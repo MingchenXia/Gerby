@@ -405,7 +405,7 @@ def shell(content, title, records, revision, root=""):
 <main id="content">{content}<footer class="book-footer">{escape(AUTHOR)} · Draft edition · Source revision <a href="{REPOSITORY}/commit/{revision}">{revision[:12]}</a><br>Tags identify source labels. Formalization status is recorded independently of the mathematical text.</footer></main></div></body></html>'''
 
 
-def export(source, output, prepare=None):
+def export(source, output, prepare=None, transform=None):
     global ASSETS
     source, output = source.resolve(), output.resolve()
     ASSETS = output / "assets"
@@ -417,6 +417,8 @@ def export(source, output, prepare=None):
     output.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="gerby-foundations-") as temporary:
         records = render_fragments(source / DIRECTORY, Path(temporary), prepare=prepare)
+    if transform:
+        records = transform(source / DIRECTORY, records)
     index = f'<div class="book-title"><p class="eyebrow">An online draft</p><h1>{TITLE}</h1><p>{escape(AUTHOR)}</p></div>'
     index += "".join(decorate(record["html"], "") for record in records if record["section"])
     (output / "index.html").write_text(shell(index, TITLE, records, revision))

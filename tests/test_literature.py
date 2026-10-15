@@ -21,20 +21,20 @@ class LiteratureTests(unittest.TestCase):
 \newtheorem{theorem}{Theorem}[section]
 \begin{document}
 \maketitle
+\section*{Scope, attribution and conventions}
 Prerequisite text and attribution \cite[p.~36]{Helms1969}.
-\input{kelvin}
-\input{halfspace}
-\input{bounded-data}
-\bibliographystyle{alpha}\bibliography{references}
+""" + "\n".join(r"\input{" + name + "}" for name in adapter.FRAGMENTS) + r"""
+\bibliographystyle{alpha}\bibliography{contributions/classical-potential-theory}
 \end{document}""")
         for number, (name, filename) in enumerate(adapter.FRAGMENTS.items(), 1):
             path = root / filename
             path.parent.mkdir(parents=True)
-            path.write_text(rf"""\section{{{name}}}\label{{sec:{name}}}
-\begin{{theorem}}\label{{thm:{name}}}For $x<y$, a selected statement.\end{{theorem}}
+            result = path.parent.name.lower()
+            path.write_text(rf"""\section{{{result}}}\label{{sec:{result}}}
+\begin{{theorem}}\label{{thm:{result}}}For $x<y$, a selected statement.\end{{theorem}}
 \begin{{proof}}Complete proof {number}.\end{{proof}}
 """)
-        (entry.parent / "references.bib").write_text("@book{Helms1969, author={Helms, L. L.}, title={Introduction to Potential Theory}, year={1969}, publisher={Wiley-Interscience}}")
+        (entry.parent / "classical-potential-theory.bib").write_text("@book{Helms1969, author={Helms, L. L.}, title={Introduction to Potential Theory}, year={1969}, publisher={Wiley-Interscience}}")
         private = root / "library/originals"
         private.mkdir(parents=True)
         (private / "unselected.tex").write_text("PRIVATE LIBRARY SENTINEL")
@@ -51,13 +51,15 @@ Prerequisite text and attribution \cite[p.~36]{Helms1969}.
             subprocess.run([sys.executable, str(ROOT / "adapters/classical-potential-theory.py"), str(source), str(output)], check=True, capture_output=True)
             entries = json.loads((output / "entries.json").read_text())
             inventory = json.loads((output / "tags.json").read_text())
-            self.assertEqual(len(inventory), 7)
-            self.assertEqual({e["label"] for e in entries}, {"sec:helms-prerequisites", *[f"{kind}:{name}" for kind in ("sec", "thm") for name in adapter.FRAGMENTS]})
-            self.assertEqual({e["topic"] for e in entries}, {adapter.TOPIC})
+            self.assertEqual(len(inventory), 1 + 2 * len(adapter.RESULTS))
+            self.assertEqual({e["label"] for e in entries}, {"sec:helms-prerequisites", *[f"{kind}:{result.lower()}" for kind in ("sec", "thm") for result in adapter.RESULTS]})
+            self.assertEqual({e["topic"] for e in entries}, {"Conventions", *[adapter.result_topic(result) for result in adapter.RESULTS]})
             theorems = [e for e in entries if e["kind"] == "theorem"]
-            self.assertEqual([e["title"] for e in theorems], ["Theorem 1.1", "Theorem 2.1", "Theorem 3.1"])
+            self.assertEqual([e["title"] for e in theorems], [f"Theorem {number}.1" for number in range(1, len(adapter.RESULTS) + 1)])
             self.assertTrue(all("Complete proof" in e["proof_html"] and "x&lt;y" in e["statement_html"] for e in theorems))
             self.assertIn("Prerequisite text", entries[0]["html"])
+            self.assertEqual(entries[0]["tag"], "59016F1B")
+            self.assertEqual(next(e for e in theorems if e["label"] == "thm:r0001")["topic"], adapter.TOPIC)
             self.assertEqual(json.loads((output / "references.json").read_text())[0]["key"], "Helms1969")
             for item in inventory:
                 page = (output / item["page"]).read_text()
@@ -66,17 +68,19 @@ Prerequisite text and attribution \cite[p.~36]{Helms1969}.
             self.assertFalse(any("PRIVATE LIBRARY SENTINEL" in p.read_text() for p in output.rglob("*") if p.is_file()))
 
     def test_changed_input_graph_or_nested_input_requires_review(self):
-        for replacement in (r"\input{../../library/originals/unselected}", r"\input{kelvin}\input{kelvin}"):
+        first = next(iter(adapter.FRAGMENTS))
+        initial = r"\input{" + first + "}"
+        for replacement in (r"\input{../../library/originals/unselected}", initial + initial):
             with self.subTest(replacement=replacement), tempfile.TemporaryDirectory() as temporary:
                 root = Path(temporary)
                 entry = self.source(root)
-                entry.write_text(entry.read_text().replace(r"\input{kelvin}", replacement))
+                entry.write_text(entry.read_text().replace(initial, replacement))
                 with self.assertRaisesRegex(ValueError, "Unreviewed literature input"):
                     adapter.prepare_article(root)
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self.source(root)
-            (root / adapter.FRAGMENTS["kelvin"]).write_text(r"\input{private}")
+            (root / adapter.FRAGMENTS[first]).write_text(r"\input{private}")
             with self.assertRaisesRegex(ValueError, "input graph"):
                 adapter.prepare_article(root)
 
@@ -87,7 +91,7 @@ Prerequisite text and attribution \cite[p.~36]{Helms1969}.
             self.source(source)
             outside = root / "outside.tex"
             outside.write_text("Outside manuscript")
-            fragment = source / adapter.FRAGMENTS["kelvin"]
+            fragment = source / next(iter(adapter.FRAGMENTS.values()))
             fragment.unlink()
             fragment.symlink_to(outside)
             with self.assertRaisesRegex(ValueError, "unsafe selected"):

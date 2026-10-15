@@ -16,7 +16,7 @@ The published `upstream.json` contains the build time, the project commit used t
 
 ## Shared collection
 
-Sources are registered in `books.json`; their status becomes `published` when an adapter is ready. The current sources track the main branches of Foundations, SGPT, the private Hermitian book, and the selected classical-potential-theory article in Gerby-Literature. Public sources use HTTPS; the private source uses the local authenticated Git credential helper. No credentials or private research files are exported.
+Sources are registered in `books.json`; their status becomes `published` when an adapter is ready. The current sources track the main branches of Foundations, SGPT, the private Hermitian book, and the complete classical-potential-theory supplement in Gerby-Literature/main after the whole-book branch merge. Public sources use HTTPS; the private source uses the local authenticated Git credential helper. No credentials or private research files are exported.
 
 Each adapter receives `SOURCE_DIRECTORY OUTPUT_DIRECTORY` and exports:
 
@@ -27,7 +27,7 @@ Each adapter receives `SOURCE_DIRECTORY OUTPUT_DIRECTORY` and exports:
 - `assets/`: illustrations referenced by the active manuscript, including locally rendered vector diagrams;
 - temporary reading/tag pages used to validate complete source tag and badge coverage.
 
-`scripts/collection.py` combines exports into `/chapters/`, `/sections/`, `/entries/`, `/tag/TAG/`, `/references/`, `/comments/`, `/search/`, and `/sources/`. Every included source subject must be explicitly assigned to one shared chapter. The current 21-chapter order follows mathematical dependencies across the books, with 73 independently addressable sections. Chapter pages contain section links, not statement lists. `/topics/` permalinks redirect to the corresponding sections. Source-specific pages become redirects, preserving old permalinks. Source records are internal provenance, not separate reading collections. Search includes every retained contribution's text and aliases; visible headings use the manuscript's numbered titles instead of names derived from internal labels.
+`scripts/collection.py` combines exports into `/chapters/`, `/sections/`, `/entries/`, `/tag/TAG/`, `/references/`, `/comments/`, `/search/`, and `/sources/`. Every included source subject must be explicitly assigned to one shared chapter. The current 21-chapter order follows mathematical dependencies across the books, with 78 independently addressable sections. Chapter pages contain section links, not statement lists. `/topics/` permalinks redirect to the corresponding sections. Source-specific pages become redirects, preserving old permalinks. Source records are internal provenance, not separate reading collections. Search includes every retained contribution's text and aliases; visible headings use the manuscript's numbered titles instead of names derived from internal labels.
 
 `scripts/reader.py` defines one reading sequence, including each chapter, its sections, and every canonical entry exactly once. Each page has reciprocal Previous/Next links at both ends, contextual breadcrumbs, a permalink, a BibTeX citation, and a comment panel. `navigation.json` records this order. Tags remain stable and are hidden in reader lists until requested. Serialized TeX label commands are stripped from presentation formulas after cross-references have been resolved.
 
@@ -71,22 +71,32 @@ The hourly Gerby automation was deleted. Updates and source revision checks now 
 
 The `gh-pages` history is merged into `main`, with its complete validated reading edition relocated byte for byte into `docs/`. The edition receipt continues to identify the commit that actually rendered that content. This consolidation does not refresh the source books. The next requested update may rebuild once to record the changed publishing infrastructure; later generated-only publication commits are ignored when checking project freshness.
 
-## Selected literature contributions
+## Whole-book literature supplement
 
-The `classical-potential-theory` source tracks `Gerby-Literature/main` and exports
-only `integrations/R0001/book.tex`, `results/R0001/proof.tex`,
-`results/R0002/proof.tex`, `results/R0003/proof.tex`, and
-`integrations/R0001/references.bib`. Its adapter checks this input graph and
-rejects added, repeated, nested, or escaping inputs pending review. It preserves
-the article's section/theorem numbering and prerequisites while replacing only
-its print layout. Complete source-tag and badge coverage uses the shared official
-Gerby renderer. The selected subject belongs to `classical-potentials`.
+The `classical-potential-theory` source tracks `Gerby-Literature` at
+`main` after the `codex/helms-whole-book` merge, with entry point
+`contributions/classical-potential-theory.tex`. The adapter permits only its
+reviewed 29 proof inputs and `contributions/classical-potential-theory.bib`.
+Unexpected, repeated, nested, reordered or escaping inputs require review.
+The scan, OCR, findings dossiers, source archive and research files are excluded.
 
-The three results reconstruct Helms (1969), Theorems 2.24--2.26, printed
-pp. 36--42, with exact citations. The covariance formula, weighted admissibility
-and converse, derivative estimates, normalization and boundary-tail arguments
-are explicit. Existing ball Poisson and measure-selection entries remain linked
-prerequisites. The already-covered ball representation is derived as an ingredient
-and is not registered as a redundant new theorem. No formalization is recorded.
-The retained scan, OCR, dossiers, findings register and unreviewed book material
-are outside the export. This integration does not complete the whole-book review.
+The supplement follows the branch's complete Helms (1969) review: 296 numbered
+source statements have recorded dispositions; 28 contribution dossiers are
+ready, two interfaces are covered, and 41 findings have retained assessments
+and repairs. These records establish the review's scope, not formal verification.
+The rendered supplement has 96 source tags and 57 complete proof fragments.
+It includes a recalled covered parameter lemma used by the added arguments.
+
+Subjects follow the existing classical and capacity chapters. The first three
+published results keep their canonical and source tags and Kelvin-section URL.
+Their theorem numbers follow their positions in the complete article. The
+expanded conventions retain the earlier prerequisite tag and appear under
+Conventions. The other source subjects cover harmonic analysis, Green
+potentials, polar sets and sweeping, Perron and fine limits, and energy and
+Martin boundaries. Every retained source label has a chapter assignment.
+
+The branch's reviewed proof hashes, dependencies, bibliography, and source
+revisions are checked before integration. Tests cover the full input graph,
+article numbering, topic coverage and old prerequisite tag. The complete build
+checks every local link; browser checks cover mathematical rendering, badges
+and layout. Formalization remains Not recorded. Updates remain on request.

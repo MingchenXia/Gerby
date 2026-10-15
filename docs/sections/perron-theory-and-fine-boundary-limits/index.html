@@ -1,0 +1,394 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/perron-theory-and-fine-boundary-limits/"><title>4.4 Perron theory and fine boundary limits · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/perron-theory-and-fine-boundary-limits/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/capacity-fine-topology/">Chapter 4: Energy, capacity, and fine topology</a></li><li><a href="../../sections/perron-theory-and-fine-boundary-limits/" aria-current="page">Section 4.4: Perron theory and fine boundary limits</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/potentials-energy-and-capacity/"><span>4.1</span> Potentials, energy and capacity</a></li><li><a href="../../sections/fine-topology-and-balayage/"><span>4.2</span> Fine topology and balayage</a></li><li><a href="../../sections/polar-sets-capacity-and-sweeping/"><span>4.3</span> Polar sets, capacity and sweeping</a></li><li><a href="../../sections/perron-theory-and-fine-boundary-limits/" aria-current="page"><span>4.4</span> Perron theory and fine boundary limits</a></li><li><a href="../../sections/green-energy-and-martin-boundaries/"><span>4.5</span> Green energy and Martin boundaries</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/perron-theory-and-fine-boundary-limits/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/perron-theory-and-fine-boundary-limits/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/C4F5D8B270EB/"><span>← Previous</span><small>Theorem 23.2</small></a><a class="pager-next" rel="next" href="../../tag/E00A8C634DA6/"><span>Next →</span><small>20 Perron solutions and completed harmonic measure</small></a></nav><h1>4.4 Perron theory and fine boundary limits</h1><div class="section-reading"><section class="reading-chunk" id="entry-E00A8C634DA6" data-section-entries="09873BDAF3E0 621606E7390C E00A8C634DA6"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/E00A8C634DA6/">20 Perron solutions and completed harmonic measure</a></h2><span data-gerby-tag="2876D8A7"></span>
+<p>
+  Let $D$ be a nonempty bounded open set. For extended boundary data $f$, let $\mathcal U_ f$ consist of componentwise superharmonic or identically infinite functions bounded below on $D$ with boundary lower limits at least $f$. Put $\overline H_ f=\inf \mathcal U_ f$ and $\underline H_ f=-\overline H_{-f}$. A function is resolutive when these coincide and are finite harmonic on every component. 
+</p>
+
+<article class="env-theorem" id="classical-potential-theory-410B64F2">
+<p><a class="environment-identifier" href="../../tag/09873BDAF3E0/">Theorem <span data-tag="410B64F2">20.1</span>.</a><span data-gerby-tag="410B64F2"></span> Upper and lower solutions are componentwise harmonic or identically one of the two infinities, and $\underline H_ f\le \overline H_ f$. Each continuous boundary function is resolutive. There are probability measures $\omega _ x$ on $\partial D$, completed simultaneously for all $x\in D$, such that $f$ is resolutive exactly when it is measurable in all these completions and $\int |f|d\omega _ x&lt;\infty $ for every $x$; then $H_ f(x)=\int f d\omega _ x$. For nonnegative measurable data the upper and lower solutions both equal the integral, possibly infinity. Within each component the measures are mutually absolutely continuous, their $L^ p$ spaces and weak/strong topologies agree, $1\le p&lt;\infty $, and their norms are equivalent. The map $x\mapsto \omega _ x$ is weakly continuous. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The finite superharmonic members of an upper class form a nonempty saturated family whenever that class has a member finite somewhere in the component: minimum and ball lowering preserve the boundary inequalities and the lower bound. The saturated-family lemma gives its harmonic or $-\infty $ infimum; if there is no such member the infimum is infinity. For $u$ in the lower and $v$ in the upper class, $v-u$ is superharmonic, bounded below, with nonnegative boundary lower limits, including where $f=\pm \infty $ (use the global bounds to avoid undefined subtraction). The bounded minimum principle gives $u\le v$. Order, constant translation, positive scaling, sign reversal and upper subadditivity follow from the defining classes, whenever sums are defined. For finite resolutive functions these prove linearity. A uniform change of boundary data by at most $\varepsilon $ changes each solution by at most $\varepsilon $, hence uniform limits of resolutive data are resolutive. The checked Foundations <a href="https://mingchenxia.github.io/Gerby/tag/8FE1B604CDA2/">perron resolutivity</a> supplies equality of the continuous upper and lower subsolution envelopes for continuous $f$. These classes are contained in our classes, so their common harmonic value lies between our lower and upper solutions; the reverse inequalities from class inclusion force equality here. Equivalently, approximate continuous data by smooth functions and split each smooth function as a difference of continuous subharmonic functions by adding a large multiple of $|x|^2$. 
+    <p>
+      We supply the required monotone limit argument. If $f_ j\uparrow f$ and $\overline H_{f_1}&gt;-\infty $, then $\overline H_{f_ j}\uparrow \overline H_ f$. Work on one component. If the limit is infinity, order proves the claim. Otherwise the limit $h$ is harmonic by monotone harmonic convergence. At a fixed $x_0$ choose $v_ j\in \mathcal U_{f_ j}$ with $v_ j(x_0)&lt;\overline H_{f_ j}(x_0)+\varepsilon 2^{-j}$. The nonnegative superharmonic series 
+    
+<div class="equation">
+  \[  v=h+\sum _ j(v_ j-\overline H_{f_ j})  \]
+</div>
+<p>
+       is finite at $x_0$, hence superharmonic, and dominates every $v_ j$. It is bounded below by one $v_ j$ and has boundary lower limits at least $f$, so belongs to $\mathcal U_ f$. Its value at $x_0$ is at most $h(x_0)+\varepsilon $. Let $\varepsilon \downarrow 0$; harmonicity and the minimum principle, or repetition at each $x_0$, gives the claim. The negative-data version gives the corresponding decreasing limit. If all $f_ j$ are resolutive, their increasing limit has equal upper/lower solutions, and is resolutive when the common value is finite. 
+    <p>
+      For continuous data, $f\mapsto H_ f(x)$ is positive linear, sends $1$ to $1$, and has norm one. Compact-space Riesz representation gives the unique probability $\omega _ x$. Decreasing continuous approximations to indicators of closed subsets, followed by the monotone limit just proved, give $H_{1_ F}(x)=\omega _ x(F)$ for closed $F$. The class of boundary sets for which this equality and resolutivity hold contains the closed sets, is closed under proper differences and increasing unions, and therefore contains their generated sigma algebra. For clarity, the elementary pi-lambda argument proves the last assertion: first fix a closed set and close the class of sets whose intersections with it lie in the class; then repeat with an arbitrary member. This gives closure under finite intersections, hence under finite unions and, with increasing unions, under all countable unions. Thus all Borel indicators, bounded simple functions, and by monotone approximation all nonnegative Borel functions have the integral formula. 
+    <p>
+      For a Borel null set $N$ at $x$, positivity and harmonicity show $H_{1_ N}=0$ on its component. Every subset of $N$ has upper and lower solutions zero there, by order. Thus the formula extends to the completion of $\omega _ x$, and componentwise to the intersection of all these completed sigma algebras. Simple approximation proves the nonnegative formula; positive/negative parts prove sufficiency for integrable data. A positive harmonic function is finite everywhere in a component if finite at one point, so integrability at one point per component suffices. 
+    <p>
+      For necessity suppose $f$ is resolutive and work on one component. Choose decreasing $v_ j\in \mathcal U_ f$ whose values at $x_0$ tend to $H_ f(x_0)$, and put $F_ j(z)=\liminf _{D\ni x\to z}v_ j(x)$. These are lower semicontinuous extended Borel functions, bounded below, decreasing and at least $f$. Their harmonic solutions satisfy $H_ f\le H_{F_ j}\le v_ j$; they are finite at $x_0$ and hence finite harmonic everywhere. Similarly lower-class approximants yield increasing Borel integrable $G_ j\le f$, with $H_{G_ j}(x_0)\to H_ f(x_0)$. Let $F=\inf F_ j$, $G=\sup G_ j$. The inequalities $G_1\le G\le f\le F\le F_1$ imply that $F,G$ are integrable for every $\omega _ x$. Monotone integration gives $\int (F-G)d\omega _{x_0}=0$. The nonnegative harmonic integral of $F-G$ is then zero throughout the component. Thus $F=f=G$ almost everywhere for every $\omega _ x$, proving completed measurability and integrability. 
+    <p>
+      Finally Harnack applied to $H_{1_ E}$ gives $C^{-1}\omega _ y(E)\le \omega _ x(E)\le C\omega _ y(E)$ for fixed interior $x,y$ in one component. Integration yields $C^{-1/p}\| f\| _{p,y}\le \| f\| _{p,x}\le C^{1/p}\| f\| _{p,y}$. Equivalent norms give the same continuous dual and weak topology; strong topologies also agree. These statements apply to the $p$th powers of norms, which are harmonic integrals; the norms themselves need not be harmonic. Weak continuity of measures follows since $\int f d\omega _ x=H_ f(x)$ is continuous for every continuous $f$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="classical-potential-theory-65DB36A3">
+<p><a class="environment-identifier" href="../../tag/621606E7390C/">Lemma <span data-tag="65DB36A3">20.2</span>.</a><span data-gerby-tag="65DB36A3"></span> Changing any boundary data on a polar set leaves both Perron solutions unchanged. If $f$ is resolutive on a bounded $D$ and $W\subset D$ is open, the data equal to $H_ f$ on $D\cap \partial W$ and to $f$ on $\partial D\cap \partial W$ are resolutive on $W$, with solution $H_ f|_ W$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For any interior $a$, choose an entire superharmonic polar function infinite on the exceptional set and finite at $a$, adding a constant to make it nonnegative on $\overline D$. Add $\varepsilon $ times it to every upper competitor. This is a competitor for either set of boundary data; evaluation at $a$ and $\varepsilon \downarrow 0$ gives equality. Negate for lower solutions. For restriction, an upper competitor dominates $H_ f$ in $D$, so its boundary lower limits on interior boundary points of $W$ dominate $H_ f$ by harmonic continuity; on the remaining points they dominate $f$. Thus the restricted upper solution is at most $H_ f$, while the lower solution is at least $H_ f$. Bounded-domain comparison forces equality. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-93318C47A3DE" data-section-entries="123C9AB7C052 2F74CBABB2A6 93318C47A3DE"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/93318C47A3DE/">21 Local barriers, cone regularity and regular exhaustions</a></h2><span data-gerby-tag="7AE1A183"></span>
+
+  A weak local barrier at $a\in \partial D$ is a strictly positive superharmonic function near $a$ in $D$ tending to zero at $a$. <article class="env-theorem" id="classical-potential-theory-7A2F4581">
+<p><a class="environment-identifier" href="../../tag/2F74CBABB2A6/">Theorem <span data-tag="7A2F4581">21.1</span>.</a><span data-gerby-tag="7A2F4581"></span> For bounded open $D$, a weak local barrier exists exactly when $a$ is regular for continuous Perron data. In that case the harmonic solution $H_ m$ for $m(z)=|z-a|$ is a global barrier, satisfies $H_ m(x)\ge |x-a|$, and has positive infimum away from every neighborhood of $a$. At such a point the upper boundary limsup of $\overline H_ f$ is at most the boundary limsup of $f$ for bounded-above $f$, and the analogous lower inequality holds for bounded-below data. Bounded data continuous at $a$ therefore attain their value there. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The convex function $|x-a|$ is subharmonic by Jensen on harmonic coordinate functions, so lies in the lower class for $m$. Thus $H_ m\ge |x-a|&gt;0$. Let $w$ be a weak local barrier, and choose a small sphere of radius $r$ centered at $a$ within its domain. Put $M=\max _{\partial D}|z-a|$. Choose compact $F\subset D\cap \partial B(a,r)$ whose complement in that open spherical set has normalized area less than $r/M$; if the open set is empty no $F$ is needed and comparison directly gives $H_ m\le r$ inside. Otherwise $k=\inf _ Fw&gt;0$ (if $F$ is empty choose it nonempty by taking a smaller error). Let $b$ be the ball Poisson integral of boundary data $M$ on $(D\cap \partial B)\setminus F$ and zero elsewhere. It is nonnegative, continuous near the center, with $b(a)&lt;r$. For every lower competitor $v$ for $m$, bounded comparison on $D\cap B$ gives 
+    
+<div class="equation">
+  \[  v\le r+(M/k)w+b.  \]
+</div>
+<p>
+       On $F$ the $w$ term dominates the bound $v\le M$; on the remaining open sphere the Poisson limit is $M$; on the original boundary $v$ has upper limit at most $m\le r$. These verify every boundary piece. Taking the supremum and then approaching $a$ gives $\limsup H_ m\le 2r$. Let $r\to 0$. The global barrier and its positive-away-from-$a$ lower bound now follow from $H_ m\ge |x-a|$. For bounded-above data with local limsup $L$, the function $L+\varepsilon +cH_ m$ belongs to the upper class when $c$ is large enough to control the data outside a small neighborhood. Its limit at $a$ is $L+\varepsilon $. The case $L=-\infty $ is handled with any finite upper target instead. Negation gives the lower inequality. Conversely, regularity applied to continuous $m$ makes $H_ m$ a weak barrier. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="classical-potential-theory-2E88760E">
+<p><a class="environment-identifier" href="../../tag/123C9AB7C052/">Theorem <span data-tag="2E88760E">21.2</span>.</a><span data-gerby-tag="2E88760E"></span> Boundary regularity is inherited by open subsets at a common boundary point. An exterior tangent ball or an exterior truncated solid cone gives regularity. A planar exterior segment also gives regularity. Every open subset of $\mathbb R^ d$, $d\ge 2$, has an increasing exhaustion by bounded regular open sets compactly contained in it. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Restrict a weak barrier for inheritance. For an exterior ball tangent only at $a$ use minus its radial fundamental function after subtracting its value on the sphere; it is positive on the exterior and tends to zero at $a$. A smaller internally tangent ball removes other contact points. For a planar exterior segment choose the logarithm branch cut along its ray; on a sufficiently small slit ball $-\operatorname {Re}(1/\log (z-a))=-\log |z-a|/|\log (z-a)|^2$ is a positive harmonic barrier tending to zero. 
+    <p>
+      For a cone, shrink it and enlarge the domain locally to the truncated cone complement $D_\rho =B(a,\rho )\setminus C$. All its boundary points other than $a$ have exterior balls, hence are regular. On $D_{2\rho }$ let $u$ be the Perron solution for $|z-a|$. On the outer sphere it equals $2\rho $; on lateral cone boundary it equals $|z-a|$. It is bounded between zero and $2\rho $ and is strictly less than $2\rho $ inside. On the compact radius-$\rho $ spherical section (including its regular lateral endpoints) its maximum is $b&lt;2\rho $. Choose $q$ with $\max \{ 1/2,b/(2\rho )\} &lt;q&lt;1$. On the boundary of $D_\rho $ except $a$, $u(x)\le q u(a+2(x-a))$: on the outer section use $b&lt;q2\rho $ and on the lateral section use the factor two. The difference is bounded harmonic; the polar boundary minimum principle permits the singleton exception at $a$. The inequality holds inside. Its finite nonnegative limsup $L$ at $a$ satisfies $L\le qL$, hence is zero. This is a weak local barrier and proves cone regularity. 
+    <p>
+      For exhaustion we give details of the finite-ball construction. Cover any compact $K$ in the open set by finitely many balls of a common radius $r$, with centers in $K$ and closures still inside the open set; choose the cover so a small interval of larger common radii still covers $K$ and has closures inside. Avoid finitely many critical radii: at a boundary point of the union, if the active outward normals had zero in their convex hull, that point would be the circumcenter in the affine span of some affinely independent subset of at most $d+1$ centers, by a minimal convex representation. Each such subset has at most one circumradius, giving a finite forbidden list. At an allowed radius the convex hull of the active normals avoids zero. Its nearest point to zero gives a direction with strictly positive scalar product with every active normal. A small solid cone in this direction avoids all active balls; the other finitely many balls have a positive gap locally. Thus every boundary point of the union has an exterior cone, and the union is bounded regular. Apply this to a compact exhaustion, including the closure of the previously constructed set at each step, to obtain the desired increasing exhaustion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-BD2BAD3CFA50" data-section-entries="2C2E1569F3E2 52535FA416BF BD2BAD3CFA50"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/BD2BAD3CFA50/">22 Green boundary limits, Kellogg&#x27;s theorem and planar Greenian sets</a></h2><span data-gerby-tag="4F495BF8"></span>
+
+<article class="env-theorem" id="classical-potential-theory-332E208E">
+<p><a class="environment-identifier" href="../../tag/52535FA416BF/">Theorem <span data-tag="332E208E">22.1</span>.</a><span data-gerby-tag="332E208E"></span> Every Greenian open set is admissible: one polar subset $Z$ of its finite boundary works for zero boundary limits of all compactly supported Green potentials. On a bounded connected open set a boundary point is regular exactly when a fixed interior-pole Green function tends to zero there. The irregular boundary points form a polar set. Bounded-density boundary limits hold with the same exception under the volume hypotheses of Theorem <a data-tag="1DF5E8AD" href="../../tag/9CF388990FE4/">14.2</a>. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a bounded open set, continuous boundary data $\Phi _ a$ have a finite harmonic Perron solution, and $G(a,\cdot )=\Phi _ a-H_{\Phi _ a}$. Indeed $\Phi _ a$ is an upper competitor, so the right side is nonnegative and admissible, hence at least $G$. Writing $G=\Phi _ a+h_ a$, the function $-h_ a$ is a lower competitor: it is bounded above by $\Phi _ a$ and bounded on a pole neighborhood by harmonicity, so bounded above throughout the bounded set. Its boundary upper limits are at most $\Phi _ a$. Thus $-h_ a\le H_{\Phi _ a}$, giving the opposite inequality. At regular points the formula gives zero boundary limit; conversely such a Green function is positive harmonic near a boundary point and supplies a weak local barrier. 
+    <p>
+      For arbitrary Greenian $\Omega $, exhaust by bounded regular open sets $D_ j\Subset \Omega $ containing a fixed pole $a$. Extend $G_{D_ j}(a,\cdot )$ by zero outside $D_ j$. On the complement of a small closed pole ball these are nonnegative continuous subharmonic functions: they are harmonic inside, zero outside, and at a boundary point their value zero is at most every sufficiently small sphere average. They increase to the zero extension $g$ of $G_\Omega (a,\cdot )$, bounded above there by the fixed-pole kernel bound. The checked subharmonic envelope/polar discrepancy theorem says $g=g^*$ outside a polar set. On $\partial \Omega $, $g=0$ and $g^*\ge \limsup _{\Omega \ni x\to z}G_\Omega (a,x)\ge 0$, so that limsup is zero off a polar set. 
+    <p>
+      Choose one pole in each component; there are at most countably many components. The union of their exceptions is polar. Harnack chains in the pole variable make the zero limit uniform on any compact subset of poles in a component. A compact subset meets only finitely many components, so the limit is uniform on every compact subset of $\Omega $. Integration against a finite compactly supported measure proves admissibility with one common exceptional set. The bounded-density statement is then precisely the compact-tail estimate already proved. On a bounded connected set, regularity and the fixed-pole condition are equivalent by the first part, so the irregular set is contained in that pole's polar exception. These arguments remove the temporary admissibility hypothesis in the capacity theorem without using that theorem to prove the boundary discrepancy. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="classical-potential-theory-06756FAF">
+<p><a class="environment-identifier" href="../../tag/2C2E1569F3E2/">Theorem <span data-tag="06756FAF">22.2</span>.</a><span data-gerby-tag="06756FAF"></span> For a nonempty planar open set $\Omega $, the following are equivalent: its complement is nonpolar; it supports a nonconstant strictly positive superharmonic function; and it has a Green function. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      A Greenian set has nonpolar boundary by the planar fact in the polar boundary minimum proof, hence nonpolar complement. Conversely, fix $a\in \Omega $. Countably many open disks tangent at $a$ cover the plane minus $a$. If the closed complement is nonpolar, one of its compact intersections $K$ with the corresponding closed disks is nonpolar. Take a larger tangent disk $B$ with $K\Subset B$ and $a\in \partial B$. The ball capacitary potential $p$ of $K$ is nonzero, lies in $[0,1]$, is harmonic off $K$ and zero at $\partial B$. Extend it by zero outside $B$. This is continuous subharmonic on the complement of $K$, by the same boundary mean argument as above. Then $2-p$ is strictly positive superharmonic on $\Omega $ and nonconstant near $a$: it equals two on the outer side of $\partial B$ and is strictly smaller on the adjacent inner component. This formulation also works if $B\setminus K$ has other components where $p=1$. 
+    <p>
+      It remains to obtain a Green kernel from a nonconstant positive superharmonic function $s$, first when $\Omega $ is connected. For any pole $a$, the strong minimum principle gives $b$ with $s(b)&lt;s(a)$. Scale and truncate $s$ so it is at least one on a small closed ball $\overline{B(a,r)}$ and less than one at $b$. The regularized infimum $v$ of nonnegative superharmonic majorants of one on that ball lies in $[0,1]$, equals one inside, is harmonic outside, and is less than one at $b$; these use only saturated families and the checked polar discrepancy theorem, not a Green kernel on $\Omega $. It is continuous on the inner sphere: on a slightly larger concentric annulus its boundary values are continuous on the outer sphere, one on the inner sphere outside a polar exception; Perron comparison ignoring that exception and annulus regularity give inner limit one. Thus $w=1-v$ is continuous subharmonic, zero on the ball, and strictly positive on its complement. That complement is connected: any path crossing the ball may be detoured through a slightly larger sphere inside $\Omega $. 
+    <p>
+      Choose $t&gt;r$ with $\overline{B(a,t)}\subset \Omega $, and $2\alpha =\min _{|x-a|=t}w(x)&gt;0$. Define a subharmonic $q$ by $\log (|x-a|/r)$ on the inner ball, by $\max \{ \log (|x-a|/r),(w(x)/\alpha )\log (t/r)\} $ on the annulus, and by the second term outside the radius-$t$ ball. At the inner sphere the extension dominates the harmonic logarithm with the same value; its sphere submeans follow. Near the outer sphere the second term dominates strictly, so locality proves subharmonicity. It is bounded above and $q+\Phi _ a=-\log r$ near $a$. If $C$ bounds $q$, the nonnegative superharmonic function $C-q$ is $\Phi _ a$ plus a superharmonic correction extending across $a$. Thus the admissible class $\mathcal B_ a$ is nonempty, and the minimal-kernel construction gives a Green function. A disconnected planar open set is already Greenian by the earlier component construction, so the connected argument suffices. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-43AD76172E0C" data-section-entries="43AD76172E0C 58BE7FB3C948 8FA95EB71F47 E16C09608A00"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/43AD76172E0C/">24 Exterior Poisson kernels and Helms&#x27;s point at infinity</a></h2><span data-gerby-tag="C3703477"></span>
+<p>
+  Let $\widehat{\mathbb R^ d}=\mathbb R^ d\cup \{ \infty \} $ have the one-point compactification topology. We use Helms's convention: superharmonicity at an interior infinity means lower semicontinuity there and $u(\infty )\ge M_{\partial B}u$ for every ball whose closed exterior lies in the domain. Harmonicity means the corresponding equality and both semicontinuities, in addition to ordinary harmonicity at finite points. This extra mean condition is part of the definition, and is not implied by ordinary bounded exterior harmonicity in dimension at least three. 
+</p>
+
+<article class="env-theorem" id="classical-potential-theory-07EA9CB6">
+<p><a class="environment-identifier" href="../../tag/E16C09608A00/">Theorem <span data-tag="07EA9CB6">24.1</span>.</a><span data-gerby-tag="07EA9CB6"></span> Let $B=B(a,R)$ and let $f\in L^1(\partial B,d\sigma )$. Put $m=(s_{d-1}R^{d-1})^{-1}\int f d\sigma $ and $r=|x-a|$. The exterior solution in this compactified convention is </p>
+<div class="equation">
+  \[  H^{\rm ext}_ Bf(x)=\frac1{s_{d-1}R}\int _{\partial B} \left[\frac{r^2-R^2}{|x-z|^ d}+\frac1{R^{d-2}}-\frac1{r^{d-2}}\right] f(z)d\sigma (z),\qquad r&gt;R,  \]
+</div>
+<p> with $H^{\rm ext}_ Bf(\infty )=m$. It is harmonic including at infinity, positive when $f\ge 0$, sends one to one, and tends to $f$ at every continuity point of $f$ on the sphere. More generally an ordinary exterior harmonic $h$, continuous to the sphere with finite limit $\alpha $ at infinity, satisfies </p>
+<div class="equation">
+  \[  h(x)=K\bigl (H_ B(h|_{\partial B})\bigr )(x) +\alpha \bigl [1-(R/r)^{d-2}\bigr ].  \]
+</div>
+<p> For $d=2$ necessarily $\alpha =m$; for $d\ge 3$, it is harmonic in Helms's sense at infinity exactly when $\alpha =m$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Invert about the sphere and apply Kelvin covariance. For $d\ge 3$, the Kelvin transform of bounded $h$ is bounded in absolute value by a multiple of the fundamental pole near $a$. Adding a sufficiently large multiple of that pole makes it nonnegative, so the proved Bôcher lemma applies. Its singular coefficient is $\alpha R^{d-2}$, by taking the limit back at infinity. Subtracting this singularity leaves a harmonic function on $B$; its continuous boundary data identify it by the ball Poisson formula, giving the displayed representation. In dimension two the Kelvin transform is bounded near the center and extends harmonically there, with center value $\alpha =m$. 
+    <p>
+      For integrable $f$, define the right side with $\alpha =m$. The inverted ball Poisson integral is harmonic away from $a$ and its derivatives are controlled on compact subsets by the integrable boundary density. The inversion distance identity gives precisely the displayed kernel. Its first term is positive; for $d\ge 3$ so is the correction $R^{2-d}-r^{2-d}$, and for $d=2$ that correction is zero. Evaluating at $f=1$ shows the total kernel mass is one. Its limit at infinity is $m$, and the ball Poisson continuity-point estimate, together with the vanishing correction at $r=R$, proves the boundary assertion. 
+    <p>
+      The Kelvin identity for concentric spherical means gives, for a general finite-limit $h$, 
+    
+<div class="equation">
+  \[  M_{\partial B(a,t)}h=\alpha +(m-\alpha )(R/t)^{d-2}\quad (d\ge 3),  \]
+</div>
+<p>
+       and the constant $m$ if $d=2$. For the chosen $\alpha =m$ these means are constant, so their radial flux is zero. The divergence theorem on the region between any large sphere containing $\overline B$ and a larger concentric sphere transfers this zero flux to the arbitrary sphere. The annular mean derivative formula then makes its subsequent spherical means constant; their limit is the limit at infinity, namely $m$. Thus every exterior-ball mean equals $h(\infty )$, as required. Conversely Helms's mean condition for the concentric spheres forces $\alpha =m$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="classical-potential-theory-7E1C8CAC">
+<p><a class="environment-identifier" href="../../tag/8FA95EB71F47/">Theorem <span data-tag="7E1C8CAC">24.2</span>.</a><span data-gerby-tag="7E1C8CAC"></span> On a connected compactified open set a superharmonic function attaining its infimum is constant. On a proper open subset, nonnegative boundary lower limits imply nonnegativity. Entire superharmonic functions on $\widehat{\mathbb R^ d}$ are constant. Positive scaling, sums and minima preserve superharmonicity. Harmonic lowering is valid on interior balls and on exterior balls, directed harmonic convergence holds, and a nonempty saturated family under both kinds of lowering has harmonic or $-\infty $ infimum on each component. The point infinity is polar for $d=2$ and is not polar for $d\ge 3$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At finite points the minimum-set argument is the checked Euclidean one. If the minimum is attained at infinity, each large sphere mean is at least the minimum and at most the value there. Lower semicontinuity and positivity of the surface measure of open patches force equality at every point of each such sphere. Thus the minimum set contains an exterior neighborhood and is open and closed. For a proper open set each component has a nonempty boundary in the connected compact ambient space. Extend by boundary liminf; compactness forces a negative minimum to be attained inside if any negative value exists. The strong minimum principle would make the component a negative constant, contradicting its nonnegative boundary limits. For the entire compact space a minimum is attained and the function is constant; one cannot infer a nonnegative constant from an empty boundary. 
+    <p>
+      For algebraic operations use the ordinary local result and the linear sphere inequalities at infinity; nontriviality follows from finite almost everywhere values on each Euclidean component. For exterior lowering, increasing continuous minorants of the lsc sphere data and the positive exterior Poisson kernel give a harmonic minorant bounded above by $u$ via compactified comparison. Finite interior values exclude an infinite limit. The same boundary-liminf/pasting proof as for interior lowering makes the replacement superharmonic at finite points. Near infinity it is the exterior harmonic solution with constant large-sphere means equal to its value there. For every other allowed sphere center, the finite-point superharmonic mean is concave as a function of $r^{2-d}$ (or $-\log r$ in the plane), and is constant at that value for all sufficiently large radii, by the zero-flux argument above. Concavity bounds its earlier means by the same value, giving the required inequality at infinity. Directed harmonic limits reduce to the Euclidean result away from infinity and the positive exterior kernel on a fixed sphere near infinity; directed monotone integration identifies the value and harmonicity there. The saturated-family proof then applies in both kinds of neighborhoods, exactly as for finite balls, with nonemptiness explicitly required. 
+    <p>
+      For $d=2$, $\log |x-a|$ on an exterior neighborhood, with value infinity at infinity, is a superharmonic pole function there. For $d\ge 3$, concentric sphere means of a superharmonic function on an exterior are finite and concave functions of $t=r^{2-d}$. A supporting affine upper bound at an interior $t$ bounds them above as $t\downarrow 0$. If the value at infinity were infinite, lsc would instead force all sufficiently distant sphere means to tend to infinity. This contradiction proves nonpolarity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="classical-potential-theory-C1B6A087">
+<p><a class="environment-identifier" href="../../tag/58BE7FB3C948/">Lemma <span data-tag="C1B6A087">24.3</span>.</a><span data-gerby-tag="C1B6A087"></span> Kelvin transformation preserves superharmonicity on domains avoiding its center. If $u$ is superharmonic on $B(a,R)$, harmonic near $a$, and $u(a)=0$, its Kelvin transform, extended by zero at infinity, is superharmonic on the compactified exterior. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On compact subdomains avoiding the center, transform harmonic comparison functions, use positivity of the Kelvin multiplier and its involutivity, and transform the comparison back. This proves the superharmonic comparison property for the transformed lsc function. In the normalized case the transform is harmonic near infinity with zero large-sphere means: the original function is harmonic near $a$ with zero center value, so the concentric mean identity and the flux transfer in the exterior theorem apply. In particular its value at infinity is zero and it is continuous there. For any other exterior ball in the domain, its sphere means are concave in $r^{2-d}$ (or $-\log r$ in the plane), and are zero for all sufficiently large radii. Concavity makes them nonpositive at the smaller allowed radii. This is exactly the supermean condition at infinity. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-02718F5DB5E5" data-section-entries="02718F5DB5E5 5D12CB9707B5 A7E357C38C8E C07BA2371FA3 E0D6C3CD3750"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/02718F5DB5E5/">25 Perron theory on the one-point compactification</a></h2><span data-gerby-tag="215EC9F4"></span>
+<p>
+  All domains in this section are proper open subsets of $\widehat{\mathbb R^ d}$ with nonpolar complement; harmonicity at an interior infinity has the exterior mean condition of the preceding section. Boundary limits and continuous data refer to this compactification. The upper class consists of bounded-below hyperharmonic functions whose boundary lower limits majorize the datum; lower classes are defined by sign reversal. We first construct the needed global pole functions, rather than presupposing their existence in a barrier argument. 
+</p>
+
+<article class="env-lemma" id="classical-potential-theory-EFC4C537">
+<p><a class="environment-identifier" href="../../tag/E0D6C3CD3750/">Lemma <span data-tag="EFC4C537">25.1</span>.</a><span data-gerby-tag="EFC4C537"></span> If $\widehat{\mathbb R^ d}\setminus \overline\Omega $ is nonempty, continuous boundary data are resolutive. Every polar boundary set has a positive superharmonic blow-up function on $\Omega $. It can be chosen finite at any prescribed interior point. A finite boundary point is regular exactly when it admits a local weak barrier; the irregular set is polar. Infinity is always regular in $d\ge 3$ when it is a boundary point. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a closed ball disjoint from $\overline\Omega $ and invert about its sphere, sending $\Omega $ into a bounded ball. Continuous data, after subtracting a constant and a uniform approximation if necessary, can be assumed zero near infinity. The transformed data, divided by the positive Kelvin multiplier, then extend continuously with value zero near the inversion center. If infinity is interior, the center is separated from the transformed boundary and the same prescription is possible. Approximate uniformly by smooth functions $\varphi $ zero near that center. Such smooth approximation follows by extending a continuous function from the compact boundary, multiplying by a cutoff, and convolving; the uniform error on the boundary is controlled by uniform continuity. 
+    <p>
+      These approximants are differences of superharmonic functions harmonic and zero near the center. To verify this, take $q(x)=-A(|x-a|-r_0)_+^4$, with the support of $\Delta \varphi $ separated from $\overline{B(a,r_0)}$. Its Laplacian is nonpositive and strictly negative on that support; sufficiently large $A$ makes both $q$ and $\varphi +q$ superharmonic. Their normalized Kelvin transforms are superharmonic even at interior infinity by the normalized Kelvin lemma. On the exterior ball the Kelvin multiplier is bounded by one (it is one in the plane), so uniform approximation survives. Each transformed approximant is a difference of bounded superharmonic traces on a compact neighborhood of $\overline\Omega $; bounded subharmonic trace resolutivity, proved by comparing its lower solution with the upper class, applies with the compactified minimum principle. Uniform stability of the Perron classes proves continuous-data resolutivity. Positive-functional representation gives a probability harmonic measure on the compact boundary, including when the pole is infinity. 
+    <p>
+      For a polar boundary set, transform its finite points into the bounded ball and split it into countably many closed shells avoiding the center. The prescribed-point polar construction gives positive superharmonic pole functions finite at the center and at the chosen transformed interior point. Lower each harmonically on a sufficiently small center ball, which avoids that shell, and subtract its center value. Its normalized Kelvin transform is superharmonic at infinity and has the same required boundary blow-up. It is defined on a neighborhood of the compact exterior, and hence has a finite lower bound there by lower semicontinuity. Add a constant to make it positive. Choose summable positive coefficients giving a finite sum at the prescribed point (and at infinity if interior). Their sum is the required function. In dimension two, if the polar set contains infinity, add a positive multiple of $\log (|x-a|/R)$ on the exterior. In higher dimensions infinity cannot belong to a polar set. The same construction on a finite boundary singleton and epsilon comparison shows that its harmonic measure is zero. 
+    <p>
+      A local finite-point weak barrier can be upgraded on the bounded set $D=\Omega \cap B(a,r)$ by the proved bounded-domain weak-barrier theorem. Its strong barrier $g$ has a positive lower bound away from $a$. On a cutting sphere inside $B(a,r)$ choose $c&gt;0$ below that lower bound; paste $\min (g,c)$ inside to the constant $c$ outside. They agree on a collar, so the pasted function is superharmonic, vanishes at $a$, and is bounded away from zero off every neighborhood of $a$. If infinity is interior, its value $c$ dominates every exterior sphere mean, since it is globally at most $c$. Thus the pasting remains valid there. The usual upper/lower barrier comparison proves regularity. Conversely use a bounded continuous boundary function $m\ge 0$ vanishing only at $a$. Its harmonic solution is positive on every component: otherwise its probability harmonic measure would be concentrated on the zero-mass singleton. At a regular point it tends to zero, giving a weak barrier. This avoids unbounded distance data on a boundary containing infinity. 
+    <p>
+      For a boundary infinity in $d\ge 3$, the fundamental function with any fixed finite pole is an explicit local weak barrier, positive and bounded away from zero on every bounded portion away from infinity. In dimension two inversion has multiplier one and transfers the finite-point local barrier criterion. At all finite points inversion preserves weak barriers locally. Thus the bounded-domain Kellogg theorem transfers to the inverted domain; polar sets transfer by Kelvin transformation. In $d\ge 3$ the possible extra center corresponds to an already regular infinity. This proves polar irregularity in all cases under the present nondensity hypothesis. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-lemma" id="classical-potential-theory-0B575946">
+<p><a class="environment-identifier" href="../../tag/5D12CB9707B5/">Lemma <span data-tag="0B575946">25.2</span>.</a><span data-gerby-tag="0B575946"></span> On every proper domain with nonpolar complement a polar boundary set has a positive superharmonic blow-up function, finite at a prescribed interior point. A bounded harmonic function with zero boundary limits outside a polar set is zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Only the dense case remains. Work in a connected component, choose $a\in \Omega $, and concentric closed balls with $0&lt;r_0&lt;r_1&lt;r_2&lt;r_3$, all contained in $\Omega $. Removing the smallest ball gives a nondense domain. Its pole function $v$ can be harmonically lowered on the annulus $r_0&lt;|x-a|&lt;r_3$, so it is finite harmonic near the two middle spheres. This preserves its true-boundary blow-up and positivity. Write $O=\Omega \setminus \overline{B(a,r_1)}$. This set is connected: any path in $\Omega $ entering the removed ball can be rerouted through the contained annulus. The harmonic measure $Q$ of its inner sphere is strictly below one on $O$. Indeed the original nonpolar boundary contains a regular point, since the nondense Kellogg exception is polar; $Q$ tends to zero there. The strong maximum principle then gives $q=\max _{|x-a|=r_2}Q(x)&lt;1$. 
+    <p>
+      Set $w_0=0$. Given $w_{j-1}$, let $u_ j$ be the ball solution in $B(a,r_2)$ with data $v+w_{j-1}$ on its sphere. Let $w_ j$ be the bounded solution on $O$ with data $u_ j-v$ on the inner sphere and zero on the true boundary. These are continuous boundary data on the nondense domain. For consecutive differences the ball maximum principle and the bound by $Q$ give 
+    
+<div class="equation">
+  \[  \| u_{j+1}-u_ j\| _{S_{r_1}} \le \| w_ j-w_{j-1}\| _{S_{r_2}},\qquad \| w_{j+1}-w_ j\| _{S_{r_2}} \le q\| u_{j+1}-u_ j\| _{S_{r_1}}.  \]
+</div>
+<p>
+       Thus the corrections converge in geometric series, uniformly on the respective boundaries and hence throughout their domains. Their limits $u,w$ are harmonic; $w$ is bounded. On both annulus boundary spheres, $u=v+w$, so annular uniqueness gives this equality throughout the overlap. Paste $u$ inside to $v+w$ outside. The result is superharmonic, harmonic near $a$, bounded below, and has the same polar boundary blow-up as $v$. Adding a constant makes it positive. This proves the assertion including finiteness at the prescribed center. Componentwise construction proves the disconnected version. 
+    <p>
+      For bounded harmonic $h$ with zero boundary limits outside a polar $Z$, compare $\pm h+\varepsilon p$ with zero, where $p$ is the positive blow-up function, finite at a prescribed interior point. Compactified boundary comparison applies even on $Z$, and yields $|h(a)|\le \varepsilon p(a)$. Let $\varepsilon \downarrow 0$ and choose $a$ arbitrarily. The same epsilon argument permits polar exceptions in bounded Perron competitors. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="classical-potential-theory-2870669A">
+<p><a class="environment-identifier" href="../../tag/A7E357C38C8E/">Theorem <span data-tag="2870669A">25.3</span>.</a><span data-gerby-tag="2870669A"></span> On every proper compactified domain with nonpolar complement, continuous boundary data are resolutive, the irregular boundary points form a polar set, and bounded harmonic solutions are unique with polar boundary exceptions. The integral characterization of resolutive data holds: an extended function is resolutive exactly when it is integrable for the simultaneously completed harmonic measures, and then $H_ f(x)=\int f\, d\omega _ x$. Polar boundary sets have zero harmonic measure. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a dense domain remove an interior closed ball. Solve the continuous datum $f$ on the true boundary and the constant $M+1$ on the artificial sphere, where $|f|\le M$. Paste $M+1$ inside by taking the minimum with that constant on a collar. The resulting bounded superharmonic function is a global upper competitor. The lower construction uses $-M-1$. At every regular true boundary point of the punctured nondense domain, these give the corresponding boundary limits for the global upper/lower solutions. Their difference is bounded harmonic, with zero boundary limits outside the polar Kellogg set, and is zero by the preceding lemma. Thus $f$ is resolutive. Those same upper/lower bounds show each such punctured-domain regular point is regular for $\Omega $, proving Kellogg for the general domain. Local barriers and the capped-constant construction give the equivalent local criterion as before. 
+    <p>
+      The full measurable-data proof now uses precisely the steps established for bounded domains: closed boundary indicators by continuous decreasing approximation, the pi-lambda argument, nonnegative simple approximation, and monotone continuity of the upper envelope via summable positive errors at a fixed pole. The only local harmonic operations needed are lowering and monotone convergence, available for both interior and exterior balls. For clarity, the necessity step also survives unchanged: countably many upper/lower competitors approximating a finite solution at a pole give Borel boundary liminf/limsup sandwiches. Their integrals have the same value at that pole, so their difference is zero almost everywhere there; positive harmonicity and Harnack transfer this common null set throughout the component. The sandwiches identify the datum in the completed measure class and give its absolute integrability. Conversely positive and negative integrable parts follow from monotone simple functions, and null changes are removed by the sandwich comparison. Apply this separately in the countably many components. Epsilon comparison with the constructed pole functions proves polar boundary nullity. This establishes the same full equivalence as the bounded Perron theorem, now with the compactified boundary condition at infinity included explicitly. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="classical-potential-theory-8D17E1C1">
+<p><a class="environment-identifier" href="../../tag/C07BA2371FA3/">Theorem <span data-tag="8D17E1C1">25.4</span>.</a><span data-gerby-tag="8D17E1C1"></span> Let $F$ be relatively closed in a Euclidean Greenian $\Omega $, and let $u\ge 0$ be superharmonic. On $\partial (\Omega \setminus F)$ prescribe $u$ on the interior boundary and zero on the original compactified boundary. Call this nonnegative lsc datum $u_0$. Its Perron solution is finite harmonic on $\Omega \setminus F$, and </p>
+<div class="equation">
+  \[  \widehat R_ Fu=H_{u_0}\quad \hbox{on }\Omega \setminus F.  \]
+</div>
+<p> On $F$ it equals $u$ except possibly at irregular interior boundary points, a polar set. For relatively closed $F$, sweeping is additive in $u$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The integral solution is bounded above by $u$, which is an upper competitor, and so is finite almost everywhere in each component. Positive harmonic alternatives make it finite everywhere there. Paste $H_{u_0}$ off $F$ to $u$ on $F$ and regularize. The ball comparison argument of the relatively compact sweeping theorem applies: restriction consistency compares on the intersection of each interior ball with $\Omega \setminus F$, and regular boundary limits follow by increasing continuous minorants of $u_0$. The exceptional set is precisely among the irregular interior boundary points, independently of $u$. The regularized paste is therefore superharmonic and majorizes $u$ on $F$ quasi-everywhere. Every defining majorant for $R_ Fu$ is an upper Perron competitor off $F$; the two inequalities identify the reduction. Linearity of nonnegative boundary integrals gives additivity off $F$; on $F$ both sides equal the original sum quasi-everywhere. Canonical ball averages remove this polar exception from the identity everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-78ACC7C20E8C" data-section-entries="201EE1A61AF0 2B657EA5CC09 78ACC7C20E8C D7E4078B4FE9 DEAF5030EE5E"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/78ACC7C20E8C/">26 Thinness and fine limits</a></h2><span data-gerby-tag="74A8FB51"></span>
+<p>
+  We use the classical fine topology, the coarsest topology making all local superharmonic functions continuous with extended values. Its equivalence with the entire-function definition follows from the exact local extension theorem. A set $E$ is thin at $a$ when some fine neighborhood of $a$ misses $E\setminus \{ a\} $. The checked Foundations <a href="https://mingchenxia.github.io/Gerby/tag/CAAD6BABA60C/">thin fine neighborhood</a> proves the equivalent local criterion 
+</p>
+<div class="equation">
+  \[  v(a)&lt;\liminf _{E\setminus \{ a\} \ni y\to a}v(y)  \]
+</div>
+<p>
+ for a superharmonic $v$ finite at $a$, with the isolated case understood. Its <a href="https://mingchenxia.github.io/Gerby/tag/498B2C3E2413/">polar fine discrete</a> proves that polar sets are finely closed and discrete and have no fine accumulation points. The topology has no isolated points, by <a href="https://mingchenxia.github.io/Gerby/tag/9E787ECDB068/">fine positive measure</a>. It is strictly finer than the Euclidean topology: a pole function finite at an accumulation point of a polar sequence gives a fine neighborhood avoiding the sequence. Every fine compact set is finite. Indeed an infinite one contains a countably infinite, hence polar, subset; this subset is finely closed and discrete, contradicting compactness. Consequently the fine topology is not locally compact: a compact neighborhood would be finite, contrary to the absence of isolated points in this Hausdorff topology. 
+</p>
+
+<article class="env-lemma" id="classical-potential-theory-16C19F3A">
+<p><a class="environment-identifier" href="../../tag/201EE1A61AF0/">Lemma <span data-tag="16C19F3A">26.1</span>.</a><span data-gerby-tag="16C19F3A"></span> If $E$ is thin at its Euclidean accumulation point $a$, there is a nonnegative superharmonic $w$ on a ball about $a$, finite at $a$, with $w(y)\to \infty $ as $E\setminus \{ a\} \ni y\to a$. Consequently </p>
+<div class="equation">
+  \[  \lim _{r\downarrow 0} \frac{\sigma ^*(E\cap \partial B(a,r))}{s_{d-1}r^{d-1}}=0.  \]
+</div>
+<p> Here outer surface measure is used, so no measurability of $E$ is assumed. If $T$ is a contraction fixing radial distances from $a$, namely $|Ty-Tz|\le |y-z|$ and $|Ty-Ta|=|y-a|$, then $T(E)$ is thin at $Ta$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Shrink a ball so the strict-gap criterion is represented by $G_ B\nu +h$ there, with $\nu $ finite on a larger compact neighborhood. The harmonic part has no effect on the gap. Finiteness at $a$ implies no atom there. For restrictions $\nu _ j=\nu |_{B(a,\varepsilon _ j)}$, their potentials $p_ j$ have $p_ j(a)\downarrow 0$. The difference $G_ B\nu -p_ j$ is harmonic near $a$, so every $p_ j$ retains the same strict limiting gap $\delta &gt;0$ along $E$. Choose a subsequence with $\sum p_ j(a)&lt;\infty $. Its sum is superharmonic, finite at $a$, and its first $m$ terms have limiting lower bound at least $m\delta $. This proves amplification. On every sufficiently small sphere, $E$ is contained in the Borel set $\{ w\ge M\} $. The supermean inequality bounds its relative outer area by $w(a)/M$; let $M\to \infty $. 
+    <p>
+      Represent an amplified barrier locally as a fundamental potential of a finite compactly supported measure plus a harmonic function. The latter can be discarded. Push the measure forward by the Lipschitz map $T$. The decreasing fundamental kernel gives $U(T_\# \nu )(Ty)\ge U\nu (y)$, whereas equality holds at $Ta$ by the radial-distance hypothesis. The transformed potential is finite there. Any sequence in $T(E)$ tending to $Ta$ has preimages tending to $a$, again by radial distance. Thus its values tend to infinity, proving thinness. In dimension two the compact supports make all negative parts bounded; add a local constant as needed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="classical-potential-theory-011EE8DF">
+<p><a class="environment-identifier" href="../../tag/D7E4078B4FE9/">Theorem <span data-tag="011EE8DF">26.2</span>.</a><span data-gerby-tag="011EE8DF"></span> Let $u\ge 0$ be superharmonic on a Greenian domain, with $u(a)&lt;\infty $, and suppose $u(a)&gt;\sup _{\Omega \setminus V}u$ for every neighborhood $V$ of $a$. Then $E$ is thin at $a$ if and only if $\widehat R_ Eu(a)&lt;u(a)$. The finiteness hypothesis is essential. The set of points of an arbitrary $E$ where $E$ is thin is polar. In particular $E$ is polar if and only if it is thin at each of its points. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Remove $a$ from $E$, which does not alter regularized reduction. Outside $E$ raw and regularized reductions agree. A deficit at $a$ therefore gives a defining superharmonic majorant $v$ with $v(a)&lt;u(a)$. Lower semicontinuity of $u$ and $v\ge u$ on $E$ give the strict-gap criterion. Conversely a thinness barrier can be chosen bounded near $a$ by truncation above its value there; local exact extension followed by compact reduction gives a bounded nonnegative superharmonic $v$ on $\Omega $, with $v(a)&lt;\alpha &lt;\liminf _ Ev$. On a neighborhood $V$ of $a$ we have $v&gt;\alpha $ along $E$. The peaking assumption gives $\gamma =u(a)-\sup _{\Omega \setminus V}u&gt;0$. For sufficiently small $\lambda &gt;0$, the function $u(a)+\lambda (v-\alpha )$ is nonnegative, majorizes $u$ on all of $E$, and is strictly below $u(a)$ at $a$. This proves the deficit. 
+    <p>
+      Locally work on a ball of radius less than $1/2$. The fundamental potential $w$ of its Lebesgue measure is finite and continuous. For each $a$ in a smaller ball split off the measure of a small ball centered at $a$. Its potential $w_1$ peaks finitely at $a$: inside that ball it is a constant minus $c_ d|y-a|^2/(2d)$, and outside it is strictly radially decreasing by the spherical mean formula. The remaining potential $w_2$ is nonnegative on the original small ball. At a self-thin point of $E$, 
+    
+<div class="equation">
+  \[  \widehat R_ Ew(a)\le \widehat R_ Ew_1(a)+\widehat R_ Ew_2(a)&lt;w(a)=R_ Ew(a).  \]
+</div>
+<p>
+       The polar discrepancy theorem puts all these points in a polar set. Countably many smaller balls cover the domain. Polarity implies thinness by the prescribed-finite-point pole construction (remove the point itself first); the converse follows from this self-thin point assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="classical-potential-theory-A2D0D838">
+<p><a class="environment-identifier" href="../../tag/2B657EA5CC09/">Theorem <span data-tag="A2D0D838">26.3</span>.</a><span data-gerby-tag="A2D0D838"></span> For a closed $F$ and $a\in \partial F$, $F$ is nonthin at $a$ if and only if there is a positive superharmonic function on $B(a,r)\setminus F$ tending to zero at $a$. Thus a finite boundary point of a Greenian open set is regular exactly when its complement is nonthin there. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On $B(a,r)$ the function $u(y)=r-|y-a|$ peaks finitely at $a$. Nonthinness and the preceding theorem give $\widehat R_ Fu(a)=u(a)$. On the complement $w=u-\widehat R_ Fu$ is nonnegative superharmonic, tends to zero at $a$ by lower semicontinuity of the reduction, and is strictly positive: otherwise the strong minimum principle would make it zero on a component, contradicting $\Delta u=-(d-1)/|y-a|&lt;0$ there. 
+    <p>
+      Conversely, if $F$ were thin, its strict gap would give a subharmonic $v$ on a smaller ball with $v(a)=1$ and $v\le -1$ on $F\setminus \{ a\} $. On a still smaller concentric sphere, $v&lt;0$ near $F$, and away from that neighborhood the positive lsc barrier $w$ has a positive lower bound. Choose $A$ so $v-Aw\le 0$ on that sphere. Subtracting a small positive fundamental pole at $a$ makes the boundary upper limit nonpositive at $a$ as well. The bounded-domain maximum principle gives $v\le Aw$ after the pole coefficient tends to zero. The upper limit of $v$ along the complement is at most zero and along $F$ at most $-1$, contradicting the canonical subharmonic value $v(a)=1$. The regularity equivalence now follows from the weak-barrier theorem on $\Omega \cap B(a,r)$ and the locality of finite boundary regularity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="classical-potential-theory-74F98C5E">
+<p><a class="environment-identifier" href="../../tag/DEAF5030EE5E/">Theorem <span data-tag="74F98C5E">26.4</span>.</a><span data-gerby-tag="74F98C5E"></span> If $a$ is a fine accumulation point of $E$ and $g$ has fine limit $\ell $ there, one fine neighborhood $V$ of $a$ satisfies $\lim _{E\cap V\setminus \{ a\} \ni y\to a}g(y)=\ell $ in the Euclidean topology. If a closed $F$ is thin at $a$, every positive superharmonic function on $B(a,r)\setminus F$ has an extended fine limit at $a$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply $\arctan $ to handle extended limits, and choose intervals $J_ j$ shrinking to the finite transformed limit. There are fine neighborhoods $V_ j$ on which $g\in J_ j$ along $E\setminus \{ a\} $. If infinitely many $V_ j$ are Euclidean neighborhoods the ordinary limit already exists. Otherwise discard finitely many and use amplified positive barriers $v_ j$ for their thin complements on a common ball. Choose $\alpha _ j&gt;0$ with $\sum \alpha _ jv_ j(a)&lt;\infty $. Put $F_ j=(B\setminus V_ j)\cap \{ \alpha _ jv_ j&gt;j\} $ and $F'=\bigcup F_ j$. The sum $v=\sum \alpha _ jv_ j$ tends to infinity along $F'$ at $a$: terms with $j\ge p$ are already above $p$, while each of the finitely many remaining terms is above $p$ sufficiently close to $a$ on its complement. Thus $F'$ is thin. Let $V$ be the fine interior of its complement. Choose an actual Euclidean neighborhood $O_ j$ of $a$ with $O_ j\setminus V_ j\subset \{ \alpha _ jv_ j&gt;j\} $. Then $O_ j\cap V\subset V_ j$, proving the ordinary limit on $E\cap V$. 
+    <p>
+      For the second assertion choose an amplified $u\ge 0$, finite at $a$, infinite along $F$ approaching $a$. If $\liminf _{y\to a,\, y\notin F}(v+u)(y)=\infty $, fine continuity of $u$ implies the fine limit of $v$ is infinity. Otherwise call this liminf $\lambda $ and take $k&gt;\lambda $. Near $a$, $u&gt;k$ on $F\setminus \{ a\} $. Paste $\min (v+u,k)$ off $F$ to the value $k$ on $F\setminus \{ a\} $. The boundary lower limits justify superharmonic pasting. It is bounded below and extends across the polar singleton, with canonical value $\lambda $ at $a$. Its fine neighborhood $\{ w&lt;k\} $ contains $a$; on its complement-of-$F$ portion $w=v+u$. Fine continuity of $w,u$ therefore gives the finite fine limit $\lambda -u(a)$ for $v$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-ED2AAB8DC124" data-section-entries="04CCB65ED650 A856D11F5895 ED2AAB8DC124"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/ED2AAB8DC124/">27 The Wiener criterion and planar continua</a></h2><span data-gerby-tag="CA3AC376"></span>
+
+<article class="env-theorem" id="classical-potential-theory-2DD9E98C">
+<p><a class="environment-identifier" href="../../tag/04CCB65ED650/">Theorem <span data-tag="2DD9E98C">27.1</span>.</a><span data-gerby-tag="2DD9E98C"></span> Every endpoint of a nondegenerate planar segment is a nonthin point of that segment. If the complement of a planar open set is thin at $a$, arbitrarily small circles centered at $a$ lie in the open set. Consequently a boundary point belonging to a nondegenerate continuum in the complement is regular. In particular every bounded simply connected planar domain is regular. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      An interior point of a segment is regular for a disk slit along the segment by the explicit exterior-segment barrier. The boundary nonthinness theorem therefore makes the segment nonthin at that point. If it were thin at an endpoint, reflect an amplified barrier across the endpoint and add the two barriers. The doubled segment would then be thin at its interior point, a contradiction. The radial projection $y\mapsto a+|y-a|e_1$ is a contraction preserving distances from $a$. If every sufficiently small circle met a thin complement, its projection would contain a nondegenerate segment ending at $a$, contradicting contraction invariance of thinness. Hence the required circles exist. An exterior continuum containing $a$ and another point $b$ meets every circle of radius less than $|a-b|$, by connectedness of its distance image. This contradicts the circle conclusion if the complement were thin. Nonthinness gives regularity. For the final assertion use the standard planar topological characterization of a simply connected domain: its complement in the sphere is connected. For a bounded domain this complement is a nondegenerate compact continuum containing infinity; its radial distance image at each finite boundary point meets every sufficiently small circle. The same argument applies directly on the sphere, without assuming a finite exterior arc. This planar topological characterization is an explicit topological prerequisite, not a new potential-theoretic premise. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+All following capacities use Helms's kernel and are relative to $B=B(a,1/2)$. Changing the small fixed ball or multiplying capacity by a fixed positive constant does not change convergence of the series. <article class="env-theorem" id="classical-potential-theory-BE9DEDF9">
+<p><a class="environment-identifier" href="../../tag/A856D11F5895/">Theorem <span data-tag="BE9DEDF9">27.2</span>.</a><span data-gerby-tag="BE9DEDF9"></span> For $\lambda &gt;1$, choose an integer $j_0\ge 1$ with $\lambda ^{j_0}&gt;\Phi (\tfrac 12e_1)$, and put </p>
+<div class="equation">
+  \[  E_ j=E\cap \{ y:\lambda ^ j\le \Phi (y-a)\le \lambda ^{j+1}\} ,\qquad j\ge j_0.  \]
+</div>
+<p> Then $E$ is thin at $a$ if and only if $\sum _{j\ge j_0}\lambda ^ j C^*(E_ j)&lt;\infty $. Each shell is then compactly contained in the capacity ball; changing $j_0$ discards only finitely many finite-capacity terms. For a Greenian $\Omega $ and finite $a\in \partial \Omega $, this series for $E=\mathbb R^ d\setminus \Omega $ converges exactly when $a$ is irregular. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We give the kernel and measure details used in both directions. If $U\Subset B$ is open, compact exhaustion and the equilibrium measures give a measure $\mu _ U$ on $\partial U$ with mass $C(U)$ and $G_ B\mu _ U=1$ on $U$. Indeed their masses are bounded by $C(\overline U)$; weak compactness gives a limit supported on $\partial U$, and for each interior $x$ the eventual supports avoid a neighborhood of $x$, so the continuous kernel can be tested there. A cutoff equal to one around $\overline U$ gives the limiting mass. Also, if $\nu $ is supported on a closed $F$ and $G_ B\nu \ge b$ quasi-everywhere on $F$, then $\nu (F)\ge b C_*(F)$. To see this, integrate against each compact equilibrium measure $\mu _ K$, $K\subset F$, use reciprocity and $G_ B\mu _ K\le 1$, and then take the compact supremum. 
+    <p>
+      Here is the uniform separated-shell estimate. For $\Phi (y-a)\in [\lambda ^ j,\lambda ^{j+1}]$ and $\Phi (z-a)\notin (\lambda ^{j-1},\lambda ^{j+2})$, 
+    
+<div class="equation">
+  \[  G_ B(y,z)\le \Phi (y-z)\le M_\lambda \Phi (z-a).  \]
+</div>
+<p>
+       In $d\ge 3$, the radii of the two shells differ by at least the fixed factor $\lambda ^{1/(d-2)}$; the reverse triangle inequality bounds $|y-z|$ below by a fixed positive multiple of $|z-a|$. In the plane, write the radii as $e^{-t}$. In the outer case their ratio is at most $q=e^{-(\lambda -1)}&lt;1$, hence $\log (1/|y-z|)\le \Phi (z-a)+\log (1/(1-q))$. In the inner case the same estimate with the variables reversed gives $\Phi (y-z)\le \lambda ^{-1}\Phi (z-a)+\log (1/(1-q))$. Since $z\in B$ gives $\Phi (z-a)\ge \log 2$, these are uniform ratio bounds. The same argument applies to shells of width three whose indices are separated by six. If $G_ B\nu (a)&lt;\infty $ and $\nu $ is finite, then $\int \Phi (z-a)d\nu =G_ B\nu (a)+\Phi (1/2)\nu (B)&lt;\infty $. Thus the potential contributed by all sufficiently separated shells is bounded by a constant independent of their index and target point. 
+    <p>
+      Suppose first the series converges. Choose open $U_ j\Supset E_ j$ with compact closure in $B$, avoiding $\{ \Phi &gt;\lambda ^{j+2}\} $, and $C(U_ j)\le C^*(E_ j)+\varepsilon _ j$, where $\sum \lambda ^ j\varepsilon _ j&lt;\infty $. Finite initial indices outside $B$ may be discarded. Their open equilibrium potentials $p_ j$ satisfy $p_ j=1$ on $U_ j$ and $p_ j(a)\le \lambda ^{j+2}C(U_ j)$. Hence $v_ k=\sum _{j\ge k}p_ j$ is superharmonic, finite at $a$, with $v_ k(a)\to 0$, while $v_ k\ge 1$ on all sufficiently near points of $E\setminus \{ a\} $. For large $k$ this is the strict-gap criterion. 
+    <p>
+      Conversely use an amplified thinness potential $v=G_ B\nu $, with $\nu $ finite and $v(a)&lt;\infty $. To obtain it on this fixed ball, first extend the local amplified barrier exactly to an entire superharmonic function, then restrict its Riesz measure to $B$. That measure is finite because the function is defined on a neighborhood of $\overline B$. The discarded harmonic function is bounded near $a$ and has no effect on the infinite approach. Remove $a$ from $E$ and discard empty shells. Set $b_ j=\min (j,\inf _{E_ j}v)$, so $b_ j$ is finite and tends to infinity. The Borel sets 
+    
+<div class="equation">
+  \[  U_ j=\{ v&gt;b_ j-1\} \cap \{ \lambda ^ j\le \Phi (\cdot -a)\le \lambda ^{j+1}\}   \]
+</div>
+<p>
+       contain $E_ j$ and are capacitable. Choose compact $K_ j\subset U_ j$ with $C(K_ j)&gt;C(U_ j)-\varepsilon _ j$, with summable weighted errors. Fix a residue class modulo six and put $K=\{ a\} \cup \bigcup K_{6j+p}$. This is compact. Its reduction $w=\widehat R_ Kv=G_ B\eta $ has $w(a)\le v(a)&lt;\infty $, is supported on $K$, and $\eta (\{ a\} )=0$. The separated-shell estimate bounds the contribution of all the other $K_{6k+p}$ at points of $K_{6j+p}$ by a fixed $\beta $. Since $w=v&gt;b_{6j+p}-1$ quasi-everywhere on that compact set, for all sufficiently large $j$ its own contribution is at least one quasi-everywhere. The preceding mass-capacity inequality gives $\eta (K_{6j+p})\ge C(K_{6j+p})$. Finally $\int \Phi (z-a)d\eta &lt;\infty $, so 
+    
+<div class="equation">
+  \[  \sum _ j\lambda ^{6j+p}C(K_{6j+p}) \le \sum _ j\lambda ^{6j+p}\eta (K_{6j+p})&lt;\infty .  \]
+</div>
+<p>
+       Apply this to all six classes, restore the summable errors, and use $C^*(E_ j)\le C(U_ j)$. This proves necessity. The last assertion is exactly the already proved equivalence between irregularity and thinness of the complement. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/C4F5D8B270EB/"><span>← Previous</span><small>Theorem 23.2</small></a><a class="pager-next" rel="next" href="../../tag/E00A8C634DA6/"><span>Next →</span><small>20 Perron solutions and completed harmonic measure</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-perron-theory-and-fine-boundary-limits,
+  author = {{Gerby contributors}},
+  title = {4.4 Perron theory and fine boundary limits},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/perron-theory-and-fine-boundary-limits/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/perron-theory-and-fine-boundary-limits/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fperron-theory-and-fine-boundary-limits%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fperron-theory-and-fine-boundary-limits%2F&amp;body=Page%3A+%5B4.4+Perron+theory+and+fine+boundary+limits%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fperron-theory-and-fine-boundary-limits%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+6e36bf0202700e26a79a1107506409f5dc67346b+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

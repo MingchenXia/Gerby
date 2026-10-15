@@ -10,8 +10,8 @@ The shared collection also requires neutral `entries.json` fragments and metadat
 
 `Math.jinja2s` overrides upstream math templates to escape TeX before HTML parsing. This preserves inequalities such as `$x<y$`; treating raw TeX as HTML would otherwise swallow adjacent mathematical text and links.
 
-`classical-potential-theory.py` prepares the selected article in the private
-Gerby-Literature repository through an explicit file allowlist. Its input graph
-and original article theorem numbering are checked; source PDFs and research
-records are excluded. The common renderer accepts a preparation callback and
-a subject for article sources without chapter headings.
+`classical-potential-theory.py` prepares the reviewed whole-book supplement
+from Gerby-Literature/main after the `codex/helms-whole-book` merge. An explicit 29-input
+allowlist excludes the private scan and research records. Preparation and
+record-transformation callbacks preserve article numbering, assign every label
+to a shared subject, and retain the original Kelvin and prerequisite tags.
