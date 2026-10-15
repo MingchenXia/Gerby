@@ -14,7 +14,7 @@ The page always offers direct GitHub discussion links. A service failure shows a
 
 ## Stable threads
 
-The repository rename preserves its repository and discussion-category IDs. Existing thread keys also remain unchanged: `comments.json` retains the original `Gerby` prefix to keep comments attached to their pages. Each thread is identified by `Gerby /<route>/`, using a canonical entry tag, chapter slug, or section slug. It is independent of page title and source revision. Old source URLs redirect to the canonical entry and therefore share that entry's comments.
+The project display name is Pome; repository and discussion-category IDs remain unchanged. Existing thread keys also remain unchanged: `comments.json` retains the original `Gerby` prefix to keep comments attached to their pages. Each thread is identified by `Gerby /<route>/`, using a canonical entry tag, chapter slug, or section slug. It is independent of page title and source revision. Old source URLs redirect to the canonical entry and therefore share that entry's comments.
 
 giscus uses strict matching with the SHA-1 marker of the thread identifier. The direct GitHub composition link includes the same marker and a link to the reading page, so a thread created through the fallback can later appear inline. Keep this hidden marker when editing a thread's original post.
 

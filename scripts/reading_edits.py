@@ -47,6 +47,8 @@ def attribution_markup(node):
         note.attrs = {'class': 'attribution-note'}
     for text in copy.find_all(string=re.compile(r'\\gerbyfootnotemark')):
         text.replace_with(re.sub(r'\\gerbyfootnotemark\{[^{}]+\}', '', text))
+    for text in list(copy.find_all(string=re.compile(r'\bGerby\b(?!-)'))):
+        text.replace_with(re.sub(r'\bGerby\b(?!-)', 'Pome', text))
     return str(copy)
 
 

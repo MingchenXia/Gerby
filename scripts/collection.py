@@ -475,12 +475,13 @@ def build_collection(books, destination, configuration):
         variants, texts = [], []
         for number, variant in enumerate(entry["variants"]):
             source, local = variant["source"], variant["tag"]
-            badge = f'<span data-gerby-tag="{local}"></span>'
             body = prepare_fragment(variant, source_tags, reference_map, root, anchors, reader.numbering, footnotes)
+            parsed_body = BeautifulSoup(body, "html.parser")
+            badge = '' if parsed_body.find(attrs={"data-gerby-tag": local}) else f'<span data-gerby-tag="{local}"></span>'
             if number:
                 body = '<details class="source-alternative"><summary>Read the alternative statement and proof</summary>' + body + '</details>'
             content += f'<section class="source-variant" data-gerby-book="{source}">{badge}{body}</section>'
-            texts.append(BeautifulSoup(body, "html.parser").get_text(" ", strip=True))
+            texts.append(parsed_body.get_text(" ", strip=True))
             variants.append({"book": source, "tag": local, "label": variant["label"], "revision": editions[source]["commit"]})
         if entry.get("section_intro"):
             fragments = {v["source"] + "-" + v["tag"]: v["source"] + "-" + v["tag"] for v in entry["components"]}
@@ -507,9 +508,10 @@ def build_collection(books, destination, configuration):
                 redirect(destination / "tag" / old / "index.html", destination / "tag" / tag / "index.html", destination, anchor=anchors.get((variant["source"], variant["tag"]), ""))
     source_list = '<h1>Sources</h1><p>Contributions share one chapter structure. Attribution and exact revisions remain available for every entry. These are working mathematical texts; inclusion does not certify a proof or a formalization.</p><ul class="entry-list">'
     for source, book in sources.items():
-        source_list += f'<li><a href="{source}/">{escape(book["title"])}</a> · {escape(book.get("author", ""))}</li>'
+        author = re.sub(r'\bGerby\b(?!-)', 'Pome', book.get('author', ''))
+        source_list += f'<li><a href="{source}/">{escape(book["title"])}</a> · {escape(author)}</li>'
         relevant = [entry for entry in entries.values() if any(v["source"] == source for v in entry["variants"])]
-        source_content = f'<p class="eyebrow">Source attribution</p><h1>{escape(book["title"])}</h1><p>{escape(book.get("author", ""))}</p><p>These contributions appear throughout the shared chapters.</p>'
+        source_content = f'<p class="eyebrow">Source attribution</p><h1>{escape(book["title"])}</h1><p>{escape(author)}</p><p>These contributions appear throughout the shared chapters.</p>'
         if book.get("visibility") == "private":
             source_content += '<p class="source-notice">This reading edition is published by permission. The source repository remains private; its revision links require access. Research files and source archives are not included.</p>'
         source_content += f'<p><a href="{escape(book["repository"])}/commit/{editions[source]["commit"]}">Source revision {editions[source]["commit"][:12]} ↗</a></p>'
