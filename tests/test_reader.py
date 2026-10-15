@@ -31,6 +31,7 @@ class ReaderTests(unittest.TestCase):
         return json.loads((root / "navigation.json").read_text())
 
     def test_chapters_list_sections_and_sections_show_full_statements(self):
+        self.config["topics"][0]["description"] = "A redundant section summary."
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self.build(root)
@@ -39,6 +40,7 @@ class ReaderTests(unittest.TestCase):
             self.assertFalse(chapter.select('main .reference-entry'))
             section = BeautifulSoup((root / "sections/alpha/index.html").read_text(), "html.parser")
             self.assertFalse(section.select('main .reference-entry'))
+            self.assertNotIn('A redundant section summary.', section.select_one('main').get_text())
             self.assertEqual(len(section.select('main .env-definition')), 2)
             self.assertEqual(section.select_one('html')['data-reading-mode'], 'continuous')
             self.assertIn('A statement.', section.select_one('main').get_text())

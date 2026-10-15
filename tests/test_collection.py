@@ -5,7 +5,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from collection import organize, prepare_fragment, statement_fingerprint, chapter_structure, check_links
+from collection import organize, prepare_fragment, statement_fingerprint, chapter_structure, check_links, redirect
 
 
 class CollectionTests(unittest.TestCase):
@@ -87,6 +87,16 @@ class CollectionTests(unittest.TestCase):
             (root / "index.html").write_text('<img src="missing.svg" alt="A diagram">')
             with self.assertRaisesRegex(ValueError, "Broken internal link"):
                 check_links(root)
+
+    def test_absorbed_heading_redirects_keep_clause_fragment_targets(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "assets").mkdir()
+            (root / "assets/redirect.js").touch()
+            (root / "section.html").write_text('<h1 id="intro">Analysis</h1><li id="source-clause">A condition.</li>')
+            redirect(root / "tag/index.html", root / "section.html", root, {"source-clause": "source-clause"}, anchor="#intro")
+            (root / "index.html").write_text('<a href="tag/#source-clause">The condition</a>')
+            check_links(root)
 
     def test_display_math_diagrams_become_real_images(self):
         html = r'\[ \gerbyimage{first/diagram.svg}{A diagram} \]'

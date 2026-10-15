@@ -8,6 +8,8 @@ Reader numbering belongs to Gerby's current organization, independently of the o
 
 A retained source heading below a Gerby section is a subsection. A heading that repeats its containing section's title is absorbed into that section. Its old tag URL redirects to the introduction inside the section, and its source metadata and content remain available. Chapter pages list sections and their retained subsections.
 
+Section titles are followed directly by reading content. Do not display topic metadata descriptions as small explanatory subtitles beneath them.
+
 The 15 October 2026 layout review subdivides 30 long subjects at 357 reviewed headings. It separates complex Hessian equations, Gauduchon variational volume, equations with prescribed singularities, and historical notes into their own chapters. The collection has 25 chapters and 435 sections. Future edits should review subject coherence and reading length, rather than copy these counts or impose a word limit without mathematical judgment.
 
 ## Generated locators
@@ -23,6 +25,8 @@ Equation labels sit beside their formulas in a two-column row. Long mathematics 
 ## Tags and verification
 
 Show tags reveals tags for all addressable reading structures, including chapters and sections. A section reuses its absorbed introductory heading's tag when available; otherwise its tag derives from its stable route. Chapter tags also derive from stable routes. Renumbering does not change these identifiers. Subsections, mathematical statements, equations, and logical clauses keep their existing tags. A structure tag identifies content; it does not assert formalization.
+
+Cite this page opens the citation panel immediately, including when clicked again with an existing `#cite` fragment. Direct citation links also expand the panel. Copy citation copies the displayed BibTeX entry; the permalink and title must identify the current reading page.
 
 Before publication, run:
 

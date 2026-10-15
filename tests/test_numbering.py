@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from collection import prepare_fragment, check_links
 from numbering import assign_numbers
 from reader import Reader, display_title
-from structure import arrange_sections
+from structure import arrange_sections, title_key
 
 
 class NumberingTests(unittest.TestCase):
@@ -73,6 +73,15 @@ class NumberingTests(unittest.TestCase):
         self.config["section_promotions"]["analysis"][0]["start"] = "DEADBEEF"
         with self.assertRaisesRegex(ValueError, "Missing or reordered"):
             self.arrange()
+
+    def test_a_promoted_heading_is_absorbed_even_with_an_editorial_title(self):
+        self.config["section_promotions"]["analysis"][0]["title"] = "Inversion and Kelvin transforms"
+        self.arrange()
+        self.assertTrue(self.entries["00000002"]["section_intro"])
+        self.assertEqual(self.entries["00000003"]["number"], "3.2.1")
+
+    def test_tex_styling_does_not_hide_a_duplicate_section_title(self):
+        self.assertEqual(title_key(r"Multiplier-ideal envelopes and $\mathcal I$-goodness"), title_key("Multiplier-ideal envelopes and I-goodness"))
 
     def test_build_check_rejects_stale_display_numbers(self):
         with tempfile.TemporaryDirectory() as temporary:

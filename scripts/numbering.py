@@ -30,7 +30,7 @@ def assign_numbers(chapters, entries):
                 entry["number"] = number
                 entry["reader_title"] = numbered_title(entry["variants"][0], number)
                 for variant in entry["variants"]:
-                    record = {"number": number, "title": numbered_title(variant, number), "section": variant.get("section", False), "tag": variant["tag"], "canonical_tag": entry["tag"], "math_row": variant.get("math_row", False)}
+                    record = {"number": number, "title": numbered_title(variant, number), "section": variant.get("section", False), "intro": entry.get("section_intro", False), "tag": variant["tag"], "canonical_tag": entry["tag"], "math_row": variant.get("math_row", False)}
                     for identifier in (variant["tag"], variant["label"], *variant.get("aliases", [])):
                         references[variant["source"], identifier] = record
                 # Clause numbers describe the logical list within a statement.
@@ -65,4 +65,5 @@ def renumber_markup(soup, source, references):
             if marker.name == "a" and record["section"]:
                 preceding = marker.previous_sibling
                 if isinstance(preceding, str):
-                    preceding.replace_with(re.sub(r"\b(?:chapter|section|subsection|subsubsection)(\s*)$", lambda m: ("Subsection" if m[0][0].isupper() else "subsection") + m[1], preceding, flags=re.I))
+                    name = "section" if record.get("intro") else "subsection"
+                    preceding.replace_with(re.sub(r"\b(?:chapter|section|subsection|subsubsection)(\s*)$", lambda m: (name.title() if m[0][0].isupper() else name) + m[1], preceding, flags=re.I))

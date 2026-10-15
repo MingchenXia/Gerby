@@ -373,7 +373,8 @@ def redirect(path, target, destination, fragments=None, anchor=""):
         relative = relative.removesuffix("index.html") or "./"
     relative += anchor
     assets = Path(os.path.relpath(destination / "assets", path.parent)).as_posix() + "/"
-    path.write_text(f'''<!doctype html><html lang="en" data-redirect="{escape(relative, quote=True)}" data-fragments='{escape(json.dumps(fragments or {}), quote=True)}'><head><meta charset="utf-8"><title>Continue to Gerby</title><link rel="canonical" href="{escape(relative, quote=True)}"><script defer src="{assets}redirect.js"></script></head><body><p>This content is part of the shared Gerby reference. <a href="{escape(relative, quote=True)}">Continue to the shared entry</a>.</p></body></html>''')
+    fragment_anchors = "".join(f'<span hidden id="{escape(identifier, quote=True)}"></span>' for identifier in (fragments or {}))
+    path.write_text(f'''<!doctype html><html lang="en" data-redirect="{escape(relative, quote=True)}" data-fragments='{escape(json.dumps(fragments or {}), quote=True)}'><head><meta charset="utf-8"><title>Continue to Gerby</title><link rel="canonical" href="{escape(relative, quote=True)}"><script defer src="{assets}redirect.js"></script></head><body>{fragment_anchors}<p>This content is part of the shared Gerby reference. <a href="{escape(relative, quote=True)}">Continue to the shared entry</a>.</p></body></html>''')
 
 
 def build_collection(books, destination, configuration):
@@ -423,9 +424,6 @@ def build_collection(books, destination, configuration):
     roots = source_roots(entries)
     for topic, section in reader.sections.items():
         content = f'<h1>{section["number"]} {escape(section["title"])}{tag_code(section["tag"])}</h1>'
-        description = topics[topic].get("description", "")
-        if description and description != "Definitions, results, and proofs on this subject.":
-            content += f'<p>{escape(description)}</p>'
         content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors, reader.numbering)
         write("sections/" + topic, content, section["title"], "../../")
         if section["tag"] not in entries:
@@ -469,7 +467,8 @@ def build_collection(books, destination, configuration):
             texts.append(BeautifulSoup(body, "html.parser").get_text(" ", strip=True))
             variants.append({"book": source, "tag": local, "label": variant["label"], "revision": editions[source]["commit"]})
         if entry.get("section_intro"):
-            redirect(destination / "tag" / tag / "index.html", destination / "sections" / entry["topic"] / "index.html", destination, anchor="#entry-" + tag)
+            fragments = {v["source"] + "-" + v["tag"]: v["source"] + "-" + v["tag"] for v in entry["components"]}
+            redirect(destination / "tag" / tag / "index.html", destination / "sections" / entry["topic"] / "index.html", destination, fragments, anchor="#entry-" + tag)
         else:
             write("tag/" + tag, content, display_title(entry), root)
         component_aliases = [value for v in entry["components"] for value in (v["tag"], v["label"])]
