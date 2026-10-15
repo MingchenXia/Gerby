@@ -22,6 +22,8 @@ All interface text and project documentation are in English. The source texts an
 
 The reading layout adapts to computers, tablets, and phones. Wide screens keep the chapter navigation beside the text; smaller screens offer an expandable chapter list, full-width reading, and touch-friendly search and navigation. Long equations and tables scroll within the page's reading column.
 
+The color palette follows the [Stacks Project](https://stacks.math.columbia.edu/): white pages, black text, blue links (`#1d5cb4`), and warm gray navigation (`#d9d8d1` and `#edece6`). Theme colors are defined in `site/assets/book.css` and shared across the collection.
+
 ## Formalization badges
 
 Every tagged statement displays a badge:
@@ -32,7 +34,7 @@ Every tagged statement displays a badge:
 | Pending verification | A proof repository is linked, but the current revision has not been verified. |
 | ✓ 0 sorry | The mapped declaration at the linked exact revision passed the recorded proof and axiom checks. |
 
-No formalization repositories have been supplied yet, so the collection currently shows **Not recorded**. A repository link alone cannot produce a green badge. New proof commits revert to pending until verified. See [the evidence requirements](documentation/formalizations.md).
+No formalization repositories have been supplied yet, so the collection currently shows **Not recorded**. A repository link alone cannot produce a verified badge. New proof commits revert to pending until verified. See [the evidence requirements](documentation/formalizations.md).
 
 ## Adding content
 

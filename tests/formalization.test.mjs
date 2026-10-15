@@ -21,6 +21,6 @@ test('verified records link to an immutable proof revision', () => {
   assert.match(badge.title, /Book.theorem_one/);
 });
 
-test('a verified label without an exact commit cannot produce a green badge', () => {
+test('a verified label without an exact commit cannot produce a verified badge', () => {
   assert.equal(badgeDetails({state: 'verified', commit: 'main'}).state, 'pending');
 });

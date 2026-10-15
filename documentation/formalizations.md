@@ -26,7 +26,7 @@ A verified record additionally requires:
 - `verification.checked_at`: an ISO 8601 UTC timestamp;
 - `verification.axioms`: the audited transitive axiom dependencies.
 
-For Lean, a successful build alone is insufficient: Lean can compile incomplete proofs. Check `#print axioms Declaration.name` and reject `sorryAx`, including dependencies. This project's green badge accepts only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` (or no axioms). Additional axioms require an explicit policy review instead of silently receiving a green badge. See the official [Lean proof validation guide](https://lean-lang.org/doc/reference/latest/ValidatingProofs/).
+For Lean, a successful build alone is insufficient: Lean can compile incomplete proofs. Check `#print axioms Declaration.name` and reject `sorryAx`, including dependencies. This project's verified badge accepts only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` (or no axioms). Additional axioms require an explicit policy review instead of silently receiving a verified badge. See the official [Lean proof validation guide](https://lean-lang.org/doc/reference/latest/ValidatingProofs/).
 
 No verified records are seeded. Proof repositories, mappings, and verifier configuration will be added when supplied. Metadata validation is not a substitute for executing and reviewing the proof check.
 

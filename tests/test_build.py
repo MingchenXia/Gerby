@@ -18,7 +18,7 @@ class RegistryTests(unittest.TestCase):
         build.validate({"version": 1, "books": []}, {"version": 1, "entries": []})
         build.validate(self.books, self.registry)
 
-    def test_no_green_badge_for_sorry_or_custom_axioms(self):
+    def test_no_verified_badge_for_sorry_or_custom_axioms(self):
         for axiom in ("sorryAx", "Book.assumed_theorem"):
             with self.subTest(axiom=axiom):
                 self.item["verification"]["axioms"] = [axiom]

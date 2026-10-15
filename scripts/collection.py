@@ -242,7 +242,7 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
 @cache
 def asset_revision():
     folder = Path(__file__).resolve().parents[1] / "site" / "assets"
-    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs")
+    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs", "favicon.svg")
     return sha256(b"".join((folder / name).read_bytes() for name in names)).hexdigest()[:12]
 
 
@@ -252,8 +252,8 @@ def shell(content, title, chapters, root=""):
     version = asset_revision()
     return f'''<!doctype html>
 <html lang="en" data-search-index="{root}search.json" data-collection-root="{root}">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(title)} · Gerby</title>
-<link rel="icon" href="{assets}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{assets}book.css?v={version}"><link rel="stylesheet" href="{assets}collection.css?v={version}"><link rel="stylesheet" href="{assets}formalization.css?v={version}">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><title>{escape(title)} · Gerby</title>
+<link rel="icon" href="{assets}favicon.svg?v={version}" type="image/svg+xml"><link rel="stylesheet" href="{assets}book.css?v={version}"><link rel="stylesheet" href="{assets}collection.css?v={version}"><link rel="stylesheet" href="{assets}formalization.css?v={version}">
 <script src="{assets}math-config.js?v={version}"></script><script defer src="{assets}mathjax/tex-chtml.js?v={version}"></script><script type="module" src="{assets}formalization.mjs?v={version}"></script><script type="module" src="{assets}collection.mjs?v={version}"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="{root}" aria-label="Gerby home">g <span>Gerby</span></a><nav aria-label="Primary"><a href="{root}chapters/">Chapters</a><a href="{root}entries/">All entries</a><a href="{root}sources/">Sources</a></nav></header>
 <div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
