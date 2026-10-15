@@ -358,7 +358,7 @@ def continuous_section(relevant, entries, roots, sources, source_tags, reference
         covered.update(represented)
         body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors, numbering)
         heading = f'<h2><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a>{tag_code(entry["tag"])}</h2>' if variant.get("section") and not entry.get("section_intro") else ""
-        badge = f'<span data-gerby-tag="{variant["tag"]}"></span>'
+        badge = f'<span data-gerby-tag="{variant["tag"]}">{tag_code(entry["tag"]) if entry.get("section_intro") else ""}</span>'
         chunks.append(f'<section class="reading-chunk" id="entry-{entry["tag"]}" data-section-entries="{" ".join(sorted(represented))}"><div class="source-variant" data-gerby-book="{source}">{heading}{badge}{body}</div></section>')
     expected = {entry["tag"] for entry in relevant}
     if covered != expected:

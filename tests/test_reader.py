@@ -146,6 +146,23 @@ class ReaderTests(unittest.TestCase):
             self.assertTrue(soup.select_one('#section-comments a'))
             check_links(root)
 
+    def test_chapters_sections_and_subsections_expose_working_tag_routes(self):
+        self.records.insert(0, {"tag": "00000010", "label": "sec:inversion", "title": "4 Inversion", "caption": "Inversion", "number": "4", "kind": "section", "topic": "Alpha", "section": True, "html": '<h2 id="sec:inversion"><span data-tag="00000010">4</span> Inversion</h2><p>Opening explanation.</p>'})
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.build(root)
+            collection = json.loads((root / 'collection.json').read_text())
+            for structure in [*collection['chapters'], *collection['topics']]:
+                self.assertTrue((root / 'tag' / structure['tag'] / 'index.html').is_file())
+            chapter = BeautifulSoup((root / 'chapters/first/index.html').read_text(), 'html.parser')
+            self.assertTrue(chapter.select_one('main h1 .tag-id'))
+            self.assertEqual(chapter.select_one('main .subsection-list a').get_text(), '1.1.1 Inversion')
+            self.assertTrue(chapter.select_one('main .subsection-list .tag-id'))
+            section = BeautifulSoup((root / 'sections/alpha/index.html').read_text(), 'html.parser')
+            self.assertTrue(section.select_one('main h1 .tag-id'))
+            self.assertTrue(section.select_one('.section-reading h2 .tag-id'))
+            check_links(root)
+
     def test_labels_are_searchable_but_not_reader_headings_or_result_titles(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

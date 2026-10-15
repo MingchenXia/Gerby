@@ -10,7 +10,7 @@ A retained source heading below a Gerby section is a subsection. A heading that 
 
 Section titles are followed directly by reading content. Do not display topic metadata descriptions as small explanatory subtitles beneath them.
 
-The 15 October 2026 layout review subdivides 30 long subjects at 357 reviewed headings. It separates complex Hessian equations, Gauduchon variational volume, equations with prescribed singularities, and historical notes into their own chapters. The collection has 25 chapters and 435 sections. Future edits should review subject coherence and reading length, rather than copy these counts or impose a word limit without mathematical judgment.
+The 15 October 2026 layout review subdivides 36 section groups at 413 reviewed headings. It separates complex Hessian equations, Gauduchon variational volume, equations with prescribed singularities, and historical notes into their own chapters. The collection has 25 chapters and 491 sections. Future edits should review subject coherence and reading length, rather than copy these counts or impose a word limit without mathematical judgment.
 
 ## Generated locators
 

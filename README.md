@@ -16,7 +16,7 @@ The collection integrates four sources, tracking their `main` branches:
 
 Only each manuscript's active input graph is included. Excluded drafts and private research material are not exported.
 
-The collection has **25 shared chapters**, ordered by mathematical subject across the books, with 435 sections inside them. Chapter 1 contains only conventions; manuscript prefaces, acknowledgments, introductions, and part overviews are omitted. Reader numbering follows the current Gerby chapters and sections; source metadata and exact revisions are collected under Sources rather than repeated beside every statement. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
+The collection has **25 shared chapters**, ordered by mathematical subject across the books, with 491 sections inside them. Chapter 1 contains only conventions; manuscript prefaces, acknowledgments, introductions, and part overviews are omitted. Reader numbering follows the current Gerby chapters and sections; source metadata and exact revisions are collected under Sources rather than repeated beside every statement. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
 
 Reviewed duplicates have one canonical entry and one search result. Alternative source wording, proofs, and formalization badges remain accessible within that entry. Numbered clauses stay inside their parent statements, retaining their own tags and badges. `collection.json` records each reviewed statement fingerprint: a changed statement requires a new review before it can be merged again. Results with different hypotheses remain separate.
 
