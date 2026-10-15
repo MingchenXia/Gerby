@@ -1,0 +1,506 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--vanishing-lower-mass/"><title>12.19 Vanishing lower mass · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--vanishing-lower-mass/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/gauduchon-variational-volume/">Chapter 12: Gauduchon variational volume</a></li><li><a href="../../sections/a-gauduchon-variational-volume--vanishing-lower-mass/" aria-current="page">Section 12.19: Vanishing lower mass</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/a-gauduchon-variational-volume/"><span>12.1</span> A Gauduchon variational volume</a><code class="tag-id">881C26425D7A</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-quotient-and-the-smooth-equation/"><span>12.2</span> The quotient and the smooth equation</a><code class="tag-id">43BF29E33E59</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-equality-case-of-concavity-and-the-first-variation/"><span>12.3</span> The equality case of concavity and the first variation</a><code class="tag-id">484879715C58</code></li><li><a href="../../sections/a-gauduchon-variational-volume--second-variation-on-background-classes/"><span>12.4</span> Second variation on background classes</a><code class="tag-id">8A687EAB6B68</code></li><li><a href="../../sections/a-gauduchon-variational-volume--recovering-a-positive-class-from-its-gauduchon-derivative/"><span>12.5</span> Recovering a positive class from its Gauduchon derivative</a><code class="tag-id">9141861B4F50</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/"><span>12.6</span> The Hessian metric and its completion</a><code class="tag-id">466CEDF9AEBA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-compact-dual-problem-over-gauduchon-currents/"><span>12.7</span> A compact dual problem over Gauduchon currents</a><code class="tag-id">54ADA5D399DA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--supporting-probabilities-represented-by-maximizing-currents/"><span>12.8</span> Supporting probabilities represented by maximizing currents</a><code class="tag-id">7C2BB0FDDDF5</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrability-of-gauduchon-determinant-measures/"><span>12.9</span> Integrability of Gauduchon determinant measures</a><code class="tag-id">D02094988A03</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/"><span>12.10</span> Integrable densities in the compact Gauduchon problem</a><code class="tag-id">5CB8CFC32A19</code></li><li><a href="../../sections/a-gauduchon-variational-volume--nef-limits-and-nonattainment/"><span>12.11</span> Nef limits and nonattainment</a><code class="tag-id">EA449D56F8F7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-with-a-closed-nef-core/"><span>12.12</span> Subtraction with a closed nef core</a><code class="tag-id">75F31FAA4616</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-on-warped-products/"><span>12.13</span> Subtraction on warped products</a><code class="tag-id">EA9388E29ABC</code></li><li><a href="../../sections/a-gauduchon-variational-volume--positive-volume-without-bigness/"><span>12.14</span> Positive volume without bigness</a><code class="tag-id">E4AB7B03C20D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--varying-the-probability-measure/"><span>12.15</span> Varying the probability measure</a><code class="tag-id">8B161DDAE77F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-conditions-for-mass-extrema/"><span>12.16</span> Curvature conditions for mass extrema</a><code class="tag-id">A57EC3129CC8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-pairs-and-positive-lower-mass/"><span>12.17</span> Curvature pairs and positive lower mass</a><code class="tag-id">C18EABD7D630</code></li><li><a href="../../sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/"><span>12.18</span> Geometric bounds and determinant concentration</a><code class="tag-id">AA652CC345D8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--vanishing-lower-mass/" aria-current="page"><span>12.19</span> Vanishing lower mass</a><code class="tag-id">108F40B2DFAA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary/"><span>12.20</span> Orders of degeneration at the nef boundary</a><code class="tag-id">3567ADAA7365</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--elliptic-surface-volumes-and-order-spectra/"><span>12.21</span> Elliptic surface volumes and order spectra</a><code class="tag-id">E4B29689FB79</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--comparison-under-an-arbitrary-modification/"><span>12.22</span> Comparison under an arbitrary modification</a><code class="tag-id">9BED3D691F82</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--strict-changes-under-one-blowup/"><span>12.23</span> Strict changes under one blowup</a><code class="tag-id">D0D47B7389D7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--positive-current-subtraction-and-divisorial-residuals/"><span>12.24</span> Positive-current subtraction and divisorial residuals</a><code class="tag-id">57C0ECEB4F4C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--integer-orders-in-fixed-projective-cones/"><span>12.25</span> Integer orders in fixed projective cones</a><code class="tag-id">E6D8A97F4D2C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--a-maximum-rank-comparison-criterion/"><span>12.26</span> A maximum-rank comparison criterion</a><code class="tag-id">493311C8FB2F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-anticanonical-curves/"><span>12.27</span> Flat anticanonical curves</a><code class="tag-id">0E9176045572</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-divisors-and-hartogs-extension/"><span>12.28</span> Flat divisors and Hartogs extension</a><code class="tag-id">25D1457FC429</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--punctured-line-bundles-and-elliptic-quotients/"><span>12.29</span> Punctured line bundles and elliptic quotients</a><code class="tag-id">76F771FE4DA3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-torsors-on-split-elliptic-ruled-surfaces/"><span>12.30</span> Cotangent torsors on split elliptic ruled surfaces</a><code class="tag-id">E4B698D2AEE3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--symmetric-tensors-on-split-elliptic-ruled-surfaces/"><span>12.31</span> Symmetric tensors on split elliptic ruled surfaces</a><code class="tag-id">7CF6C47CAA92</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--section-algebras-of-cotangent-extensions/"><span>12.32</span> Section algebras of cotangent extensions</a><code class="tag-id">72E247F3A7CA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-extensions-with-zero-ruling-component/"><span>12.33</span> Cotangent extensions with zero ruling component</a><code class="tag-id">C9CE007F34A7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/"><span>12.34</span> Current tests for smooth positivity</a><code class="tag-id">509A5021C77D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/"><span>12.35</span> Divisorial constraints and residual volume</a><code class="tag-id">269CE892EA5B</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-divisorial-threshold-on-the-hopf-threefold/"><span>12.36</span> A divisorial threshold on the Hopf threefold</a><code class="tag-id">7F944D8C8D92</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--vanishing-lower-mass/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--vanishing-lower-mass/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/6072DDDAB57F/"><span>← Previous</span><small>Theorem 12.18.17</small></a><a class="pager-next" rel="next" href="../../tag/38D9206B1A2F/"><span>Next →</span><small>Theorem 12.19.1</small></a></nav><h1>12.19 Vanishing lower mass<code class="tag-id">108F40B2DFAA</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-108F40B2DFAA" data-section-entries="108F40B2DFAA 38D9206B1A2F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="EC5DD50E"><code class="tag-id">108F40B2DFAA</code></span>
+<p>
+By (<a data-tag="DE55D25C" href="../../tag/AE720210AADD/">12.15.5</a>), the lower mass $v_-(h)$ vanishes as soon as there are Gauduchon metrics $\eta $ whose degrees $\int _ Xh\wedge \eta ^{n-1}$ stay bounded while their volumes $\int _ X\eta ^ n$ tend to infinity. We construct such metrics on a compact threefold. Writing $\Gamma =\eta ^2$, the volume of $\eta $ is a determinant integral of the coefficient matrix of the positive $\mathrm{dd}^{\mathrm{c}}$-closed form $\Gamma $. The construction first concentrates the trace of a normalized form $\Gamma $ in one direction near a hypersurface, and then adds an average of compact rational curves that fills the two complementary directions. The degree stays bounded, while the determinant, and hence the volume of the positive root, becomes large. The smooth equation then converts these metrics into potentials whose masses tend to zero. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-C504D1D4">
+<p><a class="environment-identifier" href="../../tag/38D9206B1A2F/">Theorem <span data-tag="C504D1D4">12.19.1</span>.</a><span data-gerby-tag="C504D1D4"><code class="tag-id">38D9206B1A2F</code></span> There is a connected compact complex threefold $X$ such that, for every Hermitian form $h$ on $X$, there are smooth real functions $u_ j$ satisfying </p>
+<div class="equation">
+  \[  h+\mathrm{dd}^{\mathrm{c}}u_ j&gt;0,\qquad \sup _ Xu_ j=0,\qquad \int _ X(h+\mathrm{dd}^{\mathrm{c}}u_ j)^3\longrightarrow 0.  \]
+</div>
+<p> In particular, $v_-(h)=0$ for every Hermitian form $h$ on this manifold. </p>
+</article>
+
+</div></section><section class="reading-chunk" id="entry-1DD06E8B2862" data-section-entries="1DD06E8B2862 388DD0213040 444A78EADE47 669B72559DF9"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/1DD06E8B2862/">12.19.2 The elliptic quotient</a><code class="tag-id">1DD06E8B2862</code></h2><span data-gerby-tag="6BE59185"></span>
+<p>
+Write points of $\mathbb P^3$ as $[z:w]$, with $z,w\in \mathbb C^2$, and set 
+</p>
+<div class="equation">
+  \[  \Omega =\{ [z:w]:z\ne 0,\  w\ne 0\} ,\qquad q=\mathrm{e}^{2\pi },\qquad g[z:w]=[z:qw].  \]
+</div>
+<p>
+ Thus $g$ is an automorphism of $\Omega $; let $\langle g\rangle $ be the cyclic group it generates. This group acts freely. Indeed, if $g^ k$ fixed a point, the same scalar would have to equal $1$ on the nonzero block $z$ and $q^ k$ on the nonzero block $w$, which forces $k=0$. 
+</p>
+<p>
+ The function 
+</p>
+<div class="equation">
+  \[  t=\log \frac{\| w\| ^2}{\| z\| ^2}  \]
+</div>
+<p>
+ is well defined on $\Omega $ and satisfies $t\circ g=t+4\pi $. Consequently the action is properly discontinuous: $t$ is bounded on compact subsets, so only finitely many translates of one compact set can meet another. Moreover, the strip $\{ 0\leq t\leq 4\pi \} $ is compact. In homogeneous coordinates of total norm one, its defining inequalities bound both blocks away from zero, so it is a closed subset of $\mathbb P^3$ contained in $\Omega $. Since the strip meets every orbit, 
+</p>
+<div class="equation">
+  \[  X=\Omega /\langle g\rangle  \]
+</div>
+<p>
+ is a connected compact complex threefold. 
+</p>
+<p>
+The map $[z:w]\mapsto ([z],[w])$ induces a holomorphic submersion $X\to \mathbb P^1\times \mathbb P^1$. Using a logarithm of the scalar relating two points with the same image, one sees that its fibers are the elliptic curves $E=\mathbb C/(2\pi \mathbb Z+2\pi \mathrm{i}\mathbb Z)$. Let $\alpha ,\beta $ be the pullbacks of the Fubini–Study forms of the two factors, each normalized to have integral one. Although $t$ does not descend to $X$, its differentials $\mathrm dt$ and $\mathrm d^{\mathrm c}t$ do. The form 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-EE0EE26F"><span data-gerby-tag="EE0EE26F"><code class="tag-id">444A78EADE47</code></span>
+<span class="equation-label"><a data-tag="EE0EE26F" href="../../tag/444A78EADE47/">12.19.3</a></span>
+<div>\begin{equation}  \omega =\alpha +\beta +\mathrm{d}t\wedge \mathrm d^{\mathrm c}t \end{equation}</div>
+</div>
+<p>
+ is Hermitian: $\alpha +\beta $ is semipositive with kernel the vertical line, while $\mathrm{d}t\wedge \mathrm d^{\mathrm c}t$ is semipositive and strictly positive on the vertical line. 
+</p>
+<p>
+ On the open set $\{ z_0w_0\ne 0\} $ we use the coordinates 
+</p>
+<div class="equation">
+  \[  x=\frac{z_1}{z_0},\qquad y=\frac{w_1}{w_0},\qquad \zeta =\log \frac{w_0}{z_0}\in E.  \]
+</div>
+<p>
+ Near $0\in E$, the last coordinate is represented by an ordinary complex number. For any one of these coordinates, denoted by $v$, put $\sigma _ v=\frac{\mathrm{i}}{2\pi }\mathrm{d}v\wedge \mathrm{d}\bar v$. Choose a smooth probability density $p$ relative to $\sigma _ v$ that is positive on $\{ |v|&lt;1\} $ and vanishes on $\{ |v|\geq 1\} $. Choose also a smooth function $\chi _0$ with values in $[0,1]$, supported in $\{ |v|&lt;1\} $ and equal to one on $\{ |v|\leq 1/2\} $, and write $\chi (x,y)=\chi _0(x)\chi _0(y)$. For $0&lt;\delta &lt;1/100$ define 
+</p>
+<div class="equation">
+  \[  B_\delta =\chi (x,y)\delta ^{-2}p(\zeta /\delta )\sigma _\zeta ,  \]
+</div>
+<p>
+ extended by zero. This is a smooth semipositive $(1,1)$-form on $X$, because the chosen functions are smooth with compact support in their coordinate domains. As $\delta \downarrow 0$ it concentrates on the hypersurface $\{ \zeta =0\} $. 
+</p>
+<p>
+The first step shows that normalized positive $\mathrm{dd}^{\mathrm{c}}$-closed $(2,2)$-forms can pair arbitrarily strongly with $B_\delta $. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C0F79A8C">
+<p><a class="environment-identifier" href="../../tag/669B72559DF9/">Lemma <span data-tag="C0F79A8C">12.19.4</span>.</a><span data-gerby-tag="C0F79A8C"><code class="tag-id">669B72559DF9</code></span> For $\delta &gt;0$ put </p>
+<div class="equation">
+  \[  C_\delta =\sup \left\{ \int _ XB_\delta \wedge \Theta : \Theta &gt;0,\  \mathrm{dd}^{\mathrm{c}}\Theta =0,\  \int _ X\omega \wedge \Theta =1\right\} ,  \]
+</div>
+<p> the supremum being taken over smooth real $(2,2)$-forms $\Theta $. These numbers are finite and tend to infinity as $\delta \downarrow 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For fixed $\delta $, choose a constant $M_\delta &gt;0$ with $B_\delta \leq M_\delta \omega $; this shows that $C_\delta \leq M_\delta $. Suppose instead that $C_{\delta _ l}\leq C$ along a sequence $\delta _ l\to 0$. Then $\int _ X(C\omega -B_{\delta _ l})\wedge \Theta \geq 0$ for every admissible $\Theta $, and in particular for the squares of Gauduchon metrics. By theorem <a data-tag="87DC00D0" href="../../tag/88BE3B63D9E5/">11.6.1</a>, there are quasi-plurisubharmonic functions $v_ l$ such that 
+    
+<div class="equation">
+  \[  C\omega +\mathrm{dd}^{\mathrm{c}}v_ l\geq B_{\delta _ l},\qquad \sup _ Xv_ l=0.  \]
+</div>
+<p>
+       By theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">5.25.2</a>, a subsequence converges in $L^1$ to a $C\omega $-plurisubharmonic function $v$, not identically $-\infty $. Since $\delta ^{-2}p(\zeta /\delta )\sigma _\zeta $ is an approximate identity in the variable $\zeta $, 
+    
+<div class="equation">
+  \[  B_{\delta _ l}\rightharpoonup \chi [\zeta =0],\qquad C\omega +\mathrm{dd}^{\mathrm{c}}v\geq \chi [\zeta =0].  \]
+</div>
+<p>
+       On a coordinate ball where $\chi =1$, add to $v$ a smooth strictly plurisubharmonic function whose complex Hessian dominates $C\omega $. The resulting plurisubharmonic function has a current that dominates $[\zeta =0]$, so its Lelong number is at least one at every point of an open subset of this hypersurface. Smooth corrections do not change Lelong numbers, so the same holds for $v$. Siu's analyticity theorem, recalled in <a data-tag="86D804B1" href="../../tag/E911F3E2C8E9/">5.34.2</a>, shows that $Z=\{ \nu (v,\cdot )\geq 1\} $ is an analytic subset of $X$. It is a proper subset because $v$ is not identically $-\infty $. 
+    <p>
+      Let $\widetilde Z$ be the inverse image of $Z$ in $\Omega $. It contains an open subset of $H_0\cap \Omega $, where $H_0=\{ w_0=z_0\} $. This surface is a projective plane with two points removed, so it is connected and irreducible, and the identity principle gives $H_0\cap \Omega \subset \widetilde Z$. Since $\widetilde Z$ is invariant under $g$, also 
+    
+<div class="equation">
+  \[  H_ k\cap \Omega \subset \widetilde Z,\qquad H_ k=\{ w_0=q^ kz_0\} , \qquad k\in \mathbb Z.  \]
+</div>
+<p>
+       Now use the chart $z_1=1$ near the point $[0:1:1:0]\in \Omega $. There $H_ k$ is the graph $z_0=q^{-k}w_0$. For each fixed $(w_0,w_1)$ near $(1,0)$, every local holomorphic defining function of $\widetilde Z$ vanishes at the distinct values $z_0=q^{-k}w_0$, which tend to zero as $k\to +\infty $. The one-variable identity theorem makes each defining function vanish identically on a polydisk. Thus $\widetilde Z$ contains a nonempty open subset of the connected manifold $\Omega $, contradicting properness. Hence no subsequence of $C_\delta $ stays bounded as $\delta \downarrow 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+By the lemma we can choose $\delta _ j\downarrow 0$, each smaller than half its predecessor, and then, by the definition of the supremum, smooth strictly positive $\mathrm{dd}^{\mathrm{c}}$-closed $(2,2)$-forms $\Theta _ j$ with 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-EB0AB332"><span data-gerby-tag="EB0AB332"><code class="tag-id">388DD0213040</code></span>
+<span class="equation-label"><a data-tag="EB0AB332" href="../../tag/388DD0213040/">12.19.5</a></span>
+<div>\begin{equation}  \int _ X\omega \wedge \Theta _ j=1,\qquad J_ j=\int _ XB_{\delta _ j}\wedge \Theta _ j&gt;j^4. \end{equation}</div>
+</div>
+</div></section><section class="reading-chunk" id="entry-57556869C08A" data-section-entries="3DC335D33654 40DB573E7C1E 57556869C08A 79DFF8AF8DCA BE92C16DAFFD E994975CCA57"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/57556869C08A/">12.19.6 Averaging the trace and compact curves</a><code class="tag-id">57556869C08A</code></h2><span data-gerby-tag="AAB746AB"></span>
+<p>
+A large pairing with $B_{\delta _ j}$ means that $\Theta _ j$ has a large coefficient in one direction, but possibly only on a small set. Averaging by translations spreads this coefficient over a whole product region of size comparable to $\delta _ j$ in the vertical direction. A second average, this time of compact rational curves, fills the two complementary directions, which is needed for a lower bound on a determinant. Fix $j$ and write $\delta =\delta _ j$. 
+</p>
+<p>
+For complex parameters $a,b,\tau $, the automorphisms 
+</p>
+<div class="equation">
+  \[  T_{a,b,\tau }[z_0:z_1:w_0:w_1] =[z_0:z_1+az_0:\mathrm{e}^{\tau }w_0: \mathrm{e}^{\tau }(w_1+bw_0)]  \]
+</div>
+<p>
+ of $\Omega $ commute with $g$, and in the product chart they act by $(x,y,\zeta )\mapsto (x+a,y+b,\zeta +\tau )$.  Average $T_{a,b,\tau }^*\Theta _ j$ against the probability density 
+</p>
+<div class="equation">
+  \[  3^{-4}p(a/3)p(b/3)(3\delta )^{-2}p(\tau /(3\delta )) \sigma _ a\wedge \sigma _ b\wedge \sigma _\tau ,  \]
+</div>
+<p>
+ and denote the result by $\widehat\Theta _ j$. It is smooth, strictly positive and $\mathrm{dd}^{\mathrm{c}}$-closed. The parameters range in a fixed compact set of automorphisms, so $(T_{a,b,\tau }^{-1})^*\omega \leq C\omega $ with one constant $C$, and a change of variables gives 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-BD0C1F9D"><span data-gerby-tag="BD0C1F9D"><code class="tag-id">E994975CCA57</code></span>
+<span class="equation-label"><a data-tag="BD0C1F9D" href="../../tag/E994975CCA57/">12.19.7</a></span>
+<div>\begin{equation}  \int _ X\omega \wedge \widehat\Theta _ j\leq C. \end{equation}</div>
+</div>
+<p>
+Let $F_ j$ be the coefficient of $\sigma _ x\wedge \sigma _ y$ in the restriction of $\Theta _ j$ to the slices $\{ \zeta =\text{constant}\} $, and let $\widehat F_ j$ be the corresponding coefficient of $\widehat\Theta _ j$. Positivity gives $F_ j\geq 0$, and since the translations preserve $\sigma _ x\wedge \sigma _ y$, $\widehat F_ j$ is an average of translates of $F_ j$. At a point of 
+</p>
+<div class="equation">
+  \[  V_ j=\{ |x|,|y|&lt;1/4,\  |\zeta |&lt;\delta /4\} ,  \]
+</div>
+<p>
+ every translation carrying it into $\operatorname {supp}B_\delta $ has $|a|,|b|\leq 5/4$ and $|\tau |\leq 5\delta /4$. On this range the first two averaging factors are bounded below by a positive constant, and the third by a positive constant times $\delta ^{-2}$. On the other hand, $\chi \leq 1$ and $p$ is bounded, so the number $J_ j$ of (<a data-tag="EB0AB332" href="../../tag/388DD0213040/">12.19.5</a>) is at most a constant times $\delta ^{-2}$ times the integral of $F_ j$ over $\operatorname {supp}B_\delta $. Comparing the two integrals gives 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-336550A9"><span data-gerby-tag="336550A9"><code class="tag-id">79DFF8AF8DCA</code></span>
+<span class="equation-label"><a data-tag="336550A9" href="../../tag/79DFF8AF8DCA/">12.19.8</a></span>
+<div>\begin{equation}  \widehat F_ j\geq cJ_ j\quad \hbox{on }V_ j, \end{equation}</div>
+</div>
+<p>
+ with $c&gt;0$ independent of $j$. 
+</p>
+<p>
+The second average fills the two horizontal directions. Put 
+</p>
+<div class="equation">
+  \[  f(a,b)=p(4(a-1))p(b/2),\qquad \rho _ j(\tau )=4\delta ^{-2}p(2\tau /\delta ).  \]
+</div>
+<p>
+ For parameters in the supports of these functions and $|u|\leq 1/16$, consider the holomorphic maps $\iota _{\tau ,u,a,b}:\mathbb P^1\to X$ defined by 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-53056D76"><span data-gerby-tag="53056D76"><code class="tag-id">BE92C16DAFFD</code></span>
+<span class="equation-label"><a data-tag="53056D76" href="../../tag/BE92C16DAFFD/">12.19.9</a></span>
+<div>\begin{equation}  \iota _{\tau ,u,a,b}[z_0:z_1] =[z_0:z_1:\mathrm{e}^{\tau }(z_0+uz_1): \mathrm{e}^{\tau }(az_1+bz_0)]\in X. \end{equation}</div>
+</div>
+<p>
+ For $0&lt;\varepsilon \leq 1/16$, average their integration currents against 
+</p>
+<div class="equation">
+  \[  \rho _ j(\tau )f(a,b)\varepsilon ^{-2}p(u/\varepsilon ) \sigma _\tau \wedge \sigma _ a\wedge \sigma _ b\wedge \sigma _ u,  \]
+</div>
+<p>
+ and call the result $T_{j,\varepsilon }$. Define $T_{j,0}$ in the same way, but with $u=0$ and without the integral over $u$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-DF3A79AE">
+<p><a class="environment-identifier" href="../../tag/40DB573E7C1E/">Lemma <span data-tag="DF3A79AE">12.19.10</span>.</a><span data-gerby-tag="DF3A79AE"><code class="tag-id">40DB573E7C1E</code></span> For $\varepsilon &gt;0$, the form $T_{j,\varepsilon }$ is smooth on $X$, semipositive and closed, and </p>
+<div class="equation">
+  \[  \int _ X\omega \wedge T_{j,\varepsilon }\leq C'  \]
+</div>
+<p> with $C'$ independent of $j$ and $\varepsilon $. For each fixed $j$, $T_{j,\varepsilon }$ converges smoothly to $T_{j,0}$ on compact subsets of the product chart as $\varepsilon \downarrow 0$. In this chart </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-FA6811E1"><span data-gerby-tag="FA6811E1"><code class="tag-id">3DC335D33654</code></span>
+<span class="equation-label"><a data-tag="FA6811E1" href="../../tag/3DC335D33654/">12.19.11</a></span>
+<div>\begin{equation}  T_{j,0}=\rho _ j(\zeta )\sigma _\zeta \wedge K_ f,\qquad K_ f=\int _\mathbb Cf(a,y-ax)\frac{\mathrm{i}}{2\pi } (\mathrm{d}y-a\, \mathrm{d}x)\wedge (\mathrm{d}\bar y-\bar a\, \mathrm{d}\bar x)\, \sigma _ a, \end{equation}</div>
+</div>
+<p> and on $\{ |x|,|y|\leq 1/4\} $ the form $K_ f$ is bounded below by a positive multiple of $\sigma _ x+\sigma _ y$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On the parameter supports, $|a-bu|\geq 3/4-2/16=5/8$. Hence the matrix $\left(\begin{smallmatrix}1&amp; u\\ b&amp; a\end{smallmatrix}\right)$ is uniformly invertible, and the projective line (<a data-tag="53056D76" href="../../tag/BE92C16DAFFD/">12.19.9</a>) lies in $\Omega $. Distinct deck translates of this line are disjoint: equality at a point fixes $[z_0:z_1]$, and invertibility of the matrix then forces the deck scalar to be one. Thus each map is an embedding onto a compact rational curve in $X$. 
+    <p>
+      The evaluation map from $\mathbb P^1$ times the open parameter domain to $X$ is a holomorphic submersion. Indeed, after fixing a projective gauge, variations of $u$ and $a$ span the two $w$-coordinates at points with $z_1\ne 0$, variations of $\tau $ and $b$ span them at points with $z_1=0$, and the coordinate on $\mathbb P^1$ supplies the remaining direction. For $\varepsilon &gt;0$, the average is the integral along the fibers of this submersion of a smooth compactly supported parameter density, which proves smoothness. As an average of closed positive integration currents, $T_{j,\varepsilon }$ is closed and semipositive. 
+    <p>
+      All curve parameters lie in one compact subset of the domain where the matrix is invertible, so the $\omega $-areas of the curves are uniformly bounded. The weights in $\tau $ and $u$ have mass one, and the weight in $(a,b)$ has a fixed finite mass. This proves the degree bound. 
+    <p>
+      When $u=0$, the curve is given in the product chart by $\zeta =\tau $ and $y=ax+b$. Integrating in $b$ and $\tau $ yields (<a data-tag="FA6811E1" href="../../tag/3DC335D33654/">12.19.11</a>); the $(1,1)$-factor there is the integration current of the graph of $y=ax+b$. On $\{ |x|,|y|\leq 1/4\} $, the density $f(a,y-ax)$ is bounded below by a positive constant for $a$ in a fixed small disk about $1$. The covectors $\mathrm{d}y-a\, \mathrm{d}x$, for $a$ in that disk, have no common nonzero annihilator, so integrating their squared absolute values and using compactness of the unit sphere in the $(x,y)$-directions gives the asserted lower bound. 
+    <p>
+      For general $u$, the curve is given by 
+    
+<div class="equation">
+  \[  \zeta =\tau +\log (1+ux),\qquad y=\frac{ax+b}{1+ux}.  \]
+</div>
+<p>
+       On a fixed compact subset of the chart, $1+ux$ stays away from zero for all sufficiently small $u$. Solving for the parameters gives $\tau =\zeta -\log (1+ux)$ and $b=(1+ux)y-ax$. Regarding $\rho _ j$ as a smooth function on $E$, this change of variables also applies near the boundary of its support. The Jacobians, the density coefficients and any fixed number of their derivatives depend smoothly on $u$. Averaging against the approximate identity in $u$ therefore gives local $C^\infty $ convergence. This convergence is needed only for each fixed $j$; it is not uniform in $j$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-92006A543CD2" data-section-entries="92006A543CD2 BD9C00A32F59"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/92006A543CD2/">12.19.12 The volume of the positive root</a><code class="tag-id">92006A543CD2</code></h2><span data-gerby-tag="EF00306B"></span>
+<p>
+The two averages contribute complementary blocks of the coefficient matrix of a $(2,2)$-form: the translated forms give a large vertical entry, and the curves give a positive horizontal block. A Schur-complement estimate combines them into a lower bound for the volume of the positive root. In the coframe $(x,y,\zeta )$ put $\mathrm{d}V_0=\sigma _ x\wedge \sigma _ y\wedge \sigma _\zeta $. For a real $(1,1)$-form $\xi $, let $H_\xi $ be its coefficient matrix in this normalization. A real $(2,2)$-form $\Theta $ corresponds to a Hermitian matrix $Q_\Theta $, which we call its cofactor matrix, by 
+</p>
+<div class="equation">
+  \[  \xi \wedge \Theta =\operatorname {tr}(H_\xi Q_\Theta )\, \mathrm{d}V_0.  \]
+</div>
+<p>
+ Strict positivity of $\Theta $ is equivalent to $Q_\Theta &gt;0$. 
+</p>
+<p>
+ If $\eta ^2=\Theta $ and $H=H_\eta $, expanding the wedge products gives 
+</p>
+<div class="equation">
+  \[  Q_\Theta =2(\det H)H^{-1},\qquad \eta ^3=\frac{3}{\sqrt2}(\det Q_\Theta )^{1/2}\, \mathrm{d}V_0.  \]
+</div>
+<p>
+ Conversely, these formulas uniquely recover a smooth positive $H$ from $Q_\Theta &gt;0$; this is the three-dimensional case of the root construction used in the proof of theorem <a data-tag="87DC00D0" href="../../tag/88BE3B63D9E5/">11.6.1</a>. We write $\Theta ^{3/2}=\eta ^3$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-D56ADE63">
+<p><a class="environment-identifier" href="../../tag/BD9C00A32F59/">Lemma <span data-tag="D56ADE63">12.19.13</span>.</a><span data-gerby-tag="D56ADE63"><code class="tag-id">BD9C00A32F59</code></span> There are smooth strictly positive $\mathrm{dd}^{\mathrm{c}}$-closed $(2,2)$-forms $\Gamma _ j$ such that </p>
+<div class="equation">
+  \[  \int _ X\omega \wedge \Gamma _ j\leq C_2,\qquad R_ j=\int _ X\Gamma _ j^{3/2}\longrightarrow +\infty .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write the cofactor matrix of $\widehat\Theta _ j$ in block form, with a $2\times 2$ Hermitian block $A_ j$ in the $(x,y)$-directions and a column $\kappa _ j\in \mathbb C^2$: 
+    
+<div class="equation">
+  \[  Q_ j=\begin{pmatrix} A_ j
+
+&amp; \kappa _ j
+
+\\ \kappa _ j^*
+
+&amp; \widehat F_ j
+
+\end{pmatrix}.  \]
+</div>
+<p>
+       The cofactor matrix of $T_{j,0}$ has the form $\operatorname {diag}(B_ j,0)$. Let $I_2$ denote the $2\times 2$ identity matrix. The lower bound for $K_ f$ and the definition of $\rho _ j$ give a constant $c_0&gt;0$ such that $B_ j\geq c_0\delta _ j^{-2}I_2$ on $V_ j$. Since $Q_ j&gt;0$, the Schur complement $A_ j-\kappa _ j\kappa _ j^*/\widehat F_ j$ is positive definite, and 
+    
+<div class="equation">
+  \[  \det \bigl (Q_ j+\operatorname {diag}(B_ j,0)\bigr ) =\widehat F_ j\det \left(B_ j+A_ j- \frac{\kappa _ j\kappa _ j^*}{\widehat F_ j}\right) \geq \widehat F_ j\det B_ j,  \]
+</div>
+<p>
+       by monotonicity of the determinant on positive Hermitian matrices. Combining the root formula with (<a data-tag="336550A9" href="../../tag/79DFF8AF8DCA/">12.19.8</a>), we obtain 
+    
+<div class="equation">
+  \[  (\widehat\Theta _ j+T_{j,0})^{3/2} \geq c\delta _ j^{-2}\sqrt{J_ j}\, \mathrm{d}V_0 \quad \hbox{on }V_ j.  \]
+</div>
+<p>
+        The smaller region $W_ j=\{ |x|,|y|&lt;1/8,\  |\zeta |&lt;\delta _ j/8\} $ has $\mathrm{d}V_0$-volume equal to a fixed positive constant times $\delta _ j^2$. Consequently 
+    
+<div class="equation">
+  \[  I_ j=\int _{W_ j}(\widehat\Theta _ j+T_{j,0})^{3/2} \geq c_1\sqrt{J_ j}&gt;c_1j^2.  \]
+</div>
+<p>
+       For this fixed $j$, lemma <a data-tag="DF3A79AE" href="../../tag/40DB573E7C1E/">12.19.10</a> gives smooth convergence of $T_{j,\varepsilon }$ to $T_{j,0}$ on the closure of $W_ j$. The cofactor matrix of $\widehat\Theta _ j+T_{j,0}$ is positive definite there, so the integrand of the root volume depends continuously on these smooth coefficients. We can therefore choose $0&lt;\varepsilon _ j\leq 1/16$ so small that 
+    
+<div class="equation">
+  \[  \int _{W_ j}(\widehat\Theta _ j+T_{j,\varepsilon _ j})^{3/2} \geq I_ j/2.  \]
+</div>
+<p>
+       Set $\Gamma _ j=\widehat\Theta _ j+T_{j,\varepsilon _ j}$. It is smooth, strictly positive and $\mathrm{dd}^{\mathrm{c}}$-closed. Its degree is bounded by (<a data-tag="BD0C1F9D" href="../../tag/E994975CCA57/">12.19.7</a>) and lemma <a data-tag="DF3A79AE" href="../../tag/40DB573E7C1E/">12.19.10</a>, whereas its root volume is at least $c_1j^2/2$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<article class="env-proof">
+<p>
+<strong>of theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">12.19.1</a>.</strong>
+       Fix a Hermitian form $h$ on $X$, and choose $A&gt;0$ with $h\leq A\omega $. Let $\eta _ j$ be the positive root of $\Gamma _ j$, so that $\eta _ j^2=\Gamma _ j$. These metrics are Gauduchon, and 
+    
+<div class="equation">
+  \[  P_ j=\int _ Xh\wedge \eta _ j^2\leq AC_2,\qquad R_ j=\int _ X\eta _ j^3\longrightarrow +\infty .  \]
+</div>
+<p>
+       Set $\mu _ j=\eta _ j^3/R_ j$ and solve the smooth equation in the background $h$: 
+    
+<div class="equation">
+  \[  h_ j=h+\mathrm{dd}^{\mathrm{c}}u_ j&gt;0,\qquad h_ j^3=c_ h(\mu _ j)\mu _ j, \qquad \sup _ Xu_ j=0.  \]
+</div>
+<p>
+       Since $D_{\mu _ j}(\eta _ j)=R_ j^{2/3}$, using $\eta _ j$ as a test in theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">12.2.3</a> gives 
+    
+<div class="equation">
+  \[  0&lt;\int _ Xh_ j^3=c_ h(\mu _ j)=\mathcal V_{\mu _ j}(h) \leq \frac{P_ j^3}{R_ j^2}\longrightarrow 0.  \]
+</div>
+<p>
+       The potentials $u_ j$ are smooth, hence bounded, so $v_-(h)=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-8E3D46779F5F" data-section-entries="435BD74C27A9 8E3D46779F5F 940F7BB9270C"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/8E3D46779F5F/">12.19.14 Consequences for dimension and equations</a><code class="tag-id">8E3D46779F5F</code></h2><span data-gerby-tag="EC34F5BB"></span>
+<p>
+The example occurs in the smallest possible dimension: on a surface, comparison with a Gauduchon metric gives positive lower mass. Products with projective spaces carry the threefold degeneration to every higher dimension, and a product with the Hopf threefold produces, in addition, unbounded upper mass. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-FFC1B483">
+<p><a class="environment-identifier" href="../../tag/435BD74C27A9/">Corollary <span data-tag="FFC1B483">12.19.15</span>.</a><span data-gerby-tag="FFC1B483"><code class="tag-id">435BD74C27A9</code></span> Every Hermitian form on a compact complex manifold of dimension at most two has positive lower mass. In every dimension $n\geq 3$ there is a connected compact complex manifold on which every Hermitian form has zero lower mass. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In dimension one the mass is $\int _ Xh&gt;0$, and the surface case is corollary <a data-tag="CC54FEC4" href="../../tag/40D45A12B192/">12.18.1</a>. In higher dimensions we use the monotonicity and the homogeneity of degree $n$ of $v_-$, which follow directly from (<a data-tag="DE55D25C" href="../../tag/AE720210AADD/">12.15.5</a>), to pass from a split metric to every Hermitian metric. 
+    <p>
+       For $n=3$ this is theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">12.19.1</a>. For $n&gt;3$, take the product of the threefold $X$ with $\mathbb P^{n-3}$, let $\kappa $ be a Fubini–Study form on the projective factor, and consider the split metric $h_0=\omega +\kappa $, with pullbacks understood. For the potentials $u_ j$ given by the theorem for the background $\omega $, 
+    
+<div class="equation">
+  \[  \int _{X\times \mathbb P^{n-3}}(h_0+\mathrm{dd}^{\mathrm{c}}u_ j)^ n =\binom n3\left(\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u_ j)^3\right) \left(\int _{\mathbb P^{n-3}}\kappa ^{n-3}\right) \longrightarrow 0.  \]
+</div>
+<p>
+       For another Hermitian form $h$, choose $A$ with $h\leq Ah_0$. Monotonicity and homogeneity give $v_-(h)\leq A^ n v_-(h_0)=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-91A592F8">
+<p><a class="environment-identifier" href="../../tag/940F7BB9270C/">Corollary <span data-tag="91A592F8">12.19.16</span>.</a><span data-gerby-tag="91A592F8"><code class="tag-id">940F7BB9270C</code></span> In every dimension $n\geq 6$ there is a connected compact complex manifold with </p>
+<div class="equation">
+  \[  v_-(h)=0,\qquad v_+(h)=+\infty  \]
+</div>
+<p> for every Hermitian form $h$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take the product of the threefold above with the Hopf threefold of section <a data-tag="AB469878" href="../../tag/142249962360/">23.1</a>, with a split metric. Potentials pulled back from the first factor make the masses tend to zero, while the smooth potentials of theorem <a data-tag="B6188BE3" href="../../tag/92B2FB434C79/">23.1.1</a>, pulled back from the second factor, make them tend to infinity. In each case the product integral is $\binom 63$ times the product of the two factor masses. The metric comparison in the preceding proof handles the lower mass for every Hermitian form, and the metric independence in proposition <a data-tag="C8F0BC96" href="../../tag/45F622BE862A/">13.14.15</a> handles the upper mass. Products with projective spaces give every higher dimension by the same expansion of wedge powers. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Finally, fix a smooth positive probability measure $\mu $ on the threefold $X$. The smooth equation still gives $\mathcal V_\mu (h)&gt;0$ for each Hermitian form $h$. With $\mathscr M$ and $\lambda _*$ as in subsection <a data-tag="EFC25662" href="../../tag/53B6AFE7C911/">12.15.3</a>, theorem <a data-tag="89544950" href="../../tag/B6CA5669E402/">12.15.4</a> gives 
+</p>
+<div class="equation">
+  \[  \inf _{\nu \in \mathscr M}\mathcal V_\nu (h)=0, \qquad \lambda _*(h)=0.  \]
+</div>
+<p>
+ Thus even a smooth strictly positive background can have vanishing infimum over densities. For the metrics $\eta _ j$ and numbers $R_ j,P_ j$ in the proof of theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">12.19.1</a>, the measures $\mu _ j=\eta _ j^3/R_ j$ satisfy $\mathcal V_{\mu _ j}(h)\leq P_ j^3/R_ j^2\to 0$. Hence the densities $\mu _ j/\mu $ cannot be uniformly bounded above: a bound $\mu _ j\leq M\mu $ would give $\mathcal V_{\mu _ j}(h)\geq M^{-1}\mathcal V_\mu (h)&gt;0$, by the comparison of denominators in the proof of proposition <a data-tag="408236E7" href="../../tag/37E6FFC01EDB/">12.15.1</a>. 
+</p>
+<p>
+The example also shows that the endpoint estimate in theorem <a data-tag="6F2BDB20" href="../../tag/E7F890105D42/">12.9.2</a> fails for the full family of normalized Gauduchon currents: the supremum of the $L^{3/2}$ norms of their determinant densities is infinite, although every subcritical $L^ q$ norm, $1&lt;q&lt;3/2$, remains uniformly bounded by theorem <a data-tag="9369A45C" href="../../tag/BF52D98B114F/">12.9.1</a>. For the same fixed background, theorem <a data-tag="E0673342" href="../../tag/6A30AAE398CD/">12.9.7</a>, corollary <a data-tag="9D18FFE7" href="../../tag/7877D1AB98D3/">12.9.10</a> give uniform $L^\infty $ bounds for the exact maximizers and their adjoint probabilities in a small $C^{2,\alpha }$ family of smooth densities. A larger sufficient family is given by theorem <a data-tag="A790BDE0" href="../../tag/AD62F7DA0E68/">12.9.18</a>: uniformly comparable smooth solution forms yield uniform bounds for both densities, without derivative bounds on the varying Hessian. Endpoint estimates for arbitrary bounded families of continuous densities remain open. 
+</p>
+</div></section><section class="reading-chunk" id="entry-DEA97C6D08EB" data-section-entries="3290D6E85075 69BB70EA26D9 87EE58E6037C 94417AD14985 9E38044EBFA0 DEA97C6D08EB"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/DEA97C6D08EB/">12.19.17 A balanced metric and a finite upper mass</a><code class="tag-id">DEA97C6D08EB</code></h2><span data-gerby-tag="D4ED901D"></span>
+<p>
+Although every Hermitian form on the threefold of theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">12.19.1</a> has zero lower mass, the metric $\omega $ of (<a data-tag="EE0EE26F" href="../../tag/444A78EADE47/">12.19.3</a>) is balanced and has finite upper mass. A direct calculation expresses the loss of mass under a potential as a vertical Dirichlet energy along the elliptic fibers. The same calculation shows that the degeneration cannot be realized by potentials that are the sum of a periodic function of $t$ and a function on the base: their masses stay above $8$. Put $D=\mathrm{d}t\wedge \mathrm d^{\mathrm c}t$, so that $\omega =\alpha +\beta +D$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-CC2145C0">
+<p><a class="environment-identifier" href="../../tag/94417AD14985/">Proposition <span data-tag="CC2145C0">12.19.18</span>.</a><span data-gerby-tag="CC2145C0"><code class="tag-id">94417AD14985</code></span> On the threefold $X$ of theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">12.19.1</a>, the Hermitian form $\omega =\alpha +\beta +D$ satisfies </p>
+<div class="equation">
+  \[  \mathrm{d}(\omega ^2)=0,\qquad \mathrm{dd}^{\mathrm{c}}\omega =2\alpha \wedge \beta \geq 0, \qquad \int _ X\omega ^3=24\pi .  \]
+</div>
+<p> For every smooth real function $u$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-6C36DB68"><span data-gerby-tag="6C36DB68"><code class="tag-id">9E38044EBFA0</code></span>
+<span class="equation-label"><a data-tag="6C36DB68" href="../../tag/9E38044EBFA0/">12.19.19</a></span>
+<div>\begin{equation}  \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^3 =24\pi -6\int _ X\mathrm{d}u\wedge \mathrm d^{\mathrm c}u\wedge \alpha \wedge \beta . \end{equation}</div>
+</div>
+<p> Consequently $v_+(\omega )=24\pi $. In particular, $X$ has the bounded mass property, while $v_-(h)=0$ for every Hermitian form $h$ on $X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Although $t$ is defined only on the covering space $\Omega $, both $\mathrm{d}t$ and $\mathrm d^{\mathrm c}t$ descend to $X$. The Fubini–Study potentials $\log \| z\| ^2$ and $\log \| w\| ^2$ give $\mathrm{dd}^{\mathrm{c}}t=\beta -\alpha $. The forms $\alpha ,\beta $ are closed, and $\alpha ^2=\beta ^2=0$ since each is pulled back from a curve. As $D^2=0$, we obtain 
+    
+<div class="equation">
+  \[  \mathrm{d}D=-\mathrm{d}t\wedge (\beta -\alpha ),\qquad \mathrm{dd}^{\mathrm{c}}D=-(\beta -\alpha )^2=2\alpha \wedge \beta ,  \]
+</div>
+
+<div class="equation">
+  \[  \mathrm{d}(\omega ^2) =-2(\alpha +\beta +D)\wedge \mathrm{d}t\wedge (\beta -\alpha )=0.  \]
+</div>
+<p>
+       In the last identity, the term involving $D$ contains $\mathrm{d}t$ twice, and $(\alpha +\beta )\wedge (\beta -\alpha )=0$. Thus $\omega $ is balanced, hence Gauduchon, and the formula for $\mathrm{dd}^{\mathrm{c}}\omega $ follows from that for $\mathrm{dd}^{\mathrm{c}}D$. 
+    <p>
+      On a fiber, write $\zeta =a+\mathrm{i}b$, where both real periods are $2\pi $. There $t=2a$ plus a constant, so 
+    
+<div class="equation">
+  \[  D|_ E=\frac1\pi \, \mathrm{d}a\wedge \mathrm{d}b, \qquad \int _ ED=4\pi .  \]
+</div>
+<p>
+       Since $\omega ^3=6\alpha \wedge \beta \wedge D$, fiber integration and the normalization of the Fubini–Study forms give $\int _ X\omega ^3=24\pi $. 
+    <p>
+      The identity (<a data-tag="10BBB84F" href="../../tag/D5CA82478984/">12.16.4</a>) for Gauduchon metrics on threefolds, with $\mathrm{dd}^{\mathrm{c}}\omega =2\alpha \wedge \beta $, gives (<a data-tag="6C36DB68" href="../../tag/9E38044EBFA0/">12.19.19</a>). Its last integral is nonnegative. Thus every smooth strictly $\omega $-plurisubharmonic potential has mass at most $24\pi $, and the constant potential attains this value. Regularization of bounded potentials, as in the proof of theorem <a data-tag="89544950" href="../../tag/B6CA5669E402/">12.15.4</a>, gives the same supremum over bounded potentials, so $v_+(\omega )=24\pi $. The metric independence in proposition <a data-tag="C8F0BC96" href="../../tag/45F622BE862A/">13.14.15</a> then gives the bounded mass property of $X$. The assertion about the lower mass is theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">12.19.1</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+For an admissible smooth $u$, equality in the upper-mass bound holds precisely when $u$ is constant along every elliptic fiber. Indeed, $\alpha \wedge \beta $ is a positive volume form in the base directions, so the nonnegative integral in (<a data-tag="6C36DB68" href="../../tag/9E38044EBFA0/">12.19.19</a>) vanishes exactly when the derivative of $u$ along the fibers vanishes. The fibers are connected, and smooth local sections then show that $u$ is the pullback of a smooth function on $\mathbb P^1\times \mathbb P^1$. For the potentials with masses tending to zero in theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">12.19.1</a>, the same integral instead tends to $4\pi $. 
+</p>
+<p>
+A function $f(t)$ descends to $X$ when $f$ is $4\pi $-periodic, since $t\circ g=t+4\pi $. Even after adding an arbitrary potential pulled back from the base, such functions leave a positive mass gap. The sharp gap follows from the bounds on the first two derivatives of $f$ imposed by positivity. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-73E21B50">
+<p><a class="environment-identifier" href="../../tag/3290D6E85075/">Proposition <span data-tag="73E21B50">12.19.20</span>.</a><span data-gerby-tag="73E21B50"><code class="tag-id">3290D6E85075</code></span> Let $\pi :X\to B=\mathbb P^1\times \mathbb P^1$ be the elliptic fibration above, and put $L=4\pi $. Consider the smooth potentials </p>
+<div class="equation">
+  \[  u=f(t)+\pi ^*v,\qquad \omega +\mathrm{dd}^{\mathrm{c}}u&gt;0,  \]
+</div>
+<p> where $f:\mathbb R\to \mathbb R$ is smooth and $L$-periodic and $v\in C^\infty (B,\mathbb R)$. The infimum of $\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^3$ over these potentials is $8$. Every such mass is strictly greater than $8$, and the infimum is approached already with $v=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $p=f'$, an $L$-periodic function with mean zero. The chain rule gives 
+    
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}u =(1-p)\alpha +(1+p)\beta +\pi ^*\mathrm{dd}^{\mathrm{c}}v+(1+p')D.  \]
+</div>
+<p>
+       Positivity on the vertical line implies $p'&gt;-1$. On the complex plane $\ker \partial t$, the form $D$ vanishes and the projection to the base is an isomorphism. For each value of $t$ modulo $L$, every base point has a point above it with that value. Hence, writing $\alpha _ B,\beta _ B$ for the two Fubini–Study forms on $B$, the form $(1-p(s))\alpha _ B+(1+p(s))\beta _ B+\mathrm{dd}^{\mathrm{c}}v$ is positive on $B$ for every $s$. Integration over the two rulings gives $1-p&gt;0$ and $1+p&gt;0$. Thus $|p|&lt;1$ and $p'&gt;-1$; when $v=0$, these inequalities also suffice for strict positivity. 
+    <p>
+      In a logarithmic fiber coordinate $x+\mathrm{i}y$, both real periods are $2\pi $, $t=2x$ plus a constant, and $D|_ E=\pi ^{-1}\mathrm{d}x\wedge \mathrm{d}y$. Hence $\int _ E F(t)D=\int _0^ L F(s)\, \mathrm{d}s$ for every $L$-periodic function $F$. Only the derivative of $u$ along the fibers contributes to (<a data-tag="6C36DB68" href="../../tag/9E38044EBFA0/">12.19.19</a>), and it equals $p(t)$ times the derivative of $t$. Fiber integration therefore gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-2D128C77"><span data-gerby-tag="2D128C77"><code class="tag-id">87EE58E6037C</code></span>
+<span class="equation-label"><a data-tag="2D128C77" href="../../tag/87EE58E6037C/">12.19.21</a></span>
+<div>\begin{equation}  \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^3 =6\left(L-\int _0^ L p(s)^2\, \mathrm{d}s\right). \end{equation}</div>
+</div>
+<p>
+      We now bound $\int _0^ Lp^2$. Suppose first that $p\not\equiv 0$, and put $m_+=\max p&gt;0$, $m_-=-\min p&gt;0$ and $r=m_++m_-&lt;2$. The function $G(s)=(m_+-s)(s+m_-)$ is nonnegative on $[-m_-,m_+]$. Choose an interval $I$ of length at most $L$ that runs from a maximum point of $p$ forward to the next minimum point. Since $p'\geq -1$, we have $G(p)\geq -G(p)p'$. Using that $p$ has mean zero, we obtain 
+    
+<div class="equation">
+  \[  \begin{split}  m_+m_-L-\int _0^ L p^2\, \mathrm{d}s &amp; =\int _0^ L G(p)\, \mathrm{d}s \geq -\int _ I G(p)p'\, \mathrm{d}s\\ &amp; =\int _{-m_-}^{m_+}G(s)\, \mathrm{d}s=\frac{r^3}{6}. \end{split}  \]
+</div>
+<p>
+        As $m_+m_-\leq r^2/4$, it follows that 
+    
+<div class="equation">
+  \[  \int _0^ L p^2\, \mathrm{d}s \leq \frac{Lr^2}{4}-\frac{r^3}{6}&lt;L-\frac43,  \]
+</div>
+<p>
+       where the last inequality holds because the middle expression is strictly increasing in $r\in (0,2]$, as $L&gt;2$. The inequality $\int _0^ Lp^2&lt;L-4/3$ holds trivially when $p=0$. Equation (<a data-tag="2D128C77" href="../../tag/87EE58E6037C/">12.19.21</a>) now gives the strict lower bound $8$. 
+    <p>
+      To prove sharpness, put $a=(L-2)/2$ and define an $L$-periodic function $p_0$ by 
+    
+<div class="equation">
+  \[  p_0(s)= \begin{cases}  1,&amp; 0\leq s&lt;a,\\  1-(s-a),&amp; a\leq s&lt;a+2,\\  -1,&amp; a+2\leq s&lt;L. \end{cases}  \]
+</div>
+<p>
+       It has mean zero, $|p_0|\leq 1$ and $\int _0^ L p_0^2\, \mathrm{d}s=L-4/3$. Its distributional derivative is $-1$ on the descending interval and zero on the two constant intervals, and it has a positive atom where the period closes up. Thus $p_0'\geq -1$ as distributions on the circle. Let $\rho _\varepsilon $ be a nonnegative smooth periodic approximate identity of integral one, and set $p_\varepsilon =(1-\varepsilon )(p_0*\rho _\varepsilon )$ for $0&lt;\varepsilon &lt;1$. Then $p_\varepsilon $ is smooth, has mean zero, and 
+    
+<div class="equation">
+  \[  |p_\varepsilon |\leq 1-\varepsilon , \qquad p_\varepsilon '\geq -1+\varepsilon , \qquad p_\varepsilon \longrightarrow p_0\quad \hbox{in }L^2.  \]
+</div>
+<p>
+       Its primitive $f_\varepsilon $ is smooth and periodic, so $u_\varepsilon =f_\varepsilon (t)$ is admissible. By (<a data-tag="2D128C77" href="../../tag/87EE58E6037C/">12.19.21</a>), its mass tends to $8$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-2E8355DD">
+<p><a class="environment-identifier" href="../../tag/69BB70EA26D9/">Proposition <span data-tag="2E8355DD">12.19.22</span>.</a><span data-gerby-tag="2E8355DD"><code class="tag-id">69BB70EA26D9</code></span> The threefold $X$ admits neither a pluriclosed Hermitian metric nor a closed Kähler current. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="CC2145C0" href="../../tag/94417AD14985/">12.19.18</a>, the nonzero smooth semipositive $(2,2)$-form $\alpha \wedge \beta =\mathrm{dd}^{\mathrm{c}}(\omega /2)$ is $\mathrm{dd}^{\mathrm{c}}$-exact. If a Hermitian metric $\eta $ satisfied $\mathrm{dd}^{\mathrm{c}}\eta =0$, Stokes' theorem would give 
+    
+<div class="equation">
+  \[  0&lt;\int _ X\eta \wedge \alpha \wedge \beta =\frac12\int _ X\eta \wedge \mathrm{dd}^{\mathrm{c}}\omega =\frac12\int _ X\omega \wedge \mathrm{dd}^{\mathrm{c}}\eta =0,  \]
+</div>
+<p>
+       a contradiction. The first inequality holds because $\eta $ is positive in the vertical direction at every point. 
+    <p>
+       Similarly, if a closed positive current $T$ satisfied $T\geq \varepsilon \omega $ for some $\varepsilon &gt;0$, positivity and Stokes' theorem for currents would give 
+    
+<div class="equation">
+  \[  0&lt;\varepsilon \int _ X\omega \wedge \alpha \wedge \beta \leq \int _ XT\wedge \alpha \wedge \beta =\frac12\int _ X\omega \wedge \mathrm{dd}^{\mathrm{c}}T=0.  \]
+</div>
+<p>
+       Hence there is no closed Kähler current. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Since a compact complex manifold carries a closed Kähler current exactly when it belongs to Fujiki's class $\mathcal C$, as recalled in section <a data-tag="E403236A" href="../../tag/8871793F78BB/">24.4</a>, the threefold $X$ lies outside this class. The example shows that a balanced metric does not guarantee positive lower mass, even together with bounded upper mass. The Hopf threefold, in contrast, has positive lower mass and infinite upper mass, so the two properties are logically independent, and the products in corollary <a data-tag="91A592F8" href="../../tag/940F7BB9270C/">12.19.16</a> show that both can fail at once. In particular, in a theorem asserting solvability for every nonzero finite non-pluripolar measure, bounded mass alone cannot replace the hypothesis of positive lower mass. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/6072DDDAB57F/"><span>← Previous</span><small>Theorem 12.18.17</small></a><a class="pager-next" rel="next" href="../../tag/38D9206B1A2F/"><span>Next →</span><small>Theorem 12.19.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-a-gauduchon-variational-volume--vanishing-lower-mass,
+  author = {{Gerby contributors}},
+  title = {12.19 Vanishing lower mass},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--vanishing-lower-mass/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/a-gauduchon-variational-volume--vanishing-lower-mass/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fa-gauduchon-variational-volume--vanishing-lower-mass%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fa-gauduchon-variational-volume--vanishing-lower-mass%2F&amp;body=Page%3A+%5B12.19+Vanishing+lower+mass%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fa-gauduchon-variational-volume--vanishing-lower-mass%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+577b03fce1db31b55ee0f60d559657ac8d9fca81+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

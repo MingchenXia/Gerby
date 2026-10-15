@@ -1,0 +1,274 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/"><title>14.24 Bounded uniqueness and connectedness · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/monge-ampere-equations/">Chapter 14: Monge–Ampère equations and stability</a></li><li><a href="../../sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/" aria-current="page">Section 14.24: Bounded uniqueness and connectedness</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/smooth-monge-ampere-equations/"><span>14.1</span> Smooth Monge–Ampère equations</a><code class="tag-id">92B1F482D72A</code></li><li><a href="../../sections/smooth-monge-ampere-equations--scalar-bounds-and-uniqueness/"><span>14.2</span> Scalar bounds and uniqueness</a><code class="tag-id">5E342E12EF34</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-potential-bound-from-weighted-integration/"><span>14.3</span> The potential bound from weighted integration</a><code class="tag-id">D57A1C84047D</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-linearized-equation-and-smooth-dependence/"><span>14.4</span> The linearized equation and smooth dependence</a><code class="tag-id">7BDF4C42EB78</code></li><li><a href="../../sections/smooth-monge-ampere-equations--second-derivatives-and-ellipticity/"><span>14.5</span> Second derivatives and ellipticity</a><code class="tag-id">CBFCDA7183ED</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-continuity-method/"><span>14.6</span> The continuity method</a><code class="tag-id">F1D5D01E2624</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-smooth-exponential-equation/"><span>14.7</span> The smooth exponential equation</a><code class="tag-id">A4D09B787D84</code></li><li><a href="../../sections/smooth-monge-ampere-equations--variation-of-the-normalization-scalar/"><span>14.8</span> Variation of the normalization scalar</a><code class="tag-id">9541740AAFDC</code></li><li><a href="../../sections/smooth-monge-ampere-equations--normalization-on-the-hopf-threefold/"><span>14.9</span> Normalization on the Hopf threefold</a><code class="tag-id">44E03525BBAF</code></li><li><a href="../../sections/smooth-monge-ampere-equations--prescribing-a-gauduchon-volume-form/"><span>14.10</span> Prescribing a Gauduchon volume form</a><code class="tag-id">6950E7B1FBCB</code></li><li><a href="../../sections/smooth-monge-ampere-equations--bounds-for-the-gauduchon-potential/"><span>14.11</span> Bounds for the Gauduchon potential</a><code class="tag-id">F9FF7B5E741A</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/"><span>14.12</span> The adjoint equation for Gauduchon volume</a><code class="tag-id">F6A1B32989A1</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-matrix-structure-of-the-gauduchon-equation/"><span>14.13</span> The matrix structure of the Gauduchon equation</a><code class="tag-id">53E844FE515C</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-largest-eigenvalue-estimate/"><span>14.14</span> The largest-eigenvalue estimate</a><code class="tag-id">148E6041EC3F</code></li><li><a href="../../sections/smooth-monge-ampere-equations--a-liouville-theorem-for-the-limiting-cone/"><span>14.15</span> A Liouville theorem for the limiting cone</a><code class="tag-id">D4DE203BE3BF</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-gradient-bound-by-rescaling/"><span>14.16</span> The gradient bound by rescaling</a><code class="tag-id">40669ABC11F8</code></li><li><a href="../../sections/smooth-monge-ampere-equations--existence-for-the-gauduchon-ansatz/"><span>14.17</span> Existence for the Gauduchon ansatz</a><code class="tag-id">6904C64D5831</code></li><li><a href="../../sections/smooth-monge-ampere-equations--normalization-for-the-gauduchon-equation/"><span>14.18</span> Normalization for the Gauduchon equation</a><code class="tag-id">9C1043361EBF</code></li><li><a href="../../sections/continuous-solutions-and-normalization/"><span>14.19</span> Continuous solutions and normalization</a><code class="tag-id">080A6052D542</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations/"><span>14.20</span> Uniqueness for degenerate equations</a><code class="tag-id">6B1310DDF7B5</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--extrema-and-density-sublevels/"><span>14.21</span> Extrema and density sublevels</a><code class="tag-id">6267D9D97C43</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--polarized-cofactors-and-propagation/"><span>14.22</span> Polarized cofactors and propagation</a><code class="tag-id">9769545E981A</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--integral-rigidity-in-dimensions-two-and-three/"><span>14.23</span> Integral rigidity in dimensions two and three</a><code class="tag-id">4DE5082C1B2B</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/" aria-current="page"><span>14.24</span> Bounded uniqueness and connectedness</a><code class="tag-id">E0DB623401C5</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--comparison-and-invariant-mass/"><span>14.25</span> Comparison and invariant mass</a><code class="tag-id">48CE016DFF65</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--smooth-nonuniqueness-for-a-degenerate-density/"><span>14.26</span> Smooth nonuniqueness for a degenerate density</a><code class="tag-id">D85397FA2C2A</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--nonuniqueness-with-a-zero-set-of-empty-interior/"><span>14.27</span> Nonuniqueness with a zero set of empty interior</a><code class="tag-id">5278ECB27C50</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--quadratic-density-zeros/"><span>14.28</span> Quadratic density zeros</a><code class="tag-id">9ABE80D68F2B</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--a-real-analytic-density/"><span>14.29</span> A real analytic density</a><code class="tag-id">C3B76FE21E71</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/3DF5F7F34405/"><span>← Previous</span><small>Corollary 14.23.7</small></a><a class="pager-next" rel="next" href="../../tag/98EC31947E4C/"><span>Next →</span><small>Theorem 14.24.1</small></a></nav><h1>14.24 Bounded uniqueness and connectedness<code class="tag-id">E0DB623401C5</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-E0DB623401C5" data-section-entries="2C3AA01F259B 98EC31947E4C C7BC3EE4D543 E0DB623401C5"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="B64A3254"><code class="tag-id">E0DB623401C5</code></span>
+<p>
+For a continuous density whose positive set is connected and dense, bounded solutions are unique up to a constant. An energy measure of $w=u-v$ recovers the information supplied by differentiability. Its pushforward under $w$ has a Lipschitz density vanishing at the extreme values. If $w$ were nonconstant, these properties would force both extremal sets to have zero mass for the common Monge–Ampère measure. A smooth test potential with a larger density near one of these sets then contradicts modified comparison. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-3B7B4CAD">
+<p><a class="environment-identifier" href="../../tag/98EC31947E4C/">Theorem <span data-tag="3B7B4CAD">14.24.1</span>.</a><span data-gerby-tag="3B7B4CAD"><code class="tag-id">98EC31947E4C</code></span> Let $F\in C^0(X)$ satisfy $F\geq 0$, $F\not\equiv 0$, with $U=\{ F&gt;0\} $ connected and dense. If bounded $\omega $-plurisubharmonic functions $u,v$ satisfy </p>
+<div class="equation">
+  \[  \omega _ u^ n=\omega _ v^ n=F\omega ^ n,  \]
+</div>
+<p> then $u-v$ is constant. In particular, $\sup _ Xu=\sup _ Xv$ implies $u=v$. </p>
+</article>
+
+<p>
+Continuity of $F$ supplies the local positive lower bounds and the neighborhoods of the extremal set used below. The auxiliary test densities are chosen smooth independently of $F$. Bounded solutions are continuous by corollary <a data-tag="708510FF" href="../../tag/AEA7DCEDBA8B/">14.19.29</a>, so we may use pointwise extrema throughout the proof. We shall also use modified comparison in the following form. If $b$ is continuous and $\omega _ b\geq \varepsilon \omega $ for some $0&lt;\varepsilon &lt;1$, then $b/(1-\varepsilon )$ is $\omega $-plurisubharmonic, so theorem <a data-tag="FBBA14CA" href="../../tag/492E047184B3/">14.19.6</a> applies with $(1-\varepsilon )v=b$. Thus its thin-sublevel estimate applies directly to such a strictly positive comparison potential $b$, and the correction factor tends to one as the height of the sublevel set tends to zero, with $\varepsilon $ fixed. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-02FAC4D4">
+<p><a class="environment-identifier" href="../../tag/2C3AA01F259B/">Proposition <span data-tag="02FAC4D4">14.24.2</span>.</a><span data-gerby-tag="02FAC4D4"><code class="tag-id">2C3AA01F259B</code></span> Let $u,v$ be continuous $\omega $-plurisubharmonic functions with $\omega _ u^ n=\omega _ v^ n=F\omega ^ n$, where $F\geq 0$ is bounded and measurable. Let $q$ be a smooth strictly $\omega $-plurisubharmonic function, and write $\omega _ q^ n=G\omega ^ n$. Then for every $0&lt;\kappa &lt;1$ and $\eta &gt;0$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-23D2AAA0"><span data-gerby-tag="23D2AAA0"><code class="tag-id">C7BC3EE4D543</code></span>
+<span class="equation-label"><a data-tag="23D2AAA0" href="../../tag/C7BC3EE4D543/">14.24.3</a></span>
+<div>\begin{equation}  F\omega ^ n\bigl (\{ u-v&lt;\min _ X(u-v)+\eta \} \cap \{ F&gt;\kappa G\} \bigr )&gt;0. \end{equation}</div>
+</div>
+<p> The analogous assertion holds for the set $\{ u-v&gt;\max _ X(u-v)-\eta \} $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $\delta \in (0,1]$ with $\omega _ q\geq \delta \omega $. For $0&lt;t&lt;1$, put $b_ t=(1-t)v+tq$, $m_ t=\min _ X(u-b_ t)$, and $E_ s=\{ u&lt;b_ t+m_ t+s\} $. Then $\omega _{b_ t}\geq t\delta \omega $. Write $\mu =F\omega ^ n$, $d=\kappa ^{-1/n}-1$, and $\gamma =nd$. By (<a data-tag="53046082" href="../../tag/4547B4E0976D/">5.28.9</a>), 
+    
+<div class="equation">
+  \[  \omega _{b_ t}^ n\geq \bigl ((1-t)F^{1/n}+tG^{1/n}\bigr )^ n \omega ^ n.  \]
+</div>
+<p>
+        On $L=\{ F\leq \kappa G\} $ this is at least $(1+\gamma t)\mu $, since $G^{1/n}\geq (1+d)F^{1/n}$ there, and on $R=\{ F&gt;\kappa G\} $ it is at least $(1-nt)\mu $. Choose $s&gt;0$ so small that the reverse comparison factor in (<a data-tag="409B0CFF" href="../../tag/63BE08CDB80C/">14.19.7</a>), with $\varepsilon =t\delta $, is at most $1+\gamma t/2$. Modified comparison on $E_ s$, with $x=\mu (E_ s\cap L)$ and $y=\mu (E_ s\cap R)$, gives 
+    
+<div class="equation">
+  \[  (1+\gamma t)x+(1-nt)y\leq (1+\gamma t/2)(x+y), \qquad \text{and hence}\qquad y\geq \frac{1-\kappa ^{1/n}}2\, \mu (E_ s).  \]
+</div>
+<p>
+       The open set $E_ s$ is nonempty by the definition of $m_ t$. As $\omega _{b_ t}^ n\geq (t\delta )^ n\omega ^ n$, (<a data-tag="409B0CFF" href="../../tag/63BE08CDB80C/">14.19.7</a>) forces $\mu (E_ s)&gt;0$, hence $y&gt;0$. 
+    <p>
+      Let $a=\min _ X(u-v)$ and $\Lambda =\| v-q\| _\infty $. Since $u-b_ t=u-v+t(v-q)$, we have $|m_ t-a|\leq t\Lambda $ and $E_ s\subset \{ u-v&lt;a+2t\Lambda +s\} $. Given $\eta $, choose $t$ and then $s$ with $2t\Lambda +s&lt;\eta $. Since $y=\mu (E_ s\cap R)&gt;0$, this proves (<a data-tag="23D2AAA0" href="../../tag/C7BC3EE4D543/">14.24.3</a>). Interchanging $u$ and $v$ gives the assertion for the near-maximum set. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-42826D458068" data-section-entries="25FABE38E60B 42826D458068 4FB9051BD00E 5EA1FD990FD5 7EF7549DDD02 B3915B7974CA C45BFBEEAF7F D3E407319B3E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/42826D458068/">14.24.4 The energy of the difference</a><code class="tag-id">42826D458068</code></h2><span data-gerby-tag="725C1C48"></span>
+<p>
+In this subsection, $u,v$ are continuous $\omega $-plurisubharmonic functions with $A^ n=B^ n=F\omega ^ n$ for a bounded measurable function $F\geq 0$, and $w=u-v$. Although the cofactor $T$ is now only a current, its product with $\mathrm dw\wedge \mathrm d^{\mathrm c}w$ still defines a positive measure. The identity $\mathrm{dd}^{\mathrm{c}}w\wedge T=0$ determines how this energy is distributed over the level sets of $w$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-8137BCDB">
+<p><a class="environment-identifier" href="../../tag/25FABE38E60B/">Proposition <span data-tag="8137BCDB">14.24.5</span>.</a><span data-gerby-tag="8137BCDB"><code class="tag-id">25FABE38E60B</code></span> There is a finite positive measure $E=\mathrm{d} w\wedge \mathrm d^{\mathrm c}w\wedge T$, defined below as a limit of regularizations, with the following properties. </p>
+<p>For every smooth real function $\chi $ on $\mathbb R$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-09035D3B"><span data-gerby-tag="09035D3B"><code class="tag-id">5EA1FD990FD5</code></span>
+<span class="equation-label"><a data-tag="09035D3B" href="../../tag/5EA1FD990FD5/">14.24.6</a></span>
+<div>\begin{equation}  \int _ X\chi ''(w)\, \mathrm{d} E=\int _ X\chi (w)\, \mathrm{dd}^{\mathrm{c}}T. \end{equation}</div>
+</div>
+<p> The signed current $\mathrm{dd}^{\mathrm{c}}T$ is a finite measure. If $a=\min _ Xw$, $b=\max _ Xw$, and </p>
+<div class="equation">
+  \[  k(t)=\int _ X(w-t)_+\, \mathrm{dd}^{\mathrm{c}}T,  \]
+</div>
+<p> then $k$ is nonnegative, globally Lipschitz, supported on $[a,b]$, and </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B0F9B793"><span data-gerby-tag="B0F9B793"><code class="tag-id">B3915B7974CA</code></span>
+<span class="equation-label"><a data-tag="B0F9B793" href="../../tag/B3915B7974CA/">14.24.7</a></span>
+<div>\begin{equation}  w_*E=k(t)\, \mathrm{d} t. \end{equation}</div>
+</div>
+<p> In particular, $E$ charges no level set of $w$. </p>
+<p>Let $V$ be a relatively compact coordinate domain such that $F$ has a positive essential lower bound on a neighborhood of $\overline V$. Then there is $C_ V&lt;\infty $ such that every piecewise $C^1$ Lipschitz function $p$ on $[a,b]$ satisfies </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-FFA07A79"><span data-gerby-tag="FFA07A79"><code class="tag-id">C45BFBEEAF7F</code></span>
+<span class="equation-label"><a data-tag="FFA07A79" href="../../tag/C45BFBEEAF7F/">14.24.8</a></span>
+<div>\begin{equation}  \int _ V|\mathrm{d}(p(w))|\, \mathrm{d}\lambda \leq C_ V\left(\int _ V|p'(w)|^2\, \mathrm{d} E\right)^{1/2}, \end{equation}</div>
+</div>
+<p> where $\mathrm{d}\lambda $ is Euclidean coordinate volume. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Locally, expand $T$ into powers of the smooth form $\omega $ multiplied by closed Bedford–Taylor products of $\mathrm{dd}^{\mathrm{c}}u$ and $\mathrm{dd}^{\mathrm{c}}v$. The operator $\mathrm{dd}^{\mathrm{c}}$ then acts only on the powers of $\omega $, and the local mass bounds in section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a> show that $\mathrm{dd}^{\mathrm{c}}T$ is a finite signed measure. 
+    <p>
+      We first construct $E$ and prove (<a data-tag="09035D3B" href="../../tag/5EA1FD990FD5/">14.24.6</a>). On a coordinate ball, convolve $u$, $v$ and the coefficients of $\omega $ with a common nonnegative radial mollifier. Write the resulting smooth positive forms as $A_\rho =\omega _\rho +\mathrm{dd}^{\mathrm{c}}u_\rho $ and $B_\rho =\omega _\rho +\mathrm{dd}^{\mathrm{c}}v_\rho $, and let $T_\rho $ be their mixed sum. On a slightly larger ball, add the same fixed multiple of $|z|^2$ to each potential to obtain plurisubharmonic functions. Their radial regularizations decrease to the originals, so Bedford–Taylor continuity applies to all closed Hessian products. Since $u,v$ are continuous, $u_\rho ,v_\rho ,w_\rho $ converge uniformly on compact subsets. 
+    <p>
+      For a closed smooth product $S_\rho $ appearing in $T_\rho $, the identity 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-F8590E5E"><span data-gerby-tag="F8590E5E"><code class="tag-id">D3E407319B3E</code></span>
+<span class="equation-label"><a data-tag="F8590E5E" href="../../tag/D3E407319B3E/">14.24.9</a></span>
+<div>\begin{equation}  \mathrm{d} w_\rho \wedge \mathrm d^{\mathrm c}w_\rho \wedge S_\rho =\tfrac 12\mathrm{dd}^{\mathrm{c}}(w_\rho ^2S_\rho )-w_\rho \mathrm{dd}^{\mathrm{c}}w_\rho \wedge S_\rho \end{equation}</div>
+</div>
+<p>
+       has a distributional limit: both Hessian products on the right converge weakly with uniformly bounded local variation, and their weights converge uniformly. The same holds after multiplication by the convergent smooth factors coming from $\omega _\rho $. Thus the positive measures $E_\rho =\mathrm{d} w_\rho \wedge \mathrm d^{\mathrm c}w_\rho \wedge T_\rho $ converge to a finite positive measure $E$. By (<a data-tag="F8590E5E" href="../../tag/D3E407319B3E/">14.24.9</a>), this limit does not depend on the regularization, so the local limits agree on overlapping charts. 
+    <p>
+      For smooth regularizations, the chain rule gives 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\chi (w_\rho )\wedge T_\rho =\chi ''(w_\rho )E_\rho +\chi '(w_\rho )\mathrm{dd}^{\mathrm{c}}w_\rho \wedge T_\rho .  \]
+</div>
+<p>
+       The last current tends to zero, because $\mathrm{dd}^{\mathrm{c}}w_\rho \wedge T_\rho =A_\rho ^ n-B_\rho ^ n$ tends weakly to $A^ n-B^ n=0$ with uniformly bounded variation, and $\chi '(w_\rho )$ converges uniformly. Passing to the limit and integrating by parts on the compact manifold $X$ gives (<a data-tag="09035D3B" href="../../tag/5EA1FD990FD5/">14.24.6</a>). A partition of unity justifies this passage without a global regularization; the terms containing derivatives of the cutoff functions cancel after summation. 
+    <p>
+      Let $\sigma =w_*(\mathrm{dd}^{\mathrm{c}}T)$ and $\nu =w_*E$. Equation (<a data-tag="09035D3B" href="../../tag/5EA1FD990FD5/">14.24.6</a>) says that $\nu ''=\sigma $ as distributions on $\mathbb R$. Stokes' theorem and $\mathrm{dd}^{\mathrm{c}}w\wedge T=0$ give 
+    
+<div class="equation">
+  \[  \sigma (\mathbb R)=\int _ X\mathrm{dd}^{\mathrm{c}}T=0,\qquad \int _{\mathbb R}s\, \mathrm{d}\sigma (s)=\int _ Xw\, \mathrm{dd}^{\mathrm{c}}T=\int _ X\mathrm{dd}^{\mathrm{c}}w\wedge T=0.  \]
+</div>
+<p>
+       Consequently $k(t)=\int (s-t)_+\, \mathrm{d}\sigma (s)$ is globally Lipschitz and vanishes outside $[a,b]$. It satisfies $k''=\sigma $, so the compactly supported distribution $\nu -k(t)\, \mathrm{d} t$ has second derivative zero and therefore vanishes. Positivity of $\nu $ and continuity of $k$ imply $k\geq 0$. This proves (<a data-tag="B0F9B793" href="../../tag/B3915B7974CA/">14.24.7</a>), and the assertion about level sets follows because $\nu $ is absolutely continuous. 
+    <p>
+      We now prove (<a data-tag="FFA07A79" href="../../tag/C45BFBEEAF7F/">14.24.8</a>). On a coordinate neighborhood of $\overline V$, set $\beta =\mathrm{dd}^{\mathrm{c}}|z|^2$ and choose $c_ V&gt;0$ with $F\omega ^ n\geq c_ V\beta ^ n$. Let $A_{\mathrm{ac}}$ denote the absolutely continuous part of the current $A$, whose coefficients are locally integrable functions. Applying lemma <a data-tag="60F484B5" href="../../tag/C5B4B944142C/">5.28.10</a> with the constant function $g=c_ V^{1/n}$ and differentiating the coefficient measures, we obtain $\det _\beta A_{\mathrm{ac}}\geq c_ V$ almost everywhere. The local Sobolev regularity in section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a> gives $w_\rho \to w$ strongly in $W^{1,2}_{\mathrm{loc}}$, so a subsequence of the gradients converges almost everywhere. Moreover, $A_\rho \to A_{\mathrm{ac}}$ almost everywhere, by differentiation of the coefficient measures. 
+    <p>
+       Since $T_\rho $ contains the term $A_\rho ^{n-1}$ and all its terms are positive, Fatou's lemma, applied to $E_\rho $, yields the measure inequality 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-A555FD61"><span data-gerby-tag="A555FD61"><code class="tag-id">7EF7549DDD02</code></span>
+<span class="equation-label"><a data-tag="A555FD61" href="../../tag/7EF7549DDD02/">14.24.10</a></span>
+<div>\begin{equation}  E\geq \mathrm{d} w\wedge \mathrm d^{\mathrm c}w\wedge A_{\mathrm{ac}}^{n-1}. \end{equation}</div>
+</div>
+<p>
+        The cofactor matrix of $A_{\mathrm{ac}}$ has smallest eigenvalue at least $\det A_{\mathrm{ac}}/\operatorname {tr}A_{\mathrm{ac}}\geq c_ V/\operatorname {tr}A_{\mathrm{ac}}$, where traces and determinants are taken with respect to $\beta $. The trace is locally integrable because $A$ has locally finite mass. The chain rule for Sobolev functions, (<a data-tag="A555FD61" href="../../tag/7EF7549DDD02/">14.24.10</a>) and the Cauchy–Schwarz inequality give 
+    
+<div class="equation">
+  \[  \int _ V|\mathrm{d}(p(w))|\, \mathrm{d}\lambda \leq C\left(\int _ V|p'(w)|^2\, \mathrm{d} E\right)^{1/2} \left(\int _ V\frac{\operatorname {tr}A_{\mathrm{ac}}}{c_ V}\, \mathrm{d}\lambda \right)^{1/2}.  \]
+</div>
+<p>
+       The last factor is finite and is absorbed into $C_ V$. The values of $p'$ at the finitely many corners of $p$ are immaterial, because $E$ charges no level set of $w$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-5CCA610C">
+<p><a class="environment-identifier" href="../../tag/4FB9051BD00E/">Lemma <span data-tag="5CCA610C">14.24.11</span>.</a><span data-gerby-tag="5CCA610C"><code class="tag-id">4FB9051BD00E</code></span> In the setting of proposition <a data-tag="8137BCDB" href="../../tag/25FABE38E60B/">14.24.5</a>, assume in addition that $F$ is continuous and that $U=\{ F&gt;0\} $ is connected and dense. If $w=u-v$ is nonconstant, then </p>
+<div class="equation">
+  \[  F\omega ^ n(\{ w=\min _ Xw\} )=F\omega ^ n(\{ w=\max _ Xw\} )=0.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $a=\min _ Xw&lt;b=\max _ Xw$, and let $k$ be the function of proposition <a data-tag="8137BCDB" href="../../tag/25FABE38E60B/">14.24.5</a>. It is Lipschitz and nonnegative, and $k(a)=0$. Choose $\epsilon _ j\downarrow 0$ with $a+\epsilon _ j&lt;b$. For $\delta &gt;0$, set 
+    
+<div class="equation">
+  \[  J_ j(\delta )=\int _ a^{a+\epsilon _ j}\frac{\mathrm{d} t}{k(t)+\delta }.  \]
+</div>
+<p>
+       If $L$ is a Lipschitz constant for $k$, then $k(t)\leq L(t-a)$ on this interval, so $J_ j(\delta )\to \infty $ as $\delta \downarrow 0$. Choose $\delta _ j&gt;0$ with $J_ j=J_ j(\delta _ j)\geq j$. Let $p_ j=0$ on $(-\infty ,a]$, $p_ j=1$ on $[a+\epsilon _ j,\infty )$, and 
+    
+<div class="equation">
+  \[  p_ j'(t)=\frac{1}{J_ j(k(t)+\delta _ j)}\quad (a&lt;t&lt;a+\epsilon _ j).  \]
+</div>
+<p>
+       The pushforward identity (<a data-tag="B0F9B793" href="../../tag/B3915B7974CA/">14.24.7</a>) gives 
+    
+<div class="equation">
+  \[  \int _ X|p_ j'(w)|^2\, \mathrm{d} E =\frac{1}{J_ j^2}\int _ a^{a+\epsilon _ j}\frac{k(t)}{(k(t)+\delta _ j)^2}\, \mathrm{d} t \leq \frac1{J_ j}\longrightarrow 0.  \]
+</div>
+<p>
+       Every point of $U$ has a coordinate neighborhood $V$ as in proposition <a data-tag="8137BCDB" href="../../tag/25FABE38E60B/">14.24.5</a>, since $F$ is continuous. By (<a data-tag="FFA07A79" href="../../tag/C45BFBEEAF7F/">14.24.8</a>), therefore, $\mathrm{d}(p_ j(w))\to 0$ in $L^1_{\mathrm{loc}}(U)$. The bounded functions $p_ j(w)$ converge pointwise and in $L^1_{\mathrm{loc}}$ to $\mathbf1_{\{ w&gt;a\} }$, whose distributional gradient therefore vanishes on $U$. Since $U$ is connected, this indicator function is almost everywhere constant on $U$. As $w$ is nonconstant, $\{ w&gt;a\} $ is a nonempty open set, and its intersection with the dense open set $U$ is nonempty and open; hence the constant is one. Thus $\{ w=a\} \cap U$ has zero volume, and since $F=0$ off $U$, the first assertion follows. Applying the argument to $-w$ gives the assertion for the maximum set. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-E597C8D6FBF4" data-section-entries="527FB17149BB 6928CCD52E25 7044361ECDC0 768EAB7723D9 7F590FD94846 E597C8D6FBF4"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/E597C8D6FBF4/">14.24.12 Concentrating smooth test potentials</a><code class="tag-id">E597C8D6FBF4</code></h2><span data-gerby-tag="A3023E09"></span>
+<p>
+The next proposition produces smooth test potentials whose Monge–Ampère density dominates a fixed multiple of a prescribed function $g$, with a constant independent of $\sup _ Xg$ and of the derivatives of $g$. This uniformity allows the test densities to concentrate near a set of measure zero. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-0687B449">
+<p><a class="environment-identifier" href="../../tag/7F590FD94846/">Proposition <span data-tag="0687B449">14.24.13</span>.</a><span data-gerby-tag="0687B449"><code class="tag-id">7F590FD94846</code></span> For every $B_0&gt;\| 1\| _{L^2(\omega ^ n)}$ there is $\varepsilon =\varepsilon (X,\omega ,B_0)&gt;0$ such that every smooth function $g\geq 1$ with $\| g\| _{L^2(\omega ^ n)}\leq B_0$ admits a smooth strictly $\omega $-plurisubharmonic function $q$ satisfying </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-9AB915D8"><span data-gerby-tag="9AB915D8"><code class="tag-id">6928CCD52E25</code></span>
+<span class="equation-label"><a data-tag="9AB915D8" href="../../tag/6928CCD52E25/">14.24.14</a></span>
+<div>\begin{equation}  \omega _ q^ n\geq \varepsilon g \omega ^ n. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose finitely many coordinate balls $B_ j=\{ |z_ j|&lt;R_ j\} $, with closures in their charts, such that the concentric smaller balls $\{ |z_ j|&lt;r_ j\} $ cover $X$. On $B_ j$, let $\psi _ j$ solve the Dirichlet problem 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-4514E499"><span data-gerby-tag="4514E499"><code class="tag-id">768EAB7723D9</code></span>
+<span class="equation-label"><a data-tag="4514E499" href="../../tag/768EAB7723D9/">14.24.15</a></span>
+<div>\begin{equation}  (\mathrm{dd}^{\mathrm{c}}\psi _ j)^ n=g\omega ^ n,\qquad \psi _ j|_{\partial B_ j}=0. \end{equation}</div>
+</div>
+<p>
+       The density of $g\omega ^ n$ with respect to coordinate volume is smooth and strictly positive. The classical smooth Dirichlet theorem therefore applies, since $C_ j(|z_ j|^2-R_ j^2)$ is a smooth strict subsolution with zero boundary values for sufficiently large $C_ j&gt;0$. Thus $\psi _ j$ is smooth and strictly plurisubharmonic on $\overline B_ j$, and the maximum principle gives $\psi _ j\leq 0$. 
+    <p>
+      We need a lower bound for $\psi _ j$ independent of $\sup _ Xg$. Write the coordinate equation as $\det (\partial _ a\bar\partial _ b\psi _ j)=D_ j$, and put $M_ j=-\min _{B_ j}\psi _ j$. Let $x_ j$ be a minimum point. For each real slope $p$ with $|p|&lt;M_ j/(2R_ j)$, the function $\psi _ j-p\cdot (x-x_ j)$ attains its minimum at an interior point, because its value at $x_ j$ is $-M_ j$, while its boundary values are larger than $-M_ j$. At such a contact point the real Hessian $S$ of $\psi _ j$ is nonnegative, and the gradient of $\psi _ j$ maps the contact set onto the ball of these slopes. The area formula and the matrix inequality 
+    
+<div class="equation">
+  \[  \det _{\mathbb R}S\leq 4^ n\bigl (\det _{\mathbb C}(\partial _ a\bar\partial _ b\psi _ j)\bigr )^2=4^ nD_ j^2  \]
+</div>
+<p>
+       therefore give $M_ j\leq C(n,R_ j)\| D_ j\| _{L^2(B_ j)}^{1/n}$. To prove the matrix inequality, let $J$ be the standard complex structure on the real coordinate space and average $S$ with $J^\mathsf TSJ$. Concavity of $\log \det $, and the fact that the eigenvalues of this $J$-invariant average occur in pairs, give the displayed factor; singular matrices are handled by approximation. Since the ratio of $\omega ^ n$ to coordinate volume is fixed and bounded, $\| D_ j\| _2$ is controlled by $B_0$. Consequently 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B14135E3"><span data-gerby-tag="B14135E3"><code class="tag-id">7044361ECDC0</code></span>
+<span class="equation-label"><a data-tag="B14135E3" href="../../tag/7044361ECDC0/">14.24.16</a></span>
+<div>\begin{equation}  -M_0\leq \psi _ j\leq 0\quad \text{on every }B_ j, \end{equation}</div>
+</div>
+<p>
+       where $M_0$ depends only on $X,\omega ,B_0$ and the chosen finite cover. 
+    <p>
+      Next we glue the local solutions. Put $\beta _ j=\mathrm{dd}^{\mathrm{c}}|z_ j|^2$. Choose $a_ j&gt;0$ such that $a_ j\beta _ j\leq \omega /2$ on $B_ j$, and let $t_ j=(R_ j^2+r_ j^2)/2$. Fix $\tau &gt;0$ so small that $\tau M_0&lt;a_ j(R_ j^2-r_ j^2)/4$ for every $j$. The smooth function 
+    
+<div class="equation">
+  \[  s_ j=\tau \psi _ j+a_ j(t_ j-|z_ j|^2)  \]
+</div>
+<p>
+       is bounded below by a fixed positive constant on the smaller ball, negative on a collar of $\partial B_ j$, and satisfies $\omega _{s_ j}\geq \omega /2+\tau \mathrm{dd}^{\mathrm{c}}\psi _ j$. Choose a smooth convex function $\phi _ j:\mathbb R\to \mathbb R$ approximating $s\mapsto \max (s,0)$, equal to zero below a small negative threshold and to $s$ above the corresponding positive threshold, with $0\leq \phi _ j'\leq 1$ and $\phi _ j''\geq 0$; the thresholds are chosen smaller in absolute value than both margins of $s_ j$. Set $Q_ j=\phi _ j(s_ j)$ on $B_ j$ and extend it by zero. This extension is smooth, and 
+    
+<div class="equation">
+  \[  \omega _{Q_ j}=\phi _ j'(s_ j)\omega _{s_ j}+\bigl (1-\phi _ j'(s_ j)\bigr )\omega +\phi _ j''(s_ j)\, \mathrm{d} s_ j\wedge \mathrm d^{\mathrm c}s_ j\geq \omega /2.  \]
+</div>
+<p>
+        On the smaller ball, $Q_ j=s_ j$ and $\omega _{Q_ j}\geq \tau \mathrm{dd}^{\mathrm{c}}\psi _ j$. If $N$ is the number of balls, put $q=N^{-1}\sum _ jQ_ j$. Then $\omega _ q=N^{-1}\sum _ j\omega _{Q_ j}\geq \omega /2$ everywhere. Each point belongs to at least one smaller ball $\{ |z_ j|&lt;r_ j\} $, so positivity of the other summands and (<a data-tag="4514E499" href="../../tag/768EAB7723D9/">14.24.15</a>) give 
+    
+<div class="equation">
+  \[  \omega _ q^ n\geq (\tau /N)^ n(\mathrm{dd}^{\mathrm{c}}\psi _ j)^ n=(\tau /N)^ n g \omega ^ n.  \]
+</div>
+<p>
+       Thus (<a data-tag="9AB915D8" href="../../tag/6928CCD52E25/">14.24.14</a>) holds with $\varepsilon =(\tau /N)^ n$, independent of $\sup g$ and of all derivatives of $g$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<article class="env-proof">
+<p>
+<strong>of theorem <a data-tag="3B7B4CAD" href="../../tag/98EC31947E4C/">14.24.1</a>.</strong>
+       By corollary <a data-tag="708510FF" href="../../tag/AEA7DCEDBA8B/">14.19.29</a>, $u,v$ are continuous. In dimension one, $\mathrm{dd}^{\mathrm{c}}w=0$, so the maximum principle makes $w$ constant. Assume $n\geq 2$. 
+    <p>
+      Suppose that $w=u-v$ is nonconstant. Let $a=\min _ Xw$, $K=\{ w=a\} $, and $\mu =F\omega ^ n$. By lemma <a data-tag="5CCA610C" href="../../tag/4FB9051BD00E/">14.24.11</a>, $\mu (K)=0$. Choose $B_0&gt;\| 1\| _{L^2(\omega ^ n)}$ and let $\varepsilon &gt;0$ be the constant from proposition <a data-tag="0687B449" href="../../tag/7F590FD94846/">14.24.13</a>. Since $\mu (K)=0$, the compact set $K_0=K\cap \{ F\geq \varepsilon /2\} $ has zero $\omega ^ n$-volume. Fix $A&gt;1$ with $\varepsilon A&gt;\max _ XF$. By outer regularity of the smooth volume measure, choose an open neighborhood $O$ of $K_0$ so small that 
+    
+<div class="equation">
+  \[  \int _ X\omega ^ n+(A^2-1)\int _ O\omega ^ n&lt;B_0^2.  \]
+</div>
+<p>
+       Take a smooth $0\leq \chi \leq 1$ equal to one near $K_0$ and supported in $O$, and set $g=1+(A-1)\chi $. If $K_0=\varnothing $, take $\chi =0$. Then $g\geq 1$, $g=A$ on $K_0$, and $\| g\| _{L^2(\omega ^ n)}&lt;B_0$. 
+    <p>
+      By proposition <a data-tag="0687B449" href="../../tag/7F590FD94846/">14.24.13</a>, there is a smooth strictly $\omega $-plurisubharmonic $q$ with $\omega _ q^ n=G\omega ^ n\geq \varepsilon g\omega ^ n$. On $K_0$ we have $G\geq \varepsilon A&gt;F$; on $K\setminus K_0$ we have $F&lt;\varepsilon /2&lt;\varepsilon \leq G$. Thus $G&gt;F$ throughout the compact set $K$. By compactness and continuity, we can choose $0&lt;\kappa &lt;1$ such that $F&lt;\kappa G$ on $K$; put $W=\{ F&lt;\kappa G\} $. The complement of this open neighborhood of $K$ is compact, and $w-a$ has a strictly positive minimum there if it is nonempty. Hence some $\eta &gt;0$ satisfies $\{ w&lt;a+\eta \} \subset W$. 
+    <p>
+      Proposition <a data-tag="02FAC4D4" href="../../tag/2C3AA01F259B/">14.24.2</a> asserts that $\mu (\{ w&lt;a+\eta \} \cap \{ F&gt;\kappa G\} )&gt;0$. By the preceding inclusion, however, this set is empty. This contradiction shows that $w$ is constant. If $\sup _ Xu=\sup _ Xv$, the constant is zero. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+ For a bounded measurable density, a positive lower bound gives the same conclusion. In this case coercivity holds on all of $X$, and the concentrating test potential can dominate the essential upper bound of the density on a whole neighborhood of the extremal set. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-7D78E4FE">
+<p><a class="environment-identifier" href="../../tag/527FB17149BB/">Corollary <span data-tag="7D78E4FE">14.24.17</span>.</a><span data-gerby-tag="7D78E4FE"><code class="tag-id">527FB17149BB</code></span> If $0&lt;c_0\leq F\leq C_0&lt;\infty $ almost everywhere and bounded $\omega $-plurisubharmonic functions satisfy $\omega _ u^ n=\omega _ v^ n=F\omega ^ n$, then $u-v$ is constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The functions $u,v$ are continuous by corollary <a data-tag="708510FF" href="../../tag/AEA7DCEDBA8B/">14.19.29</a>, and in dimension one the assertion follows from $\mathrm{dd}^{\mathrm{c}}(u-v)=0$ and the maximum principle. Let $n\geq 2$, suppose that $w=u-v$ is nonconstant, and put $K=\{ w=\min _ Xw\} $. The proof of lemma <a data-tag="5CCA610C" href="../../tag/4FB9051BD00E/">14.24.11</a> applies with $U=X$, since proposition <a data-tag="8137BCDB" href="../../tag/25FABE38E60B/">14.24.5</a> gives the pushforward identity and local coercivity on every chart. Thus $K$ has zero volume. 
+    <p>
+      Fix $B_0&gt;\| 1\| _{L^2(\omega ^ n)}$ and the corresponding $\varepsilon $ in proposition <a data-tag="0687B449" href="../../tag/7F590FD94846/">14.24.13</a>. Choose $A&gt;1$ with $\varepsilon A&gt;C_0$, and a smooth cutoff function $\chi $, equal to one on a neighborhood $W$ of $K$ and supported in an open set of volume so small that $g=1+(A-1)\chi $ satisfies $\| g\| _2&lt;B_0$. The resulting test potential $q$ has density $G\geq \varepsilon g$. Choose $\kappa &lt;1$ with $C_0&lt;\kappa \varepsilon A$. Then $F&lt;\kappa G$ almost everywhere on $W$. By continuity of $w$, a sufficiently thin set $\{ w&lt;\min _ Xw+\eta \} $ lies inside $W$, which contradicts proposition <a data-tag="02FAC4D4" href="../../tag/2C3AA01F259B/">14.24.2</a>. Hence $w$ is constant. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/3DF5F7F34405/"><span>← Previous</span><small>Corollary 14.23.7</small></a><a class="pager-next" rel="next" href="../../tag/98EC31947E4C/"><span>Next →</span><small>Theorem 14.24.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness,
+  author = {{Gerby contributors}},
+  title = {14.24 Bounded uniqueness and connectedness},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Funiqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Funiqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness%2F&amp;body=Page%3A+%5B14.24+Bounded+uniqueness+and+connectedness%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Funiqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+990d34c54a1a0f221dfb9b5660a5b8e67146ca0a+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

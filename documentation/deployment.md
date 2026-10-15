@@ -27,13 +27,13 @@ Each adapter receives `SOURCE_DIRECTORY OUTPUT_DIRECTORY` and exports:
 - `assets/`: illustrations referenced by the active manuscript, including locally rendered vector diagrams;
 - temporary reading/tag pages used to validate complete source tag and badge coverage.
 
-`scripts/collection.py` combines exports into `/chapters/`, `/sections/`, `/entries/`, `/tag/TAG/`, `/references/`, `/comments/`, `/search/`, and `/sources/`. Every included source subject must be explicitly assigned to one shared chapter. The current 21-chapter order follows mathematical dependencies across the books, with 78 independently addressable sections. Chapter pages contain section links, not statement lists. `/topics/` permalinks redirect to the corresponding sections. Source-specific pages become redirects, preserving old permalinks. Source records are internal provenance, not separate reading collections. Search includes every retained contribution's text and aliases; visible headings use the manuscript's numbered titles instead of names derived from internal labels.
+`scripts/collection.py` combines exports into `/chapters/`, `/sections/`, `/entries/`, `/tag/TAG/`, `/references/`, `/comments/`, `/search/`, and `/sources/`. Every included source subject must be explicitly assigned to one shared chapter. The current 25-chapter order follows mathematical dependencies across the books, with 491 independently addressable sections. Chapter pages contain section and subsection links. `/topics/` permalinks redirect to the corresponding sections. Source-specific pages become redirects, preserving old permalinks. Source records are internal provenance, not separate reading collections. Search includes every retained contribution's text and aliases; visible headings retain mathematical names and use numbers generated from the current Gerby section. See [the integration layout contract](integration-layout.md).
 
 `scripts/reader.py` defines one reading sequence, including each chapter, its sections, and every canonical entry exactly once. Each page has reciprocal Previous/Next links at both ends, contextual breadcrumbs, a permalink, a BibTeX citation, and a comment panel. `navigation.json` records this order. Tags remain stable and are hidden in reader lists until requested. Serialized TeX label commands are stripped from presentation formulas after cross-references have been resolved.
 
 Section pages are continuous reading pages. They retain source prose between statements and display proofs in full. The renderer tracks source root identifiers so a statement or equation already contained in a larger fragment is not printed a second time. For a reviewed duplicate, the preferred source version appears once; the other occurrence links to the shared entry, where every source version remains available. The build checks complete section coverage. Mathematics on these longer pages is typeset as it approaches the viewport, using the bundled MathJax lazy extension.
 
-Book-origin captions and generic section descriptions are omitted from the reading pages. Bibliographic citations and the underlying source and badge metadata remain. Guarded proof additions in `proofs/` expand external references in both individual entries and continuous sections; see [proof expansion review](proof-expansions.md). Completed changes are proposed in PRs and regularly merged and deployed after local checks, without CI.
+Book-origin captions and all section metadata descriptions are omitted from the reading pages. Bibliographic citations and the underlying source and badge metadata remain. Guarded proof additions in `proofs/` expand external references in both individual entries and continuous sections; see [proof expansion review](proof-expansions.md). Completed changes are proposed in PRs and regularly merged and deployed after local checks, without CI.
 
 Chapter 1 contains only conventions. `collection.json` lists omitted front matter in `excluded_topics`; these subjects and their entries are excluded from the reading order, search, and collection listings. References to omitted material retain their text without a link, and its old section and entry URLs redirect to the table of contents. Source tag inventories retain omitted tags with `canonical_tag: null`.
 
@@ -89,7 +89,7 @@ It includes a recalled covered parameter lemma used by the added arguments.
 
 Subjects follow the existing classical and capacity chapters. The first three
 published results keep their canonical and source tags and Kelvin-section URL.
-Their theorem numbers follow their positions in the complete article. The
+Their reader numbers follow their current Gerby section, independently of article positions. The
 expanded conventions retain the earlier prerequisite tag and appear under
 Conventions. The other source subjects cover harmonic analysis, Green
 potentials, polar sets and sweeping, Perron and fine limits, and energy and
@@ -97,6 +97,6 @@ Martin boundaries. Every retained source label has a chapter assignment.
 
 The branch's reviewed proof hashes, dependencies, bibliography, and source
 revisions are checked before integration. Tests cover the full input graph,
-article numbering, topic coverage and old prerequisite tag. The complete build
+source-coordinate export, reader numbering, topic coverage and old prerequisite tag. The complete build
 checks every local link; browser checks cover mathematical rendering, badges
 and layout. Formalization remains Not recorded. Updates remain on request.

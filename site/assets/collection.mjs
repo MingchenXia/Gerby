@@ -118,6 +118,17 @@ document.querySelectorAll('[data-copy-link], [data-copy-citation]').forEach(butt
   catch { status.textContent = 'Select and copy the permalink or citation above.'; }
 }));
 
+// Fragment navigation alone leaves a closed <details> panel collapsed. Open
+// it on every click, including when #cite is already the current fragment.
+document.querySelectorAll('a[href="#cite"]').forEach(anchor => anchor.addEventListener('click', () => {
+  const citation = document.querySelector('details#cite');
+  if (citation) {
+    citation.open = true;
+    citation.querySelector('textarea')?.focus({preventScroll: true});
+    citation.scrollIntoView({block: 'start'});
+  }
+}));
+
 // A clause permalink may target a retained source version that is collapsed.
 function revealFragment() {
   if (!location.hash) return;
@@ -125,7 +136,7 @@ function revealFragment() {
   try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); }
   catch { return; }
   if (!target) return;
-  for (let node = target.parentElement; node; node = node.parentElement) {
+  for (let node = target; node; node = node.parentElement) {
     if (node.tagName === 'DETAILS') node.open = true;
   }
   target.scrollIntoView({block: 'start'});

@@ -1,0 +1,353 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/"><title>12.35 Divisorial constraints and residual volume · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/gauduchon-variational-volume/">Chapter 12: Gauduchon variational volume</a></li><li><a href="../../sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/" aria-current="page">Section 12.35: Divisorial constraints and residual volume</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/a-gauduchon-variational-volume/"><span>12.1</span> A Gauduchon variational volume</a><code class="tag-id">881C26425D7A</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-quotient-and-the-smooth-equation/"><span>12.2</span> The quotient and the smooth equation</a><code class="tag-id">43BF29E33E59</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-equality-case-of-concavity-and-the-first-variation/"><span>12.3</span> The equality case of concavity and the first variation</a><code class="tag-id">484879715C58</code></li><li><a href="../../sections/a-gauduchon-variational-volume--second-variation-on-background-classes/"><span>12.4</span> Second variation on background classes</a><code class="tag-id">8A687EAB6B68</code></li><li><a href="../../sections/a-gauduchon-variational-volume--recovering-a-positive-class-from-its-gauduchon-derivative/"><span>12.5</span> Recovering a positive class from its Gauduchon derivative</a><code class="tag-id">9141861B4F50</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/"><span>12.6</span> The Hessian metric and its completion</a><code class="tag-id">466CEDF9AEBA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-compact-dual-problem-over-gauduchon-currents/"><span>12.7</span> A compact dual problem over Gauduchon currents</a><code class="tag-id">54ADA5D399DA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--supporting-probabilities-represented-by-maximizing-currents/"><span>12.8</span> Supporting probabilities represented by maximizing currents</a><code class="tag-id">7C2BB0FDDDF5</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrability-of-gauduchon-determinant-measures/"><span>12.9</span> Integrability of Gauduchon determinant measures</a><code class="tag-id">D02094988A03</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/"><span>12.10</span> Integrable densities in the compact Gauduchon problem</a><code class="tag-id">5CB8CFC32A19</code></li><li><a href="../../sections/a-gauduchon-variational-volume--nef-limits-and-nonattainment/"><span>12.11</span> Nef limits and nonattainment</a><code class="tag-id">EA449D56F8F7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-with-a-closed-nef-core/"><span>12.12</span> Subtraction with a closed nef core</a><code class="tag-id">75F31FAA4616</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-on-warped-products/"><span>12.13</span> Subtraction on warped products</a><code class="tag-id">EA9388E29ABC</code></li><li><a href="../../sections/a-gauduchon-variational-volume--positive-volume-without-bigness/"><span>12.14</span> Positive volume without bigness</a><code class="tag-id">E4AB7B03C20D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--varying-the-probability-measure/"><span>12.15</span> Varying the probability measure</a><code class="tag-id">8B161DDAE77F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-conditions-for-mass-extrema/"><span>12.16</span> Curvature conditions for mass extrema</a><code class="tag-id">A57EC3129CC8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-pairs-and-positive-lower-mass/"><span>12.17</span> Curvature pairs and positive lower mass</a><code class="tag-id">C18EABD7D630</code></li><li><a href="../../sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/"><span>12.18</span> Geometric bounds and determinant concentration</a><code class="tag-id">AA652CC345D8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--vanishing-lower-mass/"><span>12.19</span> Vanishing lower mass</a><code class="tag-id">108F40B2DFAA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary/"><span>12.20</span> Orders of degeneration at the nef boundary</a><code class="tag-id">3567ADAA7365</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--elliptic-surface-volumes-and-order-spectra/"><span>12.21</span> Elliptic surface volumes and order spectra</a><code class="tag-id">E4B29689FB79</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--comparison-under-an-arbitrary-modification/"><span>12.22</span> Comparison under an arbitrary modification</a><code class="tag-id">9BED3D691F82</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--strict-changes-under-one-blowup/"><span>12.23</span> Strict changes under one blowup</a><code class="tag-id">D0D47B7389D7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--positive-current-subtraction-and-divisorial-residuals/"><span>12.24</span> Positive-current subtraction and divisorial residuals</a><code class="tag-id">57C0ECEB4F4C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--integer-orders-in-fixed-projective-cones/"><span>12.25</span> Integer orders in fixed projective cones</a><code class="tag-id">E6D8A97F4D2C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--a-maximum-rank-comparison-criterion/"><span>12.26</span> A maximum-rank comparison criterion</a><code class="tag-id">493311C8FB2F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-anticanonical-curves/"><span>12.27</span> Flat anticanonical curves</a><code class="tag-id">0E9176045572</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-divisors-and-hartogs-extension/"><span>12.28</span> Flat divisors and Hartogs extension</a><code class="tag-id">25D1457FC429</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--punctured-line-bundles-and-elliptic-quotients/"><span>12.29</span> Punctured line bundles and elliptic quotients</a><code class="tag-id">76F771FE4DA3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-torsors-on-split-elliptic-ruled-surfaces/"><span>12.30</span> Cotangent torsors on split elliptic ruled surfaces</a><code class="tag-id">E4B698D2AEE3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--symmetric-tensors-on-split-elliptic-ruled-surfaces/"><span>12.31</span> Symmetric tensors on split elliptic ruled surfaces</a><code class="tag-id">7CF6C47CAA92</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--section-algebras-of-cotangent-extensions/"><span>12.32</span> Section algebras of cotangent extensions</a><code class="tag-id">72E247F3A7CA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-extensions-with-zero-ruling-component/"><span>12.33</span> Cotangent extensions with zero ruling component</a><code class="tag-id">C9CE007F34A7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/"><span>12.34</span> Current tests for smooth positivity</a><code class="tag-id">509A5021C77D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/" aria-current="page"><span>12.35</span> Divisorial constraints and residual volume</a><code class="tag-id">269CE892EA5B</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-divisorial-threshold-on-the-hopf-threefold/"><span>12.36</span> A divisorial threshold on the Hopf threefold</a><code class="tag-id">7F944D8C8D92</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/706929790BE5/"><span>← Previous</span><small>Example 12.34.14</small></a><a class="pager-next" rel="next" href="../../tag/C43B33AA4A18/"><span>Next →</span><small>Proposition 12.35.1</small></a></nav><h1>12.35 Divisorial constraints and residual volume<code class="tag-id">269CE892EA5B</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-269CE892EA5B" data-section-entries="269CE892EA5B 3EE856593807 44DAB02F7C7C 7B32818E6010 C43B33AA4A18 D8ACD0FADFBD"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="47871B89"><code class="tag-id">269CE892EA5B</code></span>
+<p>
+Suppose we require a $\theta $-plurisubharmonic function to have generic Lelong numbers at least $a_ j$ along prescribed prime divisors $D_ j$. Removing the divisor $D=\sum _ ja_ jD_ j$ leaves the residual background $\theta -\eta _ D$, where $\eta _ D$ is a curvature form of $D$, and in each Gauduchon quotient this removal subtracts the Gauduchon degree of $D$ from the numerator. Lamari's duality therefore decides when such functions exist, and the volume of the residual background measures what remains. By the correspondence of theorem <a data-tag="37CD7A01" href="../../tag/7281EDB812F1/">11.41.1</a>, equations in the ordinary singularity type of the logarithmic potential of $D$ reduce to equations in the residual background. When the residual background has a smooth positive representative, the smooth maximizer of the dual problem forces every subsolution with the prescribed Lelong numbers and the residual volume as scalar to be the logarithmic potential of $D$ plus a smooth function, up to a constant. 
+</p>
+<p>
+Fix a smooth real $(1,1)$-form $\theta $ on $X$. Let $D=\sum _{j=1}^ N a_ jD_ j$ be an effective real divisor, with distinct prime divisors $D_ j$ and coefficients $a_ j&gt;0$. Choose a smooth Hermitian metric on each line bundle $\mathcal O_ X(D_ j)$, write $s_ j$ for its canonical section, and let $\eta _ j$ be its Chern curvature form. Set 
+</p>
+<div class="equation">
+  \[  \sigma _ D=\sum _ j a_ j\log |s_ j|^2, \qquad \eta _ D=\sum _ j a_ j\eta _ j, \qquad \beta _ D=\theta -\eta _ D.  \]
+</div>
+<p>
+ The Poincaré–Lelong formula reads 
+</p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\sigma _ D=[D]-\eta _ D.  \]
+</div>
+<p>
+ For a Gauduchon metric $\gamma $ on $X$, define the Gauduchon degree 
+</p>
+<div class="equation">
+  \[  \deg _\gamma D=\int _ X[D]\wedge \gamma ^{n-1} =\sum _ j a_ j\int _{D_ j}\gamma ^{n-1},  \]
+</div>
+<p>
+ where integration over a singular divisor means integration over its regular locus, or equivalently against its current of integration. This degree is finite, positive for $D\ne 0$, and equal to $\int _ X\eta _ D\wedge \gamma ^{n-1}$ by distributional Stokes. We write $\nu (u,D_ j)$ for the generic Lelong number of $u$ along $D_ j$, as in section <a data-tag="BB3C41D4" href="../../tag/0D77FC17B23B/">5.34</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-BA07E404">
+<p><a class="environment-identifier" href="../../tag/C43B33AA4A18/">Proposition <span data-tag="BA07E404">12.35.1</span>.</a><span data-gerby-tag="BA07E404"><code class="tag-id">C43B33AA4A18</code></span> The following are equivalent: </p>
+<ol>
+<li><p>
+there is $u\in \mathrm{PSH}(X,\theta )$ with $\nu (u,D_ j)\geq a_ j$ for every $j$; 
+</p>
+</li><li><p>
+the residual background $\beta _ D$ is pseudoeffective; 
+</p>
+</li><li><p>
+for every Gauduchon metric $\gamma $, 
+</p>
+<div class="equation">
+  \[  \int _ X\theta \wedge \gamma ^{n-1}\geq \deg _\gamma D.  \]
+</div>
+</li>
+</ol>
+<p> The first condition does not require $u-\sigma _ D$ to be bounded, nor the Lelong numbers of $u$ to equal the prescribed ones. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose first that $u$ satisfies the first condition. By lemma <a data-tag="71AD1E73" href="../../tag/3AA98220C897/">5.38.1</a>, these Lelong numbers can be subtracted: $\theta +\mathrm{dd}^{\mathrm{c}}u-[D]\geq 0$. Consequently 
+    
+<div class="equation">
+  \[  \beta _ D+\mathrm{dd}^{\mathrm{c}}(u-\sigma _ D)=\theta +\mathrm{dd}^{\mathrm{c}}u-[D]\geq 0,  \]
+</div>
+<p>
+       where the difference $u-\sigma _ D$ is first taken in $L^1$ and then replaced by its quasi-plurisubharmonic representative. This proves the second condition. Conversely, if $v\in \mathrm{PSH}(X,\beta _ D)$, then $u=\sigma _ D+v$ satisfies 
+    
+<div class="equation">
+  \[  \theta +\mathrm{dd}^{\mathrm{c}}u=[D]+\beta _ D+\mathrm{dd}^{\mathrm{c}}v\geq 0,  \]
+</div>
+<p>
+       so its generic Lelong numbers along the $D_ j$ are at least $a_ j$. For $n\geq 2$, Lamari's duality, theorem <a data-tag="87DC00D0" href="../../tag/88BE3B63D9E5/">11.6.1</a>, says that a smooth background is pseudoeffective exactly when all its Gauduchon integrals are nonnegative; applied to $\beta _ D$, together with the degree identity, it gives the equivalence of the second and third conditions. For $n=1$ the same criterion reads $\int _ X\beta _ D\geq 0$: necessity follows from Stokes' theorem, and for sufficiency one solves $\mathrm{dd}^{\mathrm{c}}f=(\int _ X\beta _ D)\mu -\beta _ D$ for a smooth real function $f$ with the scalar Green operator. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For a nonzero effective real divisor $D$ and a pseudoeffective $\theta $, the exact threshold is therefore 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-12AC975F"><span data-gerby-tag="12AC975F"><code class="tag-id">D8ACD0FADFBD</code></span>
+<span class="equation-label"><a data-tag="12AC975F" href="../../tag/D8ACD0FADFBD/">12.35.2</a></span>
+<div>\begin{equation}  \tau _\theta (D)= \inf _{\gamma \text{ Gauduchon}} \frac{\int _ X\theta \wedge \gamma ^{n-1}}{\deg _\gamma D}. \end{equation}</div>
+</div>
+<p>
+ It is finite and nonnegative, and a function $u\in \mathrm{PSH}(X,\theta )$ with $\nu (u,D_ j)\geq ta_ j$ for all $j$ exists if and only if $0\leq t\leq \tau _\theta (D)$. The endpoint is included, because the non-strict Gauduchon inequalities still hold there and duality gives a positive current. This is a threshold for the existence of a positive current, not for the existence of a bounded residual potential. 
+</p>
+<p>
+Whenever $\beta _ D$ is pseudoeffective, define the residual volume 
+</p>
+<div class="equation">
+  \[  \mathcal V_\mu (\theta ;D)=\mathcal V_\mu (\beta _ D).  \]
+</div>
+<p>
+ The definition and the degree identity give the exact formula 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-C3812B18"><span data-gerby-tag="C3812B18"><code class="tag-id">44DAB02F7C7C</code></span>
+<span class="equation-label"><a data-tag="C3812B18" href="../../tag/44DAB02F7C7C/">12.35.3</a></span>
+<div>\begin{equation}  \mathcal V_\mu (\theta ;D)^{1/n} =\inf _{\gamma \text{ Gauduchon}} \frac{\int _ X\theta \wedge \gamma ^{n-1}-\deg _\gamma D}{D_\mu (\gamma )}, \end{equation}</div>
+</div>
+<p>
+ and the residual volume is finite and nonnegative. Changing the auxiliary metrics on the line bundles changes $\eta _ D$ by a smooth $\mathrm{dd}^{\mathrm{c}}$-exact term, so the residual volume does not depend on these metrics, nor on a smooth $\mathrm{dd}^{\mathrm{c}}$ change of $\theta $. It depends on the prescribed divisor and on the smooth probability measure $\mu $. 
+</p>
+<p>
+Here $\mathrm{MA}^{\mathrm{ext}}_\theta $ denotes the extended non-pluripolar Monge–Ampère measure of theorem <a data-tag="059FFA20" href="../../tag/99C7ACBB2589/">13.14.3</a>. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-6629041C">
+<p><a class="environment-identifier" href="../../tag/7B32818E6010/">Theorem <span data-tag="6629041C">12.35.4</span>.</a><span data-gerby-tag="6629041C"><code class="tag-id">7B32818E6010</code></span> Suppose that $\beta _ D$ has a smooth positive representative, and put $c=\mathcal V_\mu (\theta ;D)$. There is a $\theta $-plurisubharmonic function $u_0=\sigma _ D+v$, with $v$ smooth, satisfying </p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\theta (u_0)=c\mu .  \]
+</div>
+<p> Every $u\in \mathrm{PSH}(X,\theta )$ such that </p>
+<div class="equation">
+  \[  \nu (u,D_ j)\geq a_ j\quad (1\leq j\leq N),\qquad \mathrm{MA}^{\mathrm{ext}}_\theta (u)\geq c\mu  \]
+</div>
+<p> differs from $u_0$ by a constant. In particular, a solution of a normalized equation $\mathrm{MA}^{\mathrm{ext}}_\theta (u)=c'\mu $ in the ordinary singularity type of $\sigma _ D$ has scalar $c'=c$, has a smooth remainder $u-\sigma _ D$, and is unique up to constants. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Existence.</em> The smooth equation and theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">12.2.3</a> give a smooth $v$ with 
+    
+<div class="equation">
+  \[  \Omega =\beta _ D+\mathrm{dd}^{\mathrm{c}}v&gt;0,\qquad \Omega ^ n=c\mu .  \]
+</div>
+<p>
+       Then $\theta +\mathrm{dd}^{\mathrm{c}}(\sigma _ D+v)=[D]+\Omega \geq 0$. Off $D$, the extended measure of $u_0=\sigma _ D+v$ is $\Omega ^ n$, and both measures give zero mass to $D$. This proves existence. 
+    <p>
+<em>Reduction to the residual background.</em> Let $u$ satisfy the two inequalities. Removing the divisor as in the proof of proposition <a data-tag="BA07E404" href="../../tag/C43B33AA4A18/">12.35.1</a>, we obtain 
+    
+<div class="equation">
+  \[  w=u-\sigma _ D-v\in \mathrm{PSH}(X,\Omega ),\qquad \Omega +\mathrm{dd}^{\mathrm{c}}w=\theta +\mathrm{dd}^{\mathrm{c}}u-[D]\geq 0,  \]
+</div>
+<p>
+       where the difference is first taken in $L^1$ and then replaced by its canonical representative. On $X\setminus D$, the two currents differ only by smooth changes in the decomposition of their local potentials, so their extended measures agree there, and both measures vanish on $D$. Hence 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\Omega (w) =\mathrm{MA}^{\mathrm{ext}}_\theta (u)\geq c\mu .  \]
+</div>
+<p>
+<em>Rigidity.</em> Take $\mathrm{d}V=\mu $. The zero function solves the smooth equation $\Omega ^ n=c\mu $ in the background $\Omega $, so its subsolution threshold is $b_\Omega (1)=c$, by proposition <a data-tag="58DB2491" href="../../tag/69BB1D568698/">15.28.7</a>. For $n\geq 2$, the normalized $(n-1)$st power of the Gauduchon metric conformal to $\Omega $ is a smooth strictly positive maximizer of the dual problem. By corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a>, any two threshold subsolutions differ by a constant; comparing $w$ with zero shows that $w$ is constant. For $n=1$, the positive current $\Omega +\mathrm{dd}^{\mathrm{c}}w$ dominates its extended measure, hence dominates $c\mu =\Omega $, while both have total mass $\int _ X\Omega =c$ by Stokes' theorem. Thus $\mathrm{dd}^{\mathrm{c}}w=0$, and $w$ is again constant. 
+    <p>
+<em>Solutions in the ordinary type.</em> Finally, let $u$ be in the ordinary singularity type of $\sigma _ D$ with $\mathrm{MA}^{\mathrm{ext}}_\theta (u)=c'\mu $ for some $c'\geq 0$. Then $\nu (u,D_ j)=a_ j$, and the same reduction gives a bounded $w\in \mathrm{PSH}(X,\Omega )$ with $\mathrm{MA}_\Omega (w)=c'\mu $. Suppose $c'&lt;c$. For every constant $C$, the bounded functions $w$ and $C$ satisfy $\mathrm{MA}_\Omega (w)=(c'/c)\mathrm{MA}_\Omega (C)$, so theorem <a data-tag="45E482CE" href="../../tag/C0DEE578BC5D/">14.19.10</a> gives $w\geq C$, which is impossible for a bounded $w$. The case $c'&gt;c$ is symmetric, with the roles of $w$ and the constants exchanged. Therefore $c'=c$, and the rigidity just proved gives $u=u_0+\mathrm{constant}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+When $\theta $ is Hermitian, write $\mu =f\, \mathrm{d}V$ relative to a smooth strictly positive probability volume $\mathrm{d}V$. For every $u\in \mathrm{PSH}(X,\theta )$ with $\theta +\mathrm{dd}^{\mathrm{c}}u\geq [D]$ and $\mathrm{MA}^{\mathrm{ext}}_\theta (u)\geq cf\, \mathrm{d}V$, in particular for the potential $u_0$ of theorem <a data-tag="6629041C" href="../../tag/7B32818E6010/">12.35.4</a> with $c=\mathcal V_\mu (\theta ;D)$, proposition <a data-tag="F984B99B" href="../../tag/7B0AC7895B1F/">10.18.1</a> bounds the coefficient $c$ in terms of the subsolution threshold $b_\theta (f)$ of theorem <a data-tag="76378BFC" href="../../tag/CC13A9B1D927/">15.28.4</a> and the linear threshold of the class of the divisor. The residual problem prescribes the divisor, whereas the threshold $b_\theta (f)$ allows all $\theta $-plurisubharmonic functions. 
+</p>
+<p>
+ Along a family $D_ t=tD$, $t\geq 0$, in the feasible interval, the root of (<a data-tag="C3812B18" href="../../tag/44DAB02F7C7C/">12.35.3</a>) is concave and nonincreasing in $t$: every test quotient is affine in $t$ with nonpositive slope, and both properties pass to the infimum. On a subinterval where $\theta -t\eta _ D$ has a smooth positive representative, choose a minimizing Gauduchon metric $\gamma _ t$ for that background. Proposition <a data-tag="6D3F0AB8" href="../../tag/94AFD9E43DE0/">12.3.2</a> then gives the sharper formula 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-71115215"><span data-gerby-tag="71115215"><code class="tag-id">3EE856593807</code></span>
+<span class="equation-label"><a data-tag="71115215" href="../../tag/3EE856593807/">12.35.5</a></span>
+<div>\begin{equation}  \frac{\mathrm{d}}{\mathrm{d}t}\mathcal V_\mu (\theta ;tD)^{1/n} =-\frac{\deg _{\gamma _ t}D}{D_\mu (\gamma _ t)}&lt;0. \end{equation}</div>
+</div>
+<p>
+ In dimension one the derivative is $-\deg D$, since the denominator is one. If the residual background at an endpoint of the interval is nef, theorem <a data-tag="F03E2CAC" href="../../tag/9ECB2B21B601/">12.11.1</a> also expresses its volume as the limit of the scalars of the smooth normalized equations for the perturbations by $\epsilon h$, with $h$ a fixed Hermitian form and $\epsilon \downarrow 0$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-2AD000453E7C" data-section-entries="280181A9DE22 2AD000453E7C"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/2AD000453E7C/">12.35.6 Varying divisorial coefficients</a><code class="tag-id">2AD000453E7C</code></h2><span data-gerby-tag="C2D6C36D"></span>
+<p>
+For a fixed support, the residual equation depends smoothly on the coefficients as long as the residual background stays in $\mathscr P$. The smooth remainders then give convergence in capacity of the solutions, and they determine all generic Lelong numbers of the limit on every modification. Keep $D_ j$, $s_ j$ and $\eta _ j$ as above, and put $\sigma _ j=\log |s_ j|^2$. 
+</p>
+<p>
+For $a=(a_1,\ldots ,a_ N)\in \mathbb R_{\geq 0}^ N$ put 
+</p>
+<div class="equation">
+  \[  D_ a=\sum _ j a_ jD_ j,\qquad \sigma _ a=\sum _{a_ j&gt;0}a_ j\sigma _ j,\qquad \beta _ a=\theta -\sum _ j a_ j\eta _ j,  \]
+</div>
+<p>
+ where zero coefficients are omitted from the logarithmic sum. Let $\mathcal A$ be the set of such $a$ for which $\beta _ a$ has a smooth positive representative. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-4F49A535">
+<p><a class="environment-identifier" href="../../tag/280181A9DE22/">Proposition <span data-tag="4F49A535">12.35.7</span>.</a><span data-gerby-tag="4F49A535"><code class="tag-id">280181A9DE22</code></span> There are unique smooth functions $v_ a$, $a\in \mathcal A$, such that </p>
+<div class="equation">
+  \[  \int _ Xv_ a\, \mathrm{d}\mu =0,\qquad \Omega _ a=\beta _ a+\mathrm{dd}^{\mathrm{c}}v_ a&gt;0,\qquad \Omega _ a^ n=c(a)\mu , \quad c(a)=\mathcal V_\mu (\beta _ a)&gt;0.  \]
+</div>
+<p> The maps $a\mapsto v_ a$ and $a\mapsto c(a)$ are smooth, and every smooth norm of $v_ a$ is bounded on compact subsets of $\mathcal A$. Here smoothness at a parameter with a zero coefficient means that the family is the restriction of a smooth family defined on an open subset of $\mathbb R^ N$. </p>
+<p>Set $u_ a=\sigma _ a+v_ a$. If $a^{(k)}\in \mathcal A$ and $a^{(k)}\to a\in \mathcal A$, then $u_{a^{(k)}}\to u_ a$ in $L^1$ and in capacity, and smoothly on compact subsets of $X\setminus \bigcup _ jD_ j$. Moreover, </p>
+<div class="equation">
+  \[  \bigl \| \mathrm{MA}^{\mathrm{ext}}_\theta (u_{a^{(k)}}) -\mathrm{MA}^{\mathrm{ext}}_\theta (u_ a)\bigr \| _{\mathrm{TV}} =|c(a^{(k)})-c(a)|\longrightarrow 0,  \]
+</div>
+<p> where $\| \cdot \| _{\mathrm{TV}}$ is the total variation norm. For every modification $\pi :Y\to X$ with $Y$ smooth and every prime divisor $E\subset Y$, </p>
+<div class="equation">
+  \[  \nu (u_ a\circ \pi ,E)=\sum _ j a_ j\operatorname {ord}_ E(\pi ^*D_ j),  \]
+</div>
+<p> where $\operatorname {ord}_ E(\pi ^*D_ j)$ is the vanishing order along $E$ of the pullback of a local equation of $D_ j$. In particular, the limit $u_ a$ has exactly the ordinary singularity type of $\sigma _ a$, and no further singularity appears in this finite family. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The set of parameters in $\mathbb R^ N$ for which $\beta _ a$ has a smooth positive representative is open, and the smooth equation gives $v_ a$ and $c(a)$ on it. The argument in the proof of proposition <a data-tag="6D3F0AB8" href="../../tag/94AFD9E43DE0/">12.3.2</a> gives smooth dependence of both quantities on the parameter, with the fixed mean normalization; uniqueness makes the local families agree. Covering a compact set of parameters by finitely many such neighborhoods gives the asserted bounds. 
+    <p>
+      The Poincaré–Lelong formula gives 
+    
+<div class="equation">
+  \[  \theta +\mathrm{dd}^{\mathrm{c}}u_ a=[D_ a]+\Omega _ a,  \]
+</div>
+<p>
+       so $u_ a\in \mathrm{PSH}(X,\theta )$. Its extended measure equals $\Omega _ a^ n=c(a)\mu $ off the union of the divisors, and both measures vanish on that union; this also covers the case $D_ a=0$. Each fixed $\sigma _ j$ is locally integrable, so the convergence of the coefficients and the smooth convergence of $v_ a$ give convergence in $L^1$. Off the union of the divisors every $\sigma _ j$ is smooth, which gives smooth convergence there. For convergence in capacity, remove a neighborhood of this analytic set of arbitrarily small Hermitian capacity; on its compact complement the convergence is uniform. Since the union of the divisors has capacity zero, this proves convergence in capacity. The identity for the total variation distances follows from the equations and $\mu (X)=1$. 
+    <p>
+      Finally, after pullback the logarithmic potential $\sigma _ j\circ \pi $ has generic Lelong number $\operatorname {ord}_ E(\pi ^*D_ j)$ along $E$, whereas $v_ a\circ \pi $ is smooth. Additivity of Lelong numbers for the finite sum proves the formula on every modification. Since $v_ a$ is smooth also at the limiting parameter, $u_ a$ has the ordinary singularity type of $\sigma _ a$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The smooth bounds above use that the limiting parameter lies in $\mathcal A$. When the sections and weights move, theorem <a data-tag="B7148C83" href="../../tag/BF6A67E9A40E/">11.41.3</a> gives $L^1$ convergence of the potentials normalized by $\sup _ X=0$; when the residual background is fixed, it also allows uniformly bounded measurable right-hand sides converging in $L^1$. On a modification, the pullback of a positive probability density can vanish along the exceptional divisor, so the smooth equation with positive density no longer applies directly. For a minimal exceptional pole, proposition <a data-tag="8D71B5D2" href="../../tag/86DDC28E0989/">10.21.9</a> gives a vanishing order of the density that is necessary for a smooth residual, but this order alone does not ensure smoothness. 
+</p>
+<p>
+Multiplier ideals need not stabilize in this family. At a smooth point of $D_ j$ outside the other divisors, take a local coordinate $z_1$ defining $D_ j$. There $u_ a=a_ j\log |z_1|^2+O(1)$, so 
+</p>
+<div class="equation">
+  \[  \mathcal I(u_ a)=(z_1^{\lfloor a_ j\rfloor })  \]
+</div>
+<p>
+ by the one-variable integral in example <a data-tag="07A23101" href="../../tag/36A8480CE7DF/">5.33.3</a> and Fubini's theorem. Thus, if the parameter stays in $\mathcal A$ while $a_ j$ increases to an integer from below, this local ideal jumps at the limit. Convergence of the Lelong numbers to their limiting values does not imply that the multiplier ideals are eventually equal to those of the limit. 
+</p>
+</div></section><section class="reading-chunk" id="entry-E45BF47B8568" data-section-entries="10918993D19D 76B0694EBA2F AFBB384B6340 DA1A40EA1D3A E45BF47B8568 E45E9799C813 F402CC8C0A7E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/E45BF47B8568/">12.35.8 A ruled residual and its subtraction cost</a><code class="tag-id">E45BF47B8568</code></h2><span data-gerby-tag="BAA6E44F"></span>
+<p>
+On the ruled surface of subsection <a data-tag="ECB5F6D3" href="../../tag/070063ADB7C2/">20.3.63</a>, the Gauduchon variational volume has a different dependence on the data from the two volumes of an ordinary type. Keep $Y=\mathbb P^1\times \mathbb P^1$, $\theta =cw_1+aw_2$, $0\leq b&lt;c$ and $\beta =(c-b)w_1+aw_2$. Let $m&gt;0$ be smooth on the first curve, with $\int mw=1$, and put 
+</p>
+<div class="equation">
+  \[  \mu =mw_1\wedge w_2,\qquad k=c-b,\qquad H=\int _{\mathbb P^1}\frac{m}{a}w.  \]
+</div>
+<p>
+ In dimension two the Gauduchon tests are all smooth positive $(1,1)$-forms $T$ with $\mathrm{dd}^{\mathrm{c}}T=0$, and $D_\mu (T)=\int _ Y\sqrt{T^2/\mu }\, \mu $. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-E8B67AAC">
+<p><a class="environment-identifier" href="../../tag/E45E9799C813/">Proposition <span data-tag="E8B67AAC">12.35.9</span>.</a><span data-gerby-tag="E8B67AAC"><code class="tag-id">E45E9799C813</code></span> The all-test infimum is attained and </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-79341B7B"><span data-gerby-tag="79341B7B"><code class="tag-id">DA1A40EA1D3A</code></span>
+<span class="equation-label"><a data-tag="79341B7B" href="../../tag/DA1A40EA1D3A/">12.35.10</a></span>
+<div>\begin{equation}  \mathcal V_\mu (\theta ;bD)=\mathcal V_\mu (\beta )=\frac{2(c-b)}{H}, \qquad \mathcal V_\mu (\theta )=\frac{2c}{H}. \end{equation}</div>
+</div>
+<p> Writing $V=2k/H$ and $g=Vm/(2a)$, a minimizing test is the closed positive form </p>
+<div class="equation">
+  \[  T=\frac ga w_1+w_2.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\int gw=k$, solve $\mathrm{dd}^{\mathrm{c}}f=(g-k)w$ on the first sphere. Then $\Omega =\beta +\mathrm{dd}^{\mathrm{c}}f=gw_1+aw_2&gt;0$ and $\Omega ^2=V\mu $. For every Gauduchon test, Stokes and the matrix arithmetic–geometric mean inequality give 
+    
+<div class="equation">
+  \[  \int _ Y\beta \wedge T=\int _ Y\Omega \wedge T \geq \sqrt V\, D_\mu (T).  \]
+</div>
+<p>
+       The displayed $T$ is closed, since $g/a$ depends only on the first factor, and $T=a^{-1}\Omega $, so equality holds pointwise. Explicitly, 
+    
+<div class="equation">
+  \[  \int _ Y\beta \wedge T=2k, \qquad D_\mu (T)=\sqrt V\int \frac ma w=\sqrt V H.  \]
+</div>
+<p>
+       This proves the infimum over all tests. The curvature of $D$ is $w_1$, so the divisorial residual is indeed $\beta $. Replacing $k$ by $c$ gives the formula for $\theta $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Fix a real constant $d$ and a smooth real first-factor function $e$. On an interval where $c_ s=c-sd&gt;b$ and $a_ s=a-se&gt;0$, keep $b,m$ fixed and put 
+</p>
+<div class="equation">
+  \[  k_ s=c_ s-b,\qquad H_ s=\int \frac{m}{a_ s}w, \qquad V_ s=\frac{2k_ s}{H_ s},\qquad T_ s=\frac{V_ sm}{2a_ s^2}w_1+w_2.  \]
+</div>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-38159801">
+<p><a class="environment-identifier" href="../../tag/F402CC8C0A7E/">Corollary <span data-tag="38159801">12.35.11</span>.</a><span data-gerby-tag="38159801"><code class="tag-id">F402CC8C0A7E</code></span> For the residual background $\beta _ s=k_ sw_1+a_ sw_2$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-FE72E750"><span data-gerby-tag="FE72E750"><code class="tag-id">10918993D19D</code></span>
+<span class="equation-label"><a data-tag="FE72E750" href="../../tag/10918993D19D/">12.35.12</a></span>
+<div>\begin{equation}  \frac{\mathrm d}{\mathrm ds}\sqrt{V_ s} =-\frac{\int _ Y(d w_1+e w_2)\wedge T_ s}{D_\mu (T_ s)}. \end{equation}</div>
+</div>
+<p> Consequently, for every compact segment $[s_0,s_1]$ in that interval, </p>
+<div class="equation">
+  \[  \sqrt{V_{s_0}}-\sqrt{V_{s_1}} =\int _{s_0}^{s_1} \frac{\int _ Y(d w_1+e w_2)\wedge T_ s}{D_\mu (T_ s)}\, \mathrm ds.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We have $H_ s'=\int em/a_ s^2\, w$, $D_\mu (T_ s)=\sqrt{V_ s}H_ s$ and 
+    
+<div class="equation">
+  \[  \int _ Y(d w_1+e w_2)\wedge T_ s=d+\frac{V_ s}{2}H_ s'.  \]
+</div>
+<p>
+       Differentiating $V_ s=2k_ s/H_ s$ gives (<a data-tag="FE72E750" href="../../tag/10918993D19D/">12.35.12</a>); integration proves the second identity. This is the explicit first variation of proposition <a data-tag="6D3F0AB8" href="../../tag/94AFD9E43DE0/">12.3.2</a> along the residual family. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+For $c=1$, $b=1/4$, $a=2+\tau $ and $m=1$, the height $\tau $ has distribution $\mathrm d\tau /2$ under $w$. Hence $H=(\log 3)/2$, and the residual and original variational volumes are $3/\log 3$ and $4/\log 3$. The ordinary-type volumes from (<a data-tag="F6BA579E" href="../../tag/9099C8F4472B/">20.3.68</a>) are instead $3/2$ and $9/2$, independent of $m$. The subtraction identity differentiates the density-dependent variational volume. Pure-pullback invariance of the ordinary-type masses does not identify an arbitrary smooth positive probability density upstairs with the degenerate pullback of $\mu $. 
+</p>
+<p>
+The distinction persists along a segment ending at a nef background. The following surface example combines the subtraction cost with an imposed nonanalytic ordinary type, including the range in which its closed first moment is infinite. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-6BCE1933">
+<p><a class="environment-identifier" href="../../tag/76B0694EBA2F/">Example <span data-tag="6BCE1933">12.35.13</span>.</a><span data-gerby-tag="6BCE1933"><code class="tag-id">76B0694EBA2F</code></span> Let $\mu =w_1\wedge w_2$, let $\tau (z)=(|z|^2-1)/(|z|^2+1)$ be the height on the first sphere, and set </p>
+<div class="equation">
+  \[  \theta _ s=w_1+(2+\tau -s)w_2,\qquad 0\leq s&lt;1.  \]
+</div>
+<p> Fix the ordinary type of $U=1-(1-G_ p)^\alpha $ with $1/2\leq \alpha &lt;1$, and write $\sigma _-(s),\sigma _+(s)$ for its lower and upper volumes in $\theta _ s$. Then </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-E84EC474"><span data-gerby-tag="E84EC474"><code class="tag-id">AFBB384B6340</code></span>
+<span class="equation-label"><a data-tag="E84EC474" href="../../tag/AFBB384B6340/">12.35.14</a></span>
+<div>\begin{equation}  V_ s:=\mathcal V_\mu (\theta _ s)=\frac4{\log ((3-s)/(1-s))},\qquad \sigma _-(s)=2(1-s),\qquad \sigma _+(s)=2(3-s). \end{equation}</div>
+</div>
+<p> The improper subtraction cost is finite and equals $2/\sqrt{\log 3}$, while $\sigma _+(s)\to 4$. The endpoint $\theta _1=w_1+(1+\tau )w_2$ is nef, has zero variational volume, and is not big. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take $c=1$, $b=0$, $a_ s=2+\tau -s$ and $m=1$ in proposition <a data-tag="E8B67AAC" href="../../tag/E45E9799C813/">12.35.9</a>. Radial integration on the first sphere gives the law $\mathrm d\tau /2$ on $[-1,1]$, so 
+    
+<div class="equation">
+  \[  H_ s=\frac12\int _{-1}^1\frac{\mathrm dt}{2+t-s} =\frac12\log \frac{3-s}{1-s}.  \]
+</div>
+<p>
+       Thus $V_ s=2/H_ s$. Since $b=0&lt;c$, theorem <a data-tag="D8182E16" href="../../tag/9EDE5892D63B/">20.3.66</a> gives all rough representatives of the fixed type finite positive mass, with the extrema in (<a data-tag="E84EC474" href="../../tag/AFBB384B6340/">12.35.14</a>). The reference has zero Lelong numbers and trivial multiplier ideals but no analytic representative, by proposition <a data-tag="B1896FDF" href="../../tag/C33DAF9C7870/">20.3.71</a>. Its infinite closed first moment in this range of $\alpha $ was computed after (<a data-tag="AB4D6D19" href="../../tag/F060F71204CB/">20.3.69</a>); no such moment is needed for either extremum. 
+    <p>
+      For the minimizing tests $T_ s=V_ s(2+\tau -s)^{-2}w_1/2+w_2$, corollary <a data-tag="38159801" href="../../tag/F402CC8C0A7E/">12.35.11</a> gives 
+    
+<div class="equation">
+  \[  \frac{\int _ Yw_2\wedge T_ s}{D_\mu (T_ s)} =-\frac{\mathrm d}{\mathrm ds}\sqrt{V_ s} =\frac{2}{(1-s)(3-s)[\log ((3-s)/(1-s))]^{3/2}}.  \]
+</div>
+<p>
+       Integrating to $r&lt;1$ gives $\sqrt{V_0}-\sqrt{V_ r}$. Since $V_ r\to 0$, the improper integral is $\sqrt{V_0}=2/\sqrt{\log 3}$. By theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">12.2.3</a>, every minimizing test is a constant multiple of $T_ s$, so the cost is independent of this choice. 
+    <p>
+      The endpoint is smooth semipositive, hence nef. Monotonicity gives 
+    
+<div class="equation">
+  \[  0\leq \lambda _\mu (\theta _1)\leq \lambda _\mu (\theta _ s) \longrightarrow 0,  \]
+</div>
+<p>
+       so its variational volume vanishes. To exclude bigness, suppose that $\theta _1+\mathrm{dd}^{\mathrm{c}}q\geq \epsilon (w_1+w_2)$ for a quasi-plurisubharmonic $q$ and $\epsilon &gt;0$. Choose a nonzero smooth nonnegative $(1,1)$-form $\zeta $ on the first sphere supported where $1+\tau &lt;\epsilon $. Its pullback is closed, so distributional Stokes gives 
+    
+<div class="equation">
+  \[  0\leq \int _ Y(\theta _1+\mathrm{dd}^{\mathrm{c}}q-\epsilon (w_1+w_2))\wedge \zeta =\int _{\mathbb P^1}(1+\tau -\epsilon )\zeta &lt;0,  \]
+</div>
+<p>
+       a contradiction. Thus the positive segment ends outside the big cone, although its upper ordinary-type volume has a positive limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/706929790BE5/"><span>← Previous</span><small>Example 12.34.14</small></a><a class="pager-next" rel="next" href="../../tag/C43B33AA4A18/"><span>Next →</span><small>Proposition 12.35.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume,
+  author = {{Gerby contributors}},
+  title = {12.35 Divisorial constraints and residual volume},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fa-gauduchon-variational-volume--divisorial-constraints-and-residual-volume%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fa-gauduchon-variational-volume--divisorial-constraints-and-residual-volume%2F&amp;body=Page%3A+%5B12.35+Divisorial+constraints+and+residual+volume%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fa-gauduchon-variational-volume--divisorial-constraints-and-residual-volume%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+3feff47095cec5085e1063d0e5288b9836278365+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

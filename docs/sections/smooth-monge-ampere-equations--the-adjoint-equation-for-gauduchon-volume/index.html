@@ -1,0 +1,122 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/"><title>14.12 The adjoint equation for Gauduchon volume · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/monge-ampere-equations/">Chapter 14: Monge–Ampère equations and stability</a></li><li><a href="../../sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/" aria-current="page">Section 14.12: The adjoint equation for Gauduchon volume</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/smooth-monge-ampere-equations/"><span>14.1</span> Smooth Monge–Ampère equations</a><code class="tag-id">92B1F482D72A</code></li><li><a href="../../sections/smooth-monge-ampere-equations--scalar-bounds-and-uniqueness/"><span>14.2</span> Scalar bounds and uniqueness</a><code class="tag-id">5E342E12EF34</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-potential-bound-from-weighted-integration/"><span>14.3</span> The potential bound from weighted integration</a><code class="tag-id">D57A1C84047D</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-linearized-equation-and-smooth-dependence/"><span>14.4</span> The linearized equation and smooth dependence</a><code class="tag-id">7BDF4C42EB78</code></li><li><a href="../../sections/smooth-monge-ampere-equations--second-derivatives-and-ellipticity/"><span>14.5</span> Second derivatives and ellipticity</a><code class="tag-id">CBFCDA7183ED</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-continuity-method/"><span>14.6</span> The continuity method</a><code class="tag-id">F1D5D01E2624</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-smooth-exponential-equation/"><span>14.7</span> The smooth exponential equation</a><code class="tag-id">A4D09B787D84</code></li><li><a href="../../sections/smooth-monge-ampere-equations--variation-of-the-normalization-scalar/"><span>14.8</span> Variation of the normalization scalar</a><code class="tag-id">9541740AAFDC</code></li><li><a href="../../sections/smooth-monge-ampere-equations--normalization-on-the-hopf-threefold/"><span>14.9</span> Normalization on the Hopf threefold</a><code class="tag-id">44E03525BBAF</code></li><li><a href="../../sections/smooth-monge-ampere-equations--prescribing-a-gauduchon-volume-form/"><span>14.10</span> Prescribing a Gauduchon volume form</a><code class="tag-id">6950E7B1FBCB</code></li><li><a href="../../sections/smooth-monge-ampere-equations--bounds-for-the-gauduchon-potential/"><span>14.11</span> Bounds for the Gauduchon potential</a><code class="tag-id">F9FF7B5E741A</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/" aria-current="page"><span>14.12</span> The adjoint equation for Gauduchon volume</a><code class="tag-id">F6A1B32989A1</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-matrix-structure-of-the-gauduchon-equation/"><span>14.13</span> The matrix structure of the Gauduchon equation</a><code class="tag-id">53E844FE515C</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-largest-eigenvalue-estimate/"><span>14.14</span> The largest-eigenvalue estimate</a><code class="tag-id">148E6041EC3F</code></li><li><a href="../../sections/smooth-monge-ampere-equations--a-liouville-theorem-for-the-limiting-cone/"><span>14.15</span> A Liouville theorem for the limiting cone</a><code class="tag-id">D4DE203BE3BF</code></li><li><a href="../../sections/smooth-monge-ampere-equations--the-gradient-bound-by-rescaling/"><span>14.16</span> The gradient bound by rescaling</a><code class="tag-id">40669ABC11F8</code></li><li><a href="../../sections/smooth-monge-ampere-equations--existence-for-the-gauduchon-ansatz/"><span>14.17</span> Existence for the Gauduchon ansatz</a><code class="tag-id">6904C64D5831</code></li><li><a href="../../sections/smooth-monge-ampere-equations--normalization-for-the-gauduchon-equation/"><span>14.18</span> Normalization for the Gauduchon equation</a><code class="tag-id">9C1043361EBF</code></li><li><a href="../../sections/continuous-solutions-and-normalization/"><span>14.19</span> Continuous solutions and normalization</a><code class="tag-id">080A6052D542</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations/"><span>14.20</span> Uniqueness for degenerate equations</a><code class="tag-id">6B1310DDF7B5</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--extrema-and-density-sublevels/"><span>14.21</span> Extrema and density sublevels</a><code class="tag-id">6267D9D97C43</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--polarized-cofactors-and-propagation/"><span>14.22</span> Polarized cofactors and propagation</a><code class="tag-id">9769545E981A</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--integral-rigidity-in-dimensions-two-and-three/"><span>14.23</span> Integral rigidity in dimensions two and three</a><code class="tag-id">4DE5082C1B2B</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--bounded-uniqueness-and-connectedness/"><span>14.24</span> Bounded uniqueness and connectedness</a><code class="tag-id">E0DB623401C5</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--comparison-and-invariant-mass/"><span>14.25</span> Comparison and invariant mass</a><code class="tag-id">48CE016DFF65</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--smooth-nonuniqueness-for-a-degenerate-density/"><span>14.26</span> Smooth nonuniqueness for a degenerate density</a><code class="tag-id">D85397FA2C2A</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--nonuniqueness-with-a-zero-set-of-empty-interior/"><span>14.27</span> Nonuniqueness with a zero set of empty interior</a><code class="tag-id">5278ECB27C50</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--quadratic-density-zeros/"><span>14.28</span> Quadratic density zeros</a><code class="tag-id">9ABE80D68F2B</code></li><li><a href="../../sections/uniqueness-for-degenerate-equations--a-real-analytic-density/"><span>14.29</span> A real analytic density</a><code class="tag-id">C3B76FE21E71</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/8F909795AE16/"><span>← Previous</span><small>Equation 14.11.2</small></a><a class="pager-next" rel="next" href="../../tag/706EB82AB6A2/"><span>Next →</span><small>Proposition 14.12.1</small></a></nav><h1>14.12 The adjoint equation for Gauduchon volume<code class="tag-id">F6A1B32989A1</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-F6A1B32989A1" data-section-entries="029A1D30A55E 195CC5F57ABE 62F6382D2CAC 706EB82AB6A2 BD3712C889A6 F6A1B32989A1"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="397EA1AE"><code class="tag-id">F6A1B32989A1</code></span>
+<p>
+As for the Monge–Ampère equation, solving the linearized Gauduchon volume equation requires a compatibility condition, given by an adjoint probability measure. Taking the $(n-1)$st root multiplies the trace linearization by the factor $n/(n-1)$, and the first-order term of the ansatz introduces a drift term. We compute the linearized operator at any potential with $\Gamma _ u&gt;0$, and then express its adjoint condition as an equation for a positive $(1,1)$-form. Throughout this section we put $K=\gamma ^{n-2}$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-1A082A94">
+<p><a class="environment-identifier" href="../../tag/706EB82AB6A2/">Proposition <span data-tag="1A082A94">14.12.1</span>.</a><span data-gerby-tag="1A082A94"><code class="tag-id">706EB82AB6A2</code></span> On the open set of smooth potentials $u$ with $\Gamma _ u&gt;0$, the derivative of </p>
+<div class="equation">
+  \[  \mathcal G(u)=\log \frac{\eta _ u^ n}{\gamma ^ n}  \]
+</div>
+<p> is the real elliptic operator </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-13060337"><span data-gerby-tag="13060337"><code class="tag-id">62F6382D2CAC</code></span>
+<span class="equation-label"><a data-tag="13060337" href="../../tag/62F6382D2CAC/">14.12.2</a></span>
+<div>\begin{equation}  \mathcal L_ uv= \frac{n}{n-1}\frac{\eta _ u\wedge \mathcal D_\gamma v}{\eta _ u^ n}. \end{equation}</div>
+</div>
+<p> It has no zeroth-order term, and its kernel consists of the constants. There is a unique smooth positive function $\rho _ u$, normalized by $\int _ X\rho _ u\eta _ u^ n=1$, such that the probability measure </p>
+<div class="equation">
+  \[  \mathrm{d}\mu _ u^\gamma =\rho _ u\eta _ u^ n  \]
+</div>
+<p> satisfies $\int _ X\mathcal L_ uv\, \mathrm{d}\mu _ u^\gamma =0$ for every smooth real $v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a smooth path of potentials $u(t)$, write $\eta =\eta _{u(t)}$ and $\Gamma =\Gamma _{u(t)}$. Differentiating $\eta ^{n-1}=\Gamma $ gives $(n-1)\dot\eta \wedge \eta ^{n-2}=\dot\Gamma $, where $\dot\Gamma =\mathcal D_\gamma \dot u$. Wedging with $\eta $ and dividing by $\eta ^ n$, we obtain 
+    
+<div class="equation">
+  \[  \frac{\mathrm{d}}{\mathrm{d}t}\log \eta ^ n =\frac{n}{n-1}\frac{\eta \wedge \dot\Gamma }{\eta ^ n},  \]
+</div>
+<p>
+       which proves (<a data-tag="13060337" href="../../tag/62F6382D2CAC/">14.12.2</a>). 
+    <p>
+      Only the second-order term $\mathrm{dd}^{\mathrm{c}}v\wedge \gamma ^{n-2}$ of $\mathcal D_\gamma v$ contributes to the principal symbol. For a nonzero complex covector $\zeta $ of type $(1,0)$, the form 
+    
+<div class="equation">
+  \[  \eta _ u\wedge \mathrm i\zeta \wedge \overline\zeta \wedge \gamma ^{n-2}  \]
+</div>
+<p>
+       is a positive volume form. Hence the principal symbol is positive definite, and by compactness the operator is uniformly elliptic for each fixed $u$. The remaining term is of first order, and constants are annihilated, so the strong maximum principle gives $\ker \mathcal L_ u=\mathbb R$. 
+    <p>
+      The Fredholm and positivity arguments in the proof of theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a> apply to this real elliptic operator with first-order terms and no zeroth-order term. Its index is zero by deformation to a Laplacian, so its formal adjoint with respect to $\eta _ u^ n$ has a one-dimensional kernel spanned by a smooth strictly positive function. Normalizing its integral to one gives $\rho _ u$ and proves uniqueness. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+ The adjoint condition can be expressed as an equation for the positive $(1,1)$-form $\rho _ u\eta _ u$. For a smooth real $(1,1)$-form $A$, set 
+</p>
+<div class="equation">
+  \[  \mathcal A_\gamma (A) =\mathrm{dd}^{\mathrm{c}}A\wedge \gamma ^{n-2} +\operatorname {Re}\left(\frac{\mathrm i}{2\pi } \partial A\wedge \bar\partial (\gamma ^{n-2})\right).  \]
+</div>
+<p>
+ This is a real form of top degree, and $\mathcal A_\gamma $ is the formal adjoint of $\mathcal D_\gamma $ under the pairing of $(1,1)$-forms with $(n-1,n-1)$-forms, as the proof below shows. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-DAC00F18">
+<p><a class="environment-identifier" href="../../tag/029A1D30A55E/">Proposition <span data-tag="DAC00F18">14.12.3</span>.</a><span data-gerby-tag="DAC00F18"><code class="tag-id">029A1D30A55E</code></span> The function $\rho _ u$ of proposition <a data-tag="1A082A94" href="../../tag/706EB82AB6A2/">14.12.1</a> is characterized by </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-F5B6F447"><span data-gerby-tag="F5B6F447"><code class="tag-id">BD3712C889A6</code></span>
+<span class="equation-label"><a data-tag="F5B6F447" href="../../tag/BD3712C889A6/">14.12.4</a></span>
+<div>\begin{equation}  \mathcal A_\gamma (\rho _ u\eta _ u)=0, \qquad \int _ X\rho _ u\eta _ u^ n=1. \end{equation}</div>
+</div>
+<p> When $n=2$, its first equation is $\mathrm{dd}^{\mathrm{c}}(\rho _ u\eta _ u)=0$. When $\eta _ u=\gamma $, the function $\rho _ u$ is constant and $\mathrm{d}\mu _ u^\gamma =\gamma ^ n/\int _ X\gamma ^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first prove that, for every smooth real $(1,1)$-form $A$ and every smooth real function $v$ on $X$, 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-4C39622D"><span data-gerby-tag="4C39622D"><code class="tag-id">195CC5F57ABE</code></span>
+<span class="equation-label"><a data-tag="4C39622D" href="../../tag/195CC5F57ABE/">14.12.5</a></span>
+<div>\begin{equation}  \int _ X A\wedge \mathcal D_\gamma v =\int _ X v\, \mathcal A_\gamma (A). \end{equation}</div>
+</div>
+<p>
+       Write $c=\mathrm i/(2\pi )$. Since $A,K,v$ are real, expanding the real part gives 
+    
+<div class="equation">
+  \[  \mathcal D_\gamma v =c\, \partial \bar\partial v\wedge K +\frac c2\bigl (\partial v\wedge \bar\partial K -\bar\partial v\wedge \partial K\bigr ).  \]
+</div>
+<p>
+       Integrating the first term by parts twice gives $\int _ Xv\, c\partial \bar\partial (A\wedge K)$, and integrating each first-order term by parts once gives the correction 
+    
+<div class="equation">
+  \[  \int _ Xv\, \frac c2 \bigl (-\partial A\wedge \bar\partial K +\bar\partial A\wedge \partial K -2A\wedge \partial \bar\partial K\bigr ).  \]
+</div>
+<p>
+       Finally, 
+    
+<div class="equation">
+  \[  \partial \bar\partial (A\wedge K) =\partial \bar\partial A\wedge K -\bar\partial A\wedge \partial K +\partial A\wedge \bar\partial K +A\wedge \partial \bar\partial K.  \]
+</div>
+<p>
+       Adding these contributions cancels the terms containing $A\wedge \partial \bar\partial K$ and leaves $\mathcal A_\gamma (A)$. This proves (<a data-tag="4C39622D" href="../../tag/195CC5F57ABE/">14.12.5</a>). Applied to $A=\rho _ u\eta _ u$, it shows by (<a data-tag="13060337" href="../../tag/62F6382D2CAC/">14.12.2</a>) that $\int _ X\mathcal L_ uv\, \mathrm{d}\mu _ u^\gamma $ is a fixed positive multiple of $\int _ Xv\, \mathcal A_\gamma (\rho _ u\eta _ u)$, so the adjoint condition is equivalent to (<a data-tag="F5B6F447" href="../../tag/BD3712C889A6/">14.12.4</a>). 
+    <p>
+      For $n=2$, we have $K=1$, which gives the first special case. For the second, the product rule gives 
+    
+<div class="equation">
+  \[  \mathcal A_\gamma (\gamma ) =\frac1{n-1}\mathrm{dd}^{\mathrm{c}}(\gamma ^{n-1})=0.  \]
+</div>
+<p>
+       By uniqueness, $\rho _ u$ is consequently the constant $(\int _ X\gamma ^ n)^{-1}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+For $n&gt;2$ the equation for $\rho _ u\eta _ u$ involves the first derivatives of $\gamma ^{n-2}$, so the fixed auxiliary metric $\gamma $ remains part of the adjoint equation; it is not simply the Gauduchon condition for $\eta _ u$. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/8F909795AE16/"><span>← Previous</span><small>Equation 14.11.2</small></a><a class="pager-next" rel="next" href="../../tag/706EB82AB6A2/"><span>Next →</span><small>Proposition 14.12.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume,
+  author = {{Gerby contributors}},
+  title = {14.12 The adjoint equation for Gauduchon volume},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/smooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fsmooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fsmooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume%2F&amp;body=Page%3A+%5B14.12+The+adjoint+equation+for+Gauduchon+volume%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fsmooth-monge-ampere-equations--the-adjoint-equation-for-gauduchon-volume%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+e0fb9062e8adfb61e8b1b37b9c81a8261b275ecb+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

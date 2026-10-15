@@ -268,6 +268,7 @@ def render_fragments(source, working, prepare=None):
         if kind in {"ArrayRow", "align", "gather", "eqnarray"}:
             kind = "equation"
         title = node.title.textContent.strip() if getattr(node, "title", None) else ""
+        caption = title
         semantic_title = title or label.split(":")[-1].replace("-", " ").replace("_", " ").capitalize()
         if node.nodeName == "thmenv":
             title = kind.title() + (" " + number if number else "") + (f" ({title})" if title else "")
@@ -292,7 +293,7 @@ def render_fragments(source, working, prepare=None):
         while ancestor is not None and ancestor.nodeName not in SECTIONS | {"thmenv"}:
             ancestor = ancestor.parentNode
         parent_label = ancestor.id if ancestor is not None else None
-        records.append({"tag": tag, "label": label, "aliases": aliases[1:], "title": title, "semantic_title": semantic_title, "kind": kind, "math_row": node.nodeName == "ArrayRow", "topic": topic, "section": node.nodeName in SECTIONS, "statement_tex": node.source, "parent_label": parent_label})
+        records.append({"tag": tag, "label": label, "aliases": aliases[1:], "title": title, "caption": caption, "number": number, "semantic_title": semantic_title, "kind": kind, "math_row": node.nodeName == "ArrayRow", "topic": topic, "section": node.nodeName in SECTIONS, "statement_tex": node.source, "parent_label": parent_label})
     (working / "tags").write_text("".join(f"{tag},{label}\n" for tag, label in tags.items()))
     previous = Path.cwd()
     rows = {record["tag"]: record for record in records if record["math_row"]}
@@ -332,6 +333,13 @@ def render_fragments(source, working, prepare=None):
         if len(fragments) != 1:
             raise ValueError(f"Expected exactly one Gerby fragment for {record['kind']} {record['tag']} {record['label']}: {record['statement_tex'][:500]}")
         record["html"] = web_references(fragments[0].read_text())
+        if record["section"]:
+            heading = BeautifulSoup(record["html"], "html.parser").find(re.compile(r"^h[1-6]$"))
+            if heading:
+                marker = heading.find(attrs={"data-tag": record["tag"]})
+                if marker:
+                    marker.decompose()
+                record["caption"] = heading.get_text(" ", strip=True)
         record["statement_html"] = record["html"]
         if record["kind"] == "definition":
             term = BeautifulSoup(record["html"], "html.parser").find("em")

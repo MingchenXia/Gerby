@@ -1,0 +1,209 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/"><title>8.9 Bounded potentials and recursive Hessian currents · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/complex-hessian-equations/">Chapter 8: Complex Hessian equations</a></li><li><a href="../../sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/" aria-current="page">Section 8.9: Bounded potentials and recursive Hessian currents</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/complex-hessian-equations/"><span>8.1</span> Complex Hessian equations</a><code class="tag-id">CFD38285654D</code></li><li><a href="../../sections/complex-hessian-equations--the-admissible-cone/"><span>8.2</span> The admissible cone</a><code class="tag-id">F677D35E0BD7</code></li><li><a href="../../sections/complex-hessian-equations--liouville-and-gradient-estimates/"><span>8.3</span> Liouville and gradient estimates</a><code class="tag-id">1B647CA2D005</code></li><li><a href="../../sections/complex-hessian-equations--a-trace-estimate-with-a-prescribed-potential/"><span>8.4</span> A trace estimate with a prescribed potential</a><code class="tag-id">54309E0621C2</code></li><li><a href="../../sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/"><span>8.5</span> Bounded complex Hessians and elliptic extensions</a><code class="tag-id">EA00781761AE</code></li><li><a href="../../sections/complex-hessian-equations--proper-equations-and-admissible-approximation/"><span>8.6</span> Proper equations and admissible approximation</a><code class="tag-id">A493740DE457</code></li><li><a href="../../sections/complex-hessian-equations--continuous-products-envelopes-and-domination/"><span>8.7</span> Continuous products, envelopes and domination</a><code class="tag-id">5B2332FC78E2</code></li><li><a href="../../sections/complex-hessian-equations--continuous-equations-and-regularity/"><span>8.8</span> Continuous equations and regularity</a><code class="tag-id">D5976AE10288</code></li><li><a href="../../sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/" aria-current="page"><span>8.9</span> Bounded potentials and recursive Hessian currents</a><code class="tag-id">376A2B30178D</code></li><li><a href="../../sections/complex-hessian-equations--sobolev-capacity-and-two-hessian-factors/"><span>8.10</span> Sobolev capacity and two Hessian factors</a><code class="tag-id">FB2B0B645AB5</code></li><li><a href="../../sections/complex-hessian-equations--local-capacities-and-decreasing-products/"><span>8.11</span> Local capacities and decreasing products</a><code class="tag-id">BA5052EF5C4F</code></li><li><a href="../../sections/complex-hessian-equations--locality-and-maxima-of-bounded-potentials/"><span>8.12</span> Locality and maxima of bounded potentials</a><code class="tag-id">927D22F5110F</code></li><li><a href="../../sections/complex-hessian-equations--hessian-mass-and-global-comparison/"><span>8.13</span> Hessian mass and global comparison</a><code class="tag-id">B908310EE8A2</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/76376AD88152/"><span>← Previous</span><small>Theorem 8.8.3</small></a><a class="pager-next" rel="next" href="../../tag/C35233382EB9/"><span>Next →</span><small>Lemma 8.9.1</small></a></nav><h1>8.9 Bounded potentials and recursive Hessian currents<code class="tag-id">376A2B30178D</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-376A2B30178D" data-section-entries="17FA1BFF2491 26EFAEC0B76D 376A2B30178D 5F56B4D9CC35 66BDC02D9E25 686912AA777F 846671D5582A A1E60FC7AA88 C35233382EB9 EB2FA13CDDE0"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="8713AB3E"><code class="tag-id">376A2B30178D</code></span>
+<p>
+The decreasing approximation of bounded admissible potentials supplies limits that uniform approximation cannot reach. A bounded potential can multiply a current with measure coefficients, so one can apply $\mathrm{dd}^{\mathrm{c}}$ to the resulting current. Repeating this operation requires bounds on every coefficient, rather than only on the trace of a positive mixed measure. The absolute-form estimate provides these bounds below degree $m$; at degree $m$, positivity is obtained after wedging with $\omega ^{n-m}$. 
+</p>
+<p>
+All bounded potentials have their canonical upper semicontinuous representatives from (<a data-tag="99D246B6" href="../../tag/B372916B922F/">8.2.2</a>). Their pointwise values will be used when multiplying measure coefficients. For a real current $T$ of order zero, write $\| T\| _ K$ for the sum of the total variations of its coefficients on a compact coordinate set $K$. Fix $K\Subset U$ in a coordinate chart. Different fixed coordinate frames give equivalent local bounds. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-968D4676">
+<p><a class="environment-identifier" href="../../tag/C35233382EB9/">Lemma <span data-tag="968D4676">8.9.1</span>.</a><span data-gerby-tag="968D4676"><code class="tag-id">C35233382EB9</code></span> If $u$ is bounded admissible, then $\mathrm{dd}^{\mathrm{c}}u$ has signed Radon measure coefficients. For $K\Subset U$ contained in a coordinate chart, </p>
+<div class="equation">
+  \[  \| \mathrm{dd}^{\mathrm{c}}u\| _ K\leq C_{K,U,\omega }(1+\| u\| _{L^\infty (X)}).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose smooth strictly admissible $u_ j\downarrow u$ by <a data-tag="0FD1E681" href="../../tag/68BE4F589DCE/">8.6.6</a>, and put $\sigma _ j=\omega +\mathrm{dd}^{\mathrm{c}}u_ j$. After discarding finitely many terms, $\| u_ j\| _\infty \leq \| u\| _\infty +1$. Indeed, the increasing open sets $\{ u_ j&lt;\sup _ Xu+1\} $ cover $X$, and compactness gives a single index whose open set is all of $X$; the lower bound follows from $u_ j\geq u$. 
+    <p>
+      The closed $m$-cone lies in the closed $2$-cone. In an $\omega $-unitary frame, its eigenvalues satisfy 
+    
+<div class="equation">
+  \[  \sum _ i\lambda _ i^2\leq (\operatorname {tr}\sigma _ j)^2, \qquad \operatorname {tr}\sigma _ j\geq 0.  \]
+</div>
+<p>
+       Thus every coefficient of $\sigma _ j$ is bounded by its trace. The degree-one Chern–Levine–Nirenberg estimate in <a data-tag="81F79DFF" href="../../tag/D2A0F255F625/">8.7.1</a>, applied to these smooth functions, bounds the integral of that trace on $K$ by $C(1+\| u\| _\infty )$. Subtracting the fixed smooth $\omega $ gives the same bound for the coefficient variations of $\mathrm{dd}^{\mathrm{c}}u_ j$. Bounded convergence gives $u_ j\to u$ in local $L^1$, and therefore $\mathrm{dd}^{\mathrm{c}}u_ j\to \mathrm{dd}^{\mathrm{c}}u$ in distributions. The uniform coefficient bounds show that this limit has measure coefficients with the asserted bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Set $D_0=1$. For an ordered list $u_1,\ldots ,u_ p$ of bounded admissible potentials, define recursively 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-C10D5DA8"><span data-gerby-tag="C10D5DA8"><code class="tag-id">66BDC02D9E25</code></span>
+<span class="equation-label"><a data-tag="C10D5DA8" href="../../tag/66BDC02D9E25/">8.9.2</a></span>
+<div>\begin{equation}  D_ p(u_1,\ldots ,u_ p) =\mathrm{dd}^{\mathrm{c}}\bigl (u_ pD_{p-1}(u_1,\ldots ,u_{p-1})\bigr ). \end{equation}</div>
+</div>
+<p>
+ The next result justifies the bounded multiplication at every step up to $p=m$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-354EA0C7">
+<p><a class="environment-identifier" href="../../tag/EB2FA13CDDE0/">Proposition <span data-tag="354EA0C7">8.9.3</span>.</a><span data-gerby-tag="354EA0C7"><code class="tag-id">EB2FA13CDDE0</code></span> For $1\leq p&lt;m$, the recursion defines a real closed current of order zero and bidegree $(p,p)$. If $M=\max _ a\| u_ a\| _{L^\infty (X)}$, then </p>
+<div class="equation">
+  \[  \| D_ p(u_1,\ldots ,u_ p)\| _ K \leq C_{K,U,\omega ,p}(1+M)^ p.  \]
+</div>
+<p> For $p=m$, it defines a real closed distributional current. For any smooth admissible sequences $u_ a^{j_ a}\downarrow u_ a$ with a common uniform bound, one has </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-C5B973F0"><span data-gerby-tag="C5B973F0"><code class="tag-id">686912AA777F</code></span>
+<span class="equation-label"><a data-tag="C5B973F0" href="../../tag/686912AA777F/">8.9.4</a></span>
+<div>\begin{equation}  D_ p(u_1,\ldots ,u_ p) =\lim _{j_ p\to \infty }\cdots \lim _{j_1\to \infty } \mathrm{dd}^{\mathrm{c}}u_1^{j_1}\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ p^{j_ p} \end{equation}</div>
+</div>
+<p> in distributions. The index $j_1$ tends to infinity first. Below degree $m$, all these limits have locally uniformly bounded coefficient variations. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The case $p=1$ is the preceding lemma. Suppose the assertions hold through degree $p-1&lt;m$. Since $u_ p$ is bounded Borel and $D_{p-1}$ has measure coefficients, their product is well defined. Applying $\mathrm{dd}^{\mathrm{c}}$ gives a real current that is both $\mathrm d$- and $\mathrm d^{\mathrm c}$-closed. 
+    <p>
+      For a fixed smooth complementary test form $\eta $, dominated convergence against the fixed signed measures gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  \langle D_ p,\eta \rangle &amp; =\langle u_ pD_{p-1},\mathrm{dd}^{\mathrm{c}}\eta \rangle \\ &amp; =\lim _{j_ p\to \infty } \langle u_ p^{j_ p}D_{p-1},\mathrm{dd}^{\mathrm{c}}\eta \rangle . \end{aligned}  \]
+</div>
+<p>
+       With $j_ p$ fixed, the inductive iterated limit for $D_{p-1}$ can be paired with the smooth form $u_ p^{j_ p}\mathrm{dd}^{\mathrm{c}}\eta $. Integration by parts for the smooth closed factors identifies the resulting pairing with the smooth product on the right of (<a data-tag="C5B973F0" href="../../tag/686912AA777F/">8.9.4</a>). This proves that identity also when $p=m$. 
+    <p>
+      For $p&lt;m$, expand the smooth product using $\mathrm{dd}^{\mathrm{c}}u_ a^{j_ a}=\sigma _ a^{j_ a}-\omega $. A term with $q$ admissible factors, $0\leq q\leq p$, has the form 
+    
+<div class="equation">
+  \[  \sigma _{a_1}^{j_{a_1}}\wedge \cdots \wedge \sigma _{a_ q}^{j_{a_ q}}\wedge \omega ^{p-q}.  \]
+</div>
+<p>
+       Every such $q$ is strictly less than $m$. Apply <a data-tag="25ADAEE1" href="../../tag/B0643A9A1173/">8.2.7</a> to each coefficient test, and then the smooth mass estimate from <a data-tag="81F79DFF" href="../../tag/D2A0F255F625/">8.7.1</a> to the potential sum. The term $q=0$ is the fixed smooth form $\omega ^ p$. For $q\geq 1$, the sum of its admissible forms is $q(\omega +\mathrm{dd}^{\mathrm{c}}\bar u)$, where $\bar u$ is their average and $\| \bar u\| _\infty \leq M+1$. The result is a coefficient variation bound $C(1+M)^ p$, after choosing the approximations with norm at most $M+1$ as in the preceding proof. For arbitrary uniformly bounded approximations the same argument uses their common bound. The bounds survive each distributional limit, proving that $D_ p$ has order zero and the stated estimate. This completes the induction. No coefficient bound for the unwedged degree-$m$ current is used or asserted. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+ For a subset $I=\{ i_1&lt;\cdots &lt;i_ q\} \subset \{ 1,\ldots ,p\} $, write $D_ I=D_ q(u_{i_1},\ldots ,u_{i_ q})$, with $D_\varnothing =1$. Define the shifted current and its mixed positive current by 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-E021C6DE"><span data-gerby-tag="E021C6DE"><code class="tag-id">17FA1BFF2491</code></span>
+<span class="equation-label"><a data-tag="E021C6DE" href="../../tag/17FA1BFF2491/">8.9.5</a></span>
+<div>\begin{equation}  R_ p(u_1,\ldots ,u_ p) =\sum _{I\subset \{ 1,\ldots ,p\} }\omega ^{p-|I|}\wedge D_ I, \qquad Q_ p=R_ p\wedge \omega ^{n-m}. \end{equation}</div>
+</div>
+<p>
+ Below degree $m$, $R_ p$ has measure coefficients. At degree $m$ it is initially a distributional current. Its positive wedge $Q_ m$ is nevertheless a measure. 
+</p>
+<p>
+Put $M=\max _ a\| u_ a\| _{L^\infty (X)}$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-61CC9D08">
+<p><a class="environment-identifier" href="../../tag/846671D5582A/">Theorem <span data-tag="61CC9D08">8.9.6</span>.</a><span data-gerby-tag="61CC9D08"><code class="tag-id">846671D5582A</code></span> For $1\leq p\leq m$, $Q_ p$ is a positive current of order zero, and </p>
+<div class="equation">
+  \[  \int _ KQ_ p\wedge \omega ^{m-p} \leq C_{K,U,\omega ,p}(1+M)^ p.  \]
+</div>
+<p> It is the iterated limit, in the order of (<a data-tag="C5B973F0" href="../../tag/686912AA777F/">8.9.4</a>), of </p>
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u_1^{j_1})\wedge \cdots \wedge (\omega +\mathrm{dd}^{\mathrm{c}}u_ p^{j_ p})\wedge \omega ^{n-m}.  \]
+</div>
+<p> In particular $Q_ m$ is a positive Radon measure. These currents are local in the canonical potentials and independent of the chosen approximations for the fixed ordering. When all potentials are continuous, $Q_ p$ equals the continuous mixed product of <a data-tag="81F79DFF" href="../../tag/D2A0F255F625/">8.7.1</a>. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Expand the smooth shifted product over its subsets. Applying (<a data-tag="C5B973F0" href="../../tag/686912AA777F/">8.9.4</a>) to each subset, in its inherited ordering, gives (<a data-tag="E021C6DE" href="../../tag/17FA1BFF2491/">8.9.5</a>). The absent indices have no effect on a subset's limit. 
+    <p>
+      Each smooth product is positive: pairing with a decomposable strongly positive complementary test appends $m-p$ nonnegative rank-one $(1,1)$-forms, and polarized Gårding positivity applies. The smooth mixed mass bound is uniform in all indices. Distributional limits preserve positivity and the local trace bound at every step. Positive currents have order zero, so this gives the assertions for $Q_ p$, including the top-degree measure. 
+    <p>
+      The recursion uses only bounded multiplication of canonical values and local distributional differentiation. It is therefore local. Its definition contains no approximation choices, so the proved limit is independent of those choices while the ordering is fixed. For continuous potentials, the approximations converge uniformly by Dini's theorem. The telescoping estimate in <a data-tag="81F79DFF" href="../../tag/D2A0F255F625/">8.7.1</a> is uniform in all remaining indices and shows that their iterated limit is the same continuous mixed product. This also proves permutation invariance in the continuous case. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+The shifted currents are not closed. Their derivatives can be stated without multiplying a discontinuous function by a distribution of positive order. This is the torsion identity needed before considering integration by parts with bounded weights. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-633FD461">
+<p><a class="environment-identifier" href="../../tag/26EFAEC0B76D/">Proposition <span data-tag="633FD461">8.9.7</span>.</a><span data-gerby-tag="633FD461"><code class="tag-id">26EFAEC0B76D</code></span> Write $R_{p-1}^{\widehat a}$ for the shifted current obtained by omitting $u_ a$, in the inherited order, and use two hats for two omissions. Put $R_0=1$. For $1\leq p\leq m$, </p>
+<div class="equation">
+  \[  \begin{aligned}  \mathrm dR_ p&amp; =\mathrm d\omega \wedge \sum _{a=1}^ pR_{p-1}^{\widehat a},\\  \mathrm d^{\mathrm c}R_ p&amp; =\mathrm d^{\mathrm c}\omega \wedge \sum _{a=1}^ pR_{p-1}^{\widehat a},\\  \mathrm{dd}^{\mathrm{c}}R_ p&amp; =\mathrm{dd}^{\mathrm{c}}\omega \wedge \sum _{a=1}^ pR_{p-1}^{\widehat a} +2\, \mathrm d\omega \wedge \mathrm d^{\mathrm c}\omega \wedge \sum _{a&lt;b}R_{p-2}^{\widehat a\widehat b}. \end{aligned}  \]
+</div>
+<p> The last sum is absent for $p=1$. All currents on the right have order zero. If all but at most one potential are smooth, $R_ p$ is independent of the ordering and is the ordinary product of the smooth factors with $\omega +\mathrm{dd}^{\mathrm{c}}u$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Every $D_ I$ is both $\mathrm d$- and $\mathrm d^{\mathrm c}$-closed. Differentiating (<a data-tag="E021C6DE" href="../../tag/17FA1BFF2491/">8.9.5</a>) therefore gives 
+    
+<div class="equation">
+  \[  \mathrm dR_ p=\mathrm d\omega \wedge \sum _ I(p-|I|)\omega ^{p-|I|-1}\wedge D_ I,  \]
+</div>
+<p>
+       with zero terms omitted. The coefficient $p-|I|$ counts the omitted indices outside $I$, which proves the first formula; the second is identical with $\mathrm d^{\mathrm c}$ in place of $\mathrm d$. Apply $\mathrm d$ to the second formula. Each pair of omitted indices occurs twice, and $-\mathrm d^{\mathrm c}\omega \wedge \mathrm d\omega =\mathrm d\omega \wedge \mathrm d^{\mathrm c}\omega $ because both forms have odd degree three. This gives the displayed $\mathrm{dd}^{\mathrm{c}}$ formula, with every background derivative retained. 
+    <p>
+      If all but one potential are smooth, applying $\mathrm{dd}^{\mathrm{c}}$ to the bounded potential times a smooth closed product gives its $\mathrm{dd}^{\mathrm{c}}$ wedged with that product. At later smooth steps, closedness again makes the recursion ordinary smooth multiplication. This is independent of the position of the bounded potential, and the subset expansion gives the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Local capacity arguments naturally concern functions whose unshifted Hessian lies in the cone. On a coordinate ball $U$, call a bounded canonical function $f$ <em>$m$-subharmonic relative to $\omega $</em> if 
+</p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}f\wedge \gamma _1\wedge \cdots \wedge \gamma _{m-1} \wedge \omega ^{n-m}\geq 0  \]
+</div>
+<p>
+ for all smooth $\gamma _ i\in \Gamma _ m(\omega )$. Equivalently, its local upper tests $q$ satisfy $\mathrm{dd}^{\mathrm{c}}q\in \overline{\Gamma _ m(\omega )}$. The same Hermitian form $\omega $ is used here and in the chapter's shifted admissibility. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B3E694DA">
+<p><a class="environment-identifier" href="../../tag/A1E60FC7AA88/">Lemma <span data-tag="B3E694DA">8.9.8</span>.</a><span data-gerby-tag="B3E694DA"><code class="tag-id">A1E60FC7AA88</code></span> Let $U$ be a coordinate ball compactly contained in a holomorphic chart. There is a smooth strictly plurisubharmonic $\rho $ on a neighborhood of $\overline U$ such that $\mathrm{dd}^{\mathrm{c}}\rho \geq 2\omega $ and, for every bounded admissible $u$ on $X$, $u+\rho $ is $m$-subharmonic relative to $\omega $ on $U$. Adding $\rho $ to the approximations in <a data-tag="0FD1E681" href="../../tag/68BE4F589DCE/">8.6.6</a> gives uniformly bounded smooth decreasing approximations in this local class. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take $\rho =C|z|^2$ in the chart. On the fixed compact set $\overline U$, a sufficiently large $C$ gives $\mathrm{dd}^{\mathrm{c}}\rho \geq 2\omega $. An upper test $q$ for $u+\rho $ at $x$ gives the upper test $q-\rho $ for $u$ there. Hence 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}q=(\omega +\mathrm{dd}^{\mathrm{c}}(q-\rho ))+(\mathrm{dd}^{\mathrm{c}}\rho -\omega ) \in \overline{\Gamma _ m(\omega )},  \]
+</div>
+<p>
+       since the second summand is positive and the cone is preserved by adding nonnegative forms. Smooth addition preserves the canonical representative. The same identity applies pointwise to every smooth admissible approximation. Adding a fixed smooth function preserves pointwise decrease and convergence, and its bounded norm on $\overline U$ preserves the common local bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The correction is a local inclusion of classes. It leaves the metric in the cone tests unchanged. Although $\tau =\mathrm{dd}^{\mathrm{c}}\rho $ is closed, $\tau -\omega $ has derivative $-\mathrm d\omega $, so the background terms in the preceding torsion identity remain present. In particular, $\omega +\mathrm{dd}^{\mathrm{c}}u=\mathrm{dd}^{\mathrm{c}}(u+\rho )+(\omega -\tau )$. Comparison of the unshifted Hessians of the corrected functions must therefore account for this smooth remainder. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-595A54DE">
+<p><a class="environment-identifier" href="../../tag/5F56B4D9CC35/">Example <span data-tag="595A54DE">8.9.9</span>.</a><span data-gerby-tag="595A54DE"><code class="tag-id">5F56B4D9CC35</code></span> On the unit ball in $\mathbb C^3$, put $\beta _ j=\mathrm{dd}^{\mathrm{c}}|z_ j|^2$, $\beta =\sum _{j=1}^3\beta _ j$ and </p>
+<div class="equation">
+  \[  u=-\tfrac 12\sum _{j=1}^3|z_ j|^2, \qquad v=-\tfrac 45|z_1|^2.  \]
+</div>
+<p> Both $\beta +\mathrm{dd}^{\mathrm{c}}u$ and $\beta +\mathrm{dd}^{\mathrm{c}}v$ are strictly positive, but </p>
+<div class="equation">
+  \[  (\beta +\mathrm{dd}^{\mathrm{c}}v)^2\wedge \beta &gt; (\beta +\mathrm{dd}^{\mathrm{c}}u)^2\wedge \beta , \qquad (\mathrm{dd}^{\mathrm{c}}v)^2\wedge \beta &lt;(\mathrm{dd}^{\mathrm{c}}u)^2\wedge \beta .  \]
+</div>
+<p> Thus shifted Hessian order does not imply unshifted Hessian order, even for smooth potentials with positive perturbed forms. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The eigenvalues of the two perturbed forms relative to $\beta $ are $(\tfrac 12,\tfrac 12,\tfrac 12)$ and $(\tfrac 15,1,1)$. For a diagonal form with relative eigenvalues $\lambda _1,\lambda _2, \lambda _3$, its second Hessian is $(\lambda _1\lambda _2+\lambda _1\lambda _3+\lambda _2\lambda _3)\beta ^3/3$. Consequently the shifted measures of $u,v$ are $\tfrac 14\beta ^3$ and $\tfrac 7{15}\beta ^3$, while their unshifted expressions are $\tfrac 14\beta ^3$ and $0$. Their unshifted traces are negative, so neither original function belongs to the local unshifted class. Adding $\sum _ j|z_ j|^2$ gives an exact correction in this constant closed background. An exact correction $\mathrm{dd}^{\mathrm{c}}\rho =\omega $ is impossible where $\mathrm d\omega \ne 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The iterated limit fixes the order of the potentials. Symmetry and simultaneous convergence require control of discontinuous weights against varying coefficient measures. The next section supplies the first-Hessian estimate for <a data-tag="A19E0DE8" href="../../tag/0241EC758621/">8.10.5</a>; the local Hessian capacities in section <a data-tag="CEF84F31" href="../../tag/BA5052EF5C4F/">8.11</a> give the control in the remaining degrees. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/76376AD88152/"><span>← Previous</span><small>Theorem 8.8.3</small></a><a class="pager-next" rel="next" href="../../tag/C35233382EB9/"><span>Next →</span><small>Lemma 8.9.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents,
+  author = {{Gerby contributors}},
+  title = {8.9 Bounded potentials and recursive Hessian currents},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fcomplex-hessian-equations--bounded-potentials-and-recursive-hessian-currents%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fcomplex-hessian-equations--bounded-potentials-and-recursive-hessian-currents%2F&amp;body=Page%3A+%5B8.9+Bounded+potentials+and+recursive+Hessian+currents%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fcomplex-hessian-equations--bounded-potentials-and-recursive-hessian-currents%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+d541a90e0d2b07c6dff361fdffa0e4d6ddf458c2+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

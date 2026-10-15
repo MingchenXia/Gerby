@@ -1,0 +1,322 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/"><title>5.10 Limits, envelopes and local integrability · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/psh-positive-currents/">Chapter 5: Plurisubharmonic functions and positive currents</a></li><li><a href="../../sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/" aria-current="page">Section 5.10: Limits, envelopes and local integrability</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/complex-differential-forms-and-positive-currents/"><span>5.1</span> Complex differential forms and positive currents</a><code class="tag-id">4DEEEF894245</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--complex-manifolds-and-differential-forms/"><span>5.2</span> Complex manifolds and differential forms</a><code class="tag-id">D8E2D1A98ACF</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--currents-and-positivity/"><span>5.3</span> Currents and positivity</a><code class="tag-id">ACB622806098</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--local-potentials-for-closed-1-1-currents/"><span>5.4</span> Local potentials for closed (1,1)-currents</a><code class="tag-id">618FE2108D26</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--holomorphic-zeros-and-the-poincare-lelong-formula/"><span>5.5</span> Holomorphic zeros and the Poincaré–Lelong formula</a><code class="tag-id">0C34F7796300</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--maps-of-currents-and-local-mass/"><span>5.6</span> Maps of currents and local mass</a><code class="tag-id">9F1C9C4A649E</code></li><li><a href="../../sections/plurisubharmonic-functions/"><span>5.7</span> Plurisubharmonic functions</a><code class="tag-id">7B39B08A9568</code></li><li><a href="../../sections/plurisubharmonic-functions--the-line-definition-and-upper-semicontinuity/"><span>5.8</span> The line definition and upper semicontinuity</a><code class="tag-id">55393AEE99C8</code></li><li><a href="../../sections/plurisubharmonic-functions--positive-hessians-and-holomorphic-maps/"><span>5.9</span> Positive Hessians and holomorphic maps</a><code class="tag-id">484A05EF6DF1</code></li><li><a href="../../sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/" aria-current="page"><span>5.10</span> Limits, envelopes and local integrability</a><code class="tag-id">5C7282E51B13</code></li><li><a href="../../sections/plurisubharmonic-functions--extension-across-closed-exceptional-sets/"><span>5.11</span> Extension across closed exceptional sets</a><code class="tag-id">E197EAFECEC0</code></li><li><a href="../../sections/plurisubharmonic-functions--kiselman-s-minimum-principle/"><span>5.12</span> Kiselman&#x27;s minimum principle</a><code class="tag-id">53A48113C242</code></li><li><a href="../../sections/plurisubharmonic-functions--the-definition-of-plurisubharmonic-functions/"><span>5.13</span> The definition of plurisubharmonic functions</a><code class="tag-id">92A4FA45DFE1</code></li><li><a href="../../sections/plurisubharmonic-functions--properties-of-plurisubharmonic-functions/"><span>5.14</span> Properties of plurisubharmonic functions</a><code class="tag-id">6C47792FE6D9</code></li><li><a href="../../sections/plurisubharmonic-functions--plurifine-topology/"><span>5.15</span> Plurifine topology</a><code class="tag-id">DFFF533F1AE8</code></li><li><a href="../../sections/plurisubharmonic-functions--lelong-numbers-and-multiplier-ideal-sheaves/"><span>5.16</span> Lelong numbers and multiplier ideal sheaves</a><code class="tag-id">EB678D619AD9</code></li><li><a href="../../sections/plurisubharmonic-functions--quasi-plurisubharmonic-functions/"><span>5.17</span> Quasi-plurisubharmonic functions</a><code class="tag-id">4DF694F99750</code></li><li><a href="../../sections/plurisubharmonic-functions--analytic-singularities/"><span>5.18</span> Analytic singularities</a><code class="tag-id">26AEEBDF865B</code></li><li><a href="../../sections/plurisubharmonic-functions--the-space-of-currents/"><span>5.19</span> The space of currents</a><code class="tag-id">EB85809E6CA8</code></li><li><a href="../../sections/plurisubharmonic-functions--plurisubharmonic-metrics-on-line-bundles/"><span>5.20</span> Plurisubharmonic metrics on line bundles</a><code class="tag-id">A59F8B8F06A8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities/"><span>5.21</span> Plurisubharmonic functions and singularities</a><code class="tag-id">EDB5A2485B58</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--plurisubharmonic-potentials/"><span>5.22</span> Plurisubharmonic potentials</a><code class="tag-id">17A37A0D3690</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--changes-of-background/"><span>5.23</span> Changes of background</a><code class="tag-id">012278DBB6E8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--maxima-and-the-maximum-principle/"><span>5.24</span> Maxima and the maximum principle</a><code class="tag-id">AA6F3BC0AD9F</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--normalized-compactness/"><span>5.25</span> Normalized compactness</a><code class="tag-id">0B216F0B911E</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--uniform-exponential-integrability/"><span>5.26</span> Uniform exponential integrability</a><code class="tag-id">5A19CE5C3CCE</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/"><span>5.27</span> Local products and capacity</a><code class="tag-id">5E507B6993DC</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--products-with-smooth-backgrounds/"><span>5.28</span> Products with smooth backgrounds</a><code class="tag-id">5E2B332B89B4</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/"><span>5.29</span> Hermitian capacity</a><code class="tag-id">DD310AD8B258</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--comparing-local-regularizations/"><span>5.30</span> Comparing local regularizations</a><code class="tag-id">DB8E63271D73</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--gluing-with-a-small-curvature-error/"><span>5.31</span> Gluing with a small curvature error</a><code class="tag-id">78243032B1A1</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--regularization-in-a-fixed-hermitian-background/"><span>5.32</span> Regularization in a fixed Hermitian background</a><code class="tag-id">26C061D9E9B2</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--singularity-type-and-multiplier-ideals/"><span>5.33</span> Singularity type and multiplier ideals</a><code class="tag-id">9A10411F1BCD</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--analytic-types-and-restriction/"><span>5.34</span> Analytic types and restriction</a><code class="tag-id">0D77FC17B23B</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-local-bergman-estimates/"><span>5.35</span> The local Bergman estimates</a><code class="tag-id">51F374296336</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-global-curvature-bound/"><span>5.36</span> The global curvature bound</a><code class="tag-id">3BCA55154463</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--multiplier-ideals-and-logarithmic-poles/"><span>5.37</span> Multiplier ideals and logarithmic poles</a><code class="tag-id">5BB7B3EA169D</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--lelong-numbers-and-divisorial-estimates/"><span>5.38</span> Lelong numbers and divisorial estimates</a><code class="tag-id">2C2417A75DF4</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--potential-regularity-and-metric-distance/"><span>5.39</span> Potential regularity and metric distance</a><code class="tag-id">DE3129821F10</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--obstacle-envelopes/"><span>5.40</span> Obstacle envelopes</a><code class="tag-id">8EA2EE30DE99</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-minimum-principle/"><span>5.41</span> The minimum principle</a><code class="tag-id">392B79314DF8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--chern-connection-regularization/"><span>5.42</span> Chern-connection regularization</a><code class="tag-id">001730C9ED64</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/"><span>5.43</span> Pullback and descent</a><code class="tag-id">88AEFA5005B9</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--integration-against-non-pluripolar-measures/"><span>5.44</span> Integration against non-pluripolar measures</a><code class="tag-id">2111608E9FA1</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--curvature-of-line-bundles/"><span>5.45</span> Curvature of line bundles</a><code class="tag-id">355A31F789F6</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--polar-curvature/"><span>5.46</span> Polar curvature</a><code class="tag-id">AFA07BFD0E7B</code></li><li><a href="../../sections/pluripolar-sets-and-the-plurifine-topology/"><span>5.47</span> Pluripolar sets and the plurifine topology</a><code class="tag-id">F5A3147592B6</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/7EBEE004A7FA/"><span>← Previous</span><small>Proposition 5.9.5</small></a><a class="pager-next" rel="next" href="../../tag/FE144A69076E/"><span>Next →</span><small>Theorem 5.10.1</small></a></nav><h1>5.10 Limits, envelopes and local integrability<code class="tag-id">5C7282E51B13</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-5C7282E51B13" data-section-entries="03676DBFBA61 1A6F10A07BA5 219E06AF4230 5C7282E51B13 69CE23EA1637 6A92D19CE668 8326366018BB B979DF329B28 C2DB8DFE9E2C C493F766D641 D32A2FB94F6B DE8035B23862 F2A3CA649325 FE144A69076E"><div class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><span data-gerby-tag="A23BCCF5"><code class="tag-id">5C7282E51B13</code></span>
+<p>
+This section treats limits and envelopes of plurisubharmonic functions and their local integrability. Throughout, $X$ is a complex manifold of positive dimension, except in theorem <a data-tag="D4A39993" href="../../tag/F2A3CA649325/">5.10.10</a>, which also allows dimension zero. By theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">5.9.1</a>, plurisubharmonic functions are locally integrable, and we regard each of them as the distinguished representative of its class. Local $L^ p$ norms on $X$ are computed with Euclidean volume in local coordinates, and “almost everywhere” refers to Lebesgue measure in charts. Any smooth positive volume form gives the same local $L^ p$ spaces and the same $L^ p_{\mathrm{loc}}$ convergence, since in coordinates its density is bounded above and below by positive constants on compact sets. By the discussion following definition <a data-tag="76F27E8E" href="../../tag/42A02A1A5EFE/">5.2.3</a>, each connected component of $X$ has a countable basis; $X$ itself need not have one, and we assume this explicitly when a global countable selection is needed. 
+</p>
+<p>
+We call a subset of an open set in $\mathbb {C}^ n$ <em>real polar</em> if it is polar in the sense of definition <a data-tag="5C959E29" href="../../tag/03DCBB9E3633/">3.4.26</a> when $\mathbb {C}^ n$ is identified with $\mathbb R^{2n}$. The adjective distinguishes these sets from the pluripolar sets of section <a data-tag="BBD3DCE5" href="../../tag/F5A3147592B6/">5.47</a>. Real polar sets are Lebesgue null, by the remark following definition <a data-tag="5C959E29" href="../../tag/03DCBB9E3633/">3.4.26</a>.  
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-1174FCEA">
+<p><a class="environment-identifier" href="../../tag/FE144A69076E/">Theorem <span data-tag="1174FCEA">5.10.1</span>.</a><span data-gerby-tag="1174FCEA"><code class="tag-id">FE144A69076E</code></span> Let $(u_ i)_{i\in I}$ be a decreasing net in $\mathrm{PSH}(X)$, that is, $u_ j\leq u_ i$ whenever $i\leq j$, and let $u=\lim _ iu_ i=\inf _ iu_ i$ be its pointwise limit. Then on each connected component $X_0$ of $X$, exactly one of the following holds: either $u$ is plurisubharmonic on $X_0$ and $u_ i\to u$ in $L^1_{\mathrm{loc}}(X_0)$, or $u\equiv -\infty $ on $X_0$ and $u_ i\to -\infty $ locally uniformly on $X_0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The limit $u$ is upper semicontinuous, since $\{ u&lt;c\} =\bigcup _ i\{ u_ i&lt;c\} $ is open for every real $c$. Fix a connected component $X_0$ of $X$; it has a countable basis. 
+    <p>
+<em>Step 1: a decreasing sequence with the same limit.</em> Let $i_0\in I$. We show that there are indices $i_0\leq i_1\leq i_2\leq \cdots $ such that $u_{i_ l}\downarrow u$ pointwise on $X_0$. Replacing $I$ by the cofinal directed set $\{ i\in I:i\geq i_0\} $, which does not change the limit, we only have to find indices $i_1\leq i_2\leq \cdots $. For each rational $c$, the open sets $\{ u_ i&lt;c\} \cap X_0$ cover $\{ u&lt;c\} \cap X_0$, and countably many of them suffice: for each basis element of $X_0$ contained in some set $\{ u_ i&lt;c\} $, choose one such index $i$; every point of $\{ u&lt;c\} \cap X_0$ lies in such a basis element. Let $k_1,k_2,\ldots $ be an enumeration, with repetitions allowed, of the indices chosen for all rational $c$. Since $I$ is directed, we can choose inductively $i_1\geq k_1$ and $i_{l+1}\geq i_ l,k_{l+1}$. The sequence $(u_{i_ l})$ is decreasing and bounded below by $u$. If $u(x)&lt;c$ with $c$ rational and $x\in X_0$, then $u_{k_ l}(x)&lt;c$ for some $l$, hence $u_{i_ l}(x)\leq u_{k_ l}(x)&lt;c$. Therefore $u_{i_ l}\downarrow u$ on $X_0$. 
+    <p>
+<em>Step 2: the limit.</em> Let $V\subset X_0$ be a connected coordinate neighborhood, identified with a domain in $\mathbb {C}^ n$. On each connected component of each affine complex-line section of $V$, the restrictions of the $u_{i_ l}$ form a decreasing sequence of subharmonic functions, whose limit is subharmonic by theorem <a data-tag="1B5BFA16" href="../../tag/62E4A7EF2B4F/">3.4.9</a>. Since $u$ is upper semicontinuous, it is either plurisubharmonic on $V$ or identically $-\infty $ on $V$, by definition <a data-tag="2C78F54E" href="../../tag/6070D2D83EC6/">5.8.1</a>. As $X_0$ is connected, lemma <a data-tag="B39137D8" href="../../tag/598B886D700E/">5.9.4</a> shows that either $u$ is plurisubharmonic on $X_0$ or $u\equiv -\infty $ on $X_0$. 
+    <p>
+<em>Step 3: convergence.</em> Suppose first that $u$ is plurisubharmonic on $X_0$. Fix $i_0\in I$, take the sequence of Step 1, and let $K$ be a compact subset of a coordinate neighborhood in $X_0$. Then $0\leq u_{i_ l}-u\leq u_{i_0}-u$ almost everywhere, namely wherever $u$ is finite, and $u_{i_0}-u$ is integrable on $K$. By dominated convergence, $\| u_{i_ l}-u\| _{L^1(K)}\to 0$. Given $\varepsilon &gt;0$, choose $l$ with $\| u_{i_ l}-u\| _{L^1(K)}&lt;\varepsilon $; for every $i\geq i_ l$ we have $0\leq u_ i-u\leq u_{i_ l}-u$ almost everywhere, hence $\| u_ i-u\| _{L^1(K)}&lt;\varepsilon $. Thus the net converges to $u$ in $L^1(K)$, and covering an arbitrary compact subset of $X_0$ by finitely many such sets $K$ gives convergence in $L^1_{\mathrm{loc}}(X_0)$. 
+    <p>
+      Suppose now that $u\equiv -\infty $ on $X_0$, and let $K\subset X_0$ be compact and $A&gt;0$. The open sets $\{ u_ i&lt;-A\} $ cover $K$, so finitely many of them, say those with indices $j_1,\ldots ,j_ p$, already cover $K$. If $i\geq j_1,\ldots ,j_ p$, then $u_ i\leq u_{j_ q}$ for each $q$, and hence $u_ i&lt;-A$ on $K$. This is locally uniform convergence to $-\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Recall that a function $F$ with values in $[-\infty ,\infty )$ that is locally bounded above has an upper semicontinuous regularization $F^*$, the smallest upper semicontinuous function that dominates $F$. On $X$ it is given by $F^*(x)=\inf _ W\sup _ WF$, where $W$ ranges over the neighborhoods of $x$, and in a chart it is the regularization of subsection <a data-tag="FCDD36ED" href="../../tag/F1C0C53624DF/">3.4.21</a>. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-1E761457">
+<p><a class="environment-identifier" href="../../tag/D32A2FB94F6B/">Theorem <span data-tag="1E761457">5.10.2</span>.</a><span data-gerby-tag="1E761457"><code class="tag-id">D32A2FB94F6B</code></span> Let $(u_ i)_{i\in I}$ be a nonempty family in $\mathrm{PSH}(X)$ that is locally uniformly bounded above, and let $F=\sup _ iu_ i$ be its upper envelope. Then the upper semicontinuous regularization $F^*$ is plurisubharmonic, and $F=F^*$ almost everywhere; more precisely, in every coordinate chart the set $\{ F&lt;F^*\} $ is real polar. If $X$ has a countable basis, there is a countable subset $J\subset I$ such that $(\sup _{i\in J}u_ i)^*=F^*$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $F^*$ is defined by a local formula and plurisubharmonicity is a local property, it suffices to prove that $F^*$ is plurisubharmonic on every connected coordinate neighborhood $V$, which we identify with a domain in $\mathbb {C}^ n$. By theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.23</a>, $F^*$ is subharmonic on $V$, and $F$ is Lebesgue measurable and equal to $F^*$ almost everywhere on $V$. By Choquet's lemma, lemma <a data-tag="B87643F0" href="../../tag/B37EED9280E3/">3.4.22</a>, there is a countable set $J_ V\subset I$ with $(\sup _{i\in J_ V}u_ i)^*=F^*$ on $V$. 
+    <p>
+      We next show that $\mathrm{dd}^{\mathrm{c}}F^*\geq 0$ on $V$. Fix $i_0\in I$, enumerate $J_ V\cup \{ i_0\} $ as $i_0,i_1,i_2,\ldots $, with repetitions if this set is finite, and put $v_ j=\max \{ u_{i_0},\ldots ,u_{i_ j}\} $. The functions $v_ j$ are plurisubharmonic by proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">5.9.5</a>, increase with $j$, are locally uniformly bounded above, and dominate the locally integrable function $u_{i_0}$. Their limit $G=\sup _ jv_ j$ lies between $\sup _{i\in J_ V}u_ i$ and $F$, so $G^*=F^*$, and hence $G=F^*$ almost everywhere by theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.23</a> applied to the countable family. On a compact set $K\subset V$ on which every $u_ i$ is bounded above by $M$, we have $0\leq v_ j-u_{i_0}\leq M-u_{i_0}$, so dominated convergence gives $v_ j\to F^*$ in $L^1(K)$. Therefore $\mathrm{dd}^{\mathrm{c}}F^*\geq 0$, as a limit of positive currents. Since $F^*$ is subharmonic and dominates the locally integrable function $u_{i_0}$, it is locally integrable and hence the canonical representative of its class, and theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">5.9.1</a> shows that $F^*$ is plurisubharmonic on $V$. 
+    <p>
+      If $X$ has a countable basis, cover $X$ by countably many connected coordinate neighborhoods $V_1,V_2,\ldots $ and put $J=\bigcup _ mJ_{V_ m}$. On each $V_ m$ we have $F^*=(\sup _{i\in J_{V_ m}}u_ i)^*\leq (\sup _{i\in J}u_ i)^*\leq F^*$, and since the regularization is local, $(\sup _{i\in J}u_ i)^*=F^*$ on $X$. 
+    <p>
+      Finally, in each chart the functions $u_ i$ are subharmonic, so the second assertion of theorem <a data-tag="B7DF3499" href="../../tag/E54414B74C32/">4.1.26</a> shows that $\{ F&lt;F^*\} $ is polar in the corresponding open subset of $\mathbb R^{2n}$, that is, real polar. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-F24BB0D4">
+<p><a class="environment-identifier" href="../../tag/1A6F10A07BA5/">Proposition <span data-tag="F24BB0D4">5.10.3</span>.</a><span data-gerby-tag="F24BB0D4"><code class="tag-id">1A6F10A07BA5</code></span> Let $\Omega \subset \mathbb {C}^ n$ be a domain, $n\geq 1$, and let $g=(g_1,\ldots ,g_ r)$, $r\geq 1$, be a tuple of holomorphic functions on $\Omega $, not all identically zero. Then the function $\log \sum _ j|g_ j|^2$, with the value $-\infty $ at the common zeros of the $g_ j$, is plurisubharmonic on $\Omega $. In particular, for every $a\in \mathbb {C}^ n$ the function $\log |z-a|^2$ is plurisubharmonic on $\mathbb {C}^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the Cauchy–Schwarz inequality, with equality for $\lambda $ proportional to $(\overline{g_1(z)},\ldots ,\overline{g_ r(z)})$, we have 
+    
+<div class="equation">
+  \[  \log \sum _ j|g_ j(z)|^2 =\sup _{\sum _ j|\lambda _ j|^2=1}\log \left|\sum _ j\lambda _ jg_ j(z)\right|^2  \]
+</div>
+<p>
+       for every $z\in \Omega $, both sides being $-\infty $ at a common zero. The supremum does not change if we omit the $\lambda $ for which $\sum _ j\lambda _ jg_ j$ vanishes identically: at a point $z$ that is not a common zero, the maximizing $\lambda $ gives $\sum _ j\lambda _ jg_ j(z)\neq 0$, and at a common zero all terms equal $-\infty $. Some $g_ j$ is not identically zero, so the remaining family is nonempty. Its members are plurisubharmonic by proposition <a data-tag="1563DB35" href="../../tag/37EEAF275A32/">5.5.3</a>, theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">5.9.1</a>, and they are locally uniformly bounded above by the left-hand side. Their supremum $\log \sum _ j|g_ j|^2$ is already upper semicontinuous: it is continuous as a map to $[-\infty ,\infty )$, because $\sum _ j|g_ j|^2$ is continuous and its logarithm tends to $-\infty $ at a common zero. Hence it equals its regularization, which is plurisubharmonic by theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">5.10.2</a>. The particular case is the tuple $(z_1-a_1,\ldots ,z_ n-a_ n)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-3C807BFA">
+<p><a class="environment-identifier" href="../../tag/C2DB8DFE9E2C/">Theorem <span data-tag="3C807BFA">5.10.4</span>.</a><span data-gerby-tag="3C807BFA"><code class="tag-id">C2DB8DFE9E2C</code></span> Let $\Omega \subset \mathbb C^ n$ be a domain, $n\geq 1$. Every sequence in $\mathrm{PSH}(\Omega )$ that is locally uniformly bounded above has a subsequence that either converges locally uniformly to $-\infty $ or converges in $L^1_{\mathrm{loc}}(\Omega )$ to a plurisubharmonic function. If a sequence $(u_ j)$ in $\mathrm{PSH}(\Omega )$ converges in $L^1_{\mathrm{loc}}(\Omega )$, then its limit has a plurisubharmonic representative $u$, and the following holds: for every compact set $K\subset \Omega $ and every lower semicontinuous function $f\colon K\to \mathbb R$ with $u&lt;f$ on $K$, for instance every real continuous function on $K$, one has $u_ j&lt;f$ on $K$ for all sufficiently large $j$. In particular $\varlimsup _ j u_ j(x)\le u(x)$ for every $x\in \Omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Plurisubharmonic functions are subharmonic by theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">5.9.1</a>. Hence, by the compactness theorem (theorem <a data-tag="2B01EAC3" href="../../tag/F159A5A96A98/">3.4.19</a>), a sequence as in the first assertion either tends to $-\infty $ locally uniformly, or has a subsequence converging in $L^1_{\mathrm{loc}}(\Omega )$ to a locally integrable subharmonic function $v$. In the second case $\mathrm{dd}^{\mathrm{c}}v\geq 0$, as a distributional limit of positive currents, and $v$ is the canonical representative of its class; so $v$ is plurisubharmonic by theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">5.9.1</a>. 
+    <p>
+      Now let $(u_ j)$ converge in $L^1_{\mathrm{loc}}(\Omega )$ to $T$. As above, $\mathrm{dd}^{\mathrm{c}}T\geq 0$, so $T$ has a plurisubharmonic representative $u$, namely its canonical subharmonic representative. The $u_ j$ are locally integrable subharmonic functions converging in $L^1_{\mathrm{loc}}(\Omega )$, and $u$ is the canonical representative of their limit, so the remaining assertions are Hartogs' lemma for subharmonic functions, theorem <a data-tag="CAECA7D8" href="../../tag/5784B80133BF/">3.4.20</a>, which requires no upper bound on the sequence; the last one is its first assertion with the constant sequence $x_ j=x$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+We next show that plurisubharmonic functions belong to $L^ p_{\mathrm{loc}}$ for every finite $p$, and that $L^1_{\mathrm{loc}}$ convergence of plurisubharmonic functions implies $L^ p_{\mathrm{loc}}$ convergence. We first treat a subharmonic function $v\leq 0$ on the unit disc. By the Riesz decomposition (theorem <a data-tag="A2BCDB4A" href="../../tag/F04DBD614238/">3.4.14</a>), $v$ is locally the sum of a harmonic function and the fundamental potential $E_2*\mu $ of a measure, and the kernel $E_2(z)=(2\pi )^{-1}\log |z|$ belongs locally to every $L^ p$ with $p&lt;\infty $; this gives an $L^ p$ bound in terms of the value of $v$ at the center. Applying this bound in one complex variable at a time then gives the estimate for plurisubharmonic functions on polydiscs. 
+</p>
+<p>
+We write $D(a,r)=\{ z\in \mathbb C:|z-a|&lt;r\} $ and $D=D(0,1)$, and for $t&gt;0$ we write $tD=D(0,t)$; thus $D^ n$ is the unit polydisc in $\mathbb C^ n$ and $(tD)^ n$ the polydisc of radius $t$ centered at $0$. Integrals over discs and polydiscs are taken with respect to Lebesgue measure $\mathrm dV$. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-17846537">
+<p><a class="environment-identifier" href="../../tag/69CE23EA1637/">Lemma <span data-tag="17846537">5.10.5</span>.</a><span data-gerby-tag="17846537"><code class="tag-id">69CE23EA1637</code></span> There is a constant $C_0\geq 1$ with the following property. Let $v\leq 0$ be a subharmonic function on $D$ with $v(0)&gt;-\infty $. Then there are a finite positive Borel measure $\nu $ with support in $D(0,9/10)$ and a harmonic function $h$ on $D(0,4/5)$ such that </p>
+<div class="equation numbered-equation" id="foundations-of-pluripotential-theory-26FC6776"><span data-gerby-tag="26FC6776"><code class="tag-id">6A92D19CE668</code></span>
+<span class="equation-label"><a data-tag="26FC6776" href="../../tag/6A92D19CE668/">5.10.6</a></span>
+<div>\begin{equation}  \begin{gathered} v(z)=P(z)+h(z)\quad (z\in D(0,4/5)),\qquad P(z)=\frac1{2\pi }\int \log |z-\zeta |\, \mathrm d\nu (\zeta ),\\ \nu (D)\leq C_0|v(0)|,\qquad \sup _{\overline{D(0,1/2)}}|h|\leq C_0|v(0)|. \end{gathered} \end{equation}</div>
+</div>
+<p> Moreover, for every $1\leq p&lt;\infty $ there is a constant $C_ p&gt;0$ such that every such $v$ satisfies </p>
+<div class="equation">
+  \[  \| v\| _{L^ p(D(0,1/2))}\leq C_ p|v(0)|.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In this proof $C$ denotes constants that depend only on two cutoff functions $\chi $ and $\eta $ fixed below, and $C'$ constants that depend in addition on $p$. Since $v(0)&gt;-\infty $, the function $v$ is not identically $-\infty $, and hence it is locally integrable by proposition <a data-tag="922C2A66" href="../../tag/5975EB5B5D7D/">3.4.8</a>. For $0&lt;r&lt;1$, the ball submean inequality (theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.4.5</a>) and $v\leq 0$ give 
+    
+<div class="equation numbered-equation" id="foundations-of-pluripotential-theory-8535FBAE"><span data-gerby-tag="8535FBAE"><code class="tag-id">C493F766D641</code></span>
+<span class="equation-label"><a data-tag="8535FBAE" href="../../tag/C493F766D641/">5.10.7</a></span>
+<div>\begin{equation}  \| v\| _{L^1(D(0,r))}=-\int _{D(0,r)}v\, \mathrm dV\leq \pi r^2|v(0)|. \end{equation}</div>
+</div>
+<p>
+       Let $\mu =\Delta v$ be the Riesz measure of $v$, and choose a smooth cutoff $\chi \geq 0$ supported in $D(0,19/20)$ and equal to one on $D(0,9/10)$. By the definition of the distributional Laplacian and (<a data-tag="8535FBAE" href="../../tag/C493F766D641/">5.10.7</a>), 
+    
+<div class="equation">
+  \[  \mu (D(0,9/10))\leq \int \chi \, \mathrm d\mu =\int v\Delta \chi \, \mathrm dV\leq \sup |\Delta \chi |\, \| v\| _{L^1(D(0,19/20))}\leq C|v(0)|.  \]
+</div>
+<p>
+       Next choose a smooth cutoff $0\leq \eta \leq 1$ supported in $D(0,9/10)$ and equal to one on a neighborhood of $\overline{D(0,4/5)}$. The fundamental solution in the plane is $(2\pi )^{-1}\log |z|$, so theorem <a data-tag="A2BCDB4A" href="../../tag/F04DBD614238/">3.4.14</a>, applied with the measure $\nu =\eta \mu $, which is finite and supported in $\operatorname{Supp}\eta \subset D(0,9/10)$, gives 
+    
+<div class="equation">
+  \[  v(z)=P(z)+h(z),\qquad P(z)=\frac1{2\pi }\int \log |z-\zeta |\, \mathrm d\nu (\zeta ),  \]
+</div>
+<p>
+       for every $z\in D(0,4/5)$, with $h$ harmonic on $D(0,4/5)$. 
+    <p>
+      We estimate $P$. For $|\zeta |\leq 9/10$, the translated disc $D(0,4/5)-\zeta $ lies in $D(0,2)$, so 
+    
+<div class="equation">
+  \[  \int _{D(0,4/5)}|\log |z-\zeta ||^ p\, \mathrm dV(z) \leq L_ p=\int _{D(0,2)}|\log |z||^ p\, \mathrm dV(z)&lt;\infty ;  \]
+</div>
+<p>
+       the integral $L_ p$ is finite because its part over $D$ equals $2\pi \int _0^1r|\log r|^ p\, \mathrm dr$, whose integrand is bounded on $(0,1]$, while $|\log |z||\leq \log 2$ on the rest of $D(0,2)$. Let $m=\nu (D)=\int \eta \, \mathrm d\mu $, so that $m\leq \mu (D(0,9/10))\leq C|v(0)|$. If $m=0$, then $P=0$. Otherwise, $|P(z)|\leq \frac m{2\pi }\int |\log |z-\zeta ||\, \mathrm d\nu (\zeta )/m$, and Hölder's inequality for the probability measure $\nu /m$ gives 
+    
+<div class="equation">
+  \[  |P(z)|^ p\leq \Bigl (\frac m{2\pi }\Bigr )^ p\int |\log |z-\zeta ||^ p\, \frac{\mathrm d\nu (\zeta )}m,  \]
+</div>
+<p>
+       and integrating over $z\in D(0,4/5)$ with Tonelli's theorem yields $\| P\| _{L^ p(D(0,4/5))}\leq L_ p^{1/p}m/(2\pi )\leq C'|v(0)|$. 
+    <p>
+      We now estimate $h$. The case $p=1$ of the bound for $P$, in which $L_1$ is an absolute constant, and (<a data-tag="8535FBAE" href="../../tag/C493F766D641/">5.10.7</a>) give $\| h\| _{L^1(D(0,4/5))}\leq C|v(0)|$. For $|z|\leq 1/2$, the closed disc $\overline{D(z,1/4)}$ lies in $D(0,4/5)$, and the ball mean-value property of the harmonic function $h$ (proposition <a data-tag="51885F96" href="../../tag/620D5E4DD6EC/">3.1.5</a>) gives $|h(z)|\leq (16/\pi )\| h\| _{L^1(D(0,4/5))}$. We have thus found a constant $C_0\geq 1$, depending only on the cutoff functions $\chi $ and $\eta $, such that $\nu (D)=m\leq C_0|v(0)|$ and $\sup _{\overline{D(0,1/2)}}|h|\leq C_0|v(0)|$; this proves (<a data-tag="26FC6776" href="../../tag/6A92D19CE668/">5.10.6</a>). Adding the estimates for $P$ and $h$ on $D(0,1/2)$, we obtain 
+    
+<div class="equation">
+  \[  \| v\| _{L^ p(D(0,1/2))}\leq \| P\| _{L^ p(D(0,4/5))}+(\pi /4)^{1/p}C_0|v(0)|\leq C'|v(0)|,  \]
+</div>
+<p>
+       which proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-32AC1833">
+<p><a class="environment-identifier" href="../../tag/B979DF329B28/">Proposition <span data-tag="32AC1833">5.10.8</span>.</a><span data-gerby-tag="32AC1833"><code class="tag-id">B979DF329B28</code></span> Let $n\geq 1$ and $1\leq p&lt;\infty $. There are constants $C_{n,p},A_{n,p}&gt;0$ such that every plurisubharmonic function $v\leq 0$ on the unit polydisc $D^ n$ satisfies </p>
+<div class="equation">
+  \[  \| v\| _{L^ p((\tfrac 12D)^ n)}\leq C_{n,p}|v(0)| \quad \text{if }v(0)&gt;-\infty ,  \]
+</div>
+<p> and </p>
+<div class="equation numbered-equation" id="foundations-of-pluripotential-theory-7F1CEF5E"><span data-gerby-tag="7F1CEF5E"><code class="tag-id">8326366018BB</code></span>
+<span class="equation-label"><a data-tag="7F1CEF5E" href="../../tag/8326366018BB/">5.10.9</a></span>
+<div>\begin{equation}  \| v\| _{L^ p((\tfrac 14D)^ n)}\leq A_{n,p}\| v\| _{L^1(D^ n)}. \end{equation}</div>
+</div>
+<p> Here $\| v\| _{L^1(D^ n)}$ may be infinite, in which case there is nothing to prove. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We prove the first estimate by induction on $n$. For $n=1$ it is lemma <a data-tag="17846537" href="../../tag/69CE23EA1637/">5.10.5</a>. Let $n\geq 2$, write $z=(z_1,z')$ with $z'\in \mathbb C^{n-1}$, and let $v$ be as in the statement with $v(0)&gt;-\infty $. The function $w(z')=v(0,z')$ is the composition of $v$ with the holomorphic map $z'\mapsto (0,z')$, so by proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">5.9.3</a> it is plurisubharmonic or identically $-\infty $ on $D^{n-1}$. Since $w(0)=v(0)&gt;-\infty $, it is plurisubharmonic, hence locally integrable and finite outside a Lebesgue null set $E\subset D^{n-1}$. For $z'\in D^{n-1}\setminus E$, the function $z_1\mapsto v(z_1,z')$ is subharmonic and nonpositive on $D$, with the finite value $w(z')$ at the center, so lemma <a data-tag="17846537" href="../../tag/69CE23EA1637/">5.10.5</a> gives 
+    
+<div class="equation">
+  \[  \int _{\frac12D}|v(z_1,z')|^ p\, \mathrm dV(z_1) \leq C_ p^ p|w(z')|^ p.  \]
+</div>
+<p>
+       We integrate over $z'\in (\tfrac 12D)^{n-1}$ using Tonelli's theorem; the null set $E$, on which the inner integral may be infinite, does not contribute. The induction hypothesis applied to $w$ then gives 
+    
+<div class="equation">
+  \[  \| v\| _{L^ p((\frac12D)^ n)}^ p\leq C_ p^ p\| w\| _{L^ p((\frac12D)^{n-1})}^ p\leq C_ p^ pC_{n-1,p}^ p|v(0)|^ p,  \]
+</div>
+<p>
+       which is the first estimate with $C_{n,p}=C_ pC_{n-1,p}$. 
+    <p>
+      For the second estimate, let $Q=(\tfrac 1{10}D)^ n$ and $|Q|$ its volume. If $\| v\| _{L^1(D^ n)}=0$, then $v=0$ almost everywhere, hence $v\equiv 0$ by theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">5.9.1</a>, and there is nothing to prove; we may also assume that $\| v\| _{L^1(D^ n)}&lt;\infty $. Put $\lambda =2|Q|^{-1}\| v\| _{L^1(D^ n)}&gt;0$. By Chebyshev's inequality, the set of points of $Q$ with $|v|&gt;\lambda $ has measure at most $\lambda ^{-1}\int _ Q|v|\, \mathrm dV\leq |Q|/2$, so its complement in $Q$ has positive measure. Since $v$ is finite almost everywhere, there is a point $a\in Q$ with $v(a)&gt;-\infty $ and 
+    
+<div class="equation">
+  \[  |v(a)|\leq 2|Q|^{-1}\| v\| _{L^1(D^ n)}.  \]
+</div>
+<p>
+       The polydisc of radius $4/5$ centered at $a$ lies in $D^ n$, and the polydisc of radius $2/5$ centered at $a$ contains $(\tfrac 14D)^ n$, since $\tfrac 14+\tfrac 1{10}&lt;\tfrac 25$. We apply the first estimate to the plurisubharmonic function $\zeta \mapsto v(a+\tfrac 45\zeta )\leq 0$ on $D^ n$ and change variables: 
+    
+<div class="equation">
+  \[  \| v\| _{L^ p((\frac14D)^ n)}\leq \bigl (\tfrac 45\bigr )^{2n/p}C_{n,p}|v(a)|\leq 2\bigl (\tfrac 45\bigr )^{2n/p}C_{n,p}|Q|^{-1}\| v\| _{L^1(D^ n)}.  \]
+</div>
+<p>
+       This is (<a data-tag="7F1CEF5E" href="../../tag/8326366018BB/">5.10.9</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-D4A39993">
+<p><a class="environment-identifier" href="../../tag/F2A3CA649325/">Theorem <span data-tag="D4A39993">5.10.10</span>.</a><span data-gerby-tag="D4A39993"><code class="tag-id">F2A3CA649325</code></span> Let $X$ be a complex manifold and $1\leq p&lt;\infty $. Every plurisubharmonic function on $X$ belongs to $L^ p_{\mathrm{loc}}(X)$. If a sequence of plurisubharmonic functions on $X$ converges in $L^1_{\mathrm{loc}}(X)$, then it converges in $L^ p_{\mathrm{loc}}(X)$ to the same limit. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $X$ has dimension zero, every compact subset of $X$ is finite, plurisubharmonic functions are real-valued, and convergence in $L^ p_{\mathrm{loc}}$ is pointwise convergence; so both assertions hold. Let $X$ have dimension $n\geq 1$. Every compact subset of $X$ is covered by finitely many coordinate polydiscs, so it suffices to work near a point $x\in X$ in a chart in which $x=0$ and the closed polydisc $\overline{(RD)^ n}$ lies in the chart, for some $R&gt;0$. 
+    <p>
+      Let $v$ be plurisubharmonic. Being upper semicontinuous, $v$ is bounded above on $\overline{(RD)^ n}$ by some constant $A$. The function $\zeta \mapsto v(R\zeta )-A$ is plurisubharmonic and nonpositive on $D^ n$, and its $L^1$ norm on $D^ n$ is finite because $v$ is locally integrable. By (<a data-tag="7F1CEF5E" href="../../tag/8326366018BB/">5.10.9</a>), $v$ belongs to $L^ p$ on the polydisc $(\tfrac R4D)^ n$. This proves the first assertion. 
+    <p>
+      Now let $(u_ j)$ be a sequence of plurisubharmonic functions converging in $L^1_{\mathrm{loc}}(X)$. For $p=1$ there is nothing to prove, so let $p&gt;1$. By theorem <a data-tag="3C807BFA" href="../../tag/C2DB8DFE9E2C/">5.10.4</a> applied in charts, together with the uniqueness in theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">5.9.1</a>, the limit is represented by a plurisubharmonic function $u$. The norms $\| u_ j\| _{L^1((RD)^ n)}$ are bounded because the sequence converges. If $y\in (\tfrac R2D)^ n$, the ball $B(y,R/2)$ lies in $(RD)^ n$, so the ball submean inequality gives $u_ j(y)\leq |B(y,R/2)|^{-1}\| u_ j\| _{L^1((RD)^ n)}$. Hence there is a constant $M$, independent of $j$, with $u_ j\leq M$ and $u\leq M$ on $(\tfrac R2D)^ n$. Applying (<a data-tag="7F1CEF5E" href="../../tag/8326366018BB/">5.10.9</a>) to $\zeta \mapsto u_ j(\tfrac R2\zeta )-M$ and to $\zeta \mapsto u(\tfrac R2\zeta )-M$, whose $L^1$ norms on $D^ n$ are bounded independently of $j$, we obtain a bound for the $L^{2p}$ norms of $u_ j$ and $u$ on $(\tfrac R8D)^ n$ that is uniform in $j$. By a finite covering, for every compact set $K\subset X$ the norms $\| u_ j\| _{L^{2p}(K)}$ and $\| u\| _{L^{2p}(K)}$ are bounded independently of $j$. 
+    <p>
+      We interpolate between $L^1$ and $L^{2p}$. For a function $f$ on $K$, write $|f|^ p=|f|^{p/(2p-1)}\cdot |f|^{p(2p-2)/(2p-1)}$ and apply Hölder's inequality with the conjugate exponents $(2p-1)/p$ and $(2p-1)/(p-1)$; since $\frac{p(2p-2)}{2p-1}\cdot \frac{2p-1}{p-1}=2p$, this gives 
+    
+<div class="equation">
+  \[  \int _ K|f|^ p\, \mathrm dV\leq \Bigl (\int _ K|f|\, \mathrm dV\Bigr )^{p/(2p-1)}\Bigl (\int _ K|f|^{2p}\, \mathrm dV\Bigr )^{(p-1)/(2p-1)},  \]
+</div>
+<p>
+       that is, $\| f\| _{L^ p(K)}\leq \| f\| _{L^1(K)}^{1/(2p-1)}\| f\| _{L^{2p}(K)}^{(2p-2)/(2p-1)}$. With $f=u_ j-u$, whose $L^{2p}(K)$ norms are bounded independently of $j$, we obtain 
+    
+<div class="equation">
+  \[  \| u_ j-u\| _{L^ p(K)} \leq \| u_ j-u\| _{L^1(K)}^{1/(2p-1)} \| u_ j-u\| _{L^{2p}(K)}^{(2p-2)/(2p-1)}\longrightarrow 0.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></p></p></article>
+<p>
+The same Riesz decomposition gives exponential integrability: if $v\leq 0$ is plurisubharmonic on a ball, then $\mathrm e^{-\alpha v}$ is integrable on a smaller concentric ball for every sufficiently small $\alpha &gt;0$, and the admissible $\alpha $ and the bound for the integral depend only on a bound for the $L^1$ norm of $v$. In one variable this follows from Jensen's inequality applied to the fundamental potential in the Riesz decomposition. In several variables we integrate the one-variable estimates over all complex lines through a suitable point. For $t&gt;0$ we write $tB$ for the ball of radius $t$ centered at $0$ in $\mathbb C^ n$; thus $B$ is the unit ball. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-FB314177">
+<p><a class="environment-identifier" href="../../tag/03676DBFBA61/">Lemma <span data-tag="FB314177">5.10.11</span>.</a><span data-gerby-tag="FB314177"><code class="tag-id">03676DBFBA61</code></span> There are constants $\beta ,C&gt;0$ such that every subharmonic function $v\leq 0$ on $D$ with $v(0)\geq -1$ satisfies </p>
+<div class="equation">
+  \[  \int _{D(0,1/2)}\mathrm e^{-\beta v}\, \mathrm dV\leq C.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $v(0)\geq -1&gt;-\infty $, lemma <a data-tag="17846537" href="../../tag/69CE23EA1637/">5.10.5</a> gives a finite positive measure $\nu $ with support in $D(0,9/10)$ and a harmonic function $h$ on $D(0,4/5)$ such that 
+    
+<div class="equation">
+  \[  v=P+h,\qquad P(z)=\frac1{2\pi }\int \log |z-\zeta |\, \mathrm d\nu (\zeta )  \]
+</div>
+<p>
+       at every point of $D(0,4/5)$. Since $|v(0)|\leq 1$, the bounds (<a data-tag="26FC6776" href="../../tag/6A92D19CE668/">5.10.6</a>) give $M=\nu (D)\leq C_0$ and $\sup _{D(0,1/2)}|h|\leq C_0$, where $C_0\geq 1$ is the universal constant of that lemma. Fix $\beta \in (0,1]$ with $\beta C_0\leq 2\pi $. 
+    <p>
+      We show that $\int _{D(0,1/2)}\mathrm e^{-\beta P}\, \mathrm dV\leq 8\pi $. If $M=0$, then $P=0$, and this integral is $\pi /4$. Assume $M&gt;0$ and put $b=\beta M/(2\pi )\in (0,1]$. Fix $z\in D(0,1/2)$. For $N\geq 1$ the Borel function $f_ N(\zeta )=-b\max \{ \log |z-\zeta |,-N\} $ is bounded on $D(0,9/10)$, so Jensen's inequality (lemma <a data-tag="C4BE8A40" href="../../tag/9931E90187F6/">2.2.4</a>), applied to the convex function $\exp $ on $\mathbb R$ and the probability measure $\nu /M$, gives 
+    
+<div class="equation">
+  \[  \exp \Bigl (\int f_ N\, \frac{\mathrm d\nu }M\Bigr )\leq \int \mathrm e^{f_ N}\, \frac{\mathrm d\nu }M\leq \frac1M\int |z-\zeta |^{-b}\, \mathrm d\nu (\zeta ).  \]
+</div>
+<p>
+       As $N\to \infty $, the functions $f_ N$ increase to $-b\log |z-\zeta |$, which may take the value $+\infty $, and they are bounded below by the bounded function $f_1$. By monotone convergence, $\int f_ N\, \mathrm d\nu /M$ increases to $\int -b\log |z-\zeta |\, \mathrm d\nu (\zeta )/M=-\beta P(z)$, and therefore 
+    
+<div class="equation">
+  \[  \mathrm e^{-\beta P(z)}\leq \frac1M\int |z-\zeta |^{-b}\, \mathrm d\nu (\zeta )  \]
+</div>
+<p>
+       for every $z\in D(0,1/2)$, with the convention $\mathrm e^{\infty }=\infty $. For every $\zeta \in D(0,9/10)$ the translated disc $D(0,1/2)-\zeta $ lies in $D(0,2)$, and $r^{-b}\leq 1+r^{-1}$ for $r&gt;0$ because $0&lt;b\leq 1$; hence 
+    
+<div class="equation">
+  \[  \int _{D(0,1/2)}|z-\zeta |^{-b}\, \mathrm dV(z) \leq \int _{D(0,2)}(1+|z|^{-1})\, \mathrm dV(z)=8\pi .  \]
+</div>
+<p>
+       Integrating the bound for $\mathrm e^{-\beta P(z)}$ over $z\in D(0,1/2)$ with Tonelli's theorem, we obtain $\int _{D(0,1/2)}\mathrm e^{-\beta P}\, \mathrm dV\leq 8\pi $. Finally, since $\mathrm e^{-\beta v}=\mathrm e^{-\beta P}\mathrm e^{-\beta h}\leq \mathrm e^{\beta C_0}\mathrm e^{-\beta P}$ on $D(0,1/2)$, the lemma follows with $C=8\pi \mathrm e^{C_0}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-3A07F5A7">
+<p><a class="environment-identifier" href="../../tag/219E06AF4230/">Proposition <span data-tag="3A07F5A7">5.10.12</span>.</a><span data-gerby-tag="3A07F5A7"><code class="tag-id">219E06AF4230</code></span> Let $n\geq 1$, and let $B$ be the unit ball of $\mathbb C^ n$. There are constants $\alpha _ n,C_ n&gt;0$ such that every plurisubharmonic function $v\leq 0$ on $B$ with $\| v\| _{L^1(B)}\leq 1$ satisfies </p>
+<div class="equation numbered-equation" id="foundations-of-pluripotential-theory-452E11AB"><span data-gerby-tag="452E11AB"><code class="tag-id">DE8035B23862</code></span>
+<span class="equation-label"><a data-tag="452E11AB" href="../../tag/DE8035B23862/">5.10.13</a></span>
+<div>\begin{equation}  \int _{\frac14B}\mathrm e^{-\alpha _ n v}\, \mathrm dV\leq C_ n. \end{equation}</div>
+</div>
+<p> More generally, if $\| v\| _{L^1(B)}\leq M$ for some $M&gt;0$, the same bound holds with the exponent $\alpha _ n/M$ in place of $\alpha _ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $A_ n=\max \{ 1,2/|\frac18B|\} $. The mean of $|v|$ over $\frac18B$ is at most $1/|\frac18B|&lt;A_ n$. Hence the set of points of $\frac18B$ with $|v|\leq A_ n$ has positive measure, since otherwise $|v|&gt;A_ n$ almost everywhere on $\frac18B$ and the mean would be at least $A_ n$; so there is a point $a\in \frac18B$ with $|v(a)|\leq A_ n$. For each unit vector $e\in \mathbb C^ n$, the disc $\{ a+\tfrac 34\zeta e:|\zeta |&lt;1\} $ lies in $B$, so the function 
+    
+<div class="equation">
+  \[  \zeta \longmapsto A_ n^{-1}v(a+\tfrac 34\zeta e)  \]
+</div>
+<p>
+       is subharmonic and nonpositive on $D$, with value at least $-1$ at $0$. Set $\alpha _ n=\beta /A_ n$, with $\beta $ as in lemma <a data-tag="FB314177" href="../../tag/03676DBFBA61/">5.10.11</a>. That lemma and the change of variables $\zeta \mapsto \frac34\zeta $ give a bound, independent of $e$ and $v$, for 
+    
+<div class="equation">
+  \[  \int _{|\zeta |&lt;3/8}\mathrm e^{-\alpha _ n v(a+\zeta e)}\, \mathrm dV(\zeta ).  \]
+</div>
+<p>
+      It remains to pass from these integrals over discs in complex lines to an integral over a ball. Let $\tau $ and $s_{2n-1}$ be as in (<a data-tag="2009992A" href="../../tag/A577EADC63E4/">5.8.3</a>). By that identity, applied with center $a$, and since $|\zeta |^{2n-2}\leq r^{2n-2}$ for $|\zeta |&lt;r$, every Borel function $F\geq 0$, possibly taking the value $+\infty $, satisfies 
+    
+<div class="equation">
+  \[  \int _{|z-a|&lt;r}F(z)\, \mathrm dV(z) \leq \frac{s_{2n-1}r^{2n-2}}{2\pi } \int _{S^{2n-1}}\int _{|\zeta |&lt;r}F(a+\zeta e)\, \mathrm dV(\zeta )\, \mathrm d\tau (e)  \]
+</div>
+<p>
+       for every $r&gt;0$. We apply this with $F=\mathrm e^{-\alpha _ n v}$ and $r=3/8$. Since $\frac14B\subset B(a,3/8)$, the uniform bound for the line integrals proves (<a data-tag="452E11AB" href="../../tag/DE8035B23862/">5.10.13</a>). Finally, if $\| v\| _{L^1(B)}\leq M$ with $M&gt;0$, then $v/M$ is a nonpositive plurisubharmonic function with $\| v/M\| _{L^1(B)}\leq 1$, and (<a data-tag="452E11AB" href="../../tag/DE8035B23862/">5.10.13</a>) for $v/M$ is the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Consequently, every plurisubharmonic function $u$ on a complex manifold $X$ is locally exponentially integrable: every point $x\in X$ has a neighborhood $W$ for which there is $\alpha _0&gt;0$ such that $\mathrm e^{-\alpha u}$ is integrable on $W$ for $0&lt;\alpha \leq \alpha _0$, the integrals being computed in local coordinates. In dimension zero we may take $W=\{ x\} $. In dimension $n\geq 1$, choose a chart in which $x=0$ and the closed ball $\overline{B(0,R)}$ lies in the chart domain, for some $R&gt;0$, and let $c$ be an upper bound for $u$ on this ball. The function $v(\zeta )=u(R\zeta )-c$ is plurisubharmonic and nonpositive on the unit ball $B$, and since $u$ is locally integrable there is $A&gt;0$ with $\| v\| _{L^1(B)}\leq A$. Put $\alpha _0=\alpha _ n/A$ and $W=B(0,R/4)$. For $0&lt;\alpha \leq \alpha _0$ we have $\mathrm e^{-\alpha v}\leq \mathrm e^{-\alpha _0v}$, because $v\leq 0$, so the change of variables $z=R\zeta $ and the last assertion of proposition <a data-tag="3A07F5A7" href="../../tag/219E06AF4230/">5.10.12</a> give 
+</p>
+<div class="equation">
+  \[  \int _ W\mathrm e^{-\alpha u}\, \mathrm dV=R^{2n}\mathrm e^{-\alpha c}\int _{\frac14B}\mathrm e^{-\alpha v}\, \mathrm dV\leq R^{2n}\mathrm e^{-\alpha c}C_ n&lt;\infty .  \]
+</div>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/7EBEE004A7FA/"><span>← Previous</span><small>Proposition 5.9.5</small></a><a class="pager-next" rel="next" href="../../tag/FE144A69076E/"><span>Next →</span><small>Theorem 5.10.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-plurisubharmonic-functions--limits-envelopes-and-local-integrability,
+  author = {{Gerby contributors}},
+  title = {5.10 Limits, envelopes and local integrability},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fplurisubharmonic-functions--limits-envelopes-and-local-integrability%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fplurisubharmonic-functions--limits-envelopes-and-local-integrability%2F&amp;body=Page%3A+%5B5.10+Limits%2C+envelopes+and+local+integrability%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fplurisubharmonic-functions--limits-envelopes-and-local-integrability%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+86b6e87667fe1eb01020dd09cd2bd66c78589e2c+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

@@ -1,0 +1,366 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/"><title>11.23 The adjoint measure of the linearization · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/hermitian-torsion/">Chapter 11: Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/" aria-current="page">Section 11.23: The adjoint measure of the linearization</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/torsion-and-the-variation-of-mass/"><span>11.1</span> Torsion and the variation of mass</a><code class="tag-id">7B453010B5B8</code></li><li><a href="../../sections/monge-ampere-energy-and-torsion/"><span>11.2</span> Monge–Ampère energy and torsion</a><code class="tag-id">1FC29EAFAA97</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass/"><span>11.3</span> Gauduchon metrics and linear mass</a><code class="tag-id">1009E65ECC4C</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conformal-gauduchon-metrics/"><span>11.4</span> Conformal Gauduchon metrics</a><code class="tag-id">4ECC3E68F7D5</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conservation-of-the-trace-mass/"><span>11.5</span> Conservation of the trace mass</a><code class="tag-id">A21D56C40154</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-gauduchon-criterion-for-positivity/"><span>11.6</span> The Gauduchon criterion for positivity</a><code class="tag-id">6029C37CE10F</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--compactness-and-duality-of-gauduchon-currents/"><span>11.7</span> Compactness and duality of Gauduchon currents</a><code class="tag-id">A532E9A2E94A</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--transverse-concentration-of-gauduchon-tests/"><span>11.8</span> Transverse concentration of Gauduchon tests</a><code class="tag-id">959649DAC54D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/"><span>11.9</span> Convex norms and Gauduchon degrees</a><code class="tag-id">93399AABE3EC</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--homogeneous-convex-regularization/"><span>11.10</span> Homogeneous convex regularization</a><code class="tag-id">879A1C19426E</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--strict-positivity-from-the-tautological-metric/"><span>11.11</span> Strict positivity from the tautological metric</a><code class="tag-id">733548AD7779</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/"><span>11.12</span> Polar norms of semipositive Finsler metrics</a><code class="tag-id">C40892E1279D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--ample-comparison-quotients-on-hirzebruch-surfaces/"><span>11.13</span> Ample comparison quotients on Hirzebruch surfaces</a><code class="tag-id">9C2F19628D6F</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--stable-extensions-approaching-the-split-comparison-bundle/"><span>11.14</span> Stable extensions approaching the split comparison bundle</a><code class="tag-id">D9D859664CFB</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--deforming-to-stable-ample-bundles/"><span>11.15</span> Deforming to stable ample bundles</a><code class="tag-id">E22565883FFD</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--a-fixed-stein-hypersurface-for-all-finsler-metrics/"><span>11.16</span> A fixed Stein hypersurface for all Finsler metrics</a><code class="tag-id">FE1ACFDCD4DA</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--concave-neighborhoods-and-dual-norms/"><span>11.17</span> Concave neighborhoods and dual norms</a><code class="tag-id">4276F3B6339D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--curvature-and-projective-complement-exhaustions/"><span>11.18</span> Curvature and projective complement exhaustions</a><code class="tag-id">F56029D8C19A</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--negative-bundle-metrics-and-logarithmic-weights/"><span>11.19</span> Negative bundle metrics and logarithmic weights</a><code class="tag-id">EF53CEC272DE</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--external-tensor-products-and-complement-convexity/"><span>11.20</span> External tensor products and complement convexity</a><code class="tag-id">391E9AF09F50</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--homogeneous-plurisubharmonic-functions-and-hopf-complements/"><span>11.21</span> Homogeneous plurisubharmonic functions and Hopf complements</a><code class="tag-id">2ADE48A8B892</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--pluriharmonic-currents/"><span>11.22</span> Pluriharmonic currents</a><code class="tag-id">B57478F1D4E4</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/" aria-current="page"><span>11.23</span> The adjoint measure of the linearization</a><code class="tag-id">C01896004229</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--fredholm-theory-for-a-continuous-hermitian-form/"><span>11.24</span> Fredholm theory for a continuous Hermitian form</a><code class="tag-id">DB480BD29A98</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--limits-of-adjoint-measures/"><span>11.25</span> Limits of adjoint measures</a><code class="tag-id">8B86B2B0A308</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conformal-changes-and-directional-curvature-positivity/"><span>11.26</span> Conformal changes and directional curvature positivity</a><code class="tag-id">A4E01A8B6F30</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--ricci-flat-kahler-surfaces/"><span>11.27</span> Ricci-flat Kähler surfaces</a><code class="tag-id">FFC070E9C8C2</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--holomorphic-sectional-curvature/"><span>11.28</span> Holomorphic sectional curvature</a><code class="tag-id">AF4D6581275D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--projective-first-jets-and-positive-bundle-metrics/"><span>11.29</span> Projective first jets and positive bundle metrics</a><code class="tag-id">A1CB99CAE47B</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--ramified-section-tests-and-a-positive-root-metric/"><span>11.30</span> Ramified section tests and a positive root metric</a><code class="tag-id">EF54BD838F8D</code></li><li><a href="../../sections/gauduchon-traces-and-the-topology-of-potentials/"><span>11.31</span> Gauduchon traces and the topology of potentials</a><code class="tag-id">15943A2C3613</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures/"><span>11.32</span> Normalization and weak adjoint measures</a><code class="tag-id">7091FEDB43F0</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--the-scalar-functional/"><span>11.33</span> The scalar functional</a><code class="tag-id">52D96CD9BFA7</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--supporting-probability-measures/"><span>11.34</span> Supporting probability measures</a><code class="tag-id">EE2EC5B3CDE0</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--a-convex-functional-on-probability-measures/"><span>11.35</span> A convex functional on probability measures</a><code class="tag-id">D8DD45551DB2</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--bounded-measurable-densities-and-stability/"><span>11.36</span> Bounded measurable densities and stability</a><code class="tag-id">0E821D2FEC9D</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--entropy-and-the-closed-case/"><span>11.37</span> Entropy and the closed case</a><code class="tag-id">694B6AE5D5E5</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--entropy-bounds/"><span>11.38</span> Entropy bounds</a><code class="tag-id">531A2D2A66CF</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--changing-the-prescribed-singularities/"><span>11.39</span> Changing the prescribed singularities</a><code class="tag-id">44DF399743E5</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--varying-positive-backgrounds/"><span>11.40</span> Varying positive backgrounds</a><code class="tag-id">ABAC4E4BC446</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--divisorial-types-and-moving-sections/"><span>11.41</span> Divisorial types and moving sections</a><code class="tag-id">2D3AC831EDA6</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--the-mass-determined-by-the-functional/"><span>11.42</span> The mass determined by the functional</a><code class="tag-id">F459A353BA9B</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--convex-body-criteria-for-varying-references/"><span>11.43</span> Convex-body criteria for varying references</a><code class="tag-id">7D0D0E9AC5C3</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-by-a-vanishing-exponential-parameter/"><span>11.44</span> Selection by a vanishing exponential parameter</a><code class="tag-id">DB96849B14F8</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/"><span>11.45</span> Selection for logarithmic models on products</a><code class="tag-id">A167FA614566</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--residual-regularity-in-radial-singularity-types/"><span>11.46</span> Residual regularity in radial singularity types</a><code class="tag-id">DF55B983AF23</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--envelopes-for-singular-radial-obstacles/"><span>11.47</span> Envelopes for singular radial obstacles</a><code class="tag-id">AEE10281DB3D</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/3CD7629C6061/"><span>← Previous</span><small>Lemma 11.22.4</small></a><a class="pager-next" rel="next" href="../../tag/BEA90D7B5428/"><span>Next →</span><small>Equation 11.23.1</small></a></nav><h1>11.23 The adjoint measure of the linearization<code class="tag-id">C01896004229</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-C01896004229" data-section-entries="0B0003A3A873 28F39F2B7C2C 9140CF590948 A914D4D9C6CB BEA90D7B5428 C01896004229"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="7D23394A"><code class="tag-id">C01896004229</code></span>
+<p>
+The derivative of the logarithmic Monge–Ampère operator $u\mapsto \log (\omega _ u^ n/\mathrm dV)$ annihilates the constants, so its linearized equation can be solved only under a compatibility condition. The Gauduchon multiplier of theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a> identifies this condition. Fix $u\in \mathcal H_\omega $ and write $\eta =\omega _ u$. For a smooth real direction $v$, logarithmic differentiation gives the linearized operator 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-82DEDD31"><span data-gerby-tag="82DEDD31"><code class="tag-id">BEA90D7B5428</code></span>
+<span class="equation-label"><a data-tag="82DEDD31" href="../../tag/BEA90D7B5428/">11.23.1</a></span>
+<div>\begin{equation}  L_ u v=n\, \frac{\mathrm{dd}^{\mathrm{c}}v\wedge \eta ^{n-1}}{\eta ^ n}. \end{equation}</div>
+</div>
+<p>
+ Choose the Gauduchon multiplier $\rho _ u$ of $\eta $ given by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a>, normalized by 
+</p>
+<div class="equation">
+  \[  \int _ X\rho _ u\eta ^ n=1, \qquad \text{and put}\qquad \mathrm{d}\mu _ u:=\rho _ u\eta ^ n.  \]
+</div>
+<p>
+ The <em>adjoint measure</em> $\mu _ u$ is a smooth positive probability measure. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-C9919263">
+<p><a class="environment-identifier" href="../../tag/0B0003A3A873/">Proposition <span data-tag="C9919263">11.23.2</span>.</a><span data-gerby-tag="C9919263"><code class="tag-id">0B0003A3A873</code></span> For every smooth real $v$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-64A39B45"><span data-gerby-tag="64A39B45"><code class="tag-id">9140CF590948</code></span>
+<span class="equation-label"><a data-tag="64A39B45" href="../../tag/9140CF590948/">11.23.3</a></span>
+<div>\begin{equation}  \int _ X L_ uv\, \mathrm{d}\mu _ u=0. \end{equation}</div>
+</div>
+<p> Moreover, for smooth real $h$, the equation $L_ uv=h$ has a smooth solution if and only if $\int _ Xh\, \mathrm{d}\mu _ u=0$. When it exists, the solution is unique modulo constants. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The integral in (<a data-tag="64A39B45" href="../../tag/9140CF590948/">11.23.3</a>) is 
+    
+<div class="equation">
+  \[  n\int _ X\mathrm{dd}^{\mathrm{c}}v\wedge \rho _ u\eta ^{n-1} =n\int _ Xv\, \mathrm{dd}^{\mathrm{c}}(\rho _ u\eta ^{n-1})=0.  \]
+</div>
+<p>
+       This proves that the compatibility condition is necessary. 
+    <p>
+      By the Fredholm argument in the proof of theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a>, the range of $L_ u:C^{k+2,\alpha }(X)\to C^{k,\alpha }(X)$ has codimension one for every integer $k\geq 0$ and $0&lt;\alpha &lt;1$. The nonzero functional $h\mapsto \int _ Xh\, \mathrm{d}\mu _ u$ annihilates that range, so its kernel is the range. Elliptic regularity gives a smooth solution, and since the kernel of $L_ u$ consists of the constants, the solution is unique modulo constants. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+ By its defining equation and the uniqueness in theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a>, the multiplier $\rho _ u$ is constant precisely when $\eta $ is Gauduchon. Thus 
+</p>
+<div class="equation">
+  \[  \mu _ u=\frac{\eta ^ n}{\int _ X\eta ^ n} \quad \text{if }\mathrm{dd}^{\mathrm{c}}(\eta ^{n-1})=0.  \]
+</div>
+<p>
+ On a surface, $\mathrm{dd}^{\mathrm{c}}\omega _ u=\mathrm{dd}^{\mathrm{c}}\omega $, so every positive potential perturbation of a Gauduchon form is still Gauduchon. In higher dimension this persistence requires more than the Gauduchon condition at $u=0$. Write $M=\int _ X\omega ^ n$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-B9B9F692">
+<p><a class="environment-identifier" href="../../tag/A914D4D9C6CB/">Proposition <span data-tag="B9B9F692">11.23.4</span>.</a><span data-gerby-tag="B9B9F692"><code class="tag-id">A914D4D9C6CB</code></span> Every form $\omega _ u$ with $u\in \mathcal H_\omega $ is Gauduchon if and only if </p>
+<div class="equation">
+  \[  \int _ X\omega _ u^ n=M \quad \text{for every }u\in \mathcal H_\omega .  \]
+</div>
+<p> In that case the normalized multiplier is $\rho _ u=M^{-1}$ and $\mu _ u=M^{-1}\omega _ u^ n$ for every $u\in \mathcal H_\omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If all the forms $\omega _ u$ are Gauduchon, the mass derivative (<a data-tag="658A588E" href="../../tag/0B024E0A2A47/">11.1.9</a>) vanishes at every point of $\mathcal H_\omega $ and in every direction. Since $\mathcal H_\omega $ is convex, integration along the segment from $0$ to $u$ gives the mass identity. Conversely, proposition <a data-tag="940AB63B" href="../../tag/5C29873687ED/">11.1.8</a> shows that constant mass forces $\mathrm{dd}^{\mathrm{c}}(\omega _ u^{n-1})=0$ for every $u\in \mathcal H_\omega $. In that case the normalized multiplier is the constant $M^{-1}$, by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+By theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a>, this persistence is equivalent to $\mathrm{dd}^{\mathrm{c}}(\omega ^ j)=0$ for all integers $1\leq j\leq n-1$. The following example distinguishes it from the single Gauduchon identity in dimension three. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-324594DA">
+<p><a class="environment-identifier" href="../../tag/28F39F2B7C2C/">Example <span data-tag="324594DA">11.23.5</span>.</a><span data-gerby-tag="324594DA"><code class="tag-id">28F39F2B7C2C</code></span> Let $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$ and $X=E^3$. For $1\leq j\leq 3$, write $z_ j=x_ j+\mathrm i y_ j$ for the coordinates on the covering space, and let $\eta _ j$ be the form on $X$ induced by $(\mathrm i/2)\mathrm dz_ j\wedge \mathrm d\bar z_ j$. The periodic functions </p>
+<div class="equation">
+  \[  b=\exp (\cos (2\pi x_1)),\qquad c=b^{-1}  \]
+</div>
+<p> define a Hermitian form </p>
+<div class="equation">
+  \[  \omega =\eta _1+b\eta _2+c\eta _3.  \]
+</div>
+<p> Since $bc=1$, </p>
+<div class="equation">
+  \[  \omega ^2=2b\eta _1\wedge \eta _2 +2c\eta _1\wedge \eta _3+2\eta _2\wedge \eta _3.  \]
+</div>
+<p> The functions $b$ and $c$ depend only on $x_1$, so $\mathrm{dd}^{\mathrm{c}}b$ and $\mathrm{dd}^{\mathrm{c}}c$ are multiples of $\eta _1$, and $\mathrm{dd}^{\mathrm{c}}(\omega ^2)=0$. Thus $\omega $ is Gauduchon. </p>
+<p>Put $v=\cos (2\pi x_2)$ and $h=-\pi \cos (2\pi x_2)$, so that $\mathrm{dd}^{\mathrm{c}}v=h\eta _2$. For a real $s$ with $0&lt;|s|&lt;1/(\pi \mathrm e)$, the form </p>
+<div class="equation">
+  \[  \omega _{sv}=\eta _1+(b+sh)\eta _2+c\eta _3  \]
+</div>
+<p> is positive, since $b\geq \mathrm e^{-1}$ and $|h|\leq \pi $. However, </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(\omega _{sv}^2) =2s\mathrm{dd}^{\mathrm{c}}\omega \wedge \mathrm{dd}^{\mathrm{c}}v =2sh\mathrm{dd}^{\mathrm{c}}c\wedge \eta _2\wedge \eta _3\ne 0.  \]
+</div>
+<p> Indeed, $\mathrm{dd}^{\mathrm{c}}c=(c''/(4\pi ))\eta _1$, where the prime denotes differentiation in $x_1$, and $c''(0)=4\pi ^2\mathrm e^{-1}$, while $h=-\pi $ at $x_2=0$. Thus a Gauduchon form can have arbitrarily small positive potential perturbations that are not Gauduchon. </p>
+</article>
+
+<p>
+When persistence holds, the one-form $v\mapsto \int _ Xv\, \mathrm d\mu _ u$ on $\mathcal H_\omega $ is the Monge–Ampère one-form of section <a data-tag="40704AA7" href="../../tag/1FC29EAFAA97/">11.2</a> divided by $M$. By theorem <a data-tag="788EACD6" href="../../tag/7D069B347672/">11.2.4</a>, it therefore has a primitive exactly when $\omega $ is closed. 
+</p>
+</div></section><section class="reading-chunk" id="entry-5C3C01BC6D13" data-section-entries="0BC0A4E1D2A4 1C7A6B39E520 313276789DFD 5C3C01BC6D13 AE4D0608184F DD9886FF9427 F45FF03B558B"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5C3C01BC6D13/">11.23.6 Convex entropies along a Monge–Ampère flow</a><code class="tag-id">5C3C01BC6D13</code></h2><span data-gerby-tag="38C5F467"></span>
+<p>
+The logarithmic Monge–Ampère operator generates a parabolic flow whose linearization is the operator $L_ u$ of (<a data-tag="82DEDD31" href="../../tag/BEA90D7B5428/">11.23.1</a>). Along this flow, the ratio of the Monge–Ampère measure to a fixed target measure satisfies a heat-type equation. Integrating a convex function of this ratio by parts produces, besides the usual nonpositive gradient term, a term involving $\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})$. If the forms along the flow are Gauduchon, this additional term vanishes and all convex entropies decrease. Requiring decrease for every smooth positive target at the initial time characterizes the Gauduchon condition. 
+</p>
+<p>
+Recall that $M=\int _ X\omega ^ n$, and fix a smooth strictly positive probability volume form $\nu $ on $X$. Consider a smooth solution on an interval $[0,T)$ of the <em>logarithmic Monge–Ampère flow</em>
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B41D5CB0"><span data-gerby-tag="B41D5CB0"><code class="tag-id">DD9886FF9427</code></span>
+<span class="equation-label"><a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">11.23.7</a></span>
+<div>\begin{equation}  \dot u_ t=\log \rho _ t,\qquad \rho _ t=\frac{\omega _{u_ t}^ n}{M\nu },\qquad u_0=0,\qquad \omega _{u_ t}&gt;0. \end{equation}</div>
+</div>
+<p>
+ We keep the initial normalizing constant $M$ fixed; the evolving mass $\int _ X\omega _{u_ t}^ n$ need not equal $M$. Define the linearized operator $\Delta _ t$ by 
+</p>
+<div class="equation">
+  \[  \Delta _ t v\, \omega _{u_ t}^ n =n\mathrm{dd}^{\mathrm{c}}v\wedge \omega _{u_ t}^{n-1};  \]
+</div>
+<p>
+ it is the operator $L_{u_ t}$ of (<a data-tag="82DEDD31" href="../../tag/BEA90D7B5428/">11.23.1</a>). Logarithmic differentiation gives $\partial _ t\log \rho _ t=\Delta _ t\dot u_ t=\Delta _ t\log \rho _ t$. Integration by parts against $\omega _{u_ t}^{n-1}$ then produces the same derivative of the background power that appears in the mass variation of proposition <a data-tag="940AB63B" href="../../tag/5C29873687ED/">11.1.8</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-0A929870">
+<p><a class="environment-identifier" href="../../tag/AE4D0608184F/">Proposition <span data-tag="0A929870">11.23.8</span>.</a><span data-gerby-tag="0A929870"><code class="tag-id">AE4D0608184F</code></span> Let $\Phi \in C^2((0,+\infty ),\mathbb R)$, and choose a function $G$ with $G'(r)=\Phi '(r)/r$. Along (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">11.23.7</a>), </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-705E04B0"><span data-gerby-tag="705E04B0"><code class="tag-id">313276789DFD</code></span>
+<span class="equation-label"><a data-tag="705E04B0" href="../../tag/313276789DFD/">11.23.9</a></span>
+<div>\begin{equation}  \begin{split}  \frac{\mathrm{d}}{\mathrm{d}t}\int _ X\Phi (\rho _ t)\nu ={}&amp; \frac nM\int _ XG(\rho _ t)\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})\\ &amp; -\frac nM\int _ X\frac{\Phi ''(\rho _ t)}{\rho _ t} \mathrm{d}\rho _ t\wedge \mathrm d^{\mathrm c}\rho _ t\wedge \omega _{u_ t}^{n-1}. \end{split} \end{equation}</div>
+</div>
+<p> In particular, for $p&gt;1$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-3BCBC72A"><span data-gerby-tag="3BCBC72A"><code class="tag-id">0BC0A4E1D2A4</code></span>
+<span class="equation-label"><a data-tag="3BCBC72A" href="../../tag/0BC0A4E1D2A4/">11.23.10</a></span>
+<div>\begin{equation}  \begin{split}  \frac{\mathrm{d}}{\mathrm{d}t}\int _ X\rho _ t^ p\nu ={}&amp; \frac{np}{(p-1)M}\int _ X\rho _ t^{p-1}\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})\\ &amp; -\frac{np(p-1)}M\int _ X\rho _ t^{p-3} \mathrm{d}\rho _ t\wedge \mathrm d^{\mathrm c}\rho _ t\wedge \omega _{u_ t}^{n-1}. \end{split} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Using $\partial _ t\rho _ t=\rho _ t\Delta _ t\log \rho _ t$ and $\rho _ t\nu =M^{-1}\omega _{u_ t}^ n$, we find that the derivative of the entropy is 
+    
+<div class="equation">
+  \[  \frac nM\int _ X\Phi '(\rho _ t)\mathrm{dd}^{\mathrm{c}}\log \rho _ t \wedge \omega _{u_ t}^{n-1}.  \]
+</div>
+<p>
+       The chain rule and the definition of $G$ give 
+    
+<div class="equation">
+  \[  \Phi '(r)\mathrm{dd}^{\mathrm{c}}\log r =\mathrm{dd}^{\mathrm{c}}G(r)-\frac{\Phi ''(r)}r\mathrm{d}r\wedge \mathrm d^{\mathrm c}r,  \]
+</div>
+<p>
+       and lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">11.1.2</a> applies to the first term. Adding a constant to $G$ does not change the result, since $\int _ X\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})=0$. Taking $\Phi (r)=r^ p$ and $G(r)=p r^{p-1}/(p-1)$ proves the second formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-F5266200">
+<p><a class="environment-identifier" href="../../tag/1C7A6B39E520/">Corollary <span data-tag="F5266200">11.23.11</span>.</a><span data-gerby-tag="F5266200"><code class="tag-id">1C7A6B39E520</code></span> Suppose that every form $\omega _{u_ t}$ in (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">11.23.7</a>) is Gauduchon. Then $\int _ X\rho _ t\nu =1$, and $t\mapsto \int _ X\Phi (\rho _ t)\nu $ is nonincreasing for every convex function $\Phi \in C^2((0,+\infty ),\mathbb R)$. In particular, </p>
+<div class="equation">
+  \[  \| \rho _ t\| _{L^ p(\nu )}\leq \| \rho _ s\| _{L^ p(\nu )} \quad (0\leq s\leq t&lt;T,\  p&gt;1).  \]
+</div>
+<p> If $\Phi ''&gt;0$, the derivative of the entropy vanishes at a time $t$ precisely when $\rho _ t=1$, in which case $\dot u_ t=0$. </p>
+<p>The hypothesis holds on a Gauduchon surface, and in any dimension it holds if $\mathrm{dd}^{\mathrm{c}}(\omega ^ j)=0$ for $1\leq j\leq n-1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The derivative of the mass is 
+    
+<div class="equation">
+  \[  \frac{\mathrm{d}}{\mathrm{d}t}\int _ X\rho _ t\nu =\frac nM\int _ X\dot u_ t\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})=0,  \]
+</div>
+<p>
+       and its initial value is one. In (<a data-tag="705E04B0" href="../../tag/313276789DFD/">11.23.9</a>) the first term vanishes, while the second is nonpositive, because $\mathrm{d}\rho _ t\wedge \mathrm d^{\mathrm c}\rho _ t$ is a semipositive $(1,1)$-form and $\Phi ''\geq 0$. If $\Phi ''&gt;0$, the vanishing of this term forces $\mathrm{d}\rho _ t=0$, and connectedness together with the mass normalization gives $\rho _ t=1$. The converse and the assertion about $\dot u_ t$ follow from the equation. 
+    <p>
+      On a surface, $\mathrm{dd}^{\mathrm{c}}\omega _{u_ t}=\mathrm{dd}^{\mathrm{c}}\omega =0$. Under the power identities, expand $\omega _{u_ t}^{n-1}$ by the binomial theorem; since the factors $\mathrm{dd}^{\mathrm{c}}u_ t$ are annihilated by $\mathrm d$ and $\mathrm d^{\mathrm c}$, each term has vanishing complex Hessian. These are also the persistence conditions of proposition <a data-tag="B9B9F692" href="../../tag/A914D4D9C6CB/">11.23.4</a>, theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For $\Phi (r)=r\log r$, the same formula gives the dissipation of the relative entropy. In higher dimension, the Gauduchon condition on the initial form alone need not persist along potential perturbations, as example <a data-tag="324594DA" href="../../tag/28F39F2B7C2C/">11.23.5</a> shows. The next criterion determines the role of this condition at the initial time, without assuming that the flow exists. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-13AE2096">
+<p><a class="environment-identifier" href="../../tag/F45FF03B558B/">Proposition <span data-tag="13AE2096">11.23.12</span>.</a><span data-gerby-tag="13AE2096"><code class="tag-id">F45FF03B558B</code></span> Fix $p&gt;1$. For each smooth strictly positive probability volume form $\nu $, put $\rho _\nu =\omega ^ n/(M\nu )$ and define </p>
+<div class="equation">
+  \[  \mathcal D_ p(\omega ,\nu ) :=\left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0} \int _ X\left(\frac{(\omega +t\mathrm{dd}^{\mathrm{c}}\log \rho _\nu )^ n}{M\nu }\right)^ p\nu .  \]
+</div>
+<p> Then $\mathcal D_ p(\omega ,\nu )\leq 0$ for every such $\nu $ if and only if $\omega $ is Gauduchon. If $\omega $ is not Gauduchon, there is such a $\nu $ with $\mathcal D_ p(\omega ,\nu )&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The form in the definition is positive for sufficiently small $|t|$. The path $u_ t=t\log \rho _\nu $ starts at $u_0=0$ with the velocity $\log \rho _\nu $ prescribed by (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">11.23.7</a>) at time zero. The proof of proposition <a data-tag="0A929870" href="../../tag/AE4D0608184F/">11.23.8</a> at a given time uses only the potential and its velocity at that time, so (<a data-tag="3BCBC72A" href="../../tag/0BC0A4E1D2A4/">11.23.10</a>) holds for the derivative at $t=0$. If $\omega $ is Gauduchon, its first term vanishes and the derivative is nonpositive. 
+    <p>
+      Conversely, suppose that $\lambda :=\mathrm{dd}^{\mathrm{c}}(\omega ^{n-1})\ne 0$. Write $\lambda =f\omega ^ n/M$, where $f$ is smooth and real. Stokes' theorem gives $\int _ Xf\omega ^ n=0$, whereas 
+    
+<div class="equation">
+  \[  \int _ Xf\lambda =\frac1M\int _ Xf^2\omega ^ n&gt;0.  \]
+</div>
+<p>
+       For small $\varepsilon &gt;0$, set 
+    
+<div class="equation">
+  \[  c_\varepsilon =\frac1M\int _ X\mathrm{e}^{-\varepsilon f}\omega ^ n, \qquad r_\varepsilon =c_\varepsilon \mathrm{e}^{\varepsilon f}, \qquad \nu _\varepsilon =\frac{\omega ^ n}{M r_\varepsilon }.  \]
+</div>
+<p>
+       Then $\nu _\varepsilon $ is a smooth strictly positive probability volume form, and $\rho _{\nu _\varepsilon }=r_\varepsilon $. Since $c_\varepsilon =1+O(\varepsilon ^2)$, $\int _ X\lambda =0$ and $\mathrm{d}r_\varepsilon =\varepsilon r_\varepsilon \mathrm{d}f$, the two terms in (<a data-tag="3BCBC72A" href="../../tag/0BC0A4E1D2A4/">11.23.10</a>) give 
+    
+<div class="equation">
+  \[  \mathcal D_ p(\omega ,\nu _\varepsilon ) =\frac{np}M\varepsilon \int _ Xf\lambda +O(\varepsilon ^2)&gt;0  \]
+</div>
+<p>
+       for sufficiently small $\varepsilon &gt;0$. This proves necessity and the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The criterion involves only the initial velocity: every smooth solution of (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">11.23.7</a>) with target $\nu $ has the same initial entropy derivative, independently of its existence for later times or its convergence. Quantification over all targets is essential. For the target $\nu =\omega ^ n/M$, the flow $u_ t=0$ is stationary for every Hermitian $\omega $, and all entropy derivatives vanish. 
+</p>
+</div></section><section class="reading-chunk" id="entry-F9C293B132B8" data-section-entries="21368BD09EBB 621E75C5A9F4 6C85B622ADCF 7732A51ABE6E F9C293B132B8"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/F9C293B132B8/">11.23.13 Total variation between two evolving probabilities</a><code class="tag-id">F9C293B132B8</code></h2><span data-gerby-tag="5F0B59E7"></span>
+<p>
+The entropies of <a data-tag="38C5F467" href="../../tag/5C3C01BC6D13/">11.23.6</a> compare one evolving probability with the fixed target. Two solutions of the flow with different initial potentials can nevertheless move apart. On a flat torus, even with a closed background, their total-variation distance can increase at the initial time, while no convex entropy relative to the target increases. We show this by computing the initial derivatives explicitly. By a <em>logarithmic Monge–Ampère flow with target</em> $\nu $ we mean a smooth solution of the equation in (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">11.23.7</a>), with an arbitrary smooth initial potential. 
+</p>
+<p>
+For this example, let $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$ and $X=E^2$, with covering coordinates $z_ j=x_ j+\mathrm i y_ j$. Write 
+</p>
+<div class="equation">
+  \[  \eta _ j=\frac{\mathrm i}2\mathrm dz_ j\wedge \mathrm d\bar z_ j, \qquad \kappa =\eta _1+\eta _2, \qquad \mu =\eta _1\wedge \eta _2=\frac{\kappa ^2}2.  \]
+</div>
+<p>
+ Thus $\mu $ is a probability volume form and $\int _ X\kappa ^2=2$. Put 
+</p>
+<div class="equation">
+  \[  c_ j=\cos (2\pi x_ j),\qquad S=c_1+c_2,\qquad P=c_1c_2.  \]
+</div>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-90808614">
+<p><a class="environment-identifier" href="../../tag/6C85B622ADCF/">Lemma <span data-tag="90808614">11.23.14</span>.</a><span data-gerby-tag="90808614"><code class="tag-id">6C85B622ADCF</code></span> The averages of $|S|$ and $P|S|$ are </p>
+<div class="equation">
+  \[  \int _ X|S|\mu =\frac8{\pi ^2}, \qquad \int _ XP|S|\mu =\frac8{3\pi ^2}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The integrands do not depend on $y_1,y_2$. The degree-two map of real tori $(a,b)\mapsto (a+b,a-b)$ preserves normalized Haar averages. With the angles $A=2\pi a$ and $B=2\pi b$, it gives 
+    
+<div class="equation">
+  \[  S=2\cos A\cos B,\qquad P=\frac{\cos (2A)+\cos (2B)}2.  \]
+</div>
+<p>
+       The one-variable averages of $|\cos A|$ and $|\cos A|^3$ are $2/\pi $ and $4/(3\pi )$, respectively, so the average of $\cos (2A)|\cos A|$ is $2/(3\pi )$. Multiplying the averages over the two independent angles gives both formulas. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+For a fixed real number $K&gt;3$, define the smooth target probability $\nu _ K$ by 
+</p>
+<div class="equation">
+  \[  Z_ K=\int _ X\mathrm e^{KP}\mu , \qquad f_ K=Z_ K^{-1}\mathrm e^{KP}, \qquad \nu _ K=f_ K\mu .  \]
+</div>
+<p>
+ For $0&lt;\varepsilon &lt;1/\pi $, the initial potentials $\varepsilon S$ and zero give positive forms. Set 
+</p>
+<div class="equation">
+  \[  A_\varepsilon =1-\pi \varepsilon c_1, \qquad B_\varepsilon =1-\pi \varepsilon c_2, \qquad r_\varepsilon =A_\varepsilon B_\varepsilon ,  \]
+</div>
+<p>
+ so that $\kappa +\mathrm{dd}^{\mathrm{c}}(\varepsilon S)=A_\varepsilon \eta _1+B_\varepsilon \eta _2$ and its normalized Monge–Ampère probability is $r_\varepsilon \mu $. 
+</p>
+<p>
+Consider the short smooth paths 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-EF6DB8D9"><span data-gerby-tag="EF6DB8D9"><code class="tag-id">7732A51ABE6E</code></span>
+<span class="equation-label"><a data-tag="EF6DB8D9" href="../../tag/7732A51ABE6E/">11.23.15</a></span>
+<div>\begin{equation}  U_\varepsilon (t)=\varepsilon S+t\log \frac{r_\varepsilon }{f_ K}, \qquad V(t)=-t\log f_ K. \end{equation}</div>
+</div>
+<p>
+ They remain positive for sufficiently small $|t|$, and at $t=0$ their velocities are exactly those prescribed by the logarithmic Monge–Ampère flow with target $\nu _ K$. Their normalized probabilities are 
+</p>
+<div class="equation">
+  \[  \mu _\varepsilon (t)=\frac{(\kappa +\mathrm{dd}^{\mathrm{c}}U_\varepsilon (t))^2}2, \qquad \mu _0(t)=\frac{(\kappa +\mathrm{dd}^{\mathrm{c}}V(t))^2}2,  \]
+</div>
+<p>
+ which have mass one because the background $\kappa $ is closed. Define their total-variation distance, with the convention for probabilities, by 
+</p>
+<div class="equation">
+  \[  D_\varepsilon (t) =\frac12\int _ X|\mu _\varepsilon (t)-\mu _0(t)|.  \]
+</div>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-ACB97703">
+<p><a class="environment-identifier" href="../../tag/621E75C5A9F4/">Proposition <span data-tag="ACB97703">11.23.16</span>.</a><span data-gerby-tag="ACB97703"><code class="tag-id">621E75C5A9F4</code></span> For the paths (<a data-tag="EF6DB8D9" href="../../tag/7732A51ABE6E/">11.23.15</a>), </p>
+<div class="equation">
+  \[  D'_\varepsilon (0) =4\varepsilon \left(\frac K3-1\right)+o(\varepsilon ) \quad \text{as }\varepsilon \downarrow 0.  \]
+</div>
+<p> In particular, this derivative is positive for sufficiently small $\varepsilon &gt;0$. Any two logarithmic Monge–Ampère flows with target $\nu _ K$ and these initial potentials have the same positive initial derivative of their total-variation distance. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a real function $h$ depending only on $x_1,x_2$, the coefficient matrix of $\mathrm{dd}^{\mathrm{c}}h$ with respect to the forms $(\mathrm i/2)\mathrm dz_ j\wedge \mathrm d\bar z_ k$ is $(4\pi )^{-1}(h_{x_ jx_ k})$. Put $R_\varepsilon (t)=\mathrm d\mu _\varepsilon (t)/\mathrm d\mu $ and $R_0(t)=\mathrm d\mu _0(t)/\mathrm d\mu $. Differentiating the determinant at the diagonal initial matrices gives 
+    
+<div class="equation">
+  \[  \begin{split}  \left.\partial _ t(R_\varepsilon -R_0)\right|_{t=0} =\frac1{4\pi }\bigl (&amp; B_\varepsilon \partial _{x_1}^2\log A_\varepsilon +A_\varepsilon \partial _{x_2}^2\log B_\varepsilon \\ &amp; -K(B_\varepsilon -1)\partial _{x_1}^2P -K(A_\varepsilon -1)\partial _{x_2}^2P\bigr ). \end{split}  \]
+</div>
+<p>
+       Since $\partial _{x_ j}^2P=-4\pi ^2P$, Taylor expansion in $\varepsilon $ yields the uniform estimate 
+    
+<div class="equation">
+  \[  \left.\partial _ t(R_\varepsilon -R_0)\right|_{t=0} =\pi ^2\varepsilon S(1-KP)+O(\varepsilon ^2).  \]
+</div>
+<p>
+       At $t=0$, the difference of the densities is 
+    
+<div class="equation">
+  \[  q_\varepsilon =r_\varepsilon -1 =-\pi \varepsilon S+\pi ^2\varepsilon ^2P.  \]
+</div>
+<p>
+       For each fixed $x_2$, its coefficient of $c_1$ is $-\pi \varepsilon (1-\pi \varepsilon c_2)\ne 0$, so as a function of $x_1$ it has at most two zeros in a period, and its zero set has measure zero. Differentiation under the integral sign, justified by the uniform bound on the derivatives of the smooth densities, gives 
+    
+<div class="equation">
+  \[  D'_\varepsilon (0)=\frac12\int _ X\operatorname {sgn}(q_\varepsilon ) \left.\partial _ t(R_\varepsilon -R_0)\right|_{t=0}\mu .  \]
+</div>
+<p>
+       The set $\{ S=0\} $ also has measure zero, and $\operatorname {sgn}(q_\varepsilon )\to -\operatorname {sgn}(S)$ off this set. Dominated convergence and lemma <a data-tag="90808614" href="../../tag/6C85B622ADCF/">11.23.14</a> give 
+    
+<div class="equation">
+  \[  \lim _{\varepsilon \downarrow 0}\frac{D'_\varepsilon (0)}\varepsilon =\frac{\pi ^2}2\int _ X|S|(KP-1)\mu =4\left(\frac K3-1\right).  \]
+</div>
+<p>
+       Every flow with the stated initial data has the velocities (<a data-tag="EF6DB8D9" href="../../tag/7732A51ABE6E/">11.23.15</a>) at $t=0$, so its initial density derivatives, and hence the derivative of the distance, coincide with this computation. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-B6390986">
+<p><a class="environment-identifier" href="../../tag/21368BD09EBB/">Corollary <span data-tag="B6390986">11.23.17</span>.</a><span data-gerby-tag="B6390986"><code class="tag-id">21368BD09EBB</code></span> For these paths, the initial derivative of every $C^2$ convex entropy of each probability relative to $\nu _ K$ is nonpositive, while the total-variation distance between the two probabilities has positive initial derivative for sufficiently small $\varepsilon &gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The initial velocities are those of the logarithmic flow, and both initial forms are closed. The chain-rule calculation in the proof of proposition <a data-tag="0A929870" href="../../tag/AE4D0608184F/">11.23.8</a> therefore applies at $t=0$: its background term vanishes and its gradient term is nonpositive. The preceding proposition gives the assertion about the pair. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Since only initial velocities enter, the example shows, without any existence or convergence theorem for the flow, that the logarithmic Monge–Ampère flow need not contract the total-variation distance infinitesimally, even though no convex entropy relative to the target increases at the initial time. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/3CD7629C6061/"><span>← Previous</span><small>Lemma 11.22.4</small></a><a class="pager-next" rel="next" href="../../tag/BEA90D7B5428/"><span>Next →</span><small>Equation 11.23.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization,
+  author = {{Gerby contributors}},
+  title = {11.23 The adjoint measure of the linearization},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fgauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fgauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization%2F&amp;body=Page%3A+%5B11.23+The+adjoint+measure+of+the+linearization%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fgauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+295411422652fe80a0638a434606bd6839e0e3cd+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

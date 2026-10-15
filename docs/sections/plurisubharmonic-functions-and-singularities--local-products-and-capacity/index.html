@@ -1,0 +1,985 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/"><title>5.27 Local products and capacity · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/psh-positive-currents/">Chapter 5: Plurisubharmonic functions and positive currents</a></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/" aria-current="page">Section 5.27: Local products and capacity</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/complex-differential-forms-and-positive-currents/"><span>5.1</span> Complex differential forms and positive currents</a><code class="tag-id">4DEEEF894245</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--complex-manifolds-and-differential-forms/"><span>5.2</span> Complex manifolds and differential forms</a><code class="tag-id">D8E2D1A98ACF</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--currents-and-positivity/"><span>5.3</span> Currents and positivity</a><code class="tag-id">ACB622806098</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--local-potentials-for-closed-1-1-currents/"><span>5.4</span> Local potentials for closed (1,1)-currents</a><code class="tag-id">618FE2108D26</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--holomorphic-zeros-and-the-poincare-lelong-formula/"><span>5.5</span> Holomorphic zeros and the Poincaré–Lelong formula</a><code class="tag-id">0C34F7796300</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--maps-of-currents-and-local-mass/"><span>5.6</span> Maps of currents and local mass</a><code class="tag-id">9F1C9C4A649E</code></li><li><a href="../../sections/plurisubharmonic-functions/"><span>5.7</span> Plurisubharmonic functions</a><code class="tag-id">7B39B08A9568</code></li><li><a href="../../sections/plurisubharmonic-functions--the-line-definition-and-upper-semicontinuity/"><span>5.8</span> The line definition and upper semicontinuity</a><code class="tag-id">55393AEE99C8</code></li><li><a href="../../sections/plurisubharmonic-functions--positive-hessians-and-holomorphic-maps/"><span>5.9</span> Positive Hessians and holomorphic maps</a><code class="tag-id">484A05EF6DF1</code></li><li><a href="../../sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/"><span>5.10</span> Limits, envelopes and local integrability</a><code class="tag-id">5C7282E51B13</code></li><li><a href="../../sections/plurisubharmonic-functions--extension-across-closed-exceptional-sets/"><span>5.11</span> Extension across closed exceptional sets</a><code class="tag-id">E197EAFECEC0</code></li><li><a href="../../sections/plurisubharmonic-functions--kiselman-s-minimum-principle/"><span>5.12</span> Kiselman&#x27;s minimum principle</a><code class="tag-id">53A48113C242</code></li><li><a href="../../sections/plurisubharmonic-functions--the-definition-of-plurisubharmonic-functions/"><span>5.13</span> The definition of plurisubharmonic functions</a><code class="tag-id">92A4FA45DFE1</code></li><li><a href="../../sections/plurisubharmonic-functions--properties-of-plurisubharmonic-functions/"><span>5.14</span> Properties of plurisubharmonic functions</a><code class="tag-id">6C47792FE6D9</code></li><li><a href="../../sections/plurisubharmonic-functions--plurifine-topology/"><span>5.15</span> Plurifine topology</a><code class="tag-id">DFFF533F1AE8</code></li><li><a href="../../sections/plurisubharmonic-functions--lelong-numbers-and-multiplier-ideal-sheaves/"><span>5.16</span> Lelong numbers and multiplier ideal sheaves</a><code class="tag-id">EB678D619AD9</code></li><li><a href="../../sections/plurisubharmonic-functions--quasi-plurisubharmonic-functions/"><span>5.17</span> Quasi-plurisubharmonic functions</a><code class="tag-id">4DF694F99750</code></li><li><a href="../../sections/plurisubharmonic-functions--analytic-singularities/"><span>5.18</span> Analytic singularities</a><code class="tag-id">26AEEBDF865B</code></li><li><a href="../../sections/plurisubharmonic-functions--the-space-of-currents/"><span>5.19</span> The space of currents</a><code class="tag-id">EB85809E6CA8</code></li><li><a href="../../sections/plurisubharmonic-functions--plurisubharmonic-metrics-on-line-bundles/"><span>5.20</span> Plurisubharmonic metrics on line bundles</a><code class="tag-id">A59F8B8F06A8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities/"><span>5.21</span> Plurisubharmonic functions and singularities</a><code class="tag-id">EDB5A2485B58</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--plurisubharmonic-potentials/"><span>5.22</span> Plurisubharmonic potentials</a><code class="tag-id">17A37A0D3690</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--changes-of-background/"><span>5.23</span> Changes of background</a><code class="tag-id">012278DBB6E8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--maxima-and-the-maximum-principle/"><span>5.24</span> Maxima and the maximum principle</a><code class="tag-id">AA6F3BC0AD9F</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--normalized-compactness/"><span>5.25</span> Normalized compactness</a><code class="tag-id">0B216F0B911E</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--uniform-exponential-integrability/"><span>5.26</span> Uniform exponential integrability</a><code class="tag-id">5A19CE5C3CCE</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/" aria-current="page"><span>5.27</span> Local products and capacity</a><code class="tag-id">5E507B6993DC</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--products-with-smooth-backgrounds/"><span>5.28</span> Products with smooth backgrounds</a><code class="tag-id">5E2B332B89B4</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/"><span>5.29</span> Hermitian capacity</a><code class="tag-id">DD310AD8B258</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--comparing-local-regularizations/"><span>5.30</span> Comparing local regularizations</a><code class="tag-id">DB8E63271D73</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--gluing-with-a-small-curvature-error/"><span>5.31</span> Gluing with a small curvature error</a><code class="tag-id">78243032B1A1</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--regularization-in-a-fixed-hermitian-background/"><span>5.32</span> Regularization in a fixed Hermitian background</a><code class="tag-id">26C061D9E9B2</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--singularity-type-and-multiplier-ideals/"><span>5.33</span> Singularity type and multiplier ideals</a><code class="tag-id">9A10411F1BCD</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--analytic-types-and-restriction/"><span>5.34</span> Analytic types and restriction</a><code class="tag-id">0D77FC17B23B</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-local-bergman-estimates/"><span>5.35</span> The local Bergman estimates</a><code class="tag-id">51F374296336</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-global-curvature-bound/"><span>5.36</span> The global curvature bound</a><code class="tag-id">3BCA55154463</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--multiplier-ideals-and-logarithmic-poles/"><span>5.37</span> Multiplier ideals and logarithmic poles</a><code class="tag-id">5BB7B3EA169D</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--lelong-numbers-and-divisorial-estimates/"><span>5.38</span> Lelong numbers and divisorial estimates</a><code class="tag-id">2C2417A75DF4</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--potential-regularity-and-metric-distance/"><span>5.39</span> Potential regularity and metric distance</a><code class="tag-id">DE3129821F10</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--obstacle-envelopes/"><span>5.40</span> Obstacle envelopes</a><code class="tag-id">8EA2EE30DE99</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-minimum-principle/"><span>5.41</span> The minimum principle</a><code class="tag-id">392B79314DF8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--chern-connection-regularization/"><span>5.42</span> Chern-connection regularization</a><code class="tag-id">001730C9ED64</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/"><span>5.43</span> Pullback and descent</a><code class="tag-id">88AEFA5005B9</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--integration-against-non-pluripolar-measures/"><span>5.44</span> Integration against non-pluripolar measures</a><code class="tag-id">2111608E9FA1</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--curvature-of-line-bundles/"><span>5.45</span> Curvature of line bundles</a><code class="tag-id">355A31F789F6</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--polar-curvature/"><span>5.46</span> Polar curvature</a><code class="tag-id">AFA07BFD0E7B</code></li><li><a href="../../sections/pluripolar-sets-and-the-plurifine-topology/"><span>5.47</span> Pluripolar sets and the plurifine topology</a><code class="tag-id">F5A3147592B6</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/88C7A8DCE36E/"><span>← Previous</span><small>Lemma 5.26.2</small></a><a class="pager-next" rel="next" href="../../tag/8B1218AE4FDC/"><span>Next →</span><small>Theorem 5.27.1 (Bedford–Taylor)</small></a></nav><h1>5.27 Local products and capacity<code class="tag-id">5E507B6993DC</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-5E507B6993DC" data-section-entries="2A60C2B3B4C3 5E507B6993DC 5E980A5776A2 8B1218AE4FDC 9149838224AE 9D64513AE343 A9D318047BDA B4EA93FC61EE C56C5CBA0E0D DBC85A3C1608 EBF435BDB6A0 F138661713A9 F547D6DF0352"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="936B251D"><code class="tag-id">5E507B6993DC</code></span>
+<p>
+Bedford–Taylor products of bounded plurisubharmonic functions, and the capacity defined through them, measure the exceptional sets of plurisubharmonic functions and control bounded approximation. We recall these classical facts of local pluripotential theory from <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>. The <em>plurifine topology</em> is the coarsest topology that makes all local plurisubharmonic functions continuous. It is finer than the ordinary topology; in particular, strict superlevel sets of quasi-plurisubharmonic functions are plurifine open. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-219D82A9">
+<p><a class="environment-identifier" href="../../tag/8B1218AE4FDC/">Theorem <span data-tag="219D82A9">5.27.1</span> <span class="named">(Bedford–Taylor)</span>.</a><span data-gerby-tag="219D82A9"><code class="tag-id">8B1218AE4FDC</code></span>  Let $1\leq k\leq n$. If $p_1,\ldots ,p_ k$ are locally bounded plurisubharmonic functions on a domain in $\mathbb C^ n$, their mixed product $\mathrm{dd}^{\mathrm{c}}p_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}p_ k$ is a positive closed current of order zero. It is symmetric, multilinear in its current factors, and continuous under simultaneous locally bounded decreasing approximation. It does not charge pluripolar sets and is local in the plurifine topology. </p>
+</article>
+
+<p>
+Here plurifine locality means that if two families of such functions agree on a plurifine open Borel set, then their products have the same restriction to that set. 
+</p>
+<p>
+Products multiplied by a bounded potential need more than the weak convergence of the unweighted products in theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">5.27.1</a>. An auxiliary complex variable recovers the weight from an ordinary mixed product in one more dimension, including at top degree. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-672093DF">
+<p><a class="environment-identifier" href="../../tag/2A60C2B3B4C3/">Lemma <span data-tag="672093DF">5.27.2</span>.</a><span data-gerby-tag="672093DF"><code class="tag-id">2A60C2B3B4C3</code></span> Let $a_ j\downarrow a$ and $b_{i,j}\downarrow b_ i$, $1\leq i\leq r\leq n$, be locally uniformly bounded plurisubharmonic functions on a domain in $\mathbb C^ n$. Then </p>
+<div class="equation">
+  \[  a_ j\, \mathrm{dd}^{\mathrm{c}}b_{1,j}\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}b_{r,j} \longrightarrow a\, \mathrm{dd}^{\mathrm{c}}b_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}b_ r  \]
+</div>
+<p> weakly as currents. The same holds for quasi-plurisubharmonic functions that become plurisubharmonic after fixed smooth corrections, and after wedging with smooth forms that converge locally in $C^\infty $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First let $r=n$, and write $\mu _ j=\bigwedge _ i\mathrm{dd}^{\mathrm{c}}b_{i,j}$ and $\mu =\bigwedge _ i\mathrm{dd}^{\mathrm{c}}b_ i$. Work over a relatively compact ball on which $-M\leq a_ j,a\leq M$. On the product of this ball with a disk of radius $R$ in an auxiliary variable $w$, where $\log R^2&gt;M+1$, set 
+    
+<div class="equation">
+  \[  v_ j(z,w)=\max \{ a_ j(z),\log |w|^2\} ,\qquad v(z,w)=\max \{ a(z),\log |w|^2\} .  \]
+</div>
+<p>
+       These are locally bounded plurisubharmonic functions, also at $w=0$, and $v_ j\downarrow v$. Pulling back the functions $b_{i,j}$ and $b_ i$ to the product and applying theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">5.27.1</a> in dimension $n+1$, we obtain 
+    
+<div class="equation">
+  \[  T_ j=\mu _ j\wedge \mathrm{dd}^{\mathrm{c}}v_ j\longrightarrow T=\mu \wedge \mathrm{dd}^{\mathrm{c}}v.  \]
+</div>
+<p>
+       Since $\mu $ is closed, $T=\mathrm{dd}^{\mathrm{c}}(v\mu )$. As $\mu $ has top degree in the base variables, only derivatives in $w$ contribute. Testing against product test functions and applying Fubini's theorem therefore identifies $T$ with $\mu (\mathrm dz)$ times the circle measure 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}_ w\max \{ a(z),\log |w|^2\}  =\sigma _{\exp (a(z)/2)}.  \]
+</div>
+<p>
+       Here $\sigma _ t$ is the uniform probability measure on the circle $|w|=t$: the radial derivative jumps from zero to $2/t$ there, so the Euclidean Laplacian has total mass $4\pi $, and our normalization of $\mathrm{dd}^{\mathrm{c}}$ divides that mass by $4\pi $. This distributional computation is valid for every bounded Borel function $a$; no continuity in $z$ is needed. The same description holds for $T_ j$. 
+    <p>
+      Choose a smooth radial compactly supported function $\vartheta (w)$, supported away from zero and from the circle $|w|=R$, that equals $\log |w|^2$ on all circles with $-M\leq \log |w|^2\leq M$. For every smooth compactly supported test function $\xi $ on the base, 
+    
+<div class="equation">
+  \[  \langle T_ j,\xi \vartheta \rangle =\int \xi a_ j\, \mathrm d\mu _ j, \qquad \langle T,\xi \vartheta \rangle =\int \xi a\, \mathrm d\mu .  \]
+</div>
+<p>
+       The convergence $T_ j\to T$ therefore proves the top-degree assertion. 
+    <p>
+      For $r&lt;n$, wedge with $n-r$ constant positive $(1,1)$-forms, each the Hessian of a positive quadratic function, and apply the top-degree case. By polarization, the products of positive constant $(1,1)$-forms span the real constant forms of bidegree $(n-r,n-r)$, and multiplying them by smooth test functions recovers every coefficient of the currents. For quasi-plurisubharmonic functions, add the fixed smooth corrections to the decreasing sequences, apply the result to the corrected functions, and expand; the term involving the correction to $a_ j$ converges by the ordinary decreasing continuity of the products. Finally, the local Chern–Levine–Nirenberg bounds show that these finitely many products have uniformly bounded variation on compact sets. This allows smooth forms converging locally in $C^\infty $ to replace fixed forms in the tests. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+ For concentric coordinate balls $B'\Subset B$ and a Borel set $E\subset B'$, the <em>relative Bedford–Taylor capacity</em> is 
+</p>
+<div class="equation">
+  \[  \operatorname {cap}(E,B)=\sup \Bigl \{ \int _ E(\mathrm{dd}^{\mathrm{c}}v)^ n:v\in \mathrm{PSH}(B),\  0\leq v\leq 1\Bigr \} .  \]
+</div>
+<p>
+ If $v$ is bounded, nonconstant and plurisubharmonic on $B$, applying the definition to $(v-\inf _ Bv)/(\sup _ Bv-\inf _ Bv)$ gives 
+</p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}v)^ n(E)\leq (\sup _ Bv-\inf _ Bv)^ n\operatorname {cap}(E,B);  \]
+</div>
+<p>
+ for constant $v$ both sides vanish. Write $\operatorname {Vol}(E)=\int _ E\mathrm{d}V$, where $\mathrm{d}V$ is a fixed smooth positive volume form. We use two standard local estimates on these balls, with constants $C,a&gt;0$ depending only on the nested balls and on $\mathrm{d}V$: 
+</p>
+<ol>
+<li><p>
+If $w\leq 0$ is plurisubharmonic on $B$ and $v$ is bounded and plurisubharmonic on $B$, then 
+</p>
+<div class="equation">
+  \[  \int _{B'}|w|(\mathrm{dd}^{\mathrm{c}}v)^ n \leq C\| w\| _{L^1(B)}\| v\| _{L^\infty (B)}^ n.  \]
+</div>
+<p>
+ Since adding a constant to $v$ does not change $(\mathrm{dd}^{\mathrm{c}}v)^ n$, one may first normalize $v$ by such a constant. This is the weighted Chern–Levine–Nirenberg inequality. 
+</p>
+</li><li><p>
+For every Borel set $E\subset B'$, 
+</p>
+<div class="equation">
+  \[  \operatorname {Vol}(E)\leq C\exp \bigl (-a\operatorname {cap}(E,B)^{-1/n}\bigr ),  \]
+</div>
+<p>
+ where the right-hand side is zero when the capacity is zero. This is the classical local volume–capacity estimate. 
+</p>
+</li>
+</ol>
+<p>
+ Both are classical results of local pluripotential theory <span class="cite">[<span class="postnote">Chapters 3 and 4</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>; the conventions for bounded products and capacity in <span class="cite">[<span class="postnote">Chapter 2</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span> agree with these up to fixed constants. 
+</p>
+<p>
+The dependence on the range of the potential can be read off from the usual cutoff argument. Let $M&gt;0$ and let $p$ be plurisubharmonic on $B$ with $0\leq p\leq M$. Let $\kappa =\mathrm{dd}^{\mathrm{c}}|z|^2$ be the Euclidean form, and choose a cutoff function $\chi $ supported in $B$, with $0\leq \chi \leq 1$, equal to one on a smaller ball and satisfying $-C\kappa \leq \mathrm{dd}^{\mathrm{c}}\chi \leq C\kappa $. Integration by parts gives, for $1\leq j\leq n$, 
+</p>
+<div class="equation">
+  \[  \begin{split}  \int \chi (\mathrm{dd}^{\mathrm{c}}p)^ j\wedge \kappa ^{n-j} &amp; =\int p\, \mathrm{dd}^{\mathrm{c}}\chi \wedge (\mathrm{dd}^{\mathrm{c}}p)^{j-1}\wedge \kappa ^{n-j}\\ &amp; \leq CM\int _{\operatorname {supp}\chi }(\mathrm{dd}^{\mathrm{c}}p)^{j-1}\wedge \kappa ^{n-j+1}. \end{split}  \]
+</div>
+<p>
+ Iterating this estimate with nested cutoffs between $B'$ and $B$, and stopping at degree one or at degree zero, we obtain respectively 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-0B0E74EF"><span data-gerby-tag="0B0E74EF"><code class="tag-id">F138661713A9</code></span>
+<span class="equation-label"><a data-tag="0B0E74EF" href="../../tag/F138661713A9/">5.27.3</a></span>
+<div>\begin{equation}  \begin{split}  \int _{B'}(\mathrm{dd}^{\mathrm{c}}p)^ j\wedge \kappa ^{n-j} &amp; \leq C_ jM^{j-1}\int _ B\mathrm{dd}^{\mathrm{c}}p\wedge \kappa ^{n-1},\\  \int _{B'}(\mathrm{dd}^{\mathrm{c}}p)^ j\wedge \kappa ^{n-j} &amp; \leq C_ jM^ j. \end{split} \end{equation}</div>
+</div>
+<p>
+ The constants depend only on the nested balls and on $j$. For bounded $p$, the integrations by parts are justified by local decreasing regularization. 
+</p>
+
+<article class="env-definition" id="non-kahler-pluripotential-theory-9BDBB9D7">
+<p><a class="environment-identifier" href="../../tag/9D64513AE343/">Definition <span data-tag="9BDBB9D7">5.27.4</span>.</a><span data-gerby-tag="9BDBB9D7"><code class="tag-id">9D64513AE343</code></span> For a compact set $E$ in an open Euclidean ball $B\subset \mathbb C^ n$, the <em>relative extremal function</em> is </p>
+<div class="equation">
+  \[  h_{E,B}=\sup \{ u\in \mathrm{PSH}(B):-1\leq u\leq 0,\  u|_ E\leq -1\} .  \]
+</div>
+</article>
+
+<p>
+The constant $-1$ is a competitor, and the family is bounded above by zero. The local upper-envelope theorem therefore gives $h_{E,B}^*\in \mathrm{PSH}(B)$ with $-1\leq h_{E,B}^*\leq 0$. Allowing all competitors $u\leq 0$ with $u|_ E\leq -1$ gives the same supremum, because the truncation $\max (u,-1)$ of such a competitor is a competitor in the original family. 
+</p>
+<p>
+A sequence of functions $f_ j$ converges to $f$ <em>in local capacity</em> if $\operatorname {cap}(K\cap \{ |f_ j-f|&gt;\epsilon \} ,B)\to 0$ for every $\epsilon &gt;0$, every coordinate ball $B$ and every compact set $K\subset B$. An assertion holds <em>quasi-everywhere</em>, abbreviated q.e., if it holds outside a pluripolar set; in particular, differences of functions that may both be $-\infty $ are considered only off such a set. A positive measure is <em>non-pluripolar</em> if it gives zero mass to every pluripolar set. 
+</p>
+<p>
+A function is <em>quasi-continuous</em> if, for every $\epsilon &gt;0$, it is continuous outside an open set of capacity less than $\epsilon $. Plurisubharmonic functions have this property for the local Bedford–Taylor capacity, and a Borel set has zero capacity if and only if it is pluripolar. A locally uniformly bounded monotone sequence of plurisubharmonic functions converges in capacity: to its limit if it decreases, and to the upper semicontinuous regularization of its limit if it increases. If uniformly bounded plurisubharmonic functions converge in capacity, their local products converge weakly, and this remains true after the products are multiplied by uniformly bounded quasi-continuous coefficients converging in capacity. These local results, recalled in <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, also apply to quasi-plurisubharmonic functions after a common smooth correction. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-C6F8A3DC">
+<p><a class="environment-identifier" href="../../tag/DBC85A3C1608/">Theorem <span data-tag="C6F8A3DC">5.27.5</span> <span class="named">(Mixed Monge–Ampère inequality)</span>.</a><span data-gerby-tag="C6F8A3DC"><code class="tag-id">DBC85A3C1608</code></span> Let $U\subset \mathbb C^ n$ be a domain, and let $\beta $ be its Euclidean Hermitian form. Let $a,b$ be locally bounded plurisubharmonic functions on $U$, and let $f,g$ be nonnegative measurable functions on $U$ with </p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}a)^ n\geq f\beta ^ n, \qquad (\mathrm{dd}^{\mathrm{c}}b)^ n\geq g\beta ^ n.  \]
+</div>
+<p> Then, for $0\leq k\leq n$, </p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}a)^ k\wedge (\mathrm{dd}^{\mathrm{c}}b)^{n-k} \geq f^{k/n}g^{(n-k)/n}\beta ^ n.  \]
+</div>
+</article>
+
+<p>
+The comparison principle of Bedford and Taylor also has mixed forms, recalled in <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>. Let $a,b$ be locally bounded plurisubharmonic functions on $U$ such that $E=\{ a&lt;b\} \Subset U$, and let $S$ be a positive closed $(n-1,n-1)$-current that is a product of Hessians of bounded plurisubharmonic functions and smooth closed positive forms. Then 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-89D3AD99"><span data-gerby-tag="89D3AD99"><code class="tag-id">5E980A5776A2</code></span>
+<span class="equation-label"><a data-tag="89D3AD99" href="../../tag/5E980A5776A2/">5.27.6</a></span>
+<div>\begin{equation}  \int _ E\mathrm{dd}^{\mathrm{c}}b\wedge S\leq \int _ E\mathrm{dd}^{\mathrm{c}}a\wedge S. \end{equation}</div>
+</div>
+<p>
+ Indeed, apply the Bedford–Taylor integration by parts formula to $b_\epsilon =\max \{ a,b-\epsilon \} $, and let $\epsilon \downarrow 0$, using monotone continuity to pass to the limit. Replacing one factor at a time, we obtain, with $P=\mathrm{dd}^{\mathrm{c}}a$ and $Q=\mathrm{dd}^{\mathrm{c}}b$, 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-49BA5BCF"><span data-gerby-tag="49BA5BCF"><code class="tag-id">A9D318047BDA</code></span>
+<span class="equation-label"><a data-tag="49BA5BCF" href="../../tag/A9D318047BDA/">5.27.7</a></span>
+<div>\begin{equation}  \int _ E P^{n-j}\wedge Q^ j\leq \int _ E P^ n, \qquad 0\leq j\leq n. \end{equation}</div>
+</div>
+<p>
+The local envelope theorem for bounded obstacles, recalled in <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, shows where an envelope can carry Monge–Ampère mass. Let $B$ be a ball with a smooth strictly plurisubharmonic defining function $h&lt;0$, and let $f$ be a bounded quasi-continuous obstacle with $Ah\leq f\leq 0$ for some $A&gt;0$. Then the envelope 
+</p>
+<div class="equation">
+  \[  q=\bigl (\sup \{ v\in \mathrm{PSH}(B):v\leq f\  \text{q.e.}\} \bigr )^*  \]
+</div>
+<p>
+ satisfies $Ah\leq q\leq 0$, tends to zero at the boundary, and 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-CEC1B366"><span data-gerby-tag="CEC1B366"><code class="tag-id">F547D6DF0352</code></span>
+<span class="equation-label"><a data-tag="CEC1B366" href="../../tag/F547D6DF0352/">5.27.8</a></span>
+<div>\begin{equation}  \mathbf1_{\{ q&lt;f\} }(\mathrm{dd}^{\mathrm{c}}q)^ n=0. \end{equation}</div>
+</div>
+<p>
+For a locally bounded quasi-plurisubharmonic function $v$ and a smooth convex increasing function $F$ on a neighborhood of the range of $v$, the bounded Bedford–Taylor chain rule reads 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-D75A9621"><span data-gerby-tag="D75A9621"><code class="tag-id">B4EA93FC61EE</code></span>
+<span class="equation-label"><a data-tag="D75A9621" href="../../tag/B4EA93FC61EE/">5.27.9</a></span>
+<div>\begin{equation}  \mathrm{dd}^{\mathrm{c}}F(v)=F'(v)\mathrm{dd}^{\mathrm{c}}v+F''(v)\, \mathrm{d}v\wedge \mathrm d^{\mathrm c}v. \end{equation}</div>
+</div>
+<p>
+ The gradient term, and its products with positive Bedford–Taylor factors of bounded potentials, are nonnegative. These identities belong to the bounded local calculus recalled in <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>; they follow by decreasing regularization, and bounded potentials have the local Sobolev regularity needed to define the gradient term. In particular, inequalities derived from this formula survive local smoothing with a lower curvature error tending to zero. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4248E6D1">
+<p><a class="environment-identifier" href="../../tag/9149838224AE/">Lemma <span data-tag="4248E6D1">5.27.10</span>.</a><span data-gerby-tag="4248E6D1"><code class="tag-id">9149838224AE</code></span> Let $B$ be a coordinate ball and let $\tau $ be a finite non-pluripolar measure with compact support in $B$. Then there is a bounded plurisubharmonic function $v$ on $B$ such that $\tau \ll (\mathrm{dd}^{\mathrm{c}}v)^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $n\geq 2$, we use Cegrell's decomposition theorem. On a bounded hyperconvex domain in $\mathbb C^ n$, $n\geq 2$, let $\mathcal E_0$ consist of the bounded negative plurisubharmonic functions with zero boundary values and finite total Monge–Ampère mass. The theorem states that every positive compactly supported measure $\tau $ has a decomposition 
+    
+<div class="equation">
+  \[  \tau =g(\mathrm{dd}^{\mathrm{c}}v)^ n+\tau _ s, \qquad v\in \mathcal E_0,\qquad 0\leq g\in L^1((\mathrm{dd}^{\mathrm{c}}v)^ n),  \]
+</div>
+<p>
+       where $\tau _ s$ is a positive measure carried by a pluripolar set. If $\tau $ is non-pluripolar, then $\tau _ s=0$, so $\tau \ll (\mathrm{dd}^{\mathrm{c}}v)^ n$. 
+    <p>
+      In dimension one, the assertion follows directly from the Green potential. Let $a\leq 0$ be the Green potential of $\tau $ on the disk, normalized by $\mathrm{dd}^{\mathrm{c}}a=\tau $. Then $v=\mathrm{e}^ a$ is bounded and subharmonic, and 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}v\geq \mathrm{e}^ a\tau .  \]
+</div>
+<p>
+       To justify this inequality, set $a_ M=\max (a,-M)$. The chain rule (<a data-tag="D75A9621" href="../../tag/B4EA93FC61EE/">5.27.9</a>) in dimension one gives $\mathrm{dd}^{\mathrm{c}}\mathrm{e}^{a_ M}\geq \mathrm{e}^{a_ M}\mathrm{dd}^{\mathrm{c}}a_ M$, and the right-hand side is at least $\mathrm{e}^ a\tau $ on $\{ a&gt;-M\} $. Let $M\to \infty $, using the decreasing convergence of the bounded subharmonic functions $\mathrm{e}^{a_ M}$ on the left and monotone convergence on the right. Since $\{ a=-\infty \} $ is polar and $\tau $ charges no polar set, $\mathrm{e}^ a&gt;0$ almost everywhere for $\tau $. Thus $\tau \ll \mathrm{dd}^{\mathrm{c}}v$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+For a signed measure $\nu $, write $|\nu |$ for its total variation measure and $\| \nu \| _{\mathrm{TV}(B)}=|\nu |(B)$. On a curve, the Green representation controls capacity by the total variation of the Laplacian, together with an $L^1$ term for the harmonic remainder. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-11545C04">
+<p><a class="environment-identifier" href="../../tag/C56C5CBA0E0D/">Lemma <span data-tag="11545C04">5.27.11</span>.</a><span data-gerby-tag="11545C04"><code class="tag-id">C56C5CBA0E0D</code></span> Let $B'\Subset B$ be concentric disks in $\mathbb C$. There is a constant $C$, depending only on these disks, such that for all quasi-subharmonic functions $u,v$ on a neighborhood of $\overline B$ and all $t&gt;0$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-05B5AF17"><span data-gerby-tag="05B5AF17"><code class="tag-id">EBF435BDB6A0</code></span>
+<span class="equation-label"><a data-tag="05B5AF17" href="../../tag/EBF435BDB6A0/">5.27.12</a></span>
+<div>\begin{equation}  \operatorname {cap}(B'\cap \{ |u-v|&gt;t\} ,B) \leq \frac Ct\left(\| u-v\| _{L^1(B)} +\| \mathrm{dd}^{\mathrm{c}}(u-v)\| _{\mathrm{TV}(B)}\right). \end{equation}</div>
+</div>
+<p> Here the difference $u-v$ is formed off the pole sets of $u$ and $v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $f=u-v$ and write the Jordan decomposition on $B$ as $\mathrm{dd}^{\mathrm{c}}f=\alpha ^+-\alpha ^-$. Let $g^\pm \leq 0$ be the Green potentials of $\alpha ^\pm $ on $B$ with zero boundary values. The $L^1(B)$ norm of the Green kernel of the disk is bounded uniformly in its pole, so 
+    
+<div class="equation">
+  \[  \| g^+\| _{L^1(B)}+\| g^-\| _{L^1(B)} \leq C\| \mathrm{dd}^{\mathrm{c}}f\| _{\mathrm{TV}(B)}.  \]
+</div>
+<p>
+       Indeed, on the unit disk the kernel is $\log |(z-\zeta )/(1-\overline\zeta z)|^2$; its logarithmic singularity is uniformly integrable, and $|1-\overline\zeta z|\leq 2$. Scaling gives the bound on $B$. 
+    <p>
+      The distribution $h=f-g^++g^-$ is harmonic, and the interior mean-value estimate gives 
+    
+<div class="equation">
+  \[  \| h\| _{L^\infty (B')} \leq C\left(\| f\| _{L^1(B)}+\| \mathrm{dd}^{\mathrm{c}}f\| _{\mathrm{TV}(B)}\right).  \]
+</div>
+<p>
+       The identity $u+g^-=v+g^++h$ holds almost everywhere, hence everywhere by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">5.24.3</a>. Thus $|u-v|\leq -g^+-g^-+|h|$ off the polar sets of $u$ and $v$. Let $0\leq a\leq 1$ be a subharmonic test function on $B$. Since the measure $\mathrm{dd}^{\mathrm{c}}a$ charges no polar set, this pointwise bound, the weighted Chern–Levine–Nirenberg estimate and (<a data-tag="0B0E74EF" href="../../tag/F138661713A9/">5.27.3</a>) yield 
+    
+<div class="equation">
+  \[  \int _{B'}|u-v|\, \mathrm{dd}^{\mathrm{c}}a \leq C\left(\| f\| _{L^1(B)}+\| \mathrm{dd}^{\mathrm{c}}f\| _{\mathrm{TV}(B)}\right).  \]
+</div>
+<p>
+       Restricting the integral to $B'\cap \{ |u-v|&gt;t\} $, dividing by $t$ and taking the supremum over $a$ proves (<a data-tag="05B5AF17" href="../../tag/EBF435BDB6A0/">5.27.12</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-1953F5546AC6" data-section-entries="1953F5546AC6 6FC7AD4CB464 B54F79E95767 F9517F96057F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/1953F5546AC6/">5.27.13 Polar parts on curves</a><code class="tag-id">1953F5546AC6</code></h2><span data-gerby-tag="CA3BB620"></span>
+<p>
+Every locally finite signed measure $\nu $ on a Riemann surface splits uniquely as the sum of its <em>polar part</em> $\nu ^{\mathrm{pol}}$, which is carried by a polar Borel set, and a measure that charges no polar set. To construct the splitting locally, choose countably many polar Borel sets whose $|\nu |$-masses approach the supremum over all polar Borel sets, and restrict $\nu $ to their union, which is again polar. Uniqueness allows these local decompositions to be patched together and shows that $\nu \mapsto \nu ^{\mathrm{pol}}$ is linear. 
+</p>
+<p>
+For a locally quasi-subharmonic function $u$, the <em>polar curvature</em> of $u$ is the positive measure $\mu _ u=(\mathrm{dd}^{\mathrm{c}}u)^{\mathrm{pol}}=\mathbf1_{\{ u=-\infty \} }\mathrm{dd}^{\mathrm{c}}u$. The second equality holds because smooth corrections do not change polar parts, while bounded truncations and plurifine locality show that $\mathbf1_{\{ u&gt;-j\} }\mathrm{dd}^{\mathrm{c}}u$ charges no polar set. The following inverse maximum principle shows that an upper bound for the difference of two potentials orders their polar curvatures. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-0DBDEF00">
+<p><a class="environment-identifier" href="../../tag/B54F79E95767/">Lemma <span data-tag="0DBDEF00">5.27.14</span>.</a><span data-gerby-tag="0DBDEF00"><code class="tag-id">B54F79E95767</code></span> Let $B\subset \mathbb C$ be a disk and let $f\in L^1_{\mathrm{loc}}(B)$ have a distributional Laplacian that is a signed Radon measure. If $f\leq 0$ almost everywhere, then $(\Delta f)^{\mathrm{pol}}\geq 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to prove $\Delta f(K)\geq 0$ for every compact polar set $K\subset B$; restriction to smaller disks and inner regularity then give the assertion. Choose open neighborhoods $O_ j$ of $K$ with smooth boundaries such that $\overline O_{j+1}\subset O_ j\Subset B$ and $\bigcap _ j\overline O_ j=K$. Let $h_ j$ be the function that equals one on $\overline O_ j$, is harmonic on $B\setminus \overline O_ j$, and vanishes on $\partial B$. The Dirichlet problem on this smooth domain shows that $h_ j$ is continuous with $0\leq h_ j\leq 1$. Its outward normal derivative on $\partial O_ j$ is nonpositive, so the jump of the derivative across $\partial O_ j$ gives $\Delta h_ j\leq 0$ on $B$ in the sense of distributions. The maximum principle gives $h_{j+1}\leq h_ j$. 
+    <p>
+      Since $0\leq h_ j\leq 1$, the sequence converges in $L^1_{\mathrm{loc}}(B)$. Let $h$ be the superharmonic representative of this limit; it may differ from the pointwise limit on $K$. It is harmonic off $K$, so its Laplacian is supported on the polar set $K$. On the other hand, $-h$ is bounded and subharmonic, so its Laplacian charges no polar set, by theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">5.27.1</a>. Hence $h$ is harmonic on $B$. Since $0\leq h\leq h_1$ and $h_1$ tends to zero at $\partial B$, the maximum principle gives $h=0$. It follows that $h_ j\to 0$ smoothly on compact subsets of $B\setminus K$, while $h_ j=1$ on $K$. 
+    <p>
+       Choose $0\leq \chi \in C_ c^\infty (B)$ equal to one near $K$. For large $j$, regularize $h_ j$ by convolution on a neighborhood of $\operatorname {supp}\chi $, obtaining smooth functions $h_{j,\epsilon }$ with $\Delta h_{j,\epsilon }\leq 0$. Since $f\leq 0$, 
+    
+<div class="equation">
+  \[  \begin{split}  \int _ B\chi h_{j,\epsilon }\, \mathrm{d}(\Delta f) &amp; =\int _ B f\, \Delta (\chi h_{j,\epsilon })\, \mathrm{d}x\, \mathrm{d}y\\ &amp; \geq \int _ B f\bigl (2\nabla \chi \cdot \nabla h_{j,\epsilon } +h_{j,\epsilon }\Delta \chi \bigr )\, \mathrm{d}x\, \mathrm{d}y. \end{split}  \]
+</div>
+<p>
+       For fixed $j$, the convolutions converge uniformly to $h_ j$ on $\operatorname {supp}\chi $, because $h_ j$ is continuous. On the support of the derivatives of $\chi $, the function $h_ j$ is harmonic for all large $j$. We may therefore first let $\epsilon \downarrow 0$ and then let $j\to \infty $. The smooth convergence away from $K$ makes the right-hand side tend to zero, and dominated convergence for the signed measure $\Delta f$ makes the left-hand side tend to $\Delta f(K)$. This proves $\Delta f(K)\geq 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-1346CAB0">
+<p><a class="environment-identifier" href="../../tag/F9517F96057F/">Corollary <span data-tag="1346CAB0">5.27.15</span>.</a><span data-gerby-tag="1346CAB0"><code class="tag-id">F9517F96057F</code></span> Let $u,v$ be locally quasi-subharmonic functions on a Riemann surface. If $u\leq v+C$ on an open set for some constant $C$, then $\mu _ u\geq \mu _ v$ there. Moreover, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-D1876C85"><span data-gerby-tag="D1876C85"><code class="tag-id">6FC7AD4CB464</code></span>
+<span class="equation-label"><a data-tag="D1876C85" href="../../tag/6FC7AD4CB464/">5.27.16</a></span>
+<div>\begin{equation}  \mu _{\max (u,v)}=\mu _ u\wedge \mu _ v, \end{equation}</div>
+</div>
+<p> where the right-hand side is the greatest measure dominated by both $\mu _ u$ and $\mu _ v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply lemma <a data-tag="0DBDEF00" href="../../tag/B54F79E95767/">5.27.14</a> to $u-v-C$ in local coordinates. Since smooth functions have zero polar part, linearity of the polar part gives the first assertion. Applying it to $u-\max (u,v)$ and to $v-\max (u,v)$ gives the inequality $\leq $ in (<a data-tag="D1876C85" href="../../tag/6FC7AD4CB464/">5.27.16</a>). 
+    <p>
+      For the reverse inequality, add a common smooth correction to make $u$ and $v$ subharmonic on a coordinate disk. On a smaller disk, let $g$ be the Green potential of the restriction of $\lambda =\mu _ u\wedge \mu _ v$ to that disk, so that $\mathrm{dd}^{\mathrm{c}}g=\lambda $. The distributions $u-g$ and $v-g$ have positive Hessians and hence subharmonic representatives $a$ and $b$. Since $\max (u,v)=g+\max (a,b)$ almost everywhere, the Hessian of $\max (u,v)$ dominates $\lambda $. Restricting this inequality to a polar Borel set carrying $\lambda $ proves the reverse inequality on the smaller disk, and these local statements give it on the whole surface. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-486795BA5E5C" data-section-entries="1BBBF8109419 486795BA5E5C F7D352207205"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/486795BA5E5C/">5.27.17 Products at small pole sets</a><code class="tag-id">486795BA5E5C</code></h2><span data-gerby-tag="938EFE42"></span>
+<p>
+A top-degree product can carry mass on a pole set, and the non-pluripolar product discards this mass. When the unbounded locus is sufficiently small, the full local current product is well defined. Singularity order then compares its residual measures on the pole set, and bounded perturbations leave these measures unchanged. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-2291BBE0">
+<p><a class="environment-identifier" href="../../tag/1BBBF8109419/">Theorem <span data-tag="2291BBE0">5.27.18</span>.</a><span data-gerby-tag="2291BBE0"><code class="tag-id">1BBBF8109419</code></span> Let $\Omega \subset \mathbb C^ n$ be a domain and $S\subset \Omega $ a closed set of Hausdorff dimension zero. Suppose that $u_1,\ldots ,u_ q$, $1\leq q\leq n$, are plurisubharmonic on $\Omega $ and locally bounded on $\Omega \setminus S$. Then their inductively defined full current product </p>
+<div class="equation">
+  \[  \bigl (\mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ q\bigr )_{\mathrm{full}}  \]
+</div>
+<p> is a closed positive current of order zero. It is symmetric, multilinear, local in the ordinary topology, and continuous under simultaneous decreasing approximation by plurisubharmonic functions. The weighted current $u_1\bigl (\mathrm{dd}^{\mathrm{c}}u_2\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ q\bigr )_{\mathrm{full}}$ has coefficients of locally finite variation. These full products may charge $S$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply the classical theorem on products with unbounded potentials, together with its monotone continuity statement, in <span class="cite">[<span class="postnote">Chapter III, Theorem 4.5 and Proposition 4.9, pp. 152–156</span>, <a href="../../references/#R67A7837FBEE7">DemCADG</a>]</span>, with the underlying current $T=1$. For every choice of $m$ of the functions, that theorem requires the intersection of their unbounded loci to have zero Hausdorff measure of dimension $2n-2m+1$. This intersection lies in $S$, and $2n-2m+1\geq 1$, so the measure is zero. The same hypothesis gives local integrability of the weighted current. Symmetry, multilinearity and locality on open sets follow from the local construction of the currents and decreasing regularization. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The subscript distinguishes this product from the non-pluripolar product used later; the two coincide for locally bounded functions. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-7F7BF53B">
+<p><a class="environment-identifier" href="../../tag/F7D352207205/">Lemma <span data-tag="7F7BF53B">5.27.19</span>.</a><span data-gerby-tag="7F7BF53B"><code class="tag-id">F7D352207205</code></span> Let $\Omega \subset \mathbb C^ n$ be a domain and $S\subset \Omega $ a closed set of Hausdorff dimension zero. Let $a,b$ be plurisubharmonic on $\Omega $ and locally bounded off $S$, with $\{ a=-\infty \} =S$. If $a\leq b+C$ near $S$ for some finite constant $C$, then, as positive Radon measures, </p>
+<div class="equation">
+  \[  \mathbf1_ S(\mathrm{dd}^{\mathrm{c}}b)^ n_{\mathrm{full}} \leq \mathbf1_ S(\mathrm{dd}^{\mathrm{c}}a)^ n_{\mathrm{full}}.  \]
+</div>
+<p> If $a-b$ is bounded near $S$, equality holds. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a compact set $E\subset S$ and $\varepsilon &gt;0$, and put $w_ c=\max \{ b-c,(1+\varepsilon )a\} $ for $c&gt;0$. Since $a=-\infty $ on the compact set $E$, upper semicontinuity gives a neighborhood of $E$ on which $a&lt;-(C+c)/\varepsilon $ and $a\leq b+C$. Off $S$, on this neighborhood, $b-c-(1+\varepsilon )a\geq -C-c-\varepsilon a&gt;0$, while on $S$ the second branch of the maximum equals $-\infty $. Thus $w_ c=b-c$ near $E$, and locality on open sets gives $(\mathrm{dd}^{\mathrm{c}}w_ c)^ n_{\mathrm{full}}(E)=(\mathrm{dd}^{\mathrm{c}}b)^ n_{\mathrm{full}}(E)$. 
+    <p>
+      As $c\to \infty $, the functions $w_ c$ decrease to $(1+\varepsilon )a$. Theorem <a data-tag="2291BBE0" href="../../tag/1BBBF8109419/">5.27.18</a> applies to every $w_ c$ with the same set $S$, so their full measures converge weakly to $(1+\varepsilon )^ n(\mathrm{dd}^{\mathrm{c}}a)^ n_{\mathrm{full}}$. Since the mass of a compact set is upper semicontinuous under weak convergence of positive measures, we obtain 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}b)^ n_{\mathrm{full}}(E) \leq (1+\varepsilon )^ n(\mathrm{dd}^{\mathrm{c}}a)^ n_{\mathrm{full}}(E).  \]
+</div>
+<p>
+       Here we apply the semicontinuity after multiplying the measures by a fixed nonnegative cutoff function with compact support, equal to one near $E$; both masses on $E$ are finite by the theorem. Letting $\varepsilon \downarrow 0$ and applying inner regularity to all compact sets $E\subset S$ gives the asserted inequality of measures. If $a-b$ is bounded near $S$, then also $\{ b=-\infty \} =S$, so the roles of $a$ and $b$ can be interchanged, and equality follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-C37C319849E5" data-section-entries="4B607387D3F1 4BF5A61AFC51 5B874925BCA1 C37C319849E5 C3F45D193092"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/C37C319849E5/">5.27.20 Sobolev regularity at divisorial poles</a><code class="tag-id">C37C319849E5</code></h2><span data-gerby-tag="0DBF360F"></span>
+<p>
+For a potential that is a convex function of $\log |f|$, with $f$ holomorphic, the growth of the convex function at $-\infty $ determines which derivatives are integrable near the divisor of $f$. The gradient and the classical Laplacian have different thresholds. Moreover, the distributional Laplacian keeps a measure on the divisor unless the slope of the convex function tends to zero. 
+</p>
+<p>
+Let $U\subset \mathbb C^ n$ be a sufficiently small neighborhood of $0$, and let $f\not\equiv 0$ be a holomorphic function on $U$ with $f(0)=0$. Write 
+</p>
+<div class="equation">
+  \[  f=g\prod _{j=1}^ N h_ j^{m_ j},\qquad m_0=\min _ jm_ j,  \]
+</div>
+<p>
+ where $g$ is a holomorphic unit and the $h_ j$ are distinct irreducible germs represented on $U$. Fix a convex nondecreasing function $\chi \in C^2(({-\infty },A])$ and shrink $U$ so that $\log |f|&lt;A-1$. Set $v=\chi (\log |f|)$ off $Z=\{ f=0\} $; this function is plurisubharmonic and bounded above, and we extend it across $Z$ by lemma <a data-tag="E113365A" href="../../tag/F3A890BB2575/">5.24.7</a>. In this subsection, gradients, Laplacians, Sobolev spaces and the volume form $\mathrm dV$ are the real Euclidean ones. Write $|\partial f|^2=\sum _ j|\partial f/\partial z_ j|^2$, so that $|\nabla |f||=|\partial f|$ off $Z$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-5A36E5AE">
+<p><a class="environment-identifier" href="../../tag/C3F45D193092/">Lemma <span data-tag="5A36E5AE">5.27.21</span>.</a><span data-gerby-tag="5A36E5AE"><code class="tag-id">C3F45D193092</code></span> After shrinking $U$, there is a constant $C&gt;0$ such that </p>
+<div class="equation">
+  \[  |\partial f|\leq C|f|^{1-1/m_0}\quad \text{on }U\setminus Z.  \]
+</div>
+<p> For each compact set $K\subset U$, there are $C_ K,r_ K&gt;0$ with </p>
+<div class="equation">
+  \[  \int _{K\cap \{ |f|=r\} }|\partial f|\, \mathrm dS\leq C_ Kr \qquad (0&lt;r&lt;r_ K),  \]
+</div>
+<p> where $\mathrm dS$ is the Euclidean surface measure on the real hypersurface $\{ |f|=r\} $. In particular, for every nonnegative measurable function $\Psi $, </p>
+<div class="equation">
+  \[  \int _{K\cap \{ 0&lt;|f|&lt;r_ K\} }\Psi (|f|)|\partial f|^2\, \mathrm dV \leq C_ K\int _0^{r_ K}\Psi (r)r\, \mathrm dr.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Shrink $U$ so that $|h_ j|\leq 1$ and the unit $g$, its inverse and the first derivatives of $g$ and of all $h_ j$ are bounded. For each $j$, $|f|^{1/m_0}\leq C|h_ j|^{m_ j/m_0}\leq C|h_ j|$. Logarithmic differentiation of the factorization therefore gives 
+    
+<div class="equation">
+  \[  \frac{|\partial f|}{|f|} \leq C\left(1+\sum _ j|h_ j|^{-1}\right) \leq C|f|^{-1/m_0},  \]
+</div>
+<p>
+       which proves the first bound. 
+    <p>
+      For small $\zeta \in \mathbb C$, let $\mu _\zeta $ be the Euclidean volume measure of the fiber divisor $\{ f=\zeta \} $, counted with multiplicity. As $\zeta \to 0$, we have $\log |f-\zeta |\to \log |f|$ in $L^1_{\mathrm{loc}}$: by the local compactness theorem recalled at the beginning of section <a data-tag="07D202BB" href="../../tag/0B216F0B911E/">5.25</a>, it suffices to identify subsequential limits, and the convergence is locally uniform off $Z$, which identifies every such limit and excludes convergence to $-\infty $. The Poincaré–Lelong formula therefore gives weak convergence of the fiber currents, and hence of their Euclidean trace measures. Pairing with a fixed nonnegative cutoff function equal to one near $K$ shows that $\sup _{|\zeta |&lt;r_ K}\mu _\zeta (K)&lt;\infty $ for some $r_ K&gt;0$. 
+    <p>
+      The critical locus of $f$ has finitely many local components, and $f$ is constant on each of them. After shrinking $U$, every remaining critical component passes through $0$, where $f$ vanishes. Thus the small nonzero fibers are smooth. On $\{ |f|=r\} $, the coarea formula for the map $f$ to the circle of radius $r$ gives 
+    
+<div class="equation">
+  \[  \int _{K\cap \{ |f|=r\} }|\partial f|\, \mathrm dS =\int _{|\zeta |=r}\mu _\zeta (K)\, \mathrm dS(\zeta ) \leq C_ Kr.  \]
+</div>
+<p>
+       The coarea formula for the function $|f|$, together with $|\nabla |f||=|\partial f|$, proves the last inequality. The same formulas hold in dimension one, where the fiber volume is the counting measure. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-6B3D3B0E">
+<p><a class="environment-identifier" href="../../tag/4BF5A61AFC51/">Proposition <span data-tag="6B3D3B0E">5.27.22</span>.</a><span data-gerby-tag="6B3D3B0E"><code class="tag-id">4BF5A61AFC51</code></span> For each $2\leq p&lt;\infty $, </p>
+<div class="equation">
+  \[  v\in W^{1,p}_{\mathrm{loc}}(U) \quad \Longleftrightarrow \quad \int _{-\infty }^ A|\chi '(s)|^ p \mathrm e^{(2-p)s/m_0}\, \mathrm ds&lt;\infty .  \]
+</div>
+<p> In this case, the weak gradient of $v$ is the zero extension of $\chi '(\log |f|)\nabla \log |f|$ from $U\setminus Z$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At a smooth point of a component of multiplicity $m_0$, outside the other components, multiplying the defining function of the component by a holomorphic $m_0$-th root of the remaining unit gives a normal coordinate $w_1$ with $f=w_1^{m_0}$. Coordinate changes with bounded derivatives and Jacobians preserve local first-order Sobolev integrability. With $r=|w_1|$ and $s=m_0\log r$, polar integration of the classical gradient gives, up to fixed positive factors, 
+    
+<div class="equation">
+  \[  \int _0^{r_0}|\chi '(m_0\log r)|^ p r^{1-p}\, \mathrm dr =\frac1{m_0}\int _{-\infty }^{m_0\log r_0} |\chi '(s)|^ p\mathrm e^{(2-p)s/m_0}\, \mathrm ds.  \]
+</div>
+<p>
+       Such smooth points occur in every neighborhood of $0$. This proves necessity, since changing the finite upper endpoint does not affect convergence. 
+    <p>
+      For sufficiency, put 
+    
+<div class="equation">
+  \[  s_\varepsilon =\tfrac 12\log (|f|^2+\varepsilon ^2), \qquad v_\varepsilon =\chi (s_\varepsilon ).  \]
+</div>
+<p>
+       For small $\varepsilon &gt;0$, these are $C^2$ plurisubharmonic functions decreasing to $v$. By convexity, $|\chi (s)|\leq C(1+|s|)$ for $s\leq A$, so the local exponential integrability of $\log |f|$, recalled in <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>, gives convergence in every local $L^ p$ space with $p&lt;\infty $. By the chain rule, 
+    
+<div class="equation">
+  \[  |\nabla v_\varepsilon | =\chi '(s_\varepsilon ) \frac{|f|}{|f|^2+\varepsilon ^2}|\partial f|.  \]
+</div>
+<p>
+        Apply lemma <a data-tag="5A36E5AE" href="../../tag/C3F45D193092/">5.27.21</a> with the coarea formula, keeping two powers of $|\partial f|$ for the level estimate and bounding the other $p-2$ powers by the first inequality of the lemma. The local integral of $|\nabla v_\varepsilon |^ p$ over $K\cap \{ 0&lt;|f|&lt;r_ K\} $ is then bounded by 
+    
+<div class="equation">
+  \[  C\int _0^{r_ K} |\chi '(\tfrac 12\log (r^2+\varepsilon ^2))|^ p \frac{r^{p+(p-2)(1-1/m_0)+1}}{(r^2+\varepsilon ^2)^ p} \, \mathrm dr.  \]
+</div>
+<p>
+       With $s=\tfrac 12\log (r^2+\varepsilon ^2)$, we have $\mathrm ds=r\, \mathrm dr/(r^2+\varepsilon ^2)$ and $r\leq (r^2+\varepsilon ^2)^{1/2}$, so this is at most 
+    
+<div class="equation">
+  \[  C\int _{-\infty }^ A|\chi '(s)|^ p \mathrm e^{(2-p)s/m_0}\, \mathrm ds.  \]
+</div>
+<p>
+       The integral over the part where $|f|\geq r_ K$ is uniformly bounded as well. Weak compactness in Sobolev spaces and the local $L^ p$ convergence therefore show that $v\in W^{1,p}_{\mathrm{loc}}$. Its weak gradient agrees with the classical one off $Z$, and $Z$ has Lebesgue measure zero, which proves the final assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-2C151296">
+<p><a class="environment-identifier" href="../../tag/5B874925BCA1/">Proposition <span data-tag="2C151296">5.27.23</span>.</a><span data-gerby-tag="2C151296"><code class="tag-id">5B874925BCA1</code></span> Let $G$ be the zero extension of $\chi ''(\log |f|)|\nabla \log |f||^2$ from $U\setminus Z$, and put $\ell =\lim _{s\to -\infty }\chi '(s)$. For each $1\leq p&lt;\infty $, </p>
+<div class="equation">
+  \[  G\in L^ p_{\mathrm{loc}}(U) \quad \Longleftrightarrow \quad \int _{-\infty }^ A|\chi ''(s)|^ p \mathrm e^{2(1-p)s/m_0}\, \mathrm ds&lt;\infty .  \]
+</div>
+<p> In the sense of distributions, </p>
+<div class="equation">
+  \[  \Delta v=G+\ell \, \Delta \log |f|,  \]
+</div>
+<p> where $\Delta \log |f|$ is a positive measure carried by the divisor of $f$. In particular, $\Delta v$ is represented by a locally $L^ p$ function exactly when $\ell =0$ and the integral above is finite. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The limit $\ell \geq 0$ exists because $\chi '$ is nonnegative and nondecreasing. Near a smooth point of a component of multiplicity $m_0$, outside the other components, the coordinate reduction to $f=w_1^{m_0}$ makes the positive complex Hessian of $v$ off $Z$ a single factor in the normal direction. Its Euclidean traces in the two coordinate systems are uniformly comparable, so polar integration gives necessity. In general, $G=\chi ''(\log |f|)|\partial f|^2/|f|^2$ off $Z$. The coarea formula and lemma <a data-tag="5A36E5AE" href="../../tag/C3F45D193092/">5.27.21</a>, now bounding the remaining $2p-2$ powers of $|\partial f|$ by the first inequality of the lemma, give 
+    
+<div class="equation">
+  \[  \int _{K\cap \{ 0&lt;|f|&lt;r_ K\} }G^ p\, \mathrm dV \leq C\int _0^{r_ K}|\chi ''(\log r)|^ p r^{-1-2(p-1)/m_0}\, \mathrm dr.  \]
+</div>
+<p>
+       The substitution $s=\log r$ proves sufficiency. For $p=1$ the integral is always finite, since $\int _{-\infty }^ A\chi ''=\chi '(A)-\ell $. 
+    <p>
+       For the distributional identity, use $s_\varepsilon $ and $v_\varepsilon $ from the preceding proof. Direct differentiation gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  \Delta v_\varepsilon &amp; =\chi ''(s_\varepsilon ) \frac{|f|^2|\partial f|^2}{(|f|^2+\varepsilon ^2)^2} +\chi '(s_\varepsilon )\Delta s_\varepsilon ,\\  \Delta s_\varepsilon &amp; =\frac{2\varepsilon ^2|\partial f|^2}{(|f|^2+\varepsilon ^2)^2}. \end{aligned}  \]
+</div>
+<p>
+        Off $Z$, the first term tends locally uniformly to $G$. By the level estimate of lemma <a data-tag="5A36E5AE" href="../../tag/C3F45D193092/">5.27.21</a> and the same substitution, its integral over $K\cap \{ |f|&lt;r_0\} $ is at most 
+    
+<div class="equation">
+  \[  C\int _{-\infty }^{\frac12\log (r_0^2+\varepsilon ^2)} \chi ''(s)\, \mathrm ds.  \]
+</div>
+<p>
+       This bound tends to zero if we first let $\varepsilon \to 0$ and then $r_0\to 0$, so the first term converges to $G$ in $L^1_{\mathrm{loc}}$. 
+    <p>
+      The positive measures $\Delta s_\varepsilon $ converge weakly to $\Delta \log |f|$, with locally bounded masses, and the Poincaré–Lelong formula shows that this limit is a measure supported on $Z$. On $\{ |f|&lt;r_0\} $, 
+    
+<div class="equation">
+  \[  0\leq \chi '(s_\varepsilon )-\ell \leq \chi '(\tfrac 12\log (r_0^2+\varepsilon ^2))-\ell ,  \]
+</div>
+<p>
+       while $\Delta s_\varepsilon \to 0$ uniformly on compact subsets of $\{ |f|\geq r_0\} $. Taking the same successive limits shows that $(\chi '(s_\varepsilon )-\ell )\Delta s_\varepsilon \to 0$ weakly. Since $v_\varepsilon \to v$ in $L^1_{\mathrm{loc}}$, passing to the limit in the formula for $\Delta v_\varepsilon $ gives the identity. If $\ell &gt;0$, the measure $\ell \, \Delta \log |f|$ is nonzero and singular with respect to Lebesgue measure; uniqueness of the Lebesgue decomposition therefore proves the final criterion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-D54CB429">
+<p><a class="environment-identifier" href="../../tag/4B607387D3F1/">Example <span data-tag="D54CB429">5.27.24</span>.</a><span data-gerby-tag="D54CB429"><code class="tag-id">4B607387D3F1</code></span> Shrink $U$ so that $\log |f|&lt;-2$, and let $0&lt;a&lt;1$. Then the plurisubharmonic function </p>
+<div class="equation">
+  \[  v_ a=-(-\log |f|)^ a  \]
+</div>
+<p> has $\Delta v_ a\in L^1_{\mathrm{loc}}$, while </p>
+<div class="equation">
+  \[  v_ a\in W^{1,2}_{\mathrm{loc}} \quad \Longleftrightarrow \quad a&lt;\tfrac 12.  \]
+</div>
+<p> It belongs to no $W^{1,p}_{\mathrm{loc}}$ with $p&gt;2$ and to no $W^{2,1}_{\mathrm{loc}}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Here $\chi (s)=-(-s)^ a$ is of class $C^2$ on $(-\infty ,-1]$, so the preceding propositions apply with $A=-1$. Moreover, $\chi '(s)=a(-s)^{a-1}$ and $\chi ''(s)=a(1-a)(-s)^{a-2}$, so $\ell =0$. The two propositions give the assertion about the Laplacian and the first-order thresholds. At $a=1/2$, the first-order integral diverges logarithmically; for $p&gt;2$, its exponential factor forces divergence. 
+    <p>
+      For second derivatives, take a smooth point of a component of multiplicity $m$, outside the other components, with a normal coordinate $w_1$ such that $f=w_1^ m$. Write $F(r)=\chi (m\log r)$ with $r=|w_1|$. The real second derivative of $v_ a$ in the unit direction tangent to the circles $|w_1|=r$ equals $F'(r)/r=m\chi '(m\log r)/r^2$. Thus the integral of its absolute value over the normal disk is bounded below, up to a fixed positive factor, by 
+    
+<div class="equation">
+  \[  \int _0^{r_0}\chi '(m\log r)\frac{\mathrm dr}{r} =\frac1m\int _{-\infty }^{m\log r_0}\chi '(s)\, \mathrm ds =+\infty .  \]
+</div>
+<p>
+       Hence the classical Hessian of $v_ a$ off the divisor is not locally integrable, whereas local integrability is necessary for $W^{2,1}_{\mathrm{loc}}$. Since smooth coordinate changes preserve this Sobolev class, the argument is complete. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-C95109EA4FF8" data-section-entries="3242D4BA1F13 C95109EA4FF8"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/C95109EA4FF8/">5.27.25 Spherical Monge–Ampère measures</a><code class="tag-id">C95109EA4FF8</code></h2><span data-gerby-tag="8DBAC9DE"></span>
+<p>
+A bounded radial maximum gives a measure concentrated on a real hypersurface. This supplies singular measures that still give zero mass to pluripolar sets. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-961DE4FB">
+<p><a class="environment-identifier" href="../../tag/3242D4BA1F13/">Lemma <span data-tag="961DE4FB">5.27.26</span>.</a><span data-gerby-tag="961DE4FB"><code class="tag-id">3242D4BA1F13</code></span> For $r&gt;0$, let $\sigma _ r$ be the normalized Euclidean surface measure on $\{ |z|=r\} \subset \mathbb C^ n$. Then </p>
+<div class="equation">
+  \[  \bigl (\mathrm{dd}^{\mathrm{c}}\log \max \{ |z|^2,r^2\} \bigr )^ n=\sigma _ r.  \]
+</div>
+<p> In particular, $\sigma _ r$ does not charge pluripolar sets. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $t=\log |z|^2$ and approximate $\max \{ t,\log r^2\} $ uniformly by smooth convex increasing functions $F_\epsilon (t)$ whose derivatives equal zero below $\log r^2-\epsilon $ and one above $\log r^2+\epsilon $. Their compositions with $t$ extend smoothly across zero. Since $\mathrm{dd}^{\mathrm{c}}t$ has rank $n-1$ off zero, the chain rule gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}F_\epsilon (t))^ n =n(F_\epsilon ')^{n-1}F_\epsilon ''\, \mathrm dt\wedge \mathrm d^{\mathrm c}t \wedge (\mathrm{dd}^{\mathrm{c}}t)^{n-1}.  \]
+</div>
+<p>
+       The integral of $\mathrm d^{\mathrm c}t\wedge (\mathrm{dd}^{\mathrm{c}}t)^{n-1}$ over each sphere is one. Indeed, $\mathrm d^{\mathrm c}t$ integrates to one on the Hopf circle, and the induced form on $\mathbb P^{n-1}$ is $\mathrm{dd}^{\mathrm{c}}\log (1+|w|^2)$; its top power has density $(n-1)!\pi ^{-(n-1)}(1+|w|^2)^{-n}$ on the affine chart, whose integral is one. Thus each displayed radial measure has total mass $\int ( (F_\epsilon ')^ n)'\, \mathrm dt=1$. Its support shrinks to the sphere, and its rotation invariance identifies the limit as $\sigma _ r$. Uniform bounded-potential convergence identifies that limit with the product in the statement. Non-pluripolarity follows from theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">5.27.1</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-4FE21E50E832" data-section-entries="026A64B7A5A2 4FE21E50E832 55862640C106 97724F2A7D19 E2307F7792A2"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/4FE21E50E832/">5.27.27 Measure concentration under integrable convergence</a><code class="tag-id">4FE21E50E832</code></h2><span data-gerby-tag="633AFB67"></span>
+<p>
+Decreasing approximation controls Bedford–Taylor products, but convergence of the potentials in $L^1$ alone does not. If plurisubharmonic functions tend to zero in $L^1_{\mathrm{loc}}$ and are locally uniformly bounded, the range estimate (<a data-tag="0B0E74EF" href="../../tag/F138661713A9/">5.27.3</a>) shows that their Monge–Ampère measures tend to zero. Without a common bound, smooth bounded potentials that tend to zero, even in capacity, can have Monge–Ampère measures converging to a point mass. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B41297A6">
+<p><a class="environment-identifier" href="../../tag/55862640C106/">Lemma <span data-tag="B41297A6">5.27.28</span>.</a><span data-gerby-tag="B41297A6"><code class="tag-id">55862640C106</code></span> Let $\Omega \subset \mathbb C^ n$ be a domain. Suppose that $u_ j\in \mathrm{PSH}(\Omega )\cap L^\infty _{\mathrm{loc}}(\Omega )$ tend to zero in $L^1_{\mathrm{loc}}(\Omega )$ and satisfy $\sup _ j\| u_ j\| _{L^\infty (K)}&lt;\infty $ for every compact set $K\subset \Omega $. Then $(\mathrm{dd}^{\mathrm{c}}u_ j)^ n(K)\to 0$ for every such $K$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix concentric balls $B'\Subset B\Subset B_1\Subset \Omega $, and put $\beta =\mathrm{dd}^{\mathrm{c}}|z|^2$. If $\psi $ is a nonnegative smooth cutoff function supported in $B_1$ and equal to one near $\overline B$, integration by parts gives 
+    
+<div class="equation">
+  \[  0\leq \int _ B\mathrm{dd}^{\mathrm{c}}u_ j\wedge \beta ^{n-1} \leq \int _{B_1}u_ j\mathrm{dd}^{\mathrm{c}}\psi \wedge \beta ^{n-1} \leq C\| u_ j\| _{L^1(B_1)}\longrightarrow 0.  \]
+</div>
+<p>
+       Choose $M&gt;0$ with $|u_ j|\leq M$ on $B$ for all $j$, and apply the first estimate in (<a data-tag="0B0E74EF" href="../../tag/F138661713A9/">5.27.3</a>) to $u_ j+M$, whose values lie in $[0,2M]$. It bounds the top-degree mass of $B'$ by $C(2M)^{n-1}$ times the trace integral over $B$, which tends to zero; for $n=1$ the trace estimate itself suffices. Covering $K$ by finitely many such balls proves the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The construction uses a regularized maximum of a small multiple of a logarithm in one variable and a potential in the remaining variables. Its Monge–Ampère measure can be computed exactly by integration over circles in the first variable, and this will keep its top-degree mass fixed while the logarithmic coefficient tends to zero. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-CE87AA05">
+<p><a class="environment-identifier" href="../../tag/E2307F7792A2/">Lemma <span data-tag="CE87AA05">5.27.29</span>.</a><span data-gerby-tag="CE87AA05"><code class="tag-id">E2307F7792A2</code></span> Let $n\geq 2$, let $U\subset \mathbb C^{n-1}$ be a domain, and let $v$ be a smooth plurisubharmonic function on $U$. Fix $\varepsilon ,R,\eta &gt;0$ and $A\in \mathbb R$. Let $\chi _\eta $ be the convolution of $t\mapsto \max (t,0)$ with a smooth even probability density supported in $[-\eta ,\eta ]$, and put </p>
+<div class="equation">
+  \[  \begin{split}  q(\zeta )&amp; =\varepsilon \log (|\zeta |^2/R^2),\qquad T(\zeta ,z')=v(z')-A-q(\zeta ),\\  h(\zeta ,z')&amp; =q(\zeta )+\chi _\eta (T(\zeta ,z')) \end{split}  \]
+</div>
+<p> for $\zeta \ne 0$. Then $h$ extends to a smooth plurisubharmonic function on $\mathbb C\times U$. Set </p>
+<div class="equation">
+  \[  w_\eta (t)=n\chi _\eta '(t)^{n-1}\chi _\eta ''(t),\qquad r_ t(z')=R\exp \bigl ((v(z')-A-t)/(2\varepsilon )\bigr ).  \]
+</div>
+<p> The function $w_\eta $ is nonnegative, supported in $[-\eta ,\eta ]$, and has integral one. For every $f\in C_ c(\mathbb C\times U)$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-0228B7BC"><span data-gerby-tag="0228B7BC"><code class="tag-id">97724F2A7D19</code></span>
+<span class="equation-label"><a data-tag="0228B7BC" href="../../tag/97724F2A7D19/">5.27.30</a></span>
+<div>\begin{equation}  \begin{split}  \int f(\mathrm{dd}^{\mathrm{c}}h)^ n =\varepsilon \int _ U\biggl [\int _{-\eta }^{\eta }w_\eta (t) \int _0^{2\pi }f(r_ t(z')\mathrm e^{\mathrm i\vartheta },z') \frac{\mathrm d\vartheta }{2\pi }\, \mathrm dt\biggr ] (\mathrm{dd}^{\mathrm{c}}v)^{n-1}. \end{split} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By convexity, $0\leq \chi _\eta '\leq 1$ and $\chi _\eta ''\geq 0$. The function $\chi _\eta $ vanishes on $(-\infty ,-\eta ]$ and equals $t$ on $[\eta ,\infty )$. Since $T\to +\infty $ as $\zeta \to 0$, we have $h=v-A$ near each point with $\zeta =0$, which gives the smooth extension. Off the hyperplane $\{ \zeta =0\} $, the function $q$ is pluriharmonic and 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}h=\chi _\eta '(T)\mathrm{dd}^{\mathrm{c}}v +\chi _\eta ''(T)\, \mathrm dT\wedge \mathrm d^{\mathrm c}T\geq 0.  \]
+</div>
+<p>
+       The second summand has rank at most one, and the first has rank at most $n-1$. Hence 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}h)^ n=n\chi _\eta '(T)^{n-1}\chi _\eta ''(T) \, \mathrm dT\wedge \mathrm d^{\mathrm c}T\wedge (\mathrm{dd}^{\mathrm{c}}v)^{n-1}.  \]
+</div>
+<p>
+       The last factor has top degree in the variables $z'$, so the derivatives of $v$ in $\mathrm dT\wedge \mathrm d^{\mathrm c}T$ contribute nothing. Write $s=\log (|\zeta |^2/R^2)$. In polar coordinates, $\mathrm dq=\varepsilon \, \mathrm ds$ and $\mathrm d^{\mathrm c}q=\varepsilon \, \mathrm d\vartheta /(2\pi )$. At fixed $z'$, the change of variables from $s$ to $t=v-A-\varepsilon s$ gives (<a data-tag="0228B7BC" href="../../tag/97724F2A7D19/">5.27.30</a>). There is no contribution near $\zeta =0$, where $h=v-A$ and the form $\mathrm{dd}^{\mathrm{c}}h$ has rank at most $n-1$. Finally, $w_\eta $ is the derivative of $(\chi _\eta ')^ n$, whose values at $-\eta $ and $\eta $ are zero and one. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-EF331BFB">
+<p><a class="environment-identifier" href="../../tag/026A64B7A5A2/">Proposition <span data-tag="EF331BFB">5.27.31</span>.</a><span data-gerby-tag="EF331BFB"><code class="tag-id">026A64B7A5A2</code></span> Let $\Omega \subset \mathbb C^ n$, $n\geq 2$, be a bounded domain and $a\in \Omega $. For every $c&gt;0$, there are smooth bounded plurisubharmonic functions $u_ j\leq 0$ on $\Omega $ such that </p>
+<div class="equation">
+  \[  \| u_ j\| _{L^ p(\Omega )}\longrightarrow 0\quad (1\leq p&lt;\infty ), \qquad (\mathrm{dd}^{\mathrm{c}}u_ j)^ n\longrightarrow c\delta _ a \quad \text{vaguely}.  \]
+</div>
+<p> The same sequence tends to zero in local capacity. Here the norms are taken with respect to Lebesgue measure, and vague convergence means convergence against every compactly supported continuous test function. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Translate $a$ to the origin and write $z=(\zeta ,z')\in \mathbb C\times \mathbb C^ m$, $m=n-1$. It suffices to construct measures of mass one and then multiply the potentials by $c^{1/n}$. For $\delta &gt;0$, put $H_\delta (z')=\log (|z'|^2+\delta ^2)$. With $s=|z'|^2$, the complex Hessian of $H_\delta $ has the eigenvalue $(s+\delta ^2)^{-1}$ with multiplicity $m-1$ in the directions orthogonal to $z'$ and the eigenvalue $\delta ^2(s+\delta ^2)^{-2}$ in the radial direction. Taking the determinant and integrating in polar coordinates gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}H_\delta )^ m= \frac{m!}{\pi ^ m}\frac{\delta ^2}{(|z'|^2+\delta ^2)^{m+1}} \, \mathrm d\lambda _{2m}, \qquad \int _{|z'|&lt;b}(\mathrm{dd}^{\mathrm{c}}H_\delta )^ m =\left(\frac{b^2}{b^2+\delta ^2}\right)^ m,  \]
+</div>
+<p>
+       where $\lambda _{2m}$ is Lebesgue measure. These probability measures tend to $\delta _0$ as $\delta \downarrow 0$, since their mass outside each ball about the origin tends to zero. 
+    <p>
+      Choose $R&gt;\max (1,\sup _\Omega |\zeta |)$ and a ball $P\subset \mathbb C^ m$ containing the projection of $\Omega $ to the $z'$ variables. Set 
+    
+<div class="equation">
+  \[  \begin{gathered} \delta _ j=\varepsilon _ j=j^{-1},\qquad \eta _ j=j^{-2}, \qquad v_ j=\varepsilon _ j^{-1/m}H_{\delta _ j},\\ A_ j=\sup _ Pv_ j+2\varepsilon _ j\log (Rj). \end{gathered}  \]
+</div>
+<p>
+       Apply lemma <a data-tag="CE87AA05" href="../../tag/E2307F7792A2/">5.27.29</a> on $\mathbb C\times \mathbb C^ m$ to these data, and let $u_ j=h_ j-\eta _ j$, where $h_ j$ is the resulting function. The convolution satisfies $0\leq \chi _{\eta _ j}(t)-\max (t,0)\leq \eta _ j$, and $q+\max (T,0)=\max (q,v_ j-A_ j)$. Both branches of this maximum are negative on $\Omega $, so 
+    
+<div class="equation">
+  \[  \varepsilon _ j\log (|\zeta |^2/R^2)-\eta _ j \leq u_ j\leq 0.  \]
+</div>
+<p>
+       Each $u_ j$ is smooth and bounded on $\Omega $, since the second branch $v_ j-A_ j$ is bounded below on the bounded set $P$. The logarithm has finite $L^ p(\Omega )$ norm for every finite $p$, by polar integration on a fixed polydisk containing $\Omega $. Hence $u_ j\to 0$ in all these norms. 
+    <p>
+      Let $B'\Subset B\Subset \Omega $ be concentric balls, and let $w\in \mathrm{PSH}(B)$ with $0\leq w\leq 1$. Since $|u_ j|\leq \varepsilon _ j|\log (|\zeta |^2/R^2)|+\eta _ j$, the weighted Chern–Levine–Nirenberg estimate applied to $\log (|\zeta |^2/R^2)$, together with the range estimate (<a data-tag="0B0E74EF" href="../../tag/F138661713A9/">5.27.3</a>) for the constant term, gives 
+    
+<div class="equation">
+  \[  \int _{B'}|u_ j|(\mathrm{dd}^{\mathrm{c}}w)^ n\leq C_ B(\varepsilon _ j+\eta _ j),  \]
+</div>
+<p>
+       where $C_ B$ depends on the fixed balls and the logarithm but not on $j$ or $w$. Restricting the integral to $B'\cap \{ |u_ j|&gt;t\} $, dividing by $t&gt;0$ and taking the supremum over $w$ shows that the capacity of $B'\cap \{ |u_ j|&gt;t\} $ relative to $B$ tends to zero. 
+    <p>
+      In (<a data-tag="0228B7BC" href="../../tag/97724F2A7D19/">5.27.30</a>), the factor $\varepsilon _ j(\mathrm{dd}^{\mathrm{c}}v_ j)^ m$ equals $(\mathrm{dd}^{\mathrm{c}}H_{\delta _ j})^ m$. For $z'\in P$ and $|t|\leq \eta _ j$, the radii satisfy 
+    
+<div class="equation">
+  \[  r_ t(z')\leq j^{-1}\exp (\eta _ j/(2\varepsilon _ j)) \leq \mathrm e^{1/2}/j.  \]
+</div>
+<p>
+       Extend $f\in C_ c(\Omega )$ by zero to $\mathbb C^ n$. Outside the projection of $\operatorname {supp}f$ to the $z'$ variables, both $f(r_ t\mathrm e^{\mathrm i\vartheta },z')$ and $f(0,z')$ vanish. On this projection, the uniform continuity of $f$ and the bound on the radii make their difference tend to zero uniformly. Since the weights $w_{\eta _ j}(t)\, \mathrm dt$ and $\mathrm d\vartheta /(2\pi )$ and the measures $(\mathrm{dd}^{\mathrm{c}}H_{\delta _ j})^ m$ all have total mass one, it follows that 
+    
+<div class="equation">
+  \[  \int _\Omega f(\mathrm{dd}^{\mathrm{c}}u_ j)^ n -\int _{\mathbb C^ m}f(0,z')(\mathrm{dd}^{\mathrm{c}}H_{\delta _ j})^ m \longrightarrow 0.  \]
+</div>
+<p>
+       The second integral tends to $f(0)$, which proves the asserted vague limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+Each approximating measure has a smooth density and charges no pluripolar set, whereas the limit is a point mass. By lemma <a data-tag="B41297A6" href="../../tag/55862640C106/">5.27.28</a>, the potentials therefore have no common lower bound on some compact set. Thus convergence in capacity is compatible with concentration of the Monge–Ampère measures once common local bounds are lost. 
+</p>
+</div></section><section class="reading-chunk" id="entry-38F5E7BC8433" data-section-entries="0950BB9BC118 0EE345C93AFA 38F5E7BC8433 6C1E4E8060FF CCB8860FB3B5"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/38F5E7BC8433/">5.27.32 Adding a prescribed local measure</a><code class="tag-id">38F5E7BC8433</code></h2><span data-gerby-tag="B1D5B063"></span>
+<p>
+The concentration in proposition <a data-tag="EF331BFB" href="../../tag/026A64B7A5A2/">5.27.31</a> can be produced on top of a given bounded potential $b$ and repeated, so as to add an arbitrary prescribed measure to $(\mathrm{dd}^{\mathrm{c}}b)^ n$. Adding a perturbation $h$ to $b$ creates the mixed terms $(\mathrm{dd}^{\mathrm{c}}b)^{n-r}\wedge (\mathrm{dd}^{\mathrm{c}}h)^ r$. A mixed Chern–Levine–Nirenberg estimate controls them, provided that the lower-degree currents of $h$ are kept small. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C2D838F2">
+<p><a class="environment-identifier" href="../../tag/0EE345C93AFA/">Lemma <span data-tag="C2D838F2">5.27.33</span>.</a><span data-gerby-tag="C2D838F2"><code class="tag-id">0EE345C93AFA</code></span> Fix the data $n,U,v,\varepsilon ,R,\eta ,\chi _\eta $ of lemma <a data-tag="CE87AA05" href="../../tag/E2307F7792A2/">5.27.29</a>, and write $h_ A$ for the smooth plurisubharmonic function $h$ of that lemma, regarded as a function of $A$. Put $D=\{ 0\} \times U$, and write $[D]$ for the current of integration over this hypersurface. Then, for every $1\leq r\leq n$, </p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}h_ A)^ r\longrightarrow \varepsilon [D]\wedge (\mathrm{dd}^{\mathrm{c}}v)^{r-1} \quad \text{as currents on }\mathbb C\times U,\  A\to \infty .  \]
+</div>
+<p> The product on the right is integration of the restriction of the smooth form $(\mathrm{dd}^{\mathrm{c}}v)^{r-1}$ over $D$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $S=\mathrm{dd}^{\mathrm{c}}v$, $q=\varepsilon \log (|\zeta |^2/R^2)$ and $T_ A=v-A-q$. The rank-one calculation in the proof of lemma <a data-tag="CE87AA05" href="../../tag/E2307F7792A2/">5.27.29</a> gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}h_ A)^ r=\chi _\eta '(T_ A)^ rS^ r +r\chi _\eta '(T_ A)^{r-1}\chi _\eta ''(T_ A) \, \mathrm dT_ A\wedge \mathrm d^{\mathrm c}T_ A\wedge S^{r-1}  \]
+</div>
+<p>
+       off $D$; since $h_ A$ is smooth and $D$ has measure zero, this formula determines the current. Fix a smooth compactly supported test form. On the projection of its support to $U$, the function $v$ and its derivatives are bounded. Hence the support of $\chi _\eta '(T_ A)$ lies in $\{ |\zeta |\leq s_ A\} $, where $s_ A=C\exp (-A/(2\varepsilon ))$ and $C$ depends only on this compact set and the fixed data. The coefficients involving $v$ and $\chi _\eta $ are bounded at the fixed parameters, so the first summand has pairing $O(s_ A^2)$. In the second summand, the term with two derivatives of $v$ also has pairing $O(s_ A^2)$, and the two cross terms have pairing $O(s_ A)$: the derivative of $q$ in the $\zeta $ direction has size $O(|\zeta |^{-1})$, and its area integral over the disk $\{ |\zeta |\leq s_ A\} $ is $O(s_ A)$. 
+    <p>
+      It remains to integrate the term containing $\mathrm dq\wedge \mathrm d^{\mathrm c}q$. The logarithmic change of the radial variable used for (<a data-tag="0228B7BC" href="../../tag/97724F2A7D19/">5.27.30</a>) leaves the factor $\varepsilon $ and the probability weight 
+    
+<div class="equation">
+  \[  r\chi _\eta '(t)^{r-1}\chi _\eta ''(t)\, \mathrm dt, \qquad -\eta \leq t\leq \eta .  \]
+</div>
+<p>
+       Only the component of the test form in the $z'$ directions enters this term, and on the shrinking circles its coefficients tend uniformly to their values at $\zeta =0$. Integration in the angle therefore gives, in the limit, exactly the pairing with $\varepsilon [D]\wedge S^{r-1}$. This proves the convergence in every degree. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-73D7F964">
+<p><a class="environment-identifier" href="../../tag/0950BB9BC118/">Lemma <span data-tag="73D7F964">5.27.34</span>.</a><span data-gerby-tag="73D7F964"><code class="tag-id">0950BB9BC118</code></span> Let $\Omega \subset \mathbb C^ n$ be a domain, let $K$ and $L$ be compact subsets of $\Omega $ with $K$ contained in the interior $L^\circ $ of $L$, and put $\beta =\mathrm{dd}^{\mathrm{c}}|z|^2$. Let $b$ be a locally bounded plurisubharmonic function on $\Omega $, and let $T$ be a smooth positive closed $(r,r)$-form, $1\leq r&lt;n$. Then </p>
+<div class="equation">
+  \[  \int _ K(\mathrm{dd}^{\mathrm{c}}b)^{n-r}\wedge T \leq C_{K,L,n}(1+\| b\| _{L^\infty (L)})^{n-r} \int _ L T\wedge \beta ^{n-r}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $M=1+\| b\| _{L^\infty (L)}$. Cover $K$ by finitely many balls whose larger concentric balls have closures in $L^\circ $. Replacing $b$ by $b+M$, which has the same Hessian and takes values in $[0,2M]$ on $L$, we may assume $0\leq b\leq 2M$ there. For nested cutoff functions $\psi $, integration by parts against closed forms gives 
+    
+<div class="equation">
+  \[  \int \psi \mathrm{dd}^{\mathrm{c}}b\wedge W =\int b\mathrm{dd}^{\mathrm{c}}\psi \wedge W \leq CM \int _{\operatorname {supp}\psi }\beta \wedge W,  \]
+</div>
+<p>
+       where $W$ is $T$ multiplied by the remaining positive closed factors. Apply this successively to the $n-r$ Hessians of $b$. For bounded $b$, the integrations by parts are justified by local decreasing regularization and theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">5.27.1</a>, with one common bound on the range. Summing over the finite cover gives the asserted constant. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-ADE7B9AB">
+<p><a class="environment-identifier" href="../../tag/6C1E4E8060FF/">Proposition <span data-tag="ADE7B9AB">5.27.35</span>.</a><span data-gerby-tag="ADE7B9AB"><code class="tag-id">6C1E4E8060FF</code></span> Let $\Omega \subset \mathbb C^ n$, $n\geq 2$, be a bounded domain, let $b\in \mathrm{PSH}(\Omega )\cap L^\infty (\Omega )$, $a\in \Omega $ and $c&gt;0$. Given finitely many $f_ i\in C_ c(\Omega )$ and numbers $\tau ,t&gt;0$, there is a smooth bounded plurisubharmonic function $h\leq 0$ on $\Omega $ such that </p>
+<div class="equation">
+  \[  \begin{gathered} \| h\| _{L^ p(\Omega )}\leq C_{\Omega ,p}t\quad (1\leq p&lt;\infty ),\\ \left|\int _\Omega f_ i\bigl ((\mathrm{dd}^{\mathrm{c}}(b+h))^ n-(\mathrm{dd}^{\mathrm{c}}b)^ n\bigr ) -cf_ i(a)\right|&lt;\tau \quad \text{for every }i. \end{gathered}  \]
+</div>
+<p> For concentric balls $B'\Subset B\Subset \Omega $ and every $w\in \mathrm{PSH}(B)$ with $0\leq w\leq 1$, it also satisfies </p>
+<div class="equation">
+  \[  \int _{B'}|h|(\mathrm{dd}^{\mathrm{c}}w)^ n\leq C_{B',B,\Omega }t.  \]
+</div>
+<p> These constants are independent of $b,a,c$, the test functions and the tolerances. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We take for $h$ a function from lemma <a data-tag="CE87AA05" href="../../tag/E2307F7792A2/">5.27.29</a> whose top-degree measure approximates $c\delta _ a$ and whose lower-degree currents are small; lemma <a data-tag="73D7F964" href="../../tag/0950BB9BC118/">5.27.34</a> then controls the mixed terms. 
+    <p>
+      Write $a=(a_1,a')$ and $m=n-1$, and fix $R=2\sup _\Omega |z_1|+2$. For $\delta &gt;0$, put $H_\delta (z')=\log (|z'-a'|^2+\delta ^2)$. By the radial calculation in the proof of proposition <a data-tag="EF331BFB" href="../../tag/026A64B7A5A2/">5.27.31</a>, $(\mathrm{dd}^{\mathrm{c}}H_\delta )^ m$ is a probability measure tending to $\delta _{a'}$ as $\delta \downarrow 0$. Extend every $f_ i$ by zero outside $\Omega $, and choose $\delta $ such that 
+    
+<div class="equation">
+  \[  \left|c\int _{\mathbb C^ m}f_ i(a_1,z')(\mathrm{dd}^{\mathrm{c}}H_\delta )^ m -cf_ i(a)\right|&lt;\tau /3\quad \text{for all }i.  \]
+</div>
+<p>
+       Choose compact sets $K,L\subset \Omega $ with $K\subset L^\circ $ and $K$ containing the supports of all $f_ i$, and a nonnegative smooth cutoff function $\psi $ with compact support in $\Omega $, equal to one near $L$. Put $\beta =\mathrm{dd}^{\mathrm{c}}|z|^2$. Expanding the top power of $\mathrm{dd}^{\mathrm{c}}(b+h)$, summing the bounds of lemma <a data-tag="73D7F964" href="../../tag/0950BB9BC118/">5.27.34</a> with their binomial coefficients and the norms $\| f_ i\| _\infty $, we find $\gamma &gt;0$ such that the mixed terms contribute less than $\tau /3$ to every test integral whenever $h$ is smooth and plurisubharmonic and 
+    
+<div class="equation">
+  \[  \int _ L(\mathrm{dd}^{\mathrm{c}}h)^ r\wedge \beta ^{n-r}&lt;\gamma , \qquad 1\leq r&lt;n.  \]
+</div>
+<p>
+      Fix $0&lt;\eta \leq t/2$. Apply lemma <a data-tag="CE87AA05" href="../../tag/E2307F7792A2/">5.27.29</a> on $\mathbb C\times \mathbb C^ m$ with transverse variable $\zeta =z_1-a_1$ and $v=c^{1/m}\varepsilon ^{-1/m}H_\delta $. For $r&lt;n$, lemma <a data-tag="C2D838F2" href="../../tag/0EE345C93AFA/">5.27.33</a> gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}h_ A)^ r\longrightarrow \varepsilon ^{(n-r)/(n-1)}c^{(r-1)/(n-1)} [\{ z_1=a_1\} ]\wedge (\mathrm{dd}^{\mathrm{c}}H_\delta )^{r-1}  \]
+</div>
+<p>
+       as $A\to \infty $. For the fixed $\delta $, the integrals of these limits against $\psi \beta ^{n-r}$ are finite, and their exponents of $\varepsilon $ are positive. Choose $0&lt;\varepsilon \leq t/2$ so that each of them is less than $\gamma /2$. With these parameters fixed, choose $A$ so large that the integrals $\int _ L(\mathrm{dd}^{\mathrm{c}}h_ A)^ r\wedge \beta ^{n-r}$ are less than $\gamma $, that $v-A\leq 0$ on the projection of $\Omega $ to the $z'$ variables, and that 
+    
+<div class="equation">
+  \[  \left|\int _\Omega f_ i(\mathrm{dd}^{\mathrm{c}}h_ A)^ n -c\int _{\mathbb C^ m}f_ i(a_1,z')(\mathrm{dd}^{\mathrm{c}}H_\delta )^ m\right|&lt;\tau /3 \quad \text{for all }i.  \]
+</div>
+<p>
+       The last choice follows directly from (<a data-tag="0228B7BC" href="../../tag/97724F2A7D19/">5.27.30</a>), because the circles there shrink uniformly over the projected supports of the tests and $\varepsilon (\mathrm{dd}^{\mathrm{c}}v)^ m=c(\mathrm{dd}^{\mathrm{c}}H_\delta )^ m$. 
+    <p>
+      Set $h=h_ A-\eta $. As in the proof of proposition <a data-tag="EF331BFB" href="../../tag/026A64B7A5A2/">5.27.31</a>, $h$ is smooth, bounded and nonpositive on $\Omega $, with 
+    
+<div class="equation">
+  \[  \varepsilon \log (|z_1-a_1|^2/R^2)-\eta \leq h\leq 0.  \]
+</div>
+<p>
+       The logarithm has $L^ p(\Omega )$ norm bounded uniformly for $a_1$ in the projection of $\Omega $ to the first coordinate: after translation, its one-variable integral is bounded by polar integration on one fixed disk. This uniform bound, the weighted Chern–Levine–Nirenberg estimate and the range estimate (<a data-tag="0B0E74EF" href="../../tag/F138661713A9/">5.27.3</a>) give the asserted bound for the integrals over $B'$. Since $\varepsilon +\eta \leq t$, both estimates hold with constants depending only on $\Omega $, $p$, $B'$ and $B$. 
+    <p>
+      Finally, multilinearity of bounded products gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}(b+h))^ n=(\mathrm{dd}^{\mathrm{c}}b)^ n+(\mathrm{dd}^{\mathrm{c}}h)^ n +\sum _{r=1}^{n-1}\binom nr (\mathrm{dd}^{\mathrm{c}}b)^{n-r}\wedge (\mathrm{dd}^{\mathrm{c}}h)^ r.  \]
+</div>
+<p>
+       The choice of $\delta $, the choice of $A$ for the top-degree term and the estimate of the mixed terms each contribute less than $\tau /3$ to every test integral. This proves the required inequalities, with one choice of $h$ for all finite $p$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-7D38FAF5">
+<p><a class="environment-identifier" href="../../tag/CCB8860FB3B5/">Theorem <span data-tag="7D38FAF5">5.27.36</span>.</a><span data-gerby-tag="7D38FAF5"><code class="tag-id">CCB8860FB3B5</code></span> Let $\Omega \subset \mathbb C^ n$, $n\geq 2$, be a bounded domain, let $b\in \mathrm{PSH}(\Omega )\cap L^\infty (\Omega )$, and let $\nu $ be a positive Radon measure on $\Omega $. There are bounded plurisubharmonic functions $u_ j\leq b$ on $\Omega $ such that </p>
+<div class="equation">
+  \[  \begin{gathered} \| u_ j-b\| _{L^ p(\Omega )}\longrightarrow 0\quad (1\leq p&lt;\infty ),\\ (\mathrm{dd}^{\mathrm{c}}u_ j)^ n\longrightarrow (\mathrm{dd}^{\mathrm{c}}b)^ n+\nu \quad \text{vaguely}. \end{gathered}  \]
+</div>
+<p> The same sequence converges to $b$ in local capacity. If $b$ is smooth, every $u_ j$ can be chosen smooth. The measure $\nu $ may have infinite total mass. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose relatively compact open sets exhausting $\Omega $, each with closure contained in the next one. On each of these sets, take a countable family of smooth compactly supported functions that is uniformly dense in the space of continuous functions vanishing at its boundary, and add a nonnegative smooth compactly supported cutoff function equal to one on its closure. Enumerate the union of these families as $(f_ i)$. If positive measures converge against every $f_ i$ to a fixed positive Radon measure, they converge vaguely: the cutoff functions give common local mass bounds, and uniform approximation then handles every continuous compactly supported test function. 
+    <p>
+      For each $j$, approximate $\nu $ against $f_1,\ldots ,f_ j$ by a finite positive atomic measure 
+    
+<div class="equation">
+  \[  \nu _ j=\sum _{s=1}^{N_ j}c_{j,s}\delta _{a_{j,s}},\qquad \left|\int _\Omega f_ i(\nu _ j-\nu )\right|&lt;j^{-1}\quad (i\leq j).  \]
+</div>
+<p>
+       Such an approximation uses only the finite mass of $\nu $ on a compact neighborhood of the supports of these tests: a finite partition on which all the tests have small oscillation provides the atoms and their positive weights. Atoms of weight zero are omitted. If $N_ j=0$, set $u_ j=b$. Otherwise start with $b_{j,0}=b$ and apply proposition <a data-tag="ADE7B9AB" href="../../tag/6C1E4E8060FF/">5.27.35</a> successively to $b_{j,s-1}$, $a_{j,s}$ and $c_{j,s}$, with the tests $f_1,\ldots ,f_ j$ and $\tau =t=(jN_ j)^{-1}$. This gives perturbations $h_{j,s}$, and we define 
+    
+<div class="equation">
+  \[  b_{j,s}=b_{j,s-1}+h_{j,s},\qquad u_ j=b_{j,N_ j}.  \]
+</div>
+<p>
+       Every intermediate potential is bounded and plurisubharmonic, so the proposition applies at each step; the choice at the next step may depend on the bound of the current potential, and each perturbation serves all finite $p$ at once. Summing the norm estimates yields $\| u_ j-b\| _{L^ p(\Omega )}\leq C_{\Omega ,p}/j$, and since every $h_{j,s}\leq 0$, we have $u_ j\leq b$. Summing the measure errors gives 
+    
+<div class="equation">
+  \[  \left|\int _\Omega f_ i\bigl ((\mathrm{dd}^{\mathrm{c}}u_ j)^ n-(\mathrm{dd}^{\mathrm{c}}b)^ n-\nu \bigr )\right| &lt;2/j\quad (i\leq j).  \]
+</div>
+<p>
+       By the choice of the family $(f_ i)$, this proves the asserted vague limit, also when $\nu (\Omega )=\infty $. 
+    <p>
+      For fixed concentric balls $B'\Subset B\Subset \Omega $, the perturbations are nonpositive, so $|u_ j-b|=\sum _ s|h_{j,s}|$. The last estimate of proposition <a data-tag="ADE7B9AB" href="../../tag/6C1E4E8060FF/">5.27.35</a> bounds the integral of this function against $(\mathrm{dd}^{\mathrm{c}}w)^ n$ over $B'$ by $C_{B',B,\Omega }/j$, for every $w\in \mathrm{PSH}(B)$ with $0\leq w\leq 1$. Restricting to the set where $|u_ j-b|$ exceeds a fixed threshold, dividing by the threshold and taking the supremum over $w$ proves convergence in local capacity. If $b$ is smooth, the finite sums defining $u_ j$ are smooth as well. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The construction takes place in a bounded Euclidean domain, without prescribed boundary values and without a common bound on the approximating potentials. These freedoms allow concentration even under convergence in local capacity; a fixed global Hermitian background imposes further constraints. 
+</p>
+</div></section><section class="reading-chunk" id="entry-C9D7C212A8BF" data-section-entries="7F112BE621FD C9D7C212A8BF DCCBB28F9C78"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/C9D7C212A8BF/">5.27.37 Full cluster sets at the zero potential</a><code class="tag-id">C9D7C212A8BF</code></h2><span data-gerby-tag="EFA3D9C7"></span>
+<p>
+Theorem <a data-tag="7D38FAF5" href="../../tag/CCB8860FB3B5/">5.27.36</a> prescribes one limit of the Monge–Ampère measures, but a single sequence of potentials can have many subsequential limits. In fact, every vaguely closed set of measures is the set of all subsequential limits for a suitable sequence of potentials tending to zero. For a domain $\Omega \subset \mathbb C^ n$, write $\mathcal M_+(\Omega )$ for the set of positive Radon measures on $\Omega $, including zero and measures of infinite total mass, with the vague topology defined by integration against $C_ c(\Omega )$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C2A03E38">
+<p><a class="environment-identifier" href="../../tag/7F112BE621FD/">Lemma <span data-tag="C2A03E38">5.27.38</span>.</a><span data-gerby-tag="C2A03E38"><code class="tag-id">7F112BE621FD</code></span> There are real functions $f_ i\in C_ c^\infty (\Omega )$ such that </p>
+<div class="equation">
+  \[  d_ v(\alpha ,\beta )=\sum _{i\geq 1}2^{-i} \frac{\left|\int _\Omega f_ i(\alpha -\beta )\right|}{1+\left|\int _\Omega f_ i(\alpha -\beta )\right|}  \]
+</div>
+<p> is a metric inducing the vague topology on $\mathcal M_+(\Omega )$. This metric space is separable. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose relatively compact open sets $U_\ell $ exhausting $\Omega $, with $\overline U_\ell \subset U_{\ell +1}$. For each $\ell $, choose a countable uniformly dense subset of $C_0(U_{\ell +1};\mathbb R)$ consisting of smooth compactly supported functions, extended by zero to $\Omega $; such families exist because $C_0(U_{\ell +1};\mathbb R)$ is separable and its elements can be approximated uniformly by smooth functions. Add a nonnegative smooth compactly supported cutoff function equal to one near $\overline U_{\ell +1}$, and enumerate the union of all these functions as $(f_ i)$. 
+    <p>
+      Call the maps $\alpha \mapsto \int _\Omega f_ i\, \mathrm d\alpha $ the coordinates. If positive measures converge to a fixed measure in every coordinate, the cutoff coordinates give common mass bounds on each $\overline U_{\ell +1}$, and uniform approximation then gives convergence against every $g\in C_ c(\Omega )$. The same argument, applied near a fixed measure, shows that $\alpha \mapsto \int _\Omega g\, \mathrm d\alpha $ is continuous for the topology generated by the coordinates: bound the relevant cutoff coordinate on a neighborhood, choose one smooth test that is uniformly close to $g$, and shrink the neighborhood using the coordinate of that test. Thus the coordinates generate exactly the vague topology, and they separate measures. 
+    <p>
+      The function $s\mapsto s/(1+s)$ is increasing and subadditive on $[0,\infty )$. Applying it to the triangle inequalities for the coordinates gives the triangle inequality for $d_ v$, and $d_ v$ is positive on distinct measures because the coordinates separate them. Each coordinate is continuous for this metric, and the tails of the series are uniformly small, so the metric induces exactly the topology generated by the coordinates. 
+    <p>
+      Finally, the finite atomic measures with nonnegative rational weights at points of a fixed countable dense subset of $\Omega $ form a countable dense family. To approximate a measure in finitely many coordinates, partition a compact neighborhood of the supports of the corresponding tests into sets on which all these tests have small oscillation, place an atom in each set of nonzero mass, and then perturb its location and weight. Only the finite mass of that compact neighborhood is used, and the remaining tail of the metric is arbitrarily small. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The metric controls limits along corresponding subsequences: if $d_ v(\alpha _ j,\beta _ j)\to 0$ and one of the sequences converges vaguely to a fixed measure along a subsequence, then, by the triangle inequality, so does the other. Without common local mass bounds, however, $d_ v(\alpha _ j,\beta _ j)\to 0$ need not imply that $\int g(\alpha _ j-\beta _ j)\to 0$ for every $g\in C_ c(\Omega )$. For example, fix $a\in \Omega $, a unit vector $e$, and numbers $r_ j\downarrow 0$ with $a+r_ je\in \Omega $, and put 
+</p>
+<div class="equation">
+  \[  \alpha _ j=r_ j^{-1/2}\delta _{a+r_ je},\qquad \beta _ j=r_ j^{-1/2}\delta _ a.  \]
+</div>
+<p>
+ For every smooth compactly supported test, the difference of the two integrals is $O(r_ j^{1/2})$, so $d_ v(\alpha _ j,\beta _ j)\to 0$ because the tails of the series are small. On the other hand, if $\chi \in C_ c^\infty (\Omega )$ equals one near $a$, the continuous test function $g(z)=\chi (z)|z-a|^{1/2}$ gives $\int g(\alpha _ j-\beta _ j)=1$ for all large $j$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-60A4C827">
+<p><a class="environment-identifier" href="../../tag/DCCBB28F9C78/">Theorem <span data-tag="60A4C827">5.27.39</span>.</a><span data-gerby-tag="60A4C827"><code class="tag-id">DCCBB28F9C78</code></span> Let $\Omega \subset \mathbb C^ n$, $n\geq 2$, be a bounded domain. A set $F\subset \mathcal M_+(\Omega )$ is vaguely closed if and only if there are smooth bounded plurisubharmonic functions $u_ j\leq 0$ on $\Omega $, tending to zero in $L^ p(\Omega )$ for every $1\leq p&lt;\infty $ and in local capacity, whose full vague cluster set is $F$: </p>
+<div class="equation">
+  \[  F=\left\{ \mu \in \mathcal M_+(\Omega ):\  (\mathrm{dd}^{\mathrm{c}}u_{j_ k})^ n\longrightarrow \mu \text{ vaguely for some }j_1&lt;j_2&lt;\cdots \right\} .  \]
+</div>
+<p> The empty set is allowed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In a metric space, the full cluster set of a sequence is the intersection of the closures of its tails: a point of this intersection can be approximated within $1/k$ at an index larger than the preceding one, successively for $k=1,2,\ldots $. The full cluster set is therefore closed, and lemma <a data-tag="C2A03E38" href="../../tag/7F112BE621FD/">5.27.38</a> proves necessity. 
+    <p>
+      For sufficiency, suppose first that $F$ is nonempty and closed. A subset of a separable metric space is separable, so we may choose a dense sequence $\mu _1,\mu _2,\ldots $ in $F$, repetitions allowed. Concatenating the finite lists $(\mu _1)$, $(\mu _1,\mu _2)$, $(\mu _1,\mu _2,\mu _3)$, and so on, we obtain a sequence $(\nu _ j)$ in which every $\mu _ k$ appears arbitrarily late. Hence every point of $F$ is the limit of a subsequence, and since $F$ is closed, no other subsequential limit occurs. If $F$ is empty, take $\nu _ j=j\delta _ a$ for a fixed $a\in \Omega $. A nonnegative compactly supported test function equal to one at $a$ has integral $j$ against $\nu _ j$, so this sequence has no vaguely convergent subsequence. 
+    <p>
+       In either case, let $(f_ i)$ and $d_ v$ be as in lemma <a data-tag="C2A03E38" href="../../tag/7F112BE621FD/">5.27.38</a>, and perform the finite atomic construction from the proof of theorem <a data-tag="7D38FAF5" href="../../tag/CCB8860FB3B5/">5.27.36</a> separately for each $j$, with background zero, target $\nu _ j$ and tests $f_1,\ldots ,f_ j$. Thus we approximate $\nu _ j$ in these coordinates by a finite atomic measure with error less than $1/j$. If this measure has $N_ j&gt;0$ atoms, apply proposition <a data-tag="ADE7B9AB" href="../../tag/6C1E4E8060FF/">5.27.35</a> successively with $t=\tau =(jN_ j)^{-1}$; if it has none, take $u_ j=0$. The resulting smooth bounded plurisubharmonic functions $u_ j\leq 0$ satisfy 
+    
+<div class="equation">
+  \[  \| u_ j\| _{L^ p(\Omega )}\leq C_{\Omega ,p}/j, \qquad \left|\int _\Omega f_ i\bigl ((\mathrm{dd}^{\mathrm{c}}u_ j)^ n-\nu _ j\bigr )\right| &lt;2/j\quad (i\leq j).  \]
+</div>
+<p>
+       On every fixed pair of concentric balls $B'\Subset B\Subset \Omega $, the bounds of that proposition for test measures $(\mathrm{dd}^{\mathrm{c}}w)^ n$, with $w\in \mathrm{PSH}(B)$ and $0\leq w\leq 1$, also sum to $C_{B',B,\Omega }/j$. Dividing by a positive threshold and taking the supremum over $w$ gives convergence in local capacity. These estimates require neither convergence of the targets $\nu _ j$ nor a common local mass bound for them. 
+    <p>
+      Splitting the series defining the metric after its first $j$ terms gives 
+    
+<div class="equation">
+  \[  d_ v\bigl ((\mathrm{dd}^{\mathrm{c}}u_ j)^ n,\nu _ j\bigr )\leq 2/j+2^{-j}\longrightarrow 0.  \]
+</div>
+<p>
+       Consequently, the two sequences of measures have the same limits along corresponding subsequences, and hence the same full cluster set $F$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For subharmonic functions on a planar domain, by contrast, $L^1_{\mathrm{loc}}$ convergence to zero forces $\mathrm{dd}^{\mathrm{c}}u_ j\to 0$ in the sense of distributions, and positivity, tested against compactly supported cutoff functions, then gives vague convergence to zero. The freedom in the theorem therefore begins in dimension two. 
+</p>
+</div></section><section class="reading-chunk" id="entry-A72166484AB2" data-section-entries="745A94C03209 A72166484AB2 CD407359DDEA"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A72166484AB2/">5.27.40 Cluster sets at a bounded background</a><code class="tag-id">A72166484AB2</code></h2><span data-gerby-tag="836E3432"></span>
+<p>
+Let $\Omega \subset \mathbb C^ n$ be a domain, $n\geq 1$, and let $b$ be a locally bounded plurisubharmonic function on $\Omega $. If potentials approach $b$ from below in local capacity, every limit of their Monge–Ampère measures must dominate $(\mathrm{dd}^{\mathrm{c}}b)^ n$. Truncation at a fixed distance below $b$ provides a common bound, and plurifine locality keeps the measure outside the small set where the truncation changes the potential. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-60F22EF6">
+<p><a class="environment-identifier" href="../../tag/CD407359DDEA/">Lemma <span data-tag="60F22EF6">5.27.41</span>.</a><span data-gerby-tag="60F22EF6"><code class="tag-id">CD407359DDEA</code></span> Let $b,u_ j$ be locally bounded plurisubharmonic functions on $\Omega $ with $u_ j\leq b$ and $u_ j\to b$ in local capacity. Then, for every nonnegative $f\in C_ c(\Omega )$, </p>
+<div class="equation">
+  \[  \liminf _{j\to \infty }\int _\Omega f(\mathrm{dd}^{\mathrm{c}}u_ j)^ n \geq \int _\Omega f(\mathrm{dd}^{\mathrm{c}}b)^ n.  \]
+</div>
+<p> In particular, every vague subsequential limit of $(\mathrm{dd}^{\mathrm{c}}u_ j)^ n$ dominates $(\mathrm{dd}^{\mathrm{c}}b)^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First suppose that $f$ is supported in $B'$, where $B'\Subset B\Subset \Omega $ are concentric balls. Put $v_ j=\max (u_ j,b-1)$ and $E_ j=\{ u_ j\leq b-1\} $. The functions $v_ j$ lie between $b-1$ and $b$ and tend to $b$ in local capacity. Because of their common bounds, the continuity of bounded products recalled in section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a> gives $(\mathrm{dd}^{\mathrm{c}}v_ j)^ n\to (\mathrm{dd}^{\mathrm{c}}b)^ n$ vaguely on $B$. With $R=\sup _ B b-\inf _ B b+1$, the capacity bound for bounded potentials gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}v_ j)^ n(E_ j\cap \operatorname {supp}f) \leq R^ n\operatorname {cap}(E_ j\cap \operatorname {supp}f,B) \longrightarrow 0,  \]
+</div>
+<p>
+       where the limit holds because $E_ j\subset \{ |u_ j-b|&gt;1/2\} $. On the plurifine open Borel set $\{ u_ j&gt;b-1\} $ we have $v_ j=u_ j$, so theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">5.27.1</a> shows that the two measures agree there. By positivity, 
+    
+<div class="equation">
+  \[  \int f(\mathrm{dd}^{\mathrm{c}}u_ j)^ n \geq \int f(\mathrm{dd}^{\mathrm{c}}v_ j)^ n -\| f\| _\infty (\mathrm{dd}^{\mathrm{c}}v_ j)^ n(E_ j\cap \operatorname {supp}f).  \]
+</div>
+<p>
+       Taking the lower limit proves the assertion for such $f$. For a general $f$, use a finite nonnegative partition of unity subordinate to a cover of its support by such balls. Applying the inequality along a vaguely convergent subsequence proves the final assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-0BEFD41C">
+<p><a class="environment-identifier" href="../../tag/745A94C03209/">Theorem <span data-tag="0BEFD41C">5.27.42</span>.</a><span data-gerby-tag="0BEFD41C"><code class="tag-id">745A94C03209</code></span> Assume that $\Omega $ is bounded, $n\geq 2$, and $b\in \mathrm{PSH}(\Omega )\cap L^\infty (\Omega )$. For a set $F\subset \mathcal M_+(\Omega )$, the following are equivalent: </p>
+<ol>
+<li><p>
+$F$ is vaguely closed and every $\mu \in F$ satisfies $\mu \geq (\mathrm{dd}^{\mathrm{c}}b)^ n$; 
+</p>
+</li><li><p>
+there are bounded plurisubharmonic functions $u_ j\leq b$ on $\Omega $, converging to $b$ in $L^ p(\Omega )$ for every $1\leq p&lt;\infty $ and in local capacity, whose full vague cluster set is $F$. 
+</p>
+</li>
+</ol>
+<p> The empty set is allowed. If $b$ is smooth, every $u_ j$ in the second condition can be chosen smooth. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If the second condition holds, lemma <a data-tag="60F22EF6" href="../../tag/CD407359DDEA/">5.27.41</a> gives the measure inequality, and the full cluster set is closed in the metrizable vague topology by the argument at the beginning of the proof of theorem <a data-tag="60A4C827" href="../../tag/DCCBB28F9C78/">5.27.39</a>. 
+    <p>
+      Conversely, assume the first condition. If $F$ is nonempty, the concatenation of a dense sequence used in the proof of theorem <a data-tag="60A4C827" href="../../tag/DCCBB28F9C78/">5.27.39</a> gives measures $\nu _ j\in F$ whose full vague cluster set is $F$. If $F$ is empty, take $\nu _ j=(\mathrm{dd}^{\mathrm{c}}b)^ n+j\delta _ a$ for a fixed $a\in \Omega $. A nonnegative compactly supported test function equal to one at $a$ has integral at least $j$ against $\nu _ j$, so this sequence has no vaguely convergent subsequence. In either case, $\nu _ j-(\mathrm{dd}^{\mathrm{c}}b)^ n$ is a positive Radon measure. 
+    <p>
+      Let $(f_ i)$ and $d_ v$ be as in lemma <a data-tag="C2A03E38" href="../../tag/7F112BE621FD/">5.27.38</a>. For each $j$, approximate the excess $\nu _ j-(\mathrm{dd}^{\mathrm{c}}b)^ n$ against $f_1,\ldots ,f_ j$ by a positive finite atomic measure, with each error less than $1/j$. If this measure has $N_ j&gt;0$ atoms, perform the construction from the proof of theorem <a data-tag="7D38FAF5" href="../../tag/CCB8860FB3B5/">5.27.36</a>, starting at $b$ and using $\tau =t=(jN_ j)^{-1}$ for each atom; if it has none, take $u_ j=b$. Summing the estimates of proposition <a data-tag="ADE7B9AB" href="../../tag/6C1E4E8060FF/">5.27.35</a> gives 
+    
+<div class="equation">
+  \[  \| u_ j-b\| _{L^ p(\Omega )}\leq C_{\Omega ,p}/j, \qquad \left|\int _\Omega f_ i\bigl ((\mathrm{dd}^{\mathrm{c}}u_ j)^ n-\nu _ j\bigr )\right| &lt;2/j\quad (i\leq j).  \]
+</div>
+<p>
+       For every fixed pair of concentric balls $B'\Subset B\Subset \Omega $, the same construction bounds the integral of $|u_ j-b|$ over $B'$ against $(\mathrm{dd}^{\mathrm{c}}w)^ n$ by $C_{B',B,\Omega }/j$, for every $w\in \mathrm{PSH}(B)$ with $0\leq w\leq 1$. Dividing by a fixed positive threshold and taking the supremum over $w$ gives convergence in local capacity. Each $u_ j$ is bounded and lies below $b$, and it is smooth when $b$ is smooth. One sequence serves all finite $p$, and no common local mass bound on the $\nu _ j$ is needed. 
+    <p>
+      The error in the first $j$ coordinates and the tail of the series yield 
+    
+<div class="equation">
+  \[  d_ v\bigl ((\mathrm{dd}^{\mathrm{c}}u_ j)^ n,\nu _ j\bigr )\leq 2/j+2^{-j}\longrightarrow 0.  \]
+</div>
+<p>
+       By the remark following lemma <a data-tag="C2A03E38" href="../../tag/7F112BE621FD/">5.27.38</a>, the two sequences of measures have the same limits along corresponding subsequences. Hence their full vague cluster sets coincide. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For example, on the unit ball the function $b=|z|^2-1$ has nonzero Monge–Ampère measure. For every point $a$ of the ball, the theorem allows the cluster sets $\{ (\mathrm{dd}^{\mathrm{c}}b)^ n\} $, $\{ (\mathrm{dd}^{\mathrm{c}}b)^ n+\delta _ a\} $ and the empty set, but it excludes $\{ 0\} $; this exclusion relies on the convergence in local capacity. In dimension one, $L^1$ convergence alone forces $\mathrm{dd}^{\mathrm{c}}u_ j\to \mathrm{dd}^{\mathrm{c}}b$ vaguely, so the full cluster set is always $\{ \mathrm{dd}^{\mathrm{c}}b\} $. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/88C7A8DCE36E/"><span>← Previous</span><small>Lemma 5.26.2</small></a><a class="pager-next" rel="next" href="../../tag/8B1218AE4FDC/"><span>Next →</span><small>Theorem 5.27.1 (Bedford–Taylor)</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-plurisubharmonic-functions-and-singularities--local-products-and-capacity,
+  author = {{Gerby contributors}},
+  title = {5.27 Local products and capacity},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fplurisubharmonic-functions-and-singularities--local-products-and-capacity%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fplurisubharmonic-functions-and-singularities--local-products-and-capacity%2F&amp;body=Page%3A+%5B5.27+Local+products+and+capacity%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fplurisubharmonic-functions-and-singularities--local-products-and-capacity%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+a1e79db636fcfb207979c47613c8460c184ea199+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

@@ -1,15 +1,24 @@
 """Reading order, navigation, citations, and the shared reference interface."""
-from hashlib import sha1
+from hashlib import sha1, sha256
 from html import escape
 from urllib.parse import urlencode
+from numbering import assign_numbers
 
 PUBLIC_ROOT = "https://mingchenxia.github.io/Gerby/"
 DISCUSSIONS = "https://github.com/MingchenXia/Gerby/discussions"
 
 
+def route_tag(route):
+    return sha256(("gerby-route\0" + route).encode()).hexdigest()[:12].upper()
+
+
+def tag_code(tag):
+    return f'<code class="tag-id">{tag}</code>'
+
+
 def display_title(entry):
-    """Environment names come from the manuscript, never from a TeX label."""
-    return entry["variants"][0]["title"]
+    """Names come from manuscript captions; locators come from Gerby."""
+    return entry.get("reader_title", entry["variants"][0]["title"])
 
 
 def bibtex(title, route):
@@ -24,17 +33,22 @@ class Reader:
     def __init__(self, chapters, topics, entries, sources, comments):
         self.chapters, self.topics, self.entries = chapters, topics, entries
         self.sources, self.comments = sources, comments
+        self.numbering = assign_numbers(chapters, entries)
         self.sections, self.pages, self.order = {}, {}, []
         self.add("", "Gerby")
         self.add("chapters", "Table of contents")
         for key, chapter in chapters.items():
+            chapter["tag"] = route_tag("chapters/" + key)
             self.add("chapters/" + key, f'{chapter["number"]} {chapter["title"]}', chapter=key)
             for number, topic in enumerate(chapter["topics"], 1):
                 relevant = [e for e in entries.values() if e["topic"] == topic]
                 self.sections[topic] = {**topics[topic], "chapter": key, "number": f'{chapter["number"]}.{number}', "entries": relevant}
+                intro = next((entry for entry in relevant if entry.get("section_intro")), None)
+                self.sections[topic]["tag"] = intro["tag"] if intro else route_tag("sections/" + topic)
                 self.add("sections/" + topic, f'{chapter["number"]}.{number} {topics[topic]["title"]}', chapter=key, section=topic)
                 for entry in relevant:
-                    self.add("tag/" + entry["tag"], display_title(entry), chapter=key, section=topic, tag=entry["tag"])
+                    if not entry.get("section_intro"):
+                        self.add("tag/" + entry["tag"], display_title(entry), chapter=key, section=topic, tag=entry["tag"])
         self.add("entries", "All entries")
         self.add("references", "Bibliography")
         self.add("sources", "Sources")
@@ -42,7 +56,7 @@ class Reader:
             self.add("sources/" + source, book["title"])
         self.add("search", "Search")
         self.add("comments", "Comments")
-        expected = {"tag/" + tag for tag in entries}
+        expected = {"tag/" + tag for tag, entry in entries.items() if not entry.get("section_intro")}
         if {route for route in self.order if route.startswith("tag/")} != expected:
             raise ValueError("Reading order must contain every canonical entry exactly once")
         self.positions = {route: number for number, route in enumerate(self.order)}
@@ -73,20 +87,25 @@ class Reader:
                 links.append(f'<a class="pager-{direction}" rel="{direction}" href="{self.href(target, root)}"><span>{caption}</span><small>{escape(page["title"])}</small></a>')
         return f'<nav class="page-navigation" aria-label="Page navigation{" bottom" if bottom else ""}">{"".join(links)}</nav>'
 
-    def section_list(self, chapter, root, current=None, anchors=False):
+    def section_list(self, chapter, root, current=None, anchors=False, subsections=False):
         rows = []
         for topic in self.chapters[chapter]["topics"]:
             section = self.sections[topic]
             active = ' aria-current="page"' if current == topic else ""
             anchor = "section-" + topic if topic in {"comments", "cite", "content", "collection-search", "citation-text", "search-results"} else topic
             identifier = f' id="{anchor}"' if anchors else ""
-            rows.append(f'<li{identifier}><a href="{self.href("sections/" + topic, root)}"{active}><span>{section["number"]}</span> {escape(section["title"])}</a></li>')
+            children = ""
+            if subsections:
+                headings = [entry for entry in section["entries"] if entry["variants"][0].get("section") and not entry.get("section_intro")]
+                if headings:
+                    children = '<ol class="subsection-list">' + "".join(f'<li><a href="{self.href("tag/" + entry["tag"], root)}">{escape(display_title(entry))}</a>{tag_code(entry["tag"])}</li>' for entry in headings) + '</ol>'
+            rows.append(f'<li{identifier}><a href="{self.href("sections/" + topic, root)}"{active}><span>{section["number"]}</span> {escape(section["title"])}</a>{tag_code(section["tag"])}{children}</li>')
         return '<ol class="section-list">' + "".join(rows) + '</ol>'
 
     def contents(self, root):
         parts = []
         for key, chapter in self.chapters.items():
-            parts.append(f'<details class="toc-chapter" open><summary><a href="{self.href("chapters/" + key, root)}">Chapter {chapter["number"]}. {escape(chapter["title"])}</a></summary>{self.section_list(key, root)}</details>')
+            parts.append(f'<details class="toc-chapter" open><summary><a href="{self.href("chapters/" + key, root)}">Chapter {chapter["number"]}. {escape(chapter["title"])}</a>{tag_code(chapter["tag"])}</summary>{self.section_list(key, root)}</details>')
         return '<div class="toc-controls"><button type="button" data-toc="expand">Expand all</button><button type="button" data-toc="collapse">Collapse all</button></div><div class="table-of-contents">' + "".join(parts) + '</div>'
 
     def breadcrumbs(self, route, root):
