@@ -1,0 +1,817 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/comparison-of-singularities--the-p-and-mathcal-i-preorders/"><title>16.8 The $P$ and $\mathcal{I}$-preorders · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/comparison-of-singularities--the-p-and-mathcal-i-preorders/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/envelopes-models/">Chapter 16: Singularity types, envelopes, and models</a></li><li><a href="../../sections/comparison-of-singularities--the-p-and-mathcal-i-preorders/" aria-current="page">Section 16.8: The $P$ and $\mathcal{I}$-preorders</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/the-envelope-operators/"><span>16.1</span> The envelope operators</a><code class="tag-id">2AC9E2799656</code></li><li><a href="../../sections/the-envelope-operators--p-envelopes/"><span>16.2</span> P-envelopes</a><code class="tag-id">A6FA63C034E6</code></li><li><a href="../../sections/the-envelope-operators--p-envelopes--rooftop-operator-and-the-definition-of-the-p-envelope/"><span>16.3</span> Rooftop operator and the definition of the $P$-envelope</a><code class="tag-id">1BFD41225C11</code></li><li><a href="../../sections/the-envelope-operators--p-envelopes--properties-of-the-p-envelope/"><span>16.4</span> Properties of the $P$-envelope</a><code class="tag-id">666167293D79</code></li><li><a href="../../sections/the-envelope-operators--p-envelopes--relative-full-mass-classes/"><span>16.5</span> Relative full mass classes</a><code class="tag-id">B22CE32B08DB</code></li><li><a href="../../sections/the-envelope-operators--multiplier-ideal-envelopes/"><span>16.6</span> Multiplier-ideal envelopes</a><code class="tag-id">3FB831210DD1</code></li><li><a href="../../sections/comparison-of-singularities/"><span>16.7</span> Comparison of singularities</a><code class="tag-id">DE52193AE570</code></li><li><a href="../../sections/comparison-of-singularities--the-p-and-mathcal-i-preorders/" aria-current="page"><span>16.8</span> The $P$ and $\mathcal{I}$-preorders</a><code class="tag-id">EC95C2958023</code></li><li><a href="../../sections/comparison-of-singularities--the-d-s-pseudometric/"><span>16.9</span> The $d_ S$-pseudometric</a><code class="tag-id">45BED73AEFE3</code></li><li><a href="../../sections/envelopes-and-model-potentials/"><span>16.10</span> Envelopes and model potentials</a><code class="tag-id">CC5E34310EEC</code></li><li><a href="../../sections/envelopes-and-model-potentials--obstacles-and-rooftops/"><span>16.11</span> Obstacles and rooftops</a><code class="tag-id">FBD81D436A6A</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets/"><span>16.12</span> Measures on contact sets</a><code class="tag-id">87B472751372</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets--concentration-on-the-contact-set/"><span>16.13</span> Concentration on the contact set</a><code class="tag-id">954F538078ED</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets--obstacles-with-bounded-metric-laplacian/"><span>16.14</span> Obstacles with bounded metric Laplacian</a><code class="tag-id">74F4AD99CB8E</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets--penalized-equations-and-metric-laplacian-envelopes/"><span>16.15</span> Penalized equations and metric-Laplacian envelopes</a><code class="tag-id">F9CE743055E9</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets--real-hessian-bounds-for-kahler-envelopes/"><span>16.16</span> Real Hessian bounds for Kähler envelopes</a><code class="tag-id">20C85925F87F</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets--smoothing-and-its-joint-complex-hessian/"><span>16.17</span> Smoothing and its joint complex Hessian</a><code class="tag-id">B73B45463F24</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets--a-minimum-with-a-varying-upper-radius/"><span>16.18</span> A minimum with a varying upper radius</a><code class="tag-id">8DF7590E8FE8</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets--big-class-envelopes-on-the-ample-locus/"><span>16.19</span> Big-class envelopes on the ample locus</a><code class="tag-id">422B4DDB7F36</code></li><li><a href="../../sections/envelopes-and-model-potentials--measures-on-contact-sets--contact-with-an-arbitrary-singular-potential/"><span>16.20</span> Contact with an arbitrary singular potential</a><code class="tag-id">99AF407A4E55</code></li><li><a href="../../sections/envelopes-and-model-potentials--singularity-envelopes/"><span>16.21</span> Singularity envelopes</a><code class="tag-id">88E8C70208D8</code></li><li><a href="../../sections/envelopes-and-model-potentials--extrapolation-and-model-singularities/"><span>16.22</span> Extrapolation and model singularities</a><code class="tag-id">472B5CD7929C</code></li><li><a href="../../sections/envelopes-and-model-potentials--rooftops-and-mass-inequalities/"><span>16.23</span> Rooftops and mass inequalities</a><code class="tag-id">4CC29395A55C</code></li><li><a href="../../sections/envelopes-and-model-potentials--divisorial-constraints-under-envelopes/"><span>16.24</span> Divisorial constraints under envelopes</a><code class="tag-id">A7364A53065E</code></li><li><a href="../../sections/envelopes-and-model-potentials--singularity-constraints-and-relative-capacity/"><span>16.25</span> Singularity constraints and relative capacity</a><code class="tag-id">2B1B1CB179EE</code></li><li><a href="../../sections/envelopes-and-model-potentials--quantitative-rooftop-extrapolation/"><span>16.26</span> Quantitative rooftop extrapolation</a><code class="tag-id">5928CB7C3BCE</code></li><li><a href="../../sections/envelopes-and-model-potentials--comparison-of-relative-capacities/"><span>16.27</span> Comparison of relative capacities</a><code class="tag-id">DE4415660D60</code></li><li><a href="../../sections/envelopes-and-volumes-of-singularities/"><span>16.28</span> Envelopes and volumes of singularities</a><code class="tag-id">168D3DF32068</code></li><li><a href="../../sections/envelope-systems-over-hermitian-perturbations/"><span>16.29</span> Envelope systems over Hermitian perturbations</a><code class="tag-id">4AD4DDD929EE</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/comparison-of-singularities--the-p-and-mathcal-i-preorders/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/comparison-of-singularities--the-p-and-mathcal-i-preorders/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/3E4D57445698/"><span>← Previous</span><small>Definition 16.7.1</small></a><a class="pager-next" rel="next" href="../../tag/F7493F03C4C2/"><span>Next →</span><small>16.8.1 The definitions of the preorders</small></a></nav><h1>16.8 The $P$ and $\mathcal{I}$-preorders<code class="tag-id">EC95C2958023</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-EC95C2958023" data-section-entries="EC95C2958023"><div class="source-variant" data-gerby-book="sgpt"><span data-gerby-tag="509A3C17"><code class="tag-id">EC95C2958023</code></span>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$. 
+</p>
+<p>
+Recall that we defined a preorder on $\mathrm{QPSH}(X)$ in definition <a data-tag="410CBDE6" href="../../tag/3E4D57445698/">16.7.1</a> to compare the singularity types of quasi-plurisubharmonic functions. The problem with this preorder is that it is too fine. For our purposes, it is useful to consider rougher relations. 
+</p>
+</div></section><section class="reading-chunk" id="entry-F7493F03C4C2" data-section-entries="005A077A0167 14285897F9E7 295DE82294BA 2E8F613E7CBE 325A49CBCF74 33F50367BB68 4A5CF38738F2 4E959BD934C4 564E8A0E68F9 5C5512F45CC2 69E7C4B20FAE 7E95C2DD4B7D A3C93A5CDBF4 C7A2AD00BFF3 C7C64ABB4647 D3383E5F872D DF3EF73A9B89 EE590FE41862 F7493F03C4C2 FE600747C81E"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/F7493F03C4C2/">16.8.1 The definitions of the preorders</a><code class="tag-id">F7493F03C4C2</code></h2><span data-gerby-tag="61FEC296"></span>
+
+Recall that the $P$-envelope is defined in definition <a data-tag="15C6153F" href="../../tag/395DB7860949/">16.3.5</a>. <article class="env-definition" id="sgpt-D4B3E008">
+<p><a class="environment-identifier" href="../../tag/4E959BD934C4/">Definition <span data-tag="D4B3E008">16.8.2</span>.</a><span data-gerby-tag="D4B3E008"><code class="tag-id">4E959BD934C4</code></span> For $\varphi ,\psi \in \mathrm{QPSH}(X)$, we say $\varphi $ is <em>$P$-more singular than $\psi $</em> and write $\varphi \preceq _ P \psi $ if for some (equivalently, every, due to <a data-tag="AEBA911B" href="../../tag/A3C93A5CDBF4/">16.8.4</a> below) closed smooth real $(1,1)$-form $\theta $ on $X$ such that $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, we have </p>
+<div class="equation numbered-equation" id="sgpt-08DA962E"><span data-gerby-tag="08DA962E"><code class="tag-id">D3383E5F872D</code></span>
+<span class="equation-label"><a data-tag="08DA962E" href="../../tag/D3383E5F872D/">16.8.3</a></span>
+<div>\begin{equation}  P_{\theta }[\varphi ]\leq P_{\theta }[\psi ]. \end{equation}</div>
+</div>
+<p> If $\varphi \preceq _ P \psi $ and $\psi \preceq _ P \varphi $, we write $\varphi \sim _ P \psi $ and say that $\varphi $ and $\psi $ have the same <em>$P$-singularity type</em>. </p>
+</article> Recall that $\mathrm{PSH}(X,\theta )_{&gt;0}$ was introduced in (<a data-tag="827717AF" href="../../tag/44C4E200865B/">13.13.1</a>). Note that if $\varphi \preceq \psi $, then $\varphi \preceq _ P \psi $. So the $P$-preorder is <em>coarser</em> than $\preceq $. 
+
+<p>
+The $P$-equivalence relation can also be formulated using the language of relative full mass classes developed in <a data-tag="60D02775" href="../../tag/B22CE32B08DB/">16.5</a>. In fact, $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ satisfies $\varphi \sim _ P \psi $ if and only if $\varphi ,\psi \in \mathcal{E}(X,\theta ;\phi )$ for a common model potential $\phi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. 
+</p>
+
+The condition (<a data-tag="08DA962E" href="../../tag/D3383E5F872D/">16.8.3</a>) is independent of the choice of $\theta $: <article class="env-lemma" id="sgpt-AEBA911B">
+<p><a class="environment-identifier" href="../../tag/A3C93A5CDBF4/">Lemma <span data-tag="AEBA911B">16.8.4</span>.</a><span data-gerby-tag="AEBA911B"><code class="tag-id">A3C93A5CDBF4</code></span> Let $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. For any Kähler form $\omega $ on $X$, the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-AF916033"><span data-gerby-tag="AF916033"><code class="tag-id">ED4E919B13E0</code></span><p>
+ $P_{\theta }[\varphi ]\leq P_{\theta }[\psi ]$; 
+</p>
+</li><li class="custom-item" id="sgpt-F2F1719E"><span data-gerby-tag="F2F1719E"><code class="tag-id">E3965942668C</code></span><p>
+ $P_{\theta +\omega }[\varphi ]\leq P_{\theta +\omega }[\psi ]$. 
+</p>
+</li>
+</ol>
+</article> In particular, $\preceq _ P$ defines a preorder on $\mathrm{QPSH}(X)$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="AF916033" href="../../tag/A3C93A5CDBF4/#sgpt-AF916033">1</a> $\implies $ <a data-tag="F2F1719E" href="../../tag/A3C93A5CDBF4/#sgpt-F2F1719E">2</a>. Assume <a data-tag="AF916033" href="../../tag/A3C93A5CDBF4/#sgpt-AF916033">1</a>. Observe that 
+    
+<div class="equation">
+  \[  \varphi \preceq P_{\theta }[\varphi ]\leq P_{\theta +\omega }[\varphi ].  \]
+</div>
+<p>
+       Taking the $P_{\theta +\omega }$-envelope, we find 
+    
+<div class="equation">
+  \[  P_{\theta +\omega }[\varphi ] \leq P_{\theta +\omega }\Bigl [P_{\theta }[\varphi ]\Bigr ] \leq P_{\theta +\omega }\Bigl [P_{\theta +\omega }[\varphi ]\Bigr ]=P_{\theta +\omega }[\varphi ],  \]
+</div>
+<p>
+       where the equality follows from theorem <a data-tag="36606B5B" href="../../tag/7ADF30509E4E/">16.3.15</a>. In particular, 
+    
+<div class="equation numbered-equation" id="sgpt-46757C69"><span data-gerby-tag="46757C69"><code class="tag-id">7E95C2DD4B7D</code></span>
+<span class="equation-label"><a data-tag="46757C69" href="../../tag/7E95C2DD4B7D/">16.8.5</a></span>
+<div>\begin{equation}  P_{\theta +\omega }[\varphi ]=P_{\theta +\omega }\Bigl [P_{\theta }[\varphi ]\Bigr ]. \end{equation}</div>
+</div>
+<p>
+       A similar formula holds for $\psi $. So we see that <a data-tag="F2F1719E" href="../../tag/A3C93A5CDBF4/#sgpt-F2F1719E">2</a> holds. 
+    <p>
+<a data-tag="F2F1719E" href="../../tag/A3C93A5CDBF4/#sgpt-F2F1719E">2</a> $\implies $ <a data-tag="AF916033" href="../../tag/A3C93A5CDBF4/#sgpt-AF916033">1</a>. Assume <a data-tag="F2F1719E" href="../../tag/A3C93A5CDBF4/#sgpt-F2F1719E">2</a>. By (<a data-tag="46757C69" href="../../tag/7E95C2DD4B7D/">16.8.5</a>), we may assume that $\varphi $ and $\psi $ are both model potentials in $\mathrm{PSH}(X,\theta )_{&gt;0}$. 
+    <p>
+      Observe that $\varphi \lor \psi \preceq P_{\theta +\omega }[\psi ]$. It follows that $P_{\theta +\omega }[\varphi \lor \psi ]\leq P_{\theta +\omega }[\psi ]$. The reverse inequality is trivial, so 
+    
+<div class="equation">
+  \[  P_{\theta +\omega }[\varphi \lor \psi ]= P_{\theta +\omega }[\psi ].  \]
+</div>
+<p>
+       From the direction we have proved, for any $C\geq 1$, 
+    
+<div class="equation">
+  \[  P_{\theta +C\omega }[\varphi \lor \psi ]= P_{\theta +C\omega }[\psi ].  \]
+</div>
+<p>
+       So by proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a>, 
+    
+<div class="equation">
+  \[  \int _ X \Bigl (\theta +C\omega +\mathrm{dd}^{\mathrm{c}}(\varphi \lor \psi )\Bigr )^ n=\int _ X\left(\theta +C\omega +\mathrm{dd}^{\mathrm{c}}\psi \right)^ n.  \]
+</div>
+<p>
+       Since both sides are polynomials in $C$, the equality extends to $C=0$, namely, 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\varphi \lor \psi }^ n=\int _ X \theta _{\psi }^ n.  \]
+</div>
+<p>
+       In particular, $\varphi \lor \psi \leq P_{\theta }[\psi ]=\psi $ by (<a data-tag="67B36882" href="../../tag/2B585EFD6781/">16.3.16</a>). So <a data-tag="AF916033" href="../../tag/A3C93A5CDBF4/#sgpt-AF916033">1</a> follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+ As a consequence of <a data-tag="AEBA911B" href="../../tag/A3C93A5CDBF4/">16.8.4</a>, we can define the $P$-preorder at the level of currents. Given closed positive $(1,1)$-currents $T=\theta _{\varphi }$, $S=\theta '_{\psi }$, we write $T\preceq _ P S$ (resp. $T\sim _ P S$) if $\varphi \preceq _ P \psi $ (resp. $\varphi \sim _ P \psi $). This definition is independent of the decompositions of $T$ and $S$. 
+</p>
+
+As a first example of $P$-equivalence, we have: <article class="env-example" id="sgpt-A2EA28E7">
+<p><a class="environment-identifier" href="../../tag/14285897F9E7/">Example <span data-tag="A2EA28E7">16.8.6</span>.</a><span data-gerby-tag="A2EA28E7"><code class="tag-id">14285897F9E7</code></span> Let $\theta $ be a closed smooth real $(1,1)$-form on $X$ and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation">
+  \[  \varphi \sim _ P P_{\theta }[\varphi ]\footnotemark .  \]
+</div>
+ <aside class="source-footnote" id="sgpt-a0000048053"><span class="footnote-label">Note.</span> It is not known to us whether the same holds when $\varphi $ has vanishing mass.</aside> This follows immediately from theorem <a data-tag="36606B5B" href="../../tag/7ADF30509E4E/">16.3.15</a>. 
+</article>
+
+
+We give a very useful criterion of the $P$-equivalence in terms of the non-pluripolar masses. <article class="env-proposition" id="sgpt-2047C5CC">
+<p><a class="environment-identifier" href="../../tag/C7C64ABB4647/">Proposition <span data-tag="2047C5CC">16.8.7</span>.</a><span data-gerby-tag="2047C5CC"><code class="tag-id">C7C64ABB4647</code></span> Let $\theta $ be a closed smooth real $(1,1)$-form on $X$ representing a big cohomology class. Let $\varphi ,\psi \in \mathrm{PSH}(X,\theta )$ and $\varphi \preceq _ P \psi $. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-8F96975E"><span data-gerby-tag="8F96975E"><code class="tag-id">B4083090A0B4</code></span><p>
+ $\varphi \sim _ P \psi $; 
+</p>
+</li><li class="custom-item" id="sgpt-654F4EB3"><span data-gerby-tag="654F4EB3"><code class="tag-id">28D1D9DDF8EF</code></span><p>
+ for each $j=0,\ldots ,n$, we have 
+</p>
+<div class="equation numbered-equation" id="sgpt-1B5D4DA9"><span data-gerby-tag="1B5D4DA9"><code class="tag-id">DF3EF73A9B89</code></span>
+<span class="equation-label"><a data-tag="1B5D4DA9" href="../../tag/DF3EF73A9B89/">16.8.8</a></span>
+<div>\begin{equation}  \int _ X \theta _{\varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}=\int _ X \theta _{\psi }^ j\wedge \theta _{V_{\theta }}^{n-j}. \end{equation}</div>
+</div>
+</li>
+</ol>
+<p> Assume furthermore that $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, then these conditions are equivalent to the following: </p>
+<ol>
+<li class="custom-item" id="sgpt-0DC00279"><span data-gerby-tag="0DC00279"><code class="tag-id">2A79C290D213</code></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  \int _ X \theta _{\varphi }^ n=\int _ X \theta _{\psi }^ n.  \]
+</div>
+</li>
+</ol>
+</article> Recall that $V_{\theta }$ is introduced in (<a data-tag="5E51046F" href="../../tag/6F52E700CD98/">13.13.7</a>). 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first prove the equivalence between <a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a> and <a data-tag="0DC00279" href="../../tag/C7C64ABB4647/#sgpt-0DC00279">1</a> when $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. 
+    <p>
+<a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a> $\implies $ <a data-tag="0DC00279" href="../../tag/C7C64ABB4647/#sgpt-0DC00279">1</a>. Assume that $\varphi \sim _ P \psi $. By <a data-tag="AEBA911B" href="../../tag/A3C93A5CDBF4/">16.8.4</a>, we have 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]=P_{\theta }[\psi ].  \]
+</div>
+<p>
+       So <a data-tag="0DC00279" href="../../tag/C7C64ABB4647/#sgpt-0DC00279">1</a> follows from proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a>. 
+    <p>
+<a data-tag="0DC00279" href="../../tag/C7C64ABB4647/#sgpt-0DC00279">1</a> $\implies $ <a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a>. Since $\varphi \preceq _ P\psi $, we have $P_{\theta }[\varphi ]\leq P_{\theta }[\psi ]$. Moreover, proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a> shows that $P_{\theta }[\varphi ]$ and $P_{\theta }[\psi ]$ have the same positive mass. By theorem <a data-tag="36606B5B" href="../../tag/7ADF30509E4E/">16.3.15</a>, $P_{\theta }[\psi ]$ is a candidate in the characterization of $P_{\theta }\bigl [P_{\theta }[\varphi ]\bigr ]=P_{\theta }[\varphi ]$. Hence $P_{\theta }[\psi ]\leq P_{\theta }[\varphi ]$, and therefore $P_{\theta }[\varphi ]=P_{\theta }[\psi ]$. So <a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a> follows. 
+    <p>
+      Let us come back to the general case with $\varphi ,\psi \in \mathrm{PSH}(X,\theta )$. 
+    <p>
+<a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a> $\implies $ <a data-tag="654F4EB3" href="../../tag/C7C64ABB4647/#sgpt-654F4EB3">2</a>. Fix $j\in \{ 0,\ldots ,n\} $. We argue (<a data-tag="1B5D4DA9" href="../../tag/DF3EF73A9B89/">16.8.8</a>). 
+    <p>
+      Take a Kähler form $\omega $ on $X$. By <a data-tag="AEBA911B" href="../../tag/A3C93A5CDBF4/">16.8.4</a>, for each $\epsilon &gt;0$, we have 
+    
+<div class="equation">
+  \[  P_{\theta +\epsilon \omega }[\varphi ]= P_{\theta +\epsilon \omega }[\psi ].  \]
+</div>
+<p>
+       It follows from proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a> that 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _ X \left(\theta +\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\psi \right)^ j\wedge \theta _{V_{\theta }}^{n-j}=&amp; \int _ X \Bigl (\theta +\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta +\epsilon \omega }[\psi ] \Bigr )^ j\wedge \theta _{V_{\theta }}^{n-j}\\  =&amp; \int _ X \Bigl (\theta +\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta +\epsilon \omega }[\varphi ] \Bigr )^ j\wedge \theta _{V_{\theta }}^{n-j} \\  =&amp;  \int _ X \left(\theta +\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi \right)^ j\wedge \theta _{V_{\theta }}^{n-j}. \end{aligned}  \]
+</div>
+<p>
+       Since the two extremes are both polynomials in $\epsilon $ by the multi-linearity of the non-pluripolar products proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">13.11.4</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>, we conclude that the same holds when $\epsilon =0$, that is, (<a data-tag="1B5D4DA9" href="../../tag/DF3EF73A9B89/">16.8.8</a>) holds. 
+    <p>
+<a data-tag="654F4EB3" href="../../tag/C7C64ABB4647/#sgpt-654F4EB3">2</a> $\implies $ <a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a>. Assume (<a data-tag="1B5D4DA9" href="../../tag/DF3EF73A9B89/">16.8.8</a>) holds for all $j=0,\ldots ,n$. Then the same holds with $P_{\theta }[\psi ]$ in place of $\psi $, thanks to proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a>. Therefore, for each $t\in (0,1)$, we have 
+    
+<div class="equation">
+  \[  \int _ X \theta _{t\varphi +(1-t)V_{\theta }}^ n= \int _ X \theta _{tP_{\theta }[\psi ]+(1-t)V_{\theta }}^ n  \]
+</div>
+<p>
+       by the binomial expansion. Furthermore, $t\varphi +(1-t)V_{\theta }\preceq tP_{\theta }[\psi ]+(1-t)V_{\theta }$. By the implication <a data-tag="0DC00279" href="../../tag/C7C64ABB4647/#sgpt-0DC00279">1</a> $\implies $ <a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a>, we have 
+    
+<div class="equation">
+  \[  t\varphi +(1-t)V_{\theta }\sim _ P t P_{\theta }[\psi ]+(1-t)V_{\theta }  \]
+</div>
+<p>
+       for each $t\in (0,1)$. 
+    <p>
+      Fix a Kähler form $\omega $ on $X$. From the implication <a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a> $\implies $ <a data-tag="0DC00279" href="../../tag/C7C64ABB4647/#sgpt-0DC00279">1</a>, we have 
+    
+<div class="equation">
+  \[  \int _ X (\theta +\omega )_{t\varphi +(1-t)V_{\theta }}^ n= \int _ X (\theta +\omega )_{tP_{\theta }[\psi ]+(1-t)V_{\theta }}^ n.  \]
+</div>
+<p>
+       Since both sides are polynomials in $t$ by the multi-linearity of the non-pluripolar products proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">13.11.4</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>, the same holds when $t=1$. From the implication <a data-tag="0DC00279" href="../../tag/C7C64ABB4647/#sgpt-0DC00279">1</a> $\implies $ <a data-tag="8F96975E" href="../../tag/C7C64ABB4647/#sgpt-8F96975E">1</a> again, we have $\varphi \sim _ P P_{\theta }[\psi ]\sim _ P \psi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+Next we introduce a different preorder. <article class="env-proposition" id="sgpt-9FF73CFC">
+<p><a class="environment-identifier" href="../../tag/EE590FE41862/">Proposition <span data-tag="9FF73CFC">16.8.9</span>.</a><span data-gerby-tag="9FF73CFC"><code class="tag-id">EE590FE41862</code></span> Given $\varphi ,\psi \in \mathrm{QPSH}(X)$, the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-37577912"><span data-gerby-tag="37577912"><code class="tag-id">ABA41C3D6B24</code></span><p>
+ For any $k\in \mathbb {Z}_{&gt;0}$, we have 
+</p>
+<div class="equation">
+  \[  \mathcal{I}(k\varphi )\subseteq \mathcal{I}(k\psi );  \]
+</div>
+</li><li class="custom-item" id="sgpt-472E385C"><span data-gerby-tag="472E385C"><code class="tag-id">C970FD27DA7D</code></span><p>
+ for any $\lambda \in \mathbb {R}_{&gt;0}$, we have 
+</p>
+<div class="equation">
+  \[  \mathcal{I}(\lambda \varphi )\subseteq \mathcal{I}(\lambda \psi );  \]
+</div>
+</li><li class="custom-item" id="sgpt-7EFB768E"><span data-gerby-tag="7EFB768E"><code class="tag-id">EE2809B429C8</code></span><p>
+ for any modification $\pi \colon Y\rightarrow X$ and any $y\in Y$, we have 
+</p>
+<div class="equation">
+  \[  \nu (\pi ^*\varphi ,y)\geq \nu (\pi ^*\psi ,y);  \]
+</div>
+</li><li class="custom-item" id="sgpt-E235BC2F"><span data-gerby-tag="E235BC2F"><code class="tag-id">F03432967BAB</code></span><p>
+ for any proper bimeromorphic morphism $\pi \colon Y\rightarrow X$ from a Kähler manifold and any $y\in Y$, we have 
+</p>
+<div class="equation">
+  \[  \nu (\pi ^*\varphi ,y)\geq \nu (\pi ^*\psi ,y);  \]
+</div>
+</li><li class="custom-item" id="sgpt-1F171A3C"><span data-gerby-tag="1F171A3C"><code class="tag-id">7B8BA50C8017</code></span><p>
+ for any prime divisor $E$ over $X$, we have 
+</p>
+<div class="equation">
+  \[  \nu (\varphi ,E)\geq \nu (\psi ,E).  \]
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The proof is almost identical to that of proposition <a data-tag="24D38FCD" href="../../tag/8769D844C274/">16.6.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-definition" id="sgpt-534FD2DC">
+<p><a class="environment-identifier" href="../../tag/5C5512F45CC2/">Definition <span data-tag="534FD2DC">16.8.10</span>.</a><span data-gerby-tag="534FD2DC"><code class="tag-id">5C5512F45CC2</code></span> Let $\varphi ,\psi \in \mathrm{QPSH}(X)$, we say $\varphi $ is <em>$\mathcal{I}$-more singular than $\psi $</em> and write $\varphi \preceq _{\mathcal{I}} \psi $ if the equivalent conditions in proposition <a data-tag="9FF73CFC" href="../../tag/EE590FE41862/">16.8.9</a> are satisfied. </p>
+</article> It is clear that $\preceq _{\mathcal{I}}$ is a preorder on $\mathrm{QPSH}(X)$. 
+
+<p>
+Note that $\varphi \preceq _{\mathcal{I}}\psi $ and $\psi \preceq _{\mathcal{I}}\varphi $ both hold if and only if $\varphi \sim _{\mathcal{I}}\psi $ in the sense of definition <a data-tag="6FD5CB8F" href="../../tag/3B668848773E/">16.6.3</a>. 
+</p>
+<p>
+Given closed positive $(1,1)$-currents $T=\theta _{\varphi }$, $S=\theta '_{\psi }$, we write $T\preceq _{\mathcal{I}} S$ (resp. $T\sim _{\mathcal{I}} S$) if $\varphi \preceq _{\mathcal{I}} \psi $ (resp. $\varphi \sim _{\mathcal{I}} \psi $). This definition is independent of the decompositions of $T$ and $S$. 
+</p>
+
+<article class="env-lemma" id="sgpt-F10E91ED">
+<p><a class="environment-identifier" href="../../tag/4A5CF38738F2/">Lemma <span data-tag="F10E91ED">16.8.11</span>.</a><span data-gerby-tag="F10E91ED"><code class="tag-id">4A5CF38738F2</code></span> Let $\theta $ be a closed smooth real $(1,1)$-form on $X$ representing a big cohomology class. Let $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation numbered-equation" id="sgpt-6E40067B"><span data-gerby-tag="6E40067B"><code class="tag-id">295DE82294BA</code></span>
+<span class="equation-label"><a data-tag="6E40067B" href="../../tag/295DE82294BA/">16.8.12</a></span>
+<div>\begin{equation}  P_{\theta }[\varphi \lor \psi ]=P_{\theta }\Bigl [ P_{\theta }[\varphi ]\lor P_{\theta }[\psi ] \Bigr ]. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\varphi \lor \psi \preceq P_{\theta }[\varphi ]\lor P_{\theta }[\psi ]$, the $\leq $ direction of (<a data-tag="6E40067B" href="../../tag/295DE82294BA/">16.8.12</a>) follows. Conversely, it suffices to show that 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi \lor \psi ]\geq P_{\theta }[\varphi ]\lor P_{\theta }[\psi ],  \]
+</div>
+<p>
+       which follows from $\varphi \preceq \varphi \lor \psi $, $\psi \preceq \varphi \lor \psi $, and the monotonicity of the $P$-envelope with respect to $\preceq $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="sgpt-E8047F11">
+<p><a class="environment-identifier" href="../../tag/005A077A0167/">Lemma <span data-tag="E8047F11">16.8.13</span>.</a><span data-gerby-tag="E8047F11"><code class="tag-id">005A077A0167</code></span> Let $\varphi ,\psi \in \mathrm{QPSH}(X)$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-877F0D64"><span data-gerby-tag="877F0D64"><code class="tag-id">F123EB79E13C</code></span><p>
+ $\varphi \preceq _ P \psi $ (resp. $\varphi \preceq _{\mathcal{I}} \psi $); 
+</p>
+</li><li class="custom-item" id="sgpt-76AF4882"><span data-gerby-tag="76AF4882"><code class="tag-id">1D8449F6F20B</code></span><p>
+ $\varphi \lor \psi \sim _ P\psi $ (resp. $\varphi \lor \psi \sim _{\mathcal{I}}\psi $). 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take a closed real smooth $(1,1)$-form $\theta $ on $X$ such that $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. We only prove the $P$ case, the $\mathcal{I}$ case is similar. 
+    <p>
+<a data-tag="76AF4882" href="../../tag/005A077A0167/#sgpt-76AF4882">2</a> $\implies $ <a data-tag="877F0D64" href="../../tag/005A077A0167/#sgpt-877F0D64">1</a>. Assume <a data-tag="76AF4882" href="../../tag/005A077A0167/#sgpt-76AF4882">2</a>. By <a data-tag="76AF4882" href="../../tag/005A077A0167/#sgpt-76AF4882">2</a> and example <a data-tag="A2EA28E7" href="../../tag/14285897F9E7/">16.8.6</a>, $P_{\theta }[\varphi \lor \psi ]=P_{\theta }[\psi ]\sim _ P \psi $. But $\varphi \preceq P_{\theta }[\varphi \lor \psi ]$, so <a data-tag="877F0D64" href="../../tag/005A077A0167/#sgpt-877F0D64">1</a> follows. 
+    <p>
+<a data-tag="877F0D64" href="../../tag/005A077A0167/#sgpt-877F0D64">1</a> $\implies $ <a data-tag="76AF4882" href="../../tag/005A077A0167/#sgpt-76AF4882">2</a>. Assume <a data-tag="877F0D64" href="../../tag/005A077A0167/#sgpt-877F0D64">1</a>. We may assume that $\varphi ,\psi $ are both model by <a data-tag="F10E91ED" href="../../tag/4A5CF38738F2/">16.8.11</a>. Then $\varphi \leq \psi $ and <a data-tag="76AF4882" href="../../tag/005A077A0167/#sgpt-76AF4882">2</a> follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-B623A66E">
+<p><a class="environment-identifier" href="../../tag/FE600747C81E/">Corollary <span data-tag="B623A66E">16.8.14</span>.</a><span data-gerby-tag="B623A66E"><code class="tag-id">FE600747C81E</code></span> Let $\varphi ,\psi \in \mathrm{QPSH}(X)$. Assume that $\varphi \preceq _ P \psi $. Then $\varphi \preceq _{\mathcal{I}}\psi $. </p>
+</article> Therefore, the preorder $\preceq _{\mathcal{I}}$ is coarser than $\preceq _ P$. Given $\varphi ,\psi \in \mathrm{QPSH}(X)$, we therefore have the implications: 
+
+<div class="equation">
+  \[  \varphi \preceq \psi \implies \varphi \preceq _ P \psi \implies \varphi \preceq _{\mathcal{I}} \psi .  \]
+</div>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Thanks to <a data-tag="E8047F11" href="../../tag/005A077A0167/">16.8.13</a>, we have $\varphi \lor \psi \sim _ P \psi $. Take a closed smooth real $(1,1)$-form $\theta $ on $X$ such that $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then by proposition <a data-tag="0437CA76" href="../../tag/8AE79B76D6D2/">16.6.18</a>, we have 
+    
+<div class="equation">
+  \[  \psi \sim _{\mathcal{I}} P_{\theta }[\psi ]= P_{\theta }\left[\varphi \lor \psi \right]\sim _{\mathcal{I}} \varphi \lor \psi .  \]
+</div>
+<p>
+       Our assertion follows from the $\mathcal{I}$-version of <a data-tag="E8047F11" href="../../tag/005A077A0167/">16.8.13</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+Next we give a few extra characterizations of the $P$-envelope. <article class="env-corollary" id="sgpt-8EF406D8">
+<p><a class="environment-identifier" href="../../tag/564E8A0E68F9/">Corollary <span data-tag="8EF406D8">16.8.15</span>.</a><span data-gerby-tag="8EF406D8"><code class="tag-id">564E8A0E68F9</code></span> Let $\theta $ be a closed smooth real $(1,1)$-form on $X$ representing a big cohomology class. Assume that $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation">
+  \[  \begin{aligned}  P_{\theta }[\varphi ]=&amp; \sup \left\{  \psi \in \mathrm{PSH}(X,\theta ): \psi \leq 0, \psi \sim _ P \varphi \right\} \\  =&amp;  \sup \left\{  \psi \in \mathrm{PSH}(X,\theta ): \psi \leq 0, \psi \preceq _ P \varphi \right\} . \end{aligned}  \]
+</div>
+</article> Just for comparison, let us recall a few other characterizations of the $P$-envelope for $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$: 
+
+<div class="equation">
+  \[  \begin{aligned}  P_{\theta }[\varphi ]=&amp; \operatorname *{sup}_{}{}\! {}^{*}\left\{  \psi \in \mathrm{PSH}(X,\theta ):\psi \leq 0,\psi \preceq \varphi \right\} \\  =&amp; \operatorname *{sup}_{}{}\! {}^{*}\left\{  \psi \in \mathrm{PSH}(X,\theta ):\psi \leq 0,\psi \sim \varphi \right\} \\  =&amp; \operatorname *{sup}_{C\in \mathbb {Z}_{&gt;0}}{}\! {}^{*} (\varphi +C)\land V_{\theta }\\  =&amp;  \sup \left\{ \psi \in \mathrm{PSH}(X,\theta ): \psi \leq 0,\varphi \preceq \psi , \int _ X \theta _{\varphi }^ n=\int _ X \theta _{\psi }^ n\right\} . \end{aligned}  \]
+</div>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Note that $\psi \sim _ P \varphi $ implies that $\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ by proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a>. We observe that 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \sup \left\{  \psi \in \mathrm{PSH}(X,\theta ): \psi \leq 0, \psi \sim _ P \varphi \right\} \\ =&amp; \sup \left\{  \psi \in \mathrm{PSH}(X,\theta ): \psi \leq 0, \varphi \preceq \psi , \psi \sim _ P \varphi \right\}  \end{split}  \]
+</div>
+<p>
+       since for any candidate $\psi $ for the first supremum, $\psi \lor (\varphi -\sup _ X \varphi )$ is larger than $\psi $, and is a candidate for the second supremum thanks to <a data-tag="E8047F11" href="../../tag/005A077A0167/">16.8.13</a>. So the first equality is a direct consequence of proposition <a data-tag="2047C5CC" href="../../tag/C7C64ABB4647/">16.8.7</a> and theorem <a data-tag="36606B5B" href="../../tag/7ADF30509E4E/">16.3.15</a>. 
+    <p>
+      Next we prove the second equality. We only need to show that for any $\psi \in \mathrm{PSH}(X,\theta )$ with $\psi \leq 0$ and $\psi \preceq _ P \varphi $, we have $\psi \leq P_{\theta }[\varphi ]$. 
+    <p>
+      By <a data-tag="E8047F11" href="../../tag/005A077A0167/">16.8.13</a> and example <a data-tag="A2EA28E7" href="../../tag/14285897F9E7/">16.8.6</a>, we know that $P_{\theta }[\varphi ]\lor \psi \sim _ P \varphi $ and $P_{\theta }[\varphi ]\lor \psi \leq 0$. It follows from the first equality that $\psi \leq P_{\theta }[\varphi ]$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+ Similarly, we have a new characterization of the $\mathcal{I}$-envelope. <article class="env-corollary" id="sgpt-148EF361">
+<p><a class="environment-identifier" href="../../tag/69E7C4B20FAE/">Corollary <span data-tag="148EF361">16.8.16</span>.</a><span data-gerby-tag="148EF361"><code class="tag-id">69E7C4B20FAE</code></span> Let $\theta $ be a closed smooth real $(1,1)$-form on $X$ representing a pseudo-effective cohomology class. Assume that $\varphi \in \mathrm{PSH}(X,\theta )$. Then </p>
+<div class="equation">
+  \[  P_{\theta }[\varphi ]_{\mathcal{I}}=\sup \left\{  \psi \in \mathrm{PSH}(X,\theta ): \psi \leq 0, \psi \preceq _{\mathcal{I}} \varphi \right\} .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to show that for any $\psi \in \mathrm{PSH}(X,\theta )$ with $\psi \leq 0$ and $\psi \preceq _{\mathcal{I}}\varphi $, we have $\psi \leq P_{\theta }[\varphi ]_{\mathcal{I}}$. By <a data-tag="E8047F11" href="../../tag/005A077A0167/">16.8.13</a> and proposition <a data-tag="898F78D9" href="../../tag/363E28FF4A61/">16.6.11</a>, we know that $P_{\theta }[\varphi ]_{\mathcal{I}}\lor \psi \sim _{\mathcal{I}}\varphi $. Therefore, $P_{\theta }[\varphi ]_{\mathcal{I}}\lor \psi $ is a candidate in the definition of $P_{\theta }[\varphi ]_{\mathcal{I}}$ (cf. (<a data-tag="11CC46EC" href="../../tag/FA4D3373FBAE/">16.6.8</a>)), so 
+    
+<div class="equation">
+  \[  \psi \leq P_{\theta }[\varphi ]_{\mathcal{I}}\lor \psi \leq P_{\theta }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       We conclude the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="sgpt-B0226FF8">
+<p><a class="environment-identifier" href="../../tag/2E8F613E7CBE/">Proposition <span data-tag="B0226FF8">16.8.17</span>.</a><span data-gerby-tag="B0226FF8"><code class="tag-id">2E8F613E7CBE</code></span> Let $\theta $ be a closed real smooth $(1,1)$-form on $X$ and $\varphi ,\psi \in \mathrm{PSH}(X,\theta )$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-D99760F5"><span data-gerby-tag="D99760F5"><code class="tag-id">42227A6623F5</code></span><p>
+ $\varphi \preceq _{\mathcal{I}}\psi $; 
+</p>
+</li><li class="custom-item" id="sgpt-F9C3E069"><span data-gerby-tag="F9C3E069"><code class="tag-id">6B5F8E56CB73</code></span><p>
+ $P_{\theta }[\varphi ]_{\mathcal{I}}\leq P_{\theta }[\psi ]_{\mathcal{I}}$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="D99760F5" href="../../tag/2E8F613E7CBE/#sgpt-D99760F5">1</a> $\implies $ <a data-tag="F9C3E069" href="../../tag/2E8F613E7CBE/#sgpt-F9C3E069">2</a>. This follows immediately from corollary <a data-tag="148EF361" href="../../tag/69E7C4B20FAE/">16.8.16</a>. 
+    <p>
+<a data-tag="F9C3E069" href="../../tag/2E8F613E7CBE/#sgpt-F9C3E069">2</a> $\implies $ <a data-tag="D99760F5" href="../../tag/2E8F613E7CBE/#sgpt-D99760F5">1</a>. It follows from proposition <a data-tag="898F78D9" href="../../tag/363E28FF4A61/">16.6.11</a> that 
+    
+<div class="equation">
+  \[  \varphi \sim _{\mathcal{I}} P_{\theta }[\varphi ]_{\mathcal{I}}\leq P_{\theta }[\psi ]_{\mathcal{I}} \sim _{\mathcal{I}} \psi .  \]
+</div>
+<p>
+       We conclude <a data-tag="D99760F5" href="../../tag/2E8F613E7CBE/#sgpt-D99760F5">1</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-example" id="sgpt-16B8F82C">
+<p><a class="environment-identifier" href="../../tag/C7A2AD00BFF3/">Example <span data-tag="16B8F82C">16.8.18</span>.</a><span data-gerby-tag="16B8F82C"><code class="tag-id">C7A2AD00BFF3</code></span> Let us continue our example example <a data-tag="BAA6FABC" href="../../tag/E548BFB3BF04/">16.3.22</a>, where $X=\mathbb {P}^1$, $\omega $ is the Fubini–Study metric and $\varphi \in \mathrm{PSH}(X,\omega )$ has log-log singularity at $0$. We have shown that $P_{\omega }[\varphi ]=0$ in (<a data-tag="441C9097" href="../../tag/B2DFFDD6A0F3/">16.3.23</a>), so $\varphi \sim _{P} 0$ and hence $\varphi \sim _{\mathcal{I}} 0$. In particular, $P$-equivalence is not equivalent to the equivalence of singularity types. </p>
+<p>On the other hand, consider a potential $\psi \in \mathrm{PSH}(X,\omega )$ with log singularity at $0$, as in example <a data-tag="866F3C9A" href="../../tag/CC1C409253F3/">5.20.12</a>. We know that $\nu (\psi ,0)=1$ from the explicit expression (<a data-tag="3C92A163" href="../../tag/6B76079BBD9C/">5.20.13</a>). So $\psi \not\sim _{\mathcal{I}} 0$ and hence $\psi \not\sim _{P} 0$. </p>
+<p>Moreover, $\psi \preceq _{P} \varphi $ and hence $\psi \preceq _{\mathcal{I}}\varphi $. </p>
+</article>
+
+
+We give an example showing that $P$-equivalence is not equivalent to $\mathcal{I}$-equivalence. <article class="env-example" id="sgpt-65A23FEC">
+<p><a class="environment-identifier" href="../../tag/325A49CBCF74/">Example <span data-tag="65A23FEC">16.8.19</span>.</a><span data-gerby-tag="65A23FEC"><code class="tag-id">325A49CBCF74</code></span> Let $X=\mathbb {P}^1$ and $\omega $ be the Fubini–Study metric. Let $K\subseteq \mathbb {P}^1$ be a polar Cantor set carrying an atom free probability measure $\mu $ supported on $K$ (see <span class="cite">[<span class="postnote">Page 31</span>, <a href="../../references/#R3A1BF853FA7A">Car83</a>]</span>). Write $\mu =\omega +\mathrm{dd}^{\mathrm{c}}\varphi $ for some $\omega $-subharmonic function $\varphi $. Since $\mu $ is atom free, we know that all Lelong numbers of $\varphi $ are $0$. On the other hand, $\varphi $ has $0$ non-pluripolar mass since $K$ is pluripolar. </p>
+<p>Then observe that $\varphi \sim _{\mathcal{I}} 0$ while $\varphi \not\sim _ P 0$. </p>
+</article>
+
+
+For later use, we give the following definition. <article class="env-definition" id="sgpt-C6FE534B">
+<p><a class="environment-identifier" href="../../tag/33F50367BB68/">Definition <span data-tag="C6FE534B">16.8.20</span>.</a><span data-gerby-tag="C6FE534B"><code class="tag-id">33F50367BB68</code></span> Let $L$ be a pseudo-effective line bundle on $X$. An <em>elementary metric</em> on $L$ is a psh metric $h$ on $L$ such that there is a generalized Fubini–Study metric $h'$ on $L$ such that </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}h\sim _{P} \mathrm{dd}^{\mathrm{c}}h'.  \]
+</div>
+<p> The set of elementary metrics on $L$ is denoted by $\mathrm{Ele}(L)$. </p>
+<p>We also say $\mathrm{dd}^{\mathrm{c}}h$ is elementary. If we have fixed a Hermitian metric $h_0$ on $L$, and if we represent $h$ as $h_0\exp (-\varphi )$, we also say the quasi-psh function $\varphi $ is elementary. </p>
+</article> Recall that the generalized Fubini–Study metrics are defined in definition <a data-tag="CE1E7AF0" href="../../tag/8FCD7BEEDD56/">5.20.15</a>. 
+
+</div></section><section class="reading-chunk" id="entry-F4304BE7EF91" data-section-entries="1C6DED516857 1CA975F04423 21CC5153F56F 3BF94E656512 42D232E5CD85 4EE47D80CC25 68E00C8C52A1 82DCD8E3B1BA 8C181599D520 9690BB77C920 C42706880DED F4304BE7EF91 FB1663F2B6E1"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/F4304BE7EF91/">16.8.21 Properties of the preorders</a><code class="tag-id">F4304BE7EF91</code></h2><span data-gerby-tag="BA891D08"></span>
+
+Now we state a more natural version of the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">13.13.11</a>. <article class="env-proposition" id="sgpt-9C02A916">
+<p><a class="environment-identifier" href="../../tag/82DCD8E3B1BA/">Proposition <span data-tag="9C02A916">16.8.22</span> <span class="named">(Monotonicity theorem)</span>.</a><span data-gerby-tag="9C02A916"><code class="tag-id">82DCD8E3B1BA</code></span> Let $\theta _1,\ldots ,\theta _ n$ be closed real smooth $(1,1)$-forms on $X$. Let $\varphi _ i,\psi _ i\in \mathrm{PSH}(X,\theta _ i)$ for $i=1,\ldots ,n$. Assume that $\varphi _ i\preceq _ P \psi _ i$ for each $i$. Then </p>
+<div class="equation">
+  \[  \int _ X \theta _{1,\varphi _1}\wedge \cdots \wedge \theta _{n,\varphi _ n}\leq \int _ X \theta _{1,\psi _1}\wedge \cdots \wedge \theta _{n,\psi _ n}.  \]
+</div>
+<p> In other words, the non-pluripolar mass is a decreasing quantity with respect to the $P$-singularity types of the potentials. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a Kähler form $\omega $ on $X$. For each $i=1,\ldots ,n$, since $\varphi _ i\preceq _ P\psi _ i$, we have 
+    
+<div class="equation">
+  \[  P_{\theta _ i+\epsilon \omega }[\varphi _ i]\leq P_{\theta _ i+\epsilon \omega }[\psi _ i]  \]
+</div>
+<p>
+       for all $\epsilon &gt;0$. Therefore, by proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a> and our previous monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">13.13.11</a>, we have 
+    
+<div class="equation">
+  \[  \int _ X (\theta _1+\epsilon \omega )_{\varphi _1}\wedge \cdots \wedge (\theta _ n+\epsilon \omega )_{\varphi _ n}\leq \int _ X (\theta _1+\epsilon \omega )_{\psi _1}\wedge \cdots \wedge (\theta _ n+\epsilon \omega )_{\psi _ n}.  \]
+</div>
+<p>
+       Letting $\epsilon \to 0+$ and applying the multi-linearity of the non-pluripolar products proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">13.11.4</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>, we find the desired inequality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+The $P$-preorder allows us to derive a natural generalization of <a data-tag="8560C5E9" href="../../tag/1CC7CDBE65A9/">13.13.30</a>. <article class="env-theorem" id="sgpt-630E2895">
+<p><a class="environment-identifier" href="../../tag/68E00C8C52A1/">Theorem <span data-tag="630E2895">16.8.23</span>.</a><span data-gerby-tag="630E2895"><code class="tag-id">68E00C8C52A1</code></span> Let $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, $\varphi \preceq _ P \psi $. Then for any </p>
+<div class="equation numbered-equation" id="sgpt-277736A1"><span data-gerby-tag="277736A1"><code class="tag-id">3BF94E656512</code></span>
+<span class="equation-label"><a data-tag="277736A1" href="../../tag/3BF94E656512/">16.8.24</a></span>
+<div>\begin{equation}  a\in \left( 1, \left(\frac{\int _ X \theta _{\psi }^ n}{\int _ X \theta _{\psi }^ n-\int _ X \theta _{\varphi }^ n}\right)^{1/n} \right), \end{equation}</div>
+</div>
+<p> the function </p>
+<div class="equation">
+  \[  \eta \coloneqq P_{\theta }\Bigl (a\varphi +(1-a)\psi \Bigr )  \]
+</div>
+<p> lies in $\mathrm{PSH}(X,\theta )_{&gt;0}$, satisfies $\eta \preceq _ P \varphi $ and </p>
+<div class="equation numbered-equation" id="sgpt-EBE797C4"><span data-gerby-tag="EBE797C4"><code class="tag-id">9690BB77C920</code></span>
+<span class="equation-label"><a data-tag="EBE797C4" href="../../tag/9690BB77C920/">16.8.25</a></span>
+<div>\begin{equation}  a^{-1}\eta +\left(1-a^{-1}\right)\psi \leq \varphi . \end{equation}</div>
+</div>
+<p>If in addition, $\varphi \sim _ P \psi $, then $\eta \sim _ P \varphi $ as well. </p>
+</article> In (<a data-tag="277736A1" href="../../tag/3BF94E656512/">16.8.24</a>), the fraction is understood as $\infty $ if either $\int _ X \theta _{\psi }^ n=\int _ X \theta _{\varphi }^ n$ or $n=0$, exactly as in <a data-tag="8560C5E9" href="../../tag/1CC7CDBE65A9/">13.13.30</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By our assumption and (<a data-tag="DBCD5710" href="../../tag/268F8CAEF7E2/">16.3.8</a>), we have $\varphi \preceq P_{\theta }[\varphi ]\leq P_{\theta }[\psi ]$. Due to proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a>, the interval (<a data-tag="277736A1" href="../../tag/3BF94E656512/">16.8.24</a>) remains unchanged after replacing $\psi $ by $P_{\theta }[\psi ]$. Fix $a$ in this interval. So by <a data-tag="8560C5E9" href="../../tag/1CC7CDBE65A9/">13.13.30</a> and the discussions afterwards, 
+    
+<div class="equation">
+  \[  \eta '\coloneqq P_{\theta }\Bigl (a\varphi +(1-a)P_{\theta }[\psi ]\Bigr )\in \mathrm{PSH}(X,\theta )_{&gt;0}.  \]
+</div>
+<p>
+       We first check that $\eta $ is a genuine $\theta $-psh function. Choose a closed non-pluripolar set $K\subseteq X$ on which $\varphi $ and $\psi $ are bounded. Then the obstacle $a\varphi +(1-a)\psi $ is bounded above on $K$. Every candidate in the definition of $\eta $ is therefore uniformly bounded above on $X$ by <a data-tag="26574542" href="../../tag/0CEC6D75820C/">5.17.4</a>, so $\eta \not\equiv \infty $ and hence $\eta \in \mathrm{PSH}(X,\theta )\cup \{ -\infty \} $. On the other hand, since $\psi \preceq P_{\theta }[\psi ]$, we can find $C&gt;0$ such that $\psi \leq P_{\theta }[\psi ]+C$. Then 
+    
+<div class="equation">
+  \[  \eta '-(a-1)C\leq a\varphi +(1-a)\psi  \]
+</div>
+<p>
+       quasi-everywhere, hence $\eta \geq \eta '-(a-1)C$. Thus $\eta '\preceq \eta $, and the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">13.13.11</a> gives $\eta \in \mathrm{PSH}(X,\theta )_{&gt;0}$. 
+    <p>
+      By (<a data-tag="85329A28" href="../../tag/5F5458A60B41/">13.13.20</a>), 
+    
+<div class="equation">
+  \[  \eta \leq a\varphi +(1-a)\psi  \]
+</div>
+<p>
+       quasi-everywhere. Equivalently, (<a data-tag="EBE797C4" href="../../tag/9690BB77C920/">16.8.25</a>) holds quasi-everywhere. Since both sides of (<a data-tag="EBE797C4" href="../../tag/9690BB77C920/">16.8.25</a>) are $\theta $-psh, proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">5.14.6</a> upgrades the inequality to an everywhere inequality. 
+    <p>
+      It remains to prove the assertion about the $P$-order. Using proposition <a data-tag="9AB8A7BE" href="../../tag/CF5FECD1B547/">16.4.2</a>, we get 
+    
+<div class="equation">
+  \[  a^{-1} P_{\theta }[\eta ]+\left(1-a^{-1}\right)P_{\theta }[\psi ] \leq P_{\theta }[\varphi ].  \]
+</div>
+<p>
+       By the assumption $\varphi \preceq _ P\psi $, we also have $P_{\theta }[\varphi ]\leq P_{\theta }[\psi ]$. Therefore, 
+    
+<div class="equation">
+  \[  a^{-1} P_{\theta }[\eta ]\leq P_{\theta }[\varphi ]-\left(1-a^{-1}\right)P_{\theta }[\psi ]\leq a^{-1} P_{\theta }[\varphi ]  \]
+</div>
+<p>
+       quasi-everywhere and hence everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">5.14.6</a>. It follows that $P_{\theta }[\eta ]\leq P_{\theta }[\varphi ]$, namely $\eta \preceq _ P\varphi $. 
+    <p>
+      Finally assume that $\varphi \sim _ P\psi $. Then $\int _ X\theta _{P_{\theta }[\psi ]}^ n=\int _ X\theta _{\varphi }^ n$ by proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a>. Applying corollary <a data-tag="43DC5A4B" href="../../tag/992A84CBAC5D/">13.13.42</a> gives 
+    
+<div class="equation">
+  \[  \int _ X\theta _{\eta '}^ n=\int _ X\theta _{\varphi }^ n.  \]
+</div>
+<p>
+       Since $\eta '\preceq \eta $, the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">13.13.11</a> gives 
+    
+<div class="equation">
+  \[  \int _ X\theta _{\eta }^ n\geq \int _ X\theta _{\varphi }^ n.  \]
+</div>
+<p>
+       The reverse inequality follows from $\eta \preceq _ P\varphi $ and proposition <a data-tag="9C02A916" href="../../tag/82DCD8E3B1BA/">16.8.22</a>. Hence $\eta \sim _ P\varphi $ by proposition <a data-tag="2047C5CC" href="../../tag/C7C64ABB4647/">16.8.7</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Next we show that the $P$ and $\mathcal{I}$-preorders are preserved by some natural operations. 
+</p>
+
+<article class="env-lemma" id="sgpt-2BD0A7BD">
+<p><a class="environment-identifier" href="../../tag/FB1663F2B6E1/">Lemma <span data-tag="2BD0A7BD">16.8.26</span>.</a><span data-gerby-tag="2BD0A7BD"><code class="tag-id">FB1663F2B6E1</code></span> Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism from a Kähler manifold $Y$. Given two quasi-plurisubharmonic functions $\varphi ,\psi $ on $X$, then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-D0FE454F"><span data-gerby-tag="D0FE454F"><code class="tag-id">8ED2C9D6D32D</code></span><p>
+ $\varphi \preceq _{P} \psi $; 
+</p>
+</li><li class="custom-item" id="sgpt-7AF403F0"><span data-gerby-tag="7AF403F0"><code class="tag-id">754FFF454EEB</code></span><p>
+ $\pi ^*\varphi \preceq _{P} \pi ^*\psi $. 
+</p>
+</li>
+</ol>
+<p> The same holds with $\mathcal{I}$ in place of $P$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In the $P$-case, this follows from proposition <a data-tag="0C43BCE4" href="../../tag/055CAE14F80F/">16.4.1</a>, while in the $\mathcal{I}$-case, this follows from proposition <a data-tag="D63378B8" href="../../tag/E535E4DC5384/">16.6.10</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-86A5051F">
+<p><a class="environment-identifier" href="../../tag/C42706880DED/">Proposition <span data-tag="86A5051F">16.8.27</span>.</a><span data-gerby-tag="86A5051F"><code class="tag-id">C42706880DED</code></span> Let $\varphi ,\psi ,\varphi ',\psi '\in \mathrm{QPSH}(X)$. Assume that </p>
+<div class="equation">
+  \[  \varphi \preceq _ P \psi ,\quad \varphi '\preceq _ P \psi '.  \]
+</div>
+<p> Then </p>
+<div class="equation">
+  \[  \varphi +\varphi '\preceq _ P \psi +\psi '.  \]
+</div>
+<p> The same holds with $\preceq _{\mathcal{I}}$ in place of $\preceq _ P$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take a Kähler form $\omega $ on $X$ such that $\varphi ,\psi ,\varphi ',\psi '\in \mathrm{PSH}(X,\omega )_{&gt;0}$. The statement for $\preceq _{\mathcal{I}}$ is a simple consequence of proposition <a data-tag="BEBA77BB" href="../../tag/B9C4FE156D00/">5.16.8</a>. We only need to handle the case of $\preceq _{P}$. 
+    <p>
+<strong>Step 1</strong>. We first show that 
+    
+<div class="equation">
+  \[  P_{\omega }[\varphi ]+P_{\omega }[\varphi ']\sim _ P \varphi +\varphi '.  \]
+</div>
+<p>
+       In fact, we clearly have 
+    
+<div class="equation">
+  \[  P_{\omega }[\varphi ]+P_{\omega }[\varphi ']\succeq \varphi +\varphi '.  \]
+</div>
+<p>
+       So by proposition <a data-tag="2047C5CC" href="../../tag/C7C64ABB4647/">16.8.7</a>, it suffices to show that they have the same mass. We compute 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \int _ X \Bigl (2\omega +\mathrm{dd}^{\mathrm{c}}P_{\omega }[\varphi ]+\mathrm{dd}^{\mathrm{c}}P_{\omega }[\varphi ']\Bigr )^ n\\  =&amp;  \sum _{j=0}^ n \binom {n}{j} \int _ X \Bigl (\omega +\mathrm{dd}^{\mathrm{c}}P_{\omega }[\varphi ]\Bigr )^ j\wedge \Bigl (\omega +\mathrm{dd}^{\mathrm{c}}P_{\omega }[\varphi ']\Bigr )^{n-j}\\  =&amp;  \sum _{j=0}^ n \binom {n}{j} \int _ X \omega _{\varphi }^ j\wedge \omega _{\varphi '}^{n-j}\\  =&amp;  \int _ X \left(2\omega +\mathrm{dd}^{\mathrm{c}}\varphi +\mathrm{dd}^{\mathrm{c}}\varphi '\right)^ n, \end{aligned}  \]
+</div>
+<p>
+       where we applied proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a> to the mixed products on the third line. 
+    <p>
+<strong>Step 2</strong>. By Step 1, we may assume that $\varphi ,\psi ,\varphi ',\psi '$ are all model potentials, after replacing them by their $P_{\omega }$-envelopes. So $\varphi \leq \psi $ and $\varphi '\leq \psi '$. Our assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-30130F48">
+<p><a class="environment-identifier" href="../../tag/1C6DED516857/">Proposition <span data-tag="30130F48">16.8.28</span>.</a><span data-gerby-tag="30130F48"><code class="tag-id">1C6DED516857</code></span> Let $(\varphi _ i)_{i\in I}$, $(\psi _ i)_{i\in I}$ be uniformly bounded from above non-empty families in $\mathrm{QPSH}(X)$. Assume that there exists a closed smooth real $(1,1)$-form $\theta $ such that $\varphi _ i,\psi _ i\in \mathrm{PSH}(X,\theta )$ and $\varphi _ i\preceq _ P \psi _ i$ for all $i\in I$. Then </p>
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*} \varphi _ i\preceq _ P \operatorname *{sup}_{i\in I}{}\! {}^{*}\psi _ i.  \]
+</div>
+<p>The same holds with $\preceq _{\mathcal{I}}$ in place of $\preceq _ P$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By adding a Kähler form to $\theta $, we may assume that $\varphi _ i,\psi _ i\in \mathrm{PSH}(X,\theta )_{&gt;0}$ for all $i\in I$. The statement for $\preceq _{\mathcal{I}}$ is a simple consequence of corollary <a data-tag="D8C9CDFB" href="../../tag/F3F797E97E9D/">5.16.9</a>, we only have to consider the statement for $\preceq _ P$. 
+    <p>
+<strong>Step 1</strong>. We first handle the case where $I$ is a directed set and $(\varphi _ i)_{i\in I}$ and $(\psi _ i)_{i\in I}$ are increasing nets. 
+    <p>
+      In this case, our assertion follows simply from proposition <a data-tag="1A5AE3C4" href="../../tag/3654A10A0CCC/">16.4.9</a>. 
+    <p>
+<strong>Step 2</strong>. We handle the case where $I$ is finite. We may assume that $I=\{ 0,1\} $. It suffices to show that 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi _0]\lor P_{\theta }[\varphi _1]\sim _ P \varphi _0\lor \varphi _1,  \]
+</div>
+<p>
+       which follows from <a data-tag="F10E91ED" href="../../tag/4A5CF38738F2/">16.8.11</a>. 
+    <p>
+<strong>Step 3</strong>. The general case can be reduced to the two cases handled in Step 1 and Step 2. More precisely, by applying proposition <a data-tag="BAE53833" href="../../tag/1D624ECF05E9/">5.14.3</a> to the two families and taking the union of the resulting countable subsets, we can find a countable subset $J\subseteq I$ such that 
+    
+<div class="equation">
+  \[  \operatorname *{sup}_{j\in J}{}\! {}^{*} \varphi _ j=\operatorname *{sup}_{i\in I}{}\! {}^{*} \varphi _ i,\quad \operatorname *{sup}_{j\in J}{}\! {}^{*} \psi _ j=\operatorname *{sup}_{i\in I}{}\! {}^{*} \psi _ i.  \]
+</div>
+<p>
+       We may replace $I$ by $J$ and assume that $I$ is countable. If $I$ is finite, Step 2 applies directly. Otherwise, write $I=\mathbb {Z}_{&gt;0}$ and set 
+    
+<div class="equation">
+  \[  \tilde{\varphi }_ m=\varphi _1\lor \cdots \lor \varphi _ m,\quad \tilde{\psi }_ m=\psi _1\lor \cdots \lor \psi _ m.  \]
+</div>
+<p>
+       By Step 2, $\tilde{\varphi }_ m\preceq _ P\tilde{\psi }_ m$ for every $m$. The two new sequences are increasing and have the same upper envelopes as the original families, so Step 1 applies. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+We now refine <a data-tag="6AF33F49" href="../../tag/BCC1B8FD1BED/">16.3.32</a> using the $P$-equivalence relation. <article class="env-proposition" id="sgpt-BD95B46E">
+<p><a class="environment-identifier" href="../../tag/8C181599D520/">Proposition <span data-tag="BD95B46E">16.8.29</span>.</a><span data-gerby-tag="BD95B46E"><code class="tag-id">8C181599D520</code></span> Let $\varphi ,\psi ,\varphi ',\psi '\in \mathrm{PSH}(X,\theta )$ for some closed smooth real $(1,1)$-form $\theta $ on $X$. Assume that </p>
+<div class="equation">
+  \[  \varphi \sim _ P \varphi ',\quad \psi \sim _ P\psi ',\quad \varphi '\land \psi '\in \mathrm{PSH}(X,\theta )_{&gt;0}.  \]
+</div>
+<p> Then </p>
+<div class="equation">
+  \[  \varphi \land \psi \in \mathrm{PSH}(X,\theta )_{&gt;0},\quad \varphi \land \psi \sim _ P \varphi '\land \psi '.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first observe that $\varphi ,\varphi ',\psi ,\psi '\in \mathrm{PSH}(X,\theta )_{&gt;0}$ by assumption. Let 
+    
+<div class="equation">
+  \[  \phi \coloneqq P_{\theta }[\varphi ]=P_{\theta }[\varphi '],\quad \gamma =P_{\theta }[\psi ]=P_{\theta }[\psi '].  \]
+</div>
+<p>
+       Since $\varphi '\preceq \phi $ and $\psi '\preceq \gamma $, after adding a common constant to $\varphi '$ and $\psi '$, we may assume that $\varphi '\leq \phi $ and $\psi '\leq \gamma $. Then $\varphi '\land \psi '\leq \phi \land \gamma $, so the assumption $\varphi '\land \psi '\in \mathrm{PSH}(X,\theta )_{&gt;0}$ implies $\phi \land \gamma \in \mathrm{PSH}(X,\theta )_{&gt;0}$ by monotonicity. It follows from <a data-tag="6AF33F49" href="../../tag/BCC1B8FD1BED/">16.3.32</a> that 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\varphi '\land \psi '}^ n=\int _ X \theta _{\phi \land \gamma }^ n.  \]
+</div>
+<p>
+       Next, we apply <a data-tag="6AF33F49" href="../../tag/BCC1B8FD1BED/">16.3.32</a> again to conclude that $\varphi \land \psi \in \mathrm{PSH}(X,\theta )$ and 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\varphi \land \psi }^ n=\int _ X \theta _{\phi \land \gamma }^ n=\int _ X \theta _{\varphi '\land \psi '}^ n&gt;0.  \]
+</div>
+<p>
+       Since $\varphi \land \psi \preceq \phi \land \gamma $ and the two potentials have the same positive mass, theorem <a data-tag="36606B5B" href="../../tag/7ADF30509E4E/">16.3.15</a> gives $P_{\theta }[\varphi \land \psi ]=\phi \land \gamma $. The same argument gives $P_{\theta }[\varphi '\land \psi ']=\phi \land \gamma $, hence $\varphi \land \psi \sim _ P\varphi '\land \psi '$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+We can formulate a generalization of proposition <a data-tag="A836F73B" href="../../tag/75FA2659491D/">16.5.54</a> using the $P$-partial order. <article class="env-corollary" id="sgpt-A6227B93">
+<p><a class="environment-identifier" href="../../tag/21CC5153F56F/">Corollary <span data-tag="A6227B93">16.8.30</span>.</a><span data-gerby-tag="A6227B93"><code class="tag-id">21CC5153F56F</code></span> Let $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Assume that $\psi \preceq _ P \varphi $. Then for any $C&gt;0$, $\psi \land (\varphi +C)\in \mathrm{PSH}(X,\theta )_{&gt;0}$ and </p>
+<div class="equation numbered-equation" id="sgpt-2EF655CA"><span data-gerby-tag="2EF655CA"><code class="tag-id">42D232E5CD85</code></span>
+<span class="equation-label"><a data-tag="2EF655CA" href="../../tag/42D232E5CD85/">16.8.31</a></span>
+<div>\begin{equation}  P_{\theta }[\varphi ](\psi )=\operatorname *{sup}_{C&gt;0}{}\! {}^{*} \psi \land (\varphi +C)=\psi . \end{equation}</div>
+</div>
+</article> We refer to definition <a data-tag="E47EF727" href="../../tag/B791A3D8205D/">16.3.39</a> for the definition of $P_{\theta }[\varphi ](\psi )$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\psi \preceq _ P\varphi $, by proposition <a data-tag="BD95B46E" href="../../tag/8C181599D520/">16.8.29</a>, we get 
+    
+<div class="equation">
+  \[  \psi \land (\varphi +C)\in \mathrm{PSH}(X,\theta )_{&gt;0}  \]
+</div>
+<p>
+       and $\psi \land (\varphi +C)\sim _ P\psi $ for every $C&gt;0$. 
+    <p>
+      Let 
+    
+<div class="equation">
+  \[  \eta \coloneqq \operatorname *{sup}_{C&gt;0}{}\! {}^{*}\psi \land (\varphi +C).  \]
+</div>
+<p>
+       Then $\eta \sim _ P \psi $. By corollary <a data-tag="496CCBFB" href="../../tag/B6EF8456606F/">16.3.14</a>, we have 
+    
+<div class="equation">
+  \[  \theta _\eta ^ n\leq \mathds {1}_{\{ \eta =\psi \} }\, \theta _\psi ^ n.  \]
+</div>
+<p>
+       The domination principle theorem <a data-tag="08DC0304" href="../../tag/B798B54E6F2E/">13.13.43</a> gives $\eta \geq \psi $. The reverse inequality is trivial, so $\eta =\psi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+The $P$-equivalence relation characterizes when a subgeodesic exists. See definition <a data-tag="9287531D" href="../../tag/8699FCF63094/">17.10.2</a> for the notion of subgeodesics. <article class="env-theorem" id="sgpt-D01C6A5E">
+<p><a class="environment-identifier" href="../../tag/1CA975F04423/">Theorem <span data-tag="D01C6A5E">16.8.32</span>.</a><span data-gerby-tag="D01C6A5E"><code class="tag-id">1CA975F04423</code></span> Let $\varphi _0,\varphi _1\in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-2B986886"><span data-gerby-tag="2B986886"><code class="tag-id">8E345DA2D98A</code></span><p>
+ There is a subgeodesic from $\varphi _0$ to $\varphi _1$; 
+</p>
+</li><li class="custom-item" id="sgpt-AB4EDA74"><span data-gerby-tag="AB4EDA74"><code class="tag-id">5498C9F0BF2D</code></span><p>
+ $\varphi _0\sim _ P\varphi _1$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="AB4EDA74" href="../../tag/1CA975F04423/#sgpt-AB4EDA74">2</a> $\implies $ <a data-tag="2B986886" href="../../tag/1CA975F04423/#sgpt-2B986886">1</a>. This follows from proposition <a data-tag="74EB2527" href="../../tag/8AB36536E36D/">17.10.24</a>. 
+    <p>
+<a data-tag="2B986886" href="../../tag/1CA975F04423/#sgpt-2B986886">1</a> $\implies $ <a data-tag="AB4EDA74" href="../../tag/1CA975F04423/#sgpt-AB4EDA74">2</a>. Let $(\varphi _ t)_{t\in (0,1)}$ be a subgeodesic from $\varphi _0$ to $\varphi _1$. 
+    <p>
+<strong>Step 1</strong>. We assume that $\varphi _0\geq \varphi _1$. 
+    <p>
+      We first replace the given subgeodesic by the geodesic from $\varphi _0$ to $\varphi _1$. Note that the geodesic is necessarily a subgeodesic as well by <a data-tag="B8D4881A" href="../../tag/BDEA4F06B7F1/">17.10.22</a>. 
+    <p>
+      Observe that $t\mapsto \varphi _ t$ is decreasing due to <a data-tag="EFEDFCE7" href="../../tag/8A0F90757653/">17.10.28</a>. 
+    <p>
+      Let $\varphi _ t=\varphi _1$ for all $t&gt;1$. Then by the gluing lemma <a data-tag="F358A89F" href="../../tag/3BEBB86C7F79/">17.10.16</a>, we find that $(\varphi _ t)_{t\geq 0}$ is a subgeodesic ray. 
+    <p>
+      Next, we consider the Legendre transform 
+    
+<div class="equation">
+  \[  \Gamma _{\tau }\coloneqq \inf _{t\geq 0}(\varphi _ t-t\tau ),\quad \tau \in \mathbb {R}.  \]
+</div>
+<p>
+       It follows from Kiselman's principle proposition <a data-tag="E0DBA4DC" href="../../tag/BB26476C13FA/">5.14.15</a> that $\Gamma _{\tau }\in \mathrm{PSH}(X,\theta )\cup \{ -\infty \} $. Note that for $\tau &gt;0$, we clearly have $\Gamma _{\tau }\equiv -\infty $. On the other hand, for $\tau \leq 0$, 
+    
+<div class="equation">
+  \[  \Gamma _{\tau }=\inf _{t\in [0,1]}(\varphi _ t-t\tau )\in \mathrm{PSH}(X,\theta ).  \]
+</div>
+<p>
+      By Legendre inversion (cf. corollary <a data-tag="8B97E76A" href="../../tag/8C4DFDD0ADE0/">21.11.26</a>), for $t&gt;0$, 
+    
+<div class="equation">
+  \[  \varphi _ t=\sup _{\tau &lt;0} \left(\Gamma _{\tau }+t\tau \right).  \]
+</div>
+<p>
+       Fix a Kähler form $\omega $ on $X$. It follows from proposition <a data-tag="30130F48" href="../../tag/1C6DED516857/">16.8.28</a> that for each $t&gt;0$, 
+    
+<div class="equation">
+  \[  \varphi _ t\sim _ P \operatorname *{sup}_{\tau &lt;0}{}\! {}^{*} P_{\theta +\omega }[\Gamma _{\tau }].  \]
+</div>
+<p>
+       The right-hand side is independent of $t$. Here by adding $\omega $, we no longer have to worry about the possibility where $\Gamma _{\tau }$ has vanishing mass. 
+    <p>
+      Write 
+    
+<div class="equation">
+  \[  \varphi _0=\operatorname *{sup}_{t\in (0,1)}{}\! {}^{*}\varphi _ t.  \]
+</div>
+<p>
+       By proposition <a data-tag="30130F48" href="../../tag/1C6DED516857/">16.8.28</a> again, we find that 
+    
+<div class="equation">
+  \[  \varphi _0\sim _ P \operatorname *{sup}_{\tau &lt;0}{}\! {}^{*} P_{\theta +\omega }[\Gamma _{\tau }]  \]
+</div>
+<p>
+       as well. So $\varphi _0\sim _ P \varphi _1$. 
+    <p>
+<strong>Step 2</strong>. We prove the general case. 
+    <p>
+      Observe that $(\varphi _ t\lor \varphi _1)_{t\in (0,1)}$ is a subgeodesic from $\varphi _0\lor \varphi _1$ to $\varphi _1$. By Step 1, 
+    
+<div class="equation">
+  \[  \varphi _0\lor \varphi _1\sim _ P \varphi _1.  \]
+</div>
+<p>
+       Hence $\varphi _0\preceq _ P \varphi _1$ by <a data-tag="E8047F11" href="../../tag/005A077A0167/">16.8.13</a>. The converse is proved similarly. Hence <a data-tag="AB4EDA74" href="../../tag/1CA975F04423/#sgpt-AB4EDA74">2</a> follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Restating the <a data-tag="2B986886" href="../../tag/1CA975F04423/#sgpt-2B986886">1</a> $\implies $ <a data-tag="AB4EDA74" href="../../tag/1CA975F04423/#sgpt-AB4EDA74">2</a> direction in the theorem in terms of the complexification, we find the following interesting result. 
+</p>
+
+Let $S=\{ z\in \mathbb {C}:0&lt; \operatorname{Re}z &lt;1\} $. We write $p_1\colon X\times S\rightarrow X$ for the natural projection. <article class="env-corollary" id="sgpt-FC220C22">
+<p><a class="environment-identifier" href="../../tag/4EE47D80CC25/">Corollary <span data-tag="FC220C22">16.8.33</span>.</a><span data-gerby-tag="FC220C22"><code class="tag-id">4EE47D80CC25</code></span> Let $\Phi \in \mathrm{PSH}(X\times S,p_1^*\theta )$. Assume that for any $c\in \mathbb {R}$, $x\in X$ and $z\in S$, we have </p>
+<div class="equation">
+  \[  \Phi (x,z)=\Phi (x,z+\mathrm{i}c).  \]
+</div>
+<p> Then $\int _ X (\theta +\mathrm{dd}^{\mathrm{c}}\Phi _ z)^ n$ is independent of $z\in S$, where $\Phi _ z \in \mathrm{PSH}(X,\theta )$ is given by $\Phi _ z(x)=\Phi (x,z)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a Kähler form $\omega $ on $X$. We may regard $\Phi $ as an element of $\mathrm{PSH}(X\times S,p_1^*(\theta +\omega ))$. For any $0&lt;a&lt;b&lt;1$, the restriction $(\Phi _ t)_{t\in [a,b]}$ is then a subgeodesic from $\Phi _ a$ to $\Phi _ b$ in the class $\theta +\omega $. The slices have positive mass in this class, so theorem <a data-tag="D01C6A5E" href="../../tag/1CA975F04423/">16.8.32</a> gives $\Phi _ a\sim _ P\Phi _ b$. By proposition <a data-tag="9C02A916" href="../../tag/82DCD8E3B1BA/">16.8.22</a>, this directly implies 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\Phi _ a}^ n=\int _ X \theta _{\Phi _ b}^ n.  \]
+</div>
+<p>
+       Since $\Phi $ is invariant under imaginary translations, $\Phi _ z$ depends only on $\operatorname{Re}z$, so the mass is independent of $z\in S$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/3E4D57445698/"><span>← Previous</span><small>Definition 16.7.1</small></a><a class="pager-next" rel="next" href="../../tag/F7493F03C4C2/"><span>Next →</span><small>16.8.1 The definitions of the preorders</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-comparison-of-singularities--the-p-and-mathcal-i-preorders,
+  author = {{Gerby contributors}},
+  title = {16.8 The $P$ and $\textbackslash{}mathcal\{I\}$-preorders},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/comparison-of-singularities--the-p-and-mathcal-i-preorders/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/comparison-of-singularities--the-p-and-mathcal-i-preorders/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fcomparison-of-singularities--the-p-and-mathcal-i-preorders%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fcomparison-of-singularities--the-p-and-mathcal-i-preorders%2F&amp;body=Page%3A+%5B16.8+The+%24P%24+and+%24%5Cmathcal%7BI%7D%24-preorders%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fcomparison-of-singularities--the-p-and-mathcal-i-preorders%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+60b12b2be2a8bf4db9a2fdd2eb39c17ee9199cf2+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

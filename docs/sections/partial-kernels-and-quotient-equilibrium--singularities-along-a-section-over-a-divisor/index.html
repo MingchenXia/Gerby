@@ -1,0 +1,770 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor/"><title>18.39 Singularities along a section over a divisor · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/ideal-goodness/">Chapter 18: Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor/" aria-current="page">Section 18.39: Singularities along a section over a divisor</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/good-singularities/"><span>18.1</span> I-good singularities</a><code class="tag-id">A058A93BF381</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness/"><span>18.2</span> Multiplier-ideal envelopes and I-goodness</a><code class="tag-id">530E72454328</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--the-kahler-characterization/"><span>18.3</span> The Kähler characterization</a><code class="tag-id">649A8A26E78B</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--ideal-projection/"><span>18.4</span> Ideal projection</a><code class="tag-id">3458DC26AA54</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--changes-of-background-and-envelope-mass/"><span>18.5</span> Changes of background and envelope mass</a><code class="tag-id">FD3DFA6C79CF</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--geometry-of-ideal-classes/"><span>18.6</span> geometry of ideal classes</a><code class="tag-id">3D693DBCCBE2</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--limits-of-analytic-envelopes/"><span>18.7</span> Limits of analytic envelopes</a><code class="tag-id">E69A0F80536C</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types/"><span>18.8</span> A topology on ordinary singularity types</a><code class="tag-id">8E117060E468</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--analytic-closure/"><span>18.9</span> Analytic closure</a><code class="tag-id">E3C1856717ED</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--separation-and-mass/"><span>18.10</span> Separation and mass</a><code class="tag-id">85FB0412C472</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--transport-with-an-obstacle/"><span>18.11</span> Transport with an obstacle</a><code class="tag-id">2C83B2C35668</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--all-smooth-obstacles/"><span>18.12</span> All smooth obstacles</a><code class="tag-id">B61E129D450F</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--countable-poles-and-all-obstacles/"><span>18.13</span> Countable poles and all obstacles</a><code class="tag-id">A941DC64EED0</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--relative-divisors-and-fiber-obstacles/"><span>18.14</span> Relative divisors and fiber obstacles</a><code class="tag-id">F77ABCE68FED</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--divisorial-products-and-zero-volume/"><span>18.15</span> Divisorial products and zero volume</a><code class="tag-id">FCC95AC9CD7B</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--several-curve-factors/"><span>18.16</span> Several curve factors</a><code class="tag-id">CCB2410A352E</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--varying-the-curve-coefficients/"><span>18.17</span> Varying the curve coefficients</a><code class="tag-id">E1C8539A70B7</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--arbitrary-curve-backgrounds/"><span>18.18</span> Arbitrary curve backgrounds</a><code class="tag-id">16EA76D7DAAB</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--equality-below-all-obstacles-on-separated-products/"><span>18.19</span> Equality below all obstacles on separated products</a><code class="tag-id">627A32EBF892</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--auxiliary-compact-complex-factors/"><span>18.20</span> Auxiliary compact complex factors</a><code class="tag-id">42B1A5F53675</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--a-polar-metric-in-a-background-with-unbounded-mass/"><span>18.21</span> A polar metric in a background with unbounded mass</a><code class="tag-id">49135DC5A99F</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--models-over-a-curve/"><span>18.22</span> Models over a curve</a><code class="tag-id">00A545D724DB</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--finite-curve-factors/"><span>18.23</span> Finite curve factors</a><code class="tag-id">9BCD2B4E97EF</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--models-pulled-back-by-a-finite-curve-map/"><span>18.24</span> Models pulled back by a finite curve map</a><code class="tag-id">EB49D847F199</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--hopf-surface-fibers-and-unbounded-ambient-mass/"><span>18.25</span> Hopf surface fibers and unbounded ambient mass</a><code class="tag-id">B094CC4C0076</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--a-topology-on-ordinary-singularity-types--complete-model-topologies/"><span>18.26</span> Complete model topologies</a><code class="tag-id">987BD480177F</code></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness--small-curvature-and-strict-ordinary-types/"><span>18.27</span> Small curvature and strict ordinary types</a><code class="tag-id">0A2CF48796FA</code></li><li><a href="../../sections/partial-bergman-kernels/"><span>18.28</span> Partial Bergman kernels</a><code class="tag-id">065B04510A8A</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium/"><span>18.29</span> Partial kernels and quotient equilibrium</a><code class="tag-id">B52A879692D6</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--selected-spaces-and-partial-bergman-kernels/"><span>18.30</span> Selected spaces and partial Bergman kernels</a><code class="tag-id">F62F806EF43E</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--a-local-bernstein-markov-estimate/"><span>18.31</span> A local Bernstein–Markov estimate</a><code class="tag-id">71CAA1E8F43F</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--partial-envelopes-on-a-weighted-compact-set/"><span>18.32</span> Partial envelopes on a weighted compact set</a><code class="tag-id">848269EDF931</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--an-upper-bound-for-partial-fubini-study-limits/"><span>18.33</span> An upper bound for partial Fubini–Study limits</a><code class="tag-id">2502C12D48F4</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--the-determinant-functional/"><span>18.34</span> The determinant functional</a><code class="tag-id">3AC0CF30AE00</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--partial-kernels-under-a-modification/"><span>18.35</span> Partial kernels under a modification</a><code class="tag-id">D537C70B64A0</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--kernels-on-a-fibration/"><span>18.36</span> Kernels on a fibration</a><code class="tag-id">8EDC1869ED38</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--isolated-logarithmic-poles-on-a-fibration/"><span>18.37</span> Isolated logarithmic poles on a fibration</a><code class="tag-id">79DB60788E3F</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--a-point-pole-on-the-hopf-manifold/"><span>18.38</span> A point pole on the Hopf manifold</a><code class="tag-id">CFB70C5F514C</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor/" aria-current="page"><span>18.39</span> Singularities along a section over a divisor</a><code class="tag-id">DFED5BDE8678</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--horizontal-poles-over-projective-space/"><span>18.40</span> Horizontal poles over projective space</a><code class="tag-id">6109F3CDB146</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--degenerate-curvature-and-growing-vanishing-orders/"><span>18.41</span> Degenerate curvature and growing vanishing orders</a><code class="tag-id">99460DD0DBB7</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--localization-on-curves/"><span>18.42</span> Localization on curves</a><code class="tag-id">B3DCF0B463CE</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--a-logarithmic-kernel-scale-in-two-dimensions/"><span>18.43</span> A logarithmic kernel scale in two dimensions</a><code class="tag-id">9C0BFE5CB0FF</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--anisotropic-point-jets-and-isolated-poles-on-fibrations/"><span>18.44</span> Anisotropic point jets and isolated poles on fibrations</a><code class="tag-id">44BF9B7D0141</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--newton-selection-and-moment-shell-limits/"><span>18.45</span> Newton selection and moment-shell limits</a><code class="tag-id">5CEF27CB9AAA</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--rounding-in-multiplier-ideal-kernel-families/"><span>18.46</span> Rounding in multiplier-ideal kernel families</a><code class="tag-id">73EEA7DBAB83</code></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium--three-monomial-bands-from-a-multiplier-ideal-selection/"><span>18.47</span> Three monomial bands from a multiplier-ideal selection</a><code class="tag-id">435C250083A1</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/B73567245C4F/"><span>← Previous</span><small>Proposition 18.38.6</small></a><a class="pager-next" rel="next" href="../../tag/EF14C0C90C6C/"><span>Next →</span><small>Lemma 18.39.1</small></a></nav><h1>18.39 Singularities along a section over a divisor<code class="tag-id">DFED5BDE8678</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-DFED5BDE8678" data-section-entries="115614FB1F9D 145C74FFDD88 AE701AEF7FDE DFED5BDE8678 EF14C0C90C6C FE69C8A3CBBF"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="D65304D4"><code class="tag-id">DFED5BDE8678</code></span>
+<p>
+We now replace the isolated poles by a pole along the image of a holomorphic section of the fibration over a divisor of the base. The selected sections must then vanish to a certain order along that divisor. As for point poles, the normal variables in the fiber shift the integrability threshold only by a bounded amount, so this order differs from the order imposed by a divisorial pole on the base by a bounded number. Restriction sequences along the divisor show that each unit of vanishing order costs $O(m^{q-1})$ sections, and kernel convergence again reduces to the equilibrium theorem on the base. 
+</p>
+<p>
+For the restriction sequences we need a bound for the dimensions of section spaces that is uniform over a range of twists growing linearly with $m$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-89631BE1">
+<p><a class="environment-identifier" href="../../tag/EF14C0C90C6C/">Lemma <span data-tag="89631BE1">18.39.1</span>.</a><span data-gerby-tag="89631BE1"><code class="tag-id">EF14C0C90C6C</code></span> Let $M$ be a compact complex manifold of dimension $d\geq 0$, and let $E,F$ be holomorphic line bundles on $M$. For each $C_0&gt;0$ there is a constant $C_1$ such that </p>
+<div class="equation">
+  \[  h^0(M,E^ m\otimes F^ j)\leq C_1m^ d \qquad (m\geq 1,\  j\in \mathbb Z,\  |j|\leq C_0m).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $d=0$, the manifold $M$ is a finite set and the dimension is at most its number of points. Let $d\geq 1$. Fix smooth Hermitian metrics on $E$ and $F$, a smooth positive volume form $\mathrm{d}V$, and finitely many coordinate charts with holomorphic frames, together with smaller subcharts that still cover $M$. For $|j|\leq C_0m$, the local weight of the metric on $E^ m\otimes F^ j$ has second derivatives bounded by $Cm$. At a point $p$ of a smaller subchart, multiply the frame by the exponential of a holomorphic affine function to remove the constant and real-linear terms of this weight at $p$. The new weight vanishes at $p$ and is bounded by $Cm|z-p|^2$ on a fixed neighborhood. A ball of radius $\varepsilon m^{-1/2}$ about $p$ lies in the chart, with $\varepsilon &gt;0$ independent of $p$, $m$ and $j$, and on this ball the weight is bounded. The submean inequality for the holomorphic coefficient of a section $s$ on this ball gives 
+    
+<div class="equation">
+  \[  |s(p)|^2\leq Cm^ d\int _ M|s|^2\, \mathrm{d}V,  \]
+</div>
+<p>
+       where all constants depend only on the fixed charts, metrics, volume and $C_0$. Evaluation at $p$ has a one-dimensional target, so for an $L^2$-orthonormal basis $s_1,\ldots ,s_ N$ of $H^0(M,E^ m\otimes F^ j)$ its squared norm is $\sum _{\ell =1}^ N|s_\ell (p)|^2\leq Cm^ d$. Integrating over $M$ gives $N\leq C\operatorname {Vol}(M)m^ d$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Let $\pi :X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers of dimension $r\geq 1$, and suppose that $B$ is Kähler of dimension $q\geq 1$. Fix a holomorphic line bundle $A$ on $B$ with a smooth Hermitian metric $h_ A$ whose curvature $\theta =c_1(A,h_ A)$ is positive. Let $Z\subset B$ be a nonempty smooth divisor, and suppose that $\pi $ has a holomorphic section $\sigma :Z\to X$ over $Z$; put $Y=\sigma (Z)$. Fix $c&gt;0$ and a smooth metric $h_ Z$ on $\mathcal O_ B(Z)$, with curvature $\Theta _ Z$, such that $\alpha :=\theta -c\Theta _ Z&gt;0$. Let $s_ Z$ be the canonical section of $\mathcal O_ B(Z)$, and set $\psi =c\log |s_ Z|_{h_ Z}^2$. 
+</p>
+<p>
+ Fix a Hermitian form $\omega $ on $X$, chosen independently of $h_ A$. Suppose that $\varphi \in \mathrm{PSH}(X,\omega )$ is locally bounded on $X\setminus Y$ and that, in submersion coordinates $(x,z',w_1,\ldots ,w_ r)$ near each point of $Y$, 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-610CD96E"><span data-gerby-tag="610CD96E"><code class="tag-id">145C74FFDD88</code></span>
+<span class="equation-label"><a data-tag="610CD96E" href="../../tag/145C74FFDD88/">18.39.2</a></span>
+<div>\begin{equation}  \begin{gathered} \varphi =c\log \left(|x|^2+\sum _{j=1}^ r|w_ j|^2\right)+O(1),\\ Z=\{ x=0\} ,\qquad Y=\{ x=w_1=\cdots =w_ r=0\} , \end{gathered} \end{equation}</div>
+</div>
+<p>
+ with a locally bounded remainder. Here $x$ and $z'$ are coordinates on the base, and the vector $z'$ of the $q-1$ tangential coordinates is absent when $q=1$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-301AF97E">
+<p><a class="environment-identifier" href="../../tag/AE701AEF7FDE/">Theorem <span data-tag="301AF97E">18.39.3</span>.</a><span data-gerby-tag="301AF97E"><code class="tag-id">AE701AEF7FDE</code></span> The function $\psi $ is $\theta $-plurisubharmonic, with positive non-pluripolar mass </p>
+<div class="equation">
+  \[  \int _ B\mathrm{MA}_\theta (\psi )=\int _ B\alpha ^ q&gt;0.  \]
+</div>
+<p> For every integer $m\geq 1$ put $\ell _ m=\lfloor mc\rfloor $ and $k_ m=\max \{ \ell _ m-r,0\} $. Under holomorphic descent, the spaces selected by $\varphi $ on $X$ and by $\psi $ on $B$ are </p>
+<div class="equation">
+  \[  \begin{split}  V_ m&amp; :=H^0\bigl (X,\pi ^*A^ m\otimes \mathcal I(m\varphi )\bigr ) =H^0\bigl (B,A^ m(-k_ m Z)\bigr ),\\  W_ m&amp; :=H^0\bigl (B,A^ m\otimes \mathcal I(m\psi )\bigr ) =H^0\bigl (B,A^ m(-\ell _ m Z)\bigr )\subseteq V_ m. \end{split}  \]
+</div>
+<p> There is a constant $C$, depending only on the fixed data, such that </p>
+<div class="equation">
+  \[  0\leq \dim V_ m-\dim W_ m\leq Cm^{q-1}.  \]
+</div>
+<p> For $q=1$ the difference is at most $r\, \# Z$ for every $m$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the Poincaré–Lelong formula, $\theta +\mathrm{dd}^{\mathrm{c}}\psi =\alpha +c[Z]\geq 0$. The divisorial measure identity (<a data-tag="2A73967C" href="../../tag/345F0935B009/">11.41.2</a>), applied with the residual form $\alpha &gt;0$ and the bounded part zero, gives $\mathrm{MA}_\theta (\psi )=\alpha ^ q$, which proves the mass formula. 
+    <p>
+      Every section of $\pi ^*A^ m$ descends by proposition <a data-tag="DF971029" href="../../tag/7E88736EF73B/">18.36.1</a>. In the $r+1$ normal variables $(x,w)$, lemma <a data-tag="94144E8D" href="../../tag/C21A2A6F9E07/">5.37.1</a> gives 
+    
+<div class="equation">
+  \[  \mathcal I(m\varphi )=(x,w_1,\ldots ,w_ r)^{k_ m}.  \]
+</div>
+<p>
+       The local coefficient $g(x,z')$ of a pulled-back section does not depend on $w$. Expanding $g$ in powers of $x$, we see that $g$ lies in this ideal exactly when the coefficients of $x^ j$ vanish for $j&lt;k_ m$, that is, when $x^{k_ m}$ divides $g$. This is an identity of germs in all tangential variables, so it holds at every point of $Z$. Outside $Y$ the function $\varphi $ is locally bounded. On the base, the same lemma in the single normal variable $x$ gives $\mathcal I(m\psi )=\mathcal O_ B(-\ell _ mZ)$. These facts prove the two identities and the inclusion. 
+    <p>
+      For $k_ m\leq j&lt;\ell _ m$, the restriction sequence along $Z$, 
+    
+<div class="equation">
+  \[  \begin{split}  0&amp; \longrightarrow A^ m(-(j+1)Z)\longrightarrow A^ m(-jZ)\\ &amp; \longrightarrow \bigl (A^ m(-jZ)\bigr )|_ Z\longrightarrow 0, \end{split}  \]
+</div>
+<p>
+       shows that passing from vanishing order $j$ to order $j+1$ along $Z$ loses at most $h^0(Z,(A^ m(-jZ))|_ Z)$ dimensions. Apply lemma <a data-tag="89631BE1" href="../../tag/EF14C0C90C6C/">18.39.1</a> on $Z$ with $E=A|_ Z$ and $F=\mathcal O_ B(-Z)|_ Z$; since $0\leq j\leq cm$, each loss is at most $Cm^{q-1}$, uniformly in $j$. There are at most $r$ steps, which proves the estimate. When $q=1$, the divisor $Z$ is a finite set and each restriction space has dimension $\# Z$, which gives the last assertion directly. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+We call $\psi $ the <em>reference potential</em>, $W_ m$ the <em>reference spaces</em>, and $\dim V_ m-\dim W_ m$ the <em>defect</em>; the same terms are used for the analogous comparisons below. The following example shows that the order $m^{q-1}$ in theorem <a data-tag="301AF97E" href="../../tag/AE701AEF7FDE/">18.39.3</a> is sharp. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-B8CBF9F0">
+<p><a class="environment-identifier" href="../../tag/FE69C8A3CBBF/">Example <span data-tag="B8CBF9F0">18.39.4</span>.</a><span data-gerby-tag="B8CBF9F0"><code class="tag-id">FE69C8A3CBBF</code></span> For all integers $q,r,k\geq 1$ and every real $0&lt;c&lt;k$, the hypotheses above are satisfied on $X=\mathbb P^ q\times \mathbb P^ r$ with $B=\mathbb P^ q$ and $A=\mathcal O_{\mathbb P^ q}(k)$, for suitable choices made in the proof. For $q\geq 2$ the defect is </p>
+<div class="equation">
+  \[  \dim V_ m-\dim W_ m =\frac{r(k-c)^{q-1}}{(q-1)!}m^{q-1}+O(m^{q-2}),  \]
+</div>
+<p> and for $q=1$ it equals $\min \{ r,\lfloor mc\rfloor \} $ for every $m$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use homogeneous coordinates $[Z_0:\cdots :Z_ q]$ on the base and $[W_0:\cdots :W_ r]$ on the fiber. Let $Z=\{ Z_0=0\} $ and $Y=Z\times \{ [1:0:\cdots :0]\} $, and let $\omega _ B,\omega _ F$ be the Fubini–Study forms normalized to have top integrals one. Define 
+    
+<div class="equation">
+  \[  R_ B=\frac{|Z_0|^2}{\sum _{i=0}^ q|Z_ i|^2},\qquad R_ F=\frac{\sum _{j=1}^ r|W_ j|^2}{\sum _{j=0}^ r|W_ j|^2},\qquad \varphi =c\log (R_ B+R_ F),\quad \psi =c\log R_ B.  \]
+</div>
+<p>
+       The function $\varphi $ is smooth off $Y$ and satisfies (<a data-tag="610CD96E" href="../../tag/145C74FFDD88/">18.39.2</a>). Over a common denominator, the numerator of $R_ B+R_ F$ is 
+    
+<div class="equation">
+  \[  \sum _{j=0}^ r|Z_0W_ j|^2+\sum _{i=0}^ q\sum _{j=1}^ r|Z_ iW_ j|^2,  \]
+</div>
+<p>
+       whose logarithm is plurisubharmonic in each affine chart. Hence $\mathrm{dd}^{\mathrm{c}}\varphi \geq -c(\omega _ B+\omega _ F)$. Choose an integer $b\geq c$ and set $\omega =k\omega _ B+b\omega _ F$. This is a Hermitian form, and $\omega +\mathrm{dd}^{\mathrm{c}}\varphi \geq (k-c)\omega _ B+(b-c)\omega _ F\geq 0$. On the base, $\theta =k\omega _ B$, $\Theta _ Z=\omega _ B$ and $\alpha =(k-c)\omega _ B&gt;0$. 
+    <p>
+      Put $\ell _ m=\lfloor mc\rfloor $. Divisibility of homogeneous polynomials by powers of $Z_0$ gives the exact dimensions 
+    
+<div class="equation">
+  \[  \dim W_ m=\binom {km-\ell _ m+q}{q},\qquad \dim V_ m=\binom {km-\max \{ \ell _ m-r,0\} +q}{q}.  \]
+</div>
+<p>
+       For large $m$, the two residual degrees differ by $r$ and equal $(k-c)m+O(1)$. Subtracting the two binomial coefficients, which are polynomials of degree $q$ in the residual degrees, gives the asserted leading coefficient and remainder. For $q=1$ the difference is $\ell _ m-\max \{ \ell _ m-r,0\} =\min \{ r,\ell _ m\} $ for every $m$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The bounded shift of divisorial order thus has negligible normalized codimension. To compare the kernels under the hypotheses of theorem <a data-tag="301AF97E" href="../../tag/AE701AEF7FDE/">18.39.3</a>, fix a smooth positive probability volume $\nu _ B$ on $B$, smooth fiber probabilities, and the lifting map $\mathcal L$ of section <a data-tag="7934D1A2" href="../../tag/8EDC1869ED38/">18.36</a>, and put $\nu _ X=\mathcal L\nu _ B$. Use the pullback metric on $\pi ^*A$ and, for a real function $v\in C(B)$, the weight $v\circ \pi $ in the norm on $X$. Write $\beta _{X,m,v\circ \pi ,\varphi }^{(q)}$ and $\mathcal F_{X,m}^{(q)}$ for the kernel measure and the determinant functional on $X$, as in section <a data-tag="3EF3D687" href="../../tag/79DB60788E3F/">18.37</a>, and 
+</p>
+<div class="equation">
+  \[  E(v)=E_{\theta ,B}[\psi ]_{\mathcal I}(v).  \]
+</div>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-FE848014">
+<p><a class="environment-identifier" href="../../tag/115614FB1F9D/">Corollary <span data-tag="FE848014">18.39.5</span>.</a><span data-gerby-tag="FE848014"><code class="tag-id">115614FB1F9D</code></span> The total variation distance between the kernel measure $\beta _{X,m,v\circ \pi ,\varphi }^{(q)}$ selected by $\varphi $ on $X$ and the lift of the kernel measure selected by $\psi $ on $B$ is $O(m^{-1})$. In particular, </p>
+<div class="equation">
+  \[  \beta _{X,m,v\circ \pi ,\varphi }^{(q)} \rightharpoonup \mathcal L\bigl (\mathrm{MA}_\theta (E(v))\bigr ).  \]
+</div>
+<p> The determinant functionals, normalized to vanish at the zero weight, satisfy </p>
+<div class="equation">
+  \[  \mathcal F_{X,m}^{(q)}(v\circ \pi )\longrightarrow \int _0^1\left(\int _ Bv\, \mathrm{d}\mathrm{MA}_\theta (E(tv))\right)\mathrm{d}t.  \]
+</div>
+<p> With the normalization $(q+r)!/m^{q+r}$ given by the dimension of $X$, the kernel measures tend to zero in total variation. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      As in proposition <a data-tag="DF971029" href="../../tag/7E88736EF73B/">18.36.1</a>, fiber integration identifies the norm on $X$ with the norm on $V_ m\subseteq H^0(B,A^ m)$, so the kernel measure on $X$ is the lift of the kernel measure of $V_ m$ on $B$. By lemma <a data-tag="08207DCC" href="../../tag/22D696DB398E/">18.37.1</a>, theorem <a data-tag="301AF97E" href="../../tag/AE701AEF7FDE/">18.39.3</a>, the latter differs from the kernel measure of $W_ m$ by a positive measure of total mass $q!(\dim V_ m-\dim W_ m)/m^ q=O(m^{-1})$, and so do the lifts. Since $B$ is Kähler and $\psi $ has positive non-pluripolar mass, the equilibrium theorem used in the proof of theorem <a data-tag="C55A8970" href="../../tag/87C196C13DDE/">18.36.3</a> applies to $W_ m$ and gives the weak limit. By lemma <a data-tag="08207DCC" href="../../tag/22D696DB398E/">18.37.1</a>, the determinant functionals of $V_ m$ and $W_ m$ differ by at most $O(m^{-1})\| v\| _\infty $, and corollary <a data-tag="2DADC136" href="../../tag/9C43863CE5F1/">18.35.6</a>, applied on $B$ with the identity modification, gives the limit of the functionals; its dominated convergence bound is $\| v\| _\infty $ times the bounded sequence of $q$-normalized dimensions. Finally, the $q$-normalized masses are bounded, so multiplying them by $(q+r)!m^{-r}/q!$ proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Thus the selecting potentials of (<a data-tag="610CD96E" href="../../tag/145C74FFDD88/">18.39.2</a>) admit the approximation asked for in <a data-tag="3C96DD18" href="../../tag/4813DF6B9029/">24.10.2</a>, whenever the curvature margin $\theta -c\Theta _ Z$ is positive. 
+</p>
+</div></section><section class="reading-chunk" id="entry-14F47AA5A61B" data-section-entries="094794C14195 14F47AA5A61B A79139E2A3C6 BBA6C67F74CF EB221EFD409A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/14F47AA5A61B/">18.39.6 A bounded divisorial band from fiber integrability</a><code class="tag-id">14F47AA5A61B</code></h2><span data-gerby-tag="9D7A0568"></span>
+<p>
+The comparison of theorem <a data-tag="301AF97E" href="../../tag/AE701AEF7FDE/">18.39.3</a> does not need the exact local form (<a data-tag="610CD96E" href="../../tag/145C74FFDD88/">18.39.2</a>). It suffices to bound the selecting potential from below by a divisorial pole on all of $X$, and from above by an anisotropic model in a single chart over the divisor. The lower bound gives the inclusion of the reference spaces into the selected spaces. The upper bound forces vanishing along the divisor to an order that falls short of the reference order by a bounded amount: separate powers of the normal variables replace the shift by the fiber dimension with a weighted shift. The selecting potential may then be singular along a positive-dimensional subset of a fiber, and it need not descend to the base. 
+</p>
+<p>
+Let $\pi :X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds with connected fibers of dimension $f\geq 1$, and let $B$ be Kähler of dimension $q\geq 1$. Fix a Hermitian form $\omega $ on $X$, a holomorphic line bundle $A$ on $B$ with a smooth Hermitian metric $h$, and $\varphi \in \mathrm{PSH}(X,\omega )$. Write $\theta =c_1(A,h)$, and use holomorphic descent to regard the selected spaces as subspaces of $H^0(B,A^ m)$: 
+</p>
+<div class="equation">
+  \[  V_ m=H^0\bigl (X,\pi ^*A^ m\otimes \mathcal I(m\varphi )\bigr ) \subseteq H^0(B,A^ m),\qquad m\geq 1.  \]
+</div>
+<p>
+ Let $D\subset B$ be a nonempty smooth connected reduced divisor. Fix a smooth metric $H_ D$ on $\mathcal O_ B(D)$, and write $s_ D$ for its canonical section and $\eta =c_1(\mathcal O_ B(D),H_ D)$ for its curvature. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4ACCB4C2">
+<p><a class="environment-identifier" href="../../tag/BBA6C67F74CF/">Lemma <span data-tag="4ACCB4C2">18.39.7</span>.</a><span data-gerby-tag="4ACCB4C2"><code class="tag-id">BBA6C67F74CF</code></span> Let $r\geq 1$ and $\ell \geq 0$ be integers, let $p,b_1,\ldots ,b_ r$ be positive integers, and let $P&gt;0$. The function </p>
+<div class="equation">
+  \[  |z|^{2\ell }\left(|z|^{2p}+\sum _{j=1}^ r|w_ j|^{2b_ j}\right)^{-P}  \]
+</div>
+<p> of $(z,w)\in \mathbb C\times \mathbb C^ r$ is locally integrable near the origin if and only if </p>
+<div class="equation">
+  \[  \frac{\ell +1}{p}+\sum _{j=1}^ r\frac1{b_ j}&gt;P.  \]
+</div>
+<p> In the case of equality, the integral diverges logarithmically. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      After integrating over the angles, substitute $x_0=|z|^{2p}$ and $x_ j=|w_ j|^{2b_ j}$. Up to a positive constant, the integral becomes 
+    
+<div class="equation">
+  \[  \int (x_0+\cdots +x_ r)^{-P}x_0^{(\ell +1)/p-1} \prod _{j=1}^ r x_ j^{1/b_ j-1}\, \mathrm dx_0\cdots \mathrm dx_ r  \]
+</div>
+<p>
+       over a box near the origin. This box contains a small simplex $\{ \sum _ jx_ j&lt;\delta \} $ and is contained in a larger one. On either simplex use the coordinates $\rho =\sum _ jx_ j$ and $x_ j=\rho y_ j$. The integral over $y$ is finite and positive, because all its exponents exceed $-1$, and the integral over $\rho $ is 
+    
+<div class="equation">
+  \[  \int _0^\delta \rho ^{(\ell +1)/p+\sum b_ j^{-1}-P-1}\, \mathrm d\rho .  \]
+</div>
+<p>
+       This gives the threshold and the logarithmic divergence at equality. Bounded factors in the weight, holomorphic units and additional tangential variables do not affect this local test. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-95ADC985">
+<p><a class="environment-identifier" href="../../tag/A79139E2A3C6/">Theorem <span data-tag="95ADC985">18.39.8</span>.</a><span data-gerby-tag="95ADC985"><code class="tag-id">A79139E2A3C6</code></span> Suppose that $c&gt;0$ and $u\in C^\infty (B,\mathbb R)$ satisfy </p>
+<div class="equation">
+  \[  \beta =\theta +\mathrm{dd}^{\mathrm{c}}u-c\eta &gt;0, \qquad \varphi \geq c\log \| \pi ^*s_ D\| _{H_ D}^2-C \quad \hbox{on }X  \]
+</div>
+<p> for a constant $C$. Suppose further that there is one submersion polydisk over an open subset of $D$, with coordinates </p>
+<div class="equation">
+  \[  \pi (z,t,w,v)=(z,t),\quad D=\{ z=0\} ,\quad t\in \mathbb C^{q-1},\quad w\in \mathbb C^ r,\quad v\in \mathbb C^{f-r},  \]
+</div>
+<p> where $1\leq r\leq f$, on which </p>
+<div class="equation">
+  \[  \varphi \leq \frac cp\log \left(|z|^{2p}+\sum _{j=1}^ r|w_ j|^{2b_ j}\right)+C'  \]
+</div>
+<p> for positive integers $p,b_1,\ldots ,b_ r$ and a constant $C'$. Put </p>
+<div class="equation">
+  \[  a=p\sum _{j=1}^ r b_ j^{-1},\quad L_ m=\lfloor mc\rfloor ,\quad K_ m=\max \{ \lfloor mc-a\rfloor ,0\} ,\quad \psi =u+c\log \| s_ D\| _{H_ D}^2.  \]
+</div>
+<p> Then $\psi \in \mathrm{PSH}(B,\theta )$, its non-pluripolar mass is $\int _ B\beta ^ q\in (0,\infty )$, and for every $m\geq 1$, </p>
+<div class="equation">
+  \[  W_ m:=H^0\bigl (B,A^ m\otimes \mathcal I(m\psi )\bigr ) =H^0(B,A^ m(-L_ mD))\subseteq V_ m \subseteq H^0(B,A^ m(-K_ mD)).  \]
+</div>
+<p> Moreover $\dim V_ m-\dim W_ m=O(m^{q-1})=o(m^ q)$. For $q=1$ this difference is at most $\lceil a\rceil $ for every $m$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the Poincaré–Lelong formula, $\theta +\mathrm{dd}^{\mathrm{c}}\psi =\beta +c[D]$. Off $D$, locality identifies the non-pluripolar top power with $\beta ^ q$; the non-pluripolar product puts no mass on $D$, and neither does the smooth measure $\beta ^ q$. Hence $\mathrm{MA}_\theta (\psi )=\beta ^ q$, whose mass is finite and positive because $\beta &gt;0$ and $B$ is compact. The one-variable integrability condition $\ell +1&gt;mc$ gives $\mathcal I(m\psi )=\mathcal O_ B(-L_ mD)$, also when $mc$ is an integer. Since $u$ is bounded, the global lower bound implies $\varphi \geq \psi \circ \pi -C''$. Hence integrability on the base gives integrability of the pullback in every bounded submersion chart, which proves $W_ m\subseteq V_ m$. 
+    <p>
+      For the upper inclusion, take a nonzero section in $V_ m$ and let $\ell $ be its vanishing order along $D$; note that $D$ is irreducible, being smooth and connected. In the polydisk of the upper bound, the coefficient of the section is $z^\ell g(z,t)$, where $g(0,t)$ does not vanish identically on the open subset of $D$, since otherwise the identity theorem would increase the order along $D$. Shrink the polydisk about a point with $w=0$ at which $g(0,t)\ne 0$, so that $g$ becomes a holomorphic unit. The upper bound on $\varphi $ and lemma <a data-tag="4ACCB4C2" href="../../tag/BBA6C67F74CF/">18.39.7</a> then force $\ell +1&gt;mc-a$. For an integer $\ell \geq 0$ this is equivalent to $\ell \geq K_ m$, which proves the upper inclusion. 
+    <p>
+      Since $\lfloor mc\rfloor -\lfloor mc-a\rfloor \leq \lceil a\rceil $, we have $0\leq L_ m-K_ m\leq \lceil a\rceil $. Use the restriction sequences along $D$ from the proof of theorem <a data-tag="301AF97E" href="../../tag/AE701AEF7FDE/">18.39.3</a> for $K_ m\leq j&lt;L_ m$. Each step loses at most $h^0(D,(A^ m(-jD))|_ D)$ dimensions, and by lemma <a data-tag="89631BE1" href="../../tag/EF14C0C90C6C/">18.39.1</a> this is at most $Cm^{q-1}$, uniformly for $0\leq j\leq cm$. Since the number of steps is bounded, the estimate follows. For $q=1$ the connected divisor $D$ is a single point, and each restriction space has dimension one. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-1E656A09">
+<p><a class="environment-identifier" href="../../tag/094794C14195/">Corollary <span data-tag="1E656A09">18.39.9</span>.</a><span data-gerby-tag="1E656A09"><code class="tag-id">094794C14195</code></span> Keep the positivity condition $\beta &gt;0$ of theorem <a data-tag="95ADC985" href="../../tag/A79139E2A3C6/">18.39.8</a>. Suppose that a nonempty compact smooth submanifold $Z\subset \pi ^{-1}(D)$ projects submersively onto $D$, and that near every point of $Z$ there are coordinates as in that theorem in which </p>
+<div class="equation">
+  \[  Z=\{ z=w_1=\cdots =w_ r=0\} ,\qquad \varphi =\frac cp\log \left(|z|^{2p}+\sum _{j=1}^ r|w_ j|^{2b_ j}\right)+O(1),  \]
+</div>
+<p> with fixed $c,p,b_ j$. Suppose also that $\varphi $ is locally bounded outside $Z$. Then $\varphi $ satisfies the hypotheses of theorem <a data-tag="95ADC985" href="../../tag/A79139E2A3C6/">18.39.8</a>, so its conclusions hold, and moreover </p>
+<div class="equation">
+  \[  V_ m=H^0(B,A^ m(-K_ mD))\qquad (m\geq 1).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The local model is bounded below by $c\log |z|^2$ up to a constant. Near points of $\pi ^{-1}(D)$ outside $Z$, the function $\varphi $ is locally bounded, so the same lower bound holds there; away from $\pi ^{-1}(D)$ both functions are locally bounded. By compactness, finitely many charts give the global lower bound. The upper bound holds in any chart of the model. Conversely, if a section is divisible by $z^{K_ m}$, its residual coefficient is bounded and holomorphic in each chart of the model, and the strict inequality $K_ m+1&gt;mc-a$ together with lemma <a data-tag="4ACCB4C2" href="../../tag/BBA6C67F74CF/">18.39.7</a> gives integrability there. Outside $Z$ the function $\varphi $ is locally bounded, which proves the reverse inclusion. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Such exact models exist with pole sets of positive dimension inside the fibers. Let $B$ be projective, let $A$ be ample, and let $X=B\times (\mathbb P^1)^ f$ with $\pi $ the first projection. Mark a point $o_ j$ in each of the first $r$ factors $\mathbb P^1$ of the fiber, and let $E_ j\subset X$ be the inverse image of $o_ j$. With smooth metrics on the corresponding line bundles, put 
+</p>
+<div class="equation">
+  \[  Q=\| \pi ^*s_ D\| ^{2p}+\sum _{j=1}^ r\| s_{E_ j}\| ^{2b_ j}, \qquad \varphi =\lambda \log Q,\qquad c=p\lambda .  \]
+</div>
+<p>
+ The common zero set of the terms of $Q$ is $D\times \{ o_1\} \times \cdots \times \{ o_ r\} \times (\mathbb P^1)^{f-r}$. Near it, the positive factors of the metrics give exactly the local model of corollary <a data-tag="1E656A09" href="../../tag/094794C14195/">18.39.9</a>, and $\varphi $ is smooth elsewhere. The inequality $Q\geq \| \pi ^*s_ D\| ^{2p}$ gives the global lower bound. Locally, $\mathrm{dd}^{\mathrm{c}}\log Q$ is bounded below by a convex combination of the negatives of the smooth curvature forms of the terms; hence $\mathrm{dd}^{\mathrm{c}}\log Q\geq -C_0\omega $ for a constant $C_0$, first off the common zero set and then across it, after a quadratic correction, by the extension theorem for plurisubharmonic functions. Since $A$ is ample, there is $u$ with $\theta +\mathrm{dd}^{\mathrm{c}}u&gt;0$. For sufficiently small $\lambda &gt;0$ we then have $\lambda C_0\leq 1$, so that $\varphi \in \mathrm{PSH}(X,\omega )$, and $\theta +\mathrm{dd}^{\mathrm{c}}u-p\lambda \eta &gt;0$. Thus the exact series of the corollary also occurs when $r&lt;f$. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-799505B0">
+<p><a class="environment-identifier" href="../../tag/EB221EFD409A/">Example <span data-tag="799505B0">18.39.10</span>.</a><span data-gerby-tag="799505B0"><code class="tag-id">EB221EFD409A</code></span> Let $B=\mathbb P^ q$ with a hyperplane $D$, let $A=\mathcal O_ B(1)$, and let $X=B\times \mathbb P^1$. Let $\omega _ B,\omega _ F$ be the Fubini–Study forms normalized to have total mass one, and use the corresponding metrics on the divisor line bundles. For a point $o\in \mathbb P^1$ set </p>
+<div class="equation">
+  \[  \varphi =\tfrac 14\log \bigl (\| s_ D\| ^4+\| s_ o\| ^6\bigr ),\qquad \omega =\omega _ B+\omega _ F.  \]
+</div>
+<p> Then $p=2$, $b_1=3$, $c=1/2$, $a=2/3$, and the reference potential $\psi =\tfrac 12\log \| s_ D\| ^2$ has mass $2^{-q}$. The spaces $V_1$ and $W_1$ agree, and for every $m\geq 2$ the defect is </p>
+<div class="equation">
+  \[  \dim V_ m-\dim W_ m =\binom {\lceil m/2\rceil +q}{q-1} \sim \frac{2^{1-q}}{(q-1)!}m^{q-1}.  \]
+</div>
+<p> For $q=1$ the defect is exactly one for every $m\geq 2$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Locally, the complex Hessian of the logarithm of a sum of two squared norms of holomorphic sections is bounded below by a convex combination of the negatives of their curvature forms. Hence $\mathrm{dd}^{\mathrm{c}}\varphi \geq -\tfrac 12\omega _ B-\tfrac 34\omega _ F$ off the pole set, and across it by the extension theorem after a quadratic correction. Thus $\varphi \in \mathrm{PSH}(X,\omega )$. The pole set is $D\times \{ o\} $, along which $\varphi $ has the exact local model of corollary <a data-tag="1E656A09" href="../../tag/094794C14195/">18.39.9</a>. Here $u=0$, $\beta =\tfrac 12\omega _ B$, and $K_ m=L_ m-1$ for $m\geq 2$, while $K_1=L_1=0$. The spaces $V_ m$ and $W_ m$ therefore correspond to homogeneous polynomials of degrees $m-L_ m+1$ and $m-L_ m$, and since $m-L_ m=\lceil m/2\rceil $, the difference of their dimensions is the displayed binomial coefficient. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+In this example $\varphi $ is finite on most of each fiber over $D$ and equals $-\infty $ on a proper subset of it, so $\varphi $ differs from every pullback of a function on $B$ by an unbounded amount. For $p=b_ j=1$ and $r=f$, the shift $a=f$ is the shift by the fiber dimension found in theorem <a data-tag="301AF97E" href="../../tag/AE701AEF7FDE/">18.39.3</a>. Theorem <a data-tag="95ADC985" href="../../tag/A79139E2A3C6/">18.39.8</a> thus gives sufficient conditions for the approximation asked for in <a data-tag="3C96DD18" href="../../tag/4813DF6B9029/">24.10.2</a>; we do not know which other fiber singularities admit such an approximation. 
+</p>
+<p>
+The assumption $f\geq 1$ excludes only a trivial case. If the fibers have dimension zero, then $\pi $ is a covering, since $X$ is compact and $\pi $ is a submersion, and hence a biholomorphism, since the fibers are connected. If, in addition, the descended selecting potential is $\theta $-plurisubharmonic with finite positive mass, taking it as $\psi $ gives $V_ m=W_ m$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9C902F002FA9" data-section-entries="411D2D5FFC5D 46F892FF98FE 9C902F002FA9 A7CF6A5A6A5C"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/9C902F002FA9/">18.39.11 Several crossing base divisors</a><code class="tag-id">9C902F002FA9</code></h2><span data-gerby-tag="7A8AB77B"></span>
+<p>
+Keep the submersion $\pi :X\to B$, the line bundle $(A,h)$, the selecting potential $\varphi $ and the descended spaces $V_ m$ of subsection <a data-tag="9D7A0568" href="../../tag/14F47AA5A61B/">18.39.6</a>. Several divisorial singularities can be handled at once if the divisors cross normally. At their intersections the integrability test on the base separates in normal coordinates, and a bounded change of each divisorial order again costs only $O(m^{q-1})$ sections. For this we need the restriction estimate with all the divisorial twists at once. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-12F3EB37">
+<p><a class="environment-identifier" href="../../tag/46F892FF98FE/">Lemma <span data-tag="12F3EB37">18.39.12</span>.</a><span data-gerby-tag="12F3EB37"><code class="tag-id">46F892FF98FE</code></span> Let $M$ be a compact complex manifold of dimension $d\geq 0$, and let $E,F_1,\ldots ,F_ N$ be holomorphic line bundles on $M$. For each $C_0&gt;0$ there is a constant $C_1$ such that </p>
+<div class="equation">
+  \[  h^0\left(M,E^ m\otimes \bigotimes _{i=1}^ NF_ i^{j_ i}\right)\leq C_1m^ d \qquad (m\geq 1,\  j_ i\in \mathbb Z,\  |j_ i|\leq C_0m).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $d=0$ the dimension is at most the number of points of $M$. For $d\geq 1$, use fixed smooth metrics, a smooth positive volume form and finitely many framed charts as in the proof of lemma <a data-tag="89631BE1" href="../../tag/EF14C0C90C6C/">18.39.1</a>. The local weight of the metric is $m\phi _ E+\sum _ i j_ i\phi _{F_ i}$, whose second derivatives are bounded by $Cm$ uniformly over the stated range. After its constant and real-linear terms at a point have been removed by a holomorphic affine change of frame, it is bounded by a fixed constant on a ball of radius $\varepsilon m^{-1/2}$ about that point. The submean inequality then gives $|s(x)|^2\leq Cm^ d\| s\| _{L^2}^2$, uniformly in $x$, $m$ and the integers $j_ i$. Since evaluation has a one-dimensional target, an orthonormal basis satisfies $\sum _\ell |s_\ell (x)|^2\leq Cm^ d$, and integration gives the estimate. The constants depend only on the fixed bundles, metrics, charts, volume and $C_0$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Let $D_1,\ldots ,D_ N$ be distinct nonempty smooth connected reduced divisors on $B$ whose union has simple normal crossings. For each $i$, choose a smooth metric $H_ i$ on $\mathcal O_ B(D_ i)$, and write $s_ i$ for the canonical section and $\eta _ i$ for the curvature. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-6FEFFC60">
+<p><a class="environment-identifier" href="../../tag/A7CF6A5A6A5C/">Theorem <span data-tag="6FEFFC60">18.39.13</span>.</a><span data-gerby-tag="6FEFFC60"><code class="tag-id">A7CF6A5A6A5C</code></span> Suppose that $c_1,\ldots ,c_ N&gt;0$ and $u\in C^\infty (B,\mathbb R)$ satisfy </p>
+<div class="equation">
+  \[  \beta =\theta +\mathrm{dd}^{\mathrm{c}}u-\sum _{i=1}^ Nc_ i\eta _ i&gt;0, \qquad \varphi \geq \sum _{i=1}^ Nc_ i\log \| \pi ^*s_ i\| _{H_ i}^2-C \quad \hbox{on }X.  \]
+</div>
+<p> Suppose that for each $i$ there is a submersion polydisk over an open subset of $D_ i\setminus \bigcup _{j\ne i}D_ j$, with coordinates $(z_ i,t_ i,w_ i,v_ i)$ as in theorem <a data-tag="95ADC985" href="../../tag/A79139E2A3C6/">18.39.8</a>, on which </p>
+<div class="equation">
+  \[  \varphi \leq \frac{c_ i}{p_ i}\log \left(|z_ i|^{2p_ i} +\sum _{j=1}^{r_ i}|w_{ij}|^{2b_{ij}}\right)+C_ i, \qquad 1\leq r_ i\leq f,  \]
+</div>
+<p> where $p_ i$ and $b_{ij}$ are positive integers and $C_ i$ is a constant. Put </p>
+<div class="equation">
+  \[  \begin{gathered} a_ i=p_ i\sum _{j=1}^{r_ i}b_{ij}^{-1},\quad L_{m,i}=\lfloor mc_ i\rfloor ,\quad K_{m,i}=\max \{ \lfloor mc_ i-a_ i\rfloor ,0\} ,\\ \psi =u+\sum _{i=1}^ Nc_ i\log \| s_ i\| _{H_ i}^2. \end{gathered}  \]
+</div>
+<p> Then $\psi \in \mathrm{PSH}(B,\theta )$ has non-pluripolar mass $\int _ B\beta ^ q\in (0,\infty )$, and for every $m\geq 1$, </p>
+<div class="equation">
+  \[  \begin{split}  W_ m&amp; :=H^0\bigl (B,A^ m\otimes \mathcal I(m\psi )\bigr ) =H^0\left(B,A^ m\left(-\sum _ iL_{m,i}D_ i\right)\right)\subseteq V_ m,\\  V_ m&amp; \subseteq H^0\left(B,A^ m\left(-\sum _ iK_{m,i}D_ i\right)\right). \end{split}  \]
+</div>
+<p> Moreover $\dim V_ m-\dim W_ m=O(m^{q-1})$. For $q=1$ this difference is at most $\sum _ i\lceil a_ i\rceil $ for every $m$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the Poincaré–Lelong formula, $\theta +\mathrm{dd}^{\mathrm{c}}\psi =\beta +\sum _ i c_ i[D_ i]$. Off the divisors the non-pluripolar measure equals $\beta ^ q$, and neither measure charges their union. Thus $\mathrm{MA}_\theta (\psi )=\beta ^ q$, with finite positive total mass. 
+    <p>
+      Near a point of an intersection, the divisors through that point are distinct coordinate hyperplanes $\{ z_ i=0\} $. If a holomorphic germ is divisible by each corresponding $z_ i^{L_{m,i}}$, then it is divisible by their product; its residual coefficient is bounded, and since $L_{m,i}+1&gt;mc_ i$, Fubini's theorem gives integrability. Conversely, integrability at generic nearby points of each coordinate hyperplane forces divisibility by $z_ i^{L_{m,i}}$, by the one-variable threshold, and the divisor of the germ then gives divisibility throughout the chart. This proves 
+    
+<div class="equation">
+  \[  \mathcal I(m\psi )=\mathcal O_ B\left(-\sum _ iL_{m,i}D_ i\right).  \]
+</div>
+<p>
+       Since $u$ is bounded, the global lower bound implies $\varphi \geq \psi \circ \pi -C'$, and integration in submersion coordinates gives $W_ m\subseteq V_ m$. For a nonzero section in $V_ m$, the polydisk over $D_ i$ on which the upper bound holds detects the generic vanishing order of the section along the irreducible divisor $D_ i$. The argument with a unit coefficient in the proof of theorem <a data-tag="95ADC985" href="../../tag/A79139E2A3C6/">18.39.8</a>, together with the strict integrability threshold of lemma <a data-tag="4ACCB4C2" href="../../tag/BBA6C67F74CF/">18.39.7</a>, shows that this order is at least $K_{m,i}$. Imposing all these orders proves the upper inclusion. 
+    <p>
+      To compare dimensions, raise the orders from $(K_{m,i})_ i$ to $(L_{m,i})_ i$, one divisor and one unit at a time. At each step, the restriction sequence loses at most 
+    
+<div class="equation">
+  \[  h^0\left(D_ i,\left.A^ m\left(-\sum _ j n_ jD_ j\right)\right|_{D_ i}\right), \qquad 0\leq n_ j\leq mc_ j,  \]
+</div>
+<p>
+       dimensions. By lemma <a data-tag="12F3EB37" href="../../tag/46F892FF98FE/">18.39.12</a> with $E=A|_{D_ i}$ and $F_ j=\mathcal O_ B(-D_ j)|_{D_ i}$, this is $O(m^{q-1})$ uniformly over all steps, and there are at most $\sum _ i\lceil a_ i\rceil $ steps. When $q=1$, the distinct connected divisors are points, and each restriction space has dimension one. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The upper bounds are required only away from the crossings; integrability at the crossings is controlled by the global lower bound. Exact models can nevertheless have fiber poles over the crossings, as in the following example, where different divisors use separate fiber coordinates. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-83357111">
+<p><a class="environment-identifier" href="../../tag/411D2D5FFC5D/">Example <span data-tag="83357111">18.39.14</span>.</a><span data-gerby-tag="83357111"><code class="tag-id">411D2D5FFC5D</code></span> Let $B=(\mathbb P^1)^ q$, $X=B\times (\mathbb P^1)^ q$ and $A=\mathcal O_ B(1,\ldots ,1)$. For each $i$, let $D_ i\subset B$ be the inverse image of a marked point in the $i$th factor of $B$, and let $E_ i\subset X$ be the inverse image of a marked point in the $i$th factor of the fiber. Use normalized Fubini–Study metrics on the corresponding line bundles, and write $\omega _{B,i},\omega _{F,i}$ for the pullbacks to $X$ of the normalized Fubini–Study forms on the $i$th factors of $B$ and of the fiber. Put </p>
+<div class="equation">
+  \[  \begin{gathered} R_ i=\| \pi ^*s_ i\| ^2,\quad T_ i=\| s_{E_ i}\| ^2,\quad \varphi =\frac14\sum _{i=1}^ q\log (R_ i^2+T_ i^3),\\ \omega =\sum _ i(\omega _{B,i}+\omega _{F,i}),\qquad \psi =\frac12\sum _ i\log \| s_ i\| ^2. \end{gathered}  \]
+</div>
+<p> Then $\varphi \in \mathrm{PSH}(X,\omega )$, and theorem <a data-tag="6FEFFC60" href="../../tag/A7CF6A5A6A5C/">18.39.13</a> applies with $u=0$, $c_ i=1/2$, $p_ i=2$, $b_{i1}=3$ and $a_ i=2/3$. The reference potential $\psi $ has mass $q!/2^ q$. With $L_ m=\lfloor m/2\rfloor $ and $K_ m=\max \{ \lfloor m/2-2/3\rfloor ,0\} $, the selected and reference spaces are exactly </p>
+<div class="equation">
+  \[  \begin{split}  V_ m&amp; =H^0\bigl (B,\mathcal O_ B(m-K_ m,\ldots ,m-K_ m)\bigr ),\\  W_ m&amp; =H^0\bigl (B,\mathcal O_ B(m-L_ m,\ldots ,m-L_ m)\bigr ). \end{split}  \]
+</div>
+<p> They agree for $m=1$, and for $m\geq 2$ the defect is </p>
+<div class="equation">
+  \[  \dim V_ m-\dim W_ m =(\lceil m/2\rceil +2)^ q-(\lceil m/2\rceil +1)^ q.  \]
+</div>
+<p> For $q\geq 2$ this is $q2^{1-q}m^{q-1}+O(m^{q-2})$, and for $q=1$ it is exactly one. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the calculation in example <a data-tag="799505B0" href="../../tag/EB221EFD409A/">18.39.10</a>, the complex Hessian of each summand of $\varphi $ is bounded below by $-\tfrac 12\omega _{B,i}-\tfrac 34\omega _{F,i}$, also across its pole set by the extension theorem after a quadratic correction. Summing proves $\varphi \in \mathrm{PSH}(X,\omega )$. The global lower bound follows from $R_ i^2+T_ i^3\geq R_ i^2$. For the upper bound over $D_ i$, away from the other divisors, place the $i$th fiber coordinate at its marked point; all the other summands are smooth there. The residual is $\beta =\tfrac 12\sum _ i\omega _{B,i}&gt;0$, whose top integral is $q!/2^ q$. 
+    <p>
+      The theorem gives the required generic orders along every $D_ i$. Conversely, near a point where several of the pairs $(R_ i,T_ i)$ vanish, the density $\mathrm{e}^{-m\varphi }$ is comparable to the product of the factors $(|z_ i|^4+|w_ i|^6)^{-m/4}$ in disjoint pairs of variables. A descended coefficient divisible by every $z_ i^{K_ m}$ has a bounded holomorphic residual. Each factor is integrable because $K_ m+1&gt;m/2-2/3$, and Fubini's theorem gives integrability at the intersections; elsewhere the same argument uses fewer factors. This proves the identity for $V_ m$, and the theorem gives $W_ m$. A line bundle $\mathcal O_ B(d,\ldots ,d)$ with $d\geq 0$ has $(d+1)^ q$ independent sections, the products of monomials in the separate factors. Since $K_ m=L_ m-1$ for $m\geq 2$ and $m-L_ m=\lceil m/2\rceil $, subtraction gives the displayed defect and its leading term. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+As before, the selecting potential takes finite values and the value $-\infty $ in the fibers over the divisors, so it does not descend. Theorem <a data-tag="6FEFFC60" href="../../tag/A7CF6A5A6A5C/">18.39.13</a> extends the sufficient conditions for <a data-tag="3C96DD18" href="../../tag/4813DF6B9029/">24.10.2</a> to normal crossing divisors; it does not cover base ideals of other forms, and it gives no necessary conditions. 
+</p>
+</div></section><section class="reading-chunk" id="entry-A6E0B69D347F" data-section-entries="17FFBB442DEB 1FC6712A00F0 A6E0B69D347F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A6E0B69D347F/">18.39.15 Fiber integrability on a modified base</a><code class="tag-id">A6E0B69D347F</code></h2><span data-gerby-tag="77FC2933"></span>
+<p>
+Keep $\pi :X\to B$, $(A,h)$, $\theta $, $\varphi $ and $V_ m$ as in subsection <a data-tag="9D7A0568" href="../../tag/14F47AA5A61B/">18.39.6</a>. A singularity of higher codimension on the base can become divisorial after a modification of the base. By lemma <a data-tag="14CA6D10" href="../../tag/599D8A3D42BC/">5.43.22</a>, the integrability test upstairs then applies to the pulled-back section multiplied by the Jacobian. This fixed factor shifts the divisorial orders, while the restriction estimate still bounds the number of lost sections. 
+</p>
+<p>
+Let $\rho :Y\to B$ be a modification of connected compact complex manifolds, and form the fiber product and its projections 
+</p>
+<div class="equation">
+  \[  X'=X\times _ B Y,\qquad \pi ':X'\to Y,\qquad \mu :X'\to X.  \]
+</div>
+<p>
+ In local submersion coordinates one sees that $X'$ is smooth, that $\pi '$ is a submersion with the same compact connected fibers as $\pi $, and that $\mu $ is a modification. Let $R_\rho $ and $J_\rho $ be the relative canonical bundle and the Jacobian section of $\rho $, as in subsection <a data-tag="F1F72D4B" href="../../tag/F75CE9F0BB10/">5.43.21</a>. The coordinate Jacobian matrix of $\mu $ is that of $\rho $, extended by the identity in the fiber variables, so 
+</p>
+<div class="equation">
+  \[  R_\mu =\pi '^*R_\rho ,\qquad J_\mu =\pi '^*J_\rho .  \]
+</div>
+<p>
+ Put $\varphi '=\varphi \circ \mu $ and $\theta '=\rho ^*\theta $. Choose distinct nonempty smooth connected reduced divisors $D_1,\ldots ,D_ N$ on $Y$ whose union has simple normal crossings, together with smooth metrics $H_ i$ on $\mathcal O_ Y(D_ i)$, canonical sections $s_ i$ and curvatures $\eta _ i$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-00DB9E10">
+<p><a class="environment-identifier" href="../../tag/1FC6712A00F0/">Theorem <span data-tag="00DB9E10">18.39.16</span>.</a><span data-gerby-tag="00DB9E10"><code class="tag-id">1FC6712A00F0</code></span> Suppose that $c_ i&gt;0$ and $u\in C^\infty (Y,\mathbb R)$ satisfy </p>
+<div class="equation">
+  \[  \beta =\theta '+\mathrm{dd}^{\mathrm{c}}u-\sum _ i c_ i\eta _ i&gt;0, \qquad \varphi '\geq \sum _ i c_ i\log \| \pi '^*s_ i\| _{H_ i}^2-C.  \]
+</div>
+<p> Suppose that for each $i$ the function $\varphi '$ satisfies an anisotropic upper bound, with respect to $\pi '$, on a submersion polydisk over an open subset of $D_ i$ away from the other divisors, as in theorem <a data-tag="6FEFFC60" href="../../tag/A7CF6A5A6A5C/">18.39.13</a>, with fixed $p_ i,b_{ij}$. Define $a_ i$, $L_{m,i}$ and $K_{m,i}$ by the formulas of that theorem, and put </p>
+<div class="equation">
+  \[  \psi '=u+\sum _ i c_ i\log \| s_ i\| _{H_ i}^2, \qquad M_ m=\rho ^*A^ m\otimes R_\rho .  \]
+</div>
+<p> Then there is a unique $\psi \in \mathrm{PSH}(B,\theta )$ with $\psi \circ \rho =\psi '$, and </p>
+<div class="equation">
+  \[  \mathrm{MA}_\theta (\psi )=\rho _*(\beta ^ q),\qquad \int _ B\mathrm{MA}_\theta (\psi )=\int _ Y\beta ^ q\in (0,\infty ).  \]
+</div>
+<p> The map $T_ m(s)=J_\rho \rho ^*s$ identifies $H^0(B,A^ m)$ with $H^0(Y,M_ m)$, and for $W_ m=H^0(B,A^ m\otimes \mathcal I(m\psi ))$, </p>
+<div class="equation">
+  \[  \begin{split}  T_ m(W_ m)&amp; =H^0\left(Y,M_ m\left(-\sum _ iL_{m,i}D_ i\right)\right),\\  T_ m(W_ m)&amp; \subseteq T_ m(V_ m) \subseteq H^0\left(Y,M_ m\left(-\sum _ iK_{m,i}D_ i\right)\right). \end{split}  \]
+</div>
+<p> Consequently $W_ m\subseteq V_ m$ and $\dim V_ m-\dim W_ m=O(m^{q-1})$. If $q=1$, the difference is at most $\sum _ i\lceil a_ i\rceil $ for every $m$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the Poincaré–Lelong formula, $\theta '+\mathrm{dd}^{\mathrm{c}}\psi '=\beta +\sum _ i c_ i[D_ i]$. Thus $\psi '\in \mathrm{PSH}(Y,\rho ^*\theta )$, and proposition <a data-tag="DC3CD043" href="../../tag/A7090F92CA39/">5.43.18</a> gives the unique potential $\psi $ on $B$ with $\psi \circ \rho =\psi '$. On $Y$, locality off the union of the divisors and the fact that the non-pluripolar measure does not charge this union give $\mathrm{MA}_{\theta '}(\psi ')=\beta ^ q$. The measure identity in proposition <a data-tag="CFD1E559" href="../../tag/609A9325CEC9/">18.35.1</a> then gives the pushforward formula and the mass. 
+    <p>
+      Lemma <a data-tag="14CA6D10" href="../../tag/599D8A3D42BC/">5.43.22</a>, applied first with weight zero and then with weight $m\psi $, gives the identification of the full section spaces and the formula for $T_ m(W_ m)$; here $\mathcal I(m\psi ')=\mathcal O_ Y(-\sum _ iL_{m,i}D_ i)$ by the integrability computation for simple normal crossings in the proof of theorem <a data-tag="6FEFFC60" href="../../tag/A7CF6A5A6A5C/">18.39.13</a>. Since $u$ is bounded, the global lower bound gives $\varphi '\geq \psi '\circ \pi '-C'$. As $\rho \circ \pi '=\pi \circ \mu $ and $\mu $ is surjective, this descends to $\varphi \geq \psi \circ \pi -C'$, and integrability in bounded submersion charts proves $W_ m\subseteq V_ m$. 
+    <p>
+      For $s\in V_ m$, the transformation of multiplier ideals under $\mu $ gives 
+    
+<div class="equation">
+  \[  J_\mu \mu ^*s=\pi '^*T_ m(s) \in H^0\bigl (X',\pi '^*M_ m\otimes \mathcal I(m\varphi ')\bigr ).  \]
+</div>
+<p>
+       Hence, in each polydisk where the upper bound holds, the descended coefficient of $T_ m(s)$ vanishes to order at least $K_{m,i}$ along $D_ i$, by lemma <a data-tag="4ACCB4C2" href="../../tag/BBA6C67F74CF/">18.39.7</a> and the argument with a unit coefficient in the proof of theorem <a data-tag="95ADC985" href="../../tag/A79139E2A3C6/">18.39.8</a>. This is the vanishing order of $T_ m(s)$, including the Jacobian factor, and it proves the upper inclusion. 
+    <p>
+      The chain of restrictions along the divisors on $Y$ has at most $\sum _ i\lceil a_ i\rceil $ steps. On $D_ i$, each target is $(\rho ^*A|_{D_ i})^ m$ twisted by powers of the bundles $\mathcal O_ Y(-D_ j)|_{D_ i}$ in a linear range and by the fixed bundle $R_\rho |_{D_ i}$. Including the latter in lemma <a data-tag="12F3EB37" href="../../tag/46F892FF98FE/">18.39.12</a> with exponent one, we see that every target has dimension $O(m^{q-1})$, uniformly. Summing gives the estimate. For $q=1$ each divisor is a point and every target has dimension one. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The theorem requires the modification and the divisorial data to be given, with a positive residual; it does not say which selecting potentials admit such data. In the following model with a point pole on the base, both the residual and the Jacobian correction are explicit. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-0476ACDF">
+<p><a class="environment-identifier" href="../../tag/17FFBB442DEB/">Example <span data-tag="0476ACDF">18.39.17</span>.</a><span data-gerby-tag="0476ACDF"><code class="tag-id">17FFBB442DEB</code></span> Let $q\geq 2$, $B=\mathbb P^ q$, $A=\mathcal O_ B(1)$, $p=[1:0:\cdots :0]$ and $X=B\times \mathbb P^1$. Use the normalized Fubini–Study forms $\omega _ B,\omega _ F$ and the corresponding metrics, and for a point $o\in \mathbb P^1$ put </p>
+<div class="equation">
+  \[  R=\frac{\sum _{j=1}^ q|Z_ j|^2}{\sum _{j=0}^ q|Z_ j|^2},\quad T=\| s_ o\| ^2,\quad \varphi =\tfrac 14\log (R^2+T^3),\quad \psi =\tfrac 12\log R.  \]
+</div>
+<p> Then $\varphi \in \mathrm{PSH}(X,\omega _ B+\omega _ F)$, and $\psi \in \mathrm{PSH}(B,\omega _ B)$ has mass $1-2^{-q}$. Let $\mathfrak m_ p$ be the ideal sheaf of $p$. The selected and reference spaces are exactly </p>
+<div class="equation">
+  \[  \begin{gathered} V_ m=H^0\bigl (B,A^ m\otimes \mathfrak m_ p^{k_ m}\bigr ),\qquad W_ m=H^0\bigl (B,A^ m\otimes \mathfrak m_ p^{\ell _ m}\bigr ),\\ k_ m=\max \{ \lfloor m/2-2/3\rfloor -q+1,0\} ,\qquad \ell _ m=\max \{ \lfloor m/2\rfloor -q+1,0\} . \end{gathered}  \]
+</div>
+<p> Their defect vanishes for $m&lt;2q$, and for $m\geq 2q$ it is </p>
+<div class="equation">
+  \[  \dim V_ m-\dim W_ m=\binom {\lfloor m/2\rfloor -1}{q-1} \sim \frac{2^{1-q}}{(q-1)!}m^{q-1}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Over a common denominator, $R^2+T^3$ is a sum of squared moduli of holomorphic coefficients of sections of $\mathcal O_ X(2,3)$, divided by the corresponding metric factor. Hence $\mathrm{dd}^{\mathrm{c}}\varphi \geq -\tfrac 12\omega _ B-\tfrac 34\omega _ F$, also across the common zero set by the extension theorem. 
+    <p>
+      Let $\rho :Y\to B$ be the blowup of $p$, with exceptional divisor $E$, and let $\tau :Y\to \mathbb P^{q-1}$ be the extension to $Y$ of the projection $[Z_0:\cdots :Z_ q]\mapsto [Z_1:\cdots :Z_ q]$. Since $(\rho ,\tau )$ is an embedding, the forms 
+    
+<div class="equation">
+  \[  \alpha =\rho ^*\omega _ B,\quad \gamma =\tau ^*\omega _{\mathbb P^{q-1}},\qquad \beta =\tfrac 12(\alpha +\gamma )  \]
+</div>
+<p>
+       satisfy $\beta &gt;0$. The divisor bundle is $\mathcal O_ Y(E)=\rho ^*\mathcal O_ B(1)\otimes \tau ^*\mathcal O_{\mathbb P^{q-1}}(-1)$; its quotient metric has curvature $\alpha -\gamma $ and satisfies $R\circ \rho =\| s_ E\| ^2$. Thus the theorem applies with the single divisor $E$, $u=0$, $c=1/2$, $a=2/3$ and residual $\beta $. Along $E\times \{ o\} $ the pulled-back selecting potential has the exact local model $\tfrac 14\log (|z|^4+|w|^6)+O(1)$, and it is locally bounded elsewhere. If $T_ m(s)$ is divisible by $z^{K_ m}$, where $K_ m=\max \{ \lfloor m/2-2/3\rfloor ,0\} $, then lemma <a data-tag="4ACCB4C2" href="../../tag/BBA6C67F74CF/">18.39.7</a> gives integrability in every chart of this model; this gives the inclusion opposite to the upper inclusion of the theorem. 
+    <p>
+      In the blowup coordinates $Z_1/Z_0=z$ and $Z_ j/Z_0=zt_ j$ for $j\geq 2$, the Jacobian of $\rho $ is $z^{q-1}$. Hence, if a section $s$ of $A^ m$ vanishes to order $d$ at $p$, then $T_ m(s)$ vanishes to order $d+q-1$ generically along $E$. The two divisorial thresholds $\lfloor m/2\rfloor $ and $K_ m$ therefore give exactly the orders $\ell _ m$ and $k_ m$ above. Homogeneous polynomials of degree $m$ realize every jet of total degree at most $m$ at $p$. For $m\geq 2q$ we have $k_ m=\ell _ m-1$, and the additional jets of degree $\ell _ m-1$ are spanned by $\binom {\ell _ m+q-2}{q-1}$ monomials, which gives the defect. For $m&lt;2q$ both orders vanish. 
+    <p>
+      Finally, in cohomology $[\beta ]=\rho ^*c_1(A)-\tfrac 12[E]$. The intersection numbers containing both $\rho ^*c_1(A)$ and $[E]$ vanish, because $\rho ^*c_1(A)$ restricts to zero on $E$. The normal bundle of $E\simeq \mathbb P^{q-1}$ is $\mathcal O_ E(-1)$, so $\int _ Y[E]^ q=(-1)^{q-1}$, while $\int _ Y(\rho ^*c_1(A))^ q=1$. Expanding gives $\int _ Y\beta ^ q=1-2^{-q}$, which is the mass of $\psi $ by the theorem. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The selecting potential is finite at most points of the fiber over $p$ and equals $-\infty $ at the point $(p,o)$, so again it does not descend, even up to a bounded function. The reference potential $\psi $ has a pole of codimension $q$ at $p$, and the Jacobian factor is what converts the divisorial orders along $E$ into vanishing orders at $p$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-27FE241587D2" data-section-entries="27FE241587D2 AF408F696ADF C695A6659495"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/27FE241587D2/">18.39.18 Semipositive residuals with positive volume</a><code class="tag-id">27FE241587D2</code></h2><span data-gerby-tag="F4A72E55"></span>
+<p>
+Strict positivity of the residual $\beta $ was used only to make the reference potential $\psi $ plurisubharmonic with positive non-pluripolar mass; the estimates for the divisorial orders do not use it. The section comparison therefore holds for semipositive residuals with positive top integral. In particular, it does not require the residual class to contain a positive form. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-019439A3">
+<p><a class="environment-identifier" href="../../tag/AF408F696ADF/">Corollary <span data-tag="019439A3">18.39.19</span>.</a><span data-gerby-tag="019439A3"><code class="tag-id">AF408F696ADF</code></span> In each of theorem <a data-tag="95ADC985" href="../../tag/A79139E2A3C6/">18.39.8</a>, theorem <a data-tag="6FEFFC60" href="../../tag/A7CF6A5A6A5C/">18.39.13</a>, theorem <a data-tag="00DB9E10" href="../../tag/1FC6712A00F0/">18.39.16</a>, replace the condition $\beta &gt;0$ by </p>
+<div class="equation">
+  \[  \beta \geq 0,\qquad \int _ M\beta ^ q&gt;0,  \]
+</div>
+<p> where $M=B$ in the first two theorems and $M=Y$ in the third, and keep all the other hypotheses. Then all the conclusions remain valid. The same replacement is valid in corollary <a data-tag="1E656A09" href="../../tag/094794C14195/">18.39.9</a>. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In each case the reference current is $\beta +\sum _ i c_ i[D_ i]$, which is positive. Locality off the union of the divisors, together with the fact that the non-pluripolar measure does not charge this union, gives the non-pluripolar measure $\beta ^ q$ on $M$. Its mass is finite because $\beta $ is smooth and $M$ is compact, and positive by assumption. In the case of a modified base, the potential descends and its measure is $\rho _*(\beta ^ q)$, by the same descent and measure identities as before. 
+    <p>
+      The multiplier ideal on the base depends only on the logarithmic divisorial orders and the bounded smooth term. The lower inclusion uses the global lower bound for the selecting potential, and the upper inclusion uses the anisotropic threshold in a polydisk where the upper bound holds; neither uses strict positivity of $\beta $. The restriction estimates concern fixed line bundles, whatever their curvature, and the Jacobian and the fixed canonical twist in the case of a modified base are unchanged. Hence the inclusions and dimension bounds in all three proofs remain valid. The reverse inclusion for the exact anisotropic model uses only its local integrability test and the local boundedness off the pole set, so it also remains valid. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The condition on the top integral concerns the chosen reference: a semipositive residual may have zero top integral. Conversely, a semipositive residual with positive top integral need not become strictly positive after any smooth change of gauge. The following example shows this, with an exact computation of the selected spaces. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-5040129F">
+<p><a class="environment-identifier" href="../../tag/C695A6659495/">Example <span data-tag="5040129F">18.39.20</span>.</a><span data-gerby-tag="5040129F"><code class="tag-id">C695A6659495</code></span> Let $q\geq 2$, let $\rho :B\to \mathbb P^ q$ be the blowup of $p=[1:0:\cdots :0]$, and let $E$ be its exceptional divisor. Let $\tau :B\to \mathbb P^{q-1}$ be the extension to $B$ of the projection from $p$, and put </p>
+<div class="equation">
+  \[  \alpha =\rho ^*\omega _{\mathbb P^ q},\qquad \gamma =\tau ^*\omega _{\mathbb P^{q-1}},\qquad \kappa =\alpha +\gamma &gt;0,  \]
+</div>
+<p> where $\omega _{\mathbb P^ q}$ and $\omega _{\mathbb P^{q-1}}$ are the normalized Fubini–Study forms. Equip $\mathcal O_ B(E)=\rho ^*\mathcal O_{\mathbb P^ q}(1)\otimes \tau ^*\mathcal O_{\mathbb P^{q-1}}(-1)$ with the quotient metric, whose curvature is $\eta =\alpha -\gamma $, and let $s_ E$ be its canonical section. For an integer $k\geq 1$, equip </p>
+<div class="equation">
+  \[  A=\rho ^*\mathcal O_{\mathbb P^ q}(k)\otimes \mathcal O_ B(E) \quad \hbox{with curvature}\quad \theta =k\alpha +\eta .  \]
+</div>
+<p> Let $X=B\times \mathbb P^1$, with projection $\pi $ to $B$. For a point $o\in \mathbb P^1$, use the normalized Fubini–Study metric on $\mathcal O_{\mathbb P^1}(o)$, and set </p>
+<div class="equation">
+  \[  \begin{gathered} R=\| \pi ^*s_ E\| ^2,\quad T=\| s_ o\| ^2,\quad \varphi =\tfrac 12\log (R^2+T^3),\quad \omega =\pi ^*\kappa +2\omega _{\mathbb P^1},\\ \psi =\log \| s_ E\| ^2. \end{gathered}  \]
+</div>
+<p> Then $\varphi \in \mathrm{PSH}(X,\omega )$, $\psi \in \mathrm{PSH}(B,\theta )$ and </p>
+<div class="equation">
+  \[  \mathrm{MA}_\theta (\psi )=(k\alpha )^ q,\qquad \int _ B\mathrm{MA}_\theta (\psi )=k^ q.  \]
+</div>
+<p> The residual $k\alpha $ cannot be made strictly positive by a smooth change of gauge. Nevertheless, for every $m\geq 1$ the selected and reference spaces coincide as subspaces of $H^0(B,A^ m)$: </p>
+<div class="equation">
+  \[  V_ m=W_ m=H^0(B,A^ m) =s_ E^ m\rho ^*H^0(\mathbb P^ q,\mathcal O(km)), \qquad \dim V_ m=\binom {km+q}{q}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $(\rho ,\tau )$ is an embedding, $\kappa &gt;0$. The quotient metric satisfies 
+    
+<div class="equation">
+  \[  \| s_ E\| ^2=\rho ^*\left(\frac{\sum _{j=1}^ q|Z_ j|^2}{\sum _{j=0}^ q|Z_ j|^2}\right),  \]
+</div>
+<p>
+       as in example <a data-tag="0476ACDF" href="../../tag/17FFBB442DEB/">18.39.17</a>. The same calculation over a common denominator, now with coefficient $1/2$, gives 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\varphi \geq -\pi ^*\alpha -\tfrac 32\omega _{\mathbb P^1}  \]
+</div>
+<p>
+       off the pole set $E\times \{ o\} $, and across it by the extension theorem. Hence $\omega +\mathrm{dd}^{\mathrm{c}}\varphi \geq \pi ^*\gamma +\tfrac 12\omega _{\mathbb P^1}\geq 0$. Along the smooth pole set $E\times \{ o\} $, the function $\varphi $ has the exact local model $\tfrac 12\log (|z|^4+|w|^6)+O(1)$, and it is locally bounded elsewhere. It also satisfies the global lower bound $\varphi \geq \log R$. 
+    <p>
+      We may therefore take $c=1$, $u=0$, $p=2$, $b_1=3$ and $a=2/3$, with residual $\beta =\theta -\eta =k\alpha \geq 0$. Its top integral is $k^ q$, since the normalized Fubini–Study form has top integral one and $\rho $ is a modification. Corollary <a data-tag="019439A3" href="../../tag/AF408F696ADF/">18.39.19</a>, Corollary <a data-tag="1E656A09" href="../../tag/094794C14195/">18.39.9</a> therefore give 
+    
+<div class="equation">
+  \[  W_ m=H^0(B,A^ m(-mE)),\qquad V_ m=H^0(B,A^ m(-(m-1)E)).  \]
+</div>
+<p>
+      Let $t\geq 0$ be an integer. A section of $\rho ^*\mathcal O(km)\otimes \mathcal O_ B(tE)$, divided by $s_ E^ t$, gives a holomorphic section of $\mathcal O(km)$ on $\mathbb P^ q\setminus \{ p\} $, which extends across $p$ by Hartogs' theorem since $q\geq 2$. Pulling the extension back and multiplying by $s_ E^ t$ recovers the original section off $E$, hence everywhere by the identity theorem. Thus every section of $A^ m$ has the form $s_ E^ m\rho ^*s$, and the natural embeddings of $W_ m$ and $V_ m$ into $H^0(B,A^ m)$ both have this image. Its dimension is the number $\binom {km+q}{q}$ of monomials of degree $km$. 
+    <p>
+      Finally, let $C\subset E\simeq \mathbb P^{q-1}$ be a projective line; it is contracted by $\rho $. For every smooth real function $u$, Stokes' theorem gives $\int _ C(k\alpha +\mathrm{dd}^{\mathrm{c}}u)=0$, whereas a strictly positive form has positive integral over $C$. Changing the smooth metric on the divisor bundle changes the residual only by $\mathrm{dd}^{\mathrm{c}}$ of a smooth function, so this proves the obstruction. Moreover, $\varphi $ is finite on most of each fiber over $E$ and equals $-\infty $ at the point $o$ of that fiber, so it does not descend, even up to a bounded function. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+Thus the selected and reference spaces agree, although the selecting potential does not descend and the reference has positive mass. The reason is that $E$ is a fixed component of every section of $A^ m$: all global sections vanish along $E$ to order $m$, more than the local integrability threshold requires. As before, the criterion presupposes the global bounds for the selecting potential and a residual with positive top integral; it does not produce them for arbitrary fiber singularities. 
+</p>
+</div></section><section class="reading-chunk" id="entry-64330C0C7BF6" data-section-entries="64330C0C7BF6 F3005ECDDA69"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/64330C0C7BF6/">18.39.21 Fixed exceptional orders and coefficient thresholds</a><code class="tag-id">64330C0C7BF6</code></h2><span data-gerby-tag="1019FA75"></span>
+<p>
+In example <a data-tag="5040129F" href="../../tag/C695A6659495/">18.39.20</a> the fixed divisor $E$ absorbs the local integrability conditions. If the coefficient of the selecting potential increases, the selected sections must eventually also vanish at the point that was blown up. The following family shows when this happens, and when the mass of the reference potential vanishes. 
+</p>
+<p>
+Keep the blowup $\rho :B\to \mathbb P^ q$ with $q\geq 2$, its exceptional divisor $E$, the extended projection $\tau $, the forms $\alpha ,\gamma ,\kappa $, and the quotient metric on $\mathcal O_ B(E)$ with curvature $\eta $ from that example, and write $x=\rho (E)$ for the point blown up. Let $k,e\geq 1$ be integers and equip 
+</p>
+<div class="equation">
+  \[  A_ e=\rho ^*\mathcal O_{\mathbb P^ q}(k)\otimes \mathcal O_ B(eE), \qquad \theta =k\alpha +e\eta  \]
+</div>
+<p>
+ with the product metric. Let $X=B\times \mathbb P^1$ with its projection $\pi $, let $o\in \mathbb P^1$, and let $R=\| \pi ^*s_ E\| ^2$ and $T=\| s_ o\| ^2$ as before. For positive integers $p,b$ and a real number $c&gt;0$, put 
+</p>
+<div class="equation">
+  \[  \varphi _ c=\frac cp\log (R^ p+T^ b),\quad \omega _ c=c\pi ^*\kappa +(cb/p+1)\omega _{\mathbb P^1},\quad a=\frac pb,  \]
+</div>
+<p>
+ and let $V_ m(c)\subseteq H^0(B,A_ e^ m)$ be the space selected by $\mathcal I(m\varphi _ c)$, regarded on $B$ by descent. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-7D333DF3">
+<p><a class="environment-identifier" href="../../tag/F3005ECDDA69/">Proposition <span data-tag="7D333DF3">18.39.22</span>.</a><span data-gerby-tag="7D333DF3"><code class="tag-id">F3005ECDDA69</code></span> For every $c&gt;0$ we have $\varphi _ c\in \mathrm{PSH}(X,\omega _ c)$, and the selected space is </p>
+<div class="equation">
+  \[  \begin{gathered} V_ m(c)=s_ E^{em}\rho ^*H^0\bigl (\mathbb P^ q,\mathcal O(km)\otimes \mathfrak m_ x^{v_ m}\bigr ),\\ v_ m=\max \{ \lfloor m(c-e)-a\rfloor ,0\} ,\qquad m\geq 1, \end{gathered}  \]
+</div>
+<p> where $\mathfrak m_ x$ is the ideal sheaf of $x$. For $0&lt;c\leq e+k$ put </p>
+<div class="equation">
+  \[  d=\max \{ c,e\} ,\quad \delta =d-e,\quad \psi _ d=d\log \| s_ E\| ^2,\quad \ell _ m=\lfloor m\delta \rfloor .  \]
+</div>
+<p> Then $\psi _ d\in \mathrm{PSH}(B,\theta )$ and </p>
+<div class="equation">
+  \[  \begin{gathered} \mathrm{MA}_\theta (\psi _ d)=\bigl ((k-\delta )\alpha +\delta \gamma \bigr )^ q, \qquad \int _ B\mathrm{MA}_\theta (\psi _ d)=k^ q-\delta ^ q. \end{gathered}  \]
+</div>
+<p> The reference spaces satisfy </p>
+<div class="equation">
+  \[  \begin{split}  W_ m(c)&amp; :=H^0\bigl (B,A_ e^ m\otimes \mathcal I(m\psi _ d)\bigr )\\ &amp; =s_ E^{em}\rho ^*H^0\bigl (\mathbb P^ q,\mathcal O(km)\otimes \mathfrak m_ x^{\ell _ m}\bigr ) \subseteq V_ m(c). \end{split}  \]
+</div>
+<p> If $0&lt;c\leq e$, both spaces equal $H^0(B,A_ e^ m)$ for every $m$. If $e&lt;c&lt;e+k$, the defect and the leading term of the dimension are </p>
+<div class="equation">
+  \[  \begin{gathered} \dim V_ m(c)-\dim W_ m(c) =\binom {\ell _ m+q-1}{q}-\binom {v_ m+q-1}{q}=O(m^{q-1}),\\ \dim V_ m(c)=\frac{k^ q-(c-e)^ q}{q!}m^ q+O(m^{q-1}), \end{gathered}  \]
+</div>
+<p> where $\binom {q-1}{q}=0$. At $c=e+k$ the reference $\psi _ d$ has zero mass and </p>
+<div class="equation">
+  \[  \dim V_ m(e+k) =\frac{(\lceil a\rceil +1)k^{q-1}}{(q-1)!}m^{q-1}+O(m^{q-2}).  \]
+</div>
+<p> If $c&gt;e+k$, the selected space is zero exactly when </p>
+<div class="equation">
+  \[  m(c-e-k)\geq a+1;  \]
+</div>
+<p> in particular, it is zero for every $m\geq \lceil (a+1)/(c-e-k)\rceil $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      As in example <a data-tag="5040129F" href="../../tag/C695A6659495/">18.39.20</a>, the norm identity writes $R^ p+T^ b$ over the common denominator for $\mathcal O(p,b)$ on $\mathbb P^ q\times \mathbb P^1$, pulled back to $X$, and its numerator is a sum of squared moduli of holomorphic coefficients. The lower bound for the complex Hessian of the logarithm of such a sum, together with the extension theorem across the pole set, gives 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\varphi _ c\geq -c\pi ^*\alpha -(cb/p)\omega _{\mathbb P^1}.  \]
+</div>
+<p>
+       Thus $\omega _ c+\mathrm{dd}^{\mathrm{c}}\varphi _ c\geq c\pi ^*\gamma +\omega _{\mathbb P^1}\geq 0$. 
+    <p>
+      Hartogs' theorem, as in that example, shows that every global section of $A_ e^ m$ can be written uniquely as $s_ E^{em}\rho ^*s$ with $s\in H^0(\mathbb P^ q,\mathcal O(km))$. If $s$ vanishes to order $j$ at $x$, this section vanishes to order $em+j$ generically along $E$. In a chart of the pole set, $\varphi _ c=(c/p)\log (|z|^{2p}+|w|^{2b})+O(1)$. The argument with a unit coefficient in the proof of theorem <a data-tag="95ADC985" href="../../tag/A79139E2A3C6/">18.39.8</a> and lemma <a data-tag="4ACCB4C2" href="../../tag/BBA6C67F74CF/">18.39.7</a> require 
+    
+<div class="equation">
+  \[  em+j+1&gt;mc-a, \quad \hbox{equivalently}\quad j\geq \max \{ \lfloor m(c-e)-a\rfloor ,0\} .  \]
+</div>
+<p>
+       Conversely, this divisorial order gives integrability in every chart of the pole set, and $\varphi _ c$ is locally bounded elsewhere. The vanishing order of $s$ at $x$ equals the generic vanishing order of $\rho ^*s$ along $E$, as the blowup coordinates of example <a data-tag="0476ACDF" href="../../tag/17FFBB442DEB/">18.39.17</a> show. This proves the formula for $V_ m(c)$. 
+    <p>
+      For $0\leq \delta \leq k$, the Poincaré–Lelong formula gives 
+    
+<div class="equation">
+  \[  \theta +\mathrm{dd}^{\mathrm{c}}\psi _ d=(k-\delta )\alpha +\delta \gamma +d[E]\geq 0.  \]
+</div>
+<p>
+       The non-pluripolar measure does not charge $E$, and it equals the top power of the smooth residual $(k-\delta )\alpha +\delta \gamma $. The class of this residual is $k\rho ^*c_1(\mathcal O(1))-\delta [E]$. The mixed intersection numbers vanish and $\int _ B[E]^ q=(-1)^{q-1}$, as computed in example <a data-tag="0476ACDF" href="../../tag/17FFBB442DEB/">18.39.17</a>, so its mass is $k^ q-\delta ^ q$. The divisorial ideal is $\mathcal I(m\psi _ d)=\mathcal O_ B(-\lfloor md\rfloor E)$. Since $em$ is an integer, $\lfloor md\rfloor =em+\ell _ m$, and the condition on $s$ is exactly $j\geq \ell _ m$. This gives the formula for $W_ m(c)$, and the inclusion follows from $\ell _ m\geq v_ m$. If $c\leq e$, both point orders are zero. 
+    <p>
+      For an integer $0\leq j\leq km+1$, homogeneous polynomials of degree $km$ realize every jet of total degree less than $j$ at $x$, and there are $\binom {j+q-1}{q}$ such jets. Hence 
+    
+<div class="equation">
+  \[  h^0\bigl (\mathbb P^ q,\mathcal O(km)\otimes \mathfrak m_ x^ j\bigr ) =\binom {km+q}{q}-\binom {j+q-1}{q}.  \]
+</div>
+<p>
+       For $e&lt;c&lt;e+k$ we have $0\leq v_ m\leq \ell _ m\leq km$ and $\ell _ m-v_ m\leq \lceil a\rceil $, and subtraction gives the exact defect. Each additional jet degree contributes $O(m^{q-1})$ monomials, which gives the bound, and $v_ m=m(c-e)+O(1)$ gives the leading term of $\dim V_ m(c)$. 
+    <p>
+      At $c=e+k$ we have $v_ m=\max \{ km-\lceil a\rceil ,0\} $. For large $m$, the allowed monomials have vanishing orders $km-\lceil a\rceil ,\ldots ,km$ at $x$, and each of these $\lceil a\rceil +1$ degrees has $k^{q-1}m^{q-1}/(q-1)!+O(m^{q-2})$ monomials, which proves the asymptotic formula. The residual is then $k\gamma $, whose top power vanishes. For $c&gt;e+k$, a nonzero polynomial of degree $km$ vanishes at $x$ to order at most $km$. Hence $V_ m(c)=0$ exactly when $v_ m&gt;km$, which is equivalent to $m(c-e-k)-a\geq 1$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+For $0&lt;c&lt;e+k$ the reference $\psi _ d$ has positive mass and the defect is $O(m^{q-1})$, so this family admits the approximation asked for in <a data-tag="3C96DD18" href="../../tag/4813DF6B9029/">24.10.2</a>. At $c=e+k$ the reference mass vanishes and the growth degree of the selected spaces drops to $q-1$; beyond this threshold the selected spaces eventually vanish. 
+</p>
+</div></section><section class="reading-chunk" id="entry-5AF8FED16874" data-section-entries="47ABA9EAB173 5AF8FED16874 822490631827"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5AF8FED16874/">18.39.23 A semipositive residual with nonzero defect</a><code class="tag-id">5AF8FED16874</code></h2><span data-gerby-tag="D48272F6"></span>
+<p>
+Blowing up two points instead of one, we obtain a residual that is semipositive, cannot be made strictly positive, and still has positive top integral. Unlike the example with one blown-up point, the gap between the two divisorial thresholds now produces a nonzero defect of the largest possible order $m^{q-1}$. Counting the spaces requires the following elementary interpolation of jets at several points. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-CAFD60B4">
+<p><a class="environment-identifier" href="../../tag/822490631827/">Lemma <span data-tag="CAFD60B4">18.39.24</span>.</a><span data-gerby-tag="CAFD60B4"><code class="tag-id">822490631827</code></span> Let $x_1,\ldots ,x_ N$ be distinct points of $\mathbb P^ q$, $q\geq 1$, and let $d,j_1,\ldots ,j_ N$ be nonnegative integers with $\sum _ i j_ i\leq d+1$. Then the map from $H^0(\mathbb P^ q,\mathcal O(d))$ to the jets of order less than $j_ i$ at the points $x_ i$ is surjective. In particular, </p>
+<div class="equation">
+  \[  h^0\left(\mathbb P^ q,\mathcal O(d)\otimes \bigcap _ i\mathfrak m_{x_ i}^{j_ i}\right) =\binom {d+q}{q}-\sum _ i\binom {j_ i+q-1}{q},  \]
+</div>
+<p> where $\binom {q-1}{q}=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may discard the points with $j_ i=0$; if no point remains, the target is zero. Choose an affine chart containing all the remaining points, and use the corresponding trivialization of $\mathcal O(d)$. For each pair $i\ne k$ choose an affine linear function $L_{ik}$ vanishing at $x_ k$ and nonzero at $x_ i$, and set 
+    
+<div class="equation">
+  \[  Q_ i=\prod _{k\ne i}L_{ik}^{j_ k}.  \]
+</div>
+<p>
+       Given a jet $b_ i$ at $x_ i$, divide it by the invertible jet of $Q_ i$ at $x_ i$, and let $T_ i$ be the Taylor polynomial of degree at most $j_ i-1$ of the quotient. Then $Q_ iT_ i$ has the jet $b_ i$ at $x_ i$ and vanishes to order at least $j_ k$ at every other point $x_ k$, and its degree is at most $\sum _ kj_ k-1\leq d$. Hence $\sum _ iQ_ iT_ i$, homogenized to degree $d$, realizes all the prescribed jets. In $q$ variables there are $\binom {j_ i+q-1}{q}$ monomials of total degree less than $j_ i$, which gives the dimension formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-80EF4205">
+<p><a class="environment-identifier" href="../../tag/47ABA9EAB173/">Example <span data-tag="80EF4205">18.39.25</span>.</a><span data-gerby-tag="80EF4205"><code class="tag-id">47ABA9EAB173</code></span> Let $q\geq 2$ and let $\rho :B\to \mathbb P^ q$ be the blowup of the two points $x_1=[1:0:\cdots :0]$ and $x_2=[0:1:0:\cdots :0]$, with exceptional divisors $E_1,E_2$. Let $\tau _ i:B\to \mathbb P^{q-1}$ be the extension to $B$ of the projection from $x_ i$. With the normalized Fubini–Study forms, put </p>
+<div class="equation">
+  \[  \alpha =\rho ^*\omega _{\mathbb P^ q},\qquad \gamma _ i=\tau _ i^*\omega _{\mathbb P^{q-1}},\qquad \kappa =\alpha +\gamma _1+\gamma _2&gt;0.  \]
+</div>
+<p> Equip $\mathcal O_ B(E_ i)=\rho ^*\mathcal O(1)\otimes \tau _ i^*\mathcal O(-1)$ with the quotient metric, whose curvature is $\eta _ i=\alpha -\gamma _ i$, and let $s_ i$ be its canonical section. Equip </p>
+<div class="equation">
+  \[  A=\rho ^*\mathcal O(2)\otimes \mathcal O_ B(E_1+E_2), \qquad \theta =2\alpha +\eta _1+\eta _2  \]
+</div>
+<p> with the product metric. On $X=B\times \mathbb P^1$, with projection $\pi $ and a point $o\in \mathbb P^1$, set </p>
+<div class="equation">
+  \[  \begin{gathered} R_ i=\| \pi ^*s_ i\| ^2,\qquad T=\| s_ o\| ^2,\\ \varphi =\log (R_1^2+T^3)+\log (R_2^2+T^3),\\ \omega =4\pi ^*\kappa +7\omega _{\mathbb P^1},\\ \psi =2\log \| s_1\| ^2+2\log \| s_2\| ^2, \qquad \beta =\gamma _1+\gamma _2. \end{gathered}  \]
+</div>
+<p> Then $\varphi \in \mathrm{PSH}(X,\omega )$, $\psi \in \mathrm{PSH}(B,\theta )$, and </p>
+<div class="equation">
+  \[  \mathrm{MA}_\theta (\psi )=\beta ^ q,\qquad \int _ B\beta ^ q=2^ q-2&gt;0.  \]
+</div>
+<p> No smooth change of gauge makes $\beta $ strictly positive. Nevertheless, writing $V_ m$ and $W_ m$ for the selected and reference spaces as before, their images in $H^0(B,A^ m)$ are, for every $m\geq 1$, </p>
+<div class="equation">
+  \[  \begin{aligned}  V_ m&amp; =s_1^ ms_2^ m\rho ^*H^0\left(\mathbb P^ q,\mathcal O(2m) \otimes \mathfrak m_{x_1}^{m-1}\mathfrak m_{x_2}^{m-1}\right),\\  W_ m&amp; =s_1^ ms_2^ m\rho ^*H^0\left(\mathbb P^ q,\mathcal O(2m) \otimes \mathfrak m_{x_1}^{m}\mathfrak m_{x_2}^{m}\right). \end{aligned}  \]
+</div>
+<p> The defect and the common leading term of the dimensions are </p>
+<div class="equation">
+  \[  \begin{gathered} \dim V_ m-\dim W_ m=2\binom {m+q-2}{q-1} \sim \frac{2}{(q-1)!}m^{q-1},\\ \dim V_ m=\frac{2^ q-2}{q!}m^ q+O(m^{q-1}),\qquad \dim W_ m=\frac{2^ q-2}{q!}m^ q+O(m^{q-1}). \end{gathered}  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The map $(\rho ,\tau _1,\tau _2)$ is an embedding: away from the exceptional divisors $\rho $ is already an embedding, and along $E_ i$ the map $\tau _ i$ separates the tangent directions of $E_ i$ while $\rho $ detects the normal direction. Hence $\kappa &gt;0$. The identity for the quotient metric is the one-point identity of example <a data-tag="5040129F" href="../../tag/C695A6659495/">18.39.20</a>, applied at each center. For each $i$, the calculation over a common denominator writes $R_ i^2+T^3$ as a sum of squared moduli of holomorphic coefficients over the metric denominator for $\mathcal O(2,3)$. Together with the extension theorem across the pole set, this gives 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\varphi \geq -4\pi ^*\alpha -6\omega _{\mathbb P^1}.  \]
+</div>
+<p>
+       It follows that $\omega +\mathrm{dd}^{\mathrm{c}}\varphi \geq 4\pi ^*\beta +\omega _{\mathbb P^1}\geq 0$. 
+    <p>
+      By the Poincaré–Lelong formula, 
+    
+<div class="equation">
+  \[  \theta +\mathrm{dd}^{\mathrm{c}}\psi =\beta +2[E_1]+2[E_2]\geq 0.  \]
+</div>
+<p>
+       The non-pluripolar product does not charge the divisors and equals $\beta ^ q$. The class of $\beta $ is $2H-[E_1]-[E_2]$, where $H=\rho ^*c_1(\mathcal O(1))$. As in example <a data-tag="0476ACDF" href="../../tag/17FFBB442DEB/">18.39.17</a>, $H^ q=1$, the mixed intersection numbers involving $H$ and some $[E_ i]$ vanish, and $[E_ i]^ q=(-1)^{q-1}$; moreover, the two exceptional divisors are disjoint. Expanding gives $\int _ B\beta ^ q=2^ q-2$. 
+    <p>
+      Let $C$ be the strict transform of the line through $x_1$ and $x_2$. Both maps $\tau _ i$ are constant on $C$, so $\int _ C\beta =0$. By Stokes' theorem, $\int _ C(\beta +\mathrm{dd}^{\mathrm{c}}u)=0$ for every smooth real function $u$, whereas a strictly positive form has positive integral over $C$. This proves the obstruction, although the top integral is positive. 
+    <p>
+      The selecting potential satisfies $\varphi \geq \pi ^*\psi $. Its pole set is the disjoint union of the sets $E_ i\times \{ o\} $. Near either of them the other summand is smooth, and 
+    
+<div class="equation">
+  \[  \varphi =\log (|z|^4+|w|^6)+O(1),\qquad E_ i=\{ z=0\} ,\quad o=\{ w=0\} .  \]
+</div>
+<p>
+       Thus $c_ i=p_ i=2$, $b_{i1}=3$ and $a_ i=2/3$. By theorem <a data-tag="6FEFFC60" href="../../tag/A7CF6A5A6A5C/">18.39.13</a>, corollary <a data-tag="019439A3" href="../../tag/AF408F696ADF/">18.39.19</a>, $W_ m=H^0(B,A^ m(-2m(E_1+E_2)))$, and $V_ m$ is contained in $H^0(B,A^ m(-(2m-1)(E_1+E_2)))$; for an integer $\ell $, the strict local integrability condition $\ell +1&gt;2m-2/3$ means $\ell \geq 2m-1$. Conversely, by lemma <a data-tag="4ACCB4C2" href="../../tag/BBA6C67F74CF/">18.39.7</a>, divisibility by these orders gives integrability in every chart of the pole set, and off the pole set the selecting potential is locally bounded. This proves equality for $V_ m$. 
+    <p>
+      Dividing a section of $A^ m$ by $s_1^ ms_2^ m$ gives a section of $\mathcal O(2m)$ away from the two centers, which extends across them by Hartogs' theorem since $q\geq 2$. The pullback of the extension, multiplied by $s_1^ ms_2^ m$, agrees with the original section everywhere, by the identity theorem. If the extended section vanishes to order $j_ i$ at $x_ i$, the corresponding section of $A^ m$ vanishes to order $m+j_ i$ generically along $E_ i$. The two divisorial conditions therefore give exactly the vanishing orders at $x_1$ and $x_2$ displayed in the statement. Since the two point ideals have disjoint supports, their product equals their intersection. 
+    <p>
+      Apply lemma <a data-tag="CAFD60B4" href="../../tag/822490631827/">18.39.24</a> with $d=2m$ and orders $(m,m)$ or $(m-1,m-1)$; in both cases their sum is at most $d+1$. This gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  \dim W_ m&amp; =\binom {2m+q}{q}-2\binom {m+q-1}{q},\\  \dim V_ m&amp; =\binom {2m+q}{q}-2\binom {m+q-2}{q}. \end{aligned}  \]
+</div>
+<p>
+       Pascal's identity gives the exact defect, and the leading terms give both growth laws. For $m=1$ the vanishing orders for $V_1$ are zero, and the defect is already two. For $q=2$ the dimensions are $\dim W_ m=(m+1)^2$ and $\dim V_ m=m^2+4m+1$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+In this example the residual $\beta $ has zero integral over the curve $C$, so no smooth change of gauge makes it positive, and yet its top integral is positive. Thus the bound $O(m^{q-1})$ of corollary <a data-tag="019439A3" href="../../tag/AF408F696ADF/">18.39.19</a> cannot be improved to $o(m^{q-1})$ for semipositive residuals either. As in the previous examples, the selecting potential is finite on most of each fiber over $E_ i$ and equals $-\infty $ at the point $o$ of that fiber, so it does not descend, even up to a bounded function. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/B73567245C4F/"><span>← Previous</span><small>Proposition 18.38.6</small></a><a class="pager-next" rel="next" href="../../tag/EF14C0C90C6C/"><span>Next →</span><small>Lemma 18.39.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor,
+  author = {{Gerby contributors}},
+  title = {18.39 Singularities along a section over a divisor},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/partial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fpartial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fpartial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor%2F&amp;body=Page%3A+%5B18.39+Singularities+along+a+section+over+a+divisor%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fpartial-kernels-and-quotient-equilibrium--singularities-along-a-section-over-a-divisor%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+22f1eaa0cfbad890362337649e6d77b06549682a+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

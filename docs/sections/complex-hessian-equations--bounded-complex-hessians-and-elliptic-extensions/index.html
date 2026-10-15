@@ -1,0 +1,159 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/"><title>8.5 Bounded complex Hessians and elliptic extensions · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/complex-hessian-equations/">Chapter 8: Complex Hessian equations</a></li><li><a href="../../sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/" aria-current="page">Section 8.5: Bounded complex Hessians and elliptic extensions</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/complex-hessian-equations/"><span>8.1</span> Complex Hessian equations</a><code class="tag-id">CFD38285654D</code></li><li><a href="../../sections/complex-hessian-equations--the-admissible-cone/"><span>8.2</span> The admissible cone</a><code class="tag-id">F677D35E0BD7</code></li><li><a href="../../sections/complex-hessian-equations--liouville-and-gradient-estimates/"><span>8.3</span> Liouville and gradient estimates</a><code class="tag-id">1B647CA2D005</code></li><li><a href="../../sections/complex-hessian-equations--a-trace-estimate-with-a-prescribed-potential/"><span>8.4</span> A trace estimate with a prescribed potential</a><code class="tag-id">54309E0621C2</code></li><li><a href="../../sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/" aria-current="page"><span>8.5</span> Bounded complex Hessians and elliptic extensions</a><code class="tag-id">EA00781761AE</code></li><li><a href="../../sections/complex-hessian-equations--proper-equations-and-admissible-approximation/"><span>8.6</span> Proper equations and admissible approximation</a><code class="tag-id">A493740DE457</code></li><li><a href="../../sections/complex-hessian-equations--continuous-products-envelopes-and-domination/"><span>8.7</span> Continuous products, envelopes and domination</a><code class="tag-id">5B2332FC78E2</code></li><li><a href="../../sections/complex-hessian-equations--continuous-equations-and-regularity/"><span>8.8</span> Continuous equations and regularity</a><code class="tag-id">D5976AE10288</code></li><li><a href="../../sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/"><span>8.9</span> Bounded potentials and recursive Hessian currents</a><code class="tag-id">376A2B30178D</code></li><li><a href="../../sections/complex-hessian-equations--sobolev-capacity-and-two-hessian-factors/"><span>8.10</span> Sobolev capacity and two Hessian factors</a><code class="tag-id">FB2B0B645AB5</code></li><li><a href="../../sections/complex-hessian-equations--local-capacities-and-decreasing-products/"><span>8.11</span> Local capacities and decreasing products</a><code class="tag-id">BA5052EF5C4F</code></li><li><a href="../../sections/complex-hessian-equations--locality-and-maxima-of-bounded-potentials/"><span>8.12</span> Locality and maxima of bounded potentials</a><code class="tag-id">927D22F5110F</code></li><li><a href="../../sections/complex-hessian-equations--hessian-mass-and-global-comparison/"><span>8.13</span> Hessian mass and global comparison</a><code class="tag-id">B908310EE8A2</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/BEA27E46DAEE/"><span>← Previous</span><small>Corollary 8.4.7</small></a><a class="pager-next" rel="next" href="../../tag/89771FD1FD15/"><span>Next →</span><small>Lemma 8.5.1</small></a></nav><h1>8.5 Bounded complex Hessians and elliptic extensions<code class="tag-id">EA00781761AE</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-EA00781761AE" data-section-entries="1881F6670EF4 6FBA7BB8AC94 89771FD1FD15 BAC60298D0F2 EA00781761AE"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="46AC6C46"><code class="tag-id">EA00781761AE</code></span>
+<p>
+Uniform complex-Hessian bounds give enough compactness both to pass the nonlinear products to a limit and to make the Hessian root uniformly elliptic. In coordinates use the metric matrix $g$ of the preceding section and write $H(u)=(u_{i\bar j})$. Coefficient products with bounded measurable factors will be identified with currents by convolution. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-835B5652">
+<p><a class="environment-identifier" href="../../tag/89771FD1FD15/">Lemma <span data-tag="835B5652">8.5.1</span>.</a><span data-gerby-tag="835B5652"><code class="tag-id">89771FD1FD15</code></span> Suppose $u_ j$ is smooth, </p>
+<div class="equation">
+  \[  \sup _ j\bigl (\| u_ j\| _\infty +\| \mathrm{dd}^{\mathrm{c}}u_ j\| _{L^\infty }\bigr )&lt;\infty , \qquad u_ j\longrightarrow u\quad \hbox{uniformly on }X.  \]
+</div>
+<p> Then $u\in W^{2,p}(X)$ for every $1&lt;p&lt;\infty $, its distributional complex Hessian has bounded coefficients, and $u_ j\to u$ in $C^{1,\alpha }(X)$ for every $0&lt;\alpha &lt;1$. The same hypotheses give uniform $W^{2,p}$ bounds for the sequence. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On a coordinate ball the Euclidean Laplacian is $\Delta u_ j=4\sum _ i (u_ j)_{i\bar i}$, so it is uniformly bounded. The interior Laplace estimate on two nested balls gives 
+    
+<div class="equation">
+  \[  \| u_ j\| _{W^{2,p}(B')}\leq C_ p \bigl (\| \Delta u_ j\| _{L^ p(B)}+\| u_ j\| _{L^ p(B)}\bigr ).  \]
+</div>
+<p>
+       A finite cover gives the global bound. Weak $W^{2,p}$ limits coincide with the uniform limit. The bounded complex Hessians have weak-star limits in $L^\infty $; testing against compactly supported smooth functions identifies them with $H(u)$. Choose $p$ with $1-2n/p&gt;\alpha $. The compact Sobolev embedding into $C^{1,\alpha }$ gives convergence of subsequences. Every such limit is $u$, hence the whole sequence converges. This estimates the full real Hessian in every finite $L^ p$ space, without asserting that it is bounded. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-E0A89860">
+<p><a class="environment-identifier" href="../../tag/1881F6670EF4/">Lemma <span data-tag="E0A89860">8.5.2</span>.</a><span data-gerby-tag="E0A89860"><code class="tag-id">1881F6670EF4</code></span> For $1\leq a\leq k\leq n$, suppose $u_ j^ a$ and $u^ a$ satisfy the preceding lemma. Let $\theta _ a$ be fixed smooth real $(1,1)$-forms. Then </p>
+<div class="equation">
+  \[  \bigwedge _{a=1}^ k(\theta _ a+\mathrm{dd}^{\mathrm{c}}u_ j^ a) \longrightarrow \bigwedge _{a=1}^ k(\theta _ a+\mathrm{dd}^{\mathrm{c}}u^ a) \quad \hbox{as currents}.  \]
+</div>
+<p> The current on the right is the product of the almost-everywhere coefficients. No closedness or positivity of the $\theta _ a$ is required. For each compactly supported smooth complementary test form $\eta $, the difference of its pairings is bounded by $C_\eta \max _ a\| u_ j^ a-u^ a\| _\infty $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Set $D_ j^ a=\mathrm{dd}^{\mathrm{c}}u_ j^ a$ and $D^ a=\mathrm{dd}^{\mathrm{c}}u^ a$. On a smaller coordinate ball, convolution gives smooth $u_\epsilon ^ a$ whose complex Hessians are uniformly bounded and converge to $H(u^ a)$ in every finite $L^ p$ space. Their coefficient products consequently converge in finite $L^ p$ spaces. In particular the products of the $D^ a$ are closed currents, since their smooth approximants are closed. 
+    <p>
+      Expand the smooth background factors and telescope each remaining product. Every difference has the form 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(u_ j^ a-u^ a)\wedge T_ j,  \]
+</div>
+<p>
+       where $T_ j$ is a product of $D_ j^ b$ and $D^ b$ with $b\ne a$. It has uniformly bounded coefficients and is closed. Local convolution, followed by strong convergence of its finite coefficient products, justifies integration by parts: 
+    
+<div class="equation">
+  \[  \left\langle \mathrm{dd}^{\mathrm{c}}(u_ j^ a-u^ a)\wedge T_ j,\xi \right\rangle =\int (u_ j^ a-u^ a)\, T_ j\wedge \mathrm{dd}^{\mathrm{c}}\xi .  \]
+</div>
+<p>
+       Here $\xi $ includes the chosen smooth background factors and the test form, so their derivatives are retained. The right-hand side has the asserted uniform bound. A finite partition of unity proves the claim on $X$. This argument also proves that the coefficient product is the distributional limit; it does not identify a separately defined bounded Hessian operator for all nonsmooth admissible functions. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B1F0AA6B">
+<p><a class="environment-identifier" href="../../tag/BAC60298D0F2/">Lemma <span data-tag="B1F0AA6B">8.5.3</span>.</a><span data-gerby-tag="B1F0AA6B"><code class="tag-id">BAC60298D0F2</code></span> For $f_0&gt;0$ and $L&gt;0$, assume the set </p>
+<div class="equation">
+  \[  K=\{ A\in C_{n,m}:\operatorname {tr}A\leq L, \  \sigma _ m(A)\geq f_0^ m\}   \]
+</div>
+<p> is nonempty. It is a compact subset of the interior, and there are $\vartheta ,\Theta &gt;0$, depending only on $n,m,f_0,L$, such that </p>
+<div class="equation">
+  \[  \vartheta I\leq DF_ A\leq \Theta I\qquad (A\in K).  \]
+</div>
+<p> The function on all Hermitian matrices defined by </p>
+<div class="equation">
+  \[  \widehat F(B)=\inf _{A\in K} \bigl (F(A)+\operatorname {tr}(DF_ A(B-A))\bigr )  \]
+</div>
+<p> is concave, agrees with $F$ on $K$, and satisfies, for $P\geq 0$, </p>
+<div class="equation">
+  \[  \vartheta \operatorname {tr}P\leq \widehat F(B+P)-\widehat F(B) \leq \Theta \operatorname {tr}P.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In the closed $2$-cone, 
+    
+<div class="equation">
+  \[  \sum _ i\lambda _ i^2=(\operatorname {tr}A)^2-2S_2(A) \leq L^2.  \]
+</div>
+<p>
+       Thus $K$ is bounded and closed. Maclaurin gives $\sigma _ j(A)\geq \sigma _ m(A)^{j/m}\geq f_0^ j$ for $j\leq m$, so every matrix in $K$ is in the interior. In a unitary eigenframe, 
+    
+<div class="equation">
+  \[  F_ i=\frac{F^{1-m}S_{m-1}(\lambda |i)}{m\binom nm}, \qquad \frac{f_0}{m!L}\leq F_ i\leq \frac{L^{m-1}}{n f_0^{m-1}}.  \]
+</div>
+<p>
+       The lower bound is <a data-tag="53FFB5F3" href="../../tag/7710D01DF6F5/">8.2.5</a>; the upper bound uses $|\lambda _ i|\leq L$ in the polynomial numerator and its positivity. These bounds give possible values of $\vartheta $ and $\Theta $. Concavity places each tangent plane above $F$ on the cone; the plane at $B$ gives equality when $B\in K$. An infimum of affine functions is concave. Each plane increases under $P\geq 0$ by a number between the two displayed trace bounds; taking infima preserves these bounds. The same estimates give global Lipschitz continuity of $\widehat F$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+To interpret this as a real elliptic operator, let $\mathcal C(R)$ be the complex Hessian of the real quadratic function $q(x)=\frac12 x^{\mathsf T}Rx$, where $x\in \mathbb R^{2n}$. For $R\geq 0$, one has $\mathcal C(R)\geq 0$ and $\operatorname {tr}\mathcal C(R)=\operatorname {tr}R/4$. If $\mu I\leq g(x)\leq MI$, then 
+</p>
+<div class="equation">
+  \[  \mathcal G(x,R)=\widehat F \bigl (I+g(x)^{-1/2}\mathcal C(R)g(x)^{-1/2}\bigr )  \]
+</div>
+<p>
+ is uniformly elliptic on real symmetric matrices, with constants $\vartheta /(4M)$ and $\Theta /(4\mu )$. Its dependence on $x$ satisfies on compact coordinate balls 
+</p>
+<div class="equation">
+  \[  |\mathcal G(x,R)-\mathcal G(y,R)| \leq C|x-y|(1+\| R\| ).  \]
+</div>
+<p>
+ These follow respectively from the trace bound and the smooth dependence of the positive matrix square root of the fixed metric. 
+</p>
+<p>
+We use the classical interior Evans–Krylov–Caffarelli estimate for a concave operator on all real symmetric matrices with fixed positive ellipticity constants and coefficient oscillation bounded by $C|x-y|^\gamma (1+\| R\| )$, where $\gamma &gt;0$. A Hölder right-hand side then gives an interior $C^{2,\beta }$ estimate, for some $\beta &gt;0$. This estimate applies also to continuous viscosity solutions. The real extension just constructed satisfies these conditions. Once its solution is $C^{2,\beta }$ and the attained complex Hessians remain in a compact subset of the open cone, the original smooth Hessian operator and Schauder estimates give the higher derivatives. 
+</p>
+<p>
+We next identify the limit of the proper auxiliary equations that will be used for regularity. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-659459E7">
+<p><a class="environment-identifier" href="../../tag/6FBA7BB8AC94/">Proposition <span data-tag="659459E7">8.5.4</span>.</a><span data-gerby-tag="659459E7"><code class="tag-id">6FBA7BB8AC94</code></span> Suppose $v_ j\to \varphi $ uniformly on $X$, $h(x,t)$ is smooth on a fixed bounded interval containing their values, and smooth admissible $u_ j$ satisfy </p>
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u_ j)^ m\wedge \omega ^{n-m} =e^{u_ j+h(x,v_ j)}\omega ^ n.  \]
+</div>
+<p> Assume $u_ j\to u$ uniformly and the complex Hessians of $u_ j$ are uniformly bounded. Then $\omega +\mathrm{dd}^{\mathrm{c}}u$ is admissible almost everywhere and its coefficient product satisfies </p>
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u)^ m\wedge \omega ^{n-m} =e^{u+h(x,\varphi )}\omega ^ n.  \]
+</div>
+<p> On every coordinate ball $u$ also solves the corresponding uniformly elliptic concave extension in the viscosity sense. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first lemma gives $u\in W^{2,p}$ for every finite $p$ and a bounded complex Hessian. The matrices $A_ j=I+g^{-1/2}H(u_ j)g^{-1/2}$ converge weakly in $L^2$ to the analogous matrix $A$ for $u$. Mazur's lemma gives convex combinations of tails converging strongly in $L^2$, hence almost everywhere along a subsequence. The pointwise closed cone is convex, so $A\in C_{n,m}$ almost everywhere. The product lemma passes the equation to the limit as currents, since its right-hand side converges uniformly. Equality of the bounded densities then gives the equation almost everywhere. 
+    <p>
+      The right-hand sides are bounded above and away from zero. The complex Hessian bound gives a uniform upper bound $L$ for $\operatorname {tr}A_ j$. Choose $f_0&gt;0$ below all their normalized roots. Thus every $A_ j$, and almost every $A$, belongs to the compact set $K$ of the preceding lemma. Every $u_ j$ is a classical solution of 
+    
+<div class="equation">
+  \[  \mathcal G(x,D^2u_ j)=r_ j(x),\qquad r_ j(x)=e^{(u_ j+h(x,v_ j))/m}.  \]
+</div>
+<p>
+       For completeness, if a smooth test $q$ touches $u$ from above at an interior point $x_0$, add a small positive quartic term to make the local contact strict. Local maximum points of $u_ j-q$ tend to $x_0$. At these points $D^2u_ j\leq D^2q$, and ellipticity gives $\mathcal G(x,D^2q)\geq r_ j(x)$. Pass to the limit, then remove the quartic term. A test from below gives the reverse inequality. The extension is defined on every real Hessian, so no admissibility of a lower test has been assumed. This proves the viscosity statement. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/BEA27E46DAEE/"><span>← Previous</span><small>Corollary 8.4.7</small></a><a class="pager-next" rel="next" href="../../tag/89771FD1FD15/"><span>Next →</span><small>Lemma 8.5.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions,
+  author = {{Gerby contributors}},
+  title = {8.5 Bounded complex Hessians and elliptic extensions},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fcomplex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fcomplex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions%2F&amp;body=Page%3A+%5B8.5+Bounded+complex+Hessians+and+elliptic+extensions%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fcomplex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+e2511c35971346aea5aa109fbf55101f0b790756+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

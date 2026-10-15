@@ -1,0 +1,307 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/test-curves--the-notion-of-test-curves/"><title>17.12 The notion of test curves · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/test-curves--the-notion-of-test-curves/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/energy-geodesics/">Chapter 17: Energy, geodesics, rays, and test curves</a></li><li><a href="../../sections/test-curves--the-notion-of-test-curves/" aria-current="page">Section 17.12: The notion of test curves</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/relative-energy-and-perron-segments/"><span>17.1</span> Relative energy and Perron segments</a><code class="tag-id">BDB8E5100372</code></li><li><a href="../../sections/relative-energy-and-perron-segments--integration-by-parts-for-bounded-differences/"><span>17.2</span> Integration by parts for bounded differences</a><code class="tag-id">F694A6981C1D</code></li><li><a href="../../sections/relative-energy-and-perron-segments--relative-monge-ampere-energy/"><span>17.3</span> Relative Monge–Ampère energy</a><code class="tag-id">EC60D9ED3C42</code></li><li><a href="../../sections/relative-energy-and-perron-segments--continuity-and-compactness/"><span>17.4</span> Continuity and compactness</a><code class="tag-id">3B8286222A1B</code></li><li><a href="../../sections/relative-energy-and-perron-segments--variational-monge-ampere-equations/"><span>17.5</span> Variational Monge–Ampère equations</a><code class="tag-id">16614E7E6F9C</code></li><li><a href="../../sections/relative-energy-and-perron-segments--singularity-envelopes-at-arbitrary-mass/"><span>17.6</span> Singularity envelopes at arbitrary mass</a><code class="tag-id">178F9F7684F6</code></li><li><a href="../../sections/relative-energy-and-perron-segments--subgeodesics-and-perron-segments/"><span>17.7</span> Subgeodesics and Perron segments</a><code class="tag-id">4C4B950F1CFF</code></li><li><a href="../../sections/relative-energy-and-perron-segments--energy-along-weak-geodesics/"><span>17.8</span> Energy along weak geodesics</a><code class="tag-id">0753F06C3AFA</code></li><li><a href="../../sections/relative-energy-and-perron-segments--extremal-slopes-and-long-perron-segments/"><span>17.9</span> Extremal slopes and long Perron segments</a><code class="tag-id">66FE6F0ACABE</code></li><li><a href="../../sections/geodesic-rays-in-the-space-of-potentials/"><span>17.10</span> Geodesic rays in the space of potentials</a><code class="tag-id">1E44B710CD7B</code></li><li><a href="../../sections/test-curves/"><span>17.11</span> Test curves</a><code class="tag-id">BA6AA7598BE3</code></li><li><a href="../../sections/test-curves--the-notion-of-test-curves/" aria-current="page"><span>17.12</span> The notion of test curves</a><code class="tag-id">908139B245F5</code></li><li><a href="../../sections/test-curves--ross-witt-nystrom-correspondence/"><span>17.13</span> Ross–Witt Nyström correspondence</a><code class="tag-id">C9D15D724069</code></li><li><a href="../../sections/test-curves--model-test-curves/"><span>17.14</span> -model test curves</a><code class="tag-id">CAE331B64333</code></li><li><a href="../../sections/test-curves--operations-on-test-curves/"><span>17.15</span> Operations on test curves</a><code class="tag-id">9D751AA26579</code></li><li><a href="../../sections/perron-interpolation-and-the-geodesic-equation/"><span>17.16</span> Perron interpolation and the geodesic equation</a><code class="tag-id">E4ED60C8BCA5</code></li><li><a href="../../sections/test-curves-and-legendre-duality/"><span>17.17</span> Test curves and Legendre duality</a><code class="tag-id">D5DBDCE92D6A</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/test-curves--the-notion-of-test-curves/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/test-curves--the-notion-of-test-curves/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../sections/test-curves/"><span>← Previous</span><small>17.11 Test curves</small></a><a class="pager-next" rel="next" href="../../tag/C8399F09D86D/"><span>Next →</span><small>Definition 17.12.1</small></a></nav><h1>17.12 The notion of test curves<code class="tag-id">908139B245F5</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-908139B245F5" data-section-entries="1A17E2EECB2D 2059587BD91B 20FE43CB91F9 348ACDBCB24E 3578A2265BDC 37432F25600E 3D73AB2E32CB 5EFADBE6069E 69529F41AA18 724BF0CAE002 7AF1F81E928C 908139B245F5 942AC971E484 9BE4C00F2E15 B015D2EA4B4F B7CD1B90CFDA C8399F09D86D E3D67CAF2F52 E703D3F2D79D F4B7B1DBBE89"><div class="source-variant" data-gerby-book="sgpt"><span data-gerby-tag="25DB2489"><code class="tag-id">908139B245F5</code></span>
+<p>
+Let $X$ be a connected compact Kähler manifold of dimension $n$ and $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a big cohomology class. 
+</p>
+
+Recall that the notion of model potentials is defined in definition <a data-tag="A6D9D88E" href="../../tag/6623E38E5FC2/">16.3.18</a>. <article class="env-definition" id="sgpt-ECCF19D5">
+<p><a class="environment-identifier" href="../../tag/C8399F09D86D/">Definition <span data-tag="ECCF19D5">17.12.1</span>.</a><span data-gerby-tag="ECCF19D5"><code class="tag-id">C8399F09D86D</code></span> A <em>test curve</em> $\Gamma $ in $\mathrm{PSH}(X,\theta )$ consists of a real number $\Gamma _{\max }$ together with a map $(-\infty ,\Gamma _{\max })\rightarrow \mathrm{PSH}(X,\theta )$ denoted by $\tau \mapsto \Gamma _{\tau }$ satisfying the following conditions: </p>
+<ol>
+<li class="custom-item" id="sgpt-2BFDD24B"><span data-gerby-tag="2BFDD24B"><code class="tag-id">D665BBFA648A</code></span><p>
+ The map $\tau \mapsto \Gamma _{\tau }$ is concave and decreasing; 
+</p>
+</li><li class="custom-item" id="sgpt-1425728D"><span data-gerby-tag="1425728D"><code class="tag-id">99E7A7AB790A</code></span><p>
+ $P_{\theta }[\Gamma _{\tau }]=\Gamma _{\tau }$; 
+</p>
+</li><li class="custom-item" id="sgpt-7141AE90"><span data-gerby-tag="7141AE90"><code class="tag-id">28110BFBC4C9</code></span><p>
+ the potential 
+</p>
+<div class="equation numbered-equation" id="sgpt-51AD6DE6"><span data-gerby-tag="51AD6DE6"><code class="tag-id">E3D67CAF2F52</code></span>
+<span class="equation-label"><a data-tag="51AD6DE6" href="../../tag/E3D67CAF2F52/">17.12.2</a></span>
+<div>\begin{equation}  \Gamma _{-\infty }\coloneqq \operatorname *{sup}_{\tau &lt;\Gamma _{\max }}{}\! {}^{*}\Gamma _{\tau } \end{equation}</div>
+</div>
+<p>
+ satisfies 
+</p>
+<div class="equation">
+  \[  \int _ X \left(\theta +\mathrm{dd}^{\mathrm{c}}\Gamma _{-\infty }\right)^ n&gt;0.  \]
+</div>
+</li>
+</ol>
+<p> Let $\phi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ be a model potential. The set of test curves $\Gamma $ with $\Gamma _{-\infty }=\phi $ is denoted by $\mathrm{TC}(X,\theta ;\phi )$. </p>
+<p>The union of all $\mathrm{TC}(X,\theta ;\phi )$'s for various model potentials $\phi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ is denoted by $\mathrm{TC}(X,\theta )_{&gt;0}$. </p>
+</article> By <a data-tag="1425728D" href="../../tag/C8399F09D86D/#sgpt-1425728D">2</a>, $\sup _{X}\Gamma _{\tau }=0$ for each $\tau &lt;\Gamma _{\max }$. So $\Gamma _{-\infty }\in \mathrm{PSH}(X,\theta )$ by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">5.14.2</a>. 
+
+<p>
+Thanks to corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">13.13.12</a> and <a data-tag="7141AE90" href="../../tag/C8399F09D86D/#sgpt-7141AE90">3</a>, there is $C&lt;\Gamma _{\max }$ so that whenever $\tau &lt;C$, we have $\Gamma _{\tau }\in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then it follows that $\Gamma _{-\infty }$ is a model potential by proposition <a data-tag="1A5AE3C4" href="../../tag/3654A10A0CCC/">16.4.9</a>. 
+</p>
+
+<article class="env-remark" id="sgpt-FCDC9660">
+<p><a class="environment-identifier" href="../../tag/3D73AB2E32CB/">Remark <span data-tag="FCDC9660">17.12.3</span>.</a><span data-gerby-tag="FCDC9660"><code class="tag-id">3D73AB2E32CB</code></span> Sometimes it is convenient to extend $\Gamma _{\tau }$ to $\tau \geq \Gamma _{\max }$ as well. This can be done as follows: for $\tau &gt;\Gamma _{\max }$, we set $\Gamma _{\tau }\equiv -\infty $. For $\tau =\Gamma _{\max }$, we set </p>
+<div class="equation">
+  \[  \Gamma _{\tau }\coloneqq \inf _{\tau '&lt;\Gamma _{\max }}\Gamma _{\tau '}\in \mathrm{PSH}(X,\theta ).  \]
+</div>
+<p> Note that $\Gamma _{\tau }\in \mathrm{PSH}(X,\theta )$ by corollary <a data-tag="DE6F6670" href="../../tag/B5E91AB35965/">5.17.5</a>. </p>
+</article>
+
+<p>
+In general, for any $x\in X$, the map $\tau \mapsto \Gamma _{\tau }(x)$ falls into one of the following three categories: 
+</p>
+<ol>
+<li class="custom-item" id="sgpt-CC7A5796"><span data-gerby-tag="CC7A5796"><code class="tag-id">A67F5048890E</code></span><p>
+ $\Gamma _{\tau }(x)\equiv -\infty $; 
+</p>
+</li><li class="custom-item" id="sgpt-13585245"><span data-gerby-tag="13585245"><code class="tag-id">E2DED6E870B0</code></span><p>
+ $\Gamma _{\tau }(x)&gt;-\infty $ for all $\tau \leq \Gamma _{\max }$; 
+</p>
+</li><li class="custom-item" id="sgpt-8C1AF699"><span data-gerby-tag="8C1AF699"><code class="tag-id">F51FF55AD767</code></span><p>
+ there is $\tau (x)\in (-\infty ,\Gamma _{\max }]$ so that $\Gamma _{\tau }(x)&gt;-\infty $ for all $\tau \in (-\infty ,\tau (x))$, and $\Gamma _{\tau }(x)=-\infty $ for all $\tau \geq \tau (x)$. 
+</p>
+</li>
+</ol>
+<p>
+ The last two possibilities are illustrated in <a data-tag="D06FA510" href="../../tag/9BE4C00F2E15/">17.12.4</a>. 
+</p>
+<figure class="source-float"><div class="centered"> <img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/ade59e301a485e4ecd2a.svg"/> <figcaption id="sgpt-D06FA510"><span data-gerby-tag="D06FA510"><code class="tag-id">9BE4C00F2E15</code></span><a data-tag="D06FA510" href="../../tag/9BE4C00F2E15/">17.12.4</a> The last two pointwise possibilities for $\tau \mapsto \Gamma _\tau (x)$.</figcaption> </div>
+</figure>
+<p>
+Note that <a data-tag="13585245" href="../../tag/908139B245F5/#sgpt-13585245">2</a> is the generic situation. It occurs whenever $x\notin \{ \Gamma _{\Gamma _{\max }}=-\infty \} $. In particular, when this situation occurs, $(-\infty ,\Gamma _{\max })\ni \tau \mapsto \Gamma _{\tau }(x)$ is finite concave, and hence continuous. As a consequence, for any $\tau \in (-\infty ,\Gamma _{\max })$, we have 
+</p>
+<div class="equation numbered-equation" id="sgpt-07C41068"><span data-gerby-tag="07C41068"><code class="tag-id">5EFADBE6069E</code></span>
+<span class="equation-label"><a data-tag="07C41068" href="../../tag/5EFADBE6069E/">17.12.5</a></span>
+<div>\begin{equation}  \Gamma _{\tau }=\inf _{\tau '&lt;\tau }\Gamma _{\tau '},\quad \Gamma _{\tau }=\operatorname *{sup}_{\tau '\in (\tau ,\Gamma _{\max })}{}\! {}^{*}\Gamma _{\tau '} \end{equation}</div>
+</div>
+<p>
+ almost everywhere and hence everywhere due to proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">5.14.6</a>. 
+</p>
+
+Recall that according to our general principle, we speak of model potentials only when a potential has positive mass. <article class="env-lemma" id="sgpt-95575DAE">
+<p><a class="environment-identifier" href="../../tag/348ACDBCB24E/">Lemma <span data-tag="95575DAE">17.12.6</span>.</a><span data-gerby-tag="95575DAE"><code class="tag-id">348ACDBCB24E</code></span> Assume that $\Gamma \in \mathrm{TC}(X,\theta )_{&gt;0}$. Then for each $\tau &lt;\Gamma _{\max }$, we have </p>
+<div class="equation numbered-equation" id="sgpt-6A4FF5DF"><span data-gerby-tag="6A4FF5DF"><code class="tag-id">F4B7B1DBBE89</code></span>
+<span class="equation-label"><a data-tag="6A4FF5DF" href="../../tag/F4B7B1DBBE89/">17.12.7</a></span>
+<div>\begin{equation}  \int _ X \left(\theta +\mathrm{dd}^{\mathrm{c}}\Gamma _{\tau }\right)^ n&gt;0. \end{equation}</div>
+</div>
+<p> In particular, $\Gamma _{\tau }$ is a model potential in $\mathrm{PSH}(X,\theta )_{&gt;0}$. </p>
+</article> The notations in the proof below are summarized in <a data-tag="A6FBC7ED" href="../../tag/20FE43CB91F9/">17.12.8</a>. 
+
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/3e033eb3b2b23ee8261e.svg"/> <figcaption id="sgpt-A6FBC7ED"><span data-gerby-tag="A6FBC7ED"><code class="tag-id">20FE43CB91F9</code></span><a data-tag="A6FBC7ED" href="../../tag/20FE43CB91F9/">17.12.8</a> The test curve $\Gamma $.</figcaption> </div>
+</figure>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $\tau \in (-\infty ,\Gamma _{\max })$. 
+    <p>
+      By assumption, $\Gamma _{-\infty }$ has positive mass. By corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">13.13.12</a>, we have 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\Gamma _{-\infty }}^ n=\lim _{\tau \to -\infty }\int _ X \theta _{\Gamma _{\tau }}^ n.  \]
+</div>
+<p>
+       In particular, for a sufficiently small $\tau _0&lt;\tau $, we have 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\Gamma _{\tau _0}}^ n&gt;0.  \]
+</div>
+<p>
+       Now take $\tau '\in (\tau , \Gamma _{\max })$ and $t\in (0,1)$ so that 
+    
+<div class="equation">
+  \[  \tau =(1-t)\tau '+t\tau _0.  \]
+</div>
+<p>
+       From the concavity of $\Gamma $, we find that 
+    
+<div class="equation">
+  \[  \Gamma _{\tau }\geq (1-t)\Gamma _{\tau '}+t\Gamma _{\tau _0}.  \]
+</div>
+<p>
+       By the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">13.13.11</a> and the multi-linearity of the non-pluripolar products proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">13.11.4</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>, 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\Gamma _{\tau }}^ n\geq \int _ X \theta _{(1-t)\Gamma _{\tau '}+t\Gamma _{\tau _0}}^ n\geq t^ n \int _ X \theta _{\Gamma _{\tau _0}}^ n&gt;0  \]
+</div>
+<p>
+       and (<a data-tag="6A4FF5DF" href="../../tag/F4B7B1DBBE89/">17.12.7</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-37ECD68D">
+<p><a class="environment-identifier" href="../../tag/B7CD1B90CFDA/">Proposition <span data-tag="37ECD68D">17.12.9</span>.</a><span data-gerby-tag="37ECD68D"><code class="tag-id">B7CD1B90CFDA</code></span> Let $\Gamma \in \mathrm{TC}(X,\theta )_{&gt;0}$. Then the map </p>
+<div class="equation">
+  \[  [-\infty ,\Gamma _{\max })\rightarrow \mathbb {R},\quad \tau \mapsto \log \int _ X \theta _{\Gamma _{\tau }}^ n  \]
+</div>
+<p> is continuous and concave on $(-\infty ,\Gamma _{\max })$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The concavity of this function follows from theorem <a data-tag="5DEDC013" href="../../tag/7F7BE8292E76/">13.13.5</a> and theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">13.13.11</a>. The continuity at $-\infty $ is a consequence of corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">13.13.12</a>. The continuity on $(-\infty ,\Gamma _{\max })$ follows from the fact that finite concave functions on open intervals are continuous. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-definition" id="sgpt-38A406EF">
+<p><a class="environment-identifier" href="../../tag/69529F41AA18/">Definition <span data-tag="38A406EF">17.12.10</span>.</a><span data-gerby-tag="38A406EF"><code class="tag-id">69529F41AA18</code></span> Let $\phi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ be a model potential. </p>
+<p>A test curve $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$ is said to be <em>bounded</em> if for $\tau $ small enough, $\Gamma _{\tau }=\phi $. The subset of bounded test curves in $\mathrm{TC}(X,\theta ;\phi )$ is denoted by $\mathrm{TC}^{\infty }(X,\theta ;\phi )$. In this case, we write </p>
+<div class="equation numbered-equation" id="sgpt-12B25AF6"><span data-gerby-tag="12B25AF6"><code class="tag-id">3578A2265BDC</code></span>
+<span class="equation-label"><a data-tag="12B25AF6" href="../../tag/3578A2265BDC/">17.12.11</a></span>
+<div>\begin{equation}  \Gamma _{\min }\coloneqq \sup \{ \tau \in \mathbb {R}:\Gamma _{\tau }=\phi \} . \end{equation}</div>
+</div>
+<p>A test curve $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$ is said to have <em>finite energy</em> if </p>
+<div class="equation numbered-equation" id="sgpt-50A4CAA5"><span data-gerby-tag="50A4CAA5"><code class="tag-id">942AC971E484</code></span>
+<span class="equation-label"><a data-tag="50A4CAA5" href="../../tag/942AC971E484/">17.12.12</a></span>
+<div>\begin{equation}  \mathbf{E}^{\phi }(\Gamma )\coloneqq \Gamma _{\max } \int _ X \theta _{\phi }^ n+\int _{-\infty }^{\Gamma _{\max }} \left(\int _ X\theta _{\Gamma _{\tau }}^ n-\int _ X \theta _{\phi }^ n\right)\, \mathrm{d}\tau &gt;-\infty . \end{equation}</div>
+</div>
+<p>  When $\phi =V_{\theta }$, we write $\mathbf{E}$ instead of $\mathbf{E}^{\phi }$. </p>
+<p>The subset of test curves with finite energy in $\mathrm{TC}(X,\theta ;\phi )$ is denoted by $\mathrm{TC}^1(X,\theta ;\phi )$. </p>
+</article>
+
+
+<article class="env-example" id="sgpt-C293066A">
+<p><a class="environment-identifier" href="../../tag/1A17E2EECB2D/">Example <span data-tag="C293066A">17.12.13</span>.</a><span data-gerby-tag="C293066A"><code class="tag-id">1A17E2EECB2D</code></span> Given $\varphi \in \mathrm{PSH}(X,\theta )$, there is a canonically associated test curve $\Gamma ^{\varphi }\in \mathrm{TC}^{\infty }(X,\theta ;V_{\theta })$: Set $\Gamma ^{\varphi }_{\max }=0$ and </p>
+<div class="equation">
+  \[  \Gamma ^{\varphi }_{\tau }= \begin{cases}  V_{\theta },&amp; \textup{if }\tau \leq -1;\\  P_{\theta }\left[ (1+\tau )\varphi -\tau V_{\theta } \right],&amp;  \textup{if }-1&lt;\tau &lt;0. \end{cases}  \]
+</div>
+<p> Note that $\Gamma ^{\varphi }$ is indeed a test curve, as follows from proposition <a data-tag="9AB8A7BE" href="../../tag/CF5FECD1B547/">16.4.2</a>. Indeed, the concavity and monotonicity in $\tau $ follow from proposition <a data-tag="9AB8A7BE" href="../../tag/CF5FECD1B547/">16.4.2</a>, and $\Gamma ^\varphi _{-\infty }=V_\theta $ has positive mass. </p>
+</article>
+
+
+We first observe that the notion of test curves does not really depend on the choice of $\theta $ within its cohomology class. <article class="env-proposition" id="sgpt-C3D00D09">
+<p><a class="environment-identifier" href="../../tag/B015D2EA4B4F/">Proposition <span data-tag="C3D00D09">17.12.14</span>.</a><span data-gerby-tag="C3D00D09"><code class="tag-id">B015D2EA4B4F</code></span> Let $\theta '$ be another smooth closed real $(1,1)$-form on $X$ representing the same cohomology class as $\theta $. Let $\phi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ be a model potential. Let $\phi '\in \mathrm{PSH}(X,\theta ')_{&gt;0}$ be the unique model potential satisfying $\phi \sim \phi '$. </p>
+<p>Then there is a canonical bijection </p>
+<div class="equation">
+  \[  \mathrm{TC}(X,\theta ;\phi )\xrightarrow {\sim } \mathrm{TC}(X,\theta ';\phi ').  \]
+</div>
+<p> This bijection induces the following bijections: </p>
+<div class="equation">
+  \[  \mathrm{TC}^1(X,\theta ;\phi )\xrightarrow {\sim }\mathrm{TC}^1(X,\theta ';\phi '),\quad \mathrm{TC}^{\infty }(X,\theta ;\phi )\xrightarrow {\sim }\mathrm{TC}^{\infty }(X,\theta ';\phi ').  \]
+</div>
+<p> These bijections satisfy the obvious cocycle conditions. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $g\in C^{\infty }(X)$ such that $\theta '=\theta +\mathrm{dd}^{\mathrm{c}}g$. Given any $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$, we observe that $\Gamma '\colon (-\infty ,\Gamma _{\max })\rightarrow \mathrm{PSH}(X,\theta ')$ defined as 
+    
+<div class="equation">
+  \[  \tau \mapsto P_{\theta '}[\Gamma _{\tau }-g]  \]
+</div>
+<p>
+       lies in $\mathrm{TC}(X,\theta ';\phi ')$. In fact, the concavity and monotonicity of $\Gamma '$ follow from proposition <a data-tag="9AB8A7BE" href="../../tag/CF5FECD1B547/">16.4.2</a>. Moreover, applying proposition <a data-tag="1A5AE3C4" href="../../tag/3654A10A0CCC/">16.4.9</a> to the increasing net obtained as $\tau \to -\infty $ gives 
+    
+<div class="equation">
+  \[  \Gamma '_{-\infty }=P_{\theta '}[\Gamma _{-\infty }-g]=P_{\theta '}[\phi -g]=\phi '.  \]
+</div>
+<p>
+       Thus $\Gamma '\in \mathrm{TC}(X,\theta ';\phi ')$. 
+    <p>
+      Moreover, the choice of $g$ is irrelevant since for any other choice of $g$, say $g'$, we have 
+    
+<div class="equation">
+  \[  \Gamma _{\tau }-g\sim \Gamma _{\tau }-g'  \]
+</div>
+<p>
+       for all $\tau &lt;\Gamma _{\max }$. The inverse construction is obtained by replacing $g$ with $-g$. The boundedness condition is clearly preserved. Finally, by proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a>, for every $\tau &lt;\Gamma _{\max }$, 
+    
+<div class="equation">
+  \[  \int _ X(\theta '+\mathrm{dd}^{\mathrm{c}}\Gamma '_\tau )^ n=\int _ X(\theta +\mathrm{dd}^{\mathrm{c}}\Gamma _\tau )^ n,  \]
+</div>
+<p>
+       and the same holds for $\phi $ and $\phi '$. Hence the finite energy condition is preserved. The cocycle condition is immediate from the uniqueness of the model representative in a fixed singularity type. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-076A771E">
+<p><a class="environment-identifier" href="../../tag/2059587BD91B/">Proposition <span data-tag="076A771E">17.12.15</span>.</a><span data-gerby-tag="076A771E"><code class="tag-id">2059587BD91B</code></span> Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism from a Kähler manifold $Y$. Then the pointwise pull-back induces a bijection </p>
+<div class="equation">
+  \[  \pi ^*\colon \mathrm{TC}(X,\theta ;\phi )\xlongrightarrow {\sim } \mathrm{TC}(Y,\pi ^*\theta ;\pi ^*\phi ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The bijectivity on the underlying potentials follows from proposition <a data-tag="0E9ABD1F" href="../../tag/AF2A3F35959C/">5.17.8</a>. The compatibility with model potentials follows from proposition <a data-tag="0C43BCE4" href="../../tag/055CAE14F80F/">16.4.1</a>. These two facts also preserve concavity, monotonicity and the value of $\Gamma _{-\infty }$, hence give the asserted bijection of test curves. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+Next we verify the closedness of a test curve as a family of concave functions, so that no pathology arises in the Legendre transforms considered below. The notion of closedness is recalled in definition <a data-tag="BBDFED14" href="../../tag/61B746F5E884/">21.11.15</a>. <article class="env-proposition" id="sgpt-BE27B2D8">
+<p><a class="environment-identifier" href="../../tag/7AF1F81E928C/">Proposition <span data-tag="BE27B2D8">17.12.16</span>.</a><span data-gerby-tag="BE27B2D8"><code class="tag-id">7AF1F81E928C</code></span> Let $\Gamma $ be a test curve in $\mathrm{PSH}(X,\theta )$. For each $x\in X$, the map $\mathbb {R} \ni \tau \mapsto \Gamma _{\tau }(x)$ is a closed concave function. Moreover, the map is proper as long as $\Gamma _{\Gamma _{\max }}(x)\neq -\infty $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We prove closedness. Fix $x\in X$. Assume that $\Gamma _{\tau }(x)\neq -\infty $ for some $\tau \in \mathbb {R}$. We only need to argue the upper semicontinuity of $\tau \mapsto \Gamma _{\tau }(x)$. The upper semicontinuity is clear at $\tau \geq \Gamma _{\max }$, so we are reduced to prove the following: 
+    
+<div class="equation numbered-equation" id="sgpt-C6E953D0"><span data-gerby-tag="C6E953D0"><code class="tag-id">E703D3F2D79D</code></span>
+<span class="equation-label"><a data-tag="C6E953D0" href="../../tag/E703D3F2D79D/">17.12.17</a></span>
+<div>\begin{equation}  \Gamma _{\tau }=\inf _{\tau '&lt;\tau }\Gamma _{\tau '} \end{equation}</div>
+</div>
+<p>
+       for any $\tau &lt;\Gamma _{\max }$. Take $\tau ''\in (\tau ,\Gamma _{\max })$. Outside the polar locus of $\Gamma _{\tau ''}$, we know that (<a data-tag="C6E953D0" href="../../tag/E703D3F2D79D/">17.12.17</a>) holds by continuity of real-valued concave functions. So (<a data-tag="C6E953D0" href="../../tag/E703D3F2D79D/">17.12.17</a>) holds everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">5.14.6</a>. 
+    <p>
+      The final assertion follows from properness of a finite closed concave function on its effective domain. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-definition" id="sgpt-DD41B6C2">
+<p><a class="environment-identifier" href="../../tag/37432F25600E/">Definition <span data-tag="DD41B6C2">17.12.18</span>.</a><span data-gerby-tag="DD41B6C2"><code class="tag-id">37432F25600E</code></span> Let $\Gamma \in \mathrm{TC}(X,\theta )_{&gt;0}$ and $\omega $ be a smooth closed real positive $(1,1)$-form. Then we define $P_{\theta +\omega }[\Gamma ]\in \mathrm{TC}(X,\theta +\omega )_{&gt;0}$ as follows:   </p>
+<ol>
+<li class="custom-item" id="sgpt-338BADCD"><span data-gerby-tag="338BADCD"><code class="tag-id">A6773BF32868</code></span><p>
+ Define 
+</p>
+<div class="equation">
+  \[  P_{\theta +\omega }[\Gamma ]_{\max }=\Gamma _{\max };  \]
+</div>
+</li><li class="custom-item" id="sgpt-6210947C"><span data-gerby-tag="6210947C"><code class="tag-id">240BD675E3E0</code></span><p>
+ for each $\tau &lt;\Gamma _{\max }$, define 
+</p>
+<div class="equation">
+  \[  P_{\theta +\omega }[\Gamma ]_{\tau }=P_{\theta +\omega }[\Gamma _{\tau }].  \]
+</div>
+</li>
+</ol>
+</article> It follows from proposition <a data-tag="9AB8A7BE" href="../../tag/CF5FECD1B547/">16.4.2</a> that the family $P_{\theta +\omega }[\Gamma ]$ is concave and decreasing. Moreover, since $\omega $ is positive, 
+
+<div class="equation">
+  \[  \int _ X(\theta +\omega +\mathrm{dd}^{\mathrm{c}}\Gamma _\tau )^ n \geq \int _ X(\theta +\mathrm{dd}^{\mathrm{c}}\Gamma _\tau )^ n&gt;0  \]
+</div>
+<p>
+ for every $\tau &lt;\Gamma _{\max }$, and hence $P_{\theta +\omega }[\Gamma ]_\tau $ is a model potential by corollary <a data-tag="7954BF44" href="../../tag/E10CA97A11EF/">16.3.20</a>. Thus $P_{\theta +\omega }[\Gamma ]\in \mathrm{TC}(X,\theta +\omega )_{&gt;0}$. 
+</p>
+
+<article class="env-proposition" id="sgpt-129B6722">
+<p><a class="environment-identifier" href="../../tag/724BF0CAE002/">Proposition <span data-tag="129B6722">17.12.19</span>.</a><span data-gerby-tag="129B6722"><code class="tag-id">724BF0CAE002</code></span> Let $\Gamma \in \mathrm{TC}(X,\theta )_{&gt;0}$ and $\omega $ be a closed real smooth positive $(1,1)$-form on $X$. Then </p>
+<div class="equation">
+  \[  P_{\theta +\omega }[\Gamma ]_{-\infty }=P_{\theta +\omega }[\Gamma _{-\infty }].  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows from proposition <a data-tag="1A5AE3C4" href="../../tag/3654A10A0CCC/">16.4.9</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../sections/test-curves/"><span>← Previous</span><small>17.11 Test curves</small></a><a class="pager-next" rel="next" href="../../tag/C8399F09D86D/"><span>Next →</span><small>Definition 17.12.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-test-curves--the-notion-of-test-curves,
+  author = {{Gerby contributors}},
+  title = {17.12 The notion of test curves},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/test-curves--the-notion-of-test-curves/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/test-curves--the-notion-of-test-curves/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Ftest-curves--the-notion-of-test-curves%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Ftest-curves--the-notion-of-test-curves%2F&amp;body=Page%3A+%5B17.12+The+notion+of+test+curves%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Ftest-curves--the-notion-of-test-curves%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+3b2ab41f0356035655fa8ba78c11a05b69dba94c+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

@@ -1,0 +1,879 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/test-curves--ross-witt-nystrom-correspondence/"><title>17.13 Ross–Witt Nyström correspondence · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/test-curves--ross-witt-nystrom-correspondence/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/energy-geodesics/">Chapter 17: Energy, geodesics, rays, and test curves</a></li><li><a href="../../sections/test-curves--ross-witt-nystrom-correspondence/" aria-current="page">Section 17.13: Ross–Witt Nyström correspondence</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/relative-energy-and-perron-segments/"><span>17.1</span> Relative energy and Perron segments</a><code class="tag-id">BDB8E5100372</code></li><li><a href="../../sections/relative-energy-and-perron-segments--integration-by-parts-for-bounded-differences/"><span>17.2</span> Integration by parts for bounded differences</a><code class="tag-id">F694A6981C1D</code></li><li><a href="../../sections/relative-energy-and-perron-segments--relative-monge-ampere-energy/"><span>17.3</span> Relative Monge–Ampère energy</a><code class="tag-id">EC60D9ED3C42</code></li><li><a href="../../sections/relative-energy-and-perron-segments--continuity-and-compactness/"><span>17.4</span> Continuity and compactness</a><code class="tag-id">3B8286222A1B</code></li><li><a href="../../sections/relative-energy-and-perron-segments--variational-monge-ampere-equations/"><span>17.5</span> Variational Monge–Ampère equations</a><code class="tag-id">16614E7E6F9C</code></li><li><a href="../../sections/relative-energy-and-perron-segments--singularity-envelopes-at-arbitrary-mass/"><span>17.6</span> Singularity envelopes at arbitrary mass</a><code class="tag-id">178F9F7684F6</code></li><li><a href="../../sections/relative-energy-and-perron-segments--subgeodesics-and-perron-segments/"><span>17.7</span> Subgeodesics and Perron segments</a><code class="tag-id">4C4B950F1CFF</code></li><li><a href="../../sections/relative-energy-and-perron-segments--energy-along-weak-geodesics/"><span>17.8</span> Energy along weak geodesics</a><code class="tag-id">0753F06C3AFA</code></li><li><a href="../../sections/relative-energy-and-perron-segments--extremal-slopes-and-long-perron-segments/"><span>17.9</span> Extremal slopes and long Perron segments</a><code class="tag-id">66FE6F0ACABE</code></li><li><a href="../../sections/geodesic-rays-in-the-space-of-potentials/"><span>17.10</span> Geodesic rays in the space of potentials</a><code class="tag-id">1E44B710CD7B</code></li><li><a href="../../sections/test-curves/"><span>17.11</span> Test curves</a><code class="tag-id">BA6AA7598BE3</code></li><li><a href="../../sections/test-curves--the-notion-of-test-curves/"><span>17.12</span> The notion of test curves</a><code class="tag-id">908139B245F5</code></li><li><a href="../../sections/test-curves--ross-witt-nystrom-correspondence/" aria-current="page"><span>17.13</span> Ross–Witt Nyström correspondence</a><code class="tag-id">C9D15D724069</code></li><li><a href="../../sections/test-curves--model-test-curves/"><span>17.14</span> -model test curves</a><code class="tag-id">CAE331B64333</code></li><li><a href="../../sections/test-curves--operations-on-test-curves/"><span>17.15</span> Operations on test curves</a><code class="tag-id">9D751AA26579</code></li><li><a href="../../sections/perron-interpolation-and-the-geodesic-equation/"><span>17.16</span> Perron interpolation and the geodesic equation</a><code class="tag-id">E4ED60C8BCA5</code></li><li><a href="../../sections/test-curves-and-legendre-duality/"><span>17.17</span> Test curves and Legendre duality</a><code class="tag-id">D5DBDCE92D6A</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/test-curves--ross-witt-nystrom-correspondence/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/test-curves--ross-witt-nystrom-correspondence/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/724BF0CAE002/"><span>← Previous</span><small>Proposition 17.12.19</small></a><a class="pager-next" rel="next" href="../../tag/2105331E66C7/"><span>Next →</span><small>Definition 17.13.1</small></a></nav><h1>17.13 Ross–Witt Nyström correspondence<code class="tag-id">C9D15D724069</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-C9D15D724069" data-section-entries="0893138962D7 10B32891AA98 16A5FF346A3B 1824FEE5F9FF 1C55A624E61E 1F48BF7602CA 2105331E66C7 22C9794122C8 23E6778F003A 24A2034A1287 25F16D030FA9 3746B0074A79 4884EC5C8FA9 4B87EF03E3EA 59C9610616F1 5BF1777D23C2 6D5BA4827FF5 6F01D0840C12 77E18B7AC795 7B83BD1D5FB9 7F6505CF081C 82AB68443E01 85E0D04C585D 877135CB19C2 9C6538C4298E ABB931E35703 AE510D6D0C2F B28F0A28CB3E BC74B8EA334F BD13D6DEBB93 C6092031D5B3 C9D15D724069 CBA3E07AB082 D50F33814868 DA238F3ECC6F DA97CC2A78DC DBCF50A40C12 DBF41B839C63 E10A1DEDC7AF E2332A16AF00 E5C60BE9B124 E6915C7339CD F147312B98B3 F5A9BEF8F7BA"><div class="source-variant" data-gerby-book="sgpt"><span data-gerby-tag="805440C7"><code class="tag-id">C9D15D724069</code></span>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$ and $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a big cohomology class. Fix a model potential $\phi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. 
+</p>
+<p>
+proposition <a data-tag="BE27B2D8" href="../../tag/7AF1F81E928C/">17.12.16</a> allows us to talk about the Legendre transforms of test curves in the expected way. 
+</p>
+
+The general definition of the Legendre transform definition <a data-tag="8B018B53" href="../../tag/2E5E29E9A58B/">21.11.22</a> can be translated as follows: <article class="env-definition" id="sgpt-236F4C37">
+<p><a class="environment-identifier" href="../../tag/2105331E66C7/">Definition <span data-tag="236F4C37">17.13.1</span>.</a><span data-gerby-tag="236F4C37"><code class="tag-id">2105331E66C7</code></span> Let $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$. We define its <em>Legendre transform</em> as the map $\Gamma ^*\colon (0,\infty )\rightarrow \mathrm{PSH}(X,\theta )$ given by </p>
+<div class="equation numbered-equation" id="sgpt-236BD41E"><span data-gerby-tag="236BD41E"><code class="tag-id">22C9794122C8</code></span>
+<span class="equation-label"><a data-tag="236BD41E" href="../../tag/22C9794122C8/">17.13.2</a></span>
+<div>\begin{equation}  \Gamma ^*_ t=\sup _{\tau \in \mathbb {R}} \left(t\tau + \Gamma _{\tau }\right)\footnotemark . \end{equation}</div>
+</div>
+ <aside class="source-footnote" id="sgpt-a0000073394"><span class="footnote-label">Note.</span> There is no usc regularization in the preceding formula. This is not a typo.</aside> 
+</article> Thanks to <a data-tag="FCDC9660" href="../../tag/3D73AB2E32CB/">17.12.3</a>, (<a data-tag="236BD41E" href="../../tag/22C9794122C8/">17.13.2</a>) can be equivalently written as 
+
+<div class="equation">
+  \[  \Gamma ^*_ t=\sup _{\tau &lt;\Gamma _{\max }} \left(t\tau + \Gamma _{\tau }\right)=\sup _{\tau \leq \Gamma _{\max }} \left(t\tau + \Gamma _{\tau }\right).  \]
+</div>
+<p>
+It is sometimes handy to <em>define</em>
+</p>
+<div class="equation numbered-equation" id="sgpt-673BDD59"><span data-gerby-tag="673BDD59"><code class="tag-id">1824FEE5F9FF</code></span>
+<span class="equation-label"><a data-tag="673BDD59" href="../../tag/1824FEE5F9FF/">17.13.3</a></span>
+<div>\begin{equation}  \Gamma ^*_0\coloneqq \phi \end{equation}</div>
+</div>
+<p>
+ at $t=0$. But it is important to remember that, with this convention, (<a data-tag="236BD41E" href="../../tag/22C9794122C8/">17.13.2</a>) is not true at $t=0$ in general. 
+</p>
+
+<article class="env-remark" id="sgpt-7E89249F">
+<p><a class="environment-identifier" href="../../tag/ABB931E35703/">Remark <span data-tag="7E89249F">17.13.4</span>.</a><span data-gerby-tag="7E89249F"><code class="tag-id">ABB931E35703</code></span> Here we do not discuss the case $t&lt;0$ because its behavior is straightforward: take $x\in X$; if $\Gamma _{\tau }(x)=-\infty $ for all $\tau &lt;\Gamma _{\max }$, then $\Gamma _ t^*(x)=-\infty $; otherwise, $\Gamma _ t^*(x)=\infty $. </p>
+</article>
+
+
+The information about $t&gt;0$ suffices to characterize $\Gamma $. <article class="env-proposition" id="sgpt-B7A24A26">
+<p><a class="environment-identifier" href="../../tag/1F48BF7602CA/">Proposition <span data-tag="B7A24A26">17.13.5</span>.</a><span data-gerby-tag="B7A24A26"><code class="tag-id">1F48BF7602CA</code></span> Let $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$. Then </p>
+<div class="equation numbered-equation" id="sgpt-108F8251"><span data-gerby-tag="108F8251"><code class="tag-id">24A2034A1287</code></span>
+<span class="equation-label"><a data-tag="108F8251" href="../../tag/24A2034A1287/">17.13.6</a></span>
+<div>\begin{equation}  \Gamma _{\tau }=\inf _{t&gt;0} \left(\Gamma ^*_ t-t\tau \right) \end{equation}</div>
+</div>
+<p> for all $\tau \in \mathbb {R}$. </p>
+</article> Due to our convention (<a data-tag="673BDD59" href="../../tag/1824FEE5F9FF/">17.13.3</a>), in (<a data-tag="108F8251" href="../../tag/24A2034A1287/">17.13.6</a>) we may equivalently take $t\geq 0$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $x\in X$. We want to establish (<a data-tag="108F8251" href="../../tag/24A2034A1287/">17.13.6</a>) at $x$. We distinguish two cases. First suppose that $\Gamma _{\tau }(x)=-\infty $ for all $\tau &lt;\Gamma _{\max }$ and hence all $\tau \in \mathbb {R}$. In this case, we have $\Gamma _ t^*(x)=-\infty $ for all $t&gt;0$. Therefore, (<a data-tag="108F8251" href="../../tag/24A2034A1287/">17.13.6</a>) follows trivially. 
+    <p>
+      Otherwise, by <a data-tag="7E89249F" href="../../tag/ABB931E35703/">17.13.4</a>, we know that $\Gamma ^*_ t(x)=\infty $ for all $t&lt;0$. The relative interior of the domain of $t\mapsto \Gamma ^*_ t(x)$ is contained in $(0,\infty )$. Therefore, (<a data-tag="108F8251" href="../../tag/24A2034A1287/">17.13.6</a>) follows from theorem <a data-tag="1A7E065D" href="../../tag/258227E5D497/">21.11.24</a>, proposition <a data-tag="BE27B2D8" href="../../tag/7AF1F81E928C/">17.12.16</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+In definition <a data-tag="236F4C37" href="../../tag/2105331E66C7/">17.13.1</a>, we made the nontrivial claim that $\Gamma ^*_ t\in \mathrm{PSH}(X,\theta )$ for all $t&gt;0$. Let us prove this. <article class="env-lemma" id="sgpt-27709055">
+<p><a class="environment-identifier" href="../../tag/BC74B8EA334F/">Lemma <span data-tag="27709055">17.13.7</span>.</a><span data-gerby-tag="27709055"><code class="tag-id">BC74B8EA334F</code></span> Let $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$. Then $\Gamma ^*_ t\in \mathrm{PSH}(X,\theta )$ for all $t&gt;0$. In fact, $\Gamma ^*$ is upper semicontinuous as a function of $X\times (0,\infty )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first observe that for each $x\in X$, we have 
+    
+<div class="equation">
+  \[  \Gamma _ t^*(x)\leq t\Gamma _{\max }&lt;\infty .  \]
+</div>
+<p>
+      Let $R=\{ a+\mathrm{i}b\in \mathbb {C}:a&gt;0,b\in \mathbb {R}\} $. We consider 
+    
+<div class="equation">
+  \[  F\colon X\times R\rightarrow [-\infty ,\infty ),\quad (x,a+\mathrm{i}b)\mapsto \Gamma _ a^*(x).  \]
+</div>
+<p>
+       Let $\pi \colon X\times R\rightarrow X$ be the natural projection. Observe that the upper semicontinuous regularization $G$ of $F$ is $\pi ^*\theta $-psh by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">5.14.2</a>. It suffices to show that $F=G$. We let 
+    
+<div class="equation">
+  \[  E\coloneqq \left\{  (x,z)\in X\times R: F(x,z)&lt;G(x,z) \right\} .  \]
+</div>
+<p>
+       We want to argue that $E=\varnothing $. Since $F$ is invariant under translations in the imaginary direction of $R$, the same is true for its upper semicontinuous regularization $G$. So $E$ can be written as $B\times \mathrm{i}\mathbb {R}$ for some set $B\subseteq X\times (0,\infty )$. Since $E$ is a pluripolar set by proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">5.14.5</a>, it has zero Lebesgue measure. Hence, $B$ has zero Lebesgue measure. For each $x\in X$, write 
+    
+<div class="equation">
+  \[  B_ x=\left\{ t\in (0,\infty ): (x,t)\in B \right\} .  \]
+</div>
+<p>
+       By Fubini's theorem, $B_ x$ has vanishing $1$-dimensional Lebesgue measure for all $x\in X\setminus Z$, where $Z\subseteq X$ is a subset of measure $0$. We may assume that $Z\supseteq \{ \Gamma _{\Gamma _{\max }}=-\infty \} $ so that for $x\in X\setminus Z$, $\Gamma ^*_ t(x)\neq -\infty $ for all $t&gt;0$. 
+    <p>
+      For any $x\in X\setminus Z$, both $t\mapsto F(x,t)$ and $G(x,t)$ are convex functions with values in $\mathbb {R}$ on $(0,\infty )$. They agree almost everywhere, hence everywhere by their continuity. It follows that for $x\in X\setminus Z$, we have $B_ x=\varnothing $. 
+    <p>
+      By proposition <a data-tag="B7A24A26" href="../../tag/1F48BF7602CA/">17.13.5</a>, for any $x\in X$, we have 
+    
+<div class="equation">
+  \[  \Gamma _{\tau }(x)=\inf _{t&gt;0} (F(x,t)-t\tau ),\quad \tau &lt;\Gamma _{\max }.  \]
+</div>
+<p>
+       On the other hand, let 
+    
+<div class="equation numbered-equation" id="sgpt-A6213E7A"><span data-gerby-tag="A6213E7A"><code class="tag-id">DBF41B839C63</code></span>
+<span class="equation-label"><a data-tag="A6213E7A" href="../../tag/DBF41B839C63/">17.13.8</a></span>
+<div>\begin{equation}  \chi _{\tau }(x)=\inf _{t&gt;0} (G(x,t)-t\tau ),\quad \tau &lt; \Gamma _{\max },\quad x\in X. \end{equation}</div>
+</div>
+<p>
+       By Kiselman's principle proposition <a data-tag="E0DBA4DC" href="../../tag/BB26476C13FA/">5.14.15</a>, $\chi _{\tau }\in \mathrm{PSH}(X,\theta )$. But on $X\setminus Z$, we already know that $\Gamma _{\tau }=\chi _{\tau }$ for all $\tau &lt;\Gamma _{\max }$. By proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">5.14.6</a>, 
+    
+<div class="equation">
+  \[  \Gamma _{\tau }=\chi _{\tau },\quad \tau &lt;\Gamma _{\max }.  \]
+</div>
+<p>
+       Now we conclude that $F(x,t)=G(x,t)$ by corollary <a data-tag="8B97E76A" href="../../tag/8C4DFDD0ADE0/">21.11.26</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-9F1F181A">
+<p><a class="environment-identifier" href="../../tag/4B87EF03E3EA/">Corollary <span data-tag="9F1F181A">17.13.9</span>.</a><span data-gerby-tag="9F1F181A"><code class="tag-id">4B87EF03E3EA</code></span> Let $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$. Then $\Gamma ^*_ t\in \mathcal{E}(X,\theta ;\phi )$ for all $t&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $t&gt;0$. We already know that $\Gamma ^*_ t\in \mathrm{PSH}(X,\theta )$ by <a data-tag="27709055" href="../../tag/BC74B8EA334F/">17.13.7</a>. It suffices to show that 
+    
+<div class="equation">
+  \[  \Gamma ^*_ t\sim _ P \phi .  \]
+</div>
+<p>
+       From (<a data-tag="236BD41E" href="../../tag/22C9794122C8/">17.13.2</a>) and proposition <a data-tag="30130F48" href="../../tag/1C6DED516857/">16.8.28</a>, we know that 
+    
+<div class="equation">
+  \[  \Gamma ^*_ t\sim _ P \operatorname *{sup}_{\tau &lt;\Gamma _{\max }}{}\! {}^{*} \Gamma _{\tau }=\phi .  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="sgpt-988B137E">
+<p><a class="environment-identifier" href="../../tag/C6092031D5B3/">Lemma <span data-tag="988B137E">17.13.10</span>.</a><span data-gerby-tag="988B137E"><code class="tag-id">C6092031D5B3</code></span> Let $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$. Then </p>
+<div class="equation">
+  \[  \sup _ X \Gamma _ t^*=t\Gamma _{\max }  \]
+</div>
+<p> for all $t&gt;0$. </p>
+<p>In particular, $t\mapsto \Gamma ^*_ t-t\Gamma _{\max }$ is a decreasing function in $t&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\Gamma _{\tau }\leq 0$ for all $\tau &lt;\Gamma _{\max }$, we have 
+    
+<div class="equation">
+  \[  \sup _ X \Gamma _ t^*\leq t\Gamma _{\max }  \]
+</div>
+<p>
+       for all $t&gt;0$. Conversely, for each $\tau &lt;\Gamma _{\max }$, 
+    
+<div class="equation">
+  \[  \sup _ X\Gamma _ t^*\geq \sup _ X(t\tau +\Gamma _{\tau })=t\tau .  \]
+</div>
+<p>
+       Letting $\tau \to \Gamma _{\max }$ gives the reverse inequality. The final assertion follows directly from the formula 
+    
+<div class="equation">
+  \[  \Gamma _ t^*-t\Gamma _{\max }=\sup _{\tau &lt;\Gamma _{\max }}\Bigl (\Gamma _\tau -t(\Gamma _{\max }-\tau )\Bigr ).  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="sgpt-B6B676DD">
+<p><a class="environment-identifier" href="../../tag/9C6538C4298E/">Lemma <span data-tag="B6B676DD">17.13.11</span>.</a><span data-gerby-tag="B6B676DD"><code class="tag-id">9C6538C4298E</code></span> Given $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$, we have $\Gamma ^*\in \mathcal{R}(X,\theta ;\phi )$. </p>
+</article> See definition <a data-tag="33CB8825" href="../../tag/2E335019C3A7/">17.10.38</a> for the notation $\mathcal{R}(X,\theta ;\phi )$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It follows from <a data-tag="27709055" href="../../tag/BC74B8EA334F/">17.13.7</a>, (<a data-tag="236BD41E" href="../../tag/22C9794122C8/">17.13.2</a>) and proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">5.14.2</a> that the restriction of $\Gamma ^*$ to each compact subinterval of $(0,\infty )$ is a subgeodesic. By corollary <a data-tag="9F1F181A" href="../../tag/4B87EF03E3EA/">17.13.9</a>, for any $t&gt;0$, $\Gamma ^*_ t\in \mathcal{E}(X,\theta ;\phi )$. 
+    <p>
+      First observe that as $t\to 0+$, we have 
+    
+<div class="equation numbered-equation" id="sgpt-AAA38489"><span data-gerby-tag="AAA38489"><code class="tag-id">E5C60BE9B124</code></span>
+<span class="equation-label"><a data-tag="AAA38489" href="../../tag/E5C60BE9B124/">17.13.12</a></span>
+<div>\begin{equation}  \Gamma _ t^*\xrightarrow {L^1}\phi . \end{equation}</div>
+</div>
+<p>
+       By <a data-tag="988B137E" href="../../tag/C6092031D5B3/">17.13.10</a> and proposition <a data-tag="050755D1" href="../../tag/EC4B3805B84D/">5.17.3</a>, it suffices to show each $L^1$-cluster point $\psi \in \mathrm{PSH}(X,\theta )$ of $\Gamma _ t^*$ as $t\to 0$ is equal to $\phi $. 
+    <p>
+      To see this, first observe that by (<a data-tag="236BD41E" href="../../tag/22C9794122C8/">17.13.2</a>), for any fixed $t&gt;0$, 
+    
+<div class="equation">
+  \[  \Gamma _ t^*\leq t\Gamma _{\max }+\phi .  \]
+</div>
+<p>
+       Therefore, $\psi \leq \phi $. On the other hand, for any fixed $\tau &lt;\Gamma _{\max }$, by (<a data-tag="236BD41E" href="../../tag/22C9794122C8/">17.13.2</a>), we have 
+    
+<div class="equation">
+  \[  \Gamma ^*_ t\geq \Gamma _{\tau }+t\tau  \]
+</div>
+<p>
+       for any $t&gt;0$. So $\psi \geq \Gamma _{\tau }$ almost everywhere and hence everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">5.14.6</a>. It follows that $\psi \geq \phi $. Therefore, $\psi =\phi $. 
+    <p>
+      Assume that $\Gamma ^*$ is not a geodesic ray. Then we can find $0\leq a&lt;b$ such that $(\Gamma ^*_ t)_{t\in (a,b)}$ differs from the geodesic $(\eta _ t)_{t\in (a,b)}$ from $\Gamma ^*_ a$ to $\Gamma ^*_ b$. The existence of $(\eta _ t)_ t$ is guaranteed by proposition <a data-tag="74EB2527" href="../../tag/8AB36536E36D/">17.10.24</a>. We consider the subgeodesic $(\ell _ t)_{t&gt;0}$ given by $\ell _ t=\eta _ t$ for $t\in (a,b)$ and $\ell _ t=\Gamma ^*_ t$ otherwise. Note that $\ell $ is a subgeodesic due to the gluing lemma <a data-tag="F358A89F" href="../../tag/3BEBB86C7F79/">17.10.16</a>. 
+    <p>
+      Consider the Legendre transform 
+    
+<div class="equation">
+  \[  \Gamma '_{\tau }=\inf _{t&gt;0} (\ell _ t-t\tau ),\quad \tau \in \mathbb {R}.  \]
+</div>
+<p>
+       Then $\Gamma '_{\tau }\geq \Gamma _{\tau }$ and $\Gamma '_{\tau }\in \mathrm{PSH}(X,\theta )\cup \{ -\infty \} $ by proposition <a data-tag="E0DBA4DC" href="../../tag/BB26476C13FA/">5.14.15</a> for all $\tau \in \mathbb {R}$. 
+    <p>
+      We claim that 
+    
+<div class="equation numbered-equation" id="sgpt-890B6FA2"><span data-gerby-tag="890B6FA2"><code class="tag-id">BD13D6DEBB93</code></span>
+<span class="equation-label"><a data-tag="890B6FA2" href="../../tag/BD13D6DEBB93/">17.13.13</a></span>
+<div>\begin{equation}  \Gamma '_{\tau }\leq \Gamma _{\tau }+(b-a)(\Gamma _{\max }-\tau ),\quad \tau \in \mathbb {R}. \end{equation}</div>
+</div>
+<p>
+       Observe that $\Gamma '_{\tau }\equiv -\infty $ when $\tau &gt;\Gamma _{\max }$ by <a data-tag="988B137E" href="../../tag/C6092031D5B3/">17.13.10</a>. Thus it suffices to consider $\tau \leq \Gamma _{\max }$. Put 
+    
+<div class="equation">
+  \[  C_{\tau }\coloneqq (b-a)(\Gamma _{\max }-\tau )\geq 0.  \]
+</div>
+<p>
+       For any $s\in [a,b]$, the monotonicity of $t\mapsto \Gamma _ t^*-t\Gamma _{\max }$ from <a data-tag="988B137E" href="../../tag/C6092031D5B3/">17.13.10</a> gives 
+    
+<div class="equation">
+  \[  \Gamma _ b^*-b\tau \leq \Gamma _ s^*-s\tau +C_{\tau }.  \]
+</div>
+<p>
+       Since $\ell _ b=\Gamma _ b^*$, we get 
+    
+<div class="equation">
+  \[  \Gamma '_{\tau }\leq \Gamma _ b^*-b\tau \leq \Gamma _ s^*-s\tau +C_{\tau },\quad s\in [a,b].  \]
+</div>
+<p>
+       For $s\notin [a,b]$, we have $\ell _ s=\Gamma _ s^*$, hence 
+    
+<div class="equation">
+  \[  \Gamma '_{\tau }\leq \Gamma _ s^*-s\tau \leq \Gamma _ s^*-s\tau +C_{\tau }.  \]
+</div>
+<p>
+       Taking the infimum over all $s&gt;0$ gives 
+    
+<div class="equation">
+  \[  \Gamma '_{\tau }\leq \Gamma _{\tau }+C_{\tau }.  \]
+</div>
+<p>
+       Therefore, (<a data-tag="890B6FA2" href="../../tag/BD13D6DEBB93/">17.13.13</a>) follows. In particular, for any $\tau &lt;\Gamma _{\max }$, we have $\Gamma '_{\tau }\sim \Gamma _{\tau }$. Moreover, $\sup _ X\ell _ t\leq t\Gamma _{\max }$ for all $t&gt;0$: this is clear outside $(a,b)$ from <a data-tag="988B137E" href="../../tag/C6092031D5B3/">17.13.10</a>, and on $(a,b)$ it follows from the convexity of subgeodesics applied to the geodesic $(\eta _ t)_{t\in (a,b)}$. Hence, for $\tau &lt;\Gamma _{\max }$, 
+    
+<div class="equation">
+  \[  \sup _ X(\ell _ t-t\tau )\leq t(\Gamma _{\max }-\tau ).  \]
+</div>
+<p>
+       Letting $t\to 0+$ gives $\Gamma '_{\tau }\leq 0$. It follows from the fact that $\Gamma _{\tau }$ is a model potential that $\Gamma _{\tau }=\Gamma '_{\tau }$ for all $\tau &lt;\Gamma _{\max }$. Therefore, by theorem <a data-tag="1A7E065D" href="../../tag/258227E5D497/">21.11.24</a>, we have $\Gamma ^*_ t=\ell _ t$ for all $t&gt;0$, which is a contradiction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+ Given $\ell \in \mathcal{R}(X,\theta ;\phi )$, define its Legendre transform 
+</p>
+<div class="equation numbered-equation" id="sgpt-36BDE2AA"><span data-gerby-tag="36BDE2AA"><code class="tag-id">10B32891AA98</code></span>
+<span class="equation-label"><a data-tag="36BDE2AA" href="../../tag/10B32891AA98/">17.13.14</a></span>
+<div>\begin{equation}  \ell ^*_{\tau }\coloneqq \inf _{t&gt;0} (\ell _ t-t\tau ),\quad \tau \in \mathbb {R}. \end{equation}</div>
+</div>
+
+<article class="env-lemma" id="sgpt-17307E25">
+<p><a class="environment-identifier" href="../../tag/7B83BD1D5FB9/">Lemma <span data-tag="17307E25">17.13.15</span>.</a><span data-gerby-tag="17307E25"><code class="tag-id">7B83BD1D5FB9</code></span> Given $\ell \in \mathcal{R}(X,\theta ;\phi )$, then $\ell ^*=(\ell ^*_\tau )_{\tau &lt;\sup _ X \ell _1}\in \mathrm{TC}(X,\theta ;\phi )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Note that it follows from proposition <a data-tag="E0DBA4DC" href="../../tag/BB26476C13FA/">5.14.15</a> that $\ell ^*_{\tau }\in \mathrm{PSH}(X,\theta )\cup \{ -\infty \} $ for all $\tau \in \mathbb {R}$. It is clear that $\mathbb {R}\ni \tau \mapsto \ell ^*_{\tau }$ is a decreasing and concave function. 
+    <p>
+      By proposition <a data-tag="3F6C536C" href="../../tag/FD1B5378AA06/">17.10.39</a>, 
+    
+<div class="equation">
+  \[  \sup _ X\ell _ t= t\sup _ X \ell _1 \quad \forall t\geq 0.  \]
+</div>
+<p>
+       Set $C=\sup _ X\ell _1$. By proposition <a data-tag="3F6C536C" href="../../tag/FD1B5378AA06/">17.10.39</a>, $\sup _ X(\ell _ t-Ct)=0$ for all $t&gt;0$. For each $x$ outside a pluripolar set, the function $t\mapsto \ell _ t(x)-Ct$ is convex on $(0,\infty )$ and bounded above by $0$, hence it is decreasing. By proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">5.14.6</a>, the same monotonicity holds as an inequality of $\theta $-psh functions. Thus $(\ell _ t-Ct)_{t&gt;0}$ is a decreasing net in $\mathrm{PSH}(X,\theta )$. 
+    <p>
+      Its infimum is not identically $-\infty $, since the family is normalized by $\sup _ X(\ell _ t-Ct)=0$ and is compact in $L^1$ by proposition <a data-tag="050755D1" href="../../tag/EC4B3805B84D/">5.17.3</a>. Therefore 
+    
+<div class="equation">
+  \[  \ell ^*_{C}=\inf _{t&gt;0}(\ell _ t-Ct)\in \mathrm{PSH}(X,\theta )  \]
+</div>
+<p>
+       by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">5.14.2</a>. 
+    <p>
+      On the other hand, for $\tau &gt;\sup _ X \ell _1$, the same argument shows that 
+    
+<div class="equation">
+  \[  \ell ^*_{\tau }\equiv -\infty .  \]
+</div>
+<p>
+       Therefore, $\ell ^*_{\tau }\in \mathrm{PSH}(X,\theta )$ if and only if $\tau \leq \ell ^*_{\max }\coloneqq \sup _ X \ell _1$. 
+    <p>
+      We claim that $(\ell ^*_{\tau })_{\tau &lt;\ell ^*_{\max }}$ is a test curve. We first observe that for $\tau &lt;\ell ^*_{\max }$, we have 
+    
+<div class="equation">
+  \[  \ell ^*_{\tau }\leq \ell _1-\tau \sim _ P \phi .  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation numbered-equation" id="sgpt-F91E4284"><span data-gerby-tag="F91E4284"><code class="tag-id">5BF1777D23C2</code></span>
+<span class="equation-label"><a data-tag="F91E4284" href="../../tag/5BF1777D23C2/">17.13.16</a></span>
+<div>\begin{equation}  \ell ^*_{\tau }\preceq _ P \phi ,\quad \forall \tau &lt;\ell ^*_{\max }. \end{equation}</div>
+</div>
+<p>
+       Also observe that for any $\tau \leq \ell ^*_{\max }$ and any $t&gt;0$, we have 
+    
+<div class="equation">
+  \[  \sup _ X \ell ^*_{\tau }\leq \sup _ X \ell _ t-t\tau =\ell ^*_{\max }t-t\tau .  \]
+</div>
+<p>
+       Letting $t\to 0+$, we find that for any $\tau \leq \ell ^*_{\max }$, we have 
+    
+<div class="equation numbered-equation" id="sgpt-D5ED9F01"><span data-gerby-tag="D5ED9F01"><code class="tag-id">6F01D0840C12</code></span>
+<span class="equation-label"><a data-tag="D5ED9F01" href="../../tag/6F01D0840C12/">17.13.17</a></span>
+<div>\begin{equation}  \sup _ X \ell ^*_{\tau }\leq 0. \end{equation}</div>
+</div>
+<p>
+      Fix $\tau &lt;\ell ^*_{\max }$. We want to argue that 
+    
+<div class="equation numbered-equation" id="sgpt-65115157"><span data-gerby-tag="65115157"><code class="tag-id">59C9610616F1</code></span>
+<span class="equation-label"><a data-tag="65115157" href="../../tag/59C9610616F1/">17.13.18</a></span>
+<div>\begin{equation}  P_{\theta }\left[\ell ^*_{\tau }\right]=\ell ^*_{\tau }. \end{equation}</div>
+</div>
+<p>
+       First we claim that for any $C&gt;0$, we have 
+    
+<div class="equation numbered-equation" id="sgpt-3993AB31"><span data-gerby-tag="3993AB31"><code class="tag-id">25F16D030FA9</code></span>
+<span class="equation-label"><a data-tag="3993AB31" href="../../tag/25F16D030FA9/">17.13.19</a></span>
+<div>\begin{equation}  (\ell ^*_{\tau }+C)\land \phi =(\ell ^*_{\tau }+C)\land V_{\theta }. \end{equation}</div>
+</div>
+<p>
+       The $\leq $ direction is trivial. We argue the reverse inequality, which reduces to 
+    
+<div class="equation">
+  \[  \phi \geq (\ell ^*_{\tau }+C)\land V_{\theta }.  \]
+</div>
+<p>
+       Since $\phi $ is model and $(\ell ^*_{\tau }+C)\land V_{\theta }\leq 0$, it suffices to show that 
+    
+<div class="equation">
+  \[  \phi \succeq _ P (\ell ^*_{\tau }+C)\land V_{\theta },  \]
+</div>
+<p>
+       which follows from (<a data-tag="F91E4284" href="../../tag/5BF1777D23C2/">17.13.16</a>). Therefore, (<a data-tag="3993AB31" href="../../tag/25F16D030FA9/">17.13.19</a>) is established. Thanks to (<a data-tag="D5ED9F01" href="../../tag/6F01D0840C12/">17.13.17</a>), we have the obvious inequality 
+    
+<div class="equation">
+  \[  (\ell ^*_{\tau }+C)\land V_{\theta }\geq \ell ^*_{\tau }  \]
+</div>
+<p>
+       for any $C&gt;0$. Therefore, in order to prove (<a data-tag="65115157" href="../../tag/59C9610616F1/">17.13.18</a>), it remains to argue that for any $C&gt;0$, 
+    
+<div class="equation numbered-equation" id="sgpt-9738CE0C"><span data-gerby-tag="9738CE0C"><code class="tag-id">CBA3E07AB082</code></span>
+<span class="equation-label"><a data-tag="9738CE0C" href="../../tag/CBA3E07AB082/">17.13.20</a></span>
+<div>\begin{equation}  (\ell ^*_{\tau }+C)\land \phi \leq \ell ^*_{\tau }. \end{equation}</div>
+</div>
+<p>
+       For this purpose, let us consider the following geodesics: For any $M&gt;0$ and $t\in [0,1]$, let 
+    
+<div class="equation">
+  \[  \ell ^{1,M}_ t= \ell _{tM}-tM\tau ,\quad \ell ^{2,M}_ t= (\ell ^*_{\tau }+C)\land \phi -Ct.  \]
+</div>
+<p>
+       It is clear that at $t=0,1$, we have $\ell ^{2,M}_ t\leq \ell ^{1,M}_ t$. Hence, the same holds for all $t\in [0,1]$. In particular, for any fixed $s\in (0,1]$, we have 
+    
+<div class="equation">
+  \[  (\ell ^*_{\tau }+C)\land \phi -Cs\leq \ell _{sM}-sM\tau  \]
+</div>
+<p>
+       for all $M&gt;0$. Taking infimum with respect to $M&gt;0$, we find 
+    
+<div class="equation">
+  \[  (\ell ^*_{\tau }+C)\land \phi -Cs\leq \ell ^*_{\tau }.  \]
+</div>
+<p>
+       Since $s\in (0,1]$ is arbitrary, we conclude (<a data-tag="9738CE0C" href="../../tag/CBA3E07AB082/">17.13.20</a>). 
+    <p>
+      Finally, we check the condition at $-\infty $. Set 
+    
+<div class="equation">
+  \[  \psi \coloneqq \operatorname *{sup}_{\tau &lt;\ell ^*_{\max }}{}\! {}^{*}\ell ^*_{\tau }.  \]
+</div>
+<p>
+       The family $(\ell ^*_{\tau })_{\tau &lt;\ell ^*_{\max }}$ is locally uniformly bounded from above, so $\psi \in \mathrm{PSH}(X,\theta )$. Thanks to corollary <a data-tag="B35F3B4F" href="../../tag/C645EE3517E1/">17.10.9</a>, outside a pluripolar set, the function $t\mapsto \ell _ t(x)$ is a finite closed convex function on $[0,\infty )$ with value $\phi (x)$ at $t=0$. Applying the one-variable Legendre duality gives 
+    
+<div class="equation">
+  \[  \psi (x)=\adjustlimits \sup _{\tau &lt;\ell ^*_{\max }}\inf _{t&gt;0}\bigl (\ell _ t(x)-t\tau \bigr )=\ell _0(x)=\phi (x)\quad \textup{quasi-everywhere}.  \]
+</div>
+<p>
+       Hence $\psi =\phi $ by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">5.14.6</a>. In particular, $\ell ^*_{-\infty }=\phi $ has positive mass. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="sgpt-CA4237EF">
+<p><a class="environment-identifier" href="../../tag/B28F0A28CB3E/">Theorem <span data-tag="CA4237EF">17.13.21</span>.</a><span data-gerby-tag="CA4237EF"><code class="tag-id">B28F0A28CB3E</code></span> The Legendre transform in definition <a data-tag="236F4C37" href="../../tag/2105331E66C7/">17.13.1</a> is a bijection </p>
+<div class="equation numbered-equation" id="sgpt-BADD9474"><span data-gerby-tag="BADD9474"><code class="tag-id">6D5BA4827FF5</code></span>
+<span class="equation-label"><a data-tag="BADD9474" href="../../tag/6D5BA4827FF5/">17.13.22</a></span>
+<div>\begin{equation}  \mathrm{TC}(X,\theta ;\phi )\xrightarrow {\sim } \mathcal{R}(X,\theta ;\phi ). \end{equation}</div>
+</div>
+<p> Moreover, this bijection restricts to the following bijections: </p>
+<div class="equation numbered-equation" id="sgpt-BC907D09"><span data-gerby-tag="BC907D09"><code class="tag-id">AE510D6D0C2F</code></span>
+<span class="equation-label"><a data-tag="BC907D09" href="../../tag/AE510D6D0C2F/">17.13.23</a></span>
+<div>\begin{equation}  \mathrm{TC}^1(X,\theta ;\phi )\xrightarrow {\sim } \mathcal{R}^1(X,\theta ;\phi ),\quad \mathrm{TC}^{\infty }(X,\theta ;\phi )\xrightarrow {\sim } \mathcal{R}^{\infty }(X,\theta ;\phi ). \end{equation}</div>
+</div>
+<p> For any $\Gamma \in \mathrm{TC}^1(X,\theta ;\phi )$, we have </p>
+<div class="equation numbered-equation" id="sgpt-EDA8DFEE"><span data-gerby-tag="EDA8DFEE"><code class="tag-id">4884EC5C8FA9</code></span>
+<span class="equation-label"><a data-tag="EDA8DFEE" href="../../tag/4884EC5C8FA9/">17.13.24</a></span>
+<div>\begin{equation}  \mathbf{E}^{\phi }(\Gamma )=\mathbf{E}^{\phi }(\Gamma ^*). \end{equation}</div>
+</div>
+</article> Recall that the two energy functionals in (<a data-tag="EDA8DFEE" href="../../tag/4884EC5C8FA9/">17.13.24</a>) are defined in (<a data-tag="50A4CAA5" href="../../tag/942AC971E484/">17.12.12</a>) and definition <a data-tag="D3519A70" href="../../tag/89AFFBB3978E/">17.10.82</a> respectively. 
+
+<p>
+The correspondence (<a data-tag="BADD9474" href="../../tag/6D5BA4827FF5/">17.13.22</a>) will be referred to as the <em>Ross–Witt Nyström correspondence</em>. 
+</p>
+<p>
+To appreciate this result, just consider the simple case where $\theta $ is a Kähler form and $\phi =0$. In this case, elements in $\mathcal{R}^{\infty }(X,\theta )$ are rays of <em>bounded</em> potentials, while elements in $\mathrm{TC}^{\infty }(X,\theta )$ are rays of <em>singular</em> potentials. This result establishes a bridge between the pluripotential theory of regular potentials and that of singular potentials! 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first establish (<a data-tag="BADD9474" href="../../tag/6D5BA4827FF5/">17.13.22</a>). 
+    <p>
+      It follows from <a data-tag="B6B676DD" href="../../tag/9C6538C4298E/">17.13.11</a> that the forward map is well-defined. The inverse map is given by (<a data-tag="36BDE2AA" href="../../tag/10B32891AA98/">17.13.14</a>). We show that the inverse map is also well-defined. Given $\ell \in \mathcal{R}(X,\theta ;\phi )$, we know from <a data-tag="17307E25" href="../../tag/7B83BD1D5FB9/">17.13.15</a> that $\ell ^*\in \mathrm{TC}(X,\theta ;\phi )$. We need to show that $\ell ^*\in \mathrm{TC}(X,\theta ;\phi )$. 
+    <p>
+      The equality $\ell ^*_{-\infty }=\phi $ was proved in <a data-tag="17307E25" href="../../tag/7B83BD1D5FB9/">17.13.15</a>. Therefore, $\ell ^*\in \mathrm{TC}(X,\theta ;\phi )$ as expected. 
+    <p>
+      The two operations are inverse to each other thanks to corollary <a data-tag="8B97E76A" href="../../tag/8C4DFDD0ADE0/">21.11.26</a>. Hence, (<a data-tag="BADD9474" href="../../tag/6D5BA4827FF5/">17.13.22</a>) is established. 
+    <p>
+<strong>Step 2</strong>. Next we consider the bounded situation. Namely, we want to establish the second half of (<a data-tag="BC907D09" href="../../tag/AE510D6D0C2F/">17.13.23</a>). 
+    <p>
+      Suppose that $\Gamma \in \mathrm{TC}^{\infty }(X,\theta ;\phi )$. Take $\tau _0\in \mathbb {R}$ so that $\Gamma _{\tau }=\phi $ for all $\tau \leq \tau _0$. It follows from (<a data-tag="236BD41E" href="../../tag/22C9794122C8/">17.13.2</a>) that 
+    
+<div class="equation">
+  \[  \Gamma _ t^*\geq \phi +t\tau _0  \]
+</div>
+<p>
+       for all $t&gt;0$. Therefore, $\Gamma ^*_ t\sim \phi $ for all $t&gt;0$ and hence $\Gamma ^*\in \mathcal{R}^{\infty }(X,\theta ;\phi )$. 
+    <p>
+      Conversely, suppose that $\ell \in \mathcal{R}^{\infty }(X,\theta ;\phi )$. Thanks to proposition <a data-tag="72CF4A43" href="../../tag/9335B48D7458/">17.10.37</a>, there is a constant $C&gt;0$ such that 
+    
+<div class="equation">
+  \[  \ell _ t\geq \phi -Ct.  \]
+</div>
+<p>
+       Therefore, according to (<a data-tag="36BDE2AA" href="../../tag/10B32891AA98/">17.13.14</a>), we have 
+    
+<div class="equation">
+  \[  \ell ^*_{\tau }\geq \inf _{t&gt;0} \Bigl ( \phi -(C+\tau )t \Bigr )=\phi  \]
+</div>
+<p>
+       if $\tau \leq -C$. Therefore, $\ell ^*_{\tau }=\phi $ for all $\tau \leq -C$. 
+    <p>
+<strong>Step 3</strong>. We establish (<a data-tag="EDA8DFEE" href="../../tag/4884EC5C8FA9/">17.13.24</a>) and the first half of (<a data-tag="BC907D09" href="../../tag/AE510D6D0C2F/">17.13.23</a>). 
+    <p>
+<strong>Step 3.1</strong>. We reduce to the case where $\Gamma _{\max }=0$. 
+    <p>
+      Suppose that we define 
+    
+<div class="equation">
+  \[  \Gamma '_{\tau }=\Gamma _{\tau +\Gamma _{\max }},\quad \forall \tau &lt;0.  \]
+</div>
+<p>
+       Then $\Gamma '\in \mathrm{TC}(X,\theta ;\phi )$ as well and for all $t&gt;0$, 
+    
+<div class="equation">
+  \[  \Gamma '^*_ t=\sup _{\tau &lt;0} \left( t\tau +\Gamma '_{\tau } \right)=\sup _{\tau &lt;\Gamma _{\max }} \left( t\tau +\Gamma _{\tau } \right)-t\Gamma _{\max }=\Gamma ^*_ t-t\Gamma _{\max }.  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  \mathbf{E}^{\phi }\left(\Gamma '^*\right)=\mathbf{E}^{\phi }\left(\Gamma ^*\right)-\Gamma _{\max }\int _ X \theta _{\phi }^ n.  \]
+</div>
+<p>
+       by (<a data-tag="3F192A6A" href="../../tag/BC7744A40FEC/">16.5.13</a>). Using (<a data-tag="50A4CAA5" href="../../tag/942AC971E484/">17.12.12</a>), we also have 
+    
+<div class="equation">
+  \[  \begin{aligned}  \mathbf{E}^{\phi }(\Gamma ')=&amp; \int _{-\infty }^0 \left( \int _ X \theta _{\Gamma '_{\tau }}^ n-\int _ X \theta _{\phi }^ n \right)\, \mathrm{d}\tau \\  =&amp;  \int _{-\infty }^{\Gamma _{\max }}\left( \int _ X \theta _{\Gamma _{\tau }}^ n-\int _ X \theta _{\phi }^ n \right)\, \mathrm{d}\tau \\  =&amp;  \mathbf{E}^{\phi }(\Gamma )-\Gamma _{\max }\int _ X \theta _{\phi }^ n. \end{aligned}  \]
+</div>
+<p>
+       Therefore, it suffices to establish (<a data-tag="EDA8DFEE" href="../../tag/4884EC5C8FA9/">17.13.24</a>) for $\Gamma '$ in place of $\Gamma $. 
+    <p>
+<strong>Step 3.2</strong>. We assume that $\Gamma _{\max }=0$ and $\Gamma \in \mathrm{TC}^{\infty }(X,\theta ;\phi )$. We prove (<a data-tag="EDA8DFEE" href="../../tag/4884EC5C8FA9/">17.13.24</a>). 
+    <p>
+      For $N\in \mathbb {Z}_{&gt;0}$, $M \in \mathbb {Z}$, we introduce the following: 
+    
+<div class="equation">
+  \[  \Gamma ^{*,N,M}_ t \coloneqq \max _{\substack {k \in \mathbb {Z} \\ k \leq M}} \left(\Gamma _{k/2^ N} + tk/2^ N\right)\in \mathcal{E}^{\infty }(X,\theta ;\phi ),\quad t&gt;0.  \]
+</div>
+<p>
+       We first claim that for all $t&gt;0$, $N\in \mathbb {Z}_{&gt;0}$ and $M\in \mathbb {Z}_{&lt;0}$, 
+    
+<div class="equation numbered-equation" id="sgpt-B8F201D4"><span data-gerby-tag="B8F201D4"><code class="tag-id">1C55A624E61E</code></span>
+<span class="equation-label"><a data-tag="B8F201D4" href="../../tag/1C55A624E61E/">17.13.25</a></span>
+<div>\begin{equation}  \frac{t}{2^ N} \int _ X \theta ^ n_{\Gamma _{(M+1)/2^ N}}\leq E_{\theta }^{\phi }\left(\Gamma _ t^{*,N,M+1}\right)-E_{\theta }^{\phi }\left(\Gamma _ t^{*,N,M}\right)\leq \frac{t}{2^ N} \int _ X \theta ^ n_{\Gamma _{M/2^ N}}. \end{equation}</div>
+</div>
+<p>
+      Assuming this, let us prove (<a data-tag="EDA8DFEE" href="../../tag/4884EC5C8FA9/">17.13.24</a>). 
+    <p>
+      Fixing $N$, let $M=\lfloor 2^{N}\Gamma _{\min }\rfloor $. Recall that $\Gamma _{\min }$ is defined in (<a data-tag="12B25AF6" href="../../tag/3578A2265BDC/">17.12.11</a>). Then repeated applications of (<a data-tag="B8F201D4" href="../../tag/1C55A624E61E/">17.13.25</a>) yield 
+    
+<div class="equation">
+  \[  \sum _{j=M+1}^0 \frac{t}{2^ N} \int _ X \theta ^ n_{\Gamma _{j/2^ N}}\leq E^{\phi }_{\theta }\left(\Gamma _ t^{*,N,0}\right)-E^{\phi }_{\theta }\left(\Gamma _ t^{*,N,M}\right)\leq \sum _{j=M}^{-1} \frac{t}{2^ N} \int _ X \theta ^ n_{\Gamma _{j/2^ N}}.  \]
+</div>
+<p>
+       Since $M \leq 2^{N}\Gamma _{\min }$, we have 
+    
+<div class="equation">
+  \[  \Gamma ^{*,N,M}_ t =\phi +t M/2^ N.  \]
+</div>
+<p>
+       Using (<a data-tag="3F192A6A" href="../../tag/BC7744A40FEC/">16.5.13</a>), we can continue to write 
+    
+<div class="equation">
+  \[  \sum _{j=M+1}^0 \frac{t}{2^ N} \left(\int _ X \theta ^ n_{\Gamma _{j/2^ N}} - \int _ X \theta ^ n_{\phi }\right)\leq E_{\theta }^{\phi }\left(\Gamma _ t^{*,N,0}\right)\leq \sum _{j=M}^{-1} \frac{t}{2^ N} \left(\int _ X \theta ^ n_{\Gamma _{j/2^ N}} - \int _ X \theta ^ n_{\phi }\right).  \]
+</div>
+<p>
+       We now notice that we have Riemann sums on both the left and right of the above inequality. Moreover, as $N\to \infty $, the potentials $\Gamma _ t^{*,N,0}$ increase to $\Gamma _ t^*$, hence their energies converge to $E^\phi _\theta (\Gamma _ t^*)$ by proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">16.5.37</a>. Using proposition <a data-tag="37ECD68D" href="../../tag/B7CD1B90CFDA/">17.12.9</a>, it is possible to let $N \to \infty $ and obtain 
+    
+<div class="equation numbered-equation" id="sgpt-3BC776D5"><span data-gerby-tag="3BC776D5"><code class="tag-id">85E0D04C585D</code></span>
+<span class="equation-label"><a data-tag="3BC776D5" href="../../tag/85E0D04C585D/">17.13.26</a></span>
+<div>\begin{equation}  E_{\theta }^{\phi }(\Gamma _ t^{*})=t\mathbf{E}^{\phi }(\Gamma ) \end{equation}</div>
+</div>
+<p>
+       So (<a data-tag="EDA8DFEE" href="../../tag/4884EC5C8FA9/">17.13.24</a>) follows as desired. 
+    <p>
+      It remains to argue (<a data-tag="B8F201D4" href="../../tag/1C55A624E61E/">17.13.25</a>). Fix $t&gt;0$, $N\in \mathbb {Z}_{&gt;0}$ and $M\in \mathbb {Z}$. By proposition <a data-tag="EFA21885" href="../../tag/51CFFEE97C34/">16.5.36</a>, 
+    
+<div class="equation numbered-equation" id="sgpt-3911202C"><span data-gerby-tag="3911202C"><code class="tag-id">877135CB19C2</code></span>
+<span class="equation-label"><a data-tag="3911202C" href="../../tag/877135CB19C2/">17.13.27</a></span>
+<div>\begin{equation}  \begin{aligned}  \int _ X \left(\Gamma _ t^{*,N,M+1}-\Gamma _ t^{*,N,M}\right)\, \theta ^ n_{\Gamma _ t^{*,N,M+1}}\leq &amp;  E_{\theta }^{\phi }\left(\Gamma _ t^{*,N,M+1}\right)-E_{\theta }^{\phi }\left(\Gamma _ t^{*,N,M}\right)\\  \leq &amp;  \int _ X \left(\Gamma _ t^{*,N,M+1}-\Gamma _ t^{*,N,M}\right)\, \theta ^ n_{\Gamma _ t^{*,N,M}}. \end{aligned} \end{equation}</div>
+</div>
+<p>
+       Clearly $\Gamma _ t^{*,N,M+1} \geq \Gamma _ t^{*,N,M}$. Moreover, since $\mathbb {R}\ni \tau \mapsto \Gamma _{\tau }+t\tau $ is concave, we notice that 
+    
+<div class="equation">
+  \[  U_ t \coloneqq \left\{ \Gamma ^{*,N,M+1}_ t&gt;\Gamma ^{*,N,M}_ t\right\}  = \left\{ \Gamma _{(M+1)/2^ N} + 2^{-N}t &gt;\Gamma _{M/2^ N}\right\} ,  \]
+</div>
+<p>
+       and on $U_ t$ we have 
+    
+<div class="equation numbered-equation" id="sgpt-C3FDA5D2"><span data-gerby-tag="C3FDA5D2"><code class="tag-id">23E6778F003A</code></span>
+<span class="equation-label"><a data-tag="C3FDA5D2" href="../../tag/23E6778F003A/">17.13.28</a></span>
+<div>\begin{equation}  \Gamma _ t^{*,N,M+1} = \Gamma _{(M+1)/2^ N} + t (M+1)/2^{N},\quad \Gamma _ t^{*,N,M} = \Gamma _{M/2^ N} + t M /2^{N}. \end{equation}</div>
+</div>
+<p>
+       We also note that $U_ t$ is $\mathcal{F}$-open by corollary <a data-tag="C66A9314" href="../../tag/030D740FC9C6/">5.15.19</a>. So from the lower bound in (<a data-tag="3911202C" href="../../tag/877135CB19C2/">17.13.27</a>), we have 
+    
+<div class="equation">
+  \[  \begin{aligned}  E_{\theta }^{\phi }\left(\Gamma _ t^{*,N,M+1}\right)-E_{\theta }^{\phi }\left(\Gamma _ t^{*,N,M}\right)\geq &amp;  \int _{U_ t} \left(\Gamma _ t^{*,N,M+1}-\Gamma _ t^{*,N,M}\right)\, \theta ^ n_{\Gamma _ t^{*,N,M+1}}\\  = &amp;  \int _{U_ t} \left(\Gamma _{(M+1)/2^ N}-\Gamma _{M/2^ N}+t2^{-N}\right)\, \theta ^ n_{\Gamma _{(M+1)/2^ N}}\\  \geq &amp;  \int _{\left\{ \Gamma _{(M+1)/2^ N}=0\right\} }t2^{-N}\, \theta ^ n_{\Gamma _{(M+1)/2^ N}}, \end{aligned}  \]
+</div>
+<p>
+       where on the second line, we applied (<a data-tag="C3FDA5D2" href="../../tag/23E6778F003A/">17.13.28</a>) and proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">13.11.4</a>, on the third line, we applied the fact that $\theta _{\Gamma _{(M+1)/2^ N}}^ n$ is supported on the set (cf. theorem <a data-tag="D18E0263" href="../../tag/553335F185CE/">16.3.12</a>) 
+    
+<div class="equation">
+  \[  \left\{ \Gamma _{(M+1)/2^ N}=0\right\} \subseteq U_ t\cap \left\{ \Gamma _{M/2^ N}=0\right\} .  \]
+</div>
+<p>
+       When $(M+1)/2^ N=0$, we use proposition <a data-tag="6F748350" href="../../tag/8EB68D9BFB64/">16.4.3</a> to see that $P_\theta [\Gamma _0]=\Gamma _0$, since $\Gamma _0$ is the decreasing limit of the model potentials $\Gamma _\tau $ as $\tau \nearrow 0$. Thus theorem <a data-tag="D18E0263" href="../../tag/553335F185CE/">16.3.12</a> applies to this endpoint as well. 
+    <p>
+      We have deduced the first inequality in (<a data-tag="B8F201D4" href="../../tag/1C55A624E61E/">17.13.25</a>). Next, we apply the upper bound part in (<a data-tag="3911202C" href="../../tag/877135CB19C2/">17.13.27</a>) and compute similarly 
+    
+<div class="equation">
+  \[  \begin{aligned}  E_{\theta }^{\phi }(\Gamma _ t^{*,N,M+1})-E_{\theta }^{\phi }(\Gamma _ t^{*,N,M})\leq &amp;  \int _ X \left(\Gamma _ t^{*,N,M+1}-\Gamma _ t^{*,N,M}\right)\, \theta ^ n_{\Gamma _ t^{*,N,M}}\\  =&amp;  \int _{U_ t} \left(\Gamma _{(M+1)/2^ N}-\Gamma _{M/2^ N}+t2^{-N}\right)\, \theta ^ n_{\Gamma _{M/2^ N}}\\  \leq &amp;  \int _{\{ \Gamma _{M/2^ N}=0\} \cap U_ t}\left(\Gamma _{(M+1)/2^ N}+t2^{-N}\right)\, \theta ^ n_{\Gamma _{M/2^ N}} \\  \leq &amp; \int _{\{ \Gamma _{M/2^ N}=0\} \cap U_ t} t2^{-N}\, \theta ^ n_{\Gamma _{M/2^ N}}. \end{aligned}  \]
+</div>
+<p>
+       We conclude the latter half of (<a data-tag="B8F201D4" href="../../tag/1C55A624E61E/">17.13.25</a>). 
+    <p>
+<strong>Step 3.3</strong>. We assume that $\Gamma _{\max }=0$. Now $\Gamma \in \mathrm{TC}(X,\theta ;\phi )$ only. 
+    <p>
+      For each $\epsilon &gt;0$, we introduce $\Gamma ^{\epsilon }\in \mathrm{TC}^{\infty }(X,\theta ;\phi )$ as follows: 
+    
+<ol>
+<li class="custom-item" id="sgpt-1163513B"><span data-gerby-tag="1163513B"><code class="tag-id">1E08B0569766</code></span><p>
+ Let $\Gamma ^{\epsilon }_{\max }=0$, and 
+</p>
+</li><li class="custom-item" id="sgpt-4FB715D1"><span data-gerby-tag="4FB715D1"><code class="tag-id">70863808F7A7</code></span><p>
+ we set 
+</p>
+<div class="equation">
+  \[  \Gamma ^{\epsilon }_{\tau }= \begin{cases}  \phi ,&amp; \textup{if }\tau \leq -\epsilon ^{-1};\\  P_{\theta }\left[ (1+\epsilon \tau )\Gamma _{\tau }-\epsilon \tau \phi \right],&amp; \textup{if }\tau \in \left(-\epsilon ^{-1},0\right). \end{cases}  \]
+</div>
+</li>
+</ol>
+<p>
+       The concavity and monotonicity in $\tau $ follow from proposition <a data-tag="9AB8A7BE" href="../../tag/CF5FECD1B547/">16.4.2</a>. The value at $-\infty $ is $\phi $. Moreover, $\Gamma ^\epsilon _\tau =\phi $ for $\tau \leq -\epsilon ^{-1}$, so $\Gamma ^\epsilon \in \mathrm{TC}^\infty (X,\theta ;\phi )$. 
+    <p>
+      It follows from corollary <a data-tag="3A4E114E" href="../../tag/B1559025EC82/">16.9.38</a> and corollary <a data-tag="D2436235" href="../../tag/F84D53FDA599/">16.9.14</a> that for each $\tau &lt;0$, the potentials $\Gamma ^{\epsilon }_{\tau }$ decrease to $\Gamma _{\tau }$ as $\epsilon \searrow 0$. Applying proposition <a data-tag="DE839E2D" href="../../tag/048490BEAC8C/">16.4.4</a>, we have 
+    
+<div class="equation">
+  \[  \lim _{\epsilon \to 0+} \int _ X \left(\theta +\mathrm{dd}^{\mathrm{c}}\Gamma ^{\epsilon }_{\tau }\right)^ n=\int _ X \left(\theta +\mathrm{dd}^{\mathrm{c}}\Gamma _{\tau }\right)^ n  \]
+</div>
+<p>
+       for all $\tau &lt;0$. Hence, by the monotone convergence theorem and Step 3.2, we find 
+    
+<div class="equation numbered-equation" id="sgpt-B21A0E9B"><span data-gerby-tag="B21A0E9B"><code class="tag-id">DBCF50A40C12</code></span>
+<span class="equation-label"><a data-tag="B21A0E9B" href="../../tag/DBCF50A40C12/">17.13.29</a></span>
+<div>\begin{equation}  \mathbf{E}^{\phi }(\Gamma )=\lim _{\epsilon \to 0+}\mathbf{E}^{\phi }(\Gamma ^{\epsilon })=\lim _{\epsilon \to 0+}\mathbf{E}^{\phi }(\Gamma ^{\epsilon *})=\lim _{\epsilon \to 0+} E_{\theta }^{\phi }(\Gamma ^{\epsilon *}_1), \end{equation}</div>
+</div>
+<p>
+       where the last equality follows from (<a data-tag="3BC776D5" href="../../tag/85E0D04C585D/">17.13.26</a>). Furthermore, according to proposition <a data-tag="24FD3947" href="../../tag/7A76E56311F5/">21.11.36</a>, we have 
+    
+<div class="equation">
+  \[  \Gamma ^*_ t=\inf _{\epsilon &gt;0} \Gamma ^{\epsilon *}_ t  \]
+</div>
+<p>
+       for all $t&gt;0$. Note that we do not have to take the closure of the right-hand side since it is automatically upper semicontinuous in $t$. 
+    <p>
+      Now suppose that $\Gamma \in \mathrm{TC}^1(X,\theta ;\phi )$. Then by (<a data-tag="B21A0E9B" href="../../tag/DBCF50A40C12/">17.13.29</a>), as $\epsilon \to 0+$, $(\Gamma _ t^{\epsilon *})_{\epsilon }$ is a decreasing Cauchy net in $\mathcal{E}^1(X,\theta ;\phi )$ and hence by theorem <a data-tag="C6AC67A2" href="../../tag/D84A6072F1A6/">17.10.63</a> for each $t&gt;0$, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }\left(\Gamma ^*_ t\right)=\lim _{\epsilon \to 0+}E_{\theta }^{\phi }\left(\Gamma ^{\epsilon ,*}_ t\right)=t\mathbf{E}^{\phi }(\Gamma )&gt;-\infty ,  \]
+</div>
+<p>
+       where we have applied (<a data-tag="3BC776D5" href="../../tag/85E0D04C585D/">17.13.26</a>) and (<a data-tag="B21A0E9B" href="../../tag/DBCF50A40C12/">17.13.29</a>). Hence, $\Gamma ^*\in \mathcal{R}^1(X,\theta ;\phi )$. Moreover, (<a data-tag="EDA8DFEE" href="../../tag/4884EC5C8FA9/">17.13.24</a>) follows. 
+    <p>
+      Conversely, suppose that $\Gamma ^*\in \mathcal{R}^1(X,\theta ;\phi )$. Then (<a data-tag="B21A0E9B" href="../../tag/DBCF50A40C12/">17.13.29</a>) implies that 
+    
+<div class="equation">
+  \[  \mathbf{E}^{\phi }(\Gamma )=\lim _{\epsilon \to 0+} E_{\theta }^{\phi }\left(\Gamma ^{\epsilon *}_1\right) \geq E_{\theta }^{\phi }\left(\Gamma ^*_1\right)&gt;-\infty .  \]
+</div>
+<p>
+       Hence, $\Gamma \in \mathrm{TC}^1(X,\theta ;\phi )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-remark" id="sgpt-8F2FD449">
+<p><a class="environment-identifier" href="../../tag/E10A1DEDC7AF/">Remark <span data-tag="8F2FD449">17.13.30</span>.</a><span data-gerby-tag="8F2FD449"><code class="tag-id">E10A1DEDC7AF</code></span> One could also consider geodesic rays emanating from another potential $\Phi \in \mathcal{E}(X,\theta ;\phi )$. In this case, one can show that these geodesic rays are in bijection with $\Phi $-twisted test curves: In definition <a data-tag="ECCF19D5" href="../../tag/C8399F09D86D/">17.12.1</a>, we replace <a data-tag="1425728D" href="../../tag/C8399F09D86D/#sgpt-1425728D">2</a> by the following condition: </p>
+<div class="equation">
+  \[  P_{\theta }\left[\Gamma _{\tau }\right](\Phi )=\Gamma _{\tau }.  \]
+</div>
+<p> Furthermore, we require that $\Gamma _{-\infty }=\Phi $. </p>
+<p>The above results equally work in the twisted setting. The proofs are almost identical to the untwisted case. </p>
+</article>
+
+
+<article class="env-corollary" id="sgpt-E8E70C7F">
+<p><a class="environment-identifier" href="../../tag/82AB68443E01/">Corollary <span data-tag="E8E70C7F">17.13.31</span>.</a><span data-gerby-tag="E8E70C7F"><code class="tag-id">82AB68443E01</code></span> Let $\ell \in \mathcal{R}(X,\theta ;\phi )$. Then $\sup _ X \ell _ t=\ell ^*_{\max }t$ for any $t\geq 0$. </p>
+<p>In particular, $\ell _ t-\ell ^*_{\max }t$ is a decreasing function of $t\geq 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows from <a data-tag="988B137E" href="../../tag/C6092031D5B3/">17.13.10</a> and theorem <a data-tag="CA4237EF" href="../../tag/B28F0A28CB3E/">17.13.21</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="sgpt-A54B10AF">
+<p><a class="environment-identifier" href="../../tag/E2332A16AF00/">Example <span data-tag="A54B10AF">17.13.32</span>.</a><span data-gerby-tag="A54B10AF"><code class="tag-id">E2332A16AF00</code></span> Let us see what the test curve in example <a data-tag="C293066A" href="../../tag/1A17E2EECB2D/">17.12.13</a> corresponds to under the Ross–Witt Nyström correspondence. Fix $\varphi \in \mathrm{PSH}(X,\theta )$. We claim that </p>
+<div class="equation numbered-equation" id="sgpt-AAF001D3"><span data-gerby-tag="AAF001D3"><code class="tag-id">D50F33814868</code></span>
+<span class="equation-label"><a data-tag="AAF001D3" href="../../tag/D50F33814868/">17.13.33</a></span>
+<div>\begin{equation}  \ell ^{\varphi }=\Gamma ^{\varphi *}, \end{equation}</div>
+</div>
+<p> where $\ell ^{\varphi }$ is as in example <a data-tag="EE621D7C" href="../../tag/02BD88048323/">17.10.92</a>. We may assume that $\varphi \leq 0$ since both sides are invariant after adding a constant to $\varphi $. </p>
+<p>We first prove the easy direction $\ell ^{\varphi }\geq \Gamma ^{\varphi *}$, which is equivalent to $\ell ^{\varphi *}\geq \Gamma ^{\varphi }$. Since $\ell ^{\varphi *}$ is a test curve, the latter is equivalent to </p>
+<div class="equation">
+  \[  \ell ^{\varphi *}_{\tau }\geq (1+\tau )\varphi -\tau V_{\theta }  \]
+</div>
+<p> for all $\tau \in (-1,0)$. By Legendre duality, this is equivalent to </p>
+<div class="equation numbered-equation" id="sgpt-655C16E3"><span data-gerby-tag="655C16E3"><code class="tag-id">F5A9BEF8F7BA</code></span>
+<span class="equation-label"><a data-tag="655C16E3" href="../../tag/F5A9BEF8F7BA/">17.13.34</a></span>
+<div>\begin{equation}  \ell ^{\varphi }_ t\geq \sup _{\tau \in (-1,0)} \Bigl ((1+\tau )\varphi -\tau V_{\theta }+t\tau \Bigr )=\varphi \lor (V_{\theta }-t) \end{equation}</div>
+</div>
+<p> for all $t&gt;0$. </p>
+<p>Using the notations of example <a data-tag="EE621D7C" href="../../tag/02BD88048323/">17.10.92</a>, we find easily that </p>
+<div class="equation">
+  \[  \ell ^{\varphi ,C}_ t\geq \varphi \lor (V_{\theta }-t)  \]
+</div>
+<p> for any $C&gt;0$ and $t\in [0,C]$, since it holds at $t=0$ and $t=C$. Letting $C\to \infty $, we find (<a data-tag="655C16E3" href="../../tag/F5A9BEF8F7BA/">17.13.34</a>). Therefore, $\ell ^{\varphi }\geq \Gamma ^{\varphi *}$ follows. </p>
+<p>In order to prove the equality in (<a data-tag="AAF001D3" href="../../tag/D50F33814868/">17.13.33</a>), it suffices to show that the two sides have the same energy, as a consequence of (<a data-tag="B824D8A8" href="../../tag/67CD28C301F2/">17.10.84</a>). So we compute </p>
+<div class="equation">
+  \[  \begin{aligned}  \mathbf{E}\left(\Gamma ^{\varphi *}\right)=&amp;  \mathbf{E}\left(\Gamma ^{\varphi }\right)\\  =&amp;  \int _{-1}^0 \left(\int _ X \theta _{(1+\tau )\varphi -\tau V_{\theta }}^ n-\int _ X \theta _{V_{\theta }}^ n\right)\, \mathrm{d}\tau \\  =&amp;  \sum _{j=0}^{n} \binom {n}{j} \int _ X \theta _{\varphi }^{j}\wedge \theta _{V_{\theta }}^{n-j} \int _0^1 \tau ^ j (1-\tau )^{n-j}\, \mathrm{d}\tau -\int _ X \theta _{V_{\theta }}^ n\\  =&amp;  \sum _{j=0}^{n} \binom {n}{j}\frac{j!(n-j)!}{(n+1)!} \int _ X \theta _{\varphi }^{j}\wedge \theta _{V_{\theta }}^{n-j}-\int _ X \theta _{V_{\theta }}^ n\\  =&amp;  \mathbf{E}(\ell ^{\varphi }), \end{aligned}  \]
+</div>
+ where in the second line we used proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">16.3.10</a>, in the fourth line we used the value of the $\beta $-function<aside class="source-footnote" id="sgpt-a0000076698"><span class="footnote-label">Note.</span> Also known as Euler integral of the first kind.</aside>, and the last line is just (<a data-tag="0A1CE6E1" href="../../tag/795CA33E2D29/">17.10.94</a>). 
+</article>
+
+
+The multiplier ideal sheaves of a test curve can be characterized using the corresponding geodesic ray in a very simple manner. <article class="env-proposition" id="sgpt-5698E0B2">
+<p><a class="environment-identifier" href="../../tag/E6915C7339CD/">Proposition <span data-tag="5698E0B2">17.13.35</span> <span class="named">(He–Testorf–Wang)</span>.</a><span data-gerby-tag="5698E0B2"><code class="tag-id">E6915C7339CD</code></span> Let $\ell \in \mathcal{R}(X,\theta ;\phi )$. Given any $\tau &lt;\ell ^*_{\max }$ and $x\in X$, we have </p>
+<div class="equation numbered-equation" id="sgpt-B89ADC0E"><span data-gerby-tag="B89ADC0E"><code class="tag-id">DA238F3ECC6F</code></span>
+<span class="equation-label"><a data-tag="B89ADC0E" href="../../tag/DA238F3ECC6F/">17.13.36</a></span>
+<div>\begin{equation}  \mathcal{I}\left(\ell ^*_{\tau }\right)_{x}=\left\{  f\in \mathcal{O}_{X,x}: |f|^2\int _0^{\infty } \exp (-\ell _ t+t\tau )\, \mathrm{d}t \textup{ is integrable near }x \right\} . \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $x\in X$, $\tau &lt;\ell ^*_{\max }$ and $f\in \mathcal{O}_{X,x}$. Fix a Kähler form $\omega $ on $X$. 
+    <p>
+<strong>Step 1</strong>. We first assume that $f$ lies in the right-hand side of (<a data-tag="B89ADC0E" href="../../tag/DA238F3ECC6F/">17.13.36</a>). 
+    <p>
+      Given any $y\in X$, it follows from (<a data-tag="36BDE2AA" href="../../tag/10B32891AA98/">17.13.14</a>) that there is $t_0&gt;0$ with 
+    
+<div class="equation">
+  \[  \ell ^*_{\tau }(y)+1\geq \ell _{t_0}(y)-t_0\tau .  \]
+</div>
+<p>
+       Observe that $t\mapsto \ell _ t-t\ell ^*_{\max }$ is decreasing in $t$ by corollary <a data-tag="E8E70C7F" href="../../tag/82AB68443E01/">17.13.31</a>, it follows that for $t\in [t_0,t_0+1]$, we have 
+    
+<div class="equation">
+  \[  \ell ^*_{\tau }(y)+1-t_0(\ell ^*_{\max }-\tau )\geq \ell _{t_0}(y)-t_0\ell ^*_{\max }\geq \ell _{t}(y)-t\ell ^*_{\max }.  \]
+</div>
+<p>
+       Since $\tau &lt; \ell ^*_{\max }$ and $t_0\geq t-1$, we deduce that 
+    
+<div class="equation numbered-equation" id="sgpt-2FDE265D"><span data-gerby-tag="2FDE265D"><code class="tag-id">77E18B7AC795</code></span>
+<span class="equation-label"><a data-tag="2FDE265D" href="../../tag/77E18B7AC795/">17.13.37</a></span>
+<div>\begin{equation}  \ell ^*_{\tau }(y)+1+\ell ^*_{\max }-\tau \geq \ell _{t}(y)-t\tau ,\quad t\in [t_0,t_0+1]. \end{equation}</div>
+</div>
+<p>
+       Take a sufficiently small open neighborhood $U$ of $x$ such that 
+    
+<div class="equation">
+  \[  \int _ U |f|^2\int _0^{\infty } \exp (-\ell _ t+t\tau )\, \mathrm{d}t\, \omega ^ n&lt;\infty .  \]
+</div>
+<p>
+       Applying (<a data-tag="2FDE265D" href="../../tag/77E18B7AC795/">17.13.37</a>), we deduce that 
+    
+<div class="equation">
+  \[  \int _ U |f|^2\exp \left(-\ell ^*_{\tau }\right)\, \omega ^ n&lt;\infty .  \]
+</div>
+<p>
+       Therefore, $f\in \mathcal{I}(\ell ^*_{\tau })_ x$. 
+    <p>
+<strong>Step 2</strong>. Assume that $f\in \mathcal{I}(\ell ^*_{\tau })_ x$. 
+    <p>
+      It follows from the strong openness theorem theorem <a data-tag="B37FCFC9" href="../../tag/917763AE5E35/">5.16.21</a> (cf. (<a data-tag="07C41068" href="../../tag/5EFADBE6069E/">17.12.5</a>)) that $f\in \mathcal{I}(\ell ^*_{\tau +\epsilon })_ x$ for some small enough $\epsilon &gt;0$ with $\tau +\epsilon &lt;\ell ^*_{\max }$. Take a sufficiently small open neighborhood $U$ of $x$ such that 
+    
+<div class="equation">
+  \[  \int _ U |f|^2 \exp \left(-\ell ^*_{\tau +\epsilon }\right)\, \omega ^ n&lt;\infty .  \]
+</div>
+<p>
+       We compute 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _ U |f|^2\int _0^{\infty } \exp \left(-\ell _ t+t\tau \right)\, \mathrm{d}t\, \omega ^ n\leq &amp;  \int _ U |f|^2\int _0^{\infty } \exp \left(-\ell ^*_{\tau +\epsilon }-t\epsilon \right)\, \mathrm{d}t\, \omega ^ n\\  =&amp; \frac{1}{\epsilon }\int _ U |f|^2\exp \left(-\ell ^*_{\tau +\epsilon }\right)\, \omega ^ n\\  &lt;&amp; \infty . \end{aligned}  \]
+</div>
+<p>
+       Therefore, $f$ lies in the right-hand side of (<a data-tag="B89ADC0E" href="../../tag/DA238F3ECC6F/">17.13.36</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+
+The masses of potentials on a test curve can also be expressed in terms of the corresponding geodesic ray. <article class="env-proposition" id="sgpt-DC3E26A9">
+<p><a class="environment-identifier" href="../../tag/3746B0074A79/">Proposition <span data-tag="DC3E26A9">17.13.38</span> <span class="named">(Hisamoto)</span>.</a><span data-gerby-tag="DC3E26A9"><code class="tag-id">3746B0074A79</code></span> Let $\ell \in \mathcal{R}(X,\theta ;\phi )$. Given any $\tau &lt;\ell ^*_{\max }$, we have </p>
+<div class="equation numbered-equation" id="sgpt-2396EA3C"><span data-gerby-tag="2396EA3C"><code class="tag-id">16A5FF346A3B</code></span>
+<span class="equation-label"><a data-tag="2396EA3C" href="../../tag/16A5FF346A3B/">17.13.39</a></span>
+<div>\begin{equation}  \int _ X \left(\theta +\mathrm{dd}^{\mathrm{c}}\ell ^*_{\tau }\right)^ n=\int _{\{ \dot{\ell }_0\geq \tau \} } \theta _{\phi }^ n. \end{equation}</div>
+</div>
+</article> Here $\dot{\ell }_0$ denotes the right-derivative of $\ell _ t$ with respect to $t$ at $t=0$. It is well-defined quasi-everywhere by corollary <a data-tag="B35F3B4F" href="../../tag/C645EE3517E1/">17.10.9</a>, and hence the right-hand side of (<a data-tag="2396EA3C" href="../../tag/16A5FF346A3B/">17.13.39</a>) makes sense, even though $\{ \dot{\ell }_0\geq \tau \} $ is not well-defined. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $\tau &lt;\ell ^*_{\max }$. We first observe that it suffices to show that 
+    
+<div class="equation numbered-equation" id="sgpt-636FB01C"><span data-gerby-tag="636FB01C"><code class="tag-id">0893138962D7</code></span>
+<span class="equation-label"><a data-tag="636FB01C" href="../../tag/0893138962D7/">17.13.40</a></span>
+<div>\begin{equation}  \int _{\left\{ \dot{\ell }_0\geq \tau \right\} } \theta _{\phi }^ n=\int _{\left\{ \ell ^*_{\tau }=\phi \right\} } \theta _{\phi }^ n. \end{equation}</div>
+</div>
+<p>
+      Assuming (<a data-tag="636FB01C" href="../../tag/0893138962D7/">17.13.40</a>) for the moment. By theorem <a data-tag="CA4237EF" href="../../tag/B28F0A28CB3E/">17.13.21</a>, $\ell ^*\in \mathrm{TC}(X,\theta ;\phi )$. In particular, $\ell ^*_\tau $ is a model potential and 
+    
+<div class="equation">
+  \[  \ell ^*_\tau \leq \ell ^*_{-\infty }=\phi .  \]
+</div>
+<p>
+       Since $\phi $ is model as well, proposition <a data-tag="C372831F" href="../../tag/BE692352C556/">16.3.41</a> gives 
+    
+<div class="equation">
+  \[  \theta ^ n_{\ell ^*_{\tau }}=\mathds {1}_{\left\{ \ell ^*_{\tau }=0\right\} }\, \theta ^ n,\quad \theta ^ n_{\phi }=\mathds {1}_{\{ \phi =0\} }\, \theta ^ n.  \]
+</div>
+<p>
+       Since $\ell ^*_{\tau }\leq \phi \leq 0$, we have 
+    
+<div class="equation">
+  \[  \mathds {1}_{\left\{ \ell ^*_{\tau }=\phi \right\} }\, \theta _{\phi }^ n =\mathds {1}_{\left\{ \ell ^*_{\tau }=\phi =0\right\} }\, \theta ^ n =\mathds {1}_{\left\{ \ell ^*_{\tau }=0\right\} }\, \theta ^ n =\theta ^ n_{\ell ^*_{\tau }}.  \]
+</div>
+<p>
+       Therefore, (<a data-tag="2396EA3C" href="../../tag/16A5FF346A3B/">17.13.39</a>) follows from (<a data-tag="636FB01C" href="../../tag/0893138962D7/">17.13.40</a>). 
+    <p>
+      In order to prove (<a data-tag="636FB01C" href="../../tag/0893138962D7/">17.13.40</a>), it suffices to show that 
+    
+<div class="equation numbered-equation" id="sgpt-6CBC6BED"><span data-gerby-tag="6CBC6BED"><code class="tag-id">7F6505CF081C</code></span>
+<span class="equation-label"><a data-tag="6CBC6BED" href="../../tag/7F6505CF081C/">17.13.41</a></span>
+<div>\begin{equation}  \left\{ \dot{\ell }_0\geq \tau \right\} =\left\{ \ell ^*_{\tau }=\phi \right\} \quad \textup{outside a pluripolar set}. \end{equation}</div>
+</div>
+<p>
+      Take $x\in X$ so that $(\ell _ t(x))_{t\geq 0}$ is finite and right-differentiable at $t=0$. Note that this condition holds quasi-everywhere. Suppose that $\ell ^*_{\tau }(x)=\phi (x)$. Then 
+    
+<div class="equation">
+  \[  \dot{\ell }_0(x)=\inf _{t&gt;0} \frac{\ell _ t(x)-\phi (x)}{t}\geq \inf _{t&gt;0} \frac{\ell ^*_{\tau }(x)+t\tau -\phi (x)}{t}=\tau .  \]
+</div>
+<p>
+       Therefore, the $\supseteq $ direction in (<a data-tag="6CBC6BED" href="../../tag/7F6505CF081C/">17.13.41</a>) follows. Conversely, suppose that $\dot{\ell }_0(x)\geq \tau $, then 
+    
+<div class="equation">
+  \[  \ell ^*_{\tau }(x)=\inf _{t&gt;0} \left(\ell _ t(x)-t\tau \right)\geq \inf _{t&gt;0} \left(\phi (x)+t\dot{\ell }_0(x)-t\tau \right)\geq \phi (x).  \]
+</div>
+<p>
+       Together with $\ell ^*_\tau \leq \phi $, this gives $\ell ^*_\tau (x)=\phi (x)$. Therefore, the $\subseteq $ direction in (<a data-tag="6CBC6BED" href="../../tag/7F6505CF081C/">17.13.41</a>) follows as well. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-FAA99AF5">
+<p><a class="environment-identifier" href="../../tag/F147312B98B3/">Corollary <span data-tag="FAA99AF5">17.13.42</span>.</a><span data-gerby-tag="FAA99AF5"><code class="tag-id">F147312B98B3</code></span> Let $\ell \in \mathcal{R}^1(X,\theta ;\phi )$. Then $\dot{\ell }_0\in L^1(X,\theta _{\phi }^ n)$ and </p>
+<div class="equation numbered-equation" id="sgpt-EBA159B5"><span data-gerby-tag="EBA159B5"><code class="tag-id">DA97CC2A78DC</code></span>
+<span class="equation-label"><a data-tag="EBA159B5" href="../../tag/DA97CC2A78DC/">17.13.43</a></span>
+<div>\begin{equation}  \mathbf{E}^{\phi }(\ell )=\int _ X \dot{\ell }_0\, \theta _{\phi }^ n. \end{equation}</div>
+</div>
+<p> In particular, for every $t\geq 0$, </p>
+<div class="equation">
+  \[  E_{\theta }^{\phi }(\ell _ t)=t\int _ X \dot{\ell }_0\, \theta _{\phi }^ n.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Set $\Gamma =\ell ^*$. By theorem <a data-tag="CA4237EF" href="../../tag/B28F0A28CB3E/">17.13.21</a>, we have $\Gamma \in \mathrm{TC}^1(X,\theta ;\phi )$ and 
+    
+<div class="equation">
+  \[  \mathbf{E}^{\phi }(\ell )=\mathbf{E}^{\phi }(\Gamma ).  \]
+</div>
+<p>
+       By proposition <a data-tag="DC3E26A9" href="../../tag/3746B0074A79/">17.13.38</a>, for every $\tau &lt;\ell ^*_{\max }$, 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\Gamma _{\tau }}^ n=\int _{\{ \dot{\ell }_0\geq \tau \} } \theta _{\phi }^ n.  \]
+</div>
+<p>
+       Hence (<a data-tag="50A4CAA5" href="../../tag/942AC971E484/">17.12.12</a>) gives 
+    
+<div class="equation">
+  \[  \mathbf{E}^{\phi }(\ell ) =\ell ^*_{\max }\int _ X \theta _{\phi }^ n-\int _{-\infty }^{\ell ^*_{\max }} \int _{\{ \dot{\ell }_0&lt;\tau \} }\theta _{\phi }^ n\, \mathrm{d}\tau .  \]
+</div>
+<p>
+       For $\tau &gt;\ell ^*_{\max }$, we have $\ell ^*_{\tau }\equiv -\infty $ by <a data-tag="17307E25" href="../../tag/7B83BD1D5FB9/">17.13.15</a>. Then (<a data-tag="636FB01C" href="../../tag/0893138962D7/">17.13.40</a>) shows that 
+    
+<div class="equation">
+  \[  \int _{\{ \dot{\ell }_0\geq \tau \} }\theta _{\phi }^ n=0.  \]
+</div>
+<p>
+       The layer-cake formula therefore gives (<a data-tag="EBA159B5" href="../../tag/DA97CC2A78DC/">17.13.43</a>). The final assertion follows from proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">17.10.65</a>, since $E_{\theta }^{\phi }(\ell _0)=E_{\theta }^{\phi }(\phi )=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/724BF0CAE002/"><span>← Previous</span><small>Proposition 17.12.19</small></a><a class="pager-next" rel="next" href="../../tag/2105331E66C7/"><span>Next →</span><small>Definition 17.13.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-test-curves--ross-witt-nystrom-correspondence,
+  author = {{Gerby contributors}},
+  title = {17.13 Ross–Witt Nyström correspondence},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/test-curves--ross-witt-nystrom-correspondence/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/test-curves--ross-witt-nystrom-correspondence/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Ftest-curves--ross-witt-nystrom-correspondence%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Ftest-curves--ross-witt-nystrom-correspondence%2F&amp;body=Page%3A+%5B17.13+Ross%E2%80%93Witt+Nystr%C3%B6m+correspondence%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Ftest-curves--ross-witt-nystrom-correspondence%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+abc20d7d1cefe2598d8de753db56df59a56a4830+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

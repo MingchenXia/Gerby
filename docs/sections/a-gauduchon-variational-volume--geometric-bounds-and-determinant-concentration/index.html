@@ -1,0 +1,373 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/"><title>12.18 Geometric bounds and determinant concentration · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/gauduchon-variational-volume/">Chapter 12: Gauduchon variational volume</a></li><li><a href="../../sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/" aria-current="page">Section 12.18: Geometric bounds and determinant concentration</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/a-gauduchon-variational-volume/"><span>12.1</span> A Gauduchon variational volume</a><code class="tag-id">881C26425D7A</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-quotient-and-the-smooth-equation/"><span>12.2</span> The quotient and the smooth equation</a><code class="tag-id">43BF29E33E59</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-equality-case-of-concavity-and-the-first-variation/"><span>12.3</span> The equality case of concavity and the first variation</a><code class="tag-id">484879715C58</code></li><li><a href="../../sections/a-gauduchon-variational-volume--second-variation-on-background-classes/"><span>12.4</span> Second variation on background classes</a><code class="tag-id">8A687EAB6B68</code></li><li><a href="../../sections/a-gauduchon-variational-volume--recovering-a-positive-class-from-its-gauduchon-derivative/"><span>12.5</span> Recovering a positive class from its Gauduchon derivative</a><code class="tag-id">9141861B4F50</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/"><span>12.6</span> The Hessian metric and its completion</a><code class="tag-id">466CEDF9AEBA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-compact-dual-problem-over-gauduchon-currents/"><span>12.7</span> A compact dual problem over Gauduchon currents</a><code class="tag-id">54ADA5D399DA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--supporting-probabilities-represented-by-maximizing-currents/"><span>12.8</span> Supporting probabilities represented by maximizing currents</a><code class="tag-id">7C2BB0FDDDF5</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrability-of-gauduchon-determinant-measures/"><span>12.9</span> Integrability of Gauduchon determinant measures</a><code class="tag-id">D02094988A03</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/"><span>12.10</span> Integrable densities in the compact Gauduchon problem</a><code class="tag-id">5CB8CFC32A19</code></li><li><a href="../../sections/a-gauduchon-variational-volume--nef-limits-and-nonattainment/"><span>12.11</span> Nef limits and nonattainment</a><code class="tag-id">EA449D56F8F7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-with-a-closed-nef-core/"><span>12.12</span> Subtraction with a closed nef core</a><code class="tag-id">75F31FAA4616</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-on-warped-products/"><span>12.13</span> Subtraction on warped products</a><code class="tag-id">EA9388E29ABC</code></li><li><a href="../../sections/a-gauduchon-variational-volume--positive-volume-without-bigness/"><span>12.14</span> Positive volume without bigness</a><code class="tag-id">E4AB7B03C20D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--varying-the-probability-measure/"><span>12.15</span> Varying the probability measure</a><code class="tag-id">8B161DDAE77F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-conditions-for-mass-extrema/"><span>12.16</span> Curvature conditions for mass extrema</a><code class="tag-id">A57EC3129CC8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-pairs-and-positive-lower-mass/"><span>12.17</span> Curvature pairs and positive lower mass</a><code class="tag-id">C18EABD7D630</code></li><li><a href="../../sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/" aria-current="page"><span>12.18</span> Geometric bounds and determinant concentration</a><code class="tag-id">AA652CC345D8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--vanishing-lower-mass/"><span>12.19</span> Vanishing lower mass</a><code class="tag-id">108F40B2DFAA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary/"><span>12.20</span> Orders of degeneration at the nef boundary</a><code class="tag-id">3567ADAA7365</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--elliptic-surface-volumes-and-order-spectra/"><span>12.21</span> Elliptic surface volumes and order spectra</a><code class="tag-id">E4B29689FB79</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--comparison-under-an-arbitrary-modification/"><span>12.22</span> Comparison under an arbitrary modification</a><code class="tag-id">9BED3D691F82</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--strict-changes-under-one-blowup/"><span>12.23</span> Strict changes under one blowup</a><code class="tag-id">D0D47B7389D7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--positive-current-subtraction-and-divisorial-residuals/"><span>12.24</span> Positive-current subtraction and divisorial residuals</a><code class="tag-id">57C0ECEB4F4C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--integer-orders-in-fixed-projective-cones/"><span>12.25</span> Integer orders in fixed projective cones</a><code class="tag-id">E6D8A97F4D2C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--a-maximum-rank-comparison-criterion/"><span>12.26</span> A maximum-rank comparison criterion</a><code class="tag-id">493311C8FB2F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-anticanonical-curves/"><span>12.27</span> Flat anticanonical curves</a><code class="tag-id">0E9176045572</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-divisors-and-hartogs-extension/"><span>12.28</span> Flat divisors and Hartogs extension</a><code class="tag-id">25D1457FC429</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--punctured-line-bundles-and-elliptic-quotients/"><span>12.29</span> Punctured line bundles and elliptic quotients</a><code class="tag-id">76F771FE4DA3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-torsors-on-split-elliptic-ruled-surfaces/"><span>12.30</span> Cotangent torsors on split elliptic ruled surfaces</a><code class="tag-id">E4B698D2AEE3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--symmetric-tensors-on-split-elliptic-ruled-surfaces/"><span>12.31</span> Symmetric tensors on split elliptic ruled surfaces</a><code class="tag-id">7CF6C47CAA92</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--section-algebras-of-cotangent-extensions/"><span>12.32</span> Section algebras of cotangent extensions</a><code class="tag-id">72E247F3A7CA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-extensions-with-zero-ruling-component/"><span>12.33</span> Cotangent extensions with zero ruling component</a><code class="tag-id">C9CE007F34A7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/"><span>12.34</span> Current tests for smooth positivity</a><code class="tag-id">509A5021C77D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/"><span>12.35</span> Divisorial constraints and residual volume</a><code class="tag-id">269CE892EA5B</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-divisorial-threshold-on-the-hopf-threefold/"><span>12.36</span> A divisorial threshold on the Hopf threefold</a><code class="tag-id">7F944D8C8D92</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/D04D662546BA/"><span>← Previous</span><small>Equation 12.17.15</small></a><a class="pager-next" rel="next" href="../../tag/40D45A12B192/"><span>Next →</span><small>Corollary 12.18.1</small></a></nav><h1>12.18 Geometric bounds and determinant concentration<code class="tag-id">AA652CC345D8</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-AA652CC345D8" data-section-entries="40D45A12B192 827DBF9602F3 89AE8B534538 A89800F03DB4 AA652CC345D8"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="541A1814"><code class="tag-id">AA652CC345D8</code></span>
+<p>
+By theorem <a data-tag="6F2BDB20" href="../../tag/E7F890105D42/">12.9.2</a>, the determinant densities of all normalized Gauduchon currents are bounded in the critical space $L^{n/(n-1)}$ exactly when the lower mass is positive. Together with the mass-invariance criterion of theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a>, this gives geometric sufficient conditions for the critical bound. The critical exponent cannot be raised, even for currents that are powers of Kähler forms in one fixed class. The same concentrating family shows that currents approaching the maximum of the determinant functional for a fixed smooth density need not satisfy any uniform higher integrability, although the maximizer itself is smooth. 
+</p>
+<p>
+Throughout this section $n\geq 2$ and $\mathrm{d}V$ is a smooth positive probability volume form. For a Hermitian form $h$, $k_ T$ denotes the determinant density relative to $\mathrm{d}V$ of a current $T\in \mathscr G_ h$, as in section <a data-tag="8127FAE6" href="../../tag/D02094988A03/">12.9</a>. Put $q=n/(n-1)$. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-CC54FEC4">
+<p><a class="environment-identifier" href="../../tag/40D45A12B192/">Corollary <span data-tag="CC54FEC4">12.18.1</span>.</a><span data-gerby-tag="CC54FEC4"><code class="tag-id">40D45A12B192</code></span> Suppose $g$ is a Hermitian form with $\mathrm{dd}^{\mathrm{c}}g=\mathrm{dd}^{\mathrm{c}}(g^2)=0$, and put $V_ g=\int _ Xg^ n$. For every Hermitian form $h\geq cg$, $c&gt;0$, </p>
+<div class="equation">
+  \[  v_-(h)\geq c^ nV_ g,\qquad \sup _{T\in \mathscr G_ h}\| k_ T\| _{L^ q(\mathrm{d}V)} \leq c^{-1}V_ g^{-1/n}.  \]
+</div>
+<p> Equality holds in the determinant bound when $h=g$ and $c=1$. In particular, on a compact Kähler manifold or a compact complex surface, the critical norm is uniformly bounded over the normalized Gauduchon currents of each fixed Hermitian form. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The identity $\mathrm{dd}^{\mathrm{c}}(g^2)=2g\wedge \mathrm{dd}^{\mathrm{c}}g+2\mathrm{d}g\wedge \mathrm d^{\mathrm c}g$ shows that $\mathrm{d}g\wedge \mathrm d^{\mathrm c}g=0$, so theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a> gives $v_-(g)=V_ g$. The quotient in (<a data-tag="DE55D25C" href="../../tag/AE720210AADD/">12.15.5</a>) is monotone and homogeneous in its numerator, so $h\geq cg$ implies $v_-(h)^{1/n}\geq cV_ g^{1/n}$. Theorem <a data-tag="6F2BDB20" href="../../tag/E7F890105D42/">12.9.2</a> turns these lower-mass bounds into the asserted determinant bounds, with equality when $h=g$. 
+    <p>
+      A Kähler form satisfies both differential identities. On a surface, theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a> gives a metric $g$ with $\mathrm{dd}^{\mathrm{c}}g=0$, and $\mathrm{dd}^{\mathrm{c}}(g^2)=0$ for degree reasons. By compactness, each fixed $h$ satisfies $h\geq cg$ for some $c&gt;0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+For a fixed smooth $F$, theorem <a data-tag="B931D275" href="../../tag/0537569F9F52/">12.7.3</a> gives a unique maximizing current for the determinant functional $\mathfrak D_ F$ of (<a data-tag="919BAA56" href="../../tag/A99038CD10B4/">12.7.1</a>), and this current is smooth and strictly positive, so its determinant density is bounded. The following construction shows that currents approaching this maximum satisfy no uniform bound on higher moments of their determinant densities. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-DB141F7B">
+<p><a class="environment-identifier" href="../../tag/89AE8B534538/">Proposition <span data-tag="DB141F7B">12.18.2</span>.</a><span data-gerby-tag="DB141F7B"><code class="tag-id">89AE8B534538</code></span> Let $X=E^ n$, where $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$ carries its flat area form of total area one, and write $\omega _ i$ for the pullback of this form from the $i$th factor. Set </p>
+<div class="equation">
+  \[  h=\sum _{i=1}^ n\omega _ i,\qquad \mathrm{d}V=\omega _1\wedge \cdots \wedge \omega _ n,\qquad V=n!,\qquad \alpha =\frac{n-1}{n}.  \]
+</div>
+<p> For $F=0$, the unique maximizing current is $T_*=h^{n-1}/V$, with $k_{T_*}=V^{-1/n}$ and $\mathfrak D_0(T_*)=V^{-1/n}$. There are smooth strictly positive closed forms $S_\varepsilon \in \mathscr G_ h$, $0&lt;\varepsilon &lt;\min \{ 1/4,\mathrm e^{-1}\} $, such that </p>
+<div class="equation">
+  \[  \| k_{S_\varepsilon }\| _{L^ q}=V^{-1/n},\qquad \mathfrak D_0(S_\varepsilon )\longrightarrow V^{-1/n},  \]
+</div>
+<p> while for every fixed finite $p&gt;q$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B85CC375"><span data-gerby-tag="B85CC375"><code class="tag-id">827DBF9602F3</code></span>
+<span class="equation-label"><a data-tag="B85CC375" href="../../tag/827DBF9602F3/">12.18.3</a></span>
+<div>\begin{equation}  \int _ X k_{S_\varepsilon }^{p}\, \mathrm{d}V \geq C_{n,p}[\log (1/\varepsilon )]^{-\alpha p} \varepsilon ^{2-2\alpha p}\longrightarrow +\infty . \end{equation}</div>
+</div>
+<p> Their $L^\infty $ norms also diverge. Each $S_\varepsilon $ is the $(n-1)$st power of a Kähler form in the fixed class $V^{-1/(n-1)}[h]$, and has the same Bott–Chern, de Rham and Aeppli classes as $T_*$. No $S_\varepsilon $ attains the maximum of $\mathfrak D_0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $H_ i=\bigwedge _{j\ne i}\omega _ j$. Expanding the wedge powers gives $h^{n-1}=(n-1)!\sum _ iH_ i$ and $h\wedge H_ i=\mathrm{d}V$. Thus $T_*=(1/n)\sum _ iH_ i$ is normalized, and the determinant formula gives $k_{T_*}=V^{-1/n}$. The smooth equation for $F=0$ is solved by the zero potential, since $h^ n=V\, \mathrm{d}V$; theorem <a data-tag="B931D275" href="../../tag/0537569F9F52/">12.7.3</a> therefore gives the maximal value and the uniqueness of the maximizer. 
+    <p>
+      To construct $S_\varepsilon $, choose a nonnegative smooth function $\beta $ compactly supported in the unit disk in $\mathbb C$, of integral one, with $\beta \geq \beta _0&gt;0$ on a disk of radius $r_0\in (0,1)$. On an embedded disk in the first elliptic factor put $b_\varepsilon (z)=\varepsilon ^{-2}\beta (z/\varepsilon )$, extended by zero; it has integral one. For $0&lt;t&lt;1$, set 
+    
+<div class="equation">
+  \[  \begin{gathered} f_{\varepsilon ,t}=1-t+tb_\varepsilon ,\qquad a=V^{-1/(n-1)},\\ \gamma _{\varepsilon ,t}=a(f_{\varepsilon ,t}\omega _1+\omega _2+\cdots +\omega _ n), \qquad T_{\varepsilon ,t}=\gamma _{\varepsilon ,t}^{n-1}. \end{gathered}  \]
+</div>
+<p>
+       The form $\gamma _{\varepsilon ,t}$ is strictly positive, and it is closed because $f_{\varepsilon ,t}$ depends only on the first factor, which has real dimension two. Direct expansion gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B7A807F6"><span data-gerby-tag="B7A807F6"><code class="tag-id">A89800F03DB4</code></span>
+<span class="equation-label"><a data-tag="B7A807F6" href="../../tag/A89800F03DB4/">12.18.4</a></span>
+<div>\begin{equation}  T_{\varepsilon ,t}=\frac1n\left(H_1+f_{\varepsilon ,t}\sum _{i=2}^ nH_ i\right), \qquad k_{T_{\varepsilon ,t}}=V^{-1/n}f_{\varepsilon ,t}^{\alpha }. \end{equation}</div>
+</div>
+<p>
+       Since $\int _ Xf_{\varepsilon ,t}\, \mathrm{d}V=1$, the trace integral is one, so $T_{\varepsilon ,t}\in \mathscr G_ h$, and $\| k_{T_{\varepsilon ,t}}\| _{L^ q}=V^{-1/n}$ because $\alpha q=1$. 
+    <p>
+      The mean-zero function $f_{\varepsilon ,t}-1$ has a smooth real potential $\psi $ on $E$ with $\mathrm{dd}^{\mathrm{c}}\psi =(f_{\varepsilon ,t}-1)\omega _1$; for example, the mean-zero Fourier series solving $\Delta \psi =4\pi (f_{\varepsilon ,t}-1)$ in the area-one coordinates. Consequently $\gamma _{\varepsilon ,t}-ah=\mathrm{dd}^{\mathrm{c}}(a\psi )$. Since $T_*=(ah)^{n-1}$, the closed form $R=\sum _{j=0}^{n-2}\gamma _{\varepsilon ,t}^{n-2-j}\wedge (ah)^ j$ satisfies 
+    
+<div class="equation">
+  \[  T_{\varepsilon ,t}-T_*=\mathrm{dd}^{\mathrm{c}}(a\psi R).  \]
+</div>
+<p>
+       This proves all the assertions about classes, including the case $n=2$, where $R=1$. 
+    <p>
+      Jensen's inequality and $f_{\varepsilon ,t}\geq 1-t$ give 
+    
+<div class="equation">
+  \[  V^{-1/n}(1-t)^\alpha \leq \mathfrak D_0(T_{\varepsilon ,t}) =V^{-1/n}\int _ Xf_{\varepsilon ,t}^{\alpha }\, \mathrm{d}V &lt;V^{-1/n},  \]
+</div>
+<p>
+       where the inequality is strict because $f_{\varepsilon ,t}$ is nonconstant and $0&lt;\alpha &lt;1$. On the product of the disk of radius $r_0\varepsilon $ with the other factors, we have $f_{\varepsilon ,t}\geq t\beta _0\varepsilon ^{-2}$, and this set has volume $\pi r_0^2\varepsilon ^2$. Hence 
+    
+<div class="equation">
+  \[  \begin{split}  \int _ Xk_{T_{\varepsilon ,t}}^ p\, \mathrm{d}V &amp; \geq V^{-p/n}\pi r_0^2\beta _0^{\alpha p}t^{\alpha p} \varepsilon ^{2-2\alpha p},\\  \| k_{T_{\varepsilon ,t}}\| _\infty &amp; \geq V^{-1/n}\beta _0^\alpha t^\alpha \varepsilon ^{-2\alpha }. \end{split}  \]
+</div>
+<p>
+       Now take $t=1/\log (1/\varepsilon )$, which lies in $(0,1)$ by the restriction on $\varepsilon $, and $S_\varepsilon =T_{\varepsilon ,t}$. Then $\mathfrak D_0(S_\varepsilon )$ converges to its maximum, while both lower bounds diverge for $p&gt;q$ because $\alpha p&gt;1$. All constants are independent of $\varepsilon $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+If instead $t\in (0,1)$ is kept fixed in the same construction, then $\int _ Xk_{T_{\varepsilon ,t}}^ p\, \mathrm{d}V\geq C_{n,p,t}\varepsilon ^{2-2\alpha p}$ and $\| k_{T_{\varepsilon ,t}}\| _\infty \geq C_{n,t}\varepsilon ^{-2\alpha }$. Thus there are no uniform bounds on higher moments, either over the full normalized cone or along a maximizing sequence for one smooth density. Every member of these families attains the supremum $V^{-1/n}$ of the critical norm in corollary <a data-tag="CC54FEC4" href="../../tag/40D45A12B192/">12.18.1</a>, whereas the maximum of $\mathfrak D_0$ is attained only by $T_*$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-5613B7E2253B" data-section-entries="290803738499 3EA495FF9D1A 5613B7E2253B 5771D42397D7 AF0F557495C3 B462DE2DBA4C DCAEAF642D39"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5613B7E2253B/">12.18.5 Intrinsic determinant measures and the complete profile</a><code class="tag-id">5613B7E2253B</code></h2><span data-gerby-tag="97BE3338"></span>
+<p>
+Keep the smooth positive probability volume $\mathrm dV$ fixed. For a positive $(n-1,n-1)$-current $T$ of finite mass, let $\Gamma _{0,h}(T)$ denote the determinant measure of (<a data-tag="919BAA56" href="../../tag/A99038CD10B4/">12.7.1</a>) computed with a positive auxiliary metric $h$. The current need not be smooth or strictly positive. The following coordinate calculation identifies the measure itself, including on singular coefficient measures. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-7970305E">
+<p><a class="environment-identifier" href="../../tag/5771D42397D7/">Lemma <span data-tag="7970305E">12.18.6</span>.</a><span data-gerby-tag="7970305E"><code class="tag-id">5771D42397D7</code></span> For a fixed positive current $T$ and fixed $\mathrm dV$, the measure $\Gamma _{0,h}(T)$ is independent of the positive auxiliary metric $h$. This statement includes singular and degenerate currents. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In a holomorphic frame put $\lambda =\bigwedge _{j=1}^ n(i\, dz_ j\wedge d\bar z_ j)$, $h=i\sum H_{ij}\, dz_ i\wedge d\bar z_ j$ and $\mathrm dV=v\lambda $. Positive currents have measure coefficients. Choose a positive Radon measure $\nu $ dominating them. For a smooth real form $\xi =i\sum \Xi _{ij}\, dz_ i\wedge d\bar z_ j$, let $Q$ be the positive semidefinite Hermitian coefficient matrix characterized by $\xi \wedge T=\operatorname {tr}(\Xi Q)\nu $. Then 
+    
+<div class="equation">
+  \[  \sigma _ h=\operatorname {tr}(HQ)\nu ,\qquad P_ h=\frac{nH^{1/2}QH^{1/2}}{\operatorname {tr}(HQ)}.  \]
+</div>
+<p>
+       The formula holds on $Q\ne 0$; zero is assigned when $Q=0$. Since $h^ n=n!\det (H)\lambda $, determinant algebra gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-566878BB"><span data-gerby-tag="566878BB"><code class="tag-id">DCAEAF642D39</code></span>
+<span class="equation-label"><a data-tag="566878BB" href="../../tag/DCAEAF642D39/">12.18.7</a></span>
+<div>\begin{equation}  \Gamma _{0,h}(T) =n(n!)^{-1/n}v^{1/n}(\det Q)^{1/n}\nu . \end{equation}</div>
+</div>
+<p>
+       This expression has no $H$. Replacing $\nu $ by $L\nu $, where $L&gt;0$ almost everywhere, replaces $Q$ by $Q/L$, leaving the measure unchanged; a common dominating measure compares any two choices. The original geometric definition ensures compatibility under frame changes. Matrix AM–GM bounds it locally by a constant times a reference trace measure, proving local finiteness. Compactness gives a finite Radon measure. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+ Write $\Gamma _0(T)$ for this intrinsic measure. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-6957E040">
+<p><a class="environment-identifier" href="../../tag/3EA495FF9D1A/">Theorem <span data-tag="6957E040">12.18.8</span>.</a><span data-gerby-tag="6957E040"><code class="tag-id">3EA495FF9D1A</code></span> Let $\beta $ be smooth positive Hermitian with $\mathrm{dd}^{\mathrm{c}}(\beta ^ j)=0$ for $1\leq j\leq n-1$, $V=\int _ X\beta ^ n$, and let $h=\beta +\mathrm{dd}^{\mathrm{c}}u&gt;0$ for a smooth global real function $u$. Then </p>
+<div class="equation">
+  \[  \mathscr G_ h=\mathscr G_\beta ,\qquad \{ \Gamma _{0,h}(T):T\in \mathscr G_ h\}  =\{ \Gamma _{0,\beta }(T):T\in \mathscr G_\beta \} .  \]
+</div>
+<p> Every measure in this common family has a density $k_ T$ satisfying </p>
+<div class="equation">
+  \[  k_ T\geq 0,\qquad \| k_ T\| _{L^{n/(n-1)}(\mathrm dV)}\leq V^{-1/n}.  \]
+</div>
+<p> For every real or complex $p\in L^ n(\mathrm dV)$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-1F4A2E2C"><span data-gerby-tag="1F4A2E2C"><code class="tag-id">290803738499</code></span>
+<span class="equation-label"><a data-tag="1F4A2E2C" href="../../tag/290803738499/">12.18.9</a></span>
+<div>\begin{equation}  \sup _{T\in \mathscr G_ h}\int _ X|p|\, \Gamma _0(T) =V^{-1/n}\| p\| _{L^ n(\mathrm dV)}. \end{equation}</div>
+</div>
+<p> All suprema retain singular and degenerate tests. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Distributional integration by parts gives $\int h\wedge T=\int \beta \wedge T+\int u\mathrm{dd}^{\mathrm{c}}T =\int \beta \wedge T$. This proves equality of the actual current sets; Lemma <a data-tag="7970305E" href="../../tag/5771D42397D7/">12.18.6</a> proves equality of their measure sets. 
+    <p>
+      Take a smooth strictly positive real $r$ and put $M=\int r^ n \mathrm dV$. By theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">14.2.1</a> there are a smooth potential $w$, a positive form $A=\beta +\mathrm{dd}^{\mathrm{c}}w$ and a positive coefficient in its prescribed-volume equation. The mass-invariance hypothesis and theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a> determine that coefficient, giving 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-C9F93F50"><span data-gerby-tag="C9F93F50"><code class="tag-id">AF0F557495C3</code></span>
+<span class="equation-label"><a data-tag="C9F93F50" href="../../tag/AF0F557495C3/">12.18.10</a></span>
+<div>\begin{equation}  A^ n=\frac{Vr^ n}{M}\, \mathrm dV. \end{equation}</div>
+</div>
+<p>
+       In particular, the total mass of $A$ is $V$. No estimates uniform in a degenerating smooth density are required. 
+    <p>
+      For every $T\in \mathscr G_\beta $, integration by parts gives $\int A\wedge T=1$. In an $A$-unitary frame, matrix AM–GM gives $\det (P_ A)^{1/n}\leq 1$, including singular coefficient densities. Thus as Radon measures 
+    
+<div class="equation">
+  \[  \Gamma _0(T)\leq (\mathrm dV/A^ n)^{1/n}(A\wedge T).  \]
+</div>
+<p>
+       Multiplying by $r$ and using (<a data-tag="C9F93F50" href="../../tag/AF0F557495C3/">12.18.10</a>) yields 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-60AC6625"><span data-gerby-tag="60AC6625"><code class="tag-id">B462DE2DBA4C</code></span>
+<span class="equation-label"><a data-tag="60AC6625" href="../../tag/B462DE2DBA4C/">12.18.11</a></span>
+<div>\begin{equation}  \int r\, \Gamma _0(T)\leq V^{-1/n}\| r\| _{L^ n(\mathrm dV)}. \end{equation}</div>
+</div>
+<p>
+       Replacing a smooth nonnegative $r$ by $r+\eta $ and letting $\eta \downarrow 0$ extends this bound to nonnegative smooth tests. For smooth real or complex $s$, smooth positive approximations $\sqrt{|s|^2+\eta ^2}$ imply $|\int s\, \Gamma _0(T)|\leq V^{-1/n}\| s\| _ n$. Consequently integration against $\Gamma _0(T)$ extends continuously from smooth functions to $L^ n$. Its positive dual representative is $k_ T\in L^{n/(n-1)}$ with the stated bound. Equality on smooth tests identifies the two Radon measures, proving absolute continuity. The integrals of arbitrary $L^ n$ roots are therefore well-defined. 
+    <p>
+      For the reverse inequality with $r&gt;0$ smooth, let $T_ r=A^{n-1}/V$. It is smooth and positive. Write $E=\mathrm{dd}^{\mathrm{c}}w$. For $j\leq n-1$, expansion and closedness of $E$ give 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(A^ j)=\sum _{l=0}^ j\binom jl\mathrm{dd}^{\mathrm{c}}(\beta ^{j-l})\wedge E^ l=0.  \]
+</div>
+<p>
+       The term with $j=l$ differentiates the constant one. Thus $\mathrm{dd}^{\mathrm{c}}T_ r=0$, and smooth integration by parts gives 
+    
+<div class="equation">
+  \[  \int _ X\beta \wedge A^{n-1} =\int _ X A^ n-\int _ X\mathrm{dd}^{\mathrm{c}}w\wedge A^{n-1}=V.  \]
+</div>
+<p>
+       Consequently $T_ r\in \mathscr G_\beta $. Its positive root is $\gamma =V^{-1/(n-1)}A$, so 
+    
+<div class="equation">
+  \[  k_{T_ r}=(\gamma ^ n/\mathrm dV)^{(n-1)/n} =V^{-1/n}\frac{r^{n-1}}{\| r\| _ n^{n-1}}.  \]
+</div>
+<p>
+       It attains equality in (<a data-tag="60AC6625" href="../../tag/B462DE2DBA4C/">12.18.11</a>). For a nonnegative $p\in L^ n$, take smooth positive $r_ j\to p$ in $L^ n$. The common dual bound controls $\int (p-r_ j)k_{T_{r_ j}}\mathrm dV$, proving the lower bound in (<a data-tag="1F4A2E2C" href="../../tag/290803738499/">12.18.9</a>); the upper bound already holds for every current. Apply the same argument to $|p|$ for complex roots. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-95D23527B325" data-section-entries="95D23527B325 BDB7ADF7845B"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/95D23527B325/">12.18.12 Fixed determinant data with degenerating ellipticity</a><code class="tag-id">95D23527B325</code></h2><span data-gerby-tag="4C47642B"></span>
+
+ Here $v_-(h)$ and $v_+(h)$ denote the infimum and supremum of $\int _ X(h+\mathrm{dd}^{\mathrm{c}}w)^ n$ over bounded $h$-psh potentials $w$.  <article class="env-theorem" id="non-kahler-pluripotential-theory-2274AFC4">
+<p><a class="environment-identifier" href="../../tag/BDB7ADF7845B/">Theorem <span data-tag="2274AFC4">12.18.13</span>.</a><span data-gerby-tag="2274AFC4"><code class="tag-id">BDB7ADF7845B</code></span> On $X=(\mathbb C/(\mathbb Z+i\mathbb Z))^ n$, $n\geq 2$, there are positive metrics $\omega _\varepsilon $ in a fixed Kähler class, $0&lt;\varepsilon \leq 1$, with fixed complete current and determinant-measure families and fixed endpoint (<a data-tag="1F4A2E2C" href="../../tag/290803738499/">12.18.9</a>), while their least relative eigenvalue equals $\varepsilon $. They have uniformly bounded smooth coefficients and global potentials, and </p>
+<div class="equation">
+  \[  v_-(\omega _\varepsilon )=v_+(\omega _\varepsilon )=n!&gt;0.  \]
+</div>
+<p> The manifold has a global holomorphic volume form and $c_1=0$. Every displayed metric is already balanced and pluriclosed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $z_ j=x_ j+iy_ j$, $\beta _ j=(i/2)dz_ j\wedge d\bar z_ j=dx_ j\wedge dy_ j$, $\beta =\sum _ j\beta _ j$, $V=n!$, and $\mathrm dV=\beta ^ n/V$. Set 
+    
+<div class="equation">
+  \[  u_\varepsilon =\frac{1-\varepsilon }{4\pi }\cos (4\pi x_1), \qquad a_\varepsilon =1-(1-\varepsilon )\cos (4\pi x_1).  \]
+</div>
+<p>
+       For a function of $x_1$, $\mathrm{dd}^{\mathrm{c}}u=(u''/(4\pi ))\beta _1$. Hence 
+    
+<div class="equation">
+  \[  \omega _\varepsilon =\beta +\mathrm{dd}^{\mathrm{c}}u_\varepsilon =a_\varepsilon \beta _1+\sum _{j=2}^ n\beta _ j.  \]
+</div>
+<p>
+       These are globally periodic smooth positive closed forms with $\varepsilon \leq a_\varepsilon \leq 2-\varepsilon $ and $\omega _\varepsilon \leq 2\beta $. Their minimum relative eigenvalue is $\varepsilon $. They converge smoothly to a semipositive form losing rank on $\{ x_1\in \tfrac 12\mathbb Z\} $. All fixed-order smooth norms of the coefficients and potentials are uniformly bounded. Theorem <a data-tag="6957E040" href="../../tag/3EA495FF9D1A/">12.18.8</a> proves equality of the entire current data and the exact norm at every $\varepsilon $. 
+    <p>
+      Since $\omega _\varepsilon $ is closed, theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a> gives mass $V$ for every bounded $\omega _\varepsilon $-plurisubharmonic potential. The explicit formula also gives $\int _ X\omega _\varepsilon ^ n=V$, since $a_\varepsilon $ has mean one. Thus both extrema over bounded potentials equal $V$. The global form $dz_1\wedge \cdots \wedge dz_ n$ trivializes the canonical bundle; closed positive metrics are balanced and pluriclosed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-10AA5741C871" data-section-entries="10AA5741C871 17E4315391CC"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/10AA5741C871/">12.18.14 The same obstruction for nonclosed pluriclosed metrics</a><code class="tag-id">10AA5741C871</code></h2><span data-gerby-tag="41CEAD5E"></span>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-83265DB4">
+<p><a class="environment-identifier" href="../../tag/17E4315391CC/">Theorem <span data-tag="83265DB4">12.18.15</span>.</a><span data-gerby-tag="83265DB4"><code class="tag-id">17E4315391CC</code></span> On the fixed torus above, fix $0&lt;\tau &lt;1/2$. There is a positive nonclosed pluriclosed metric $h_\tau $ and a family $\Omega _\varepsilon =h_\tau +\mathrm{dd}^{\mathrm{c}}u_\varepsilon &gt;0$, $0&lt;\varepsilon \leq 1/2$, with identical actual current sets and intrinsic determinant-measure families. For any fixed smooth positive probability volume their entire-family endpoint is </p>
+<div class="equation">
+  \[  \sup _{T\in \mathscr G_{\Omega _\varepsilon }} \int _ X|p|\, \Gamma _0(T) =V_\tau ^{-1/n}\| p\| _{L^ n(\mathrm dV)},\qquad V_\tau =n!(1-\tau ^2/2).  \]
+</div>
+<p> Both bounded-potential masses equal $V_\tau $. All fixed-order smooth coefficient and potential norms are uniformly bounded, while </p>
+<div class="equation">
+  \[  \min _ X\lambda _{\min }(\Omega _\varepsilon \mid \beta )=\varepsilon , \qquad d\Omega _\varepsilon =dh_\tau \ne 0.  \]
+</div>
+<p> The flat $\beta $ is a fixed balanced metric on this same manifold with $c_1=0$; each $\Omega _\varepsilon $ is pluriclosed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      With the torus coordinates above set $s=\sin (2\pi x_1)$ and 
+    
+<div class="equation">
+  \[  \xi =\frac i2(dz_1\wedge d\bar z_2+dz_2\wedge d\bar z_1) =dx_1\wedge dy_2+dx_2\wedge dy_1, \qquad h_\tau =\beta +\tau s\xi .  \]
+</div>
+<p>
+       The first relative Hermitian block is $\left(\begin{smallmatrix}1&amp; \tau s\\ \tau s&amp; 1\end{smallmatrix}\right)$, so positivity follows from $|\tau s|&lt;1$. Moreover 
+    
+<div class="equation">
+  \[  dh_\tau =2\pi \tau \cos (2\pi x_1) dx_1\wedge dx_2\wedge dy_1\ne 0.  \]
+</div>
+<p>
+       Because $\mathrm{dd}^{\mathrm{c}}s$ is proportional to $dz_1\wedge d\bar z_1$, $\mathrm{dd}^{\mathrm{c}}(s\xi )=0$. The first two-coordinate metric is thus pluriclosed, and its square is top degree on that complex surface. Expanding with the remaining closed curve factors proves 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(h_\tau ^ j)=0\quad (1\leq j\leq n-1),\qquad \int _ X h_\tau ^ n=n!\int _0^1(1-\tau ^2\sin ^2(2\pi x_1))dx_1 =V_\tau .  \]
+</div>
+<p>
+       Use the same $u_\varepsilon $ and $a_\varepsilon $ as in Theorem <a data-tag="2274AFC4" href="../../tag/BDB7ADF7845B/">12.18.13</a>, now with $\varepsilon \leq 1/2$. Then 
+    
+<div class="equation">
+  \[  \Omega _\varepsilon =a_\varepsilon \beta _1+ \sum _{j\geq 2}\beta _ j+\tau s\xi , \qquad a_\varepsilon =\varepsilon +2(1-\varepsilon )s^2.  \]
+</div>
+<p>
+       The first block of $\Omega _\varepsilon -\varepsilon \beta $ has diagonal entries $2(1-\varepsilon )s^2$ and $1-\varepsilon $, and determinant 
+    
+<div class="equation">
+  \[  \bigl [2(1-\varepsilon )^2-\tau ^2\bigr ]s^2\geq 0.  \]
+</div>
+<p>
+       It is positive semidefinite; the remaining diagonal entries are $1-\varepsilon $. Hence $\Omega _\varepsilon \geq \varepsilon \beta $, with equality in the least eigenvalue at $s=0$. Also $\Omega _\varepsilon \leq 3\beta $, all fixed-order smooth norms are uniformly bounded, and the smooth semipositive limit loses rank at $s=0$. Since $d\mathrm{dd}^{\mathrm{c}}u_\varepsilon =0$, the exterior derivative is the displayed fixed nonzero $dh_\tau $. 
+    <p>
+      The lower-power expansion in the proof of theorem <a data-tag="6957E040" href="../../tag/3EA495FF9D1A/">12.18.8</a> applies to $\Omega _\varepsilon =h_\tau +\mathrm{dd}^{\mathrm{c}}u_\varepsilon $; it gives $\mathrm{dd}^{\mathrm{c}}(\Omega _\varepsilon ^ j)=0$ for $j\leq n-1$, in particular pluriclosedness. Its volume is $V_\tau $, either by integrating the displayed determinant or by theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a>. That theorem also gives mass $V_\tau $ for every bounded $\Omega _\varepsilon $-plurisubharmonic potential, so both mass extrema equal $V_\tau $. Theorem <a data-tag="6957E040" href="../../tag/3EA495FF9D1A/">12.18.8</a> applied to $h_\tau $ gives equality of the entire current and measure sets and their exact endpoint for every $p\in L^ n$. The balanced trace is fixed as well: 
+    
+<div class="equation">
+  \[  \int _ X\Omega _\varepsilon \wedge \beta ^{n-1}=n!.  \]
+</div>
+<p>
+       The off-diagonal term has zero trace and the mean of $a_\varepsilon $ equals one. The global holomorphic volume form gives $c_1=0$. The manifold itself is already Kähler, so these nonclosed metrics show that the complete determinant profile and positive bounded-potential mass extrema can stay fixed while the least relative eigenvalue tends to zero. The coexistence problem of <a data-tag="0903E63E" href="../../tag/58C2B4B7107E/">24.4.22</a> remains open. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-A4F04193B5B9" data-section-entries="6072DDDAB57F A4F04193B5B9"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A4F04193B5B9/">12.18.16 Concentration at exact maximizers for varying roots</a><code class="tag-id">A4F04193B5B9</code></h2><span data-gerby-tag="03045AC7"></span>
+
+ Sharp determinant bounds also need not give uniform integrability of the determinant powers or preserve maximizers under weak current limits.  <article class="env-theorem" id="non-kahler-pluripotential-theory-0F6F98CA">
+<p><a class="environment-identifier" href="../../tag/6072DDDAB57F/">Theorem <span data-tag="0F6F98CA">12.18.17</span>.</a><span data-gerby-tag="0F6F98CA"><code class="tag-id">6072DDDAB57F</code></span> On $X=(\mathbb C/(\mathbb Z+\mathrm i\mathbb Z))^ n$, let $\beta _ j=\mathrm dx_ j\wedge \mathrm dy_ j$, $\beta =\sum _ j\beta _ j$, $V=n!$ and $\mathrm dV=\beta ^ n/V$. There are smooth positive closed $A_\varepsilon =\beta +\mathrm{dd}^{\mathrm{c}}w_\varepsilon $, $0&lt;\varepsilon &lt;1$, and $T_\varepsilon =A_\varepsilon ^{n-1}/V \in \mathscr G_\beta $ satisfying </p>
+<div class="equation">
+  \[  \int _ X k_{T_\varepsilon }^{n/(n-1)}\mathrm dV=V^{-1/(n-1)}.  \]
+</div>
+<p> Each $T_\varepsilon $ is an actual dual maximizer for a specified unit $L^ n$ root. The potentials $w_\varepsilon $ have uniformly bounded oscillation and converge uniformly to a continuous canonical $\beta $-psh $w_0$. The currents converge weakly to $T_0=(\beta +\mathrm{dd}^{\mathrm{c}}w_0)^{n-1}/V\in \mathscr G_\beta $, but $\Gamma _0(T_0)=0$. The power densities above are not uniformly integrable. Nevertheless every $w_\varepsilon $, including $w_0$, has bounded-potential Monge–Ampère mass $V$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $r=1-\varepsilon $ and 
+    
+<div class="equation">
+  \[  P_ r(x)=\frac{1-r^2}{1-2r\cos (2\pi x)+r^2},\qquad f_\varepsilon =\varepsilon +(1-\varepsilon )P_ r.  \]
+</div>
+<p>
+       The positive periodic Poisson kernel has mean one and Fourier series 
+    
+<div class="equation">
+  \[  P_ r=1+2\sum _{m\geq 1}r^ m\cos (2\pi mx).  \]
+</div>
+<p>
+       Define 
+    
+<div class="equation">
+  \[  w_\varepsilon =-\frac{2(1-\varepsilon )}{\pi } \sum _{m\geq 1}\frac{r^ m\cos (2\pi mx_1)}{m^2}.  \]
+</div>
+<p>
+       For fixed $\varepsilon &gt;0$ this is smooth. Differentiation gives $w_\varepsilon ''=4\pi (f_\varepsilon -1)$, and hence 
+    
+<div class="equation">
+  \[  A_\varepsilon =f_\varepsilon (x_1)\beta _1+ \sum _{j=2}^ n\beta _ j=\beta +\mathrm{dd}^{\mathrm{c}}w_\varepsilon &gt;0.  \]
+</div>
+<p>
+       It is closed, and $\int A_\varepsilon ^ n=V$. Theorem <a data-tag="6957E040" href="../../tag/3EA495FF9D1A/">12.18.8</a> and the smooth-root formula give 
+    
+<div class="equation">
+  \[  k_{T_\varepsilon }=V^{-1/n}f_\varepsilon ^{(n-1)/n}, \qquad k_{T_\varepsilon }^{n/(n-1)} =V^{-1/(n-1)}f_\varepsilon .  \]
+</div>
+<p>
+       Thus the displayed power integral attains the upper bound over <em>all</em> currents, not a bound for a selected family. More precisely, $p_\varepsilon =f_\varepsilon ^{1/n}$ has $L^ n$ norm one, and $\int p_\varepsilon k_{T_\varepsilon }\mathrm dV=V^{-1/n}$, so $T_\varepsilon $ attains the original entire-family dual supremum for this varying root. No common fixed density is asserted. 
+    <p>
+      The Fourier series bounds $|w_\varepsilon |\leq \pi /3$ and implies uniform convergence to 
+    
+<div class="equation">
+  \[  w_0=-\frac2\pi \sum _{m\geq 1}\frac{\cos (2\pi mx_1)}{m^2}.  \]
+</div>
+<p>
+       This limit is continuous and canonically $\beta $-psh by distributional positivity of $A_0=\beta +\mathrm{dd}^{\mathrm{c}}w_0$. The probability measures $P_ r(x_1)dx_1$ converge weakly to the periodic Dirac mass at $x_1=0$, as follows from their Fourier coefficients $r^{|m|}$. Thus 
+    
+<div class="equation">
+  \[  A_0=\delta _{x_1=0}\beta _1+\sum _{j=2}^ n\beta _ j,  \]
+</div>
+<p>
+       where the Dirac measure is tensored with Lebesgue measure in the remaining real coordinates. Its bounded local products are genuine Bedford–Taylor products. Locally the first-coordinate current $\beta _1+\mathrm{dd}^{\mathrm{c}}w_0$ is pulled back from one complex coordinate, so its powers of degree at least two vanish in the bounded-product recursion. The remaining factors are smooth and closed. Multilinear expansion therefore contains at most one first-coordinate factor; the same expansion for $A_\varepsilon $ passes directly to the distributional limit. Consequently $T_\varepsilon \to T_0=A_0^{n-1}/V$ weakly. This current is positive, closed and normalized by $\int \beta \wedge T_0=1$. 
+    <p>
+      In its positive coefficient matrix the absolutely continuous part is proportional to the first diagonal matrix below; the singular part on $x_1=0$ is proportional to the second: 
+    
+<div class="equation">
+  \[  \operatorname {diag}(1,0,\ldots ,0),\qquad \operatorname {diag}(0,1,\ldots ,1).  \]
+</div>
+<p>
+       Their ranks are respectively one and $n-1$, both less than $n$. With a measure dominating these mutually singular parts, formula (<a data-tag="566878BB" href="../../tag/DCAEAF642D39/">12.18.7</a>) therefore gives $\Gamma _0(T_0)=0$. This is not the Monge–Ampère measure of $w_0$, which has total mass $V$ by theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a>. 
+    <p>
+      Away from $x_1=0$, $f_\varepsilon \to 0$ pointwise; its integral against $\mathrm dV$ remains one. Thus the positive power densities are not uniformly integrable: almost-everywhere convergence to zero and uniform integrability would force their fixed positive integrals to vanish. In particular $T\mapsto \int k_ T^{n/(n-1)}\mathrm dV$ is not continuous under these weak current limits, even with uniformly convergent continuous potentials. The intrinsic measures themselves satisfy $\Gamma _0(T_\varepsilon )\to 0$ in total mass; this follows from their uniform $L^{n/(n-1)}$ bound by splitting off arbitrarily small neighborhoods of $x_1=0$. The discontinuity concerns their <em>power integrals</em>, not that last measure limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+The maximizing root varies with $\varepsilon $. This construction concerns the complete dual profile and the critical power integral; it does not give a sequence of exact maximizers for one fixed smooth density. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/D04D662546BA/"><span>← Previous</span><small>Equation 12.17.15</small></a><a class="pager-next" rel="next" href="../../tag/40D45A12B192/"><span>Next →</span><small>Corollary 12.18.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration,
+  author = {{Gerby contributors}},
+  title = {12.18 Geometric bounds and determinant concentration},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fa-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fa-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration%2F&amp;body=Page%3A+%5B12.18+Geometric+bounds+and+determinant+concentration%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fa-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+1e81f62e0f77026f1d73d592dde70b1c1f9af378+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

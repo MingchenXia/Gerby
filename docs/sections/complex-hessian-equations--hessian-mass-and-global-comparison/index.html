@@ -1,0 +1,376 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--hessian-mass-and-global-comparison/"><title>8.13 Hessian mass and global comparison · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--hessian-mass-and-global-comparison/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/complex-hessian-equations/">Chapter 8: Complex Hessian equations</a></li><li><a href="../../sections/complex-hessian-equations--hessian-mass-and-global-comparison/" aria-current="page">Section 8.13: Hessian mass and global comparison</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/complex-hessian-equations/"><span>8.1</span> Complex Hessian equations</a><code class="tag-id">CFD38285654D</code></li><li><a href="../../sections/complex-hessian-equations--the-admissible-cone/"><span>8.2</span> The admissible cone</a><code class="tag-id">F677D35E0BD7</code></li><li><a href="../../sections/complex-hessian-equations--liouville-and-gradient-estimates/"><span>8.3</span> Liouville and gradient estimates</a><code class="tag-id">1B647CA2D005</code></li><li><a href="../../sections/complex-hessian-equations--a-trace-estimate-with-a-prescribed-potential/"><span>8.4</span> A trace estimate with a prescribed potential</a><code class="tag-id">54309E0621C2</code></li><li><a href="../../sections/complex-hessian-equations--bounded-complex-hessians-and-elliptic-extensions/"><span>8.5</span> Bounded complex Hessians and elliptic extensions</a><code class="tag-id">EA00781761AE</code></li><li><a href="../../sections/complex-hessian-equations--proper-equations-and-admissible-approximation/"><span>8.6</span> Proper equations and admissible approximation</a><code class="tag-id">A493740DE457</code></li><li><a href="../../sections/complex-hessian-equations--continuous-products-envelopes-and-domination/"><span>8.7</span> Continuous products, envelopes and domination</a><code class="tag-id">5B2332FC78E2</code></li><li><a href="../../sections/complex-hessian-equations--continuous-equations-and-regularity/"><span>8.8</span> Continuous equations and regularity</a><code class="tag-id">D5976AE10288</code></li><li><a href="../../sections/complex-hessian-equations--bounded-potentials-and-recursive-hessian-currents/"><span>8.9</span> Bounded potentials and recursive Hessian currents</a><code class="tag-id">376A2B30178D</code></li><li><a href="../../sections/complex-hessian-equations--sobolev-capacity-and-two-hessian-factors/"><span>8.10</span> Sobolev capacity and two Hessian factors</a><code class="tag-id">FB2B0B645AB5</code></li><li><a href="../../sections/complex-hessian-equations--local-capacities-and-decreasing-products/"><span>8.11</span> Local capacities and decreasing products</a><code class="tag-id">BA5052EF5C4F</code></li><li><a href="../../sections/complex-hessian-equations--locality-and-maxima-of-bounded-potentials/"><span>8.12</span> Locality and maxima of bounded potentials</a><code class="tag-id">927D22F5110F</code></li><li><a href="../../sections/complex-hessian-equations--hessian-mass-and-global-comparison/" aria-current="page"><span>8.13</span> Hessian mass and global comparison</a><code class="tag-id">B908310EE8A2</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--hessian-mass-and-global-comparison/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--hessian-mass-and-global-comparison/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/BB9187C844DA/"><span>← Previous</span><small>Proposition 8.12.5</small></a><a class="pager-next" rel="next" href="../../tag/69692CE9985B/"><span>Next →</span><small>Lemma 8.13.1</small></a></nav><h1>8.13 Hessian mass and global comparison<code class="tag-id">B908310EE8A2</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-B908310EE8A2" data-section-entries="0DB9D80DE230 53F870DE5980 69692CE9985B B8626F362B85 B908310EE8A2 CCDE5B297235"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="C2F0EE62"><code class="tag-id">B908310EE8A2</code></span>
+<p>
+The maximum inequality compares measures on complementary Borel sets. Integrating it leaves a difference of total masses. The recursive currents express this difference through the complex Hessians of the background powers, extending the mass calculation of section <a data-tag="A7900C78" href="../../tag/7B453010B5B8/">11.1</a> to bounded admissible potentials. Their vanishing characterizes the unmodified comparison principle. When they do not vanish, a small sublevel set limits the change made by the maximum; the resulting torsion error can still be absorbed after rescaling the upper potential. 
+</p>
+<p>
+For bounded admissible $t_1,\ldots ,t_ m$, put 
+</p>
+<div class="equation">
+  \[  \mathcal M_ m(t_1,\ldots ,t_ m)=\int _ XQ_ m(t_1,\ldots ,t_ m), \qquad H_ m(t)=Q_ m(t,\ldots ,t).  \]
+</div>
+<p>
+ Here $H_ m(t)$ is a finite positive Radon measure and $\mathcal M_ m$ is the total mass of a mixed positive measure, by <a data-tag="61CC9D08" href="../../tag/846671D5582A/">8.9.6</a>. For a nonempty subset $I=\{ i_1&lt;\cdots &lt;i_ q\} \subset \{ 1,\ldots ,m\} $, put $i(I)=i_ q$ and $I^-=I\setminus \{ i_ q\} $. Use $D_{I^-}$ for the recursive current with those ordered inputs, with $D_\varnothing =1$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-A6052F07">
+<p><a class="environment-identifier" href="../../tag/69692CE9985B/">Lemma <span data-tag="A6052F07">8.13.1</span>.</a><span data-gerby-tag="A6052F07"><code class="tag-id">69692CE9985B</code></span> For every bounded admissible list, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-412E15D4"><span data-gerby-tag="412E15D4"><code class="tag-id">B8626F362B85</code></span>
+<span class="equation-label"><a data-tag="412E15D4" href="../../tag/B8626F362B85/">8.13.2</a></span>
+<div>\begin{equation}  \mathcal M_ m(t_1,\ldots ,t_ m) =\int _ X\omega ^ n+ \sum _{\varnothing \ne I\subset \{ 1,\ldots ,m\} } \int _ X t_{i(I)}D_{I^-}\wedge \mathrm{dd}^{\mathrm{c}}(\omega ^{n-|I|}). \end{equation}</div>
+</div>
+<p> Every integral on the right is an integral of bounded canonical values against signed measure coefficients. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Expand $Q_ m$ using (<a data-tag="E021C6DE" href="../../tag/17FA1BFF2491/">8.9.5</a>). The term for $I$ pairs $D_ I$ with the smooth form $\omega ^{n-|I|}$. By (<a data-tag="C10D5DA8" href="../../tag/66BDC02D9E25/">8.9.2</a>), 
+    
+<div class="equation">
+  \[  \langle D_ I,\omega ^{n-|I|}\rangle =\langle t_{i(I)}D_{I^-},\mathrm{dd}^{\mathrm{c}}(\omega ^{n-|I|})\rangle .  \]
+</div>
+<p>
+       Since $|I^-|\leq m-1$, <a data-tag="354EA0C7" href="../../tag/EB2FA13CDDE0/">8.9.3</a> gives measure coefficients for $D_{I^-}$; their bounded product with $t_{i(I)}$ is well defined. Thus the displayed pairing is exactly the integral in the sum, and is finite on compact $X$. The empty subset contributes $\int _ X\omega ^ n$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Let $\mu _ r$ be the repeated-slot mixed measure from <a data-tag="D838B734" href="../../tag/655B0BBF4F9C/">8.12.2</a>, for fixed $r$ and $z_1,\ldots ,z_{m-r}$. The total-mass difference below therefore has the explicit expression (<a data-tag="412E15D4" href="../../tag/B8626F362B85/">8.13.2</a>) for the two indicated lists. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-987BD409">
+<p><a class="environment-identifier" href="../../tag/CCDE5B297235/">Proposition <span data-tag="987BD409">8.13.3</span>.</a><span data-gerby-tag="987BD409"><code class="tag-id">CCDE5B297235</code></span> If $u,v$ are bounded admissible and $w=\max \{ u,v\} $, then </p>
+<div class="equation">
+  \[  \int _{\{ u&lt;v\} }\mathrm d\mu _ r(v) \leq \int _{\{ u&lt;v\} }\mathrm d\mu _ r(u) +\int _ X\mathrm d\mu _ r(w)-\int _ X\mathrm d\mu _ r(u).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Set $E=\{ u&lt;v\} $. The contact-set version of <a data-tag="D838B734" href="../../tag/655B0BBF4F9C/">8.12.2</a> gives 
+    
+<div class="equation">
+  \[  \mu _ r(w)\geq \mathbf1_{X\setminus E}\mu _ r(u) +\mathbf1_ E\mu _ r(v).  \]
+</div>
+<p>
+       All these measures are finite and positive. Integrating on $X$ and using $\mu _ r(u)(X\setminus E)=\mu _ r(u)(X)-\mu _ r(u)(E)$ gives exactly the assertion. No boundary or closed-background hypothesis enters this calculation. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The unmodified global comparison principle holds precisely when the powers occurring in this mass formula are $\mathrm{dd}^{\mathrm{c}}$-closed. Only the powers $n-m,\ldots ,n-1$ occur at Hessian degree $m$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-776C8B26">
+<p><a class="environment-identifier" href="../../tag/53F870DE5980/">Theorem <span data-tag="776C8B26">8.13.4</span>.</a><span data-gerby-tag="776C8B26"><code class="tag-id">53F870DE5980</code></span> The following conditions are equivalent: </p>
+<ol>
+<li><p>
+$\mathrm{dd}^{\mathrm{c}}(\omega ^{n-q})=0$ for every $1\leq q\leq m$; 
+</p>
+</li><li><p>
+$\int _ XH_ m(u)$ is independent of the smooth admissible potential $u$; 
+</p>
+</li><li><p>
+$\mathcal M_ m(t_1,\ldots ,t_ m)=\int _ X\omega ^ n$ for every bounded admissible list; 
+</p>
+</li><li><p>
+every pair of bounded admissible $u,v$ satisfies 
+</p>
+<div class="equation">
+  \[  \int _{\{ u&lt;v\} }H_ m(v)\leq \int _{\{ u&lt;v\} }H_ m(u).  \]
+</div>
+</li>
+</ol>
+<p> Under these conditions, for every $1\leq r\leq m$ and every fixed bounded admissible list $z_1,\ldots ,z_{m-r}$, one also has </p>
+<div class="equation">
+  \[  \int _{\{ u&lt;v\} }\mathrm d\mu _ r(v) \leq \int _{\{ u&lt;v\} }\mathrm d\mu _ r(u).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first condition implies the third by (<a data-tag="412E15D4" href="../../tag/B8626F362B85/">8.13.2</a>). The third implies the second by taking all inputs equal to a smooth potential. 
+    <p>
+      To prove that the second implies the first, fix any smooth real $f$. For all sufficiently small real $t$ of either sign, $\omega +t\mathrm{dd}^{\mathrm{c}}f$ is positive, so $tf$ is strictly admissible. The polynomial 
+    
+<div class="equation">
+  \[  \int _ X(\omega +t\mathrm{dd}^{\mathrm{c}}f)^ m\wedge \omega ^{n-m} =\sum _{q=0}^ m\binom mq t^ q \int _ X(\mathrm{dd}^{\mathrm{c}}f)^ q\wedge \omega ^{n-q}  \]
+</div>
+<p>
+       is constant on an interval. Consequently every coefficient with $q\geq 1$ vanishes. Polarizing that coefficient by replacing $f$ with $\sum _{a=1}^ q s_ af_ a$ gives 
+    
+<div class="equation">
+  \[  \int _ X\mathrm{dd}^{\mathrm{c}}f_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}f_ q \wedge \omega ^{n-q}=0  \]
+</div>
+<p>
+       for all smooth real $f_ a$. Integration by parts in the first factor, using lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">11.1.2</a>, gives 
+    
+<div class="equation">
+  \[  \int _ Xf_1\mathrm{dd}^{\mathrm{c}}f_2\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}f_ q \wedge \mathrm{dd}^{\mathrm{c}}(\omega ^{n-q})=0.  \]
+</div>
+<p>
+       Since $f_1$ is arbitrary, the smooth top-degree form paired with it vanishes pointwise. At each point the other complex Hessians can be prescribed by real quadratic functions times a cutoff. Complexifying this multilinear identity gives all coordinate $(q-1,q-1)$-forms, as in the proof of theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a>. They detect every coefficient of $\mathrm{dd}^{\mathrm{c}}(\omega ^{n-q})$, so that form vanishes. When $q=1$, there are no other Hessians and the same conclusion follows directly from the arbitrariness of $f_1$. 
+    <p>
+      Under the third condition, $\mu _ r(w)$ and $\mu _ r(u)$ have the same total mass. <a data-tag="987BD409" href="../../tag/CCDE5B297235/">8.13.3</a> proves the mixed comparison assertion, and $r=m$ gives the fourth condition. Finally, suppose the fourth condition holds and fix smooth admissible $u,v$. Choose $C$ so large that $u&lt;v+C$ everywhere. Constant invariance gives $H_ m(v+C)=H_ m(v)$, so comparison gives $\int _ XH_ m(v)\leq \int _ XH_ m(u)$. Exchanging $u,v$ gives equality, which is the second condition. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The same varying background that obstructs Monge–Ampère comparison also obstructs comparison at each intermediate Hessian degree. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-870AB319">
+<p><a class="environment-identifier" href="../../tag/0DB9D80DE230/">Example <span data-tag="870AB319">8.13.5</span>.</a><span data-gerby-tag="870AB319"><code class="tag-id">0DB9D80DE230</code></span> Let $X=(\mathbb C/(\mathbb Z+\mathrm i\mathbb Z))^ n$, with $z_ j=x_ j+\mathrm i y_ j$, and put </p>
+<div class="equation">
+  \[  \beta _ j=\frac{\mathrm i}{2\pi }\, \mathrm dz_ j\wedge \mathrm d\bar z_ j, \qquad b=2+\cos (2\pi x_1), \qquad \omega =\beta _1+b\beta _2+\sum _{j=3}^ n\beta _ j.  \]
+</div>
+<p> For $|t|&lt;\pi ^{-2}$ the potential $u_ t=t\cos (2\pi x_1)$ is smooth strictly admissible, and, with $B_ n=\int _ X\beta _1\wedge \cdots \wedge \beta _ n$, </p>
+<div class="equation">
+  \[  \int _ X H_ m(u_ t)=n!\left(2-\frac{m\pi ^2t}{2n}\right)B_ n.  \]
+</div>
+<p> Thus every $-\pi ^{-2}&lt;t&lt;0$, together with a constant $C&gt;|t|$, gives a pair $u=0$, $v=u_ t+C$ that violates the unmodified global comparison inequality. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      As in example <a data-tag="028A9E19" href="../../tag/F336FEED9D87/">11.1.12</a>, $\mathrm{dd}^{\mathrm{c}}u_ t=-\pi ^2t\cos (2\pi x_1)\beta _1$. The coefficient of $\beta _1$ in $\omega +\mathrm{dd}^{\mathrm{c}}u_ t$ is strictly positive in the stated range, and all the other coefficients are positive. Since $(\mathrm{dd}^{\mathrm{c}}u_ t)^2=0$, expansion gives 
+    
+<div class="equation">
+  \[  H_ m(u_ t)=\omega ^ n+m\mathrm{dd}^{\mathrm{c}}u_ t\wedge \omega ^{n-1} =n!b\left(1-\frac mn\pi ^2t\cos (2\pi x_1)\right) \beta _1\wedge \cdots \wedge \beta _ n.  \]
+</div>
+<p>
+       The period averages of $b$ and $b\cos (2\pi x_1)$ are respectively $2$ and $1/2$, proving the mass formula. For $t&lt;0$ this mass is strictly larger than $\int _ XH_ m(0)=2n!B_ n$. Meanwhile $C&gt;|t|$ gives $\{ 0&lt;u_ t+C\} =X$, so the comparison inequality for this pair would assert the opposite ordering of these masses. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-10ABC920077E" data-section-entries="0F8C3F6B0122 10ABC920077E B83D4B8CE619"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/10ABC920077E/">8.13.6 Modified comparison</a><code class="tag-id">10ABC920077E</code></h2><span data-gerby-tag="2B423022"></span>
+<p>
+On a sublevel set just above the infimum of a difference, the maximum changes the lower potential by at most a prescribed small number. Integration by parts then expresses the mass defect through this small difference and a torsion measure. Mixed lower-degree traces control its variation. Rescaling the upper potential adds a positive background term that relates these traces to the top Hessian measure. 
+</p>
+<p>
+For bounded admissible $u,V$, use the notation 
+</p>
+<div class="equation">
+  \[  \sigma _ u=\omega +\mathrm{dd}^{\mathrm{c}}u,\qquad M_{p,q}=\sigma _ u^ p\sigma _ V^ q\omega ^{n-p-q} \quad (0\leq p+q\leq m).  \]
+</div>
+<p>
+ These expressions denote the positive mixed measure $Q_ m$ with $p$ slots equal to $u$, $q$ slots equal to $V$ and the remaining slots equal to the constant zero. In particular $M_{0,0}=\omega ^ n$.  For $p+q\leq m-1$, put 
+</p>
+<div class="equation">
+  \[  T_{p,q}=\sigma _ u^ p\sigma _ V^ q\omega ^{n-p-q-1}.  \]
+</div>
+<p>
+ This denotes $R_{m-1}$ with the same nonconstant slots and zero in its other slots, wedged with $\omega ^{n-m}$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-D2B92D4C">
+<p><a class="environment-identifier" href="../../tag/0F8C3F6B0122/">Lemma <span data-tag="D2B92D4C">8.13.7</span>.</a><span data-gerby-tag="D2B92D4C"><code class="tag-id">0F8C3F6B0122</code></span> Let $u,V$ be bounded admissible, $b$ a real constant and $s&gt;0$. Suppose $0\leq \max \{ u,V+b\} -u\leq s$. Set $E=\{ u&lt;V+b\} $ and $b_{p,q}=M_{p,q}(E)$. There is a constant $C$, depending only on $X,\omega ,m,n$, such that </p>
+<div class="equation">
+  \[  b_{p,q+1}\leq b_{p+1,q} +Cs\sum _{a+d\leq p+q}b_{a,d} \qquad (p+q\leq m-1).  \]
+</div>
+<p> For $q=0$, the error can instead be bounded by $Cs(b_{p,0}+b_{p-1,0}+b_{p-2,0})$, with negative indices zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First estimate the torsion of $T_{p,q}$, writing $r=p+q$. For smooth admissible potentials, the product rule expresses $\mathrm{dd}^{\mathrm{c}}T_{p,q}$ as a sum of fixed smooth metric forms wedged with products of $\sigma _ u,\sigma _ V$ of degrees $r,r-1,r-2$. The terms of degree $r$ come from differentiating the background power; they cannot be discarded. Indeed, $\mathrm d\sigma _ u=\mathrm d\sigma _ V=\mathrm d\omega $, $\mathrm d^{\mathrm c}\sigma _ u=\mathrm d^{\mathrm c}\sigma _ V=\mathrm d^{\mathrm c}\omega $ and $\mathrm{dd}^{\mathrm{c}}\sigma _ u=\mathrm{dd}^{\mathrm{c}}\sigma _ V=\mathrm{dd}^{\mathrm{c}}\omega $. Every term therefore contains either $\mathrm{dd}^{\mathrm{c}}\omega $ or $\mathrm d\omega \wedge \mathrm d^{\mathrm c}\omega $, with its product-rule multiplicity and the appropriate remaining background power. Terms with negative numbers of factors are absent. 
+    <p>
+      All variable degrees are at most $r&lt;m$. Apply <a data-tag="25ADAEE1" href="../../tag/B0643A9A1173/">8.2.7</a> to each term. Expanding the resulting positive power of the sum of its variable factors gives the pointwise bound 
+    
+<div class="equation">
+  \[  |\mathrm{dd}^{\mathrm{c}}T_{p,q}|\leq C\sum _{a+d\leq r}M_{a,d}.  \]
+</div>
+<p>
+       For $q=0$ every variable factor is $\sigma _ u$, so the sharper bound is $C(M_{p,0}+M_{p-1,0}+M_{p-2,0})$. The constant bounds fixed metric coefficients on a finite coordinate cover and the finitely many multiplicities; it is independent of the potentials and their bounds. 
+    <p>
+      Choose uniformly bounded smooth decreasing approximations to $u,V$. By <a data-tag="5AEBD34D" href="../../tag/3A8C156268BF/">8.12.4</a>, the torsion measures converge weakly; by <a data-tag="B227378C" href="../../tag/C044CD1C65C4/">8.11.12</a>, all positive measures in these bounds also converge weakly. Against nonnegative continuous tests, lower semicontinuity of total variation preserves both bounds. They are consequently inequalities of measures and may be restricted to the Borel set $E$. 
+    <p>
+      Put $w=\max \{ u,V+b\} $ and $h=w-u$. The mixed maximum theorem <a data-tag="D838B734" href="../../tag/655B0BBF4F9C/">8.12.2</a>, with one moving slot and the fixed slots defining $T_{p,q}$, gives 
+    
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}w)T_{p,q} \geq \mathbf1_ E\sigma _ VT_{p,q} +\mathbf1_{X\setminus E}\sigma _ uT_{p,q}.  \]
+</div>
+<p>
+       All products here are the corresponding positive mixed measures. After integration, this implies 
+    
+<div class="equation">
+  \[  b_{p,q+1}\leq b_{p+1,q} +\int _ X\bigl ((\omega +\mathrm{dd}^{\mathrm{c}}w)-\sigma _ u\bigr )T_{p,q}.  \]
+</div>
+<p>
+       Regularized maxima of the smooth decreasing approximations give a uniformly bounded decreasing smooth list $w_ j\downarrow w$. Stokes' theorem on compact $X$ gives for these lists 
+    
+<div class="equation">
+  \[  \int _ X\bigl ((\omega +\mathrm{dd}^{\mathrm{c}}w_ j)-\sigma _{u_ j}\bigr )T_{p,q}^ j =\int _ X(w_ j-u_ j)\mathrm{dd}^{\mathrm{c}}T_{p,q}^ j.  \]
+</div>
+<p>
+       Joint decreasing convergence passes the positive mixed measures on the left to their limits. The continuous two-variable weight $F(x,y)=y-x$ in <a data-tag="5AEBD34D" href="../../tag/3A8C156268BF/">8.12.4</a> passes the right side to $\int _ Xh\mathrm{dd}^{\mathrm{c}}T_{p,q}$. No monotonicity of $w_ j-u_ j$ is needed. Since $h$ is zero outside $E$ and $0\leq h\leq s$, 
+    
+<div class="equation">
+  \[  \int _ Xh\mathrm{dd}^{\mathrm{c}}T_{p,q}\leq s|\mathrm{dd}^{\mathrm{c}}T_{p,q}|(E).  \]
+</div>
+<p>
+       The torsion bounds prove both assertions. The argument never passes a varying measure to a weak limit after restriction to $E$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-AEE5FFB9">
+<p><a class="environment-identifier" href="../../tag/B83D4B8CE619/">Theorem <span data-tag="AEE5FFB9">8.13.8</span>.</a><span data-gerby-tag="AEE5FFB9"><code class="tag-id">B83D4B8CE619</code></span> There is $C\geq 1$, depending only on $X,\omega ,m,n$, with the following property. For bounded admissible $u,v$ and $0&lt;\alpha &lt;1$, put $\eta =1-\alpha $, $V=\alpha v$ and $S=\inf _ X(u-V)$. For $0&lt;s&lt;\eta ^3/C$, let $E_ s=\{ u&lt;V+S+s\} $. Then </p>
+<div class="equation">
+  \[  \int _{E_ s}H_ m(V) \leq \left(1+\frac{Cs}{\eta ^ m}\right) \int _{E_ s}H_ m(u).  \]
+</div>
+<p> No differential identity for a power of $\omega $ is assumed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use the mixed measures above on $E_ s$, writing $b_{p,q}=M_{p,q}(E_ s)$ and $a_ k=b_{k,0}$. The definition of $S$ gives $0\leq \max \{ u,V+S+s\} -u\leq s$, so <a data-tag="D2B92D4C" href="../../tag/0F8C3F6B0122/">8.13.7</a> applies. Repeatedly moving a $V$ slot to a $u$ slot gives, for $p+q=r$, 
+    
+<div class="equation">
+  \[  b_{p,q}\leq a_ r+C_1s\sum _{d=0}^{r-1}A_ d, \qquad A_ d=\max _{a+b=d}b_{a,b},\qquad 1\leq r\leq m.  \]
+</div>
+<p>
+       Here there are at most $m$ moves, and the multiplicity $d+1$ in the lower-degree sum is absorbed in $C_1$. For $0&lt;s\leq 1$, induction on $r$ shows 
+    
+<div class="equation">
+  \[  A_ r\leq a_ r+K_ rs\sum _{k&lt;r}a_ k.  \]
+</div>
+<p>
+       In fact $A_0=a_0$, and one may take $K_ r=C_1(1+\sum _{1\leq d&lt;r}K_ d)$: insert the earlier bounds in the displayed recurrence and use $s^2\leq s$. Thus, for a constant $C_2$ depending only on the setting, 
+    
+<div class="equation">
+  \[  b_{0,m}\leq a_ m+C_2s\sum _{k&lt;m}a_ k.  \]
+</div>
+<p>
+      It remains to control the lower diagonal masses by $a_ m$. The identity $\sigma _ V=\alpha \sigma _ v+\eta \omega $ and mixed positivity give $b_{k,1}\geq \eta a_ k$; this identity and inequality pass from smooth approximations by joint convergence. The diagonal assertion of <a data-tag="D2B92D4C" href="../../tag/0F8C3F6B0122/">8.13.7</a> gives 
+    
+<div class="equation">
+  \[  \eta a_ k\leq a_{k+1} +C_3s(a_ k+a_{k-1}+a_{k-2})\qquad (0\leq k&lt;m),  \]
+</div>
+<p>
+       with $a_{-1}=a_{-2}=0$. Set $B_ k=\eta ^{m-k}a_ k$ for $0\leq k\leq m$, and set $B_{-1}=B_{-2}=0$. Multiplying by $\eta ^{m-k-1}$ and using $0&lt;\eta &lt;1$ gives 
+    
+<div class="equation">
+  \[  B_ k\leq B_{k+1} +\delta (B_ k+B_{k-1}+B_{k-2}), \qquad \delta =C_3s\eta ^{-3}.  \]
+</div>
+<p>
+       For $M=\max _{0\leq k&lt;m}B_ k$, summing from any $j&lt;m$ through $m-1$ gives $B_ j\leq B_ m+3m\delta M$. If $s&lt;\eta ^3/(6mC_3)$, it follows that $M\leq 2B_ m$. Consequently 
+    
+<div class="equation">
+  \[  a_ k\leq 2\eta ^{-(m-k)}a_ m\quad (k&lt;m),\qquad \sum _{k&lt;m}a_ k\leq 2m\eta ^{-m}a_ m.  \]
+</div>
+<p>
+       Choose $C\geq \max \{ 1,6mC_3,2mC_2\} $. Then the asserted range for $s$ supplies every preceding restriction, and substitution in the bound for $b_{0,m}$ proves the theorem. No division by $a_ m$ occurs, so zero top mass on $E_ s$ is included. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-DBEDA039CF16" data-section-entries="5460C4009B01 6BFB2EB67A74 A532C77D7D0C DBEDA039CF16 FBE7E9A6BE5E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/DBEDA039CF16/">8.13.9 Domination and proper equations</a><code class="tag-id">DBEDA039CF16</code></h2><span data-gerby-tag="300D5B9E"></span>
+<p>
+The weak modified comparison estimate makes strict domination possible on an arbitrary Hermitian background. A convex rescaling supplies a positive volume term, while choosing a sufficiently small sublevel set absorbs the torsion error. Canonical representatives detect its positive volume even when the set is not open. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-98425BFC">
+<p><a class="environment-identifier" href="../../tag/A532C77D7D0C/">Theorem <span data-tag="98425BFC">8.13.10</span>.</a><span data-gerby-tag="98425BFC"><code class="tag-id">A532C77D7D0C</code></span> Let $u,v$ be bounded admissible. If, for some $0\leq c&lt;1$, </p>
+<div class="equation">
+  \[  \mathbf1_{\{ u&lt;v\} }H_ m(u) \leq c\mathbf1_{\{ u&lt;v\} }H_ m(v),  \]
+</div>
+<p> then $u\geq v$ everywhere, on an arbitrary Hermitian background. In particular, $H_ m(u)(\{ u&lt;v\} )=0$ implies $u\geq v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Add the same constant to $u,v$ so that $v\geq 1$. This preserves the measure hypothesis and the desired conclusion. Choose $0&lt;\alpha &lt;1$ with $\alpha ^ m&gt;c$ and put $V=\alpha v$, $\eta =1-\alpha $. Suppose $S=\inf _ X(u-V)&lt;0$. For $0&lt;s&lt;-S$, the set $E_ s=\{ u&lt;V+S+s\} $ is contained in $\{ u&lt;V\} $ and hence in $\{ u&lt;v\} $. It has positive volume. Indeed, if its volume were zero, then $u\geq V+S+s$ almost everywhere. Both functions are bounded admissible with their canonical representatives, so <a data-tag="6FFAAFB0" href="../../tag/A1FFEE061CF5/">8.2.10</a> would give this order everywhere, contradicting the definition of $S$. The argument does not require $E_ s$ to be open or the infimum to be attained. 
+    <p>
+      Choose also $s&lt;\eta ^3/C$, where $C$ is from <a data-tag="AEE5FFB9" href="../../tag/B83D4B8CE619/">8.13.8</a>. By <a data-tag="B518F16E" href="../../tag/132BB9E1B1F5/">8.12.3</a> and the measure hypothesis, 
+    
+<div class="equation">
+  \[  \begin{aligned}  \alpha ^ m H_ m(v)(E_ s)+\eta ^ m\int _{E_ s}\omega ^ n &amp; \leq H_ m(V)(E_ s)\\ &amp; \leq (1+Cs\eta ^{-m})H_ m(u)(E_ s)\\ &amp; \leq c(1+Cs\eta ^{-m})H_ m(v)(E_ s). \end{aligned}  \]
+</div>
+<p>
+       If $c&gt;0$, take $s$ still smaller so that $c(1+Cs\eta ^{-m})&lt;\alpha ^ m$. If $c=0$, this strict inequality already holds. All measures are finite and positive, so the display forces the positive-volume term to be zero, a contradiction. Hence $S\geq 0$ and $u\geq \alpha v$. Let $\alpha $ increase to one, with $\alpha ^ m&gt;c$. Since $v$ is bounded, $\alpha v\to v$ uniformly, and therefore $u\geq v$. The final assertion is $c=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-B7B86F6A">
+<p><a class="environment-identifier" href="../../tag/6BFB2EB67A74/">Corollary <span data-tag="B7B86F6A">8.13.11</span>.</a><span data-gerby-tag="B7B86F6A"><code class="tag-id">6BFB2EB67A74</code></span> Fix $a&gt;0$. If bounded admissible $u,v$ satisfy </p>
+<div class="equation">
+  \[  e^{-av}H_ m(v)\geq e^{-au}H_ m(u),  \]
+</div>
+<p> then $u\geq v$. Consequently, for any fixed finite positive Radon measure $\nu $, the equation $H_ m(u)=e^{au}\nu $ has at most one bounded admissible solution. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $\delta &gt;0$, put $E_\delta =\{ u&lt;v-\delta \} $. Multiplying the assumed measure inequality by the positive bounded Borel function $e^{au}$ gives on $E_\delta $ 
+    
+<div class="equation">
+  \[  H_ m(u)\leq e^{a(u-v)}H_ m(v) \leq e^{-a\delta }H_ m(v-\delta ).  \]
+</div>
+<p>
+       The last identity uses invariance under constants. Since $e^{-a\delta }&lt;1$, <a data-tag="98425BFC" href="../../tag/A532C77D7D0C/">8.13.10</a> applied to $u,v-\delta $ gives $u\geq v-\delta $ everywhere. Letting $\delta \downarrow 0$ gives $u\geq v$. Two solutions of the stated equation have equal weighted measures $e^{-au}H_ m(u)=\nu $. Applying the order assertion in both directions proves uniqueness. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+A strictly increasing exponent also controls changes in logarithmic data for a fixed Radon right-hand measure. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-3FE616D3">
+<p><a class="environment-identifier" href="../../tag/FBE7E9A6BE5E/">Proposition <span data-tag="3FE616D3">8.13.12</span>.</a><span data-gerby-tag="3FE616D3"><code class="tag-id">FBE7E9A6BE5E</code></span> Let $A&lt;B$ and $f$ be smooth near $X\times [A,B]$, with $\partial _ t f\geq \kappa &gt;0$ there, and let $\nu $ be a finite positive Radon measure. Suppose bounded admissible $u,v$ have values in $[A,B]$ and satisfy </p>
+<div class="equation">
+  \[  H_ m(u)=e^{f(x,u)+h_1}\nu ,\qquad H_ m(v)=e^{f(x,v)+h_2}\nu ,  \]
+</div>
+<p> where $h_1,h_2$ are bounded Borel functions. Then </p>
+<div class="equation">
+  \[  \| u-v\| _\infty \leq \kappa ^{-1}\| h_1-h_2\| _{L^\infty (\nu )}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $K=\| h_1-h_2\| _{L^\infty (\nu )}$ and fix $s&gt;K/\kappa $. On $E_ s=\{ v+s&lt;u\} $, the actual values $u,v$ lie in $[A,B]$, so $f(x,u)-f(x,v)\geq \kappa s$. The equations and the essential bound on $h_2-h_1$ therefore give, as restricted measures, 
+    
+<div class="equation">
+  \[  \mathbf1_{E_ s}H_ m(v+s) =\mathbf1_{E_ s}H_ m(v) \leq e^{K-\kappa s}\mathbf1_{E_ s}H_ m(u).  \]
+</div>
+<p>
+       The constant is smaller than one. Applying <a data-tag="98425BFC" href="../../tag/A532C77D7D0C/">8.13.10</a> to $v+s,u$ gives $u\leq v+s$ pointwise. Let $s\downarrow K/\kappa $ and exchange $u,v$ to obtain the norm bound. The exponent is evaluated only at $u,v$; the shifted comparison potential need not take its values in $[A,B]$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-126D8F14">
+<p><a class="environment-identifier" href="../../tag/5460C4009B01/">Corollary <span data-tag="126D8F14">8.13.13</span>.</a><span data-gerby-tag="126D8F14"><code class="tag-id">5460C4009B01</code></span> Under the hypotheses of <a data-tag="8B2683EB" href="../../tag/76376AD88152/">8.8.3</a>, every bounded admissible solution with values in $[A,B]$ is its smooth solution. In particular, for every $a&gt;0$ and smooth real $H$, the equation $H_ m(u)=e^{au+H}\omega ^ n$ has exactly one bounded admissible solution, and that solution is smooth and strictly admissible. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a continuous admissible potential, smooth decreasing admissible approximations converge uniformly on compact $X$ by Dini's theorem. Thus <a data-tag="B227378C" href="../../tag/C044CD1C65C4/">8.11.12</a>, <a data-tag="81F79DFF" href="../../tag/D2A0F255F625/">8.7.1</a> define the same Hessian measure on the continuous class. The smooth solution of <a data-tag="8B2683EB" href="../../tag/76376AD88152/">8.8.3</a> therefore solves the bounded equation as well. Apply <a data-tag="3FE616D3" href="../../tag/FBE7E9A6BE5E/">8.13.12</a> with $\nu =\omega ^ n$ and $h_1=h_2=0$ to identify any other bounded solution in $[A,B]$ with it. For the final assertion, smooth existence is already <a data-tag="91CAEA62" href="../../tag/8B310CC2C1A1/">8.6.1</a>, and <a data-tag="B7B86F6A" href="../../tag/6BFB2EB67A74/">8.13.11</a> with $\nu =e^ H\omega ^ n$ gives uniqueness among all bounded solutions. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/BB9187C844DA/"><span>← Previous</span><small>Proposition 8.12.5</small></a><a class="pager-next" rel="next" href="../../tag/69692CE9985B/"><span>Next →</span><small>Lemma 8.13.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-complex-hessian-equations--hessian-mass-and-global-comparison,
+  author = {{Gerby contributors}},
+  title = {8.13 Hessian mass and global comparison},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/complex-hessian-equations--hessian-mass-and-global-comparison/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/complex-hessian-equations--hessian-mass-and-global-comparison/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fcomplex-hessian-equations--hessian-mass-and-global-comparison%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fcomplex-hessian-equations--hessian-mass-and-global-comparison%2F&amp;body=Page%3A+%5B8.13+Hessian+mass+and+global+comparison%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fcomplex-hessian-equations--hessian-mass-and-global-comparison%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+4ad1227c5bb622847ef8cbe204702b7b607d1a0e+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

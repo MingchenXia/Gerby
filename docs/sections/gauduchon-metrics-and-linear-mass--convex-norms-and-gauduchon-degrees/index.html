@@ -1,0 +1,204 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/"><title>11.9 Convex norms and Gauduchon degrees · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/hermitian-torsion/">Chapter 11: Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/" aria-current="page">Section 11.9: Convex norms and Gauduchon degrees</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/torsion-and-the-variation-of-mass/"><span>11.1</span> Torsion and the variation of mass</a><code class="tag-id">7B453010B5B8</code></li><li><a href="../../sections/monge-ampere-energy-and-torsion/"><span>11.2</span> Monge–Ampère energy and torsion</a><code class="tag-id">1FC29EAFAA97</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass/"><span>11.3</span> Gauduchon metrics and linear mass</a><code class="tag-id">1009E65ECC4C</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conformal-gauduchon-metrics/"><span>11.4</span> Conformal Gauduchon metrics</a><code class="tag-id">4ECC3E68F7D5</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conservation-of-the-trace-mass/"><span>11.5</span> Conservation of the trace mass</a><code class="tag-id">A21D56C40154</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-gauduchon-criterion-for-positivity/"><span>11.6</span> The Gauduchon criterion for positivity</a><code class="tag-id">6029C37CE10F</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--compactness-and-duality-of-gauduchon-currents/"><span>11.7</span> Compactness and duality of Gauduchon currents</a><code class="tag-id">A532E9A2E94A</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--transverse-concentration-of-gauduchon-tests/"><span>11.8</span> Transverse concentration of Gauduchon tests</a><code class="tag-id">959649DAC54D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/" aria-current="page"><span>11.9</span> Convex norms and Gauduchon degrees</a><code class="tag-id">93399AABE3EC</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--homogeneous-convex-regularization/"><span>11.10</span> Homogeneous convex regularization</a><code class="tag-id">879A1C19426E</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--strict-positivity-from-the-tautological-metric/"><span>11.11</span> Strict positivity from the tautological metric</a><code class="tag-id">733548AD7779</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/"><span>11.12</span> Polar norms of semipositive Finsler metrics</a><code class="tag-id">C40892E1279D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--ample-comparison-quotients-on-hirzebruch-surfaces/"><span>11.13</span> Ample comparison quotients on Hirzebruch surfaces</a><code class="tag-id">9C2F19628D6F</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--stable-extensions-approaching-the-split-comparison-bundle/"><span>11.14</span> Stable extensions approaching the split comparison bundle</a><code class="tag-id">D9D859664CFB</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--deforming-to-stable-ample-bundles/"><span>11.15</span> Deforming to stable ample bundles</a><code class="tag-id">E22565883FFD</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--a-fixed-stein-hypersurface-for-all-finsler-metrics/"><span>11.16</span> A fixed Stein hypersurface for all Finsler metrics</a><code class="tag-id">FE1ACFDCD4DA</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--concave-neighborhoods-and-dual-norms/"><span>11.17</span> Concave neighborhoods and dual norms</a><code class="tag-id">4276F3B6339D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--curvature-and-projective-complement-exhaustions/"><span>11.18</span> Curvature and projective complement exhaustions</a><code class="tag-id">F56029D8C19A</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--negative-bundle-metrics-and-logarithmic-weights/"><span>11.19</span> Negative bundle metrics and logarithmic weights</a><code class="tag-id">EF53CEC272DE</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--external-tensor-products-and-complement-convexity/"><span>11.20</span> External tensor products and complement convexity</a><code class="tag-id">391E9AF09F50</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--homogeneous-plurisubharmonic-functions-and-hopf-complements/"><span>11.21</span> Homogeneous plurisubharmonic functions and Hopf complements</a><code class="tag-id">2ADE48A8B892</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--pluriharmonic-currents/"><span>11.22</span> Pluriharmonic currents</a><code class="tag-id">B57478F1D4E4</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/"><span>11.23</span> The adjoint measure of the linearization</a><code class="tag-id">C01896004229</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--fredholm-theory-for-a-continuous-hermitian-form/"><span>11.24</span> Fredholm theory for a continuous Hermitian form</a><code class="tag-id">DB480BD29A98</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--limits-of-adjoint-measures/"><span>11.25</span> Limits of adjoint measures</a><code class="tag-id">8B86B2B0A308</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conformal-changes-and-directional-curvature-positivity/"><span>11.26</span> Conformal changes and directional curvature positivity</a><code class="tag-id">A4E01A8B6F30</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--ricci-flat-kahler-surfaces/"><span>11.27</span> Ricci-flat Kähler surfaces</a><code class="tag-id">FFC070E9C8C2</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--holomorphic-sectional-curvature/"><span>11.28</span> Holomorphic sectional curvature</a><code class="tag-id">AF4D6581275D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--projective-first-jets-and-positive-bundle-metrics/"><span>11.29</span> Projective first jets and positive bundle metrics</a><code class="tag-id">A1CB99CAE47B</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--ramified-section-tests-and-a-positive-root-metric/"><span>11.30</span> Ramified section tests and a positive root metric</a><code class="tag-id">EF54BD838F8D</code></li><li><a href="../../sections/gauduchon-traces-and-the-topology-of-potentials/"><span>11.31</span> Gauduchon traces and the topology of potentials</a><code class="tag-id">15943A2C3613</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures/"><span>11.32</span> Normalization and weak adjoint measures</a><code class="tag-id">7091FEDB43F0</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--the-scalar-functional/"><span>11.33</span> The scalar functional</a><code class="tag-id">52D96CD9BFA7</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--supporting-probability-measures/"><span>11.34</span> Supporting probability measures</a><code class="tag-id">EE2EC5B3CDE0</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--a-convex-functional-on-probability-measures/"><span>11.35</span> A convex functional on probability measures</a><code class="tag-id">D8DD45551DB2</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--bounded-measurable-densities-and-stability/"><span>11.36</span> Bounded measurable densities and stability</a><code class="tag-id">0E821D2FEC9D</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--entropy-and-the-closed-case/"><span>11.37</span> Entropy and the closed case</a><code class="tag-id">694B6AE5D5E5</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--entropy-bounds/"><span>11.38</span> Entropy bounds</a><code class="tag-id">531A2D2A66CF</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--changing-the-prescribed-singularities/"><span>11.39</span> Changing the prescribed singularities</a><code class="tag-id">44DF399743E5</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--varying-positive-backgrounds/"><span>11.40</span> Varying positive backgrounds</a><code class="tag-id">ABAC4E4BC446</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--divisorial-types-and-moving-sections/"><span>11.41</span> Divisorial types and moving sections</a><code class="tag-id">2D3AC831EDA6</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--the-mass-determined-by-the-functional/"><span>11.42</span> The mass determined by the functional</a><code class="tag-id">F459A353BA9B</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--convex-body-criteria-for-varying-references/"><span>11.43</span> Convex-body criteria for varying references</a><code class="tag-id">7D0D0E9AC5C3</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-by-a-vanishing-exponential-parameter/"><span>11.44</span> Selection by a vanishing exponential parameter</a><code class="tag-id">DB96849B14F8</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/"><span>11.45</span> Selection for logarithmic models on products</a><code class="tag-id">A167FA614566</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--residual-regularity-in-radial-singularity-types/"><span>11.46</span> Residual regularity in radial singularity types</a><code class="tag-id">DF55B983AF23</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--envelopes-for-singular-radial-obstacles/"><span>11.47</span> Envelopes for singular radial obstacles</a><code class="tag-id">AEE10281DB3D</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/26C9605156BE/"><span>← Previous</span><small>Proposition 11.8.2</small></a><a class="pager-next" rel="next" href="../../tag/A592FEE54E20/"><span>Next →</span><small>Lemma 11.9.1</small></a></nav><h1>11.9 Convex norms and Gauduchon degrees<code class="tag-id">93399AABE3EC</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-93399AABE3EC" data-section-entries="93399AABE3EC A592FEE54E20 C222D1BB3C65 EE774D339C2C FD645EB1208B"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="0FAE63D7"><code class="tag-id">93399AABE3EC</code></span>
+<p>
+For holomorphic line bundles, the trace identity of proposition <a data-tag="0D4A42C8" href="../../tag/828FAD1A35BF/">11.5.1</a> becomes a statement about curvature. Let $F$ be a holomorphic line bundle on $X$ and $k$ a smooth Hermitian metric on $F$. In a local holomorphic frame $e$ of $F$ we identify $k$ with the positive function $|e|_ k^2$, and the curvature form of $k$ is $R_ k=-\mathrm{dd}^{\mathrm{c}}\log k$. Let $\Theta $ be a smooth strictly positive real $(n-1,n-1)$-form with $\mathrm{dd}^{\mathrm{c}}\Theta =0$; by the root calculation preceding the proof of theorem <a data-tag="87DC00D0" href="../../tag/88BE3B63D9E5/">11.6.1</a>, $\Theta =\gamma ^{n-1}$ for a unique Gauduchon metric $\gamma $. The <em>degree</em> of $F$ with respect to $\Theta $ is 
+</p>
+<div class="equation">
+  \[  \deg _\Theta F=\int _ XR_ k\wedge \Theta .  \]
+</div>
+<p>
+ Two metrics on $F$ differ by a factor $\mathrm e^{-u}$ with $u$ smooth, which adds $\mathrm{dd}^{\mathrm{c}}u$ to the curvature, so the degree is independent of $k$ by lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">11.1.2</a>. It is the Gauduchon degree of the curvature form with respect to $\gamma $; the form $\Theta $ need not be $\mathrm d$-closed. 
+</p>
+<p>
+The squared norm $v\mapsto |v|_ k^2$ is plurisubharmonic on the total space of $F$ off the zero section exactly when $\log k$ is plurisubharmonic, that is, when $R_ k\leq 0$; this follows from the Levi form computation in the proof of lemma <a data-tag="F0EE457D" href="../../tag/40D29F4EF95B/">11.11.1</a> below. A line bundle of positive degree therefore admits no metric with plurisubharmonic squared norm. This section extends the obstruction to direct sums of line bundles of positive degree, to all holomorphic structures sufficiently close to such a direct sum, and to norms that need not be Hermitian. The mechanism is again integration against $\Theta $: averaging the horizontal complex Hessians of a norm near the line summands produces a negative multiple of the degrees, and this negativity is stable under small changes of the holomorphic structure. 
+</p>
+<p>
+For a smooth complex vector bundle $F$, a <em>smooth complex norm</em> is a continuous function $p:F\to [0,+\infty )$, positive away from the zero section and smooth there, such that 
+</p>
+<div class="equation">
+  \[  p(\lambda v)=|\lambda |p(v),\qquad p(v+w)\leq p(v)+p(w)  \]
+</div>
+<p>
+ for $\lambda \in \mathbb C$ and vectors $v,w$ in the same fiber. Its square $G=p^2$ satisfies $G(\lambda v)=|\lambda |^2G(v)$. Near each line summand of a direct sum, the triangle inequality controls the fiber derivatives of $G$, and these estimates control the averaged horizontal complex Hessians. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-D3B9FDE5">
+<p><a class="environment-identifier" href="../../tag/A592FEE54E20/">Lemma <span data-tag="D3B9FDE5">11.9.1</span>.</a><span data-gerby-tag="D3B9FDE5"><code class="tag-id">A592FEE54E20</code></span> Fix a smooth positive volume form $\mu $ on $X$. Every holomorphic line bundle $F$ has a Hermitian metric $k$ satisfying </p>
+<div class="equation">
+  \[  R_ k\wedge \Theta =\lambda \mu , \qquad \lambda =\frac{\deg _\Theta F}{\int _ X\mu }.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Start with any metric $k^0$, and put $\mathcal Lu=(\mathrm{dd}^{\mathrm{c}}u\wedge \Theta )/\mu $. This scalar operator is uniformly elliptic, has no zeroth-order term, and its kernel consists of the constants by the maximum principle. On Hölder spaces, the homotopy to a Laplace operator used in the proof of theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a> shows that its index is zero, so its cokernel is one-dimensional. Since $\mathrm{dd}^{\mathrm{c}}\Theta =0$, integration by parts gives $\int _ X\mathcal Lu\, \mu =0$, and therefore its image consists exactly of the smooth functions of zero $\mu $-mean. Hence we can solve 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}u\wedge \Theta =\lambda \mu -R_{k^0}\wedge \Theta ,  \]
+</div>
+<p>
+       whose right-hand side has integral zero, and elliptic regularity makes $u$ smooth. Then $k=k^0\mathrm e^{-u}$ has the required curvature. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Let $F_0=\bigoplus _{s=1}^ rF_ s$ be a direct sum of holomorphic line bundles, with $r\geq 2$. Choose Hermitian metrics $k_ s$ on $F_ s$ and write $k=\bigoplus _ sk_ s$. Let $P_ s$ be the orthogonal projection onto $F_ s$, and let 
+</p>
+<div class="equation">
+  \[  \Sigma =\{ v\in F_0:|v|_ k=1\}   \]
+</div>
+<p>
+ be the unit sphere bundle, with fibers $\Sigma _ x$. On each fiber sphere $\Sigma _ x$ we use the rotation-invariant probability measure $\mathrm d\sigma _ x$. Fix a nonnegative smooth function $\chi $ supported in $(-1,1)$ and positive near zero. For $0&lt;\varepsilon &lt;1/2$, define weights $\rho _ s$ on $\Sigma $ by 
+</p>
+<div class="equation">
+  \[  \rho _ s(v)=c_\varepsilon \chi \left(\frac{|(I-P_ s)v|_ k^2}{\varepsilon ^2}\right), \qquad \int _{\Sigma _ x}\rho _ s\, \mathrm d\sigma _ x=1.  \]
+</div>
+<p>
+ In unitary frames respecting the splitting, these weights and the normalizing constant $c_\varepsilon $ are independent of the base point and of the index $s$. Independent phase rotations of the summands preserve them, so they are globally defined. The support of $\rho _ s$ lies within distance $\varepsilon $ of the unit circle of $F_ s$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-7C17C01A">
+<p><a class="environment-identifier" href="../../tag/FD645EB1208B/">Lemma <span data-tag="7C17C01A">11.9.2</span>.</a><span data-gerby-tag="7C17C01A"><code class="tag-id">FD645EB1208B</code></span> For a smooth complex norm on $F_0$ with square $G$, put </p>
+<div class="equation">
+  \[  a_ s(x)=G(e_ s),\qquad N(x)=\sum _ sa_ s(x),\qquad D_ jG(v)=\mathrm d_ vG(P_ jv),  \]
+</div>
+<p> where $e_ s$ is any $k_ s$-unit vector in the fiber of $F_ s$ at $x$; complex homogeneity makes $a_ s$ well defined. Then </p>
+<div class="equation">
+  \[  G(v)\leq N|v|_ k^2,\qquad |\mathrm d_ vG(w)|\leq 2N|v|_ k|w|_ k.  \]
+</div>
+<p> On the support of $\rho _ s$, </p>
+<div class="equation">
+  \[  |D_ jG|\leq 2\varepsilon N\quad (j\ne s),\qquad |D_ sG-2a_ s|\leq 10\varepsilon N.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The triangle inequality and the Cauchy–Schwarz inequality give $p(v)\leq \sum _ s|v_ s|_ k\sqrt{a_ s}\leq \sqrt N|v|_ k$. Differentiating $|p(v+tw)-p(v)|\leq |t|p(w)$ in the real variable $t$ gives $|\mathrm d_ vp(w)|\leq p(w)$, and both global bounds follow. 
+    <p>
+      For $v$ in the support of $\rho _ s$, set $w=(I-P_ s)v$ and $e_ s=P_ sv/|P_ sv|_ k$. Then $|w|_ k&lt;\varepsilon $ and $|v-e_ s|_ k\leq |w|_ k+1-|P_ sv|_ k&lt;2\varepsilon $. The segment from $e_ s$ to $v$ stays in the unit ball and avoids zero, so integrating the derivative bound along it gives $|G(v)-a_ s|\leq 4\varepsilon N$. For $j\ne s$, we have $|P_ jv|_ k&lt;\varepsilon $, which gives the first axis bound. Euler's identity $\mathrm d_ vG(v)=2G(v)$ yields 
+    
+<div class="equation">
+  \[  D_ sG-2a_ s=2(G(v)-a_ s)-\sum _{j\ne s}D_ jG.  \]
+</div>
+<p>
+       The sum on the right is $\mathrm d_ vG(w)$, whose absolute value is at most $2\varepsilon N$. This proves the second axis bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Write $\pi :F_0\to X$ for the bundle projection. For $v\in F_0$ with $\pi (v)=x$, let $H_{0,v}:T_ xX\to T_ vF_0$ be the horizontal lift for the Chern connection of $k$. It is complex linear, and at unit vectors it is tangent to $\Sigma $, since the Chern connection preserves $k$. For a smooth real function $G$ on $F_0\setminus \{ 0\} $, define a $(1,1)$-form $\beta _ s(G)$ and functions $U_ s$, $V_{sj}$ on $X$ by 
+</p>
+<div class="equation">
+  \[  \begin{aligned}  \beta _ s(G)&amp; =\int _{\Sigma _ x}\rho _ s H_{0,v}^*(\mathrm{dd}^{\mathrm{c}}G)\, \mathrm d\sigma _ x,\\  U_ s&amp; =\int _{\Sigma _ x}G\rho _ s\, \mathrm d\sigma _ x,\\  V_{sj}&amp; =\int _{\Sigma _ x}D_ jG\rho _ s\, \mathrm d\sigma _ x. \end{aligned}  \]
+</div>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-DF13AB99">
+<p><a class="environment-identifier" href="../../tag/EE774D339C2C/">Lemma <span data-tag="DF13AB99">11.9.3</span>.</a><span data-gerby-tag="DF13AB99"><code class="tag-id">EE774D339C2C</code></span> With $R_ j$ the curvature of $k_ j$, </p>
+<div class="equation">
+  \[  \beta _ s(G)=\mathrm{dd}^{\mathrm{c}}U_ s-\frac12\sum _ jR_ jV_{sj}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At a fixed base point, choose holomorphic frames of the line bundles with $k_ j=\mathrm e^{-\varphi _ j}$ and $\mathrm d\varphi _ j=0$ at that point. There the horizontal lift has zero vertical component. Write the smooth unitary fiber coordinates as $\zeta _ j=\mathrm e^{-\varphi _ j/2}v_ j$ and $G(z,v)=g(z,\zeta )$. At the base point, the first base derivatives of $\zeta _ j$ vanish, and its mixed second base derivatives are $-\frac12(\varphi _ j)_{\alpha \bar\beta }\zeta _ j$ and their conjugates. The chain rule therefore gives 
+    
+<div class="equation">
+  \[  G_{\alpha \bar\beta } =g_{\alpha \bar\beta }-\frac12\sum _ j(\varphi _ j)_{\alpha \bar\beta } (\zeta _ jg_{\zeta _ j}+\bar\zeta _ jg_{\bar\zeta _ j}).  \]
+</div>
+<p>
+       The expression in parentheses is $D_ jG$. Both the spherical measure and $\rho _ s$ are independent of $z$ in unitary coordinates, so averaging the identity gives the result, since $R_ j=\mathrm{dd}^{\mathrm{c}}\varphi _ j$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-5A4D8636">
+<p><a class="environment-identifier" href="../../tag/C222D1BB3C65/">Theorem <span data-tag="5A4D8636">11.9.4</span>.</a><span data-gerby-tag="5A4D8636"><code class="tag-id">C222D1BB3C65</code></span> Suppose that for each $s$ there is a smooth strictly positive real $(n-1,n-1)$-form $\Theta _ s$ satisfying </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\Theta _ s=0,\qquad \deg _{\Theta _ s}F_ s&gt;0.  \]
+</div>
+<p> Then there is a $C^4$ neighborhood of the split Dolbeault operator on the underlying smooth bundle of $F_0$ such that no integrable Dolbeault operator in this neighborhood admits a smooth complex norm whose square is plurisubharmonic off the zero section. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: the split structure.</em> Fix $\mu $ and use lemma <a data-tag="D3B9FDE5" href="../../tag/A592FEE54E20/">11.9.1</a> to choose $k_ s$ with $R_ s\wedge \Theta _ s=\lambda _ s\mu $, where $\lambda _ s&gt;0$. Put 
+    
+<div class="equation">
+  \[  \lambda _* =\min _ s\lambda _ s,\qquad C=5\sum _ s\lambda _ s+ \sum _ s\sum _{j\ne s}\sup _ X\left|\frac{R_ j\wedge \Theta _ s}{\mu }\right|.  \]
+</div>
+<p>
+       For a squared norm $G$, define $I_0(G)=\sum _ s\int _ X\beta _ s(G)\wedge \Theta _ s$. By lemma <a data-tag="DF13AB99" href="../../tag/EE774D339C2C/">11.9.3</a>, the term $\mathrm{dd}^{\mathrm{c}}U_ s$ integrates to zero against $\Theta _ s$, and the axis estimates of lemma <a data-tag="7C17C01A" href="../../tag/FD645EB1208B/">11.9.2</a> then give 
+    
+<div class="equation">
+  \[  I_0(G)=-\frac12\sum _{s,j}\int _ XV_{sj}R_ j\wedge \Theta _ s \leq -(\lambda _* -\varepsilon C)\int _ XN\mu .  \]
+</div>
+<p>
+       Choose $\varepsilon $ so that $\varepsilon C&lt;\lambda _*/2$, and keep all weights fixed. 
+    <p>
+<em>Step 2: nearby holomorphic structures.</em> Write a nearby operator as $\bar\partial _ A=\bar\partial _0+A$, with $\bar\partial _ A^2=0$. Its Chern connection for $k$ is $D_ A=D_0+A-A^{*k}$, where the adjoint changes the type from $(0,1)$ to $(1,0)$. Let $J_ A$ be the corresponding complex structure on the total space and $H_{A,v}$ the horizontal lift of $D_ A$. These depend smoothly on $A$, and $H_{A,v}$ is complex linear and tangent to the fixed sphere bundle $\Sigma $. 
+    <p>
+      For $g\in C^\infty (\Sigma ,\mathbb R)$, define its homogeneous extension by 
+    
+<div class="equation">
+  \[  (\mathcal Eg)(v)=|v|_ k^2g(v/|v|_ k),  \]
+</div>
+<p>
+       and define a real differential operator on $\Sigma $ by 
+    
+<div class="equation">
+  \[  (\mathcal P_ Ag)(v)=\sum _ s\rho _ s(v) \frac{H_{A,v}^*(\mathrm{dd}^{\mathrm{c}}_{J_ A}\mathcal Eg)_ v\wedge \Theta _ s(x)}{\mu (x)}, \qquad x=\pi (v).  \]
+</div>
+<p>
+       It has order at most two. By the identity $\mathrm d^{\mathrm c}_ Jf=-(4\pi )^{-1}\mathrm df\circ J$, its coefficients depend on $A$ and its first derivatives, as well as on the fixed smooth data. Consequently they converge in $C^2$ as $A\to 0$ in $C^4$. 
+    <p>
+<em>Step 3: the adjoint operator.</em> Take the formal adjoint $\mathcal P_ A^*$ for the fixed density $\mathrm d\nu =\mathrm d\sigma _ x\, \mu (x)$ on the compact sphere bundle, and put $b_ A=\mathcal P_ A^*1$. Locally, if $\mathrm d\nu =m(y)\, \mathrm dy$ and $\mathcal P_ A=\sum _{|\alpha |\leq 2}c_{\alpha ,A}\partial ^\alpha $, then 
+    
+<div class="equation">
+  \[  b_ A=m^{-1}\sum _{|\alpha |\leq 2}(-1)^{|\alpha |} \partial ^\alpha (mc_{\alpha ,A}).  \]
+</div>
+<p>
+       Thus $\| b_ A-b_0\| _{C^0}\to 0$ as $A\to 0$ in $C^4$. For $g=G|_\Sigma $, homogeneity gives $\mathcal Eg=G$ and 
+    
+<div class="equation">
+  \[  I_ A(G):=\int _\Sigma \mathcal P_ Ag\, \mathrm d\nu =\int _\Sigma gb_ A\, \mathrm d\nu .  \]
+</div>
+<p>
+       Since $0&lt;g\leq N\circ \pi $ and the spherical measures have mass one, 
+    
+<div class="equation">
+  \[  |I_ A(G)-I_0(G)| \leq \| b_ A-b_0\| _{C^0}\int _ XN\mu .  \]
+</div>
+<p>
+       Choose the neighborhood so that $\| b_ A-b_0\| _{C^0}&lt;\lambda _*/4$ in it. Then $I_ A(G)\leq -\frac14\lambda _*\int _ XN\mu &lt;0$ for every smooth squared complex norm $G$. If $G$ were plurisubharmonic for $J_ A$, all horizontal pullbacks of $\mathrm{dd}^{\mathrm{c}}_{J_ A}G$ would be semipositive, and their pairings with $\Theta _ s$, weighted by $\rho _ s\geq 0$, would give $I_ A(G)\geq 0$, a contradiction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+<p>
+The neighborhood depends on the bundle and on the test forms $\Theta _ s$, and different line summands may require different tests. Its size is independent of all derivatives of the candidate norms: integration over the fixed sphere bundle transfers those derivatives to the coefficients of the adjoint operator. 
+</p>
+<p>
+To apply theorem <a data-tag="5A4D8636" href="../../tag/C222D1BB3C65/">11.9.4</a> to norms obtained by duality, we first need to regularize continuous norms while preserving a strict convexity margin. Polar duality then turns the obstruction into a failure of semipositive Kobayashi curvature on the dual bundle. Stable ample bundles on Hirzebruch surfaces provide concrete examples, and a fixed Stein hypersurface detects the failure for every Finsler metric on such a bundle. 
+</p>
+<p>
+Dual support norms also connect this obstruction with the geometry of neighborhoods of the zero section. This leads to bounds for the convexity of a projective complement. Curvature supplies a second way to study these complements, through explicit exhaustions. A uniformly negative bundle over a Kähler base with a proper psh exhaustion instead gives logarithmic weights and a complete metric on its punctured total space (<a data-tag="109C01F3" href="../../tag/EF53CEC272DE/">11.19</a>). The distinction between these spaces matters: the final flat and Hopf examples use restrictions and topology to obtain further bounds for the projective complement. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/26C9605156BE/"><span>← Previous</span><small>Proposition 11.8.2</small></a><a class="pager-next" rel="next" href="../../tag/A592FEE54E20/"><span>Next →</span><small>Lemma 11.9.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees,
+  author = {{Gerby contributors}},
+  title = {11.9 Convex norms and Gauduchon degrees},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fgauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fgauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees%2F&amp;body=Page%3A+%5B11.9+Convex+norms+and+Gauduchon+degrees%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fgauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+8e214527431f7c418af3975c385d22a69b6f637d+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

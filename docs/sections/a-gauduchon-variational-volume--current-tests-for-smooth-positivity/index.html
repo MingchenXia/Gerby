@@ -1,0 +1,360 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/"><title>12.34 Current tests for smooth positivity · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/gauduchon-variational-volume/">Chapter 12: Gauduchon variational volume</a></li><li><a href="../../sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/" aria-current="page">Section 12.34: Current tests for smooth positivity</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/a-gauduchon-variational-volume/"><span>12.1</span> A Gauduchon variational volume</a><code class="tag-id">881C26425D7A</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-quotient-and-the-smooth-equation/"><span>12.2</span> The quotient and the smooth equation</a><code class="tag-id">43BF29E33E59</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-equality-case-of-concavity-and-the-first-variation/"><span>12.3</span> The equality case of concavity and the first variation</a><code class="tag-id">484879715C58</code></li><li><a href="../../sections/a-gauduchon-variational-volume--second-variation-on-background-classes/"><span>12.4</span> Second variation on background classes</a><code class="tag-id">8A687EAB6B68</code></li><li><a href="../../sections/a-gauduchon-variational-volume--recovering-a-positive-class-from-its-gauduchon-derivative/"><span>12.5</span> Recovering a positive class from its Gauduchon derivative</a><code class="tag-id">9141861B4F50</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/"><span>12.6</span> The Hessian metric and its completion</a><code class="tag-id">466CEDF9AEBA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-compact-dual-problem-over-gauduchon-currents/"><span>12.7</span> A compact dual problem over Gauduchon currents</a><code class="tag-id">54ADA5D399DA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--supporting-probabilities-represented-by-maximizing-currents/"><span>12.8</span> Supporting probabilities represented by maximizing currents</a><code class="tag-id">7C2BB0FDDDF5</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrability-of-gauduchon-determinant-measures/"><span>12.9</span> Integrability of Gauduchon determinant measures</a><code class="tag-id">D02094988A03</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/"><span>12.10</span> Integrable densities in the compact Gauduchon problem</a><code class="tag-id">5CB8CFC32A19</code></li><li><a href="../../sections/a-gauduchon-variational-volume--nef-limits-and-nonattainment/"><span>12.11</span> Nef limits and nonattainment</a><code class="tag-id">EA449D56F8F7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-with-a-closed-nef-core/"><span>12.12</span> Subtraction with a closed nef core</a><code class="tag-id">75F31FAA4616</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-on-warped-products/"><span>12.13</span> Subtraction on warped products</a><code class="tag-id">EA9388E29ABC</code></li><li><a href="../../sections/a-gauduchon-variational-volume--positive-volume-without-bigness/"><span>12.14</span> Positive volume without bigness</a><code class="tag-id">E4AB7B03C20D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--varying-the-probability-measure/"><span>12.15</span> Varying the probability measure</a><code class="tag-id">8B161DDAE77F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-conditions-for-mass-extrema/"><span>12.16</span> Curvature conditions for mass extrema</a><code class="tag-id">A57EC3129CC8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-pairs-and-positive-lower-mass/"><span>12.17</span> Curvature pairs and positive lower mass</a><code class="tag-id">C18EABD7D630</code></li><li><a href="../../sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/"><span>12.18</span> Geometric bounds and determinant concentration</a><code class="tag-id">AA652CC345D8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--vanishing-lower-mass/"><span>12.19</span> Vanishing lower mass</a><code class="tag-id">108F40B2DFAA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary/"><span>12.20</span> Orders of degeneration at the nef boundary</a><code class="tag-id">3567ADAA7365</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--elliptic-surface-volumes-and-order-spectra/"><span>12.21</span> Elliptic surface volumes and order spectra</a><code class="tag-id">E4B29689FB79</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--comparison-under-an-arbitrary-modification/"><span>12.22</span> Comparison under an arbitrary modification</a><code class="tag-id">9BED3D691F82</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--strict-changes-under-one-blowup/"><span>12.23</span> Strict changes under one blowup</a><code class="tag-id">D0D47B7389D7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--positive-current-subtraction-and-divisorial-residuals/"><span>12.24</span> Positive-current subtraction and divisorial residuals</a><code class="tag-id">57C0ECEB4F4C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--integer-orders-in-fixed-projective-cones/"><span>12.25</span> Integer orders in fixed projective cones</a><code class="tag-id">E6D8A97F4D2C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--a-maximum-rank-comparison-criterion/"><span>12.26</span> A maximum-rank comparison criterion</a><code class="tag-id">493311C8FB2F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-anticanonical-curves/"><span>12.27</span> Flat anticanonical curves</a><code class="tag-id">0E9176045572</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-divisors-and-hartogs-extension/"><span>12.28</span> Flat divisors and Hartogs extension</a><code class="tag-id">25D1457FC429</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--punctured-line-bundles-and-elliptic-quotients/"><span>12.29</span> Punctured line bundles and elliptic quotients</a><code class="tag-id">76F771FE4DA3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-torsors-on-split-elliptic-ruled-surfaces/"><span>12.30</span> Cotangent torsors on split elliptic ruled surfaces</a><code class="tag-id">E4B698D2AEE3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--symmetric-tensors-on-split-elliptic-ruled-surfaces/"><span>12.31</span> Symmetric tensors on split elliptic ruled surfaces</a><code class="tag-id">7CF6C47CAA92</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--section-algebras-of-cotangent-extensions/"><span>12.32</span> Section algebras of cotangent extensions</a><code class="tag-id">72E247F3A7CA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-extensions-with-zero-ruling-component/"><span>12.33</span> Cotangent extensions with zero ruling component</a><code class="tag-id">C9CE007F34A7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/" aria-current="page"><span>12.34</span> Current tests for smooth positivity</a><code class="tag-id">509A5021C77D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/"><span>12.35</span> Divisorial constraints and residual volume</a><code class="tag-id">269CE892EA5B</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-divisorial-threshold-on-the-hopf-threefold/"><span>12.36</span> A divisorial threshold on the Hopf threefold</a><code class="tag-id">7F944D8C8D92</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/AD465D07A4C1/"><span>← Previous</span><small>Problem 12.33.4</small></a><a class="pager-next" rel="next" href="../../tag/FC99385C18B8/"><span>Next →</span><small>Theorem 12.34.1</small></a></nav><h1>12.34 Current tests for smooth positivity<code class="tag-id">509A5021C77D</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-509A5021C77D" data-section-entries="509A5021C77D 635FE1D11798 FC99385C18B8"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="29251027"><code class="tag-id">509A5021C77D</code></span>
+<p>
+Lamari's duality, theorem <a data-tag="87DC00D0" href="../../tag/88BE3B63D9E5/">11.6.1</a>, characterizes pseudoeffective backgrounds by their pairings with Gauduchon metrics. Smooth positivity, and hence nefness, is characterized in the same way by pairing with all positive $\mathrm{dd}^{\mathrm{c}}$-closed $(n-1,n-1)$-currents. By the Hahn–Banach theorem, the minimum of these pairings over normalized currents is exactly the largest $a$ such that $\theta +\mathrm{dd}^{\mathrm{c}}u&gt;ah$ for a smooth function $u$, and the nef boundary is where this minimum vanishes. The full set of currents is needed here: the closure of the smooth tests used in Lamari's duality detects pseudoeffectivity and bigness instead. The minimizing currents at the nef boundary appear again at the maximal time of the Chern–Ricci flow, and positive variational volume forces their determinant-weighted measures to vanish. 
+</p>
+<p>
+Let $X$ again be a connected compact complex manifold of dimension $n\geq 1$. Fix a Hermitian metric $h$, and let $\mathscr G_ h$ be the set of normalized Gauduchon currents of section <a data-tag="941A1AE6" href="../../tag/A532E9A2E94A/">11.7</a>, that is, positive $\mathrm{dd}^{\mathrm{c}}$-closed $(n-1,n-1)$-currents $T$ with $\int _ Xh\wedge T=1$. This set is weakly compact for $n\geq 2$. For $n=1$, elliptic regularity and the maximum principle give $\mathscr G_ h=\{ 1/\int _ Xh\} $, so compactness holds in this case as well.  For a smooth real $(1,1)$-form $\theta $, define 
+</p>
+<div class="equation">
+  \[  m_ h(\theta )=\min _{T\in \mathscr G_ h}\int _ X\theta \wedge T.  \]
+</div>
+<p>
+ The minimum exists by weak compactness, and it is finite since $-Ch\leq \theta \leq Ch$ for some constant $C$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-DC850E04">
+<p><a class="environment-identifier" href="../../tag/FC99385C18B8/">Theorem <span data-tag="DC850E04">12.34.1</span>.</a><span data-gerby-tag="DC850E04"><code class="tag-id">FC99385C18B8</code></span> The background $\theta $ has a smooth positive representative if and only if $m_ h(\theta )&gt;0$. Moreover, $\theta $ is nef if and only if $m_ h(\theta )\geq 0$, and </p>
+<div class="equation">
+  \[  m_ h(\theta )=\sup \{ a\in \mathbb R:\  \exists u\in C^\infty (X,\mathbb R), \  \theta +\mathrm{dd}^{\mathrm{c}}u&gt;ah\} .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\theta +\mathrm{dd}^{\mathrm{c}}u\geq ah$ with $a&gt;0$ and $u$ smooth, then integration by parts gives $\int _ X\theta \wedge T\geq a$ for every $T\in \mathscr G_ h$. Since a smooth positive representative satisfies such a bound for some $a&gt;0$ by compactness, this proves one implication. 
+    <p>
+      For the converse, work in the real Fréchet space of smooth real $(1,1)$-forms. Let $\mathcal K$ be its open convex cone of strictly positive forms, and let $\mathcal L=\mathrm{dd}^{\mathrm{c}}C^\infty (X,\mathbb R)$. If the affine subspace $\theta +\mathcal L$ is disjoint from $\mathcal K$, the Hahn–Banach separation theorem for an open convex set and a disjoint affine subspace gives a nonzero continuous real linear functional $T$ with 
+    
+<div class="equation">
+  \[  T(\theta +\ell )\leq T(\eta )\qquad (\ell \in \mathcal L,\  \eta \in \mathcal K).  \]
+</div>
+<p>
+       Replacing $\ell $ by arbitrary real multiples shows that $T(\mathcal L)=0$. Scaling a fixed $\eta \in \mathcal K$ to zero shows that $T(\theta )\leq 0$, while scaling it to infinity shows that $T(\eta )\geq 0$. Since every smooth semipositive form is a limit of strictly positive forms, $T$ is a positive current, and positivity makes it a current of order zero. The equality $T(\mathcal L)=0$ says exactly that $\mathrm{dd}^{\mathrm{c}}T=0$. Since $T\ne 0$ and $h&gt;0$, the trace $T(h)$ is positive, and normalizing $T$ gives an element of $\mathscr G_ h$ with nonpositive pairing against $\theta $. This contradicts $m_ h(\theta )&gt;0$ and proves the converse. 
+    <p>
+      Applying the equivalence just proved to $\theta -ah$, and using $m_ h(\theta -ah)=m_ h(\theta )-a$, shows that the set in the supremum is exactly $(-\infty ,m_ h(\theta ))$. Finally, $\theta $ is nef if and only if $\theta +\varepsilon h$ has a smooth positive representative for every $\varepsilon &gt;0$, that is, if and only if $m_ h(\theta )+\varepsilon &gt;0$ for all such $\varepsilon $, or equivalently $m_ h(\theta )\geq 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+ For $n\geq 2$, let $\mathscr C_ h\subseteq \mathscr G_ h$ be the weak closure of the smooth strictly positive normalized Gauduchon forms, and let $\kappa _ h(\theta )$ be the linear positivity threshold of corollary <a data-tag="EAE0F4AE" href="../../tag/F83E15A1F529/">11.6.2</a>, which is the minimum of $\int _ X\theta \wedge T$ over $T\in \mathscr C_ h$, by section <a data-tag="941A1AE6" href="../../tag/A532E9A2E94A/">11.7</a>. The inclusion $\mathscr C_ h\subseteq \mathscr G_ h$ gives $m_ h(\theta )\leq \kappa _ h(\theta )$. The larger test set detects smooth positivity and nefness, whereas the weak closure of the smooth tests detects the existence of positive and of strictly positive currents in the class, that is, pseudoeffectivity and bigness. The inequality can be strict, as example <a data-tag="1D976FC2" href="../../tag/0C57A6C5BFEC/">10.18.3</a> shows. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-39289E45">
+<p><a class="environment-identifier" href="../../tag/635FE1D11798/">Proposition <span data-tag="39289E45">12.34.2</span>.</a><span data-gerby-tag="39289E45"><code class="tag-id">635FE1D11798</code></span> Let $\theta $ be nef with $\lambda _\mu (\theta )&gt;0$. If $T\in \mathscr G_ h$ satisfies $\int _ X\theta \wedge T=0$, then the determinant-weighted measure of $T$, computed as in (<a data-tag="919BAA56" href="../../tag/A99038CD10B4/">12.7.1</a>) with reference metric $h$ and with $\mu $ in place of $\mathrm e^ F\mathrm dV$, vanishes. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In dimension one the hypotheses cannot hold, since $\int _ X\theta \wedge T=\lambda _\mu (\theta )/\int _ Xh&gt;0$. Suppose $n\geq 2$, and write $D_\mu (T)$ for the total mass of this determinant-weighted measure; for $T=\gamma ^{n-1}$ it is the denominator $D_\mu (\gamma )$ of definition <a data-tag="6E1DBC11" href="../../tag/0C4AF7E2CEBB/">12.2.1</a>. If $\eta \in \mathscr P$, its solution form $\Omega $ satisfies $\Omega ^ n=\lambda _\mu (\eta )^ n\mu $, so $\Omega /\lambda _\mu (\eta )$ is an admissible test in the infimum of lemma <a data-tag="EF340E54" href="../../tag/FB6C2382E066/">12.7.2</a>. Together with Stokes' theorem, this gives 
+    
+<div class="equation">
+  \[  \int _ X\eta \wedge T=\int _ X\Omega \wedge T \geq \lambda _\mu (\eta )D_\mu (T).  \]
+</div>
+<p>
+       Apply this to $\eta =\theta +\varepsilon h$. The left side equals $\varepsilon $, while theorem <a data-tag="F03E2CAC" href="../../tag/9ECB2B21B601/">12.11.1</a> gives $\lambda _\mu (\eta )\to \lambda _\mu (\theta )&gt;0$. Hence $D_\mu (T)=0$. The determinant-weighted measure is positive and has total mass zero, so it vanishes. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Thus, at a nef background of positive volume, every annihilating current in $\mathscr G_ h$ has a coefficient matrix of deficient rank almost everywhere with respect to its trace measure. This alone does not force the trace measure to be supported on an analytic subset. 
+</p>
+</div></section><section class="reading-chunk" id="entry-355CACEF1F3C" data-section-entries="00A6644760C0 355CACEF1F3C 90A4213A9E87 A5486C5A27CF B6FA0B70406A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/355CACEF1F3C/">12.34.3 Maximal time of the Chern–Ricci flow</a><code class="tag-id">355CACEF1F3C</code></h2><span data-gerby-tag="577E27B5"></span>
+<p>
+The Chern–Ricci flow deforms a Hermitian metric by $\partial _ t\omega =-\operatorname {Ric}(\omega )$. Since the Chern–Ricci forms of any two Hermitian metrics differ by a $\mathrm{dd}^{\mathrm{c}}$-exact form, a solution starting at $\omega _0$ stays in the affine family $\omega _0-t\operatorname {Ric}(\omega _0)$ modulo $\mathrm{dd}^{\mathrm{c}}$ of smooth functions. It can therefore exist only as long as this family has smooth positive representatives. Conversely, a positive representative at a later time provides a uniformly positive reference path, and parabolic estimates exclude an earlier singularity. The current criterion of theorem <a data-tag="DC850E04" href="../../tag/FC99385C18B8/">12.34.1</a> then computes the lifetime. 
+</p>
+<p>
+Let $\omega _0$ be the initial Hermitian metric. For a Hermitian form $\omega $ on $X$ we use the Chern–Ricci form 
+</p>
+<div class="equation">
+  \[  \operatorname {Ric}(\omega )=-\mathrm{i}\partial \bar\partial \log \omega ^ n =-2\pi \mathrm{dd}^{\mathrm{c}}\log \omega ^ n,  \]
+</div>
+<p>
+ where $\omega ^ n$ is identified with its coefficient in local holomorphic coordinates; a change of coordinates changes $\log \omega ^ n$ by a pluriharmonic function and does not affect the form. This normalization fixes the time scale of the flow $\partial _ t\omega =-\operatorname {Ric}(\omega )$. Put $\chi =\operatorname {Ric}(\omega _0)$ and $\theta _ t=\omega _0-t\chi $. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-4918E1F8">
+<p><a class="environment-identifier" href="../../tag/B6FA0B70406A/">Theorem <span data-tag="4918E1F8">12.34.4</span>.</a><span data-gerby-tag="4918E1F8"><code class="tag-id">B6FA0B70406A</code></span> The Chern–Ricci flow starting from $\omega _0$ has a unique maximal smooth solution on $[0,\tau )$, where </p>
+<div class="equation">
+  \[  \tau =\sup \{ t\geq 0:\  \theta _ t\text{ has a smooth positive representative}\} .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Call a time $t\geq 0$ admissible if $\theta _ t$ has a smooth positive representative. The admissible times form an interval containing zero, since convex combinations of positive representatives at two times are positive representatives at the intermediate times, and the set is open because positivity is an open condition. We show that the flow exists on $[0,t_1)$ for every admissible $t_1&gt;0$ and that it cannot exist beyond $\tau $. 
+    <p>
+<em>Step 1: the scalar equation.</em> Fix an admissible $t_1&gt;0$, and choose a smooth real function $a$ with $\theta _{t_1}+\mathrm{dd}^{\mathrm{c}}a&gt;0$. The reference forms 
+    
+<div class="equation">
+  \[  \gamma _ t=\theta _ t+\frac t{t_1}\mathrm{dd}^{\mathrm{c}}a =\left(1-\frac t{t_1}\right)\omega _0 +\frac t{t_1}(\theta _{t_1}+\mathrm{dd}^{\mathrm{c}}a),\qquad 0\leq t\leq t_1,  \]
+</div>
+<p>
+       are uniformly positive, with all derivatives uniformly bounded. Put 
+    
+<div class="equation">
+  \[  \Omega =\mathrm{e}^{a/(2\pi t_1)}\omega _0^ n.  \]
+</div>
+<p>
+       Then $\dot\gamma _ t=-\operatorname {Ric}(\Omega )$, where the Ricci form of a volume form is defined by the same local expression. Consider the scalar equation 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-5871FBCA"><span data-gerby-tag="5871FBCA"><code class="tag-id">00A6644760C0</code></span>
+<span class="equation-label"><a data-tag="5871FBCA" href="../../tag/00A6644760C0/">12.34.5</a></span>
+<div>\begin{equation}  \dot u=2\pi \log \frac{(\gamma _ t+\mathrm{dd}^{\mathrm{c}}u)^ n}{\Omega }, \qquad \gamma _ t+\mathrm{dd}^{\mathrm{c}}u&gt;0,\qquad u(0)=0. \end{equation}</div>
+</div>
+<p>
+       Applying $\mathrm{dd}^{\mathrm{c}}$ shows that $\omega (t)=\gamma _ t+\mathrm{dd}^{\mathrm{c}}u(t)$ solves the metric flow. Conversely, for a solution $\omega (t)$ of the metric flow, the function $u(t)=2\pi \int _0^ t\log (\omega (s)^ n/\Omega )\, \mathrm ds$ satisfies $\omega (t)=\gamma _ t+\mathrm{dd}^{\mathrm{c}}u(t)$ and solves (<a data-tag="5871FBCA" href="../../tag/00A6644760C0/">12.34.5</a>). The linearization of (<a data-tag="5871FBCA" href="../../tag/00A6644760C0/">12.34.5</a>) is $\partial _ t-2\pi \operatorname {tr}_{\omega (t)}\mathrm{dd}^{\mathrm{c}}$, a strictly parabolic operator, so the classical short-time existence theory for smooth strictly parabolic equations gives a solution. The difference of two solutions satisfies a linear parabolic equation whose principal coefficients, the averages of the inverse metrics along the segment between the two solutions, are positive; the maximum principle therefore proves uniqueness. 
+    <p>
+      Suppose that the maximal time $t_*$ of this solution satisfies $t_*&lt;t_1$. We derive estimates independent of $t&lt;t_*$ that allow us to continue the solution. 
+    <p>
+<em>Step 2: bounds for $u$ and $\dot u$.</em> For a large constant $C$, the functions $Ct$ and $-Ct$ are a supersolution and a subsolution of (<a data-tag="5871FBCA" href="../../tag/00A6644760C0/">12.34.5</a>), respectively: at a spatial extremum of $u$ the complex Hessian has the appropriate sign, and $\gamma _ t^ n/\Omega $ is bounded above and away from zero. The maximum principle gives $|u|\leq Ct_1$. 
+    <p>
+      Set $v=\dot u$ and $\mathcal L=2\pi \operatorname {tr}_{\omega (t)}\mathrm{dd}^{\mathrm{c}}$. Differentiation gives 
+    
+<div class="equation">
+  \[  (\partial _ t-\mathcal L)v=2\pi \operatorname {tr}_{\omega (t)}\dot\gamma _ t, \qquad (\partial _ t-\mathcal L)u=v-2\pi n+2\pi \operatorname {tr}_{\omega (t)}\gamma _ t.  \]
+</div>
+<p>
+       Since $\gamma _ t$ is affine in time, these identities imply 
+    
+<div class="equation">
+  \begin{align*}  (\partial _ t-\mathcal L)(t v-u-2\pi nt) &amp; =-2\pi \operatorname {tr}_{\omega (t)}\omega _0&lt;0,\\  (\partial _ t-\mathcal L)((t_1-t)v+u+2\pi nt) &amp; =2\pi \operatorname {tr}_{\omega (t)}\gamma _{t_1}&gt;0. \end{align*}
+</div>
+<p>
+       By the maximum principle, the first expression is bounded above by its initial value zero, and the second is bounded below by $\min _ Xt_1v(0)$. The bound for $u$ and $t_1-t\geq t_1-t_*&gt;0$ give a lower bound for $v$. The first inequality gives an upper bound for $v$ on $[t_*/2,t_*)$, and the smooth solution bounds it on $[0,t_*/2]$. In particular, $\omega (t)^ n/\Omega =\mathrm{e}^{v/(2\pi )}$ is bounded above and away from zero. 
+    <p>
+<em>Step 3: a parabolic trace inequality.</em> We next bound the trace, keeping track of the time derivative of the reference metric. In the coordinates of lemma <a data-tag="FE968158" href="../../tag/BC4847C0CD7D/">14.5.1</a>, write $g(t)$ for the matrix of $\gamma _ t$ and, as in that lemma, $h=g+(u_{i\bar j})$ for the matrix of $\omega (t)$. Put 
+    
+<div class="equation">
+  \[  S=\operatorname {tr}_ g h,\qquad B=\operatorname {tr}_ h g, \qquad F=\log \frac{\Omega }{\gamma _ t^ n},  \]
+</div>
+<p>
+       so that $\log (\det h/\det g)=v/(2\pi )+F$. The family $g(t)$ has uniformly bounded Chern torsion and curvature, so at each fixed time lemma <a data-tag="FE968158" href="../../tag/BC4847C0CD7D/">14.5.1</a> applies with uniform constants. Direct differentiation of $S$ gives 
+    
+<div class="equation">
+  \[  \partial _ t\log S =\frac{\Delta _ g v+\operatorname {tr}_ g\dot g}{S} -\frac{\operatorname {tr}(g^{-1}\dot g\, g^{-1}h)}{S}.  \]
+</div>
+<p>
+       In $(\partial _ t-\mathcal L)\log S$, the term $\Delta _ gv/S$ cancels the corresponding term in the lower bound for $\mathcal L\log S$ given by the lemma. With $\tau _ k=\sum _ iT_{ik}^ i$ the torsion trace of $g(t)$, as in the lemma, we obtain on $\{ S\geq 1\} $ 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-E9D509DA"><span data-gerby-tag="E9D509DA"><code class="tag-id">A5486C5A27CF</code></span>
+<span class="equation-label"><a data-tag="E9D509DA" href="../../tag/A5486C5A27CF/">12.34.6</a></span>
+<div>\begin{equation}  (\partial _ t-\mathcal L)\log S \leq -\frac{4\pi }{S^2}\operatorname {Re}(h^{k\bar q}\tau _ k S_{\bar q})+CB+C. \end{equation}</div>
+</div>
+<p>
+       Indeed, $\Delta _ gF$ and $\operatorname {tr}_ g\dot g$ are uniformly bounded, $S^{-1}\leq B/n^2$, and $-Cg\leq \dot g\leq Cg$ bounds the last quotient above. These bounds account for all the terms coming from the time dependence of the reference metric. 
+    <p>
+<em>Step 4: the trace bound.</em> Choose a constant $C_0$ such that $1\leq s=u+C_0\leq D$ on the whole time interval, and maximize 
+    
+<div class="equation">
+  \[  Q=\log S-Au+s^{-1}  \]
+</div>
+<p>
+       on $X\times [0,t_0]$, where $t_0&lt;t_*$ and the constant $A\geq 1$ will be fixed independently of $t_0$. If the maximum is attained at time zero, the initial data bound $Q$. At a maximum with positive time, $\partial \log S=(A+s^{-2})\partial u$. Since $|\tau |_ h^2\leq CB$, Young's inequality bounds the absolute value of the first term on the right of (<a data-tag="E9D509DA" href="../../tag/A5486C5A27CF/">12.34.6</a>) by 
+    
+<div class="equation">
+  \[  2\pi s^{-3}|\partial u|_ h^2 +\frac{C(A+1)^2s^3}{S^2}B.  \]
+</div>
+<p>
+       If $S^2\leq (A+1)^2D^3$, the trace is already bounded at the maximum. Otherwise the last coefficient is at most $C$, and 
+    
+<div class="equation">
+  \[  \begin{split}  0\leq (\partial _ t-\mathcal L)Q &amp; \leq CB+C-(A+s^{-2})(v-2\pi n+2\pi B) -2\pi s^{-3}|\partial u|_ h^2\\ &amp; \leq (C-2\pi A)B+C(A+1). \end{split}  \]
+</div>
+<p>
+       Choosing $A$ with $2\pi A&gt;C+1$ bounds $B$ at the maximum. In terms of the eigenvalues, $S\leq n(\det h/\det g)B^{n-1}$ for $n\geq 2$, and $S=\det h/\det g$ for $n=1$, so the determinant bound of Step 2 bounds $S$ at the maximum in every case. The bound for $u$ transfers this estimate from $Q$ to $S$ everywhere, uniformly in $t_0$, and the lower bound for the determinant then bounds the smallest eigenvalue away from zero. Thus $\omega (t)$ and $\gamma _ t$ are uniformly equivalent for $t&lt;t_*$. 
+    <p>
+<em>Step 5: higher estimates and continuation.</em> Uniform ellipticity now gives the higher estimates by classical local parabolic regularity. In a coordinate ball, write the logarithmic determinant as a concave function of the complex part of the real Hessian. On the compact set of positive matrices just obtained, its supporting affine functions have uniformly positive and bounded slopes, and their infimum extends the operator to a concave, uniformly elliptic function of all real symmetric matrices. The dependence on space and time enters only through the smooth family $g(t)$ and the fixed density $\Omega $. The parabolic Evans–Krylov estimate gives uniform $C^{2+\alpha ,1+\alpha /2}$ bounds away from the initial time, and the smooth solution covers a fixed initial interval. Differentiating the equation and applying parabolic Schauder estimates then bounds all spatial and time derivatives uniformly. This is the parabolic counterpart of the local argument used in corollary <a data-tag="AC24B5B7" href="../../tag/36B42C74EE0B/">14.5.8</a>. 
+    <p>
+      The bounds for the time derivatives show that $u(t)$ converges in every spatial $C^ k$ norm as $t\uparrow t_*$. By uniform ellipticity, the smooth limit still has a strictly positive solution form, and short-time existence with this limit as initial datum extends the solution beyond $t_*$, a contradiction. Hence the flow exists up to every admissible time $t_1$, and by uniqueness these solutions patch together on $[0,\tau )$. 
+    <p>
+<em>Step 6: maximality.</em> Integrating the metric flow gives 
+    
+<div class="equation">
+  \[  \omega (t)=\theta _ t+\mathrm{dd}^{\mathrm{c}}\left(2\pi \int _0^ t \log \frac{\omega (s)^ n}{\omega _0^ n}\, \mathrm{d}s\right).  \]
+</div>
+<p>
+       Hence every time at which a smooth positive solution exists is admissible, which proves maximality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Combining the continuation theorem with the current criterion gives a numerical description of the lifetime. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-4896A877">
+<p><a class="environment-identifier" href="../../tag/90A4213A9E87/">Corollary <span data-tag="4896A877">12.34.7</span>.</a><span data-gerby-tag="4896A877"><code class="tag-id">90A4213A9E87</code></span> Let </p>
+<div class="equation">
+  \[  b=\max _{T\in \mathscr G_{\omega _0}}\int _ X\chi \wedge T.  \]
+</div>
+<p> Then the maximal smooth existence time is </p>
+<div class="equation">
+  \[  \tau =\begin{cases} 1/b,&amp; b&gt;0,\\ +\infty ,&amp; b\leq 0.\end{cases}  \]
+</div>
+<p> If $\tau &lt;\infty $, the limiting background $\theta _\tau $ is nef and there is a current $T_*\in \mathscr G_{\omega _0}$ with $\int _ X\theta _\tau \wedge T_*=0$. If moreover $\lambda _\mu (\theta _\tau )&gt;0$, every such annihilating current has zero determinant-weighted measure. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $t\geq 0$, the normalization of the test currents gives the identity 
+    
+<div class="equation">
+  \[  m_{\omega _0}(\theta _ t)=1-tb.  \]
+</div>
+<p>
+       Theorem <a data-tag="DC850E04" href="../../tag/FC99385C18B8/">12.34.1</a>, Theorem <a data-tag="4918E1F8" href="../../tag/B6FA0B70406A/">12.34.4</a> give the formula for $\tau $. When $b&gt;0$, the maximum defining $b$ is attained by weak compactness, and a maximizer $T_*$ annihilates $\theta _\tau $. The same identity gives $m_{\omega _0}(\theta _\tau )=0$, hence nefness. The last assertion is proposition <a data-tag="39289E45" href="../../tag/635FE1D11798/">12.34.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+ Along the flow, $\omega (t)=\theta _ t+\mathrm{dd}^{\mathrm{c}}\varphi _ t$ with a smooth potential $\varphi _ t$. Consequently, for every fixed $T\in \mathscr G_{\omega _0}$, 
+</p>
+<div class="equation">
+  \[  \int _ X\omega (t)\wedge T =1-t\int _ X\chi \wedge T.  \]
+</div>
+<p>
+ These traces describe the obstruction at the maximal time without any bound on the total Monge–Ampère mass. They do not locate the singularities of the flow, nor do they give smooth convergence away from an analytic set; such geometric questions require local estimates in addition to these scalar pairings. 
+</p>
+</div></section><section class="reading-chunk" id="entry-382AAED0F384" data-section-entries="348CDC5BE9A1 382AAED0F384 83512AFDC859 AFAF4566FE5D C648779A3DE9"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/382AAED0F384/">12.34.8 A positive-volume endpoint that is not big</a><code class="tag-id">382AAED0F384</code></h2><span data-gerby-tag="3D9708DA"></span>
+<p>
+Backgrounds reached at the maximal time of a Chern–Ricci flow are not better behaved, as far as the relation between positive volume and bigness is concerned. The radial background of section <a data-tag="9D7CBE5E" href="../../tag/E4AB7B03C20D/">12.14</a> occurs, up to a smooth $\mathrm{dd}^{\mathrm{c}}$ change, as the limiting background of a Chern–Ricci flow at its maximal time. The normalized currents annihilating it can also be described explicitly. 
+</p>
+<p>
+We use the notation of section <a data-tag="9D7CBE5E" href="../../tag/E4AB7B03C20D/">12.14</a>: $n=m+1\geq 3$, $t=(m-1)/m$, $a=x/t$, and 
+</p>
+<div class="equation">
+  \[  X=\mathbb P^ m\times \mathbb P^1,\qquad \theta =\omega +a w,\qquad \mu =\omega ^ m\wedge w, \qquad Z=\{ p\} \times \mathbb P^1,  \]
+</div>
+<p>
+ where $\omega $ and $w$ are the normalized Fubini–Study forms pulled back from the two factors, so that $\mu $ is a probability form. Start the flow from the Hermitian metric 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-6932A807"><span data-gerby-tag="6932A807"><code class="tag-id">C648779A3DE9</code></span>
+<span class="equation-label"><a data-tag="6932A807" href="../../tag/C648779A3DE9/">12.34.9</a></span>
+<div>\begin{equation}  \omega _0=(n+1)\omega +(a+2)w. \end{equation}</div>
+</div>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-E7934A47">
+<p><a class="environment-identifier" href="../../tag/AFAF4566FE5D/">Theorem <span data-tag="E7934A47">12.34.10</span>.</a><span data-gerby-tag="E7934A47"><code class="tag-id">AFAF4566FE5D</code></span> With the normalization of the Ricci form in <a data-tag="577E27B5" href="../../tag/355CACEF1F3C/">12.34.3</a>, the maximal smooth existence time of the Chern–Ricci flow starting from $\omega _0$ is $\tau =1/(2\pi )$. The limiting background $\alpha _\tau =\omega _0-\tau \operatorname {Ric}(\omega _0)$ is nef and not big, and </p>
+<div class="equation">
+  \[  \alpha _\tau =\theta +\mathrm{dd}^{\mathrm{c}}\log (a+2),\qquad \mathcal V_\mu (\alpha _\tau )=n.  \]
+</div>
+<p> Its variational volume is positive for every smooth strictly positive probability form on $X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The initial metric is strictly positive, and 
+    
+<div class="equation">
+  \[  \omega _0^ n=n(n+1)^ m(a+2)\mu .  \]
+</div>
+<p>
+       With our normalization, the Ricci forms of the normalized Fubini–Study metrics are $2\pi n\omega $ and $4\pi w$. Consequently 
+    
+<div class="equation">
+  \[  \operatorname {Ric}(\omega _0) =2\pi \bigl (n\omega +2w-\mathrm{dd}^{\mathrm{c}}\log (a+2)\bigr ).  \]
+</div>
+<p>
+       Write $s$ for the flow time and put $r=2\pi s$. The affine background is 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-BB139725"><span data-gerby-tag="BB139725"><code class="tag-id">348CDC5BE9A1</code></span>
+<span class="equation-label"><a data-tag="BB139725" href="../../tag/348CDC5BE9A1/">12.34.11</a></span>
+<div>\begin{equation}  \alpha _ s=(n+1-nr)\omega +(a+2-2r)w +r\mathrm{dd}^{\mathrm{c}}\log (a+2). \end{equation}</div>
+</div>
+<p>
+       For $0\leq r&lt;1$, adding $\mathrm{dd}^{\mathrm{c}}$ of the smooth function $-r\log (a+2)$ gives a strictly positive representative: the horizontal coefficient is at least one and the vertical coefficient is at least $2(1-r)&gt;0$. At $r=1$ we obtain the identity $\alpha _\tau =\theta +\mathrm{dd}^{\mathrm{c}}\log (a+2)$. Since the logarithm is a smooth function on $X$, the bijection $u\mapsto u-\log (a+2)$ between the potentials of the two backgrounds preserves nefness and bigness, and Stokes' theorem for Gauduchon metrics shows that the variational volume is unchanged. Theorem <a data-tag="7A1559DF" href="../../tag/ECAB6BFB33FD/">12.14.6</a> therefore shows that the endpoint background is nef, not big, and of volume $n$. 
+    <p>
+      For $r&gt;1$, choose a nonzero smooth nonnegative function $f$ on the base supported in $\{ a+2-2r&lt;0\} $, a neighborhood of $p$. Its pullback $S=f\omega ^ m$ is a closed semipositive $(n-1,n-1)$-form. For every quasi-plurisubharmonic function $v$, distributional Stokes gives 
+    
+<div class="equation">
+  \[  \int _ X(\alpha _ s+\mathrm{dd}^{\mathrm{c}}v)\wedge S =\int _{\mathbb P^ m}f(a+2-2r)\omega ^ m&lt;0,  \]
+</div>
+<p>
+       so $\alpha _ s$ is not even pseudoeffective for $r&gt;1$. At $r=1$, a smooth positive representative would contradict nonbigness. Thus $r=1$ is the supremum of the admissible times, and theorem <a data-tag="4918E1F8" href="../../tag/B6FA0B70406A/">12.34.4</a> gives the smooth flow on $[0,\tau )$ with exactly this lifetime; the reference representatives used above need not solve the flow equation. Finally, proposition <a data-tag="408236E7" href="../../tag/37E6FFC01EDB/">12.15.1</a> gives positivity of the volume for every smooth positive probability form. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-233B5FB5">
+<p><a class="environment-identifier" href="../../tag/83512AFDC859/">Proposition <span data-tag="233B5FB5">12.34.12</span>.</a><span data-gerby-tag="233B5FB5"><code class="tag-id">83512AFDC859</code></span> The current $[Z]/2$ belongs to $\mathscr G_{\omega _0}$ and annihilates $\alpha _\tau $. Every $R\in \mathscr G_{\omega _0}$ with $\int _ X\alpha _\tau \wedge R=0$ has its trace probability $\sigma _ R=\omega _0\wedge R$ supported on $Z$. In the coefficient-matrix convention of section <a data-tag="3314ED2C" href="../../tag/54ADA5D399DA/">12.7</a>, its matrix is </p>
+<div class="equation">
+  \[  P_ R=n\Pi _{\mathrm{vert}}\qquad \sigma _ R\text{-almost everywhere},  \]
+</div>
+<p> where $\Pi _{\mathrm{vert}}$ is the $\omega _0$-orthogonal projection onto the tangent line of the fiber $\{ p\} \times \mathbb P^1$. In particular, $P_ R$ has rank one, and the determinant-weighted measure of $R$ vanishes for every smooth positive reference density. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Only smooth forms need to be restricted to $Z$, and their restrictions satisfy $\omega _0|_ Z=2w$ and $\alpha _\tau |_ Z=0$. This proves that $[Z]/2$ is normalized and annihilates $\alpha _\tau $. 
+    <p>
+      Let $R$ be a general annihilator. Since $\alpha _\tau $ and $\theta $ differ by $\mathrm{dd}^{\mathrm{c}}$ of a smooth function, Stokes' theorem gives $\int _ X\theta \wedge R=0$. The measure $\theta \wedge R$ is nonnegative, so it vanishes. On every compact set $K\subset X\setminus Z$, the explicit form $\theta $ satisfies $\theta \geq c_ K\omega _0$ for some $c_ K&gt;0$. Thus $\sigma _ R(K)=0$, and a countable exhaustion by compact sets shows that $\sigma _ R$ is supported on $Z$. 
+    <p>
+      Relative to $\omega _0$, the matrix of $R$ is characterized, for smooth test forms $\beta $ with matrix $B_\beta $, by 
+    
+<div class="equation">
+  \[  \beta \wedge R=\frac1n\operatorname {tr}(B_\beta P_ R)\sigma _ R, \qquad P_ R\geq 0,\qquad \operatorname {tr}P_ R=n.  \]
+</div>
+<p>
+       At points of $Z$, the form $\theta $ is positive on the horizontal $m$-plane and vanishes on the vertical line. The vanishing of $\theta \wedge R$ therefore forces all horizontal diagonal entries of $P_ R$ to vanish, and the inequality $|(P_ R)_{ij}|^2\leq (P_ R)_{ii}(P_ R)_{jj}$ for positive matrices removes their rows and columns. The remaining vertical entry is $n$, which proves the formula and the vanishing of the determinant. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+For each such annihilator $R$, the trace identity at the end of <a data-tag="577E27B5" href="../../tag/355CACEF1F3C/">12.34.3</a> becomes 
+</p>
+<div class="equation">
+  \[  \int _ X\omega (s)\wedge R=1-2\pi s, \qquad 0\leq s&lt;1/(2\pi ).  \]
+</div>
+<p>
+ This is a statement about averaged traces. The support statement uses the explicit semipositive representative $\theta $ of the endpoint class; the vanishing of the determinant alone would not give it. Neither statement concerns pointwise collapse of the metrics, their local convergence, or uniqueness of the trace probability. 
+</p>
+</div></section><section class="reading-chunk" id="entry-FFD5AB006AEF" data-section-entries="706929790BE5 FFD5AB006AEF"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/FFD5AB006AEF/">12.34.13 Twisting and distance bounds</a><code class="tag-id">FFD5AB006AEF</code></h2><span data-gerby-tag="7756B9F4"></span>
+<p>
+A twisted Chern–Ricci flow is the equation $\partial _ t\omega =-\operatorname {Ric}(\omega )+\zeta $, where the twist $\zeta $ is a fixed smooth closed real $(1,1)$-form. Diameter bounds along such flows cannot depend only on the maximal time and on the initial Monge–Ampère density: the twist and the length of the time interval enter the geometry, even for flat Kähler metrics. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-F61A86A9">
+<p><a class="environment-identifier" href="../../tag/706929790BE5/">Example <span data-tag="F61A86A9">12.34.14</span>.</a><span data-gerby-tag="F61A86A9"><code class="tag-id">706929790BE5</code></span> Let $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$, let $X=E^ n$ with $n\geq 2$, and let $\eta _ j=(\mathrm i/2)\mathrm dz_ j\wedge \mathrm d\bar z_ j$ be the flat forms pulled back from the factors. Put $\omega _0=\sum _{j=1}^ n\eta _ j$. All the flows below start at $\omega _0$, with potential zero and initial density one relative to $\omega _0^ n$. In particular, hypotheses on the initial data expressed through a decomposition $\mathrm e^{\psi ^+-\psi ^-}$ of the density, with quasi-plurisubharmonic functions $\psi ^\pm $ subject to fixed $L^ p$ bounds, hold uniformly for all these flows, with $\psi ^+=\psi ^-=0$. </p>
+<p>For each $M&gt;0$, the twist $\zeta _ M=M\eta _1-\eta _2$ gives the explicit solution </p>
+<div class="equation">
+  \[  \omega _ M(t)=(1+Mt)\eta _1+(1-t)\eta _2+ \sum _{j=3}^ n\eta _ j, \qquad 0\leq t&lt;1,  \]
+</div>
+<p> of $\partial _ t\omega =-\operatorname {Ric}(\omega )+\zeta _ M$. Its maximal smooth existence time is exactly one, while </p>
+<div class="equation">
+  \[  \operatorname {diam}(X,\omega _ M(1/2)) \geq \sqrt{1+M/2}\, \operatorname {diam}(E,\eta _1).  \]
+</div>
+<p> For the single fixed twist $\zeta =\omega _0$, the solution is $(1+t)\omega _0$ for all $t\geq 0$, and its diameter grows as $\sqrt{1+t}\, \operatorname {diam}(X,\omega _0)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Each of these metrics has constant coefficients, so its Chern–Ricci form vanishes; differentiation in $t$ proves the flow equations, and positivity of the coefficients gives the stated existence intervals. In the first family, pair a hypothetical positive representative at a time $t\geq 1$ with the closed positive form $\eta _1\wedge \eta _3\wedge \cdots \wedge \eta _ n$, where the empty product is $1$ when $n=2$. The potential term integrates to zero, and the pairing is a positive fixed multiple of $1-t$, so it cannot be strictly positive. Integrating the flow equation shows that every smooth solution differs from the affine background by $\mathrm{dd}^{\mathrm{c}}$ of a smooth function, so no smooth positive continuation beyond $t=1$ is possible. 
+    <p>
+      Projection to the first elliptic factor does not increase lengths once the metric of that factor is scaled by $1+Mt$. Taking two points that differ only in the first factor proves the lower bound for the diameter. For the second flow, every path length is multiplied by $\sqrt{1+t}$, which proves the exact formula for the diameter. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+On a fixed finite time interval, a common Dini modulus for the potentials and a uniform bound for the affine backgrounds do give control of distances and diameters, by corollary <a data-tag="017413AB" href="../../tag/D3B517FBCE4F/">5.39.8</a>. The example shows why such bounds must be imposed when the twist varies or the time interval grows. It does not concern the limit metric at the maximal time of an untwisted flow. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/AD465D07A4C1/"><span>← Previous</span><small>Problem 12.33.4</small></a><a class="pager-next" rel="next" href="../../tag/FC99385C18B8/"><span>Next →</span><small>Theorem 12.34.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-a-gauduchon-variational-volume--current-tests-for-smooth-positivity,
+  author = {{Gerby contributors}},
+  title = {12.34 Current tests for smooth positivity},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fa-gauduchon-variational-volume--current-tests-for-smooth-positivity%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fa-gauduchon-variational-volume--current-tests-for-smooth-positivity%2F&amp;body=Page%3A+%5B12.34+Current+tests+for+smooth+positivity%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fa-gauduchon-variational-volume--current-tests-for-smooth-positivity%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+b90ca10fe8f83d8ff80567c6471a0bf354082026+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

@@ -1,0 +1,1033 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/"><title>12.10 Integrable densities in the compact Gauduchon problem · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/gauduchon-variational-volume/">Chapter 12: Gauduchon variational volume</a></li><li><a href="../../sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/" aria-current="page">Section 12.10: Integrable densities in the compact Gauduchon problem</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/a-gauduchon-variational-volume/"><span>12.1</span> A Gauduchon variational volume</a><code class="tag-id">881C26425D7A</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-quotient-and-the-smooth-equation/"><span>12.2</span> The quotient and the smooth equation</a><code class="tag-id">43BF29E33E59</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-equality-case-of-concavity-and-the-first-variation/"><span>12.3</span> The equality case of concavity and the first variation</a><code class="tag-id">484879715C58</code></li><li><a href="../../sections/a-gauduchon-variational-volume--second-variation-on-background-classes/"><span>12.4</span> Second variation on background classes</a><code class="tag-id">8A687EAB6B68</code></li><li><a href="../../sections/a-gauduchon-variational-volume--recovering-a-positive-class-from-its-gauduchon-derivative/"><span>12.5</span> Recovering a positive class from its Gauduchon derivative</a><code class="tag-id">9141861B4F50</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/"><span>12.6</span> The Hessian metric and its completion</a><code class="tag-id">466CEDF9AEBA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-compact-dual-problem-over-gauduchon-currents/"><span>12.7</span> A compact dual problem over Gauduchon currents</a><code class="tag-id">54ADA5D399DA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--supporting-probabilities-represented-by-maximizing-currents/"><span>12.8</span> Supporting probabilities represented by maximizing currents</a><code class="tag-id">7C2BB0FDDDF5</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrability-of-gauduchon-determinant-measures/"><span>12.9</span> Integrability of Gauduchon determinant measures</a><code class="tag-id">D02094988A03</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/" aria-current="page"><span>12.10</span> Integrable densities in the compact Gauduchon problem</a><code class="tag-id">5CB8CFC32A19</code></li><li><a href="../../sections/a-gauduchon-variational-volume--nef-limits-and-nonattainment/"><span>12.11</span> Nef limits and nonattainment</a><code class="tag-id">EA449D56F8F7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-with-a-closed-nef-core/"><span>12.12</span> Subtraction with a closed nef core</a><code class="tag-id">75F31FAA4616</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-on-warped-products/"><span>12.13</span> Subtraction on warped products</a><code class="tag-id">EA9388E29ABC</code></li><li><a href="../../sections/a-gauduchon-variational-volume--positive-volume-without-bigness/"><span>12.14</span> Positive volume without bigness</a><code class="tag-id">E4AB7B03C20D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--varying-the-probability-measure/"><span>12.15</span> Varying the probability measure</a><code class="tag-id">8B161DDAE77F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-conditions-for-mass-extrema/"><span>12.16</span> Curvature conditions for mass extrema</a><code class="tag-id">A57EC3129CC8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-pairs-and-positive-lower-mass/"><span>12.17</span> Curvature pairs and positive lower mass</a><code class="tag-id">C18EABD7D630</code></li><li><a href="../../sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/"><span>12.18</span> Geometric bounds and determinant concentration</a><code class="tag-id">AA652CC345D8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--vanishing-lower-mass/"><span>12.19</span> Vanishing lower mass</a><code class="tag-id">108F40B2DFAA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary/"><span>12.20</span> Orders of degeneration at the nef boundary</a><code class="tag-id">3567ADAA7365</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--elliptic-surface-volumes-and-order-spectra/"><span>12.21</span> Elliptic surface volumes and order spectra</a><code class="tag-id">E4B29689FB79</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--comparison-under-an-arbitrary-modification/"><span>12.22</span> Comparison under an arbitrary modification</a><code class="tag-id">9BED3D691F82</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--strict-changes-under-one-blowup/"><span>12.23</span> Strict changes under one blowup</a><code class="tag-id">D0D47B7389D7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--positive-current-subtraction-and-divisorial-residuals/"><span>12.24</span> Positive-current subtraction and divisorial residuals</a><code class="tag-id">57C0ECEB4F4C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--integer-orders-in-fixed-projective-cones/"><span>12.25</span> Integer orders in fixed projective cones</a><code class="tag-id">E6D8A97F4D2C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--a-maximum-rank-comparison-criterion/"><span>12.26</span> A maximum-rank comparison criterion</a><code class="tag-id">493311C8FB2F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-anticanonical-curves/"><span>12.27</span> Flat anticanonical curves</a><code class="tag-id">0E9176045572</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-divisors-and-hartogs-extension/"><span>12.28</span> Flat divisors and Hartogs extension</a><code class="tag-id">25D1457FC429</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--punctured-line-bundles-and-elliptic-quotients/"><span>12.29</span> Punctured line bundles and elliptic quotients</a><code class="tag-id">76F771FE4DA3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-torsors-on-split-elliptic-ruled-surfaces/"><span>12.30</span> Cotangent torsors on split elliptic ruled surfaces</a><code class="tag-id">E4B698D2AEE3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--symmetric-tensors-on-split-elliptic-ruled-surfaces/"><span>12.31</span> Symmetric tensors on split elliptic ruled surfaces</a><code class="tag-id">7CF6C47CAA92</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--section-algebras-of-cotangent-extensions/"><span>12.32</span> Section algebras of cotangent extensions</a><code class="tag-id">72E247F3A7CA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-extensions-with-zero-ruling-component/"><span>12.33</span> Cotangent extensions with zero ruling component</a><code class="tag-id">C9CE007F34A7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/"><span>12.34</span> Current tests for smooth positivity</a><code class="tag-id">509A5021C77D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/"><span>12.35</span> Divisorial constraints and residual volume</a><code class="tag-id">269CE892EA5B</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-divisorial-threshold-on-the-hopf-threefold/"><span>12.36</span> A divisorial threshold on the Hopf threefold</a><code class="tag-id">7F944D8C8D92</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/CAEF64468276/"><span>← Previous</span><small>Example 12.9.21</small></a><a class="pager-next" rel="next" href="../../tag/41D17749328B/"><span>Next →</span><small>Theorem 12.10.1</small></a></nav><h1>12.10 Integrable densities in the compact Gauduchon problem<code class="tag-id">5CB8CFC32A19</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-5CB8CFC32A19" data-section-entries="025E3287544B 41D17749328B 5CB8CFC32A19 B5DC9A4ABEEC"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="22459783"><code class="tag-id">5CB8CFC32A19</code></span>
+<p>
+We keep the Hermitian background $\omega $ and replace the continuous logarithmic density by an integrable density. For an unbounded density, weak compactness of the test currents alone does not pass the determinant integral to the limit; uniform control of the weighted tails provides the missing upper semicontinuity. 
+</p>
+<p>
+We use the following notation from section <a data-tag="CF1C0A46" href="../../tag/72CDE5ADD348/">15.28</a>, section <a data-tag="F10CA257" href="../../tag/7B44C03D318B/">15.29</a>, with $\omega $ in place of $h$. For a nonzero nonnegative $f\in L^1(\mathrm{d}V)$, the <em>subsolution threshold</em> $b_\omega (f)\geq 0$ is, by theorem <a data-tag="76378BFC" href="../../tag/CC13A9B1D927/">15.28.4</a>, the largest $b\geq 0$ for which some $u\in \mathrm{PSH}(X,\omega )$ satisfies $\mathrm{MA}^{\mathrm{ext}}_\omega (u)\geq bf\, \mathrm{d}V$. For $p\in L^ n$, the <em>root norm</em> is $\rho _\omega (p)=b_\omega (|p|^ n)^{-1/n}$ if $p\ne 0$, and $\rho _\omega (0)=0$. The space $\mathcal D_\omega $ of proposition <a data-tag="643758CB" href="../../tag/4C06D1B94BD1/">15.32.5</a> consists of the $p\in L^ n$ with $\rho _\omega (p)&lt;+\infty $, and $\mathcal D_\omega ^0$ is the closure of the bounded functions in $\mathcal D_\omega $, characterized by vanishing tails in proposition <a data-tag="0EDDC796" href="../../tag/2210D4123A64/">15.32.9</a>. For a Gauduchon metric $\gamma $, $L_{\omega ,\gamma }(p)$ denotes the test quotient of section <a data-tag="F10CA257" href="../../tag/7B44C03D318B/">15.29</a>, and theorem <a data-tag="0DF693AB" href="../../tag/346B39C3F0B6/">15.29.1</a> gives $\rho _\omega (p)=\sup _\gamma L_{\omega ,\gamma }(|p|)$. Finally, $k_ T$ is the determinant density of $T\in \mathscr G_\omega $ from theorem <a data-tag="9369A45C" href="../../tag/BF52D98B114F/">12.9.1</a>. 
+</p>
+<p>
+If $p\geq 0$ is measurable, define 
+</p>
+<div class="equation">
+  \[  D_ p(T)=\int _ Xp k_ T\, \mathrm{d}V\qquad (T\in \mathscr G_\omega ),  \]
+</div>
+<p>
+ allowing the value $+\infty $. If $T=\gamma ^{n-1}/\int _ X\omega \wedge \gamma ^{n-1}$ for a Gauduchon metric $\gamma $, then $D_ p(T)=L_{\omega ,\gamma }(p)$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-942336A0">
+<p><a class="environment-identifier" href="../../tag/41D17749328B/">Theorem <span data-tag="942336A0">12.10.1</span>.</a><span data-gerby-tag="942336A0"><code class="tag-id">41D17749328B</code></span> For every nonnegative $p\in L^ n$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-ED3E0287"><span data-gerby-tag="ED3E0287"><code class="tag-id">025E3287544B</code></span>
+<span class="equation-label"><a data-tag="ED3E0287" href="../../tag/025E3287544B/">12.10.2</a></span>
+<div>\begin{equation}  \sup _{T\in \mathscr G_\omega }D_ p(T)=\rho _\omega (p), \end{equation}</div>
+</div>
+<p> with the value $+\infty $ allowed. If $p\in \mathcal D_\omega ^0$, the functional $D_ p$ is finite, concave and weakly upper semicontinuous on $\mathscr G_\omega $, its maximum is attained, and the densities $p k_ T$, for $T\in \mathscr G_\omega $, are uniformly integrable. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a smooth strictly positive $p$, we have $D_ p=\mathfrak D_{n\log p}$ and $\mathrm{e}^{-B_0(n\log p)/n}=\rho _\omega (p)$, so theorem <a data-tag="B931D275" href="../../tag/0537569F9F52/">12.7.3</a>, applied to $F=n\log p$, proves (<a data-tag="ED3E0287" href="../../tag/025E3287544B/">12.10.2</a>). By Hölder's inequality and theorem <a data-tag="9369A45C" href="../../tag/BF52D98B114F/">12.9.1</a>, for every real $r&gt;n$ there is a constant $C_ r$ such that, for every $q\in L^ r$, 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-0B6A71D8"><span data-gerby-tag="0B6A71D8"><code class="tag-id">B5DC9A4ABEEC</code></span>
+<span class="equation-label"><a data-tag="0B6A71D8" href="../../tag/B5DC9A4ABEEC/">12.10.3</a></span>
+<div>\begin{equation}  \sup _{T\in \mathscr G_\omega }\int _ X|q| k_ T\, \mathrm{d}V \leq C_ r\| q\| _{L^ r}. \end{equation}</div>
+</div>
+<p>
+       Next, approximate a bounded nonnegative $p$ in $L^{2n}$ by smooth strictly positive functions. This estimate and (<a data-tag="3C33DF46" href="../../tag/CA92BD48A42D/">15.32.8</a>) give uniform convergence on $\mathscr G_\omega $ of the corresponding functionals $D$ and convergence of the root norms, so the supremum formula holds for bounded $p$. For such $p$, the functional $D_ p$ is also upper semicontinuous and concave, by lemma <a data-tag="EF340E54" href="../../tag/FB6C2382E066/">12.7.2</a> and uniform convergence. For general $p\in L^ n$, we use the truncations $\min (p,K)$ at positive integer levels $K$. Monotone convergence and the definition of $b_\omega $ through truncations give 
+    
+<div class="equation">
+  \[  \sup _ T D_ p(T)=\sup _ T\sup _ K D_{\min (p,K)}(T) =\sup _ K\rho _\omega (\min (p,K))=\rho _\omega (p).  \]
+</div>
+<p>
+       This step only interchanges two suprema and gives no attainment. 
+    <p>
+      Now suppose $p\in \mathcal D_\omega ^0$. The supremum formula applied to the tail gives 
+    
+<div class="equation">
+  \[  0\leq D_ p(T)-D_{\min (p,K)}(T) \leq \rho _\omega (p\mathbf1_{\{ p&gt;K\} })\longrightarrow 0  \]
+</div>
+<p>
+       uniformly in $T$, by proposition <a data-tag="0EDDC796" href="../../tag/2210D4123A64/">15.32.9</a>. Hence $D_ p$ is finite and is a uniform limit of upper semicontinuous concave functionals, and compactness of $\mathscr G_\omega $ gives a maximizer. Finally, fix $1&lt;q&lt;n/(n-1)$. By Hölder's inequality and theorem <a data-tag="9369A45C" href="../../tag/BF52D98B114F/">12.9.1</a>, for every measurable set $E$, 
+    
+<div class="equation">
+  \[  \sup _ T\int _ Ep k_ T\, \mathrm{d}V \leq \rho _\omega (p\mathbf1_{\{ p&gt;K\} }) +K C_ q\, \mathrm{d}V(E)^{1-1/q}.  \]
+</div>
+<p>
+       Choosing first $K$ large and then the volume of $E$ small proves uniform absolute continuity. Since the total masses are bounded by $\rho _\omega (p)$, the densities are uniformly integrable. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For a nonzero density, a maximizing current gives a supporting probability for the threshold, as we show below. Whether the threshold is attained by an exact equation depends on the regularity of the maximizing current, which enters through the trace inequalities of <a data-tag="9FCD4F41" href="../../tag/07A010666AF5/">12.10.10</a>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-5210ECD5227F" data-section-entries="249445C21482 5210ECD5227F B62E802ED631"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5210ECD5227F/">12.10.4 The tail condition and perturbations of the density</a><code class="tag-id">5210ECD5227F</code></h2><span data-gerby-tag="65649BD7"></span>
+<p>
+Vanishing tails are equivalent to continuity of the threshold under uniformly bounded multiplicative perturbations of the density that converge in measure. This explains the role of the tail condition: if it fails, a perturbation supported on sets of shrinking volume can lower the threshold by a fixed factor. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-69907017">
+<p><a class="environment-identifier" href="../../tag/249445C21482/">Proposition <span data-tag="69907017">12.10.5</span>.</a><span data-gerby-tag="69907017"><code class="tag-id">249445C21482</code></span> Let $0\leq p\in \mathcal D_\omega $ be nonzero. The following are equivalent: </p>
+<ol>
+<li><p>
+$p\in \mathcal D_\omega ^0$; 
+</p>
+</li><li><p>
+the densities $p k_ T$, for $T\in \mathscr G_\omega $, are uniformly integrable; 
+</p>
+</li><li><p>
+whenever $F_ j$ are smooth real functions, uniformly bounded and tending to zero in measure, one has 
+</p>
+<div class="equation">
+  \[  b_\omega (\mathrm{e}^{F_ j}p^ n)\longrightarrow b_\omega (p^ n).  \]
+</div>
+</li>
+</ol>
+<p> If the first condition holds, the convergence in the third also holds for bounded measurable $F_ j$ with the same uniform bound and convergence in measure. If it fails, there are smooth $F_ j\geq 0$, uniformly bounded and tending to zero in measure, such that </p>
+<div class="equation">
+  \[  \mathrm{e}^{F_ j}p^ n\longrightarrow p^ n\quad \text{in }L^1, \qquad b_\omega (\mathrm{e}^{F_ j}p^ n)\leq 2^{-n}b_\omega (p^ n).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first condition implies the second by theorem <a data-tag="942336A0" href="../../tag/41D17749328B/">12.10.1</a>. Conversely, $\mathrm{d}V(\{ p&gt;K\} )\to 0$ as $K\to \infty $, so uniform integrability and (<a data-tag="ED3E0287" href="../../tag/025E3287544B/">12.10.2</a>) give 
+    
+<div class="equation">
+  \[  \rho _\omega (p\mathbf1_{\{ p&gt;K\} }) =\sup _{T\in \mathscr G_\omega }\int _{\{ p&gt;K\} }p k_ T\, \mathrm{d}V \longrightarrow 0.  \]
+</div>
+<p>
+       This is the first condition by proposition <a data-tag="0EDDC796" href="../../tag/2210D4123A64/">15.32.9</a>. 
+    <p>
+      If $p\in \mathcal D_\omega ^0$ and $|F_ j|\leq A$, then $p(\mathrm{e}^{F_ j/n}-1)$ tends to zero in measure and its absolute value is at most $(\mathrm{e}^{A/n}+1)p$. The dominated-convergence criterion of proposition <a data-tag="0EDDC796" href="../../tag/2210D4123A64/">15.32.9</a> makes its root norm tend to zero, and the triangle inequality gives $\rho _\omega (p\mathrm{e}^{F_ j/n})\to \rho _\omega (p)&gt;0$. Taking negative $n$th powers proves the third condition, also for bounded measurable $F_ j$. 
+    <p>
+      Suppose now that the tails do not tend to zero, and put $R=\rho _\omega (p)&gt;0$. The formula of theorem <a data-tag="0DF693AB" href="../../tag/346B39C3F0B6/">15.29.1</a>, which uses only smooth tests, yields $\delta &gt;0$, numbers $K_ j\to \infty $ and smooth strictly positive $T_ j\in \mathscr G_\omega $ such that 
+    
+<div class="equation">
+  \[  \int _{\{ p&gt;K_ j\} }p k_{T_ j}\, \mathrm{d}V&gt;\delta .  \]
+</div>
+<p>
+       Since the finite measure $p k_{T_ j}\, \mathrm{d}V$ is regular, we can choose a compact set $C_ j\subset \{ p&gt;K_ j\} $ of mass greater than $\delta /2$ for this measure. By outer regularity of $\mathrm{d}V$, choose an open set $O_ j\supset \{ p&gt;K_ j\} $ with $\mathrm{d}V(O_ j)\leq \mathrm{d}V(\{ p&gt;K_ j\} )+1/j$, and a smooth cutoff $0\leq \chi _ j\leq 1$ that equals one on $C_ j$ and has support in $O_ j$. Fix $A&gt;0$ with $\mathrm{e}^{A/n}\delta /2&gt;2R$, and set $F_ j=A\chi _ j$. Then $F_ j\to 0$ in measure, while 
+    
+<div class="equation">
+  \[  \rho _\omega (p\mathrm{e}^{F_ j/n}) \geq \int _ Xp\mathrm{e}^{F_ j/n}k_{T_ j}\, \mathrm{d}V &gt;2R.  \]
+</div>
+<p>
+       Since $b_\omega (\mathrm{e}^{F_ j}p^ n)=\rho _\omega (p\mathrm{e}^{F_ j/n})^{-n}$, this gives the asserted uniform gap. Finally, $|\mathrm{e}^{F_ j}-1|p^ n\leq (\mathrm{e}^ A-1)p^ n\mathbf1_{O_ j}$, whose integral tends to zero by absolute continuity of the integral. This proves the last assertion and the converse to the third condition. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For $f=p^ n$, the perturbed densities satisfy $\mathrm{e}^{-A}f\leq \mathrm{e}^{F_ j}f\leq \mathrm{e}^ Af$ with a fixed $A$, so the continuity statement concerns only such order intervals. The instability under general $L^1$ approximation in section <a data-tag="9ABBA367" href="../../tag/06284CD8A9D4/">15.32</a> involves approximations without these bounds. 
+</p>
+<p>
+For attainment at one density, uniform integrability along a single maximizing sequence is enough, and this weaker condition also identifies the limit of its weighted measures. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-DD4588A4">
+<p><a class="environment-identifier" href="../../tag/B62E802ED631/">Proposition <span data-tag="DD4588A4">12.10.6</span>.</a><span data-gerby-tag="DD4588A4"><code class="tag-id">B62E802ED631</code></span> Let $0\leq p\in \mathcal D_\omega $ be nonzero and put $R=\rho _\omega (p)$. Suppose $T_ j\in \mathscr G_\omega $ converge weakly to $T$ and satisfy $D_ p(T_ j)\to R$. If the densities $p k_{T_ j}$ are uniformly integrable, then </p>
+<div class="equation">
+  \[  D_ p(T)=R,\qquad p k_{T_ j}\, \mathrm{d}V\rightharpoonup p k_ T\, \mathrm{d}V.  \]
+</div>
+<p> Consequently, a maximizing sequence for $D_ p$ with uniformly integrable densities $pk_{T_ j}$ has a maximizing current among its weak cluster limits. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For positive integers $K$, put $p_ K=\min (p,K)$. Since $p$ is finite almost everywhere, uniform integrability gives 
+    
+<div class="equation">
+  \[  \varepsilon _ K:=\sup _ j\int _{\{ p&gt;K\} }p k_{T_ j}\, \mathrm{d}V \longrightarrow 0.  \]
+</div>
+<p>
+       For every nonnegative continuous function $h$, the weight $hp_ K$ is bounded and measurable, so the upper semicontinuity of $D_{hp_ K}$ proved in theorem <a data-tag="942336A0" href="../../tag/41D17749328B/">12.10.1</a> gives 
+    
+<div class="equation">
+  \[  \limsup _ j\int _ Xhp k_{T_ j}\, \mathrm{d}V \leq \int _ Xhp_ K k_ T\, \mathrm{d}V +\| h\| _\infty \varepsilon _ K.  \]
+</div>
+<p>
+       Now let $K\to \infty $. For $h=1$ this yields $R\leq D_ p(T)$, and the supremum formula (<a data-tag="ED3E0287" href="../../tag/025E3287544B/">12.10.2</a>) gives the reverse inequality. If $\Lambda $ is a weak cluster limit of the measures $p k_{T_ j}\, \mathrm{d}V$, the same estimate for all nonnegative continuous $h$ gives $\Lambda \leq p k_ T\, \mathrm{d}V$. Both measures have mass $R$, so they agree. Since these measures have bounded masses, they form a weakly relatively compact family, and every cluster limit has now been identified. The final assertion follows from the compactness of $\mathscr G_\omega $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-516A524E7A2A" data-section-entries="516A524E7A2A C174F8B6FDCF CCE6CFE41CBF"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/516A524E7A2A/">12.10.7 Supporting probabilities for an integrable density</a><code class="tag-id">516A524E7A2A</code></h2><span data-gerby-tag="2ED2E2A0"></span>
+<p>
+Under the vanishing-tail condition, we can also perturb the density by continuous multiplicative factors $\mathrm{e}^ F$. The logarithm of the threshold is then a concave function of $F$, and its supporting probabilities are given by the maximizing currents, just as for the continuous densities in section <a data-tag="0A067F39" href="../../tag/7C2BB0FDDDF5/">12.8</a>. 
+</p>
+<p>
+Let $f\in L^1(\mathrm{d}V)$ be nonzero and nonnegative, and assume $p=f^{1/n}\in \mathcal D_\omega ^0$. For a continuous real $F$, set 
+</p>
+<div class="equation">
+  \[  B_ f(F)=\log b_\omega (\mathrm{e}^ Ff) =-n\log \rho _\omega (p \mathrm{e}^{F/n}),\qquad M_ f(F)=\rho _\omega (p \mathrm{e}^{F/n}).  \]
+</div>
+<p>
+ Both quantities are finite and $M_ f(F)&gt;0$, since $\mathcal D_\omega ^0$ is an order ideal. Let $\mathscr M_ f(F)$ be the set of currents in $\mathscr G_\omega $ maximizing $D_{p \mathrm{e}^{F/n}}$, which is nonempty by theorem <a data-tag="942336A0" href="../../tag/41D17749328B/">12.10.1</a>, and put 
+</p>
+<div class="equation">
+  \[  \nu _{T,F}=\frac{p \mathrm{e}^{F/n} k_ T}{M_ f(F)}\, \mathrm{d}V \quad (T\in \mathscr M_ f(F)).  \]
+</div>
+<p>
+ These are probability measures. Let $\mathcal A_ f(F)$, the set of <em>supporting probabilities</em> of $B_ f$ at $F$, consist of all Borel probability measures $\nu $ satisfying 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-F8AAFECC"><span data-gerby-tag="F8AAFECC"><code class="tag-id">C174F8B6FDCF</code></span>
+<span class="equation-label"><a data-tag="F8AAFECC" href="../../tag/C174F8B6FDCF/">12.10.8</a></span>
+<div>\begin{equation}  B_ f(G)\leq B_ f(F)-\int _ X(G-F)\, \mathrm{d}\nu \qquad (G\in C(X,\mathbb R)). \end{equation}</div>
+</div>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-E8E6CE5C">
+<p><a class="environment-identifier" href="../../tag/CCE6CFE41CBF/">Proposition <span data-tag="E8E6CE5C">12.10.9</span>.</a><span data-gerby-tag="E8E6CE5C"><code class="tag-id">CCE6CFE41CBF</code></span> The functional $B_ f$ is concave, decreasing and $1$-Lipschitz for the uniform norm, and $B_ f(F+a)=B_ f(F)-a$ for constants $a$. Moreover, </p>
+<div class="equation">
+  \[  \mathcal A_ f(F)=\{ \nu _{T,F}:T\in \mathscr M_ f(F)\} .  \]
+</div>
+<p> This set is nonempty, convex and weakly compact, and its measures are absolutely continuous. For each $R&gt;0$, the densities of all these measures, for all $F$ with $\| F\| _\infty \leq R$, are uniformly integrable. For $H\in C(X,\mathbb R)$, the one-sided directional derivatives of $B_ f$ at $F$ are </p>
+<div class="equation">
+  \[  (B_ f)'_+(F;H)=-\max _{\nu \in \mathcal A_ f(F)}\int _ XH\, \mathrm{d}\nu , \qquad (B_ f)'_-(F;H)=-\min _{\nu \in \mathcal A_ f(F)}\int _ XH\, \mathrm{d}\nu .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For each $T$, Hölder's inequality makes $F\mapsto \int _ Xp \mathrm{e}^{F/n}k_ T\, \mathrm{d}V$ logarithmically convex, and taking suprema preserves the inequality defining logarithmic convexity. Thus $M_ f$ is logarithmically convex and $B_ f=-n\log M_ f$ is concave. Monotonicity and homogeneity of $\rho _\omega $ give the translation rule and, by comparison with constant translates, the Lipschitz estimate. 
+    <p>
+      For fixed $F$, the weight $p\mathrm{e}^{F/n}$ belongs to $\mathcal D_\omega ^0$, so the densities $p\mathrm{e}^{F/n}k_ T$, $T\in \mathscr G_\omega $, are uniformly integrable by theorem <a data-tag="942336A0" href="../../tag/41D17749328B/">12.10.1</a>. If $T_ j\to T$ and $D_{p\mathrm{e}^{F/n}}(T_ j)\to M_ f(F)$, proposition <a data-tag="DD4588A4" href="../../tag/B62E802ED631/">12.10.6</a> makes $T$ a maximizer and gives convergence of the weighted measures. For $T_1,T_2\in \mathscr G_\omega $ and real $0\leq t\leq 1$, matrix determinant concavity gives 
+    
+<div class="equation">
+  \[  p \mathrm{e}^{F/n}k_{tT_1+(1-t)T_2}\, \mathrm{d}V \geq t p \mathrm{e}^{F/n}k_{T_1}\, \mathrm{d}V +(1-t)p \mathrm{e}^{F/n}k_{T_2}\, \mathrm{d}V.  \]
+</div>
+<p>
+       For two maximizing currents, the current on the left also maximizes, and equal total masses turn this inequality into an equality. The set $\mathscr N_ f(F)=\{ \nu _{T,F}:T\in \mathscr M_ f(F)\} $ is therefore nonempty, compact and convex. 
+    <p>
+       A maximizing $T$ gives 
+    
+<div class="equation">
+  \[  M_ f(G)\geq M_ f(F)\int _ X\mathrm{e}^{(G-F)/n}\, \mathrm{d}\nu _{T,F}.  \]
+</div>
+<p>
+       Taking $-n$ times the logarithm and applying Jensen's inequality proves (<a data-tag="F8AAFECC" href="../../tag/C174F8B6FDCF/">12.10.8</a>), so $\mathscr N_ f(F)\subset \mathcal A_ f(F)$. For the reverse inclusion, a Taylor expansion of the exponential gives 
+    
+<div class="equation">
+  \[  D_{p \mathrm{e}^{(F+tH)/n}}(T) =D_{p \mathrm{e}^{F/n}}(T)+\frac tn\int _ X H p \mathrm{e}^{F/n} k_ T\, \mathrm{d}V+O(t^2),  \]
+</div>
+<p>
+       where the error is uniform in $T$ since $D_{p \mathrm{e}^{F/n}}(T)\leq M_ f(F)$. Maximizers at $F+tH$ are near-maximizers at $F$, by the multiplicative bounds $\mathrm{e}^{-t\| H\| _\infty /n}\leq M_ f(F+tH)/M_ f(F)\leq \mathrm{e}^{t\| H\| _\infty /n}$. The convergence of their weighted measures proved above and this uniform expansion are exactly the two inputs of the one-sided differentiation argument in the proof of theorem <a data-tag="3606F8FD" href="../../tag/E9E119AAA269/">12.8.2</a>, which gives 
+    
+<div class="equation">
+  \[  (B_ f)'_+(F;H)=-\max _{\nu \in \mathscr N_ f(F)}\int _ XH\, \mathrm{d}\nu .  \]
+</div>
+<p>
+       The separation argument of that proof then identifies all supporting probabilities with $\mathscr N_ f(F)$, and replacing $H$ by $-H$ gives the left derivative. 
+    <p>
+      Finally, $M_ f(F)\geq \mathrm{e}^{-R/n}\rho _\omega (p)$ when $\| F\| _\infty \leq R$, so the densities of the probabilities $\nu _{T,F}$ are at most $\mathrm{e}^{2R/n}\rho _\omega (p)^{-1}p k_ T$. The uniform integrability of the densities $pk_ T$ in theorem <a data-tag="942336A0" href="../../tag/41D17749328B/">12.10.1</a> proves the remaining assertions. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+When $f=1$, we have $B_ f=B_0$, and the proposition reduces to theorem <a data-tag="3606F8FD" href="../../tag/E9E119AAA269/">12.8.2</a>. For general $f$, the functional $B_ f$ is defined through the subsolution threshold and does not presuppose that the corresponding equation has a solution. If $v_-(\omega )&gt;0$, every nonzero nonnegative $f\in L^1$ satisfies $f^{1/n}\in \mathcal D_\omega ^0$ by proposition <a data-tag="0EDDC796" href="../../tag/2210D4123A64/">15.32.9</a>, and corollary <a data-tag="51776ACC" href="../../tag/74BE83BA167D/">15.37.32</a> identifies $b_\omega (f)$ as the unique constant for which the equation $\mathrm{MA}^{\mathrm{ext}}_\omega (v)=b\, f\, \mathrm{d}V$ has a solution $v$ in the envelope class $\mathcal E_{\mathrm{env}}(X,\omega ,0)$ of that corollary. Without positive lower mass, the uniform tail condition is an explicit sufficient hypothesis for this compact dual description. 
+</p>
+</div></section><section class="reading-chunk" id="entry-07A010666AF5" data-section-entries="07A010666AF5 08C2A578ACE2 2C73D81273C0 36B0532E29A1 6362B224AE69 F5E70269636C"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/07A010666AF5/">12.10.10 Trace inequalities at the subsolution threshold</a><code class="tag-id">07A010666AF5</code></h2><span data-gerby-tag="9FCD4F41"></span>
+<p>
+Let $0\leq f\in L^1(\mathrm{d}V)$ be nonzero with $b=b_\omega (f)&gt;0$. Recall from section <a data-tag="CF1C0A46" href="../../tag/72CDE5ADD348/">15.28</a> that a threshold subsolution is a function $u\in \mathrm{PSH}(X,\omega )$ with $\mathrm{MA}^{\mathrm{ext}}_\omega (u)\geq bf\, \mathrm{d}V$, and a threshold solution is one for which equality holds; threshold subsolutions exist by theorem <a data-tag="76378BFC" href="../../tag/CC13A9B1D927/">15.28.4</a>. A smooth Gauduchon test can be paired with the full current $\omega +\mathrm{dd}^{\mathrm{c}}u$ of a threshold subsolution, and by lemma <a data-tag="DAAAABF5" href="../../tag/2CA81432B327/">13.14.12</a> the resulting trace measure is bounded below by the determinant-weighted density. The nonnegative difference has a mass that depends only on the test. Along a maximizing sequence this mass tends to zero, uniformly over all threshold subsolutions. We write $\| \cdot \| _{\mathrm{TV}}$ for the total variation of a finite signed measure. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-D3C12AF2">
+<p><a class="environment-identifier" href="../../tag/08C2A578ACE2/">Proposition <span data-tag="D3C12AF2">12.10.11</span>.</a><span data-gerby-tag="D3C12AF2"><code class="tag-id">08C2A578ACE2</code></span> Let $0\leq f\in L^1$ be nonzero and $b=b_\omega (f)&gt;0$, and write $p=f^{1/n}$. Suppose $u\in \mathrm{PSH}(X,\omega )$ satisfies $\mathrm{MA}^{\mathrm{ext}}_\omega (u)\geq bf\, \mathrm{d}V$. For every smooth strictly positive $T\in \mathscr G_\omega $, the measure </p>
+<div class="equation">
+  \[  R_{u,T}=(\omega +\mathrm{dd}^{\mathrm{c}}u)\wedge T-b^{1/n}p k_ T\, \mathrm{d}V  \]
+</div>
+<p> is positive and has mass </p>
+<div class="equation">
+  \[  R_{u,T}(X)=1-b^{1/n}D_ p(T).  \]
+</div>
+<p> In particular, if $(T_ j)$ is a sequence of smooth strictly positive members of $\mathscr G_\omega $ with $D_ p(T_ j)\to \rho _\omega (p)$, then $\| R_{u,T_ j}\| _{\mathrm{TV}}\to 0$, uniformly over all threshold subsolutions $u$. </p>
+<p>If also $p\in \mathcal D_\omega ^0$ and $T_ j\to T$ as currents, then $T$ maximizes $D_ p$ and </p>
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u)\wedge T_ j \rightharpoonup b^{1/n}p k_ T\, \mathrm{d}V.  \]
+</div>
+<p> In particular, for a fixed sequence $(T_ j)$ with limit $T$, this limiting probability is the same for all threshold subsolutions $u$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      A smooth strictly positive $T\in \mathscr G_\omega $ is $\gamma ^{n-1}$ for a Gauduchon metric $\gamma $ normalized by $\int _ X\omega \wedge \gamma ^{n-1}=1$. Lemma <a data-tag="DAAAABF5" href="../../tag/2CA81432B327/">13.14.12</a> proves positivity of $R_{u,T}$, and Stokes' theorem for currents gives $((\omega +\mathrm{dd}^{\mathrm{c}}u)\wedge T)(X)=\int _ X\omega \wedge T=1$. This proves the mass formula. Since $\rho _\omega (p)=b^{-1/n}$, the nonnegative mass tends to zero along a maximizing sequence; it equals the total variation norm and does not depend on $u$. 
+    <p>
+      Under the tail hypothesis, theorem <a data-tag="942336A0" href="../../tag/41D17749328B/">12.10.1</a> gives uniform integrability of the densities $p k_{T_ j}$. Thus proposition <a data-tag="DD4588A4" href="../../tag/B62E802ED631/">12.10.6</a> makes $T$ a maximizer and gives $p k_{T_ j}\, \mathrm{d}V\rightharpoonup p k_ T\, \mathrm{d}V$. Adding the error measures $R_{u,T_ j}$, which tend to zero in total variation, proves the limit formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The limit formula concerns smooth maximizing sequences. It does not define the product $(\omega +\mathrm{dd}^{\mathrm{c}}u)\wedge T$ for a singular current $T$, nor does it show that the limit is the same for different maximizing currents. 
+</p>
+<p>
+If a maximizing test is itself a smooth strictly positive form, the trace inequality becomes an equality of currents, and since $n\geq 2$ this forces an exact smooth equation. The local regularity needed for this comes from lemma <a data-tag="636DE9AC" href="../../tag/0DED015E67EF/">5.22.4</a>. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-4B7D0776">
+<p><a class="environment-identifier" href="../../tag/F5E70269636C/">Corollary <span data-tag="4B7D0776">12.10.12</span>.</a><span data-gerby-tag="4B7D0776"><code class="tag-id">F5E70269636C</code></span> Let $0\leq f\in L^1(\mathrm{d}V)$ be nonzero with $b=b_\omega (f)&gt;0$. If $D_{f^{1/n}}$ has a smooth strictly positive maximizer $T\in \mathscr G_\omega $, then $f^{1/n}$ agrees almost everywhere with a smooth nonnegative function, and every threshold subsolution $u$ is smooth and satisfies </p>
+<div class="equation">
+  \[  \mathrm{MA}_\omega (u)=bf\, \mathrm{d}V.  \]
+</div>
+<p> In particular a smooth threshold solution exists, and any two threshold subsolutions differ by a constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $u$ be any threshold subsolution; one exists by theorem <a data-tag="76378BFC" href="../../tag/CC13A9B1D927/">15.28.4</a>. Write $T=\gamma ^{n-1}$, where $\gamma $ is the smooth Gauduchon metric given by the positive $(n-1)$st root of $T$, and set 
+    
+<div class="equation">
+  \[  a=\left(\frac{bf\, \mathrm{d}V}{\gamma ^ n}\right)^{1/n}.  \]
+</div>
+<p>
+       Put $A=\omega +\mathrm{dd}^{\mathrm{c}}u\geq 0$. Since $T$ maximizes, the positive measure $R_{u,T}$ of proposition <a data-tag="D3C12AF2" href="../../tag/08C2A578ACE2/">12.10.11</a> has mass zero, which gives the equality 
+    
+<div class="equation">
+  \[  A\wedge \gamma ^{n-1}=a\gamma ^ n.  \]
+</div>
+<p>
+       The coefficient measures of the positive current $A$ are controlled by this trace measure, which is absolutely continuous. Thus $A$ has a matrix density that is positive semidefinite almost everywhere, with coefficients in $L^ n$ because $a\in L^ n$. 
+    <p>
+       For every smooth Hermitian form $\beta $, lemma <a data-tag="DAAAABF5" href="../../tag/2CA81432B327/">13.14.12</a> also gives 
+    
+<div class="equation">
+  \[  A\wedge \beta ^{n-1} \geq \left(\frac{bf\, \mathrm{d}V}{\beta ^ n}\right)^{1/n}\beta ^ n.  \]
+</div>
+<p>
+       The resulting pointwise matrix inequalities hold almost everywhere, simultaneously for all positive definite matrices: on each coordinate chart, first use a countable dense family of constant positive matrices, realized on smaller charts by global smooth Hermitian forms, and then use continuity in the matrix. The variational formula for $(\det P)^{1/n}$ in the proof of lemma <a data-tag="EF340E54" href="../../tag/FB6C2382E066/">12.7.2</a> therefore yields 
+    
+<div class="equation">
+  \[  \left(\frac{A^ n}{\gamma ^ n}\right)^{1/n}\geq a \quad \text{almost everywhere}.  \]
+</div>
+<p>
+       Here $A^ n$ denotes only the determinant of the measurable coefficient matrix of $A$; no nonlinear product of currents is used. The trace equality gives the reverse inequality, by the arithmetic–geometric mean inequality. Equality then forces all eigenvalues of $A$ relative to $\gamma $ to equal $a$, also where $a=0$. Consequently $A=a\gamma $ as currents. 
+    <p>
+      By lemma <a data-tag="636DE9AC" href="../../tag/0DED015E67EF/">5.22.4</a>, applied with $\theta =\omega $, both $a$ and $u$ are smooth, and $f^{1/n}=b^{-1/n}a(\gamma ^ n/\mathrm{d}V)^{1/n}$ has a smooth nonnegative representative. Since $u$ is smooth, we may now take the top power: $(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n=a^ n\gamma ^ n=bf\, \mathrm{d}V$. Finally, the function $a$ was defined from $f$, $b$ and $\gamma $ alone, so two threshold subsolutions $u_1,u_2$ satisfy $\omega +\mathrm{dd}^{\mathrm{c}}u_1=a\gamma =\omega +\mathrm{dd}^{\mathrm{c}}u_2$. Their smooth difference is therefore pluriharmonic, hence constant on the connected compact manifold $X$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+If $f$ is smooth and strictly positive, theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">12.2.3</a> provides a smooth strictly positive maximizing Gauduchon form, obtained from the smooth equation. The corollary therefore applies, and shows in particular that all threshold subsolutions, bounded or not, differ from the smooth solution by constants. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-E422AF44">
+<p><a class="environment-identifier" href="../../tag/2C73D81273C0/">Corollary <span data-tag="E422AF44">12.10.13</span>.</a><span data-gerby-tag="E422AF44"><code class="tag-id">2C73D81273C0</code></span> Under the hypotheses of corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a>, let $u$ be the threshold solution with $\sup _ Xu=0$. If $u_\lambda $ is the unique bounded solution of </p>
+<div class="equation">
+  \[  \mathrm{MA}_\omega (u_\lambda )=\mathrm{e}^{\lambda u_\lambda }f\, \mathrm{d}V, \qquad \lambda &gt;0,  \]
+</div>
+<p> then $u_\lambda -\sup _ Xu_\lambda \to u$ uniformly as $\lambda \downarrow 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a>, $f$ agrees almost everywhere with a smooth function, so it belongs to $L^ p$ for every finite $p$. By proposition <a data-tag="58DB2491" href="../../tag/69BB1D568698/">15.28.7</a>, the constant $c$ for which $\mathrm{MA}_\omega (v)=cf\, \mathrm{d}V$ has a bounded solution is $b_\omega (f)$. Thus proposition <a data-tag="9CF1F9CD" href="../../tag/1750C7E75315/">15.20.1</a>, with the trivial symmetry group, shows that the normalized family $u_\lambda -\sup _ Xu_\lambda $ is uniformly precompact as $\lambda \downarrow 0$ and that every cluster limit is a normalized solution with this constant. Each cluster limit is therefore a normalized threshold subsolution and equals $u$ by corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a>. If the whole family did not converge uniformly, a sequence staying at a fixed positive uniform distance from $u$ would have a uniformly convergent subsequence, a contradiction. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-4F28E053">
+<p><a class="environment-identifier" href="../../tag/6362B224AE69/">Corollary <span data-tag="4F28E053">12.10.14</span>.</a><span data-gerby-tag="4F28E053"><code class="tag-id">6362B224AE69</code></span> Suppose $\omega $ is Kähler. For a nonzero nonnegative $f\in L^1(\mathrm{d}V)$, the functional $D_{f^{1/n}}$ has a smooth strictly positive maximizer in $\mathscr G_\omega $ if and only if $f$ agrees almost everywhere with a smooth strictly positive function. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The Kähler formula in proposition <a data-tag="58DB2491" href="../../tag/69BB1D568698/">15.28.7</a> gives $b_\omega (f)&gt;0$. If a smooth strictly positive maximizer exists, the proof of corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a> gives 
+    
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}u=a\gamma , \qquad a\geq 0,  \]
+</div>
+<p>
+       with $a,u$ smooth and $a\not\equiv 0$. Since $\mathrm{d}\omega =0$, the first-order equation in lemma <a data-tag="636DE9AC" href="../../tag/0DED015E67EF/">5.22.4</a> becomes $\mathrm{d}a=-aC$ for a smooth one-form $C$. Along any smooth path $\sigma $, this is the linear scalar equation 
+    
+<div class="equation">
+  \[  (a\circ \sigma )'=-(a\circ \sigma )C(\dot\sigma ).  \]
+</div>
+<p>
+       whose solution is the initial value multiplied by a positive exponential. Since $X$ is connected and $a\not\equiv 0$, it follows that $a&gt;0$ everywhere, and $f=b_\omega (f)^{-1}a^ n\gamma ^ n/\mathrm{d}V$ is smooth and strictly positive. Conversely, if $f$ is smooth and strictly positive, the smooth equation and theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">12.2.3</a> provide the maximizing Gauduchon form. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For a nonclosed background, the strict positivity of $f$ in corollary <a data-tag="4F28E053" href="../../tag/6362B224AE69/">12.10.14</a> fails, on every compact complex manifold of dimension at least two, including Kähler manifolds. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-047331AF">
+<p><a class="environment-identifier" href="../../tag/36B0532E29A1/">Example <span data-tag="047331AF">12.10.15</span>.</a><span data-gerby-tag="047331AF"><code class="tag-id">36B0532E29A1</code></span> On every connected compact complex manifold $X$ of dimension $n\geq 2$, with a fixed smooth strictly positive probability volume $\mathrm{d}V$, there is a nonclosed Hermitian form $\omega $ and a nonzero smooth nonnegative density $f$ vanishing on an open set such that $b_\omega (f)=1$ and $D_{f^{1/n}}$ has a smooth strictly positive maximizer. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a Gauduchon metric $\gamma $ and a point $x$. Choose a smooth real function $\psi $ such that $\mathrm{dd}^{\mathrm{c}}\psi \leq -\gamma $ on a coordinate neighborhood $U$ of $x$; in holomorphic coordinates $z=(z_1,\ldots ,z_ n)$ centered at $x$, such a function is obtained by multiplying $-M|z|^2$, with $M$ large enough, by a cutoff that equals one near $x$, and then shrinking $U$. 
+    <p>
+      Choose a smooth function $\chi $ with $0\leq \chi \leq 1$ that vanishes on a smaller neighborhood of $x$ and equals one outside $U$. Put 
+    
+<div class="equation">
+  \[  a=L\chi ,\qquad \omega =a\gamma -\mathrm{dd}^{\mathrm{c}}\psi .  \]
+</div>
+<p>
+       Since $X$ is compact, $\omega $ is strictly positive for sufficiently large $L&gt;0$: on $U$ the term $-\mathrm{dd}^{\mathrm{c}}\psi $ is at least $\gamma $, and outside $U$ the term $L\gamma $ dominates $\mathrm{dd}^{\mathrm{c}}\psi $. Set $f=a^ n\gamma ^ n/\mathrm{d}V$. The smooth function $\psi $ satisfies $\omega +\mathrm{dd}^{\mathrm{c}}\psi =a\gamma \geq 0$ and $\mathrm{MA}_\omega (\psi )=f\, \mathrm{d}V$, so $b_\omega (f)\geq 1$. 
+    <p>
+      Stokes' theorem and $\mathrm{dd}^{\mathrm{c}}\gamma ^{n-1}=0$ give 
+    
+<div class="equation">
+  \[  \int _ X\omega \wedge \gamma ^{n-1} =\int _ Xa\gamma ^ n =\int _ X(f\, \mathrm{d}V/\gamma ^ n)^{1/n}\gamma ^ n.  \]
+</div>
+<p>
+       Testing (<a data-tag="86A10912" href="../../tag/3FECA4E31049/">15.29.3</a>) with $\gamma $ therefore gives the opposite inequality $b_\omega (f)\leq 1$. Hence $b_\omega (f)=1$, the metric $\gamma $ attains the infimum, and the normalized current $\gamma ^{n-1}/\int _ X\omega \wedge \gamma ^{n-1}$ is a smooth strictly positive maximizer of $D_{f^{1/n}}$. If $\omega $ were closed, corollary <a data-tag="4F28E053" href="../../tag/6362B224AE69/">12.10.14</a> would force $f$ to be strictly positive, contrary to its vanishing on an open set. Thus $\omega $ is nonclosed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+In example <a data-tag="047331AF" href="../../tag/36B0532E29A1/">12.10.15</a>, corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a>, corollary <a data-tag="E422AF44" href="../../tag/2C73D81273C0/">12.10.13</a> show that every threshold subsolution is a constant translate of $\psi $ and that the normalized solutions of the exponential equations converge uniformly to $\psi -\sup _ X\psi $. Thus vanishing of the density on an open set does not by itself force nonuniqueness or the failure of this approximation. 
+</p>
+<p>
+The restriction $n\geq 2$ in corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a> is necessary. On a compact connected Riemann surface $X$ with a Hermitian form $\omega $, a normalized Gauduchon current has bidegree $(0,0)$, and the equation $\mathrm{dd}^{\mathrm{c}}T=0$ makes it a harmonic function, hence the constant $(\int _ X\omega )^{-1}$. This single smooth strictly positive current maximizes for every nonzero nonnegative $L^1$ density, which need not have a smooth representative. 
+</p>
+</div></section><section class="reading-chunk" id="entry-8D604EFF48DF" data-section-entries="51F452E9F8D1 8D604EFF48DF E32DBBA007AF"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/8D604EFF48DF/">12.10.16 A smooth maximizing form with an analytic degeneracy set</a><code class="tag-id">8D604EFF48DF</code></h2><span data-gerby-tag="2A8552FE"></span>
+<p>
+We now allow the smooth maximizing form to degenerate. Where it is strictly positive, the argument of corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a> still determines the solution current and gives the equation. If the degeneracy set is a proper analytic subset, neither side of the equation charges it, so the equation holds on all of $X$. Uniqueness follows by passing to the maximum of two threshold subsolutions and applying lemma <a data-tag="56C208E5" href="../../tag/4296DE167374/">5.38.2</a>. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-916CF05A">
+<p><a class="environment-identifier" href="../../tag/51F452E9F8D1/">Theorem <span data-tag="916CF05A">12.10.17</span>.</a><span data-gerby-tag="916CF05A"><code class="tag-id">51F452E9F8D1</code></span> Let $0\leq f\in L^1(\mathrm{d}V)$ be nonzero, and assume $b=b_\omega (f)&gt;0$. Suppose that $D_{f^{1/n}}$ has a smooth semipositive maximizer $T\in \mathscr G_\omega $ that is strictly positive on $X\setminus Z$, where $Z$ is a proper analytic subset of $X$. Then every threshold subsolution $u$ is smooth on $X\setminus Z$ and satisfies </p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\omega (u)=bf\, \mathrm{d}V  \]
+</div>
+<p> on $X$. In particular a threshold solution exists, and it has finite mass. The function $f^{1/n}$ has a smooth nonnegative representative on $X\setminus Z$. </p>
+<p>Any two threshold subsolutions differ by a constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $p=f^{1/n}$ and $A=\omega +\mathrm{dd}^{\mathrm{c}}u$, where $u$ is any threshold subsolution; one exists by theorem <a data-tag="76378BFC" href="../../tag/CC13A9B1D927/">15.28.4</a>. Fix a smooth strictly positive $T_0\in \mathscr G_\omega $, and for real $\varepsilon &gt;0$ set $T_\varepsilon =(T+\varepsilon T_0)/(1+\varepsilon )$. Each $T_\varepsilon $ is a smooth strictly positive member of $\mathscr G_\omega $, so proposition <a data-tag="D3C12AF2" href="../../tag/08C2A578ACE2/">12.10.11</a> gives 
+    
+<div class="equation">
+  \[  A\wedge T_\varepsilon \geq b^{1/n}p k_{T_\varepsilon }\, \mathrm{d}V.  \]
+</div>
+<p>
+       For a smooth semipositive form $T$ with coefficient matrix $P'$ relative to $\omega ^ n$, (<a data-tag="919BAA56" href="../../tag/A99038CD10B4/">12.7.1</a>) gives $k_ T\, \mathrm{d}V=f_0(\det P')^{1/n}\omega ^ n$, so that $k_ T=f_0^{1-n}(\det P')^{1/n}$ is a continuous function of that matrix. Thus $k_{T_\varepsilon }\to k_ T$ uniformly on the compact manifold $X$. Since $p\in L^1$, passing to the limit gives 
+    
+<div class="equation">
+  \[  A\wedge T\geq b^{1/n}p k_ T\, \mathrm{d}V.  \]
+</div>
+<p>
+       The left side has mass one by Stokes' theorem and $\mathrm{dd}^{\mathrm{c}}T=0$, and the right side has mass $b^{1/n}D_ p(T)=1$ because $T$ maximizes. Their difference is positive and has mass zero, hence 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-EEBEBCDC"><span data-gerby-tag="EEBEBCDC"><code class="tag-id">E32DBBA007AF</code></span>
+<span class="equation-label"><a data-tag="EEBEBCDC" href="../../tag/E32DBBA007AF/">12.10.18</a></span>
+<div>\begin{equation}  A\wedge T=b^{1/n}p k_ T\, \mathrm{d}V. \end{equation}</div>
+</div>
+<p>
+      On $U=X\setminus Z$ write $T=\gamma ^{n-1}$, where $\gamma $ is smooth and strictly positive, and set $a=(bf\, \mathrm{d}V/\gamma ^ n)^{1/n}$. The trace equality becomes $A\wedge \gamma ^{n-1}=a\gamma ^ n$ on $U$. On relatively compact subsets of $U$, it controls every coefficient measure of $A$ by an $L^ n$ density. The trace inequalities for all Hermitian forms and the matrix arithmetic–geometric mean inequality, used exactly as in the proof of corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a>, force $A=a\gamma $ on $U$. This step uses only the positivity of $\gamma $ on $U$, since the Hermitian test forms needed there can be taken to be global forms obtained by extension from smaller coordinate charts. 
+    <p>
+      The local regularity lemma lemma <a data-tag="636DE9AC" href="../../tag/0DED015E67EF/">5.22.4</a> makes $u$ and $a$ smooth on $U$. Taking the top power proves the equation on $U$, and $f^{1/n}=b^{-1/n}a(\gamma ^ n/\mathrm{d}V)^{1/n}$ is smooth and nonnegative there. Both $\mathrm{MA}^{\mathrm{ext}}_\omega (u)$ and $f\, \mathrm{d}V$ put no mass on the pluripolar set $Z$. Hence the equality holds on $X$, and its total mass is $b\int _ Xf\, \mathrm{d}V&lt;+\infty $. 
+    <p>
+      It remains to prove uniqueness. Let $v$ be another threshold subsolution and put $w=\max (u,v)$. By proposition <a data-tag="1DA4CC7E" href="../../tag/17AF37734177/">13.14.6</a>, 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\omega (w)\geq \mathbf1_{\{ u\geq v\} }\mathrm{MA}^{\mathrm{ext}}_\omega (u) +\mathbf1_{\{ u&lt;v\} }\mathrm{MA}^{\mathrm{ext}}_\omega (v) \geq bf\, \mathrm{d}V.  \]
+</div>
+<p>
+       Here the pole sets carry no mass for any of the measures involved. Thus $w$ is also a threshold subsolution, and the preceding argument gives the same smooth current $\omega +\mathrm{dd}^{\mathrm{c}}u=\omega +\mathrm{dd}^{\mathrm{c}}v=\omega +\mathrm{dd}^{\mathrm{c}}w=a\gamma $ on $U$. 
+    <p>
+      We apply lemma <a data-tag="56C208E5" href="../../tag/4296DE167374/">5.38.2</a> to $u\leq w$ and to $v\leq w$: their complex Hessians agree on $X\setminus Z$, so $w-u$ and $w-v$ are constant. Hence $u-v$ is constant. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-604052B5061F" data-section-entries="604052B5061F D179EF5E5E25 D804C5144A2D"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/604052B5061F/">12.10.19 The limit of the exponential equations</a><code class="tag-id">604052B5061F</code></h2><span data-gerby-tag="3A50BDBC"></span>
+<p>
+The uniqueness just proved identifies the limit, as $\lambda \downarrow 0$, of the solutions of the exponential equations $\mathrm{MA}^{\mathrm{ext}}_\omega (u)=\mathrm{e}^{\lambda u}f\, \mathrm{d}V$. To control their normalization, we use the probability measure obtained from the maximizing form and the density. Normalized potentials have bounded moments with respect to this measure, and Jensen's inequality converts this bound into an estimate for the constants and a common lower barrier for the potentials. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-E6050C3D">
+<p><a class="environment-identifier" href="../../tag/D804C5144A2D/">Proposition <span data-tag="E6050C3D">12.10.20</span>.</a><span data-gerby-tag="E6050C3D"><code class="tag-id">D804C5144A2D</code></span> Assume the hypotheses of theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>, and let $u_0$ be its unique threshold solution with $\sup _ Xu_0=0$. For real $\lambda &gt;0$, let $u_\lambda $ be the greatest solution of the exponential equation (<a data-tag="FB4936E0" href="../../tag/A708922257FB/">15.35.1</a>), with $\omega $ in place of $h$, given by corollary <a data-tag="A854CD10" href="../../tag/B2672237F244/">15.35.3</a>, and put </p>
+<div class="equation">
+  \[  v_\lambda =u_\lambda -\sup _ Xu_\lambda ,\qquad c_\lambda =\mathrm{e}^{\lambda \sup _ Xu_\lambda }.  \]
+</div>
+<p> There is a constant $C$ independent of $\lambda &gt;0$ such that </p>
+<div class="equation">
+  \[  b\leq c_\lambda \leq b\, \mathrm{e}^{C\lambda },\qquad u_0-C\leq v_\lambda \leq 0.  \]
+</div>
+<p> Moreover $v_\lambda \to u_0$ in $L^1(X)$ as $\lambda \downarrow 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $p=f^{1/n}$ and introduce the probability measure 
+    
+<div class="equation">
+  \[  \mathrm{d}\nu =b^{1/n}p k_ T\, \mathrm{d}V.  \]
+</div>
+<p>
+       It has mass one because $T$ maximizes. Its density belongs to $L^ n$, since $p\in L^ n$ and the smooth semipositive form $T$ has bounded determinant density $k_ T$. By lemma <a data-tag="2C0C5ADC" href="../../tag/88C7A8DCE36E/">5.26.2</a>, $\omega $-plurisubharmonic functions with supremum zero have uniformly bounded moments of every finite order. Hölder's inequality with the exponents $n$ and $n/(n-1)$, which is finite because $n\geq 2$, therefore gives 
+    
+<div class="equation">
+  \[  \int _ X(-v_\lambda )\, \mathrm{d}\nu \leq C.  \]
+</div>
+<p>
+      Since $\mathrm{MA}^{\mathrm{ext}}_\omega (v_\lambda )=c_\lambda \mathrm{e}^{\lambda v_\lambda }f\, \mathrm{d}V$, the trace inequality of lemma <a data-tag="DAAAABF5" href="../../tag/2CA81432B327/">13.14.12</a>, applied with the positive regularizations of $T$ and passed to the limit as in the preceding proof, gives $(\omega +\mathrm{dd}^{\mathrm{c}}v_\lambda )\wedge T\geq (c_\lambda /b)^{1/n}\mathrm{e}^{\lambda v_\lambda /n}\, \nu $. Integrating, we obtain 
+    
+<div class="equation">
+  \[  1\geq (c_\lambda /b)^{1/n} \int _ X\mathrm{e}^{\lambda v_\lambda /n}\, \mathrm{d}\nu \geq (c_\lambda /b)^{1/n}\mathrm{e}^{-C\lambda /n},  \]
+</div>
+<p>
+       where the last step is Jensen's inequality. This proves the upper bound for $c_\lambda $. The lower bound and the comparison 
+    
+<div class="equation">
+  \[  v_\lambda \geq u_0-\lambda ^{-1}\log (c_\lambda /b)  \]
+</div>
+<p>
+       follow from corollary <a data-tag="A854CD10" href="../../tag/B2672237F244/">15.35.3</a> applied with $v=u_0$, and together with the upper bound they give the common lower barrier $u_0-C$. 
+    <p>
+      Take any sequence $\lambda _ j\downarrow 0$. By theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">5.25.2</a>, a subsequence of $(v_{\lambda _ j})$ converges in $L^1$ to some $v\in \mathrm{PSH}(X,\omega )$ with supremum zero, and proposition <a data-tag="AF83D4C4" href="../../tag/D42D2088B421/">15.28.6</a> makes $v$ a threshold subsolution. Uniqueness in theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a> therefore gives $v=u_0$. Since every sequence tending to zero has a subsequence with this same $L^1$ limit, the whole family converges. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+Under the additional envelope condition of the next corollary, the lower barrier upgrades this to convergence in capacity. If the maximizing form is strictly positive everywhere, corollary <a data-tag="E422AF44" href="../../tag/2C73D81273C0/">12.10.13</a> already gives uniform convergence. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-E87F6872">
+<p><a class="environment-identifier" href="../../tag/D179EF5E5E25/">Corollary <span data-tag="E87F6872">12.10.21</span>.</a><span data-gerby-tag="E87F6872"><code class="tag-id">D179EF5E5E25</code></span> Under the hypotheses of proposition <a data-tag="E6050C3D" href="../../tag/D804C5144A2D/">12.10.20</a>, suppose in addition that the obstacle envelope $P_{\delta \omega }(u_0)$ of section <a data-tag="575A3488" href="../../tag/8EA2EE30DE99/">5.40</a> is not identically $-\infty $ for some real $0&lt;\delta &lt;1$. Then $v_\lambda \to u_0$ in capacity as $\lambda \downarrow 0$. In particular this holds if the threshold solution $u_0$ is bounded. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a sequence $\lambda _ j\downarrow 0$. Proposition <a data-tag="E6050C3D" href="../../tag/D804C5144A2D/">12.10.20</a> gives $u_0-C\leq v_{\lambda _ j}\leq 0$ and $v_{\lambda _ j}\to u_0$ in $L^1$. For all $j$ with $\lambda _ j\leq 1$, 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\omega (v_{\lambda _ j}) =c_{\lambda _ j}\mathrm{e}^{\lambda _ jv_{\lambda _ j}}f\, \mathrm{d}V \leq b\mathrm{e}^{C}f\, \mathrm{d}V.  \]
+</div>
+<p>
+       The bounded functions $|\mathrm{e}^{v_{\lambda _ j}}-\mathrm{e}^{u_0}|$ tend to zero in $\mathrm{d}V$-measure. Since $f\in L^1$, their integrals against $f\, \mathrm{d}V$ tend to zero, so the error term in (<a data-tag="F81301C1" href="../../tag/B172EB5C34CB/">15.9.2</a>) tends to zero. We apply proposition <a data-tag="786C08E2" href="../../tag/EFAF50966FDF/">15.9.3</a> with $\theta =\omega $ and $\varphi =u_0$; its additional hypothesis that the $L^1$ limit $u$ satisfies $u\preceq \varphi $, in the notation of definition <a data-tag="478DCB81" href="../../tag/3E4D57445698/">16.7.1</a>, holds trivially, since $u=u_0$. This proves convergence in capacity along every sequence, and hence for the family. Finally, if $u_0$ is bounded, a constant below it is a competitor for $P_{\delta \omega }(u_0)$, so this envelope is not identically $-\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+In general, the condition on $P_{\delta \omega }(u_0)$ is an additional hypothesis. The next subsection shows that it holds when the Monge–Ampère mass of $\omega $ is invariant, or when the singularity of $u_0$ satisfies a quantitative bound. 
+</p>
+</div></section><section class="reading-chunk" id="entry-DC394A61A477" data-section-entries="30380C32B7A7 62BDDC322780 DC394A61A477"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/DC394A61A477/">12.10.22 Envelope criteria and extension across the degeneracy set</a><code class="tag-id">DC394A61A477</code></h2><span data-gerby-tag="C7A74F84"></span>
+<p>
+The capacity criterion above requires the obstacle envelope of $u_0$ in a smaller background $\delta \omega $ not to be identically $-\infty $. We give two sufficient conditions of different origin: invariance of the Monge–Ampère mass controls the contact measures of envelopes of stretched truncations, while a sublinear bound on the singularity provides explicit competitors. Both conditions also give zero Lelong numbers. In the setting of theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>, if the maximizing form has a globally smooth root of rank at least two, zero Lelong numbers then allow the threshold solution to be extended smoothly across the analytic degeneracy set. 
+</p>
+<p>
+The setting is unchanged: $X$ has dimension $n\geq 2$, $\omega $ is a Hermitian form and $\mathrm{d}V$ a smooth positive probability volume form. Inequalities between quasi-plurisubharmonic functions refer to their canonical representatives, and $\nu (u,x)$ denotes the Lelong number of $u$ at $x$. We will use the following consequence of lemma <a data-tag="519C12FA" href="../../tag/1792691862B8/">5.38.8</a>, where $C_\omega $ is the bound for the Lelong numbers of $\omega $-plurisubharmonic functions given there: if $u\in \mathrm{PSH}(X,\omega )$ and, for every $0&lt;\delta &lt;1$, some $v_\delta \in \mathrm{PSH}(X,\delta \omega )$ satisfies $v_\delta \leq u$, then 
+</p>
+<div class="equation">
+  \[  0\leq \nu (u,x)\leq \nu (v_\delta ,x) =\delta \nu (v_\delta /\delta ,x)\leq \delta C_\omega .  \]
+</div>
+<p>
+ Thus $u$ has zero Lelong numbers; the bound is uniform in $\delta $ because $v_\delta /\delta \in \mathrm{PSH}(X,\omega )$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-B159B705">
+<p><a class="environment-identifier" href="../../tag/30380C32B7A7/">Theorem <span data-tag="B159B705">12.10.23</span>.</a><span data-gerby-tag="B159B705"><code class="tag-id">30380C32B7A7</code></span> Suppose $\mathrm{dd}^{\mathrm{c}}(\omega ^ j)=0$ for $1\leq j&lt;n$. Put $V=\int _ X\omega ^ n$. For every nonzero $0\leq f\in L^1(\mathrm{d}V)$, with $M=\int _ Xf\, \mathrm{d}V$, one has </p>
+<div class="equation">
+  \[  b_\omega (f)=\frac VM.  \]
+</div>
+<p> Every threshold subsolution $u$ satisfies $\mathrm{MA}^{\mathrm{ext}}_\omega (u)=(V/M)f\, \mathrm{d}V$ and has mass $V$. Its obstacle envelope $P_{\delta \omega }(u)$ is not identically $-\infty $ for any $0&lt;\delta &lt;1$, and $u$ has zero Lelong numbers. More generally, these last two conclusions hold for every $u\in \mathrm{PSH}(X,\omega )$ with $\int _ X\mathrm{MA}^{\mathrm{ext}}_\omega (u)=V$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a>, every bounded $\omega $-plurisubharmonic function has mass $V$, and truncation therefore bounds every extended mass by $V$. For $f_ k=\min (f,k)$, integration of the bounded equation gives $c_\omega (f_ k)=V/\int _ Xf_ k\, \mathrm{d}V$, so the definition (<a data-tag="CC55A713" href="../../tag/E3AA9E3C0D2D/">15.28.1</a>) gives $b_\omega (f)=V/M$. A threshold subsolution has mass at least $b_\omega (f)M=V$. Its mass is consequently $V$, and the nonnegative difference between its measure and $b_\omega (f)f\, \mathrm{d}V$ has mass zero. 
+    <p>
+      Now let $u\in \mathrm{PSH}(X,\omega )$ have extended mass $V$. Normalize $u\leq 0$, put $\mu _ u=\mathrm{MA}^{\mathrm{ext}}_\omega (u)$, and fix $a&gt;1$. For $u_ j=\max (u,-j)$, let $w_ j=P_\omega (au_ j)$. Comparison with constants gives $-aj\leq w_ j\leq 0$. The bounded contact theorem theorem <a data-tag="50BC4236" href="../../tag/45D3A8D823A8/">16.28.4</a> shows that $\mathrm{MA}_\omega (w_ j)$ is concentrated on the contact set $C_ j=\{ w_ j=au_ j\} $. Since the two functions are canonical representatives and $w_ j\leq au_ j$ almost everywhere, this inequality holds everywhere. Both functions are $a\omega $-plurisubharmonic, so positivity and proposition <a data-tag="1DA4CC7E" href="../../tag/17AF37734177/">13.14.6</a> give 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\omega (w_ j) \leq \mathbf1_{C_ j}\mathrm{MA}_{a\omega }(w_ j) \leq a^ n\mathbf1_{C_ j}\mathrm{MA}_\omega (u_ j).  \]
+</div>
+<p>
+       For integers $j\geq N$, locality of the products on $\{ u&gt;-N\} $ and the mass identity for bounded functions yield 
+    
+<div class="equation">
+  \[  \int _{\{ u_ j\leq -N\} }\mathrm{MA}_\omega (u_ j) =V-\mu _ u(\{ u&gt;-N\} )=\mu _ u(\{ u\leq -N\} ).  \]
+</div>
+<p>
+       Choose $N$ with $a^ n\mu _ u(\{ u\leq -N\} )&lt;V$; this is possible because $\mu _ u$ is finite and puts no mass on the pole set of $u$. If $\sup _ Xw_ j&lt;-aN$, the contact set $C_ j$ lies in $\{ u_ j&lt;-N\} $, and the preceding inequalities contradict $\int _ X\mathrm{MA}_\omega (w_ j)=V$. Hence $\sup _ Xw_ j\geq -aN$ for $j\geq N$, and for smaller $j$ the bound $\sup _ Xw_ j\geq -aj$ suffices. 
+    <p>
+      The envelopes $w_ j$ decrease with $j$, and by compactness of normalized quasi-plurisubharmonic functions this uniform lower bound for their suprema prevents their limit from being identically $-\infty $. Their limit $w\in \mathrm{PSH}(X,\omega )$ satisfies $w\leq au$, also at the poles of $u$. With $\delta =1/a$, the function $\delta w\in \mathrm{PSH}(X,\delta \omega )$ is therefore a competitor for $P_{\delta \omega }(u)$, so this envelope is not identically $-\infty $. Since $a&gt;1$ was arbitrary, this holds for every $0&lt;\delta &lt;1$, and the Lelong estimate preceding the theorem completes the proof. The normalization $u\leq 0$ does not affect any conclusion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-65687F61">
+<p><a class="environment-identifier" href="../../tag/62BDDC322780/">Proposition <span data-tag="65687F61">12.10.24</span>.</a><span data-gerby-tag="65687F61"><code class="tag-id">62BDDC322780</code></span> Let $\psi \leq 0$ be a quasi-plurisubharmonic function with $\mathrm{dd}^{\mathrm{c}}\psi \geq -C\omega $ for some $C&gt;0$, and let $u\in \mathrm{PSH}(X,\omega )$ satisfy, everywhere on $X$, </p>
+<div class="equation">
+  \[  u\geq -A(1-\psi )^\alpha -B, \qquad A&gt;0,\quad B\in \mathbb R,\quad 0&lt;\alpha &lt;1.  \]
+</div>
+<p> Then $P_{\delta \omega }(u)$ is not identically $-\infty $ for every $0&lt;\delta &lt;1$, and $u$ has zero Lelong numbers. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $\alpha &lt;\beta &lt;1$ and $\varepsilon &gt;0$ with $\varepsilon \beta C\leq \delta $. The number 
+    
+<div class="equation">
+  \[  K=B+\sup _{t\geq 1}(At^\alpha -\varepsilon t^\beta )  \]
+</div>
+<p>
+       is finite, and $v_\delta =-\varepsilon (1-\psi )^\beta -K\leq u$. The function $t\mapsto -\varepsilon (1-t)^\beta $ is increasing and convex on $t\leq 0$, with derivative at most $\varepsilon \beta $. Applying the chain inequality for quasi-plurisubharmonic functions to $\max (\psi ,-j)$ and passing to the decreasing limit as $j\to \infty $, we obtain $\mathrm{dd}^{\mathrm{c}}v_\delta \geq -\varepsilon \beta C\omega \geq -\delta \omega $. The limit is not identically $-\infty $ because $\psi $ is finite almost everywhere; at the poles of $\psi $ it takes the value $-\infty $, where the comparison with $u$ still holds. Thus $v_\delta \in \mathrm{PSH}(X,\delta \omega )$ is a competitor for $P_{\delta \omega }(u)$ for each $\delta $, and the Lelong estimate preceding theorem <a data-tag="B159B705" href="../../tag/30380C32B7A7/">12.10.23</a> proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-8EACEED9426F" data-section-entries="7449627F15EC 8EACEED9426F BD4046661AE4"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/8EACEED9426F/">12.10.25 A globally smooth root of rank at least two</a><code class="tag-id">8EACEED9426F</code></h2><span data-gerby-tag="36C5FBAE"></span>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-57780E01">
+<p><a class="environment-identifier" href="../../tag/7449627F15EC/">Theorem <span data-tag="57780E01">12.10.26</span>.</a><span data-gerby-tag="57780E01"><code class="tag-id">7449627F15EC</code></span> Assume the hypotheses of theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>, with analytic degeneracy set $Z$, and let $\Phi _ f$ be the greatest threshold subsolution with supremum zero, from proposition <a data-tag="AF83D4C4" href="../../tag/D42D2088B421/">15.28.6</a>; by that theorem it is the threshold solution with supremum zero. Suppose that the maximizing form is $T=\gamma ^{n-1}$ for a globally smooth semipositive $(1,1)$-form $\gamma $ whose rank is at least two everywhere. If $\Phi _ f$ has zero Lelong numbers, then it is smooth on $X$; by theorem <a data-tag="B159B705" href="../../tag/30380C32B7A7/">12.10.23</a>, proposition <a data-tag="65687F61" href="../../tag/62BDDC322780/">12.10.24</a>, this applies under either of the conditions above. Every threshold subsolution is then smooth, since these subsolutions differ by constants. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $U=X\setminus Z$ and $A=\omega +\mathrm{dd}^{\mathrm{c}}\Phi _ f$. By theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>, $A$ is smooth on $U$ and $\Phi _ f$ satisfies the equation on $X$; the root $\gamma $ is positive on $U$. Stokes' theorem gives $\int _ XA\wedge T=1$, while attainment gives 
+    
+<div class="equation">
+  \[  \int _ U(A^ n)^{1/n}(\gamma ^ n)^{(n-1)/n} =b_\omega (f)^{1/n}D_{f^{1/n}}(T)=1.  \]
+</div>
+<p>
+       The difference $A\wedge \gamma ^{n-1}-(A^ n/\gamma ^ n)^{1/n}\gamma ^ n$ is nonnegative and continuous on $U$ by the arithmetic–geometric mean inequality, and its integral vanishes. The equality case gives $A=r\gamma $ on $U$ with the smooth function $r=\operatorname {tr}_\gamma A/n\geq 0$; where $A^ n=0$, equality forces $A=0$ and $r=0$. 
+    <p>
+      Since $\mathrm{dd}^{\mathrm{c}}\Phi _ f$ is closed, 
+    
+<div class="equation">
+  \[  \mathrm dr\wedge \gamma +r\, \mathrm d\gamma =\mathrm d\omega \quad \hbox{on }U.  \]
+</div>
+<p>
+       For a semipositive form $\gamma $ of rank at least two, the real-linear map $W_\gamma :\xi \mapsto \xi \wedge \gamma $ from real one-forms to three-forms is injective at every point. Indeed, write $\gamma =\sum _ k\lambda _ k\, \mathrm dx_ k\wedge \mathrm dy_ k$ at the point in suitable real coordinates $z_ k=x_ k+\mathrm iy_ k$, with $\lambda _ k\geq 0$ and at least two $\lambda _ k$ positive. For each index $j$ choose $k\neq j$ with $\lambda _ k&gt;0$. The coefficient of $\mathrm dx_ j\wedge \mathrm dx_ k\wedge \mathrm dy_ k$ in $\xi \wedge \gamma $ is $\lambda _ k$ times the coefficient of $\mathrm dx_ j$ in $\xi $, and similarly for $\mathrm dy_ j$. Hence $\xi \wedge \gamma =0$ forces $\xi =0$. 
+    <p>
+      Choose an auxiliary Riemannian metric. The left inverse $L_\gamma =(W_\gamma ^*W_\gamma )^{-1}W_\gamma ^*$ is smooth and uniformly bounded on compact $X$. Thus 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-695D67EC"><span data-gerby-tag="695D67EC"><code class="tag-id">BD4046661AE4</code></span>
+<span class="equation-label"><a data-tag="695D67EC" href="../../tag/BD4046661AE4/">12.10.27</a></span>
+<div>\begin{equation}  \mathrm dr=\alpha -r\beta ,\qquad \alpha =L_\gamma (\mathrm d\omega ),\quad \beta =L_\gamma (\mathrm d\gamma ), \end{equation}</div>
+</div>
+<p>
+       with smooth one-forms on $X$. In particular $|\mathrm d\log (1+r)|\leq C$ on $U$. 
+    <p>
+      Points of $U$ can be joined by short paths avoiding $Z$. In a coordinate ball, stratify $Z$ into countably many smooth strata of real dimension at most $2n-2$. For a fixed point outside $Z$, the endpoints of segments from it that meet one stratum lie in a cone of dimension at most $2n-1$, which is Lebesgue-null. Given two nearby points outside $Z$, choose a generic intermediate point in a ball of radius comparable to their distance; both connecting segments then avoid $Z$, and their combined length is bounded by a fixed multiple of that distance. Using a finite connected cover by coordinate balls, with intermediate points chosen in the overlaps, we also obtain a uniform bound for the lengths of connecting paths in $U$. 
+    <p>
+      The bound on $\mathrm d\log (1+r)$ now bounds $r$ on $U$, and (<a data-tag="695D67EC" href="../../tag/BD4046661AE4/">12.10.27</a>) bounds its derivative. The short paths therefore give a unique locally Lipschitz extension of $r$ across $Z$. Since $Z$ is Lebesgue-null, the weak derivative of the extension satisfies (<a data-tag="695D67EC" href="../../tag/BD4046661AE4/">12.10.27</a>) on $X$. The right side is continuous, so $r$ is $C^1$, and iterating makes it smooth. 
+    <p>
+      Set $S=r\gamma $. It is smooth and semipositive, and $\mathrm dS=\mathrm d\omega $ on $X$ by density of $U$. The current $R=A-S$ is therefore closed, and it is supported on $Z$. It is also positive: since $A=S$ off $Z$ and $S$ puts no mass on $Z$, the current $R$ is the restriction of the positive current $A$ to $Z$. The support theorem recalled in section <a data-tag="0D05D1AE" href="../../tag/2C2417A75DF4/">5.38</a> expresses $R$ as a nonnegative combination of currents of integration along the components of $Z$ of codimension one. Locally $S-\omega $ is smooth and closed, so it has a smooth local $\mathrm{dd}^{\mathrm{c}}$-potential, and the coefficients of $R$ are the generic Lelong numbers of $\Phi _ f$ along these components. All of them vanish, so $\mathrm{dd}^{\mathrm{c}}\Phi _ f=S-\omega $ is smooth. Taking a Euclidean trace and applying elliptic regularity gives a smooth function equal to $\Phi _ f$ almost everywhere, and hence everywhere, since $\Phi _ f$ is its canonical representative. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+The smooth root and its rank bound are hypotheses of the theorem: a smooth semipositive $(n-1,n-1)$-form need not have a smooth $(1,1)$-root across its degeneracy set. On a surface the rank condition already forces $\gamma &gt;0$ everywhere. 
+</p>
+</div></section><section class="reading-chunk" id="entry-244D24A4396B" data-section-entries="244D24A4396B 2A3A58A80CB4 4C03E42B184D E97964925666"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/244D24A4396B/">12.10.28 Two attained instances</a><code class="tag-id">244D24A4396B</code></h2><span data-gerby-tag="AF9D73F2"></span>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-A915115D">
+<p><a class="environment-identifier" href="../../tag/E97964925666/">Example <span data-tag="A915115D">12.10.29</span>.</a><span data-gerby-tag="A915115D"><code class="tag-id">E97964925666</code></span> On the Hopf surface $X=(\mathbb C^2\setminus \{ 0\} )/\langle z\mapsto 2z\rangle $, the background $\omega =|z|^{-2}\mathrm{dd}^{\mathrm{c}}|z|^2$ satisfies $\mathrm{dd}^{\mathrm{c}}\omega =0$, so its Monge–Ampère mass is invariant. There are smooth densities whose threshold solutions are smooth and nonconstant and whose maximizing tests are smooth strictly positive forms. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The form is invariant under $z\mapsto 2z$, so it descends to $X$, and it is positive. For $s=|z|^2$ and $F(s)=s^{-1}$, the identity $sF''+2F'=0$ gives $\mathrm{dd}^{\mathrm{c}}\omega =\mathrm{dd}^{\mathrm{c}}(s^{-1})\wedge \mathrm{dd}^{\mathrm{c}}s=0$, while $\omega $ is not closed. Choose a nonconstant smooth real $q$ and small nonzero $\varepsilon $ such that $A=\omega +\mathrm{dd}^{\mathrm{c}}(\varepsilon q)&gt;0$. Put $V=\int _ X\omega ^2$, $\mathrm{d}V=\omega ^2/V$, $f=A^2/\mathrm{d}V$ and $u=\varepsilon q-\sup _ X\varepsilon q$. Invariance of the mass gives $\int _ Xf\, \mathrm{d}V=\int _ XA^2=V$, hence $b_\omega (f)=1$ by theorem <a data-tag="B159B705" href="../../tag/30380C32B7A7/">12.10.23</a>. 
+    <p>
+      The form $T=A/V$ satisfies $\mathrm{dd}^{\mathrm{c}}T=0$, $\int _ X\omega \wedge T=1$ and $D_{\sqrt f}(T)=1$. For every smooth strictly positive $Q\in \mathscr G_\omega $, the arithmetic–geometric mean inequality and Stokes' theorem give $D_{\sqrt f}(Q)\leq \int _ XA\wedge Q=1$. Thus $T$ is a smooth strictly positive maximizer, and since $u$ is a threshold solution with supremum zero, corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a> gives $\Phi _ f=u$. This is a bounded nonconstant example. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-80D28B87">
+<p><a class="environment-identifier" href="../../tag/4C03E42B184D/">Example <span data-tag="80D28B87">12.10.30</span>.</a><span data-gerby-tag="80D28B87"><code class="tag-id">4C03E42B184D</code></span> Let $n\geq 3$, and view the smooth quadric of dimension $n$ as a double cover of $\mathbb P^ n$. For the restricted Fubini–Study form and a suitable smooth density, the maximizing test is a smooth semipositive form whose smooth root has rank at least two everywhere and degenerates along the ramification divisor. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let 
+    
+<div class="equation">
+  \[  X=\{ [w:z_0:\cdots :z_ n]:w^2=\textstyle \sum _{i=0}^ nz_ i^2\}  \subset \mathbb P^{n+1},\qquad F([w:z])=[z].  \]
+</div>
+<p>
+       The quadratic form is nonsingular, and $F$ is finite of degree two, with smooth ramification divisor $Z=\{ w=0\} $. Local branch coordinates show that $\mathrm dF$ has rank $n-1$ on $Z$ and $n$ elsewhere. Let $\omega $ be the restriction to $X$ of the normalized Fubini–Study form of $\mathbb P^{n+1}$, and let $A=F^*\omega _{\mathrm{FS}}$, where $\omega _{\mathrm{FS}}$ is the normalized Fubini–Study form of $\mathbb P^ n$. Then 
+    
+<div class="equation">
+  \[  u=\log \frac{\sum _ i|z_ i|^2}{|w|^2+\sum _ i|z_ i|^2}  \]
+</div>
+<p>
+       is a smooth function on $X$ with $-\log 2\leq u\leq 0$, $\sup _ Xu=0$ and $A=\omega +\mathrm{dd}^{\mathrm{c}}u$. The change of variables for the branched cover gives $\int _ XA^ n=2$, and Stokes' theorem gives $V=\int _ X\omega ^ n=2$. 
+    <p>
+      Set $\mathrm{d}V=\omega ^ n/V$, $f=A^ n/\mathrm{d}V$, $T=A^{n-1}/V$ and $\gamma =A/V^{1/(n-1)}$. Since $\omega $ is closed, theorem <a data-tag="B159B705" href="../../tag/30380C32B7A7/">12.10.23</a> gives $b_\omega (f)=V/\int _ Xf\, \mathrm{d}V=1$. Stokes' theorem gives $\mathrm{dd}^{\mathrm{c}}T=0$ and $\int _ X\omega \wedge T=1$, and computing the determinant density gives $D_{f^{1/n}}(T)=1$. The arithmetic–geometric mean inequality, which remains valid for semipositive $A$, bounds $D_{f^{1/n}}(Q)$ by $\int _ XA\wedge Q=1$ for every smooth strictly positive $Q\in \mathscr G_\omega $. Thus $T$ is a maximizer, strictly positive off the proper analytic set $Z$, and theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a> gives $\Phi _ f=u$. Its root $\gamma $ has rank $n-1\geq 2$ on $Z$ and is positive elsewhere, as required. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The invariant-mass and sublinear conditions settle the envelope condition only in special situations. We do not know whether general moment or entropy bounds imply either of them, or the hypothesis on the smooth root. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-D602D8E8">
+<p><a class="environment-identifier" href="../../tag/2A3A58A80CB4/">Corollary <span data-tag="D602D8E8">12.10.31</span>.</a><span data-gerby-tag="D602D8E8"><code class="tag-id">2A3A58A80CB4</code></span> Under the hypotheses of theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>, suppose in addition that $f\in L^ p(\mathrm{d}V)$ for some $p&gt;1$. Then the normalized threshold solution $u_0$ is continuous, and the normalized greatest exponential solutions converge uniformly to $u_0$ as the exponent tends to zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="58DB2491" href="../../tag/69BB1D568698/">15.28.7</a>, the constant $c$ for which $\mathrm{MA}_\omega (v)=cf\, \mathrm{d}V$ has a continuous solution is $b_\omega (f)$. The continuous normalized solution is therefore a threshold solution, and it equals $u_0$ by the uniqueness in theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>. For $L^ p$ data the greatest exponential solution coincides with the bounded solution, as explained after theorem <a data-tag="40C9E96E" href="../../tag/9016C2906071/">15.35.2</a>. By proposition <a data-tag="9CF1F9CD" href="../../tag/1750C7E75315/">15.20.1</a>, applied with the trivial group, the normalized family is uniformly precompact, and every cluster limit solves the threshold equation. Uniqueness identifies every cluster limit with $u_0$, which proves uniform convergence of the whole family. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-B4100C32D89A" data-section-entries="33BC8E188D93 B4100C32D89A D0692BB5EDD8 DB722F1D363A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/B4100C32D89A/">12.10.32 A full-mass point pole without a smooth maximizing test</a><code class="tag-id">B4100C32D89A</code></h2><span data-gerby-tag="3EAD709E"></span>
+<p>
+The envelope criteria above do not require $L^ p$ integrability of the density. In the following example on projective space, with a closed background, the threshold solution is unbounded, while its envelopes $P_{\delta \omega }(u)$ in smaller backgrounds are not identically $-\infty $. The dual supremum is approached by smooth tests but attained by no smooth semipositive test. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-07723B47">
+<p><a class="environment-identifier" href="../../tag/DB722F1D363A/">Proposition <span data-tag="07723B47">12.10.33</span>.</a><span data-gerby-tag="07723B47"><code class="tag-id">DB722F1D363A</code></span> Let $X=\mathbb P^ n$, $n\geq 2$, and let $\omega $ be the normalized Fubini–Study form, with $\int _ X\omega ^ n=1$ and $\mathrm{d}V=\omega ^ n$. For $0&lt;\alpha &lt;1$ put </p>
+<div class="equation">
+  \[  \psi =\log \frac{\sum _{i=1}^ n|z_ i|^2}{\sum _{i=0}^ n|z_ i|^2}, \qquad u=1-(1-\psi )^\alpha , \qquad o=[1:0:\cdots :0].  \]
+</div>
+<p> The function $u$ belongs to $\mathrm{PSH}(X,\omega )$, satisfies $\sup _ Xu=0$, has $o$ as its only pole, and has extended mass one. For every $0&lt;\delta &lt;1$, the envelope $P_{\delta \omega }(u)$ is not identically $-\infty $. The measure $\mathrm{MA}^{\mathrm{ext}}_\omega (u)$ is $f\, \mathrm{d}V$ with $f\in L^1(\mathrm{d}V)$ and $f\notin L^ p(\mathrm{d}V)$ for every $p&gt;1$. </p>
+<p>Moreover, $b_\omega (f)=1$ and $\rho _\omega (f^{1/n})=1$, so $u$ is a threshold solution for $f$. No smooth semipositive $T\in \mathscr G_\omega $ attains $D_{f^{1/n}}(T)=1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The numerator in the definition of $\psi $ vanishes only at $o$, and locally $\omega +\mathrm{dd}^{\mathrm{c}}\psi =\mathrm{dd}^{\mathrm{c}}\log \sum _{i=1}^ n|z_ i|^2\geq 0$. The function $\chi (t)=1-(1-t)^\alpha $ is increasing and convex on $t\leq 0$, with $0\leq \chi '\leq \alpha $. Applying the chain inequality to bounded truncations of $\psi $ and taking the decreasing limit, we obtain $u=\chi \circ \psi \in \mathrm{PSH}(X,\omega )$, with 
+    
+<div class="equation">
+  \[  A=\omega +\mathrm{dd}^{\mathrm{c}}u\geq (1-\alpha )\omega .  \]
+</div>
+<p>
+       The function $u$ is smooth off $o$, and it attains its supremum zero on $\{ z_0=0\} $. Since $u=-(1-\psi )^\alpha +1$, proposition <a data-tag="65687F61" href="../../tag/62BDDC322780/">12.10.24</a> shows that all the envelopes $P_{\delta \omega }(u)$ are not identically $-\infty $. 
+    <p>
+      To compute the mass, use the chart $z_0=1$ and write $s=\sum _{i=1}^ n|z_ i|^2$. A local potential $F$ for $A$, as a function of $s$, and the function $q=sF'$ are 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-D50CFDAF"><span data-gerby-tag="D50CFDAF"><code class="tag-id">33BC8E188D93</code></span>
+<span class="equation-label"><a data-tag="D50CFDAF" href="../../tag/33BC8E188D93/">12.10.34</a></span>
+<div>\begin{equation}  \begin{aligned}  F(s)&amp; =\log (1+s)+1-\left(1-\log \frac{s}{1+s}\right)^\alpha ,\\  q(s)&amp; =sF'(s)=\frac{s+\alpha (1-\log (s/(1+s)))^{\alpha -1}}{1+s}. \end{aligned} \end{equation}</div>
+</div>
+<p>
+       The eigenvalues of $A$ are $q/s$ in the tangential directions and $q'$ in the radial direction. Polar integration gives the radial top-degree measure $nq^{n-1}q'\, \mathrm{d}s$, where the angular normalization follows from the Fubini–Study case $q=s/(1+s)$, whose radial density is $ns^{n-1}(1+s)^{-n-1}\, \mathrm{d}s$ and whose total mass is one. Consequently, for $0&lt;s_1&lt;s_2$, 
+    
+<div class="equation">
+  \[  \int _{\{ s_1&lt;|z|^2&lt;s_2\} }A^ n=q(s_2)^ n-q(s_1)^ n.  \]
+</div>
+<p>
+       Here $q(s)\to 0$ as $s\downarrow 0$ and $q(s)\to 1$ as $s\to \infty $. On each compact annulus the extended measure equals the smooth top power, and it puts no mass on $o$ or on the hyperplane at infinity, since both are pluripolar. Exhausting the affine chart by annuli therefore gives extended mass exactly one. (This computation does not use the vanishing of the Lelong numbers.) 
+    <p>
+      Near $o$ write $L=1-\log s$. Differentiating (<a data-tag="D50CFDAF" href="../../tag/33BC8E188D93/">12.10.34</a>) gives 
+    
+<div class="equation">
+  \[  \begin{gathered} \frac qs\sim \alpha s^{-1}L^{\alpha -1},\qquad q'\sim \alpha (1-\alpha )s^{-1}L^{\alpha -2},\\ f(s)\asymp s^{-n}L^{-1-n(1-\alpha )}. \end{gathered}  \]
+</div>
+<p>
+       The smooth volume form, written in terms of $s$, is comparable to $s^{n-1}\, \mathrm{d}s$, so the contribution of a neighborhood of $o$ to $\int _ Xf\, \mathrm{d}V$ is comparable to $\int ^\infty L^{-1-n(1-\alpha )}\, \mathrm{d}L$, which is finite. For every $p&gt;1$, the corresponding integral of $f^ p$ contains an exponentially growing factor $\exp (n(p-1)L)$ and diverges. The measure is smooth off $o$ and puts no mass on $o$, so it is $f\, \mathrm{d}V$ on all of $X$. Since its total mass is one and $\omega $ is closed, theorem <a data-tag="B159B705" href="../../tag/30380C32B7A7/">12.10.23</a> gives $b_\omega (f)=1$, and hence $\rho _\omega (f^{1/n})=b_\omega (f)^{-1/n}=1$. 
+    <p>
+      Suppose that a smooth semipositive $T\in \mathscr G_\omega $ attained this value. The positive current $A$ satisfies $\int _ XA\wedge T=1$ by Stokes' theorem for currents. On $X\setminus \{ o\} $, the matrix arithmetic–geometric mean inequality gives 
+    
+<div class="equation">
+  \[  A\wedge T\geq f^{1/n}k_ T\, \mathrm{d}V.  \]
+</div>
+<p>
+       The right side has total mass one by attainment, so the nonnegative difference of the two sides vanishes off $o$. Since $A$ is smooth and strictly positive there, the equality case gives $T=tA^{n-1}$ on $X\setminus \{ o\} $, also at points where $T=0$: applying the arithmetic–geometric mean inequality to the positive semidefinite coefficient matrix of $T$ conjugated by $A^{1/2}$ shows that all its eigenvalues agree, possibly at zero. The function $t=(T\wedge A)/A^ n$ is smooth and nonnegative on $X\setminus \{ o\} $. 
+    <p>
+      Since $A$ is closed, the equation $\mathrm{dd}^{\mathrm{c}}T=0$ becomes $\mathrm{dd}^{\mathrm{c}}t\wedge A^{n-1}=0$, a locally strictly elliptic scalar equation on $X\setminus \{ o\} $. All eigenvalues of $A$ tend to infinity at $o$, and since $n\geq 2$, so do all eigenvalues of $A^{n-1}$, which are products of $n-1$ eigenvalues of $A$. Since the coefficient matrix of the smooth form $T$ is bounded, it follows that $t\to 0$ at $o$. 
+    <p>
+      Set $t(o)=0$. The resulting continuous nonnegative function on compact $X$ is not identically zero, by the normalization of $T$, so it attains a positive maximum away from $o$. The strong maximum principle on the connected manifold $X\setminus \{ o\} $ forces it to be constant there, contrary to its zero limit at $o$. This excludes every smooth semipositive maximizing test; no assumption on the degeneracy set of $T$ was needed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-E79A5047">
+<p><a class="environment-identifier" href="../../tag/D0692BB5EDD8/">Corollary <span data-tag="E79A5047">12.10.35</span>.</a><span data-gerby-tag="E79A5047"><code class="tag-id">D0692BB5EDD8</code></span> For the density and potential of proposition <a data-tag="07723B47" href="../../tag/DB722F1D363A/">12.10.33</a>, </p>
+<div class="equation">
+  \[  \int _ X f\log f\, \mathrm{d}V&lt;+\infty \quad \Longleftrightarrow \quad \alpha &lt;1-\frac1n.  \]
+</div>
+<p> For every real $r&gt;0$, </p>
+<div class="equation">
+  \[  \int _ X(-u)^ r f\, \mathrm{d}V&lt;+\infty \quad \Longleftrightarrow \quad \alpha r&lt;n(1-\alpha ).  \]
+</div>
+<p> In particular, finite entropy of the density can coexist with an unbounded threshold solution of full mass and with the absence of a smooth semipositive maximizing test. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Only a neighborhood of $o$ can contribute a divergence. There the preceding estimates give $f\, \mathrm{d}V\asymp L^{-1-n(1-\alpha )}\, \mathrm{d}L$, $\log f\sim nL$ and $-u\asymp L^\alpha $. Hence the entropy integral converges exactly when $n(1-\alpha )&gt;1$, and the weighted integral exactly when $\alpha r&lt;n(1-\alpha )$. In the equality cases both integrals are comparable to $\int ^\infty L^{-1}\, \mathrm{d}L$ and diverge. The negative part of $f\log f$ is bounded, hence integrable for the probability volume, so the entropy criterion is unambiguous. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+These are integrals of the single density $f$. They should be distinguished from uniform moment or entropy bounds for the determinant-weighted probabilities of a maximizing sequence, as in theorem <a data-tag="20272A71" href="../../tag/A528C756F776/">12.10.43</a>; since the present example has no smooth semipositive maximizer, it lies outside the setting of theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>. The proposition concerns the explicit threshold solution $u$; identifying it with the greatest normalized threshold subsolution $\Phi _ f$ would require a separate uniqueness argument. 
+</p>
+</div></section><section class="reading-chunk" id="entry-5B8A428F9007" data-section-entries="5B8A428F9007 A98696DE3546"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5B8A428F9007/">12.10.36 Quantitative convergence of the currents</a><code class="tag-id">5B8A428F9007</code></h2><span data-gerby-tag="3F271180"></span>
+<p>
+The bound for the constants $c_\lambda $ in proposition <a data-tag="E6050C3D" href="../../tag/D804C5144A2D/">12.10.20</a> also bounds the trace error linearly in $\lambda $. Away from the degeneracy set, the deficit in the arithmetic–geometric mean inequality converts this bound into a rate of convergence for all coefficients of the currents. We keep the notation $u_0$, $v_\lambda $, $c_\lambda $ of that proposition. The total variation of a current of order zero is measured with respect to a fixed smooth Hermitian metric; on a relatively compact chart it is equivalent to the sum of the total variations of its coefficients. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-3D1C88F6">
+<p><a class="environment-identifier" href="../../tag/A98696DE3546/">Proposition <span data-tag="3D1C88F6">12.10.37</span>.</a><span data-gerby-tag="3D1C88F6"><code class="tag-id">A98696DE3546</code></span> Under the hypotheses and notation of proposition <a data-tag="E6050C3D" href="../../tag/D804C5144A2D/">12.10.20</a>, put </p>
+<div class="equation">
+  \[  A_\lambda =\omega +\mathrm{dd}^{\mathrm{c}}v_\lambda ,\qquad A_0=\omega +\mathrm{dd}^{\mathrm{c}}u_0.  \]
+</div>
+<p> There is a constant $C$ such that </p>
+<div class="equation">
+  \[  \| A_\lambda \wedge T-A_0\wedge T\| _{\mathrm{TV}} \leq C\lambda \qquad (\lambda &gt;0).  \]
+</div>
+<p> For each compact set $K\Subset X\setminus Z$, there is a constant $C_ K$ such that </p>
+<div class="equation">
+  \[  \| A_\lambda -A_0\| _{\mathrm{TV}(K)} \leq C_ K\sqrt\lambda \qquad (0&lt;\lambda \leq 1).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $p=f^{1/n}$, use the probability measure $\nu =A_0\wedge T=b^{1/n}p k_ T\, \mathrm{d}V$ from the proof of proposition <a data-tag="E6050C3D" href="../../tag/D804C5144A2D/">12.10.20</a>, where the equality is (<a data-tag="EEBEBCDC" href="../../tag/E32DBBA007AF/">12.10.18</a>), and set 
+    
+<div class="equation">
+  \[  q_\lambda =(c_\lambda /b)^{1/n}\mathrm{e}^{\lambda v_\lambda /n}, \qquad R_\lambda =A_\lambda \wedge T-q_\lambda \nu \geq 0.  \]
+</div>
+<p>
+       Here $R_\lambda \geq 0$ by the trace inequality used in that proof, which also gives $c_\lambda \geq b$ and $\int _ X(-v_\lambda )\, \mathrm{d}\nu \leq C_0$ for a constant $C_0$. Write $s_+=\max (s,0)$ for the positive part of a real number $s$. Since $q_\lambda \geq \mathrm{e}^{\lambda v_\lambda /n}$ and $1-\mathrm{e}^{x}\leq -x$, we obtain 
+    
+<div class="equation">
+  \[  (1-q_\lambda )_+\leq 1-\mathrm{e}^{\lambda v_\lambda /n}, \qquad \int _ X(1-q_\lambda )_+\, \mathrm{d}\nu \leq C_0\lambda /n.  \]
+</div>
+<p>
+       Since $A_\lambda \wedge T$ and $\nu $ both have mass one, 
+    
+<div class="equation">
+  \[  \| A_\lambda \wedge T-\nu \| _{\mathrm{TV}} \leq R_\lambda (X)+\int _ X|q_\lambda -1|\, \mathrm{d}\nu =2\int _ X(1-q_\lambda )_+\, \mathrm{d}\nu .  \]
+</div>
+<p>
+       This proves the first estimate, with $C=2C_0/n$, and also gives $R_\lambda (X)\leq C_0\lambda /n$ and $\int _ X|q_\lambda -1|\, \mathrm{d}\nu \leq 2C_0\lambda /n$. 
+    <p>
+      On $U=X\setminus Z$, write $T=\gamma ^{n-1}$ and $A_0=a\gamma $ as in the proof of theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>, and put $\alpha _\lambda =q_\lambda a$. Decompose the positive current $A_\lambda $ into its absolutely continuous part, with matrix density $B_\lambda $ relative to $\gamma $, and its positive singular part. Since $\mathrm{MA}^{\mathrm{ext}}_\omega (v_\lambda )=c_\lambda \mathrm{e}^{\lambda v_\lambda }f\, \mathrm{d}V$, the trace inequalities for all Hermitian forms imply, as in the proof of corollary <a data-tag="4B7D0776" href="../../tag/F5E70269636C/">12.10.12</a>, 
+    
+<div class="equation">
+  \[  (\det B_\lambda )^{1/n}\geq \alpha _\lambda \quad \text{almost everywhere on }U.  \]
+</div>
+<p>
+        This is a statement about determinants of matrices; no nonlinear product of coefficient measures is involved. Put $s_\lambda =\operatorname {tr}B_\lambda /n$ and $\delta _\lambda =s_\lambda -\alpha _\lambda \geq 0$. On $U$, the absolutely continuous part of the trace error $R_\lambda $ is $\delta _\lambda \gamma ^ n$, and its singular part is the trace measure of the singular part of $A_\lambda $. Thus 
+    
+<div class="equation">
+  \[  \int _ U s_\lambda \gamma ^ n\leq 1,\qquad \int _ U\delta _\lambda \gamma ^ n\leq C_0\lambda /n,  \]
+</div>
+<p>
+       and the singular trace mass on $U$ has the same upper bound. 
+    <p>
+      For nonnegative numbers $\ell _1,\ldots ,\ell _ n$ with geometric mean at least $\alpha \geq 0$ and arithmetic mean $s$, the arithmetic–geometric mean inequality and the Cauchy–Schwarz inequality give 
+    
+<div class="equation">
+  \[  \sum _ i(\sqrt{\ell _ i}-\sqrt\alpha )^2\leq n(s-\alpha ), \qquad \sum _ i|\ell _ i-\alpha |\leq 2n\sqrt{s(s-\alpha )}.  \]
+</div>
+<p>
+       Indeed $\sum _ i\sqrt{\ell _ i}\geq n\sqrt\alpha $, while $\sum _ i(\sqrt{\ell _ i}+\sqrt\alpha )^2\leq 4ns$. Applying this to the eigenvalues of $B_\lambda $ relative to $\gamma $ and integrating, with the Cauchy–Schwarz inequality once more, we see that the absolutely continuous part of $A_\lambda -\alpha _\lambda \gamma $ has integrated trace norm at most $2n\sqrt{C_0\lambda /n}$ on $U$. Its singular part has norm at most $C_0\lambda $ in the same metric. Finally 
+    
+<div class="equation">
+  \[  \int _ U|\alpha _\lambda -a|\gamma ^ n =\int _ U|q_\lambda -1|\, \mathrm{d}\nu \leq 2C_0\lambda /n.  \]
+</div>
+<p>
+       Since $\gamma $ is comparable to the fixed metric on the compact set $K\subset U$, these estimates and $\lambda \leq \sqrt\lambda $ for $0&lt;\lambda \leq 1$ give the second conclusion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+The coefficient estimate is local on $X\setminus Z$. Convergence in capacity across $Z$ requires the additional envelope condition of corollary <a data-tag="E87F6872" href="../../tag/D179EF5E5E25/">12.10.21</a>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-622292D98711" data-section-entries="1E2D5DAE5C6C 622292D98711"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/622292D98711/">12.10.38 The classes of the divisorial components</a><code class="tag-id">622292D98711</code></h2><span data-gerby-tag="274CDD03"></span>
+<p>
+Uniqueness constrains the divisors along which the threshold solution can have positive Lelong numbers. A linear relation between their Bott–Chern classes would produce a global potential that changes the coefficients of these divisors while preserving the equation off the degeneracy set, contradicting uniqueness. We write $\{ D\} \in H^{1,1}_{\mathrm{BC}}(X,\mathbb R)$ for the Bott–Chern class of the current of integration $[D]$ along a prime divisor $D$, and $\nu (u,D)$ for the generic Lelong number of $u$ along $D$. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-6F09CCF2">
+<p><a class="environment-identifier" href="../../tag/1E2D5DAE5C6C/">Corollary <span data-tag="6F09CCF2">12.10.39</span>.</a><span data-gerby-tag="6F09CCF2"><code class="tag-id">1E2D5DAE5C6C</code></span> Under the hypotheses of theorem <a data-tag="916CF05A" href="../../tag/51F452E9F8D1/">12.10.17</a>, let $u$ be a threshold solution and let $D_1,\ldots ,D_ k$ be the prime divisors with $\nu (u,D_ j)&gt;0$. Then the classes $\{ D_ j\} $ are linearly independent in $H^{1,1}_{\mathrm{BC}}(X,\mathbb R)$. In particular their number is at most $\dim _{\mathbb R}H^{1,1}_{\mathrm{BC}}(X,\mathbb R)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $u$ is smooth off $Z$, these divisors are among the finitely many components of $Z$ of codimension one. Put $a_ j=\nu (u,D_ j)&gt;0$. By lemma <a data-tag="71AD1E73" href="../../tag/3AA98220C897/">5.38.1</a>, 
+    
+<div class="equation">
+  \[  R=\omega +\mathrm{dd}^{\mathrm{c}}u-\sum _ j a_ j[D_ j]\geq 0.  \]
+</div>
+<p>
+       Suppose that real numbers $c_1,\ldots ,c_ k$ satisfy $\sum _ j c_ j\{ D_ j\} =0$. Fix a Gauduchon metric $\eta $ and apply lemma <a data-tag="281A4711" href="../../tag/721E66DF8C88/">20.4.20</a> to the currents of integration $[D_ j]$, with the integrable potentials $v_\eta ([D_ j])$ given there. Since the smooth representative in that lemma depends linearly on the Bott–Chern class, we obtain 
+    
+<div class="equation">
+  \[  h=\sum _ j c_ j v_\eta ([D_ j])\in L^1(X),\qquad \mathrm{dd}^{\mathrm{c}}h=\sum _ j c_ j[D_ j].  \]
+</div>
+<p>
+       Choose $t\ne 0$ sufficiently small that $a_ j+tc_ j\geq 0$ for every $j$. The distribution $u_ t=u+th$ satisfies 
+    
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}u_ t=R+\sum _ j(a_ j+tc_ j)[D_ j]\geq 0,  \]
+</div>
+<p>
+       so it is represented by a function $u_ t\in \mathrm{PSH}(X,\omega )$. On $X\setminus Z$, the function $h$ is smooth and pluriharmonic, so $u_ t$ has the same Monge–Ampère measure as $u$ there. Since neither extended measure charges the pluripolar set $Z$, $u_ t$ is another threshold solution. Uniqueness makes $th=u_ t-u$ constant. Hence $\sum _ jc_ j[D_ j]=0$, and testing near a generic point of each of the distinct divisors $D_ j$ gives $c_ j=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The conclusion concerns only the divisors along which the solution has positive generic Lelong number. It imposes no independence condition on the other components of codimension one of the degeneracy set. 
+</p>
+</div></section><section class="reading-chunk" id="entry-BE9EC228849D" data-section-entries="2A68BBAE5086 BE9EC228849D"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/BE9EC228849D/">12.10.40 A branched projective example</a><code class="tag-id">BE9EC228849D</code></h2><span data-gerby-tag="DF2B5738"></span>
+<p>
+The squaring map of projective space gives a smooth threshold solution whose maximizing form degenerates along the coordinate hyperplanes. The density is smooth, but its $n$th root is not differentiable along these hyperplanes. 
+</p>
+<p>
+For this example take $X=\mathbb P^ n$, $n\geq 2$, with homogeneous coordinates $[Z_0:\cdots :Z_ n]$, and let $\omega $ be the Fubini–Study form normalized by $\int _ X\omega ^ n=1$. Set $\mathrm{d}V=\omega ^ n$. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-7057BCAC">
+<p><a class="environment-identifier" href="../../tag/2A68BBAE5086/">Example <span data-tag="7057BCAC">12.10.41</span>.</a><span data-gerby-tag="7057BCAC"><code class="tag-id">2A68BBAE5086</code></span> For every $n\geq 2$, there is a smooth nonnegative density $f$ on $\mathbb P^ n$, vanishing precisely on the coordinate hyperplanes, such that $b_\omega (f)=1$ and $D_{f^{1/n}}$ has a smooth semipositive maximizer strictly positive off those hyperplanes. The threshold solution is smooth, but $f^{1/n}$ is not differentiable at a general point of any coordinate hyperplane. There is no smooth strictly positive maximizing form. The normalized greatest exponential solutions converge uniformly to the normalized threshold solution. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Define the holomorphic map $F:\mathbb P^ n\to \mathbb P^ n$ and the semipositive form $A$ by 
+    
+<div class="equation">
+  \[  F[Z_0:\cdots :Z_ n]=[Z_0^2:\cdots :Z_ n^2],\qquad A=\tfrac 12F^*\omega .  \]
+</div>
+<p>
+       The homogeneous formula 
+    
+<div class="equation">
+  \[  u=\tfrac 12\log \! \left(\sum _{i=0}^ n|Z_ i|^4\right) -\log \! \left(\sum _{i=0}^ n|Z_ i|^2\right)  \]
+</div>
+<p>
+       defines a smooth function on projective space, and $A=\omega +\mathrm{dd}^{\mathrm{c}}u$. The form $A$ is semipositive, and it is strictly positive exactly where every homogeneous coordinate is nonzero. Define 
+    
+<div class="equation">
+  \[  f=A^ n/\omega ^ n,\qquad T=A^{n-1}.  \]
+</div>
+<p>
+       Since $\omega $ and $A$ are closed and cohomologous, Stokes' theorem gives $\int _ X f\omega ^ n=\int _ X\omega \wedge T=1$, and $\mathrm{dd}^{\mathrm{c}}T=0$; thus $T\in \mathscr G_\omega $. Every $v\in \mathrm{PSH}(X,\omega )$ has extended mass at most one: each bounded truncation $\max (v,-k)$ has mass one, and restricting its Monge–Ampère measure to $\{ v&gt;-k\} $ can only decrease that mass. Consequently an inequality $\mathrm{MA}^{\mathrm{ext}}_\omega (v)\geq c f\omega ^ n$ forces $c\leq 1$. The smooth solution $u$ gives the reverse bound, so $b_\omega (f)=1$. 
+    <p>
+      The determinant formula for smooth semipositive forms gives 
+    
+<div class="equation">
+  \[  k_ T=f^{(n-1)/n},\qquad D_{f^{1/n}}(T)=\int _{\mathbb P^ n}f\omega ^ n=1.  \]
+</div>
+<p>
+       By (<a data-tag="ED3E0287" href="../../tag/025E3287544B/">12.10.2</a>) and $\rho _\omega (f^{1/n})=b_\omega (f)^{-1/n}=1$, the form $T$ is a maximizer. It is strictly positive away from the coordinate hyperplanes because $A$ is; on these hyperplanes $A$ has deficient rank, and hence so does the coefficient matrix of $T=A^{n-1}$. 
+    <p>
+      For the density root, use the chart $Z_0=1$ with coordinates $z_1,\ldots ,z_ n$. Pulling back the Fubini–Study volume by $(z_1,\ldots ,z_ n)\mapsto (z_1^2,\ldots ,z_ n^2)$ and including the factor $2^{-n}$ gives 
+    
+<div class="equation">
+  \[  f(z)=2^ n\left(\prod _{i=1}^ n|z_ i|^2\right) \frac{(1+\sum _ i|z_ i|^2)^{n+1}}{(1+\sum _ i|z_ i|^4)^{n+1}}.  \]
+</div>
+<p>
+       Near a point of $\{ z_1=0\} $ at which all the other coordinates are nonzero, $f^{1/n}$ is $|z_1|^{2/n}$ times a smooth strictly positive function. Restricting to a real line transverse to that hyperplane proves nondifferentiability, also in the case $n=2$, where $|z_1|^{2/n}=|z_1|$. By symmetry of the coordinates, the same holds on every coordinate hyperplane. The absence of a smooth strictly positive maximizer follows from corollary <a data-tag="4F28E053" href="../../tag/6362B224AE69/">12.10.14</a>, since $f$ has zeros. Finally, $f$ is bounded, so corollary <a data-tag="D602D8E8" href="../../tag/2A3A58A80CB4/">12.10.31</a> gives the uniform convergence of the normalized exponential solutions. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-47D5B2CA6B21" data-section-entries="47D5B2CA6B21 797F5974140E A528C756F776"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/47D5B2CA6B21/">12.10.42 A moment condition on maximizing tests</a><code class="tag-id">47D5B2CA6B21</code></h2><span data-gerby-tag="34F9AF85"></span>
+<p>
+For a general Hermitian background, a uniform bound on the moments of normalized potentials with respect to the probabilities of one smooth maximizing sequence can replace the regularity of the maximizing current. Together with the envelope condition in a smaller background, it shows that the cluster limits of the solutions of the exponential equations are exact threshold solutions. 
+</p>
+<p>
+For a nonzero $0\leq f\in L^1(\mathrm{d}V)$ with $b_\omega (f)&gt;0$, let $\mathcal S_ f$ be the class of threshold subsolutions with supremum zero and $\Phi _ f$ its greatest member, from proposition <a data-tag="AF83D4C4" href="../../tag/D42D2088B421/">15.28.6</a>. As in proposition <a data-tag="E6050C3D" href="../../tag/D804C5144A2D/">12.10.20</a>, $u_\lambda $ denotes the greatest solution of the exponential equation $\mathrm{MA}^{\mathrm{ext}}_\omega (u)=\mathrm{e}^{\lambda u}f\, \mathrm{d}V$, and $v_\lambda =u_\lambda -\sup _ Xu_\lambda $, $c_\lambda =\mathrm{e}^{\lambda \sup _ Xu_\lambda }$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-20272A71">
+<p><a class="environment-identifier" href="../../tag/A528C756F776/">Theorem <span data-tag="20272A71">12.10.43</span>.</a><span data-gerby-tag="20272A71"><code class="tag-id">A528C756F776</code></span> Let $0\leq f\in L^1(\mathrm{d}V)$ be nonzero with $b=b_\omega (f)&gt;0$, and put $p=f^{1/n}$ and $R=\rho _\omega (p)=b^{-1/n}$. Suppose that there are smooth strictly positive $T_ j\in \mathscr G_\omega $, with associated probability measures $\nu _ j$, such that </p>
+<div class="equation">
+  \[  d_ j=D_ p(T_ j)\longrightarrow R,\qquad \mathrm{d}\nu _ j=d_ j^{-1}p k_{T_ j}\, \mathrm{d}V,  \]
+</div>
+<p> and a constant $C$ satisfying </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-4C4C14F8"><span data-gerby-tag="4C4C14F8"><code class="tag-id">797F5974140E</code></span>
+<span class="equation-label"><a data-tag="4C4C14F8" href="../../tag/797F5974140E/">12.10.44</a></span>
+<div>\begin{equation}  \int _ X(-v)\, \mathrm{d}\nu _ j\leq C \quad \text{for all }j\text{ and all }v\in \mathrm{PSH}(X,\omega ) \text{ with }\sup _ Xv=0. \end{equation}</div>
+</div>
+<p> Then, for every $\lambda &gt;0$, </p>
+<div class="equation">
+  \[  b\leq c_\lambda \leq b\mathrm{e}^{C\lambda },\qquad \Phi _ f-C\leq v_\lambda \leq 0.  \]
+</div>
+<p> Suppose in addition that $P_{\delta \omega }(\Phi _ f)$ is not identically $-\infty $ for some $0&lt;\delta &lt;1$. Whenever $\lambda _ k\downarrow 0$ and $v_{\lambda _ k}\to v$ in $L^1(X)$, the convergence holds in capacity and </p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\omega (v)=bf\, \mathrm{d}V, \qquad \Phi _ f-C\leq v\leq \Phi _ f.  \]
+</div>
+<p> In particular an exact threshold solution exists. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\mathrm{MA}^{\mathrm{ext}}_\omega (v_\lambda )=c_\lambda \mathrm{e}^{\lambda v_\lambda }f\, \mathrm{d}V$, the trace inequality of lemma <a data-tag="DAAAABF5" href="../../tag/2CA81432B327/">13.14.12</a> and Stokes' theorem give, for each $j$ and $\lambda &gt;0$, 
+    
+<div class="equation">
+  \[  1\geq c_\lambda ^{1/n}d_ j \int _ X\mathrm{e}^{\lambda v_\lambda /n}\, \mathrm{d}\nu _ j \geq c_\lambda ^{1/n}d_ j\mathrm{e}^{-C\lambda /n}.  \]
+</div>
+<p>
+        The second inequality follows from Jensen's inequality and (<a data-tag="4C4C14F8" href="../../tag/797F5974140E/">12.10.44</a>). Letting $j\to \infty $ and using $R=b^{-1/n}$, we obtain the upper bound for $c_\lambda $. The lower bound and the comparison with every normalized threshold subsolution were proved in corollary <a data-tag="A854CD10" href="../../tag/B2672237F244/">15.35.3</a>; applying that comparison to $\Phi _ f$, we obtain 
+    
+<div class="equation">
+  \[  v_\lambda \geq \Phi _ f-\lambda ^{-1}\log (c_\lambda /b) \geq \Phi _ f-C.  \]
+</div>
+<p>
+      Now let $v_{\lambda _ k}\to v$ in $L^1$. By proposition <a data-tag="AF83D4C4" href="../../tag/D42D2088B421/">15.28.6</a>, the limit $v$ lies in $\mathcal S_ f$, hence below $\Phi _ f$. The lower bound passes to the limit, so $\Phi _ f-C\leq v\leq \Phi _ f$; in particular $v\sim \Phi _ f$ in the sense of definition <a data-tag="478DCB81" href="../../tag/3E4D57445698/">16.7.1</a>. For all $k$ with $\lambda _ k\leq 1$, 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\omega (v_{\lambda _ k}) =c_{\lambda _ k}\mathrm{e}^{\lambda _ k v_{\lambda _ k}}f\, \mathrm{d}V \leq b\mathrm{e}^{C}f\, \mathrm{d}V.  \]
+</div>
+<p>
+       The functions $|\mathrm{e}^{v_{\lambda _ k}}-\mathrm{e}^ v|$ are uniformly bounded and tend to zero in $\mathrm{d}V$-measure, so their integrals against the fixed $L^1$ density $f$ tend to zero. Hence the error term in (<a data-tag="F81301C1" href="../../tag/B172EB5C34CB/">15.9.2</a>) tends to zero, as required by proposition <a data-tag="786C08E2" href="../../tag/EFAF50966FDF/">15.9.3</a> with $\varphi =\Phi _ f$. The additional hypothesis $v\preceq \Phi _ f$ of that proposition holds since $v\leq \Phi _ f$, and the condition on $P_{\delta \omega }(\Phi _ f)$ is assumed. That proposition therefore gives convergence in capacity. 
+    <p>
+      The continuity of damped measures under convergence in capacity, theorem <a data-tag="818B97D0" href="../../tag/EE93EE2035F6/">13.15.9</a>, now identifies the equation without a mass-conservation argument. Write $g_ k=c_{\lambda _ k}\mathrm{e}^{\lambda _ k v_{\lambda _ k}}f$. We know $g_ k\to bf$ in $L^1$ and $0\leq g_ k\leq b\mathrm{e}^ Cf$ for large $k$. Hence 
+    
+<div class="equation">
+  \[  \mathrm{e}^{v_{\lambda _ k}}\mathrm{MA}^{\mathrm{ext}}_\omega (v_{\lambda _ k}) =\mathrm{e}^{v_{\lambda _ k}}g_ k\, \mathrm{d}V \longrightarrow \mathrm{e}^ v bf\, \mathrm{d}V  \]
+</div>
+<p>
+       in total variation, while theorem <a data-tag="818B97D0" href="../../tag/EE93EE2035F6/">13.15.9</a> gives the weak limit $\mathrm{e}^ v\mathrm{MA}^{\mathrm{ext}}_\omega (v)$. Dividing by $\mathrm{e}^ v$ off the pole set of $v$, which neither measure charges, gives the equation and the finiteness of the mass. Finally, compactness of normalized $\omega $-plurisubharmonic functions provides an $L^1$ cluster limit along any sequence $\lambda _ k\downarrow 0$, which proves existence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The moment condition holds if the densities of the $\nu _ j$ are uniformly bounded in $L^ q(\mathrm{d}V)$ for some $q&gt;1$, by Hölder's inequality and the uniform bounds for the moments of normalized $\omega $-plurisubharmonic functions. More generally, a uniform entropy bound suffices. Write $a_ j=\mathrm{d}\nu _ j/\mathrm{d}V$ and suppose $\int _ Xa_ j\log a_ j\, \mathrm{d}V\leq H$ for all $j$. (By proposition <a data-tag="E5ACB050" href="../../tag/170451FB65CB/">11.38.1</a>, a uniform entropy bound is equivalent to a uniform bound for the dual entropy $H_0(\nu _ j)$ with zero reference defined there.) Choose $\alpha &gt;0$ and $A$ from lemma <a data-tag="2C0C5ADC" href="../../tag/88C7A8DCE36E/">5.26.2</a>, so that $\int _ X\mathrm{e}^{-\alpha v}\, \mathrm{d}V\leq A$ for every $v\in \mathrm{PSH}(X,\omega )$ with $\sup _ Xv=0$. The elementary entropy inequality, applied first to the truncations $v_ T=\max (v,-T)$ at levels $T&gt;0$, gives 
+</p>
+<div class="equation">
+  \[  \alpha \int _ X(-v_ T)a_ j\, \mathrm{d}V \leq \int _ Xa_ j\log a_ j\, \mathrm{d}V +\log \int _ X\mathrm{e}^{-\alpha v_ T}\, \mathrm{d}V \leq H+\log A.  \]
+</div>
+<p>
+ To prove this inequality, apply $t\log t-t+1\geq 0$ to $t=a_ j/q$, integrate against $q\, \mathrm{d}V$, where $q=\mathrm{e}^{-\alpha v_ T}/\int _ X\mathrm{e}^{-\alpha v_ T}\, \mathrm{d}V$ is a probability density, and rearrange. Monotone convergence as $T\to \infty $ proves (<a data-tag="4C4C14F8" href="../../tag/797F5974140E/">12.10.44</a>) with $C=(H+\log A)/\alpha $. 
+</p>
+<p>
+The same entropy bound also gives attainment of the dual supremum along this sequence. Indeed, $t\log t\geq -\mathrm{e}^{-1}$ and, for $K&gt;1$, 
+</p>
+<div class="equation">
+  \[  \int _{\{ a_ j&gt;K\} }a_ j\, \mathrm{d}V \leq \frac{H+\mathrm{e}^{-1}}{\log K}.  \]
+</div>
+<p>
+ This proves uniform integrability of the $a_ j$, and since $d_ j\to R&gt;0$, also of the densities $p k_{T_ j}=d_ ja_ j$. By proposition <a data-tag="DD4588A4" href="../../tag/B62E802ED631/">12.10.6</a>, every weak cluster limit $T$ of $(T_ j)$ maximizes $D_ p$, and along a subsequence converging to $T$ the probabilities $\nu _ j$ converge to $R^{-1}p k_ T\, \mathrm{d}V$. For each normalized $v$, the function $-v$ is nonnegative and lower semicontinuous, so the lower semicontinuity of its integral under weak convergence of measures passes the moment bound to this limiting probability. These conclusions give no regularity of $T$. 
+</p>
+<p>
+The envelope condition holds if $\Phi _ f$ is bounded. In general, it and the moment bound are additional hypotheses; the tail condition on $f^{1/n}$ alone does not provide them in this argument. The theorem identifies the equation satisfied by each cluster limit. Uniqueness, which gave convergence of the whole family in proposition <a data-tag="E6050C3D" href="../../tag/D804C5144A2D/">12.10.20</a>, is not available here. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/CAEF64468276/"><span>← Previous</span><small>Example 12.9.21</small></a><a class="pager-next" rel="next" href="../../tag/41D17749328B/"><span>Next →</span><small>Theorem 12.10.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem,
+  author = {{Gerby contributors}},
+  title = {12.10 Integrable densities in the compact Gauduchon problem},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fa-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fa-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem%2F&amp;body=Page%3A+%5B12.10+Integrable+densities+in+the+compact+Gauduchon+problem%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fa-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+18ecbdc001a39107dd65ff527e4ef4bb6f43ed5d+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

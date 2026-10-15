@@ -1,0 +1,504 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/"><title>5.29 Hermitian capacity · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/psh-positive-currents/">Chapter 5: Plurisubharmonic functions and positive currents</a></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/" aria-current="page">Section 5.29: Hermitian capacity</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/complex-differential-forms-and-positive-currents/"><span>5.1</span> Complex differential forms and positive currents</a><code class="tag-id">4DEEEF894245</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--complex-manifolds-and-differential-forms/"><span>5.2</span> Complex manifolds and differential forms</a><code class="tag-id">D8E2D1A98ACF</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--currents-and-positivity/"><span>5.3</span> Currents and positivity</a><code class="tag-id">ACB622806098</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--local-potentials-for-closed-1-1-currents/"><span>5.4</span> Local potentials for closed (1,1)-currents</a><code class="tag-id">618FE2108D26</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--holomorphic-zeros-and-the-poincare-lelong-formula/"><span>5.5</span> Holomorphic zeros and the Poincaré–Lelong formula</a><code class="tag-id">0C34F7796300</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--maps-of-currents-and-local-mass/"><span>5.6</span> Maps of currents and local mass</a><code class="tag-id">9F1C9C4A649E</code></li><li><a href="../../sections/plurisubharmonic-functions/"><span>5.7</span> Plurisubharmonic functions</a><code class="tag-id">7B39B08A9568</code></li><li><a href="../../sections/plurisubharmonic-functions--the-line-definition-and-upper-semicontinuity/"><span>5.8</span> The line definition and upper semicontinuity</a><code class="tag-id">55393AEE99C8</code></li><li><a href="../../sections/plurisubharmonic-functions--positive-hessians-and-holomorphic-maps/"><span>5.9</span> Positive Hessians and holomorphic maps</a><code class="tag-id">484A05EF6DF1</code></li><li><a href="../../sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/"><span>5.10</span> Limits, envelopes and local integrability</a><code class="tag-id">5C7282E51B13</code></li><li><a href="../../sections/plurisubharmonic-functions--extension-across-closed-exceptional-sets/"><span>5.11</span> Extension across closed exceptional sets</a><code class="tag-id">E197EAFECEC0</code></li><li><a href="../../sections/plurisubharmonic-functions--kiselman-s-minimum-principle/"><span>5.12</span> Kiselman&#x27;s minimum principle</a><code class="tag-id">53A48113C242</code></li><li><a href="../../sections/plurisubharmonic-functions--the-definition-of-plurisubharmonic-functions/"><span>5.13</span> The definition of plurisubharmonic functions</a><code class="tag-id">92A4FA45DFE1</code></li><li><a href="../../sections/plurisubharmonic-functions--properties-of-plurisubharmonic-functions/"><span>5.14</span> Properties of plurisubharmonic functions</a><code class="tag-id">6C47792FE6D9</code></li><li><a href="../../sections/plurisubharmonic-functions--plurifine-topology/"><span>5.15</span> Plurifine topology</a><code class="tag-id">DFFF533F1AE8</code></li><li><a href="../../sections/plurisubharmonic-functions--lelong-numbers-and-multiplier-ideal-sheaves/"><span>5.16</span> Lelong numbers and multiplier ideal sheaves</a><code class="tag-id">EB678D619AD9</code></li><li><a href="../../sections/plurisubharmonic-functions--quasi-plurisubharmonic-functions/"><span>5.17</span> Quasi-plurisubharmonic functions</a><code class="tag-id">4DF694F99750</code></li><li><a href="../../sections/plurisubharmonic-functions--analytic-singularities/"><span>5.18</span> Analytic singularities</a><code class="tag-id">26AEEBDF865B</code></li><li><a href="../../sections/plurisubharmonic-functions--the-space-of-currents/"><span>5.19</span> The space of currents</a><code class="tag-id">EB85809E6CA8</code></li><li><a href="../../sections/plurisubharmonic-functions--plurisubharmonic-metrics-on-line-bundles/"><span>5.20</span> Plurisubharmonic metrics on line bundles</a><code class="tag-id">A59F8B8F06A8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities/"><span>5.21</span> Plurisubharmonic functions and singularities</a><code class="tag-id">EDB5A2485B58</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--plurisubharmonic-potentials/"><span>5.22</span> Plurisubharmonic potentials</a><code class="tag-id">17A37A0D3690</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--changes-of-background/"><span>5.23</span> Changes of background</a><code class="tag-id">012278DBB6E8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--maxima-and-the-maximum-principle/"><span>5.24</span> Maxima and the maximum principle</a><code class="tag-id">AA6F3BC0AD9F</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--normalized-compactness/"><span>5.25</span> Normalized compactness</a><code class="tag-id">0B216F0B911E</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--uniform-exponential-integrability/"><span>5.26</span> Uniform exponential integrability</a><code class="tag-id">5A19CE5C3CCE</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/"><span>5.27</span> Local products and capacity</a><code class="tag-id">5E507B6993DC</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--products-with-smooth-backgrounds/"><span>5.28</span> Products with smooth backgrounds</a><code class="tag-id">5E2B332B89B4</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/" aria-current="page"><span>5.29</span> Hermitian capacity</a><code class="tag-id">DD310AD8B258</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--comparing-local-regularizations/"><span>5.30</span> Comparing local regularizations</a><code class="tag-id">DB8E63271D73</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--gluing-with-a-small-curvature-error/"><span>5.31</span> Gluing with a small curvature error</a><code class="tag-id">78243032B1A1</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--regularization-in-a-fixed-hermitian-background/"><span>5.32</span> Regularization in a fixed Hermitian background</a><code class="tag-id">26C061D9E9B2</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--singularity-type-and-multiplier-ideals/"><span>5.33</span> Singularity type and multiplier ideals</a><code class="tag-id">9A10411F1BCD</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--analytic-types-and-restriction/"><span>5.34</span> Analytic types and restriction</a><code class="tag-id">0D77FC17B23B</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-local-bergman-estimates/"><span>5.35</span> The local Bergman estimates</a><code class="tag-id">51F374296336</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-global-curvature-bound/"><span>5.36</span> The global curvature bound</a><code class="tag-id">3BCA55154463</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--multiplier-ideals-and-logarithmic-poles/"><span>5.37</span> Multiplier ideals and logarithmic poles</a><code class="tag-id">5BB7B3EA169D</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--lelong-numbers-and-divisorial-estimates/"><span>5.38</span> Lelong numbers and divisorial estimates</a><code class="tag-id">2C2417A75DF4</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--potential-regularity-and-metric-distance/"><span>5.39</span> Potential regularity and metric distance</a><code class="tag-id">DE3129821F10</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--obstacle-envelopes/"><span>5.40</span> Obstacle envelopes</a><code class="tag-id">8EA2EE30DE99</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-minimum-principle/"><span>5.41</span> The minimum principle</a><code class="tag-id">392B79314DF8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--chern-connection-regularization/"><span>5.42</span> Chern-connection regularization</a><code class="tag-id">001730C9ED64</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/"><span>5.43</span> Pullback and descent</a><code class="tag-id">88AEFA5005B9</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--integration-against-non-pluripolar-measures/"><span>5.44</span> Integration against non-pluripolar measures</a><code class="tag-id">2111608E9FA1</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--curvature-of-line-bundles/"><span>5.45</span> Curvature of line bundles</a><code class="tag-id">355A31F789F6</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--polar-curvature/"><span>5.46</span> Polar curvature</a><code class="tag-id">AFA07BFD0E7B</code></li><li><a href="../../sections/pluripolar-sets-and-the-plurifine-topology/"><span>5.47</span> Pluripolar sets and the plurifine topology</a><code class="tag-id">F5A3147592B6</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/D263A93C1D69/"><span>← Previous</span><small>Lemma 5.28.13</small></a><a class="pager-next" rel="next" href="../../tag/1C5C06D2C5D9/"><span>Next →</span><small>5.29.1 Capacity estimates</small></a></nav><h1>5.29 Hermitian capacity<code class="tag-id">DD310AD8B258</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-DD310AD8B258" data-section-entries="DD310AD8B258"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="0231BF16"><code class="tag-id">DD310AD8B258</code></span>
+<p>
+After a fixed rescaling, a local capacity test can be glued to a constant function and so becomes a global potential on $X$. This compares the local Bedford–Taylor capacity with a capacity defined by global potentials, and it transfers to $X$ both the volume–capacity estimate and an estimate for the sublevel sets of normalized potentials. 
+</p>
+<p>
+For a Borel set $E\subset X$, the <em>Hermitian capacity</em> of $E$ is 
+</p>
+<div class="equation">
+  \[  \operatorname {Cap}_\omega (E) =\sup _{v\in \mathrm{PSH}(X,\omega ),\  0\leq v\leq 1} \int _ E(\omega +\mathrm{dd}^{\mathrm{c}}v)^ n,  \]
+</div>
+<p>
+ where the products are those of proposition <a data-tag="890BD62D" href="../../tag/3EDAB69A7289/">5.28.2</a>. Their local expansion and (<a data-tag="0B0E74EF" href="../../tag/F138661713A9/">5.27.3</a>) show that $\operatorname {Cap}_\omega (X)&lt;+\infty $. On relatively compact coordinate balls, a fixed smooth correction bounds the measures of global tests by a constant times the corresponding local capacity. Conversely, the gluing construction in the proof of lemma <a data-tag="96A183CE" href="../../tag/5CEF121C5391/">5.29.2</a> below bounds local capacity by global capacity. Consequently, the quasi-continuity of quasi-plurisubharmonic functions and the characterization of sets of capacity zero recalled in section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a> hold for $\operatorname {Cap}_\omega $. A sequence $u_ j$ converges to $u$ <em>in capacity</em> if 
+</p>
+<div class="equation">
+  \[  \operatorname {Cap}_\omega (\{ |u_ j-u|&gt;\delta \} )\longrightarrow 0 \quad \text{for every }\delta &gt;0,  \]
+</div>
+<p>
+ where pole sets may be omitted. To compare with another Hermitian form $\omega '$, choose $C\geq 1$ with $\omega '\leq C\omega $. Every test $0\leq v\leq 1$ for $\operatorname {Cap}_{\omega '}$ gives a test $v/C$ for $\operatorname {Cap}_\omega $, and the positivity of mixed products gives 
+</p>
+<div class="equation">
+  \[  (\omega '+\mathrm{dd}^{\mathrm{c}}v)^ n\leq C^ n(\omega +\mathrm{dd}^{\mathrm{c}}(v/C))^ n.  \]
+</div>
+<p>
+ Thus $\operatorname {Cap}_{\omega '}\leq C^ n\operatorname {Cap}_\omega $. Interchanging the two forms shows that the capacities are equivalent up to fixed multiplicative constants, so convergence in capacity does not depend on the choice of $\omega $. Finally, the continuity statements for bounded products in section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a> pass to the products with smooth backgrounds, by their local expansion and a finite cover. 
+</p>
+</div></section><section class="reading-chunk" id="entry-1C5C06D2C5D9" data-section-entries="1C5C06D2C5D9 3EF8F920CDD3 5CEF121C5391 87E51BAEC1C0 EACB00126847"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/1C5C06D2C5D9/">5.29.1 Capacity estimates</a><code class="tag-id">1C5C06D2C5D9</code></h2><span data-gerby-tag="7AA44A4F"></span>
+<p>
+In this subsection we abbreviate $\operatorname {Cap}=\operatorname {Cap}_\omega $, and, as before, $\omega _ v=\omega +\mathrm{dd}^{\mathrm{c}}v$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-96A183CE">
+<p><a class="environment-identifier" href="../../tag/5CEF121C5391/">Lemma <span data-tag="96A183CE">5.29.2</span>.</a><span data-gerby-tag="96A183CE"><code class="tag-id">5CEF121C5391</code></span> There are constants $a,C&gt;0$ such that </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-AA55B6AE"><span data-gerby-tag="AA55B6AE"><code class="tag-id">87E51BAEC1C0</code></span>
+<span class="equation-label"><a data-tag="AA55B6AE" href="../../tag/87E51BAEC1C0/">5.29.3</a></span>
+<div>\begin{equation}  \operatorname {Vol}(E)\leq C\exp \bigl (-a\operatorname {Cap}(E)^{-1/n}\bigr ) \end{equation}</div>
+</div>
+<p> for every Borel set $E\subset X$. Moreover, for every $u\in \mathrm{PSH}(X,\omega )$ with $\sup _ Xu=0$ and every $t&gt;1$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B2A1C46F"><span data-gerby-tag="B2A1C46F"><code class="tag-id">3EF8F920CDD3</code></span>
+<span class="equation-label"><a data-tag="B2A1C46F" href="../../tag/3EF8F920CDD3/">5.29.4</a></span>
+<div>\begin{equation}  \operatorname {Cap}(\{ u&lt;-t\} )\leq C/t. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Cover $X$ by finitely many coordinate balls $B'_ j$, with larger concentric balls $B_ j$, $B'_ j\Subset B_ j$. A local capacity test $0\leq v\leq 1$ on $B_ j$ can be turned into a global test as follows. Choose a smooth function $\chi _ j$ with $-2\leq \chi _ j\leq 0$, equal to zero near $\overline{B'_ j}$ and to $-2$ near $\partial B_ j$. Choose $\delta &gt;0$ so small that 
+    
+<div class="equation">
+  \[  \omega +\delta \mathrm{dd}^{\mathrm{c}}\chi _ j\geq 0,\qquad 3\delta /2\leq 1.  \]
+</div>
+<p>
+        The function 
+    
+<div class="equation">
+  \[  V=\max \{ \delta (v+\chi _ j),-\delta /2\} +\delta /2 \quad \hbox{on }B_ j, \qquad V=0\quad \hbox{outside }B_ j,  \]
+</div>
+<p>
+       is $\omega $-plurisubharmonic on $X$, because near $\partial B_ j$ the constant branch is the larger one, and it takes values between zero and one. On $B'_ j$ we have $\omega _ V\geq \delta \mathrm{dd}^{\mathrm{c}}v$. By the positivity of bounded products, 
+    
+<div class="equation">
+  \[  \operatorname {cap}(E\cap B'_ j,B_ j) \leq \delta ^{-n}\operatorname {Cap}(E).  \]
+</div>
+<p>
+       The local volume–capacity estimate, summed over the finite cover, proves (<a data-tag="AA55B6AE" href="../../tag/87E51BAEC1C0/">5.29.3</a>). 
+    <p>
+      For the second estimate, choose on each $B_ j$ a smooth negative quadratic function $r_ j$ with $\mathrm{dd}^{\mathrm{c}}r_ j\geq \omega $. For every global test $0\leq v\leq 1$, the functions $u+r_ j\leq 0$ and $v+r_ j$ are plurisubharmonic on $B_ j$. Thus 
+    
+<div class="equation">
+  \[  \begin{split}  \int _{\{ u&lt;-t\} }\omega _ v^ n &amp; \leq t^{-1}\int _ X(-u)\omega _ v^ n\\ &amp; \leq t^{-1}\sum _ j\int _{B'_ j}(-u-r_ j) \bigl (\mathrm{dd}^{\mathrm{c}}(v+r_ j)\bigr )^ n\\ &amp; \leq \frac Ct\left(1+\int _ X|u|\, \mathrm{d}V\right). \end{split}  \]
+</div>
+<p>
+       Here the second inequality uses $\omega _ v\leq \mathrm{dd}^{\mathrm{c}}(v+r_ j)$, and the third is the weighted Chern–Levine–Nirenberg inequality, applied to local test functions with a common bound. The $L^1$ bound for normalized potentials in theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">5.25.2</a> completes the proof after taking the supremum over $v$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-398B0F5F">
+<p><a class="environment-identifier" href="../../tag/EACB00126847/">Corollary <span data-tag="398B0F5F">5.29.5</span>.</a><span data-gerby-tag="398B0F5F"><code class="tag-id">EACB00126847</code></span> Fix $p&gt;1$. There is a constant $C_ p$ such that every nonnegative $F\in L^ p(X,\mathrm{d}V)$ satisfies </p>
+<div class="equation">
+  \[  \int _ E F\, \mathrm{d}V\leq C_ p\| F\| _ p\operatorname {Cap}(E)^2  \]
+</div>
+<p> for every Borel set $E\subset X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By Hölder's inequality and (<a data-tag="AA55B6AE" href="../../tag/87E51BAEC1C0/">5.29.3</a>), the integral is at most 
+    
+<div class="equation">
+  \[  C\| F\| _ p\exp (-a\operatorname {Cap}(E)^{-1/n}/p'), \qquad p'=p/(p-1).  \]
+</div>
+<p>
+       The function $x\mapsto x^{-2}\exp (-ax^{-1/n}/p')$ is bounded on $0&lt;x\leq \operatorname {Cap}(X)&lt;\infty $, and sets of capacity zero have zero volume. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The same proof bounds the integral of an $L^ p$ density by any fixed positive power of the capacity. The exponent two will be convenient for the iteration over sublevel sets in lemma <a data-tag="15EC6B6A" href="../../tag/9C1A40570E78/">14.19.16</a>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-CACF6025C681" data-section-entries="16B648CFC04A CACF6025C681 D9AF18430F97 EF54C7C9A0A8 F701C1999BDC"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/CACF6025C681/">5.29.6 Integration against a Hölder reference</a><code class="tag-id">CACF6025C681</code></h2><span data-gerby-tag="71690A17"></span>
+<p>
+A Hölder modulus for a bounded potential gives a modulus for integration against its Monge–Ampère measure. The proof uses a smooth approximation of the reference, with integration by parts controlling the change in its measure. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-43921D37">
+<p><a class="environment-identifier" href="../../tag/D9AF18430F97/">Lemma <span data-tag="43921D37">5.29.7</span>.</a><span data-gerby-tag="43921D37"><code class="tag-id">D9AF18430F97</code></span> Let $B'\Subset B$ be concentric balls in $\mathbb C^ n$, and let $0&lt;\alpha \leq 1$. Suppose $p\in \mathrm{PSH}(B)\cap C^{0,\alpha }(B)$ has $C^{0,\alpha }$ norm at most $N$. For every $M\geq 1$ there is a constant $C_ M$ such that bounded $a,b\in \mathrm{PSH}(B)$ with $|a|,|b|\leq M$ satisfy </p>
+<div class="equation">
+  \[  \int _{B'}|a-b|(\mathrm{dd}^{\mathrm{c}}p)^ n \leq C_ M\| a-b\| _{L^1(B)}^{\alpha /(\alpha +2n)}.  \]
+</div>
+<p> The constants are uniform for references with the stated bound $N$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose intermediate concentric balls and a smooth cutoff $0\leq \chi \leq 1$ supported in the innermost of them and equal to one on $B'$. All integrations below take place away from $\partial B$. Let $p_\varepsilon $ be a nonnegative radial convolution of $p$ on a larger intermediate ball. It is plurisubharmonic, and, for small $\varepsilon &gt;0$, 
+    
+<div class="equation">
+  \[  \| p-p_\varepsilon \| _\infty \leq C\varepsilon ^\alpha , \qquad 0\leq \mathrm{dd}^{\mathrm{c}}p_\varepsilon \leq C\varepsilon ^{-2}\mathrm{dd}^{\mathrm{c}}|z|^2.  \]
+</div>
+<p>
+       Both references have a common bounded range. Set $f=|a-b|=2\max (a,b)-a-b$, and put 
+    
+<div class="equation">
+  \[  T=\sum _{j=0}^{n-1}(\mathrm{dd}^{\mathrm{c}}p)^ j\wedge (\mathrm{dd}^{\mathrm{c}}p_\varepsilon )^{n-1-j}.  \]
+</div>
+<p>
+       This is a closed positive current. Factorization and integration by parts give 
+    
+<div class="equation">
+  \[  \int \chi f\bigl ((\mathrm{dd}^{\mathrm{c}}p)^ n-(\mathrm{dd}^{\mathrm{c}}p_\varepsilon )^ n\bigr ) =\int (p-p_\varepsilon )\mathrm{dd}^{\mathrm{c}}(\chi f)\wedge T.  \]
+</div>
+<p>
+       We check that the last signed measure has variation at most $C(1+M)^2$, uniformly in $\varepsilon $. The term $\chi \mathrm{dd}^{\mathrm{c}}f\wedge T$ is a linear combination of the positive measures formed with $\max (a,b),a,b$, whose masses are at most $CM$ by local Chern–Levine–Nirenberg estimates. The term $f\mathrm{dd}^{\mathrm{c}}\chi \wedge T$ has variation at most $CM$. 
+    <p>
+      For the two terms involving $\mathrm df$, use a cutoff $\eta $ equal to one near $\operatorname {supp}\chi $. If $q$ is any of $a,b,\max (a,b)$, translate it so that $0\leq q\leq 2M$. The bounded chain rule and closedness of $T$ give 
+    
+<div class="equation">
+  \[  \int \eta \, \mathrm dq\wedge \mathrm d^{\mathrm c}q\wedge T =\frac12\int q^2\mathrm{dd}^{\mathrm{c}}\eta \wedge T -\int \eta q\mathrm{dd}^{\mathrm{c}}q\wedge T\leq CM^2.  \]
+</div>
+<p>
+       The last term is nonnegative before subtraction, and the first is bounded using the local mass of $T$. Since $f=2\max (a,b)-a-b$, its gradient energy is also bounded by $CM^2$. Cauchy–Schwarz against the positive current $T$ now bounds the variation of $\mathrm d\chi \wedge \mathrm d^{\mathrm c}f\wedge T$ and $\mathrm d^{\mathrm c}\chi \wedge \mathrm df\wedge T$ by $CM$. These are all the terms of $\mathrm{dd}^{\mathrm{c}}(\chi f)\wedge T$. 
+    <p>
+      The bounded formulas follow first for local smooth regularizations. To pass to bounded potentials, regularize $a,b,p$ decreasingly on the intermediate balls, write $f$ as the displayed linear combination, and apply lemma <a data-tag="672093DF" href="../../tag/2A60C2B3B4C3/">5.27.2</a> to the expanded identities. The energy bounds are uniform; thus the integration by parts and its estimate survive this limit. 
+    <p>
+      Writing $L=\| a-b\| _{L^1(B)}$, we have proved 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-F87713B6"><span data-gerby-tag="F87713B6"><code class="tag-id">16B648CFC04A</code></span>
+<span class="equation-label"><a data-tag="F87713B6" href="../../tag/16B648CFC04A/">5.29.8</a></span>
+<div>\begin{equation}  \int \chi f(\mathrm{dd}^{\mathrm{c}}p)^ n \leq C(1+M)^2\varepsilon ^\alpha +C\varepsilon ^{-2n}L. \end{equation}</div>
+</div>
+<p>
+       For small positive $L$, take $\varepsilon =L^{1/(\alpha +2n)}$. A fixed admissible radius and the bounded local mass handle the remaining $L$. For $L=0$, let $\varepsilon \downarrow 0$ in the same inequality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-9E2FA0D5">
+<p><a class="environment-identifier" href="../../tag/F701C1999BDC/">Corollary <span data-tag="9E2FA0D5">5.29.9</span>.</a><span data-gerby-tag="9E2FA0D5"><code class="tag-id">F701C1999BDC</code></span> Let $(X,\omega )$ be compact Hermitian, and let $u\in \mathrm{PSH}(X,\omega )\cap C^{0,\alpha }(X)$, $0&lt;\alpha \leq 1$. If uniformly bounded quasi-plurisubharmonic functions $a,b$ have a fixed common smooth lower curvature bound, then </p>
+<div class="equation">
+  \[  \int _ X|a-b|\, \omega _ u^ n \leq C\| a-b\| _{L^1(\mathrm dV)}^{\alpha /(\alpha +2n)}.  \]
+</div>
+<p> The constant depends on the bounds for $a,b$, their lower curvature bound and the $C^{0,\alpha }$ norm of $u$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On each of finitely many coordinate balls, choose a fixed smooth strictly plurisubharmonic quadratic $Q$ such that $a+Q,b+Q,u+Q$ are plurisubharmonic and $\mathrm{dd}^{\mathrm{c}}Q\geq \omega $. There $0\leq \omega _ u\leq \mathrm{dd}^{\mathrm{c}}(u+Q)$, so positivity of bounded products gives $\omega _ u^ n\leq (\mathrm{dd}^{\mathrm{c}}(u+Q))^ n$. Apply lemma <a data-tag="43921D37" href="../../tag/D9AF18430F97/">5.29.7</a> on smaller balls covering $X$. The quadratic cancels in the difference, and the local volumes are equivalent to $\mathrm dV$. Summing proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The estimate before optimization also controls the tails of unbounded potentials. We need the following local form with a compact ambient space, so that the exponential bound for smooth volume is uniform. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B6F316F2">
+<p><a class="environment-identifier" href="../../tag/EF54C7C9A0A8/">Lemma <span data-tag="B6F316F2">5.29.10</span>.</a><span data-gerby-tag="B6F316F2"><code class="tag-id">EF54C7C9A0A8</code></span> Let $(Y,\Omega )$ be compact Hermitian, let $B'\Subset B\subset Y$ be coordinate balls, and let $p\in \mathrm{PSH}(B)\cap C^{0,\alpha }(B)$ have norm at most $N$, with $0&lt;\alpha \leq 1$. There are $c,C&gt;0$, uniform for these references, such that </p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}p)^ n\bigl (B'\cap \{ v&lt;-t\} \bigr )\leq C\mathrm e^{-ct} \quad (t\geq 0)  \]
+</div>
+<p> for every $v\in \mathrm{PSH}(Y,\Omega )$ with $\sup _ Yv=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a smooth quadratic $Q$ with $\mathrm{dd}^{\mathrm{c}}Q\geq \Omega $ on $B$ and a fixed constant $D$ such that $w=v+Q-D\leq 0$. For integers $m\geq 1$, set 
+    
+<div class="equation">
+  \[  a_ m=\max (w,-m),\qquad b_ m=\max (w,-m-1),\qquad f_ m=a_ m-b_ m.  \]
+</div>
+<p>
+       These are bounded plurisubharmonic truncations; $0\leq f_ m\leq 1$, it vanishes on $\{ w\geq -m\} $, and it equals one on $\{ w&lt;-m-1\} $. By lemma <a data-tag="2C0C5ADC" href="../../tag/88C7A8DCE36E/">5.26.2</a> on $(Y,\Omega )$ and the bounded correction $Q-D$, 
+    
+<div class="equation">
+  \[  \| f_ m\| _{L^1(B)}\leq C\mathrm e^{-am}  \]
+</div>
+<p>
+       for a fixed $a&gt;0$. Use the proof of lemma <a data-tag="43921D37" href="../../tag/D9AF18430F97/">5.29.7</a>, with $M=m+1$, keeping its estimate (<a data-tag="F87713B6" href="../../tag/16B648CFC04A/">5.29.8</a>) before optimization. Taking $\varepsilon =\mathrm e^{-am/(\alpha +2n)}$ gives 
+    
+<div class="equation">
+  \[  \int \chi f_ m(\mathrm{dd}^{\mathrm{c}}p)^ n \leq C(1+m)^2\exp \left(-\frac{a\alpha m}{\alpha +2n}\right) \leq C\mathrm e^{-cm}  \]
+</div>
+<p>
+       for some $c&gt;0$. Large $m$ ensure that the convolution radius is admissible; the common local mass handles the other integers. The bounded difference between $w$ and $v$, and then choosing an integer just below the given height, prove the estimate for every real $t\geq 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-510FD09C306A" data-section-entries="1017EA20E8D8 510FD09C306A D00B685B1791"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/510FD09C306A/">5.29.11 Capacity bounds for Hölder references</a><code class="tag-id">510FD09C306A</code></h2><span data-gerby-tag="411039AA"></span>
+<p>
+To pass from the exponential tail estimate to a capacity estimate, we use a closed background on an auxiliary projective space. The local capacity comparison then returns the result to the original Hermitian manifold. 
+</p>
+<p>
+For the Fubini–Study form $\omega _{\mathrm{FS}}$ on $\mathbb P^ n$, normalized by $\int \omega _{\mathrm{FS}}^ n=1$, define for a compact set $K$ 
+</p>
+<div class="equation">
+  \[  T(K)=\inf _{v\in \mathrm{PSH}(\mathbb P^ n,\omega _{\mathrm{FS}}),\  \sup v=0} \exp (\sup _ Kv).  \]
+</div>
+<p>
+ We recall the classical global extremal-function theorem in this closed setting <span class="cite">[<a href="../../references/#RA2F733890274">GZ17</a>]</span>. If $K$ is non-pluripolar, the upper semicontinuous regularization of 
+</p>
+<div class="equation">
+  \[  V_ K=\sup \{ v\in \mathrm{PSH}(\mathbb P^ n,\omega _{\mathrm{FS}}):v|_ K\leq 0\}   \]
+</div>
+<p>
+ is bounded, nonnegative and $\omega _{\mathrm{FS}}$-plurisubharmonic. Its Monge–Ampère probability is supported on $K$. If $K$ is pluripolar, $\sup V_ K=+\infty $ and $T(K)=0$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-E4B3C199">
+<p><a class="environment-identifier" href="../../tag/1017EA20E8D8/">Lemma <span data-tag="E4B3C199">5.29.12</span>.</a><span data-gerby-tag="E4B3C199"><code class="tag-id">1017EA20E8D8</code></span> For every compact $K\subset \mathbb P^ n$, </p>
+<div class="equation">
+  \[  T(K)\leq \mathrm e\exp \bigl (-\operatorname {Cap}_{\omega _{\mathrm{FS}}}(K)^{-1/n}\bigr ).  \]
+</div>
+<p> The right-hand side is zero for capacity zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The pluripolar case follows from the recalled theorem and the characterization of capacity-zero sets. Otherwise let $M=\sup V_ K^*&lt;\infty $. Subtracting $\sup _ Kv$ from a normalized competitor, and conversely normalizing competitors for $V_ K$, shows directly that $T(K)=\mathrm e^{-M}$. 
+    <p>
+      If $M\geq 1$, the function $q=V_ K^*/M$ satisfies $0\leq q\leq 1$ and is an admissible capacity test. Since the background is closed, 
+    
+<div class="equation">
+  \[  1=\int _ K\omega _{V_ K^*}^ n \leq M^ n\int _ K\omega _ q^ n \leq M^ n\operatorname {Cap}_{\omega _{\mathrm{FS}}}(K).  \]
+</div>
+<p>
+       Here $\omega _{V_ K^*}\leq M\omega _ q$ follows from $M\geq 1$. Thus $M\geq \operatorname {Cap}_{\omega _{\mathrm{FS}}}(K)^{-1/n}$. If $M&lt;1$, $V_ K^*$ itself is a capacity test, so the same supported probability gives $\operatorname {Cap}_{\omega _{\mathrm{FS}}}(K)=1$. Since $T(K)\leq 1$, the stated factor $\mathrm e$ covers this case. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-0605525B">
+<p><a class="environment-identifier" href="../../tag/D00B685B1791/">Proposition <span data-tag="0605525B">5.29.13</span>.</a><span data-gerby-tag="0605525B"><code class="tag-id">D00B685B1791</code></span> Let $(X,\omega )$ be compact Hermitian. Fix $0&lt;\alpha \leq 1$ and $N&gt;0$. There are $a,C&gt;0$ such that every $u\in \mathrm{PSH}(X,\omega )\cap C^{0,\alpha }(X)$ with $\| u\| _{C^{0,\alpha }}\leq N$ satisfies </p>
+<div class="equation">
+  \[  \omega _ u^ n(E)\leq C\exp \bigl (-a\operatorname {Cap}_\omega (E)^{-1/n}\bigr ) \quad (E\subset X\text{ Borel}).  \]
+</div>
+<p> Consequently, for each $s&gt;0$ there is a uniform $C_ s$ with $\omega _ u^ n(E)\leq C_ s\operatorname {Cap}_\omega (E)^ s$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix nested coordinate balls $B'\Subset B$ and a smooth quadratic $Q$ with $\mathrm{dd}^{\mathrm{c}}Q\geq \omega $ on $B$. The function $p=u+Q$ is plurisubharmonic with a common Hölder bound, and $\omega _ u^ n\leq (\mathrm{dd}^{\mathrm{c}}p)^ n$ there. Regard $B$ as a ball in the affine chart $\mathbb C^ n\subset \mathbb P^ n$ and restrict this local measure to $B'$, extending it by zero. By lemma <a data-tag="B6F316F2" href="../../tag/EF54C7C9A0A8/">5.29.10</a> on $(\mathbb P^ n,\omega _{\mathrm{FS}})$, it has a uniform exponential tail on every normalized global Fubini–Study potential. Its total mass is uniformly bounded by local Chern–Levine–Nirenberg estimates. 
+    <p>
+      For a non-pluripolar compact $K\subset B'$, choose a normalized potential $v$ with $\sup _ Kv\leq \log T(K)+1$. For small $T(K)$ the tail estimate gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}p)^ n(K)\leq C T(K)^ c \leq C\exp \bigl (-c\operatorname {Cap}_{\omega _{\mathrm{FS}}}(K)^{-1/n}\bigr ).  \]
+</div>
+<p>
+       The common mass bound handles the remaining $T(K)$, and pluripolar sets have zero local product mass. A bounded local potential for $\omega _{\mathrm{FS}}$ turns every global test $0\leq v\leq 1$ into a plurisubharmonic function of a fixed bounded range on $B$. Hence 
+    
+<div class="equation">
+  \[  \operatorname {Cap}_{\omega _{\mathrm{FS}}}(K) \leq C_1\operatorname {cap}(K,B) \leq C_2\operatorname {Cap}_\omega (K),  \]
+</div>
+<p>
+       where the last inequality is the gluing construction of lemma <a data-tag="96A183CE" href="../../tag/5CEF121C5391/">5.29.2</a> on the original manifold. These inequalities have the required direction after taking negative inverse powers. Inner regularity of the finite local product extends the bound from compact to Borel subsets of $B'$. Summing over a fixed finite cover proves the first assertion. The second follows by bounding $x^{-s}\exp (-ax^{-1/n})$ on $0&lt;x\leq \operatorname {Cap}_\omega (X)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-97C040D849DD" data-section-entries="31C5645526CA 505602F4CB54 7EE2FAA017DE 97C040D849DD D0C7DB81F772 DF96BD63B553 F56E1BEB2997"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/97C040D849DD/">5.29.14 Convergence of potentials and measures</a><code class="tag-id">97C040D849DD</code></h2><span data-gerby-tag="FA285F9A"></span>
+<p>
+For quasi-continuous obstacles, a decreasing lower semicontinuous approximation keeps the original bounds and confines the error to sets of vanishing capacity. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-CA7BA291">
+<p><a class="environment-identifier" href="../../tag/DF96BD63B553/">Lemma <span data-tag="CA7BA291">5.29.15</span>.</a><span data-gerby-tag="CA7BA291"><code class="tag-id">DF96BD63B553</code></span> Every bounded quasi-continuous function $f$ on $X$ admits bounded lower semicontinuous functions $f_ j$ with common bounds such that $f_ j\downarrow f$ quasi-everywhere and $f_ j\to f$ in capacity. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose open sets $O_ j$ of capacity at most $2^{-j}$ such that the restriction of $f$ to $X\setminus O_ j$ is continuous, and set $G_ j=\bigcup _{k\geq j}O_ k$. Then the sets $G_ j$ decrease, their capacities tend to zero, and $f$ is continuous on the closed complement of each $G_ j$. Choose $M\geq \sup _ Xf$ and define 
+    
+<div class="equation">
+  \[  f_ j=f\  \hbox{on }X\setminus G_ j,\qquad f_ j=M\  \hbox{on }G_ j.  \]
+</div>
+<p>
+       At a boundary point of $G_ j$, the values of $f_ j$ on the closed complement tend to the value of $f$ there, while the values inside $G_ j$ are at least that value. Thus $f_ j$ is lower semicontinuous. The functions $f_ j$ decrease to $f$ outside $\bigcap _ jG_ j$, a set of capacity zero. Since $f_ j-f$ is supported in $G_ j$, they also converge to $f$ in capacity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Uniform bounds on potentials give a common capacity bound for their mixed measures. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-3894071E">
+<p><a class="environment-identifier" href="../../tag/F56E1BEB2997/">Lemma <span data-tag="3894071E">5.29.16</span>.</a><span data-gerby-tag="3894071E"><code class="tag-id">F56E1BEB2997</code></span> Let $A\geq 0$ and let $0\leq k\leq n$ be an integer. There is a constant $C_ A$ such that all the positive mixed measures </p>
+<div class="equation">
+  \[  \omega _{v_1}\wedge \cdots \wedge \omega _{v_ k}\wedge \omega ^{n-k}, \qquad v_ i\in \mathrm{PSH}(X,\omega ), \quad \| v_ i\| _\infty \leq A,  \]
+</div>
+<p> are bounded above on Borel sets by $C_ A\operatorname {Cap}_\omega $. In particular, their total masses are uniformly bounded. If uniformly bounded functions tend to zero in capacity, then their integrals against these measures tend to zero uniformly in the $v_ i$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Translate the $v_ i$ so that $0\leq v_ i\leq 2A$, and put $q=(v_1+\cdots +v_ k)/B$, where $B\geq \max \{ 2k,2kA,1\} $. Then $0\leq q\leq 1$ and 
+    
+<div class="equation">
+  \[  \omega _ q=B^{-1}\sum _{i=1}^ k\omega _{v_ i}+(1-k/B)\omega ,  \]
+</div>
+<p>
+       where all coefficients are positive. Expanding $\omega _ q^ n$ shows that the given mixed product is bounded by a constant multiple of $\omega _ q^ n$, and the definition of capacity proves the first claim. The case $k=0$ follows by testing with $v=0$. For a bounded function $z$, split its integral into the parts over $\{ |z|&gt;t\} $ and over its complement; first use convergence in capacity for fixed $t&gt;0$, and then let $t\downarrow 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The same control applies to the total variation of a product formed with a different smooth background. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-460E8CB5">
+<p><a class="environment-identifier" href="../../tag/7EE2FAA017DE/">Lemma <span data-tag="460E8CB5">5.29.17</span>.</a><span data-gerby-tag="460E8CB5"><code class="tag-id">7EE2FAA017DE</code></span> Let $\Omega $ be a Hermitian form and $\theta $ a smooth real $(1,1)$-form on $X$. Suppose that $\Omega $-plurisubharmonic functions $v_ j$ have common finite upper and lower bounds and decrease to $v$. Then the signed measures </p>
+<div class="equation">
+  \[  \nu _ j=(\theta +\mathrm{dd}^{\mathrm{c}}v_ j)^ n  \]
+</div>
+<p> converge to $(\theta +\mathrm{dd}^{\mathrm{c}}v)^ n$ against every fixed bounded quasi-continuous function. Their total variations are bounded, uniformly in $j$, by a constant multiple of the local capacity on the balls of a fixed finite cover. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On a relatively compact coordinate ball, choose a fixed quadratic function $q$ such that the functions $v_ j+q$ are plurisubharmonic; they still have common bounds. Expand 
+    
+<div class="equation">
+  \[  (\theta +\mathrm{dd}^{\mathrm{c}}v_ j)^ n =\sum _{\ell =0}^ n\binom n\ell \bigl (\mathrm{dd}^{\mathrm{c}}(v_ j+q)\bigr )^\ell \wedge (\theta -\mathrm{dd}^{\mathrm{c}}q)^{n-\ell }.  \]
+</div>
+<p>
+       The absolute value of the $\ell $-th summand is bounded by a fixed constant times 
+    
+<div class="equation">
+  \[  \bigl (\mathrm{dd}^{\mathrm{c}}(v_ j+q)\bigr )^\ell \wedge \kappa _0^{n-\ell },  \]
+</div>
+<p>
+       where $\kappa _0$ is a fixed positive Euclidean form. This positive mixed measure is bounded, uniformly in $j$, by a constant times the local capacity: add a fixed strictly plurisubharmonic quadratic function to $v_ j+q$, expand the top power of its Hessian, and rescale its uniformly bounded range into $[0,1]$ to apply the definition of capacity. This also covers $\ell =0$. Summing over a finite cover gives the asserted control of the total variations. The ordinary decreasing continuity of Bedford–Taylor products gives weak convergence term by term. For a bounded quasi-continuous coefficient, remove an open set of small capacity and extend the restriction of the coefficient to the compact complement to a continuous function on $X$. The variation bound controls the resulting error uniformly for the sequence and its limit, and letting the capacity of the removed set tend to zero proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+A finite non-pluripolar measure is uniformly absolutely continuous with respect to capacity, although it need not be bounded by a power of the capacity. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-F1D4CC9B">
+<p><a class="environment-identifier" href="../../tag/D0C7DB81F772/">Lemma <span data-tag="F1D4CC9B">5.29.18</span>.</a><span data-gerby-tag="F1D4CC9B"><code class="tag-id">D0C7DB81F772</code></span> Let $\mu $ be a finite non-pluripolar Borel measure on $X$. Then </p>
+<div class="equation">
+  \[  \lim _{\delta \downarrow 0}\sup \{ \mu (E):E\text{ Borel}, \operatorname {Cap}_\omega (E)\leq \delta \} =0.  \]
+</div>
+<p> Consequently, convergence in capacity implies convergence in $\mu $-measure. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If the first assertion failed, there would be $\epsilon &gt;0$ and Borel sets $E_ j$ of capacity at most $2^{-j}$ with $\mu (E_ j)\geq \epsilon $. By countable subadditivity of capacity, 
+    
+<div class="equation">
+  \[  \operatorname {Cap}_\omega \left(\limsup _ j E_ j\right)=0.  \]
+</div>
+<p>
+       Hence $\limsup _ jE_ j$ is pluripolar and has $\mu $-measure zero. On the other hand, since $\mu $ is finite, continuity from above applied to the sets $\bigcup _{k\geq j}E_ k$ shows that $\limsup _ jE_ j$ has measure at least $\epsilon $, a contradiction. If $u_ j\to u$ in capacity, applying the first assertion to the sets $\{ |u_ j-u|&gt;\delta \} $ gives the consequence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-39D08A06">
+<p><a class="environment-identifier" href="../../tag/505602F4CB54/">Lemma <span data-tag="39D08A06">5.29.19</span>.</a><span data-gerby-tag="39D08A06"><code class="tag-id">505602F4CB54</code></span> Let $u_ j\in \mathrm{PSH}(X,\theta )$. Suppose either that $u_ j$ decreases to a function $u\not\equiv -\infty $, or that $u_ j$ increases, the sequence is uniformly bounded above, and $u=(\lim _ j u_ j)^*$. Then $u_ j\to u$ in capacity. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In the decreasing case $u$ is a common lower bound for the sequence and its limit; in the increasing case $u_1$ is one. Choose a Hermitian form $\Omega \geq \theta $ and truncate all functions at $-T$. The truncations are bounded, monotone and $\Omega $-plurisubharmonic, so the convergence in capacity of locally bounded monotone sequences, recalled in section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a>, applies to them on the balls of a finite cover. By quasi-continuity of the common lower bound, there is an open set of arbitrarily small capacity containing its pole set such that the restriction of the lower bound to the compact complement is continuous. There it is finite and hence bounded below, so the capacity of the sublevel set of the lower bound at height $-T$ tends to zero as $T\to \infty $. Since the functions agree with their truncations outside this sublevel set, letting $T\to \infty $ proves the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+A fixed bounded reference potential also controls a mixed trace in which one normalized potential varies. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-9642EBFE">
+<p><a class="environment-identifier" href="../../tag/31C5645526CA/">Lemma <span data-tag="9642EBFE">5.29.20</span>.</a><span data-gerby-tag="9642EBFE"><code class="tag-id">31C5645526CA</code></span> Let $\theta \geq 0$, and fix a bounded $\psi \in \mathrm{PSH}(X,\theta )$. There is a constant $C_\psi $ such that </p>
+<div class="equation">
+  \[  \int _ X\theta _ v\wedge \theta _\psi ^{n-1}\leq C_\psi  \]
+</div>
+<p> for every bounded $v\in \mathrm{PSH}(X,\theta )$ with $\sup _ Xv=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $n=1$, Stokes' theorem gives $\int _ X\theta _ v=\int _ X\theta $, so assume $n\geq 2$. Choose a fixed Hermitian form $\Omega \geq \theta $. All currents on the left-hand side are positive, and $\Omega _\psi \geq \theta _\psi $. Hence Stokes' theorem for bounded potentials gives 
+    
+<div class="equation">
+  \[  \int _ X\theta _ v\wedge \theta _\psi ^{n-1} \leq \int _ X\theta \wedge \Omega _\psi ^{n-1} +\int _ Xv\, \mathrm{dd}^{\mathrm{c}}(\Omega _\psi ^{n-1}).  \]
+</div>
+<p>
+       The first term on the right is bounded independently of $v$. To estimate the second, differentiate: 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(\Omega _\psi ^{n-1}) =(n-1)\mathrm{dd}^{\mathrm{c}}\Omega \wedge \Omega _\psi ^{n-2} +(n-1)(n-2)\mathrm{d}\Omega \wedge \mathrm d^{\mathrm c}\Omega \wedge \Omega _\psi ^{n-3},  \]
+</div>
+<p>
+       where the second term is absent for $n=2$. Since $\mathrm{dd}^{\mathrm{c}}\Omega $ and $\mathrm d\Omega \wedge \mathrm d^{\mathrm c}\Omega $ are smooth forms, the absolute values of these terms are bounded by fixed multiples of the positive measures $\Omega ^2\wedge \Omega _\psi ^{n-2}$ and $\Omega ^3\wedge \Omega _\psi ^{n-3}$. The weighted local Chern–Levine–Nirenberg inequality of section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a> bounds the integrals of $|v|$ against these measures. Indeed, on each larger coordinate ball, add fixed smooth corrections to $v$ and $\psi $, shift the corrected $v$ so that it becomes negative, expand in the corrected positive Hessian of $\psi $, and apply that inequality on a smaller ball. The resulting bound is 
+    
+<div class="equation">
+  \[  C(1+\| \psi \| _\infty )^ n(1+\| v\| _{L^1(X)}).  \]
+</div>
+<p>
+       By theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">5.25.2</a>, normalized $\theta $-plurisubharmonic functions have uniformly bounded $L^1$ norms, and summing the local bounds proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-B092BD05E335" data-section-entries="B092BD05E335 E8D07C38BC7C FD7A4AE0DAC6"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/B092BD05E335/">5.29.21 Vanishing area on curves</a><code class="tag-id">B092BD05E335</code></h2><span data-gerby-tag="D786B9E1"></span>
+<p>
+On a compact curve, the integral of the background is the total mass of every curvature current. When this integral vanishes, positivity forces the current to vanish. Normalized compactness and the local estimate of capacity by total variation make this uniqueness stable as the area tends to zero. 
+</p>
+<p>
+Throughout this subsection, $Y$ is a compact connected Riemann surface and $\eta $ is a smooth positive $(1,1)$-form on $Y$ with $\int _ Y\eta =1$, which we use for $L^1$ norms and for the capacity $\operatorname {Cap}_\eta $ on $Y$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-093FF33F">
+<p><a class="environment-identifier" href="../../tag/E8D07C38BC7C/">Lemma <span data-tag="093FF33F">5.29.22</span>.</a><span data-gerby-tag="093FF33F"><code class="tag-id">E8D07C38BC7C</code></span> For a smooth real $(1,1)$-form $\sigma $ on $Y$, put $A=\int _ Y\sigma $. There is a smooth real function $h$ with $\sigma =A\eta +\mathrm{dd}^{\mathrm{c}}h$. The class $\mathrm{PSH}(Y,\sigma )$ is nonempty if and only if $A\geq 0$. If $A=0$, it consists of the functions $-h+c$, $c\in \mathbb R$, and its unique member with supremum zero is $u_\sigma =-h+\min _ Yh$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The smooth form $\sigma -A\eta $ has integral zero, so the Poisson equation on the compact connected surface $Y$ has a smooth solution $h$, unique up to an additive constant. If $u\in \mathrm{PSH}(Y,\sigma )$, positivity and Stokes' theorem give 
+    
+<div class="equation">
+  \[  0\leq (\sigma +\mathrm{dd}^{\mathrm{c}}u)(Y)=A.  \]
+</div>
+<p>
+       Conversely, $\sigma +\mathrm{dd}^{\mathrm{c}}(-h)=A\eta $, so $-h\in \mathrm{PSH}(Y,\sigma )$ when $A\geq 0$. If $A=0$, every positive curvature measure has total mass zero and therefore vanishes. Thus $\mathrm{dd}^{\mathrm{c}}(u+h)=0$ for every $u\in \mathrm{PSH}(Y,\sigma )$, and elliptic regularity and the uniqueness of harmonic functions on $Y$ show that $u+h$ is constant. Normalizing the supremum gives the stated formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-8B2C106E">
+<p><a class="environment-identifier" href="../../tag/FD7A4AE0DAC6/">Theorem <span data-tag="8B2C106E">5.29.23</span>.</a><span data-gerby-tag="8B2C106E"><code class="tag-id">FD7A4AE0DAC6</code></span> Let $\sigma _ j$ be smooth real $(1,1)$-forms on $Y$ that converge uniformly to a smooth form $\sigma _0$, and suppose that </p>
+<div class="equation">
+  \[  A_ j=\int _ Y\sigma _ j\geq 0,\qquad \int _ Y\sigma _0=0.  \]
+</div>
+<p> Let $u_0$ be the normalized $\sigma _0$-plurisubharmonic potential of lemma <a data-tag="093FF33F" href="../../tag/E8D07C38BC7C/">5.29.22</a>. Then, for every $t&gt;0$, </p>
+<div class="equation">
+  \[  \begin{aligned}  \sup _{u\in \mathrm{PSH}(Y,\sigma _ j),\  \sup _ Yu=0}\| u-u_0\| _{L^1(Y)}&amp; \longrightarrow 0,\\  \sup _{u\in \mathrm{PSH}(Y,\sigma _ j),\  \sup _ Yu=0} \operatorname {Cap}_\eta (\{ |u-u_0|&gt;t\} )&amp; \longrightarrow 0. \end{aligned}  \]
+</div>
+<p> Moreover, the curvature measures $\sigma _ j+\mathrm{dd}^{\mathrm{c}}u$ of these potentials tend to zero in total variation, uniformly in $u$, since each has total variation $A_ j$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $C&gt;0$ with $\sigma _ j\leq C\eta $ for every $j$. Every sequence of normalized $\sigma _ j$-plurisubharmonic functions then lies in the compact family of normalized $C\eta $-plurisubharmonic functions of theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">5.25.2</a>. Every $L^1$ limit $u$ of a subsequence is normalized and, by passing to the limit in the sense of distributions, satisfies $\sigma _0+\mathrm{dd}^{\mathrm{c}}u\geq 0$. The preceding lemma gives $u=u_0$. If the first uniform limit failed, a sequence violating it would have a subsequence converging to this same limit, a contradiction. 
+    <p>
+      For a potential $u$ in the $j$-th normalized family, put $T=\sigma _ j+\mathrm{dd}^{\mathrm{c}}u$. Positivity and Stokes' theorem give $\| T\| _{\mathrm{TV}}=A_ j$, and $A_ j\to \int _ Y\sigma _0=0$. Since $\sigma _0+\mathrm{dd}^{\mathrm{c}}u_0=0$, 
+    
+<div class="equation">
+  \[  \| \mathrm{dd}^{\mathrm{c}}(u-u_0)\| _{\mathrm{TV}} \leq A_ j+\| \sigma _ j-\sigma _0\| _{\mathrm{TV}}\longrightarrow 0  \]
+</div>
+<p>
+       uniformly over that family. Apply lemma <a data-tag="11545C04" href="../../tag/C56C5CBA0E0D/">5.27.11</a> on a fixed finite cover of $Y$ by concentric coordinate disks. The first limit and the bound above make each local capacity tend to zero uniformly, and the comparison between local and global capacity at the beginning of this section proves the second limit. The identity $\| T\| _{\mathrm{TV}}=A_ j$ proves the final assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/D263A93C1D69/"><span>← Previous</span><small>Lemma 5.28.13</small></a><a class="pager-next" rel="next" href="../../tag/1C5C06D2C5D9/"><span>Next →</span><small>5.29.1 Capacity estimates</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-plurisubharmonic-functions-and-singularities--hermitian-capacity,
+  author = {{Gerby contributors}},
+  title = {5.29 Hermitian capacity},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fplurisubharmonic-functions-and-singularities--hermitian-capacity%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fplurisubharmonic-functions-and-singularities--hermitian-capacity%2F&amp;body=Page%3A+%5B5.29+Hermitian+capacity%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fplurisubharmonic-functions-and-singularities--hermitian-capacity%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+9ef8a0d7fdf53356a382dbe1eac97981af36dc97+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

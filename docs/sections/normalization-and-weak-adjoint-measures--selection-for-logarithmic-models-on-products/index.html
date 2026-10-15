@@ -1,0 +1,456 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/"><title>11.45 Selection for logarithmic models on products · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/hermitian-torsion/">Chapter 11: Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/" aria-current="page">Section 11.45: Selection for logarithmic models on products</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/torsion-and-the-variation-of-mass/"><span>11.1</span> Torsion and the variation of mass</a><code class="tag-id">7B453010B5B8</code></li><li><a href="../../sections/monge-ampere-energy-and-torsion/"><span>11.2</span> Monge–Ampère energy and torsion</a><code class="tag-id">1FC29EAFAA97</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass/"><span>11.3</span> Gauduchon metrics and linear mass</a><code class="tag-id">1009E65ECC4C</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conformal-gauduchon-metrics/"><span>11.4</span> Conformal Gauduchon metrics</a><code class="tag-id">4ECC3E68F7D5</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conservation-of-the-trace-mass/"><span>11.5</span> Conservation of the trace mass</a><code class="tag-id">A21D56C40154</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-gauduchon-criterion-for-positivity/"><span>11.6</span> The Gauduchon criterion for positivity</a><code class="tag-id">6029C37CE10F</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--compactness-and-duality-of-gauduchon-currents/"><span>11.7</span> Compactness and duality of Gauduchon currents</a><code class="tag-id">A532E9A2E94A</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--transverse-concentration-of-gauduchon-tests/"><span>11.8</span> Transverse concentration of Gauduchon tests</a><code class="tag-id">959649DAC54D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/"><span>11.9</span> Convex norms and Gauduchon degrees</a><code class="tag-id">93399AABE3EC</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--homogeneous-convex-regularization/"><span>11.10</span> Homogeneous convex regularization</a><code class="tag-id">879A1C19426E</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--strict-positivity-from-the-tautological-metric/"><span>11.11</span> Strict positivity from the tautological metric</a><code class="tag-id">733548AD7779</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/"><span>11.12</span> Polar norms of semipositive Finsler metrics</a><code class="tag-id">C40892E1279D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--ample-comparison-quotients-on-hirzebruch-surfaces/"><span>11.13</span> Ample comparison quotients on Hirzebruch surfaces</a><code class="tag-id">9C2F19628D6F</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--stable-extensions-approaching-the-split-comparison-bundle/"><span>11.14</span> Stable extensions approaching the split comparison bundle</a><code class="tag-id">D9D859664CFB</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--deforming-to-stable-ample-bundles/"><span>11.15</span> Deforming to stable ample bundles</a><code class="tag-id">E22565883FFD</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--a-fixed-stein-hypersurface-for-all-finsler-metrics/"><span>11.16</span> A fixed Stein hypersurface for all Finsler metrics</a><code class="tag-id">FE1ACFDCD4DA</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--concave-neighborhoods-and-dual-norms/"><span>11.17</span> Concave neighborhoods and dual norms</a><code class="tag-id">4276F3B6339D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--curvature-and-projective-complement-exhaustions/"><span>11.18</span> Curvature and projective complement exhaustions</a><code class="tag-id">F56029D8C19A</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--negative-bundle-metrics-and-logarithmic-weights/"><span>11.19</span> Negative bundle metrics and logarithmic weights</a><code class="tag-id">EF53CEC272DE</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--external-tensor-products-and-complement-convexity/"><span>11.20</span> External tensor products and complement convexity</a><code class="tag-id">391E9AF09F50</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--homogeneous-plurisubharmonic-functions-and-hopf-complements/"><span>11.21</span> Homogeneous plurisubharmonic functions and Hopf complements</a><code class="tag-id">2ADE48A8B892</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--pluriharmonic-currents/"><span>11.22</span> Pluriharmonic currents</a><code class="tag-id">B57478F1D4E4</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/"><span>11.23</span> The adjoint measure of the linearization</a><code class="tag-id">C01896004229</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--fredholm-theory-for-a-continuous-hermitian-form/"><span>11.24</span> Fredholm theory for a continuous Hermitian form</a><code class="tag-id">DB480BD29A98</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--limits-of-adjoint-measures/"><span>11.25</span> Limits of adjoint measures</a><code class="tag-id">8B86B2B0A308</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conformal-changes-and-directional-curvature-positivity/"><span>11.26</span> Conformal changes and directional curvature positivity</a><code class="tag-id">A4E01A8B6F30</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--ricci-flat-kahler-surfaces/"><span>11.27</span> Ricci-flat Kähler surfaces</a><code class="tag-id">FFC070E9C8C2</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--holomorphic-sectional-curvature/"><span>11.28</span> Holomorphic sectional curvature</a><code class="tag-id">AF4D6581275D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--projective-first-jets-and-positive-bundle-metrics/"><span>11.29</span> Projective first jets and positive bundle metrics</a><code class="tag-id">A1CB99CAE47B</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--ramified-section-tests-and-a-positive-root-metric/"><span>11.30</span> Ramified section tests and a positive root metric</a><code class="tag-id">EF54BD838F8D</code></li><li><a href="../../sections/gauduchon-traces-and-the-topology-of-potentials/"><span>11.31</span> Gauduchon traces and the topology of potentials</a><code class="tag-id">15943A2C3613</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures/"><span>11.32</span> Normalization and weak adjoint measures</a><code class="tag-id">7091FEDB43F0</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--the-scalar-functional/"><span>11.33</span> The scalar functional</a><code class="tag-id">52D96CD9BFA7</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--supporting-probability-measures/"><span>11.34</span> Supporting probability measures</a><code class="tag-id">EE2EC5B3CDE0</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--a-convex-functional-on-probability-measures/"><span>11.35</span> A convex functional on probability measures</a><code class="tag-id">D8DD45551DB2</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--bounded-measurable-densities-and-stability/"><span>11.36</span> Bounded measurable densities and stability</a><code class="tag-id">0E821D2FEC9D</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--entropy-and-the-closed-case/"><span>11.37</span> Entropy and the closed case</a><code class="tag-id">694B6AE5D5E5</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--entropy-bounds/"><span>11.38</span> Entropy bounds</a><code class="tag-id">531A2D2A66CF</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--changing-the-prescribed-singularities/"><span>11.39</span> Changing the prescribed singularities</a><code class="tag-id">44DF399743E5</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--varying-positive-backgrounds/"><span>11.40</span> Varying positive backgrounds</a><code class="tag-id">ABAC4E4BC446</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--divisorial-types-and-moving-sections/"><span>11.41</span> Divisorial types and moving sections</a><code class="tag-id">2D3AC831EDA6</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--the-mass-determined-by-the-functional/"><span>11.42</span> The mass determined by the functional</a><code class="tag-id">F459A353BA9B</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--convex-body-criteria-for-varying-references/"><span>11.43</span> Convex-body criteria for varying references</a><code class="tag-id">7D0D0E9AC5C3</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-by-a-vanishing-exponential-parameter/"><span>11.44</span> Selection by a vanishing exponential parameter</a><code class="tag-id">DB96849B14F8</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/" aria-current="page"><span>11.45</span> Selection for logarithmic models on products</a><code class="tag-id">A167FA614566</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--residual-regularity-in-radial-singularity-types/"><span>11.46</span> Residual regularity in radial singularity types</a><code class="tag-id">DF55B983AF23</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--envelopes-for-singular-radial-obstacles/"><span>11.47</span> Envelopes for singular radial obstacles</a><code class="tag-id">AEE10281DB3D</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/E3635828F0E0/"><span>← Previous</span><small>Equation 11.44.22</small></a><a class="pager-next" rel="next" href="../../tag/27CD354DC77F/"><span>Next →</span><small>11.45.1 The ordinary model and the greatest solutions</small></a></nav><h1>11.45 Selection for logarithmic models on products<code class="tag-id">A167FA614566</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-A167FA614566" data-section-entries="A167FA614566"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="8E6C81C0"><code class="tag-id">A167FA614566</code></span>
+<p>
+For a logarithmic reference with a positive residual background, removing the divisor turns the singular exponential equation into a bounded equation. On a product with a curve, the selected residual can then be determined by the Green operator. This also controls simultaneous changes of the reference, background and density, for which the centering constant must follow the changing data. 
+</p>
+<p>
+Let $(Y,\kappa )$ be a connected compact Hermitian manifold of dimension $k\geq 1$, with $\int _ Y\kappa ^ k=1$, and put $X=\mathbb P^1\times Y$, $N=k+1$. Write $\omega _1$ for the mass-one Fubini–Study form on $\mathbb P^1$ and $\mathrm{d}W=\omega _1\wedge \kappa ^ k$; pullbacks to $X$ are implicit. Fix $a,d&gt;0$, a smooth positive nonconstant function $b$ on $\mathbb P^1$, and a continuous positive function $H$ on $\mathbb P^1$. Set 
+</p>
+<div class="equation">
+  \[  \begin{aligned}  \theta &amp; =(a+d)\omega _1+b\kappa ,&amp; \eta &amp; =a\omega _1+b\kappa ,\\  f&amp; =N b^ kH,&amp; m&amp; =\int _{\mathbb P^1}H\omega _1,\qquad c_0=\frac am. \end{aligned}  \]
+</div>
+<p>
+ Both forms are positive and nonclosed: the component $\mathrm{d}b\wedge \kappa $ of horizontal degree one cannot cancel the vertical component $b\, \mathrm{d}\kappa $. For homogeneous coordinates $[Z_0:Z_1]$, put 
+</p>
+<div class="equation">
+  \[  \ell =\frac{|Z_0|^2}{|Z_0|^2+|Z_1|^2},\qquad D=\{ Z_0=0\} \times Y,\qquad \psi =d\log \ell .  \]
+</div>
+<p>
+ The Poincaré–Lelong formula gives $\theta +\mathrm{dd}^{\mathrm{c}}\psi =\eta +d[D]$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-27CD354DC77F" data-section-entries="254FB5175831 27CD354DC77F 37E96D4A1D80 688DA0FB893F D9B5F3712AAE DA11AEC1C7C7"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/27CD354DC77F/">11.45.1 The ordinary model and the greatest solutions</a><code class="tag-id">27CD354DC77F</code></h2><span data-gerby-tag="6B90B9ED"></span>
+<p>
+Put $K=a+d$, $R=a/d$ and $C_*=K\log (K/d)-a\log (a/d)$. In the coordinate $z=Z_1/Z_0$ define 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-4A9A0ECD"><span data-gerby-tag="4A9A0ECD"><code class="tag-id">254FB5175831</code></span>
+<span class="equation-label"><a data-tag="4A9A0ECD" href="../../tag/254FB5175831/">11.45.2</a></span>
+<div>\begin{equation}  \phi _{a,d}=\begin{cases}  0,&amp; |z|^2\leq R,\\  a\log |z|^2+C_*-K\log (1+|z|^2),&amp; |z|^2&gt;R, \end{cases} \qquad \phi _{a,d}|_ D=-\infty . \end{equation}</div>
+</div>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-79CC743A">
+<p><a class="environment-identifier" href="../../tag/DA11AEC1C7C7/">Proposition <span data-tag="79CC743A">11.45.3</span>.</a><span data-gerby-tag="79CC743A"><code class="tag-id">DA11AEC1C7C7</code></span> The function $\phi _{a,d}$ is an ordinary model reference for $\theta $, with </p>
+<div class="equation">
+  \[  P_\theta [\psi ]=P_\theta [\phi _{a,d}]=\phi _{a,d},\qquad \psi \leq \phi _{a,d}\leq \psi +C_*,\qquad \sup _ X\phi _{a,d}=0.  \]
+</div>
+<p> For $d/(a+d)&lt;\delta &lt;1$, the envelope $P_{\delta \theta }(\phi _{a,d})$ is not identically $-\infty $. The model has finite positive Monge–Ampère measure </p>
+<div class="equation">
+  \[  \mathrm{MA}_\theta (\phi _{a,d}) =N b^ kK\mathbf1_{\{ |z|^2&lt;R\} }\, \mathrm{d}W.  \]
+</div>
+<p> The difference $\phi _{a,d}-\psi $ extends continuously across $D$. If $(a_ j,d_ j)\to (a,d)$ in $(0,+\infty )^2$, these residual extensions converge uniformly. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First take the ordinary envelope on the curve with background $K\omega _1$ and obstacle $\min (\psi +C,0)$. Rotation of $z$ preserves both the obstacle and the admissible family, so the envelope is rotation invariant. With $s=\log |z|^2$ and $F(s)=K\log (1+\mathrm{e}^ s)$, its profile plus $F$ is convex and lies below $F$. The comparison with $\psi +C$ bounds its final slope by $a$. At $s_*=\log R$, one has $F'(s_*)=a$. Above $s_*$, convexity and the final slope bound give 
+    
+<div class="equation">
+  \[  u(s)+F(s)\leq F(s_*)+a(s-s_*),  \]
+</div>
+<p>
+       and below $s_*$ the obstacle gives $u\leq 0$. The function in (<a data-tag="4A9A0ECD" href="../../tag/254FB5175831/">11.45.2</a>) attains both bounds. Its convex profile, including its logarithmic value at infinity, gives a curve potential, and direct calculation gives $\psi \leq \phi _{a,d}\leq \psi +C_*$. It is therefore a competitor for every $C\geq C_*$, so the curve envelope is exactly $\phi _{a,d}$. 
+    <p>
+      A product competitor restricts to each curve $\mathbb P^1\times \{ y\} $ as either the constant $-\infty $ or a curve competitor. It is thus bounded above by $\phi _{a,d}$. Conversely, the curve model is a product competitor because the vertical form $b\kappa $ is positive. Hence the product envelope is the same function. Ordinary-type invariance of the singularity envelope gives its model property. Moreover, 
+    
+<div class="equation">
+  \[  \delta \theta +\mathrm{dd}^{\mathrm{c}}\psi =(\delta K-d)\omega _1+\delta b\kappa +d[D]\geq 0,  \]
+</div>
+<p>
+       which proves the smaller-background assertion. 
+    <p>
+      Off $D$, the horizontal curvature of $\phi _{a,d}$ is $K\mathbf1_{\{ |z|^2&lt;R\} }\omega _1$. The first derivatives of its convex profile agree at $R$, so there is no boundary-circle atom. Expanding the product off $D$ gives the displayed measure, and the non-pluripolar product assigns $D$ zero mass. Finally, in terms of $\ell $ the residual extension is 
+    
+<div class="equation">
+  \[  \phi _{a,d}-\psi =\begin{cases}  -d\log \ell ,&amp; \ell \geq d/K,\\  a\log (1-\ell )+C_*,&amp; \ell &lt;d/K. \end{cases}  \]
+</div>
+<p>
+       The formulas agree at the moving interface and extend to both endpoints. On compact positive parameter ranges each logarithm is used away from its singular endpoint. Joint continuity on the resulting compact set proves uniform variation. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-05454E07">
+<p><a class="environment-identifier" href="../../tag/688DA0FB893F/">Lemma <span data-tag="05454E07">11.45.4</span>.</a><span data-gerby-tag="05454E07"><code class="tag-id">688DA0FB893F</code></span> For every $\sigma &gt;0$, the equation </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-58FCC08C"><span data-gerby-tag="58FCC08C"><code class="tag-id">D9B5F3712AAE</code></span>
+<span class="equation-label"><a data-tag="58FCC08C" href="../../tag/D9B5F3712AAE/">11.45.5</a></span>
+<div>\begin{equation}  \mathrm{MA}_\theta (s_\sigma )=\mathrm{e}^{\sigma s_\sigma }f\, \mathrm{d}W \end{equation}</div>
+</div>
+<p> has a solution of ordinary type $\phi _{a,d}$, unique in that type. It is the greatest exponential subsolution among all $u\in \mathrm{PSH}(X,\theta )$ with $u\preceq \phi _{a,d}$, and its measure has finite mass. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The one-sided ordinary class has the description 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-D427E2D8"><span data-gerby-tag="D427E2D8"><code class="tag-id">37E96D4A1D80</code></span>
+<span class="equation-label"><a data-tag="D427E2D8" href="../../tag/37E96D4A1D80/">11.45.6</a></span>
+<div>\begin{equation}  u\preceq \psi \quad \Longleftrightarrow \quad u=\psi +r,\quad r\in \mathrm{PSH}(X,\eta ),\qquad \mathrm{MA}^{\mathrm{ext}}_\theta (\psi +r) =\mathrm{MA}^{\mathrm{ext}}_\eta (r). \end{equation}</div>
+</div>
+<p>
+       Indeed, $u\preceq \psi $ gives $\nu (u,D)\geq d$. Divisorial removal, lemma <a data-tag="71AD1E73" href="../../tag/3AA98220C897/">5.38.1</a>, shows that $\theta +\mathrm{dd}^{\mathrm{c}}u-d[D]\geq 0$. Thus the locally integrable difference $u-\psi $ has an $\eta $-plurisubharmonic representative $r$. The equality $u=\psi +r$ holds off $D$ by canonical equality and on $D$ because both sides equal $-\infty $. Conversely, adding $\psi $ to $r$ adds the positive current $d[D]$; since $r$ has a finite compact upper bound, the one-sided comparison follows. Off $D$ the currents agree, so finite-level locality identifies their extended products, including at any additional poles of $r$. Both measures give $D$ zero mass, proving the global equality. The bounded ordinary type corresponds exactly to bounded $r$, as in theorem <a data-tag="37CD7A01" href="../../tag/7281EDB812F1/">11.41.1</a>. 
+    <p>
+      The function $g_\sigma =\mathrm{e}^{\sigma \psi }f$ extends continuously by zero on $D$ and is positive elsewhere. Since $\eta &gt;0$, theorem <a data-tag="8B6379D9" href="../../tag/CFA579B45DF9/">14.19.3</a> gives a continuous solution $R_\sigma $ of 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\eta (R_\sigma )=\mathrm{e}^{\sigma R_\sigma }g_\sigma \, \mathrm{d}W.  \]
+</div>
+<p>
+       For this bounded density, the greatest solution of theorem <a data-tag="40C9E96E" href="../../tag/9016C2906071/">15.35.2</a> is bounded and coincides with $R_\sigma $ by corollary <a data-tag="4A955D14" href="../../tag/AB62A0258D5D/">14.19.12</a>. Thus it dominates every $\eta $-plurisubharmonic exponential subsolution. The correspondence (<a data-tag="D427E2D8" href="../../tag/37E96D4A1D80/">11.45.6</a>) transfers this order to the entire one-sided ordinary class and gives $s_\sigma =\psi +R_\sigma $. Bounded residual uniqueness gives uniqueness in the ordinary type. The bounded residual equation has finite mass, so the singular equation does too. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-A00D72781B06" data-section-entries="72A7418012F7 97B5C8E6D45D 9E6339686644 A00D72781B06 E96D6BB82F6C"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A00D72781B06/">11.45.7 The selected limit with varying data</a><code class="tag-id">A00D72781B06</code></h2><span data-gerby-tag="E33E9A3C"></span>
+<p>
+For $x,z\in \mathbb P^1$, let $\operatorname {dist}_{\mathrm{chord}}(x,z)$ be the chordal distance and put 
+</p>
+<div class="equation">
+  \[  G(x,z)=\log \operatorname {dist}_{\mathrm{chord}}(x,z)^2+1.  \]
+</div>
+<p>
+ This kernel satisfies $\mathrm{dd}^{\mathrm{c}}_ xG=\delta _ z-\omega _1$ and $\int G(x,z)\omega _1(x)=0$. For a bounded density $q$, write $G*q(x)=\int G(x,z)q(z)\omega _1(z)$. Define 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-FECC52E5"><span data-gerby-tag="FECC52E5"><code class="tag-id">E96D6BB82F6C</code></span>
+<span class="equation-label"><a data-tag="FECC52E5" href="../../tag/E96D6BB82F6C/">11.45.8</a></span>
+<div>\begin{equation}  \begin{aligned}  A_0&amp; =\frac{aH}{m},&amp; w_0&amp; =G*(A_0-a),&amp; S_0&amp; =\sup _ X(\psi +w_0),\\  \mathrm{d}\nu _0&amp; =\frac Hm\, \mathrm{d}W,&amp; J&amp; =\int _ X(\psi +w_0)\, \mathrm{d}\nu _0. \end{aligned} \end{equation}</div>
+</div>
+<p>
+ The function $w_0$ is continuous, has mean zero on the curve and satisfies $\mathrm{dd}^{\mathrm{c}}w_0=(A_0-a)\omega _1$. We use the probability $\nu _0$ to normalize the separated potentials. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-01FA98A6">
+<p><a class="environment-identifier" href="../../tag/72A7418012F7/">Theorem <span data-tag="01FA98A6">11.45.9</span>.</a><span data-gerby-tag="01FA98A6"><code class="tag-id">72A7418012F7</code></span> Let $a_ j,d_ j&gt;0$ converge to $a,d&gt;0$, let smooth positive functions $b_ j$ converge uniformly to $b$, and let continuous positive functions $H_ j$ converge uniformly to $H$. For any $\sigma _ j&gt;0$ tending to zero, put </p>
+<div class="equation">
+  \[  \begin{aligned}  \theta _ j&amp; =(a_ j+d_ j)\omega _1+b_ j\kappa ,&amp; \psi _ j&amp; =d_ j\log \ell ,&amp; \phi _ j&amp; =\phi _{a_ j,d_ j},\\  f_ j&amp; =N b_ j^ kH_ j,&amp; m_ j&amp; =\int _{\mathbb P^1}H_ j\omega _1,&amp; c_{0,j}&amp; =a_ j/m_ j. \end{aligned}  \]
+</div>
+<p> Let $s_ j$ be the greatest solution of (<a data-tag="58FCC08C" href="../../tag/D9B5F3712AAE/">11.45.5</a>) for these data, and set $v_ j=s_ j-\sup _ Xs_ j$, $c_ j=\mathrm{e}^{\sigma _ j\sup _ Xs_ j}$. Then </p>
+<div class="equation">
+  \[  v_ j\longrightarrow v_0=\psi +w_0-S_0,\qquad s_ j-\sigma _ j^{-1}\log c_{0,j}\longrightarrow s_0=\psi +w_0-J  \]
+</div>
+<p> in $L^1(X)$, in capacity, and locally uniformly on $X\setminus D$. Moreover, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-3E3BFB9E"><span data-gerby-tag="3E3BFB9E"><code class="tag-id">97B5C8E6D45D</code></span>
+<span class="equation-label"><a data-tag="3E3BFB9E" href="../../tag/97B5C8E6D45D/">11.45.10</a></span>
+<div>\begin{equation}  c_ j\longrightarrow c_0,\qquad \sigma _ j^{-1}\log (c_ j/c_{0,j})\longrightarrow S_0-J, \end{equation}</div>
+</div>
+<p> and $\mathrm{MA}_{\theta _ j}(v_ j)\to c_0 f\, \mathrm{d}W$ in total variation. The limit has ordinary type $\phi _{a,d}$ and belongs to $\mathcal E_{\mathrm{env}}(X,\theta ,\phi _{a,d})$, with </p>
+<div class="equation">
+  \[  \mathrm{MA}_\theta (v_0)=c_0 f\, \mathrm{d}W.  \]
+</div>
+<p> There is no restriction on the relative rates of parameter and exponent convergence. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We construct uniformly bounded residuals on the curve, then use their equation to determine both the normalized limit and the scalar error. 
+    <p>
+<em>Uniform construction.</em> The kernel has uniformly integrable logarithmic tails and $C_ G=\sup _ x\int |G(x,z)|\omega _1(z)&lt;\infty $. These facts follow by rotation invariance and the radial integral of $|\log \ell +1|$ on $0&lt;\ell &lt;1$; the Poincaré–Lelong formula and $\int _0^1\log \ell \, \mathrm{d}\ell =-1$ give its curvature and mean. Truncating the kernel shows that convolution of bounded densities is continuous. 
+    <p>
+      Temporarily omit subscripts. On continuous mean-zero functions on the curve define 
+    
+<div class="equation">
+  \[  T_\sigma (w)=G*(A(w)-a),\qquad A(w)=\frac{aH\mathrm{e}^{\sigma (\psi +w)}}{Z(w)},\qquad Z(w)=\int _{\mathbb P^1}H\mathrm{e}^{\sigma (\psi +w)}\omega _1.  \]
+</div>
+<p>
+       For all late parameters choose fixed bounds $a\leq a_{\max }$, $d\leq d_{\max }$ and $0&lt;h_{\min }\leq H\leq h_{\max }$. Put $B=4a_{\max }h_{\max }/h_{\min }$ and choose $R_0&gt;C_ G(B+a_{\max })$. On the ball $\| w\| _\infty \leq R_0$, for sufficiently small $\sigma $, 
+    
+<div class="equation">
+  \[  Z(w)\geq \frac{h_{\min }\mathrm{e}^{-\sigma R_0}}{1+\sigma d_{\max }} \geq h_{\min }/2,\qquad 0\leq A(w)\leq B.  \]
+</div>
+<p>
+       Here $\int \ell ^{\sigma d}\omega _1=(1+\sigma d)^{-1}$. Thus $T_\sigma $ maps the mean-zero ball into itself. Since $\int A(w)\omega _1=a$, its density derivative in direction $h$ is 
+    
+<div class="equation">
+  \[  \sigma A(w)\left(h-a^{-1}\int hA(w)\omega _1\right).  \]
+</div>
+<p>
+       It follows that $\| T_\sigma (w)-T_\sigma (v)\| _\infty \leq 2\sigma B C_ G\| w-v\| _\infty $. The map is a contraction for all sufficiently small exponents, uniformly over the late parameters. Its fixed point $w_ j$ has mean zero and $\| w_ j\| _\infty \leq R_0$. 
+    <p>
+      Write $Z_ j=Z(w_ j)$ and $A_ j=A(w_ j)$. The fixed-point equation gives $\mathrm{dd}^{\mathrm{c}}w_ j=(A_ j-a_ j)\omega _1$, and the potential 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-39952CD5"><span data-gerby-tag="39952CD5"><code class="tag-id">9E6339686644</code></span>
+<span class="equation-label"><a data-tag="39952CD5" href="../../tag/9E6339686644/">11.45.11</a></span>
+<div>\begin{equation}  \psi _ j+w_ j+\sigma _ j^{-1}\log (a_ j/Z_ j) \end{equation}</div>
+</div>
+<p>
+       has residual form $A_ j\omega _1+b_ j\kappa $, continuous and semipositive. On coordinate balls, mollification of $w_ j$ converges together with its continuous complex Hessian. The local bounded product, expanded after a common strict smooth correction, therefore equals $N b_ j^ kA_ j\, \mathrm{d}W$. Removing $D$ identifies the singular product with the same measure. The identity 
+    
+<div class="equation">
+  \[  N b_ j^ kA_ j=\mathrm{e}^{\sigma _ j(\psi _ j+w_ j)}(a_ j/Z_ j)f_ j  \]
+</div>
+<p>
+       shows that (<a data-tag="39952CD5" href="../../tag/9E6339686644/">11.45.11</a>) solves the exponential equation in the ordinary type. By lemma <a data-tag="05454E07" href="../../tag/688DA0FB893F/">11.45.4</a>, it is $s_ j$. 
+    <p>
+<em>Residual and normalized limits.</em> Uniform boundedness and dominated convergence give $Z_ j\to m$ and $A_ j\to A_0$ in $L^1(\omega _1)$, with a common bound on $A_ j$. For uniformly bounded densities $F_ j\to 0$ in $L^1$, one has 
+    
+<div class="equation">
+  \[  \| G*F_ j\| _\infty \leq \| F_ j\| _\infty \sup _ x\int _{\{ |G(x,z)|&gt;M\} }|G(x,z)|\omega _1(z) +M\| F_ j\| _1.  \]
+</div>
+<p>
+       First letting $j\to \infty $ and then $M\to \infty $ proves $w_ j\to w_0$ uniformly. Although $A_ j=0$ on $D$ and $A_0&gt;0$ there, the $L^1$ convergence suffices for this argument. 
+    <p>
+      Put $S_ j=\sup _ X(\psi _ j+w_ j)$. A point with $\ell =1$ supplies a uniformly bounded competing value. Since $d_ j\geq d_{\min }&gt;0$, the upper bound $d_{\min }\log \ell +R_0$ tends uniformly to $-\infty $ near $D$, so all maximizing points stay in a fixed compact subset of $X\setminus D$. Uniform convergence there gives $S_ j\to S_0$. Hence $v_ j=\psi _ j+w_ j-S_ j$ has the asserted $L^1$ and local uniform limits. For capacity convergence, the complements of $\{ \psi &lt;-T\} $ are compact subsets of $X\setminus D$. Choose a fixed Hermitian form for which $\psi $ is plurisubharmonic and apply (<a data-tag="B2A1C46F" href="../../tag/3EF8F920CDD3/">5.29.4</a>); their omitted sublevels have capacity at most $C/T$. Local uniform convergence, followed by $T\to \infty $, proves convergence in capacity, with the common poles omitted. 
+    <p>
+      The measure formula and uniform convergence of $b_ j$ give total-variation convergence to $N b^ kA_0\, \mathrm{d}W=c_0 f\, \mathrm{d}W$. The same bounded product calculation gives this equation for $v_0$. The residual extensions in proposition <a data-tag="79CC743A" href="../../tag/DA11AEC1C7C7/">11.45.3</a> show directly that $v_0\sim \phi _{a,d}$. Choose $C$ with $v_0\geq \phi _{a,d}-C$. For every $t\geq 1$, the potential $q_ t=\phi _{a,d}-tC$ satisfies 
+    
+<div class="equation">
+  \[  t^{-1}q_ t+(1-t^{-1})\phi _{a,d}\leq v_0,  \]
+</div>
+<p>
+       which proves membership in the relative envelope class by definition <a data-tag="1025E1CB" href="../../tag/7EF949B941B4/">16.28.61</a>. 
+    <p>
+<em>Scalar centering.</em> The exact formula is $c_ j=a_ j\mathrm{e}^{\sigma _ j S_ j}/Z_ j$. In the difference quotient 
+    
+<div class="equation">
+  \[  \frac{Z_ j-m_ j}{\sigma _ j} =\int H_ j\frac{\mathrm{e}^{\sigma _ j(\psi _ j+w_ j)}-1}{\sigma _ j}\omega _1,  \]
+</div>
+<p>
+       the negative part is bounded by $h_{\max }(d_{\max }|\log \ell |+R_0)$ and the positive part by a constant. Dominated convergence gives a limit $\int H(\psi +w_0)\omega _1=mJ$. Since $m_ j\to m&gt;0$, 
+    
+<div class="equation">
+  \[  \sigma _ j^{-1}\log (Z_ j/m_ j)\longrightarrow J.  \]
+</div>
+<p>
+       The identity $c_ j/c_{0,j}=m_ j\mathrm{e}^{\sigma _ j S_ j}/Z_ j$ proves (<a data-tag="3E3BFB9E" href="../../tag/97B5C8E6D45D/">11.45.10</a>). Subtracting $\sigma _ j^{-1}\log c_{0,j}$ in (<a data-tag="39952CD5" href="../../tag/9E6339686644/">11.45.11</a>) leaves $\psi _ j+w_ j-\sigma _ j^{-1}\log (Z_ j/m_ j)$, proving the centered limit in all three topologies. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-CEEDD0460992" data-section-entries="86F268014BE0 CEEDD0460992"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/CEEDD0460992/">11.45.12 The critical coefficient and separated order</a><code class="tag-id">CEEDD0460992</code></h2><span data-gerby-tag="A5424A11"></span>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-92C733E6">
+<p><a class="environment-identifier" href="../../tag/86F268014BE0/">Corollary <span data-tag="92C733E6">11.45.13</span>.</a><span data-gerby-tag="92C733E6"><code class="tag-id">86F268014BE0</code></span> For the fixed data, $c_0$ is the largest coefficient $c&gt;0$ for which $u\in \mathrm{PSH}(X,\theta )$ with $u\preceq \phi _{a,d}$ satisfies $\mathrm{MA}^{\mathrm{ext}}_\theta (u)\geq c f\, \mathrm{d}W$. Among separated potentials $u=\psi +r(x)\preceq \phi _{a,d}$, the critical subsolutions are exactly the translates of $\psi +w_0$. Thus $v_0$ is their unique supremum-zero member, and $s_0$ is their greatest member with $\int _ Xu\, \mathrm{d}\nu _0\leq 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a separated critical subsolution, (<a data-tag="D427E2D8" href="../../tag/37E96D4A1D80/">11.45.6</a>) and the product expansion give $\mathrm{MA}^{\mathrm{ext}}_{a\omega _1}(r)\geq A_0\omega _1$. Closed curve truncations have mass $a$, so the non-pluripolar measure has mass at most $a$. Since $\int A_0\omega _1=a$, it must equal $A_0\omega _1$. The positive closed current $a\omega _1+\mathrm{dd}^{\mathrm{c}}r$ also has mass $a$, so it has no remaining measure on the pole set. Consequently $\mathrm{dd}^{\mathrm{c}}r=(A_0-a)\omega _1$ as distributions, and $r=w_0+C$ because harmonic distributions on $\mathbb P^1$ are constant. Supremum zero gives $C=-S_0$, while the mean condition gives $C\leq -J$. 
+    <p>
+      For a general $u\preceq \phi _{a,d}$ with coefficient $c&gt;0$, write $u=\psi +r$ by (<a data-tag="D427E2D8" href="../../tag/37E96D4A1D80/">11.45.6</a>) and put $B_ r=\sup _ Xr$. Since $\psi \leq 0$, the potential $u+\sigma ^{-1}\log c-B_ r$ is an exponential subsolution for every $\sigma &gt;0$. Greatestness gives 
+    
+<div class="equation">
+  \[  u+\sigma ^{-1}\log c-B_ r\leq s_\sigma .  \]
+</div>
+<p>
+       At a point off $D$ where $r$ is finite, subtract $\sigma ^{-1}\log c_0$, multiply by $\sigma $ and use the fixed-data case of theorem <a data-tag="01FA98A6" href="../../tag/72A7418012F7/">11.45.9</a>. This yields $\log c\leq \log c_0$. The potential $v_0$ attains $c_0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+The scalar in the centering follows the varying data. Replacing $c_{0,j}$ by $c_0$ adds $\sigma _ j^{-1}\log (c_{0,j}/c_0)$ to the centered potential, and this term need not vanish. For example, take $a=1$, $d=1/4$, $H=1$ and $b=2+t$, where $t$ is the sphere height. Then $w_0=0$, $S_0=0$, $J=-1/4$ and $c_0=1$, so $s_0=\psi +1/4$ and the scalar-error limit is $1/4$. If $a_ j=1+\sqrt{\sigma _ j}$ and the other data are fixed, the appropriate centering uses $c_{0,j}=a_ j$. Centering by $1$ instead adds 
+</p>
+<div class="equation">
+  \[  \frac{\log (1+\sqrt{\sigma _ j})}{\sigma _ j}\longrightarrow +\infty .  \]
+</div>
+<p>
+ These examples can be taken on a non-Kähler manifold by choosing $Y$ to be the scalar Hopf surface with its Hermitian form rescaled to unit volume. The product cannot be Kähler, since a Kähler form would restrict to one on the Hopf fiber. The pole divisor remains present in the selected ordinary type. 
+</p>
+</div></section><section class="reading-chunk" id="entry-2FFAD548CA54" data-section-entries="132C5E1825BF 23BDF62163E8 2FFAD548CA54 3C22B09DCF87 6EEDC24A3093 85744C3971DC"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/2FFAD548CA54/">11.45.14 Weak adjoints on a product surface</a><code class="tag-id">2FFAD548CA54</code></h2><span data-gerby-tag="54ADB880"></span>
+<p>
+On the product of two projective lines, the averaging probability of (<a data-tag="FECC52E5" href="../../tag/E96D6BB82F6C/">11.45.8</a>) is the full supporting probability. The continuous positive residual defines a weak linearization, and spherical harmonics give invariant-measure uniqueness without a regularity assumption. 
+</p>
+<p>
+In this subsection take $Y=\mathbb P^1_ y$, $\kappa =\omega _2$ and $k=1$. Keep $a,d,b,H,\theta ,\eta ,\psi $ and $\mathrm{d}W=\omega _1\wedge \omega _2$ as above, and write $\phi =\phi _{a,d}$, $A=A_0=c_0H$ and $u=\psi +w_0$. Choose a smooth positive probability volume form $\mathrm{d}V=q\, \mathrm{d}W$ and put $F=\log (2bH/q)$. Then 
+</p>
+<div class="equation">
+  \[  \Omega =A\omega _1+b\omega _2,\qquad \theta +\mathrm{dd}^{\mathrm{c}}u=\Omega +d[D],\qquad \mathrm{MA}_\theta (u)=\Omega ^2=c_0\mathrm{e}^ F\mathrm{d}V.  \]
+</div>
+<p>
+ The model is admissible by proposition <a data-tag="79CC743A" href="../../tag/DA11AEC1C7C7/">11.45.3</a>, and $u\sim \phi $ gives $B_\phi (F)=\log c_0$. Nonconstant $b$ cannot be harmonic, so $\mathrm{dd}^{\mathrm{c}}\theta =(\mathrm{dd}^{\mathrm{c}}b)\wedge \omega _2\ne 0$. Every smooth potential perturbation has the same $\mathrm{dd}^{\mathrm{c}}\theta $ and is therefore non-Gauduchon. 
+</p>
+<p>
+For a smooth function $h$ on the product, define its partial Laplacians by $\mathrm{dd}^{\mathrm{c}}_ i h=(\Delta _ i h)\omega _ i$. With the mass-one Fubini–Study normalization, $\Delta _ i$ is the Laplacian of the unit round sphere. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C0D35333">
+<p><a class="environment-identifier" href="../../tag/85744C3971DC/">Lemma <span data-tag="C0D35333">11.45.15</span>.</a><span data-gerby-tag="C0D35333"><code class="tag-id">85744C3971DC</code></span> Let $V&gt;0$ be continuous on $\mathbb P^1$, and let $T$ be a finite signed measure such that </p>
+<div class="equation">
+  \[  \int _{\mathbb P^1}(\Delta f-Vf)\, \mathrm{d}T=0 \qquad (f\in C^\infty (\mathbb P^1)).  \]
+</div>
+<p> Then $T=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $H_ t$ be the sphere heat operator. On spherical harmonics of degree $\ell $, it acts by $\mathrm{e}^{-t\ell (\ell +1)}$. The harmonic series defines a smooth heat solution for $t&gt;0$; for smooth initial functions, the maximum principle gives positivity and contraction in the uniform norm. Density of smooth functions extends $H_ t$ to a positive, strongly continuous contraction on $C(\mathbb P^1)$. Choose $M\geq \max V$ and define 
+    
+<div class="equation">
+  \[  R_ Mg=\int _0^\infty \mathrm{e}^{-Mt}H_ tg\, \mathrm{d}t.  \]
+</div>
+<p>
+       Then $\| R_ M\| \leq M^{-1}$ and $(M-\Delta )R_ Mg=g$ in distributions. For any $g\in C(\mathbb P^1)$, the map 
+    
+<div class="equation">
+  \[  f\longmapsto R_ M((M-V)f-g)  \]
+</div>
+<p>
+       contracts by at most $1-\min V/M&lt;1$. Its continuous fixed point satisfies $\Delta f=Vf+g$ in distributions, with a continuous right-hand side. The functions $f_\varepsilon =H_\varepsilon f$ are smooth and satisfy 
+    
+<div class="equation">
+  \[  f_\varepsilon \longrightarrow f,\qquad \Delta f_\varepsilon =H_\varepsilon (Vf+g)\longrightarrow Vf+g  \]
+</div>
+<p>
+       uniformly. Thus $(\Delta -V)f_\varepsilon \to g$ uniformly. Testing against the finite measure $T$ gives $\int g\, \mathrm{d}T=0$ for every continuous $g$, hence $T=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-B18938DE">
+<p><a class="environment-identifier" href="../../tag/23BDF62163E8/">Theorem <span data-tag="B18938DE">11.45.16</span>.</a><span data-gerby-tag="B18938DE"><code class="tag-id">23BDF62163E8</code></span> The weight and current </p>
+<div class="equation">
+  \[  \rho =\frac1{2ab},\qquad Q=\rho \Omega =\frac{A}{2ab}\omega _1+\frac1{2a}\omega _2  \]
+</div>
+<p> satisfy $\mathrm{d}Q=0$ and $\int _ X\rho \Omega ^2=1$. For smooth real $h$, the measure-valued and logarithmic linearizations at $u$ are </p>
+<div class="equation">
+  \[  D_ u\mathrm{MA}_\theta (h)=2\Omega \wedge \mathrm{dd}^{\mathrm{c}}h,\qquad L_ uh=\frac{2\Omega \wedge \mathrm{dd}^{\mathrm{c}}h}{\Omega ^2} =\frac{\Delta _1h}{A}+\frac{\Delta _2h}{b}.  \]
+</div>
+<p> The only Borel probability satisfying $\int _ XL_ uh\, \mathrm{d}\mu =0$ for every smooth real $h$ is </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-8DBE59F3"><span data-gerby-tag="8DBE59F3"><code class="tag-id">6EEDC24A3093</code></span>
+<span class="equation-label"><a data-tag="8DBE59F3" href="../../tag/6EEDC24A3093/">11.45.17</a></span>
+<div>\begin{equation}  \nu =\rho \Omega ^2=\frac Aa\, \mathrm{d}W,\qquad \mathcal A_\phi (F)=\{ \nu \} . \end{equation}</div>
+</div>
+<p> If $r\geq 0$ is measurable, $\int _ Xr\Omega ^2=1$ and $\mathrm{dd}^{\mathrm{c}}(r\Omega )=0$, then $r=\rho $ almost everywhere. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first define the weighted current and variation, then prove invariant-measure uniqueness and apply the supporting inequality on the full space $C(X)$. 
+    <p>
+<em>The current and operator.</em> Since $A/b$ depends only on the first curve, $\mathrm{d}((A/b)\omega _1)=0$ distributionally; this follows also by uniform smooth approximation of its coefficient. Thus $Q$ is closed, and $\int \rho \Omega ^2=\int A\omega _1/a=1$. The coefficient $\rho $ is smooth and $\Omega $ is continuous, so the product defining $Q$ is well defined. Uniform positivity of $\Omega $ gives $\Omega +t\mathrm{dd}^{\mathrm{c}}h&gt;0$ for sufficiently small signed $t$. The bounded-product calculation used in theorem <a data-tag="01FA98A6" href="../../tag/72A7418012F7/">11.45.9</a>, now with the smooth perturbation $th$, gives 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u+th) =\Omega ^2+2t\Omega \wedge \mathrm{dd}^{\mathrm{c}}h+t^2(\mathrm{dd}^{\mathrm{c}}h)^2.  \]
+</div>
+<p>
+       This proves the two linearizations; mixed components of $\mathrm{dd}^{\mathrm{c}}h$ have zero wedge with the diagonal $\Omega $. Distributional Stokes gives $\int L_ uh\, \mathrm{d}\nu =2\int \mathrm{dd}^{\mathrm{c}}h\wedge Q=0$. 
+    <p>
+<em>Invariant probabilities.</em> Choose real spherical harmonics $e_ j$ on the second sphere, with $e_0=1$ and $\Delta _2e_ j=-\lambda _ je_ j$. Only the constant mode has eigenvalue zero. For an invariant probability $\mu $, define finite signed measures $T_ j$ on the first sphere by 
+    
+<div class="equation">
+  \[  \int f\, \mathrm{d}T_ j =\int _ X\frac{f(x)e_ j(y)}{A(x)}\, \mathrm{d}\mu .  \]
+</div>
+<p>
+       Testing $L_ u$ on $f(x)e_ j(y)$ gives 
+    
+<div class="equation">
+  \[  \int \left(\Delta _1f-\lambda _ j\frac Ab f\right)\, \mathrm{d}T_ j=0.  \]
+</div>
+<p>
+       For $j=0$, testing on spherical harmonics of the first sphere shows that $T_0=C\omega _1$. Their finite span is uniformly dense, because restrictions of polynomials decompose into harmonics and polynomials are dense on the sphere. The first marginal of $\mu $ is therefore $CA\omega _1$, and probability normalization gives $C=1/a$. For every nonconstant mode, lemma <a data-tag="C0D35333" href="../../tag/85744C3971DC/">11.45.15</a> with $V=\lambda _ jA/b&gt;0$ gives $T_ j=0$. As these are identities of measures, their test functions may then be multiplied by the continuous function $A$. They determine all spherical harmonic moments of $\mu $. Uniform density of harmonics and of finite product tests gives $\mu =(A/a)\omega _1\wedge \omega _2$. 
+    <p>
+<em>Supporting probabilities and weights.</em> Let $\mu \in \mathcal A_\phi (F)$ and, for smooth real $h$, set 
+    
+<div class="equation">
+  \[  F_ t=F+\log \frac{(\Omega +t\mathrm{dd}^{\mathrm{c}}h)^2}{\Omega ^2}.  \]
+</div>
+<p>
+       This is continuous, and $u+th$ solves the ordinary-type equation with density $\mathrm{e}^{F_ t}$ and scalar $c_0$. Thus $B_\phi (F_ t)=B_\phi (F)$, by uniqueness of the scalar. Uniform positivity gives $F_ t-F=tL_ uh+O(t^2)$ in the uniform norm. Apply (<a data-tag="44A5BEA2" href="../../tag/4DA0C1CF8861/">11.34.1</a>) for both signs of $t$ to obtain $\int L_ uh\, \mathrm{d}\mu =0$. The perturbed density need not depend on the first curve alone: the inequality is the one on all of $C(X)$. Invariant uniqueness and nonemptiness of $\mathcal A_\phi (F)$ from theorem <a data-tag="97DE633E" href="../../tag/86A7D85266AA/">11.34.2</a> now prove (<a data-tag="8DBE59F3" href="../../tag/6EEDC24A3093/">11.45.17</a>). 
+    <p>
+      Finally, $\Omega ^2/\mathrm{d}W$ is bounded above and below by positive constants, so a normalized $r$ as in the statement belongs to $L^1(\mathrm{d}W)$ and $r\Omega $ is an order-zero current. Distributional Stokes makes $r\Omega ^2$ invariant. The probability uniqueness just proved gives $r\Omega ^2=\rho \Omega ^2$, hence $r=\rho $ almost everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-AA470794">
+<p><a class="environment-identifier" href="../../tag/132C5E1825BF/">Proposition <span data-tag="AA470794">11.45.18</span>.</a><span data-gerby-tag="AA470794"><code class="tag-id">132C5E1825BF</code></span> Let $w_ j\in C^\infty (X)$ be real and suppose </p>
+<div class="equation">
+  \[  \Omega _ j=\eta +\mathrm{dd}^{\mathrm{c}}w_ j&gt;0,\qquad \Omega _ j\longrightarrow \Omega \quad \text{uniformly as }(1,1)\text{-forms}.  \]
+</div>
+<p> Put $u_ j=\psi +w_ j$ and $F_ j=\log (\Omega _ j^2/(c_0\mathrm{d}V))$. Let $\rho _ j&gt;0$ be the smooth residual adjoint weight, normalized by </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(\rho _ j\Omega _ j)=0,\qquad \int _ X\rho _ j\Omega _ j^2=1.  \]
+</div>
+<p> Then $F_ j\to F$ uniformly, and the entire sequence satisfies </p>
+<div class="equation">
+  \[  \rho _ j\Omega _ j^2\rightharpoonup \nu ,\qquad \rho _ j\Omega _ j\rightharpoonup Q,\qquad \rho _ j\, \mathrm{d}W\rightharpoonup \rho \, \mathrm{d}W.  \]
+</div>
+<p> Such approximations exist with $w_ j\to w_0$ uniformly and can depend on both curve variables. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Existence of the smooth positive weights is theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">11.4.2</a>, applied to the residual metrics $\Omega _ j$ on the surface. Put $\nu _ j=\rho _ j\Omega _ j^2$ and $L_ jh=2\Omega _ j\wedge \mathrm{dd}^{\mathrm{c}}h/\Omega _ j^2$. Distributional Stokes gives $\int L_ jh\, \mathrm{d}\nu _ j=0$. Uniform convergence to the positive form $\Omega $ supplies a common determinant lower bound and gives $L_ jh\to L_ uh$ uniformly for every fixed smooth $h$. Every weak cluster point of the probabilities $\nu _ j$ is therefore invariant for $L_ u$. By theorem <a data-tag="B18938DE" href="../../tag/23BDF62163E8/">11.45.16</a>, it equals $\nu $, proving convergence of the whole sequence. The same determinant convergence gives $F_ j\to F$ uniformly. 
+    <p>
+      For a smooth real $(1,1)$ test form $\xi $, the ratios $\Omega _ j\wedge \xi /\Omega _ j^2$ converge uniformly to $\Omega \wedge \xi /\Omega ^2$. Consequently, 
+    
+<div class="equation">
+  \[  \int _ X\rho _ j\Omega _ j\wedge \xi =\int _ X\frac{\Omega _ j\wedge \xi }{\Omega _ j^2}\, \mathrm{d}\nu _ j \longrightarrow \int _ X\rho \Omega \wedge \xi .  \]
+</div>
+<p>
+       Similarly, the positive densities $p_ j=\Omega _ j^2/\mathrm{d}W$ converge uniformly to $p=\Omega ^2/\mathrm{d}W$. For every $g\in C(X)$, 
+    
+<div class="equation">
+  \[  \int _ Xg\rho _ j\, \mathrm{d}W =\int _ X(g/p_ j)\, \mathrm{d}\nu _ j \longrightarrow \int _ X(g/p)\, \mathrm{d}\nu =\int _ Xg\rho \, \mathrm{d}W.  \]
+</div>
+<p>
+       These arguments require no pointwise control of the weights. 
+    <p>
+      For existence, heat-smooth $A$ on the first sphere to positive smooth functions $A_ j$ of the same mean $a$, converging uniformly to $A$. Green inversion gives smooth mean-zero $w_ j(x)$ with $\mathrm{dd}^{\mathrm{c}}w_ j=(A_ j-a)\omega _1$ and $w_ j\to w_0$ uniformly. Their residuals converge uniformly to $\Omega $. Adding $\varepsilon _ j h(x,y)$ for a fixed smooth function depending on both variables and $\varepsilon _ j\to 0$ preserves positivity for all sufficiently small coefficients and supplies nonsymmetric examples. Each $u_ j$ retains the fixed logarithmic divisor, and its non-pluripolar equation has scalar $c_0$ and logarithmic density $F_ j$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-7C75616B">
+<p><a class="environment-identifier" href="../../tag/3C22B09DCF87/">Example <span data-tag="7C75616B">11.45.19</span>.</a><span data-gerby-tag="7C75616B"><code class="tag-id">3C22B09DCF87</code></span> Take $a=1$, $d=1/4$, $q=1$, and let $t$ be the sphere height </p>
+<div class="equation">
+  \[  t=\frac{|Z_0|^2-|Z_1|^2}{|Z_0|^2+|Z_1|^2},\qquad b=2+t,\qquad H=A=\tfrac 12+|t|.  \]
+</div>
+<p> Here $c_0=1$ and $F=\log (2bA)$ is Lipschitz but not $C^1$. The residual has continuous positive coefficients with the same loss of differentiability. Its supporting probability differs from normalized Monge–Ampère volume: </p>
+<div class="equation">
+  \[  \int _ X\Omega ^2=4,\qquad \int _ Xt\, \mathrm{d}\nu =0,\qquad \int _ Xt\, \frac{\Omega ^2}{4}=\frac5{24}.  \]
+</div>
+<p> Even for smooth constant $H$, approximation of the pole by globally smooth potentials need not recover the weak adjoint. For $H=a$, so that $w_0=0$ and $\nu =\mathrm{d}W$, put </p>
+<div class="equation">
+  \[  \psi _\delta =d\log (\ell +\delta (1-\ell )),\qquad P_\delta =\omega _1+\mathrm{dd}^{\mathrm{c}}(\psi _\delta /d),\qquad 0&lt;\delta \leq 1.  \]
+</div>
+<p> The smooth potentials $\psi _\delta $ decrease pointwise to $\psi $, converge in $L^1$ and smoothly off $D$, but the classical adjoint probabilities of $\theta +\mathrm{dd}^{\mathrm{c}}\psi _\delta $ converge to </p>
+<div class="equation">
+  \[  \frac{a\omega _1+d\delta _ p}{a+d}\wedge \omega _2, \qquad p=\{ Z_0=0\} .  \]
+</div>
+<p> This limit assigns mass $d/(a+d)&gt;0$ to $D$, and the weighted currents also retain a nonzero divisor component. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The height $t$ is uniform on $[-1,1]$, so $\int A\omega _1=1$ and $\int tA\omega _1=0$. Since $\Omega ^2=2bA\, \mathrm{d}W$, its mass is four and its normalized height moment is 
+    
+<div class="equation">
+  \[  \frac12\int _{-1}^1 t^2(\tfrac 12+|t|)\, \frac{\mathrm{d}t}{2} =\frac5{24}.  \]
+</div>
+<p>
+       The weight is $1/(2b)$ and $\nu =A\, \mathrm{d}W$. Moreover, $\mathrm{dd}^{\mathrm{c}}\theta =-2t\, \mathrm{d}W$, so the background has no smooth positive Gauduchon potential perturbation. 
+    <p>
+      For the smoothing family, direct differentiation gives 
+    
+<div class="equation">
+  \[  \frac{P_\delta }{\omega _1} =\frac{4\delta }{((1+\delta )+(1-\delta )t)^2}.  \]
+</div>
+<p>
+       It is positive of mass one and converges weakly to $\delta _ p$. Thus the positive smooth forms are $\widehat\Omega _\delta =a\omega _1+dP_\delta +b\omega _2$. Their classical weights and probabilities are 
+    
+<div class="equation">
+  \[  \widehat\rho _\delta =\frac1{2(a+d)b},\qquad \widehat\nu _\delta =\frac{a\omega _1+dP_\delta }{a+d}\wedge \omega _2.  \]
+</div>
+<p>
+       The weighted forms are closed, so these are the normalized classical adjoints. Their limits follow from the curve measure convergence. In particular, the weighted-current limit contains $d[D]/(2(a+d)b(p))$. These smoothings fill the pole and do not satisfy the fixed-divisor and uniform-residual hypotheses of proposition <a data-tag="AA470794" href="../../tag/132C5E1825BF/">11.45.18</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/E3635828F0E0/"><span>← Previous</span><small>Equation 11.44.22</small></a><a class="pager-next" rel="next" href="../../tag/27CD354DC77F/"><span>Next →</span><small>11.45.1 The ordinary model and the greatest solutions</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products,
+  author = {{Gerby contributors}},
+  title = {11.45 Selection for logarithmic models on products},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fnormalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fnormalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products%2F&amp;body=Page%3A+%5B11.45+Selection+for+logarithmic+models+on+products%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fnormalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+ea720188d11e778e81b52e3ce4680c106ae94679+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

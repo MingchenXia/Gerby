@@ -1,0 +1,1074 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/"><title>12.6 The Hessian metric and its completion · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/gauduchon-variational-volume/">Chapter 12: Gauduchon variational volume</a></li><li><a href="../../sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/" aria-current="page">Section 12.6: The Hessian metric and its completion</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/a-gauduchon-variational-volume/"><span>12.1</span> A Gauduchon variational volume</a><code class="tag-id">881C26425D7A</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-quotient-and-the-smooth-equation/"><span>12.2</span> The quotient and the smooth equation</a><code class="tag-id">43BF29E33E59</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-equality-case-of-concavity-and-the-first-variation/"><span>12.3</span> The equality case of concavity and the first variation</a><code class="tag-id">484879715C58</code></li><li><a href="../../sections/a-gauduchon-variational-volume--second-variation-on-background-classes/"><span>12.4</span> Second variation on background classes</a><code class="tag-id">8A687EAB6B68</code></li><li><a href="../../sections/a-gauduchon-variational-volume--recovering-a-positive-class-from-its-gauduchon-derivative/"><span>12.5</span> Recovering a positive class from its Gauduchon derivative</a><code class="tag-id">9141861B4F50</code></li><li><a href="../../sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/" aria-current="page"><span>12.6</span> The Hessian metric and its completion</a><code class="tag-id">466CEDF9AEBA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-compact-dual-problem-over-gauduchon-currents/"><span>12.7</span> A compact dual problem over Gauduchon currents</a><code class="tag-id">54ADA5D399DA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--supporting-probabilities-represented-by-maximizing-currents/"><span>12.8</span> Supporting probabilities represented by maximizing currents</a><code class="tag-id">7C2BB0FDDDF5</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrability-of-gauduchon-determinant-measures/"><span>12.9</span> Integrability of Gauduchon determinant measures</a><code class="tag-id">D02094988A03</code></li><li><a href="../../sections/a-gauduchon-variational-volume--integrable-densities-in-the-compact-gauduchon-problem/"><span>12.10</span> Integrable densities in the compact Gauduchon problem</a><code class="tag-id">5CB8CFC32A19</code></li><li><a href="../../sections/a-gauduchon-variational-volume--nef-limits-and-nonattainment/"><span>12.11</span> Nef limits and nonattainment</a><code class="tag-id">EA449D56F8F7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-with-a-closed-nef-core/"><span>12.12</span> Subtraction with a closed nef core</a><code class="tag-id">75F31FAA4616</code></li><li><a href="../../sections/a-gauduchon-variational-volume--subtraction-on-warped-products/"><span>12.13</span> Subtraction on warped products</a><code class="tag-id">EA9388E29ABC</code></li><li><a href="../../sections/a-gauduchon-variational-volume--positive-volume-without-bigness/"><span>12.14</span> Positive volume without bigness</a><code class="tag-id">E4AB7B03C20D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--varying-the-probability-measure/"><span>12.15</span> Varying the probability measure</a><code class="tag-id">8B161DDAE77F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-conditions-for-mass-extrema/"><span>12.16</span> Curvature conditions for mass extrema</a><code class="tag-id">A57EC3129CC8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--curvature-pairs-and-positive-lower-mass/"><span>12.17</span> Curvature pairs and positive lower mass</a><code class="tag-id">C18EABD7D630</code></li><li><a href="../../sections/a-gauduchon-variational-volume--geometric-bounds-and-determinant-concentration/"><span>12.18</span> Geometric bounds and determinant concentration</a><code class="tag-id">AA652CC345D8</code></li><li><a href="../../sections/a-gauduchon-variational-volume--vanishing-lower-mass/"><span>12.19</span> Vanishing lower mass</a><code class="tag-id">108F40B2DFAA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary/"><span>12.20</span> Orders of degeneration at the nef boundary</a><code class="tag-id">3567ADAA7365</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--elliptic-surface-volumes-and-order-spectra/"><span>12.21</span> Elliptic surface volumes and order spectra</a><code class="tag-id">E4B29689FB79</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--comparison-under-an-arbitrary-modification/"><span>12.22</span> Comparison under an arbitrary modification</a><code class="tag-id">9BED3D691F82</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--strict-changes-under-one-blowup/"><span>12.23</span> Strict changes under one blowup</a><code class="tag-id">D0D47B7389D7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--positive-current-subtraction-and-divisorial-residuals/"><span>12.24</span> Positive-current subtraction and divisorial residuals</a><code class="tag-id">57C0ECEB4F4C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--integer-orders-in-fixed-projective-cones/"><span>12.25</span> Integer orders in fixed projective cones</a><code class="tag-id">E6D8A97F4D2C</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--a-maximum-rank-comparison-criterion/"><span>12.26</span> A maximum-rank comparison criterion</a><code class="tag-id">493311C8FB2F</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-anticanonical-curves/"><span>12.27</span> Flat anticanonical curves</a><code class="tag-id">0E9176045572</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--flat-divisors-and-hartogs-extension/"><span>12.28</span> Flat divisors and Hartogs extension</a><code class="tag-id">25D1457FC429</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--punctured-line-bundles-and-elliptic-quotients/"><span>12.29</span> Punctured line bundles and elliptic quotients</a><code class="tag-id">76F771FE4DA3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-torsors-on-split-elliptic-ruled-surfaces/"><span>12.30</span> Cotangent torsors on split elliptic ruled surfaces</a><code class="tag-id">E4B698D2AEE3</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--symmetric-tensors-on-split-elliptic-ruled-surfaces/"><span>12.31</span> Symmetric tensors on split elliptic ruled surfaces</a><code class="tag-id">7CF6C47CAA92</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--section-algebras-of-cotangent-extensions/"><span>12.32</span> Section algebras of cotangent extensions</a><code class="tag-id">72E247F3A7CA</code></li><li><a href="../../sections/a-gauduchon-variational-volume--orders-of-degeneration-at-the-nef-boundary--cotangent-extensions-with-zero-ruling-component/"><span>12.33</span> Cotangent extensions with zero ruling component</a><code class="tag-id">C9CE007F34A7</code></li><li><a href="../../sections/a-gauduchon-variational-volume--current-tests-for-smooth-positivity/"><span>12.34</span> Current tests for smooth positivity</a><code class="tag-id">509A5021C77D</code></li><li><a href="../../sections/a-gauduchon-variational-volume--divisorial-constraints-and-residual-volume/"><span>12.35</span> Divisorial constraints and residual volume</a><code class="tag-id">269CE892EA5B</code></li><li><a href="../../sections/a-gauduchon-variational-volume--a-divisorial-threshold-on-the-hopf-threefold/"><span>12.36</span> A divisorial threshold on the Hopf threefold</a><code class="tag-id">7F944D8C8D92</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/4BBB232A044C/"><span>← Previous</span><small>Proposition 12.5.1</small></a><a class="pager-next" rel="next" href="../../tag/88C1708A920C/"><span>Next →</span><small>Proposition 12.6.1</small></a></nav><h1>12.6 The Hessian metric and its completion<code class="tag-id">466CEDF9AEBA</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-466CEDF9AEBA" data-section-entries="466CEDF9AEBA 88C1708A920C"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="1133CEBD"><code class="tag-id">466CEDF9AEBA</code></span>
+<p>
+We now study the metric $\mathfrak g$ of (<a data-tag="B96CF85C" href="../../tag/6BCEC0329DE5/">12.4.4</a>) on finite-dimensional cones of backgrounds, where it defines an ordinary Riemannian path distance. Homogeneity of $\lambda _\mu $ separates the scale of a positive class from its position on a level set of $\lambda _\mu $, and the logarithm of this scale turns out to be a Euclidean coordinate orthogonal to the level sets. The metric is therefore a product, and its completeness reduces to that of the unit-volume hypersurface. 
+</p>
+<p>
+Let $V$ be a finite-dimensional real vector space of smooth real $(1,1)$-forms such that 
+</p>
+<div class="equation">
+  \[  V\cap \mathrm{dd}^{\mathrm{c}}C^\infty (X,\mathbb R)=\{ 0\} , \qquad \mathscr C=V\cap \mathscr P\ne \varnothing .  \]
+</div>
+<p>
+ Then $\mathscr C$ is an open convex cone in $V$. Write $\lambda =\lambda _\mu |_{\mathscr C}$, and let $g=-D^2\log \lambda $ be the restriction to $\mathscr C$ of the metric (<a data-tag="B96CF85C" href="../../tag/6BCEC0329DE5/">12.4.4</a>); it is a smooth Riemannian metric on $\mathscr C$ because $V$ meets $\mathrm{dd}^{\mathrm{c}}C^\infty (X,\mathbb R)$ only in zero. Put 
+</p>
+<div class="equation">
+  \[  \mathscr S=\{ \theta \in \mathscr C:\lambda (\theta )=1\} ,  \]
+</div>
+<p>
+ and equip this smooth hypersurface with the induced metric $g_{\mathscr S}$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-9494E2B6">
+<p><a class="environment-identifier" href="../../tag/88C1708A920C/">Proposition <span data-tag="9494E2B6">12.6.1</span>.</a><span data-gerby-tag="9494E2B6"><code class="tag-id">88C1708A920C</code></span> The map </p>
+<div class="equation">
+  \[  \Phi :\mathbb R\times \mathscr S\longrightarrow \mathscr C, \qquad (r,q)\longmapsto \mathrm{e}^ r q  \]
+</div>
+<p> is an isometry from the product metric $\mathrm{d}r^2+g_{\mathscr S}$ onto $g$. In particular, if $d_ g$ and $d_{\mathscr S}$ are the intrinsic distances, then </p>
+<div class="equation">
+  \[  d_ g(\mathrm{e}^{r_0}q_0,\mathrm{e}^{r_1}q_1)^2 =|r_1-r_0|^2+d_{\mathscr S}(q_0,q_1)^2.  \]
+</div>
+<p> The metric on $\mathscr C$ is complete if and only if the induced metric on $\mathscr S$ is complete. Every path for which $\lambda $ tends to zero or to infinity has infinite length. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Homogeneity gives $\lambda (s\theta )=s\lambda (\theta )$ for $s&gt;0$. Hence $r=\log \lambda (\theta )$ and $q=\theta /\lambda (\theta )$ define the smooth inverse of $\Phi $. The level set is smooth because the Euler identity gives $D\lambda _\theta (\theta )=\lambda (\theta )&gt;0$. 
+    <p>
+      Differentiating the Euler identity $D\log \lambda _\theta (\theta )=1$ in a direction $\chi \in V$ gives 
+    
+<div class="equation">
+  \[  g_\theta (\theta ,\chi )=D\log \lambda _\theta (\chi ), \qquad g_\theta (\theta ,\theta )=1.  \]
+</div>
+<p>
+       For directions $\chi ,\eta \in V$, differentiating homogeneity twice also gives 
+    
+<div class="equation">
+  \[  g_{s\theta }(s\chi ,s\eta )=g_\theta (\chi ,\eta ).  \]
+</div>
+<p>
+       Let $q\in \mathscr S$, let $\xi ,\eta \in T_ q\mathscr S$, and let $a,b,r$ be real numbers. Since $\xi $ and $\eta $ are tangent to a level set of $\lambda $, the first of these identities shows that both are $g_ q$-orthogonal to the radial vector $q$. Using also the second identity and the scaling rule, we obtain 
+    
+<div class="equation">
+  \[  g_{\mathrm{e}^ rq}\bigl (\mathrm{e}^ r(aq+\xi ),\mathrm{e}^ r(bq+\eta )\bigr ) =ab+g_ q(\xi ,\eta ),  \]
+</div>
+<p>
+       which proves the metric identity. 
+    <p>
+      It remains to prove the distance formula and its consequences. A path $(r(t),q(t))$ in the product has length $\int \sqrt{|r'|^2+|q'|_{g_{\mathscr S}}^2}\, \mathrm{d}t$. The triangle inequality in $\mathbb R^2$ (applied to the integral of the vector $(|r'|,|q'|_{g_{\mathscr S}})$) bounds this below by the square root of the sum of the squared endpoint difference in $r$ and the squared length of the projected path in $\mathscr S$. For the opposite bound, choose a path in $\mathscr S$ of length within $\epsilon $ of the distance of its endpoints, parametrize it with constant speed, and let $r$ vary linearly; then let $\epsilon $ decrease to zero. This proves the distance formula. It identifies Cauchy sequences in $\mathscr C$ with pairs of Cauchy sequences in the two factors; since $\mathbb R$ is complete, the completeness assertion follows. Finally, the length of any path is at least the total change of $\log \lambda $ along it, and this change is infinite when $\lambda $ tends to zero or to infinity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-5429610F6E7A" data-section-entries="316E7687E1CC 5429610F6E7A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5429610F6E7A/">12.6.2 Product and blowup examples</a><code class="tag-id">5429610F6E7A</code></h2><span data-gerby-tag="FA1370DB"></span>
+<p>
+The following two examples of closed classes show that the unit-volume hypersurface may be complete or may have a boundary at finite distance. The first also shows why the derivative is needed in proposition <a data-tag="765CFEAC" href="../../tag/4BBB232A044C/">12.5.1</a>: knowing the volume for every smooth probability measure need not identify the class. 
+</p>
+<p>
+For the first example take $X=\mathbb P^1\times \mathbb P^1$, and let $\alpha ,\beta $ be the pulled-back Fubini–Study forms of integral one on their respective factors. They satisfy 
+</p>
+<div class="equation">
+  \[  \alpha ^2=\beta ^2=0,\qquad \int _ X\alpha \wedge \beta =1.  \]
+</div>
+<p>
+ For $a,b&gt;0$ the form $\theta _{a,b}=a\alpha +b\beta $ is Kähler. Since it is closed, integrating the smooth equation gives, for every smooth positive probability measure $\mu $, 
+</p>
+<div class="equation">
+  \[  \mathcal V_\mu (\theta _{a,b})=2ab, \qquad \lambda _\mu (\theta _{a,b})=\sqrt{2ab}.  \]
+</div>
+<p>
+ Consequently, for real $t$, all the forms $\theta _{\mathrm{e}^ t,\mathrm{e}^{-t}}$ have volume $2$ for every $\mu $. Their background classes are nevertheless distinct: for any fixed point $p$ of the second factor, integration over $\mathbb P^1\times \{ p\} $ gives $\mathrm{e}^ t$, and this integral is unchanged by the addition of $\mathrm{dd}^{\mathrm{c}}f$. 
+</p>
+<p>
+ By direct differentiation, the restriction of (<a data-tag="B96CF85C" href="../../tag/6BCEC0329DE5/">12.4.4</a>) to this two-dimensional cone is 
+</p>
+<div class="equation">
+  \[  \mathfrak g=\frac12\left(\frac{\mathrm{d}a^2}{a^2}+\frac{\mathrm{d}b^2}{b^2}\right).  \]
+</div>
+<p>
+ The coordinates $((\log a)/\sqrt2,(\log b)/\sqrt2)$ identify this metric with the Euclidean metric on $\mathbb R^2$, so the metric on this family is complete. The curve $a=\mathrm{e}^ t$, $b=\mathrm{e}^{-t}$ has unit speed. All distances here are intrinsic to this two-dimensional family. 
+</p>
+<p>
+In the second example, the blowup of $\mathbb P^2$ at a point, the cone is incomplete, and the boundary added by the completion consists of classes of positive volume. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-B2DC1C14">
+<p><a class="environment-identifier" href="../../tag/316E7687E1CC/">Example <span data-tag="B2DC1C14">12.6.3</span>.</a><span data-gerby-tag="B2DC1C14"><code class="tag-id">316E7687E1CC</code></span> Let $\pi :X\to \mathbb P^2$ be the blowup at one point. Write $H$ for the pullback of the hyperplane class and $E$ for the exceptional divisor class. In the two-dimensional space they span, the cone of classes with a positive smooth representative is </p>
+<div class="equation">
+  \[  \mathscr C=\{ aH-bE:a&gt;b&gt;0\} .  \]
+</div>
+<p> These are closed classes, and we represent them by fixed smooth forms in order to apply proposition <a data-tag="9494E2B6" href="../../tag/88C1708A920C/">12.6.1</a>. Their intersection numbers are $H^2=1$, $H\cdot E=0$, $E^2=-1$. Consequently, for every smooth positive probability measure $\mu $, </p>
+<div class="equation">
+  \[  \lambda _\mu (aH-bE)=\sqrt{a^2-b^2}.  \]
+</div>
+<p> In the coordinates </p>
+<div class="equation">
+  \[  a=\mathrm{e}^ r\cosh s,\qquad b=\mathrm{e}^ r\sinh s, \qquad r\in \mathbb R,\quad s&gt;0,  \]
+</div>
+<p> the Hessian metric is $\mathrm{d}r^2+\mathrm{d}s^2$. Its completion is therefore the Euclidean closed half-plane. The added boundary $s=0$ consists of the nef classes $\mathrm{e}^ rH$, each of positive volume $\mathrm{e}^{2r}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The projection from the blown-up point extends to a morphism $f:X\to \mathbb P^1$ with class $L=H-E$. The incidence map $(\pi ,f):X\to \mathbb P^2\times \mathbb P^1$ is an embedding. If $h$ and $\ell $ are pullbacks of Fubini–Study forms of integral one, then 
+    
+<div class="equation">
+  \[  (a-b)h+b\ell  \]
+</div>
+<p>
+       is positive for $a&gt;b&gt;0$, by the product embedding. Conversely, a positive representative has positive integrals over the exceptional curve and the strict transform of a line through the blown-up point. These integrals are respectively $b$ and $a-b$, proving the cone description. The same curves show that no nonzero linear combination in this two-dimensional space is smoothly $\mathrm{dd}^{\mathrm{c}}$-exact. 
+    <p>
+       The intersection numbers follow from the hyperplane pullback and the normal bundle $\mathcal O_{\mathbb P^1}(-1)$ of the exceptional curve; equivalently $H^2=H\cdot L=1$ and $L^2=0$. Since the classes are closed, integrating the smooth equation gives $\mathcal V_\mu =a^2-b^2$, independently of $\mu $. Direct differentiation of $-\log \sqrt{a^2-b^2}$ gives 
+    
+<div class="equation">
+  \[  g=\frac{(a^2+b^2)(\mathrm{d}a^2+\mathrm{d}b^2)-4ab\, \mathrm{d}a\, \mathrm{d}b}{(a^2-b^2)^2}.  \]
+</div>
+<p>
+       Substituting the stated coordinates gives $\mathrm{d}r^2+\mathrm{d}s^2$. The coordinate domain is exactly $\mathbb R\times (0,\infty )$, so the intrinsic distance and completion are those of that Euclidean half-plane. Finally, $H$ has a semipositive pullback representative and is a limit of positive classes, hence is nef. Its square is one, but its integral over $E$ is zero, so it has no positive representative. This proves all assertions about the added boundary. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-8D8E5D56DAEF" data-section-entries="269EE4BAAD07 3C044D127EF7 47DDBF953B9C 5EC99A6A3831 684C5D55AF27 704C3B45EDAF 81EECB4E9700 85B17908B21F 8B3AE102E667 8B7DB948FBBB 8D8E5D56DAEF 8E5F08796F4E B01FA2265C81 B2704F167832 C6F155F53713 ED6415BD1F26"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/8D8E5D56DAEF/">12.6.4 Invariant backgrounds on compact Lie-group quotients</a><code class="tag-id">8D8E5D56DAEF</code></h2><span data-gerby-tag="F1E45D33"></span>
+<p>
+On a compact quotient of a complex Lie group, the backgrounds with constant coefficients in an invariant coframe form a cone of nonclosed backgrounds on which everything can be computed explicitly. With respect to the normalized invariant volume, the root volume is the $n$th root of a determinant, the minimizing metric is the background itself, and the Hessian metric is the trace metric on positive Hermitian matrices. Its unit-volume hypersurface is complete, so the boundary of the cone of coefficient matrices lies at infinite distance after normalization. 
+</p>
+<p>
+Let $G$ be a connected complex Lie group of dimension $n\geq 2$, and let $X=\Gamma \backslash G$ be compact, where the discrete subgroup $\Gamma $ acts on the left. Choose a left-invariant holomorphic coframe $\alpha _1,\ldots ,\alpha _ n$, which descends to $X$. For a Hermitian matrix $A$ put 
+</p>
+<div class="equation">
+  \[  \begin{gathered} \theta _ A=\frac{\mathrm i}{2\pi }\sum _{j,k}A_{jk}\alpha _ j\wedge \bar\alpha _ k, \qquad h_0=\theta _ I,\\ H=\int _ Xh_0^ n,\qquad \mu =\frac{h_0^ n}{H}. \end{gathered}  \]
+</div>
+<p>
+ Here $\operatorname {Herm}(n)$ is the real vector space of Hermitian $n\times n$ matrices, and $A&gt;0$ (respectively $A\geq 0$) means that $A$ is positive definite (respectively semidefinite). Fix a real linear subspace $W\subset \operatorname {Herm}(n)$ containing a positive matrix, and write $V_ W=\{ \theta _ A:A\in W\} $. Throughout this subsection, the probability form is the normalized invariant volume $\mu $ just defined. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-95BE22FD">
+<p><a class="environment-identifier" href="../../tag/47DDBF953B9C/">Proposition <span data-tag="95BE22FD">12.6.5</span>.</a><span data-gerby-tag="95BE22FD"><code class="tag-id">47DDBF953B9C</code></span> The backgrounds in $V_ W\cap \mathscr P$ are exactly the forms $\theta _ A$ with $A\in W$ and $A&gt;0$. Moreover, </p>
+<div class="equation">
+  \[  V_ W\cap \mathrm{dd}^{\mathrm{c}}C^\infty (X,\mathbb R)=\{ 0\} .  \]
+</div>
+<p> Every positive $\theta _ A$ is balanced, and its unique minimizing Gauduchon metric normalized by $D_\mu =1$ is </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-4E2B5B08"><span data-gerby-tag="4E2B5B08"><code class="tag-id">684C5D55AF27</code></span>
+<span class="equation-label"><a data-tag="4E2B5B08" href="../../tag/684C5D55AF27/">12.6.6</a></span>
+<div>\begin{equation}  \lambda _\mu (\theta _ A)=(H\det A)^{1/n},\qquad \gamma _ A=\frac{\theta _ A}{\lambda _\mu (\theta _ A)},\qquad \gamma _ A^ n=\mu . \end{equation}</div>
+</div>
+<p> On this coefficient cone the Hessian metric is </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-75DECB89"><span data-gerby-tag="75DECB89"><code class="tag-id">85B17908B21F</code></span>
+<span class="equation-label"><a data-tag="75DECB89" href="../../tag/85B17908B21F/">12.6.7</a></span>
+<div>\begin{equation}  g_ A(U,Z)=\frac1n\operatorname {tr}(A^{-1}UA^{-1}Z), \qquad U,Z\in W. \end{equation}</div>
+</div>
+<p>For $A\in W$, there is a real distribution $u$ with $\theta _ A+\mathrm{dd}^{\mathrm{c}}u\geq 0$ exactly when $A\geq 0$. The closure of $\{ A\in W:A&gt;0\} $ is $W\cap \{ A\geq 0\} $, and each of its points $A$ is represented by the smooth semipositive form $\theta _ A$. For $A=0$, the only positive current $\mathrm{dd}^{\mathrm{c}}u$ is zero. If $G$ is nonabelian, every positive background in this cone is nonclosed, and adding a smooth $\mathrm{dd}^{\mathrm{c}}$ term never makes it closed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Invariant averages and balancedness.</em> Let $Z_1,\ldots ,Z_ n$ be the invariant holomorphic vector fields dual to $\alpha _1,\ldots ,\alpha _ n$, and set $\Upsilon =\alpha _1\wedge \cdots \wedge \alpha _ n$. This holomorphic top-degree form and its conjugate are closed. For an invariant holomorphic vector field $Z$, evaluation on the invariant frame gives 
+    
+<div class="equation">
+  \[  \mathcal L_ Z\Upsilon =-\operatorname {tr}(\operatorname {ad}Z)\Upsilon , \qquad \mathcal L_ Z\bar\Upsilon =0.  \]
+</div>
+<p>
+       The second identity also follows from Cartan's formula. Since $h_0^ n$ is a positive constant multiple of the appropriately oriented form $\Upsilon \wedge \bar\Upsilon $, Stokes' theorem on compact $X$ gives 
+    
+<div class="equation">
+  \[  0=\int _ X\mathcal L_ Zh_0^ n=-H\operatorname {tr}(\operatorname {ad}Z).  \]
+</div>
+<p>
+       Thus the fields $Z_ j$ and their conjugates have zero divergence with respect to $\mu $. In particular, 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-98E5CC28"><span data-gerby-tag="98E5CC28"><code class="tag-id">8E5F08796F4E</code></span>
+<span class="equation-label"><a data-tag="98E5CC28" href="../../tag/8E5F08796F4E/">12.6.8</a></span>
+<div>\begin{equation}  \int _ XZ_ jf\, \mu =\int _ X\bar Z_ jf\, \mu =0 \qquad (f\in C^\infty (X,\mathbb C)). \end{equation}</div>
+</div>
+<p>
+       Cartan's formula also gives $\mathrm d(\iota _{Z_ j}\Upsilon )=0$. These contractions span the invariant $(n-1,0)$-forms. The form $\theta _ A^{n-1}$ is a constant linear combination of their wedges with conjugates, so $\mathrm d\theta _ A^{n-1}=0$. 
+    <p>
+      The holomorphic fields commute with the antiholomorphic fields, and $\mathrm d\alpha _ j$ has type $(2,0)$. The coefficient matrix of $\mathrm{dd}^{\mathrm{c}}u$ is therefore $(Z_ j\bar Z_ k u)$. For smooth $u$ its entries have $\mu $-mean zero by (<a data-tag="98E5CC28" href="../../tag/8E5F08796F4E/">12.6.8</a>), so the matrix of $\mu $-means of the coefficients of $\theta _ A+\mathrm{dd}^{\mathrm{c}}u$ is $A$. If $\theta _ A+\mathrm{dd}^{\mathrm{c}}u&gt;0$, averaging the positive coefficient matrix gives $A&gt;0$. The converse follows by taking $u=0$. The same average shows that $V_ W$ contains no nonzero smooth $\mathrm{dd}^{\mathrm{c}}$ direction. 
+    <p>
+      For a distribution $u$, the adjoints of $Z_ j$ and $\bar Z_ k$ with respect to $\mu $ annihilate constants, so the mean of each $Z_ j\bar Z_ k u$ is still zero. The coefficients of a positive current in this global frame form a positive matrix of measures, whose matrix of total masses is semipositive; for $\theta _ A+\mathrm{dd}^{\mathrm{c}}u\geq 0$ this gives $A\geq 0$. Conversely, $\theta _ A$ itself is a positive current when $A\geq 0$. If $A=0$, the positive trace measure of $\mathrm{dd}^{\mathrm{c}}u$ has total mass zero, and polarization then makes the entire current zero. Finally, for a fixed positive $A_+\in W$, the matrices $A+\varepsilon A_+$ with $\varepsilon \downarrow 0$ approximate every semipositive $A\in W$ from the positive cone. This proves the closure assertion. 
+    <p>
+<em>The quotient and its equality case.</em> Put $Q=H\det A$, so that $\theta _ A^ n=Q\mu $. For every smooth positive Hermitian form $\gamma $, the matrix arithmetic–geometric mean inequality gives 
+    
+<div class="equation">
+  \[  \frac{\theta _ A\wedge \gamma ^{n-1}}{\gamma ^ n} =\frac1n\operatorname {tr}_\gamma \theta _ A \geq \left(\frac{\theta _ A^ n}{\gamma ^ n}\right)^{1/n}.  \]
+</div>
+<p>
+       Integration yields $\int _ X\theta _ A\wedge \gamma ^{n-1}\geq Q^{1/n}D_\mu (\gamma )$, which bounds every Gauduchon quotient in definition <a data-tag="6E1DBC11" href="../../tag/0C4AF7E2CEBB/">12.2.1</a> from below. The balanced, hence Gauduchon, metric $\gamma =\theta _ A$ has $D_\mu (\theta _ A)=Q^{(n-1)/n}$ and attains equality. This proves the formula for $\lambda _\mu (\theta _ A)$. 
+    <p>
+      For a minimizing Gauduchon metric $\gamma $, the continuous nonnegative difference of the two sides of the pointwise inequality has integral zero. Pointwise equality then forces $\gamma =f\theta _ A$ for a smooth positive function $f$. Set $q=f^{n-1}$ and $T=\theta _ A^{n-1}$. Since $\mathrm dT=0$, the Gauduchon equation becomes $\mathrm{dd}^{\mathrm{c}}q\wedge T=0$, and 
+    
+<div class="equation">
+  \[  0=\int _ Xq\mathrm{dd}^{\mathrm{c}}q\wedge T=-\int _ X\mathrm dq\wedge \mathrm d^{\mathrm c}q\wedge T.  \]
+</div>
+<p>
+       The last integrand is nonnegative and vanishes exactly where $\mathrm dq=0$. Thus $f$ is constant. As $n\geq 2$ and 
+    
+<div class="equation">
+  \[  D_\mu (c\theta _ A)=c^{n-1}\lambda _\mu (\theta _ A)^{n-1},  \]
+</div>
+<p>
+       normalization determines $c=\lambda _\mu (\theta _ A)^{-1}$. This proves the unique minimizer and its volume identity. 
+    <p>
+      Differentiating $-\log \lambda _\mu (\theta _ A)=-(\log H+\log \det A)/n$ twice gives (<a data-tag="75DECB89" href="../../tag/85B17908B21F/">12.6.7</a>). The corresponding squared norm of $U$ is $\| A^{-1/2}UA^{-1/2}\| _{\mathrm F}^2/n$, which is positive for $U\ne 0$; here $\| B\| _{\mathrm F}^2=\operatorname {tr}(B^*B)$ denotes the squared Frobenius norm. 
+    <p>
+      Finally, 
+    
+<div class="equation">
+  \[  \partial \theta _ A=\frac{\mathrm i}{2\pi }\sum _{j,k}A_{jk}\, \mathrm d\alpha _ j\wedge \bar\alpha _ k.  \]
+</div>
+<p>
+       For invertible $A$, the vanishing of this form forces every $\mathrm d\alpha _ j=0$, by independence of the conjugate coframe, and the Lie algebra would then be abelian. Since adding $\mathrm{dd}^{\mathrm{c}}u$ does not change $\mathrm d\theta _ A$, this proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-016ADD09">
+<p><a class="environment-identifier" href="../../tag/81EECB4E9700/">Lemma <span data-tag="016ADD09">12.6.9</span>.</a><span data-gerby-tag="016ADD09"><code class="tag-id">81EECB4E9700</code></span> On the cone of all positive definite Hermitian $n\times n$ matrices, the Riemannian distance of the metric (<a data-tag="75DECB89" href="../../tag/85B17908B21F/">12.6.7</a>) is </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B0C036DF"><span data-gerby-tag="B0C036DF"><code class="tag-id">C6F155F53713</code></span>
+<span class="equation-label"><a data-tag="B0C036DF" href="../../tag/C6F155F53713/">12.6.10</a></span>
+<div>\begin{equation}  d_{\mathrm{full}}(A,B)=\frac1{\sqrt n} \| \log (A^{-1/2}BA^{-1/2})\| _{\mathrm F}. \end{equation}</div>
+</div>
+<p> For endpoints with equal determinant, this is also the intrinsic distance in the hypersurface of all positive definite matrices with that determinant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the trace formula, the congruence $M\mapsto P^*MP$ by a fixed invertible matrix $P$ is an isometry. Taking $P=A^{-1/2}$, we may assume that the endpoints are $I$ and $C=A^{-1/2}BA^{-1/2}&gt;0$. The curve $\exp (t\log C)$, $0\leq t\leq 1$, has constant speed $\| \log C\| _{\mathrm F}/\sqrt n$, which gives the upper bound for the distance. 
+    <p>
+      For the reverse inequality, diagonalization gives the convergent resolvent formula for the matrix logarithm and its derivative 
+    
+<div class="equation">
+  \begin{align*}  \log M&amp; =\int _0^\infty \bigl ((1+s)^{-1}I-(M+sI)^{-1}\bigr )\, \mathrm ds,\\  D\log _ M[U]&amp; =\int _0^\infty (M+sI)^{-1}U(M+sI)^{-1}\, \mathrm ds. \end{align*}
+</div>
+<p>
+       On a neighborhood of $M$ where the spectrum is bounded below by a positive constant, differentiation under the integral sign is justified by an integrable bound. In a unitary basis diagonalizing $M$, with eigenvalues $d_ i&gt;0$, the derivative has entries $c_{ij}U_{ij}$, where 
+    
+<div class="equation">
+  \[  c_{ij}=\frac{\log d_ i-\log d_ j}{d_ i-d_ j}\quad (d_ i\ne d_ j), \qquad c_{ij}=\frac1{d_ i}\quad (d_ i=d_ j).  \]
+</div>
+<p>
+       Writing $d_ i/d_ j=\mathrm e^{2s}$ gives $\sqrt{d_ id_ j}|c_{ij}|=|s/\sinh s|\leq 1$, including the limiting value at $s=0$. Hence 
+    
+<div class="equation">
+  \[  \| D\log _ M[U]\| _{\mathrm F} \leq \| M^{-1/2}UM^{-1/2}\| _{\mathrm F}.  \]
+</div>
+<p>
+       Applying this along a piecewise $C^1$ path of positive matrices from $I$ to $C$ and integrating, we bound its length below by $\| \log C\| _{\mathrm F}/\sqrt n$. This proves the distance formula. In terms of the original endpoints, the length-minimizing curve is 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-C5579362"><span data-gerby-tag="C5579362"><code class="tag-id">3C044D127EF7</code></span>
+<span class="equation-label"><a data-tag="C5579362" href="../../tag/3C044D127EF7/">12.6.11</a></span>
+<div>\begin{equation}  M(t)=A^{1/2}(A^{-1/2}BA^{-1/2})^ tA^{1/2}. \end{equation}</div>
+</div>
+<p>
+       Its determinant is $(\det A)^{1-t}(\det B)^ t$, so for endpoints with equal determinant it stays in the fixed-determinant hypersurface. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+Write $\lambda (A)=\lambda _\mu (\theta _ A)$ and 
+</p>
+<div class="equation">
+  \[  S_ W=\{ A\in W:A&gt;0,\  H\det A=1\} .  \]
+</div>
+<p>
+ The radial derivative of $\lambda $ is positive, so $S_ W$ is a smooth hypersurface of the cone $\{ A\in W:A&gt;0\} $. We write $d_ W$ for the intrinsic path distance of $S_ W$ with the metric induced by (<a data-tag="75DECB89" href="../../tag/85B17908B21F/">12.6.7</a>). 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-0545D460">
+<p><a class="environment-identifier" href="../../tag/B01FA2265C81/">Theorem <span data-tag="0545D460">12.6.12</span>.</a><span data-gerby-tag="0545D460"><code class="tag-id">B01FA2265C81</code></span> The metric space $(S_ W,d_ W)$ is complete and proper, and a sequence in $S_ W$ is Cauchy exactly when its coefficient matrices converge to a positive matrix in $S_ W$. For $A,B\in S_ W$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-925ADEF0"><span data-gerby-tag="925ADEF0"><code class="tag-id">8B3AE102E667</code></span>
+<span class="equation-label"><a data-tag="925ADEF0" href="../../tag/8B3AE102E667/">12.6.13</a></span>
+<div>\begin{align}  d_ W(A,B)&amp; \geq \frac1{\sqrt n} \| \log (A^{-1/2}BA^{-1/2})\| _{\mathrm F},\\  d_ W(A,B)&amp; \leq \frac{\| A-B\| _{\mathrm F}}{\sqrt n\min \{ \lambda _{\min }(A),\lambda _{\min }(B)\} }. \tag{12.6.14} \end{align}</div>
+</div>
+<p> The normalized minimizing metrics of (<a data-tag="4E2B5B08" href="../../tag/684C5D55AF27/">12.6.6</a>) satisfy, pointwise on $X$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-4275D2C1"><span data-gerby-tag="4275D2C1"><code class="tag-id">ED6415BD1F26</code></span>
+<span class="equation-label"><a data-tag="4275D2C1" href="../../tag/ED6415BD1F26/">12.6.15</a></span>
+<div>\begin{equation}  \mathrm e^{-\sqrt n d_ W(A,B)}\gamma _ A \leq \gamma _ B\leq \mathrm e^{\sqrt n d_ W(A,B)}\gamma _ A. \end{equation}</div>
+</div>
+<p> In particular, the completion of $S_ W$ adds no point, and no point of the boundary of the coefficient cone is a limit of a Cauchy sequence. </p>
+<p>If $A_ j&gt;0$ in $W$ converges to a nonzero singular semipositive $A_0$, then $\widehat A_ j=A_ j/\lambda (A_ j)$ lies in $S_ W$ and, for fixed $A_\star \in S_ W$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-86BD9982"><span data-gerby-tag="86BD9982"><code class="tag-id">5EC99A6A3831</code></span>
+<span class="equation-label"><a data-tag="86BD9982" href="../../tag/5EC99A6A3831/">12.6.16</a></span>
+<div>\begin{equation}  d_ W(A_\star ,\widehat A_ j) \geq \frac{|\log \det A_ j|}{n\sqrt n}+O(1) \longrightarrow \infty . \end{equation}</div>
+</div>
+<p> By contrast, a sequence of coefficient matrices tending to zero can normalize to a point of $S_ W$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Paths in $W$.</em> Every path in $S_ W$ is a path in the hypersurface of all positive matrices with $H\det A=1$, so lemma <a data-tag="016ADD09" href="../../tag/81EECB4E9700/">12.6.9</a> gives (<a data-tag="925ADEF0" href="../../tag/8B3AE102E667/">12.6.13</a>). To obtain an upper bound by paths inside $W$, put 
+    
+<div class="equation">
+  \[  U=B-A,\qquad C(t)=A+tU,\qquad N(t)=\frac{C(t)}{\lambda (C(t))}.  \]
+</div>
+<p>
+       Since the positive cone is convex and $W$ is linear, $N(t)$ stays in $S_ W$ and joins $A$ to $B$. With $K=C^{-1/2}UC^{-1/2}$, differentiation gives 
+    
+<div class="equation">
+  \[  \begin{gathered} g_ N(N',N')=\frac1n\operatorname {tr}(K^2) -\frac1{n^2}(\operatorname {tr}K)^2 \leq \frac{\| U\| _{\mathrm F}^2}{nm^2},\\ m=\min \{ \lambda _{\min }(A),\lambda _{\min }(B)\} . \end{gathered}  \]
+</div>
+<p>
+       Indeed $C(t)\geq mI$ and $(\log \lambda (C))'=\operatorname {tr}(C^{-1}U)/n$. Integrating proves (<a data-tag="86E4B781" href="../../tag/6D807945F202/">12.6.14</a>), and shows in particular that $S_ W$ is connected. 
+    <p>
+      Put $d=d_ W(A,B)$. Every eigenvalue of $A^{-1/2}BA^{-1/2}$ has a logarithm of absolute value at most $\| \log (A^{-1/2}BA^{-1/2})\| _{\mathrm F}\leq \sqrt n\, d$, by (<a data-tag="925ADEF0" href="../../tag/8B3AE102E667/">12.6.13</a>). Hence 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-0D746ABD"><span data-gerby-tag="0D746ABD"><code class="tag-id">B2704F167832</code></span>
+<span class="equation-label"><a data-tag="0D746ABD" href="../../tag/B2704F167832/">12.6.17</a></span>
+<div>\begin{equation}  \mathrm e^{-\sqrt n d}A\leq B\leq \mathrm e^{\sqrt n d}A. \end{equation}</div>
+</div>
+<p>
+       Since $\gamma _ A=\theta _ A$ on $S_ W$, this proves (<a data-tag="4275D2C1" href="../../tag/ED6415BD1F26/">12.6.15</a>). 
+    <p>
+<em>Cauchy sequences and bounded balls.</em> For a Cauchy sequence $(A_ j)$ in $(S_ W,d_ W)$, comparison with one fixed element of the sequence, using (<a data-tag="0D746ABD" href="../../tag/B2704F167832/">12.6.17</a>), gives $mI\leq A_ j\leq MI$ with fixed positive $m,M$. Comparing two elements then gives 
+    
+<div class="equation">
+  \[  \| A_ j-A_ k\| _{\mathrm{op}} \leq M\bigl (\mathrm e^{\sqrt n d_ W(A_ j,A_ k)}-1\bigr ),  \]
+</div>
+<p>
+       where $\| \cdot \| _{\mathrm{op}}$ is the operator norm. The coefficient matrices therefore form a Cauchy sequence. Their limit lies in the closed linear space $W$, is positive, and satisfies $H\det A=1$, and the upper bound (<a data-tag="86E4B781" href="../../tag/6D807945F202/">12.6.14</a>) proves convergence to that point in $d_ W$. Conversely, coefficient convergence to a positive point gives convergence in $d_ W$ by the same bound. This proves completeness and the Cauchy criterion. The minimizing forms then converge in $C^\infty $, because their coefficients multiply a fixed smooth coframe. 
+    <p>
+      By these estimates, $d_ W$ induces the topology of coefficient convergence. A closed ball of radius $R$ around $A_\star $ is contained in the compact matrix interval 
+    
+<div class="equation">
+  \[  \begin{gathered} \mathrm e^{-\sqrt nR}A_\star \leq A\leq \mathrm e^{\sqrt nR}A_\star ,\\ A\in W,\qquad H\det A=1. \end{gathered}  \]
+</div>
+<p>
+       The ball is closed in that interval, hence compact. This proves properness. In particular, distances from a fixed reference point are bounded exactly when the eigenvalues relative to that point are bounded above and away from zero. 
+    <p>
+<em>The coefficient boundary.</em> Write $\lambda _{\max }$ for the largest eigenvalue. If $A_ j\to A_0$ with $A_0\geq 0$ singular and nonzero, then $\lambda (A_ j)\to 0$ while $\lambda _{\max }(A_ j)$ has a positive limit, so the largest eigenvalue of $\widehat A_ j$ tends to infinity. Applying (<a data-tag="0D746ABD" href="../../tag/B2704F167832/">12.6.17</a>) to $A_\star ,\widehat A_ j$ gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  d_ W(A_\star ,\widehat A_ j) &amp; \geq \frac1{\sqrt n}\log \frac{\lambda _{\max }(A_ j)}{\lambda (A_ j)\lambda _{\max }(A_\star )}\\ &amp; =\frac{|\log \det A_ j|}{n\sqrt n}+O(1). \end{aligned}  \]
+</div>
+<p>
+       The error term is bounded because $A_0\ne 0$. This proves (<a data-tag="86BD9982" href="../../tag/5EC99A6A3831/">12.6.16</a>). For comparison, $A_ j=t_ jA_\star $ with $t_ j\downarrow 0$ normalizes to $A_\star $ for every $j$; its coefficient limit, the zero matrix, gives no new point of the completion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+<p>
+By proposition <a data-tag="9494E2B6" href="../../tag/88C1708A920C/">12.6.1</a>, the whole cone $\{ \theta _ A:A\in W,\  A&gt;0\} $ is then complete as well. The argument uses the invariant probability and the linearity of $W$; in other geometries the unit-volume hypersurface can have a boundary at finite distance, as in example <a data-tag="B2DC1C14" href="../../tag/316E7687E1CC/">12.6.3</a>. 
+</p>
+<p>
+The length-minimizing path (<a data-tag="C5579362" href="../../tag/3C044D127EF7/">12.6.11</a>) need not stay in a proper subspace $W$. For $n=3$, take 
+</p>
+<div class="equation">
+  \[  W=\operatorname {span}_{\mathbb R}\{ I,\operatorname {diag}(0,1,2)\} , \qquad a=H^{-1/3}.  \]
+</div>
+<p>
+ The points $aI$ and $a6^{-1/3}\operatorname {diag}(1,2,3)$ of $S_ W$ have, on the path (<a data-tag="C5579362" href="../../tag/3C044D127EF7/">12.6.11</a>), the midpoint $a6^{-1/6}\operatorname {diag}(1,\sqrt2,\sqrt3)$. The diagonal entries fail the relation $x_1-2x_2+x_3=0$, since $1-2\sqrt2+\sqrt3\ne 0$. Thus this path leaves $W$, whereas the normalized segment $N(t)$ used in the proof remains in it. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-14FB7757">
+<p><a class="environment-identifier" href="../../tag/704C3B45EDAF/">Example <span data-tag="14FB7757">12.6.18</span>.</a><span data-gerby-tag="14FB7757"><code class="tag-id">704C3B45EDAF</code></span> On $G=\mathbb C^3$ take the multiplication </p>
+<div class="equation">
+  \[  z\cdot w=(z_1+w_1,z_2+w_2,z_3+w_3+z_1w_2),  \]
+</div>
+<p> the Gaussian lattice $\Gamma =\mathbb Z[\mathrm i]^3$, and $X=\Gamma \backslash G$. This is a compact non-Kähler manifold of dimension three, with invariant coframe </p>
+<div class="equation">
+  \[  \alpha _1=\mathrm dz_1,\qquad \alpha _2=\mathrm dz_2,\qquad \alpha _3=\mathrm dz_3-z_1\mathrm dz_2.  \]
+</div>
+<p> For its full nine-dimensional cone $W=\operatorname {Herm}(3)$ and the normalized invariant probability, </p>
+<div class="equation">
+  \[  H=\frac6{\pi ^3},\qquad \mathcal V_\mu (\theta _ A)=\frac6{\pi ^3}\det A,\qquad S=\{ A&gt;0:\det A=\pi ^3/6\} .  \]
+</div>
+<p> Every positive background is nonclosed. The eight-dimensional unit-volume hypersurface is complete and proper, and its intrinsic distance is </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-02E2F940"><span data-gerby-tag="02E2F940"><code class="tag-id">8B7DB948FBBB</code></span>
+<span class="equation-label"><a data-tag="02E2F940" href="../../tag/8B7DB948FBBB/">12.6.19</a></span>
+<div>\begin{equation}  d_ S(A,B)=\frac1{\sqrt3}\| \log (A^{-1/2}BA^{-1/2})\| _{\mathrm F}. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The bilinear cross term makes the multiplication associative, with identity zero and inverse $(-z_1,-z_2,-z_3+z_1z_2)$. These operations preserve the Gaussian lattice. Its action by left multiplication is free and properly discontinuous: for a compact set $K\subset G$, elements $\gamma $ with $\gamma K\cap K\ne \varnothing $ belong to the compact set $KK^{-1}$, containing only finitely many lattice elements. 
+    <p>
+      Choose Gaussian integers $\gamma _1,\gamma _2$ that move $z_1,z_2$ into the half-open unit square, and then $\gamma _3$ that moves $z_3+\gamma _1z_2$ into it. This gives a representative in the real six-dimensional unit cube. If two points of the half-open cube are equivalent, then $\gamma _1=\gamma _2=0$ and then $\gamma _3=0$. The cube is therefore a measurable fundamental domain, and $X$ is compact, being the image of its closure. 
+    <p>
+      This coframe is left-invariant, descends to $X$, and has 
+    
+<div class="equation">
+  \[  \mathrm d\alpha _3=-\alpha _1\wedge \alpha _2,\qquad \alpha _1\wedge \alpha _2\wedge \alpha _3 =\mathrm dz_1\wedge \mathrm dz_2\wedge \mathrm dz_3.  \]
+</div>
+<p>
+       The density of $h_0^3$ is $6/\pi ^3$ times real Lebesgue volume on the fundamental cube, giving the stated $H$. The coefficient of $\alpha _1\wedge \alpha _2\wedge \bar\alpha _3$ in $\partial \theta _ A$ is $-\mathrm iA_{33}/(2\pi )$, so positivity makes every such background nonclosed. 
+    <p>
+      To see that $X$ admits no Kähler metric at all, suppose that a positive closed $(1,1)$-form $\kappa $ existed, and average its coefficient functions in this coframe against $\mu $. Their mean is a positive matrix $A$. In the coefficients of $\partial \kappa $, derivative terms have mean zero by (<a data-tag="98E5CC28" href="../../tag/8E5F08796F4E/">12.6.8</a>); the remaining means are exactly the coefficients of $\partial \theta _ A$. Closedness would force them to vanish, contradicting $A_{33}&gt;0$. Thus $X$ is non-Kähler. 
+    <p>
+      The assertions about the volume, the minimizers and completeness follow from proposition <a data-tag="95BE22FD" href="../../tag/47DDBF953B9C/">12.6.5</a>, theorem <a data-tag="0545D460" href="../../tag/B01FA2265C81/">12.6.12</a>. As $W$ is the full matrix space, the equal-determinant exponential path stays in $S$, and lemma <a data-tag="016ADD09" href="../../tag/81EECB4E9700/">12.6.9</a> gives (<a data-tag="02E2F940" href="../../tag/8B7DB948FBBB/">12.6.19</a>). For $A_\star =aI$, $a=(\pi ^3/6)^{1/3}$, this becomes 
+    
+<div class="equation">
+  \[  d_ S(A_\star ,A)^2=\frac13\sum _{j=1}^3 \left(\log \frac{\lambda _ j(A)}a\right)^2.  \]
+</div>
+<p>
+       The three logarithms sum to zero. 
+    <p>
+      For a concrete degeneration, take $A_\varepsilon =\operatorname {diag}(1,1,\varepsilon )$, $0&lt;\varepsilon \leq 1$. As $\varepsilon \to 0$, the coefficients converge to the nonzero smooth semipositive form $\theta _{\operatorname {diag}(1,1,0)}$. The normalized matrices and their distances, on the other hand, are 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-56B5A6AE"><span data-gerby-tag="56B5A6AE"><code class="tag-id">269EE4BAAD07</code></span>
+<span class="equation-label"><a data-tag="56B5A6AE" href="../../tag/269EE4BAAD07/">12.6.20</a></span>
+<div>\begin{equation}  \begin{gathered} \widehat A_\varepsilon =a\operatorname {diag}(\varepsilon ^{-1/3},\varepsilon ^{-1/3},\varepsilon ^{2/3}),\\ d_ S(A_\star ,\widehat A_\varepsilon )=\frac{\sqrt2}{3}|\log \varepsilon |. \end{gathered} \end{equation}</div>
+</div>
+<p>
+       Thus, after normalization, the boundary form $\theta _{\operatorname {diag}(1,1,0)}$ lies at infinite distance. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-6D807945F202" data-section-entries="6D807945F202"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="86E4B781"></span><div class="equation numbered-equation" id="non-kahler-pluripotential-theory-86E4B781"><span data-gerby-tag="86E4B781"><code class="tag-id">6D807945F202</code></span><span class="equation-label"><a data-tag="86E4B781" href="../../tag/6D807945F202/">12.6.14</a></span><div>\[\begin{aligned}\begin{align}  d_ W(A,B)&amp; \leq \frac{\| A-B\| _{\mathrm F}}{\sqrt n\min \{ \lambda _{\min }(A),\lambda _{\min }(B)\} }.  \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-D70657252686" data-section-entries="18897CCC762F 2DDABE7168CA 3861E23FD396 3E1F104EFFA9 7294934ED49C 7AA419EEDABE 8859AB23548E 98DEB3AF443E 9BB432CC1FE6 D70657252686"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/D70657252686/">12.6.21 Masses and reference densities in dimension three</a><code class="tag-id">D70657252686</code></h2><span data-gerby-tag="6F3E7C0D"></span>
+<p>
+In dimension three, an invariant positive background has a nonnegative complex Hessian. Together with the mass identities for Gauduchon backgrounds, this determines its upper Monge–Ampère mass and shows that the singular semipositive coefficient limits have zero top mass. On the Iwasawa quotient, the same calculation identifies exactly which smooth reference probabilities keep the determinant formula for the volume. 
+</p>
+<p>
+We keep the invariant coframe, $h_0$, $H$ and $\theta _ A$ of subsection <a data-tag="F1E45D33" href="../../tag/8D8E5D56DAEF/">12.6.4</a>, and now assume $n=3$. Write $\mu _0=h_0^3/H$ to distinguish this invariant probability from other reference measures, and let $\mathscr M$ be the set of smooth strictly positive probability forms on $X$. Recall that $v_+$ denotes the upper Monge–Ampère mass of definition <a data-tag="254B47C8" href="../../tag/EB45638CBB2C/">13.14.14</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-D2B09014">
+<p><a class="environment-identifier" href="../../tag/7294934ED49C/">Proposition <span data-tag="D2B09014">12.6.22</span>.</a><span data-gerby-tag="D2B09014"><code class="tag-id">7294934ED49C</code></span> For $A&gt;0$ on any such compact complex Lie-group quotient, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B6145C8B"><span data-gerby-tag="B6145C8B"><code class="tag-id">18897CCC762F</code></span>
+<span class="equation-label"><a data-tag="B6145C8B" href="../../tag/18897CCC762F/">12.6.23</a></span>
+<div>\begin{equation}  v_+(\theta _ A)=H\det A =\max _{\nu \in \mathscr M}\mathcal V_\nu (\theta _ A). \end{equation}</div>
+</div>
+<p> The invariant probability $\mu _0$ attains this maximum. In particular the quotient has the bounded mass property. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since the forms $\mathrm d\alpha _ j$ are holomorphic, we have 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-1539E6DB"><span data-gerby-tag="1539E6DB"><code class="tag-id">2DDABE7168CA</code></span>
+<span class="equation-label"><a data-tag="1539E6DB" href="../../tag/2DDABE7168CA/">12.6.24</a></span>
+<div>\begin{equation}  \mathrm{dd}^{\mathrm{c}}\theta _ A=\frac1{4\pi ^2} \sum _{j,k}A_{jk}\, \mathrm d\alpha _ j\wedge \mathrm d\bar\alpha _ k\geq 0. \end{equation}</div>
+</div>
+<p>
+       Indeed $\bar\partial (\alpha _ j\wedge \bar\alpha _ k) =-\alpha _ j\wedge \mathrm d\bar\alpha _ k$, and applying $\partial $ and multiplying by $(\mathrm i/(2\pi ))^2$ gives the identity in (<a data-tag="1539E6DB" href="../../tag/2DDABE7168CA/">12.6.24</a>). Diagonalizing the positive coefficient matrix expresses the result as a sum of nonnegative multiples of $\beta \wedge \bar\beta $ for invariant $(2,0)$-forms $\beta $. In dimension three these are nonnegative $(2,2)$-forms: the wedge product with $\mathrm i\xi \wedge \bar\xi $, for a $(1,0)$-form $\xi $, has the squared modulus of $\xi \wedge \beta $ as coefficient. 
+    <p>
+      By proposition <a data-tag="95BE22FD" href="../../tag/47DDBF953B9C/">12.6.5</a>, $\theta _ A$ is balanced, hence Gauduchon. The maximum case of theorem <a data-tag="F297E7B1" href="../../tag/26629526444F/">12.16.3</a> therefore gives $v_+(\theta _ A)=\int _ X\theta _ A^3=H\det A$. The supremum of $\mathcal V_\nu (\theta _ A)$ over $\nu \in \mathscr M$ equals this upper mass by theorem <a data-tag="89544950" href="../../tag/B6CA5669E402/">12.15.4</a>, and (<a data-tag="4E2B5B08" href="../../tag/684C5D55AF27/">12.6.6</a>) shows that it is attained at $\mu _0$. Finally, proposition <a data-tag="C8F0BC96" href="../../tag/45F622BE862A/">13.14.15</a> makes the finiteness of the upper mass a property of the manifold. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-7F261537">
+<p><a class="environment-identifier" href="../../tag/9BB432CC1FE6/">Corollary <span data-tag="7F261537">12.6.25</span>.</a><span data-gerby-tag="7F261537"><code class="tag-id">9BB432CC1FE6</code></span> If $A\geq 0$ is singular, then every bounded $u\in \mathrm{PSH}(X,\theta _ A)$ satisfies </p>
+<div class="equation">
+  \[  \int _ X(\theta _ A+\mathrm{dd}^{\mathrm{c}}u)^3=0.  \]
+</div>
+<p> For every $u\in \mathrm{PSH}(X,\theta _ A)$, bounded or not, the non-pluripolar top power of $\theta _ A+\mathrm{dd}^{\mathrm{c}}u$ is also zero. Thus the nonzero semipositive boundary forms $\theta _ A$ of proposition <a data-tag="95BE22FD" href="../../tag/47DDBF953B9C/">12.6.5</a> have zero non-pluripolar top mass. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $\varepsilon &gt;0$, the same bounded $u$ is $\theta _{A+\varepsilon I}$-plurisubharmonic, so the preceding proposition bounds its mass by $H\det (A+\varepsilon I)$, which tends to zero with $\varepsilon $. By the multilinear construction of bounded products in proposition <a data-tag="890BD62D" href="../../tag/3EDAB69A7289/">5.28.2</a>, 
+    
+<div class="equation">
+  \[  (\theta _{A+\varepsilon I}+\mathrm{dd}^{\mathrm{c}}u)^3 =\bigl (\theta _ A+\mathrm{dd}^{\mathrm{c}}u+\varepsilon h_0\bigr )^3  \]
+</div>
+<p>
+       is a polynomial in $\varepsilon $ whose coefficients are mixed products of finite mass. Its total mass therefore converges to $\int _ X(\theta _ A+\mathrm{dd}^{\mathrm{c}}u)^3$ as $\varepsilon \downarrow 0$, so this mass is zero, and positivity makes the measure zero. 
+    <p>
+      For unbounded $u$, we subtract a constant so that $u\leq 0$. Since $\theta _ A\geq 0$, the truncations $u_ k=\max (u,-k)$ are bounded and $\theta _ A$-plurisubharmonic, so their top products vanish by the bounded case. Restricting them to $\{ u&gt;-k\} $ and passing to the limit that defines the non-pluripolar product gives zero as well. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+We now specialize to the Iwasawa quotient of example <a data-tag="14FB7757" href="../../tag/704C3B45EDAF/">12.6.18</a>. Put 
+</p>
+<div class="equation">
+  \[  E=\mathbb C/\mathbb Z[\mathrm i],\qquad B=E^2,\qquad p:X\longrightarrow B,\quad [z]\longmapsto ([z_1],[z_2]).  \]
+</div>
+<p>
+ This is a holomorphic submersion with connected elliptic fibers, and the coordinate description of the fundamental cube gives $p_*\mu _0=\mu _ B$, where $\mu _ B$ is the Haar probability on $B$. A smooth probability is called <em>fiber invariant</em> if it has the form 
+</p>
+<div class="equation">
+  \[  \mu _ f=(f\circ p)\mu _0,\qquad f\in C^\infty (B),\quad f&gt;0,\quad \int _ B f\, \mu _ B=1.  \]
+</div>
+<p>
+ Thus a smooth probability is fiber invariant when its density relative to $\mu _0$ is constant along the elliptic fibers of $p$; no invariance in the base directions is required. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-3842469D">
+<p><a class="environment-identifier" href="../../tag/7AA419EEDABE/">Theorem <span data-tag="3842469D">12.6.26</span>.</a><span data-gerby-tag="3842469D"><code class="tag-id">7AA419EEDABE</code></span> For every $A&gt;0$ and fiber-invariant $\mu _ f$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-E576F05A"><span data-gerby-tag="E576F05A"><code class="tag-id">3E1F104EFFA9</code></span>
+<span class="equation-label"><a data-tag="E576F05A" href="../../tag/3E1F104EFFA9/">12.6.27</a></span>
+<div>\begin{equation}  \mathcal V_{\mu _ f}(\theta _ A)=H\det A, \qquad H=\frac6{\pi ^3}. \end{equation}</div>
+</div>
+<p> Its unique minimizing Gauduchon metric normalized by $D_{\mu _ f}=1$ is </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-64CFEE3A"><span data-gerby-tag="64CFEE3A"><code class="tag-id">98DEB3AF443E</code></span>
+<span class="equation-label"><a data-tag="64CFEE3A" href="../../tag/98DEB3AF443E/">12.6.28</a></span>
+<div>\begin{equation}  \gamma _{A,f}=\frac{\theta _ A+\mathrm{dd}^{\mathrm{c}}(p^*v_{A,f})}{(H\det A)^{1/3}}, \qquad \gamma _{A,f}^3=\mu _ f, \end{equation}</div>
+</div>
+<p> where $v_{A,f}$ is the solution of the Monge–Ampère equation (<a data-tag="A124E964" href="../../tag/8859AB23548E/">12.6.29</a>) on the torus $B$, with a closed background, constructed in the proof. Conversely, for a fixed $A&gt;0$, the probabilities $\nu \in \mathscr M$ maximizing $\mathcal V_\nu (\theta _ A)$ are exactly the fiber-invariant ones. </p>
+<p>For each fixed real linear $W\subset \operatorname {Herm}(3)$ containing a positive matrix, the Hessian metric for $\mu _ f$ is </p>
+<div class="equation">
+  \[  g_ A(U,Z)=\frac13\operatorname {tr}(A^{-1}UA^{-1}Z).  \]
+</div>
+<p> Its unit-volume hypersurface $S_ W=\{ A\in W:A&gt;0,\  H\det A=1\} $ is complete and proper, and the Cauchy criterion and the distance bounds of theorem <a data-tag="0545D460" href="../../tag/B01FA2265C81/">12.6.12</a> hold with $n=3$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The map $p$ is well defined because multiplication by lattice elements adds Gaussian integers to the first two coordinates. It is a submersion, and fixing representatives of those coordinates identifies each fiber with the central quotient $E$. Integrating first in the third coordinate over the fundamental cube proves the pushforward identity. 
+    <p>
+<em>The closed equation on the base.</em> Write the positive Hermitian matrix in block form and take its Schur complement: 
+    
+<div class="equation">
+  \[  \begin{gathered} A=\begin{pmatrix} C
+
+&amp; b
+
+\\  b^*
+
+&amp; a
+
+\end{pmatrix},\\ a=A_{33}&gt;0,\qquad S=C-a^{-1}bb^*&gt;0. \end{gathered}  \]
+</div>
+<p>
+       On $B$, let 
+    
+<div class="equation">
+  \[  \omega _ S=\frac{\mathrm i}{2\pi }\sum _{j,k=1}^2 S_{jk}\, \mathrm dz_ j\wedge \mathrm d\bar z_ k, \qquad Q_ B=\int _ B\omega _ S^2=\frac2{\pi ^2}\det S.  \]
+</div>
+<p>
+       We apply theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">14.2.1</a> to this closed background with the density $Q_ Bf\mu _ B$. Since $\omega _ S$ is closed and the density has total mass $Q_ B$, Stokes' theorem forces the constant in the equation to be one. We obtain a smooth real $v=v_{A,f}$, unique up to an additive constant, such that 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-A124E964"><span data-gerby-tag="A124E964"><code class="tag-id">8859AB23548E</code></span>
+<span class="equation-label"><a data-tag="A124E964" href="../../tag/8859AB23548E/">12.6.29</a></span>
+<div>\begin{equation}  (\omega _ S+\mathrm{dd}^{\mathrm{c}}v)^2=Q_ Bf\mu _ B, \qquad \omega _ S+\mathrm{dd}^{\mathrm{c}}v&gt;0. \end{equation}</div>
+</div>
+<p>
+       If $K$ is the coefficient matrix of $\mathrm{dd}^{\mathrm{c}}v$ in the base coframe, this says $\det (S+K)=(\det S)f$. The form 
+    
+<div class="equation">
+  \[  \Omega =\theta _ A+\mathrm{dd}^{\mathrm{c}}(p^*v)  \]
+</div>
+<p>
+       has coefficient matrix $\left(\begin{smallmatrix}C+K&amp; b\\ b^*&amp; a\end{smallmatrix}\right)$ in the invariant coframe. Since $a&gt;0$ and the Schur complement $S+K$ is positive, $\Omega &gt;0$; its determinant is $a\det (S+K)=(\det A)(f\circ p)$. Consequently $\Omega ^3=(H\det A)\mu _ f$. 
+    <p>
+      This solution form is also balanced. Put $\beta =\mathrm{dd}^{\mathrm{c}}(p^*v)$, which is closed and uses only $\alpha _1,\alpha _2$ and their conjugates. Since $\mathrm d\alpha _3=-\alpha _1\wedge \alpha _2$, every term of $\partial \theta _ A$ contains $\alpha _1\wedge \alpha _2$, and every conjugate term contains $\bar\alpha _1\wedge \bar\alpha _2$. Thus $\mathrm d\theta _ A\wedge \beta =0$. Together with $\mathrm d\theta _ A^2=0$, this proves 
+    
+<div class="equation">
+  \[  \mathrm d\Omega ^2=\mathrm d\theta _ A^2+2\mathrm d\theta _ A\wedge \beta =0.  \]
+</div>
+<p>
+       Theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">12.2.3</a> now gives (<a data-tag="E576F05A" href="../../tag/3E1F104EFFA9/">12.6.27</a>). Its characterization of the minimizers, the balancedness of $\Omega $ and the homogeneity of degree two of $D_{\mu _ f}$ give the unique normalized minimizer (<a data-tag="64CFEE3A" href="../../tag/98DEB3AF443E/">12.6.28</a>). 
+    <p>
+<em>All maximizing densities.</em> Let $Z_3=\partial /\partial z_3$ be dual to $\alpha _3$, and set $\tau _ j=(\mathrm i/(2\pi ))\alpha _ j\wedge \bar\alpha _ j$. Directly from (<a data-tag="1539E6DB" href="../../tag/2DDABE7168CA/">12.6.24</a>), 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\theta _ A=A_{33}\tau _1\wedge \tau _2, \qquad h_0^3=6\tau _1\wedge \tau _2\wedge \tau _3.  \]
+</div>
+<p>
+       Since $\theta _ A$ is Gauduchon, the identity (<a data-tag="10BBB84F" href="../../tag/D5CA82478984/">12.16.4</a>) therefore becomes, for every smooth real $u$, 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-D19296CE"><span data-gerby-tag="D19296CE"><code class="tag-id">3861E23FD396</code></span>
+<span class="equation-label"><a data-tag="D19296CE" href="../../tag/3861E23FD396/">12.6.30</a></span>
+<div>\begin{equation}  \int _ X(\theta _ A+\mathrm{dd}^{\mathrm{c}}u)^3 =H\det A-\frac{A_{33}H}{2}\int _ X|Z_3u|^2\mu _0. \end{equation}</div>
+</div>
+<p>
+       Here $\mathrm du\wedge \mathrm d^{\mathrm c}u=(\mathrm i/(2\pi ))\partial u\wedge \bar\partial u$, and wedging with $\tau _1\wedge \tau _2$ selects its coefficient on $\alpha _3\wedge \bar\alpha _3$; this also accounts for the factor $1/2$. 
+    <p>
+      For an arbitrary $\nu \in \mathscr M$, let $u_\nu $ be the smooth solution of the equation for $\theta _ A$ and $\nu $. Its mass equals $\mathcal V_\nu (\theta _ A)$ by theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">12.2.3</a>. By (<a data-tag="D19296CE" href="../../tag/3861E23FD396/">12.6.30</a>), this mass equals $H\det A$ exactly when $Z_3u_\nu =0$. As $u_\nu $ is real, its derivatives in both real directions of each elliptic fiber then vanish, and connectedness of the fibers gives $u_\nu =p^*v$ for a smooth $v$ on $B$. The density of $(\theta _ A+\mathrm{dd}^{\mathrm{c}}u_\nu )^3$ relative to $\mu _0$ is then a function on $B$, so the equation makes $\nu $ fiber invariant. The converse was proved by the construction on the base. 
+    <p>
+<em>Completion in the background parameters.</em> For fixed $f$, formula (<a data-tag="E576F05A" href="../../tag/3E1F104EFFA9/">12.6.27</a>) holds on the entire cone of positive matrices, and differentiating the logarithm of its cube root twice gives the stated Hessian metric. Since this is the same metric as in theorem <a data-tag="0545D460" href="../../tag/B01FA2265C81/">12.6.12</a>, the matrix-path and coefficient-limit arguments of that proof apply unchanged on each fixed $W$. They give the distance bounds, completeness, properness and the Cauchy criterion; they do not use that the minimizing forms have constant coefficients. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+For the minimizing metrics $\gamma _{A,f}$, the pointwise estimate (<a data-tag="4275D2C1" href="../../tag/ED6415BD1F26/">12.6.15</a>) is replaced by an estimate for coefficient means. For a form $\eta $ whose coefficient matrix in the invariant coframe is $(\eta _{jk})$, write $\overline\eta $ for the matrix of means $\int _ X\eta _{jk}\, \mu _0$. The mean-zero identity (<a data-tag="98E5CC28" href="../../tag/8E5F08796F4E/">12.6.8</a>) gives 
+</p>
+<div class="equation">
+  \[  \overline{\gamma }_{A,f}=\frac{A}{(H\det A)^{1/3}}.  \]
+</div>
+<p>
+ Thus on $S_ W$ the distance bounds control these means, and along a normalized sequence whose coefficients converge to a nonzero singular semipositive matrix the largest eigenvalue of the means diverges. The corresponding minimizing metrics then cannot be bounded above by a fixed multiple of $h_0$. For $f\ne 1$, however, we do not obtain the pointwise bound (<a data-tag="4275D2C1" href="../../tag/ED6415BD1F26/">12.6.15</a>) for the nonconstant forms $\gamma _{A,f}$. 
+</p>
+<p>
+Reference densities that vary along the fibers give a strictly smaller volume. Choose a smooth real $\chi $ supported in a coordinate ball with $Z_3\chi \not\equiv 0$, and let $t\ne 0$ be sufficiently small that $\theta _ A+t\mathrm{dd}^{\mathrm{c}}\chi &gt;0$. Put 
+</p>
+<div class="equation">
+  \[  M(t)=\int _ X(\theta _ A+t\mathrm{dd}^{\mathrm{c}}\chi )^3, \qquad \nu _ t=\frac{(\theta _ A+t\mathrm{dd}^{\mathrm{c}}\chi )^3}{M(t)}.  \]
+</div>
+<p>
+ Then $t\chi $ solves the equation for $\theta _ A$ and $\nu _ t$ with constant $M(t)$, so theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">12.2.3</a> and (<a data-tag="D19296CE" href="../../tag/3861E23FD396/">12.6.30</a>) give 
+</p>
+<div class="equation">
+  \[  \mathcal V_{\nu _ t}(\theta _ A) =H\det A-\frac{A_{33}H}{2}t^2\int _ X|Z_3\chi |^2\mu _0 &lt;H\det A.  \]
+</div>
+<p>
+ Here $\nu _ t$ is constructed from the fixed background $\theta _ A$. The example therefore shows that the volume depends on the reference measure, but it does not determine the Hessian completion for a fixed density that varies along the fibers. 
+</p>
+</div></section><section class="reading-chunk" id="entry-C0584AC307C7" data-section-entries="02AE1B3B4027 0989D826EF96 40DF235D735C 49FA03FEEBDF 73FE713DE9E4 9C1715A1F2ED C0584AC307C7"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/C0584AC307C7/">12.6.31 Warped product cones and flat completion</a><code class="tag-id">C0584AC307C7</code></h2><span data-gerby-tag="BC36FEAF"></span>
+<p>
+The invariant cones above have complete unit-volume hypersurfaces. On the product of a compact Kähler manifold with a curve, a nonconstant coefficient in the fiber direction gives cones of nonclosed backgrounds whose unit-volume hypersurfaces are flat and complete instead to a strip or a half-plane. The volume is the reciprocal of an integral of the reciprocal fiber coefficient, and the variance of that reciprocal coefficient measures the distance to the boundary. The probability measure in this variance is a trace of a minimizing balanced metric. 
+</p>
+<p>
+Let $(B,\kappa )$ be a connected compact Kähler manifold of dimension $m\geq 2$, with $\int _ B\kappa ^ m=1$. Let $C$ be a connected compact complex curve with a smooth positive $(1,1)$-form $w$ of integral one. Fix a smooth strictly positive probability form $\sigma $ on $B$ and a smooth nonconstant real function $a$ on $B$ with $\min a=0$ and $\max a=M&gt;0$. On $X=B\times C$, of dimension $n=m+1$, put $\mu =\sigma \wedge w$; we omit pullbacks from the notation. For real parameters $b,c,e$, the backgrounds in the real span of $\kappa ,aw,w$ are 
+</p>
+<div class="equation">
+  \[  \theta _{b,c,e}=b\kappa +Lw,\qquad L=ca+e.  \]
+</div>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-14DB163A">
+<p><a class="environment-identifier" href="../../tag/40DF235D735C/">Theorem <span data-tag="14DB163A">12.6.32</span>.</a><span data-gerby-tag="14DB163A"><code class="tag-id">40DF235D735C</code></span> This span contains no nonzero smooth $\mathrm{dd}^{\mathrm{c}}$ direction, and its intersection with $\mathscr P$ is the cone </p>
+<div class="equation">
+  \[  \mathscr C=\{ b&gt;0,\  e&gt;0,\  e+cM&gt;0\} .  \]
+</div>
+<p> For $\theta =\theta _{b,c,e}\in \mathscr C$, let $H(c,e)=\int _ B\sigma /L$. Then </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-535588E3"><span data-gerby-tag="535588E3"><code class="tag-id">49FA03FEEBDF</code></span>
+<span class="equation-label"><a data-tag="535588E3" href="../../tag/49FA03FEEBDF/">12.6.33</a></span>
+<div>\begin{equation}  \mathcal V_\mu (\theta )=\frac{nb^ m}{H(c,e)}. \end{equation}</div>
+</div>
+<p> A minimizing Gauduchon metric is </p>
+<div class="equation">
+  \[  \gamma =L^{-1/m}(A+Lw),\qquad A=b\kappa +\mathrm{dd}^{\mathrm{c}}\phi &gt;0,\qquad A^ m=\frac{b^ m}{H}\frac{\sigma }{L},  \]
+</div>
+<p> where $\phi $ is a smooth real function on $B$. This metric is balanced. Backgrounds with $c\ne 0$ are nonclosed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Pairing a smooth positive representative $\theta +\mathrm{dd}^{\mathrm{c}}u$ with the closed semipositive form $\kappa ^{m-1}\wedge w$ gives $b&gt;0$, and its integral over the compact fiber $\{ y\} \times C$ is $L(y)&gt;0$, by Stokes' theorem. These are exactly the stated inequalities; conversely, they make $\theta $ itself positive. The same tests applied to a smooth $\mathrm{dd}^{\mathrm{c}}$ direction give $b=0$ and $ca+e=0$ everywhere, and since $a$ is nonconstant, $c=e=0$. Also $\mathrm{d}\theta =c\, \mathrm{d}a\wedge w$, which is not identically zero when $c\ne 0$. 
+    <p>
+      Next we apply theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">14.2.1</a> on $B$ to the closed positive background $b\kappa $ and the density $(b^ m/H)\sigma /L$. Since this density has integral $b^ m=\int _ B(b\kappa )^ m$, Stokes' theorem forces the constant in the equation to be one, and we obtain $A$. Put $\Omega =A+Lw$. Since $A^{m+1}=0$ and $(Lw)^2=0$, the binomial expansion gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-D24AA80D"><span data-gerby-tag="D24AA80D"><code class="tag-id">0989D826EF96</code></span>
+<span class="equation-label"><a data-tag="D24AA80D" href="../../tag/0989D826EF96/">12.6.34</a></span>
+<div>\begin{equation}  \Omega ^ n=\frac{nb^ m}{H}\mu ,\qquad \gamma ^ m=L^{-1}A^ m+mA^{m-1}\wedge w. \end{equation}</div>
+</div>
+<p>
+       The first summand is the pullback of a top-degree form on $B$, and the second is closed. Hence $\gamma $ is balanced, and in particular Gauduchon. For every Gauduchon metric $\eta $ on $X$, Stokes' theorem and the pointwise arithmetic–geometric mean inequality give 
+    
+<div class="equation">
+  \[  \int _ X\theta \wedge \eta ^ m =\int _ X\Omega \wedge \eta ^ m \geq \left(\frac{nb^ m}{H}\right)^{1/n}D_\mu (\eta ).  \]
+</div>
+<p>
+       For $\eta =\gamma $ the numerator is $nb^ m$, while $D_\mu (\gamma )=(nb^ m/H)^{m/n}H$. The quotient of $\gamma $ therefore attains the lower bound, which proves (<a data-tag="535588E3" href="../../tag/49FA03FEEBDF/">12.6.33</a>) and the minimizing property of $\gamma $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The minimizing metric gives the probability identity 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-4248F3B3"><span data-gerby-tag="4248F3B3"><code class="tag-id">9C1715A1F2ED</code></span>
+<span class="equation-label"><a data-tag="4248F3B3" href="../../tag/9C1715A1F2ED/">12.6.35</a></span>
+<div>\begin{equation}  \frac{Lw\wedge \gamma ^ m}{b^ m} =\frac{\sigma \wedge w}{HL}. \end{equation}</div>
+</div>
+<p>
+ Its marginal $\sigma /(HL)$ on $B$ is the probability measure that governs the Hessian metric. To compute that metric we use the ratio $v=c/e$ and set 
+</p>
+<div class="equation">
+  \begin{align*}  v&amp; =c/e\in (-1/M,\infty ), &amp; Q(v)&amp; =\int _ B\frac{\sigma }{1+va},\\  \mathrm{d}\nu _ v&amp; =\frac{\sigma }{Q(v)(1+va)}, &amp; \ell _ v&amp; =\frac{a}{1+va}. \end{align*}
+</div>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-6DFA2CEE">
+<p><a class="environment-identifier" href="../../tag/02AE1B3B4027/">Proposition <span data-tag="6DFA2CEE">12.6.36</span>.</a><span data-gerby-tag="6DFA2CEE"><code class="tag-id">02AE1B3B4027</code></span> On the unit-volume hypersurface $\mathscr S=\{ \theta \in \mathscr C:\mathcal V_\mu (\theta )=1\} $, the functions $U=\log b$ and $v$ are global coordinates, in which </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-BA869C7F"><span data-gerby-tag="BA869C7F"><code class="tag-id">73FE713DE9E4</code></span>
+<span class="equation-label"><a data-tag="BA869C7F" href="../../tag/73FE713DE9E4/">12.6.37</a></span>
+<div>\begin{equation}  \begin{aligned}  g_{\mathscr S}&amp; =m\, \mathrm{d}U^2+\rho (v)\, \mathrm{d}v^2,\\  \rho (v)&amp; =\frac{Q''/Q-2(Q'/Q)^2}{n} =\frac2n\operatorname {Var}_{\nu _ v}(\ell _ v)&gt;0. \end{aligned} \end{equation}</div>
+</div>
+<p> For any $v_*\in (-1/M,\infty )$, the coordinates </p>
+<div class="equation">
+  \[  Y=\sqrt m\, U,\qquad R(v)=\int _{v_*}^ v\sqrt{\rho (t)}\, \mathrm{d}t  \]
+</div>
+<p> define a global isometry onto $\mathbb R\times I$, where $I$ is an open interval with the Euclidean metric. The intrinsic distance is the Euclidean distance in $(Y,R)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Consider an affine variation $\delta =(\delta b,\delta c,\delta e)$ of the coefficients, write $F=\delta L/L$, and note that $\sigma /(HL)=\mathrm{d}\nu _ v$ because $HL=Q(v)(1+va)$. Differentiating under the integral sign gives 
+    
+<div class="equation">
+  \[  D^2\log H(\delta ,\delta ) =2\mathbb E_{\nu _ v} F^2-(\mathbb E_{\nu _ v} F)^2,  \]
+</div>
+<p>
+       where $\mathbb E_{\nu _ v}$ denotes expectation with respect to $\nu _ v$. This is positive unless $\delta L=0$ everywhere, which forces $\delta c=\delta e=0$. Since $\log \lambda _\mu =(\log n+m\log b-\log H)/n$, 
+    
+<div class="equation">
+  \[  g=-D^2\log \lambda _\mu =\frac mn\left(\frac{\mathrm{d}b}{b}\right)^2 +\frac1nD^2\log H  \]
+</div>
+<p>
+       is positive definite. On the unit-volume hypersurface, the relation $H(c,e)=Q(v)/e=nb^ m$ gives 
+    
+<div class="equation">
+  \[  e=\frac{Q(v)}{n\exp (mU)},\qquad c=ve.  \]
+</div>
+<p>
+       To pull back the Hessian, write $t=\mathrm{d}e/e$ and $z=Q'/Q$. Along an affine path of coefficients one has $v''=-2tv'$, so differentiating $\log H=-\log e+\log Q(v)$ twice gives 
+    
+<div class="equation">
+  \[  D^2\log H=t^2-2zt\, \mathrm{d}v +(Q''/Q-z^2)\, \mathrm{d}v^2.  \]
+</div>
+<p>
+       On $\mathscr S$ we have $t=z\, \mathrm{d}v-m\, \mathrm{d}U$; substituting this and using $n=m+1$ gives (<a data-tag="BA869C7F" href="../../tag/73FE713DE9E4/">12.6.37</a>). Since $Q'/Q=-\mathbb E_{\nu _ v}\ell _ v$ and $Q''/Q=2\mathbb E_{\nu _ v}\ell _ v^2$, the variance formula follows, and nonconstancy of $a$ makes this variance positive. In the coordinates $(Y,R)$ the metric is Euclidean on the convex set $\mathbb R\times I$, so straight segments prove the distance assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-96431078A25B" data-section-entries="1EF963CF5EA2 72BDB634BD0E 96431078A25B DB02B7FF941A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/96431078A25B/">12.6.38 Lengths of the two ends</a><code class="tag-id">96431078A25B</code></h2><span data-gerby-tag="ECE29271"></span>
+<p>
+The interval $I$ has two ends, corresponding to $v\to \infty $ and $v\to -1/M$. Whether they lie at finite distance depends on how $a$ attains its extreme values. Assume that each of the extreme sets $\{ a=0\} $ and $\{ a=M\} $ is a finite disjoint union of smooth compact real submanifolds $Z_ i$ of positive codimension, and that near each component, respectively, 
+</p>
+<div class="equation">
+  \[  a\asymp \operatorname {dist}(Z_ i)^{k_ i},\qquad M-a\asymp \operatorname {dist}(Z_ i)^{k_ i},\qquad k_ i&gt;0,  \]
+</div>
+<p>
+ where $\asymp $ means comparability up to positive constant factors and $\operatorname {dist}(Z_ i)$ is the distance to $Z_ i$ for a fixed Riemannian metric on $B$. The function $a$, respectively $M-a$, is then bounded below by a positive constant outside small disjoint tubes around these components. Define, with minima over the components $Z_ i$ of the respective extreme set, 
+</p>
+<div class="equation">
+  \[  r_0=\min _{\{ a=0\} } \frac{\operatorname {codim}_{\mathbb R}Z_ i}{k_ i},\qquad r_ M=\min _{\{ a=M\} } \frac{\operatorname {codim}_{\mathbb R}Z_ i}{k_ i}.  \]
+</div>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-899A837E">
+<p><a class="environment-identifier" href="../../tag/1EF963CF5EA2/">Lemma <span data-tag="899A837E">12.6.39</span>.</a><span data-gerby-tag="899A837E"><code class="tag-id">1EF963CF5EA2</code></span> The end $v\to \infty $ of $I$ has finite length exactly when $r_0&gt;1$, and the end $v\to -1/M$ exactly when $r_ M&gt;1$. More precisely, at the end $v\to \infty $ put $f=a$, $\epsilon =1/v$ and $r=r_0$; at the end $v\to -1/M$ put $f=M-a$, $\epsilon =-1/v-M$ and $r=r_ M$. Let </p>
+<div class="equation">
+  \[  H_ f=\int _ B\frac{\sigma }{f+\epsilon },\quad J_ f=\int _ B\frac{\sigma }{(f+\epsilon )^2},\quad K_ f=\int _ B\frac{\sigma }{(f+\epsilon )^3}.  \]
+</div>
+<p> Then $\epsilon \downarrow 0$ at the end, and </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-E6269B0B"><span data-gerby-tag="E6269B0B"><code class="tag-id">DB02B7FF941A</code></span>
+<span class="equation-label"><a data-tag="E6269B0B" href="../../tag/DB02B7FF941A/">12.6.40</a></span>
+<div>\begin{equation}  \rho (v)\, \mathrm{d}v^2=G_ f(\epsilon )\, \mathrm{d}\epsilon ^2, \quad G_ f=\frac2n\left[\frac{K_ f}{H_ f} -\left(\frac{J_ f}{H_ f}\right)^2\right]. \end{equation}</div>
+</div>
+<p> Moreover, $G_ f\asymp \epsilon ^{-2}$ for $r&lt;1$ and $G_ f\asymp \epsilon ^{-2}/\log (1/\epsilon )$ for $r=1$, while for $r&gt;1$ the function $\sqrt{G_ f}$ is integrable near $\epsilon =0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At the end $v\to \infty $, where $\epsilon =1/v$, we have 
+    
+<div class="equation">
+  \[  \ell _ v=\epsilon -\frac{\epsilon ^2}{a+\epsilon },\qquad \mathrm{d}v=-\epsilon ^{-2}\mathrm{d}\epsilon .  \]
+</div>
+<p>
+       At the end $v\to -1/M$, where $\epsilon =-1/v-M$, we obtain 
+    
+<div class="equation">
+  \[  \ell _ v=\frac{(M+\epsilon )^2}{M-a+\epsilon }-(M+\epsilon ), \qquad \mathrm{d}v=(M+\epsilon )^{-2}\mathrm{d}\epsilon .  \]
+</div>
+<p>
+       In both cases $\ell _ v$ is an affine function of $1/(f+\epsilon )$ with coefficients depending only on $\epsilon $, and (<a data-tag="E6269B0B" href="../../tag/DB02B7FF941A/">12.6.40</a>) expresses $\rho (v)\, \mathrm{d}v^2$ through the variance of $1/(f+\epsilon )$ under the probability $\sigma /[H_ f(f+\epsilon )]$. This probability is $\nu _ v$, the marginal in (<a data-tag="4248F3B3" href="../../tag/9C1715A1F2ED/">12.6.35</a>), because $L$ is a positive multiple of $f+\epsilon $ and positive scaling of $L$ does not change that marginal. 
+    <p>
+      Integration over tubes around the components $Z_ i$, splitting the normal radius at $\epsilon ^{1/k_ i}$, gives 
+    
+<div class="equation">
+  \[  H_ f\asymp \begin{cases} \epsilon ^{r-1}&amp; r&lt;1,\\  \log (1/\epsilon )&amp; r=1,\\ 1&amp; r&gt;1, \end{cases} \qquad K_ f\asymp \begin{cases} \epsilon ^{r-3}&amp; r&lt;3,\\  \log (1/\epsilon )&amp; r=3,\\ 1&amp; r&gt;3. \end{cases}  \]
+</div>
+<p>
+       The analogous threshold for $J_ f$ is two. For a finite sum of tube integrals, the smallest ratio governs. 
+    <p>
+      If $r&lt;1$, choose a component attaining $r$, and two normal annuli at fixed multiples of $\epsilon ^{1/k_ i}$, so far apart that the two-sided bounds separate their ranges of $f/\epsilon $. Each annulus has probability bounded below, since its weighted mass and $H_ f$ both have order $\epsilon ^{r-1}$, and the values of $1/(f+\epsilon )$ on the two annuli differ by at least $c\epsilon ^{-1}$. The identity 
+    
+<div class="equation">
+  \[  \operatorname {Var}_\nu T =\frac12\iint (T(x)-T(y))^2\, \mathrm{d}\nu (x)\mathrm{d}\nu (y)  \]
+</div>
+<p>
+       applied to $T=1/(f+\epsilon )$ gives the lower bound, and $T\leq \epsilon ^{-1}$ gives the upper bound. 
+    <p>
+      If $r=1$, the near annulus has probability at least $c/\log (1/\epsilon )$. In the same tube, the normal radii between $\epsilon ^{1/(2k_ i)}$ and a fixed small radius carry probability bounded below, by the logarithmic integral. There $1/(f+\epsilon )\leq C\epsilon ^{-1/2}$, while $1/(f+\epsilon )\geq c\epsilon ^{-1}$ on the near annulus. The variance identity and the bound $G_ f\leq 2K_ f/(nH_ f)$ prove the claimed logarithmic estimate. In both cases $r&lt;1$ and $r=1$, the integral of $\sqrt{G_ f}$ diverges at $\epsilon =0$. 
+    <p>
+      For $r&gt;1$, $H_ f$ tends to a finite positive integral and $G_ f\leq C K_ f$. For $1&lt;r&lt;3$, $\sqrt{G_ f}$ is therefore bounded by $C\epsilon ^{(r-3)/2}$, whose exponent exceeds $-1$. At $r=3$ the bound is $C\sqrt{\log (1/\epsilon )}$, and for $r&gt;3$ it is a constant. All these bounds are integrable. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-44A99CC0">
+<p><a class="environment-identifier" href="../../tag/72BDB634BD0E/">Theorem <span data-tag="44A99CC0">12.6.41</span>.</a><span data-gerby-tag="44A99CC0"><code class="tag-id">72BDB634BD0E</code></span> Under the hypotheses of lemma <a data-tag="899A837E" href="../../tag/1EF963CF5EA2/">12.6.39</a> on the extreme sets, the metric completion of $\mathscr S$ is a closed Euclidean strip if $r_0,r_ M&gt;1$, a closed Euclidean half-plane if exactly one of them exceeds one, and the whole Euclidean plane otherwise. Each boundary line of the completion is parametrized by $b&gt;0$, and its points are represented by the forms </p>
+<div class="equation">
+  \begin{align*}  \theta _+(b)&amp; =b\kappa +\frac{H_ a}{nb^ m}a w, &amp; H_ a&amp; =\int _ B\frac{\sigma }{a}\quad (r_0&gt;1),\\  \theta _-(b)&amp; =b\kappa +\frac{H_-}{nb^ m}(1-a/M)w, &amp; H_-&amp; =\int _ B\frac{\sigma }{1-a/M}\quad (r_ M&gt;1). \end{align*}
+</div>
+<p> These forms are smooth, semipositive, nef, nonclosed and not big, and their variational volume is one. The completion has no other boundary points. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The completion of the convex product $\mathbb R\times I$ of proposition <a data-tag="6DFA2CEE" href="../../tag/02AE1B3B4027/">12.6.36</a> is its Euclidean closure. Along a Cauchy sequence, $Y$ converges, so $b$ has a finite positive limit, and $R$ converges to a point of $I$ or to a finite endpoint of $I$. Lemma <a data-tag="899A837E" href="../../tag/1EF963CF5EA2/">12.6.39</a> decides which endpoints are finite and gives the three alternatives. 
+    <p>
+      On $\mathscr S$ we have $e=Q(v)/(nb^ m)$ and $c=ve$. At the end $v\to \infty $, $vQ(v)\to H_ a$ by monotone convergence, which gives the coefficient limit $\theta _+(b)$. At the end $v\to -1/M$, write $1+va=1-a/M+(v+1/M)a$; dominated convergence gives $Q(v)\to H_-$, and hence the limit $\theta _-(b)$. These are the coefficient limits at all finite ends. The forms are semipositive, hence nef, and they are nonclosed. Increasing their fiber coefficient by $\epsilon &gt;0$ makes them positive, and (<a data-tag="535588E3" href="../../tag/49FA03FEEBDF/">12.6.33</a>) shows that the resulting volumes tend to one as $\epsilon \downarrow 0$. Monotonicity bounds the root volume of the limit form by this limit. Conversely, each fixed Gauduchon quotient is continuous in $\epsilon $, so the limit of the root volumes is at most every quotient of the limit form, hence at most its root volume. Thus the variational volume of $\theta _\pm (b)$ is one. 
+    <p>
+      Suppose that some quasi-plurisubharmonic $u$ satisfied 
+    
+<div class="equation">
+  \[  \theta _\pm +\mathrm{dd}^{\mathrm{c}}u\geq \delta (\kappa +w),\qquad \delta &gt;0.  \]
+</div>
+<p>
+       For every smooth nonnegative top-degree form $\eta $ on $B$, its pullback is $\mathrm{dd}^{\mathrm{c}}$-closed for degree reasons, and $\kappa \wedge \eta =0$. Stokes' theorem for currents therefore gives 
+    
+<div class="equation">
+  \[  \int _ B(L_\pm -\delta )\eta \geq 0.  \]
+</div>
+<p>
+       where $L_\pm $ is the fiber coefficient of $\theta _\pm $. But $L_\pm $ vanishes somewhere, and a nonzero $\eta $ supported where $L_\pm &lt;\delta $ contradicts this inequality. Thus $\theta _\pm $ is not big. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-9FC10688E696" data-section-entries="10BD5355ECF4 67B12ACF7773 9FC10688E696 ED7129134319"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/9FC10688E696/">12.6.42 Current cones and endpoint equations</a><code class="tag-id">9FC10688E696</code></h2><span data-gerby-tag="5508235C"></span>
+<p>
+We keep the product $X=B\times C$, the backgrounds $\theta =b\kappa +(ca+e)w$ with real parameters $b,c,e$, and the probability $\mu =\sigma \wedge w$ of subsection <a data-tag="BC36FEAF" href="../../tag/C0584AC307C7/">12.6.31</a>, and write $h=\kappa +w$ for the product Hermitian form. Pullbacks of nonnegative top-degree forms on $B$ are closed, and testing against them determines which backgrounds have positive current representatives, not only which have smooth positive ones. At a finite end of the unit-volume hypersurface, the reciprocal of the fiber coefficient is integrable with an exponent greater than one, so the equation on the base still has a continuous solution. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-25126664">
+<p><a class="environment-identifier" href="../../tag/67B12ACF7773/">Proposition <span data-tag="25126664">12.6.43</span>.</a><span data-gerby-tag="25126664"><code class="tag-id">67B12ACF7773</code></span> In this real span, the pseudoeffective and nef cones both equal </p>
+<div class="equation">
+  \[  \{ b\geq 0,\  e\geq 0,\  e+cM\geq 0\} .  \]
+</div>
+<p> A background in this span is big, that is, admits a representative $\theta +\mathrm{dd}^{\mathrm{c}}u\geq \delta h$ with $\delta &gt;0$, if and only if $b&gt;0$, $e&gt;0$ and $e+cM&gt;0$. Thus the big backgrounds in this span form exactly the cone $\mathscr C$ of theorem <a data-tag="14DB163A" href="../../tag/40DF235D735C/">12.6.32</a>. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $L=ca+e$, and suppose that a quasi-plurisubharmonic $u$ satisfies $\theta +\mathrm{dd}^{\mathrm{c}}u\geq \delta h$ for some $\delta \geq 0$. Pairing with the closed semipositive form $\kappa ^{m-1}\wedge w$ and using Stokes' theorem for currents gives $b\geq \delta $. For every smooth nonnegative top-degree form $\eta $ on $B$, its pullback to $X$ is closed for degree reasons, and 
+    
+<div class="equation">
+  \[  \int _ X(\theta +\mathrm{dd}^{\mathrm{c}}u-\delta h)\wedge \eta =\int _ B(L-\delta )\eta \geq 0.  \]
+</div>
+<p>
+       If $L&lt;\delta $ at some point, a nonzero form $\eta $ supported in the open set where $L&lt;\delta $ contradicts this inequality. Hence $L\geq \delta $ everywhere. For $\delta =0$ these conditions are exactly $b\geq 0$, $e\geq 0$ and $e+cM\geq 0$; conversely, they make $\theta $ semipositive, and such forms are nef because $\theta +\varepsilon h&gt;0$ for every $\varepsilon &gt;0$. Conversely, if $\theta $ is nef, applying the same tests to smooth positive representatives of $\theta +\varepsilon h$ and letting $\varepsilon $ tend to zero gives these inequalities. For $\delta &gt;0$ the conditions force the three strict inequalities, and conversely these make $\theta $ itself strictly positive. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-2E6799AA">
+<p><a class="environment-identifier" href="../../tag/10BD5355ECF4/">Proposition <span data-tag="2E6799AA">12.6.44</span>.</a><span data-gerby-tag="2E6799AA"><code class="tag-id">10BD5355ECF4</code></span> Under the hypotheses of lemma <a data-tag="899A837E" href="../../tag/1EF963CF5EA2/">12.6.39</a> on the extreme sets, let $\theta =b\kappa +L_0w$, with $b&gt;0$, be one of the boundary forms $\theta _+(b)$ or $\theta _-(b)$ of theorem <a data-tag="44A99CC0" href="../../tag/72BDB634BD0E/">12.6.41</a> at a finite end. There is a continuous $\theta $-plurisubharmonic function $u$, pulled back from $B$, such that </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-F183023D"><span data-gerby-tag="F183023D"><code class="tag-id">ED7129134319</code></span>
+<span class="equation-label"><a data-tag="F183023D" href="../../tag/ED7129134319/">12.6.45</a></span>
+<div>\begin{equation}  (\theta +\mathrm{dd}^{\mathrm{c}}u)^ n=\mu . \end{equation}</div>
+</div>
+<p> Here the product is the usual product of bounded potentials. No solution of this equation is of class $C^{1,1}$ on $X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $f=a$ for $\theta _+(b)$ and $f=1-a/M$ for $\theta _-(b)$, and let $r&gt;1$ be the corresponding ratio $r_0$ or $r_ M$. The coefficient $L_0$ is a positive constant multiple of $f$. In each tube around an extreme component, the integral of $f^{-p}$ converges exactly when 
+    
+<div class="equation">
+  \[  \int _0^{s_0}s^{\operatorname {codim}_{\mathbb R}Z_ i-1-k_ ip}\, \mathrm{d}s  \]
+</div>
+<p>
+       converges, where $s$ is the normal radius and $s_0&gt;0$ is small. Thus $1/L_0\in L^ p(B,\sigma )$ for every $1&lt;p&lt;r$. The zero set of $L_0$ has volume zero, so the value assigned to the density there is irrelevant. The formulas for $\theta _\pm (b)$ give 
+    
+<div class="equation">
+  \[  H_0:=\int _ B\frac{\sigma }{L_0}=nb^ m.  \]
+</div>
+<p>
+       We apply theorem <a data-tag="4F61922B" href="../../tag/C8D798C2D2F0/">14.19.2</a> on $B$ to the positive closed background $b\kappa $ and obtain a continuous $\phi $ with $A=b\kappa +\mathrm{dd}^{\mathrm{c}}\phi \geq 0$ and $A^ m=c_0\sigma /L_0$ for a constant $c_0&gt;0$. Since $b\kappa $ is closed, bounded potentials do not change its mass, by theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">11.1.7</a>; hence $\int _ BA^ m=b^ m$ and $c_0=b^ m/H_0$. Set $u=\phi \circ p_ B$, where $p_ B:X\to B$ is the projection. Then $\theta +\mathrm{dd}^{\mathrm{c}}u=A+L_0w\geq 0$. 
+    <p>
+      The pullback identity of lemma <a data-tag="85D3E502" href="../../tag/636D22C6199B/">5.28.4</a> gives $A^{m+1}=0$ on $X$, and $(L_0w)^2=0$. The multilinear expansion of proposition <a data-tag="890BD62D" href="../../tag/3EDAB69A7289/">5.28.2</a> therefore gives 
+    
+<div class="equation">
+  \[  (A+L_0w)^ n=nL_0 A^ m\wedge w =\frac{nb^ m}{H_0}\sigma \wedge w=\mu .  \]
+</div>
+<p>
+       The cancellation $L_0(\sigma /L_0)=\sigma $ holds as measures, since the zero set of $L_0$ has volume zero and $A^ m$ is absolutely continuous with density $c_0/L_0$ relative to $\sigma $. 
+    <p>
+      Suppose that some solution $q$, not necessarily pulled back from $B$, were of class $C^{1,1}$ on $X$. Since $\mu /h^ n$ is smooth and strictly positive on compact $X$, proposition <a data-tag="36B6CAB0" href="../../tag/2A843EB4B4AE/">5.28.6</a> would give $\theta +\mathrm{dd}^{\mathrm{c}}q\geq \delta h$ for some $\delta &gt;0$. This contradicts proposition <a data-tag="25126664" href="../../tag/67B12ACF7773/">12.6.43</a>, because $L_0$ vanishes somewhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-FDA6B324FD1B" data-section-entries="C7D8502937F2 FDA6B324FD1B"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/FDA6B324FD1B/">12.6.46 Limits of the base potentials</a><code class="tag-id">FDA6B324FD1B</code></h2><span data-gerby-tag="7EE05D84"></span>
+<p>
+The base potentials used in theorem <a data-tag="14DB163A" href="../../tag/40DF235D735C/">12.6.32</a> to construct the minimizing balanced metrics converge uniformly at each finite end, and the limit solves the endpoint equation (<a data-tag="F183023D" href="../../tag/ED7129134319/">12.6.45</a>). Both the compactness and the uniqueness needed here concern only the equation on $B$, whose background is closed. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-F9D7362B">
+<p><a class="environment-identifier" href="../../tag/C7D8502937F2/">Proposition <span data-tag="F9D7362B">12.6.47</span>.</a><span data-gerby-tag="F9D7362B"><code class="tag-id">C7D8502937F2</code></span> Under the hypotheses of theorem <a data-tag="44A99CC0" href="../../tag/72BDB634BD0E/">12.6.41</a>, let $\theta _ j=b_ j\kappa +L_ jw\in \mathscr S$ converge in coefficients to a boundary form $\theta _0=b\kappa +L_0w$ at a finite end. Normalize the smooth base potentials $\phi _ j$ of theorem <a data-tag="14DB163A" href="../../tag/40DF235D735C/">12.6.32</a> by $\sup _ B\phi _ j=0$ and put $u_ j=\phi _ j\circ p_ B$. Then the $u_ j$ converge uniformly on $X$ to a continuous solution $u_0$ of (<a data-tag="F183023D" href="../../tag/ED7129134319/">12.6.45</a>) pulled back from $B$. For every $1\leq k\leq n$, </p>
+<div class="equation">
+  \[  (\theta _ j+\mathrm{dd}^{\mathrm{c}}u_ j)^ k\rightharpoonup (\theta _0+\mathrm{dd}^{\mathrm{c}}u_0)^ k.  \]
+</div>
+<p> Moreover, $u_0$ is the unique bounded solution of (<a data-tag="F183023D" href="../../tag/ED7129134319/">12.6.45</a>) that is pulled back from $B$ and has supremum zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $v_ j=c_ j/e_ j$ and $\psi _ j=\phi _ j/b_ j$. On $\mathscr S$ the equation for $\phi _ j$ on $B$ becomes 
+    
+<div class="equation">
+  \[  (\kappa +\mathrm{dd}^{\mathrm{c}}\psi _ j)^ m=F_{v_ j}\sigma , \qquad F_ v=\frac1{Q(v)(1+va)},\qquad \sup _ B\psi _ j=0.  \]
+</div>
+<p>
+       At the end where $\theta _0=\theta _+(b)$, $v_ j\to \infty $. Set $\epsilon =1/v$ and $H_\epsilon =\int _ B\sigma /(a+\epsilon )$. Then $F_ v=[H_\epsilon (a+\epsilon )]^{-1}$ and $H_\epsilon \to H_ a$. At the end where $\theta _0=\theta _-(b)$, $v_ j\to -1/M$. With $f=1-a/M$ and $t=v+1/M&gt;0$, the denominator of $F_ v$ is $Q(v)(f+ta)$, and $Q(v)\to H_-$. Thus the respective limits of $F_{v_ j}$ are 
+    
+<div class="equation">
+  \[  F_+=\frac1{H_ a a},\qquad F_-=\frac1{H_-(1-a/M)}.  \]
+</div>
+<p>
+       Choose $1&lt;p&lt;r$, where $r&gt;1$ is the ratio $r_0$ or $r_ M$ of that end. Integration over tubes as in the proof of proposition <a data-tag="2E6799AA" href="../../tag/10BD5355ECF4/">12.6.44</a> gives $a^{-1}\in L^ p(B,\sigma )$, respectively $f^{-1}\in L^ p(B,\sigma )$. Near the first end $F_ v\leq C/a$, and near the second $F_ v\leq C/f$. Since the extreme sets have volume zero, dominated convergence gives $F_{v_ j}\to F_\pm $ in $L^ p(B,\sigma )$, and each limiting density has integral one. Since $\sigma /\kappa ^ m$ is smooth and strictly positive on compact $B$, the densities of the equations also have a common bound in $L^ p(B,\kappa ^ m)$. 
+    <p>
+      We apply theorem <a data-tag="A3F07E0A" href="../../tag/BF849D15DF41/">14.19.21</a> to the fixed background $\kappa $: every subsequence of $(\psi _ j)$ has a uniformly convergent further subsequence. Continuity of bounded products under uniform convergence identifies its limit with a normalized solution of $(\kappa +\mathrm{dd}^{\mathrm{c}}\psi _0)^ m=F_\pm \sigma $. Since $\kappa $ is closed, it satisfies the Guan–Li condition, so <a data-tag="7B112114" href="../../tag/27DED19DBC11/">14.25.2</a> makes this solution unique. Every cluster limit is consequently the same, which proves uniform convergence of the whole sequence. Since $b_ j\to b&gt;0$, we obtain $u_ j\to u_0=(b\psi _0)\circ p_ B$ uniformly. 
+    <p>
+      To prove convergence of the products, note that on each coordinate ball the convergence of the background coefficients provides a common smooth function $q$, a quadratic polynomial, such that all $u_ j+q$ are plurisubharmonic. These corrected potentials are uniformly bounded and converge uniformly. The continuity of bounded products under convergence in capacity (section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a>) gives weak convergence of all their products, with uniform local mass bounds. Expanding the products as in (<a data-tag="DC74A20E" href="../../tag/C87F0ACE9C76/">5.28.1</a>), and using smooth convergence of the remaining background factors, we obtain the asserted convergence of currents. In top degree, $(\theta _ j+\mathrm{dd}^{\mathrm{c}}u_ j)^ n=\mu $ for all $j$, so the limit solves the endpoint equation. 
+    <p>
+      For uniqueness, let $v=\chi \circ p_ B$ be a bounded solution pulled back from $B$, with $\sup _ B\chi =0$. The current $A_\chi =b\kappa +\mathrm{dd}^{\mathrm{c}}\chi $ on $B$ is positive, as one sees by pairing the pulled-back current $\theta _0+\mathrm{dd}^{\mathrm{c}}v$ with $w$ and with pullbacks of positive forms on $B$. The product expansion gives $nL_0A_\chi ^ m\wedge w=\sigma \wedge w$, which determines $A_\chi ^ m=\sigma /(nL_0)$ off the extreme set. That density already has total mass $H_0/n=b^ m$, whereas mass invariance for the closed background $b\kappa $ gives $\int _ BA_\chi ^ m=b^ m$. Positivity therefore excludes any mass of $A_\chi ^ m$ on the extreme set. Thus $\chi /b$ satisfies the same normalized equation on $B$ as $\psi _0$, and <a data-tag="7B112114" href="../../tag/27DED19DBC11/">14.25.2</a> proves the asserted uniqueness. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The proposition concerns the limit of the base potentials constructed above. It does not describe solutions of the endpoint equation that are not pulled back from $B$, nor does it give a pointwise limit of the balanced metrics $\gamma _ j=L_ j^{-1/m}(b_ j\kappa +\mathrm{dd}^{\mathrm{c}}\phi _ j+L_ jw)$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9C8B56E18A60" data-section-entries="2AC49E96484C 94A159D3DBDB 9C8B56E18A60 F61793B0A157"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/9C8B56E18A60/">12.6.48 Traces of minimizing metrics</a><code class="tag-id">9C8B56E18A60</code></h2><span data-gerby-tag="153CF2B2"></span>
+<p>
+Uniform convergence of the base potentials does not control the minimizing balanced metrics themselves: by the cofactor formula (<a data-tag="D24AA80D" href="../../tag/0989D826EF96/">12.6.34</a>), their $(n-1)$st powers contain the square of the reciprocal fiber coefficient. Depending on the ratio at the end, the traces of these powers stay bounded or blow up, and in the second case the trace-normalized powers concentrate on fibers over the extreme set. 
+</p>
+<p>
+Keep the sequence $\theta _ j\to \theta _0$ of proposition <a data-tag="F9D7362B" href="../../tag/C7D8502937F2/">12.6.47</a>, and let $\phi _0$ be the uniform limit of its base potentials $\phi _ j$. Put $A_ j=b_ j\kappa +\mathrm{dd}^{\mathrm{c}}\phi _ j$, and write $G_ j=\gamma _ j^ m$, where $\gamma _ j$ is the minimizing metric of theorem <a data-tag="14DB163A" href="../../tag/40DF235D735C/">12.6.32</a> for $\theta _ j$. Traces are taken with respect to $h=\kappa +w$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-6E3D6B9F">
+<p><a class="environment-identifier" href="../../tag/94A159D3DBDB/">Proposition <span data-tag="6E3D6B9F">12.6.49</span>.</a><span data-gerby-tag="6E3D6B9F"><code class="tag-id">94A159D3DBDB</code></span> Let $r&gt;1$ be the ratio $r_0$ or $r_ M$ of the end. After discarding finitely many terms, write $L_ j=s_ j(f+\epsilon _ j)$ with $s_ j&gt;0$, $s_ j\to s_0&gt;0$ and $\epsilon _ j\to 0^+$. Here $f=a$, $s_ j=c_ j$ at the first face, and $f=M-a$, $s_ j=-c_ j$ at the second. Set $J_ j=\int _ B\sigma /L_ j^2$. Then </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-BAF13BBA"><span data-gerby-tag="BAF13BBA"><code class="tag-id">F61793B0A157</code></span>
+<span class="equation-label"><a data-tag="BAF13BBA" href="../../tag/F61793B0A157/">12.6.50</a></span>
+<div>\begin{equation}  G_ j=\frac{\sigma }{nL_ j^2}+mA_ j^{m-1}\wedge w, \qquad t_ j:=\int _ Xh\wedge G_ j=\frac{J_ j}{n}+mb_ j^{m-1}. \end{equation}</div>
+</div>
+<p> For $1&lt;r&lt;2$, $t_ j\asymp \epsilon _ j^{r-2}$; for $r=2$, $t_ j\asymp \log (1/\epsilon _ j)$. For $r&gt;2$, the entire sequence converges weakly to the finite positive closed current </p>
+<div class="equation">
+  \[  G_0=\frac{\sigma }{nL_0^2}+mA_0^{m-1}\wedge w, \qquad A_0=b\kappa +\mathrm{dd}^{\mathrm{c}}\phi _0,  \]
+</div>
+<p> and $t_ j\to t_0=\int _ Xh\wedge G_0&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On $\mathscr S$, $H(c_ j,e_ j)=nb_ j^ m$, so $A_ j^ m=\sigma /(nL_ j)$. Substituting this in (<a data-tag="D24AA80D" href="../../tag/0989D826EF96/">12.6.34</a>) gives the formula for $G_ j$. Stokes' theorem on $B$, for the closed form $\kappa $, gives $\int _ B\kappa \wedge A_ j^{m-1}=b_ j^{m-1}$, which proves the trace identity. The factorization of $L_ j$ uses $\epsilon _ j=e_ j/c_ j$ at the first end and $\epsilon _ j=e_ j/(-c_ j)-M$ at the second, and the coefficient limits give $s_ j\to s_0&gt;0$. 
+    <p>
+      On each tube around an extreme component, $f\asymp \operatorname {dist}(Z_ i)^{k_ i}$, so the integral of $f^{-2}$ is comparable to 
+    
+<div class="equation">
+  \[  \int _0^{\varrho _0}\frac{\varrho ^{\operatorname {codim}_{\mathbb R}Z_ i-1}}{(\varrho ^{k_ i}+\epsilon _ j)^2}\, \mathrm{d}\varrho ,  \]
+</div>
+<p>
+       where $\varrho $ is normal radius, $\varrho _0&gt;0$ is small and $r_ i=\operatorname {codim}_{\mathbb R}Z_ i/k_ i$. Splitting the integral at $\varrho =\epsilon _ j^{1/k_ i}$ gives order $\epsilon _ j^{r_ i-2}$ for $r_ i&lt;2$, order $\log (1/\epsilon _ j)$ for $r_ i=2$, and a finite limit for $r_ i&gt;2$. The finite sum over components is governed by $r=\min _ i r_ i$. Since $b_ j$ and $s_ j$ have positive finite limits, these estimates prove the three alternatives for $t_ j$. 
+    <p>
+      If $r&gt;2$, then $f^{-2}$ is integrable and dominates $L_ j^{-2}$ up to a fixed constant factor, so $\sigma /L_ j^2\to \sigma /L_0^2$ in total variation. Since $w\wedge w=0$, we have $A_ j^{m-1}\wedge w=(\theta _ j+\mathrm{dd}^{\mathrm{c}}u_ j)^{m-1}\wedge w$, which converges weakly by proposition <a data-tag="F9D7362B" href="../../tag/C7D8502937F2/">12.6.47</a>. This proves $G_ j\rightharpoonup G_0$, and $G_0$ is positive and closed as a weak limit of positive closed forms. Pairing with $h$ gives the limit of the traces, which is positive because of the term $\sigma /(nL_0^2)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-A9E94D54">
+<p><a class="environment-identifier" href="../../tag/2AC49E96484C/">Proposition <span data-tag="A9E94D54">12.6.51</span>.</a><span data-gerby-tag="A9E94D54"><code class="tag-id">2AC49E96484C</code></span> Suppose $1&lt;r\leq 2$, and put $T_ j=G_ j/t_ j$. Every weak cluster limit of $(T_ j)$ has the form $p_ B^*\nu $, where $\nu $ is a probability measure on $B$ supported on the extreme components with ratio $r$. Such a limit is positive and closed, has trace one relative to $h$, and satisfies $\theta _0\wedge p_ B^*\nu =0$. If those components reduce to a single point $p$, the whole sequence converges to the current of integration $[\{ p\} \times C]$. </p>
+<p>The trace-normalized smooth metrics $\eta _ j=t_ j^{-1/m}\gamma _ j$ satisfy </p>
+<div class="equation">
+  \[  \int _ X\theta _ j\wedge \eta _ j^ m=D_\mu (\eta _ j) =\frac{nb_ j^ m}{t_ j}\longrightarrow 0.  \]
+</div>
+<p> Both quantities have order $\epsilon _ j^{2-r}$ when $1&lt;r&lt;2$, and order $1/\log (1/\epsilon _ j)$ when $r=2$. Their quotient remains one. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\nu _ j=\sigma /(J_ jL_ j^2)$. These are probability measures on $B$, and 
+    
+<div class="equation">
+  \[  T_ j=\frac{J_ j}{nt_ j}p_ B^*\nu _ j +\frac m{t_ j}A_ j^{m-1}\wedge w.  \]
+</div>
+<p>
+       The first coefficient tends to one. The second current is positive with trace $mb_ j^{m-1}/t_ j\to 0$, hence converges weakly to zero. Compactness of probability measures on $B$ and weak continuity of pullback under the submersion $p_ B$ therefore show that every cluster limit is $p_ B^*\nu $ for a cluster limit $\nu $ of $(\nu _ j)$. Away from small tubes around the extreme set, the density $1/L_ j^2$ is uniformly bounded, while $J_ j\to \infty $; that region receives no mass in the limit. The tube integrals for components with ratio greater than $r$ are $o(J_ j)$ by the preceding estimates, so only components with ratio $r$ keep mass. 
+    <p>
+      For a limit $T=p_ B^*\nu $, $\kappa \wedge T=0$ for degree reasons on $B$, while $L_0w\wedge T=0$ because $L_0$ vanishes on the support of $\nu $. Its trace is one because $\int _ Cw=1$. A top-degree measure on $B$ is closed, so its pullback is closed as well. If the support is the single point $p$, every cluster limit of $(\nu _ j)$ is $\delta _ p$; compactness then gives convergence of the whole sequence, and $p_ B^*\delta _ p$ is the current of integration over the fiber $\{ p\} \times C$. 
+    <p>
+      The minimizing quotient is one on $\mathscr S$, and before trace normalization both its numerator and its denominator equal $nb_ j^ m$. Each is multiplied by $t_ j^{-1}$ under the normalization, and the trace estimates give their limits and rates. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+In the projective strip of example <a data-tag="D0E56B7E" href="../../tag/27A22321E298/">12.6.53</a>, both ratios are two and each extreme set is a single point. At each of the two ends, the normalized minimizing tests therefore converge to the current of integration over the corresponding fiber $\{ p\} \times \mathbb P^1$, and the numerator and the denominator of the quotient both decay like $1/\log (1/\epsilon _ j)$. This is convergence of currents; it does not give a pointwise limit of the metrics. 
+</p>
+</div></section><section class="reading-chunk" id="entry-DDBDE1BD78C7" data-section-entries="27A22321E298 CD9181602A11 DDBDE1BD78C7"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/DDBDE1BD78C7/">12.6.52 Projective and torus examples</a><code class="tag-id">DDBDE1BD78C7</code></h2><span data-gerby-tag="2865605E"></span>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-D0E56B7E">
+<p><a class="environment-identifier" href="../../tag/27A22321E298/">Example <span data-tag="D0E56B7E">12.6.53</span>.</a><span data-gerby-tag="D0E56B7E"><code class="tag-id">27A22321E298</code></span> On $B=\mathbb P^2$, take normalized Fubini–Study $\kappa $, $\sigma =\kappa ^2$, $C=\mathbb P^1$, and </p>
+<div class="equation">
+  \[  a([Z])=\frac{|Z_1|^2/2+|Z_2|^2}{|Z_0|^2+|Z_1|^2+|Z_2|^2}.  \]
+</div>
+<p> Then $M=1$, $r_0=r_ M=2$, and the completion is a closed strip with finite faces </p>
+<div class="equation">
+  \[  b\kappa +\frac{4\log 2}{3b^2}a w,\qquad b\kappa +\frac{4\log 2}{3b^2}(1-a)w.  \]
+</div>
+<p> For $v\ne 0$, </p>
+<div class="equation">
+  \[  Q(v)=\frac4{v^2}\bigl [(v+1)\log (1+v) -(v+2)\log (1+v/2)\bigr ], \qquad Q(0)=1.  \]
+</div>
+<p> The width of the strip is the finite positive integral </p>
+<div class="equation">
+  \[  \int _{-1}^{\infty } \sqrt{\frac{Q''/Q-2(Q'/Q)^2}{3}}\, \mathrm{d}v.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The extreme sets are the points $[1:0:0]$ and $[0:0:1]$. In affine coordinates, $a$ and $1-a$ vanish there to exactly second order, so both real codimensions are four and both orders are two. To compute the law of $a$ under $\sigma $, polar integration in the chart $Z_0=1$ gives $2\, \mathrm{d}s_1\mathrm{d}s_2/(1+s_1+s_2)^3$, where $s_ j=|z_ j|^2$. The transformation $u_ j=s_ j/(1+s_1+s_2)$ gives the uniform density two on the triangle $u_1,u_2\geq 0$, $u_1+u_2\leq 1$, and $a=u_1/2+u_2$. For $0\leq s\leq 1/2$, the triangle $u_1/2+u_2\leq s$ has area $s^2$, so the law of $a$ has density $4s$ on $[0,1/2]$. With $u_0=1-u_1-u_2$, exchanging $u_0$ and $u_2$ preserves the uniform measure and replaces $a$ by $1-a$; hence the law has density $4(1-s)$ on $[1/2,1]$. Integrating against these two densities gives $H_ a=H_-=4\log 2$ and the formula for $Q$, and the integral definition of $Q$ shows that $Q(0)=1$ is its continuous extension. Theorem <a data-tag="44A99CC0" href="../../tag/72BDB634BD0E/">12.6.41</a> gives the boundary lines and the finite width, with Euclidean coordinates $Y=\sqrt2\log b$ and $R(v)$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-EEED4CC4">
+<p><a class="environment-identifier" href="../../tag/CD9181602A11/">Example <span data-tag="EEED4CC4">12.6.54</span>.</a><span data-gerby-tag="EEED4CC4"><code class="tag-id">CD9181602A11</code></span> Let $E=\mathbb C/(\mathbb Z+i\mathbb Z)$, $B=E^ m$, and write $z_ j=u_ j+i\tau _ j$. Put </p>
+<div class="equation">
+  \[  \eta _ j=\frac i2\mathrm{d}z_ j\wedge \mathrm{d}\bar z_ j, \qquad s=(m!)^{-1/m},\qquad \kappa =s\sum _ j\eta _ j,\qquad \sigma =\kappa ^ m.  \]
+</div>
+<p> For $a=\sin ^2(\pi u_1)$, the unit-volume hypersurface is itself a complete Euclidean plane, with Euclidean coordinates </p>
+<div class="equation">
+  \[  Y=\sqrt m\log b,\qquad R=\frac{\log (1+v)}{2\sqrt n},\qquad v&gt;-1.  \]
+</div>
+<p> Its minimizing balanced metrics can be written down by integrating a periodic function twice. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The forms descend to $B$, and $\sigma =\eta _1\wedge \cdots \wedge \eta _ m$ is a probability form. Both extreme sets are real hypersurfaces along which $a$, respectively $1-a$, vanishes to second order, so $r_0=r_ M=1/2$. Splitting the period and substituting $t=\tan (\pi u)$ gives 
+    
+<div class="equation">
+  \begin{align*}  Q(v)&amp; =\int _0^1\frac{\mathrm{d}u}{1+v\sin ^2(\pi u)}\\ &amp; =\frac2\pi \int _0^\infty \frac{\mathrm{d}t}{1+(1+v)t^2} =\frac1{\sqrt{1+v}}. \end{align*}
+</div>
+<p>
+       Let $F_ v(u)=[Q(v)(1+v\sin ^2(\pi u))]^{-1}$, which has mean one over a period. Integrating the equation 
+    
+<div class="equation">
+  \[  \phi _ v''=4\pi bs(F_ v-1)  \]
+</div>
+<p>
+       twice, whose right side has mean zero, gives a smooth periodic potential $\phi _ v$ of $u=u_1$; the first integration constant is chosen so that $\phi _ v'$ has mean zero. In our normalization $\mathrm{dd}^{\mathrm{c}}\phi _ v=\phi _ v''\eta _1/(4\pi )$, hence 
+    
+<div class="equation">
+  \[  A=bs\left(F_ v\eta _1+\sum _{j=2}^ m\eta _ j\right)&gt;0, \qquad A^ m=b^ mF_ v\sigma =\frac{b^ m}{H}\frac{\sigma }{L}.  \]
+</div>
+<p>
+       Thus the minimizer of theorem <a data-tag="14DB163A" href="../../tag/40DF235D735C/">12.6.32</a>, with its cofactor formula (<a data-tag="D24AA80D" href="../../tag/0989D826EF96/">12.6.34</a>), is explicit in this example, without an appeal to theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">14.2.1</a>. Differentiating $Q$ gives 
+    
+<div class="equation">
+  \[  \rho (v)=\frac1{4n(1+v)^2},\qquad g_{\mathscr S}=m\, \mathrm{d}U^2+ \frac1{4n}\left(\frac{\mathrm{d}v}{1+v}\right)^2.  \]
+</div>
+<p>
+       As $U$ and $v$ range over $\mathbb R$ and $(-1,\infty )$, the coordinates $(Y,R)$ range over all of $\mathbb R^2$. Both boundary faces of the coefficient cone are therefore at infinite distance on the unit-volume hypersurface. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+These distances are those of the fixed three-parameter cone with the product probability $\mu =\sigma \wedge w$. The endpoint criterion of lemma <a data-tag="899A837E" href="../../tag/1EF963CF5EA2/">12.6.39</a> uses the hypothesis that the extreme sets are disjoint unions of submanifolds along which $a$ vanishes to finite power order; intersecting extreme strata or vanishing of infinite order would require further estimates. The variances are computed from the minimizing metrics, but we do not assert that these metrics have a pointwise limit at a finite end. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/4BBB232A044C/"><span>← Previous</span><small>Proposition 12.5.1</small></a><a class="pager-next" rel="next" href="../../tag/88C1708A920C/"><span>Next →</span><small>Proposition 12.6.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-a-gauduchon-variational-volume--the-hessian-metric-and-its-completion,
+  author = {{Gerby contributors}},
+  title = {12.6 The Hessian metric and its completion},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/a-gauduchon-variational-volume--the-hessian-metric-and-its-completion/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fa-gauduchon-variational-volume--the-hessian-metric-and-its-completion%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fa-gauduchon-variational-volume--the-hessian-metric-and-its-completion%2F&amp;body=Page%3A+%5B12.6+The+Hessian+metric+and+its+completion%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fa-gauduchon-variational-volume--the-hessian-metric-and-its-completion%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+4b3a2ae963fd17f66445e1b174a1ac03cbcb598c+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

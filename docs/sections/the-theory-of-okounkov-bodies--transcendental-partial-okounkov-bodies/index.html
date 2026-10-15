@@ -1,0 +1,755 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies/"><title>19.5 Transcendental partial Okounkov bodies · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/sections-okounkov/">Chapter 19: Sections, graded series, and Okounkov bodies</a></li><li><a href="../../sections/the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies/" aria-current="page">Section 19.5: Transcendental partial Okounkov bodies</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/the-theory-of-okounkov-bodies/"><span>19.1</span> The theory of Okounkov bodies</a><code class="tag-id">2DF8DA44EB89</code></li><li><a href="../../sections/the-theory-of-okounkov-bodies--almost-semigroups/"><span>19.2</span> Almost semigroups</a><code class="tag-id">1ED20E6196A2</code></li><li><a href="../../sections/the-theory-of-okounkov-bodies--flags-and-valuations/"><span>19.3</span> Flags and valuations</a><code class="tag-id">E9A341A325BE</code></li><li><a href="../../sections/the-theory-of-okounkov-bodies--algebraic-partial-okounkov-bodies/"><span>19.4</span> Algebraic partial Okounkov bodies</a><code class="tag-id">C9B9B0985C6B</code></li><li><a href="../../sections/the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies/" aria-current="page"><span>19.5</span> Transcendental partial Okounkov bodies</a><code class="tag-id">A2D41AECAD65</code></li><li><a href="../../sections/the-theory-of-okounkov-bodies--okounkov-test-curves/"><span>19.6</span> Okounkov test curves</a><code class="tag-id">BC31851ECB21</code></li><li><a href="../../sections/almost-semigroups/"><span>19.7</span> Almost semigroups</a><code class="tag-id">00B44728CC57</code></li><li><a href="../../sections/holomorphic-sections-and-hermitian-mass/"><span>19.8</span> Holomorphic sections and Hermitian mass</a><code class="tag-id">725C2F97B643</code></li><li><a href="../../sections/flags-convex-bodies-and-section-growth/"><span>19.9</span> Flags, convex bodies and section growth</a><code class="tag-id">926A00196D5E</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/3C67C9063373/"><span>← Previous</span><small>Equation 19.4.57</small></a><a class="pager-next" rel="next" href="../../tag/AB52CD73DBE6/"><span>Next →</span><small>19.5.1 The traditional approach to the Okounkov body problem</small></a></nav><h1>19.5 Transcendental partial Okounkov bodies<code class="tag-id">A2D41AECAD65</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-A2D41AECAD65" data-section-entries="A2D41AECAD65"><div class="source-variant" data-gerby-book="sgpt"><span data-gerby-tag="DC0F2EE8"><code class="tag-id">A2D41AECAD65</code></span>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n&gt;0$. Fix a smooth flag $Y_{\bullet }$ on $X$. We will extend the theory of partial Okounkov bodies in the previous section to the transcendental setting. 
+</p>
+</div></section><section class="reading-chunk" id="entry-AB52CD73DBE6" data-section-entries="5F949352BAF6 AB52CD73DBE6 AD7EC900552C E839B4A35A2A"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/AB52CD73DBE6/">19.5.1 The traditional approach to the Okounkov body problem</a><code class="tag-id">AB52CD73DBE6</code></h2><span data-gerby-tag="6CB3B557"></span>
+
+<article class="env-definition" id="sgpt-3EDA148E">
+<p><a class="environment-identifier" href="../../tag/AD7EC900552C/">Definition <span data-tag="3EDA148E">19.5.2</span>.</a><span data-gerby-tag="3EDA148E"><code class="tag-id">AD7EC900552C</code></span> Let $\alpha $ be a big cohomology class on $X$. We define the <em>Okounkov body</em> of $\alpha $ with respect to the flag $Y_{\bullet }$ as </p>
+<div class="equation numbered-equation" id="sgpt-41CED6AB"><span data-gerby-tag="41CED6AB"><code class="tag-id">5F949352BAF6</code></span>
+<span class="equation-label"><a data-tag="41CED6AB" href="../../tag/5F949352BAF6/">19.5.3</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(\alpha )\coloneqq \overline{\left\{ \nu _{Y_{\bullet }}(S): S\in \mathcal{Z}_+(X,\alpha ),S\textup{ has gentle analytic singularities} \right\} }. \end{equation}</div>
+</div>
+</article> See definition <a data-tag="2C0E439C" href="../../tag/FFAA7E68EEC1/">5.18.10</a> for the definition of gentle analytic singularities. 
+
+
+The results of <span class="cite">[<a href="../../references/#REF87B96D56DE">DRWNXZ</a>]</span> can be summarized as follows: <article class="env-theorem" id="sgpt-CE657E18">
+<p><a class="environment-identifier" href="../../tag/E839B4A35A2A/">Theorem <span data-tag="CE657E18">19.5.4</span>.</a><span data-gerby-tag="CE657E18"><code class="tag-id">E839B4A35A2A</code></span> For any big cohomology class $\alpha $ on $X$, the set $\Delta _{Y_{\bullet }}(\alpha )\subseteq \mathbb {R}^ n$ is a convex body satisfying the following properties: </p>
+<ol>
+<li class="custom-item" id="sgpt-4C057314"><span data-gerby-tag="4C057314"><code class="tag-id">D06584225E6D</code></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  \operatorname{vol}\Delta _{Y_{\bullet }}(\alpha )=\frac{1}{n!}\operatorname{vol}\alpha ;  \]
+</div>
+</li><li class="custom-item" id="sgpt-AD9E94E8"><span data-gerby-tag="AD9E94E8"><code class="tag-id">046A9D0BEEA7</code></span><p>
+ given another big cohomology class $\alpha '$ on $X$, we have 
+</p>
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\alpha )+\Delta _{Y_{\bullet }}(\alpha ')\subseteq \Delta _{Y_{\bullet }}(\alpha +\alpha ');  \]
+</div>
+</li><li class="custom-item" id="sgpt-6081ABA2"><span data-gerby-tag="6081ABA2"><code class="tag-id">7D58AF38EA3C</code></span><p>
+ let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism where $Y$ is a Kähler manifold. Assume that $(W_{\bullet },g)$ is the lifting of $Y_{\bullet }$ to $Y$. Then 
+</p>
+<div class="equation">
+  \[  \Delta _{W_{\bullet }}(\pi ^*\alpha )=\Delta _{Y_{\bullet }}(\alpha )g;  \]
+</div>
+</li><li class="custom-item" id="sgpt-07546563"><span data-gerby-tag="07546563"><code class="tag-id">35F74103F4DE</code></span><p>
+ the map $\alpha \mapsto \Delta _{Y_{\bullet }}(\alpha )$ is continuous in the big cone with respect to the Hausdorff metric; 
+</p>
+</li><li class="custom-item" id="sgpt-F0C64B11"><span data-gerby-tag="F0C64B11"><code class="tag-id">111D84FB6B1C</code></span><p>
+ for any small enough $t&gt;0$, we have 
+</p>
+<div class="equation">
+  \[  \left\{  y\in \mathbb {R}^{n-1}: (t,y)\in \Delta _{Y_{\bullet }}(\alpha ) \right\} =\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}\Bigl ((\alpha -t\{ Y_1\} )|_{Y_1}\Bigr ).  \]
+</div>
+</li>
+</ol>
+</article> See definition <a data-tag="E615C683" href="../../tag/E494C67EB4B8/">19.3.12</a> for the notion of lifting. The proof requires some techniques not covered in the current book; this theorem may be used as a black box. 
+
+</div></section><section class="reading-chunk" id="entry-232CC36315A0" data-section-entries="232CC36315A0"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/232CC36315A0/">19.5.5 Definitions of partial Okounkov bodies</a><code class="tag-id">232CC36315A0</code></h2><span data-gerby-tag="90E9E2F4"></span>
+<p>
+  Let $\theta $ be a closed real smooth $(1,1)$-form on $X$ representing a big cohomology class $\alpha $. 
+</p>
+<p>
+Let $T=\theta _{\varphi }\in \mathcal{Z}_+(X,\alpha )$. We shall define a convex body $\Delta _{Y_{\bullet }}(T)\subseteq \mathbb {R}^ n$, which is also written as $\Delta _{Y_{\bullet }}(\theta ,\varphi )$. This convex body is called the <em>partial Okounkov body</em> of $T$ with respect to the flag $Y_{\bullet }$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-99ECDE21F9AA" data-section-entries="31DAEE985011 326D63AB3B8C 32DCABF4D374 5F65C388181A 99ECDE21F9AA 9AA6F51E3D18 B544FB9D12E6 F1FC05EF0A7C"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/99ECDE21F9AA/">19.5.6 The case of analytic singularities</a><code class="tag-id">99ECDE21F9AA</code></h2><span data-gerby-tag="4C78DC51"></span>
+
+<article class="env-definition" id="sgpt-A70C2473">
+<p><a class="environment-identifier" href="../../tag/31DAEE985011/">Definition <span data-tag="A70C2473">19.5.7</span>.</a><span data-gerby-tag="A70C2473"><code class="tag-id">31DAEE985011</code></span> When $T$ is a Kähler current with analytic singularities, we take a modification $\pi \colon Y\rightarrow X$ so that  </p>
+<ol>
+<li class="custom-item" id="sgpt-ABE54CA6"><span data-gerby-tag="ABE54CA6"><code class="tag-id">141D51CBF55B</code></span>
+<div class="equation numbered-equation" id="sgpt-5D71E032"><span data-gerby-tag="5D71E032"><code class="tag-id">9AA6F51E3D18</code></span>
+<span class="equation-label"><a data-tag="5D71E032" href="../../tag/9AA6F51E3D18/">19.5.8</a></span>
+<div>\begin{equation}  \pi ^*T=[D]+R, \end{equation}</div>
+</div>
+<p>
+ where $D$ is an effective $\mathbb {Q}$-divisor on $Y$ and $R$ is a closed positive $(1,1)$-current with bounded potential, and 
+</p>
+</li><li class="custom-item" id="sgpt-F39305EE"><span data-gerby-tag="F39305EE"><code class="tag-id">AE57180E327B</code></span><p>
+ the lifting $(Z_{\bullet },g)$ of $Y_{\bullet }$ to $Y$ exists. 
+</p>
+</li>
+</ol>
+<p> Define </p>
+<div class="equation numbered-equation" id="sgpt-1143D784"><span data-gerby-tag="1143D784"><code class="tag-id">326D63AB3B8C</code></span>
+<span class="equation-label"><a data-tag="1143D784" href="../../tag/326D63AB3B8C/">19.5.9</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(T)\coloneqq \Delta _{Z_{\bullet }}(\{ R\} )g^{-1}+\nu _{Z_{\bullet }}([D])g^{-1}. \end{equation}</div>
+</div>
+</article> The existence of $\pi $ is guaranteed by theorem <a data-tag="9A6A24C1" href="../../tag/D6BDA051B7C1/">5.18.8</a> and theorem <a data-tag="44C3D868" href="../../tag/B00AB5301F7A/">19.3.19</a>. 
+
+
+<article class="env-lemma" id="sgpt-B8E6193C">
+<p><a class="environment-identifier" href="../../tag/32DCABF4D374/">Lemma <span data-tag="B8E6193C">19.5.10</span>.</a><span data-gerby-tag="B8E6193C"><code class="tag-id">32DCABF4D374</code></span> The convex body $\Delta _{Y_{\bullet }}(T)$ defined in definition <a data-tag="A70C2473" href="../../tag/31DAEE985011/">19.5.7</a> is independent of the choice of $\pi $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take another map $\pi '\colon Y'\rightarrow X$ with the same properties. We want to show that $\pi $ and $\pi '$ define the same $\Delta _{Y_{\bullet }}(T)$. We may assume that $\pi '$ dominates $\pi $ through $p\colon Y'\rightarrow Y$, so that we have a commutative diagram 
+    
+<div class="equation">
+<img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/8fa0f8783ec0d16b0c40.svg"/>
+</div>
+<p>
+       We take $D$ and $R$ as in (<a data-tag="5D71E032" href="../../tag/9AA6F51E3D18/">19.5.8</a>). Then 
+    
+<div class="equation">
+  \[  \pi '^*T=[p^*D]+p^*R.  \]
+</div>
+<p>
+       Write $(Z_{\bullet },g)$ and $(Z_{\bullet }',g')$ for the liftings of $Y_{\bullet }$ to $Y$ and $Y'$ respectively. We need to prove that 
+    
+<div class="equation">
+  \[  \Delta _{Z_{\bullet }}(\{ R\} )g^{-1}+\nu _{Z_{\bullet }}([D])g^{-1}=\Delta _{Z_{\bullet }'}(\{ p^*R\} )g'^{-1}+\nu _{Z_{\bullet }'}([p^*D])g'^{-1}.  \]
+</div>
+<p>
+       By theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a>, applied to the class $\{ R\} $, we have 
+    
+<div class="equation">
+  \[  \Delta _{Z'_\bullet }(\{ p^*R\} )=\Delta _{Z_\bullet }(\{ R\} )\, \operatorname{cor}(Z_\bullet ,p).  \]
+</div>
+<p>
+       By proposition <a data-tag="DD7439A2" href="../../tag/D094DD00A592/">19.3.14</a>, applied to the divisor current $[D]$, we also have 
+    
+<div class="equation">
+  \[  \nu _{Z'_\bullet }([p^*D])=\nu _{Z_\bullet }([D])\, \operatorname{cor}(Z_\bullet ,p).  \]
+</div>
+<p>
+       Finally, proposition <a data-tag="6A0E92BC" href="../../tag/8D2910CD1CEC/">19.3.17</a> gives 
+    
+<div class="equation">
+  \[  g'=g\, \operatorname{cor}(Z_\bullet ,p).  \]
+</div>
+<p>
+       Multiplying by $(g')^{-1}$ gives the desired equality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+The above proof also describes the bimeromorphic behavior of $\Delta _{Y_{\bullet }}(T)$: <article class="env-lemma" id="sgpt-88AB30EB">
+<p><a class="environment-identifier" href="../../tag/F1FC05EF0A7C/">Lemma <span data-tag="88AB30EB">19.5.11</span>.</a><span data-gerby-tag="88AB30EB"><code class="tag-id">F1FC05EF0A7C</code></span> Let $T\in \mathcal{Z}_{+}(X,\alpha )$ be a Kähler current with analytic singularities. Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism and $(W_{\bullet },g)$ be the lifting of $Y_{\bullet }$ to $Y$. Then </p>
+<div class="equation">
+  \[  \Delta _{W_{\bullet }}(\pi ^*T)=\Delta _{Y_{\bullet }}(T)g.  \]
+</div>
+</article>
+
+
+<article class="env-lemma" id="sgpt-DE288921">
+<p><a class="environment-identifier" href="../../tag/5F65C388181A/">Lemma <span data-tag="DE288921">19.5.12</span>.</a><span data-gerby-tag="DE288921"><code class="tag-id">5F65C388181A</code></span> Assume that $T,S\in \mathcal{Z}_+(X,\alpha )$ are two Kähler currents with analytic singularities and $T\preceq S$. Then </p>
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)\subseteq \Delta _{Y_{\bullet }}(S)\subseteq \Delta _{Y_{\bullet }}(\alpha ).  \]
+</div>
+<p> Moreover, </p>
+<div class="equation numbered-equation" id="sgpt-997D8778"><span data-gerby-tag="997D8778"><code class="tag-id">B544FB9D12E6</code></span>
+<span class="equation-label"><a data-tag="997D8778" href="../../tag/B544FB9D12E6/">19.5.13</a></span>
+<div>\begin{equation}  \operatorname{vol}\Delta _{Y_{\bullet }}(T)=\frac{1}{n!} \int _ X T^ n. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first show that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)\subseteq \Delta _{Y_{\bullet }}(S).  \]
+</div>
+<p>
+       Using <a data-tag="88AB30EB" href="../../tag/F1FC05EF0A7C/">19.5.11</a>, we may assume that $T$ and $S$ have log singularities along effective $\mathbb {Q}$-divisors $E$ and $F$ respectively. By assumption, $E\geq F$. Replacing $T$ and $S$ by $T-[F]$ and $S-[F]$ respectively, we may assume that $F=0$, cf. (<a data-tag="1143D784" href="../../tag/326D63AB3B8C/">19.5.9</a>). 
+    <p>
+      In this case, we need to show that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\alpha )\supseteq \Delta _{Y_{\bullet }}(\alpha -\{ E\} )+\nu _{Y_{\bullet }}([E]),  \]
+</div>
+<p>
+       which is obvious. 
+    <p>
+      Next we prove that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)\subseteq \Delta _{Y_{\bullet }}(\alpha ).  \]
+</div>
+<p>
+       By <a data-tag="88AB30EB" href="../../tag/F1FC05EF0A7C/">19.5.11</a> and theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a> again, we may assume that $T$ has log singularities. We take $D$ and $R$ as in (<a data-tag="5D71E032" href="../../tag/9AA6F51E3D18/">19.5.8</a>). We need to show that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\alpha -\{ D\} )+\nu _{Y_{\bullet }}([D])\subseteq \Delta _{Y_{\bullet }}(\alpha ),  \]
+</div>
+<p>
+       which is again obvious. 
+    <p>
+      Finally, (<a data-tag="997D8778" href="../../tag/B544FB9D12E6/">19.5.13</a>) follows immediately from theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-8B697E317627" data-section-entries="08C830D7FB38 1493F0A1407E 24F2B706F011 2F017272546D 4DF6CA86E7CD 7D755FB49272 8B697E317627 A07A6093F1F3 F190AF72550B"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/8B697E317627/">19.5.14 The case of Kähler currents</a><code class="tag-id">8B697E317627</code></h2><span data-gerby-tag="43589826"></span>
+
+<article class="env-definition" id="sgpt-860655EC">
+<p><a class="environment-identifier" href="../../tag/24F2B706F011/">Definition <span data-tag="860655EC">19.5.15</span>.</a><span data-gerby-tag="860655EC"><code class="tag-id">24F2B706F011</code></span> Let $T\in \mathcal{Z}_+(X,\alpha )$ be a Kähler current. Take a quasi-equisingular approximation $(T_ j)_ j$ of $T$ in $\mathcal{Z}_+(X,\alpha )$. Then we define  </p>
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)\coloneqq \bigcap _{j=1}^{\infty }\Delta _{Y_{\bullet }}(T_ j).  \]
+</div>
+</article>
+
+
+<article class="env-lemma" id="sgpt-0C645AF2">
+<p><a class="environment-identifier" href="../../tag/08C830D7FB38/">Lemma <span data-tag="0C645AF2">19.5.16</span>.</a><span data-gerby-tag="0C645AF2"><code class="tag-id">08C830D7FB38</code></span> The convex body $\Delta _{Y_{\bullet }}(T)$ in definition <a data-tag="860655EC" href="../../tag/24F2B706F011/">19.5.15</a> is independent of the choices of the $T_ j$'s. </p>
+</article> In particular, if $T$ also has analytic singularities, then the $\Delta _{Y_{\bullet }}(T)$'s defined in definition <a data-tag="860655EC" href="../../tag/24F2B706F011/">19.5.15</a> and in definition <a data-tag="A70C2473" href="../../tag/31DAEE985011/">19.5.7</a> coincide. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It is more convenient to use the language of $\theta $-psh functions at this point. Let $\psi _ k$ (resp. $\varphi _ k$) denote the potentials in $\mathrm{PSH}(X,\theta )$ corresponding to $S_ k$ (resp. $T_ k$) for each $k\geq 1$. Note that $\psi _ k$ and $\varphi _ k$ are unique up to additive constants. By proposition <a data-tag="C94FE791" href="../../tag/36EC36A38FAB/">5.18.12</a>, for any small rational $\epsilon &gt;0$, $j&gt;0$, we can find $k&gt;0$ so that 
+    
+<div class="equation">
+  \[  \psi _ k\preceq (1-\epsilon )\varphi _ j.  \]
+</div>
+<p>
+       By <a data-tag="DE288921" href="../../tag/5F65C388181A/">19.5.12</a>, 
+    
+<div class="equation">
+  \[  \bigcap _{k=1}^{\infty }\Delta _{Y_{\bullet }}(\theta ,\psi _ k)\subseteq \Delta _{Y_{\bullet }}(\theta ,(1-\epsilon )\varphi _ j).  \]
+</div>
+<p>
+       On the other hand, observe that 
+    
+<div class="equation">
+  \[  \bigcap _{\epsilon \in \mathbb {Q}_{&gt;0}\text{ small enough}}\Delta _{Y_{\bullet }}(\theta ,(1-\epsilon )\varphi _ j)=\Delta _{Y_{\bullet }}(\theta ,\varphi _ j).  \]
+</div>
+<p>
+       In fact, the $\supseteq $ direction follows from <a data-tag="DE288921" href="../../tag/5F65C388181A/">19.5.12</a>, so it suffices to show that the two sides have the same volume, which follows from (<a data-tag="997D8778" href="../../tag/B544FB9D12E6/">19.5.13</a>). 
+    <p>
+      It follows that 
+    
+<div class="equation">
+  \[  \bigcap _{k=1}^{\infty }\Delta _{Y_{\bullet }}(\theta ,\psi _ k)\subseteq \bigcap _{j=1}^{\infty }\Delta _{Y_{\bullet }}(\theta ,\varphi _ j).  \]
+</div>
+<p>
+       The other inclusion follows by symmetry. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+The same argument shows that <article class="env-corollary" id="sgpt-276409BE">
+<p><a class="environment-identifier" href="../../tag/A07A6093F1F3/">Corollary <span data-tag="276409BE">19.5.17</span>.</a><span data-gerby-tag="276409BE"><code class="tag-id">A07A6093F1F3</code></span> Suppose that $T,S\in \mathcal{Z}_+(X,\alpha )$ are two Kähler currents satisfying $T \preceq _{\mathcal{I}} S$. Then </p>
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)\subseteq \Delta _{Y_{\bullet }}(S)\subseteq \Delta _{Y_{\bullet }}(\alpha ).  \]
+</div>
+</article>
+
+
+<article class="env-proposition" id="sgpt-1F5123DB">
+<p><a class="environment-identifier" href="../../tag/F190AF72550B/">Proposition <span data-tag="1F5123DB">19.5.18</span>.</a><span data-gerby-tag="1F5123DB"><code class="tag-id">F190AF72550B</code></span> Let $T\in \mathcal{Z}_+(X,\alpha )$ be a Kähler current. Then </p>
+<div class="equation numbered-equation" id="sgpt-6094732F"><span data-gerby-tag="6094732F"><code class="tag-id">4DF6CA86E7CD</code></span>
+<span class="equation-label"><a data-tag="6094732F" href="../../tag/4DF6CA86E7CD/">19.5.19</a></span>
+<div>\begin{equation}  \operatorname{vol}\Delta _{Y_{\bullet }}(T)=\frac{1}{n!}\operatorname{vol}T. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take a quasi-equisingular approximation $(T_ j)_ j$ of $T$ in $\mathcal{Z}_+(X,\alpha )$. Note that $\Delta _{Y_{\bullet }}(T_ j)$ is decreasing in $j$, as follows from <a data-tag="DE288921" href="../../tag/5F65C388181A/">19.5.12</a>. Our assertion follows from (<a data-tag="997D8778" href="../../tag/B544FB9D12E6/">19.5.13</a>) and theorem <a data-tag="91496AFE" href="../../tag/CAB6F4E23080/">16.9.57</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-lemma" id="sgpt-7B63465D">
+<p><a class="environment-identifier" href="../../tag/1493F0A1407E/">Lemma <span data-tag="7B63465D">19.5.20</span>.</a><span data-gerby-tag="7B63465D"><code class="tag-id">1493F0A1407E</code></span> Let $T\in \mathcal{Z}_+(X,\alpha )$ be a Kähler current and $\omega $ be a Kähler form on $X$. Then </p>
+<div class="equation numbered-equation" id="sgpt-DBB6B079"><span data-gerby-tag="DBB6B079"><code class="tag-id">7D755FB49272</code></span>
+<span class="equation-label"><a data-tag="DBB6B079" href="../../tag/7D755FB49272/">19.5.21</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(T)\subseteq \Delta _{Y_{\bullet }}(T+\omega ). \end{equation}</div>
+</div>
+<p> Moreover, </p>
+<div class="equation numbered-equation" id="sgpt-197839B9"><span data-gerby-tag="197839B9"><code class="tag-id">2F017272546D</code></span>
+<span class="equation-label"><a data-tag="197839B9" href="../../tag/2F017272546D/">19.5.22</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(T)=\bigcap _{\epsilon &gt;0}\Delta _{Y_{\bullet }}(T+\epsilon \omega ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first prove (<a data-tag="DBB6B079" href="../../tag/7D755FB49272/">19.5.21</a>). Taking quasi-equisingular approximations, we reduce immediately to the case where $T$ has analytic singularities. By <a data-tag="88AB30EB" href="../../tag/F1FC05EF0A7C/">19.5.11</a>, we may assume that $T$ has log singularities. Take $D$ and $R$ as in (<a data-tag="5D71E032" href="../../tag/9AA6F51E3D18/">19.5.8</a>). By definition again, it suffices to show that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\{ R\} )\subseteq \Delta _{Y_{\bullet }}(\{ R\} +\{ \omega \} ),  \]
+</div>
+<p>
+       which is clear by definition. 
+    <p>
+      Next we prove (<a data-tag="197839B9" href="../../tag/2F017272546D/">19.5.22</a>). Thanks to (<a data-tag="DBB6B079" href="../../tag/7D755FB49272/">19.5.21</a>), it remains to prove that both sides have the same volume: 
+    
+<div class="equation">
+  \[  \lim _{\epsilon \to 0+}\operatorname{vol}(T+\epsilon \omega )=\operatorname{vol}T.  \]
+</div>
+<p>
+       This is proved in proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">18.1.27</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-101012300A5F" data-section-entries="0696155A37C7 101012300A5F 46A0E609C71E 68273CCE4042 75695A1B0FB3 944BC14A8246 C022629C737B E0BB6985CB53"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/101012300A5F/">19.5.23 The general case</a><code class="tag-id">101012300A5F</code></h2><span data-gerby-tag="7DDDAC5A"></span>
+
+<article class="env-definition" id="sgpt-E00CDA95">
+<p><a class="environment-identifier" href="../../tag/75695A1B0FB3/">Definition <span data-tag="E00CDA95">19.5.24</span>.</a><span data-gerby-tag="E00CDA95"><code class="tag-id">75695A1B0FB3</code></span> Let $T\in \mathcal{Z}_+(X,\alpha )$. Take a Kähler form $\omega $ on $X$. We define  </p>
+<div class="equation numbered-equation" id="sgpt-DB6539D3"><span data-gerby-tag="DB6539D3"><code class="tag-id">C022629C737B</code></span>
+<span class="equation-label"><a data-tag="DB6539D3" href="../../tag/C022629C737B/">19.5.25</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(T)=\bigcap _{j=1}^{\infty }\Delta _{Y_{\bullet }}(T+j^{-1}\omega ). \end{equation}</div>
+</div>
+<p> The same definition makes sense when $\alpha $ is only pseudo-effective. </p>
+</article> This definition is clearly independent of the choice of $\omega $ by <a data-tag="7B63465D" href="../../tag/1493F0A1407E/">19.5.20</a>. Moreover, it extends definition <a data-tag="860655EC" href="../../tag/24F2B706F011/">19.5.15</a> and definition <a data-tag="A70C2473" href="../../tag/31DAEE985011/">19.5.7</a> as a result of <a data-tag="7B63465D" href="../../tag/1493F0A1407E/">19.5.20</a>. 
+
+
+The main properties of $\Delta _{Y_{\bullet }}(T)$ are summarized as follows: <article class="env-theorem" id="sgpt-9B46A73A">
+<p><a class="environment-identifier" href="../../tag/944BC14A8246/">Theorem <span data-tag="9B46A73A">19.5.26</span>.</a><span data-gerby-tag="9B46A73A"><code class="tag-id">944BC14A8246</code></span> The convex bodies $\Delta _{Y_{\bullet }}(T)$ satisfy the following properties: </p>
+<ol>
+<li class="custom-item" id="sgpt-F01AE1E4"><span data-gerby-tag="F01AE1E4"><code class="tag-id">15D38B2026CE</code></span><p>
+ Suppose that $T\in \mathcal{Z}_+(X,\alpha )_{&gt;0}$. We have 
+</p>
+<div class="equation numbered-equation" id="sgpt-8186CA23"><span data-gerby-tag="8186CA23"><code class="tag-id">E0BB6985CB53</code></span>
+<span class="equation-label"><a data-tag="8186CA23" href="../../tag/E0BB6985CB53/">19.5.27</a></span>
+<div>\begin{equation}  \operatorname{vol}\Delta _{Y_{\bullet }}(T)=\frac{1}{n!}\operatorname{vol}T. \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-5D591206"><span data-gerby-tag="5D591206"><code class="tag-id">802F287FEE19</code></span><p>
+ For $T,S \in \mathcal{Z}_+(X,\alpha )$ satisfying $T\preceq _{\mathcal{I}}S$, we have 
+</p>
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)\subseteq \Delta _{Y_{\bullet }}(S)\subseteq \Delta _{Y_{\bullet }}(\alpha ).  \]
+</div>
+</li><li class="custom-item" id="sgpt-730000A7"><span data-gerby-tag="730000A7"><code class="tag-id">50506C1C2B02</code></span><p>
+ For any current $T\in \mathcal{Z}_+(X,\alpha )$ with minimal singularities, we have 
+</p>
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)=\Delta _{Y_{\bullet }}(\alpha ).  \]
+</div>
+</li><li class="custom-item" id="sgpt-27BE49B7"><span data-gerby-tag="27BE49B7"><code class="tag-id">9D03BAD80E42</code></span><p>
+ The map $\mathcal{Z}_+(X,\alpha )_{&gt;0}\rightarrow \mathcal{K}_ n$ given by $T\mapsto \Delta _{Y_{\bullet }}(T)$ is continuous, where we endow the $d_ S$-pseudometric on $\mathcal{Z}_+(X,\alpha )_{&gt;0}$ and the Hausdorff topology on $\mathcal{K}_ n$. 
+</p>
+</li><li class="custom-item" id="sgpt-8CBEB24B"><span data-gerby-tag="8CBEB24B"><code class="tag-id">D4C7EBFD1762</code></span><p>
+ Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism, where $Y$ is a Kähler manifold. Assume that the lifting $(W_{\bullet },g)$ of $Y_{\bullet }$ to $Y$ exists. Then for any $T\in \mathcal{Z}_+(X,\alpha )_{&gt;0}$, we have 
+</p>
+<div class="equation">
+  \[  \Delta _{W_{\bullet }}(\pi ^*T)=\Delta _{Y_{\bullet }}(T)g.  \]
+</div>
+</li><li class="custom-item" id="sgpt-1C25B22C"><span data-gerby-tag="1C25B22C"><code class="tag-id">8185D18AFE2D</code></span><p>
+ For $T,S\in \mathcal{Z}_+(X,\alpha )$, we have 
+</p>
+<div class="equation numbered-equation" id="sgpt-81C408E3"><span data-gerby-tag="81C408E3"><code class="tag-id">0696155A37C7</code></span>
+<span class="equation-label"><a data-tag="81C408E3" href="../../tag/0696155A37C7/">19.5.28</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(T)+\Delta _{Y_{\bullet }}(S)\subseteq \Delta _{Y_{\bullet }}(T+S). \end{equation}</div>
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="F01AE1E4" href="../../tag/944BC14A8246/#sgpt-F01AE1E4">1</a> By (<a data-tag="DB6539D3" href="../../tag/C022629C737B/">19.5.25</a>) and (<a data-tag="6094732F" href="../../tag/4DF6CA86E7CD/">19.5.19</a>), for any Kähler form $\omega $ on $X$, 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Delta _{Y_{\bullet }}(T)=\lim _{j\to \infty }\operatorname{vol}\Delta _{Y_{\bullet }}(T+j^{-1}\omega )=\frac{1}{n!}\lim _{j\to \infty }\operatorname{vol}(T+j^{-1}\omega ).  \]
+</div>
+<p>
+       The right-hand side is computed in proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">18.1.27</a>. Hence, (<a data-tag="8186CA23" href="../../tag/E0BB6985CB53/">19.5.27</a>) follows. 
+    <p>
+<a data-tag="5D591206" href="../../tag/944BC14A8246/#sgpt-5D591206">2</a> Fix a Kähler form $\omega $ on $X$. By corollary <a data-tag="276409BE" href="../../tag/A07A6093F1F3/">19.5.17</a>, for each $j\geq 1$, 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T+j^{-1}\omega )\subseteq \Delta _{Y_{\bullet }}(S+j^{-1}\omega )\subseteq \Delta _{Y_{\bullet }}(\alpha +j^{-1}\{ \omega \} ).  \]
+</div>
+<p>
+       It remains to show that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\alpha )=\bigcap _{j=1}^{\infty }\Delta _{Y_{\bullet }}(\alpha +j^{-1}\{ \omega \} ).  \]
+</div>
+<p>
+       The $\subseteq $ direction is clear. Comparing the volumes using theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a>, we conclude that equality holds. 
+    <p>
+<a data-tag="730000A7" href="../../tag/944BC14A8246/#sgpt-730000A7">3</a> This follows from <a data-tag="F01AE1E4" href="../../tag/944BC14A8246/#sgpt-F01AE1E4">1</a> and <a data-tag="5D591206" href="../../tag/944BC14A8246/#sgpt-5D591206">2</a>. 
+    <p>
+<a data-tag="27BE49B7" href="../../tag/944BC14A8246/#sgpt-27BE49B7">4</a> Let $(T_ j)_ j$ be a sequence in $\mathcal{Z}_+(X,\alpha )_{&gt;0}$ converging to $T\in \mathcal{Z}_+(X,\alpha )_{&gt;0}$ with respect to $d_ S$. We want to show that $\Delta _{Y_{\bullet }}(T_ j)\xrightarrow {d_{\mathrm{Haus}}} \Delta _{Y_{\bullet }}(T)$. By <a data-tag="5D591206" href="../../tag/944BC14A8246/#sgpt-5D591206">2</a>, replacing the potential of each current by its $\mathcal I$-model representative does not change its partial Okounkov body. Thus we may represent the singularity types by model potentials of uniformly positive mass. Applying proposition <a data-tag="199F2D4D" href="../../tag/1DEED63B61B0/">16.9.17</a>, after passing to a subsequence we may sandwich the sequence between an increasing and a decreasing sequence converging to $T$ in $d_ S$. Hence it suffices to treat the monotone cases. 
+    <p>
+      In either monotone case, <a data-tag="5D591206" href="../../tag/944BC14A8246/#sgpt-5D591206">2</a> gives monotonicity of the convex bodies, while <a data-tag="F01AE1E4" href="../../tag/944BC14A8246/#sgpt-F01AE1E4">1</a> and corollary <a data-tag="3F64A169" href="../../tag/D47345F0C3C8/">16.9.13</a> give convergence of their volumes to $\operatorname{vol}\Delta _{Y_{\bullet }}(T)$. Every Hausdorff cluster point is therefore a monotone limit with the same volume as $\Delta _{Y_{\bullet }}(T)$, hence is equal to $\Delta _{Y_{\bullet }}(T)$. 
+    <p>
+<a data-tag="8CBEB24B" href="../../tag/944BC14A8246/#sgpt-8CBEB24B">5</a> We may assume that $T$ is $\mathcal{I}$-good. It follows from <a data-tag="27BE49B7" href="../../tag/944BC14A8246/#sgpt-27BE49B7">4</a> and theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">18.1.2</a> that we may reduce to the case where $T$ has analytic singularities. Our assertion follows from <a data-tag="88AB30EB" href="../../tag/F1FC05EF0A7C/">19.5.11</a>. 
+    <p>
+<a data-tag="1C25B22C" href="../../tag/944BC14A8246/#sgpt-1C25B22C">6</a> By (<a data-tag="DB6539D3" href="../../tag/C022629C737B/">19.5.25</a>), in order to prove (<a data-tag="81C408E3" href="../../tag/0696155A37C7/">19.5.28</a>), we may assume that $T$ and $S$ are both Kähler currents. Take quasi-equisingular approximations $(T_ j)_ j$ and $(S_ j)_ j$ of $T$ and $S$ respectively. By theorem <a data-tag="EFF6C6C5" href="../../tag/666CDCEAA1BE/">16.9.45</a>, $T_ j+S_ j\xrightarrow {d_ S} T+S$. By <a data-tag="27BE49B7" href="../../tag/944BC14A8246/#sgpt-27BE49B7">4</a>, we may therefore assume that $T$ and $S$ have analytic singularities. Replacing $X$ by a suitable modification, we may assume that $T$ and $S$ both have log singularities, say 
+    
+<div class="equation">
+  \[  T=[D]+R,\quad S=[D']+R',  \]
+</div>
+<p>
+       where $D$ and $D'$ are $\mathbb {Q}$-divisors on $X$ and $R$ and $R'$ are closed positive $(1,1)$-currents with bounded potentials. We need to show that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\{ R\} )+\Delta _{Y_{\bullet }}(\{ R'\} )+\nu _{Y_{\bullet }}([D])+\nu _{Y_{\bullet }}([D'])\subseteq \Delta _{Y_{\bullet }}(\{ R+R'\} )+\nu _{Y_{\bullet }}([D+D']).  \]
+</div>
+<p>
+       By proposition <a data-tag="8C1D8954" href="../../tag/EF8E476D98F4/">19.3.9</a>, this is equivalent to 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\{ R\} )+\Delta _{Y_{\bullet }}(\{ R'\} )\subseteq \Delta _{Y_{\bullet }}(\{ R+R'\} ),  \]
+</div>
+<p>
+       which is already proved in theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-F1020CA4">
+<p><a class="environment-identifier" href="../../tag/68273CCE4042/">Corollary <span data-tag="F1020CA4">19.5.29</span>.</a><span data-gerby-tag="F1020CA4"><code class="tag-id">68273CCE4042</code></span> Assume that $L$ is a big line bundle on $X$ and $h$ is a plurisubharmonic metric on $L$ with positive volume. Then </p>
+<div class="equation numbered-equation" id="sgpt-94872ED0"><span data-gerby-tag="94872ED0"><code class="tag-id">46A0E609C71E</code></span>
+<span class="equation-label"><a data-tag="94872ED0" href="../../tag/46A0E609C71E/">19.5.30</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(\mathrm{dd}^{\mathrm{c}}h)=\Delta _{Y_{\bullet }}(L,h). \end{equation}</div>
+</div>
+</article> Similarly, the definition (<a data-tag="10E5CE3B" href="../../tag/FD8FCE0E872C/">19.4.38</a>) is compatible with the definition in definition <a data-tag="E00CDA95" href="../../tag/75695A1B0FB3/">19.5.24</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $\mathrm{dd}^{\mathrm{c}}h$ has positive mass and is $\mathcal{I}$-good. By the $d_ S$-continuity of both sides of (<a data-tag="94872ED0" href="../../tag/46A0E609C71E/">19.5.30</a>) as proved in theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">19.5.26</a> and theorem <a data-tag="B3064668" href="../../tag/30EEF3A985B7/">19.4.30</a>, together with theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">18.1.2</a>, we may assume that $\mathrm{dd}^{\mathrm{c}}h$ has analytic singularities. 
+    <p>
+      In this case, using the birational invariance of both sides of (<a data-tag="94872ED0" href="../../tag/46A0E609C71E/">19.5.30</a>) as proved in proposition <a data-tag="CA7419B9" href="../../tag/CFE94018A80A/">19.4.32</a> and theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">19.5.26</a>, we may assume that $\mathrm{dd}^{\mathrm{c}}h$ has log singularities. Finally, after all these reductions, the equality (<a data-tag="94872ED0" href="../../tag/46A0E609C71E/">19.5.30</a>) holds by construction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-BB37B398D505" data-section-entries="082A647C2B55 0EE135D07034 14121F7F4FC5 49B696578E15 4DF707F26C95 627CFC8D8850 66140D1891EC 6C6AAB28398F 77CE629D93F6 A8051310CBAB BB37B398D505 E7520E0649C0 E7704026C99A EF3A66F3D2C0 FA3799E6A644"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/BB37B398D505/">19.5.31 The valuative characterization</a><code class="tag-id">BB37B398D505</code></h2><span data-gerby-tag="3EF6AB17"></span>
+<p>
+  In this section, we will characterize the partial Okounkov bodies using valuations of currents. 
+</p>
+
+<article class="env-lemma" id="sgpt-3363E17F">
+<p><a class="environment-identifier" href="../../tag/082A647C2B55/">Lemma <span data-tag="3363E17F">19.5.32</span>.</a><span data-gerby-tag="3363E17F"><code class="tag-id">082A647C2B55</code></span> Let $\beta $ be a big and nef class on $X$. Then </p>
+<div class="equation numbered-equation" id="sgpt-03BA4A82"><span data-gerby-tag="03BA4A82"><code class="tag-id">66140D1891EC</code></span>
+<span class="equation-label"><a data-tag="03BA4A82" href="../../tag/66140D1891EC/">19.5.33</a></span>
+<div>\begin{equation}  \left\{  y\in \mathbb {R}^{n-1}: (0,y)\in \Delta _{Y_{\bullet }}(\beta )\right\} =\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(\beta |_{Y_1}). \end{equation}</div>
+</div>
+</article> Here the right-hand side is understood in the sense of definition <a data-tag="E00CDA95" href="../../tag/75695A1B0FB3/">19.5.24</a> when $\beta |_{Y_1}$ is not big. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first reduce to the case where $\beta $ is a Kähler class. 
+    <p>
+      Take a Kähler class $\alpha $ on $X$. It follows from the volume formula in theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a> that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\beta )=\bigcap _{\epsilon &gt;0}\Delta _{Y_{\bullet }}(\beta +\epsilon \alpha ).  \]
+</div>
+<p>
+       Since $\beta |_{Y_1}$ is nef, hence pseudo-effective, definition <a data-tag="E00CDA95" href="../../tag/75695A1B0FB3/">19.5.24</a> similarly gives 
+    
+<div class="equation">
+  \[  \Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(\beta |_{Y_1})= \bigcap _{\epsilon &gt;0}\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(\beta |_{Y_1}+\epsilon \alpha |_{Y_1}).  \]
+</div>
+<p>
+       So it suffices to prove (<a data-tag="03BA4A82" href="../../tag/66140D1891EC/">19.5.33</a>) with $\beta +\epsilon \alpha $ in place of $\beta $. 
+    <p>
+<strong>Step 2</strong>. Assume that $\beta $ is a Kähler class. The $\supseteq $ direction in (<a data-tag="03BA4A82" href="../../tag/66140D1891EC/">19.5.33</a>) follows from the extension theorem theorem <a data-tag="E1C4789D" href="../../tag/2D610C4DD6AD/">5.18.18</a>. To prove the other direction, recall that by theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a>, for $t&gt;0$ small enough, we have 
+    
+<div class="equation">
+  \[  \left\{  y\in \mathbb {R}^{n-1}: (t,y)\in \Delta _{Y_{\bullet }}(\beta ) \right\} =\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}\left((\beta -t\{ Y_1\} )|_{Y_1}\right).  \]
+</div>
+<p>
+       As $t\to 0+$, the right-hand side converges to $\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(\beta |_{Y_1})$ with respect to the Hausdorff metric as a consequence of theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a>, while the left-hand side converges to 
+    
+<div class="equation">
+  \[  \left\{  y\in \mathbb {R}^{n-1}: (0,y)\in \Delta _{Y_{\bullet }}(\beta ) \right\}   \]
+</div>
+<p>
+       by <a data-tag="68EC4013" href="../../tag/806DFD35CCE5/">19.7.9</a>. We conclude our assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-15033714">
+<p><a class="environment-identifier" href="../../tag/627CFC8D8850/">Lemma <span data-tag="15033714">19.5.34</span>.</a><span data-gerby-tag="15033714"><code class="tag-id">627CFC8D8850</code></span> Let $T\in \mathcal{Z}_+(X,\alpha )$ be a Kähler current. Assume that $\nu (T,Y_1)=0$. Then </p>
+<div class="equation numbered-equation" id="sgpt-3C1D4F76"><span data-gerby-tag="3C1D4F76"><code class="tag-id">77CE629D93F6</code></span>
+<span class="equation-label"><a data-tag="3C1D4F76" href="../../tag/77CE629D93F6/">19.5.35</a></span>
+<div>\begin{equation}  \left\{  y\in \mathbb {R}^{n-1}: (0,y)\in \Delta _{Y_{\bullet }}(T)\right\} =\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}\left(\operatorname{Tr}^{\alpha |_{Y_1}}_{Y_1}(T)\right). \end{equation}</div>
+</div>
+<p>More generally, if $T\in \mathcal{Z}_+(X,\alpha )$ and $\nu (T,Y_1)=0$, suppose in addition that $\operatorname{Tr}^{\alpha |_{Y_1}}_{Y_1}(T)$ is defined, then (<a data-tag="3C1D4F76" href="../../tag/77CE629D93F6/">19.5.35</a>) still holds. </p>
+</article> See <a data-tag="834A0B6C" href="../../tag/F5CDFD8547BC/">20.2.11</a> for the definition of $\operatorname{Tr}^{\alpha |_{Y_1}}_{Y_1}(T)$. Note that $\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}\left(\operatorname{Tr}^{\alpha |_{Y_1}}_{Y_1}(T)\right)$ is independent of the choice of the representative $\operatorname{Tr}^{\alpha |_{Y_1}}_{Y_1}(T)$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\omega $ be a Kähler form on $X$. The last assertion follows from the first by perturbing $\theta $ to $\theta +\epsilon \omega $. 
+    <p>
+<strong>Step 1</strong>. We first handle the case where $T$ has analytic singularities. Let $\pi \colon Z\rightarrow X$ be a modification such that 
+    
+<ol>
+<li class="custom-item" id="sgpt-C835C8AF"><span data-gerby-tag="C835C8AF"><code class="tag-id">90254E23C2B2</code></span><p>
+ $Y_{\bullet }$ admits a lifting $(W_{\bullet },g)$, and 
+</p>
+</li><li class="custom-item" id="sgpt-6000B7CC"><span data-gerby-tag="6000B7CC"><code class="tag-id">CA8486D14D75</code></span><p>
+ $\pi ^*T=[D]+R$, where $D$ is an effective $\mathbb {Q}$-divisor on $Z$ and $R$ is a closed positive $(1,1)$-current with bounded potential. 
+</p>
+</li>
+</ol>
+<p>
+       This is possible by theorem <a data-tag="9A6A24C1" href="../../tag/D6BDA051B7C1/">5.18.8</a> and theorem <a data-tag="44C3D868" href="../../tag/B00AB5301F7A/">19.3.19</a>. 
+    <p>
+      By <a data-tag="FCC832C0" href="../../tag/DDEF49346283/">20.2.24</a>, 
+    
+<div class="equation">
+  \[  \Pi ^*\operatorname{Tr}_{Y_1}(T)\sim _ P \operatorname{Tr}_{W_1}(\pi ^*T),  \]
+</div>
+<p>
+       where $\Pi \colon W_1\rightarrow Y_1$ is the restriction of $\pi $. It follows from theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">19.5.26</a> that 
+    
+<div class="equation">
+  \[  \begin{split}  \Delta _{W_1\supseteq \cdots \supseteq W_ n}(\operatorname{Tr}_{W_1}(\pi ^*T))=&amp;  \Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(\operatorname{Tr}_{Y_1}(T))\operatorname{cor}(Y_1\supseteq \cdots \supseteq Y_ n,\Pi ),\\  \Delta _{W_{\bullet }}(\pi ^*T)=&amp; \Delta _{Y_{\bullet }}(T)g. \end{split}  \]
+</div>
+<p>
+       Taking (<a data-tag="827D77FC" href="../../tag/63511F34173E/">19.3.13</a>) into account, we find that it suffices to show that 
+    
+<div class="equation">
+  \[  \left\{ y\in \mathbb {R}^{n-1}:(0,y)\in \Delta _{W_{\bullet }}(\pi ^*T) \right\} =\Delta _{W_1\supseteq \cdots \supseteq W_ n}(\operatorname{Tr}_{W_1}(\pi ^*T)).  \]
+</div>
+<p>
+       We may assume that $\pi $ is the identity map. Since $\nu (T,Y_1)=0$, the divisor $D$ does not contain $Y_1$. Hence we have 
+    
+<div class="equation">
+  \[  T=[D]+R,\quad T|_{Y_1}=[D]|_{Y_1}+R|_{Y_1}.  \]
+</div>
+<p>
+       Note that $[D]|_{Y_1}$ is the current of integration along an effective $\mathbb {Q}$-divisor on $Y_1$. 
+    <p>
+      In particular, 
+    
+<div class="equation">
+  \[  \begin{split}  \Delta _{Y_{\bullet }}(T)=&amp;  \Delta _{Y_{\bullet }}(\{ R\} )+\nu _{Y_{\bullet }}([D]),\\  \Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(T|_{Y_1})=&amp;  \Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(\{ R\} |_{Y_1})+\nu _{Y_1\supseteq \cdots \supseteq Y_ n}([D]|_{Y_1}). \end{split}  \]
+</div>
+<p>
+       The first coordinate of $\nu _{Y_{\bullet }}([D])$ is $0$, and the remaining coordinates are exactly $\nu _{Y_1\supseteq \cdots \supseteq Y_ n}([D]|_{Y_1})$. Thus it suffices to show that 
+    
+<div class="equation">
+  \[  \left\{ y\in \mathbb {R}^{n-1}: (0,y)\in \Delta _{Y_{\bullet }}(\{ R\} )\right\} =\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(\{ R\} |_{Y_1}).  \]
+</div>
+<p>
+       Since $R$ has bounded potential, its cohomology class is nef; it is big because $T$ is a Kähler current. Thus the last identity is exactly <a data-tag="3363E17F" href="../../tag/082A647C2B55/">19.5.32</a>. 
+    <p>
+<strong>Step 2</strong>. Next we consider the case where $T$ is a Kähler current. Take a quasi-equisingular approximation $(T_ j)_ j$ of $T$ in $\mathcal{Z}_+(X,\alpha )$. From Step 1, we know that for large $j\geq 1$, 
+    
+<div class="equation">
+  \[  \left\{ y\in \mathbb {R}^{n-1}: (0,y)\in \Delta _{Y_{\bullet }}(T_ j)\right\} =\Delta _{Y_1\supseteq \cdots \supseteq Y_ n}(\operatorname{Tr}_{Y_1}(T_ j)).  \]
+</div>
+<p>
+       Letting $j\to \infty $ and applying theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">19.5.26</a> and proposition <a data-tag="762F23ED" href="../../tag/58627BFD2457/">20.2.22</a>, we conclude (<a data-tag="3C1D4F76" href="../../tag/77CE629D93F6/">19.5.35</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-remark" id="sgpt-CD17D6AC">
+<p><a class="environment-identifier" href="../../tag/49B696578E15/">Remark <span data-tag="CD17D6AC">19.5.36</span>.</a><span data-gerby-tag="CD17D6AC"><code class="tag-id">49B696578E15</code></span> More generally, the same argument shows the following result: Let $k=0,\ldots ,n$ and $T\in \mathcal{Z}_+(X,\alpha )$ such that $\nu (T,Y_ k)=0$. Assume that $\operatorname{Tr}^{\alpha |_{Y_ k}}_{Y_ k}(T)$ is defined. Then </p>
+<div class="equation numbered-equation">
+<span class="equation-label">10.100</span>
+<div>\begin{equation}  \left\{  y\in \mathbb {R}^{n-k}: (0,\ldots ,0,y)\in \Delta _{Y_{\bullet }}(T)\right\} =\Delta _{Y_ k\supseteq \cdots \supseteq Y_ n}\left(\operatorname{Tr}^{\alpha |_{Y_ k}}_{Y_ k}(T)\right). \end{equation}</div>
+</div>
+<p> Also note that this result extends <span class="cite">[<span class="postnote">Theorem 3.4</span>, <a href="../../references/#R20A2A46B5CEC">Jow10</a>]</span> and hence gives simpler proofs of <span class="cite">[<span class="postnote">Theorem A, Theorem B</span>, <a href="../../references/#R20A2A46B5CEC">Jow10</a>]</span>. </p>
+</article>
+
+
+<article class="env-theorem" id="sgpt-35AAD756">
+<p><a class="environment-identifier" href="../../tag/EF3A66F3D2C0/">Theorem <span data-tag="35AAD756">19.5.37</span>.</a><span data-gerby-tag="35AAD756"><code class="tag-id">EF3A66F3D2C0</code></span> Assume that $T\in \mathcal{Z}_+(X,\alpha )_{&gt;0}$ is a Kähler current. We have </p>
+<div class="equation numbered-equation" id="sgpt-44FB9DBB"><span data-gerby-tag="44FB9DBB"><code class="tag-id">6C6AAB28398F</code></span>
+<span class="equation-label"><a data-tag="44FB9DBB" href="../../tag/6C6AAB28398F/">19.5.38</a></span>
+<div>\begin{equation}  \min _{\mathrm{lex}} \Delta _{Y_{\bullet }}(T)=\nu _{Y_{\bullet }}(T). \end{equation}</div>
+</div>
+</article> Here the minimum is with respect to the lexicographic order. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We argue by induction on $n\geq 0$. The case $n=0$ is of course trivial. Let us assume that $n&gt;0$ and the case $n-1$ has been proved. 
+    <p>
+      We first observe that by theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">19.5.26</a>, 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T-\nu (T,Y_1)[Y_1])+(\nu (T,Y_1),0,\ldots ,0)\subseteq \Delta _{Y_{\bullet }}(T).  \]
+</div>
+<p>
+       By proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">18.1.27</a> <a data-tag="AEEB7447" href="../../tag/DF8A923E8F3E/#sgpt-AEEB7447">5</a>, removing the divisorial part does not change the volume. Comparing the volumes of both sides using theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">19.5.26</a> and proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">18.1.27</a>, we find that equality holds: 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T-\nu (T,Y_1)[Y_1])+(\nu (T,Y_1),0,\ldots ,0)=\Delta _{Y_{\bullet }}(T).  \]
+</div>
+<p>
+       Replacing $T$ by $T-\nu (T,Y_1)[Y_1]$, we may therefore assume that $\nu (T,Y_1)=0$. It suffices to apply <a data-tag="15033714" href="../../tag/627CFC8D8850/">19.5.34</a> and the inductive hypothesis. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-corollary" id="sgpt-2288AB74">
+<p><a class="environment-identifier" href="../../tag/0EE135D07034/">Corollary <span data-tag="2288AB74">19.5.39</span>.</a><span data-gerby-tag="2288AB74"><code class="tag-id">0EE135D07034</code></span> For any $T\in \mathcal{Z}_+(X,\alpha )$, </p>
+<div class="equation">
+  \[  \nu _{Y_{\bullet }}(T)\in \Delta _{Y_{\bullet }}(T)\subseteq \Delta _{Y_{\bullet }}(\alpha ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      When $T$ is a Kähler current, this follows from theorem <a data-tag="35AAD756" href="../../tag/EF3A66F3D2C0/">19.5.37</a>. 
+    <p>
+      In general, by definition, $\nu _{Y_{\bullet }}(T)=\nu _{Y_{\bullet }}(T+\omega )$ for any Kähler form $\omega $ on $X$. It follows that 
+    
+<div class="equation">
+  \[  \nu _{Y_{\bullet }}(T)\in \Delta _{Y_{\bullet }}(T+\omega )  \]
+</div>
+<p>
+       for any Kähler form $\omega $. It follows that $\nu _{Y_{\bullet }}(T)\in \Delta _{Y_{\bullet }}(T)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="sgpt-7D9FC961">
+<p><a class="environment-identifier" href="../../tag/14121F7F4FC5/">Theorem <span data-tag="7D9FC961">19.5.40</span>.</a><span data-gerby-tag="7D9FC961"><code class="tag-id">14121F7F4FC5</code></span> For any $T\in \mathcal{Z}_+(X,\alpha )_{&gt;0}$, </p>
+<div class="equation numbered-equation" id="sgpt-7056789A"><span data-gerby-tag="7056789A"><code class="tag-id">FA3799E6A644</code></span>
+<span class="equation-label"><a data-tag="7056789A" href="../../tag/FA3799E6A644/">19.5.41</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(T)=\overline{\left\{ \nu _{Y_{\bullet }}(S):S\in \mathcal{Z}_+(X,\alpha ),S\preceq _{\mathcal{I}}T\right\} }. \end{equation}</div>
+</div>
+ In particular,<aside class="source-footnote" id="sgpt-a0000092182"><span class="footnote-label">Note.</span> According to Ya Deng, the definition (<a data-tag="1DF8915A" href="../../tag/E7704026C99A/">19.5.42</a>) of $\Delta _{Y_{\bullet }}(\alpha )$ was what Demailly originally proposed for Deng's thesis. Due to the lack of the techniques of the trace operators, Deng had to work with analytic singularities instead. As a consequence, the transcendental analogue of proposition <a data-tag="CA7419B9" href="../../tag/CFE94018A80A/">19.4.32</a> is not obvious. This is one of the two main technical difficulties of theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a>. This problem also led me to finally develop the theory of trace operators, a notion that had been on the author's mind for several years.</aside> 
+<div class="equation numbered-equation" id="sgpt-1DF8915A"><span data-gerby-tag="1DF8915A"><code class="tag-id">E7704026C99A</code></span>
+<span class="equation-label"><a data-tag="1DF8915A" href="../../tag/E7704026C99A/">19.5.42</a></span>
+<div>\begin{equation}  \Delta _{Y_{\bullet }}(\alpha )=\overline{\left\{ \nu _{Y_{\bullet }}(S):S\in \mathcal{Z}_+(X,\alpha )\right\} }. \end{equation}</div>
+</div>
+</article>
+
+
+<article class="env-remark" id="sgpt-7DA0B927">
+<p><a class="environment-identifier" href="../../tag/A8051310CBAB/">Remark <span data-tag="7DA0B927">19.5.43</span>.</a><span data-gerby-tag="7DA0B927"><code class="tag-id">A8051310CBAB</code></span> We expect that the closure operation in (<a data-tag="7056789A" href="../../tag/FA3799E6A644/">19.5.41</a>) is not necessary. This problem is closely related to the Dirichlet problem of the trace operator, see Page  for more details. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The $\supseteq $ direction in (<a data-tag="7056789A" href="../../tag/FA3799E6A644/">19.5.41</a>) follows from corollary <a data-tag="2288AB74" href="../../tag/0EE135D07034/">19.5.39</a> together with theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">19.5.26</a> <a data-tag="5D591206" href="../../tag/944BC14A8246/#sgpt-5D591206">2</a>. 
+    <p>
+      Let us write 
+    
+<div class="equation">
+  \[  D_{Y_{\bullet }}(T)=\left\{ \nu _{Y_{\bullet }}(S):S\in \mathcal{Z}_+(X,\alpha ),S\preceq _{\mathcal{I}}T\right\}   \]
+</div>
+<p>
+       for the time being. 
+    <p>
+<strong>Step 1</strong>. Assume that $T$ has analytic singularities. We have 
+    
+<div class="equation">
+  \[  \begin{split}  \Delta _{Y_{\bullet }}(T)\supseteq &amp;  \overline{D_{Y_{\bullet }}(T)}\\  \supseteq &amp;  \overline{\left\{ \nu _{Y_{\bullet }}(S):\mathcal{Z}_+(X,\alpha )\ni S \textup{ has gentle analytic singularities}, S\preceq T\right\} }. \end{split}  \]
+</div>
+<p>
+       It follows easily from theorem <a data-tag="CE657E18" href="../../tag/E839B4A35A2A/">19.5.4</a> that the volume of the right-hand side is equal to the volume of $\Delta _{Y_{\bullet }}(T)$, so (<a data-tag="7056789A" href="../../tag/FA3799E6A644/">19.5.41</a>) holds. 
+    <p>
+<strong>Step 2</strong>. Assume that $T$ is a Kähler current. Take a quasi-equisingular approximation $T_ j\in \mathcal{Z}_+(X,\alpha )$ of $T$. Next we use the language of psh functions. Let $\varphi _ j,\varphi \in \mathrm{PSH}(X,\theta )$ be the potentials corresponding to $T_ j,T$ for each $j\geq 1$. 
+    <p>
+      Fix an integer $N&gt;0$. For large enough $j\geq 1$, we can find $\psi _ j\in \mathrm{PSH}(X,\theta )_{&gt;0}$ such that 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]_{\mathcal{I}}\geq (1-N^{-1})\varphi _ j+N^{-1} \psi _ j.  \]
+</div>
+<p>
+       The existence of $\psi _ j$ follows from <a data-tag="8560C5E9" href="../../tag/1CC7CDBE65A9/">13.13.30</a>. It follows that 
+    
+<div class="equation">
+  \[  \begin{aligned}  D_{Y_{\bullet }}(T)\supseteq &amp;  D_{Y_{\bullet }}\left(\theta +\mathrm{dd}^{\mathrm{c}}\left((1-N^{-1})\varphi _ j+N^{-1} \psi _ j\right)\right)\\  \supseteq &amp;  (1-N^{-1})D_{Y_{\bullet }}(T_ j)+N^{-1} D_{Y_{\bullet }}(\theta +\mathrm{dd}^{\mathrm{c}}\psi _ j). \end{aligned}  \]
+</div>
+<p>
+       We claim that 
+    
+<div class="equation">
+  \[  \overline{D_{Y_{\bullet }}(T)}\supseteq \bigcap _{j=1}^{\infty }\overline{D_{Y_{\bullet }}(T_ j)}.  \]
+</div>
+<p>
+       Let $x$ be a point in the right-hand side. Fix $N&gt;0$. For all large $j$, choose 
+    
+<div class="equation">
+  \[  y_ j\in D_{Y_{\bullet }}(T_ j),\quad z_ j\in D_{Y_{\bullet }}(\theta +\mathrm{dd}^{\mathrm{c}}\psi _ j)  \]
+</div>
+<p>
+       with $y_ j\to x$. By the preceding inclusion, 
+    
+<div class="equation">
+  \[  (1-N^{-1})y_ j+N^{-1}z_ j\in D_{Y_{\bullet }}(T).  \]
+</div>
+<p>
+       The points $x,y_ j,z_ j$ all lie in the compact set $\Delta _{Y_{\bullet }}(\alpha )$ after taking closures, by corollary <a data-tag="2288AB74" href="../../tag/0EE135D07034/">19.5.39</a>. Hence, letting $j\to \infty $ and then $N\to \infty $, we get $x\in \overline{D_{Y_{\bullet }}(T)}$, proving the claim. Therefore, by Step 1, we conclude that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)=\bigcap _{j=1}^{\infty }\overline{\Delta _{Y_{\bullet }}(T_ j)}=\bigcap _{j=1}^{\infty }\overline{D_{Y_{\bullet }}(T_ j)}\subseteq \overline{D_{Y_{\bullet }}(T)}.  \]
+</div>
+<p>
+       The reverse direction is already known. 
+    <p>
+<strong>Step 3</strong>. Finally, consider the general case. Take a Kähler current $T'\in \mathcal{Z}_+(X,\alpha )$ more singular than $T$ (the existence of which is given by <a data-tag="44EC382B" href="../../tag/3AA4A74713F0/">13.13.47</a>). For each $\epsilon \in (0,1)$, we know that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}((1-\epsilon )T+\epsilon T')=\overline{D_{Y_{\bullet }}((1-\epsilon )T+\epsilon T')} \subseteq \overline{D_{Y_{\bullet }}(T)}.  \]
+</div>
+<p>
+       Letting $\epsilon \to 0+$ and using the $d_ S$-continuity in theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">19.5.26</a> <a data-tag="27BE49B7" href="../../tag/944BC14A8246/#sgpt-27BE49B7">4</a>, we find that 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)\subseteq \overline{D_{Y_{\bullet }}(T)}.  \]
+</div>
+<p>
+       As the other inclusion is already known, we conclude. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-59237206">
+<p><a class="environment-identifier" href="../../tag/E7520E0649C0/">Corollary <span data-tag="59237206">19.5.44</span>.</a><span data-gerby-tag="59237206"><code class="tag-id">E7520E0649C0</code></span> Assume that $T\in \mathcal{Z}_+(X,\alpha )_{&gt;0}$. We have </p>
+<div class="equation numbered-equation" id="sgpt-8EE39DFA"><span data-gerby-tag="8EE39DFA"><code class="tag-id">4DF707F26C95</code></span>
+<span class="equation-label"><a data-tag="8EE39DFA" href="../../tag/4DF707F26C95/">19.5.45</a></span>
+<div>\begin{equation}  \min _{\mathrm{lex}} \Delta _{Y_{\bullet }}(T)=\nu _{Y_{\bullet }}(T). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="7D9FC961" href="../../tag/14121F7F4FC5/">19.5.40</a>, it is clear that 
+    
+<div class="equation">
+  \[  \min _{\mathrm{lex}} \Delta _{Y_{\bullet }}(T)\leq _{\mathrm{lex}}\nu _{Y_{\bullet }}(T).  \]
+</div>
+<p>
+       On the other hand, we clearly have 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(T)\subseteq \Delta _{Y_{\bullet }}(T+\omega )  \]
+</div>
+<p>
+       for any Kähler form $\omega $ on $X$. It follows that 
+    
+<div class="equation">
+  \[  \min _{\mathrm{lex}} \Delta _{Y_{\bullet }}(T)\geq _{\mathrm{lex}} \min _{\mathrm{lex}} \Delta _{Y_{\bullet }}(T+\omega ).  \]
+</div>
+<p>
+       By theorem <a data-tag="35AAD756" href="../../tag/EF3A66F3D2C0/">19.5.37</a>, the right-hand side is just $\nu _{Y_{\bullet }}(T+\omega )=\nu _{Y_{\bullet }}(T)$. We conclude the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/3C67C9063373/"><span>← Previous</span><small>Equation 19.4.57</small></a><a class="pager-next" rel="next" href="../../tag/AB52CD73DBE6/"><span>Next →</span><small>19.5.1 The traditional approach to the Okounkov body problem</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies,
+  author = {{Gerby contributors}},
+  title = {19.5 Transcendental partial Okounkov bodies},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/the-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fthe-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fthe-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies%2F&amp;body=Page%3A+%5B19.5+Transcendental+partial+Okounkov+bodies%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fthe-theory-of-okounkov-bodies--transcendental-partial-okounkov-bodies%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+f74c481605a51e47b1cbbeba7cb07a000e325ff6+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

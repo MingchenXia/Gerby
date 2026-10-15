@@ -1,0 +1,767 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/"><title>15.19 Degenerating semipositive backgrounds · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">Chapter 15: Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/" aria-current="page">Section 15.19: Degenerating semipositive backgrounds</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/equations-with-prescribed-singularities/"><span>15.1</span> Equations with prescribed singularities</a><code class="tag-id">F9AE3BF05078</code></li><li><a href="../../sections/equations-with-prescribed-singularities--domination-with-a-smaller-background/"><span>15.2</span> Domination with a smaller background</a><code class="tag-id">2ACF52860663</code></li><li><a href="../../sections/equations-with-prescribed-singularities--bounded-equations-in-a-semipositive-big-background/"><span>15.3</span> Bounded equations in a semipositive big background</a><code class="tag-id">9F0629AA9014</code></li><li><a href="../../sections/equations-with-prescribed-singularities--a-quantitative-stability-estimate/"><span>15.4</span> A quantitative stability estimate</a><code class="tag-id">B4FB50E0C9DE</code></li><li><a href="../../sections/equations-with-prescribed-singularities--holder-continuity-from-bounded-stability/"><span>15.5</span> Hölder continuity from bounded stability</a><code class="tag-id">BDF9BACE965B</code></li><li><a href="../../sections/equations-with-prescribed-singularities--local-continuity-in-a-semipositive-big-background/"><span>15.6</span> Local continuity in a semipositive big background</a><code class="tag-id">FF4EC5CCEA0B</code></li><li><a href="../../sections/equations-with-prescribed-singularities--homogeneous-replacement-on-a-coordinate-ball/"><span>15.7</span> Homogeneous replacement on a coordinate ball</a><code class="tag-id">35C79FB822EF</code></li><li><a href="../../sections/equations-with-prescribed-singularities--contact-support-in-a-big-background/"><span>15.8</span> Contact support in a big background</a><code class="tag-id">ACC753805E21</code></li><li><a href="../../sections/equations-with-prescribed-singularities--compactness-with-a-common-lower-barrier/"><span>15.9</span> Compactness with a common lower barrier</a><code class="tag-id">D6040BDF0454</code></li><li><a href="../../sections/equations-with-prescribed-singularities--a-bounded-subsolution-theorem/"><span>15.10</span> A bounded subsolution theorem</a><code class="tag-id">898B7B54B3D0</code></li><li><a href="../../sections/equations-with-prescribed-singularities--adding-weighted-monge-ampere-measures/"><span>15.11</span> Adding weighted Monge–Ampère measures</a><code class="tag-id">7BAAE1AD9F47</code></li><li><a href="../../sections/equations-with-prescribed-singularities--equations-in-a-prescribed-ordinary-type/"><span>15.12</span> Equations in a prescribed ordinary type</a><code class="tag-id">C6737BA51F0E</code></li><li><a href="../../sections/equations-with-prescribed-singularities--comparison-above-a-strict-singular-barrier/"><span>15.13</span> Comparison above a strict singular barrier</a><code class="tag-id">1FCAFCAE9C0E</code></li><li><a href="../../sections/equations-with-prescribed-singularities--subsolutions-and-the-gauduchon-trace/"><span>15.14</span> Subsolutions and the Gauduchon trace</a><code class="tag-id">8C0AAADFFCFC</code></li><li><a href="../../sections/equations-with-prescribed-singularities--stability-above-a-strict-barrier/"><span>15.15</span> Stability above a strict barrier</a><code class="tag-id">A7C7BC261679</code></li><li><a href="../../sections/equations-with-prescribed-singularities--minimal-singularities-in-an-arbitrary-big-background/"><span>15.16</span> Minimal singularities in an arbitrary big background</a><code class="tag-id">5961B4E1812C</code></li><li><a href="../../sections/equations-with-prescribed-singularities--local-holder-continuity-in-a-big-background/"><span>15.17</span> Local Hölder continuity in a big background</a><code class="tag-id">1A5D83E43B0A</code></li><li><a href="../../sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/"><span>15.18</span> Interior smoothness on the regular locus</a><code class="tag-id">899B82DE5E84</code></li><li><a href="../../sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/" aria-current="page"><span>15.19</span> Degenerating semipositive backgrounds</a><code class="tag-id">28A495F29AAD</code></li><li><a href="../../sections/equations-with-prescribed-singularities--symmetry-and-the-selected-projective-limit/"><span>15.20</span> Symmetry and the selected projective limit</a><code class="tag-id">457A6A4C41F4</code></li><li><a href="../../sections/equations-with-prescribed-singularities--local-density-and-boundary-control/"><span>15.21</span> Local density and boundary control</a><code class="tag-id">D0D15F32906B</code></li><li><a href="../../sections/equations-with-prescribed-singularities--equations-with-resolved-logarithmic-poles/"><span>15.22</span> Equations with resolved logarithmic poles</a><code class="tag-id">3A4DA254E4F4</code></li><li><a href="../../sections/equations-with-prescribed-singularities--minimal-singularities-on-blowups/"><span>15.23</span> Minimal singularities on blowups</a><code class="tag-id">3F1CADE9F6C1</code></li><li><a href="../../sections/equations-with-prescribed-singularities--representing-measures-in-an-ordinary-type/"><span>15.24</span> Representing measures in an ordinary type</a><code class="tag-id">2BB76C1E3909</code></li><li><a href="../../sections/equations-with-prescribed-singularities--the-homogeneous-equation-with-a-holder-reference/"><span>15.25</span> The homogeneous equation with a Hölder reference</a><code class="tag-id">679A3E78F3EA</code></li><li><a href="../../sections/equations-with-prescribed-singularities--singular-measures-on-shrinking-spheres/"><span>15.26</span> Singular measures on shrinking spheres</a><code class="tag-id">4BA6AFA61CAA</code></li><li><a href="../../sections/equations-with-prescribed-singularities--lower-mass-and-solvability-for-all-measures/"><span>15.27</span> Lower mass and solvability for all measures</a><code class="tag-id">93CEF832AEA2</code></li><li><a href="../../sections/equations-with-prescribed-singularities--subsolutions-for-an-individual-density/"><span>15.28</span> Subsolutions for an individual density</a><code class="tag-id">72CDE5ADD348</code></li><li><a href="../../sections/equations-with-prescribed-singularities--gauduchon-tests-for-integrable-densities/"><span>15.29</span> Gauduchon tests for integrable densities</a><code class="tag-id">7B44C03D318B</code></li><li><a href="../../sections/equations-with-prescribed-singularities--exact-equations-on-products-with-zero-lower-mass/"><span>15.30</span> Exact equations on products with zero lower mass</a><code class="tag-id">FC44870E2A2C</code></li><li><a href="../../sections/equations-with-prescribed-singularities--singular-measures-on-products-with-a-curve/"><span>15.31</span> Singular measures on products with a curve</a><code class="tag-id">E01ACE366291</code></li><li><a href="../../sections/equations-with-prescribed-singularities--stability-of-the-subsolution-threshold/"><span>15.32</span> Stability of the subsolution threshold</a><code class="tag-id">06284CD8A9D4</code></li><li><a href="../../sections/equations-with-prescribed-singularities--power-capacity-bounds-and-threshold-equations/"><span>15.33</span> Power capacity bounds and threshold equations</a><code class="tag-id">119B0BE69A7D</code></li><li><a href="../../sections/equations-with-prescribed-singularities--limits-of-exponential-equations/"><span>15.34</span> Limits of exponential equations</a><code class="tag-id">B63DDE7640A4</code></li><li><a href="../../sections/equations-with-prescribed-singularities--exponential-equations-for-an-individual-density/"><span>15.35</span> Exponential equations for an individual density</a><code class="tag-id">C3635E28D6B1</code></li><li><a href="../../sections/equations-with-prescribed-singularities--radial-selection-for-integrable-densities/"><span>15.36</span> Radial selection for integrable densities</a><code class="tag-id">C10FB3AB7407</code></li><li><a href="../../sections/relative-equations-under-positive-lower-mass/"><span>15.37</span> Relative equations under positive lower mass</a><code class="tag-id">31A655BFE398</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/AD8A02A6088D/"><span>← Previous</span><small>Corollary 15.18.50</small></a><a class="pager-next" rel="next" href="../../tag/C397B905A723/"><span>Next →</span><small>Equation 15.19.1</small></a></nav><h1>15.19 Degenerating semipositive backgrounds<code class="tag-id">28A495F29AAD</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-28A495F29AAD" data-section-entries="279BD7D5BB42 28A495F29AAD 2D587C24F80B 4A0FCD6D9FCD 8C6C5AF468B2 C390030D09AE C397B905A723 E00C93820852"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="77DC0014"><code class="tag-id">28A495F29AAD</code></span>
+<p>
+Adding a small multiple of a Hermitian form makes a semipositive background strictly positive, and the smooth theory then solves the normalized equation with a smooth positive density. We study these smooth solutions as the added multiple tends to zero. Bounded subsolutions give uniform bounds for the potentials and the normalizing constants, and a strict analytic barrier gives uniform bounds for the trace on compact sets away from its poles. Smooth local convergence then identifies the limiting equation, without any global continuity property of the Monge–Ampère operator. 
+</p>
+<p>
+The main example is a small resolution of a threefold with nodes (<a data-tag="A4F79999" href="../../tag/8C7192C73C68/">15.19.8</a>). There the background is the pullback of a positive form from the singular threefold, and it degenerates exactly along the exceptional curves. When this background is closed, the limit is unique and the whole family converges smoothly away from the exceptional curves. Convergence of the associated metric spaces then reduces to controlling the diameters of neighborhoods of these curves, in the limiting metric and in the approximating metrics (<a data-tag="19D88954" href="../../tag/F6016CBBF3C5/">15.19.18</a>). 
+</p>
+<p>
+Throughout this section $n\geq 2$. The background $\theta $, the barrier $\rho $ and its pole set $Z$ are new data, independent of those fixed in section <a data-tag="C738AEA7" href="../../tag/1FCAFCAE9C0E/">15.13</a>. Let $\theta \geq 0$ be a smooth real $(1,1)$-form, and fix a Hermitian form $\eta $ and a smooth positive probability volume form $\mu $ on $X$. Suppose that there are $\delta &gt;0$ and $\rho \in \mathrm{PSH}(X,\theta )$ with analytic singularities such that 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-662BF6BB"><span data-gerby-tag="662BF6BB"><code class="tag-id">C397B905A723</code></span>
+<span class="equation-label"><a data-tag="662BF6BB" href="../../tag/C397B905A723/">15.19.1</a></span>
+<div>\begin{equation}  \theta +\mathrm{dd}^{\mathrm{c}}\rho \geq \delta \eta , \qquad \sup _ X\rho =0. \end{equation}</div>
+</div>
+<p>
+ Write $Z=\{ \rho =-\infty \} $ and assume that $\rho $ is smooth on $X\setminus Z$. For $0&lt;\varepsilon \leq 1$, the form $\theta +\varepsilon \eta $ is Hermitian, and theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">14.2.1</a> gives $u_\varepsilon \in C^\infty (X)$ and $c_\varepsilon &gt;0$ with 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-7C49846E"><span data-gerby-tag="7C49846E"><code class="tag-id">8C6C5AF468B2</code></span>
+<span class="equation-label"><a data-tag="7C49846E" href="../../tag/8C6C5AF468B2/">15.19.2</a></span>
+<div>\begin{equation}  \omega _\varepsilon :=\theta +\varepsilon \eta +\mathrm{dd}^{\mathrm{c}}u_\varepsilon &gt;0, \qquad \omega _\varepsilon ^ n=c_\varepsilon \mu , \qquad \sup _ Xu_\varepsilon =0. \end{equation}</div>
+</div>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-651F1847">
+<p><a class="environment-identifier" href="../../tag/4A0FCD6D9FCD/">Lemma <span data-tag="651F1847">15.19.3</span>.</a><span data-gerby-tag="651F1847"><code class="tag-id">4A0FCD6D9FCD</code></span> There are constants $b,B,C&gt;0$, independent of $\varepsilon $, such that </p>
+<div class="equation">
+  \[  b\leq c_\varepsilon \leq B, \qquad -C\leq u_\varepsilon \leq 0.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $\mu =f\, \mathrm{d}V$, where $f$ is smooth and positive. The strict barrier makes $\theta $ big. By lemma <a data-tag="09F238FA" href="../../tag/D716F01D638B/">15.3.1</a>, there is a bounded $s\in \mathrm{PSH}(X,\theta )$ with $-1\leq s\leq 0$ and $\mathrm{MA}_\theta (s)\geq b\mu $ for some fixed $b&gt;0$. If $c_\varepsilon &lt;b$, positivity gives 
+    
+<div class="equation">
+  \[  \mathrm{MA}_{\theta +\varepsilon \eta }(u_\varepsilon ) \leq (c_\varepsilon /b)\mathrm{MA}_{\theta +\varepsilon \eta }(s+A)  \]
+</div>
+<p>
+       for every constant $A$. Strict bounded domination would imply $u_\varepsilon \geq s+A$ for every $A$, which is absurd. Hence $c_\varepsilon \geq b$. 
+    <p>
+      For an upper bound, choose a fixed Gauduchon form $\gamma $. The arithmetic–geometric mean inequality and Stokes give 
+    
+<div class="equation">
+  \[  c_\varepsilon ^{1/n} \int _ X\left(\frac{\mu }{\gamma ^ n}\right)^{1/n}\gamma ^ n \leq \int _ X\omega _\varepsilon \wedge \gamma ^{n-1} =\int _ X(\theta +\varepsilon \eta )\wedge \gamma ^{n-1} \leq \int _ X(\theta +\eta )\wedge \gamma ^{n-1}.  \]
+</div>
+<p>
+       The first integral is fixed and positive, giving $c_\varepsilon \leq B$. 
+    <p>
+      For the lower bound on $u_\varepsilon $, note that all $u_\varepsilon $ are normalized $(\theta +\eta )$-plurisubharmonic functions. Uniform exponential integrability, lemma <a data-tag="2C0C5ADC" href="../../tag/88C7A8DCE36E/">5.26.2</a>, gives $a&gt;0$ such that $g_\varepsilon =\mathrm{e}^{-a u_\varepsilon }f$ has a common $L^2$ bound. Also $g_\varepsilon \geq f$. By theorem <a data-tag="E540849F" href="../../tag/96A341EAF1D4/">15.3.3</a>, the solutions 
+    
+<div class="equation">
+  \[  w_\varepsilon \in \mathrm{PSH}(X,\theta ), \qquad \mathrm{MA}_\theta (w_\varepsilon ) =\mathrm{e}^{a w_\varepsilon }g_\varepsilon \, \mathrm{d}V  \]
+</div>
+<p>
+       are uniformly bounded. Put $B_0=\max \{ 1,B\} $ and $z_\varepsilon =w_\varepsilon -a^{-1}\log B_0$. Then 
+    
+<div class="equation">
+  \[  \mathrm{MA}_{\theta +\varepsilon \eta }(z_\varepsilon ) \geq \mathrm{e}^{a z_\varepsilon }c_\varepsilon g_\varepsilon \, \mathrm{d}V, \qquad \mathrm{MA}_{\theta +\varepsilon \eta }(u_\varepsilon ) =\mathrm{e}^{a u_\varepsilon }c_\varepsilon g_\varepsilon \, \mathrm{d}V.  \]
+</div>
+<p>
+       The comparison principle for the exponential equation in the background $\theta +\varepsilon \eta $ gives $z_\varepsilon \leq u_\varepsilon \leq 0$, and $z_\varepsilon $ is bounded below uniformly in $\varepsilon $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+Since $\theta $ may degenerate along $Z$, we do not estimate the trace by local arguments. Instead we apply the maximum principle on all of $X\setminus Z$ to the logarithm of the trace minus a multiple of $u_\varepsilon -\rho $. This function tends to $-\infty $ at $Z$, so its maximum is attained off $Z$, where $\theta +\mathrm{dd}^{\mathrm{c}}\rho \geq \delta \eta $ provides positivity. An additional logarithmic term in the weight absorbs the torsion term without a gradient bound for $\rho $. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-66D07315">
+<p><a class="environment-identifier" href="../../tag/C390030D09AE/">Lemma <span data-tag="66D07315">15.19.4</span>.</a><span data-gerby-tag="66D07315"><code class="tag-id">C390030D09AE</code></span> For every compact $K\Subset X\setminus Z$, there is $C_ K&gt;1$, independent of $\varepsilon $, such that </p>
+<div class="equation">
+  \[  C_ K^{-1}\eta \leq \omega _\varepsilon \leq C_ K\eta \quad \hbox{on }K.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For the differentiated calculation write $U=u_\varepsilon /(2\pi )$ and $P=\rho /(2\pi )$, so that $\mathrm{dd}^{\mathrm{c}}u_\varepsilon =\mathrm{i}\partial \bar\partial U$. Put 
+    
+<div class="equation">
+  \[  S=\operatorname {tr}_\eta \omega _\varepsilon , \quad R=\operatorname {tr}_{\omega _\varepsilon }\eta , \quad D=\omega _\varepsilon ^ n/\eta ^ n.  \]
+</div>
+<p>
+       The previous lemma and the smooth positive density give $0&lt;d_1\leq D\leq d_2$. Choose a fixed $C_0$ so that $v=U-P+C_0&gt;1$, and set 
+    
+<div class="equation">
+  \[  H=\log S-\gamma (v),\qquad \gamma (v)=Av+\log v,  \]
+</div>
+<p>
+       where $A$ will be fixed below. For each $\varepsilon $, $S$ is smooth on $X$ and $v$ tends to infinity at $Z$. Thus $H\to -\infty $ there, and $H$ attains its maximum on $X\setminus Z$. We bound this maximum independently of $\varepsilon $. 
+    <p>
+      In local holomorphic coordinates, $h$ and $g$ denote the coefficient matrices of $\eta $ and $\omega _\varepsilon $ with respect to $\mathrm{i}\, \mathrm{d}z_ j\wedge \mathrm{d}\bar z_ k$, and commas denote coordinate derivatives, as in $h_{i\bar j,k}=\partial _ kh_{i\bar j}$ and $h_{i\bar j,\bar k}=\partial _{\bar k}h_{i\bar j}$. At a maximum point choose holomorphic coordinates in which 
+    
+<div class="equation">
+  \[  h_{i\bar j}=\delta _{ij},\qquad h_{i\bar i,k}=0, \qquad g_{i\bar j}=\lambda _ i\delta _{ij}.  \]
+</div>
+<p>
+       A linear change first normalizes $h$ and diagonalizes $g$. In these coordinates, the quadratic change $z_ i=w_ i+\frac12\sum _{j,k}a^ i_{jk}w_ jw_ k$, with symmetric coefficients chosen so that $a^ i_{ik}=-h_{i\bar i,k}$, then kills $h_{i\bar i,k}$. Its coefficients are uniformly bounded on a fixed finite cover. Write 
+    
+<div class="equation">
+  \[  \Delta _ g=\sum _ i\lambda _ i^{-1}\partial _ i\partial _{\bar i}, \quad T_{ij\bar k}=g_{j\bar k,i}-g_{i\bar k,j}, \quad E_ i=\sum _ jT_{ij\bar j}.  \]
+</div>
+<p>
+       The lowered torsion coefficients $T_{ij\bar k}$ and their first derivatives are uniformly bounded: the potential Hessian cancels, leaving only derivatives of $\theta +\varepsilon \eta $. 
+    <p>
+      Let $\mu _{\mathrm{loc}}$ be the density of $\mu $ with respect to the coordinate volume form. Differentiating $S=h^{k\bar\ell }g_{k\bar\ell }$ and the equation $\log \det g=\log c_\varepsilon +\log \mu _{\mathrm{loc}}$ gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-649682C2"><span data-gerby-tag="649682C2"><code class="tag-id">279BD7D5BB42</code></span>
+<span class="equation-label"><a data-tag="649682C2" href="../../tag/279BD7D5BB42/">15.19.5</a></span>
+<div>\begin{equation}  \Delta _ g S\geq Q-CRS-CR, \qquad Q=\sum _{i,j}\frac{|g_{i\bar j,j}|^2}{\lambda _ i\lambda _ j}. \end{equation}</div>
+</div>
+<p>
+       The second derivatives of $g$ contribute $\sum _{i,j,k}|g_{i\bar j,k}|^2/(\lambda _ i\lambda _ j)$, up to $-CR-C$, by commuting the potential derivatives. The first derivatives of $h$ contribute $-2\operatorname {Re}\sum _{i,j,k}\lambda _ i^{-1}h_{j\bar k,\bar i}g_{k\bar j,i}$. Its terms with $j=k$ vanish. Replace $g_{k\bar j,i}$ by $g_{i\bar j,k}+T_{ik\bar j}$ and apply weighted Cauchy–Schwarz. This consumes exactly the terms of the preceding square with $j\ne k$ and costs at most $CRS+CR$. The second derivatives of $h^{-1}$ cost $CRS$. Finally the fixed density term $-C$ is absorbed using $SR\geq n^2$. 
+    <p>
+      Since $\partial _ iS=\sum _ jg_{i\bar j,j}+E_ i$ at the maximum point, weighted Cauchy–Schwarz also gives 
+    
+<div class="equation">
+  \[  |\partial S|_ g^2 \leq SQ+2\operatorname {Re}\langle E,\partial S\rangle _ g.  \]
+</div>
+<p>
+       Indeed expand around $\partial S-E$ and discard the resulting term $-|E|_ g^2$. Combining with (<a data-tag="649682C2" href="../../tag/279BD7D5BB42/">15.19.5</a>) yields 
+    
+<div class="equation">
+  \[  \Delta _ g\log S\geq -CR-CR/S -\frac2S\operatorname {Re}\langle E,\partial \log S\rangle _ g.  \]
+</div>
+<p>
+       At the maximum, $\partial \log S=\gamma '\partial v$. Moreover (<a data-tag="662BF6BB" href="../../tag/C397B905A723/">15.19.1</a>) gives $\Delta _ gv\leq n-\delta R$, and $|E|_ g^2\leq CR$. Young's inequality with the positive coefficient $-\gamma ''=v^{-2}$ therefore gives 
+    
+<div class="equation">
+  \[  0\geq \Delta _ g H \geq (\delta \gamma '-C)R-n\gamma '-CR/S -\frac{CR}{S^2}\frac{\gamma '^2}{-\gamma ''}.  \]
+</div>
+<p>
+       Since $\gamma '=A+v^{-1}$, choose $A$ with $\delta A-C\geq 1$. The resulting inequality is 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-6D098582"><span data-gerby-tag="6D098582"><code class="tag-id">2D587C24F80B</code></span>
+<span class="equation-label"><a data-tag="6D098582" href="../../tag/2D587C24F80B/">15.19.6</a></span>
+<div>\begin{equation}  0\geq R-C\left(1+\frac RS+\frac{R(1+v^2)}{S^2}\right). \end{equation}</div>
+</div>
+<p>
+       All constants are independent of $\varepsilon $. 
+    <p>
+      If the maxima of $H$ were unbounded, then at a sequence of maximizing points 
+    
+<div class="equation">
+  \[  \log (S/v)=H+Av\longrightarrow +\infty .  \]
+</div>
+<p>
+       Thus $S/v\to \infty $ and $S\to \infty $. Inequality (<a data-tag="6D098582" href="../../tag/2D587C24F80B/">15.19.6</a>) would imply $R\leq 2C$ along this sequence. But 
+    
+<div class="equation">
+  \[  S=D\sum _ i\prod _{j\ne i}\lambda _ j^{-1} \leq nDR^{n-1}\leq nd_2(2C)^{n-1},  \]
+</div>
+<p>
+       a contradiction. Hence $H$ is uniformly bounded. On $K$, both $U$ and $P$ are bounded, so $S\leq C_ K$. The determinant lower bound then gives $\lambda _ i\geq d_1/C_ K^{n-1}$, completing the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-E8DA4BDF">
+<p><a class="environment-identifier" href="../../tag/E00C93820852/">Theorem <span data-tag="E8DA4BDF">15.19.7</span>.</a><span data-gerby-tag="E8DA4BDF"><code class="tag-id">E00C93820852</code></span> In the preceding setting, $c_\varepsilon $ decreases to a positive number $c_0$ as $\varepsilon \downarrow 0$. This number is independent of the perturbing Hermitian form $\eta $. For every sequence $\varepsilon _ j\downarrow 0$, a subsequence satisfies </p>
+<div class="equation">
+  \[  u_{\varepsilon _ j}\longrightarrow u_0 \quad \hbox{in }L^1(X)\cap C^\infty _{\mathrm{loc}}(X\setminus Z),  \]
+</div>
+<p> where $u_0\in \mathrm{PSH}(X,\theta )\cap L^\infty (X)$, $\sup _ Xu_0=0$, and </p>
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u_0)=c_0\mu .  \]
+</div>
+<p> If $\theta $ is closed, then $c_0=\int _ X\theta ^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Monotonicity of the constants.</em> Let $\alpha \leq \beta $ be Hermitian forms, and let $(u_\alpha ,c_\alpha )$ and $(u_\beta ,c_\beta )$ be the normalized smooth solutions of $(\alpha +\mathrm{dd}^{\mathrm{c}}u_\alpha )^ n=c_\alpha \mu $ and $(\beta +\mathrm{dd}^{\mathrm{c}}u_\beta )^ n=c_\beta \mu $. At a maximum point of $u_\alpha -u_\beta $, 
+    
+<div class="equation">
+  \[  \alpha +\mathrm{dd}^{\mathrm{c}}u_\alpha \leq \beta +\mathrm{dd}^{\mathrm{c}}u_\beta ,  \]
+</div>
+<p>
+       so $c_\alpha \leq c_\beta $. Hence $c_\varepsilon $ decreases as $\varepsilon \downarrow 0$, and lemma <a data-tag="651F1847" href="../../tag/4A0FCD6D9FCD/">15.19.3</a> gives $c_0\geq b&gt;0$. Write $c_\eta (\varepsilon )$ for the constant $c_\varepsilon $ defined with the perturbation $\eta $. For two perturbations with $M^{-1}\eta _1\leq \eta _2\leq M\eta _1$, the same comparison gives 
+    
+<div class="equation">
+  \[  c_{\eta _1}(\varepsilon /M) \leq c_{\eta _2}(\varepsilon ) \leq c_{\eta _1}(M\varepsilon ).  \]
+</div>
+<p>
+       Letting $\varepsilon \downarrow 0$ shows that $c_0$ does not depend on $\eta $. 
+    <p>
+<em>Local estimates.</em> The trace bound of lemma <a data-tag="66D07315" href="../../tag/C390030D09AE/">15.19.4</a> gives uniform ellipticity on compact subsets of $X\setminus Z$. The smooth coefficients of $\theta +\varepsilon \eta $ and all derivatives of $\log \mu _{\mathrm{loc}}$ have common bounds there. Interior complex Evans–Krylov and Schauder estimates, as in the ellipticity argument of proposition <a data-tag="00738DAE" href="../../tag/7DF8FE8A18D7/">15.18.5</a>, give uniform $C^ k$ bounds on smaller compact subsets for every $k$. 
+    <p>
+<em>Convergence and the limiting equation.</em> Normalized compactness in the fixed background $\theta +\eta $, followed by a diagonal extraction over an exhaustion of $X\setminus Z$, gives the stated convergence. The uniform bound $-C\leq u_\varepsilon \leq 0$ passes to the canonical limit, and normalized compactness preserves the supremum zero. Current convergence gives $\theta +\mathrm{dd}^{\mathrm{c}}u_0\geq 0$, and smooth convergence identifies the equation on $X\setminus Z$. The bounded non-pluripolar measure $\mathrm{MA}_\theta (u_0)$ and the smooth measure $\mu $ both vanish on the analytic set $Z$. This proves the equation on all of $X$. For closed $\theta $, bounded closed-background Stokes gives $\int _ X\mathrm{MA}_\theta (u_0)=\int _ X\theta ^ n$, proving the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Since $\theta \geq 0$ is nef, theorem <a data-tag="F03E2CAC" href="../../tag/9ECB2B21B601/">12.11.1</a> identifies $c_0$ with the Gauduchon variational volume $\mathcal V_\mu (\theta )$. The proof uses no bound on Monge–Ampère masses: all estimates concern the solutions for the fixed smooth density $\mu $. If the bounded normalized limiting equation has a unique solution, all cluster limits coincide, and the whole family converges in $L^1(X)\cap C^\infty _{\mathrm{loc}}(X\setminus Z)$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-8C7192C73C68" data-section-entries="5C6AB7F124F9 8C7192C73C68 A1536B3C6F39 AC4599B20814 C6428C798D5F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/8C7192C73C68/">15.19.8 Small resolutions of nodes</a><code class="tag-id">8C7192C73C68</code></h2><span data-gerby-tag="A4F79999"></span>
+<p>
+The pullback of a positive form from a singular space loses positivity along the contracted curves. In the standard small resolution of a node, the logarithm of the norm in the normal bundle of the exceptional curve provides the missing curvature along the curve. Cutting this logarithm off where the pullback is already positive gives a global strict barrier, so the results above apply. 
+</p>
+<p>
+Assume now $n=3$. Let $Y$ be a connected compact normal complex threefold, smooth outside a finite set $\Sigma $ of nodes. A node is locally the hypersurface 
+</p>
+<div class="equation">
+  \[  \{ x_1x_4-x_2x_3=0\} \subset \mathbb C^4.  \]
+</div>
+<p>
+ Let $\pi :X\to Y$ be a proper holomorphic map that is biholomorphic over $Y\setminus \Sigma $. Assume each local resolution is the standard small resolution: a neighborhood of its exceptional curve is identified with a neighborhood of the zero section of 
+</p>
+<div class="equation">
+  \[  \mathcal O_{\mathbb P^1}(-1)\oplus \mathcal O_{\mathbb P^1}(-1),  \]
+</div>
+<p>
+ and the contraction, in bundle coordinates $(z,y_1,y_2)$, is 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-2779723F"><span data-gerby-tag="2779723F"><code class="tag-id">5C6AB7F124F9</code></span>
+<span class="equation-label"><a data-tag="2779723F" href="../../tag/5C6AB7F124F9/">15.19.9</a></span>
+<div>\begin{equation}  \pi (z,y_1,y_2)=(y_1,zy_1,y_2,zy_2). \end{equation}</div>
+</div>
+<p>
+ Interchanging the two rulings gives the other standard model. Write $E=\pi ^{-1}(\Sigma )$; its components $E_ j$ are disjoint copies of $\mathbb P^1$. 
+</p>
+<p>
+Fix a positive form $\omega _ Y$ on $Y$ in the local embedding sense: in each ambient chart it is induced by a smooth strictly positive real $(1,1)$-form. Set $\theta =\pi ^*\omega _ Y$, and let $\eta $ be an arbitrary Hermitian form on $X$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B0605056">
+<p><a class="environment-identifier" href="../../tag/C6428C798D5F/">Lemma <span data-tag="B0605056">15.19.10</span>.</a><span data-gerby-tag="B0605056"><code class="tag-id">C6428C798D5F</code></span> The form $\theta $ is smooth and semipositive, positive on $X\setminus E$. There are $\delta &gt;0$ and $\rho \in \mathrm{PSH}(X,\theta )$ with analytic poles precisely on $E$, smooth on $X\setminus E$, such that </p>
+<div class="equation">
+  \[  \sup _ X\rho =0,\qquad \theta +\mathrm{dd}^{\mathrm{c}}\rho \geq \delta \eta .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Smoothness and positivity off $E$ follow from the pullback and the biholomorphism. In one standard model put 
+    
+<div class="equation">
+  \[  r^2=(1+|z|^2)(|y_1|^2+|y_2|^2),\qquad b=\mathrm{dd}^{\mathrm{c}}\log (1+|z|^2).  \]
+</div>
+<p>
+       The function $r^2$ is the sum of the squared absolute values of the four contracted coordinates. It is therefore globally defined on the bundle; $b$ is the pullback of the Fubini–Study form from its base. In the chart (<a data-tag="2779723F" href="../../tag/5C6AB7F124F9/">15.19.9</a>), 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-A8DCBBCE"><span data-gerby-tag="A8DCBBCE"><code class="tag-id">AC4599B20814</code></span>
+<span class="equation-label"><a data-tag="A8DCBBCE" href="../../tag/AC4599B20814/">15.19.11</a></span>
+<div>\begin{equation}  \mathrm{dd}^{\mathrm{c}}\log r^2 =b+\mathrm{dd}^{\mathrm{c}}\log (|y_1|^2+|y_2|^2)\geq b. \end{equation}</div>
+</div>
+<p>
+       This is an inequality of currents across the zero section as well as a smooth inequality off it. 
+    <p>
+      Ambient positivity gives $\theta \geq c\mathrm{dd}^{\mathrm{c}}r^2$ on a sufficiently small tube, for some $c&gt;0$. The smooth form $\mathrm{dd}^{\mathrm{c}}r^2+b$ is positive definite there. Indeed the contraction is an immersion off the zero section, and on that section $\mathrm{dd}^{\mathrm{c}}r^2$ is positive in both fiber directions while $b$ is positive along the base. Compactness of the zero section and a smaller closed tube give a uniform lower bound by a positive multiple of $\eta $. Thus, for every fixed $a&gt;0$, 
+    
+<div class="equation">
+  \[  \theta +a\mathrm{dd}^{\mathrm{c}}\log r^2 \geq c\mathrm{dd}^{\mathrm{c}}r^2+ab \geq \delta _ a\eta  \]
+</div>
+<p>
+       near the zero section, with $\delta _ a&gt;0$. 
+    <p>
+      Choose disjoint model tubes with nonempty complement and numbers $0&lt;t_1&lt;t_2&lt;1$ in each. Let $0\leq \chi \leq 1$ be a smooth cutoff of $r^2$, equal to one for $r^2\leq t_1$ and zero for $r^2\geq t_2$. Extend $\chi (r^2)\log r^2$ by zero outside its tube. On the compact transition annuli, the pullback $\theta $ is uniformly positive and the second derivatives of this cutoff potential are bounded. A sufficiently small positive rational $a$ therefore makes 
+    
+<div class="equation">
+  \[  \rho =a\sum _ j\chi _ j(r_ j^2)\log r_ j^2  \]
+</div>
+<p>
+       satisfy $\theta +\mathrm{dd}^{\mathrm{c}}\rho \geq \delta \eta $ there and near every $E_ j$. On the remaining compact set, $\rho =0$ and $\theta $ is positive, so decreasing $\delta $ proves the global inequality. Near $E_ j$ the function is $a\log (|y_1|^2+|y_2|^2)+a\log (1+|z|^2)$, hence has analytic singularities with rational coefficient and pole set exactly $E_ j$. It is smooth elsewhere and nonpositive; its zero extension gives supremum zero. If $E$ is empty, take $\rho =0$ and use the positivity of $\theta $ on compact $X$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-7932BABD">
+<p><a class="environment-identifier" href="../../tag/A1536B3C6F39/">Corollary <span data-tag="7932BABD">15.19.12</span>.</a><span data-gerby-tag="7932BABD"><code class="tag-id">A1536B3C6F39</code></span> For the preceding geometric data and every smooth positive probability volume form $\mu $ on $X$, the solutions of (<a data-tag="7C49846E" href="../../tag/8C6C5AF468B2/">15.19.2</a>) have the bounds and subsequential convergence of theorem <a data-tag="E8DA4BDF" href="../../tag/E00C93820852/">15.19.7</a>, with $Z=E$. Moreover, for each exceptional curve, </p>
+<div class="equation">
+  \[  \int _{E_ j}\omega _\varepsilon =\varepsilon \int _{E_ j}\eta \longrightarrow 0.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply the theorem using lemma <a data-tag="B0605056" href="../../tag/C6428C798D5F/">15.19.10</a>. Since $\pi $ contracts $E_ j$, the restriction of $\theta $ to it is zero. Stokes on the compact smooth curve gives $\int _{E_ j}\mathrm{dd}^{\mathrm{c}}u_\varepsilon =0$, proving the area identity. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+When $K_ X$ is torsion, the density can be chosen so that these metrics are Chern–Ricci flat. Recall that the Chern–Ricci form $\operatorname {Ric}^{\mathrm{Ch}}(\omega )$ of a Hermitian metric $\omega $ is $-\mathrm{i}\partial \bar\partial $ of the logarithm of the density of $\omega ^ n$ with respect to a coordinate volume form. Choose a nowhere vanishing holomorphic section of $K_ X^{\otimes m}$ for some $m\geq 1$. If its local expression is $f(\mathrm{d}z_1\wedge \mathrm{d}z_2\wedge \mathrm{d}z_3)^{\otimes m}$, use $|f|^{2/m}$ as the density relative to the standard coordinate volume form. The coordinate Jacobians cancel, so this defines a smooth positive volume form on $X$; normalize it to total mass one and take it as $\mu $. Its logarithmic density is pluriharmonic. Applying $-\mathrm{i}\partial \bar\partial \log $ to $\omega _\varepsilon ^3=c_\varepsilon \mu $ therefore gives $\operatorname {Ric}^{\mathrm{Ch}}(\omega _\varepsilon )=0$, and the same holds for the smooth limiting metric on $X\setminus E$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-DA6098A35E46" data-section-entries="9225EE111CC9 9FFE9C060E33 DA6098A35E46 DE65B074D310 E621E67CCA9A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/DA6098A35E46/">15.19.13 Measures and bounded potentials at a node</a><code class="tag-id">DA6098A35E46</code></h2><span data-gerby-tag="9A975458"></span>
+<p>
+We keep the standard small resolution $\pi :X\to Y$ and a smooth positive probability volume form $\mu $ on $X$. Write $\mu _ Y=\pi _*\mu $, and let $\nu _ Y$ be $\omega _ Y^3$ on the regular locus, extended by zero at the nodes. The pullback of the ambient volume form $\omega _ Y^3$ vanishes along the exceptional curves, and its order of vanishing determines the integrability of the density of $\mu _ Y$ with respect to $\nu _ Y$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-9FE8F662">
+<p><a class="environment-identifier" href="../../tag/9225EE111CC9/">Lemma <span data-tag="9FE8F662">15.19.14</span>.</a><span data-gerby-tag="9FE8F662"><code class="tag-id">9225EE111CC9</code></span> The measures $\mu _ Y$ and $\nu _ Y$ are finite and give the nodes zero mass. There is a positive density $F$ with $\mu _ Y=F\nu _ Y$. If $\Sigma $ is nonempty, then for $1\leq p&lt;\infty $, </p>
+<div class="equation">
+  \[  F\in L^ p(Y,\nu _ Y)\quad \Longleftrightarrow \quad p&lt;3.  \]
+</div>
+<p> At each node, $F$ is comparable to $r^{-2}$, where $r^2=\sum _{j=1}^4|x_ j|^2$ in the local model $\{ x_1x_4-x_2x_3=0\} $ of the node. There are $c,C,T_0&gt;0$ such that </p>
+<div class="equation">
+  \[  cT^{-3}\leq \nu _ Y(\{ F&gt;T\} )\leq CT^{-3} \qquad (T\geq T_0).  \]
+</div>
+<p> Thus the endpoint is weak $L^3$, with $F\notin L^3$. If $\Sigma $ is empty, $F$ is smooth and bounded. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The map is biholomorphic off $E$, and both smooth measures $\mu $ and $\theta ^3$ give $E$ zero mass. Hence $\nu _ Y=\pi _*\theta ^3$ is finite, $\mu _ Y$ has no node atom, and on the regular locus 
+    
+<div class="equation">
+  \[  F\circ \pi =\mu /\theta ^3.  \]
+</div>
+<p>
+       In the chart (<a data-tag="2779723F" href="../../tag/5C6AB7F124F9/">15.19.9</a>), put $h=1+|z|^2$ and $s=|y_1|^2+|y_2|^2$, so $r^2=hs$. The fiber block of the complex Hessian of $r^2$ is $h$ times the identity, and its Schur complement is $s/h$. Consequently 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-EBC9ADEE"><span data-gerby-tag="EBC9ADEE"><code class="tag-id">DE65B074D310</code></span>
+<span class="equation-label"><a data-tag="EBC9ADEE" href="../../tag/DE65B074D310/">15.19.15</a></span>
+<div>\begin{equation}  \det \bigl ((r^2)_{j\bar k}\bigr )=hs=r^2, \qquad \frac{(\mathrm{dd}^{\mathrm{c}}r^2)^3}{3!} =\frac{r^2}{\pi ^3}\, \mathrm{d}\lambda _6, \end{equation}</div>
+</div>
+<p>
+       where $\lambda _6$ is Euclidean volume in $(z,y_1,y_2)$. Ambient positivity bounds $\theta $ above and below by positive multiples of $\mathrm{dd}^{\mathrm{c}}r^2$ on a smaller tube. The smooth density of $\mu $ is bounded above and below there. On compact subcharts covering the base $\mathbb P^1$, it follows that 
+    
+<div class="equation">
+  \[  \theta ^3\asymp r^2\, \mathrm{d}\lambda _6, \qquad F\circ \pi \asymp r^{-2}.  \]
+</div>
+<p>
+       The other bundle chart gives the same comparison, since $r$ is the norm of the contracted coordinates. 
+    <p>
+      On each bounded base subchart, $r$ is comparable to the Euclidean radius $R$ in the two complex fiber variables. Up to fixed positive constants, the contribution to $\int F^ p\, \mathrm{d}\nu _ Y$ is therefore 
+    
+<div class="equation">
+  \[  \int _0^{R_0}R^{2-2p}R^3\, \mathrm{d}R =\int _0^{R_0}R^{5-2p}\, \mathrm{d}R.  \]
+</div>
+<p>
+       Two compact base subcharts give the upper estimate; a fixed open base subchart gives the lower estimate. The integral is finite precisely when $p&lt;3$, and diverges logarithmically at $p=3$. Away from the finitely many nodes the density is smooth. The same comparisons give $\nu _ Y(\{ r&lt;t\} )\asymp t^6$ near a node. The two bounds for $F$ sandwich $\{ F&gt;T\} $ between such tubes of radii comparable to $T^{-1/2}$, proving the endpoint estimate. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The descent theorem theorem <a data-tag="1FFF5E71" href="../../tag/F4C06D21AA94/">9.11.5</a> applies to the normal space $Y$ and its resolution $\pi $, also when the ambient background is not closed. Every bounded $\theta $-plurisubharmonic function is therefore constant on each exceptional curve and is the pullback of a unique bounded $\omega _ Y$-plurisubharmonic function. In particular each cluster limit has the form $u_0=\psi _0\circ \pi $, with $\sup _ Y\psi _0=0$. Let $\mathrm{MA}^{\mathrm{ext}}_{Y,\omega _ Y}$ be the extended Monge–Ampère measure on $Y$, defined in (<a data-tag="7EF17F88" href="../../tag/96D4B9F40B0A/">9.11.25</a>) as the pushforward of the extended measure of the pullback to a resolution; it does not depend on the resolution. Then 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-AC67925B"><span data-gerby-tag="AC67925B"><code class="tag-id">9FFE9C060E33</code></span>
+<span class="equation-label"><a data-tag="AC67925B" href="../../tag/9FFE9C060E33/">15.19.16</a></span>
+<div>\begin{equation}  \mathrm{MA}^{\mathrm{ext}}_{Y,\omega _ Y}(\psi _0) =c_0\mu _ Y=c_0F\nu _ Y. \end{equation}</div>
+</div>
+<p>
+ The equality holds also at the nodes, since both measures give them zero mass. Thus $\psi _0$ is a bounded solution of an equation on the singular space; nothing is claimed about its continuity at a node. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-D2687C63">
+<p><a class="environment-identifier" href="../../tag/E621E67CCA9A/">Theorem <span data-tag="D2687C63">15.19.17</span>.</a><span data-gerby-tag="D2687C63"><code class="tag-id">E621E67CCA9A</code></span> Suppose additionally that $\theta $ is closed. The equation </p>
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u)=c\mu , \qquad u\in \mathrm{PSH}(X,\theta )\cap L^\infty (X), \qquad \sup _ Xu=0,  \]
+</div>
+<p> has a unique pair $(c,u)$ with $c&gt;0$. Its scalar is $c=c_0=\int _ X\theta ^3$. The entire family $u_\varepsilon $ converges to $u$ in $L^1(X)$ and smoothly on compact subsets of $X\setminus E$. The limit is independent of $\eta $, and its descended potential is the unique bounded normalized solution of (<a data-tag="AC67925B" href="../../tag/9FFE9C060E33/">15.19.16</a>). </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Existence follows from corollary <a data-tag="7932BABD" href="../../tag/A1536B3C6F39/">15.19.12</a>. For uniqueness we use an energy identity, which is available because $\theta $ is closed. Fix one cluster limit $u_0$ and put $A=\theta +\mathrm{dd}^{\mathrm{c}}u_0$. This is a positive closed current with bounded local potentials, smooth and strictly positive on $X\setminus E$ by the trace bounds. If $v$ is another bounded solution with scalar $c$, bounded closed-background Stokes gives $c=\int _ X\theta ^3=c_0$. Put $B=\theta +\mathrm{dd}^{\mathrm{c}}v$ and $w=v-u_0$. The bounded integration-by-parts calculus of section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">5.27</a> gives 
+    
+<div class="equation">
+  \[  0=\int _ Xw(B^3-A^3) =-\sum _{j=0}^2\int _ X\mathrm{d}w\wedge \mathrm d^{\mathrm c}w \wedge B^ j\wedge A^{2-j}.  \]
+</div>
+<p>
+       All three energies are nonnegative, so each of them vanishes, in particular the one with $A^2$. On every relatively compact chart of $X\setminus E$, the smooth positive factor $A^2$ controls the weak gradient of $w$, so $\mathrm{d}w=0$ there. The complement of a proper complex analytic subset in the connected manifold $X$ is connected. Thus $w$ is constant almost everywhere off $E$. Since $E$ has ordinary volume zero, canonical almost-everywhere equality of quasi-plurisubharmonic functions, lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">5.24.3</a>, gives $v=u_0+C$ on all of $X$. Normalization fixes $C=0$. 
+    <p>
+      The compactness and smooth local estimates of theorem <a data-tag="E8DA4BDF" href="../../tag/E00C93820852/">15.19.7</a> now make every subsequential limit equal to $u_0$, proving convergence of the whole family. The equation and its unique normalized solution do not depend on $\eta $. Descent and the zero exceptional mass identify bounded solutions upstairs and downstairs, proving the final assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-F6016CBBF3C5" data-section-entries="022849340F28 0EB9DF723176 65049DB7855E E3C9C96E314E F6016CBBF3C5"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/F6016CBBF3C5/">15.19.18 Distances across finitely many contracting regions</a><code class="tag-id">F6016CBBF3C5</code></h2><span data-gerby-tag="19D88954"></span>
+<p>
+On the small resolutions above, the potential limit for a closed background gives smooth convergence of the metrics away from the exceptional curves. Global distances, however, are also affected by paths through neighborhoods of these curves, so their convergence requires control of the diameters of such neighborhoods. The criterion of proposition <a data-tag="738853ED" href="../../tag/65049DB7855E/">15.19.22</a> separates the two controls: uniform convergence on compact subsets of the regular part, and small diameters of neighborhoods of the contracted sets, in the limiting metric and uniformly in the approximating metrics. We first recall the Gromov–Hausdorff distance. 
+</p>
+
+<article class="env-definition" id="non-kahler-pluripotential-theory-3876B32D">
+<p><a class="environment-identifier" href="../../tag/0EB9DF723176/">Definition <span data-tag="3876B32D">15.19.19</span>.</a><span data-gerby-tag="3876B32D"><code class="tag-id">0EB9DF723176</code></span> For nonempty subsets $E,F$ of a metric space $(W,d_ W)$, their Hausdorff distance is </p>
+<div class="equation">
+  \[  d_{\mathrm H}^ W(E,F)=\max \left\{  \sup _{x\in E}\inf _{y\in F}d_ W(x,y), \sup _{y\in F}\inf _{x\in E}d_ W(x,y)\right\} .  \]
+</div>
+<p> For nonempty bounded metric spaces $E,F$, put </p>
+<div class="equation">
+  \[  d_{\mathrm{GH}}(E,F) =\inf _{W,\iota ,\jmath }d_{\mathrm H}^ W(\iota (E),\jmath (F)),  \]
+</div>
+<p> where $\iota ,\jmath $ are isometric embeddings into a common metric space $W$. A correspondence is a subset $R\subset E\times F$ whose two coordinate projections are surjective. Its distortion is </p>
+<div class="equation">
+  \[  \operatorname {dis}R =\sup _{(x,y),(x',y')\in R} |d_ E(x,x')-d_ F(y,y')|.  \]
+</div>
+</article>
+
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-969D4BE0">
+<p><a class="environment-identifier" href="../../tag/022849340F28/">Lemma <span data-tag="969D4BE0">15.19.20</span>.</a><span data-gerby-tag="969D4BE0"><code class="tag-id">022849340F28</code></span> For any correspondence $R$ between nonempty bounded metric spaces, </p>
+<div class="equation">
+  \[  \frac12|\operatorname {diam}E-\operatorname {diam}F| \leq d_{\mathrm{GH}}(E,F) \leq \frac12\operatorname {dis}R.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $\varepsilon &gt;0$ with $2\varepsilon \geq \operatorname {dis}R$. Give the disjoint union $E\sqcup F$ its original distances within each space, and use the symmetric cross distance 
+    
+<div class="equation">
+  \[  D(x,y)=\inf _{(x_0,y_0)\in R} \bigl (d_ E(x,x_0)+\varepsilon +d_ F(y_0,y)\bigr ), \qquad x\in E,\  y\in F.  \]
+</div>
+<p>
+       It is finite and at least $\varepsilon $. The triangle inequalities involving one cross distance follow from the triangle inequality within the corresponding space and the infimum. For two cross distances, take $(x_0,y_0),(x_1,y_1)\in R$. The distortion bound gives 
+    
+<div class="equation">
+  \[  \begin{split}  d_ E(x,x') &amp; \leq d_ E(x,x_0)+d_ F(y_0,y_1) +2\varepsilon +d_ E(x_1,x')\\ &amp; \leq d_ E(x,x_0)+d_ F(y_0,y)+\varepsilon +\varepsilon +d_ F(y,y_1)+d_ E(x_1,x'). \end{split}  \]
+</div>
+<p>
+       Taking the two infima gives $d_ E(x,x')\leq D(x,y)+D(y,x')$. The same argument with $E,F$ exchanged treats the other case. Hence $D$ is a metric extending both metrics. Each point has a correspondent at cross distance $\varepsilon $, so the Hausdorff distance between $E$ and $F$ in $(E\sqcup F,D)$ is at most $\varepsilon $. Letting $\varepsilon $ decrease to half the distortion proves the upper bound, including zero distortion. 
+    <p>
+      For the lower bound, suppose two isometric images have Hausdorff distance $h$. For every $\delta &gt;0$, two points in the first image have points in the second within $h+\delta $. Their distance is at most $\operatorname {diam}F+2h+2\delta $. Taking the supremum and then $\delta \downarrow 0$ gives $\operatorname {diam}E\leq \operatorname {diam}F+2h$. Exchanging the images and taking the infimum over embeddings proves the lower bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+We now work in a purely metric setting, which contains the nodal one. Let $Y$ be a compact metrizable space and let $S=\{ s_1,\ldots ,s_ N\} \subset Y$ be finite. Assume $Y^\circ =Y\setminus S$ is a dense connected smooth manifold. Let $g_0$ be a smooth Riemannian metric on $Y^\circ $, and denote its intrinsic length distance by $d_0$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-D5E70029">
+<p><a class="environment-identifier" href="../../tag/E3C9C96E314E/">Lemma <span data-tag="D5E70029">15.19.21</span>.</a><span data-gerby-tag="D5E70029"><code class="tag-id">E3C9C96E314E</code></span> Suppose every $s_ a$ has a neighborhood basis of open sets $V_{a,r}$ such that </p>
+<div class="equation">
+  \[  \lim _{r\downarrow 0}\operatorname {diam}_{d_0}(V_{a,r}\setminus S)=0.  \]
+</div>
+<p> Then the metric completion $(\widehat Y,\widehat d_0)$ of $(Y^\circ ,d_0)$ is compact, and the identity on $Y^\circ $ extends to a homeomorphism $\iota :Y\to \widehat Y$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The neighborhoods can be chosen nested, with closures avoiding the other points of $S$. Every sequence of regular points converging to $s_ a$ is $d_0$-Cauchy: its tail lies in each prescribed neighborhood, whose punctured diameter tends to zero. Interleaving two such sequences shows that they define the same completion point, denoted by $\widehat s_ a$. Density of $Y^\circ $ guarantees the existence of these sequences. 
+    <p>
+      For each prescribed positive diameter, remove sufficiently small neighborhoods of all the points of $S$. Their complement is a compact subset of $Y^\circ $ and hence is totally bounded for $d_0$. The removed punctured neighborhoods each have the prescribed small diameter. Thus $Y^\circ $ is totally bounded, and its completion is compact. 
+    <p>
+      The points $\widehat s_ a$ are distinct from one another and from the regular points. To see this, fix $s_ a$ and a different point $y\in Y$. Choose an open neighborhood $V$ of $s_ a$ whose closure avoids $y$ and $S\setminus \{ s_ a\} $, and choose $W\Subset V$ containing $s_ a$. There is a smooth function $\chi $ on $Y^\circ $, equal to one on $W\setminus S$ and zero outside $V$, whose derivative has compact support in $Y^\circ $. Indeed the transition takes place in the compact regular set $\overline V\setminus W$, where smooth cutoffs exist. Therefore $|\mathrm{d}\chi |_{g_0}\leq C$ for some finite $C$. Integration along curves gives 
+    
+<div class="equation">
+  \[  |\chi (p)-\chi (q)|\leq C d_0(p,q),\qquad p,q\in Y^\circ .  \]
+</div>
+<p>
+       The Lipschitz extension of $\chi $ to the completion has value one at $\widehat s_ a$ and zero at the regular point $y$, or at $\widehat s_ b$ if $y=s_ b$. This proves the assertion. 
+    <p>
+      Define $\iota $ by the identity on the regular locus and by $\iota (s_ a)=\widehat s_ a$. The intrinsic distance induces the smooth topology at each regular point. At $s_ a$, adjoining $\widehat s_ a$ to a punctured neighborhood does not increase its diameter, so the diameter hypothesis proves continuity of $\iota $. Every completion point is represented by a Cauchy sequence in $Y^\circ $. Compact metrizability of $Y$ gives a subsequence converging topologically either to a regular point or to some $s_ a$; the preceding arguments give its metric limit. Hence $\iota $ is surjective as well as injective. A continuous bijection from compact $Y$ to Hausdorff $\widehat Y$ is a homeomorphism. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Let $X$ be a compact connected smooth manifold and let $\pi :X\to Y$ be a continuous surjection, with $E=\pi ^{-1}(S)$ and with $\pi :X\setminus E\to Y^\circ $ a diffeomorphism. Assume that the identity of $Y^\circ $ extends to a homeomorphism $\iota :Y\to \widehat Y$, for instance under the hypothesis of lemma <a data-tag="D5E70029" href="../../tag/E3C9C96E314E/">15.19.21</a>, and write $G=\iota \circ \pi $. For a smooth Riemannian metric $g$ on $X$ and an open subset $U$, let $\operatorname {diam}^{\mathrm{int}}(U,g)$ denote the intrinsic diameter of $U$, computed with the lengths of piecewise smooth curves contained in $U$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-738853ED">
+<p><a class="environment-identifier" href="../../tag/65049DB7855E/">Proposition <span data-tag="738853ED">15.19.22</span>.</a><span data-gerby-tag="738853ED"><code class="tag-id">65049DB7855E</code></span> Let $g_ j$ be smooth Riemannian metrics on $X$ such that $g_ j\to \pi ^*g_0$ uniformly on every compact subset of $X\setminus E$. Suppose each $s_ a$ has a nested neighborhood basis $V_{a,r}$, with $U_{a,r}=\pi ^{-1}(V_{a,r})$, satisfying </p>
+<div class="equation">
+  \[  \lim _{r\downarrow 0}\operatorname {diam}_{\widehat d_0}(\iota (V_{a,r}))=0, \qquad \lim _{r\downarrow 0}\limsup _{j\to \infty } \operatorname {diam}^{\mathrm{int}}(U_{a,r},g_ j)=0.  \]
+</div>
+<p> Then, for the global length distances $d_ j$ of $g_ j$, </p>
+<div class="equation">
+  \[  \lim _{j\to \infty }\sup _{x,x'\in X} |d_ j(x,x')-\widehat d_0(G(x),G(x'))|=0.  \]
+</div>
+<p> Consequently $(X,d_ j)$ converges to $(\widehat Y,\widehat d_0)$ in Gromov–Hausdorff distance. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $S$ is empty, uniform metric comparison on compact $X$ proves the distance convergence. Assume $N\geq 1$. Fix $\tau &gt;0$. Choose pairwise disjoint neighborhoods $V_ a$ from the specified bases with 
+    
+<div class="equation">
+  \[  \operatorname {diam}_{\widehat d_0}(\iota (V_ a))&lt;\tau , \qquad \operatorname {diam}^{\mathrm{int}}(U_ a,g_ j)&lt;\tau  \]
+</div>
+<p>
+       for all sufficiently large $j$, where $U_ a=\pi ^{-1}(V_ a)$. Pick $q_ a\in V_ a\setminus S$, and then choose open neighborhoods $W_ a$ of $s_ a$ with $\overline W_ a\subset V_ a$ and $q_ a\notin \overline W_ a$. The regular cores 
+    
+<div class="equation">
+  \[  K_ Y=Y\setminus \bigcup _ a W_ a, \qquad K_ X=\pi ^{-1}(K_ Y)  \]
+</div>
+<p>
+       are compact and identified by $\pi $. Uniform convergence and positivity of $g_0$ on this core give numbers $A_ j\geq 1$, with $A_ j\to 1$, such that lengths of curves contained in the cores compare in both directions by the factor $A_ j$. 
+    <p>
+      Consider a piecewise smooth path in $Y^\circ $ joining two points of $K_ Y$. The preimages of the closed sets $\overline W_ a$ are compact subsets of its parameter interval. At its first visit to any such set, delete the portion from that visit through its last visit to the same set. Resume with the remaining tail. That set is never visited again; thus there are at most $N$ deleted portions. Each retained segment lies in $K_ Y$, and each deleted portion has endpoints in a single $\overline W_ a\subset V_ a$. The lifts of those endpoints can be joined in $U_ a$ with $g_ j$-length less than $\tau $, up to an arbitrarily small error. Applying this procedure to almost minimizing paths, comparing retained lengths, and letting the errors tend to zero gives, for $x,x'\in K_ X$, 
+    
+<div class="equation">
+  \[  d_ j(x,x')\leq A_ j\widehat d_0(G(x),G(x'))+N\tau .  \]
+</div>
+<p>
+      Conversely start with an almost minimizing $g_ j$-path in $X$ and apply the same deletion procedure to the closed sets $\pi ^{-1}(\overline W_ a)$. Project its retained segments, which avoid $E$, to $K_ Y$. The two images of each deleted portion have completion distance less than $\tau $. The triangle inequality in $\widehat Y$ therefore gives 
+    
+<div class="equation">
+  \[  \widehat d_0(G(x),G(x'))\leq A_ j d_ j(x,x')+N\tau , \qquad x,x'\in K_ X.  \]
+</div>
+<p>
+      For any $x\notin K_ X$ with $\pi (x)\in W_ a$, replace $x$ by $p=\pi ^{-1}(q_ a)\in U_ a\cap K_ X$. Then $d_ j(x,p)&lt;\tau $ and $\widehat d_0(G(x),G(p))&lt;\tau $. Leave points of $K_ X$ fixed. Replacing both endpoints extends the two inequalities to all $x,x'\in X$, with the same error 
+    
+<div class="equation">
+  \[  C_ j=(N+2+2A_ j)\tau .  \]
+</div>
+<p>
+       If $D=\operatorname {diam}(\widehat Y,\widehat d_0)$, the first inequality gives $\operatorname {diam}(X,d_ j)\leq A_ jD+C_ j$. The positive and negative distance errors are consequently bounded by 
+    
+<div class="equation">
+  \[  (A_ j-1)D+C_ j, \qquad (A_ j-1)(A_ jD+C_ j)+C_ j,  \]
+</div>
+<p>
+       respectively. Their upper limits are at most $(N+4)\tau $. Letting $\tau \downarrow 0$ proves uniform convergence. 
+    <p>
+      The graph of $G$ is a correspondence between $X$ and $\widehat Y$, and its distortion $b_ j$ for the distances $d_ j$ and $\widehat d_0$ is the supremum in the statement. By lemma <a data-tag="969D4BE0" href="../../tag/022849340F28/">15.19.20</a>, 
+    
+<div class="equation">
+  \[  d_{\mathrm{GH}}((X,d_ j),(\widehat Y,\widehat d_0))\leq b_ j/2\longrightarrow 0.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+For the standard nodal small resolutions of <a data-tag="A4F79999" href="../../tag/8C7192C73C68/">15.19.8</a> with closed $\theta $, the smooth convergence of the whole family off $E$ in theorem <a data-tag="D2687C63" href="../../tag/E621E67CCA9A/">15.19.17</a> gives the uniform convergence on compact subsets of $X\setminus E$ required in proposition <a data-tag="738853ED" href="../../tag/65049DB7855E/">15.19.22</a>. What remains are the two conditions on the diameters of neighborhoods. The next estimates control the approximating neighborhoods by metric bounds along and normal to the exceptional curves. 
+</p>
+</div></section><section class="reading-chunk" id="entry-83F8EFD496FF" data-section-entries="11425F03EC01 240B8EBF50C3 4A271B6E1DDB 83F8EFD496FF F7F939140E90"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/83F8EFD496FF/">15.19.23 Curve areas and radial tube lengths</a><code class="tag-id">83F8EFD496FF</code></h2><span data-gerby-tag="186C2956"></span>
+<p>
+The approximating metrics give each exceptional curve an area tending to zero, by corollary <a data-tag="7932BABD" href="../../tag/A1536B3C6F39/">15.19.12</a>. Along the curve, small area forces small diameter as long as the metrics are bounded above; in the normal directions, an integrable bound for the speed of radial rays has the same effect. 
+</p>
+<p>
+Let $C$ be a connected compact Riemann surface. Fix a smooth Hermitian metric $h$ of area one on $C$, and use the associated Riemannian metrics for lengths and areas. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-2F52270A">
+<p><a class="environment-identifier" href="../../tag/240B8EBF50C3/">Lemma <span data-tag="2F52270A">15.19.24</span>.</a><span data-gerby-tag="2F52270A"><code class="tag-id">240B8EBF50C3</code></span> There is $K_ h&gt;0$ such that every smooth Hermitian metric $g\leq M h$, with $M&gt;0$ and $A=\operatorname {Area}_ g(C)$, satisfies </p>
+<div class="equation">
+  \[  \operatorname {diam}(C,g) \leq K_ h\sqrt{A\bigl (1+\log (M/A)\bigr )}.  \]
+</div>
+<p> Here $0&lt;A\leq M$. In particular, for a fixed upper bound $M$, area tending to zero implies diameter tending to zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Replace $g$ by $g/M$. Its area is $a=A/M\leq 1$, and it is bounded above by $h$. We prove the estimate for this normalized metric. 
+    <p>
+      Choose a finite cover by holomorphic coordinate disks $U_ i$ represented by $\{ |z|&lt;1\} $, with each coordinate defined on the larger disk $\{ |z|&lt;2\} $. Write $g=\rho _ i|\mathrm{d}z|^2$ there. There is a common $L&gt;0$ such that $0&lt;\rho _ i\leq L$ on all the closed unit disks, and 
+    
+<div class="equation">
+  \[  \int _{U_ i}\rho _ i\, \mathrm{d}\lambda _2\leq a,  \]
+</div>
+<p>
+       where $\lambda _2$ is Euclidean area. For $p,z\in U_ i$, let $\ell _ p(z)$ be the $g$-length of their straight coordinate segment, which stays in $U_ i$. Polar coordinates about $p$ and Fubini give 
+    
+<div class="equation">
+  \[  \int _{U_ i}\ell _ p(z)\, \mathrm{d}\lambda _2(z) \leq 2\int _{U_ i}\frac{\sqrt{\rho _ i(w)}}{|w-p|} \, \mathrm{d}\lambda _2(w).  \]
+</div>
+<p>
+       Indeed each ray meets the convex unit disk in an interval of length $R\leq 2$. Interchanging the radial integrals multiplies the length integrand at radius $s$ by $(R^2-s^2)/2\leq 2$. 
+    <p>
+      For $0&lt;a\leq 1/4$, put $t=\sqrt a$. The integral on the right, without its factor two, is bounded by 
+    
+<div class="equation">
+  \[  \begin{split}  \sqrt L\int _{\{ |w-p|&lt;t\} }\frac{\mathrm{d}\lambda _2(w)}{|w-p|} &amp; +\left(\int _{U_ i}\rho _ i\, \mathrm{d}\lambda _2\right)^{1/2} \left(\int _{\{ t&lt;|w-p|&lt;2\} }\frac{\mathrm{d}\lambda _2(w)}{|w-p|^2}\right)^{1/2}\\ &amp; \leq 2\pi \sqrt L\, t+\sqrt{2\pi a\log (2/t)} \leq K\sqrt{a\bigl (1+\log (1/a)\bigr )}. \end{split}  \]
+</div>
+<p>
+       Thus for any $p,q\in U_ i$, averaging $\ell _ p(z)+\ell _ q(z)$ over $z\in U_ i$ gives a two-segment path of length at most $K\sqrt{a(1+\log (1/a))}$. The constant is common to the finite cover. 
+    <p>
+      The overlap graph of this cover is connected because $C$ is connected. Choose points in consecutive overlaps along a simple path in this finite graph. The local estimates join any two points of $C$ through at most the number of covering disks, proving the global bound for $a\leq 1/4$. For $1/4\leq a\leq 1$, the comparison $g\leq h$ gives $\operatorname {diam}(C,g)\leq \operatorname {diam}(C,h)$, and increasing $K_ h$ gives the same estimate. Restoring the factor $M$ scales lengths by $\sqrt M$ and proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-BE3AEA6F">
+<p><a class="environment-identifier" href="../../tag/F7F939140E90/">Example <span data-tag="BE3AEA6F">15.19.25</span>.</a><span data-gerby-tag="BE3AEA6F"><code class="tag-id">F7F939140E90</code></span> On every such $(C,h)$ there are smooth Hermitian metrics $g_\varepsilon \leq h$, for $\varepsilon \downarrow 0$, such that </p>
+<div class="equation">
+  \[  \begin{aligned}  A_\varepsilon :=\operatorname {Area}_{g_\varepsilon }(C) &amp; \asymp \varepsilon ^2\log (1/\varepsilon ),\\  \operatorname {diam}(C,g_\varepsilon ) &amp; \asymp \varepsilon \log (1/\varepsilon ). \end{aligned}  \]
+</div>
+<p> Consequently the preceding diameter bound has sharp order under its uniform upper bound. Without that bound, area can tend to zero while diameter stays bounded below by a positive constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a coordinate disk $\{ |z|&lt;R\} $ with $0&lt;R&lt;1$, on whose closure $h=\lambda (z)|\mathrm{d}z|^2$ with $\lambda &gt;0$ smooth. Choose a smooth cutoff $0\leq \chi \leq 1$, supported in this disk and equal to one for $|z|\leq R/2$, and a constant $c&gt;0$ with $c\leq \min \lambda $. For sufficiently small $\varepsilon &gt;0$, set 
+    
+<div class="equation">
+  \[  g_\varepsilon = \left(\chi \frac{c\varepsilon ^2}{\lambda (z)(\varepsilon ^2+|z|^2)} +(1-\chi )\varepsilon ^2\right)h  \]
+</div>
+<p>
+       in the disk, and set $g_\varepsilon =\varepsilon ^2h$ outside it. The cutoff makes this a smooth positive metric, and both coefficients in its convex combination are at most one. 
+    <p>
+      On $|z|\leq R/2$ its metric density is $c\varepsilon ^2/(\varepsilon ^2+|z|^2)$, whose area is 
+    
+<div class="equation">
+  \[  \pi c\varepsilon ^2 \log \left(1+\frac{R^2}{4\varepsilon ^2}\right).  \]
+</div>
+<p>
+       The remaining area is $O(\varepsilon ^2)$, proving the asserted area comparison. Any path from the origin to a point outside this smaller disk must first cross its boundary. Radial variation is bounded by Euclidean speed, so that initial portion has length at least 
+    
+<div class="equation">
+  \[  \sqrt c\, \varepsilon \int _0^{R/2} \frac{\mathrm{d}r}{\sqrt{\varepsilon ^2+r^2}} =\sqrt c\, \varepsilon \operatorname {arsinh}(R/(2\varepsilon )) \asymp \varepsilon \log (1/\varepsilon ).  \]
+</div>
+<p>
+       This gives the diameter lower bound. The upper bound follows from lemma <a data-tag="2F52270A" href="../../tag/240B8EBF50C3/">15.19.24</a>, since $A_\varepsilon (1+\log (1/A_\varepsilon ))\asymp \varepsilon ^2\log ^2(1/\varepsilon )$. Finally rescale by 
+    
+<div class="equation">
+  \[  \widetilde g_\varepsilon =\frac{g_\varepsilon }{\varepsilon ^2\log ^2(1/\varepsilon )}.  \]
+</div>
+<p>
+       Its area is comparable to $1/\log (1/\varepsilon )$ and tends to zero, whereas its diameter is comparable to one. At the origin its ratio to $h$ tends to infinity, so it has no uniform upper bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+ Let $V\to C$ be a holomorphic vector bundle of positive rank with a fixed smooth Hermitian fiber norm. Write $U_\delta =\{ v\in V:|v|&lt;\delta \} $ and identify its zero section with $C$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-5B889B03">
+<p><a class="environment-identifier" href="../../tag/4A271B6E1DDB/">Proposition <span data-tag="5B889B03">15.19.26</span>.</a><span data-gerby-tag="5B889B03"><code class="tag-id">4A271B6E1DDB</code></span> Let $g_ j$ be smooth Hermitian metrics on $U_{\delta _0}$. Suppose their restrictions to $C$ satisfy </p>
+<div class="equation">
+  \[  g_ j|_ C\leq M h,\qquad A_ j=\operatorname {Area}_{g_ j|_ C}(C)\longrightarrow 0  \]
+</div>
+<p> for a fixed $M&gt;0$. Suppose also that there are $B&gt;0$ and $0&lt;\alpha \leq 1$ such that, for every unit fiber vector $v$ over any $x\in C$, the ray $\gamma _{x,v}(s)=sv$ satisfies </p>
+<div class="equation">
+  \[  g_ j(\gamma _{x,v}'(s),\gamma _{x,v}'(s)) \leq B s^{2\alpha -2}, \qquad 0&lt;s&lt;\delta _0,  \]
+</div>
+<p> uniformly in $j,x,v$. Then </p>
+<div class="equation">
+  \[  \operatorname {diam}^{\mathrm{int}}(U_\delta ,g_ j) \leq \frac{2\sqrt B}{\alpha }\delta ^\alpha +K_ h\sqrt{A_ j\bigl (1+\log (M/A_ j)\bigr )}, \qquad 0&lt;\delta &lt;\delta _0.  \]
+</div>
+<p> In particular, </p>
+<div class="equation">
+  \[  \lim _{\delta \downarrow 0}\limsup _{j\to \infty } \operatorname {diam}^{\mathrm{int}}(U_\delta ,g_ j)=0.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      A point of fiber radius $r&lt;\delta $ joins its base point on the zero section along the radial segment, entirely inside $U_\delta $. Its length is at most 
+    
+<div class="equation">
+  \[  \sqrt B\int _0^ r s^{\alpha -1}\, \mathrm{d}s =\frac{\sqrt B}{\alpha }r^\alpha .  \]
+</div>
+<p>
+       The metric is smooth at the zero section for each $j$; the integrable uniform bound controls the whole segment. Join the two base points by an almost minimizing path in $(C,g_ j|_ C)$. This path also lies in $U_\delta $, and up to an arbitrarily small excess its length is bounded by lemma <a data-tag="2F52270A" href="../../tag/240B8EBF50C3/">15.19.24</a>. Together with the two radial segments, this gives the asserted bound for the intrinsic diameter. Since $A_ j(1+\log (M/A_ j))\to 0$, taking $j\to \infty $ and then $\delta \downarrow 0$ proves the final assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Return to the standard nodal small resolutions of <a data-tag="A4F79999" href="../../tag/8C7192C73C68/">15.19.8</a>. On a nodal tube put $r^2=\sum _{k=1}^4|x_ k\circ \pi |^2$, the squared bundle norm used in lemma <a data-tag="B0605056" href="../../tag/C6428C798D5F/">15.19.10</a>. Let $V_\delta \subset Y$ be the nodal coordinate ball $\sum _ k|x_ k|^2&lt;\delta ^2$. For sufficiently small $\delta $, properness gives $\pi ^{-1}(V_\delta )=\{ r&lt;\delta \} $. Write $g_\varepsilon $ for the Riemannian metric associated to $\omega _\varepsilon $. Its area on $E_ a$ is $\varepsilon \int _{E_ a}\eta $ by corollary <a data-tag="7932BABD" href="../../tag/A1536B3C6F39/">15.19.12</a>. Fix an area-one Hermitian metric $h_ a$ on $E_ a$. If $g_\varepsilon |_{E_ a}\leq M h_ a$ uniformly and the radial bound of proposition <a data-tag="5B889B03" href="../../tag/4A271B6E1DDB/">15.19.26</a> holds with $\alpha =1/2$, substitution in that proposition gives 
+</p>
+<div class="equation">
+  \[  \operatorname {diam}^{\mathrm{int}}(\{ r&lt;\delta \} ,g_\varepsilon ) \leq K\delta ^{1/2} +K\sqrt{\varepsilon \bigl (1+\log (1/\varepsilon )\bigr )}  \]
+</div>
+<p>
+ for sufficiently small $\varepsilon $ and $\delta $, with $K$ independent of both. Under these two pointwise metric bounds, the condition on approximating neighborhoods in proposition <a data-tag="738853ED" href="../../tag/65049DB7855E/">15.19.22</a> therefore holds. The condition on punctured neighborhoods in the limiting metric does not follow from it, as the next example shows. 
+</p>
+<p>
+In the following surface example the volume form is fixed and the approximating tubes shrink, but the punctured neighborhoods of the contracted point keep a positive diameter in the limiting metric. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-937B7FD9">
+<p><a class="environment-identifier" href="../../tag/11425F03EC01/">Example <span data-tag="937B7FD9">15.19.27</span>.</a><span data-gerby-tag="937B7FD9"><code class="tag-id">11425F03EC01</code></span> There are a compact complex surface $X$, a holomorphic map $\pi :X\to Y=\mathbb P^2$ contracting a curve $E$ to a point $p$, and smooth Hermitian metrics $g_ j,g_*$ on $X$ with the following properties. The map is biholomorphic from $X\setminus E$ to $Y\setminus \{ p\} $, and $g_ j=g_*$ eventually on each compact subset of $X\setminus E$. Their associated Hermitian forms satisfy </p>
+<div class="equation">
+  \[  \omega _ j^2=\omega _*^2.  \]
+</div>
+<p> The curve areas tend to zero, and the metrics have a uniform integrable radial bound near $E$. For a neighborhood basis $V_\delta $ of $p$, with $U_\delta =\pi ^{-1}(V_\delta )$, </p>
+<div class="equation">
+  \[  \lim _{\delta \downarrow 0}\limsup _{j\to \infty } \operatorname {diam}^{\mathrm{int}}(U_\delta ,g_ j)=0.  \]
+</div>
+<p> Nevertheless, for the intrinsic distance $d_0$ of $g_0=(\pi ^{-1})^*g_*$ on $Y\setminus \{ p\} $, there is $c&gt;0$ such that </p>
+<div class="equation">
+  \[  \operatorname {diam}_{d_0}(V_\delta \setminus \{ p\} )\geq c  \]
+</div>
+<p> for every sufficiently small $\delta $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $p=[1:0:0]$ and take the incidence surface 
+    
+<div class="equation">
+  \[  \begin{gathered} X=\bigl \{ ([z_0:z_1:z_2],[u:v])\in \mathbb P^2\times \mathbb P^1: z_1v=z_2u\bigr \} ,\\ \pi ([z],[u:v])=[z]. \end{gathered}  \]
+</div>
+<p>
+       Off $p$, the second coordinate is $[z_1:z_2]$, so $\pi $ is biholomorphic there. Its exceptional curve is $E=\{ p\} \times \mathbb P^1$. In the affine chart $z_0=1$, a chart of $X$ is 
+    
+<div class="equation">
+  \[  (t,w)\longmapsto ([1:w:tw],[1:t]).  \]
+</div>
+<p>
+       The other chart is $([1:t'w':w'],[t':1])$, with $t'=1/t$ and $w'=tw$ on their overlap. These are the charts of the tautological line bundle $L=\mathcal O_{\mathbb P^1}(-1)$. They also show smoothness along $E$; smoothness elsewhere follows from the biholomorphism. Thus $X$ is a compact smooth complex surface. Its connected dense complement $X\setminus E$ makes it connected. 
+    <p>
+      Let $q:L\to \mathbb P^1$ be the bundle projection. Give $L$ the norm induced by its tautological inclusion into $\mathbb P^1\times \mathbb C^2$. In the first chart its squared norm is 
+    
+<div class="equation">
+  \[  r^2=(1+|t|^2)|w|^2=|z_1|^2+|z_2|^2.  \]
+</div>
+<p>
+        Fix an area-one Hermitian metric $h$ on $\mathbb P^1$. The Chern connection of the fiber norm defines a smooth semipositive Hermitian tensor $k$ on $L$ by the squared norm of the covariant fiber differential. Explicitly, with $\lambda =1+|t|^2$, 
+    
+<div class="equation">
+  \[  k=\lambda \left|\mathrm{d}w+w\partial \log \lambda \right|^2.  \]
+</div>
+<p>
+       Under $t'=1/t$, $w'=tw$, the differential in this formula multiplies by $t$ and $\lambda $ divides by $|t|^2$, so the tensor is globally defined. It has complex rank one, is positive on nonzero vertical tangent vectors, and restricts to zero on $TE$. Consequently $q^*h+k$ is a smooth positive Hermitian metric on $L$. 
+    <p>
+      Choose $0&lt;\delta _0&lt;1$ and extend this metric from $U_{\delta _0}=\{ r&lt;\delta _0\} $ to a smooth Hermitian metric $g_*$ on $X$. Such an extension follows by a smooth cutoff supported in a slightly larger bundle tube and a convex combination with any global Hermitian metric. It agrees exactly with $q^*h+k$ on $U_{\delta _0}$. 
+    <p>
+      Choose $0&lt;\varepsilon _ j&lt;1$ tending to zero, with $2\varepsilon _ j^2&lt;\delta _0$, and a smooth function $0\leq \chi \leq 1$ on $[0,\infty )$, equal to zero on $[0,1]$ and to one on $[4,\infty )$. Set 
+    
+<div class="equation">
+  \[  \begin{aligned}  f_ j(r)&amp; =\varepsilon _ j^2+(1-\varepsilon _ j^2) \chi (r^2/\varepsilon _ j^4),\\  g_ j&amp; =f_ jq^*h+f_ j^{-1}k, \end{aligned}  \]
+</div>
+<p>
+       on $U_{\delta _0}$, and set $g_ j=g_*$ elsewhere. The function $f_ j$ is smooth at $E$, is at least $\varepsilon _ j^2$, and equals one for $r\geq 2\varepsilon _ j^2$. Hence the metrics glue smoothly and are positive. They equal $g_*$ eventually on every compact subset of $X\setminus E$. 
+    <p>
+      Let $\beta ,\kappa $ be the Hermitian forms of $q^*h,k$. Their complex rank one gives $\beta ^2=\kappa ^2=0$. On the tube, 
+    
+<div class="equation">
+  \[  (f_ j\beta +f_ j^{-1}\kappa )^2 =2\beta \wedge \kappa =(\beta +\kappa )^2.  \]
+</div>
+<p>
+       Outside it the metrics coincide. This proves the global volume identity. On $E$, the restriction is $g_ j|_ E=\varepsilon _ j^2h$, so its area is $\varepsilon _ j^2$. 
+    <p>
+      For any unit fiber vector $a$, a radial ray $\gamma (s)=sa$ has $k$-squared speed one and zero base component. Thus its $g_ j$-squared speed is $f_ j(s)^{-1}$. If $s&lt;2\varepsilon _ j^2$, this is at most $\varepsilon _ j^{-2}\leq 2/s$; otherwise it is one, still at most $2/s$ for $s&lt;\delta _0$. This is the uniform integrable radial bound with exponent $1/2$. 
+    <p>
+      A radial segment of radius $r&lt;\delta $ has length at most $r+2\varepsilon _ j$: its portion below $2\varepsilon _ j^2$ has speed at most $\varepsilon _ j^{-1}$ and length at most $2\varepsilon _ j$, and its remaining speed is one. Connect two points by their radial segments and an almost minimizing path on $E$. All three segments stay inside $U_\delta $, giving 
+    
+<div class="equation">
+  \[  \operatorname {diam}^{\mathrm{int}}(U_\delta ,g_ j) \leq 2\delta +\varepsilon _ j\bigl (4+\operatorname {diam}(\mathbb P^1,h)\bigr ).  \]
+</div>
+<p>
+       Taking $j\to \infty $ before $\delta \downarrow 0$ proves the asserted shrinking condition. The affine balls 
+    
+<div class="equation">
+  \[  V_\delta =\{ [1:z_1:z_2]:|z_1|^2+|z_2|^2&lt;\delta ^2\}   \]
+</div>
+<p>
+       have precisely these tubes as their preimages. 
+    <p>
+      Let $d_*$ be the global distance of the fixed smooth metric $g_*$. Choose distinct points $a,b\in E$, and put $c=d_*(a,b)&gt;0$. Choose points $a_ r,b_ r$ of fiber norm $r&gt;0$ over these base points. They tend to $a,b$ as $r\downarrow 0$. Every path in $Y\setminus \{ p\} $ lifts to a path in $X\setminus E$ with the same $g_0$-length as its $g_*$-length. Therefore 
+    
+<div class="equation">
+  \[  d_0(\pi (a_ r),\pi (b_ r))\geq d_*(a_ r,b_ r)\longrightarrow c.  \]
+</div>
+<p>
+       For any fixed $\delta &gt;0$, these two images lie in $V_\delta $ when $r&lt;\delta $. Taking the supremum and then $r\downarrow 0$ gives its punctured diameter at least $c$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/AD8A02A6088D/"><span>← Previous</span><small>Corollary 15.18.50</small></a><a class="pager-next" rel="next" href="../../tag/C397B905A723/"><span>Next →</span><small>Equation 15.19.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-equations-with-prescribed-singularities--degenerating-semipositive-backgrounds,
+  author = {{Gerby contributors}},
+  title = {15.19 Degenerating semipositive backgrounds},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fequations-with-prescribed-singularities--degenerating-semipositive-backgrounds%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fequations-with-prescribed-singularities--degenerating-semipositive-backgrounds%2F&amp;body=Page%3A+%5B15.19+Degenerating+semipositive+backgrounds%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fequations-with-prescribed-singularities--degenerating-semipositive-backgrounds%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+506699478ffa672f60d8e785c9825a2a690e99ae+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

@@ -1,0 +1,230 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/volumes-under-bounded-mass--cauchy-convergence-of-model-potentials/"><title>13.22 Cauchy convergence of model potentials · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/volumes-under-bounded-mass--cauchy-convergence-of-model-potentials/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/non-pluripolar-mass/">Chapter 13: Non-pluripolar measures and mass</a></li><li><a href="../../sections/volumes-under-bounded-mass--cauchy-convergence-of-model-potentials/" aria-current="page">Section 13.22: Cauchy convergence of model potentials</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/non-pluripolar-products/"><span>13.1</span> Non-pluripolar products</a><code class="tag-id">E478B9E17C75</code></li><li><a href="../../sections/non-pluripolar-products--truncation-and-plurifine-locality/"><span>13.2</span> Truncation and plurifine locality</a><code class="tag-id">A56454EDE5B3</code></li><li><a href="../../sections/non-pluripolar-products--closedness-and-cutoff-gradients/"><span>13.3</span> Closedness and cutoff gradients</a><code class="tag-id">4D61EAFD1D21</code></li><li><a href="../../sections/non-pluripolar-products--bounded-factors-and-the-first-degree-product/"><span>13.4</span> Bounded factors and the first-degree product</a><code class="tag-id">F483C973DB98</code></li><li><a href="../../sections/non-pluripolar-products--global-finiteness-and-bounded-cohomological-mass/"><span>13.5</span> Global finiteness and bounded cohomological mass</a><code class="tag-id">48A11CF18369</code></li><li><a href="../../sections/non-pluripolar-products--fiber-integration-and-modifications/"><span>13.6</span> Fiber integration and modifications</a><code class="tag-id">FBE95DA26374</code></li><li><a href="../../sections/non-pluripolar-products--capacity-convergence-and-loss-of-mass/"><span>13.7</span> Capacity convergence and loss of mass</a><code class="tag-id">52BF527413C6</code></li><li><a href="../../sections/non-pluripolar-products--mass-comparison-and-projective-fibers/"><span>13.8</span> Mass comparison and projective fibers</a><code class="tag-id">C76D4F3419F8</code></li><li><a href="../../sections/non-pluripolar-products--maximal-mass-and-comparison/"><span>13.9</span> Maximal mass and comparison</a><code class="tag-id">CCB85E469493</code></li><li><a href="../../sections/non-pluripolar-products--bedford-taylor-theory/"><span>13.10</span> Bedford–Taylor theory</a><code class="tag-id">7CD616A8B803</code></li><li><a href="../../sections/non-pluripolar-products--the-non-pluripolar-products/"><span>13.11</span> The non-pluripolar products</a><code class="tag-id">77A0C8665B8A</code></li><li><a href="../../sections/non-pluripolar-products--quasi-continuous-functions/"><span>13.12</span> Quasi-continuous functions</a><code class="tag-id">AD5CC24EA726</code></li><li><a href="../../sections/non-pluripolar-products--properties-of-non-pluripolar-products/"><span>13.13</span> Properties of non-pluripolar products</a><code class="tag-id">01C01D21DDD2</code></li><li><a href="../../sections/non-pluripolar-monge-ampere-measures/"><span>13.14</span> Non-pluripolar Monge–Ampère measures</a><code class="tag-id">B724B74AE68C</code></li><li><a href="../../sections/weighted-monge-ampere-measures/"><span>13.15</span> Weighted Monge–Ampère measures</a><code class="tag-id">A6A92DB9F7DA</code></li><li><a href="../../sections/volumes-under-bounded-mass/"><span>13.16</span> Volumes under bounded mass</a><code class="tag-id">EEFEDC3AE6FE</code></li><li><a href="../../sections/volumes-under-bounded-mass--comparison-of-singularity-volumes/"><span>13.17</span> Comparison of singularity volumes</a><code class="tag-id">32986EE97902</code></li><li><a href="../../sections/volumes-under-bounded-mass--volume-deficits-and-relative-full-mass/"><span>13.18</span> Volume deficits and relative full mass</a><code class="tag-id">E8D1B2CE6F8F</code></li><li><a href="../../sections/volumes-under-bounded-mass--domination-and-ordinary-envelopes/"><span>13.19</span> Domination and ordinary envelopes</a><code class="tag-id">832E0568D7C3</code></li><li><a href="../../sections/volumes-under-bounded-mass--strict-barriers-and-background-variation/"><span>13.20</span> Strict barriers and background variation</a><code class="tag-id">904042ECF361</code></li><li><a href="../../sections/volumes-under-bounded-mass--monotone-limits/"><span>13.21</span> Monotone limits</a><code class="tag-id">A8EAC258D61B</code></li><li><a href="../../sections/volumes-under-bounded-mass--cauchy-convergence-of-model-potentials/" aria-current="page"><span>13.22</span> Cauchy convergence of model potentials</a><code class="tag-id">F1D6B77D3DEE</code></li><li><a href="../../sections/volumes-under-bounded-mass--rooftops-and-capacity-convergence/"><span>13.23</span> Rooftops and capacity convergence</a><code class="tag-id">1D6292952FE6</code></li><li><a href="../../sections/volumes-under-bounded-mass--volumes-of-multiplier-ideal-envelopes/"><span>13.24</span> Volumes of multiplier-ideal envelopes</a><code class="tag-id">146F3DD22A85</code></li><li><a href="../../sections/volumes-under-bounded-mass--model-comparison-under-background-changes/"><span>13.25</span> Model comparison under background changes</a><code class="tag-id">B2557A0A9699</code></li><li><a href="../../sections/volumes-under-bounded-mass--two-sided-background-perturbations/"><span>13.26</span> Two-sided background perturbations</a><code class="tag-id">E6BBFE91C762</code></li><li><a href="../../sections/volumes-under-bounded-mass--a-complete-metric-on-positive-volume-models/"><span>13.27</span> A complete metric on positive-volume models</a><code class="tag-id">7EAA1D7446C4</code></li><li><a href="../../sections/volumes-under-bounded-mass--model-potentials-on-curves/"><span>13.28</span> Model potentials on curves</a><code class="tag-id">E6AC80354EB9</code></li><li><a href="../../sections/volumes-under-bounded-mass--background-changes-on-curves/"><span>13.29</span> Background changes on curves</a><code class="tag-id">3A638A8288E0</code></li><li><a href="../../sections/volumes-under-bounded-mass--a-complete-space-over-varying-curve-backgrounds/"><span>13.30</span> A complete space over varying curve backgrounds</a><code class="tag-id">F36B844DE285</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/volumes-under-bounded-mass--cauchy-convergence-of-model-potentials/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/volumes-under-bounded-mass--cauchy-convergence-of-model-potentials/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/9EA752566EF2/"><span>← Previous</span><small>Theorem 13.21.7</small></a><a class="pager-next" rel="next" href="../../tag/A220D62C8412/"><span>Next →</span><small>Definition 13.22.1</small></a></nav><h1>13.22 Cauchy convergence of model potentials<code class="tag-id">F1D6B77D3DEE</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-F1D6B77D3DEE" data-section-entries="38359A611D4C 412DBAD823B9 451874D2170D 4B14FA731306 62ECCE0A41E6 A220D62C8412 AB2E8992474C DBE56A98BF3E F1D6B77D3DEE"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="37E36A2D"><code class="tag-id">F1D6B77D3DEE</code></span>
+<p>
+The maximum of two potentials is a common upper bound for both, and the sum of the two upper-volume deficits from this maximum measures how far apart their ordinary envelopes are. A uniform positive lower-volume bound controls how this quantity changes when a third potential is introduced, and this replaces the triangle inequality in the Cauchy argument below. From now on we write $U(u)=\overline{\operatorname {vol}}_\theta (u)$ and $M=U(V_\theta )$; by monotonicity, $U\leq M$ on $\mathrm{PSH}(X,\theta )$. We also fix a smooth positive probability volume form $\mathrm{d}V$ for $L^1$ norms. 
+</p>
+
+<article class="env-definition" id="non-kahler-pluripotential-theory-82BBCEC3">
+<p><a class="environment-identifier" href="../../tag/A220D62C8412/">Definition <span data-tag="82BBCEC3">13.22.1</span>.</a><span data-gerby-tag="82BBCEC3"><code class="tag-id">A220D62C8412</code></span> For $u,v\in \mathrm{PSH}(X,\theta )$, define </p>
+<div class="equation">
+  \[  d_\theta (u,v)=2U(\max (u,v))-U(u)-U(v).  \]
+</div>
+<p> For $\delta &gt;0$, put </p>
+<div class="equation">
+  \[  \mathcal M_\delta (\theta )= \{ u\in \mathrm{PSH}(X,\theta ):P_\theta [u]=u, \  \underline{\operatorname {vol}}_\theta (u)\geq \delta \} .  \]
+</div>
+<p> We call $d_\theta $ the <em>volume comparison</em>. A sequence is $d_\theta $-Cauchy if $d_\theta (u_ j,u_ k)\to 0$ as $j,k\to \infty $, and it converges to $u$ for $d_\theta $ if $d_\theta (u_ j,u)\to 0$. </p>
+</article>
+
+<p>
+The volume comparison is finite, nonnegative and symmetric. It need not satisfy the triangle inequality (example <a data-tag="AFF10A6E" href="../../tag/A1CA1768E392/">13.27.1</a>), which is why we do not call it a distance. It depends only on the ordinary singularity types, since replacing either input by an equivalent one changes the maximum by a bounded amount. Monotonicity also gives 
+</p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-C5D6189D"><span data-gerby-tag="C5D6189D"><code class="tag-id">451874D2170D</code></span>
+<span class="equation-label"><a data-tag="C5D6189D" href="../../tag/451874D2170D/">13.22.2</a></span>
+<div>\begin{equation}  |U(u)-U(v)|\leq d_\theta (u,v),\qquad u\leq v\  \Longrightarrow \  d_\theta (u,v)=U(v)-U(u). \end{equation}</div>
+</div>
+<p>
+In the separation result below, the restriction to positive lower volume is necessary, even for a closed positive background. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-D78D8E9B">
+<p><a class="environment-identifier" href="../../tag/4B14FA731306/">Example <span data-tag="D78D8E9B">13.22.3</span>.</a><span data-gerby-tag="D78D8E9B"><code class="tag-id">4B14FA731306</code></span> For every $n\geq 2$ there are a closed positive $(1,1)$-form $\theta $ on the projective manifold $\mathbb P^1\times \mathbb P^{n-1}$ and two ordinary models $a\not\sim b$ in $\mathrm{PSH}(\mathbb P^1\times \mathbb P^{n-1},\theta )$ such that </p>
+<div class="equation">
+  \[  P_\theta [a]_{\mathcal I}=b,\qquad \underline{\operatorname {vol}}_\theta (a) =\underline{\operatorname {vol}}_\theta (b)=0,\qquad d_\theta (a,b)=0.  \]
+</div>
+<p> For every $n\geq 3$, the same assertions hold for a suitable nonclosed positive form $\theta $ on a projective manifold of dimension $n$ with the bounded mass property. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take the closed positive product background of example <a data-tag="87B62C7F" href="../../tag/6D425566CDE7/">18.15.4</a> on $\mathbb P^1\times \mathbb P^{n-1}$. Its models satisfy $a\leq b$ and $U(a)=U(b)=0$. Thus $\max (a,b)=b$, and the defining formula gives 
+    
+<div class="equation">
+  \[  d_\theta (a,b)=2U(b)-U(a)-U(b)=0.  \]
+</div>
+<p>
+       The other assertions are part of that example. For the nonclosed case use example <a data-tag="3D9D2182" href="../../tag/CB61780C4135/">18.15.5</a>; its models are again ordered and have zero upper volumes, so the same calculation applies. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-6F23D12A">
+<p><a class="environment-identifier" href="../../tag/38359A611D4C/">Proposition <span data-tag="6F23D12A">13.22.4</span>.</a><span data-gerby-tag="6F23D12A"><code class="tag-id">38359A611D4C</code></span> For potentials $u,v$ of positive lower volume, </p>
+<div class="equation">
+  \[  d_\theta (u,v)=d_\theta (P_\theta [u],P_\theta [v]),\qquad d_\theta (u,v)=0\  \Longleftrightarrow \  P_\theta [u]=P_\theta [v].  \]
+</div>
+<p> There is $C_\theta &gt;0$, depending on $\theta $ and $\mathrm{d}V$, such that, for $u,v\in \mathcal M_\delta (\theta )$, </p>
+<div class="equation">
+  \[  \| u-v\| _{L^1}\leq 2C_\theta \min \left\{ 1, \left(\frac{2d_\theta (u,v)}\delta \right)^{1/n}\right\} .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Translate the inputs below zero, and put $p=P_\theta [u]$, $q=P_\theta [v]$, $m=\max (u,v)$ and $r=P_\theta [m]$. Since $u\leq p$, $v\leq q$ and the envelope is monotone, 
+    
+<div class="equation">
+  \[  m\leq \max (p,q)\leq r.  \]
+</div>
+<p>
+       All these potentials have positive lower volume. Theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">13.19.5</a> and monotonicity therefore give $U(m)=U(\max (p,q))=U(r)$, while $U(u)=U(p)$ and $U(v)=U(q)$. This proves the first identity. If $d_\theta (u,v)=0$, then $U(u)=U(v)=U(m)$, since both are at most $U(m)$. Thus $u,v\in \mathcal E_{\mathrm{vol}}(X,\theta ,m)$, and theorem <a data-tag="1000CD7F" href="../../tag/D73DFBAE1EC1/">13.18.5</a>, proposition <a data-tag="36CBE3D6" href="../../tag/47066B2F8269/">16.28.65</a> give $P_\theta [u]=P_\theta [m]=P_\theta [v]$. Conversely, if $p=q$, the first identity gives $d_\theta (u,v)=d_\theta (p,p)=0$. 
+    <p>
+       Now let $u,v\in \mathcal M_\delta (\theta )$ and set $s=d_\theta (u,v)$. By theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">5.25.2</a>, there is $C_\theta $ bounding the $L^1$ norm of every $\theta $-plurisubharmonic potential with supremum zero. Since ordinary models have supremum zero, the estimate holds if $s\geq \delta /2$. Suppose $0&lt;s&lt;\delta /2$ and put $t=(2s/\delta )^{1/n}$. The upper-volume deficit from $u$ to $m$ is at most $s$, and the lower volume of $m$ is at least $\delta $. Thus lemma <a data-tag="ED39D93A" href="../../tag/92ABF533A916/">13.18.1</a>, with $b=t^{-1}$, gives $h\in \mathrm{PSH}(X,\theta )$ such that 
+    
+<div class="equation">
+  \[  (1-t)m+th\leq u.  \]
+</div>
+<p>
+       For each competitor $g$ for $P_\theta [h]$ (so $g\leq 0$ and $g\preceq h$), the potential $(1-t)m+tg$ lies below zero and is more singular than $u$. Since $u=P_\theta [u]$, it lies below $u$, and taking the envelope gives 
+    
+<div class="equation">
+  \[  (1-t)m+tP_\theta [h]\leq u.  \]
+</div>
+<p>
+       Hence $0\leq m-u\leq t(m-P_\theta [h])\leq -tP_\theta [h]$, and $\int _ X(m-u)\, \mathrm{d}V\leq tC_\theta $ because $P_\theta [h]$ has supremum zero. The same argument applies to $v$, and adding the two estimates gives the assertion, since $|u-v|\leq (m-u)+(m-v)$. If $s=0$, the argument works for every $t\in (0,1)$; let $t\downarrow 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Although the triangle inequality fails, the volume comparison satisfies it up to an error that is controlled uniformly on $\mathcal M_\delta (\theta )$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-13BB878E">
+<p><a class="environment-identifier" href="../../tag/412DBAD823B9/">Proposition <span data-tag="13BB878E">13.22.5</span>.</a><span data-gerby-tag="13BB878E"><code class="tag-id">412DBAD823B9</code></span> For $u,v,w\in \mathcal M_\delta (\theta )$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-CA97C942"><span data-gerby-tag="CA97C942"><code class="tag-id">DBE56A98BF3E</code></span>
+<span class="equation-label"><a data-tag="CA97C942" href="../../tag/DBE56A98BF3E/">13.22.6</a></span>
+<div>\begin{equation}  d_\theta (u,w)\leq d_\theta (u,v)+d_\theta (v,w) +2nM\min \left\{ 1, \left(\frac{2d_\theta (v,w)}\delta \right)^{1/n}\right\} . \end{equation}</div>
+</div>
+<p> Consequently every $d_\theta $-convergent sequence in $\mathcal M_\delta (\theta )$ is $d_\theta $-Cauchy, and its limit is unique. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $s=d_\theta (v,w)$. If $s\geq \delta /2$, the inequality follows from $d_\theta (u,w)\leq 2M$. If $0&lt;s&lt;\delta /2$, set $t=(2s/\delta )^{1/n}$. Lemma <a data-tag="ED39D93A" href="../../tag/92ABF533A916/">13.18.1</a>, applied to $v\preceq \max (v,w)$, gives $h\in \mathrm{PSH}(X,\theta )$ with 
+    
+<div class="equation">
+  \[  (1-t)\max (v,w)+th\leq v.  \]
+</div>
+<p>
+       This inequality also gives $h\leq v$. Set $r=\max (u,v)$ and $z=\max (u,v,w)$. Where $z=\max (v,w)$, the inequality above bounds $(1-t)z+th$ by $v\leq r$; where $z=u$, both $u$ and $h$ lie below $r$. Thus 
+    
+<div class="equation">
+  \[  (1-t)z+th\leq r.  \]
+</div>
+<p>
+       Addition, homogeneity and volume monotonicity give 
+    
+<div class="equation">
+  \[  U(z)-U(r)\leq \bigl (1-(1-t)^ n\bigr )U(z)\leq nMt.  \]
+</div>
+<p>
+       Since $\max (u,w)\leq z$, it follows that 
+    
+<div class="equation">
+  \[  \begin{split}  d_\theta (u,w) &amp; \leq 2U(r)+2nMt-U(u)-U(w)\\ &amp; =d_\theta (u,v)+U(v)-U(w)+2nMt\\ &amp; \leq d_\theta (u,v)+s+2nMt. \end{split}  \]
+</div>
+<p>
+       Here the last step uses (<a data-tag="C5D6189D" href="../../tag/451874D2170D/">13.22.2</a>). For $s=0$, the same proof works with every $t\in (0,1)$; let $t\downarrow 0$. This proves (<a data-tag="CA97C942" href="../../tag/DBE56A98BF3E/">13.22.6</a>). Applying it with the limit as the middle point shows that a convergent sequence is Cauchy. If a sequence converges to two limits, applying it with a member of the sequence as the middle point shows that the two limits have volume comparison zero; by proposition <a data-tag="6F23D12A" href="../../tag/38359A611D4C/">13.22.4</a>, they are equal. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-54605E21">
+<p><a class="environment-identifier" href="../../tag/62ECCE0A41E6/">Theorem <span data-tag="54605E21">13.22.7</span>.</a><span data-gerby-tag="54605E21"><code class="tag-id">62ECCE0A41E6</code></span> Every $d_\theta $-Cauchy sequence in $\mathcal M_\delta (\theta )$ converges for $d_\theta $ to a unique element of $\mathcal M_\delta (\theta )$. It also converges to that element in $L^1(X,\mathrm{d}V)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The plan is to dominate a fast subsequence by the ordinary envelopes of its tail suprema; these decrease to the limit, and the stretching lemma controls the volume they add. Choose a subsequence $a_ j$ of the given sequence such that 
+    
+<div class="equation">
+  \[  d_\theta (a_ j,a_{j+1})&lt;\delta \, 2^{-(j+1)n} \qquad (j\geq 1).  \]
+</div>
+<p>
+       For $k\geq 0$, set 
+    
+<div class="equation">
+  \[  v_ j^ k=\max (a_ j,\ldots ,a_{j+k}),\qquad v_ j=\left(\sup _{l\geq j}a_ l\right)^*.  \]
+</div>
+<p>
+       For every $l\geq j$, lemma <a data-tag="ED39D93A" href="../../tag/92ABF533A916/">13.18.1</a> with $b=2^ l$, applied to $a_ l\preceq \max (a_ l,a_{l+1})$, gives $h_ l\leq a_ l$ satisfying 
+    
+<div class="equation">
+  \[  (1-2^{-l})\max (a_ l,a_{l+1})+2^{-l}h_ l\leq a_ l.  \]
+</div>
+<p>
+       The argument by cases in the proof of proposition <a data-tag="13BB878E" href="../../tag/412DBAD823B9/">13.22.5</a> gives 
+    
+<div class="equation">
+  \[  (1-2^{-l})v_ j^{l+1-j}+2^{-l}h_ l\leq v_ j^{l-j}.  \]
+</div>
+<p>
+       Consequently 
+    
+<div class="equation">
+  \[  U(v_ j^{l+1-j})-U(v_ j^{l-j})\leq nM2^{-l}.  \]
+</div>
+<p>
+       Summing from $l=j$ to $j+k-1$ and then letting $k\to \infty $, using theorem <a data-tag="3DA9EA38" href="../../tag/453D4DA50352/">13.21.1</a>, yields 
+    
+<div class="equation">
+  \[  0\leq U(v_ j)-U(a_ j)\leq nM2^{1-j}.  \]
+</div>
+<p>
+       Here $v_ j\in \mathrm{PSH}(X,\theta )$ has lower volume at least $\delta $, because $a_ j\leq v_ j\leq 0$; this also justifies the use of that theorem. 
+    <p>
+      Put $q_ j=P_\theta [v_ j]$. By theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">13.19.5</a>, $q_ j$ is an ordinary model with the same two volumes as $v_ j$. The sequence $q_ j$ decreases, and each $q_ j$ has supremum zero. By normalized compactness, its decreasing limit $q$ is not identically $-\infty $, so $q\in \mathrm{PSH}(X,\theta )$. By theorem <a data-tag="1220EC31" href="../../tag/BE27C58EE55B/">13.21.2</a>, 
+    
+<div class="equation">
+  \[  q=P_\theta [q],\qquad \underline{\operatorname {vol}}_\theta (q) =\lim _ j\underline{\operatorname {vol}}_\theta (q_ j)\geq \delta , \qquad U(q_ j)\longrightarrow U(q).  \]
+</div>
+<p>
+       Both $a_ j$ and $q$ lie below $q_ j$. Hence 
+    
+<div class="equation">
+  \[  \begin{split}  d_\theta (a_ j,q) &amp; \leq \bigl (U(q_ j)-U(a_ j)\bigr )+\bigl (U(q_ j)-U(q)\bigr )\\ &amp; \leq nM2^{1-j}+U(q_ j)-U(q)\longrightarrow 0. \end{split}  \]
+</div>
+<p>
+       To treat the whole sequence, apply (<a data-tag="CA97C942" href="../../tag/DBE56A98BF3E/">13.22.6</a>) with a late member $a_ j$ of the subsequence as the middle point. The Cauchy property makes the first term small for all sufficiently late members of the original sequence, while $d_\theta (a_ j,q)$ makes the other two terms small. Thus the original sequence converges to $q$. Uniqueness follows from proposition <a data-tag="13BB878E" href="../../tag/412DBAD823B9/">13.22.5</a>, and the $L^1$ estimate in proposition <a data-tag="6F23D12A" href="../../tag/38359A611D4C/">13.22.4</a> proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+The non-strict inequality $\underline{\operatorname {vol}}_\theta \geq \delta $ in the definition of $\mathcal M_\delta (\theta )$ is essential for completeness. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-4D5A017A">
+<p><a class="environment-identifier" href="../../tag/AB2E8992474C/">Example <span data-tag="4D5A017A">13.22.8</span>.</a><span data-gerby-tag="4D5A017A"><code class="tag-id">AB2E8992474C</code></span> Let $\theta $ be a smooth positive $(1,1)$-form of integral one on a compact Riemann surface, and let $0&lt;\delta &lt;1$. The ordinary models of mass strictly greater than $\delta $ do not form a complete space for $d_\theta $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a point $x$, and let $g_ x\leq 0$ be the Green function used in theorem <a data-tag="C5D10418" href="../../tag/879739B42EBB/">20.3.10</a>, with $\mathrm{dd}^{\mathrm{c}}g_ x=\delta _ x-\theta $, where $\delta _ x$ is the Dirac measure at $x$. For $0\leq a&lt;1$, put $q_ a=P_\theta [ag_ x]$. The current $\theta +\mathrm{dd}^{\mathrm{c}}(ag_ x)$ equals $a\delta _ x+(1-a)\theta $, with non-pluripolar mass $1-a$. Since the background is closed, both singularity volumes of $ag_ x$ equal this mass, and theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">13.19.5</a> gives 
+    
+<div class="equation">
+  \[  q_ a=P_\theta [q_ a],\qquad \underline{\operatorname {vol}}_\theta (q_ a)=U(q_ a)=1-a.  \]
+</div>
+<p>
+       Since $g_ x\leq 0$, the potentials $q_ a$ decrease as $a$ increases, and (<a data-tag="C5D6189D" href="../../tag/451874D2170D/">13.22.2</a>) gives $d_\theta (q_ a,q_ b)=|a-b|$. Choose $a_ j&lt;1-\delta $ with $a_ j\uparrow 1-\delta $. The sequence $q_{a_ j}$ is $d_\theta $-Cauchy, and every term has mass $1-a_ j&gt;\delta $. By (<a data-tag="C5D6189D" href="../../tag/451874D2170D/">13.22.2</a>), any $d_\theta $-limit has upper volume $\lim _ j(1-a_ j)=\delta $. In this closed background the two volumes coincide, so no such limit has mass strictly greater than $\delta $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/9EA752566EF2/"><span>← Previous</span><small>Theorem 13.21.7</small></a><a class="pager-next" rel="next" href="../../tag/A220D62C8412/"><span>Next →</span><small>Definition 13.22.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-volumes-under-bounded-mass--cauchy-convergence-of-model-potentials,
+  author = {{Gerby contributors}},
+  title = {13.22 Cauchy convergence of model potentials},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/volumes-under-bounded-mass--cauchy-convergence-of-model-potentials/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/volumes-under-bounded-mass--cauchy-convergence-of-model-potentials/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fvolumes-under-bounded-mass--cauchy-convergence-of-model-potentials%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fvolumes-under-bounded-mass--cauchy-convergence-of-model-potentials%2F&amp;body=Page%3A+%5B13.22+Cauchy+convergence+of+model+potentials%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fvolumes-under-bounded-mass--cauchy-convergence-of-model-potentials%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+b14ebe9cb05a1508742765c31333621f898f1f35+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

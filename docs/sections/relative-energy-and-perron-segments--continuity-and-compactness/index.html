@@ -1,0 +1,253 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/relative-energy-and-perron-segments--continuity-and-compactness/"><title>17.4 Continuity and compactness · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/relative-energy-and-perron-segments--continuity-and-compactness/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/energy-geodesics/">Chapter 17: Energy, geodesics, rays, and test curves</a></li><li><a href="../../sections/relative-energy-and-perron-segments--continuity-and-compactness/" aria-current="page">Section 17.4: Continuity and compactness</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/relative-energy-and-perron-segments/"><span>17.1</span> Relative energy and Perron segments</a><code class="tag-id">BDB8E5100372</code></li><li><a href="../../sections/relative-energy-and-perron-segments--integration-by-parts-for-bounded-differences/"><span>17.2</span> Integration by parts for bounded differences</a><code class="tag-id">F694A6981C1D</code></li><li><a href="../../sections/relative-energy-and-perron-segments--relative-monge-ampere-energy/"><span>17.3</span> Relative Monge–Ampère energy</a><code class="tag-id">EC60D9ED3C42</code></li><li><a href="../../sections/relative-energy-and-perron-segments--continuity-and-compactness/" aria-current="page"><span>17.4</span> Continuity and compactness</a><code class="tag-id">3B8286222A1B</code></li><li><a href="../../sections/relative-energy-and-perron-segments--variational-monge-ampere-equations/"><span>17.5</span> Variational Monge–Ampère equations</a><code class="tag-id">16614E7E6F9C</code></li><li><a href="../../sections/relative-energy-and-perron-segments--singularity-envelopes-at-arbitrary-mass/"><span>17.6</span> Singularity envelopes at arbitrary mass</a><code class="tag-id">178F9F7684F6</code></li><li><a href="../../sections/relative-energy-and-perron-segments--subgeodesics-and-perron-segments/"><span>17.7</span> Subgeodesics and Perron segments</a><code class="tag-id">4C4B950F1CFF</code></li><li><a href="../../sections/relative-energy-and-perron-segments--energy-along-weak-geodesics/"><span>17.8</span> Energy along weak geodesics</a><code class="tag-id">0753F06C3AFA</code></li><li><a href="../../sections/relative-energy-and-perron-segments--extremal-slopes-and-long-perron-segments/"><span>17.9</span> Extremal slopes and long Perron segments</a><code class="tag-id">66FE6F0ACABE</code></li><li><a href="../../sections/geodesic-rays-in-the-space-of-potentials/"><span>17.10</span> Geodesic rays in the space of potentials</a><code class="tag-id">1E44B710CD7B</code></li><li><a href="../../sections/test-curves/"><span>17.11</span> Test curves</a><code class="tag-id">BA6AA7598BE3</code></li><li><a href="../../sections/test-curves--the-notion-of-test-curves/"><span>17.12</span> The notion of test curves</a><code class="tag-id">908139B245F5</code></li><li><a href="../../sections/test-curves--ross-witt-nystrom-correspondence/"><span>17.13</span> Ross–Witt Nyström correspondence</a><code class="tag-id">C9D15D724069</code></li><li><a href="../../sections/test-curves--model-test-curves/"><span>17.14</span> -model test curves</a><code class="tag-id">CAE331B64333</code></li><li><a href="../../sections/test-curves--operations-on-test-curves/"><span>17.15</span> Operations on test curves</a><code class="tag-id">9D751AA26579</code></li><li><a href="../../sections/perron-interpolation-and-the-geodesic-equation/"><span>17.16</span> Perron interpolation and the geodesic equation</a><code class="tag-id">E4ED60C8BCA5</code></li><li><a href="../../sections/test-curves-and-legendre-duality/"><span>17.17</span> Test curves and Legendre duality</a><code class="tag-id">D5DBDCE92D6A</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/relative-energy-and-perron-segments--continuity-and-compactness/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/relative-energy-and-perron-segments--continuity-and-compactness/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/474BE0C5FED2/"><span>← Previous</span><small>Equation 17.3.21</small></a><a class="pager-next" rel="next" href="../../tag/049F75F5547D/"><span>Next →</span><small>Proposition 17.4.1</small></a></nav><h1>17.4 Continuity and compactness<code class="tag-id">3B8286222A1B</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-3B8286222A1B" data-section-entries="049F75F5547D 1A67C7F5BE56 27DF9596E862 2FA1EC20E3A2 2FF0E77E9188 369EDE8DEEC5 3B8286222A1B 69A8D9FFB919 838D06267D86 85CFF04E2CEC D1604CAB7F82 F62E3A64C1EE"><div class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><span data-gerby-tag="52071997"><code class="tag-id">3B8286222A1B</code></span>
+<p>
+  We keep $\theta $ and the model potential $\phi $ of mass $m$. Convergence in $L^1(X)$ refers to the volume form $\omega ^ n$, and a $\theta $-psh potential is determined by its class in $L^1(X)$. The energy is continuous along increasing nets and upper semicontinuous for $L^1$ convergence, so that normalized potentials with energy bounded below form compact sets (corollary <a data-tag="8123FC46" href="../../tag/85CFF04E2CEC/">17.4.5</a>), as the variational method of section <a data-tag="3D6A29B3" href="../../tag/16614E7E6F9C/">17.5</a> requires. The finite-energy class is also stable under rooftop envelopes, which gives finite energy along the Perron segments of section <a data-tag="E622ECE7" href="../../tag/4C4B950F1CFF/">17.7</a>. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-24DDA159">
+<p><a class="environment-identifier" href="../../tag/049F75F5547D/">Proposition <span data-tag="24DDA159">17.4.1</span>.</a><span data-gerby-tag="24DDA159"><code class="tag-id">049F75F5547D</code></span> Let $(u_ i)_{i\in I}$ be an increasing net in $\mathcal E^1(X,\theta ,\phi )$ which is uniformly bounded above on $X$. Then its regularized upper envelope $u=(\sup _ i u_ i)^*$ belongs to $\mathcal E^1(X,\theta ,\phi )$ and </p>
+<div class="equation">
+  \[  E_\theta ^\phi (u_ i)\uparrow E_\theta ^\phi (u).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="D3939F9F" href="../../tag/4D5FAF80D021/">16.22.2</a>, $u_ i\leq \phi +\sup _ Xu_ i$, and the suprema $\sup _ Xu_ i$ are bounded above by hypothesis; hence $u\preceq \phi $. Since $u$ dominates every $u_ i$, monotonicity of the energy and theorem <a data-tag="CF717230" href="../../tag/69E7D1FEF207/">17.3.14</a> show that $u\in \mathcal E^1(X,\theta ,\phi )$. 
+    <p>
+<em>Bounded differences.</em> Consider first an increasing sequence $(u_ j)$ and a constant $C\geq 1$ such that $\phi -C\leq u_ j\leq u\leq \phi $ for all $j$. The pole sets of $u_ j$ and $u$ coincide with that of $\phi $. Let $f_ j$ be the function equal to $u-u_ j$ outside this pole set and to $0$ on it; it is a Borel function with values in $[0,C]$. By the tangent bound (<a data-tag="53882EEF" href="../../tag/26A7B21B6397/">17.3.10</a>), 
+    
+<div class="equation">
+  \[  0\leq E_\theta ^\phi (u)-E_\theta ^\phi (u_ j) \leq \int _ X(u-u_ j)\, \mu _{u_ j}=\int _ Xf_ j\, \mu _{u_ j},  \]
+</div>
+<p>
+       and we show that the right side tends to zero by applying lemma <a data-tag="AA6423AA" href="../../tag/5F05F95AAF1F/">17.2.2</a> with $\nu _ j=\mu _{u_ j}$, $\nu =\mu _ u$, the weights $f_ j$ and the limit weight $0$. For each $j$ the potential $C^{-1}u_ j+(1-C^{-1})\phi $ lies between $\phi -1$ and $\phi $ and its measure is at least $C^{-n}\mu _{u_ j}$; hence $\mu _{u_ j}\leq C^ n\operatorname {Cap}_{\theta ,\phi }$ on Borel sets, and likewise $\mu _ u\leq C^ n\operatorname {Cap}_{\theta ,\phi }$. By theorem <a data-tag="207C29D0" href="../../tag/337360EF765B/">16.27.17</a>, the measures $\mu _{u_ j}$ and $\mu _ u$ are therefore uniformly absolutely continuous with respect to $\operatorname {Cap}_\omega $. They converge weakly by corollary <a data-tag="DC306F8A" href="../../tag/56037F3B58D7/">13.8.9</a>, since $u_ j$ increases to $u$ quasi-everywhere (corollary <a data-tag="309904EA" href="../../tag/8EF0B17C7325/">5.47.11</a>). 
+    <p>
+      It remains to show that $f_ j\to 0$ in capacity. Fix finitely many pairs of concentric coordinate balls $B_\alpha \Subset B'_\alpha $ as in proposition <a data-tag="51D272D5" href="../../tag/7EC4B0FF8858/">16.27.18</a>, chosen so that $\theta $ has a smooth potential $h_\alpha $ on a neighborhood of $\overline{B'_\alpha }$ (this is possible by lemma <a data-tag="8EBD338F" href="../../tag/87D4C2281D7C/">6.14.2</a>, applied on slightly larger concentric balls), and let $c$ be the constant of that proposition. Let $\delta ,\eta &gt;0$. By proposition <a data-tag="51D272D5" href="../../tag/7EC4B0FF8858/">16.27.18</a>(3) there is an open set $G$ with $\operatorname {Cap}_\omega (G)&lt;\eta $ which contains the pole set of $\phi $ and such that $\phi $ is finite and continuous on the compact set $X\setminus G$. Let $L$ be a common bound for $|\phi |$ on $X\setminus G$ and for the functions $|h_\alpha |$ on $B'_\alpha $. The functions 
+    
+<div class="equation">
+  \[  w_{\alpha ,j}=\max \{ u_ j+h_\alpha ,-2L-C\} ,\qquad w_\alpha =\max \{ u+h_\alpha ,-2L-C\}   \]
+</div>
+<p>
+       are bounded plurisubharmonic functions on $B'_\alpha $, and $w_{\alpha ,j}$ increases to $w_\alpha $ almost everywhere, because $u_ j$ increases to $u$ quasi-everywhere and pluripolar sets have Lebesgue measure zero. By theorem <a data-tag="36787F42" href="../../tag/A4C45B704647/">7.6.1</a>, $w_{\alpha ,j}\to w_\alpha $ locally in capacity on $B'_\alpha $. On $B_\alpha \setminus G$ we have $u_ j+h_\alpha \geq \phi -C-L\geq -2L-C$, so the truncations are inactive there and $w_\alpha -w_{\alpha ,j}=u-u_ j$. Since the balls $B_\alpha $ cover $X$, 
+    
+<div class="equation">
+  \[  \{ f_ j&gt;\delta \} \subset G\cup \bigcup _\alpha \bigl (B_\alpha \cap \{ w_{\alpha ,j}&lt;w_\alpha -\delta \} \bigr ).  \]
+</div>
+<p>
+       By the countable subadditivity of $\operatorname {Cap}_\omega $ (proposition <a data-tag="2C3BA6F2" href="../../tag/1587DBB4654F/">16.25.6</a>) and the bound $\operatorname {Cap}_\omega (E)\leq c\operatorname {Cap}_{B'_\alpha }(E)$ for Borel sets $E\subset B'_\alpha $ in proposition <a data-tag="51D272D5" href="../../tag/7EC4B0FF8858/">16.27.18</a>, 
+    
+<div class="equation">
+  \[  \operatorname {Cap}_\omega (\{ f_ j&gt;\delta \} )\leq \eta +c\sum _\alpha \operatorname {Cap}^*_{B'_\alpha }\bigl (\overline{B_\alpha }\cap \{ w_{\alpha ,j}&lt;w_\alpha -\delta \} \bigr ),  \]
+</div>
+<p>
+       where we also used that the capacity of a Borel set is at most its outer capacity. By definition <a data-tag="F3E0CD1A" href="../../tag/DAD5D0809372/">7.5.5</a>, the sum tends to zero as $j\to \infty $. Hence $\varlimsup _ j\operatorname {Cap}_\omega (\{ f_ j&gt;\delta \} )\leq \eta $, and since $\eta $ is arbitrary, $f_ j\to 0$ in capacity. Lemma <a data-tag="AA6423AA" href="../../tag/5F05F95AAF1F/">17.2.2</a> now gives $\int _ Xf_ j\, \mu _{u_ j}\to 0$, and hence $E_\theta ^\phi (u_ j)\to E_\theta ^\phi (u)$. 
+    <p>
+<em>Sequences.</em> Now let $(u_ j)$ be an arbitrary increasing sequence; subtracting a common constant, we may assume $u_ j\leq u\leq \phi $. Put $u_{j,k}=\max \{ u_ j,\phi -k\} $ and $u_ k=\max \{ u,\phi -k\} $. For fixed $k$, the sequence $u_{j,k}$ increases to $\max \{ \sup _ ju_ j,\phi -k\} $, whose upper semicontinuous regularization is $\max \{ (\sup _ ju_ j)^*,\phi -k\} =u_ k$, because $\phi -k$ is upper semicontinuous; moreover $\phi -k\leq u_{j,k}\leq u_ k\leq \phi $. The preceding case, with $\max \{ k,1\} $ in place of $C$, gives $E_\theta ^\phi (u_{j,k})\to E_\theta ^\phi (u_ k)$ as $j\to \infty $. We bound the truncation error uniformly in $j$. The tangent bound of proposition <a data-tag="8C545FC2" href="../../tag/98BD01BE1363/">17.3.19</a> gives 
+    
+<div class="equation">
+  \[  0\leq E_\theta ^\phi (u_{j,k})-E_\theta ^\phi (u_ j) \leq \int _ X(u_{j,k}-u_ j)\, \mu _{u_ j} =\int _ k^\infty \mu _{u_ j}(\{ u_ j&lt;\phi -t\} )\, \mathrm dt.  \]
+</div>
+<p>
+       For $t\geq k$ put $q_ t=(u_ j+\phi -t)/2$. On $\{ u_ j&lt;\phi -t\} $ we have $u_1\leq u_ j&lt;q_ t$, and $q_ t\leq \phi -t/2$ on $X$. Since $\mu _{q_ t}\geq 2^{-n}\mu _{u_ j}$ by multilinearity, and $q_ t,u_1\in \mathcal E(X,\theta ,\phi )$, the comparison principle of proposition <a data-tag="944C88B6" href="../../tag/C32431185924/">16.25.4</a> gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  \mu _{u_ j}(\{ u_ j&lt;\phi -t\} ) &amp; \leq 2^ n\mu _{q_ t}(\{ u_1&lt;q_ t\} )\\ &amp; \leq 2^ n\mu _{u_1}(\{ u_1&lt;q_ t\} ) \leq 2^ n\mu _{u_1}(\{ u_1&lt;\phi -t/2\} ). \end{aligned}  \]
+</div>
+<p>
+       Consequently 
+    
+<div class="equation numbered-equation" id="foundations-of-pluripotential-theory-D8B62628"><span data-gerby-tag="D8B62628"><code class="tag-id">D1604CAB7F82</code></span>
+<span class="equation-label"><a data-tag="D8B62628" href="../../tag/D1604CAB7F82/">17.4.2</a></span>
+<div>\begin{equation}  \begin{aligned}  0&amp; \leq E_\theta ^\phi (u_{j,k})-E_\theta ^\phi (u_ j)\\ &amp; \leq 2^{n+1}\int _ X(\phi -u_1-k/2)_+\, \mu _{u_1}\longrightarrow 0 \end{aligned} \end{equation}</div>
+</div>
+<p>
+       as $k\to \infty $, uniformly in $j$; the limit is zero by dominated convergence, since $\phi -u_1$ is $\mu _{u_1}$-integrable. Since $E_\theta ^\phi (u_ k)\geq E_\theta ^\phi (u)$, letting first $j\to \infty $ and then $k\to \infty $ gives $\lim _ jE_\theta ^\phi (u_ j)\geq E_\theta ^\phi (u)$, and monotonicity gives the reverse inequality. 
+    <p>
+<em>Nets.</em> Let $(u_ i)_{i\in I}$ be a net as in the statement. Cover $X$ by finitely many coordinate charts $D_\beta $ on which $\theta $ has smooth potentials $h_\beta $. By theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">5.10.2</a>, applied to the functions $u_ i+h_\beta $ on $D_\beta $, there are countable sets $J_\beta \subset I$ such that $(\sup _{i\in J_\beta }u_ i)^*=u$ on $D_\beta $. The countable set $J=\bigcup _\beta J_\beta $ then satisfies $(\sup _{i\in J}u_ i)^*=u$ on $X$, since on each $D_\beta $ this envelope lies between the envelopes over $J_\beta $ and over $I$. Since the index set is directed, we can choose indices $i_1\leq i_2\leq \cdots $ such that $i_ k$ dominates the first $k$ elements of an enumeration of $J$. Since the net is increasing, $\sup _ ku_{i_ k}\geq \sup _{i\in J}u_ i$, so the increasing sequence $(u_{i_ k})$ has regularized upper envelope $u$, and the sequence case gives $E_\theta ^\phi (u_{i_ k})\to E_\theta ^\phi (u)$. Each of these energies is at most $\sup _ iE_\theta ^\phi (u_ i)$, which in turn is at most $E_\theta ^\phi (u)$ by monotonicity. Hence $\sup _ iE_\theta ^\phi (u_ i)=E_\theta ^\phi (u)$, and since the net of energies is increasing, its limit is this supremum. (The selected indices need not be cofinal in $I$, which is why we compare suprema.) 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Upper semicontinuity of the energy for $L^1$ convergence rests on the following description of $L^1$ limits of potentials by decreasing sequences. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-9EA40DD3">
+<p><a class="environment-identifier" href="../../tag/369EDE8DEEC5/">Lemma <span data-tag="9EA40DD3">17.4.3</span>.</a><span data-gerby-tag="9EA40DD3"><code class="tag-id">369EDE8DEEC5</code></span> Let $\theta $ be a smooth closed real $(1,1)$-form on $X$, and let $q_ k,q\in \mathrm{PSH}(X,\theta )$ satisfy $q_ k\to q$ in $L^1(X)$. Then the functions $q_ k$ are uniformly bounded above on $X$, the tail envelopes $a_ j=(\sup _{k\geq j}q_ k)^*$ belong to $\mathrm{PSH}(X,\theta )$, and $a_ j$ decreases pointwise to $q$ as $j\to \infty $. In particular, if $\psi \colon X\to [-\infty ,\infty )$ is upper semicontinuous and $q_ k\leq \psi $ for every $k$, then $q\leq \psi $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="BDC823C6" href="../../tag/2984F6438B4B/">10.3.1</a> the suprema $\sup _ Xq_ k$ converge to $\sup _ Xq$, so they are bounded. Hence the tail envelopes $a_ j$ are $\theta $-psh, by theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">5.10.2</a> applied in charts after adding smooth local potentials of $\theta $, and they decrease as $j$ increases. A subsequence of $(q_ k)$ converges to $q$ almost everywhere, so $a_ j\geq q$ almost everywhere, hence everywhere, since both functions are $\theta $-psh (section <a data-tag="FD8D661F" href="../../tag/FBD81D436A6A/">16.11</a>). 
+    <p>
+      Conversely, let $x\in X$ and $\varepsilon &gt;0$, let $h$ be a smooth local potential of $\theta $ on a coordinate ball $\Omega $ around $x$, and let $M&gt;q(x)+h(x)$ be a real number. By upper semicontinuity there is a closed coordinate ball $K\subset \Omega $ around $x$ on which $q+h&lt;M$ and $|h-h(x)|&lt;\varepsilon $. The plurisubharmonic functions $q_ k+h$ converge to $q+h$ in $L^1_{\mathrm{loc}}(\Omega )$, so Hartogs' lemma in the form of theorem <a data-tag="3C807BFA" href="../../tag/C2DB8DFE9E2C/">5.10.4</a>, applied with the constant function $M$ on $K$, gives $q_ k+h&lt;M$ on $K$ for all large $k$. For such $k$ we have $q_ k&lt;M-h(x)+\varepsilon $ on $K$. Since $K$ is a neighborhood of $x$, it follows that $a_ j(x)\leq M-h(x)+\varepsilon $ for all large $j$. Letting $\varepsilon \downarrow 0$ and $M\downarrow q(x)+h(x)$, or $M\to -\infty $ if $q(x)=-\infty $, we obtain $\lim _ ja_ j(x)\leq q(x)$. Thus $a_ j\downarrow q$. 
+    <p>
+      Finally, if $q_ k\leq \psi $ for all $k$ with $\psi $ upper semicontinuous, then $\sup _{k\geq j}q_ k\leq \psi $, so $a_ j\leq \psi $ for every $j$, and therefore $q=\lim _ ja_ j\leq \psi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-C70978FB">
+<p><a class="environment-identifier" href="../../tag/2FF0E77E9188/">Proposition <span data-tag="C70978FB">17.4.4</span>.</a><span data-gerby-tag="C70978FB"><code class="tag-id">2FF0E77E9188</code></span> The set $\{ u\in \mathrm{PSH}(X,\theta ):u\preceq \phi \} $ is closed in $L^1(X)$, and $E_\theta ^\phi $ is upper semicontinuous on it, with values in $[-\infty ,\infty )$: if $u_ j\to u$ in $L^1(X)$, then </p>
+<div class="equation">
+  \[  E_\theta ^\phi (u)\geq \varlimsup _ j E_\theta ^\phi (u_ j).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $u_ j\preceq \phi $ converge to $u$ in $L^1(X)$. By lemma <a data-tag="9EA40DD3" href="../../tag/369EDE8DEEC5/">17.4.3</a>, the $u_ j$ are uniformly bounded above, so lemma <a data-tag="D3939F9F" href="../../tag/4D5FAF80D021/">16.22.2</a> gives a constant $C$ with $u_ j\leq \phi +C$ for all $j$. Since $\phi +C$ is upper semicontinuous, the same lemma gives $u\leq \phi +C$, which proves closedness. The lemma also shows that the tail envelopes $v_ j=(\sup _{k\geq j}u_ k)^*$ are $\theta $-psh potentials which decrease pointwise to $u$; moreover $v_ j\leq \phi +C$, because $\phi +C$ is upper semicontinuous and dominates every $u_ k$. Since $u_ j\leq v_ j$, monotonicity and proposition <a data-tag="D32AC2F6" href="../../tag/69D86F9D2F90/">17.3.13</a> give 
+    
+<div class="equation">
+  \[  \varlimsup _ j E_\theta ^\phi (u_ j) \leq \lim _ jE_\theta ^\phi (v_ j)=E_\theta ^\phi (u).  \]
+</div>
+<p>
+       Since $L^1(X)$ is a metric space, sequential upper semicontinuity is upper semicontinuity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-8123FC46">
+<p><a class="environment-identifier" href="../../tag/85CFF04E2CEC/">Corollary <span data-tag="8123FC46">17.4.5</span>.</a><span data-gerby-tag="8123FC46"><code class="tag-id">85CFF04E2CEC</code></span> For $B\geq 0$, the set </p>
+<div class="equation">
+  \[  \{ u\in \mathrm{PSH}(X,\theta ):u\leq \phi ,\quad E_\theta ^\phi (u)\geq -B\}   \]
+</div>
+<p> is compact in $L^1(X)$ and is contained in $\mathcal E^1(X,\theta ,\phi )$. The set </p>
+<div class="equation">
+  \[  K_\phi =\{ u\in \mathrm{PSH}(X,\theta ):u\leq \phi ,\quad \sup _ Xu=0\}   \]
+</div>
+<p> is also compact in $L^1(X)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $u$ in the first set, lemma <a data-tag="D3939F9F" href="../../tag/4D5FAF80D021/">16.22.2</a> gives $u\leq \phi +\sup _ Xu$, so monotonicity and the shift formula give $-B\leq E_\theta ^\phi (u)\leq m\sup _ Xu$. Also $\sup _ Xu\leq \sup _ X\phi =0$. Hence the set lies in $\{ u\in \mathrm{PSH}(X,\theta ):-B/m\leq \sup _ Xu\leq 0\} $, which is compact in $L^1(X)$ by proposition <a data-tag="BDC823C6" href="../../tag/2984F6438B4B/">10.3.1</a>. The set is closed in $L^1(X)$: the inequality $u\leq \phi $ passes to $L^1$ limits by lemma <a data-tag="9EA40DD3" href="../../tag/369EDE8DEEC5/">17.4.3</a>, since $\phi $ is upper semicontinuous, and the energy bound passes to limits by upper semicontinuity (proposition <a data-tag="C70978FB" href="../../tag/2FF0E77E9188/">17.4.4</a>). It is therefore compact. Its members have finite energy, so they lie in $\mathcal E^1(X,\theta ,\phi )$ by theorem <a data-tag="CF717230" href="../../tag/69E7D1FEF207/">17.3.14</a>. 
+    <p>
+      The set $K_\phi $ is contained in $\{ u\in \mathrm{PSH}(X,\theta ):\sup _ Xu=0\} $, which is compact in $L^1(X)$ by proposition <a data-tag="BDC823C6" href="../../tag/2984F6438B4B/">10.3.1</a>, and it is closed in $L^1(X)$, because the supremum is continuous for $L^1$ convergence of potentials (by the same proposition) and the inequality $u\leq \phi $ passes to $L^1$ limits by lemma <a data-tag="9EA40DD3" href="../../tag/369EDE8DEEC5/">17.4.3</a>. Hence $K_\phi $ is compact. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-412C5B83">
+<p><a class="environment-identifier" href="../../tag/2FA1EC20E3A2/">Proposition <span data-tag="412C5B83">17.4.6</span>.</a><span data-gerby-tag="412C5B83"><code class="tag-id">2FA1EC20E3A2</code></span> Let $\mathcal F$ be one of the three classes $\mathcal E(X,\theta ,\phi )$, $\mathcal E^1(X,\theta ,\phi )$ and $\mathcal E^\infty (X,\theta ,\phi )$. The regularized upper envelope of a nonempty family in $\mathcal F$ which is uniformly bounded above on $X$ belongs to $\mathcal F$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="D3939F9F" href="../../tag/4D5FAF80D021/">16.22.2</a>, every member of the family is bounded above by $\phi +C$ for a common constant $C$, and so is the regularized upper envelope $U$. Fix a member $u_0$ of the family; then $u_0\leq U\preceq \phi $. For $\mathcal F=\mathcal E(X,\theta ,\phi )$, mass monotonicity gives $m=\int _ X\langle \theta _{u_0}^ n\rangle \leq \int _ X\langle \theta _ U^ n\rangle \leq m$. For $\mathcal F=\mathcal E^1(X,\theta ,\phi )$, the last assertion of corollary <a data-tag="4FBC4400" href="../../tag/4DCEFD8869DD/">17.3.17</a>, applied to $u_0\leq U$, gives $U\in \mathcal F$. For $\mathcal F=\mathcal E^\infty (X,\theta ,\phi )$, the member $u_0$ supplies a lower bound $U\geq u_0\geq \phi -C'$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-2B2C3577">
+<p><a class="environment-identifier" href="../../tag/1A67C7F5BE56/">Proposition <span data-tag="2B2C3577">17.4.7</span>.</a><span data-gerby-tag="2B2C3577"><code class="tag-id">1A67C7F5BE56</code></span> Let $u,v\in \mathcal E(X,\theta ,\phi )$. Then the rooftop envelope $w=P_\theta (u,v)$ of definition <a data-tag="D99E4099" href="../../tag/F80B4C1B3032/">16.11.5</a> is not identically $-\infty $, and it belongs to $\mathcal E(X,\theta ,\phi )$. If moreover $u,v\in \mathcal E^1(X,\theta ,\phi )$, then $w\in \mathcal E^1(X,\theta ,\phi )$, and if in addition $u,v\leq \phi $, then </p>
+<div class="equation">
+  \[  \int _ X(\phi -w)\, \mu _ w \leq \int _ X(\phi -u)\, \mu _ u+\int _ X(\phi -v)\, \mu _ v.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $u\leq \max \{ u,v\} \preceq \phi $, mass monotonicity gives $\int _ X\langle \theta _{\max \{ u,v\} }^ n\rangle =m$. Thus $\int _ X\langle \theta _ u^ n\rangle +\int _ X\langle \theta _ v^ n\rangle =2m&gt;\int _ X\langle \theta _{\max \{ u,v\} }^ n\rangle $, and proposition <a data-tag="399D14C6" href="../../tag/3499B9FD713C/">16.23.1</a> shows that $w\neq -\infty $. Theorem <a data-tag="578DB8C4" href="../../tag/641CB44C78E9/">16.23.5</a> gives $2m\leq m+\int _ X\langle \theta _ w^ n\rangle $, while $\int _ X\langle \theta _ w^ n\rangle \leq m$ by mass monotonicity, since $w\leq u$. Hence $w\in \mathcal E(X,\theta ,\phi )$. 
+    <p>
+      Now let $u,v\in \mathcal E^1(X,\theta ,\phi )$. The rooftop commutes with adding a common constant to $u$ and $v$ (proposition <a data-tag="3796C01B" href="../../tag/641F3FEC623D/">16.11.4</a>(3)), so we may assume $u,v\leq \phi $; then $w\leq \phi $. The contact inequality of corollary <a data-tag="FE439A00" href="../../tag/7FE9391D7A51/">16.13.5</a> gives 
+    
+<div class="equation">
+  \[  \mu _ w\leq \mathbf1_{\{ w=u\} }\mu _ u +\mathbf1_{\{ w=v\} }\mu _ v.  \]
+</div>
+<p>
+       Integrate the nonnegative weight $\min \{ \phi -w,N\} $ against both sides. On the first contact set the weight equals $\min \{ \phi -u,N\} $, and on the second it equals $\min \{ \phi -v,N\} $; pole sets carry no mass. Letting $N\to \infty $ gives the displayed bound. Both terms on the right are finite, so $w\in \mathcal E^1(X,\theta ,\phi )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-27E2486F">
+<p><a class="environment-identifier" href="../../tag/838D06267D86/">Corollary <span data-tag="27E2486F">17.4.8</span>.</a><span data-gerby-tag="27E2486F"><code class="tag-id">838D06267D86</code></span> For $u,v\in \mathcal E(X,\theta ,\phi )$, the singularity-constrained envelope of definition <a data-tag="4CF5DB90" href="../../tag/3558A6E66BA8/">16.25.1</a> satisfies $P_\theta [u](v)=v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="2B2C3577" href="../../tag/1A67C7F5BE56/">17.4.7</a>, the rooftop $w=P_\theta (u,v)$ belongs to $\mathcal E(X,\theta ,\phi )$. Since $w\preceq v$ and $\int _ X\langle \theta _ w^ n\rangle =\int _ X\langle \theta _ v^ n\rangle &gt;0$, proposition <a data-tag="FC98ECA1" href="../../tag/7E199392108C/">16.22.14</a> gives $P_\theta [w](v)=v$. Every competitor for $P_\theta [w](v)$ is more singular than $w$, hence than $u$, so it is a competitor for $P_\theta [u](v)$; and $P_\theta [u](v)\leq v$ quasi-everywhere by proposition <a data-tag="6A60E53F" href="../../tag/467197AADC50/">16.25.2</a>(1), hence everywhere. Therefore $v=P_\theta [w](v)\leq P_\theta [u](v)\leq v$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-0485FBAB">
+<p><a class="environment-identifier" href="../../tag/69A8D9FFB919/">Proposition <span data-tag="0485FBAB">17.4.9</span>.</a><span data-gerby-tag="0485FBAB"><code class="tag-id">69A8D9FFB919</code></span> For $u,v\in \mathcal E^1(X,\theta ,\phi )$ and $u_ t=(1-t)u+tv$, the function $t\mapsto E_\theta ^\phi (u_ t)$ is continuously differentiable on $[0,1]$, with one-sided derivatives at the endpoints, and </p>
+<div class="equation">
+  \[  \frac{\mathrm d}{\mathrm dt}E_\theta ^\phi (u_ t) =\int _ X(v-u)\, \mu _{u_ t}.  \]
+</div>
+<p> The derivative is a polynomial in $t$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="FE22CA48" href="../../tag/620127F44043/">17.3.18</a> every integral $\int _ X(v-u)\langle \theta _ v^ a\wedge \theta _ u^{n-a}\rangle $ is finite. Expanding $\mu _{u_ t}$ by multilinearity shows that the right side is a polynomial in $t$ with these integrals as coefficients. The potentials $u_ t$ lie in $\mathcal E^1(X,\theta ,\phi )$ by corollary <a data-tag="4FBC4400" href="../../tag/4DCEFD8869DD/">17.3.17</a>. Apply the cocycle formula of proposition <a data-tag="8C545FC2" href="../../tag/98BD01BE1363/">17.3.19</a> to $u_{t+s}$ and $u_ t$, with $s\neq 0$ and $t,t+s\in [0,1]$, and use $u_{t+s}-u_ t=s(v-u)$: 
+    
+<div class="equation">
+  \[  \frac{E_\theta ^\phi (u_{t+s})-E_\theta ^\phi (u_ t)}s =\frac1{n+1}\sum _{j=0}^ n\int _ X(v-u)\langle \theta _{u_{t+s}}^ j\wedge \theta _{u_ t}^{n-j}\rangle .  \]
+</div>
+<p>
+       Each mixed integral on the right is a polynomial in $s$ with the finite coefficients above, and at $s=0$ each of the $n+1$ terms equals $\int _ X(v-u)\mu _{u_ t}$. Letting $s\to 0$ proves the formula for the derivative, including the one-sided derivatives at the endpoints, and its continuity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-0662DC3E">
+<p><a class="environment-identifier" href="../../tag/F62E3A64C1EE/">Lemma <span data-tag="0662DC3E">17.4.10</span>.</a><span data-gerby-tag="0662DC3E"><code class="tag-id">F62E3A64C1EE</code></span> For $u,v\in \mathcal E^1(X,\theta ,\phi )$, </p>
+<div class="equation">
+  \[  \int _ X(v-u)\, \mu _ v\leq E_\theta ^\phi (v)-E_\theta ^\phi (u) \leq \int _ X(v-u)\, \mu _ u.  \]
+</div>
+<p> If moreover $u\leq v$, then </p>
+<div class="equation">
+  \[  \frac1{n+1}\int _ X(v-u)\, \mu _ u\leq E_\theta ^\phi (v)-E_\theta ^\phi (u).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first display is the tangent bound (<a data-tag="53882EEF" href="../../tag/26A7B21B6397/">17.3.10</a>), which holds on $\mathcal E^1(X,\theta ,\phi )$ by proposition <a data-tag="8C545FC2" href="../../tag/98BD01BE1363/">17.3.19</a>. By the same proposition, the cocycle formula (<a data-tag="D052F69F" href="../../tag/BC6BC1B194C2/">17.3.6</a>) holds for $u$ and $v$. If $u\leq v$, all its terms are nonnegative, and retaining the term $j=0$, whose measure is $\mu _ u$, gives the second display. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="foundations-of-pluripotential-theory-68158160">
+<p><a class="environment-identifier" href="../../tag/27DF9596E862/">Example <span data-tag="68158160">17.4.11</span>.</a><span data-gerby-tag="68158160"><code class="tag-id">27DF9596E862</code></span> The energy is not continuous for $L^1$ convergence, even for smooth potentials on $\mathbb P^1$. Let $\omega =\mathrm{dd}^{\mathrm{c}}\log (1+|z|^2)$, which has mass one. For $0&lt;a&lt;1$ put $\varepsilon _ a=\exp (-a^{-2})$ and </p>
+<div class="equation">
+  \[  u_ a(z)=a\log \frac{|z|^2+\varepsilon _ a}{1+|z|^2}.  \]
+</div>
+<p> These functions extend smoothly across infinity, and $\omega +\mathrm{dd}^{\mathrm{c}}u_ a=(1-a)\omega +a\mathrm{dd}^{\mathrm{c}}\log (|z|^2+\varepsilon _ a)&gt;0$. They tend to zero in $L^1$ as $a\downarrow 0$, since $a\log (|z|^2/(1+|z|^2))\leq u_ a\leq 0$ and the left side is $a$ times a fixed integrable function. </p>
+<p>We compute their Dirichlet energies. Write $r=\log |z|^2$ and $F(r)=\log (\mathrm e^ r+\varepsilon )-\log (1+\mathrm e^ r)$ with $\varepsilon =\varepsilon _ a$, so that $u_ a=aF(\log |z|^2)$. For a smooth function $g=G(\log |z|^2)$ we have $\partial g=G'(r)\, \mathrm dz/z$, hence $\mathrm dg\wedge \mathrm d^{\mathrm c}g=\frac{\mathrm i}{2\pi }\partial g\wedge \bar\partial g=\pi ^{-1}G'(r)^2|z|^{-2}\, \mathrm dA$, where $\mathrm dA$ is Lebesgue measure; integration in polar coordinates gives $\int \mathrm dg\wedge \mathrm d^{\mathrm c}g=\int _{-\infty }^\infty G'(r)^2\, \mathrm dr$. Therefore </p>
+<div class="equation">
+  \[  \int _ X\mathrm du_ a\wedge \mathrm d^{\mathrm c}u_ a =a^2\int _{-\infty }^\infty F'(r)^2\, \mathrm dr =a^2(-\log \varepsilon _ a+O(1))\longrightarrow 1.  \]
+</div>
+<p> The bound $O(1)$ is uniform in $a$. Indeed, we have </p>
+<div class="equation">
+  \[  F'(r)=\frac{\mathrm e^ r}{\mathrm e^ r+\varepsilon }-\frac{\mathrm e^ r}{1+\mathrm e^ r}\in [0,1],\qquad 1-F'(r)=\frac{\varepsilon }{\mathrm e^ r+\varepsilon }+\frac{\mathrm e^ r}{1+\mathrm e^ r}\leq \varepsilon \mathrm e^{-r}+\mathrm e^ r.  \]
+</div>
+<p> On $[\log \varepsilon ,0]$ the integral of $\varepsilon \mathrm e^{-r}+\mathrm e^ r$ is at most $2$, and $1\geq F'^2\geq 1-2(1-F')$, so $\int _{\log \varepsilon }^0F'^2\, \mathrm dr=-\log \varepsilon +O(1)$. On the left tail $F'(r)\leq \mathrm e^ r/\varepsilon $, and on the right tail $F'(r)\leq \mathrm e^{-r}$; the corresponding integrals of $F'^2$ are at most $\frac12$. Since $\int _ Xu_ a\, \omega \to 0$, the formula of example <a data-tag="0C651973" href="../../tag/6EAA0093766C/">17.3.16</a> gives $E_\omega (u_ a)\to -\frac12$, whereas $E_\omega (0)=0$. </p>
+</article>
+
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/474BE0C5FED2/"><span>← Previous</span><small>Equation 17.3.21</small></a><a class="pager-next" rel="next" href="../../tag/049F75F5547D/"><span>Next →</span><small>Proposition 17.4.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-relative-energy-and-perron-segments--continuity-and-compactness,
+  author = {{Gerby contributors}},
+  title = {17.4 Continuity and compactness},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/relative-energy-and-perron-segments--continuity-and-compactness/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/relative-energy-and-perron-segments--continuity-and-compactness/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Frelative-energy-and-perron-segments--continuity-and-compactness%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Frelative-energy-and-perron-segments--continuity-and-compactness%2F&amp;body=Page%3A+%5B17.4+Continuity+and+compactness%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Frelative-energy-and-perron-segments--continuity-and-compactness%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+a79564d6cad9d318c534391673f3f9f912748558+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

@@ -1,0 +1,181 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/"><title>11.12 Polar norms of semipositive Finsler metrics · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/hermitian-torsion/">Chapter 11: Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/" aria-current="page">Section 11.12: Polar norms of semipositive Finsler metrics</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/torsion-and-the-variation-of-mass/"><span>11.1</span> Torsion and the variation of mass</a><code class="tag-id">7B453010B5B8</code></li><li><a href="../../sections/monge-ampere-energy-and-torsion/"><span>11.2</span> Monge–Ampère energy and torsion</a><code class="tag-id">1FC29EAFAA97</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass/"><span>11.3</span> Gauduchon metrics and linear mass</a><code class="tag-id">1009E65ECC4C</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conformal-gauduchon-metrics/"><span>11.4</span> Conformal Gauduchon metrics</a><code class="tag-id">4ECC3E68F7D5</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conservation-of-the-trace-mass/"><span>11.5</span> Conservation of the trace mass</a><code class="tag-id">A21D56C40154</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-gauduchon-criterion-for-positivity/"><span>11.6</span> The Gauduchon criterion for positivity</a><code class="tag-id">6029C37CE10F</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--compactness-and-duality-of-gauduchon-currents/"><span>11.7</span> Compactness and duality of Gauduchon currents</a><code class="tag-id">A532E9A2E94A</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--transverse-concentration-of-gauduchon-tests/"><span>11.8</span> Transverse concentration of Gauduchon tests</a><code class="tag-id">959649DAC54D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees/"><span>11.9</span> Convex norms and Gauduchon degrees</a><code class="tag-id">93399AABE3EC</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--homogeneous-convex-regularization/"><span>11.10</span> Homogeneous convex regularization</a><code class="tag-id">879A1C19426E</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--strict-positivity-from-the-tautological-metric/"><span>11.11</span> Strict positivity from the tautological metric</a><code class="tag-id">733548AD7779</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/" aria-current="page"><span>11.12</span> Polar norms of semipositive Finsler metrics</a><code class="tag-id">C40892E1279D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--ample-comparison-quotients-on-hirzebruch-surfaces/"><span>11.13</span> Ample comparison quotients on Hirzebruch surfaces</a><code class="tag-id">9C2F19628D6F</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--stable-extensions-approaching-the-split-comparison-bundle/"><span>11.14</span> Stable extensions approaching the split comparison bundle</a><code class="tag-id">D9D859664CFB</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--deforming-to-stable-ample-bundles/"><span>11.15</span> Deforming to stable ample bundles</a><code class="tag-id">E22565883FFD</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--a-fixed-stein-hypersurface-for-all-finsler-metrics/"><span>11.16</span> A fixed Stein hypersurface for all Finsler metrics</a><code class="tag-id">FE1ACFDCD4DA</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--concave-neighborhoods-and-dual-norms/"><span>11.17</span> Concave neighborhoods and dual norms</a><code class="tag-id">4276F3B6339D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--curvature-and-projective-complement-exhaustions/"><span>11.18</span> Curvature and projective complement exhaustions</a><code class="tag-id">F56029D8C19A</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--negative-bundle-metrics-and-logarithmic-weights/"><span>11.19</span> Negative bundle metrics and logarithmic weights</a><code class="tag-id">EF53CEC272DE</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--external-tensor-products-and-complement-convexity/"><span>11.20</span> External tensor products and complement convexity</a><code class="tag-id">391E9AF09F50</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--homogeneous-plurisubharmonic-functions-and-hopf-complements/"><span>11.21</span> Homogeneous plurisubharmonic functions and Hopf complements</a><code class="tag-id">2ADE48A8B892</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--pluriharmonic-currents/"><span>11.22</span> Pluriharmonic currents</a><code class="tag-id">B57478F1D4E4</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--the-adjoint-measure-of-the-linearization/"><span>11.23</span> The adjoint measure of the linearization</a><code class="tag-id">C01896004229</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--fredholm-theory-for-a-continuous-hermitian-form/"><span>11.24</span> Fredholm theory for a continuous Hermitian form</a><code class="tag-id">DB480BD29A98</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--limits-of-adjoint-measures/"><span>11.25</span> Limits of adjoint measures</a><code class="tag-id">8B86B2B0A308</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--conformal-changes-and-directional-curvature-positivity/"><span>11.26</span> Conformal changes and directional curvature positivity</a><code class="tag-id">A4E01A8B6F30</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--ricci-flat-kahler-surfaces/"><span>11.27</span> Ricci-flat Kähler surfaces</a><code class="tag-id">FFC070E9C8C2</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--holomorphic-sectional-curvature/"><span>11.28</span> Holomorphic sectional curvature</a><code class="tag-id">AF4D6581275D</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--projective-first-jets-and-positive-bundle-metrics/"><span>11.29</span> Projective first jets and positive bundle metrics</a><code class="tag-id">A1CB99CAE47B</code></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass--ramified-section-tests-and-a-positive-root-metric/"><span>11.30</span> Ramified section tests and a positive root metric</a><code class="tag-id">EF54BD838F8D</code></li><li><a href="../../sections/gauduchon-traces-and-the-topology-of-potentials/"><span>11.31</span> Gauduchon traces and the topology of potentials</a><code class="tag-id">15943A2C3613</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures/"><span>11.32</span> Normalization and weak adjoint measures</a><code class="tag-id">7091FEDB43F0</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--the-scalar-functional/"><span>11.33</span> The scalar functional</a><code class="tag-id">52D96CD9BFA7</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--supporting-probability-measures/"><span>11.34</span> Supporting probability measures</a><code class="tag-id">EE2EC5B3CDE0</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--a-convex-functional-on-probability-measures/"><span>11.35</span> A convex functional on probability measures</a><code class="tag-id">D8DD45551DB2</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--bounded-measurable-densities-and-stability/"><span>11.36</span> Bounded measurable densities and stability</a><code class="tag-id">0E821D2FEC9D</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--entropy-and-the-closed-case/"><span>11.37</span> Entropy and the closed case</a><code class="tag-id">694B6AE5D5E5</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--entropy-bounds/"><span>11.38</span> Entropy bounds</a><code class="tag-id">531A2D2A66CF</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--changing-the-prescribed-singularities/"><span>11.39</span> Changing the prescribed singularities</a><code class="tag-id">44DF399743E5</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--varying-positive-backgrounds/"><span>11.40</span> Varying positive backgrounds</a><code class="tag-id">ABAC4E4BC446</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--divisorial-types-and-moving-sections/"><span>11.41</span> Divisorial types and moving sections</a><code class="tag-id">2D3AC831EDA6</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--the-mass-determined-by-the-functional/"><span>11.42</span> The mass determined by the functional</a><code class="tag-id">F459A353BA9B</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--convex-body-criteria-for-varying-references/"><span>11.43</span> Convex-body criteria for varying references</a><code class="tag-id">7D0D0E9AC5C3</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-by-a-vanishing-exponential-parameter/"><span>11.44</span> Selection by a vanishing exponential parameter</a><code class="tag-id">DB96849B14F8</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--selection-for-logarithmic-models-on-products/"><span>11.45</span> Selection for logarithmic models on products</a><code class="tag-id">A167FA614566</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--residual-regularity-in-radial-singularity-types/"><span>11.46</span> Residual regularity in radial singularity types</a><code class="tag-id">DF55B983AF23</code></li><li><a href="../../sections/normalization-and-weak-adjoint-measures--envelopes-for-singular-radial-obstacles/"><span>11.47</span> Envelopes for singular radial obstacles</a><code class="tag-id">AEE10281DB3D</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/EB345AEE34BC/"><span>← Previous</span><small>Corollary 11.11.3</small></a><a class="pager-next" rel="next" href="../../tag/82E28EBCB904/"><span>Next →</span><small>Lemma 11.12.1</small></a></nav><h1>11.12 Polar norms of semipositive Finsler metrics<code class="tag-id">C40892E1279D</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-C40892E1279D" data-section-entries="2984296C9B5A 3DE300A9B2AD 672C05CD55F8 7BB708C6E5FD 82E28EBCB904 BD7ECB0F942E C40892E1279D E21FC7F3990F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="FD642E1C"><code class="tag-id">C40892E1279D</code></span>
+<p>
+For a holomorphic vector bundle that is not assumed to carry a positively curved Hermitian metric, positivity can be measured by Finsler metrics and their Kobayashi curvature. Polar duality converts a Finsler metric on $E$ with semipositive Kobayashi curvature into a continuous norm on $E^*$ whose square is plurisubharmonic and uniformly convex in the fibers. With the regularization of <a data-tag="CC9C4A91" href="../../tag/879A1C19426E/">11.10</a>, theorem <a data-tag="5A4D8636" href="../../tag/C222D1BB3C65/">11.9.4</a> therefore excludes such Finsler metrics on an ample bundle whose dual is close to a split bundle with positive Gauduchon degrees. 
+</p>
+<p>
+Let $E\to X$ be a holomorphic vector bundle of positive rank; in this subsection $n\geq 1$. Write $E^\times $ for the complement of its zero section. A <em>squared Finsler metric</em> on $E$ is a positive smooth function $G$ on $E^\times $ with 
+</p>
+<div class="equation">
+  \[  G(x,tv)=|t|^2G(x,v),\qquad t\in \mathbb C\setminus \{ 0\} ,  \]
+</div>
+<p>
+ extended continuously by zero to the zero section. It is <em>strongly pseudoconvex</em> if its vertical complex Hessian $(G_{i\bar j})$ is positive definite; this does not require convexity in the real fiber variables. 
+</p>
+<p>
+In local holomorphic base and fiber coordinates $(z,v)$, with Greek indices for base coordinates, Latin indices for fiber coordinates and summation over repeated indices, put 
+</p>
+<div class="equation">
+  \[  \begin{gathered} S_{\alpha \bar\beta } =G_{\alpha \bar\beta } -G_{\alpha \bar j}G^{\bar j i}G_{i\bar\beta },\\ \mathcal K_ G=-\frac{\mathrm i}{2\pi G} S_{\alpha \bar\beta }\, \mathrm dz^\alpha \wedge \mathrm d\bar z^\beta , \end{gathered}  \]
+</div>
+<p>
+ where $(G^{\bar j i})$ is the inverse of the vertical Hessian. We use this convention for the <em>Kobayashi curvature</em> $\mathcal K_ G$, a horizontal $(1,1)$-form at each point of $E^\times $. Thus $\mathcal K_ G\geq 0$ means $S\leq 0$, and $\mathcal K_ G&gt;0$ means that $S$ is negative definite. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-14B27C66">
+<p><a class="environment-identifier" href="../../tag/82E28EBCB904/">Lemma <span data-tag="14B27C66">11.12.1</span>.</a><span data-gerby-tag="14B27C66"><code class="tag-id">82E28EBCB904</code></span>  Let $G$ be a strongly pseudoconvex squared Finsler metric. If $\mathcal K_ G&gt;0$, then for every $v_0\in E_{x_0}^\times $ there is a local holomorphic section $\sigma $ with $\sigma (x_0)=v_0$ and </p>
+<div class="equation">
+  \[  G(z,\sigma (z))\leq G(x_0,v_0)  \]
+</div>
+<p> near $x_0$. Moreover, without any curvature assumption, on a coordinate ball, for $\varphi =|z|^2$ and $\varepsilon &gt;0$, the metric $G_\varepsilon =\mathrm e^{-\varepsilon \varphi }G$ is strongly pseudoconvex and satisfies </p>
+<div class="equation">
+  \[  \mathcal K_{G_\varepsilon }=\mathcal K_ G+\varepsilon \mathrm{dd}^{\mathrm{c}}\varphi .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since the vertical Hessian is positive, the Levi-orthogonal complement $H_{G,v}$ of the vertical tangent space at $v$ projects isomorphically onto the base tangent space. The Levi form of $G$ on $H_{G,v}$ is the Schur complement $S$, which is negative definite when $\mathcal K_ G&gt;0$. For the vertical radial vector $R=v_ i\partial _{v_ i}$, complex homogeneity gives 
+    
+<div class="equation">
+  \[  \partial G(R)=G,\qquad \mathcal L_ G(a,\bar R)=\partial G(a)  \]
+</div>
+<p>
+       for every tangent vector $a$, where $\mathcal L_ G$ is the Levi form. Since $R$ is vertical, the second identity implies $\partial G|_{H_{G,v}}=0$. 
+    <p>
+      Choose a holomorphic section $\sigma _0$ through $v_0$ whose tangent space at $x_0$ is $H_{G,v_0}$. In coordinates centered at $x_0$, the function $G\circ \sigma _0$ has zero first derivative and Taylor expansion 
+    
+<div class="equation">
+  \[  G(x_0,v_0)+P(z)+\overline{P(z)} +S_{\alpha \bar\beta }z^\alpha \bar z^\beta +O(|z|^3),  \]
+</div>
+<p>
+       where $P$ is a homogeneous holomorphic quadratic polynomial. The identity $\partial _ vG(v_0)(v_0)=G(v_0)&gt;0$ gives a vertical vector $b$ with $\partial _ vG(v_0)(b)=1$. Set $\sigma =\sigma _0-bP$ in the local frame. This changes only the pure quadratic terms and cancels $P+\bar P$. The remaining quadratic form is negative definite, and therefore dominates the cubic remainder on a sufficiently small ball. The section stays nonzero there and satisfies the asserted inequality. 
+    <p>
+      For the last assertion, differentiate $\mathrm e^{-\varepsilon \varphi }G$ in the Schur complement. Euler's identities give $G_{\bar j}=v_ iG_{i\bar j}$ and $G_\alpha =G_{\alpha \bar j}\bar v_ j$. Hence the terms containing $\partial \varphi $, including its square, cancel between the base Hessian and the mixed block product, leaving 
+    
+<div class="equation">
+  \[  S(G_\varepsilon )=\mathrm e^{-\varepsilon \varphi } \bigl (S(G)-\varepsilon G(\varphi _{\alpha \bar\beta })\bigr ).  \]
+</div>
+<p>
+       Dividing by $G_\varepsilon $ gives the curvature formula. The vertical Hessian of $G_\varepsilon $ is the positive multiple $\mathrm e^{-\varepsilon \varphi }(G_{i\bar j})$, so $G_\varepsilon $ is again strongly pseudoconvex. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-F21E637C">
+<p><a class="environment-identifier" href="../../tag/672C05CD55F8/">Proposition <span data-tag="F21E637C">11.12.2</span>.</a><span data-gerby-tag="F21E637C"><code class="tag-id">672C05CD55F8</code></span>  Let $G$ be a strongly pseudoconvex squared Finsler metric with $\mathcal K_ G\geq 0$. Its <em>polar square</em> </p>
+<div class="equation">
+  \[  Q(x,\xi )=\max _{[v]\in \mathbb P(E_ x)} \frac{|\xi (v)|^2}{G(x,v)},\qquad \xi \in E_ x^*,  \]
+</div>
+<p> is continuous and plurisubharmonic on the total space of $E^*$, positive off the zero section and complex homogeneous of degree two. The function $\log Q$ is plurisubharmonic off the zero section, and $\sqrt Q$ is a complex norm on each fiber. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The ratio is invariant under complex rescaling of $v$, so the maximum can be taken over the compact unit sphere in a local frame, which proves continuity. Positive upper and lower bounds for $G$ on that sphere compare $Q$ with a Hermitian squared dual norm; this gives positivity off zero and continuity at zero, and complex homogeneity is clear. Moreover, 
+    
+<div class="equation">
+  \[  \sqrt{Q(x,\xi )}=\sup _{v\ne 0}\frac{|\xi (v)|}{\sqrt{G(x,v)}}.  \]
+</div>
+<p>
+       Each term satisfies the triangle inequality in $\xi $, and so does their supremum. 
+    <p>
+      On a coordinate ball, set $G_\varepsilon =\mathrm e^{-\varepsilon |z|^2}G$. By lemma <a data-tag="14B27C66" href="../../tag/82E28EBCB904/">11.12.1</a>, its Kobayashi curvature is strictly positive, and its polar square is $Q_\varepsilon =\mathrm e^{\varepsilon |z|^2}Q$. At a point $(x_0,\xi _0)$ with $\xi _0\ne 0$, choose a maximizing line and a vector $v_0$ on it. The lemma, applied to $G_\varepsilon $, gives a holomorphic section $\sigma $ such that 
+    
+<div class="equation">
+  \[  \log Q_\varepsilon (z,\xi ) \geq \log |\xi (\sigma (z))|^2-\log G_\varepsilon (x_0,v_0),  \]
+</div>
+<p>
+       with equality at $(x_0,\xi _0)$. The pairing $\xi (\sigma (z))$ is nonzero near that point, so the right-hand side is pluriharmonic there. Restriction to sufficiently small holomorphic disks centered at the point therefore gives the submean inequality for $\log Q_\varepsilon $. This argument applies at every point off the zero section, and together with continuity it shows that $\log Q_\varepsilon $ is plurisubharmonic there. 
+    <p>
+      As $\varepsilon \downarrow 0$, the functions $\log Q_\varepsilon =\log Q+\varepsilon |z|^2$ converge locally uniformly off the zero section. Passing to the limit in the submean inequalities on disks proves that $\log Q$ is plurisubharmonic off the zero section. Since the exponential is increasing and convex, Jensen's inequality shows that $Q=\exp (\log Q)$ is plurisubharmonic there. At a point of the zero section, $Q=0$ and $Q\geq 0$, so every centered disk satisfies the submean inequality there. Together with continuity and the submean inequalities at nonzero points, this proves plurisubharmonicity on the whole total space of $E^*$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-86EFA793">
+<p><a class="environment-identifier" href="../../tag/BD7ECB0F942E/">Lemma <span data-tag="86EFA793">11.12.3</span>.</a><span data-gerby-tag="86EFA793"><code class="tag-id">BD7ECB0F942E</code></span>  Let $k$ be a smooth Hermitian metric on $E$, and let $G$ be a positive smooth complex homogeneous function of degree two on $E^\times $, extended by zero. Then its polar square $Q$, defined as in proposition <a data-tag="F21E637C" href="../../tag/672C05CD55F8/">11.12.2</a>, has a constant $c&gt;0$ such that </p>
+<div class="equation">
+  \[  Q(x,\xi )-c|\xi |_{k^*}^2  \]
+</div>
+<p> is real convex on every dual fiber. Neither strong pseudoconvexity nor real convexity of $G$ is required here. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The real fiber Hessian of $G$ is bounded above by $2L$ times $k$ on the compact unit sphere bundle of $k$, for some $L&gt;0$, and homogeneity extends this bound to every nonzero vector. Also, $G$ is $C^1$ at zero with derivative zero, since its value is $O(|v|^2)$ and its first fiber derivative is $O(|v|)$, uniformly over the base. Integrating the Hessian estimate along a segment gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-21738DDB"><span data-gerby-tag="21738DDB"><code class="tag-id">7BB708C6E5FD</code></span>
+<span class="equation-label"><a data-tag="21738DDB" href="../../tag/7BB708C6E5FD/">11.12.4</a></span>
+<div>\begin{equation}  G(v+w)\leq G(v)+\mathrm d_ vG(w)+L|w|_ k^2; \end{equation}</div>
+</div>
+<p>
+       a segment passing through zero is handled by splitting it there and using the continuity of the first derivative. 
+    <p>
+      Complex homogeneity and completing the square on each complex line give the identity 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-4DB1BD28"><span data-gerby-tag="4DB1BD28"><code class="tag-id">E21FC7F3990F</code></span>
+<span class="equation-label"><a data-tag="4DB1BD28" href="../../tag/E21FC7F3990F/">11.12.5</a></span>
+<div>\begin{equation}  Q(x,\xi )=\max _{v\in E_ x} \{ 2\operatorname {Re}\xi (v)-G(x,v)\} . \end{equation}</div>
+</div>
+<p>
+       The maximum exists because $G(v)\geq a|v|_ k^2$ for a uniform constant $a&gt;0$. Fix a maximizer $v_0$ for $\xi _0$. Differentiation, including the case $\xi _0=v_0=0$, gives $\mathrm dG(v_0)=2\operatorname {Re}\xi _0$. Evaluate the expression in (<a data-tag="4DB1BD28" href="../../tag/E21FC7F3990F/">11.12.5</a>) for $\xi _0+\zeta $ at $v_0+w$ and apply (<a data-tag="21738DDB" href="../../tag/7BB708C6E5FD/">11.12.4</a>). The terms involving $\xi _0(w)$ cancel, and we obtain 
+    
+<div class="equation">
+  \[  Q(\xi _0+\zeta )\geq Q(\xi _0)+2\operatorname {Re}\zeta (v_0) +2\operatorname {Re}\zeta (w)-L|w|_ k^2.  \]
+</div>
+<p>
+       Taking the supremum over $w$ yields 
+    
+<div class="equation">
+  \[  Q(\xi _0+\zeta )\geq Q(\xi _0)+2\operatorname {Re}\zeta (v_0) +L^{-1}|\zeta |_{k^*}^2.  \]
+</div>
+<p>
+       Set $c=L^{-1}$ and $\Phi =Q-c|\cdot |_{k^*}^2$. After subtracting the square, this inequality gives a real affine function on the whole dual fiber that lies below $\Phi $ and equals $\Phi $ at $\xi _0$. Hence $\Phi $ is the supremum of such affine functions, and therefore convex. Neither uniqueness of the maximizer nor real convexity of $G$ has been used. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-44897B42">
+<p><a class="environment-identifier" href="../../tag/3DE300A9B2AD/">Corollary <span data-tag="44897B42">11.12.6</span>.</a><span data-gerby-tag="44897B42"><code class="tag-id">3DE300A9B2AD</code></span> If $E$ is ample and has a strongly pseudoconvex squared Finsler metric with semipositive Kobayashi curvature, then $E^*$ admits a smooth complex norm whose square is strictly plurisubharmonic off zero and locally strongly convex in the real fibers. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="F21E637C" href="../../tag/672C05CD55F8/">11.12.2</a>, the polar square is a positive continuous plurisubharmonic complex homogeneous function of degree two, and by lemma <a data-tag="86EFA793" href="../../tag/BD7ECB0F942E/">11.12.3</a> it has the strong convexity in the fibers required in proposition <a data-tag="36FE7528" href="../../tag/1263BBAE3998/">11.10.5</a>. Applying proposition <a data-tag="8D8FE5CC" href="../../tag/68260DAF47D2/">11.11.2</a> to $F=E^*$, whose dual $F^*=E$ is ample, gives the positive smooth strictly plurisubharmonic homogeneous function $H$ on $E^*$. Hence proposition <a data-tag="36FE7528" href="../../tag/1263BBAE3998/">11.10.5</a> applies. Its proof uses theorem <a data-tag="56776404" href="../../tag/3FA7CB52F1E5/">11.10.4</a>, which preserves strong convexity in the fibers, and the square root of the resulting function is the asserted smooth norm. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-513FF873">
+<p><a class="environment-identifier" href="../../tag/2984296C9B5A/">Corollary <span data-tag="513FF873">11.12.7</span>.</a><span data-gerby-tag="513FF873"><code class="tag-id">2984296C9B5A</code></span>  Let $F$ be the underlying smooth bundle of $F_0$ in theorem <a data-tag="5A4D8636" href="../../tag/C222D1BB3C65/">11.9.4</a>, with a holomorphic structure in the neighborhood given there. If $F^*$ is ample, then $F^*$ admits no strongly pseudoconvex squared Finsler metric with semipositive Kobayashi curvature. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply corollary <a data-tag="44897B42" href="../../tag/3DE300A9B2AD/">11.12.6</a> to $E=F^*$. Such a metric would produce a smooth complex norm on $F$ with plurisubharmonic square, contrary to theorem <a data-tag="5A4D8636" href="../../tag/C222D1BB3C65/">11.9.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The corollary applies only near a split bundle whose line summands have positive Gauduchon degrees, and it is not vacuous only if such a neighborhood contains holomorphic structures with ample dual. On Hirzebruch surfaces, theorem <a data-tag="88F5B6CB" href="../../tag/E769519C862E/">11.15.5</a> gives stable ample bundles whose duals lie in this neighborhood. Since the polar square need not be smooth, the regularization of <a data-tag="CC9C4A91" href="../../tag/879A1C19426E/">11.10</a> is an essential step of the argument. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/EB345AEE34BC/"><span>← Previous</span><small>Corollary 11.11.3</small></a><a class="pager-next" rel="next" href="../../tag/82E28EBCB904/"><span>Next →</span><small>Lemma 11.12.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics,
+  author = {{Gerby contributors}},
+  title = {11.12 Polar norms of semipositive Finsler metrics},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/gauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fgauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fgauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics%2F&amp;body=Page%3A+%5B11.12+Polar+norms+of+semipositive+Finsler+metrics%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fgauduchon-metrics-and-linear-mass--convex-norms-and-gauduchon-degrees--polar-norms-of-semipositive-finsler-metrics%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+612b9829096a56be2bdf356f4ea27598bd419060+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

@@ -1,0 +1,564 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/"><title>5.43 Pullback and descent · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/psh-positive-currents/">Chapter 5: Plurisubharmonic functions and positive currents</a></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/" aria-current="page">Section 5.43: Pullback and descent</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/complex-differential-forms-and-positive-currents/"><span>5.1</span> Complex differential forms and positive currents</a><code class="tag-id">4DEEEF894245</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--complex-manifolds-and-differential-forms/"><span>5.2</span> Complex manifolds and differential forms</a><code class="tag-id">D8E2D1A98ACF</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--currents-and-positivity/"><span>5.3</span> Currents and positivity</a><code class="tag-id">ACB622806098</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--local-potentials-for-closed-1-1-currents/"><span>5.4</span> Local potentials for closed (1,1)-currents</a><code class="tag-id">618FE2108D26</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--holomorphic-zeros-and-the-poincare-lelong-formula/"><span>5.5</span> Holomorphic zeros and the Poincaré–Lelong formula</a><code class="tag-id">0C34F7796300</code></li><li><a href="../../sections/complex-differential-forms-and-positive-currents--maps-of-currents-and-local-mass/"><span>5.6</span> Maps of currents and local mass</a><code class="tag-id">9F1C9C4A649E</code></li><li><a href="../../sections/plurisubharmonic-functions/"><span>5.7</span> Plurisubharmonic functions</a><code class="tag-id">7B39B08A9568</code></li><li><a href="../../sections/plurisubharmonic-functions--the-line-definition-and-upper-semicontinuity/"><span>5.8</span> The line definition and upper semicontinuity</a><code class="tag-id">55393AEE99C8</code></li><li><a href="../../sections/plurisubharmonic-functions--positive-hessians-and-holomorphic-maps/"><span>5.9</span> Positive Hessians and holomorphic maps</a><code class="tag-id">484A05EF6DF1</code></li><li><a href="../../sections/plurisubharmonic-functions--limits-envelopes-and-local-integrability/"><span>5.10</span> Limits, envelopes and local integrability</a><code class="tag-id">5C7282E51B13</code></li><li><a href="../../sections/plurisubharmonic-functions--extension-across-closed-exceptional-sets/"><span>5.11</span> Extension across closed exceptional sets</a><code class="tag-id">E197EAFECEC0</code></li><li><a href="../../sections/plurisubharmonic-functions--kiselman-s-minimum-principle/"><span>5.12</span> Kiselman&#x27;s minimum principle</a><code class="tag-id">53A48113C242</code></li><li><a href="../../sections/plurisubharmonic-functions--the-definition-of-plurisubharmonic-functions/"><span>5.13</span> The definition of plurisubharmonic functions</a><code class="tag-id">92A4FA45DFE1</code></li><li><a href="../../sections/plurisubharmonic-functions--properties-of-plurisubharmonic-functions/"><span>5.14</span> Properties of plurisubharmonic functions</a><code class="tag-id">6C47792FE6D9</code></li><li><a href="../../sections/plurisubharmonic-functions--plurifine-topology/"><span>5.15</span> Plurifine topology</a><code class="tag-id">DFFF533F1AE8</code></li><li><a href="../../sections/plurisubharmonic-functions--lelong-numbers-and-multiplier-ideal-sheaves/"><span>5.16</span> Lelong numbers and multiplier ideal sheaves</a><code class="tag-id">EB678D619AD9</code></li><li><a href="../../sections/plurisubharmonic-functions--quasi-plurisubharmonic-functions/"><span>5.17</span> Quasi-plurisubharmonic functions</a><code class="tag-id">4DF694F99750</code></li><li><a href="../../sections/plurisubharmonic-functions--analytic-singularities/"><span>5.18</span> Analytic singularities</a><code class="tag-id">26AEEBDF865B</code></li><li><a href="../../sections/plurisubharmonic-functions--the-space-of-currents/"><span>5.19</span> The space of currents</a><code class="tag-id">EB85809E6CA8</code></li><li><a href="../../sections/plurisubharmonic-functions--plurisubharmonic-metrics-on-line-bundles/"><span>5.20</span> Plurisubharmonic metrics on line bundles</a><code class="tag-id">A59F8B8F06A8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities/"><span>5.21</span> Plurisubharmonic functions and singularities</a><code class="tag-id">EDB5A2485B58</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--plurisubharmonic-potentials/"><span>5.22</span> Plurisubharmonic potentials</a><code class="tag-id">17A37A0D3690</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--changes-of-background/"><span>5.23</span> Changes of background</a><code class="tag-id">012278DBB6E8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--maxima-and-the-maximum-principle/"><span>5.24</span> Maxima and the maximum principle</a><code class="tag-id">AA6F3BC0AD9F</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--normalized-compactness/"><span>5.25</span> Normalized compactness</a><code class="tag-id">0B216F0B911E</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--uniform-exponential-integrability/"><span>5.26</span> Uniform exponential integrability</a><code class="tag-id">5A19CE5C3CCE</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--local-products-and-capacity/"><span>5.27</span> Local products and capacity</a><code class="tag-id">5E507B6993DC</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--products-with-smooth-backgrounds/"><span>5.28</span> Products with smooth backgrounds</a><code class="tag-id">5E2B332B89B4</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--hermitian-capacity/"><span>5.29</span> Hermitian capacity</a><code class="tag-id">DD310AD8B258</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--comparing-local-regularizations/"><span>5.30</span> Comparing local regularizations</a><code class="tag-id">DB8E63271D73</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--gluing-with-a-small-curvature-error/"><span>5.31</span> Gluing with a small curvature error</a><code class="tag-id">78243032B1A1</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--regularization-in-a-fixed-hermitian-background/"><span>5.32</span> Regularization in a fixed Hermitian background</a><code class="tag-id">26C061D9E9B2</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--singularity-type-and-multiplier-ideals/"><span>5.33</span> Singularity type and multiplier ideals</a><code class="tag-id">9A10411F1BCD</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--analytic-types-and-restriction/"><span>5.34</span> Analytic types and restriction</a><code class="tag-id">0D77FC17B23B</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-local-bergman-estimates/"><span>5.35</span> The local Bergman estimates</a><code class="tag-id">51F374296336</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-global-curvature-bound/"><span>5.36</span> The global curvature bound</a><code class="tag-id">3BCA55154463</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--multiplier-ideals-and-logarithmic-poles/"><span>5.37</span> Multiplier ideals and logarithmic poles</a><code class="tag-id">5BB7B3EA169D</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--lelong-numbers-and-divisorial-estimates/"><span>5.38</span> Lelong numbers and divisorial estimates</a><code class="tag-id">2C2417A75DF4</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--potential-regularity-and-metric-distance/"><span>5.39</span> Potential regularity and metric distance</a><code class="tag-id">DE3129821F10</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--obstacle-envelopes/"><span>5.40</span> Obstacle envelopes</a><code class="tag-id">8EA2EE30DE99</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--the-minimum-principle/"><span>5.41</span> The minimum principle</a><code class="tag-id">392B79314DF8</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--chern-connection-regularization/"><span>5.42</span> Chern-connection regularization</a><code class="tag-id">001730C9ED64</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/" aria-current="page"><span>5.43</span> Pullback and descent</a><code class="tag-id">88AEFA5005B9</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--integration-against-non-pluripolar-measures/"><span>5.44</span> Integration against non-pluripolar measures</a><code class="tag-id">2111608E9FA1</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--curvature-of-line-bundles/"><span>5.45</span> Curvature of line bundles</a><code class="tag-id">355A31F789F6</code></li><li><a href="../../sections/plurisubharmonic-functions-and-singularities--polar-curvature/"><span>5.46</span> Polar curvature</a><code class="tag-id">AFA07BFD0E7B</code></li><li><a href="../../sections/pluripolar-sets-and-the-plurifine-topology/"><span>5.47</span> Pluripolar sets and the plurifine topology</a><code class="tag-id">F5A3147592B6</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/E762B356717B/"><span>← Previous</span><small>Equation 5.42.11</small></a><a class="pager-next" rel="next" href="../../tag/1F1A3CC0946E/"><span>Next →</span><small>5.43.1 Holomorphic disks</small></a></nav><h1>5.43 Pullback and descent<code class="tag-id">88AEFA5005B9</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-88AEFA5005B9" data-section-entries="88AEFA5005B9"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="4EF7E5D1"><code class="tag-id">88AEFA5005B9</code></span>
+<p>
+Pullback by a holomorphic map preserves the inequality $\theta +\mathrm{dd}^{\mathrm{c}}u\geq 0$. Conversely, on a submersion with compact connected fibers, a potential that is positive with respect to a pulled-back background, which has no vertical component, must be constant on the fibers and therefore descends. For maps to a curve, descent also holds across critical fibers, and pullback preserves and reflects all-weight ideal types. If the fibers are disconnected, potentials descend to the curve of fiber components rather than the original base. Potentials also descend under modifications, and there a Jacobian factor accounts for the change in multiplier-ideal integrability. 
+</p>
+</div></section><section class="reading-chunk" id="entry-1F1A3CC0946E" data-section-entries="12585F177470 1F1A3CC0946E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/1F1A3CC0946E/">5.43.1 Holomorphic disks</a><code class="tag-id">1F1A3CC0946E</code></h2><span data-gerby-tag="CD370652"></span>
+<p>
+A smooth background form need not have local $\mathrm{dd}^{\mathrm{c}}$-potentials, but its pullback to a disk does, since a real $(1,1)$-form on a disk is closed. Testing on holomorphic disks therefore characterizes the exact lower curvature bound in a way that is preserved by holomorphic maps. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-BB3D49B4">
+<p><a class="environment-identifier" href="../../tag/12585F177470/">Lemma <span data-tag="BB3D49B4">5.43.2</span>.</a><span data-gerby-tag="BB3D49B4"><code class="tag-id">12585F177470</code></span> Let $\theta $ be a smooth real $(1,1)$-form on a complex manifold $M$, and let $u$ be quasi-plurisubharmonic on $M$. Then $\theta +\mathrm{dd}^{\mathrm{c}}u\geq 0$ if and only if the following condition holds: for every holomorphic map $f:\Delta \to M$ from the unit disk such that $u\circ f$ is not identically $-\infty $, and for every smooth function $a$ on an open subset of $\Delta $ with $\mathrm{dd}^{\mathrm{c}}a=f^*\theta $, the function $u\circ f+a$ is subharmonic there. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose first that $\theta +\mathrm{dd}^{\mathrm{c}}u\geq 0$. On a coordinate ball, convolve $u$ and $\theta $ with a smooth nonnegative radial kernel. The resulting smooth functions $u_\epsilon $ satisfy 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}u_\epsilon \geq -\theta _\epsilon , \qquad \theta _\epsilon \longrightarrow \theta \quad \text{smoothly}.  \]
+</div>
+<p>
+       Write $u=p-r$ locally, with $p$ plurisubharmonic and $r$ smooth. The convolutions $p_\epsilon $ decrease to $p$. On a smaller disk on which $u\circ f$ is not identically $-\infty $, $p_\epsilon \circ f$ therefore converges in $L^1_{\mathrm{loc}}$ to $p\circ f$, while $r_\epsilon \circ f$ converges smoothly. Pulling back the smooth inequality and passing to the limit in the sense of distributions gives $\mathrm{dd}^{\mathrm{c}}(u\circ f)+f^*\theta \geq 0$. Since $u\circ f=p\circ f-r\circ f$ is the sum of a subharmonic and a smooth function, this distributional inequality makes $u\circ f+a$ subharmonic. 
+    <p>
+      Conversely, test on affine complex lines in a coordinate ball. For a fixed nonzero constant direction $\xi $, local integrability of $u$ implies that the restriction of $u$ to almost every line parallel to $\xi $ is not identically $-\infty $. Fubini's theorem, applied to nonnegative smooth test functions, then gives positivity of the scalar distribution obtained by evaluating the Hermitian coefficient matrix of $\theta +\mathrm{dd}^{\mathrm{c}}u$ on $\xi $. Positivity for a countable dense set of constant directions proves positivity of the Hermitian matrix of coefficient measures, which is the current inequality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Consequently, holomorphic pullback preserves the inequality $\theta +\mathrm{dd}^{\mathrm{c}}u\geq 0$ wherever the pulled-back function is not identically $-\infty $: apply the disk criterion to the compositions with the given map. We also use descent of subharmonicity under the finite map $\rho (t)=t^ k$, $k\geq 1$, of the disk. If $h\circ \rho $ is subharmonic, local inverse branches of $\rho $ show that $h$ is subharmonic off zero. Moreover, $h$ is bounded above near zero, and its value at zero is its upper limit there, since 
+</p>
+<div class="equation">
+  \[  h(0)=(h\circ \rho )(0) =\limsup _{t\to 0,\  t\ne 0}h(t^ k) =\limsup _{z\to 0,\  z\ne 0}h(z).  \]
+</div>
+<p>
+ By the removable-singularity theorem, $h$ is subharmonic at zero as well. 
+</p>
+</div></section><section class="reading-chunk" id="entry-A5D491DF2CA3" data-section-entries="074D8F716632 8BFC96F6E5F8 A5D491DF2CA3"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A5D491DF2CA3/">5.43.3 Compact fibers</a><code class="tag-id">A5D491DF2CA3</code></h2><span data-gerby-tag="4E888F58"></span>
+<p>
+The connected components of the fibers of a submersion determine a finite covering of the base, and potentials first descend to this covering. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-9D39555D">
+<p><a class="environment-identifier" href="../../tag/074D8F716632/">Lemma <span data-tag="9D39555D">5.43.4</span>.</a><span data-gerby-tag="9D39555D"><code class="tag-id">074D8F716632</code></span> Let $p:M\to Y$ be a surjective holomorphic submersion between connected compact complex manifolds. There is a factorization </p>
+<div class="equation">
+  \[  M\xrightarrow {\pi }Y'\xrightarrow {r}Y,\qquad p=r\circ \pi ,  \]
+</div>
+<p> where $Y'$ is a connected compact complex manifold, $r$ is a finite unramified holomorphic covering and $\pi $ is a surjective holomorphic submersion with connected fibers. The points of $r^{-1}(y)$ correspond to the connected components of $p^{-1}(y)$, which are the fibers of $\pi $ over those points. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a Hermitian metric on $M$. The orthogonal complement of $\ker \mathrm dp$ gives a smooth horizontal lift of tangent vectors on $Y$. Around $y_0\in Y$ choose a coordinate ball $B$ centered at $y_0$, with compact closure inside a larger coordinate ball. For $y\in B$, lift the straight segment from $y_0$ to $y$. The ordinary differential equation for horizontal transport has a solution along the whole segment, since its projection remains in the compact closure of $B$, whose inverse image is compact. Smooth dependence on the starting point and on $y$, together with transport along the reversed segment, gives a smooth trivialization 
+    
+<div class="equation">
+  \[  p^{-1}(B)\simeq B\times p^{-1}(y_0)  \]
+</div>
+<p>
+       over $B$. 
+    <p>
+      The compact manifold $p^{-1}(y_0)$ has finitely many connected components. The trivialization partitions $p^{-1}(B)$ into finitely many open and closed pieces, each of which meets every fiber in one connected component. On overlaps, two such local partitions identify the same fiber components, and their labels differ by locally constant permutations. Glue one copy of each base ball for every component, using these identifications. Equivalently, take the quotient of $M$ that identifies points in the same connected component of a fiber. The local partitions make this quotient a Hausdorff covering space: distinct points over one base point lie on different sheets, and points over different base points are separated by their images in $Y$. 
+    <p>
+      Call the quotient $Y'$ and its projection $r$. Coordinates of $Y$ on each sheet give holomorphic charts with holomorphic transition maps, so $r$ is a local biholomorphism. It is a finite covering, and $Y'$ is compact because a finite covering of a compact space is compact. Locally, the quotient map $\pi $ is $p$ restricted to one of the open pieces, so it is a holomorphic submersion with the asserted connected fibers. Surjectivity of $\pi $ and connectedness of $M$ make $Y'$ connected. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-A0F41BA6">
+<p><a class="environment-identifier" href="../../tag/8BFC96F6E5F8/">Proposition <span data-tag="A0F41BA6">5.43.5</span>.</a><span data-gerby-tag="A0F41BA6"><code class="tag-id">8BFC96F6E5F8</code></span> Let $\pi :Y\to X$ be a surjective holomorphic submersion between connected compact complex manifolds, with connected fibers. Let $\theta $ be a smooth real $(1,1)$-form on $X$. Pullback gives a bijection </p>
+<div class="equation">
+  \[  \mathrm{PSH}(X,\theta )\longrightarrow \mathrm{PSH}(Y,\pi ^*\theta ).  \]
+</div>
+<p> Every member on the right is constant on each fiber, with the value $-\infty $ allowed on an entire fiber. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On a coordinate ball $V\subset X$, choose a smooth function $\rho $ with $\mathrm{dd}^{\mathrm{c}}\rho \geq \theta $. If $u\in \mathrm{PSH}(Y,\pi ^*\theta )$, then $u+\rho \circ \pi $ is plurisubharmonic on $\pi ^{-1}(V)$. Its restriction to a fiber is plurisubharmonic or identically $-\infty $, and since the fiber is compact and connected, the maximum principle shows that it is constant in either case. As $\rho \circ \pi $ is constant on fibers, $u=v\circ \pi $ for a uniquely defined function $v$ on $X$. 
+    <p>
+      A holomorphic submersion admits local holomorphic sections. Composing $u+\rho \circ \pi $ with such a section shows that $v+\rho $ is plurisubharmonic or identically $-\infty $ on a smaller ball. The latter alternative would make $u=-\infty $ on a nonempty open set, which is impossible for a quasi-plurisubharmonic function. Hence $v$ is quasi-plurisubharmonic. Distributional differentiation in local product coordinates gives 
+    
+<div class="equation">
+  \[  \pi ^*(\theta +\mathrm{dd}^{\mathrm{c}}v)=\pi ^*\theta +\mathrm{dd}^{\mathrm{c}}u\geq 0.  \]
+</div>
+<p>
+       Positivity of a pulled-back current of this form implies positivity on the base: test in product coordinates against products with a nonnegative compactly supported volume form of integral one in the fiber variables. It follows that $v\in \mathrm{PSH}(X,\theta )$. 
+    <p>
+      Conversely, by lemma <a data-tag="BB3D49B4" href="../../tag/12585F177470/">5.43.2</a>, the pullback of a $\theta $-plurisubharmonic function by $\pi $ is $\pi ^*\theta $-plurisubharmonic; in local product coordinates it is clearly not identically $-\infty $. The pullback map is injective because $\pi $ is surjective. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-3110CB46064E" data-section-entries="11E6C3E4D36C 3110CB46064E 47C6B39BA71A 5B3D7BB20499 633794C1EFC2 CE5106030996"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/3110CB46064E/">5.43.6 Maps to a curve</a><code class="tag-id">3110CB46064E</code></h2><span data-gerby-tag="BB4A799D"></span>
+<p>
+Let $p:X\to C$ be a surjective holomorphic map with connected fibers, where $X$ is a connected compact complex manifold of dimension $n\geq 1$ and $C$ is a connected compact Riemann surface. Critical fibers are allowed. Fix any smooth real $(1,1)$-form $\beta $ on $C$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-001ACE15">
+<p><a class="environment-identifier" href="../../tag/47C6B39BA71A/">Proposition <span data-tag="001ACE15">5.43.7</span>.</a><span data-gerby-tag="001ACE15"><code class="tag-id">47C6B39BA71A</code></span> Pullback gives a bijection </p>
+<div class="equation">
+  \[  \mathrm{PSH}(C,\beta )\longrightarrow \mathrm{PSH}(X,p^*\beta ).  \]
+</div>
+<p> It preserves the supremum and the ordinary singularity order. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The critical set is a proper compact analytic subset of $X$. It has finitely many irreducible components, and $p$ is constant on each: its differential vanishes on the smooth locus of that component, and continuity extends the constant to the component. Thus the set $D\subset C$ of critical values is finite. 
+    <p>
+      Let $U\in \mathrm{PSH}(X,p^*\beta )$. On a base coordinate disk choose a smooth $a$ with $\mathrm{dd}^{\mathrm{c}}a=\beta $. Over $C\setminus D$, the function $U+a\circ p$ restricts to a plurisubharmonic function, or the constant $-\infty $, on each compact connected fiber. The maximum principle makes it constant there. Local holomorphic sections then give a function $v$ with $U=v\circ p$ and $a+v$ subharmonic. This is the local argument of proposition <a data-tag="A0F41BA6" href="../../tag/8BFC96F6E5F8/">5.43.5</a>; it uses compactness of the fibers, not compactness of the punctured total space. 
+    <p>
+      The function $v$ is bounded above by $\sup _ XU$. The removable singularity theorem extends $a+v$ subharmonically across the finitely many punctures. The extensions glue, giving $v\in \mathrm{PSH}(C,\beta )$. Its pullback is $p^*\beta $-plurisubharmonic by lemma <a data-tag="BB3D49B4" href="../../tag/12585F177470/">5.43.2</a>. It agrees with $U$ off the proper analytic set $p^{-1}(D)$, hence almost everywhere and everywhere by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">5.24.3</a>. 
+    <p>
+      Conversely pullback preserves the curvature inequality by the disk criterion. It is not identically $-\infty $, because $p$ is surjective. Surjectivity also proves uniqueness and preserves the supremum and every inequality $v\leq w+c$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B01B5843">
+<p><a class="environment-identifier" href="../../tag/11E6C3E4D36C/">Lemma <span data-tag="B01B5843">5.43.8</span>.</a><span data-gerby-tag="B01B5843"><code class="tag-id">11E6C3E4D36C</code></span> Let $f:(\mathbb C^ m,0)\to (\mathbb C,0)$ be a nonconstant holomorphic germ, with $m\geq 1$, and let $e=\operatorname {ord}_0f$. For every quasi-subharmonic germ $v$ at zero, </p>
+<div class="equation">
+  \[  \nu (v\circ f,0)=e\nu (v,0).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      A smooth correction of $v$ pulls back to a smooth function, so we may assume that $v$ is subharmonic. The Taylor expansion of $f$ gives $|f(z)|\leq M|z|^ e$ on a small ball. Choose a unit vector $\xi $ on which the leading homogeneous term is nonzero. Then 
+    
+<div class="equation">
+  \[  f(\zeta \xi )=a\zeta ^ e+O(\zeta ^{e+1}),\qquad a\ne 0.  \]
+</div>
+<p>
+       For all small $r$, the remainder has modulus at most $|a|r^ e/4$ on $|\zeta |=r$. If $|t|&lt;|a|r^ e/4$, Rouché's theorem shows that $f(\zeta \xi )-t$ has $e$ zeros in $|\zeta |&lt;r$. Consequently, with $c=|a|/4$, 
+    
+<div class="equation">
+  \[  \{ |t|&lt;cr^ e\} \subset f(B(0,r)) \subset \{ |t|&lt;Mr^ e\} .  \]
+</div>
+<p>
+       The suprema of $v$ on these three sets are ordered. Dividing by $\log r^2&lt;0$, the two disk terms both tend to $e\nu (v,0)$ by the definition in section <a data-tag="BB3C41D4" href="../../tag/0D77FC17B23B/">5.34</a>. The middle term therefore has the same limit, proving the formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-1BD4576E">
+<p><a class="environment-identifier" href="../../tag/5B3D7BB20499/">Corollary <span data-tag="1BD4576E">5.43.9</span>.</a><span data-gerby-tag="1BD4576E"><code class="tag-id">5B3D7BB20499</code></span> For $v,w\in \mathrm{QPSH}(C)$, the inclusions $\mathcal I(tv)\subseteq \mathcal I(tw)$ for every $t&gt;0$ hold if and only if </p>
+<div class="equation">
+  \[  \mathcal I(t(v\circ p))\subseteq \mathcal I(t(w\circ p)) \quad \text{for every }t&gt;0.  \]
+</div>
+<p> In particular pullback preserves and reflects all-weight multiplier-ideal equivalence. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On a smooth curve, local modifications are isomorphisms. By theorem <a data-tag="8B4BE822" href="../../tag/3F1FC2F620B4/">5.37.3</a>, the base inclusions are therefore equivalent to $\nu (v,s)\geq \nu (w,s)$ for every $s\in C$. Let $\pi $ be any local modification of a neighborhood in $X$ with smooth source, and let $y$ be a point of its source. In a coordinate at $s=p(\pi (y))$, the germ $p\circ \pi -s$ is nonconstant. Indeed, a modification is an isomorphism on a dense open set, and a nonconstant holomorphic map cannot be constant on an open set. Its order $e_ y$ is positive and finite. The preceding lemma gives 
+    
+<div class="equation">
+  \[  \nu (v\circ p\circ \pi ,y)=e_ y\nu (v,s),\qquad \nu (w\circ p\circ \pi ,y)=e_ y\nu (w,s).  \]
+</div>
+<p>
+       The base inequalities thus imply all inequalities upstairs, and the same valuative theorem gives the ideal inclusions. Conversely the upstairs inclusions give the inequalities for the identity modification at any $x\in p^{-1}(s)$. Dividing by $\operatorname {ord}_ x(p-s)&gt;0$ recovers the base inequalities. Apply this argument in both directions for equality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-DA81C6B2">
+<p><a class="environment-identifier" href="../../tag/633794C1EFC2/">Lemma <span data-tag="DA81C6B2">5.43.10</span>.</a><span data-gerby-tag="DA81C6B2"><code class="tag-id">633794C1EFC2</code></span> If $v_ j,v\in \mathrm{PSH}(C,\beta )$ and $v_ j\to v$ in $L^1(C)$, then $v_ j\circ p\to v\circ p$ in $L^1(X)$ for every smooth positive volume form on $X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $M_ j=\sup _ Cv_ j$ and $M=\sup _ Cv$. Hartogs' lemma applied at moving maximum points gives $\limsup M_ j\leq M$. A subsequence with limiting suprema below $M$ would give $v$ below that limit almost everywhere, hence everywhere, a contradiction. Thus $M_ j\to M$. 
+    <p>
+      By surjectivity, $(v_ j-M_ j)\circ p$ has supremum zero. Normalized compactness, theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">5.25.2</a>, makes these pullbacks precompact in $L^1(X)$. On every relatively compact product chart over $C\setminus D$, where $D$ is the finite set of critical values, Fubini's theorem and bounded smooth volume densities give local $L^1$ convergence to $(v-M)\circ p$. Every subsequential limit therefore equals this pullback off $p^{-1}(D)$, and hence almost everywhere, because that analytic set has smooth volume zero. All subsequential limits agree, so the entire normalized sequence converges. Adding $M_ j\to M$ proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-BF6F75E5">
+<p><a class="environment-identifier" href="../../tag/CE5106030996/">Lemma <span data-tag="BF6F75E5">5.43.11</span>.</a><span data-gerby-tag="BF6F75E5"><code class="tag-id">CE5106030996</code></span> A function $v\in \mathrm{QPSH}(C)$ has analytic singularities if and only if $v\circ p$ has analytic singularities. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Composing a local analytic presentation with $p$ proves the forward implication. The pulled-back generators are not all identically zero, since a nonconstant map to a curve is open. 
+    <p>
+      Conversely fix $s\in C$ and $x\in p^{-1}(s)$. In coordinates, choose a complex line through $x$ on which $p-s$ has its finite order $e$ and is nonconstant, as in the Lelong lemma. On that line write 
+    
+<div class="equation">
+  \[  (p-s)(\zeta )=h(\zeta )^ e,  \]
+</div>
+<p>
+       where $h$ is a local biholomorphism fixing zero; take an analytic $e$th root of the nonvanishing factor of the germ. The restriction of $v\circ p$ to the line is not identically $-\infty $, since $v$ is finite almost everywhere and this map is open. By proposition <a data-tag="A55E69E3" href="../../tag/AAD8908A0CF9/">5.34.1</a>, it has analytic singularities. In one variable its presentation is $r\log |\zeta |^2+O(1)$ with $r\in \mathbb Q_{\geq 0}$, obtained by taking the least order of its finitely many generators. Changing to $w=h(\zeta )$ gives 
+    
+<div class="equation">
+  \[  v(s+w^ e)=r\log |w|^2+O(1).  \]
+</div>
+<p>
+       Every sufficiently small $t$ has an $e$th root $w$, so $v(s+t)=(r/e)\log |t|^2+O(1)$. This is an analytic presentation on the base, including a bounded one when $r=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-35C176E64D5B" data-section-entries="35C176E64D5B F2BB0D2DE2F4"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/35C176E64D5B/">5.43.12 The curve of fiber components</a><code class="tag-id">35C176E64D5B</code></h2><span data-gerby-tag="08FC546A"></span>
+<p>
+Dropping the connected-fiber hypothesis requires replacing the base by the curve of fiber components. The following construction is the curve case of Stein factorization. It also identifies the multiplicities needed when pulling back curvature measures. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-5A573889">
+<p><a class="environment-identifier" href="../../tag/F2BB0D2DE2F4/">Proposition <span data-tag="5A573889">5.43.13</span>.</a><span data-gerby-tag="5A573889"><code class="tag-id">F2BB0D2DE2F4</code></span> Let $p:X\to C$ be a surjective holomorphic map, where $X$ is a connected compact complex manifold of dimension $n\geq 1$ and $C$ is a connected compact Riemann surface. There is a factorization </p>
+<div class="equation">
+  \[  X\xrightarrow {q}C'\xrightarrow {r}C,\qquad p=r\circ q,  \]
+</div>
+<p> where $C'$ is a connected compact Riemann surface, $q$ is surjective and holomorphic with connected fibers, and $r$ is a finite holomorphic map. The points of $r^{-1}(s)$ correspond to the connected components of $p^{-1}(s)$, which are the fibers of $q$ over those points. The factorization is unique up to a unique isomorphism commuting with $q$ and $r$. </p>
+<p>If $t\in r^{-1}(s)$ has ramification index $e_ t$, then, as effective divisors with multiplicities, </p>
+<div class="equation">
+  \[  [p^{-1}(s)]=\sum _{t\in r^{-1}(s)}e_ t[q^{-1}(t)].  \]
+</div>
+<p> The degree of $r$ is the number of components of a regular fiber of $p$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first construct the covering over the regular values, complete it across the critical values, and then extend its component quotient to $X$. 
+    <p>
+      The critical values form a finite set $D\subset C$, by the critical-set argument in the proof of <a data-tag="001ACE15" href="../../tag/47C6B39BA71A/">5.43.7</a>; that argument does not use connectedness of the fibers. Over $C^\circ =C\setminus D$, the map $p$ is a proper submersion. The local construction in lemma <a data-tag="9D39555D" href="../../tag/074D8F716632/">5.43.4</a> applies there: horizontal transport over a disk has compact inverse image over its closure. Compact fibers have finitely many components, and the resulting local labels are glued by locally constant permutations. We obtain 
+    
+<div class="equation">
+  \[  X^\circ \xrightarrow {q^\circ }C'^\circ \xrightarrow {r^\circ }C^\circ , \qquad X^\circ =p^{-1}(C^\circ ),  \]
+</div>
+<p>
+       with $q^\circ $ a holomorphic submersion with connected fibers and $r^\circ $ a finite unramified covering of degree $d$. The complement of a proper analytic subset in a connected complex manifold is connected, so $X^\circ $ and its image $C'^\circ $ are connected. Here only the fiber divisor is removed. Locally, the complement of the zero set of a nonzero holomorphic function in a ball is path connected: join two outside points through an outside intermediate point by two complex-line disks. Each restriction is nonzero because it contains an outside endpoint, and its isolated zeros can be avoided. Applying this local argument along a chain of balls proves the required global connectedness. 
+    <p>
+      For each $s\in D$, take a small coordinate disk centered at $s$ and disjoint from the other critical values. A connected component of the covering over its puncture is a finite connected covering of a punctured disk, of some degree $e$. It has a coordinate $w$ in which $r^\circ (w)=w^ e$: the universal cover of the punctured disk is a half-plane with projection $z=\exp \zeta $, and the index-$e$ subgroup of its deck group is generated by $\zeta \mapsto \zeta +2\pi \mathrm i e$. The coordinate $w=\exp (\zeta /e)$ gives the asserted form. Attach one point $w=0$ to each such component. There are finitely many, with their degrees summing to $d$. Gluing these disks to $C'^\circ $ gives a connected Riemann surface $C'$ and a finite holomorphic map $r:C'\to C$. The new points have disjoint disk neighborhoods, so this gluing is Hausdorff. The inverse image of a small closed base disk is a finite union of closed disks; over the complement of their interiors, the original finite covering is proper. Thus $C'$ is compact. 
+    <p>
+      We extend $q^\circ $. Fix $x\in p^{-1}(s)$, $s\in D$. On a small coordinate ball $B$ about $x$, the image of $p$ lies in the chosen disk. The complement $B\setminus p^{-1}(s)$ is connected. Its image under $q^\circ $ therefore lies in a single punctured disk just attached to $C'$, since those disks are the connected components of $r^{-1}$ of the punctured base disk. In its coordinate $w$, the function $w\circ q^\circ $ is holomorphic and bounded, and 
+    
+<div class="equation">
+  \[  (w\circ q^\circ )^ e=p-s.  \]
+</div>
+<p>
+       The bounded holomorphic removable-singularity theorem extends it across $p^{-1}(s)\cap B$. To see this without assuming that the divisor is smooth, first extend at its smooth points by the one-variable theorem in transverse coordinates. The singular locus of the reduced divisor has complex codimension at least two in the ambient manifold, so Hartogs extension across that locus completes the extension. In dimension one there are only isolated points. Its $e$th power remains $p-s$ by the identity theorem, and hence its value is zero on that fiber. This defines a holomorphic map from $B$ to the attached disk. The local extensions agree on their dense common regular locus and therefore glue to $q:X\to C'$ with $p=r\circ q$. Its image is closed, by compactness, and contains the dense set $C'^\circ $, so $q$ is surjective. 
+    <p>
+      Every fiber of $q$ is connected. Otherwise write one fiber as a union of two disjoint nonempty compact subsets and put them in disjoint open neighborhoods $U_1,U_2$. Properness gives a disk $V$ about their base point $t$ such that 
+    
+<div class="equation">
+  \[  q^{-1}(V)\subset U_1\cup U_2.  \]
+</div>
+<p>
+       The map $q$ is open: at any point, a complex line on which the nonconstant germ $q-t$ has its first nonzero term gives an open one-variable restriction. Consequently both $q(U_ i)$ contain a neighborhood of $t$. A nearby point of $C'^\circ $ then has a fiber meeting both neighborhoods, contradicting connectedness of the regular fibers. 
+    <p>
+      The fibers of $p$ are the disjoint union of these connected $q$-fibers over the finitely many points of $r^{-1}(s)$. They are its components. Locally at $t$, the formula for a finite map is $r(w)-s=w^{e_ t}$ after changing the coordinate by a holomorphic root of a nonvanishing factor. Pulling back this equality by $q$ gives the divisor multiplicities stated above. Over $C^\circ $, $r$ is unramified and each sheet is one component, proving the degree assertion. 
+    <p>
+      Finally, any factorization with the stated properties has over $C^\circ $ precisely this covering of fiber components. It is unramified there: a critical point of its finite map, together with surjectivity of its first factor, would make $p$ critical over that base point. Thus the component identification is holomorphic on $C'^\circ $. On every punctured disk it identifies two completions of the same finite covering, and the coordinates $w^ e$ above extend it biholomorphically across the added point. It gives a global isomorphism; density and surjectivity make it unique and give commutation with both maps. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-1C4BCE809D00" data-section-entries="0018DC5A7DD0 151A1D744DE7 1C4BCE809D00"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/1C4BCE809D00/">5.43.14 Finite maps between curves</a><code class="tag-id">1C4BCE809D00</code></h2><span data-gerby-tag="04F697C0"></span>
+<p>
+Let $r:C'\to C$ be a finite surjective holomorphic map of degree $d$ between connected compact Riemann surfaces. Write $e_ x$ for its local degree at $x\in C'$, so that $\sum _{r(x)=s}e_ x=d$ for every $s\in C$. Fix a smooth real $(1,1)$-form $\beta $ on $C$ and put $\sigma =r^*\beta $. Potentials in background $\sigma $ need not descend to $C$. Taking the maximum on each fiber nevertheless gives a base potential that dominates the original potential after pullback. Its Lelong numbers are the smallest ramification-adjusted Lelong numbers on the fiber. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-A483620D">
+<p><a class="environment-identifier" href="../../tag/0018DC5A7DD0/">Lemma <span data-tag="A483620D">5.43.15</span>.</a><span data-gerby-tag="A483620D"><code class="tag-id">0018DC5A7DD0</code></span> For $h\in \mathrm{PSH}(C',\sigma )$, the function </p>
+<div class="equation">
+  \[  m_ h(s)=\max _{r(x)=s}h(x)  \]
+</div>
+<p> belongs to $\mathrm{PSH}(C,\beta )$ and satisfies $h\leq m_ h\circ r$. For every $s\in C$, </p>
+<div class="equation">
+  \[  \nu (m_ h,s)=\min _{r(x)=s}\frac{\nu (h,x)}{e_ x}.  \]
+</div>
+<p> If $v\in \mathrm{PSH}(C,\beta )$, then $h\preceq v\circ r$ implies $m_ h\preceq v$. The analogous implication holds for the all-weight ideal order. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On a base disk choose a smooth function $a$ with $\mathrm{dd}^{\mathrm{c}}a=\beta $. Off the branch values, $m_ h+a$ is the maximum of finitely many subharmonic functions obtained from $h+a\circ r$ by inverse branches. It is subharmonic there and locally bounded above. The removable-singularity theorem extends it across the branch values. This extension has the stated value: upper semicontinuity and properness give the upper bound at the fiber, while the genuine upper limits of $h+a\circ r$ at its points give the reverse bound. Thus the extensions glue. The function is not identically $-\infty $, since $h$ is finite at some point. This proves the curvature inequality and $h\leq m_ h\circ r$. 
+    <p>
+      Choose coordinates in the disjoint disks over $s$ so that the map on the disk centered at $x$ is $t=z^{e_ x}$. Then 
+    
+<div class="equation">
+  \[  \sup _{|t|&lt;\delta }m_ h(t) =\max _{r(x)=s}\sup _{|z|&lt;\delta ^{1/e_ x}}h(z).  \]
+</div>
+<p>
+       Divide by $\log \delta ^2&lt;0$ and use the supremum definition of Lelong number. Each quotient on the right tends to $\nu (h,x)/e_ x$, and the maximum becomes the minimum after division. Smooth local corrections do not affect these limits. 
+    <p>
+      An ordinary bound $h\leq v\circ r+c$ gives $m_ h\leq v+c$ on every fiber. On a curve, the all-weight ideal order is equivalent to the pointwise Lelong inequalities, by theorem <a data-tag="8B4BE822" href="../../tag/3F1FC2F620B4/">5.37.3</a>. The pullback formula <a data-tag="B01B5843" href="../../tag/11E6C3E4D36C/">5.43.8</a> makes $h\preceq _{\mathcal I}v\circ r$ equivalent to $\nu (h,x)\geq e_ x\nu (v,r(x))$ at every $x$. The minimum formula gives the required base inequalities. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Finite pullback of measures includes ramification at atoms. For a continuous real function $f$ on $C'$, put 
+</p>
+<div class="equation">
+  \[  (\operatorname {Tr}_ r f)(s) =\sum _{r(x)=s}e_ xf(x).  \]
+</div>
+<p>
+ This function is continuous: in the local description $t=z^ e$, the $e$ values tend to the same value at the branch point. For a finite positive measure $\mu $ on $C$, define $r^*\mu $ by 
+</p>
+<div class="equation">
+  \[  \int _{C'}f\, \mathrm d(r^*\mu ) =\int _ C\operatorname {Tr}_ r f\, \mathrm d\mu ,  \]
+</div>
+<p>
+ and extend the definition to signed measures by linearity. Positivity and the bound $|\operatorname {Tr}_ r f|\leq d\| f\| _\infty $ give a finite measure by the Riesz representation theorem. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-01A85B2E">
+<p><a class="environment-identifier" href="../../tag/151A1D744DE7/">Lemma <span data-tag="01A85B2E">5.43.16</span>.</a><span data-gerby-tag="01A85B2E"><code class="tag-id">151A1D744DE7</code></span> For every finite signed measure $\mu $ and Borel set $B\subset C$, </p>
+<div class="equation">
+  \[  \begin{gathered} r_*r^*\mu =d\mu ,\qquad \| r^*\mu \| _{\mathrm{TV}}=d\| \mu \| _{\mathrm{TV}},\\ r^*(\mathbf1_ B\mu )=\mathbf1_{r^{-1}(B)}r^*\mu , \qquad r^*\delta _ s=\sum _{r(x)=s}e_ x\delta _ x. \end{gathered}  \]
+</div>
+<p> For $v\in \mathrm{PSH}(C,\beta )$, writing $T_ v=\beta +\mathrm{dd}^{\mathrm{c}}v$ and $\mu _ v=\mathbf1_{\{ v=-\infty \} }T_ v$, one has </p>
+<div class="equation">
+  \[  T_{v\circ r}=r^*T_ v,\qquad \mu _{v\circ r}=r^*\mu _ v.  \]
+</div>
+<p> Images and inverse images of polar sets under $r$ are polar. Pullback and pushforward of positive measures commute with taking the atomic part. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The trace of $g\circ r$ is $dg$, giving the pushforward identity. The same weighted fiber formula for Borel test functions follows from the monotone-class theorem and gives the restriction and atom formulas. The positive and negative Jordan parts of a signed measure have disjoint Borel carriers; their pullbacks are positive with disjoint inverse-image carriers. Each has $d$ times its original mass, which proves the total-variation identity. 
+    <p>
+      Choose a local smooth $a$ with $\mathrm{dd}^{\mathrm{c}}a=\beta $; then $v+a$ is a subharmonic potential of $T_ v$. Its Riesz representation is a logarithmic potential plus a harmonic function. In coordinates $t=z^ e$, the identity 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}_ z\log |z^ e-t|^2 =\sum _{z^ e=t}\operatorname {ord}_ z(z^ e-t)\delta _ z  \]
+</div>
+<p>
+       shows that pulling back this potential gives the weighted measure above. Fubini's theorem applies locally: factorization of $z^ e-t$ into its $e$ linear factors gives a uniform local $L^1$ bound for these logarithmic kernels as $t$ varies on a smaller disk. The harmonic term has zero Hessian after pullback. This proves $T_{v\circ r}=r^*T_ v$. The pole set of $v\circ r$ is exactly $r^{-1}\{ v=-\infty \} $, so the restriction formula proves the polar identity. 
+    <p>
+      Inverse images of polar sets are polar by composition of local subharmonic witnesses. For images, take local witnesses on the finitely many inverse-image disks of a small base disk. Off the branch values, the sum of their values over the inverse branches is subharmonic and is $-\infty $ wherever any witness has a pole. It is locally bounded above and is not identically $-\infty $. Its extension across the branch values is subharmonic. Adding the finitely many branch values to the resulting polar set still gives a polar set. This proves the image assertion locally, hence globally. 
+    <p>
+      The pullback of a nonatomic measure has no atoms by the atom formula. The pushforward of a nonatomic measure has no atoms because every fiber is finite. Atomic measures pull back and push forward to atomic measures. Splitting a positive measure into these two parts proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-D643D283EFB3" data-section-entries="A7090F92CA39 C07C7BB26EF8 D643D283EFB3 D7CDD8CAD2AC"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/D643D283EFB3/">5.43.17 Modifications</a><code class="tag-id">D643D283EFB3</code></h2><span data-gerby-tag="0ED674DE"></span>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-DC3CD043">
+<p><a class="environment-identifier" href="../../tag/A7090F92CA39/">Proposition <span data-tag="DC3CD043">5.43.18</span>.</a><span data-gerby-tag="DC3CD043"><code class="tag-id">A7090F92CA39</code></span> Let $\pi :Y\to X$ be a modification of connected compact complex manifolds, and let $\theta $ be a smooth real $(1,1)$-form on $X$. Pullback gives a bijection </p>
+<div class="equation">
+  \[  \mathrm{PSH}(X,\theta )\longrightarrow \mathrm{PSH}(Y,\pi ^*\theta ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $S\subset X$ be a proper analytic subset over whose complement $\pi $ is an isomorphism, and put $D=\pi ^{-1}(S)$. By lemma <a data-tag="BB3D49B4" href="../../tag/12585F177470/">5.43.2</a>, pullback preserves the curvature inequality, and the pullback of a $\theta $-plurisubharmonic function is not identically $-\infty $, since $\pi $ is an isomorphism off $D$. The pullback map is injective because $\pi $ is surjective. 
+    <p>
+      To prove surjectivity, let $b\in \mathrm{PSH}(Y,\pi ^*\theta )$, and define $u=b\circ \pi ^{-1}$ off $S$. On a coordinate neighborhood in $X$, choose a smooth function $\rho $ with $\mathrm{dd}^{\mathrm{c}}\rho \geq \theta $. Then $b+\rho \circ \pi $ is plurisubharmonic on the inverse image of this neighborhood. By properness, its local upper bounds give a local upper bound for $u+\rho $ near $S$, so the removable-singularity theorem extends $u+\rho $ plurisubharmonically across $S$. The resulting quasi-plurisubharmonic extensions of $u$ agree almost everywhere on overlaps, hence everywhere, and glue to a function on $X$. 
+    <p>
+      The current $\theta +\mathrm{dd}^{\mathrm{c}}u$ is positive off $S$. Locally it is the sum of the positive current $\mathrm{dd}^{\mathrm{c}}(u+\rho )$ and the smooth form $\theta -\mathrm{dd}^{\mathrm{c}}\rho $. The smooth form gives $S$ zero mass, so the restriction of $\theta +\mathrm{dd}^{\mathrm{c}}u$ to $S$ is positive as well. Thus $u\in \mathrm{PSH}(X,\theta )$. The plurisubharmonic functions $b+\rho \circ \pi $ and $(u+\rho )\circ \pi $ agree off $D$, hence almost everywhere, hence everywhere. Therefore $b=u\circ \pi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Pullback by a modification preserves $L^1$ convergence within a family with a common lower curvature bound. Compactness controls the pullbacks near the exceptional locus, where a direct change of variables would involve a vanishing Jacobian. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-7BFD3B19">
+<p><a class="environment-identifier" href="../../tag/C07C7BB26EF8/">Lemma <span data-tag="7BFD3B19">5.43.19</span>.</a><span data-gerby-tag="7BFD3B19"><code class="tag-id">C07C7BB26EF8</code></span> Let $\pi :Y\to X$ be a modification between connected complex manifolds, and let $\theta $ be a smooth real $(1,1)$-form on $X$. If $v_ j\to v$ in $L^1_{\mathrm{loc}}(X)$ and all $v_ j,v$ belong to $\mathrm{PSH}(X,\theta )$, then </p>
+<div class="equation">
+  \[  v_ j\circ \pi \longrightarrow v\circ \pi \quad \hbox{in }L^1_{\mathrm{loc}}(Y).  \]
+</div>
+<p> In particular, on compact manifolds this is convergence in $L^1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="AA1A6D7B" href="../../tag/45B3FA75B7BD/">5.25.1</a>, the functions $v_ j$ are uniformly bounded above on relatively compact subsets of $X$. The pullbacks are therefore locally uniformly bounded above and have the common smooth lower curvature bound $-\pi ^*\theta $. After a smooth local correction, the compactness theorem for plurisubharmonic functions shows that every subsequence has a further subsequence that either converges in $L^1_{\mathrm{loc}}$ or tends locally uniformly to $-\infty $ on each connected coordinate region in $Y$. 
+    <p>
+      Every such region meets the complement of the exceptional locus. There $\pi $ is a biholomorphism, and change of variables gives $L^1_{\mathrm{loc}}$ convergence to $v\circ \pi $, which excludes convergence to $-\infty $. Each subsequential limit agrees with $v\circ \pi $ off the exceptional locus, hence almost everywhere, since this analytic set has smooth volume zero. Thus the limit is unique, and applying this argument on a countable cover by coordinate regions proves convergence of the whole sequence in $L^1_{\mathrm{loc}}(Y)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Convergence in capacity is also preserved by modifications. The comparison takes place away from small neighborhoods of the exceptional sets, so no uniform comparison of capacities on the whole manifolds is needed. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-FA634D50">
+<p><a class="environment-identifier" href="../../tag/D7CDD8CAD2AC/">Lemma <span data-tag="FA634D50">5.43.20</span>.</a><span data-gerby-tag="FA634D50"><code class="tag-id">D7CDD8CAD2AC</code></span> Let $\pi :Y\to X$ be a modification between connected compact complex manifolds, equipped with Hermitian forms $\omega _ Y,\omega _ X$. Write $\operatorname {Cap}_ Y=\operatorname {Cap}_{\omega _ Y}$ and $\operatorname {Cap}_ X=\operatorname {Cap}_{\omega _ X}$ for the Hermitian capacities of section <a data-tag="0231BF16" href="../../tag/DD310AD8B258/">5.29</a>. For quasi-plurisubharmonic functions $v_ j,v$ on $X$, </p>
+<div class="equation">
+  \[  v_ j\longrightarrow v\text{ in capacity on }X \quad \Longleftrightarrow \quad v_ j\circ \pi \longrightarrow v\circ \pi \text{ in capacity on }Y.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a proper analytic subset $S\subset X$ such that $\pi $ is an isomorphism outside $D=\pi ^{-1}(S)$. Both $S$ and $D$ have capacity zero. For $\epsilon &gt;0$, choose an open neighborhood $V$ of $D$ of capacity less than $\epsilon $. By properness, there is a neighborhood $U_0$ of $S$ with $\pi ^{-1}(U_0)\subset V$; shrink it to an open set $U$ with $\operatorname {Cap}_ X(U)&lt;\epsilon $. The inverse of $\pi $ is biholomorphic near the compact set $X\setminus U$. A finite cover by nested coordinate charts and the comparison of local and global capacities in section <a data-tag="0231BF16" href="../../tag/DD310AD8B258/">5.29</a> give a constant $C_\epsilon $ such that, for every Borel set $E\subset X$, 
+    
+<div class="equation">
+  \[  \begin{split}  \operatorname {Cap}_ Y(\pi ^{-1}E)&amp; \leq \epsilon +C_\epsilon \operatorname {Cap}_ X(E),\\  \operatorname {Cap}_ X(E)&amp; \leq \epsilon +C_\epsilon \operatorname {Cap}_ Y(\pi ^{-1}E). \end{split}  \]
+</div>
+<p>
+       Apply these inequalities to $E=\{ |v_ j-v|&gt;\delta \} $ for each fixed $\delta &gt;0$, omitting the pluripolar pole sets, and let first $j\to \infty $ and then $\epsilon \downarrow 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-F75CE9F0BB10" data-section-entries="599D8A3D42BC 6AA2493173A9 83C3A394E5BB F75CE9F0BB10"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/F75CE9F0BB10/">5.43.21 Multiplier ideals under modifications</a><code class="tag-id">F75CE9F0BB10</code></h2><span data-gerby-tag="F1F72D4B"></span>
+<p>
+Throughout this subsection, $\pi :Y\to X$ is a modification of connected compact complex manifolds of dimension $n$. There is an analytic subset $S\subset X$ of codimension at least two such that $\pi $ is an isomorphism over $X\setminus S$. Let $K_ X$ and $K_ Y$ be the canonical line bundles. Set $D=\pi ^{-1}(S)$ and 
+</p>
+<div class="equation">
+  \[  R_\pi =K_ Y\otimes \pi ^*K_ X^{-1}.  \]
+</div>
+<p>
+ The determinant of the differential of $\pi $ is a canonical holomorphic section $J_\pi $ of $R_\pi $; in local coordinates its coefficient is the holomorphic Jacobian determinant $\operatorname {Jac}\pi $, and its zeros are contained in $D$. These standard facts about modifications of complex manifolds include the case $n=1$, in which every modification is an isomorphism. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-14CA6D10">
+<p><a class="environment-identifier" href="../../tag/599D8A3D42BC/">Lemma <span data-tag="14CA6D10">5.43.22</span>.</a><span data-gerby-tag="14CA6D10"><code class="tag-id">599D8A3D42BC</code></span> Let $a$ be quasi-plurisubharmonic on $X$. Pullback followed by multiplication with $J_\pi $ induces an isomorphism </p>
+<div class="equation">
+  \[  \pi _*\bigl (R_\pi \otimes \mathcal I(a\circ \pi )\bigr ) =\mathcal I(a).  \]
+</div>
+<p> More precisely, for every holomorphic line bundle $M$ on $X$, the map </p>
+<div class="equation">
+  \[  s\longmapsto J_\pi \, \pi ^*s  \]
+</div>
+<p> is an isomorphism </p>
+<div class="equation">
+  \[  H^0\bigl (X,M\otimes \mathcal I(a)\bigr ) \simeq H^0\bigl (Y,\pi ^*M\otimes R_\pi \otimes \mathcal I(a\circ \pi )\bigr ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The assertion is local on $X$. In coordinates and local frames, the map sends a holomorphic coefficient $f$ to $(f\circ \pi )\operatorname {Jac}\pi $. By the change-of-variables formula, local integrability of 
+    
+<div class="equation">
+  \[  |f|^2\mathrm{e}^{-a} \quad \hbox{and}\quad |f\circ \pi |^2|\operatorname {Jac}\pi |^2\mathrm{e}^{-a\circ \pi }  \]
+</div>
+<p>
+       are equivalent. For the implication from integrability on $Y$ to integrability near a point of $X$, take a smaller relatively compact neighborhood of the point; by properness, its inverse image has compact closure, so finitely many charts on which the integrability holds suffice. Smooth positive coordinate densities are comparable on these charts, and analytic exceptional sets have smooth volume zero, so they do not change the integrals. 
+    <p>
+      It remains to show that every section on $Y$ is of the form $J_\pi \pi ^*s$. Divide it by $J_\pi $ off $D$ and use the inverse of $\pi $ there; this gives a holomorphic section of $M$ off $S$. Since $S$ has codimension at least two, Hartogs' extension theorem gives a holomorphic section $s$ on $X$. Its image $J_\pi \pi ^*s$ agrees with the given section off $D$, hence everywhere by the identity theorem. The integrability equivalence then places $s$ in the required multiplier ideal. The same argument on each open set proves the sheaf identity as well as the global identification. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Note that the lemma does not identify $\pi ^*\mathcal I(a)$ with $\mathcal I(a\circ \pi )$: the Jacobian is part of the holomorphic coefficient on $Y$ and cannot be removed from the integrability test. 
+</p>
+<p>
+We also need the invariance of the ideal order $\preceq _{\mathcal I}$ of section <a data-tag="6855E01F" href="../../tag/9A10411F1BCD/">5.33</a>, which involves all positive weights. The proof is local, so that we never have to extend a modification of a small open subset of $Y$ to a global one. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-BC922545">
+<p><a class="environment-identifier" href="../../tag/6AA2493173A9/">Lemma <span data-tag="BC922545">5.43.23</span>.</a><span data-gerby-tag="BC922545"><code class="tag-id">6AA2493173A9</code></span> For quasi-plurisubharmonic $a,b$ on $X$, </p>
+<div class="equation">
+  \[  a\preceq _{\mathcal I}b \quad \Longleftrightarrow \quad a\circ \pi \preceq _{\mathcal I}b\circ \pi .  \]
+</div>
+<p> The assertion is local on $X$ and also holds for a proper bimeromorphic map between noncompact smooth complex manifolds. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The reverse implication follows at every positive weight from the sheaf identity in lemma <a data-tag="14CA6D10" href="../../tag/599D8A3D42BC/">5.43.22</a>: tensor the inclusion of ideals on $Y$ with $R_\pi $ and apply the left-exact direct image functor. The proof of that sheaf identity is local on the target, since properness makes each fiber compact and gives the required finite cover by integrability charts; compactness of the manifolds themselves is not needed. 
+    <p>
+      For the forward implication, fix a coordinate neighborhood $W\subset Y$, a local modification $\sigma :Z\to W$ with smooth source, and a prime divisor $E$ on $Z$. After shrinking $W$ around the point under consideration, its image is contained in a coordinate neighborhood $U\subset X$. Put $F=\pi \circ \sigma $ and 
+    
+<div class="equation">
+  \[  A_ F(E)=1+\operatorname {ord}_ E\operatorname {Jac}F.  \]
+</div>
+<p>
+       The map $F$ is holomorphic, and it is injective and biholomorphic off a proper analytic subset; it need not be a proper modification of $U$. 
+    <p>
+      Let $m$ be a positive integer, and let $\nu _ E$ and $\operatorname {ord}_ E$ be the generic Lelong number and the generic vanishing order along $E$, as in section <a data-tag="0D05D1AE" href="../../tag/2C2417A75DF4/">5.38</a>. The proof of lemma <a data-tag="43758780" href="../../tag/1525C5219E69/">5.38.9</a> applies to the map $F$ on relatively compact coordinate patches and gives 
+    
+<div class="equation">
+  \[  \max \left\{ \nu _ E(a\circ F)-\frac{A_ F(E)}m,0\right\}  \leq \frac1m\operatorname {ord}_ E\bigl (\mathcal I(ma)\mathcal O_ Z\bigr ) \leq \nu _ E(a\circ F).  \]
+</div>
+<p>
+       In more detail, the upper inequality follows by pulling back the local Bergman lower bound on $U$. For the lower one, a germ $f\in \mathcal I(ma)$ pulls back to a coefficient $(f\circ F)\operatorname {Jac}F$ that is square integrable against $\mathrm e^{-ma\circ F}$, because on a relatively compact patch of $Z$ the change-of-variables integral is bounded by the integral over the image of the patch. Generic divisorial removal and the one-variable integral then give 
+    
+<div class="equation">
+  \[  \operatorname {ord}_ E(f\circ F)+A_ F(E)&gt;m\nu _ E(a\circ F).  \]
+</div>
+<p>
+       This estimate only uses the injectivity of $F$ off the exceptional set and the compactness of the patch, not properness of $F$ over $U$. The same estimates hold for $b$. 
+    <p>
+      The hypothesis gives $\mathcal I(ma)\subseteq \mathcal I(mb)$ for every $m&gt;0$, so the orders of the pulled-back ideals satisfy the reverse inequality. Letting $m\to \infty $ in the two estimates proves 
+    
+<div class="equation">
+  \[  \nu _ E(a\circ F)\geq \nu _ E(b\circ F).  \]
+</div>
+<p>
+       This holds for every local divisor over $Y$. Blowing up a point on the source of any local modification recovers the Lelong number at that point as a generic Lelong number along the exceptional divisor; in dimension one the point already is a divisor. The local criterion in theorem <a data-tag="8B4BE822" href="../../tag/3F1FC2F620B4/">5.37.3</a> now gives $a\circ \pi \preceq _{\mathcal I}b\circ \pi $. No extension of $\sigma $ beyond its local domain was used. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B5B998D5">
+<p><a class="environment-identifier" href="../../tag/83C3A394E5BB/">Lemma <span data-tag="B5B998D5">5.43.24</span>.</a><span data-gerby-tag="B5B998D5"><code class="tag-id">83C3A394E5BB</code></span> For a proper bimeromorphic map $\rho :Z\to Y$ between complex manifolds and quasi-plurisubharmonic functions $a,b$ on $Y$, </p>
+<div class="equation">
+  \[  a\sim _{\mathcal I}b \quad \Longleftrightarrow \quad a\circ \rho \sim _{\mathcal I}b\circ \rho .  \]
+</div>
+<p> The statement is local on $Y$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply the local order equivalence of lemma <a data-tag="BC922545" href="../../tag/6AA2493173A9/">5.43.23</a> to both $(a,b)$ and $(b,a)$. Together, the two order relations are equivalent to equality of the multiplier ideals at every positive weight. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-B669E8E3479E" data-section-entries="50D99B4B0660 B669E8E3479E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/B669E8E3479E/">5.43.25 Restriction of analytic approximants</a><code class="tag-id">B669E8E3479E</code></h2><span data-gerby-tag="5A07F63E"></span>
+<p>
+A quasi-plurisubharmonic function with zero generic Lelong number along a submanifold may still restrict to the function identically equal to $-\infty $ (section <a data-tag="BB3C41D4" href="../../tag/0D77FC17B23B/">5.34</a>). Analytic regularization removes this obstruction: the restrictions of the analytic approximants are quasi-plurisubharmonic, and a fixed lower curvature bound controls their generic Lelong numbers along divisors on every fixed modification. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-FD02E5E8">
+<p><a class="environment-identifier" href="../../tag/50D99B4B0660/">Corollary <span data-tag="FD02E5E8">5.43.26</span>.</a><span data-gerby-tag="FD02E5E8"><code class="tag-id">50D99B4B0660</code></span> Let $\theta $ be a smooth real $(1,1)$-form and $u\in \mathrm{PSH}(X,\theta )$, and let $u_ m$, with curvature errors $\epsilon _ m$, be the approximants of corollary <a data-tag="57629892" href="../../tag/8F2184BBF4C4/">5.36.2</a>. Let $Y\subset X$ be a connected compact complex submanifold along which the generic Lelong number of $u$ vanishes: </p>
+<div class="equation">
+  \[  \nu (u,Y)=\inf _{y\in Y}\nu (u,y)=0.  \]
+</div>
+<p> Then each restriction $u_ m|_ Y$ is quasi-plurisubharmonic on $Y$; in particular, it is not identically $-\infty $. If $\pi :Z\to Y$ is a modification with smooth compact source and $E\subset Z$ is a prime divisor, then </p>
+<div class="equation">
+  \[  \sup _ m\nu \bigl ((u_ m|_ Y)\circ \pi ,E\bigr )&lt;\infty .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For each $m$, choose $y\in Y$ with $\nu (u,y)&lt;1/m$. Skoda's local integrability criterion gives $\mathcal I(mu)_ y=\mathcal O_{X,y}$, so the image ideal $\mathcal I(mu)\mathcal O_ Y$ does not vanish identically. Since $u_ m$ has analytic type $(1/m,\mathcal I(mu))$, proposition <a data-tag="A55E69E3" href="../../tag/AAD8908A0CF9/">5.34.1</a> shows that $u_ m|_ Y$ is quasi-plurisubharmonic on $Y$. Its pullback to $Z$ is quasi-plurisubharmonic as well, since $\pi $ is biholomorphic off a proper analytic subset. 
+    <p>
+       Restricting and pulling back the curvature inequality of corollary <a data-tag="57629892" href="../../tag/8F2184BBF4C4/">5.36.2</a>, which is allowed by lemma <a data-tag="BB3D49B4" href="../../tag/12585F177470/">5.43.2</a>, gives 
+    
+<div class="equation">
+  \[  \pi ^*(\theta |_ Y)+\mathrm{dd}^{\mathrm{c}}\bigl ((u_ m|_ Y)\circ \pi \bigr ) \geq -\epsilon _ m\pi ^*(\omega |_ Y).  \]
+</div>
+<p>
+       Since the errors $\epsilon _ m$ are bounded, a sufficiently large multiple of a single Hermitian form on $Z$ dominates $\pi ^*(\theta |_ Y)+\epsilon _ m\pi ^*(\omega |_ Y)$ for all $m$. Lemma <a data-tag="519C12FA" href="../../tag/1792691862B8/">5.38.8</a>, applied on $Z$ in this fixed background, therefore bounds the generic Lelong numbers along $E$ uniformly in $m$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/E762B356717B/"><span>← Previous</span><small>Equation 5.42.11</small></a><a class="pager-next" rel="next" href="../../tag/1F1A3CC0946E/"><span>Next →</span><small>5.43.1 Holomorphic disks</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-plurisubharmonic-functions-and-singularities--pullback-and-descent,
+  author = {{Gerby contributors}},
+  title = {5.43 Pullback and descent},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/plurisubharmonic-functions-and-singularities--pullback-and-descent/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fplurisubharmonic-functions-and-singularities--pullback-and-descent%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fplurisubharmonic-functions-and-singularities--pullback-and-descent%2F&amp;body=Page%3A+%5B5.43+Pullback+and+descent%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fplurisubharmonic-functions-and-singularities--pullback-and-descent%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+4caa0d5505f62225ec88395ca9cc32827b671b95+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>

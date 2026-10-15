@@ -1,0 +1,909 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="4ba02220b183" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/"><title>15.18 Interior smoothness on the regular locus · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/">
+<link rel="icon" href="../../assets/favicon.svg?v=4ba02220b183" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/collection.css?v=4ba02220b183"><link rel="stylesheet" href="../../assets/formalization.css?v=4ba02220b183"><script src="../../assets/math-config.js?v=4ba02220b183"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=4ba02220b183"></script><script type="module" src="../../assets/formalization.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/collection.mjs?v=4ba02220b183"></script><script type="module" src="../../assets/comments.mjs?v=4ba02220b183"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">Chapter 15: Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/" aria-current="page">Section 15.18: Interior smoothness on the regular locus</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/equations-with-prescribed-singularities/"><span>15.1</span> Equations with prescribed singularities</a><code class="tag-id">F9AE3BF05078</code></li><li><a href="../../sections/equations-with-prescribed-singularities--domination-with-a-smaller-background/"><span>15.2</span> Domination with a smaller background</a><code class="tag-id">2ACF52860663</code></li><li><a href="../../sections/equations-with-prescribed-singularities--bounded-equations-in-a-semipositive-big-background/"><span>15.3</span> Bounded equations in a semipositive big background</a><code class="tag-id">9F0629AA9014</code></li><li><a href="../../sections/equations-with-prescribed-singularities--a-quantitative-stability-estimate/"><span>15.4</span> A quantitative stability estimate</a><code class="tag-id">B4FB50E0C9DE</code></li><li><a href="../../sections/equations-with-prescribed-singularities--holder-continuity-from-bounded-stability/"><span>15.5</span> Hölder continuity from bounded stability</a><code class="tag-id">BDF9BACE965B</code></li><li><a href="../../sections/equations-with-prescribed-singularities--local-continuity-in-a-semipositive-big-background/"><span>15.6</span> Local continuity in a semipositive big background</a><code class="tag-id">FF4EC5CCEA0B</code></li><li><a href="../../sections/equations-with-prescribed-singularities--homogeneous-replacement-on-a-coordinate-ball/"><span>15.7</span> Homogeneous replacement on a coordinate ball</a><code class="tag-id">35C79FB822EF</code></li><li><a href="../../sections/equations-with-prescribed-singularities--contact-support-in-a-big-background/"><span>15.8</span> Contact support in a big background</a><code class="tag-id">ACC753805E21</code></li><li><a href="../../sections/equations-with-prescribed-singularities--compactness-with-a-common-lower-barrier/"><span>15.9</span> Compactness with a common lower barrier</a><code class="tag-id">D6040BDF0454</code></li><li><a href="../../sections/equations-with-prescribed-singularities--a-bounded-subsolution-theorem/"><span>15.10</span> A bounded subsolution theorem</a><code class="tag-id">898B7B54B3D0</code></li><li><a href="../../sections/equations-with-prescribed-singularities--adding-weighted-monge-ampere-measures/"><span>15.11</span> Adding weighted Monge–Ampère measures</a><code class="tag-id">7BAAE1AD9F47</code></li><li><a href="../../sections/equations-with-prescribed-singularities--equations-in-a-prescribed-ordinary-type/"><span>15.12</span> Equations in a prescribed ordinary type</a><code class="tag-id">C6737BA51F0E</code></li><li><a href="../../sections/equations-with-prescribed-singularities--comparison-above-a-strict-singular-barrier/"><span>15.13</span> Comparison above a strict singular barrier</a><code class="tag-id">1FCAFCAE9C0E</code></li><li><a href="../../sections/equations-with-prescribed-singularities--subsolutions-and-the-gauduchon-trace/"><span>15.14</span> Subsolutions and the Gauduchon trace</a><code class="tag-id">8C0AAADFFCFC</code></li><li><a href="../../sections/equations-with-prescribed-singularities--stability-above-a-strict-barrier/"><span>15.15</span> Stability above a strict barrier</a><code class="tag-id">A7C7BC261679</code></li><li><a href="../../sections/equations-with-prescribed-singularities--minimal-singularities-in-an-arbitrary-big-background/"><span>15.16</span> Minimal singularities in an arbitrary big background</a><code class="tag-id">5961B4E1812C</code></li><li><a href="../../sections/equations-with-prescribed-singularities--local-holder-continuity-in-a-big-background/"><span>15.17</span> Local Hölder continuity in a big background</a><code class="tag-id">1A5D83E43B0A</code></li><li><a href="../../sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/" aria-current="page"><span>15.18</span> Interior smoothness on the regular locus</a><code class="tag-id">899B82DE5E84</code></li><li><a href="../../sections/equations-with-prescribed-singularities--degenerating-semipositive-backgrounds/"><span>15.19</span> Degenerating semipositive backgrounds</a><code class="tag-id">28A495F29AAD</code></li><li><a href="../../sections/equations-with-prescribed-singularities--symmetry-and-the-selected-projective-limit/"><span>15.20</span> Symmetry and the selected projective limit</a><code class="tag-id">457A6A4C41F4</code></li><li><a href="../../sections/equations-with-prescribed-singularities--local-density-and-boundary-control/"><span>15.21</span> Local density and boundary control</a><code class="tag-id">D0D15F32906B</code></li><li><a href="../../sections/equations-with-prescribed-singularities--equations-with-resolved-logarithmic-poles/"><span>15.22</span> Equations with resolved logarithmic poles</a><code class="tag-id">3A4DA254E4F4</code></li><li><a href="../../sections/equations-with-prescribed-singularities--minimal-singularities-on-blowups/"><span>15.23</span> Minimal singularities on blowups</a><code class="tag-id">3F1CADE9F6C1</code></li><li><a href="../../sections/equations-with-prescribed-singularities--representing-measures-in-an-ordinary-type/"><span>15.24</span> Representing measures in an ordinary type</a><code class="tag-id">2BB76C1E3909</code></li><li><a href="../../sections/equations-with-prescribed-singularities--the-homogeneous-equation-with-a-holder-reference/"><span>15.25</span> The homogeneous equation with a Hölder reference</a><code class="tag-id">679A3E78F3EA</code></li><li><a href="../../sections/equations-with-prescribed-singularities--singular-measures-on-shrinking-spheres/"><span>15.26</span> Singular measures on shrinking spheres</a><code class="tag-id">4BA6AFA61CAA</code></li><li><a href="../../sections/equations-with-prescribed-singularities--lower-mass-and-solvability-for-all-measures/"><span>15.27</span> Lower mass and solvability for all measures</a><code class="tag-id">93CEF832AEA2</code></li><li><a href="../../sections/equations-with-prescribed-singularities--subsolutions-for-an-individual-density/"><span>15.28</span> Subsolutions for an individual density</a><code class="tag-id">72CDE5ADD348</code></li><li><a href="../../sections/equations-with-prescribed-singularities--gauduchon-tests-for-integrable-densities/"><span>15.29</span> Gauduchon tests for integrable densities</a><code class="tag-id">7B44C03D318B</code></li><li><a href="../../sections/equations-with-prescribed-singularities--exact-equations-on-products-with-zero-lower-mass/"><span>15.30</span> Exact equations on products with zero lower mass</a><code class="tag-id">FC44870E2A2C</code></li><li><a href="../../sections/equations-with-prescribed-singularities--singular-measures-on-products-with-a-curve/"><span>15.31</span> Singular measures on products with a curve</a><code class="tag-id">E01ACE366291</code></li><li><a href="../../sections/equations-with-prescribed-singularities--stability-of-the-subsolution-threshold/"><span>15.32</span> Stability of the subsolution threshold</a><code class="tag-id">06284CD8A9D4</code></li><li><a href="../../sections/equations-with-prescribed-singularities--power-capacity-bounds-and-threshold-equations/"><span>15.33</span> Power capacity bounds and threshold equations</a><code class="tag-id">119B0BE69A7D</code></li><li><a href="../../sections/equations-with-prescribed-singularities--limits-of-exponential-equations/"><span>15.34</span> Limits of exponential equations</a><code class="tag-id">B63DDE7640A4</code></li><li><a href="../../sections/equations-with-prescribed-singularities--exponential-equations-for-an-individual-density/"><span>15.35</span> Exponential equations for an individual density</a><code class="tag-id">C3635E28D6B1</code></li><li><a href="../../sections/equations-with-prescribed-singularities--radial-selection-for-integrable-densities/"><span>15.36</span> Radial selection for integrable densities</a><code class="tag-id">C10FB3AB7407</code></li><li><a href="../../sections/relative-equations-under-positive-lower-mass/"><span>15.37</span> Relative equations under positive lower mass</a><code class="tag-id">31A655BFE398</code></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and capacity</a></li><li><a href="../../chapters/complex-hessian-equations/">8. Complex Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">9. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">10. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">11. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/gauduchon-variational-volume/">12. Gauduchon variational volume</a></li><li><a href="../../chapters/non-pluripolar-mass/">13. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">14. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/singular-monge-ampere-equations/">15. Monge–Ampère equations with prescribed singularities</a></li><li><a href="../../chapters/envelopes-models/">16. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">17. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">18. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">19. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">20. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">21. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">22. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">23. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">24. Problems in pluripotential theory</a></li><li><a href="../../chapters/historical-notes/">25. Historical and bibliographical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/64893D9DABFE/"><span>← Previous</span><small>Corollary 15.17.4</small></a><a class="pager-next" rel="next" href="../../tag/43AC522E5ED8/"><span>Next →</span><small>Theorem 15.18.1</small></a></nav><h1>15.18 Interior smoothness on the regular locus<code class="tag-id">899B82DE5E84</code></h1><div class="section-reading"><section class="reading-chunk" id="entry-899B82DE5E84" data-section-entries="43AC522E5ED8 899B82DE5E84"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="F8074E9B"><code class="tag-id">899B82DE5E84</code></span>
+<p>
+Throughout this section, $\theta $ is a smooth big real $(1,1)$-form, and $\rho $, $Z=\{ \rho =-\infty \} $ and $\Omega =X\setminus Z$ are the strict analytic barrier and its regular locus fixed in section <a data-tag="C738AEA7" href="../../tag/1FCAFCAE9C0E/">15.13</a>. Thus $\rho \leq 0$ has analytic singularities with smooth remainder, and $\theta +\mathrm{dd}^{\mathrm{c}}\rho \geq \omega $. If $\varphi \in \mathrm{PSH}(X,\theta )$ has minimal singularities, then $\varphi \geq V_\theta -C\geq \rho -C$ for a constant $C$. Hence $\varphi $ is locally bounded on $\Omega $, and its Monge–Ampère measure there is the bounded-potential product. 
+</p>
+<p>
+For such a potential, theorem <a data-tag="CFD39760" href="../../tag/D662421F3436/">15.17.1</a> gives local Hölder continuity on $\Omega $ when the density belongs to $L^ p$ for some $p&gt;1$. We show that a smooth strictly positive density on the whole of $\Omega $ then makes the potential smooth on $\Omega $. Local information alone cannot give this: example <a data-tag="9A96D709" href="../../tag/41D1398D77FC/">15.21.15</a> below is a locally Lipschitz plurisubharmonic function with constant Monge–Ampère density that is not $C^1$. The argument therefore uses the barrier globally. By the proper gap of lemma <a data-tag="1F642B5B" href="../../tag/4798FCFAC293/">5.40.7</a>, the difference between the solution and the barrier attains a minimum on the closed set where smoothness fails, and strict positivity of $\theta +\mathrm{dd}^{\mathrm{c}}\rho $ turns this minimum into a quadratic separation. Near the minimum, smooth Dirichlet approximants have traces of polynomial growth; the separation improves this growth until a uniform trace bound yields elliptic regularity. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-A5C76705">
+<p><a class="environment-identifier" href="../../tag/43AC522E5ED8/">Theorem <span data-tag="A5C76705">15.18.1</span>.</a><span data-gerby-tag="A5C76705"><code class="tag-id">43AC522E5ED8</code></span> Suppose $\varphi \in \mathrm{PSH}(X,\theta )$ has minimal singularities and is locally Hölder continuous on $\Omega $. Let $c&gt;0$ and let $f$ be smooth and strictly positive on $\Omega $. Assume </p>
+<div class="equation">
+  \[  (\theta +\mathrm{dd}^{\mathrm{c}}\varphi )^ n=cf\, \omega ^ n\quad \text{on }\Omega .  \]
+</div>
+<p> Then $\varphi \in C^\infty (\Omega )$ and $\theta +\mathrm{dd}^{\mathrm{c}}\varphi &gt;0$ there. </p>
+</article>
+
+<p>
+The Hölder hypothesis holds when, in addition, $f\in L^ p(X,\omega ^ n)$ for some $p&gt;1$, by theorem <a data-tag="CFD39760" href="../../tag/D662421F3436/">15.17.1</a>; see corollary <a data-tag="A9292553" href="../../tag/AD8A02A6088D/">15.18.50</a>. The theorem also applies when local Hölder continuity is obtained by another argument. 
+</p>
+<p>
+The proof is by contradiction and occupies the rest of the section. Let $\mathcal S\subset \Omega $ be the closed set of points near which $\varphi $ is not smooth, suppose that $\mathcal S\neq \varnothing $, and let $p\in \mathcal S$ minimize $\varphi -\rho $ on $\mathcal S$. On a small ball centered at $p$ the argument has four steps. 
+</p>
+<ol>
+<li><p>
+A comparison principle for continuous solutions (subsection <a data-tag="CB4C496A" href="../../tag/7A246CDE0880/">15.18.2</a>) and the smooth Dirichlet problem give smooth solutions $u_ j$ of the equation that converge uniformly to $\varphi $ at a polynomial rate in $j$, while the traces of $\theta +\mathrm{dd}^{\mathrm{c}}u_ j$, measured in Euclidean coordinates, grow at most polynomially in $j$ (subsection <a data-tag="66180C2C" href="../../tag/E9933083FDD7/">15.18.7</a>). 
+</p>
+</li><li><p>
+Near $p$, the quadratic separation along $\mathcal S$, together with uniform trace bounds on compact sets where $\varphi $ is already smooth, improves the trace growth to $O(j^\gamma )$ for every $\gamma &gt;0$. Interpolation with the convergence rate then gives uniform $C^{1,\alpha }$ bounds for every $\alpha &lt;1$ (subsection <a data-tag="D7DCA3CD" href="../../tag/B0A92E91F8D0/">15.18.24</a>). 
+</p>
+</li><li><p>
+A third-order estimate whose constants depend polynomially on the ellipticity turns uniform $C^{1,\alpha }$ bounds, for $\alpha $ close to one, into a uniform trace bound (subsection <a data-tag="D403C3A6" href="../../tag/163F19CEE4A0/">15.18.34</a>). 
+</p>
+</li><li><p>
+A continuous solution with bounded trace is smooth (subsection <a data-tag="D9E3E8F3" href="../../tag/5FD96F70C06E/">15.18.4</a>). Hence $\varphi $ is smooth near $p$, contradicting $p\in \mathcal S$ (subsection <a data-tag="5D7ED084" href="../../tag/6E838824045A/">15.18.49</a>). 
+</p>
+</li>
+</ol>
+</div></section><section class="reading-chunk" id="entry-7A246CDE0880" data-section-entries="7A246CDE0880 D2F8F8FD5A17"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/7A246CDE0880/">15.18.2 Local comparison</a><code class="tag-id">7A246CDE0880</code></h2><span data-gerby-tag="CB4C496A"></span>
+<p>
+The comparison principle below, for continuous sub- and supersolutions on a bounded domain, identifies the given continuous potential with limits of smooth Dirichlet solutions. Since the background need not be closed, the classical Bedford–Taylor comparison does not apply directly. We freeze the background at a point, apply the closed-current comparison formula (<a data-tag="49BA5BCF" href="../../tag/A9D318047BDA/">5.27.7</a>) to quadratic modifications, and control the error by the mixed inequalities of lemma <a data-tag="9BDC0351" href="../../tag/6C81352D9EE7/">5.28.7</a>, lemma <a data-tag="60F484B5" href="../../tag/C5B4B944142C/">5.28.10</a>. 
+</p>
+<p>
+The local arguments of this section take place in coordinate balls, always with compact closure in a larger coordinate chart. There we put $\beta =\mathrm{dd}^{\mathrm{c}}|z|^2$, write $\partial _ i=\partial /\partial z_ i$ and $\partial _{\bar i}=\partial /\partial \bar z_ i$, and take coefficient matrices of real $(1,1)$-forms relative to $\beta $. For such a form $A$, $\operatorname {tr}_\beta A$ and $\det _\beta A$ denote the trace and the determinant of its coefficient matrix, so that $A^ n=(\det _\beta A)\beta ^ n$, and $\Delta _\beta =\operatorname {tr}_\beta \mathrm{dd}^{\mathrm{c}}$. For a positive form $T$, $\operatorname {tr}_ T$ is the trace computed with the inverse of the coefficient matrix of $T$. Indices run from $1$ to $n$, repeated indices in tensor expressions are summed, and $I$ denotes the identity matrix. In local statements, $\vartheta $ denotes a smooth real $(1,1)$-form, not necessarily closed, which plays the role of $\theta $. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-175BF5DC">
+<p><a class="environment-identifier" href="../../tag/D2F8F8FD5A17/">Proposition <span data-tag="175BF5DC">15.18.3</span>.</a><span data-gerby-tag="175BF5DC"><code class="tag-id">D2F8F8FD5A17</code></span> Let $D\Subset \mathbb C^ n$ be a bounded domain and let $\vartheta $ be a smooth real $(1,1)$-form near $\overline D$. Suppose $u,v\in C(\overline D)$ are $\vartheta $-plurisubharmonic, </p>
+<div class="equation">
+  \[  (\vartheta +\mathrm{dd}^{\mathrm{c}}u)^ n\geq F\beta ^ n, \qquad (\vartheta +\mathrm{dd}^{\mathrm{c}}v)^ n\leq F\beta ^ n,  \]
+</div>
+<p> where $F&gt;0$ is continuous on $D$. If $u\leq v$ on $\partial D$, then $u\leq v$ in $D$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: $v$ admits no strict smooth lower test.</em> Suppose, to the contrary, that a $C^2$ function $q$ touches $v$ from below at a point $p\in D$ and that, at $p$, 
+    
+<div class="equation">
+  \[  \vartheta +\mathrm{dd}^{\mathrm{c}}q&gt;0, \qquad \det _\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}q)&gt;F.  \]
+</div>
+<p>
+        Choose a sufficiently small $a&gt;0$. After replacing $q$ by $q-a|z-p|^2$, which makes the contact strict, and restricting to a small ball $B_ r(p)$, there are fixed $\lambda ,\eta &gt;0$ such that 
+    
+<div class="equation">
+  \[  A:=\vartheta +\mathrm{dd}^{\mathrm{c}}q\geq \lambda \beta , \qquad A^ n\geq (F+\eta )\beta ^ n.  \]
+</div>
+<p>
+       To compare with closed currents, freeze the background at $p$: put $\kappa =\sup _{B_ r}\lVert \vartheta -\vartheta (p)\rVert _\beta $ and $B_0=\vartheta (p)+\kappa \beta $. Then $S=B_0-\vartheta $ satisfies $0\leq S\leq 2\kappa \beta $. For small $s&gt;0$ the set $E=\{ v&lt;q+s\} $ is nonempty and relatively compact in $B_ r$. If $Q_0$ is a quadratic potential for the constant form $B_0$, then 
+    
+<div class="equation">
+  \[  P=\mathrm{dd}^{\mathrm{c}}(v+Q_0)=\vartheta +\mathrm{dd}^{\mathrm{c}}v+S, \qquad Q=\mathrm{dd}^{\mathrm{c}}(q+s+Q_0)=A+S\geq \lambda \beta  \]
+</div>
+<p>
+       are closed positive Hessians. Applying (<a data-tag="49BA5BCF" href="../../tag/A9D318047BDA/">5.27.7</a>), expanding $P$, and using $S\leq 2\kappa \beta \leq 2\kappa \lambda ^{-1}Q$, we obtain 
+    
+<div class="equation">
+  \[  \int _ E P^ n\leq \int _ E F\beta ^ n+e_\kappa \int _ E P^ n, \qquad e_\kappa =\left(1+\frac{2\kappa }{\lambda }\right)^ n-1.  \]
+</div>
+<p>
+       On the other hand, (<a data-tag="49BA5BCF" href="../../tag/A9D318047BDA/">5.27.7</a>) with $j=n$ gives 
+    
+<div class="equation">
+  \[  \int _ E P^ n\geq \int _ E Q^ n\geq \int _ E(F+\eta )\beta ^ n.  \]
+</div>
+<p>
+       If $M$ bounds $F$ on the ball, the two estimates give $(1-e_\kappa )\eta \leq e_\kappa M$. Since $\kappa \to 0$, and hence $e_\kappa \to 0$, as $r\downarrow 0$, this is impossible for small $r$. Thus no such lower test exists. 
+    <p>
+<em>Step 2: comparison.</em>
+<p>
+      Suppose that $\max _ D(u-v)&gt;0$. We regularize $u$ to produce a forbidden lower test for $v$. Let $\chi _\delta $ be a nonnegative smooth mollifier of mass one and radius $\delta &gt;0$. For small $t&gt;0$ and $C\geq \sup _ D|z|^2$, set 
+    
+<div class="equation">
+  \[  u_ t=u+t(|z|^2-C).  \]
+</div>
+<p>
+       Then $u_ t\leq v$ on $\partial D$, the positive maximum persists, and $T_ t=\vartheta +\mathrm{dd}^{\mathrm{c}}u_ t\geq t\beta $. Lemma <a data-tag="9BDC0351" href="../../tag/6C81352D9EE7/">5.28.7</a> gives 
+    
+<div class="equation">
+  \[  T_ t^ n\geq (F^{1/n}+t)^ n\beta ^ n.  \]
+</div>
+<p>
+       Choose a relatively compact neighborhood $W$ of the positive maximum set. By lemma <a data-tag="60F484B5" href="../../tag/C5B4B944142C/">5.28.10</a>, 
+    
+<div class="equation">
+  \[  (T_ t*\chi _\delta )^ n \geq \bigl ((F^{1/n}+t)*\chi _\delta \bigr )^ n\beta ^ n.  \]
+</div>
+<p>
+       Since 
+    
+<div class="equation">
+  \[  \vartheta +\mathrm{dd}^{\mathrm{c}}(u_ t*\chi _\delta ) =T_ t*\chi _\delta +(\vartheta -\vartheta *\chi _\delta ),  \]
+</div>
+<p>
+       the convolution satisfies $T_ t*\chi _\delta \geq t\beta $. If $\epsilon _\delta =\| \vartheta -\vartheta *\chi _\delta \| _{C^0(W)}$, then 
+    
+<div class="equation">
+  \[  \vartheta +\mathrm{dd}^{\mathrm{c}}(u_ t*\chi _\delta ) \geq (1-\epsilon _\delta /t)(T_ t*\chi _\delta ).  \]
+</div>
+<p>
+       For fixed $t&gt;0$, uniform convergence of the convolved density and $\epsilon _\delta \to 0$ show that the left-hand side is positive and has determinant strictly larger than $F$ on $W$ for small $\delta $. Since $u_ t*\chi _\delta \to u_ t$ uniformly on $W$, the difference $u_ t*\chi _\delta -v$ still attains its maximum over $\overline W$ at an interior point of $W$ for small $\delta $. Subtracting this maximum from $u_ t*\chi _\delta $ produces a smooth function touching $v$ from below with the properties excluded in Step 1, a contradiction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-5FD96F70C06E" data-section-entries="5FD96F70C06E 7A41D9785A7C 7DF8FE8A18D7"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5FD96F70C06E/">15.18.4 Bounded traces and smoothness</a><code class="tag-id">5FD96F70C06E</code></h2><span data-gerby-tag="D9E3E8F3"></span>
+<p>
+We begin with the criterion used in the last step of the proof. A bounded trace of a positive current bounds all its coefficient measures, so a continuous solution with bounded trace is a strong solution with $W^{2,q}$ regularity for every finite $q$. The equation then bounds the eigenvalues from below, so it becomes uniformly elliptic. Since the solution is not yet known to be $C^2$, the Evans–Krylov theory is applied to it as a viscosity solution of a concave extension of the operator. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-00738DAE">
+<p><a class="environment-identifier" href="../../tag/7DF8FE8A18D7/">Proposition <span data-tag="00738DAE">15.18.5</span>.</a><span data-gerby-tag="00738DAE"><code class="tag-id">7DF8FE8A18D7</code></span> Let $B\subset \mathbb C^ n$ be a coordinate ball, let $\vartheta $ be a smooth real $(1,1)$-form there and let $F\in C^\infty (B)$ be strictly positive. Suppose $u$ is continuous, $T=\vartheta +\mathrm{dd}^{\mathrm{c}}u\geq 0$, and </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-2112DF2E"><span data-gerby-tag="2112DF2E"><code class="tag-id">7A41D9785A7C</code></span>
+<span class="equation-label"><a data-tag="2112DF2E" href="../../tag/7A41D9785A7C/">15.18.6</a></span>
+<div>\begin{equation}  T^ n=F\beta ^ n. \end{equation}</div>
+</div>
+<p> For a point $p\in B$, the following conditions, each required on some neighborhood of $p$, are equivalent: </p>
+<ol>
+<li><p>
+$u$ is smooth; 
+</p>
+</li><li><p>
+$T\geq \delta \beta $ for some $\delta &gt;0$; 
+</p>
+</li><li><p>
+$\operatorname {tr}_\beta T$ has a locally bounded measure density. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $C$ so that $v=u+C|z|^2$ is plurisubharmonic, and use nonnegative radial mollifiers for which $v_\eta \downarrow v$. The smooth matrix convolutions $T_\eta =T*\chi _\eta $ can be written as 
+    
+<div class="equation">
+  \[  T_\eta =(\vartheta *\chi _\eta -C\beta )+\mathrm{dd}^{\mathrm{c}}v_\eta .  \]
+</div>
+<p>
+       Bedford–Taylor monotone continuity and smooth convergence of the background imply $T_\eta ^ k\to T^ k$ for every $k$. 
+    <p>
+<em>(2)$\Rightarrow $(3).</em> Assume (2). For every Hermitian matrix $M\geq \delta I$, 
+    
+<div class="equation">
+  \[  \det M\geq \delta ^{n-1}\bigl (\operatorname {tr} M-(n-1)\delta \bigr ).  \]
+</div>
+<p>
+       Apply this to the regularizations and pass to currents. Equation (<a data-tag="2112DF2E" href="../../tag/7A41D9785A7C/">15.18.6</a>) gives 
+    
+<div class="equation">
+  \[  \operatorname {tr}_\beta T\leq \delta ^{1-n}F+(n-1)\delta ,  \]
+</div>
+<p>
+       which is (3). 
+    <p>
+<em>(3)$\Rightarrow $(1).</em> Assume (3), say $\operatorname {tr}_\beta T\leq L$. Positivity makes every coefficient of the matrix-valued current $T$ a bounded density. Hence the Euclidean Laplacian of $u$ is locally bounded, and interior Poisson estimates give $u\in W^{2,q}_{\mathrm{loc}}$ for every finite $q$. Mollification converges in $W^{2,q}$; taking $q&gt;2n$ identifies the bounded-potential determinant with the ordinary almost-everywhere determinant. Thus $\det _\beta T=F$ almost everywhere. On a smaller ball with $F\geq m&gt;0$, all eigenvalues of $T$ are at most $L$ and their product is at least $m$, so 
+    
+<div class="equation">
+  \[  \frac{m}{L^{n-1}}I\leq T\leq LI  \]
+</div>
+<p>
+       almost everywhere. 
+    <p>
+       It remains to show that this strong solution is smooth. Let $P$ be the real linear map from real symmetric $2n\times 2n$ Hessian matrices to Hermitian $n\times n$ matrices, sending $D^2u$ to the coefficient matrix of $\mathrm{dd}^{\mathrm{c}}u$ relative to $\beta $, and let $\Theta (x)$ be the matrix of $\vartheta $. With $\delta =mL^{1-n}$, define the concave extension 
+    
+<div class="equation">
+  \[  G(x,M)=\inf _{\delta I\leq A\leq LI} \left\{ \log \det A+\operatorname {tr}\! \left[A^{-1}\bigl (\Theta (x)+P(M)-A\bigr )\right]\right\} -\log F(x).  \]
+</div>
+<p>
+       For fixed $A$, write $\mathcal E_ A(x,M)$ for the expression in braces minus $\log F(x)$. The tangent-plane formula for $\log \det $ gives 
+    
+<div class="equation">
+  \[  G(x,D^2u)=0\quad \text{almost everywhere}.  \]
+</div>
+<p>
+       The operator $G$ is concave and uniformly elliptic on real symmetric matrices. The affine operators $\mathcal E_ A$ have constant principal matrices with eigenvalues bounded above and below in terms of $\delta $ and $L$. Their $x$-dependence is smooth uniformly in $A$, so $G$ has a uniform local Lipschitz modulus in $x$. 
+    <p>
+      We claim that $u$ is a viscosity solution of $G(x,D^2u)=0$. Suppose that a smooth function $\psi $ touches $u$ from above at $x_0$ and that $G(x_0,D^2\psi )&lt;0$. Some fixed matrix $A$ then satisfies $\mathcal E_ A(x,D^2\psi )&lt;-\eta $ on a small ball. Since $G(x,D^2u)=0$ almost everywhere, $\mathcal E_ A(x,D^2u)\geq 0$ there. Thus $u-\psi $ has an interior maximum and satisfies 
+    
+<div class="equation">
+  \[  \operatorname {tr}\! \left(A^{-1}P(D^2(u-\psi ))\right)\geq \eta \quad \text{almost everywhere}.  \]
+</div>
+<p>
+       After a small quadratic perturbation makes the contact strict, this contradicts the Aleksandrov maximum principle <span class="cite">[<span class="postnote">Chapter 9, Theorem 9.1</span>, <a href="../../references/#R8F926DA7BC71">GT01</a>]</span>. If instead $\psi $ touches $u$ from below and $G(x_0,D^2\psi )&gt;0$, then $\mathcal E_ A(x,D^2\psi )&gt;\eta $ for every admissible $A$ on a small ball. At almost every point choose an admissible $A(x)$ with $\mathcal E_{A(x)}(x,D^2u)&lt;\eta /2$. A measurable choice is obtained by taking the first qualifying element of a countable dense family. The function $\psi -u$ then violates the same maximum principle for the measurable uniformly elliptic coefficients $A(x)^{-1}$. This proves the claim. 
+    <p>
+      The classical variable-coefficient Evans–Krylov theorem gives $u\in C^{2,\alpha }_{\mathrm{loc}}$ for some $0&lt;\alpha &lt;1$. The original equation is now uniformly elliptic with smooth data. Difference quotients satisfy linear equations whose principal coefficients are averages of inverse matrices along positive definite segments. Interior Schauder estimates first give $u\in C^{3,\alpha }_{\mathrm{loc}}$ and then, by iteration, $u\in C^\infty $. This proves (3)$\Rightarrow $(1). 
+    <p>
+<em>(1)$\Rightarrow $(2).</em> If $u$ is smooth, then $T$ is a smooth semipositive form with determinant $F&gt;0$, so it is positive definite; on a smaller neighborhood this gives (2). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-E9933083FDD7" data-section-entries="082B0A6218F2 13E61CA163BF 1894AFF4178E 3EBB652C42D7 4327E0F53426 59253C0B8B5A 59A5B60FAB74 6586F9B3B128 8A24C1B85BE1 94BAFACA36D1 9C906B419E9F 9F54A2578D16 A09942AD8934 DF626CDAD5D9 E9933083FDD7 F834489897B3 F89A683ED708"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/E9933083FDD7/">15.18.7 Smooth exact approximants</a><code class="tag-id">E9933083FDD7</code></h2><span data-gerby-tag="66180C2C"></span>
+<p>
+We now construct the approximants of the first step. The smooth Dirichlet theorem, lemma <a data-tag="6A868117" href="../../tag/5C54B7FA3A8B/">15.7.1</a>, applies to every smooth positive density $F$. Approximating the Hölder boundary values of $\varphi $ by smooth functions therefore gives smooth solutions, and the point is to control them quantitatively. The estimates below bound the trace of a smooth solution by a power of the $C^4$ norm of its boundary value. The $C^4$ norms of the boundary approximations grow polynomially while their uniform errors decay polynomially, so both the convergence and the trace growth have polynomial rates. 
+</p>
+<p>
+In this subsection balls are centered at the origin. On the boundary sphere, $\nu $ is the outward Euclidean unit normal and $\nabla _{\tan }$ denotes tangential differentiation. For a positive form $T$, inner products $\langle \cdot ,\cdot \rangle _ T$ and norms $|\cdot |_ T$ of $(1,0)$-covectors are computed with the inverse of the coefficient matrix of $T$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-08DA38DC">
+<p><a class="environment-identifier" href="../../tag/3EBB652C42D7/">Lemma <span data-tag="08DA38DC">15.18.8</span>.</a><span data-gerby-tag="08DA38DC"><code class="tag-id">3EBB652C42D7</code></span> Let $B$ be a coordinate ball, let $\vartheta $ and $F&gt;0$ be smooth near $\overline B$, and let $q$ be smooth with $R=\vartheta +\mathrm{dd}^{\mathrm{c}}q\geq \varepsilon \beta $ for a fixed $\varepsilon &gt;0$. Fix a finite $L\geq 0$. If $u\in C^\infty (B)$ satisfies </p>
+<div class="equation">
+  \[  T=\vartheta +\mathrm{dd}^{\mathrm{c}}u&gt;0, \qquad T^ n=F\beta ^ n, \qquad |u-q|\leq L,  \]
+</div>
+<p> put $S=\operatorname {tr}_\beta T$ and $v=u-q$. For $A&gt;0$, define </p>
+<div class="equation">
+  \[  Q_ A=\log S-Av+\mathrm{e}^{-v}.  \]
+</div>
+<p> There are $A_0,C$, depending only on the fixed data and $L$, such that at every interior local maximum of $Q_ A$, with $A\geq A_0$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-31CF4CCC"><span data-gerby-tag="31CF4CCC"><code class="tag-id">59253C0B8B5A</code></span>
+<span class="equation-label"><a data-tag="31CF4CCC" href="../../tag/59253C0B8B5A/">15.18.9</a></span>
+<div>\begin{equation}  S\leq C\sqrt A. \end{equation}</div>
+</div>
+<p> The constants do not depend on any bound for the gradient of $u$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is the maximum-principle computation behind the classical second-order estimate. The non-closedness of $\vartheta $ produces a first-order error term, which is absorbed by the convex term $\mathrm{e}^{-v}$. 
+    <p>
+      At the point in question make a constant unitary change of coordinates so that the matrix of $T$ is diagonal, with eigenvalues $\lambda _ i$. Write 
+    
+<div class="equation">
+  \[  \Delta _ T=\sum _ i\lambda _ i^{-1}\partial _ i\partial _{\bar i}, \qquad H=\operatorname {tr}_ T\beta .  \]
+</div>
+<p>
+       Differentiating $\log \det T=\log F$ and commuting derivatives gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-3C2717C1"><span data-gerby-tag="3C2717C1"><code class="tag-id">8A24C1B85BE1</code></span>
+<span class="equation-label"><a data-tag="3C2717C1" href="../../tag/8A24C1B85BE1/">15.18.10</a></span>
+<div>\begin{equation}  \Delta _ TS=\Delta _\beta \log F+P+E_0, \quad P=\sum _{k,i,j}\frac{|\partial _ kT_{i\bar j}|^2}{\lambda _ i\lambda _ j}, \quad |E_0|\leq C_0H. \end{equation}</div>
+</div>
+<p>
+       The non-closedness of $\vartheta $ enters through the bounded vector 
+    
+<div class="equation">
+  \[  E_ p=\sum _ k(\partial _ p\vartheta _{k\bar k}-\partial _ k\vartheta _{p\bar k}).  \]
+</div>
+<p>
+        Since $\partial _ pS-E_ p=\sum _ k\partial _ kT_{p\bar k}$, weighted Cauchy–Schwarz gives $|\partial S-E|_ T^2\leq SP$. From (<a data-tag="3C2717C1" href="../../tag/8A24C1B85BE1/">15.18.10</a>), 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-E31F71E3"><span data-gerby-tag="E31F71E3"><code class="tag-id">1894AFF4178E</code></span>
+<span class="equation-label"><a data-tag="E31F71E3" href="../../tag/1894AFF4178E/">15.18.11</a></span>
+<div>\begin{equation}  \Delta _ T\log S \geq -\frac{C_0(1+H)}S- \frac2S\operatorname {Re}\langle \partial \log S,E\rangle _ T. \end{equation}</div>
+</div>
+<p>
+      Set $g_ A(s)=-As+\mathrm{e}^{-s}$. At a local maximum of $Q_ A$, $\partial \log S=-g_ A'(v)\partial v$ and $\Delta _ Tv=n-\operatorname {tr}_ TR$. Combining these identities with (<a data-tag="E31F71E3" href="../../tag/1894AFF4178E/">15.18.11</a>), then completing the square in $\partial v$, yields 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-ACE663BD"><span data-gerby-tag="ACE663BD"><code class="tag-id">9C906B419E9F</code></span>
+<span class="equation-label"><a data-tag="ACE663BD" href="../../tag/9C906B419E9F/">15.18.12</a></span>
+<div>\begin{equation}  0\geq \left[\varepsilon A-\frac{C_2}{S}-\frac{C_2(A+1)^2}{S^2}\right]H -C_3(A+1)-\frac{C_2}{S}. \end{equation}</div>
+</div>
+<p>
+       Here $|E|_ T^2\leq CH$ and the bounds for $v$ have been used. If $S\geq K\sqrt A$ and $K$ is large, the bracket is at least $\varepsilon A/2$. Thus $H\leq C$ independently of $A$ and $u$. The determinant upper bound then gives $S\leq C'$. Enlarging $K$ makes this incompatible with $S\geq K\sqrt A$, proving (<a data-tag="31CF4CCC" href="../../tag/59253C0B8B5A/">15.18.9</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+We shall also use the following variant, in which a gradient bound replaces the convex term. If $|\nabla (u-q)|_\beta $ is bounded, then at an interior maximum of $\log S-A(u-q)$ the trace is bounded independently of $A$ for all large $A$. Indeed, at the maximum $\partial \log S=A\partial (u-q)$, and (<a data-tag="E31F71E3" href="../../tag/1894AFF4178E/">15.18.11</a>) gives 
+</p>
+<div class="equation">
+  \[  0\geq \left[A\varepsilon -\frac CS-\frac{CA}{S}\right]H-nA-\frac CS.  \]
+</div>
+<p>
+ For $S$ larger than a fixed constant the bracket is at least $A\varepsilon /2$; the determinant again controls $S$. 
+</p>
+<h2 class="tex-paragraph" data-gerby-tag="684B939D" id="non-kahler-pluripotential-theory-heading:a-polynomial-boundary-trace-estimate"><span data-tag="684B939D">15.18.13</span> A polynomial boundary trace estimate<code class="tag-id">94BAFACA36D1</code></h2>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-68359EE0">
+<p><a class="environment-identifier" href="../../tag/6586F9B3B128/">Proposition <span data-tag="68359EE0">15.18.14</span>.</a><span data-gerby-tag="68359EE0"><code class="tag-id">6586F9B3B128</code></span> Let $B$ be the unit ball. Fix smooth $\vartheta $, smooth $F&gt;0$ near $\overline B$, and $M&lt;\infty $. There are $C,N&lt;\infty $, depending only on these fixed data, such that every smooth solution $u$ with boundary value $g\in C^\infty (\partial B)$ of </p>
+<div class="equation">
+  \[  T=\vartheta +\mathrm{dd}^{\mathrm{c}}u&gt;0, \qquad T^ n=F\beta ^ n, \qquad \lVert u\rVert _{L^\infty (B)}\leq M, \qquad u|_{\partial B}=g,  \]
+</div>
+<p> satisfies </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-72BB6E32"><span data-gerby-tag="72BB6E32"><code class="tag-id">F89A683ED708</code></span>
+<span class="equation-label"><a data-tag="72BB6E32" href="../../tag/F89A683ED708/">15.18.15</a></span>
+<div>\begin{equation}  \sup _{\overline B}\operatorname {tr}_\beta T \leq C\bigl (1+\lVert g\rVert _{C^4(\partial B)}\bigr )^ N. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We follow the classical boundary estimates for the Dirichlet problem on a ball and keep track of the dependence on $L=1+\lVert g\rVert _{C^4}$. Barriers bound the first derivatives, and differentiation along rotations bounds the mixed normal–tangential second derivatives on the boundary. A lower bound for the tangential block of $T$ then bounds the double normal derivative through the equation, and lemma <a data-tag="08DA38DC" href="../../tag/3EBB652C42D7/">15.18.8</a> reduces the interior bound to the boundary bound. 
+    <p>
+<em>Step 1: first derivatives.</em> Fix a sufficiently large constant $K&gt;0$, depending only on the fixed data. Extend $g$ to $G$ on $\overline B$ with $\lVert G\rVert _{C^4}\leq CL$. For $A=CL$ large enough, 
+    
+<div class="equation">
+  \[  \underline u=G+A(|z|^2-1), \qquad \underline T=\vartheta +\mathrm{dd}^{\mathrm{c}}\underline u\geq K\beta , \qquad \underline T^ n\geq F\beta ^ n.  \]
+</div>
+<p>
+       Proposition <a data-tag="175BF5DC" href="../../tag/D2F8F8FD5A17/">15.18.3</a> gives $\underline u\leq u$. If $h$ solves $\Delta _\beta h=-C_\vartheta $ with $h=g$ on $\partial B$ and $C_\vartheta \geq \sup \operatorname {tr}_\beta \vartheta $, then $u\leq h$. Boundary differentiation of these barriers gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-6F1E4A1B"><span data-gerby-tag="6F1E4A1B"><code class="tag-id">A09942AD8934</code></span>
+<span class="equation-label"><a data-tag="6F1E4A1B" href="../../tag/A09942AD8934/">15.18.16</a></span>
+<div>\begin{equation}  |\partial _\nu u|+|\nabla _{\tan }u|\leq CL \quad \text{on }\partial B. \end{equation}</div>
+</div>
+<p>
+      Let $H=\operatorname {tr}_ T\beta $, $\mathcal L=\operatorname {tr}_ T\mathrm{dd}^{\mathrm{c}}$, and $w=u-\underline u\geq 0$, the linearized operator and the barrier function used below. Taking $K$ fixed and sufficiently large gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-EBE3C157"><span data-gerby-tag="EBE3C157"><code class="tag-id">F834489897B3</code></span>
+<span class="equation-label"><a data-tag="EBE3C157" href="../../tag/F834489897B3/">15.18.17</a></span>
+<div>\begin{equation}  \mathcal Lw=n-\operatorname {tr}_ T\underline T\leq -(1+H). \end{equation}</div>
+</div>
+<p>
+       Let $E=\sum _ k(z_ k\partial _{z_ k}+\bar z_ k\partial _{\bar z_ k})$ be the real radial field. Write $\Theta $ for the coefficient matrix of $\vartheta $. Differentiating $\log \det T=\log F$ and commuting $E$ with complex second derivatives yields 
+    
+<div class="equation">
+  \[  \mathcal L(Eu)=E(\log F)+2n-\operatorname {tr}_ T(E\Theta +2\Theta ).  \]
+</div>
+<p>
+       Hence $|\mathcal L(Eu)|\leq C(1+H)$. The same estimate holds for $Zu$ when $Z$ is an infinitesimal unitary rotation. Applying the minimum principle to $CL+C'w\pm Yu$, with $Y=E$ or $Z$, gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-FCE596BB"><span data-gerby-tag="FCE596BB"><code class="tag-id">13E61CA163BF</code></span>
+<span class="equation-label"><a data-tag="FCE596BB" href="../../tag/13E61CA163BF/">15.18.18</a></span>
+<div>\begin{equation}  |Eu|+|Zu|\leq CL\quad \text{on }B. \end{equation}</div>
+</div>
+<p>
+<em>Step 2: mixed second derivatives on the boundary.</em> For a rotation $Z$, the function $R_ Z=Z(u-G)$ vanishes on $\partial B$ and satisfies $|\mathcal LR_ Z|\leq CL(1+H)$. The barriers $CLw\pm R_ Z$ and (<a data-tag="EBE3C157" href="../../tag/F834489897B3/">15.18.17</a>) imply $|\partial _\nu R_ Z|\leq CL^2$ on the boundary. Rotations span the real tangent space of $\partial B$, so all real mixed normal–tangential second derivatives are $O(L^2)$. Pure tangential second derivatives are $O(L)$ by differentiating $u=g$ twice and using (<a data-tag="6F1E4A1B" href="../../tag/A09942AD8934/">15.18.16</a>). Thus all complex Hessian entries except the complex normal–normal entry are $O(L^2)$. 
+    <p>
+<em>Step 3: the double normal derivative.</em> It remains to bound the tangential block of $T$ from below. For $n\geq 2$, let 
+    
+<div class="equation">
+  \[  \lambda _0=\min \{ T_ p(\xi ,\bar\xi ):p\in \partial B, \  \xi \in T_ p^{1,0}(\partial B),\  |\xi |_\beta =1\} .  \]
+</div>
+<p>
+       Choose a minimizing pair $(p,\xi )$ and extend $\xi $ to a smooth unit tangential field near $p$, with uniformly bounded derivatives. On the sphere, any smooth function vanishing there satisfies 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(u-G)(\xi ,\bar\xi )=\frac12E(u-G).  \]
+</div>
+<p>
+       Define 
+    
+<div class="equation">
+  \[  a(z)=(\vartheta +\mathrm{dd}^{\mathrm{c}}G)_ z(\xi (z),\overline{\xi (z)})-\frac12EG(z), \qquad P=a+\frac12Eu-\lambda _0.  \]
+</div>
+<p>
+       Then $P\geq 0$ on the nearby spherical boundary and $P(p)=0$. The boundary first-derivative bound also gives $\lambda _0\leq CL$ by the tangential identity above. Consequently 
+    
+<div class="equation">
+  \[  |P|\leq CL, \qquad |\mathcal LP|\leq CL(1+H).  \]
+</div>
+<p>
+       On a fixed cap $D=B\cap B_ r(p)$ consider 
+    
+<div class="equation">
+  \[  \Psi =P+C_1Lw+C_2L|z-p|^2.  \]
+</div>
+<p>
+       Choose $C_2$ so that $\Psi \geq 0$ on the interior spherical part of $\partial D$, and then $C_1$ so that $\mathcal L\Psi \leq 0$ by (<a data-tag="EBE3C157" href="../../tag/F834489897B3/">15.18.17</a>). The minimum principle yields $\Psi \geq 0$. At $p$ the normal derivative of $|z-p|^2$ vanishes, and therefore 
+    
+<div class="equation">
+  \[  \partial _\nu P+C_1L\partial _\nu w\leq 0.  \]
+</div>
+<p>
+       Equations (<a data-tag="6F1E4A1B" href="../../tag/A09942AD8934/">15.18.16</a>)–(<a data-tag="FCE596BB" href="../../tag/13E61CA163BF/">15.18.18</a>) now give $D^2u(\nu ,\nu )(p)\leq CL^2$, hence $\operatorname {tr}_\beta T(p)\leq CL^2$. Positivity and $\det _\beta T=F$ imply 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-C598084B"><span data-gerby-tag="C598084B"><code class="tag-id">4327E0F53426</code></span>
+<span class="equation-label"><a data-tag="C598084B" href="../../tag/4327E0F53426/">15.18.19</a></span>
+<div>\begin{equation}  \lambda _0\geq cL^{-2(n-1)}. \end{equation}</div>
+</div>
+<p>
+       At any boundary point write 
+    
+<div class="equation">
+  \[  T=\begin{pmatrix} B_0
+
+&amp; b
+
+\\  b^*
+
+&amp; d
+
+\end{pmatrix}  \]
+</div>
+<p>
+       in tangential–normal blocks, with $B_0$ an $(n-1)\times (n-1)$ Hermitian matrix, $b\in \mathbb C^{n-1}$ and $d\in \mathbb R$. We have $|b|\leq CL^2$ and $B_0\geq \lambda _0I$. The determinant equation and the Schur complement give 
+    
+<div class="equation">
+  \[  d=\frac{F}{\det B_0}+b^*B_0^{-1}b \leq (\sup F)\lambda _0^{-(n-1)}+CL^4\lambda _0^{-1},  \]
+</div>
+<p>
+       which is polynomial in $L$. For $n=1$, the trace is $F$ and this argument is unnecessary. 
+    <p>
+<em>Step 4: the interior.</em> Choose a fixed quadratic $q$ with $\vartheta +\mathrm{dd}^{\mathrm{c}}q\geq \varepsilon \beta $. Apply lemma <a data-tag="08DA38DC" href="../../tag/3EBB652C42D7/">15.18.8</a> with one fixed $A$. At an interior maximum of its auxiliary function the trace is uniformly bounded, while at a boundary maximum the preceding estimate applies. Since the remaining terms are uniformly bounded, (<a data-tag="72BB6E32" href="../../tag/F89A683ED708/">15.18.15</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<h2 class="tex-paragraph" data-gerby-tag="AA2F8F92" id="non-kahler-pluripotential-theory-heading:exact-approximation"><span data-tag="AA2F8F92">15.18.20</span> Exact approximation<code class="tag-id">DF626CDAD5D9</code></h2>
+<p>
+We apply these estimates to smooth approximations of the boundary values of $\varphi $ on a ball in $\Omega $. Recall that $\theta $, $\omega $, $c$ and $f$ are the data of theorem <a data-tag="A5C76705" href="../../tag/43AC522E5ED8/">15.18.1</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-630D706F">
+<p><a class="environment-identifier" href="../../tag/59A5B60FAB74/">Proposition <span data-tag="630D706F">15.18.21</span>.</a><span data-gerby-tag="630D706F"><code class="tag-id">59A5B60FAB74</code></span> Let $B\Subset \Omega $ be a coordinate ball, identified with $\{ |z|&lt;r_0\} $, with closure in a larger coordinate chart, and put </p>
+<div class="equation">
+  \[  F=\frac{cf\, \omega ^ n}{\beta ^ n}.  \]
+</div>
+<p> There are $a&gt;0$, $b,C&lt;\infty $, and $u_ j\in C^\infty (\overline B)$ such that </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-079C0B81"><span data-gerby-tag="079C0B81"><code class="tag-id">9F54A2578D16</code></span>
+<span class="equation-label"><a data-tag="079C0B81" href="../../tag/9F54A2578D16/">15.18.22</a></span>
+<div>\begin{equation}  \theta +\mathrm{dd}^{\mathrm{c}}u_ j&gt;0, \qquad (\theta +\mathrm{dd}^{\mathrm{c}}u_ j)^ n=F\beta ^ n, \end{equation}</div>
+</div>
+<p> and </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-3473B491"><span data-gerby-tag="3473B491"><code class="tag-id">082B0A6218F2</code></span>
+<span class="equation-label"><a data-tag="3473B491" href="../../tag/082B0A6218F2/">15.18.23</a></span>
+<div>\begin{equation}  \lVert u_ j-\varphi \rVert _{L^\infty (B)}\leq Cj^{-a}, \qquad \sup _{\overline B}\operatorname {tr}_\beta (\theta +\mathrm{dd}^{\mathrm{c}}u_ j)\leq Cj^ b. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\varphi $ is Hölder continuous near $\overline B$, mollification at scale $1/j$ gives smooth boundary approximations $g_ j$ with 
+    
+<div class="equation">
+  \[  \lVert g_ j-\varphi \rVert _{L^\infty (\partial B)}\leq Cj^{-a}, \qquad \lVert g_ j\rVert _{C^4(\partial B)}\leq Cj^4.  \]
+</div>
+<p>
+        Choose a fixed quadratic $q$ with $\eta =\theta +\mathrm{dd}^{\mathrm{c}}q&gt;0$ near $\overline B$. Extend $g_ j$ smoothly to $G_ j$. For a sufficiently large, polynomially bounded $A_ j$, the function 
+    
+<div class="equation">
+  \[  \underline w_ j=G_ j-q+A_ j(|z|^2-r_0^2)  \]
+</div>
+<p>
+       has boundary value $g_ j-q$ and satisfies 
+    
+<div class="equation">
+  \[  \eta +\mathrm{dd}^{\mathrm{c}}\underline w_ j =\theta +\mathrm{dd}^{\mathrm{c}}G_ j+A_ j\beta &gt;0, \qquad (\eta +\mathrm{dd}^{\mathrm{c}}\underline w_ j)^ n\geq F\beta ^ n.  \]
+</div>
+<p>
+       Apply the smooth Dirichlet theorem recalled at the beginning of this subsection, with density $H=F\beta ^ n/\eta ^ n$ to obtain a solution $w_ j$ for the Hermitian background $\eta $; put $u_ j=w_ j+q$. Comparing $u_ j$ with $\varphi \pm \lVert g_ j-\varphi \rVert _\infty $ by proposition <a data-tag="175BF5DC" href="../../tag/D2F8F8FD5A17/">15.18.3</a> proves the first bound in (<a data-tag="3473B491" href="../../tag/082B0A6218F2/">15.18.23</a>). The functions $u_ j$ are therefore uniformly bounded. Proposition <a data-tag="68359EE0" href="../../tag/6586F9B3B128/">15.18.14</a> and the polynomial $C^4$ boundary norm give the second bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-B0A92E91F8D0" data-section-entries="45A010B2A5AF 4E46369984C7 87542664E1D7 B0A92E91F8D0 D534513E3EFA E603AE0642F8 EBBDF08FE74B F9CDEC120FA0"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/B0A92E91F8D0/">15.18.24 Localization near the nonregular set</a><code class="tag-id">B0A92E91F8D0</code></h2><span data-gerby-tag="D7DCA3CD"></span>
+<p>
+In the auxiliary function of lemma <a data-tag="08DA38DC" href="../../tag/3EBB652C42D7/">15.18.8</a>, the term $-A(u_ j-q)$ penalizes points where $u_ j-q$ is large. A quadratic gap of $u-q$ along the nonregular set therefore suppresses the contribution of the boundary of a neighborhood of that set. Taking $A$ proportional to $\log j$ makes this suppression beat the polynomial growth of the boundary trace, and near the point of minimal $u-q$ the trace then grows more slowly than every positive power of $j$. Interpolation with the polynomial approximation rate gives uniform $C^{1,\alpha }$ bounds. 
+</p>
+<p>
+Distances and norms below are Euclidean. By a smooth exact solution for $(\vartheta ,F)$ we mean a smooth function $u_ j$ with $\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j&gt;0$ and $(\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)^ n=F\beta ^ n$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-B4E309F1">
+<p><a class="environment-identifier" href="../../tag/F9CDEC120FA0/">Proposition <span data-tag="B4E309F1">15.18.25</span>.</a><span data-gerby-tag="B4E309F1"><code class="tag-id">F9CDEC120FA0</code></span> For $R&gt;0$, let $B=B_ R(0)$, let $\vartheta $ and $F&gt;0$ be smooth near $\overline B$, and let $u\in C(\overline B)$. Suppose $q$ is smooth and $\vartheta +\mathrm{dd}^{\mathrm{c}}q\geq \varepsilon \beta $ for some $\varepsilon &gt;0$. Put $v=u-q$ and $m=v(0)$, and fix $\kappa &gt;0$. Let $\mathcal S\subset \overline B$ be closed, contain $0$, and satisfy </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-1AA45C4A"><span data-gerby-tag="1AA45C4A"><code class="tag-id">87542664E1D7</code></span>
+<span class="equation-label"><a data-tag="1AA45C4A" href="../../tag/87542664E1D7/">15.18.26</a></span>
+<div>\begin{equation}  v(0)=m, \qquad v(z)\geq m+\kappa |z|^2\quad (z\in \mathcal S). \end{equation}</div>
+</div>
+<p> Assume that smooth exact solutions $u_ j$, $j\geq 2$, satisfy, for fixed constants $a&gt;0$, $b\geq 0$ and $C&gt;0$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-C9A920D9"><span data-gerby-tag="C9A920D9"><code class="tag-id">E603AE0642F8</code></span>
+<span class="equation-label"><a data-tag="C9A920D9" href="../../tag/E603AE0642F8/">15.18.27</a></span>
+<div>\begin{align}  \lVert u_ j-u\rVert _\infty &amp; \leq Cj^{-a}, \\  \sup _{\overline B}\operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)&amp; \leq Cj^ b, \tag{15.18.28}\\  \sup _ j\sup _ K\operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)&amp; &lt;\infty \quad \text{for every }K\Subset \overline B\setminus \mathcal S. \tag{15.18.29} \end{align}</div>
+</div>
+<p> Then for every $\gamma &gt;0$ there are a neighborhood $U_\gamma $ of $0$ and $C_\gamma $ such that </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-28864346"><span data-gerby-tag="28864346"><code class="tag-id">EBBDF08FE74B</code></span>
+<span class="equation-label"><a data-tag="28864346" href="../../tag/EBBDF08FE74B/">15.18.30</a></span>
+<div>\begin{equation}  \operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)\leq C_\gamma j^\gamma \quad \text{on }U_\gamma . \end{equation}</div>
+</div>
+<p> For every $0&lt;\alpha &lt;1$, there is also a neighborhood $U$ of $0$ on which $u_ j\to u$ in $C^{1,\alpha }$. In particular the approximants are uniformly bounded in that norm and $u\in C^{1,\alpha }(U)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: the trace bound (<a data-tag="28864346" href="../../tag/EBBDF08FE74B/">15.18.30</a>).</em> Write $e_ j=Cj^{-a}$, fix $d=\kappa R^2/2$, and choose $D&gt;(b+1)/d$. Choose $\eta &gt;0$ so that $2D\eta &lt;\gamma /2$. For small $\delta &gt;0$, the neighborhood 
+    
+<div class="equation">
+  \[  W_\delta =\{ z\in B:\operatorname {dist}(z,\mathcal S)&lt;\delta \}   \]
+</div>
+<p>
+       contains $0$, has $v\geq m-\eta $ on its closure, and satisfies $v\geq m+d$ on $\partial B\cap \overline W_\delta $ with the fixed $d$ above. These properties follow from (<a data-tag="1AA45C4A" href="../../tag/87542664E1D7/">15.18.26</a>), continuity, and compactness. The remaining part of the boundary of $W_\delta $ is a compact subset of $\overline B\setminus \mathcal S$, where (<a data-tag="F538CFC6" href="../../tag/BDAA917CBC24/">15.18.29</a>) applies. 
+    <p>
+      Set $A_ j=D\log j$. Apply the maximum principle on $\overline W_\delta $ to 
+    
+<div class="equation">
+  \[  Q_ j=\log \operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)-A_ j(u_ j-q)+\mathrm{e}^{-(u_ j-q)}.  \]
+</div>
+<p>
+       At an interior maximum, lemma <a data-tag="08DA38DC" href="../../tag/3EBB652C42D7/">15.18.8</a> gives $\log \operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)\leq C+\frac12\log A_ j$. On the part of $\partial W_\delta $ inside $B$, which stays away from $\mathcal S$, the trace has a bound independent of $j$. On the outer part $\partial B\cap \overline W_\delta $, (<a data-tag="25BFBD2D" href="../../tag/D7F225F56CDC/">15.18.28</a>) and the gap $d$ give 
+    
+<div class="equation">
+  \[  Q_ j\leq C+b\log j-A_ j(m+d-e_ j),  \]
+</div>
+<p>
+       and the choice $Dd&gt;b+1$ makes this smaller than the bound below for large $j$. Hence throughout $W_\delta $, 
+    
+<div class="equation">
+  \[  Q_ j\leq C_\delta +\tfrac 12\log A_ j-A_ j(m-\eta -e_ j).  \]
+</div>
+<p>
+       On a small ball about $0$ where $v\leq m+\eta $, this implies 
+    
+<div class="equation">
+  \[  \log \operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j) \leq C_\delta +\tfrac 12\log A_ j+A_ j(2\eta +2e_ j).  \]
+</div>
+<p>
+       By the choice of $\eta $, the logarithmic factor and $A_ je_ j$ are absorbed into the remaining power. This proves (<a data-tag="28864346" href="../../tag/EBBDF08FE74B/">15.18.30</a>). 
+    <p>
+<em>Step 2: $C^{1,\alpha }$ convergence.</em> On a smaller ball, the real Laplacian of $u_ j$ is bounded by $Cj^\gamma $. Interior Poisson estimates give a $W^{2,q_0}$ bound for every finite $q_0$, and Sobolev embedding with $q_0$ large then gives, for every $\sigma &lt;1$, 
+    
+<div class="equation">
+  \[  \lVert u_ j\rVert _{W^{2,q_0}}+\lVert u_ j\rVert _{C^{1,\sigma }} \leq Cj^\gamma .  \]
+</div>
+<p>
+       For $d_ k=u_{2^{k+1}}-u_{2^ k}$, 
+    
+<div class="equation">
+  \[  \lVert d_ k\rVert _\infty \leq C2^{-ka}, \qquad \lVert d_ k\rVert _{C^{1,\sigma }}\leq C2^{k\gamma }.  \]
+</div>
+<p>
+       If $\alpha &lt;\sigma $ and $t=(1+\alpha )/(1+\sigma )$, Hölder interpolation gives 
+    
+<div class="equation">
+  \[  \lVert d_ k\rVert _{C^{1,\alpha }} \leq C2^{k[-a(1-t)+\gamma t]}.  \]
+</div>
+<p>
+       Since $\gamma $ may be arbitrarily small, the exponent can be made negative. The dyadic series converges in $C^{1,\alpha }$ to its uniform limit $u$. If $2^ k\leq j&lt;2^{k+1}$, interpolation applied to $u_ j-u_{2^ k}$ gives the same decaying bound. Hence the full sequence converges to $u$ in $C^{1,\alpha }$ on a smaller ball. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-6BDFB1C1">
+<p><a class="environment-identifier" href="../../tag/45A010B2A5AF/">Proposition <span data-tag="6BDFB1C1">15.18.31</span>.</a><span data-gerby-tag="6BDFB1C1"><code class="tag-id">45A010B2A5AF</code></span> Suppose $u_ j$ solve the same smooth equation as in proposition <a data-tag="B4E309F1" href="../../tag/F9CDEC120FA0/">15.18.25</a>, satisfy (<a data-tag="C9A920D9" href="../../tag/E603AE0642F8/">15.18.27</a>)–(<a data-tag="25BFBD2D" href="../../tag/D7F225F56CDC/">15.18.28</a>), and $u$ is smooth with $\vartheta +\mathrm{dd}^{\mathrm{c}}u&gt;0$ on an open set $O\subset B$. Then, for every $K\Subset O$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-F35699C2"><span data-gerby-tag="F35699C2"><code class="tag-id">D534513E3EFA</code></span>
+<span class="equation-label"><a data-tag="F35699C2" href="../../tag/D534513E3EFA/">15.18.32</a></span>
+<div>\begin{equation}  \sup _ j\sup _ K\operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)&lt;\infty . \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Where $u$ is smooth and strictly $\vartheta $-plurisubharmonic, it provides its own quadratic separation, so the argument of proposition <a data-tag="B4E309F1" href="../../tag/F9CDEC120FA0/">15.18.25</a> applies around every point of $O$. A first application gives trace growth of order $\sqrt{\log j}$; the resulting gradient convergence then allows the variant of lemma <a data-tag="08DA38DC" href="../../tag/3EBB652C42D7/">15.18.8</a> with a gradient bound, which removes this growth. 
+    <p>
+      For $p$ in a fixed compact subset of $O$, take a uniformly sized ball $B_ r(p)\Subset O$ and set 
+    
+<div class="equation">
+  \[  q_ p(z)=u(z)-\kappa |z-p|^2  \]
+</div>
+<p>
+       with $\kappa &gt;0$ small, so $\vartheta +\mathrm{dd}^{\mathrm{c}}q_ p\geq \varepsilon \beta $. If $e_ j=Cj^{-a}$ and $v_{j,p}=u_ j-q_ p$, then 
+    
+<div class="equation">
+  \[  v_{j,p}\geq -e_ j, \quad v_{j,p}(p)\leq e_ j, \quad v_{j,p}\geq \kappa r^2-e_ j\text{ on }\partial B_ r(p).  \]
+</div>
+<p>
+       With $A_ j=D\log j$ and $D\kappa r^2&gt;b+1$, the same maximum argument as above gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-417961CC"><span data-gerby-tag="417961CC"><code class="tag-id">4E46369984C7</code></span>
+<span class="equation-label"><a data-tag="417961CC" href="../../tag/4E46369984C7/">15.18.33</a></span>
+<div>\begin{equation}  \operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)(p)\leq C\sqrt{\log j}. \end{equation}</div>
+</div>
+<p>
+       The constants are uniform on compact subsets of $O$. 
+    <p>
+      Put $T_ j=\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j$ and $w_ j=u_ j-u$. On slightly larger compact sets, (<a data-tag="417961CC" href="../../tag/4E46369984C7/">15.18.33</a>) bounds $|\Delta w_ j|$ by $C\sqrt{\log j}$. Poisson estimates and Sobolev embedding give 
+    
+<div class="equation">
+  \[  \lVert w_ j\rVert _{C^{1,\sigma }}\leq C_\sigma \sqrt{\log j}, \qquad \sigma &lt;1.  \]
+</div>
+<p>
+       Interpolating with $\lVert w_ j\rVert _\infty \leq Cj^{-a}$ shows $\nabla w_ j\to 0$ uniformly on smaller compact sets. The gradients of $v_{j,p}$ are therefore uniformly bounded. Repeat the maximum argument with $\log \operatorname {tr}_\beta T_ j-A_ jv_{j,p}$, now using the variant of lemma <a data-tag="08DA38DC" href="../../tag/3EBB652C42D7/">15.18.8</a> with a gradient bound. Its interior trace bound is now independent of $A_ j$, while the boundary term is suppressed as before. Evaluation at $p$ gives 
+    
+<div class="equation">
+  \[  \operatorname {tr}_\beta T_ j(p)\leq C\exp (2A_ je_ j)\leq C,  \]
+</div>
+<p>
+       proving (<a data-tag="F35699C2" href="../../tag/D534513E3EFA/">15.18.32</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-D7F225F56CDC" data-section-entries="D7F225F56CDC"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="25BFBD2D"></span><div class="equation numbered-equation" id="non-kahler-pluripotential-theory-25BFBD2D"><span data-gerby-tag="25BFBD2D"><code class="tag-id">D7F225F56CDC</code></span><span class="equation-label"><a data-tag="25BFBD2D" href="../../tag/D7F225F56CDC/">15.18.28</a></span><div>\[\begin{aligned}\begin{align}  \sup _{\overline B}\operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)&amp; \leq Cj^ b, \\ \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-BDAA917CBC24" data-section-entries="BDAA917CBC24"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="F538CFC6"></span><div class="equation numbered-equation" id="non-kahler-pluripotential-theory-F538CFC6"><span data-gerby-tag="F538CFC6"><code class="tag-id">BDAA917CBC24</code></span><span class="equation-label"><a data-tag="F538CFC6" href="../../tag/BDAA917CBC24/">15.18.29</a></span><div>\[\begin{aligned}\begin{align}  \sup _ j\sup _ K\operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)&amp; &lt;\infty \quad \text{for every }K\Subset \overline B\setminus \mathcal S.  \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-163F19CEE4A0" data-section-entries="163F19CEE4A0 29094CECD90F 2F9977F68923 3DC50D5C4903 40CD1B311623 4261D49DE46D 4DCF25F09DA4 66EE1806AFB7 7B1658CB459D 97A8DB2D4465 9EDD6E774993 ADEA37AAF3BB E4388ADCCF56 FA7DC597E9CB"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/163F19CEE4A0/">15.18.34 Derivative estimates and bounded traces</a><code class="tag-id">163F19CEE4A0</code></h2><span data-gerby-tag="D403C3A6"></span>
+<p>
+Uniform $C^{1,\alpha }$ bounds control averages of the trace $\operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)=\operatorname {tr}_\beta \vartheta +\Delta _\beta u_ j$ over small balls. To pass from averages to pointwise values we need a bound for the gradient of the trace, that is, a third-order estimate, whose dependence on the ellipticity constants is polynomial. We prove it by Calabi's maximum-principle argument, computed with the Chern connection of the solution so that the torsion of the nonclosed background appears explicitly. The resulting averaging inequality is nonlinear in the trace, and it closes under iteration when $\alpha $ is sufficiently close to one. 
+</p>
+<p>
+In this subsection $B$ is the unit ball and $B_ r(p)$ is the Euclidean ball of radius $r$ centered at $p$. For a Hermitian metric $g$, $\partial g$ denotes the ordinary coordinate derivatives of its coefficient matrix, while tensor derivatives in the proofs are taken with respect to the Chern connection of $g$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-BD843B1F">
+<p><a class="environment-identifier" href="../../tag/ADEA37AAF3BB/">Proposition <span data-tag="BD843B1F">15.18.35</span>.</a><span data-gerby-tag="BD843B1F"><code class="tag-id">ADEA37AAF3BB</code></span> Fix smooth $\vartheta $ and smooth $F&gt;0$ near the closed unit ball. There are $C,N&lt;\infty $, depending only on finitely many derivatives of the fixed data, such that any smooth solution </p>
+<div class="equation">
+  \[  g=\vartheta +\mathrm{dd}^{\mathrm{c}}u, \qquad g^ n=F\beta ^ n, \qquad M^{-1}\beta \leq g\leq M\beta , \qquad M\geq 1,  \]
+</div>
+<p> satisfies </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-B5C89F1D"><span data-gerby-tag="B5C89F1D"><code class="tag-id">E4388ADCCF56</code></span>
+<span class="equation-label"><a data-tag="B5C89F1D" href="../../tag/E4388ADCCF56/">15.18.36</a></span>
+<div>\begin{equation}  \sup _{B_{1/2}}|\partial g|_\beta \leq CM^ N. \end{equation}</div>
+</div>
+<p> If only $\sup _ B\operatorname {tr}_\beta g\leq L$ is given, the same bound holds with a fixed power of $1+L$. On a ball of radius $r\leq 1$, </p>
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-A66FA415"><span data-gerby-tag="A66FA415"><code class="tag-id">3DC50D5C4903</code></span>
+<span class="equation-label"><a data-tag="A66FA415" href="../../tag/3DC50D5C4903/">15.18.37</a></span>
+<div>\begin{equation}  \sup _{B_{r/2}}|\nabla \operatorname {tr}_\beta g|_\beta \leq Cr^{-1}(1+L)^ N. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The quantity $\mathcal R$ below is the squared norm of the difference between the Chern connection of $g$ and the flat connection. We derive a differential inequality for $\mathcal R$ in which the torsion enters through fixed derivatives of $\vartheta $, and combine it with the trace in a maximum principle; every constant is kept a power of $M$. 
+    <p>
+      We compare the flat connection of $\beta $ with the Chern connection $\nabla $ of $g$. Write $g^{k\bar\ell }$ for the coefficients of the inverse matrix and $\bar\nabla $ for covariant differentiation in $(0,1)$ directions; tensor norms and inner products without subscript are computed with $g$. The difference of the two connections and its squared norm are 
+    
+<div class="equation">
+  \[  \Psi ^ k_{ij}=g^{k\bar\ell }\partial _ i g_{j\bar\ell }, \qquad \mathcal R=|\Psi |_ g^2.  \]
+</div>
+<p>
+       The torsion of $\nabla $ is determined by the fixed background, because the third derivatives of $u$ cancel in it. Its lowered and raised components are 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-AE75D740"><span data-gerby-tag="AE75D740"><code class="tag-id">2F9977F68923</code></span>
+<span class="equation-label"><a data-tag="AE75D740" href="../../tag/2F9977F68923/">15.18.38</a></span>
+<div>\begin{equation}  C_{ij\bar\ell } =\partial _ i\vartheta _{j\bar\ell }-\partial _ j\vartheta _{i\bar\ell }, \qquad \mathcal T^ k_{ij}=g^{k\bar\ell }C_{ij\bar\ell }. \end{equation}</div>
+</div>
+<p>
+        Consequently, for a fixed integer $N$, 
+    
+<div class="equation numbered-equation">
+<span class="equation-label">14.39</span>
+<div>\begin{align}  |\mathcal T|&amp; \leq CM^ N,\nonumber \\  |\nabla \mathcal T|+|\bar\nabla \mathcal T| &amp; \leq CM^ N(1+\sqrt{\mathcal R}),\tag{15.18.39}\\  |\nabla ^2\mathcal T|+|\nabla \bar\nabla \mathcal T|+|\bar\nabla ^2\mathcal T| &amp; \leq CM^ N(1+\mathcal R+|\nabla \Psi |+|\bar\nabla \Psi |).\nonumber \end{align}</div>
+</div>
+<p>
+       Every factor here is either a fixed derivative of $\vartheta $, a connection factor $\Psi $, or a factor of $g^{\pm 1}$; this explains the polynomial dependence. 
+    <p>
+      For tensor fields, use $\Delta _ g=g^{p\bar q}\nabla _ p\nabla _{\bar q}$. We need the following curvature identities. With 
+    
+<div class="equation">
+  \[  \operatorname {Rm}^ k{}_{i\bar j l}=-\partial _{\bar j}\Psi ^ k_{il}, \qquad \operatorname {Rm}_{i\bar j l\bar k}=g_{m\bar k}\operatorname {Rm}^ m{}_{i\bar j l},  \]
+</div>
+<p>
+       set 
+    
+<div class="equation">
+  \[  \operatorname {Ric}^{(2)}_{l\bar k}=g^{i\bar j}\operatorname {Rm}_{i\bar j l\bar k}, \qquad \operatorname {Ric}^{(1)}_{l\bar k}=g^{i\bar j}\operatorname {Rm}_{l\bar k i\bar j} =-\partial _ l\partial _{\bar k}\log F.  \]
+</div>
+<p>
+       The two curvature interchanges are 
+    
+<div class="equation">
+  \begin{align*}  \operatorname {Rm}_{i\bar j l\bar k}-\operatorname {Rm}_{l\bar j i\bar k} &amp; =-\nabla _{\bar j}C_{il\bar k},\\  \operatorname {Rm}_{i\bar j l\bar k}-\operatorname {Rm}_{i\bar k l\bar j} &amp; =-\nabla _ i\overline{C}_{\bar j\bar k l}. \end{align*}
+</div>
+<p>
+       They follow by differentiating the torsion identity and its conjugate. Successive interchange and contraction give 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-F371BBCE"><span data-gerby-tag="F371BBCE"><code class="tag-id">40CD1B311623</code></span>
+<span class="equation-label"><a data-tag="F371BBCE" href="../../tag/40CD1B311623/">15.18.40</a></span>
+<div>\begin{equation}  \operatorname {Ric}^{(2)}_{l\bar k} =\operatorname {Ric}^{(1)}_{l\bar k} -g^{i\bar j}\bigl ( \nabla _ l\overline C_{\bar j\bar k i} +\nabla _{\bar j}C_{il\bar k} \bigr ). \end{equation}</div>
+</div>
+<p>
+       Metric compatibility, (<a data-tag="2E588630" href="../../tag/8CAF7DF1496D/">15.18.39</a>), and the fixed smooth formula for $\operatorname {Ric}^{(1)}$ imply 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-019C0DBC"><span data-gerby-tag="019C0DBC"><code class="tag-id">FA7DC597E9CB</code></span>
+<span class="equation-label"><a data-tag="019C0DBC" href="../../tag/FA7DC597E9CB/">15.18.41</a></span>
+<div>\begin{equation}  |\operatorname {Ric}^{(2)}|\leq CM^ N(1+\sqrt{\mathcal R}), \qquad |\nabla \operatorname {Ric}^{(2)}| \leq CM^ N(1+\mathcal R+|\nabla \Psi |+|\bar\nabla \Psi |). \end{equation}</div>
+</div>
+<p>
+       Moreover, 
+    
+<div class="equation">
+  \[  \nabla _{\bar q}\Psi ^ k_{ij}=-\operatorname {Rm}^ k{}_{i\bar q j},  \]
+</div>
+<p>
+       and the Chern–Bianchi identity, including its torsion term, is 
+    
+<div class="equation">
+  \[  \nabla _ p\operatorname {Rm}^ k{}_{i\bar q j}-\nabla _ i\operatorname {Rm}^ k{}_{p\bar q j} =-\mathcal T^ r_{pi}\operatorname {Rm}^ k{}_{r\bar q j}.  \]
+</div>
+<p>
+       Consequently, 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-FD810534"><span data-gerby-tag="FD810534"><code class="tag-id">9EDD6E774993</code></span>
+<span class="equation-label"><a data-tag="FD810534" href="../../tag/9EDD6E774993/">15.18.42</a></span>
+<div>\begin{equation}  \Delta _ g\Psi ^ k_{ij} =-\nabla _ i(\operatorname {Ric}^{(2)})^ k{}_ j +g^{p\bar q}\mathcal T^ r_{pi}\operatorname {Rm}^ k{}_{r\bar q j}. \end{equation}</div>
+</div>
+<p>
+       If $A^ k{}_ l=(\operatorname {Ric}^{(2)})^ k{}_ l$, define its action on a tensor of type $(1,2)$ by 
+    
+<div class="equation">
+  \[  (A\mathbin {\cdot }\Psi )^ k_{ij} =A^ k{}_ l\Psi ^ l_{ij}-A^ l{}_ i\Psi ^ k_{lj}-A^ l{}_ j\Psi ^ k_{il}.  \]
+</div>
+<p>
+       Differentiating the squared norm and using metric compatibility gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-1CBF2604"><span data-gerby-tag="1CBF2604"><code class="tag-id">4261D49DE46D</code></span>
+<span class="equation-label"><a data-tag="1CBF2604" href="../../tag/4261D49DE46D/">15.18.43</a></span>
+<div>\begin{equation}  \Delta _ g\mathcal R =|\nabla \Psi |^2+|\bar\nabla \Psi |^2 +2\operatorname {Re}\langle \Delta _ g\Psi ,\Psi \rangle -\operatorname {Re}\langle A\mathbin {\cdot }\Psi ,\Psi \rangle . \end{equation}</div>
+</div>
+<p>
+       There is no mixed torsion term because the Chern torsion has type $(2,0)$. Using (<a data-tag="2E588630" href="../../tag/8CAF7DF1496D/">15.18.39</a>), (<a data-tag="019C0DBC" href="../../tag/FA7DC597E9CB/">15.18.41</a>), and (<a data-tag="FD810534" href="../../tag/9EDD6E774993/">15.18.42</a>) in (<a data-tag="1CBF2604" href="../../tag/4261D49DE46D/">15.18.43</a>), Young's inequality absorbs the products of $\sqrt{\mathcal R}$ with $|\nabla \Psi |+|\bar\nabla \Psi |$. We obtain 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-610BAAEA"><span data-gerby-tag="610BAAEA"><code class="tag-id">4DCF25F09DA4</code></span>
+<span class="equation-label"><a data-tag="610BAAEA" href="../../tag/4DCF25F09DA4/">15.18.44</a></span>
+<div>\begin{equation}  \Delta _ g\mathcal R\geq -CM^ N(\mathcal R^{3/2}+1). \end{equation}</div>
+</div>
+<p>
+       Let $s=\operatorname {tr}_\beta g$. Direct differentiation as in (<a data-tag="3C2717C1" href="../../tag/8A24C1B85BE1/">15.18.10</a>) gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-3DB3639B"><span data-gerby-tag="3DB3639B"><code class="tag-id">97A8DB2D4465</code></span>
+<span class="equation-label"><a data-tag="3DB3639B" href="../../tag/97A8DB2D4465/">15.18.45</a></span>
+<div>\begin{equation}  \Delta _ gs\geq M^{-1}\mathcal R-CM, \qquad |\partial s|_ g^2\leq nM^2\mathcal R. \end{equation}</div>
+</div>
+<p>
+       Take a cutoff $\zeta $ supported in $B$, equal to one on $B_{1/2}$, set $\eta =\zeta ^2$ and $h=2nM-s$, so $nM\leq h\leq 2nM$, and maximize 
+    
+<div class="equation">
+  \[  Q=\frac{\eta \mathcal R}{h}.  \]
+</div>
+<p>
+       At a positive interior maximum of $Q$, the identity $\partial \mathcal R/\mathcal R=\partial h/h-\partial \eta /\eta $ gives 
+    
+<div class="equation">
+  \[  \begin{split}  0\geq \frac{\Delta _ gQ}{Q} &amp; =\frac{\Delta _ g\mathcal R}{\mathcal R} +\frac{\Delta _ g\eta }{\eta }-\frac{\Delta _ gh}{h} -\frac{2|\partial \eta |_ g^2}{\eta ^2} +\frac{2\operatorname {Re}\langle \partial \eta ,\partial h\rangle _ g}{\eta h}. \end{split}  \]
+</div>
+<p>
+       We have $|\partial \eta |_ g^2\leq CM\eta $, $|\Delta _ g\eta |\leq CM$ and $|\partial h|_ g\leq \sqrt n M\sqrt{\mathcal R}$. Insert (<a data-tag="610BAAEA" href="../../tag/4DCF25F09DA4/">15.18.44</a>) and (<a data-tag="3DB3639B" href="../../tag/97A8DB2D4465/">15.18.45</a>) and multiply by $\eta Q$. The positive term is $M^{-1}Q^2$. The two terms involving $\sqrt{\mathcal R}$ are bounded in absolute value by a fixed power of $M$ times $Q^{3/2}$, since $\mathcal R=hQ/\eta $ and $h\leq 2nM$. The remaining cutoff terms are bounded by $CM^ N(Q+1)$. Therefore 
+    
+<div class="equation">
+  \[  0\geq M^{-1}Q^2-CM^ N(Q^{3/2}+Q+1).  \]
+</div>
+<p>
+       Thus $Q$, and then $\mathcal R$ on $B_{1/2}$, are bounded by a fixed polynomial in $M$. Since $|\partial g|_\beta ^2\leq M^3\mathcal R$, this proves (<a data-tag="B5C89F1D" href="../../tag/E4388ADCCF56/">15.18.36</a>). 
+    <p>
+      If $s\leq L$, the determinant lower bound gives $\lambda _{\min }(g)\geq (\inf F)L^{1-n}$, so $M$ is a fixed power of $1+L$. For a ball $B_ r(p)$, set $u_ r(z)=r^{-2}u(p+rz)$ and use the coefficient matrices $\vartheta _ r(z)=\vartheta (p+rz)$, $g_ r(z)=g(p+rz)$ and $F_ r(z)=F(p+rz)$. Then $g_ r=\vartheta _ r+\mathrm{dd}^{\mathrm{c}}u_ r$ in the unit coordinates and $\det g_ r=F_ r$. For $r\leq 1$ the derivatives of the fixed data remain uniformly bounded. The unit-ball estimate for the ordinary coefficient derivatives $\partial g_ r$ and their conjugates gives the factor $r^{-1}$ in (<a data-tag="A66FA415" href="../../tag/3DC50D5C4903/">15.18.37</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-3A60925D">
+<p><a class="environment-identifier" href="../../tag/29094CECD90F/">Proposition <span data-tag="3A60925D">15.18.46</span>.</a><span data-gerby-tag="3A60925D"><code class="tag-id">29094CECD90F</code></span> There is $\alpha _*&lt;1$, depending only on $n$ and the exponent $N$ in proposition <a data-tag="BD843B1F" href="../../tag/ADEA37AAF3BB/">15.18.35</a>, with the following property. Let $B_0$ be a Euclidean ball, fix a smooth real $(1,1)$-form $\vartheta $ and a smooth function $F&gt;0$ near $\overline{B_0}$, and let $u_ j$ be smooth exact solutions of $(\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)^ n=F\beta ^ n$ with $\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j&gt;0$. If </p>
+<div class="equation">
+  \[  \sup _ j\lVert u_ j\rVert _{C^{1,\alpha }(B_0)}&lt;\infty \qquad \text{for some }\alpha _*&lt;\alpha &lt;1,  \]
+</div>
+<p> then $\operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)$ is uniformly bounded on every smaller ball. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a center for concentric balls $B_ r\Subset B_0$, put $s_ j=\operatorname {tr}_\beta (\vartheta +\mathrm{dd}^{\mathrm{c}}u_ j)$, and set 
+    
+<div class="equation">
+  \[  M_ j(r)=1+\sup _{B_ r}s_ j.  \]
+</div>
+<p>
+       For concentric balls $B_ r\Subset B_ R\Subset B_0$, $d=R-r\leq 1$, proposition <a data-tag="BD843B1F" href="../../tag/ADEA37AAF3BB/">15.18.35</a> gives 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-E210E198"><span data-gerby-tag="E210E198"><code class="tag-id">7B1658CB459D</code></span>
+<span class="equation-label"><a data-tag="E210E198" href="../../tag/7B1658CB459D/">15.18.47</a></span>
+<div>\begin{equation}  |\nabla s_ j|\leq Cd^{-1}M_ j(R)^ N \quad \text{on }B_{r+d/2}. \end{equation}</div>
+</div>
+<p>
+       Fix $p\in B_ r$ and let $\chi _ h$ be a nonnegative mollifier of radius $h\leq d/4$. Since 
+    
+<div class="equation">
+  \[  s_ j=\operatorname {tr}_\beta \vartheta +\Delta _\beta u_ j,  \]
+</div>
+<p>
+       integration by parts, after subtracting the constant vector $\nabla u_ j(p)$, and the uniform $C^{1,\alpha }$ bound give 
+    
+<div class="equation">
+  \[  (s_ j*\chi _ h)(p)\leq C(1+h^{\alpha -1}).  \]
+</div>
+<p>
+       Equation (<a data-tag="E210E198" href="../../tag/7B1658CB459D/">15.18.47</a>) gives 
+    
+<div class="equation">
+  \[  |s_ j(p)-(s_ j*\chi _ h)(p)| \leq Cd^{-1}M_ j(R)^ Nh.  \]
+</div>
+<p>
+       Choose 
+    
+<div class="equation">
+  \[  h=\frac d4M_ j(R)^{-N/(2-\alpha )}.  \]
+</div>
+<p>
+       Taking the supremum over $p\in B_ r$ and absorbing fixed powers of $d^{-1}$, we obtain 
+    
+<div class="equation numbered-equation" id="non-kahler-pluripotential-theory-D370053F"><span data-gerby-tag="D370053F"><code class="tag-id">66EE1806AFB7</code></span>
+<span class="equation-label"><a data-tag="D370053F" href="../../tag/66EE1806AFB7/">15.18.48</a></span>
+<div>\begin{equation}  M_ j(r)\leq Cd^{-1}M_ j(R)^ q, \qquad q=\frac{N(1-\alpha )}{2-\alpha }. \end{equation}</div>
+</div>
+<p>
+       Choose $\alpha _*$ so close to one that $q&lt;1$ for $\alpha &gt;\alpha _*$. Choose $0&lt;r_0&lt;R_0$ with $B_{R_0}\Subset B_0$. Let $r_ k\uparrow R_0$ with $r_{k+1}-r_ k=(R_0-r_0)2^{-k-1}$. Iterating (<a data-tag="D370053F" href="../../tag/66EE1806AFB7/">15.18.48</a>) gives 
+    
+<div class="equation">
+  \[  M_ j(r_0) \leq \prod _{k=0}^{m-1}\left[C(r_{k+1}-r_ k)^{-1}\right]^{q^ k} M_ j(r_ m)^{q^ m}.  \]
+</div>
+<p>
+       The infinite product converges because $\sum q^ k(1+k)&lt;\infty $. For each fixed $j$, the final factor tends to one as $m\to \infty $. The resulting bound is independent of $j$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-8CAF7DF1496D" data-section-entries="8CAF7DF1496D"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><span data-gerby-tag="2E588630"></span><div class="equation numbered-equation" id="non-kahler-pluripotential-theory-2E588630"><span data-gerby-tag="2E588630"><code class="tag-id">8CAF7DF1496D</code></span><span class="equation-label"><a data-tag="2E588630" href="../../tag/8CAF7DF1496D/">15.18.39</a></span><div>\[\begin{aligned}\begin{align}  |\nabla \mathcal T|+|\bar\nabla \mathcal T| &amp; \leq CM^ N(1+\sqrt{\mathcal R}),\\ \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-6E838824045A" data-section-entries="6E838824045A AD8A02A6088D"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/6E838824045A/">15.18.49 Proof of the main theorem</a><code class="tag-id">6E838824045A</code></h2><span data-gerby-tag="5D7ED084"></span>
+<p>
+We now assemble the four steps outlined after theorem <a data-tag="A5C76705" href="../../tag/43AC522E5ED8/">15.18.1</a>. The barrier enters only once, but globally: it locates a point of the nonsmooth set at which the quadratic separation required in proposition <a data-tag="B4E309F1" href="../../tag/F9CDEC120FA0/">15.18.25</a> holds. 
+</p>
+<article class="env-proof">
+<p>
+<strong>of theorem <a data-tag="A5C76705" href="../../tag/43AC522E5ED8/">15.18.1</a>.</strong>
+       If $n=1$, the equation is the linear identity 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\varphi =cf\, \omega -\theta \quad \text{on }\Omega .  \]
+</div>
+<p>
+       Its right-hand side is smooth, so interior elliptic regularity gives $\varphi \in C^\infty (\Omega )$, and the original equation gives $\theta +\mathrm{dd}^{\mathrm{c}}\varphi =cf\, \omega &gt;0$. We henceforth assume $n\geq 2$. 
+    <p>
+      Let 
+    
+<div class="equation">
+  \[  \mathcal S=\{ p\in \Omega :\varphi \text{ is not smooth on any neighborhood of }p\} .  \]
+</div>
+<p>
+       This is closed in $\Omega $. Suppose $\mathcal S\neq \varnothing $. By lemma <a data-tag="1F642B5B" href="../../tag/4798FCFAC293/">5.40.7</a>, the restriction of $\varphi -\rho $ to $\mathcal S$ attains its minimum $m$ at some $p\in \mathcal S$. 
+    <p>
+      Choose nested coordinate balls 
+    
+<div class="equation">
+  \[  B\Subset B_0\Subset \Omega  \]
+</div>
+<p>
+       centered at $p$. On $B_0$, proposition <a data-tag="630D706F" href="../../tag/59A5B60FAB74/">15.18.21</a> gives smooth exact Dirichlet solutions $u_ j$ converging uniformly to $\varphi $ at a polynomial rate and having polynomial global trace growth. 
+    <p>
+      On the open set $\Omega \setminus \mathcal S$ the function $\varphi $ is smooth, and $\theta +\mathrm{dd}^{\mathrm{c}}\varphi $ is semipositive with positive determinant, hence positive definite. Proposition <a data-tag="6BDFB1C1" href="../../tag/45A010B2A5AF/">15.18.31</a> therefore gives a uniform trace bound for the $u_ j$ on every compact subset of $B_0\setminus \mathcal S$. 
+    <p>
+      In coordinates centered at $p$, take $\kappa &gt;0$ small and set 
+    
+<div class="equation">
+  \[  q(z)=\rho (z)-\kappa |z|^2.  \]
+</div>
+<p>
+       After shrinking $B$, the lower bound $\theta +\mathrm{dd}^{\mathrm{c}}\rho \geq \omega $ gives $\theta +\mathrm{dd}^{\mathrm{c}}q&gt;0$ on $\overline B$. If $v=\varphi -q$, then the minimizing property of $p$ gives 
+    
+<div class="equation">
+  \[  v(p)=m, \qquad v(z)=(\varphi -\rho )(z)+\kappa |z|^2 \geq m+\kappa |z|^2 \quad (z\in \mathcal S\cap \overline B).  \]
+</div>
+<p>
+       Thus proposition <a data-tag="B4E309F1" href="../../tag/F9CDEC120FA0/">15.18.25</a> applies on $B$ with the closed set $\mathcal S\cap \overline B$: the approximation rate and global polynomial trace bound come from proposition <a data-tag="630D706F" href="../../tag/59A5B60FAB74/">15.18.21</a>, and the bound away from $\mathcal S$ comes from proposition <a data-tag="6BDFB1C1" href="../../tag/45A010B2A5AF/">15.18.31</a>. Its second assertion gives, for every $0&lt;\alpha &lt;1$, a neighborhood of $p$ on which the approximants have a uniform $C^{1,\alpha }$ bound. 
+    <p>
+      Choose $\alpha &gt;\alpha _*$ as in proposition <a data-tag="3A60925D" href="../../tag/29094CECD90F/">15.18.46</a>, and apply that proposition on a ball centered at $p$ inside this neighborhood. It yields 
+    
+<div class="equation">
+  \[  \sup _ j\operatorname {tr}_\beta (\theta +\mathrm{dd}^{\mathrm{c}}u_ j)&lt;\infty  \]
+</div>
+<p>
+       on a still smaller neighborhood of $p$. Since $u_ j\to \varphi $ uniformly, $\mathrm{dd}^{\mathrm{c}}u_ j\to \mathrm{dd}^{\mathrm{c}}\varphi $ as currents. The trace bound passes to the limit, so $\operatorname {tr}_\beta (\theta +\mathrm{dd}^{\mathrm{c}}\varphi )$ has a bounded density near $p$. Proposition <a data-tag="00738DAE" href="../../tag/7DF8FE8A18D7/">15.18.5</a> now implies that $\varphi $ is smooth near $p$, contradicting $p\in \mathcal S$. 
+    <p>
+      Hence $\mathcal S=\varnothing $ and $\varphi \in C^\infty (\Omega )$. The form $\theta +\mathrm{dd}^{\mathrm{c}}\varphi $ is smooth and semipositive there, while 
+    
+<div class="equation">
+  \[  (\theta +\mathrm{dd}^{\mathrm{c}}\varphi )^ n=cf\, \omega ^ n&gt;0.  \]
+</div>
+<p>
+       Its nonnegative eigenvalues have positive product, so every eigenvalue is positive. Therefore $\theta +\mathrm{dd}^{\mathrm{c}}\varphi &gt;0$ on $\Omega $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-A9292553">
+<p><a class="environment-identifier" href="../../tag/AD8A02A6088D/">Corollary <span data-tag="A9292553">15.18.50</span>.</a><span data-gerby-tag="A9292553"><code class="tag-id">AD8A02A6088D</code></span> Let $0\leq f\in L^ p(X,\omega ^ n)$, $p&gt;1$, be smooth and strictly positive on $\Omega $. Every minimal-singularity solution of $(\theta +\mathrm{dd}^{\mathrm{c}}\varphi )^ n=cf\, \omega ^ n$, $c&gt;0$, is smooth and strictly $\theta $-plurisubharmonic on $\Omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The analytic complement of $\Omega $ has zero mass for both measures, so it suffices to know the equation in the bounded-potential sense on $\Omega $. Apply theorem <a data-tag="CFD39760" href="../../tag/D662421F3436/">15.17.1</a> with density $cf$ to obtain local Hölder continuity. All hypotheses of theorem <a data-tag="A5C76705" href="../../tag/43AC522E5ED8/">15.18.1</a> are now satisfied. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+By theorem <a data-tag="47C61618" href="../../tag/B7C31259154B/">15.16.7</a>, such a solution exists, with a uniquely determined $c&gt;0$. For a smooth closed big representative on a compact Kähler manifold, theorem <a data-tag="5B0AF731" href="../../tag/C4F23D785797/">10.20.1</a> applies this conclusion to the classical full-mass solution and identifies the regular open set with the ample locus. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/64893D9DABFE/"><span>← Previous</span><small>Corollary 15.17.4</small></a><a class="pager-next" rel="next" href="../../tag/43AC522E5ED8/"><span>Next →</span><small>Theorem 15.18.1</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus,
+  author = {{Gerby contributors}},
+  title = {15.18 Interior smoothness on the regular locus},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/equations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fequations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fequations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus%2F&amp;body=Page%3A+%5B15.18+Interior+smoothness+on+the+regular+locus%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fequations-with-prescribed-singularities--interior-smoothness-on-the-regular-locus%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+5aff2969d2d8fe4d59f3e8b2e8f7814ae7d9fffb+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>
