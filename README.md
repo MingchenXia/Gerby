@@ -30,7 +30,7 @@ Every tagged statement displays a badge:
 | Pending verification | A proof repository is linked, but the current revision has not been verified. |
 | ✓ 0 sorry | The mapped declaration at the linked exact revision passed the recorded proof and axiom checks. |
 
-No formalization repositories have been supplied yet, so the collection currently shows **Not recorded**. A repository link alone cannot produce a green badge. New proof commits revert to pending until verified. See [the evidence requirements](docs/formalizations.md).
+No formalization repositories have been supplied yet, so the collection currently shows **Not recorded**. A repository link alone cannot produce a green badge. New proof commits revert to pending until verified. See [the evidence requirements](documentation/formalizations.md).
 
 ## Adding content
 
@@ -40,13 +40,13 @@ Supply a source repository link and, when available, its formalization repositor
 - `collection.json` defines the shared chapters, subject assignments, and reviewed canonical entries.
 - `formalizations.json` records declaration mappings and verification evidence.
 - `adapters/` exports each source through the pinned official Gerby renderer.
-- [Deployment and updates](docs/deployment.md) documents the export and publishing contracts.
+- [Deployment and updates](documentation/deployment.md) documents the export and publishing contracts.
 
 ## Updates without CI
 
-GitHub Actions CI is disabled at the author's request. Builds run locally, and `scripts/publish.py` commits the checked static output to `gh-pages`. GitHub Pages serves that prebuilt branch at `/Gerby/`.
+GitHub Actions CI is disabled at the author's request. Builds run locally, and `scripts/publish.py` commits the checked static output to `docs/` on `main`. GitHub Pages serves that folder at `/Gerby/`. The repository uses a single branch; the former `gh-pages` history is merged into `main`. Authored project documentation lives in `documentation/`.
 
-Updates are **on request only**. There is no scheduled monitoring or publication. When the author asks to update Gerby, `scripts/update.py` checks all registered source and formalization revisions, rebuilds changed content, checks internal links, and verifies the published revision. The former hourly automation has been removed.
+Updates are **on request only**. There is no scheduled monitoring or publication. When the author asks to update Gerby, `scripts/update.py` checks all registered source and formalization revisions, rebuilds changed content, checks internal links, and verifies the published revision. Publication commits that change only generated `docs/` files do not trigger another rebuild on the next requested check. The former hourly automation has been removed.
 
 ## Local build and publication
 

@@ -9,7 +9,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-from publish import deployment_current, request_deployment
+from publish import deployment_current, request_deployment, project_unchanged
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -37,15 +37,13 @@ def update(force=False):
     if run("git", "branch", "--show-current", capture=True) != "main":
         raise ValueError("The local updater requires the main branch")
     run("git", "pull", "--ff-only", "origin", "main")
-    publishing_commit = run("git", "rev-parse", "HEAD", capture=True)
     books = json.loads((ROOT / "books.json").read_text())["books"]
     proofs = json.loads((ROOT / "formalizations.json").read_text())["entries"]
     keys = {(item["repository"], item.get("ref", "HEAD")) for item in books + proofs}
     revisions = [{"repository": repo, "ref": ref, "commit": current_revision(repo, ref)}
                  for repo, ref in sorted(keys)]
-    run("git", "fetch", "origin", "gh-pages")
-    receipt = json.loads(run("git", "show", "FETCH_HEAD:upstream.json", capture=True))
-    if not force and receipt.get("publishing_commit") == publishing_commit and receipt["sources"] == revisions:
+    receipt = json.loads((ROOT / "docs" / "upstream.json").read_text())
+    if not force and project_unchanged(receipt.get("publishing_commit")) and receipt["sources"] == revisions:
         if deployment_current(receipt):
             print("No changes: the public Gerby collection is current.")
         else:

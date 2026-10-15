@@ -1,12 +1,12 @@
-"""Publish already-built static files to the GitHub Pages branch, without CI."""
+"""Publish locally built static files from main/docs, without CI."""
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
+import re
 import shutil
 import subprocess
-import tempfile
 import time
 from urllib.error import URLError
 from urllib.request import Request, urlopen
@@ -30,7 +30,7 @@ def request_deployment(receipt):
     if deployment_current(receipt):
         print("The public Gerby site is current.")
         return
-    # Native Pages deployment only; no manuscript build or CI workflow is run.
+    # Native Pages delivery only; manuscript builds and tests remain local.
     subprocess.run(["gh", "api", "-X", "POST", "repos/MingchenXia/Gerby/pages/builds"], check=True, cwd=ROOT)
     for _ in range(24):
         if deployment_current(receipt):
@@ -46,37 +46,49 @@ def git(*arguments, cwd=ROOT, capture=False):
     return result.stdout.strip() if capture else None
 
 
-def publish():
-    site = ROOT / "_site"
-    if not (site / ".nojekyll").is_file() or not (site / "collection.json").is_file():
+def project_unchanged(revision, cwd=ROOT):
+    """Generated publication commits must not look like new source changes."""
+    if not isinstance(revision, str) or not re.fullmatch(r"[a-f0-9]{40}", revision):
+        return False
+    return subprocess.run(["git", "diff", "--quiet", revision, "HEAD", "--", ".", ":(exclude)docs"],
+                          cwd=cwd, stderr=subprocess.DEVNULL).returncode == 0
+
+
+def stage_publication(site, destination):
+    if not all((site / filename).is_file() for filename in (".nojekyll", "collection.json", "upstream.json")):
         raise ValueError("Build the complete shared collection before publishing")
     receipt = json.loads((site / "upstream.json").read_text())
-    if not receipt["sources"]:
+    if not receipt.get("sources"):
         raise ValueError("Refusing to publish an edition without source revisions")
-    temporary = ROOT / "_publish"
-    temporary.mkdir(exist_ok=True)
-    with tempfile.TemporaryDirectory(dir=temporary) as directory:
-        checkout = Path(directory)
-        exists = git("ls-remote", "--heads", REPOSITORY, "refs/heads/gh-pages", capture=True)
-        if exists:
-            git("clone", "--depth=1", "--single-branch", "--branch", "gh-pages", REPOSITORY, directory)
-        else:
-            git("init", "-b", "gh-pages", cwd=checkout)
-            git("remote", "add", "origin", REPOSITORY, cwd=checkout)
-        for item in checkout.iterdir():
-            if item.name != ".git":
-                shutil.rmtree(item) if item.is_dir() else item.unlink()
-        shutil.copytree(site, checkout, dirs_exist_ok=True)
-        git("add", "--all", cwd=checkout)
-        unchanged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=checkout).returncode == 0
-        if unchanged:
-            print("Published files are already current.")
-            request_deployment(receipt)
-            return
-        git("commit", "-m", "Publish shared Gerby reference [skip ci]", cwd=checkout)
-        git("-c", "http.version=HTTP/1.1", "-c", "http.postBuffer=104857600", "push", "origin", "HEAD:gh-pages", cwd=checkout)
-        print("Published prebuilt files to gh-pages.")
-        request_deployment(receipt)
+    if destination.exists():
+        shutil.rmtree(destination)
+    shutil.copytree(site, destination)
+    return receipt
+
+
+def publish():
+    site = ROOT / "_site"
+    if not (site / "upstream.json").is_file():
+        raise ValueError("Build the complete shared collection before publishing")
+    receipt = json.loads((site / "upstream.json").read_text())
+    if git("branch", "--show-current", capture=True) != "main":
+        raise ValueError("Publication requires the main branch")
+    if git("status", "--porcelain", capture=True):
+        raise ValueError("Commit or save local Gerby changes before publication")
+    remote = git("remote", "get-url", "origin", capture=True).removesuffix(".git").replace("git@github.com:", "https://github.com/")
+    if remote != REPOSITORY.removesuffix(".git"):
+        raise ValueError("The publication remote does not match the Gerby repository")
+    git("pull", "--ff-only", "origin", "main")
+    if not project_unchanged(receipt.get("publishing_commit")):
+        raise ValueError("The project changed after this build; rebuild before publication")
+    stage_publication(site, ROOT / "docs")
+    git("add", "--all", "--", "docs")
+    unchanged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode == 0
+    if not unchanged:
+        git("commit", "-m", "Publish shared Gerby reference from main/docs [skip ci]")
+    git("-c", "http.version=HTTP/1.1", "-c", "http.postBuffer=104857600", "push", "origin", "main")
+    print("Prebuilt files are published in main/docs.")
+    request_deployment(receipt)
 
 
 if __name__ == "__main__":

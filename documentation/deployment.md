@@ -4,13 +4,15 @@ The public project is [MingchenXia/Gerby](https://github.com/MingchenXia/Gerby),
 
 ## Publication without GitHub Actions CI
 
-The project builds locally and publishes prebuilt files to `gh-pages`, configured as the GitHub Pages source at its root. `.nojekyll` prevents a Jekyll transformation. The former Actions build workflow has been removed and disabled; no source build or CI workflow is scheduled on GitHub.
+The project builds locally and publishes prebuilt files to `docs/` on `main`, configured as the GitHub Pages source. Authored project documentation is kept separately in `documentation/`. The former `gh-pages` branch is merged into `main`; its history and generated content are retained there. `.nojekyll` prevents a Jekyll transformation. The former Actions build workflow has been removed and disabled; no source build or CI workflow is scheduled on GitHub.
 
-Run `python scripts/build.py --fetch`, then `python scripts/publish.py` in the prepared virtual environment. The publisher validates that a complete collection and source receipt exist, creates a temporary checkout of `gh-pages`, replaces its generated files, and pushes a normal commit. It never force-pushes. The publisher explicitly requests GitHub's native Pages deployment and waits until the public revision receipt matches the uploaded edition. This also retries an uploaded edition whose earlier deployment did not finish. Publishing requires the authenticated GitHub CLI (`gh`).
+Run `python scripts/build.py --fetch`, then `python scripts/publish.py` in the prepared virtual environment. The publisher validates that a complete collection and source receipt exist, requires a clean `main` checkout, fast-forwards from the remote, checks that source files still match the built revision, replaces only `docs/`, and pushes a normal commit. It never force-pushes. The publisher explicitly requests GitHub's native Pages deployment and waits until the public revision receipt matches the uploaded edition. This also retries an uploaded edition whose earlier deployment did not finish. Publishing requires the authenticated GitHub CLI (`gh`).
+
+GitHub performs [native Pages delivery](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) of the prebuilt folder; no custom Actions workflow builds the books or runs tests.
 
 The author requests updates manually; no regular checks or automation remain. On request, run `scripts/update.py`. It fast-forwards a clean `main`, compares every tracked source and formalization revision against the published receipt, and rebuilds only when the project or an upstream revision changes. Dependencies are reinstalled only when their pinned manifests change. Publication occurs only after a successful export and complete local-link check. Failed builds leave the deployed edition intact. Network/authentication failures are reported to the author; unchanged state stays quiet. These checks run locally when requested.
 
-The published `upstream.json` contains the build time, publishing-project commit, and exact source commits. `/sources/` retains attribution and revision information for readers. A GitHub Actions run is not required to supply formal proof evidence: a committed verification report is also accepted.
+The published `upstream.json` contains the build time, the project commit used to build the edition, and the exact source commits. The later commit that stores the generated site may have a different hash. Freshness checks compare project files against the recorded build commit while excluding generated `docs/`; a publication commit alone therefore does not cause an endless rebuild cycle. `/sources/` retains attribution and revision information for readers. A GitHub Actions run is not required to supply formal proof evidence: a committed verification report is also accepted.
 
 ## Shared collection
 
@@ -54,3 +56,7 @@ The collection contains 5,896 canonical entries in 21 shared chapters. Twelve re
 The integration preserves 28 SVG diagrams, three source PNGs, footnotes, tables, and 364 cited bibliographic identities. Local validation covers the parser regressions (optional labels, underscores, dotless math symbols), stale duplicate reviews, distinct hypotheses, clause anchors, chapter coverage, image paths, every internal link/fragment, and badge behavior. A temporary MathJax 3.2.2 checker parsed over 64,000 distinct mathematical excerpts without syntax errors after the web compatibility fixes. This checks rendering syntax, not mathematical validity. No formalization mappings have been supplied.
 
 The hourly Gerby automation was deleted. Updates and source revision checks now run only when requested by the author. No GitHub Actions CI was run.
+
+## Single-branch consolidation
+
+The `gh-pages` history is merged into `main`, with its complete validated reading edition relocated byte for byte into `docs/`. The edition receipt continues to identify the commit that actually rendered that content. This consolidation does not refresh the source books. The next requested update may rebuild once to record the changed publishing infrastructure; later generated-only publication commits are ignored when checking project freshness.
