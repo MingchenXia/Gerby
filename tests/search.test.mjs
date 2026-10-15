@@ -21,3 +21,21 @@ test('empty and one-character queries do not list the whole collection', () => {
   assert.deepEqual(searchEntries(records,''),[]);
   assert.deepEqual(searchEntries(records,'a'),[]);
 });
+
+test('chunked search retains records and resolves chunk paths under the project root', async () => {
+  const {loadSearchIndex} = await import('../site/assets/search.mjs');
+  const root = 'https://mingchenxia.github.io/Pome/';
+  const records = [{tag: 'A', title: 'First', aliases: [], topic: '', text: ''}, {tag: 'B', title: 'Second', aliases: [], topic: '', text: 'Kelvin transform'}];
+  const calls = [];
+  const request = async url => {calls.push(url); return {ok: true, json: async () => url.endsWith('search.json') ? {version: 2, chunks: ['search-data/000.json', 'search-data/001.json']} : [records[url.endsWith('000.json') ? 0 : 1]]};};
+  const result = await loadSearchIndex(root + 'search.json', request);
+  assert.deepEqual(result, records);
+  assert.deepEqual(calls, [root + 'search.json', root + 'search-data/000.json', root + 'search-data/001.json']);
+  assert.equal(exactEntry(result, 'B').tag, 'B');
+  assert.equal(searchEntries(result, 'Kelvin')[0].tag, 'B');
+});
+
+test('a failed search chunk rejects the entire load', async () => {
+  const {loadSearchIndex} = await import('../site/assets/search.mjs');
+  await assert.rejects(loadSearchIndex('https://example.org/Pome/search.json', async url => ({ok: url.endsWith('search.json'), json: async () => ({version: 2, chunks: ['search-data/000.json']})})), /Search unavailable/);
+});

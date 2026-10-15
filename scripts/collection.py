@@ -20,6 +20,7 @@ from footnotes import collect_notes, number_notes, relocate_notes
 from proof_expansions import apply_expansions, check_dependencies
 from reading_edits import apply_reading_edits, validate_reading_edits
 from numbering import assign_numbers
+from search_index import write_search_index
 
 
 def slugify(title):
@@ -549,7 +550,7 @@ def build_collection(books, destination, configuration):
     write("references", reference_content, "References", "../")
     write("search", '<h1>Search</h1><form class="page-search" role="search"><label for="page-search">Keywords, a statement number, or a permanent tag</label><input id="page-search" type="search" name="q" autocomplete="off" aria-controls="page-search-results"><button type="submit">Search</button></form><div id="page-search-results" aria-live="polite"></div>', "Search", "../")
     write("comments", '<h1>Comments and corrections</h1><p>Each chapter, section, and entry has its own comment thread. Use the Comments link on a reading page for a question or correction about that page.</p><p><a href="https://github.com/MingchenXia/Pome/discussions">Browse all discussions on GitHub</a></p><p>The comment thread below is for general feedback about the reference. Markdown and mathematical notation are supported by GitHub Discussions. Please identify the statement and give enough detail for others to check a proposed correction.</p>', "Comments", "../")
-    (destination / "search.json").write_text(json.dumps(search, ensure_ascii=False) + "\n")
+    write_search_index(search, destination)
     public_topics = [{**topic, "number": reader.sections[key]["number"], "tag": reader.sections[key]["tag"]} for key, topic in topics.items()]
     (destination / "collection.json").write_text(json.dumps({"version": 1, "chapters": list(chapters.values()), "topics": public_topics, "entries": public_entries}, ensure_ascii=False, indent=2) + "\n")
     (destination / "navigation.json").write_text(json.dumps([reader.pages[route] for route in reader.order], ensure_ascii=False, indent=2) + "\n")
