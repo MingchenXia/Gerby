@@ -33,7 +33,7 @@ def current_revision(repository, ref):
 def update(force=False):
     # Never overwrite an editor's uncommitted work or change their branch.
     if run("git", "status", "--porcelain", capture=True):
-        raise ValueError("Commit or save local Gerby changes before automatic publication")
+        raise ValueError("Commit or save local Gerby changes before requested publication")
     if run("git", "branch", "--show-current", capture=True) != "main":
         raise ValueError("The local updater requires the main branch")
     run("git", "pull", "--ff-only", "origin", "main")
@@ -64,7 +64,7 @@ def update(force=False):
     if not npm_stamp.exists() or npm_stamp.read_text() != package_hash or not (ROOT / "vendor/node_modules/mathjax").exists():
         run("npm", "ci", "--prefix", "vendor", "--ignore-scripts", "--no-audit", "--no-fund")
         npm_stamp.write_text(package_hash)
-    # Automatic runs always fetch fresh public sources, ignoring preview overrides.
+    # Requested updates always fetch fresh source revisions, ignoring preview overrides.
     environment = os.environ.copy()
     environment["GIT_TERMINAL_PROMPT"] = "0"
     for item in books:

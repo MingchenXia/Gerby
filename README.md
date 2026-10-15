@@ -1,14 +1,22 @@
 # Gerby
 
-A shared mathematical reference combining definitions, theorems, and proofs from contributing texts. Browse by **topic or permanent tag**, search across all content, and see each statement's formalization status.
+A shared mathematical reference combining definitions, theorems, and proofs from contributing texts. Browse by **shared chapter or permanent tag**, search across all content, and see each statement's formalization status.
 
 **[Read Gerby](https://mingchenxia.github.io/Gerby/)** · [Source contributions](https://mingchenxia.github.io/Gerby/sources/)
 
 ## Content and organization
 
-The first source is [Foundations of pluripotential theory](https://github.com/MingchenXia/foundations-of-pluripotential-theory), tracking its public `main` branch. The complete active manuscript is exported, including both parts and the appendices. The earlier Section 1.1-only edition came from the initial seed revision; the source branches have since been consolidated into `main`.
+The collection integrates three sources, tracking their `main` branches:
 
-Contributions form one collection of shared topics and global tags. Source titles and original numbering appear as attribution within entries. As more texts are added, `collection.json` can map statements from different sources to the same canonical entry while retaining each version and its proof status. Existing book URLs redirect to the shared entries.
+- [Foundations of pluripotential theory](https://github.com/MingchenXia/foundations-of-pluripotential-theory).
+- [Singularities in global pluripotential theory (SGPT)](https://github.com/MingchenXia/SGPT).
+- **Singularities in Hermitian pluripotential theory**, from the author's private `non-kahler-pluripotential-theory` repository. Only the authorized reading edition is published; the source repository remains private.
+
+Only each manuscript's active input graph is included. Excluded drafts and private research material are not exported.
+
+The collection has **21 shared chapters**, ordered by mathematical subject across the books, with 79 more specific subjects inside them. Source titles and original numbering appear as attribution within entries. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
+
+Reviewed duplicates have one canonical entry and one search result. Alternative source wording, proofs, and formalization badges remain accessible within that entry. Numbered clauses stay inside their parent statements, retaining their own tags and badges. `collection.json` records each reviewed statement fingerprint: a changed statement requires a new review before it can be merged again. Results with different hypotheses remain separate.
 
 All interface text and project documentation are in English. The source texts and formal proofs remain in their original repositories and retain their licenses.
 
@@ -26,10 +34,10 @@ No formalization repositories have been supplied yet, so the collection currentl
 
 ## Adding content
 
-Supply a source repository link and, when available, its formalization repository. Integration records the active LaTeX entry point, stable source labels, shared topics, and the correspondence with formal declarations.
+Supply a source repository link and, when available, its formalization repository. Integration records the active LaTeX entry point, stable source labels, shared chapters, and the correspondence with formal declarations.
 
 - `books.json` registers contributing source repositories and tracked revisions.
-- `collection.json` defines shared topics and explicit cross-source canonical entries.
+- `collection.json` defines the shared chapters, subject assignments, and reviewed canonical entries.
 - `formalizations.json` records declaration mappings and verification evidence.
 - `adapters/` exports each source through the pinned official Gerby renderer.
 - [Deployment and updates](docs/deployment.md) documents the export and publishing contracts.
@@ -38,11 +46,11 @@ Supply a source repository link and, when available, its formalization repositor
 
 GitHub Actions CI is disabled at the author's request. Builds run locally, and `scripts/publish.py` commits the checked static output to `gh-pages`. GitHub Pages serves that prebuilt branch at `/Gerby/`.
 
-An hourly local Codex automation checks both this project and the registered upstream repositories. When a revision changes, `scripts/update.py` fetches fresh sources, rebuilds, checks internal links, and publishes. It stays quiet when nothing has changed. This local automation requires the computer and Codex to be available and GitHub authentication to remain valid. It consumes no GitHub Actions CI minutes.
+Updates are **on request only**. There is no scheduled monitoring or publication. When the author asks to update Gerby, `scripts/update.py` checks all registered source and formalization revisions, rebuilds changed content, checks internal links, and verifies the published revision. The former hourly automation has been removed.
 
 ## Local build and publication
 
-Requires Python 3.11+, Git, Node.js, and npm; publication also uses the authenticated GitHub CLI (`gh`). No private-source key is needed for the current public source.
+Requires Python 3.11+, Git, Node.js, npm, XeLaTeX with the `standalone` and TikZ packages, and Poppler (`pdftocairo`); publication also uses the authenticated GitHub CLI (`gh`). The private Hermitian source requires authenticated read access; credentials stay outside the project.
 
 ```sh
 python3 -m venv .venv
@@ -61,8 +69,8 @@ Open `http://localhost:8000`. With authorized push access to `MingchenXia/Gerby`
 .venv/bin/python scripts/update.py
 ```
 
-The updater requires a clean `main` checkout and uses a fast-forward pull. It never overwrites uncommitted edits. To preview an existing source checkout, set `FOUNDATIONS_SOURCE_DIR` to its absolute path before building; automatic updates ignore that preview override and fetch public sources afresh.
+The on-request updater requires a clean `main` checkout and uses a fast-forward pull. It never overwrites uncommitted edits. To preview an existing source checkout, set `FOUNDATIONS_SOURCE_DIR`, `SGPT_SOURCE_DIR`, or `NON_KAHLER_SOURCE_DIR` to its absolute path before building; requested update checks ignore preview overrides and fetch the tracked sources afresh.
 
 ## Gerby on GitHub Pages
 
-[Gerby](https://gerby-project.github.io/) provides the LaTeX-to-tag renderer used here. This static export includes topic browsing, individual entries, full-text search, cited references, formalization badges, and self-hosted MathJax. GitHub Pages does not run the Flask/database backend, so accounts and server-side comments are not included.
+[Gerby](https://gerby-project.github.io/) provides the LaTeX-to-tag renderer used here. This static export includes shared chapters, individual entries, full-text search, cited references, formalization badges, and self-hosted MathJax. GitHub Pages does not run the Flask/database backend, so accounts and server-side comments are not included.

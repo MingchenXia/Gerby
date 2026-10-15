@@ -27,3 +27,18 @@ input?.addEventListener('input', async () => {
     if (current === request) results.textContent = 'Search is temporarily unavailable.';
   }
 });
+
+// A clause permalink may target a retained source version that is collapsed.
+function revealFragment() {
+  if (!location.hash) return;
+  let target;
+  try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); }
+  catch { return; }
+  if (!target) return;
+  for (let node = target.parentElement; node; node = node.parentElement) {
+    if (node.tagName === 'DETAILS') node.open = true;
+  }
+  target.scrollIntoView({block: 'start'});
+}
+window.addEventListener('hashchange', revealFragment);
+revealFragment();

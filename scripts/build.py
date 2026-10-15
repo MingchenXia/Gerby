@@ -40,7 +40,7 @@ def relative_path(value):
 
 
 def source_fields(record):
-    require(isinstance(record.get("repository"), str) and REPOSITORY.fullmatch(record["repository"]), "Expected a public GitHub repository URL")
+    require(isinstance(record.get("repository"), str) and REPOSITORY.fullmatch(record["repository"]), "Expected a GitHub repository URL")
     if "ref" in record:
         require(isinstance(record["ref"], str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_./-]*", record["ref"]), "Invalid source ref")
 
@@ -224,7 +224,7 @@ def build(fetch=False):
     (destination / "upstream.json").write_text(json.dumps({"built_at": datetime.now(timezone.utc).isoformat(), "publishing_commit": publishing_commit, "sources": revisions}, indent=2) + "\n")
     (destination / ".nojekyll").touch()
     check_links(destination)
-    print(f"Built {summary['entries']} entries in {summary['topics']} shared topics from {summary['sources']} source(s): {destination}")
+    print(f"Built {summary['entries']} entries in {summary['chapters']} shared chapters from {summary['sources']} source(s): {destination}")
 
 
 if __name__ == "__main__":

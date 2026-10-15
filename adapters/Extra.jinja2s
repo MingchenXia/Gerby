@@ -1,0 +1,33 @@
+name: gerbyimage
+<img class="source-figure" src="/asset/{{ obj.attributes.path|e }}" alt="{{ obj.attributes.alt|e }}" loading="lazy">
+
+name: partbacktext
+<section class="part-introduction">{{ obj }}</section>
+
+name: motto
+<blockquote class="motto">{{ obj }}</blockquote>
+
+name: footnote footnotetext
+<aside class="source-footnote" id="{{ obj.id }}"><span class="footnote-label">Note.</span> {{ obj }}</aside>
+
+name: resizebox
+{{ obj }}
+
+name: figure table
+<figure class="source-float">{{ obj }}</figure>
+
+name: caption nestedfigurecaption
+<figcaption {% if obj.userdata['tag'] %}id="{{ obj.userdata['tag'] }}"{% endif %}>{% if obj.userdata['tag'] %}<a href="/tag/{{ obj.userdata['tag'] }}" data-tag="{{ obj.userdata['tag'] }}">{{ obj.ref }}</a> {% endif %}{{ obj }}</figcaption>
+
+name: tabular
+<table class="source-table">{{ obj }}</table>
+
+name: ArrayRow
+<tr>{{ obj }}</tr>
+
+name: ArrayCell
+<td>{{ obj }}</td>
+
+name: paragraph
+<h5 id="{{ obj.id }}" class="tex-paragraph"><span data-tag="{{ obj.userdata['tag'] }}">{{ obj.ref }}</span> {{ obj.title }}</h5>
+{{ obj }}

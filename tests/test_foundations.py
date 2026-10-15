@@ -62,6 +62,28 @@ See \cref{def:test,eq:first}.
             self.assertTrue(all("&lt;" in record["html"] for record in records[4:]))
             self.assertTrue(all(record["html"].strip() for record in records))
 
+    def test_optional_labels_underscores_and_dotless_math_symbols(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source, working = root / "source", root / "render"
+            (source / "style").mkdir(parents=True)
+            working.mkdir()
+            (source / "style/book-preamble.tex").write_text("\\newcommand{\\nef}{\\mathrm{nef}}\n\\setlist")
+            (source / "book.tex").write_text(r"""\documentclass[envcountsect]{svmono}
+\begin{document}
+\chapter{Appendix}\label[appendix]{chap:with_underscore}
+\section{A section}\label{sec:test}
+\begin{definition}\label{def:with_underscore}For $\iota,\jmath$, the rest of this definition survives.\end{definition}
+\begin{equation}\label{eq:with_underscore}x<y\end{equation}
+See \cref{def:with_underscore,eq:with_underscore}.
+\end{document}""")
+            records = adapter.render_fragments(source, working)
+            self.assertEqual({r["label"] for r in records}, {"chap:with_underscore", "sec:test", "def:with_underscore", "eq:with_underscore"})
+            definition = next(r for r in records if r["kind"] == "definition")
+            self.assertIn("the rest of this definition survives", definition["html"])
+            self.assertEqual(definition["parent_label"], "sec:test")
+            self.assertNotIn("TeXFragment object", str(records))
+
 
 if __name__ == "__main__":
     unittest.main()

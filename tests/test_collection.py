@@ -1,10 +1,11 @@
 import copy
+import tempfile
 from pathlib import Path
 import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from collection import organize, prepare_fragment
+from collection import organize, prepare_fragment, statement_fingerprint, chapter_structure, check_links
 
 
 class CollectionTests(unittest.TestCase):
@@ -40,6 +41,59 @@ class CollectionTests(unittest.TestCase):
         self.assertIn('data-gerby-tag="1234ABCD"', result)
         self.assertIn('href="../../references/#R0001"', result)
         self.assertIn("$x&lt;y$", result)
+
+    def test_changed_statement_requires_new_duplicate_review(self):
+        first = {**self.record, "statement_tex": r"\begin{thmenv}\label{thm:shared}Assume $x>0$. Then $x^2>0$.\end{thmenv}"}
+        self.config["topics"] = [{"slug": "potential-theory", "title": "Potential theory"}]
+        self.config["entries"] = [{"tag": "ABCD1234", "title": "Shared result", "topic": "potential-theory", "members": [{"source": s, "label": "thm:shared", "statement_sha256": statement_fingerprint(first)} for s in ("first", "second")]}]
+        organize({"first": [first], "second": [first]}, self.config)
+        changed = {**first, "statement_tex": first["statement_tex"].replace("x>0", "x<0")}
+        with self.assertRaisesRegex(ValueError, "changed and needs review"):
+            organize({"first": [first], "second": [changed]}, self.config)
+
+    def test_unreviewed_exact_duplicates_stop_publication(self):
+        record = {**self.record, "statement_tex": r"\label{thm:shared}A statement with $x<y$."}
+        with self.assertRaisesRegex(ValueError, "exact duplicate"):
+            organize({"first": [record], "second": [record]}, self.config)
+        different = {**record, "statement_tex": r"\label{thm:shared}A statement with $x\leq y$."}
+        entries, _, _ = organize({"first": [record], "second": [different]}, self.config)
+        self.assertEqual(len(entries), 2)
+
+    def test_numbered_clause_retains_its_parent_anchor_and_badge(self):
+        parent = {**self.record, "html": '<article><ol><li id="8765ABCD">A condition.</li></ol></article>'}
+        clause = {**self.record, "tag": "8765ABCD", "label": "itm:shared:1", "kind": "item", "parent_label": "thm:shared", "html": '<li id="8765ABCD">A condition.</li>'}
+        entries, _, links = organize({"first": [parent, clause]}, self.config)
+        self.assertEqual(len(entries), 1)
+        entry = next(iter(entries.values()))
+        self.assertEqual(entry["components"][0]["tag"], "8765ABCD")
+        self.assertEqual(links[("first", "8765ABCD")], entry["tag"])
+        fragment = prepare_fragment({**parent, "source": "first", "html": parent["html"] + '<a href="/tag/8765ABCD">the condition</a>'}, links, {}, "../../", {("first", "8765ABCD"): "#first-8765ABCD"})
+        self.assertIn('data-gerby-tag="8765ABCD"', fragment)
+        self.assertIn('/#first-8765ABCD"', fragment)
+
+    def test_every_subject_needs_an_editorial_chapter(self):
+        topics = {"first": {"title": "First"}, "second": {"title": "Second"}}
+        config = {"chapters": [{"slug": "shared", "title": "A shared chapter", "topics": ["first"]}]}
+        with self.assertRaisesRegex(ValueError, "Assign new source subjects"):
+            chapter_structure(topics, config)
+        config["chapters"][0]["topics"].append("second")
+        chapters, mapping = chapter_structure(topics, config)
+        self.assertEqual(chapters["shared"]["number"], 1)
+        self.assertEqual(set(mapping.values()), {"shared"})
+
+    def test_missing_source_illustrations_are_broken_links(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "index.html").write_text('<img src="missing.svg" alt="A diagram">')
+            with self.assertRaisesRegex(ValueError, "Broken internal link"):
+                check_links(root)
+
+    def test_display_math_diagrams_become_real_images(self):
+        html = r'\[ \gerbyimage{first/diagram.svg}{A diagram} \]'
+        result = prepare_fragment({**self.record, "source": "first", "html": html}, {}, {}, "../../")
+        self.assertIn('src="../../assets/sources/first/diagram.svg"', result)
+        self.assertNotIn(r"\gerbyimage", result)
+        self.assertNotIn(r"\[", result)
 
 
 if __name__ == "__main__":
