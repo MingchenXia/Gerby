@@ -1,8 +1,1836 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations/"><title>12.1 Smooth Monge–Ampère equations · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations/"><title>12.1 Smooth Monge–Ampère equations · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/monge-ampere-equations/">Chapter 12: Monge–Ampère equations and stability</a></li><li><a href="../../sections/smooth-monge-ampere-equations/" aria-current="page">Section 12.1: Smooth Monge–Ampère equations</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/smooth-monge-ampere-equations/" aria-current="page"><span>12.1</span> Smooth Monge–Ampère equations</a></li><li><a href="../../sections/continuous-solutions-and-normalization/"><span>12.2</span> Continuous solutions and normalization</a></li><li><a href="../../sections/uniqueness-for-degenerate-equations/"><span>12.3</span> Uniqueness for degenerate equations</a></li><li><a href="../../sections/equations-with-prescribed-singularities/"><span>12.4</span> Equations with prescribed singularities</a></li><li><a href="../../sections/relative-equations-under-positive-lower-mass/"><span>12.5</span> Relative equations under positive lower mass</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/smooth-monge-ampere-equations/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../chapters/monge-ampere-equations/"><span>← Previous</span><small>12 Monge–Ampère equations and stability</small></a><a class="pager-next" rel="next" href="../../tag/92B1F482D72A/"><span>Next →</span><small>9 Smooth Monge–Ampère equations</small></a></nav><h1>12.1 Smooth Monge–Ampère equations</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/92B1F482D72A/">9 Smooth Monge–Ampère equations</a><code class="tag-id">92B1F482D72A</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/C5FA7F078BB6/">9.1 </a><code class="tag-id">C5FA7F078BB6</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/5E342E12EF34/">9.1 Scalar bounds and uniqueness</a><code class="tag-id">5E342E12EF34</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/F33DA8C9DF9F/">Theorem 9.1.1 (Tosatti–Weinkove)</a><code class="tag-id">F33DA8C9DF9F</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/853DC10A2ADA/">Proposition 9.1.2</a><code class="tag-id">853DC10A2ADA</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/EF5B417A3208/">9.2 </a><code class="tag-id">EF5B417A3208</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/366AA2E61158/">Proposition 9.1.3</a><code class="tag-id">366AA2E61158</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/D57A1C84047D/">9.2 The potential bound from weighted integration</a><code class="tag-id">D57A1C84047D</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/E2F31793530D/">Lemma 9.2.1</a><code class="tag-id">E2F31793530D</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/D570CDA4FA55/">Lemma 9.2.2</a><code class="tag-id">D570CDA4FA55</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/B38AB5EB6BF0/">9.7 </a><code class="tag-id">B38AB5EB6BF0</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/2D25F9B7C178/">9.8 </a><code class="tag-id">2D25F9B7C178</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/EEF74F1DEBB8/">Theorem 9.2.3</a><code class="tag-id">EEF74F1DEBB8</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/0F99936A9B52/">9.9 </a><code class="tag-id">0F99936A9B52</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/7BDF4C42EB78/">9.3 The linearized equation and smooth dependence</a><code class="tag-id">7BDF4C42EB78</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/2AD3CD874EA4/">Proposition 9.3.1</a><code class="tag-id">2AD3CD874EA4</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/CBFCDA7183ED/">9.4 Second derivatives and ellipticity</a><code class="tag-id">CBFCDA7183ED</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/BC4847C0CD7D/">Lemma 9.4.1</a><code class="tag-id">BC4847C0CD7D</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/CAD281B47B5A/">9.10 </a><code class="tag-id">CAD281B47B5A</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/96DF02AD3F7C/">9.11 </a><code class="tag-id">96DF02AD3F7C</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/827F0F57BBAC/">9.12 </a><code class="tag-id">827F0F57BBAC</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/A61645907A4D/">Theorem 9.4.2</a><code class="tag-id">A61645907A4D</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/8A4325B57E04/">9.15 </a><code class="tag-id">8A4325B57E04</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/E5E1B9237922/">Lemma 9.4.3</a><code class="tag-id">E5E1B9237922</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/36B42C74EE0B/">Corollary 9.4.4</a><code class="tag-id">36B42C74EE0B</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/F1D5D01E2624/">9.5 The continuity method</a><code class="tag-id">F1D5D01E2624</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/A4D09B787D84/">9.6 The smooth exponential equation</a><code class="tag-id">A4D09B787D84</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/C52E44D9C563/">Proposition 9.6.1</a><code class="tag-id">C52E44D9C563</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/97F5C96646CC/">Theorem 9.6.2</a><code class="tag-id">97F5C96646CC</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/9541740AAFDC/">9.7 Variation of the normalization scalar</a><code class="tag-id">9541740AAFDC</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/C611B2CA264A/">Theorem 9.7.1</a><code class="tag-id">C611B2CA264A</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/11F81D837A44/">9.18 </a><code class="tag-id">11F81D837A44</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/578022E3660A/">9.19 </a><code class="tag-id">578022E3660A</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/B9C312CB7069/">Corollary 9.7.2</a><code class="tag-id">B9C312CB7069</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/44E03525BBAF/">9.8 Normalization on the Hopf threefold</a><code class="tag-id">44E03525BBAF</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/CA9F2EF1D149/">Proposition 9.8.1</a><code class="tag-id">CA9F2EF1D149</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/028038652BCC/">9.20 </a><code class="tag-id">028038652BCC</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/9CEA8A3A68F0/">9.21 </a><code class="tag-id">9CEA8A3A68F0</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/BFCF1480CC8B/">Corollary 9.8.2</a><code class="tag-id">BFCF1480CC8B</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/6950E7B1FBCB/">9.9 Prescribing a Gauduchon volume form</a><code class="tag-id">6950E7B1FBCB</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/76AF759A4024/">Theorem 9.9.1 (Székelyhidi–Tosatti–Weinkove)</a><code class="tag-id">76AF759A4024</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/F9FF7B5E741A/">9.10 Bounds for the Gauduchon potential</a><code class="tag-id">F9FF7B5E741A</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/60FD5A56EE10/">Proposition 9.10.1</a><code class="tag-id">60FD5A56EE10</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/8F909795AE16/">9.22 </a><code class="tag-id">8F909795AE16</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/F6A1B32989A1/">9.11 The adjoint equation for Gauduchon volume</a><code class="tag-id">F6A1B32989A1</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/706EB82AB6A2/">Proposition 9.11.1</a><code class="tag-id">706EB82AB6A2</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/62F6382D2CAC/">9.23 </a><code class="tag-id">62F6382D2CAC</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/029A1D30A55E/">Proposition 9.11.2</a><code class="tag-id">029A1D30A55E</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/BD3712C889A6/">9.24 </a><code class="tag-id">BD3712C889A6</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/195CC5F57ABE/">9.25 </a><code class="tag-id">195CC5F57ABE</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/53E844FE515C/">9.12 The matrix structure of the Gauduchon equation</a><code class="tag-id">53E844FE515C</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D281466AD7B7/">9.26 </a><code class="tag-id">D281466AD7B7</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/6168D5D4EF96/">Lemma 9.12.1</a><code class="tag-id">6168D5D4EF96</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/A6EC7DDEACFB/">9.29 </a><code class="tag-id">A6EC7DDEACFB</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1525F23C956C/">9.30 </a><code class="tag-id">1525F23C956C</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/DBC2334A4FC0/">Lemma 9.12.2</a><code class="tag-id">DBC2334A4FC0</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/051408386360/">9.31 </a><code class="tag-id">051408386360</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/2B456F0E5D2B/">9.32 </a><code class="tag-id">2B456F0E5D2B</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/677E6AB0568A/">9.33 </a><code class="tag-id">677E6AB0568A</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/148E6041EC3F/">9.13 The largest-eigenvalue estimate</a><code class="tag-id">148E6041EC3F</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/2763FB514B34/">Theorem 9.13.1</a><code class="tag-id">2763FB514B34</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">paragraph</span><a href="../../tag/9994CF39B2B0/">Differentiating the largest eigenvalue.</a><code class="tag-id">9994CF39B2B0</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/E4B294710238/">9.34 </a><code class="tag-id">E4B294710238</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1E20E0CF9A10/">9.35 </a><code class="tag-id">1E20E0CF9A10</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/143977813E90/">9.36 </a><code class="tag-id">143977813E90</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">paragraph</span><a href="../../tag/D5E11D27FAAA/">The third derivatives and the torsion term.</a><code class="tag-id">D5E11D27FAAA</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/BE0A6E37B652/">9.37 </a><code class="tag-id">BE0A6E37B652</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/5D951DE4F0FD/">9.38 </a><code class="tag-id">5D951DE4F0FD</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/EACA66A12E82/">9.39 </a><code class="tag-id">EACA66A12E82</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D807F632DAD7/">9.40 </a><code class="tag-id">D807F632DAD7</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/35CF4803162E/">9.41 </a><code class="tag-id">35CF4803162E</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">paragraph</span><a href="../../tag/DA6F05F8F203/">Cancellation when the smallest eigenvalue is controlled.</a><code class="tag-id">DA6F05F8F203</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/7B27AFD05F7E/">9.44 </a><code class="tag-id">7B27AFD05F7E</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/9CFA88376131/">9.45 </a><code class="tag-id">9CFA88376131</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">paragraph</span><a href="../../tag/57C7A82680F3/">The remaining eigenvalue configuration.</a><code class="tag-id">57C7A82680F3</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/D4DE203BE3BF/">9.14 A Liouville theorem for the limiting cone</a><code class="tag-id">D4DE203BE3BF</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/6E3495B1A225/">Lemma 9.14.1</a><code class="tag-id">6E3495B1A225</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/AC61FE141521/">Theorem 9.14.2</a><code class="tag-id">AC61FE141521</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/B2C22D2540A1/">9.48 </a><code class="tag-id">B2C22D2540A1</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/C26DE70CAF39/">9.49 </a><code class="tag-id">C26DE70CAF39</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/89711B0B590A/">9.50 </a><code class="tag-id">89711B0B590A</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/40669ABC11F8/">9.15 The gradient bound by rescaling</a><code class="tag-id">40669ABC11F8</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/EFE7268223F4/">Proposition 9.15.1</a><code class="tag-id">EFE7268223F4</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/977E6E7B264D/">9.51 </a><code class="tag-id">977E6E7B264D</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/3DCC81BE4D1E/">9.52 </a><code class="tag-id">3DCC81BE4D1E</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/6904C64D5831/">9.16 Existence for the Gauduchon ansatz</a><code class="tag-id">6904C64D5831</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/19E4D601D907/">Lemma 9.16.1</a><code class="tag-id">19E4D601D907</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/9C1043361EBF/">9.17 Normalization for the Gauduchon equation</a><code class="tag-id">9C1043361EBF</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/1ECE72025D8E/">Lemma 9.17.1</a><code class="tag-id">1ECE72025D8E</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/F90961841CA0/">Theorem 9.17.2</a><code class="tag-id">F90961841CA0</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/8AC1A3B0F2AF/">Example 9.17.3</a><code class="tag-id">8AC1A3B0F2AF</code><span class="entry-topic">Smooth Monge–Ampère equations</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../chapters/monge-ampere-equations/"><span>← Previous</span><small>12 Monge–Ampère equations and stability</small></a><a class="pager-next" rel="next" href="../../tag/92B1F482D72A/"><span>Next →</span><small>9 Smooth Monge–Ampère equations</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../chapters/monge-ampere-equations/"><span>← Previous</span><small>12 Monge–Ampère equations and stability</small></a><a class="pager-next" rel="next" href="../../tag/92B1F482D72A/"><span>Next →</span><small>9 Smooth Monge–Ampère equations</small></a></nav><h1>12.1 Smooth Monge–Ampère equations</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-92B1F482D72A" data-section-entries="92B1F482D72A C5FA7F078BB6"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/92B1F482D72A/">9 Smooth Monge–Ampère equations</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="BEB03466"></span></div>
+<p>
+Throughout this chapter, $\omega $ is a Hermitian form on $X$ and $\mathrm{d}V$ is a smooth positive volume form. Given $F\in C^\infty (X,\mathbb R)$, we seek a smooth real potential $u$ and a scalar $b\in \mathbb R$ satisfying 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-2BED92DC"><span data-gerby-tag="2BED92DC"></span>
+<span class="equation-label"><a data-tag="2BED92DC" href="../../tag/C5FA7F078BB6/">9.1</a></span>
+<div>\begin{equation}  \omega _ u^ n=\mathrm{e}^{F+b}\mathrm{d}V,\qquad \omega _ u&gt;0. \end{equation}</div>
+</div>
+<p>
+ Here $\omega _ u=\omega +\mathrm{dd}^{\mathrm{c}}u$, and adding a constant to $u$ does not change the equation. For a closed background, integration determines $b$ from the prescribed density. For a Hermitian background, the total mass can depend on $u$, so the potential and the scalar must be found together. 
+</p>
+<p>
+The existence proof combines weighted integration, which bounds the normalized potential, with a trace estimate for the complex Hessian, which gives uniform ellipticity. The adjoint probability measure of proposition <a data-tag="C9919263" href="../../tag/0B0003A3A873/">4.8.1</a> supplies the compatibility condition for the linearized equation. Including $b$ as an unknown removes this obstruction, and the estimates give the compactness needed for the continuity method. A positive exponential of the potential instead makes the equation strictly monotone and gives existence without an additional scalar. 
+</p>
+<p>
+After proving existence, we differentiate the solution with respect to the prescribed logarithmic density. The same adjoint probability measure gives the first and second variations of $b$, proving concavity and a Lipschitz bound. On the Hopf threefold of chapter <a data-tag="AB469878" href="../../tag/142249962360/">8</a>, the fiber-energy formula measures exactly how its normalization differs from the closed-background formula. 
+</p>
+<p>
+The last part of the chapter concerns a different variation of the metric. For $n\geq 2$, we deform its $(n-1)$st power through a scalar Aeppli ansatz. If the initial metric is Gauduchon, this deformation preserves both the Gauduchon condition and its Aeppli class. The first-order torsion terms have a specific matrix structure, which makes the second-derivative estimate possible; rescaling then reduces the gradient bound to a Liouville theorem on $\mathbb C^ n$. The resulting uniqueness concerns the scalar ansatz. We finish by studying the variation of its normalization constant. 
+</p>
+</div></section><section class="reading-chunk" id="entry-5E342E12EF34" data-section-entries="366AA2E61158 5E342E12EF34 853DC10A2ADA EF5B417A3208 F33DA8C9DF9F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5E342E12EF34/">9.1 Scalar bounds and uniqueness</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="2985626E"></span></div>
+<p>
+Evaluating the equation at the extrema of the potential bounds the normalization scalar in terms of the prescribed data. Applied to the difference of two solutions, the same argument shows that their scalars agree, and ellipticity then determines the potential up to a constant. The scalar bounds will also give uniform control along the continuity path. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-3EE16849">
+<p><a class="environment-identifier" href="../../tag/F33DA8C9DF9F/">Theorem <span data-tag="3EE16849">9.1.1</span> <span class="named">(Tosatti–Weinkove)</span>.</a><span data-gerby-tag="3EE16849"></span> For every smooth real $F$, (<a data-tag="2BED92DC" href="../../tag/C5FA7F078BB6/">9.1</a>) has a unique pair $(u,b)\in C^\infty (X,\mathbb R)\times \mathbb R$ with $\sup _ Xu=0$. </p>
+</article>
+
+<p>
+In dimension one, integration determines $\mathrm{e}^ b=\int _ X\omega /\int _ X\mathrm{e}^ F \mathrm{d}V$, and the remaining equation $\mathrm{dd}^{\mathrm{c}}u=\mathrm{e}^{F+b}\mathrm{d}V-\omega $ is a Poisson equation whose right-hand side has integral zero, so it has a smooth solution, unique up to a constant; positivity of $\omega _ u$ is automatic. Thus the theorem holds in that dimension, and we prove it for $n\geq 2$ at the end of section <a data-tag="35F9C504" href="../../tag/F1D5D01E2624/">9.5</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-3E7A926C">
+<p><a class="environment-identifier" href="../../tag/853DC10A2ADA/">Proposition <span data-tag="3E7A926C">9.1.2</span>.</a><span data-gerby-tag="3E7A926C"></span> Every solution of (<a data-tag="2BED92DC" href="../../tag/C5FA7F078BB6/">9.1</a>) satisfies </p>
+<div class="equation">
+  \[  \inf _ X\! \left(\log \frac{\omega ^ n}{\mathrm{d}V}-F\right) \leq b\leq \sup _ X\! \left(\log \frac{\omega ^ n}{\mathrm{d}V}-F\right).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At a maximum point $x_+$ of $u$, the real $(1,1)$-form $\mathrm{dd}^{\mathrm{c}}u$ is nonpositive, so $0&lt;\omega _ u\leq \omega $ there. Hence $\omega _ u^ n(x_+)\leq \omega ^ n(x_+)$, and $b\leq \log (\omega ^ n/\mathrm{d}V)(x_+)-F(x_+)$. At a minimum point the reverse argument gives the lower bound. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+When $\mathrm{d}\omega =0$, integration gives the familiar explicit formula 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-DC28142E"><span data-gerby-tag="DC28142E"></span>
+<span class="equation-label"><a data-tag="DC28142E" href="../../tag/EF5B417A3208/">9.2</a></span>
+<div>\begin{equation}  b=\log \frac{\int _ X\omega ^ n}{\int _ X\mathrm{e}^ F \mathrm{d}V}. \end{equation}</div>
+</div>
+<p>
+ The same formula holds whenever the mass-invariance criterion of theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">2.2.2</a> is satisfied. In general, integrating the equation gives only 
+</p>
+<div class="equation">
+  \[  \mathrm{e}^ b=\frac{\mathrm M_\omega (u)}{\int _ X\mathrm{e}^ F \mathrm{d}V},  \]
+</div>
+<p>
+ where $\mathrm M_\omega (u)=\int _ X\omega _ u^ n$ is the mass of theorem <a data-tag="D4902E5B" href="../../tag/2B3316345A4A/">2.2.1</a>; the numerator depends on the unknown potential. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-E26E18C6">
+<p><a class="environment-identifier" href="../../tag/366AA2E61158/">Proposition <span data-tag="E26E18C6">9.1.3</span>.</a><span data-gerby-tag="E26E18C6"></span> Suppose $(u,b)$ and $(v,c)$ are smooth solutions of (<a data-tag="2BED92DC" href="../../tag/C5FA7F078BB6/">9.1</a>) with the same $F$ and $\mathrm{d}V$. Then $b=c$ and $u-v$ is constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At a maximum of $u-v$, one has $\omega _ u\leq \omega _ v$, so the equations give $\mathrm{e}^ b\leq \mathrm{e}^ c$. At a minimum one obtains $\mathrm{e}^ b\geq \mathrm{e}^ c$. Therefore $b=c$. 
+    <p>
+      Put $h=u-v$ and $\eta _ t=\omega _ v+t\mathrm{dd}^{\mathrm{c}}h=(1-t)\omega _ v+t\omega _ u$ for $0\leq t\leq 1$. These forms are strictly positive. Subtracting the logarithms of the two equations and writing the difference as the integral of its derivative along the segment, we obtain 
+    
+<div class="equation">
+  \[  0=\int _0^1 n\, \frac{\mathrm{dd}^{\mathrm{c}}h\wedge \eta _ t^{n-1}}{\eta _ t^ n}\, \mathrm{d}t.  \]
+</div>
+<p>
+       The right-hand side is a linear second-order operator applied to $h$. Its coefficients are smooth, its principal part is uniformly elliptic on the compact manifold, and it has no zeroth-order term. The strong maximum principle therefore implies that $h$ is constant. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-D57A1C84047D" data-section-entries="0F99936A9B52 2D25F9B7C178 B38AB5EB6BF0 D570CDA4FA55 D57A1C84047D E2F31793530D EEF74F1DEBB8"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/D57A1C84047D/">9.2 The potential bound from weighted integration</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="5251B41C"></span></div>
+<p>
+We now show that an upper bound for the density controls the normalized potential, following the method of Cherrier. Integrating the equation against $\mathrm{e}^{-pu}$ produces a gradient term and mixed weighted masses; a finite recurrence absorbs the latter together with the torsion error. Moser iteration then gives a set of uniformly positive volume near the minimum, and normalized $L^1$ compactness bounds that minimum. Norms below are computed with respect to the fixed metric $\omega $. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-50F89309">
+<p><a class="environment-identifier" href="../../tag/E2F31793530D/">Lemma <span data-tag="50F89309">9.2.1</span>.</a><span data-gerby-tag="50F89309"></span> There is a constant $C$ depending on $\omega $ such that, for every positive $(1,1)$-form $\eta $, every smooth real $f$, every $\delta &gt;0$, and $0\leq k\leq n-2$, </p>
+<div class="equation">
+  \[  \begin{split}  |\mathrm d^{\mathrm c}f\wedge \mathrm{d}\omega \wedge \eta ^ k\wedge \omega ^{n-k-2}| \leq {}&amp; \frac C\delta \, \mathrm{d}f\wedge \mathrm d^{\mathrm c}f\wedge \eta ^ k\wedge \omega ^{n-k-1}\\ &amp; +C\delta \, \eta ^ k\wedge \omega ^{n-k}. \end{split}  \]
+</div>
+<p> Here the absolute value of a top-degree form is the absolute value of its coefficient relative to the positive volume form $\omega ^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At a given point, choose an $\omega $-unitary frame in which $\eta $ is diagonal, with positive eigenvalues $\lambda _1,\ldots ,\lambda _ n$. Expand $\eta ^ k$ as a sum over $k$-element subsets $I$ of $\{ 1,\ldots ,n\} $, with coefficients that are positive dimensional multiples of $\lambda _ I=\prod _{i\in I}\lambda _ i$. After wedging with $\mathrm d^{\mathrm c}f\wedge \mathrm{d}\omega \wedge \omega ^{n-k-2}$, each surviving term is a bounded coefficient of $\mathrm{d}\omega $ times $\lambda _ I$ times one first derivative $f_ a$ with $a\notin I$. Young's inequality bounds its absolute value by 
+    
+<div class="equation">
+  \[  C\lambda _ I|f_ a|\leq (C/\delta )\lambda _ I|f_ a|^2 +C\delta \lambda _ I.  \]
+</div>
+<p>
+       The sum of the first terms is bounded by a fixed multiple of the first form on the right of the assertion, whose diagonal expansion consists of the terms $\lambda _ I|f_ a|^2$ with $a\notin I$. The second form on the right contains all the $\lambda _ I$. Since there are finitely many indices and $\mathrm{d}\omega $ is bounded, the constant $C$ is uniform. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-8C3D9BF8">
+<p><a class="environment-identifier" href="../../tag/D570CDA4FA55/">Lemma <span data-tag="8C3D9BF8">9.2.2</span>.</a><span data-gerby-tag="8C3D9BF8"></span> Suppose $u$ is smooth, $\eta =\omega +\mathrm{dd}^{\mathrm{c}}u&gt;0$, and $\eta ^ n\leq \Lambda \omega ^ n$ for a fixed $\Lambda &gt;0$. There are constants $p_0\geq 1$ and $C$ depending only on $\omega $ and $\Lambda $ such that </p>
+<div class="equation">
+  \[  \int _ X\mathrm{d}(\mathrm{e}^{-pu/2})\wedge \mathrm d^{\mathrm c}(\mathrm{e}^{-pu/2})\wedge \omega ^{n-1} \leq Cp\int _ X\mathrm{e}^{-pu}\omega ^ n\quad (p\geq p_0).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a fixed real $p\geq 1$, define $M_ k$ for $0\leq k\leq n$ and $J_ k$ for $0\leq k\leq n-1$ by 
+    
+<div class="equation">
+  \[  M_ k=\int _ X\mathrm{e}^{-pu}\eta ^ k\wedge \omega ^{n-k},\qquad J_ k=\int _ X\mathrm{e}^{-pu}\mathrm{d}u\wedge \mathrm d^{\mathrm c}u\wedge \eta ^ k\wedge \omega ^{n-k-1}, \quad J=\sum _{k=0}^{n-1}J_ k.  \]
+</div>
+<p>
+       All these numbers are nonnegative. The proof first bounds $pJ$ in terms of the masses $M_ k$, and then bounds these masses by a recurrence. Let $T=\sum _{k=0}^{n-1}\eta ^ k\wedge \omega ^{n-k-1}$, so that $\eta ^ n-\omega ^ n=\mathrm{dd}^{\mathrm{c}}u\wedge T$. Since $\mathrm{d}\eta =\mathrm{d}\omega $, differentiation gives 
+    
+<div class="equation">
+  \[  \mathrm{d}T=n\sum _{k=0}^{n-2}\eta ^ k\wedge \omega ^{n-k-2}\wedge \mathrm{d}\omega .  \]
+</div>
+<p>
+       The sum is empty when $n=1$. Stokes' theorem gives the exact identity 
+    
+<div class="equation">
+  \[  \begin{split}  \int _ X\mathrm{e}^{-pu}(\eta ^ n-\omega ^ n) &amp; =\int _ X\mathrm{e}^{-pu}\mathrm{dd}^{\mathrm{c}}u\wedge T\\ &amp; =pJ+\int _ X\mathrm{e}^{-pu}\mathrm d^{\mathrm c}u\wedge \mathrm{d}T. \end{split}  \]
+</div>
+<p>
+       The density assumption bounds the left-hand side above by $(\Lambda +1)M_0$. Apply lemma <a data-tag="50F89309" href="../../tag/E2F31793530D/">9.2.1</a> to the last integral, with $\delta =K/p$ for a sufficiently large fixed $K$. The contribution proportional to $J/\delta $ is then at most $pJ/2$, and after absorbing it we obtain 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-347EAEDB"><span data-gerby-tag="347EAEDB"></span>
+<span class="equation-label"><a data-tag="347EAEDB" href="../../tag/B38AB5EB6BF0/">9.7</a></span>
+<div>\begin{equation}  pJ\leq CM_0+\frac Cp\sum _{k=0}^{n-2}M_ k. \end{equation}</div>
+</div>
+<p>
+       This estimate alone does not suffice, because the mixed weighted masses on the right have not yet been bounded. 
+    <p>
+      For $1\leq k\leq n-2$, a second integration by parts gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-2D8C69B0"><span data-gerby-tag="2D8C69B0"></span>
+<span class="equation-label"><a data-tag="2D8C69B0" href="../../tag/2D25F9B7C178/">9.8</a></span>
+<div>\begin{equation}  M_ k-M_{k-1}=pJ_{k-1}+R_ k, \qquad R_ k=\int _ X\mathrm{e}^{-pu}\mathrm d^{\mathrm c}u\wedge \mathrm{d}(\eta ^{k-1}\wedge \omega ^{n-k}). \end{equation}</div>
+</div>
+<p>
+       The derivative in $R_ k$ has two terms, with coefficients $k-1$ and $n-k$. Applying the pointwise estimate with $\delta =1/p$ to each of them, and omitting terms with negative indices, we obtain 
+    
+<div class="equation">
+  \[  |R_ k|\leq Cp(J_{k-2}+J_{k-1}) +\frac Cp(M_{k-2}+M_{k-1}), \qquad M_{-1}=J_{-1}=0.  \]
+</div>
+<p>
+       Consequently, for $p\geq 1$, 
+    
+<div class="equation">
+  \[  M_ k\leq C(M_{k-1}+M_{k-2}+pJ).  \]
+</div>
+<p>
+       Induction over the finitely many values of $k$ proves 
+    
+<div class="equation">
+  \[  \sum _{k=0}^{n-2}M_ k\leq C(M_0+pJ).  \]
+</div>
+<p>
+       For $n=2$ this is immediate, and for $n=1$ the sum is empty. Inserting this bound in (<a data-tag="347EAEDB" href="../../tag/B38AB5EB6BF0/">9.7</a>) gives $pJ\leq CM_0+C'J$. For $p\geq 2C'$ the last term can be absorbed, and $pJ\leq CM_0$. 
+    <p>
+      Finally, 
+    
+<div class="equation">
+  \[  \int _ X\mathrm{d}(\mathrm{e}^{-pu/2})\wedge \mathrm d^{\mathrm c}(\mathrm{e}^{-pu/2})\wedge \omega ^{n-1} =\frac{p^2}{4}J_0\leq \frac{p^2}{4}J\leq CpM_0.  \]
+</div>
+<p>
+       This proves the claimed estimate for all $p\geq p_0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-C569075E">
+<p><a class="environment-identifier" href="../../tag/EEF74F1DEBB8/">Theorem <span data-tag="C569075E">9.2.3</span>.</a><span data-gerby-tag="C569075E"></span> For each $\Lambda &gt;0$ there is $C_\Lambda $ such that every smooth $u$ with </p>
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}u&gt;0,\qquad \sup _ Xu=0,\qquad (\omega +\mathrm{dd}^{\mathrm{c}}u)^ n\leq \Lambda \omega ^ n  \]
+</div>
+<p> satisfies $\| u\| _\infty \leq C_\Lambda $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\mathrm{d}\mu =\omega ^ n/\int _ X\omega ^ n$. The Sobolev inequality for the Riemannian metric of $\omega $ gives, for some $\beta &gt;1$ and every smooth real function $w$, 
+    
+<div class="equation">
+  \[  \left(\int _ X |w|^{2\beta }\, \mathrm{d}\mu \right)^{1/\beta } \leq C\left(\int _ X\mathrm{d}w\wedge \mathrm d^{\mathrm c}w\wedge \omega ^{n-1} +\int _ X|w|^2\, \mathrm{d}\mu \right).  \]
+</div>
+<p>
+       We may take $\beta =n/(n-1)$ if $n\geq 2$, and for example $\beta =2$ if $n=1$. Choose $p_0$ as in lemma <a data-tag="8C3D9BF8" href="../../tag/D570CDA4FA55/">9.2.2</a>. Applying the Sobolev inequality to $w=\mathrm{e}^{-pu/2}$ and using that lemma, we obtain, with $Z=\mathrm{e}^{-u}$, 
+    
+<div class="equation">
+  \[  \| Z\| _{L^{p\beta }(\mu )}\leq (Cp)^{1/p}\| Z\| _{L^ p(\mu )} \quad (p\geq p_0).  \]
+</div>
+<p>
+       Iterating with $p=p_0\beta ^ j$, $j=0,1,2,\ldots $, we obtain a bound for $\sup _ XZ$; the product of the constants is finite because $\sum _ j(1+\log (p_0\beta ^ j))/(p_0\beta ^ j)&lt;\infty $. Hence, for a uniform $C_1\geq 1$ and $m=\inf _ Xu$, 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-62EE0FF7"><span data-gerby-tag="62EE0FF7"></span>
+<span class="equation-label"><a data-tag="62EE0FF7" href="../../tag/0F99936A9B52/">9.9</a></span>
+<div>\begin{equation}  \mathrm{e}^{-p_0m}\leq C_1\int _ X\mathrm{e}^{-p_0u}\, \mathrm{d}\mu . \end{equation}</div>
+</div>
+<p>
+       The right-hand side still involves the unknown potential. Divide by $\mathrm{e}^{-p_0m}$ and set $A=p_0^{-1}\log (2C_1)$. The integrand $\mathrm{e}^{-p_0(u-m)}$ is at most one everywhere and at most $(2C_1)^{-1}$ outside $S=\{ u\leq m+A\} $. Therefore (<a data-tag="62EE0FF7" href="../../tag/0F99936A9B52/">9.9</a>) implies 
+    
+<div class="equation">
+  \[  \mu (S)\geq \frac1{2C_1}=:\delta &gt;0.  \]
+</div>
+<p>
+       Since $\sup _ Xu=0$, theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a> gives $\int _ X(-u)\, \mathrm{d}\mu \leq C_0$. On $S$ we have $-u\geq -m-A$, so 
+    
+<div class="equation">
+  \[  C_0\geq \int _ X(-u)\, \mathrm{d}\mu \geq \delta (-m-A)  \]
+</div>
+<p>
+       when $-m\geq A$; otherwise the desired bound is immediate. Thus $-m\leq A+C_0/\delta $, proving the theorem. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-7BDF4C42EB78" data-section-entries="2AD3CD874EA4 7BDF4C42EB78"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/7BDF4C42EB78/">9.3 The linearized equation and smooth dependence</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="06CAECA6"></span></div>
+<p>
+Recall from (<a data-tag="82DEDD31" href="../../tag/BEA90D7B5428/">4.15</a>) that the linearization of $u\mapsto \log (\omega _ u^ n/\mathrm{d}V)$ at $u$ is $L_ uv=n\, \mathrm{dd}^{\mathrm{c}}v\wedge \omega _ u^{n-1}/\omega _ u^ n$. This operator annihilates constants, and by proposition <a data-tag="C9919263" href="../../tag/0B0003A3A873/">4.8.1</a> its range consists of the functions with zero mean under the adjoint probability measure $\mu _ u$. Including the scalar $b$ as an unknown removes this obstruction. In dimension one, $\mu _ u=\omega _ u/\int _ X\omega _ u$, and the compatibility condition follows from Stokes' theorem. 
+</p>
+<p>
+ The normalization $\sup _ Xu=0$ is convenient for compactness, but it need not depend differentiably on the data. To differentiate solutions, we use instead the linear normalization 
+</p>
+<div class="equation">
+  \[  \int _ Xu\, \mathrm{d}V=0.  \]
+</div>
+<p>
+ Passing from one normalization to the other only adds a constant to $u$ and leaves $b$ unchanged. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-E0953F19">
+<p><a class="environment-identifier" href="../../tag/2AD3CD874EA4/">Proposition <span data-tag="E0953F19">9.3.1</span>.</a><span data-gerby-tag="E0953F19"></span> With this linear normalization, the solution $(u,b)$ of (<a data-tag="2BED92DC" href="../../tag/C5FA7F078BB6/">9.1</a>) depends smoothly on $F$ in Hölder spaces, and hence smoothly on the parameters of every smooth finite-dimensional family of smooth data. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix an integer $k\geq 0$ and a real exponent $0&lt;\alpha &lt;1$. Consider the map 
+    
+<div class="equation">
+  \[  (u,b,F)\longmapsto \log \frac{(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n}{\mathrm{d}V}-F-b  \]
+</div>
+<p>
+       on the open set of potentials in $C^{k+2,\alpha }$ with $\omega _ u&gt;0$, restricted to $\int _ Xu\, \mathrm{d}V=0$. Its derivative in $(u,b)$ is 
+    
+<div class="equation">
+  \[  (v,a)\longmapsto L_ uv-a.  \]
+</div>
+<p>
+       Given $h\in C^{k,\alpha }$, integrating $L_ uv-a=h$ against $\mu _ u$ forces $a=-\int _ Xh\, \mathrm{d}\mu _ u$. For this value, the equation for $v$ satisfies the compatibility condition of proposition <a data-tag="C9919263" href="../../tag/0B0003A3A873/">4.8.1</a>, and it has a unique solution with zero $\mathrm{d}V$-mean. Schauder estimates show that this inverse is bounded. The implicit function theorem in Banach spaces therefore gives a smooth local solution map around any given solution; this step does not use the global existence theorem. Uniqueness identifies the local maps wherever they overlap, and elliptic regularity allows arbitrary $k$ for smooth data. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-CBFCDA7183ED" data-section-entries="36B42C74EE0B 827F0F57BBAC 8A4325B57E04 96DF02AD3F7C A61645907A4D BC4847C0CD7D CAD281B47B5A CBFCDA7183ED E5E1B9237922"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/CBFCDA7183ED/">9.4 Second derivatives and ellipticity</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="CA0C5FF3"></span></div>
+<p>
+The equation controls the product of the eigenvalues of $\omega _ u$ relative to $\omega $, so an upper bound for their sum gives uniform ellipticity. We obtain this trace bound by completing a square in the differentiated equation. The remaining torsion term is of first order in the trace, and it can be absorbed at the maximum of a suitable function of the trace and the potential. 
+</p>
+<p>
+ In holomorphic coordinates $(z^1,\ldots ,z^ n)$, subscripts denote coordinate derivatives, inverse matrices carry upper indices, and repeated indices run from $1$ to $n$. Write 
+</p>
+<div class="equation">
+  \[  \omega =\frac{\mathrm i}{2\pi }g_{i\bar j}\, \mathrm{d}z^ i\wedge \mathrm{d}\bar z^ j, \qquad \omega _ u=\frac{\mathrm i}{2\pi }h_{i\bar j}\, \mathrm{d}z^ i\wedge \mathrm{d}\bar z^ j, \qquad h_{i\bar j}=g_{i\bar j}+u_{i\bar j}.  \]
+</div>
+<p>
+ For a smooth real function $v$, set $\Delta _ gv=g^{i\bar j}v_{i\bar j}$ and $\Delta _ hv=h^{i\bar j}v_{i\bar j}$. Thus $\Delta _ h=L_ u$ and $\Delta _ hu=n-\operatorname {tr}_ hg$. Write also $|\partial v|_ h^2=h^{i\bar j}v_ i v_{\bar j}$. Let $\nabla $ be the Chern connection of the fixed metric $g$, with 
+</p>
+<div class="equation">
+  \[  \Gamma _{ik}^ p=g^{p\bar q}\partial _ i g_{k\bar q},\qquad T_{ik}^ p=\Gamma _{ik}^ p-\Gamma _{ki}^ p,\qquad \tau _ k=\sum _ iT_{ik}^ i.  \]
+</div>
+<p>
+ Here $T$ is the torsion of $\nabla $ and $\tau $ its trace; all bounds for this connection, its torsion and its curvature depend only on $g$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-FE968158">
+<p><a class="environment-identifier" href="../../tag/BC4847C0CD7D/">Lemma <span data-tag="FE968158">9.4.1</span>.</a><span data-gerby-tag="FE968158"></span> Suppose $h=g+(u_{i\bar j})&gt;0$, and put </p>
+<div class="equation">
+  \[  S=\operatorname {tr}_ gh,\qquad B=\operatorname {tr}_ hg, \qquad G=\log \frac{\det h}{\det g}.  \]
+</div>
+<p> There is $C_ g$ such that, at every point where $S\geq 1$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-9337ECFA"><span data-gerby-tag="9337ECFA"></span>
+<span class="equation-label"><a data-tag="9337ECFA" href="../../tag/CAD281B47B5A/">9.10</a></span>
+<div>\begin{equation}  \Delta _ h\log S\geq \frac2{S^2}\operatorname {Re}\bigl (h^{k\bar q}\tau _ k S_{\bar q}\bigr ) +\frac{\Delta _ gG}{S}-C_ gB. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The identity $\mathrm{d}\omega _ u=\mathrm{d}\omega $ is equivalent to 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-D0224E0D"><span data-gerby-tag="D0224E0D"></span>
+<span class="equation-label"><a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a></span>
+<div>\begin{equation}  \nabla _ i h_{k\bar j}-\nabla _ k h_{i\bar j} =T_{ik}^ p(g_{p\bar j}-h_{p\bar j}), \end{equation}</div>
+</div>
+<p>
+       together with its complex conjugate; this can also be checked directly, since the third derivatives of $u$ cancel. 
+    <p>
+      For tensors with two holomorphic and one antiholomorphic lower index, we use the norm 
+    
+<div class="equation">
+  \[  \| A\| ^2=g^{i\bar\ell }h^{k\bar q}h^{p\bar j} A_{ik\bar j}\overline{A_{\ell q\bar p}}.  \]
+</div>
+<p>
+       Set $A_{ik\bar j}=\nabla _ i h_{k\bar j}$ and $D_{ik\bar j}=T_{ik}^ p h_{p\bar j}$. We first claim 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-CEB21F4A"><span data-gerby-tag="CEB21F4A"></span>
+<span class="equation-label"><a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a></span>
+<div>\begin{equation}  \Delta _ hS=\| A+D\| ^2+\Delta _ gG+E, \qquad |E|\leq C_ g(1+S)B. \end{equation}</div>
+</div>
+<p>
+       To prove this, start with $\Delta _ hS=h^{i\bar j}g^{k\bar\ell }\nabla _ i\nabla _{\bar j}h_{k\bar\ell }$. Switch $\bar j,\bar\ell $ by the conjugate of (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>), commute $\nabla _ i,\nabla _{\bar\ell }$, and then switch $i,k$ by (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>). The terms with a derivative of $h$ are 
+    
+<div class="equation">
+  \[  h^{i\bar j}g^{k\bar\ell }\nabla _{\bar\ell }\nabla _ kh_{i\bar j} -2\operatorname {Re}\bigl (h^{i\bar j}g^{k\bar\ell } T_{ik}^ p\nabla _{\bar\ell }h_{p\bar j}\bigr ).  \]
+</div>
+<p>
+       The first switch also produces the term $-h^{i\bar j}g^{k\bar\ell }\overline{T_{j\ell }^ q}\nabla _ i h_{k\bar q}$. Applying (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>) to it gives one of the two conjugate derivative terms displayed above, together with 
+    
+<div class="equation">
+  \[  h^{i\bar j}g^{k\bar\ell }T_{ik}^ p\overline{T_{j\ell }^ q} (h_{p\bar q}-g_{p\bar q}).  \]
+</div>
+<p>
+       The part of this expression containing $h_{p\bar q}$ is $\| D\| ^2$. Differentiating the logarithmic determinant twice gives 
+    
+<div class="equation">
+  \[  \Delta _ gG=h^{i\bar j}g^{k\bar\ell } \nabla _{\bar\ell }\nabla _ kh_{i\bar j}-\| A\| ^2.  \]
+</div>
+<p>
+       By the antisymmetry of $T$, the two remaining derivative terms combine to $2\operatorname {Re}\langle A,D\rangle $, where $\langle \cdot ,\cdot \rangle $ is the inner product of the norm above. These identities give (<a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a>). 
+    <p>
+      To bound the remainder $E$ explicitly, let 
+    
+<div class="equation">
+  \[  \mathcal C_{i\bar\ell k\bar j} =(\nabla _ i\nabla _{\bar\ell }-\nabla _{\bar\ell }\nabla _ i)h_{k\bar j}.  \]
+</div>
+<p>
+        The remainder is the contraction by $h^{i\bar j}g^{k\bar\ell }$ of 
+    
+<div class="equation">
+  \[  \begin{split} &amp; (\nabla _ i\overline{T_{j\ell }^ q})(g_{k\bar q}-h_{k\bar q}) +(\nabla _{\bar\ell }T_{ik}^ p)(g_{p\bar j}-h_{p\bar j})\\ &amp; \hspace{15mm}+\mathcal C_{i\bar\ell k\bar j} -T_{ik}^ p\overline{T_{j\ell }^ q}g_{p\bar q}. \end{split}  \]
+</div>
+<p>
+       The commutator $\mathcal C$ is the curvature of $\nabla $ acting linearly on $h$, as one sees by inserting $\nabla =\partial +\Gamma $ and canceling the derivatives of $h$. In a $g$-unitary frame diagonalizing $h$, every coefficient in this remainder is bounded by $C_ g(1+S)$, so the contraction is bounded by $C_ g(1+S)\sum _ i h^{i\bar i}=C_ g(1+S)B$, as asserted. In particular, no derivative of $h$ remains in $E$. 
+    <p>
+      It remains to control the gradient term introduced by the logarithm. Define 
+    
+<div class="equation">
+  \[  H_{ik\bar j}=h_{i\bar j}\frac{S_ k}{S},\qquad K=\| A+D-H\| ^2\geq 0.  \]
+</div>
+<p>
+       By (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>), 
+    
+<div class="equation">
+  \[  g^{i\bar\ell }(A+D)_{ik\bar\ell }=S_ k+\tau _ k.  \]
+</div>
+<p>
+       Moreover $\| H\| ^2=|\partial S|_ h^2/S$. Expanding the square therefore gives 
+    
+<div class="equation">
+  \[  K=\| A+D\| ^2-\frac{|\partial S|_ h^2}{S} -\frac2S\operatorname {Re}(h^{k\bar q}\tau _ kS_{\bar q}).  \]
+</div>
+<p>
+       Combining this with (<a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a>) and with $\Delta _ h\log S=\Delta _ hS/S-|\partial S|_ h^2/S^2$, we obtain the exact identity 
+    
+<div class="equation">
+  \[  \Delta _ h\log S=\frac KS+ \frac2{S^2}\operatorname {Re}(h^{k\bar q}\tau _ kS_{\bar q}) +\frac{\Delta _ gG}{S}+\frac ES.  \]
+</div>
+<p>
+       Since $K\geq 0$ and $S\geq 1$, and since $E/S\geq -2C_ gB$, enlarging the constant proves the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-49C333BE">
+<p><a class="environment-identifier" href="../../tag/A61645907A4D/">Theorem <span data-tag="49C333BE">9.4.2</span>.</a><span data-gerby-tag="49C333BE"></span> Fix $D,K&gt;0$ and a smooth real function $G$ on $X$. Suppose $u$ is smooth, $\omega _ u&gt;0$, and </p>
+<div class="equation">
+  \[  \operatorname {osc}_ Xu\leq D,\qquad \omega _ u^ n=\mathrm{e}^ G\omega ^ n,\qquad |G|\leq K,\qquad \Delta _ gG\geq -K.  \]
+</div>
+<p> There is a constant $C=C(\omega ,D,K)$ such that </p>
+<div class="equation">
+  \[  C^{-1}\omega \leq \omega _ u\leq C\omega .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use $h=g+(u_{i\bar j})$, $S=\operatorname {tr}_ g h$, and $B=\operatorname {tr}_ h g$ as in lemma <a data-tag="FE968158" href="../../tag/BC4847C0CD7D/">9.4.1</a>. Write $s=u-\inf _ Xu+1$, so that $1\leq s\leq D+1$, and consider the maximum of 
+    
+<div class="equation">
+  \[  Q=\log S-Au+s^{-1}  \]
+</div>
+<p>
+       on $X$, where $A\geq 1$ will be fixed below. Let $x$ be a maximum point. If $S(x)&lt;1$, an upper bound for $S$ on $X$ already follows from the oscillation bound and the definition of $Q$, as at the end of the proof. We may therefore assume $S(x)\geq 1$ and use lemma <a data-tag="FE968158" href="../../tag/BC4847C0CD7D/">9.4.1</a>. 
+    <p>
+       Since the eigenvalues of $h$ relative to $g$ are positive, $SB\geq n^2$, and hence $\Delta _ gG/S\geq -KB/n^2$. Moreover, $\partial Q=0$ at $x$ gives 
+    
+<div class="equation">
+  \[  \frac{S_ k}{S}=(A+s^{-2})u_ k.  \]
+</div>
+<p>
+        Because $|\tau |_ h^2\leq C_ gB$, the absolute value of the torsion term is bounded by 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-28B481A7"><span data-gerby-tag="28B481A7"></span>
+<span class="equation-label"><a data-tag="28B481A7" href="../../tag/8A4325B57E04/">9.15</a></span>
+<div>\begin{equation}  \begin{split}  \left|\frac2{S^2}\operatorname {Re}(h^{k\bar q}\tau _ kS_{\bar q})\right| &amp; \leq \frac{C_ g(A+1)}S\sqrt B\, |\partial u|_ h\\ &amp; \leq \frac{|\partial u|_ h^2}{s^3} +\frac{C_ g(A+1)^2s^3}{S^2}B. \end{split} \end{equation}</div>
+</div>
+<p>
+       If $S(x)^2\leq (A+1)^2(D+1)^3$, then $S(x)$ is bounded once $A$ is fixed, and again so is $S$ on $X$. In the remaining case the coefficient of $B$ in the last term is at most $C_ g$. 
+    <p>
+      On the other hand, direct computation gives 
+    
+<div class="equation">
+  \[  \Delta _ hQ=\Delta _ h\log S+(A+s^{-2})(B-n) +2s^{-3}|\partial u|_ h^2.  \]
+</div>
+<p>
+       The trace inequality and (<a data-tag="28B481A7" href="../../tag/8A4325B57E04/">9.15</a>) imply at $x$ 
+    
+<div class="equation">
+  \[  0\geq \Delta _ hQ\geq (A-C_ g-K/n^2)B-n(A+1),  \]
+</div>
+<p>
+       after a fixed enlargement of $C_ g$. Choosing $A&gt;C_ g+K/n^2+1$, we conclude that $B(x)$ is bounded. If $\lambda _1,\ldots ,\lambda _ n$ are the eigenvalues of $h$ relative to $g$, then $\prod _ i\lambda _ i=\mathrm{e}^ G$, and for $n\geq 2$ 
+    
+<div class="equation">
+  \[  S=\sum _ i\lambda _ i =\mathrm{e}^ G\sum _ i\prod _{j\ne i}\lambda _ j^{-1} \leq n \mathrm{e}^ K B^{n-1}.  \]
+</div>
+<p>
+       For $n=1$, directly $S=\mathrm{e}^ G$. Thus $S(x)$ is bounded in all cases. For every $y\in X$, the maximality of $Q$ at $x$ gives 
+    
+<div class="equation">
+  \[  \log S(y)\leq \log S(x)+A(u(y)-u(x))+s(x)^{-1}-s(y)^{-1} \leq \log S(x)+AD+1.  \]
+</div>
+<p>
+       This proves $S\leq C$ on $X$. The lower bound for the determinant then gives $\lambda _ i\geq \mathrm{e}^{-K}C^{-(n-1)}$, which proves the uniform equivalence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+Some equations give a trace estimate that still depends on the gradient. A linear dependence suffices to close the estimate, because elliptic regularity for the fixed operator $\Delta _ g$ bounds a Hölder norm of the gradient, and interpolation makes its contribution to the supremum norm arbitrarily small. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-09F214FC">
+<p><a class="environment-identifier" href="../../tag/E5E1B9237922/">Lemma <span data-tag="09F214FC">9.4.3</span>.</a><span data-gerby-tag="09F214FC"></span> Let $A,M\geq 0$. There is $C=C(g,A,M)$ such that every smooth real function $v$ on $X$ satisfying </p>
+<div class="equation">
+  \[  \operatorname {osc}_ Xv\leq M,\qquad \| \Delta _ gv\| _{L^\infty } \leq A\bigl (1+\| \mathrm{d}v\| _{L^\infty (g)}\bigr )  \]
+</div>
+<p> also satisfies </p>
+<div class="equation">
+  \[  \| \mathrm{d}v\| _{L^\infty (g)}+\| \Delta _ gv\| _{L^\infty }\leq C.  \]
+</div>
+<p> Here all volume and function-space norms use the fixed smooth metric $g$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Subtract $\inf _ Xv$, so that $0\leq v\leq M$, and put $K=\| \mathrm{d}v\| _{L^\infty (g)}$. Fix $p&gt;2n$ and $0&lt;\alpha &lt;1-2n/p$. The fixed operator $\Delta _ g$ is uniformly elliptic on the underlying real manifold. The local $W^{2,p}$ estimates, patched by a finite atlas, and Morrey's inequality give 
+    
+<div class="equation">
+  \[  \| v\| _{C^{1,\alpha }} \leq C_ g\| v\| _{W^{2,p}} \leq C_ g\bigl (\| v\| _{L^ p}+\| \Delta _ gv\| _{L^ p}\bigr ) \leq C_ g\bigl (M+A(1+K)\bigr ).  \]
+</div>
+<p>
+       These are the standard linear elliptic estimates of <span class="cite">[<span class="postnote">Chapter 9</span>, <a href="../../references/#R8F926DA7BC71">GT01</a>]</span>; the constants depend on the fixed metric and on the chosen $p,\alpha $. 
+    <p>
+      For $0&lt;t\leq t_0$, with $t_0$ fixed by the atlas, integration along a coordinate segment of length $t$ gives 
+    
+<div class="equation">
+  \[  K\leq C_ g t^{-1}M+C_ g t^\alpha \| v\| _{C^{1,\alpha }}.  \]
+</div>
+<p>
+       Indeed, the difference quotient is bounded by $2M/t$, and its difference from the derivative at the initial point is bounded by $C_ gt^\alpha \| v\| _{C^{1,\alpha }}$. A finite atlas with smaller charts controls every point and coordinate direction; equivalence with the $g$-norm gives the displayed estimate. Consequently, 
+    
+<div class="equation">
+  \[  K\leq C_ gt^{-1}M+C_ g^2t^\alpha (M+A) +C_ g^2At^\alpha K.  \]
+</div>
+<p>
+       Choose $t\leq t_0$ so small that $C_ g^2At^\alpha \leq 1/2$. This choice depends only on $g,A$, including when $A=0$. Absorbing the last term bounds $K$ in terms of $g,A,M$, and the assumed trace estimate then bounds $\| \Delta _ gv\| _\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-AC24B5B7">
+<p><a class="environment-identifier" href="../../tag/36B42C74EE0B/">Corollary <span data-tag="AC24B5B7">9.4.4</span>.</a><span data-gerby-tag="AC24B5B7"></span> Fix $\omega $. For smooth solutions of </p>
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u)^ n=\mathrm{e}^ G\omega ^ n,\qquad \omega +\mathrm{dd}^{\mathrm{c}}u&gt;0,  \]
+</div>
+<p> a uniform $C^0$ bound for $u$ and uniform bounds for the smooth real logarithmic density $G$ in every $C^ k$ norm imply uniform bounds for $u$ in every $C^ k$ norm. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Theorem <a data-tag="49C333BE" href="../../tag/A61645907A4D/">9.4.2</a> gives uniform ellipticity and a bound for $\Delta _ gu=S-n$. The linear elliptic $W^{2,p}$ estimates for the fixed operator $\Delta _ g$ first bound $u$ in $C^{1,\alpha }$ for every $0&lt;\alpha &lt;1$. The local Evans–Krylov estimate for the concave logarithmic determinant then gives a uniform $C^{2,\beta }$ bound for some $0&lt;\beta &lt;1$. To apply it in its real form, project real symmetric Hessians to their complex Hermitian part and extend the logarithmic determinant concavely from the compact set of positive matrices given by the preceding theorem. The extension is uniformly elliptic on real symmetric matrices because the projection preserves positivity and the trace, so the usual Evans–Krylov theorem applies. Finally, differentiating the equation gives linear uniformly elliptic equations with Hölder coefficients, and Schauder estimates and induction give all higher bounds. No regularity results beyond these standard local elliptic estimates are needed. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The same conclusion holds for equations $\omega _ u^ n=\mathrm{e}^{a u+F}\omega ^ n$ with $a$ in a fixed bounded interval of nonnegative numbers, $u$ uniformly bounded, and $F$ uniformly bounded in every $C^ k$ norm. Indeed, with $G=au+F$, 
+</p>
+<div class="equation">
+  \[  \Delta _ g(a u+F)=a(S-n)+\Delta _ gF\geq -an+\Delta _ gF,  \]
+</div>
+<p>
+ so theorem <a data-tag="49C333BE" href="../../tag/A61645907A4D/">9.4.2</a> applies without any prior bound for derivatives of $u$. The estimate for the fixed operator $\Delta _ g$ then gives a $C^{1,\alpha }$ bound, after which the same local regularity and bootstrapping apply. 
+</p>
+</div></section><section class="reading-chunk" id="entry-F1D5D01E2624" data-section-entries="F1D5D01E2624"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/F1D5D01E2624/">9.5 The continuity method</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="35F9C504"></span></div>
+<p>
+We join the background density to the prescribed one by a path of equations. The local inverse of proposition <a data-tag="E0953F19" href="../../tag/2AD3CD874EA4/">9.3.1</a> shows that the set of solvable parameters is open. The extremum bound for the scalar, the potential estimate and the derivative estimates give compactness along the path, and uniform ellipticity preserves positivity at a limiting parameter. 
+</p>
+<article class="env-proof">
+<p>
+<strong>of theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">9.1.1</a>.</strong>
+       The case $n=1$ was treated after the statement of the theorem. For $n\geq 2$ put $G=F+\log (\mathrm{d}V/\omega ^ n)$ and consider 
+    
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u_ t)^ n=\mathrm{e}^{tG+b_ t}\omega ^ n, \qquad \sup _ Xu_ t=0,\qquad 0\leq t\leq 1.  \]
+</div>
+<p>
+       At $t=0$, take $u_0=0$ and $b_0=0$. The local implicit-function argument in proposition <a data-tag="E0953F19" href="../../tag/2AD3CD874EA4/">9.3.1</a>, with the additive constant temporarily fixed by a linear mean, shows that the set of solvable parameters is open. 
+    <p>
+      At every solvable parameter, proposition <a data-tag="3E7A926C" href="../../tag/853DC10A2ADA/">9.1.2</a> gives 
+    
+<div class="equation">
+  \[  -\sup _ X(tG)\leq b_ t\leq -\inf _ X(tG), \qquad \mathrm{e}^{tG+b_ t}\leq \mathrm{e}^{\operatorname {osc}_ XG}.  \]
+</div>
+<p>
+       The constants $b_ t$ are therefore uniformly bounded, and theorem <a data-tag="C569075E" href="../../tag/EEF74F1DEBB8/">9.2.3</a> bounds $u_ t$ in $C^0$. By corollary <a data-tag="AC24B5B7" href="../../tag/36B42C74EE0B/">9.4.4</a>, the solutions are bounded in every $C^ k$ norm. Along any sequence of solvable parameters converging in $[0,1]$, a subsequence of $(u_ t,b_ t)$ therefore converges smoothly to a solution; uniform equivalence of the metrics preserves strict positivity, and the supremum normalization passes to the limit. Thus the solvable set is closed. Since it is nonempty, open and closed, connectedness of $[0,1]$ gives a solution at $t=1$, and proposition <a data-tag="E26E18C6" href="../../tag/366AA2E61158/">9.1.3</a> gives uniqueness. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-A4D09B787D84" data-section-entries="97F5C96646CC A4D09B787D84 C52E44D9C563"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A4D09B787D84/">9.6 The smooth exponential equation</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="776522C0"></span></div>
+<p>
+When the logarithmic density contains a positive multiple of the potential, the extrema of the potential are bounded directly, and the linearization acquires a negative zeroth-order term. The continuity method then needs neither an additive normalization nor an extra scalar unknown. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-CF8EC5AE">
+<p><a class="environment-identifier" href="../../tag/C52E44D9C563/">Proposition <span data-tag="CF8EC5AE">9.6.1</span>.</a><span data-gerby-tag="CF8EC5AE"></span> Let $\lambda &gt;0$, let $F$ be smooth, and let $v,w$ be smooth strictly $\omega $-plurisubharmonic functions. If </p>
+<div class="equation">
+  \[  \omega _ v^ n\geq \mathrm{e}^{\lambda v+F}\omega ^ n, \qquad \omega _ w^ n\leq \mathrm{e}^{\lambda w+F}\omega ^ n,  \]
+</div>
+<p> then $v\leq w$. In particular, two smooth solutions coincide. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose that $v-w$ has a positive maximum at a point $x$. Then $\omega _ v(x)\leq \omega _ w(x)$, and taking determinants and applying the two assumptions gives $\mathrm{e}^{\lambda v(x)+F(x)}\leq \mathrm{e}^{\lambda w(x)+F(x)}$, which contradicts $v(x)&gt;w(x)$. For two solutions, apply the comparison in both orders. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-793E5FA5">
+<p><a class="environment-identifier" href="../../tag/97F5C96646CC/">Theorem <span data-tag="793E5FA5">9.6.2</span>.</a><span data-gerby-tag="793E5FA5"></span> For every $\lambda &gt;0$ and every smooth real $F$, there is a unique smooth $u$ with $\omega _ u&gt;0$ such that </p>
+<div class="equation">
+  \[  \omega _ u^ n=\mathrm{e}^{\lambda u+F}\omega ^ n.  \]
+</div>
+<p> The solution satisfies </p>
+<div class="equation">
+  \[  -\lambda ^{-1}\sup _ XF\leq u\leq -\lambda ^{-1}\inf _ XF.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At a minimum of $u$, the equation gives $\lambda u+F\geq 0$; at a maximum it gives $\lambda u+F\leq 0$. These inequalities prove the stated bounds. 
+    <p>
+      Consider the equations 
+    
+<div class="equation">
+  \[  \omega _{u_ t}^ n=\mathrm{e}^{\lambda u_ t+tF}\omega ^ n,\qquad 0\leq t\leq 1.  \]
+</div>
+<p>
+       At $t=0$, $u_0=0$ is a solution. The linearization in $u$ is $L_ u-\lambda $, whose kernel is zero by the maximum principle. Its Fredholm index is zero: deform its principal coefficients to those of a fixed Laplacian while keeping the negative zeroth-order term; the latter operator is invertible, and the index is constant along this deformation of elliptic operators. Thus $L_ u-\lambda $ is an isomorphism between the usual Hölder spaces, with bounded inverse by Schauder theory, and the implicit function theorem proves that the set of solvable parameters is open. 
+    <p>
+      The extremum bounds give $\| u_ t\| _\infty \leq \lambda ^{-1}\| F\| _\infty $. The semilinear version of theorem <a data-tag="49C333BE" href="../../tag/A61645907A4D/">9.4.2</a> and corollary <a data-tag="AC24B5B7" href="../../tag/36B42C74EE0B/">9.4.4</a>, stated in the remark following that corollary, then gives uniform ellipticity and bounds in every $C^ k$ norm. Along any convergent sequence of solvable parameters, a subsequence of the solutions therefore converges smoothly to a strictly positive solution at the limit parameter. This proves closedness, and hence existence at $t=1$. Uniqueness is proposition <a data-tag="CF8EC5AE" href="../../tag/C52E44D9C563/">9.6.1</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+For a fixed smooth real obstacle $f$ on $X$ and a parameter $\beta &gt;0$, the choice $\lambda =\beta $ and $F=-\beta f$ gives 
+</p>
+<div class="equation">
+  \[  \omega _{u_\beta }^ n=\mathrm{e}^{\beta (u_\beta -f)}\omega ^ n.  \]
+</div>
+<p>
+ These equations penalize values above the obstacle. In proposition <a data-tag="546B55FF" href="../../tag/295F6C861B41/">13.1.1</a> we use them to construct the envelope of $f$ and to show that its Monge–Ampère measure is supported on the contact set. The convergence argument there uses only bounded regularization and the comparison just proved. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9541740AAFDC" data-section-entries="11F81D837A44 9541740AAFDC B9C312CB7069 C611B2CA264A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/9541740AAFDC/">9.7 Variation of the normalization scalar</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="BFC48217"></span></div>
+<p>
+Integration against the adjoint probability measure eliminates the derivatives of the potential from the first variation of $b$. In the second variation, the second derivative of the logarithmic determinant contributes a nonnegative square with a minus sign. This gives concavity of $b$ and identifies the equality case. 
+</p>
+<p>
+Write $b(F)$ for the scalar in (<a data-tag="2BED92DC" href="../../tag/C5FA7F078BB6/">9.1</a>), and use the linear normalization $\int _ Xu\, \mathrm{d}V=0$. For a smooth family $F_ t$, with $t$ in an open interval $I\subset \mathbb R$, write $(u_ t,b_ t)$ for the corresponding solutions and put $\eta _ t=\omega _{u_ t}$. By proposition <a data-tag="E0953F19" href="../../tag/2AD3CD874EA4/">9.3.1</a> these depend smoothly on $t$; a dot denotes differentiation in $t$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-C70BE558">
+<p><a class="environment-identifier" href="../../tag/C611B2CA264A/">Theorem <span data-tag="C70BE558">9.7.1</span>.</a><span data-gerby-tag="C70BE558"></span> Let $A_ t=\eta _ t^{-1}\mathrm{dd}^{\mathrm{c}}\dot u_ t$ be the endomorphism of the tangent bundle that represents the real $(1,1)$-form $\mathrm{dd}^{\mathrm{c}}\dot u_ t$ with respect to $\eta _ t$; it is Hermitian with respect to $\eta _ t$. The normalization constant satisfies </p>
+<div class="equation" id="non-kahler-pluripotential-theory-4CC64AAD"><span data-gerby-tag="4CC64AAD"></span>
+<span class="equation-label"><a data-tag="4CC64AAD" href="../../tag/11F81D837A44/">9.18</a></span>
+<div>\begin{align}  \dot b_ t&amp; =-\int _ X\dot F_ t\, \mathrm{d}\mu _{u_ t},\\  \ddot b_ t&amp; =-\int _ X\ddot F_ t\, \mathrm{d}\mu _{u_ t} -\int _ X\operatorname {tr}(A_ t^2)\, \mathrm{d}\mu _{u_ t}. \end{align}</div>
+</div>
+<p> In particular, for smooth real functions $F_0,G$ on $X$ and the affine family $F_ t=F_0+tG$, the function $b_ t$ is concave. Its second derivative vanishes at a parameter value if and only if $G$ is constant on $X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Differentiating the logarithm of (<a data-tag="2BED92DC" href="../../tag/C5FA7F078BB6/">9.1</a>) gives 
+    
+<div class="equation">
+  \[  L_{u_ t}\dot u_ t=\dot F_ t+\dot b_ t.  \]
+</div>
+<p>
+       Integration against $\mu _{u_ t}$ proves (<a data-tag="4CC64AAD" href="../../tag/11F81D837A44/">9.18</a>). 
+    <p>
+      For a smooth family of positive Hermitian matrices $H_ t$, differentiation of the inverse matrix gives 
+    
+<div class="equation">
+  \[  \frac{\mathrm{d}^2}{\mathrm{d}t^2}\log \det H_ t =\operatorname {tr}(H_ t^{-1}\ddot H_ t) -\operatorname {tr}\bigl ((H_ t^{-1}\dot H_ t)^2\bigr ).  \]
+</div>
+<p>
+       Apply this pointwise to the matrices of $\eta _ t$, using $\dot\eta _ t=\mathrm{dd}^{\mathrm{c}}\dot u_ t$ and $\ddot\eta _ t=\mathrm{dd}^{\mathrm{c}}\ddot u_ t$. The second derivative of the logarithmic equation is 
+    
+<div class="equation">
+  \[  L_{u_ t}\ddot u_ t-\operatorname {tr}(A_ t^2) =\ddot F_ t+\ddot b_ t.  \]
+</div>
+<p>
+       Integrating against $\mu _{u_ t}$ at this fixed parameter proves (<a data-tag="3CBF8D7E" href="../../tag/578022E3660A/">9.19</a>); there is no need to differentiate the measure. 
+    <p>
+      The eigenvalues of the Hermitian endomorphism $A_ t$ are real, so $\operatorname {tr}(A_ t^2)\geq 0$. For affine $F_ t$ we have $\ddot F_ t=0$, so the second derivative of $b_ t$ is nonpositive. If it vanishes, strict positivity of the smooth density of $\mu _{u_ t}$ implies $A_ t=0$ everywhere. Thus $\mathrm{dd}^{\mathrm{c}}\dot u_ t=0$, and the maximum principle shows that $\dot u_ t$ is constant. The first differentiated equation then gives $G=-\dot b_ t$, a constant. Conversely, if $G$ is constant, the solution metric is independent of $t$ and $b_ t=b_0-tG$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-E5122287">
+<p><a class="environment-identifier" href="../../tag/B9C312CB7069/">Corollary <span data-tag="E5122287">9.7.2</span>.</a><span data-gerby-tag="E5122287"></span> For two smooth functions $F,G$, the normalization constants satisfy </p>
+<div class="equation">
+  \[  -\sup _ X(G-F)\leq b(G)-b(F)\leq -\inf _ X(G-F).  \]
+</div>
+<p> In particular, $|b(G)-b(F)|\leq \| G-F\| _\infty $. If $G-F$ is nonconstant, both inequalities in the first display are strict. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply (<a data-tag="4CC64AAD" href="../../tag/11F81D837A44/">9.18</a>) along $F_ t=F+t(G-F)$ and integrate over $0\leq t\leq 1$. Each $\mu _{u_ t}$ is a probability measure with strictly positive smooth density, so the integral of a nonconstant continuous function against it lies strictly between the minimum and the maximum of that function. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Thus $b$ is a decreasing, concave, Lipschitz functional of the logarithmic density, with $b(F+a)=b(F)-a$ for every real constant $a$. By uniform approximation, it extends uniquely to a Lipschitz functional of continuous $F$. This extension concerns the scalar functional only; the existence and regularity of corresponding potentials require further estimates. 
+</p>
+</div></section><section class="reading-chunk" id="entry-578022E3660A" data-section-entries="578022E3660A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="3CBF8D7E"></span></div><div class="equation" id="non-kahler-pluripotential-theory-3CBF8D7E"><span data-gerby-tag="3CBF8D7E"></span><span class="equation-label"><a data-tag="3CBF8D7E" href="../../tag/578022E3660A/">9.19 </a></span><div>\[\begin{aligned}\begin{align}  \ddot b_ t&amp; =-\int _ X\ddot F_ t\, \mathrm{d}\mu _{u_ t} -\int _ X\operatorname {tr}(A_ t^2)\, \mathrm{d}\mu _{u_ t}. \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-44E03525BBAF" data-section-entries="028038652BCC 44E03525BBAF BFCF1480CC8B CA9F2EF1D149"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/44E03525BBAF/">9.8 Normalization on the Hopf threefold</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="C04C034E"></span></div>
+<p>
+On the Hopf threefold of chapter <a data-tag="AB469878" href="../../tag/142249962360/">8</a>, the deviation of $b$ from the closed-background formula (<a data-tag="DC28142E" href="../../tag/EF5B417A3208/">9.2</a>) can be computed: it is the energy of the solution along the elliptic fibers. In this section, $X$ is that threefold and $\omega $ its Gauduchon metric; we use the projection $\pi :X\to \mathbb P^2$, the probability measure $\nu =\omega ^3/6$ and the averaging operator $A$ of proposition <a data-tag="48EA3D0A" href="../../tag/E42306969D71/">8.7.1</a>, and we write $\beta =\omega -\pi ^*\omega _{\mathrm{FS}}$ for the rank-one form of that construction. As in chapter <a data-tag="AB469878" href="../../tag/142249962360/">8</a>, the fiber derivative $u_ w$ does not depend on the local trivialization of the elliptic bundle. 
+</p>
+<p>
+For $F\in C^\infty (X,\mathbb R)$, let $(u_ F,b(F))$ be the solution of 
+</p>
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u_ F)^3=\mathrm{e}^{F+b(F)}\omega ^3, \qquad \omega +\mathrm{dd}^{\mathrm{c}}u_ F&gt;0,\qquad \int _ Xu_ F\, \mathrm{d}\nu =0.  \]
+</div>
+<p>
+ Define 
+</p>
+<div class="equation">
+  \[  D(F)=b(F)+\log \int _ X\mathrm{e}^ F\, \mathrm{d}\nu .  \]
+</div>
+<p>
+ For a closed background, the corresponding quantity vanishes by (<a data-tag="DC28142E" href="../../tag/EF5B417A3208/">9.2</a>). 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-3F745314">
+<p><a class="environment-identifier" href="../../tag/CA9F2EF1D149/">Proposition <span data-tag="3F745314">9.8.1</span>.</a><span data-gerby-tag="3F745314"></span> For every smooth real $F$ on this threefold, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-A2D2957B"><span data-gerby-tag="A2D2957B"></span>
+<span class="equation-label"><a data-tag="A2D2957B" href="../../tag/028038652BCC/">9.20</a></span>
+<div>\begin{align}  \mathrm{e}^{D(F)}&amp; =1+\int _ X|(u_ F)_ w|^2\, \mathrm{d}\nu , \\  \| u_ F-Au_ F\| _{L^2(X,\nu )}^2 &amp; \leq 4\bigl (\mathrm{e}^{D(F)}-1\bigr ).  \end{align}</div>
+</div>
+<p> Thus $D(F)\geq 0$, with equality if and only if $F=\pi ^*H$ for some $H\in C^\infty (\mathbb P^2,\mathbb R)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Integration of the equation and (<a data-tag="97C333D9" href="../../tag/C46F0B405DC2/">8.2</a>) give 
+    
+<div class="equation">
+  \[  \mathrm{e}^{D(F)}=\frac16\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u_ F)^3 =1+\int _ X|(u_ F)_ w|^2\, \mathrm{d}\nu .  \]
+</div>
+<p>
+       Substituting the first equality into (<a data-tag="E385367F" href="../../tag/18B65325175F/">8.25</a>) proves (<a data-tag="3586F0DB" href="../../tag/9CEA8A3A68F0/">9.21</a>). 
+    <p>
+      If $D(F)=0$, then $(u_ F)_ w=0$ everywhere, because $u_ F$ is smooth. Since $u_ F$ is real, it is constant on each connected fiber, so it descends to a smooth real function $q$ on $\mathbb P^2$, and $\omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}q&gt;0$ as in the proof of proposition <a data-tag="48EA3D0A" href="../../tag/E42306969D71/">8.7.1</a>. Since $\beta ^2=0$ and $\omega =\pi ^*\omega _{\mathrm{FS}}+\beta $, we have 
+    
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}\pi ^*q)^3 =3\pi ^*(\omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}q)^2\wedge \beta .  \]
+</div>
+<p>
+       Dividing by $\omega ^3=3\pi ^*\omega _{\mathrm{FS}}^2\wedge \beta $ and taking logarithms proves that $F$ is a smooth base pullback. 
+    <p>
+      Conversely, suppose $F=\pi ^*H$. Apply theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">9.1.1</a> on $(\mathbb P^2,\omega _{\mathrm{FS}})$ to obtain a smooth real $q$ and a scalar $c$ with 
+    
+<div class="equation">
+  \[  \omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}q&gt;0,\qquad (\omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}q)^2=\mathrm{e}^{H+c}\omega _{\mathrm{FS}}^2.  \]
+</div>
+<p>
+       Since the base form is closed, Stokes' theorem gives $\mathrm{e}^ c\int _{\mathbb P^2}\mathrm{e}^ H\omega _{\mathrm{FS}}^2=1$. The preceding cube identity shows that $\pi ^*q$, after subtraction of its $\nu $-mean, solves the equation on $X$ with scalar $c$, and uniqueness gives $b(F)=c$. Since the base measure of $\nu $ is $\omega _{\mathrm{FS}}^2$, it follows that $D(F)=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+In particular, if a smooth positive density $f$ satisfies $\int _ Xf\, \mathrm{d}\nu =1$, the equation $(\omega +\mathrm{dd}^{\mathrm{c}}u)^3=\mathrm{e}^ b f\omega ^3$ has $b\geq 0$, with equality if and only if $f$ is the pullback of a function on the base. Fixing the total integral of the density therefore does not determine the scalar on this nonclosed background. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-B84BD0E3">
+<p><a class="environment-identifier" href="../../tag/BFCF1480CC8B/">Corollary <span data-tag="B84BD0E3">9.8.2</span>.</a><span data-gerby-tag="B84BD0E3"></span> Let $G\in C^\infty (X,\mathbb R)$, let $L_0v=3\, \mathrm{dd}^{\mathrm{c}}v\wedge \omega ^2/\omega ^3$ be the linearized operator at $u=0$, and let $v$ be the unique smooth real function satisfying </p>
+<div class="equation">
+  \[  L_0v=G-\int _ XG\, \mathrm{d}\nu , \qquad \int _ Xv\, \mathrm{d}\nu =0.  \]
+</div>
+<p> Then </p>
+<div class="equation">
+  \[  \left.\frac{\mathrm{d}}{\mathrm{d}t}D(tG)\right|_{t=0}=0, \qquad \left.\frac{\mathrm{d}^2}{\mathrm{d}t^2}D(tG)\right|_{t=0} =2\int _ X|v_ w|^2\, \mathrm{d}\nu .  \]
+</div>
+<p> The second derivative vanishes if and only if $G$ is a smooth base pullback. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For real $t$ near zero put $u_ t=u_{tG}$ and $b_ t=b(tG)$. By proposition <a data-tag="E0953F19" href="../../tag/2AD3CD874EA4/">9.3.1</a>, this is a smooth family, with $u_0=b_0=0$. Differentiating the logarithmic equation at $t=0$ gives $L_0\dot u_0=G+\dot b_0$. Since $\omega $ is Gauduchon, $\nu $ is the adjoint probability measure of $L_0$, and integration gives $\dot b_0=-\int _ XG\, \mathrm{d}\nu $. Hence $\dot u_0=v$; this also proves the existence and uniqueness of $v$. 
+    <p>
+      Smooth dependence gives $(u_ t)_ w=t v_ w+O(t^2)$ uniformly on $X$, so (<a data-tag="A2D2957B" href="../../tag/028038652BCC/">9.20</a>) gives 
+    
+<div class="equation">
+  \[  \mathrm{e}^{D(tG)}=1+t^2\int _ X|v_ w|^2\, \mathrm{d}\nu +O(t^3).  \]
+</div>
+<p>
+       Taking logarithms proves the derivative formulas. 
+    <p>
+       If the second derivative vanishes, then $v_ w=0$, so $v=\pi ^*q$ for a smooth real function $q$ on the base. Expanding $\omega ^2=\pi ^*\omega _{\mathrm{FS}}^2+2\pi ^*\omega _{\mathrm{FS}}\wedge \beta $ gives 
+    
+<div class="equation">
+  \[  L_0(\pi ^*q)=\pi ^*\! \left( \frac{2\mathrm{dd}^{\mathrm{c}}q\wedge \omega _{\mathrm{FS}}}{\omega _{\mathrm{FS}}^2}\right).  \]
+</div>
+<p>
+       Hence $G=L_0v+\int _ XG\, \mathrm{d}\nu $ is a base pullback. Conversely, when $G$ is a base pullback, proposition <a data-tag="3F745314" href="../../tag/CA9F2EF1D149/">9.8.1</a> gives $D(tG)=0$ for every real $t$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+This is a second-variation formula at the background density only. It does not determine whether $D$ is convex globally, because the second derivatives of $b$ and of the logarithmic integral have opposite signs. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9CEA8A3A68F0" data-section-entries="9CEA8A3A68F0"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="3586F0DB"></span></div><div class="equation" id="non-kahler-pluripotential-theory-3586F0DB"><span data-gerby-tag="3586F0DB"></span><span class="equation-label"><a data-tag="3586F0DB" href="../../tag/9CEA8A3A68F0/">9.21 </a></span><div>\[\begin{aligned}\begin{align}  \| u_ F-Au_ F\| _{L^2(X,\nu )}^2 &amp; \leq 4\bigl (\mathrm{e}^{D(F)}-1\bigr ).  \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-6950E7B1FBCB" data-section-entries="6950E7B1FBCB 76AF759A4024"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/6950E7B1FBCB/">9.9 Prescribing a Gauduchon volume form</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="185025DF"></span></div>
+<p>
+We now return to a general connected compact complex manifold $X$, of dimension $n\geq 2$. To stay in a fixed Aeppli class of Gauduchon metrics, we vary the $(n-1)$st power of the metric by a term of the form $\partial \xi +\bar\partial \bar\xi $. The resulting scalar ansatz contains first derivatives of the potential as well as its complex Hessian. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-3E8336C1">
+<p><a class="environment-identifier" href="../../tag/76AF759A4024/">Theorem <span data-tag="3E8336C1">9.9.1</span> <span class="named">(Székelyhidi–Tosatti–Weinkove)</span>.</a><span data-gerby-tag="3E8336C1"></span>  Fix a Hermitian form $\gamma _0$, a Gauduchon form $\gamma $, and a smooth real function $F$. There is a unique pair $(u,b)\in C^\infty (X,\mathbb R)\times \mathbb R$ with $\sup _ Xu=0$ such that the $(n-1,n-1)$-form </p>
+<div class="equation">
+  \[  \Gamma _ u=\gamma _0^{n-1}+\mathrm{dd}^{\mathrm{c}}u\wedge \gamma ^{n-2} +\operatorname {Re}\left( \frac{\mathrm i}{2\pi }\partial u\wedge \bar\partial (\gamma ^{n-2}) \right)  \]
+</div>
+<p> is strictly positive, and the Hermitian form $\eta _ u$ with $\eta _ u^{n-1}=\Gamma _ u$ satisfies </p>
+<div class="equation">
+  \[  \eta _ u^ n=\mathrm{e}^{F+b}\gamma ^ n.  \]
+</div>
+</article>
+
+<p>
+Here we use the linear-algebra fact that a real $(n-1,n-1)$-form is strictly positive if and only if it is the $(n-1)$st power of a Hermitian form, and that this Hermitian form is unique; the matrix form of this correspondence is described in section <a data-tag="568821A3" href="../../tag/53E844FE515C/">9.12</a>. Keep $\gamma _0$ and $\gamma $ fixed for the remainder of the chapter, and write $\mathcal D_\gamma u=\Gamma _ u-\gamma _0^{n-1}$ for the part of the ansatz that is linear in $u$. 
+</p>
+<p>
+To see which geometry is preserved, set $\xi _ u=\mathrm i\, \bar\partial u\wedge \gamma ^{n-2}/(4\pi )$. The Leibniz rule gives $\Gamma _ u-\gamma _0^{n-1}=\partial \xi _ u+\bar\partial \overline{\xi _ u}$. Since $\mathrm{dd}^{\mathrm{c}}(\partial \xi _ u+\bar\partial \overline{\xi _ u})=0$, if $\gamma _0$ is Gauduchon then so is $\eta _ u$, and the $(n-1)$st powers of $\gamma _0$ and $\eta _ u$ have the same Aeppli class. The uniqueness in theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a> concerns this scalar ansatz; it does not assert uniqueness among all Gauduchon metrics in the Aeppli class. 
+</p>
+</div></section><section class="reading-chunk" id="entry-F9FF7B5E741A" data-section-entries="60FD5A56EE10 8F909795AE16 F9FF7B5E741A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/F9FF7B5E741A/">9.10 Bounds for the Gauduchon potential</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="DCC24E16"></span></div>
+<p>
+Taking the trace of the positive form $\Gamma _ u$ gives a lower bound for a fixed linear elliptic operator applied to the potential, and its Green kernel then gives an $L^1$ bound. Near a minimum, supporting affine functions select a contact set on which the gradient is small and the real Hessian is bounded below; the determinant equation forces this set to have uniformly positive volume. Combining the two estimates bounds the minimum. This is an Alexandrov–Bakelman–Pucci type argument. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-212AEE83">
+<p><a class="environment-identifier" href="../../tag/60FD5A56EE10/">Proposition <span data-tag="212AEE83">9.10.1</span>.</a><span data-gerby-tag="212AEE83"></span> Every smooth solution $(u,b)$ of the equation in theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a> with $\sup _ Xu=0$ satisfies </p>
+<div class="equation">
+  \[  |b|+\| u\| _{L^\infty (X)}\leq C.  \]
+</div>
+<p> The constant depends only on $X$, $\gamma _0$, $\gamma $ and an upper bound for $\| F\| _\infty $; in particular, it does not depend on derivatives of $F$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first bound the scalar. At a maximum of $u$, the first derivatives of $u$ vanish and $\mathrm{dd}^{\mathrm{c}}u\leq 0$, so $\Gamma _ u\leq \gamma _0^{n-1}$; at a minimum the reverse inequality holds. The determinant is monotone with respect to the order of positive matrices, and $(\eta _ u^ n/\gamma ^ n)^{n-1}$ is the determinant of the coefficient matrix of $\Gamma _ u$ relative to $\gamma $ (see (<a data-tag="7EFE4E6E" href="../../tag/D281466AD7B7/">9.26</a>) below). Evaluating the equation at these two points gives 
+    
+<div class="equation">
+  \[  \inf _ X\left(\log \frac{\gamma _0^ n}{\gamma ^ n}-F\right) \leq b\leq \sup _ X\left(\log \frac{\gamma _0^ n}{\gamma ^ n}-F\right).  \]
+</div>
+<p>
+       This proves the scalar bound. 
+    <p>
+       Consider the fixed real linear elliptic operator 
+    
+<div class="equation">
+  \[  Lu=\frac{\gamma \wedge \mathcal D_\gamma u}{\gamma ^ n}.  \]
+</div>
+<p>
+       Its principal part is $\mathrm{dd}^{\mathrm{c}}u\wedge \gamma ^{n-1}/\gamma ^ n$, its remaining term is of first order, and it has no zeroth-order term. Since $\Gamma _ u$ is positive, $\gamma \wedge \Gamma _ u\geq 0$, and therefore $Lu\geq -C_0$ for a fixed constant $C_0$. 
+    <p>
+      By the Fredholm and maximum-principle argument in the proof of theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>, the operator $L$ has an adjoint probability measure $\nu $ with smooth strictly positive density, that is, $\int _ XLv\, \mathrm{d}\nu =0$ for every smooth $v$. Since $Lv\leq 0$ at a maximum of $v$, its normalized Green kernel can be written 
+    
+<div class="equation">
+  \[  \begin{gathered} v(x)-\int _ Xv\, \mathrm{d}\nu =-\int _ X K(x,y)Lv(y)\, \mathrm{d}\nu (y),\\ K\geq 0,\qquad \sup _ x\int _ XK(x,y)\, \mathrm{d}\nu (y)&lt;+\infty . \end{gathered}  \]
+</div>
+<p>
+       Here the kernel is smooth off the diagonal and locally integrable. To obtain this representation, construct the inverse of $L$ on functions of zero $\nu $-mean by the Fredholm alternative. With the minus sign above, the local fundamental solution has a positive leading singularity, so compactness gives a lower bound for the kernel. Adding a constant to $K$ makes it nonnegative and does not change the formula, since $\int _ XLv\, \mathrm{d}\nu =0$. The local estimates for the Green kernel give the uniform integral bound. 
+    <p>
+      Apply the formula to $u$ and use $Lu\geq -C_0$. At a maximum point, where $u=0$, we obtain 
+    
+<div class="equation">
+  \[  -\int _ Xu\, \mathrm{d}\nu \leq C_1.  \]
+</div>
+<p>
+       Because $u\leq 0$ and $\nu $ has a fixed smooth positive density, this is a uniform $L^1$ bound for $u$ with respect to any fixed smooth volume form. 
+    <p>
+      Now let $M=\min _ Xu$, and choose holomorphic coordinates on a ball centered at a minimum point. By compactness, the coordinate radius can be fixed, with uniform bounds for the metric coefficients and their derivatives; rescale the ball to the unit ball $B\subset \mathbb R^{2n}$. Write $x$ for the real coordinates, $D$ and $D^2$ for the Euclidean gradient and Hessian, $\mathrm{d}x$ for Euclidean volume, and $I$ for an identity matrix of the appropriate size. Fix a small number $\varepsilon &gt;0$, depending only on those bounds, and set 
+    
+<div class="equation">
+  \[  v(x)=u(x)+\varepsilon |x|^2.  \]
+</div>
+<p>
+       For every real vector $p$ with $|p|&lt;\varepsilon /2$, the function $v(x)-p\cdot x$ attains its minimum at an interior point, because its boundary values are larger than $M+\varepsilon /2$, whereas its value at the center is $M$. At such a point, 
+    
+<div class="equation">
+  \[  Dv=p,\qquad D^2v\geq 0,\qquad v\leq M+\varepsilon /2.  \]
+</div>
+<p>
+        Let $A\subset B$ be the set of all points satisfying $|Dv|\leq \varepsilon /2$, $D^2v\geq 0$, and $v\leq M+\varepsilon /2$. Since $u\geq M$, this set lies in $\{ |x|\leq 1/\sqrt2\} $. It is closed there, hence compact in $B$, and by the preceding paragraph its image under the gradient map $Dv$ contains the ball $B_{\varepsilon /2}$ of radius $\varepsilon /2$. The area formula for the smooth gradient map therefore gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-54915159"><span data-gerby-tag="54915159"></span>
+<span class="equation-label"><a data-tag="54915159" href="../../tag/8F909795AE16/">9.22</a></span>
+<div>\begin{equation}  |B_{\varepsilon /2}| \leq \int _ A\det D^2v\, \mathrm{d}x. \end{equation}</div>
+</div>
+<p>
+       The Hessian is nonnegative on $A$, so no absolute value is needed in the determinant. 
+    <p>
+      We now bound this determinant pointwise on $A$. There, 
+    
+<div class="equation">
+  \[  |Du|\leq \frac52\varepsilon , \qquad D^2u\geq -2\varepsilon I.  \]
+</div>
+<p>
+       The complex Hessian of $u$ has the corresponding lower bound. Wedging with the fixed positive form $\gamma ^{n-2}$ and bounding the first-order term of $\Gamma _ u$ by the gradient estimate, we find that $\Gamma _ u\geq \gamma _0^{n-1}-C\varepsilon \gamma ^{n-1}$. Let $Q_ u$ be the coefficient matrix of $\Gamma _ u$ in a fixed local frame of $(n-1,0)$-forms. Since $\gamma _0^{n-1}$ is strictly positive, choosing $\varepsilon $ small gives 
+    
+<div class="equation">
+  \[  Q_ u\geq cI  \]
+</div>
+<p>
+       with a uniform $c&gt;0$. The equation and the bounds for $F+b$ already proved bound $\det Q_ u$ from above, because the determinant of this matrix is, up to a fixed positive factor depending on the frame, the $(n-1)$st power of the density of $\eta _ u^ n$. All eigenvalues of $Q_ u$ are therefore bounded above as well: their product is bounded, and each of them is at least $c$. 
+    <p>
+      In particular, $\gamma \wedge \Gamma _ u/\gamma ^ n$ is uniformly bounded on $A$. Subtracting its fixed background term and its bounded first-order term, we obtain an upper bound for 
+    
+<div class="equation">
+  \[  \frac{\mathrm{dd}^{\mathrm{c}}u\wedge \gamma ^{n-1}}{\gamma ^ n}.  \]
+</div>
+<p>
+       This is a fixed positive multiple of the $\gamma $-trace of the complex Hessian of $u$, which differs from that of $v$ by a bounded term. The complex Hessian of $v$ is nonnegative on $A$, since the real Hessian is nonnegative there, so comparison of metrics bounds its Euclidean trace from above. The real trace of $D^2v$ is four times this complex trace. It follows that 
+    
+<div class="equation">
+  \[  0\leq \det D^2v \leq \left(\frac{\operatorname {tr}_{\mathbb R}D^2v}{2n}\right)^{2n} \leq C_2\quad \hbox{on }A.  \]
+</div>
+<p>
+       Inequality (<a data-tag="54915159" href="../../tag/8F909795AE16/">9.22</a>) now gives $|A|\geq c_2&gt;0$, where $c_2$ is independent of $u$. On $A$ we also have $u\leq v\leq M+\varepsilon /2$. Consequently the uniform $L^1$ bound gives 
+    
+<div class="equation">
+  \[  C_3\geq \int _ A(-u)\, \mathrm{d}x \geq c_2(-M-\varepsilon /2).  \]
+</div>
+<p>
+       This bounds $-M$ and completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-F6A1B32989A1" data-section-entries="029A1D30A55E 195CC5F57ABE 62F6382D2CAC 706EB82AB6A2 BD3712C889A6 F6A1B32989A1"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/F6A1B32989A1/">9.11 The adjoint equation for Gauduchon volume</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="397EA1AE"></span></div>
+<p>
+As for the Monge–Ampère equation, solving the linearized Gauduchon volume equation requires a compatibility condition, given by an adjoint probability measure. Taking the $(n-1)$st root multiplies the trace linearization by the factor $n/(n-1)$, and the first-order term of the ansatz introduces a drift term. We compute the linearized operator at any potential with $\Gamma _ u&gt;0$, and then express its adjoint condition as an equation for a positive $(1,1)$-form. Throughout this section we put $K=\gamma ^{n-2}$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-1A082A94">
+<p><a class="environment-identifier" href="../../tag/706EB82AB6A2/">Proposition <span data-tag="1A082A94">9.11.1</span>.</a><span data-gerby-tag="1A082A94"></span> On the open set of smooth potentials $u$ with $\Gamma _ u&gt;0$, the derivative of </p>
+<div class="equation">
+  \[  \mathcal G(u)=\log \frac{\eta _ u^ n}{\gamma ^ n}  \]
+</div>
+<p> is the real elliptic operator </p>
+<div class="equation" id="non-kahler-pluripotential-theory-13060337"><span data-gerby-tag="13060337"></span>
+<span class="equation-label"><a data-tag="13060337" href="../../tag/62F6382D2CAC/">9.23</a></span>
+<div>\begin{equation}  \mathcal L_ uv= \frac{n}{n-1}\frac{\eta _ u\wedge \mathcal D_\gamma v}{\eta _ u^ n}. \end{equation}</div>
+</div>
+<p> It has no zeroth-order term, and its kernel consists of the constants. There is a unique smooth positive function $\rho _ u$, normalized by $\int _ X\rho _ u\eta _ u^ n=1$, such that the probability measure </p>
+<div class="equation">
+  \[  \mathrm{d}\mu _ u^\gamma =\rho _ u\eta _ u^ n  \]
+</div>
+<p> satisfies $\int _ X\mathcal L_ uv\, \mathrm{d}\mu _ u^\gamma =0$ for every smooth real $v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a smooth path of potentials $u(t)$, write $\eta =\eta _{u(t)}$ and $\Gamma =\Gamma _{u(t)}$. Differentiating $\eta ^{n-1}=\Gamma $ gives $(n-1)\dot\eta \wedge \eta ^{n-2}=\dot\Gamma $, where $\dot\Gamma =\mathcal D_\gamma \dot u$. Wedging with $\eta $ and dividing by $\eta ^ n$, we obtain 
+    
+<div class="equation">
+  \[  \frac{\mathrm{d}}{\mathrm{d}t}\log \eta ^ n =\frac{n}{n-1}\frac{\eta \wedge \dot\Gamma }{\eta ^ n},  \]
+</div>
+<p>
+       which proves (<a data-tag="13060337" href="../../tag/62F6382D2CAC/">9.23</a>). 
+    <p>
+      Only the second-order term $\mathrm{dd}^{\mathrm{c}}v\wedge \gamma ^{n-2}$ of $\mathcal D_\gamma v$ contributes to the principal symbol. For a nonzero complex covector $\zeta $ of type $(1,0)$, the form 
+    
+<div class="equation">
+  \[  \eta _ u\wedge \mathrm i\zeta \wedge \overline\zeta \wedge \gamma ^{n-2}  \]
+</div>
+<p>
+       is a positive volume form. Hence the principal symbol is positive definite, and by compactness the operator is uniformly elliptic for each fixed $u$. The remaining term is of first order, and constants are annihilated, so the strong maximum principle gives $\ker \mathcal L_ u=\mathbb R$. 
+    <p>
+      The Fredholm and positivity arguments in the proof of theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a> apply to this real elliptic operator with first-order terms and no zeroth-order term. Its index is zero by deformation to a Laplacian, so its formal adjoint with respect to $\eta _ u^ n$ has a one-dimensional kernel spanned by a smooth strictly positive function. Normalizing its integral to one gives $\rho _ u$ and proves uniqueness. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+ The adjoint condition can be expressed as an equation for the positive $(1,1)$-form $\rho _ u\eta _ u$. For a smooth real $(1,1)$-form $A$, set 
+</p>
+<div class="equation">
+  \[  \mathcal A_\gamma (A) =\mathrm{dd}^{\mathrm{c}}A\wedge \gamma ^{n-2} +\operatorname {Re}\left(\frac{\mathrm i}{2\pi } \partial A\wedge \bar\partial (\gamma ^{n-2})\right).  \]
+</div>
+<p>
+ This is a real form of top degree, and $\mathcal A_\gamma $ is the formal adjoint of $\mathcal D_\gamma $ under the pairing of $(1,1)$-forms with $(n-1,n-1)$-forms, as the proof below shows. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-DAC00F18">
+<p><a class="environment-identifier" href="../../tag/029A1D30A55E/">Proposition <span data-tag="DAC00F18">9.11.2</span>.</a><span data-gerby-tag="DAC00F18"></span> The function $\rho _ u$ of proposition <a data-tag="1A082A94" href="../../tag/706EB82AB6A2/">9.11.1</a> is characterized by </p>
+<div class="equation" id="non-kahler-pluripotential-theory-F5B6F447"><span data-gerby-tag="F5B6F447"></span>
+<span class="equation-label"><a data-tag="F5B6F447" href="../../tag/BD3712C889A6/">9.24</a></span>
+<div>\begin{equation}  \mathcal A_\gamma (\rho _ u\eta _ u)=0, \qquad \int _ X\rho _ u\eta _ u^ n=1. \end{equation}</div>
+</div>
+<p> When $n=2$, its first equation is $\mathrm{dd}^{\mathrm{c}}(\rho _ u\eta _ u)=0$. When $\eta _ u=\gamma $, the function $\rho _ u$ is constant and $\mathrm{d}\mu _ u^\gamma =\gamma ^ n/\int _ X\gamma ^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first prove that, for every smooth real $(1,1)$-form $A$ and every smooth real function $v$ on $X$, 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-4C39622D"><span data-gerby-tag="4C39622D"></span>
+<span class="equation-label"><a data-tag="4C39622D" href="../../tag/195CC5F57ABE/">9.25</a></span>
+<div>\begin{equation}  \int _ X A\wedge \mathcal D_\gamma v =\int _ X v\, \mathcal A_\gamma (A). \end{equation}</div>
+</div>
+<p>
+       Write $c=\mathrm i/(2\pi )$. Since $A,K,v$ are real, expanding the real part gives 
+    
+<div class="equation">
+  \[  \mathcal D_\gamma v =c\, \partial \bar\partial v\wedge K +\frac c2\bigl (\partial v\wedge \bar\partial K -\bar\partial v\wedge \partial K\bigr ).  \]
+</div>
+<p>
+       Integrating the first term by parts twice gives $\int _ Xv\, c\partial \bar\partial (A\wedge K)$, and integrating each first-order term by parts once gives the correction 
+    
+<div class="equation">
+  \[  \int _ Xv\, \frac c2 \bigl (-\partial A\wedge \bar\partial K +\bar\partial A\wedge \partial K -2A\wedge \partial \bar\partial K\bigr ).  \]
+</div>
+<p>
+       Finally, 
+    
+<div class="equation">
+  \[  \partial \bar\partial (A\wedge K) =\partial \bar\partial A\wedge K -\bar\partial A\wedge \partial K +\partial A\wedge \bar\partial K +A\wedge \partial \bar\partial K.  \]
+</div>
+<p>
+       Adding these contributions cancels the terms containing $A\wedge \partial \bar\partial K$ and leaves $\mathcal A_\gamma (A)$. This proves (<a data-tag="4C39622D" href="../../tag/195CC5F57ABE/">9.25</a>). Applied to $A=\rho _ u\eta _ u$, it shows by (<a data-tag="13060337" href="../../tag/62F6382D2CAC/">9.23</a>) that $\int _ X\mathcal L_ uv\, \mathrm{d}\mu _ u^\gamma $ is a fixed positive multiple of $\int _ Xv\, \mathcal A_\gamma (\rho _ u\eta _ u)$, so the adjoint condition is equivalent to (<a data-tag="F5B6F447" href="../../tag/BD3712C889A6/">9.24</a>). 
+    <p>
+      For $n=2$, we have $K=1$, which gives the first special case. For the second, the product rule gives 
+    
+<div class="equation">
+  \[  \mathcal A_\gamma (\gamma ) =\frac1{n-1}\mathrm{dd}^{\mathrm{c}}(\gamma ^{n-1})=0.  \]
+</div>
+<p>
+       By uniqueness, $\rho _ u$ is consequently the constant $(\int _ X\gamma ^ n)^{-1}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+For $n&gt;2$ the equation for $\rho _ u\eta _ u$ involves the first derivatives of $\gamma ^{n-2}$, so the fixed auxiliary metric $\gamma $ remains part of the adjoint equation; it is not simply the Gauduchon condition for $\eta _ u$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-53E844FE515C" data-section-entries="051408386360 1525F23C956C 2B456F0E5D2B 53E844FE515C 6168D5D4EF96 677E6AB0568A D281466AD7B7 DBC2334A4FC0"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/53E844FE515C/">9.12 The matrix structure of the Gauduchon equation</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="568821A3"></span></div>
+<p>
+The Hodge star converts the positive $(n-1,n-1)$-form $\Gamma _ u$ into a Hermitian matrix whose logarithmic determinant is a concave function of the complex Hessian. Two features will control the largest eigenvalue in the second-order estimate: the positive background gives coercivity, and the torsion coefficients omit exactly those gradient indices that would otherwise carry the largest inverse weight. We derive both properties before differentiating the equation. 
+</p>
+<p>
+For the matrix and derivative calculations, set $v=u/(2\pi )$, so that $\mathrm{dd}^{\mathrm{c}}u=\mathrm i\partial \bar\partial v$. All covariant derivatives are taken with respect to the Chern connection $\nabla $ of $\gamma $. In holomorphic coordinates $z^1,\ldots ,z^ n$, write $v_ i=\partial _ i v$ and $v_{\bar j}=\partial _{\bar j}v$; indices range from $1$ to $n$, and $\delta _{ij}$ is the Kronecker symbol. Write $\gamma =\mathrm i\gamma _{a\bar b}\, \mathrm{d}z^ a\wedge \mathrm{d}\bar z^ b$, with repeated indices summed. We denote by $\star _\gamma $ the Hodge star of $\gamma $, and by $\det _\gamma $ the determinant of the Hermitian matrix of a real $(1,1)$-form relative to $\gamma $. Write the torsion of $\nabla $ as $T_{ab}^{c}$ and lower the last index with $\gamma $. Thus 
+</p>
+<div class="equation">
+  \[  T_{ab\bar c}=\partial _ a\gamma _{b\bar c}-\partial _ b\gamma _{a\bar c}, \qquad T_{ab\bar c}=-T_{ba\bar c}.  \]
+</div>
+<p>
+ Let $Q_0=\star _\gamma \gamma _0^{n-1}/(n-1)!$ and 
+</p>
+<div class="equation">
+  \[  Z=\frac1{(n-1)!}\star _\gamma \operatorname {Re}\bigl (\mathrm i\partial v\wedge \bar\partial \gamma ^{n-2}\bigr ).  \]
+</div>
+<p>
+ Here the real $(1,1)$-forms on the right are identified with their Hermitian coefficient matrices relative to $\gamma $. Set 
+</p>
+<div class="equation">
+  \[  \chi =(\operatorname {tr}_\gamma Q_0)\gamma -(n-1)Q_0, \quad W=(\operatorname {tr}_\gamma Z)\gamma -(n-1)Z, \quad g=\chi +\mathrm i\partial \bar\partial v+W.  \]
+</div>
+<p>
+ The linear map $P_\gamma (A)=((\operatorname {tr}_\gamma A)\gamma -A)/(n-1)$ on real $(1,1)$-forms, or Hermitian matrices, is invertible, and the equation of theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a> becomes 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-7EFE4E6E"><span data-gerby-tag="7EFE4E6E"></span>
+<span class="equation-label"><a data-tag="7EFE4E6E" href="../../tag/D281466AD7B7/">9.26</a></span>
+<div>\begin{equation}  \begin{aligned}  Q_ u&amp; :=P_\gamma (g)=Q_0+P_\gamma (\mathrm i\partial \bar\partial v)+Z&gt;0,\\  \log \det _\gamma Q_ u&amp; =h=(n-1)(F+b). \end{aligned} \end{equation}</div>
+</div>
+<p>
+ Here $Q_ u=\star _\gamma \Gamma _ u/(n-1)!$ is the coefficient matrix of $\Gamma _ u$. The tensor $g$ need not be positive. To check the Hessian term, diagonalize $\mathrm i\partial \bar\partial v$ in a unitary frame: the coefficient of $\star _\gamma (\mathrm i\partial \bar\partial v\wedge \gamma ^{n-2})/(n-1)!$ in each diagonal position is the sum of the other diagonal entries divided by $n-1$. If $\eta _ u$ has eigenvalues $a_ i$ relative to $\gamma $, then $Q_ u$ has eigenvalues $\prod _{j\ne i}a_ j$, whose product is $(\prod _ i a_ i)^{n-1}$. This proves the determinant identity. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-57B6169B">
+<p><a class="environment-identifier" href="../../tag/6168D5D4EF96/">Lemma <span data-tag="57B6169B">9.12.1</span>.</a><span data-gerby-tag="57B6169B"></span> At a point in a unitary frame, </p>
+<div class="equation">
+<span class="equation-label">9.29</span>
+<div>\begin{align}  2(n-1)Z_{i\bar j} ={}&amp; \delta _{ij}\sum _{p,k}v_ p\overline{T_{pk\bar k}} -v_ i\sum _ k\overline{T_{jk\bar k}} -\sum _ kv_ k\overline{T_{kj\bar i}}\notag \\ &amp; +\delta _{ij}\sum _{p,k}v_{\bar p}T_{pk\bar k} -v_{\bar j}\sum _ kT_{ik\bar k} -\sum _ kv_{\bar k}T_{ki\bar j}.  \end{align}</div>
+</div>
+<p>  In particular $Z_{i\bar j}$ contains no $v_ j$ or $v_{\bar i}$. Moreover </p>
+<div class="equation" id="non-kahler-pluripotential-theory-E3CADF96"><span data-gerby-tag="E3CADF96"></span>
+<span class="equation-label"><a data-tag="E3CADF96" href="../../tag/1525F23C956C/">9.30</a></span>
+<div>\begin{equation}  2(n-1)Z_{i\bar i} =\sum _{p\ne i,\  k\ne i} \bigl (v_ p\overline{T_{pk\bar k}}+v_{\bar p}T_{pk\bar k}\bigr ). \end{equation}</div>
+</div>
+<p> Covariant differentiation preserves these coefficient identities. For example $\nabla _1 Z_{1\bar1}$ contains no pure Hessian $v_{11}$ or its conjugate, and $\nabla _{\bar1}\nabla _1 Z_{1\bar1}$ contains no $v_{11\bar1}$ or its conjugate, nor a pure $v_{11}$ or its conjugate. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $n=2$, the defining expression of $Z$ is zero, and so are the formulas below, because the generalized Kronecker symbol with three indices vanishes in two dimensions. Suppose $n\geq 3$ and use coordinates that are unitary at the point. Direct antisymmetrization gives 
+    
+<div class="equation">
+  \[  \bar\partial \gamma =-\frac{\mathrm i}{2}\sum _{a,b,c} \overline{T_{bc\bar a}}\, \mathrm{d}z^ a\wedge \mathrm{d}\bar z^ b\wedge \mathrm{d}\bar z^ c.  \]
+</div>
+<p>
+       We use $\bar\partial \gamma ^{n-2}=(n-2)\bar\partial \gamma \wedge \gamma ^{n-3}$. To write the contraction explicitly, put 
+    
+<div class="equation">
+  \[  \delta ^{paj}_{bci} =\det \begin{pmatrix}  \delta _{pb}
+
+&amp; \delta _{pc}
+
+&amp; \delta _{pi}
+
+\\  \delta _{ab}
+
+&amp; \delta _{ac}
+
+&amp; \delta _{ai}
+
+\\  \delta _{jb}
+
+&amp; \delta _{jc}
+
+&amp; \delta _{ji} 
+
+\end{pmatrix}.  \]
+</div>
+<p>
+       Let $A=\star _\gamma (\mathrm i\partial v\wedge \bar\partial \gamma ^{n-2})/(n-1)!$. Expanding the $n-3$ remaining copies of $\gamma $ leaves the three complementary indices and gives 
+    
+<div class="equation">
+  \[  A_{i\bar j}=\frac1{2(n-1)} \sum _{p,a,b,c}v_ p\overline{T_{bc\bar a}}\,  \delta ^{paj}_{bci}.  \]
+</div>
+<p>
+       Indeed, the factor is $(n-2)(n-3)!/[2(n-1)!]$, and the determinant records the signs of the remaining holomorphic and antiholomorphic indices. Expanding its six terms and using $T_{bc\bar a}=-T_{cb\bar a}$, we obtain 
+    
+<div class="equation">
+  \[  A_{i\bar j}=\frac1{n-1}\left( \delta _{ij}\sum _{p,k}v_ p\overline{T_{pk\bar k}} -v_ i\sum _ k\overline{T_{jk\bar k}} -\sum _ kv_ k\overline{T_{kj\bar i}}\right).  \]
+</div>
+<p>
+       Since $Z=(A+A^*)/2$, where $A^*$ denotes the Hermitian adjoint matrix, this gives (<a data-tag="8A591D0B" href="../../tag/A6EC7DDEACFB/">9.29</a>). 
+    <p>
+      For $i\ne j$, the coefficient of $v_ j$ in this expression vanishes because $T_{jj\bar i}=0$, and the coefficient of $v_{\bar i}$ vanishes in the conjugate expression. For $i=j$, canceling the terms with $p=i$ and $k=i$ gives (<a data-tag="E3CADF96" href="../../tag/1525F23C956C/">9.30</a>). These are tensor identities valid in every unitary frame. Since the Chern connection preserves the metric, they can be differentiated in a unitary frame that is parallel at the point. For instance, the first derivative of a summand in (<a data-tag="E3CADF96" href="../../tag/1525F23C956C/">9.30</a>) is 
+    
+<div class="equation">
+  \[  (\nabla _1v_ p)\overline{T_{pk\bar k}} +v_ p\nabla _1\overline{T_{pk\bar k}},\qquad p,k\ne 1,  \]
+</div>
+<p>
+       together with its conjugate counterpart. A further derivative in the direction $\bar1$ still has $p\ne 1$. This gives the stated exclusions, including the terms in which a derivative falls on a coefficient. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+The second-order estimate uses these exclusions; an arbitrary first-order perturbation could not be substituted for $Z$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-DDF2A98C">
+<p><a class="environment-identifier" href="../../tag/DBC2334A4FC0/">Lemma <span data-tag="DDF2A98C">9.12.2</span>.</a><span data-gerby-tag="DDF2A98C"></span> Diagonalize $g$ at a point and order its eigenvalues as $\lambda _1\geq \cdots \geq \lambda _ n$. Put </p>
+<div class="equation">
+  \[  \mu _ i=\frac{\sum _{j\ne i}\lambda _ j}{n-1}&gt;0, \quad t_ i=\mu _ i^{-1},\quad f_ i=\frac1{n-1}\sum _{j\ne i}t_ j, \quad \mathcal F=\sum _ i f_ i=\sum _ i t_ i.  \]
+</div>
+<p> Then $\mu _1\leq \cdots \leq \mu _ n$, $f_1\leq \cdots \leq f_ n$, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-1A10A952"><span data-gerby-tag="1A10A952"></span>
+<span class="equation-label"><a data-tag="1A10A952" href="../../tag/051408386360/">9.31</a></span>
+<div>\begin{gather}  \sum _ i f_ i\lambda _ i=n,\qquad \frac{\mathcal F}{n(n-1)}\leq f_ k\leq \frac{\mathcal F}{n-1} \quad (k&gt;1),\qquad t_ i\leq (n-1)f_1\quad (i&gt;1), \\  f_ n\geq \mathcal F/n. \notag \end{gather}</div>
+</div>
+<p> Fix $\tau ,D&gt;0$ and assume $Q_0\geq \tau \gamma $ and $\det P_\gamma (g)\leq D$. For $\lambda _1$ larger than a constant depending only on $n,\tau ,D$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-D0720A1A"><span data-gerby-tag="D0720A1A"></span>
+<span class="equation-label"><a data-tag="D0720A1A" href="../../tag/2B456F0E5D2B/">9.32</a></span>
+<div>\begin{equation}  \sum _ i f_ i(\chi _{i\bar i}-\lambda _ i) \geq \frac\tau 2\mathcal F. \end{equation}</div>
+</div>
+<p> There is also a uniform positive lower bound for $\mathcal F$ depending only on $n,D$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The ordering follows from the formula for $\mu _ i$, and then from that for $f_ i$. The identity $\sum _ if_ i\lambda _ i=n$, which reflects the relation $\log \det P_\gamma (sg)=\log \det P_\gamma (g)+n\log s$, can be checked directly: 
+    
+<div class="equation">
+  \[  \sum _ i f_ i\lambda _ i =\sum _ j\frac{t_ j}{n-1}\sum _{i\ne j}\lambda _ i =\sum _ jt_ j\mu _ j=n.  \]
+</div>
+<p>
+       For $k&gt;1$, the sum defining $f_ k$ contains the largest weight $t_1\geq \mathcal F/n$. The upper bound for $f_ k$ and the estimate for $t_ i$ are immediate, and the largest weight $f_ n$ is at least the average $\mathcal F/n$. 
+    <p>
+      The map $P_\gamma $ is self-adjoint for the matrix trace pairing. Consequently 
+    
+<div class="equation">
+  \[  \sum _ i f_ i\chi _{i\bar i} =\sum _ i t_ i(Q_0)_{i\bar i}\geq \tau \mathcal F.  \]
+</div>
+<p>
+       Moreover $\sum _ i\lambda _ i=\sum _ i\mu _ i&gt;\lambda _1&gt;0$, where the strict inequality follows from $\mu _1&gt;0$. Hence $\mu _ n&gt;\lambda _1/n$. Since the other $n-1$ numbers $\mu _ i$ are at least $\mu _1$, 
+    
+<div class="equation">
+  \[  \mu _1^{n-1}\mu _ n\leq \prod _ i\mu _ i\leq D, \qquad \mathcal F\geq \mu _1^{-1} \geq \left(\frac{\lambda _1}{nD}\right)^{1/(n-1)}.  \]
+</div>
+<p>
+       For $\lambda _1$ sufficiently large this is at least $2n/\tau $, so $n\leq \tau \mathcal F/2$. Subtracting $\sum _ i f_ i\lambda _ i=n$ therefore proves (<a data-tag="D0720A1A" href="../../tag/2B456F0E5D2B/">9.32</a>). Finally, the arithmetic–geometric mean inequality applied to the $t_ i$ gives $\mathcal F\geq nD^{-1/n}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+ The concavity of the logarithmic determinant will supply a positive term with an explicit formula. For the matrix function $\Phi (g)=\log \det P_\gamma (g)$, the negative second differential in a complex matrix direction $B$ and its adjoint is 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-A4B47DA7"><span data-gerby-tag="A4B47DA7"></span>
+<span class="equation-label"><a data-tag="A4B47DA7" href="../../tag/677E6AB0568A/">9.33</a></span>
+<div>\begin{equation}  -D^2\Phi _ g(B,B^*) =\operatorname {tr}\bigl (P_\gamma (g)^{-1}P_\gamma (B) P_\gamma (g)^{-1}P_\gamma (B)^*\bigr )\geq 0. \end{equation}</div>
+</div>
+<p>
+ This follows by differentiating the inverse matrix. In a unitary frame diagonalizing $g$, the off-diagonal terms of this expression include 
+</p>
+<div class="equation">
+  \[  \frac{|B_{k\bar1}|^2}{(n-1)^2\mu _ k\mu _1}.  \]
+</div>
+<p>
+ When $\lambda _ k&lt;\lambda _1$, that coefficient is exactly 
+</p>
+<div class="equation">
+  \[  \frac{f_ k-f_1}{\lambda _1-\lambda _ k} =\frac1{(n-1)^2\mu _ k\mu _1}.  \]
+</div>
+<p>
+ The expression on the right also makes sense when the two eigenvalues coincide. This positive square and the weights $f_ i$ enter the largest-eigenvalue estimate in the next section. 
+</p>
+</div></section><section class="reading-chunk" id="entry-A6EC7DDEACFB" data-section-entries="A6EC7DDEACFB"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="8A591D0B"></span></div><div class="equation" id="non-kahler-pluripotential-theory-8A591D0B"><span data-gerby-tag="8A591D0B"></span><span class="equation-label"><a data-tag="8A591D0B" href="../../tag/A6EC7DDEACFB/">9.29 </a></span><div>\[\begin{aligned}\begin{align} &amp; +\delta _{ij}\sum _{p,k}v_{\bar p}T_{pk\bar k} -v_{\bar j}\sum _ kT_{ik\bar k} -\sum _ kv_{\bar k}T_{ki\bar j}.  \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-148E6041EC3F" data-section-entries="148E6041EC3F 1E20E0CF9A10 2763FB514B34 35CF4803162E 57C7A82680F3 5D951DE4F0FD 7B27AFD05F7E 9994CF39B2B0 9CFA88376131 BE0A6E37B652 D5E11D27FAAA DA6F05F8F203 E4B294710238 EACA66A12E82"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/148E6041EC3F/">9.13 The largest-eigenvalue estimate</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="BC2E1887"></span></div>
+<p>
+The matrix structure now gives a bound for the complex Hessian in terms of the squared gradient. We apply the maximum principle to the largest eigenvalue of $g$, corrected by functions of the gradient and of the potential. The missing torsion indices allow the concavity square to absorb the third derivatives. If the smallest eigenvalue is not too negative, the positive background closes the estimate; otherwise that eigenvalue produces a large positive Hessian square. 
+</p>
+<p>
+ We keep the notation of section <a data-tag="568821A3" href="../../tag/53E844FE515C/">9.12</a>. Plain subscripts on scalar functions and subscripts after a comma on matrix coefficients denote coordinate derivatives, and the coefficients of the Chern connection of $\gamma $ are written $\Gamma ^ q_{ik}$. Choose $\tau &gt;0$ with $Q_0\geq \tau \gamma $. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-9FC90E6F">
+<p><a class="environment-identifier" href="../../tag/2763FB514B34/">Theorem <span data-tag="9FC90E6F">9.13.1</span>.</a><span data-gerby-tag="9FC90E6F"></span> Fix smooth Hermitian forms $\gamma _0,\gamma $ on a compact complex manifold $X$ of dimension $n\geq 2$. For a smooth real function $h$ on $X$, suppose that $v$ is a smooth solution of </p>
+<div class="equation">
+  \[  Q=Q_0+P_\gamma (\mathrm i\partial \bar\partial v)+Z(\partial v)&gt;0, \qquad \log \det _\gamma Q=h,  \]
+</div>
+<p> with the tensors of section <a data-tag="568821A3" href="../../tag/53E844FE515C/">9.12</a>. If $\| v\| _{C^0}$ and $\| h\| _{C^2}$ are bounded, then </p>
+<div class="equation">
+  \[  \sup _ X|\mathrm i\partial \bar\partial v|_\gamma \leq C\bigl (1+\sup _ X|\partial v|_\gamma ^2\bigr ),  \]
+</div>
+<p> where $C$ depends only on these bounds and the fixed smooth data. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Adding a constant, we may assume $\sup _ Xv=0$, and we write $-M\leq v\leq 0$. Set 
+    
+<div class="equation">
+  \[  K=1+\sup _ X|\partial v|_\gamma ^2,\qquad \phi (s)=-\tfrac 12\log (1-s/(2K)),\qquad \psi (t)=D_1\mathrm{e}^{-D_2t}.  \]
+</div>
+<p>
+       The positive constants $D_1,D_2$ will be chosen below using only the fixed data. On $0\leq s\leq K$, 
+    
+<div class="equation">
+  \[  \frac1{4K}\leq \phi '\leq \frac1{2K},\qquad \phi ''=2(\phi ')^2,\qquad 0\leq \phi \leq \tfrac 12\log 2.  \]
+</div>
+<p>
+       Let $\lambda _1$ be the largest eigenvalue of $g=\chi +\mathrm i\partial \bar\partial v+W$ relative to $\gamma $. It is positive, because $\operatorname {tr}_\gamma g=\operatorname {tr}_\gamma Q&gt;0$. Consider a maximum point of 
+    
+<div class="equation">
+  \[  H=\log \lambda _1+\phi (|\partial v|_\gamma ^2)+\psi (v).  \]
+</div>
+<p>
+       It suffices to bound $\lambda _1/K$ at this point, because the other two terms of $H$ are uniformly bounded once $D_1,D_2$ are fixed. We may assume that this ratio exceeds any fixed constant specified in the course of the argument. 
+    <p>
+      Choose holomorphic coordinates that are unitary at the maximum point, with $g$ diagonal there and eigenvalues ordered as $\lambda _1\geq \cdots \geq \lambda _ n$. All estimates below are at this point, and repeated indices are summed only when a sum is written. Put $\lambda =\lambda _1$ and use the weights $t_ i,f_ k$ and their sum $\mathcal F$ from lemma <a data-tag="DDF2A98C" href="../../tag/DBC2334A4FC0/">9.12.2</a>. Since $\sum _ i\lambda _ i&gt;0$ and the eigenvalues are ordered, 
+    
+<div class="equation">
+  \[  |\lambda _ i|\leq (n-1)\lambda ,\qquad |v_{i\bar j}|\leq C\lambda \quad \hbox{if }\lambda \geq K.  \]
+</div>
+<p>
+       The constant $C$ may change from line to line; it is independent of $K$ and, until $D_1,D_2$ are fixed below, also of $D_1,D_2$. The pure second derivatives $v_{ij}$ are not covered by this bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<h5 class="tex-paragraph" data-gerby-tag="CFC7E85E" id="non-kahler-pluripotential-theory-heading:differentiating-the-largest-eigenvalue"><span data-tag="CFC7E85E"></span> Differentiating the largest eigenvalue.</h5>
+<p>
+ Since $\lambda _1$ need not be smooth where it is a multiple eigenvalue, we first perturb $g$. Choose a smooth local unitary frame that is parallel for the Chern connection at the point, with first vector an eigenvector for $\lambda $. Let $B$ be the tensor that is diagonal in this frame, with eigenvalues $0,\epsilon _0,\ldots ,\epsilon _0$, where $\epsilon _0&gt;0$ is fixed and small. Then $B\geq 0$, $\nabla B=0$ at the point, and its second derivatives are bounded by fixed constants. The largest eigenvalue $\widetilde\lambda $ of $g-B$ is simple near the point, is at most $\lambda _1(g)$, and equals $\lambda $ at the point. Hence the smooth function $\widetilde H$, defined like $H$ with $\widetilde\lambda $ in place of $\lambda _1$, also has a local maximum there. Only the largest eigenvalue needs to be simple. 
+</p>
+<p>
+For a family of self-adjoint matrices with a simple largest eigenvalue, differentiate the equation for the normalized eigenvector. Its component in the $p$th eigenspace is the corresponding derivative of the matrix divided by the eigenvalue gap. Differentiating the eigenvalue once more therefore gives 
+</p>
+<div class="equation">
+  \begin{align*}  a_ k:=\widetilde\lambda _ k&amp; =\nabla _ k g_{1\bar1},\\  \widetilde\lambda _{k\bar k} &amp; =\nabla _{\bar k}\nabla _ k g_{1\bar1}+O(1) +\sum _{p&gt;1}\frac{|\nabla _ k g_{1\bar p}|^2+ |\nabla _ k g_{p\bar1}|^2}{\lambda -\lambda _ p+\epsilon _0}. \end{align*}
+</div>
+<p>
+  This formula remains valid if some of the lower eigenvalues coincide, with the sum taken over any orthonormal basis of their eigenspaces. The gaps are positive and at most $n\lambda +\epsilon _0$. In holomorphic coordinates, $a_ k=g_{1\bar1,k}+O(\lambda )$, while converting the second covariant derivative to partial derivatives introduces an error of at most $C\sum _ p|g_{1\bar p,k}|+C\lambda $. We also convert the off-diagonal covariant derivatives in the positive squares, with errors $O(\lambda )$, and absorb the linear off-diagonal terms by Young's inequality. Thus, after decreasing a fixed positive coefficient, 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-8FC9A968"><span data-gerby-tag="8FC9A968"></span>
+<span class="equation-label"><a data-tag="8FC9A968" href="../../tag/E4B294710238/">9.34</a></span>
+<div>\begin{equation}  \widetilde\lambda _{k\bar k} \geq g_{1\bar1,k\bar k} +\frac1{8n\lambda }\sum _{p&gt;1} (|g_{1\bar p,k}|^2+|g_{p\bar1,k}|^2) -C(|g_{1\bar1,k}|+\lambda ). \end{equation}</div>
+</div>
+<p>
+ The precise positive constant will not be used. 
+</p>
+<p>
+Write $V_ k=\partial _ k(|\partial v|_\gamma ^2)$. The first derivative of $\widetilde H$ gives 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-41F3B64E"><span data-gerby-tag="41F3B64E"></span>
+<span class="equation-label"><a data-tag="41F3B64E" href="../../tag/1E20E0CF9A10/">9.35</a></span>
+<div>\begin{equation}  \frac{a_ k}{\lambda }=-\phi ' V_ k-\psi 'v_ k, \qquad |V_ k|\leq C\sqrt K\sum _ p(|v_{pk}|+|v_{p\bar k}|)+CK. \end{equation}</div>
+</div>
+<p>
+ In the second derivative, the derivatives of the fixed metric in $|\partial v|_\gamma ^2$ cost only a small fraction of the positive Hessian squares and a constant. Therefore 
+</p>
+<div class="equation">
+<span class="equation-label">9.36</span>
+<div>\begin{align}  \widetilde H_{k\bar k}\geq {}&amp;  \frac{\widetilde\lambda _{k\bar k}}\lambda -\frac{|a_ k|^2}{\lambda ^2} +\phi '\sum _ p(v_ pv_{\bar p k\bar k}+v_{\bar p}v_{pk\bar k}) +\frac1{5K}\sum _ p(|v_{pk}|^2+|v_{p\bar k}|^2)\notag \\ &amp; +\phi ”|V_ k|^2+\psi ”|v_ k|^2+\psi 'v_{k\bar k}-C.  \end{align}</div>
+</div>
+<p>
+ The third and fourth terms are obtained by differentiating $\sum \gamma ^{p\bar q}v_ pv_{\bar q}$ twice and applying $ab\leq \varepsilon a^2+C_\varepsilon b^2$ to each term containing a derivative of the metric. 
+</p>
+<h5 class="tex-paragraph" data-gerby-tag="C9021B61" id="non-kahler-pluripotential-theory-heading:the-third-derivatives-and-the-torsion-term"><span data-tag="C9021B61"></span> The third derivatives and the torsion term.</h5>
+<p>
+ We now estimate the third derivatives in this inequality. Define 
+</p>
+<div class="equation">
+  \begin{gather*}  E=\sum _{k,p} f_ k(|v_{pk}|^2+|v_{p\bar k}|^2),\qquad S=\sum _{k,p} f_ k(|v_{pk}|+|v_{p\bar k}|),\\  \mathcal C=-D^2\Phi _ g(\nabla _1g,(\nabla _1g)^*)\geq 0. \end{gather*}
+</div>
+<p>
+  The first differentiated equation is 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-71E04BDB"><span data-gerby-tag="71E04BDB"></span>
+<span class="equation-label"><a data-tag="71E04BDB" href="../../tag/BE0A6E37B652/">9.37</a></span>
+<div>\begin{equation}  \sum _ k f_ k\nabla _ p g_{k\bar k}=h_ p. \end{equation}</div>
+</div>
+<p>
+ Since $P_\gamma (W)=Z$ and the connection preserves $\gamma $, one has the exact contractions 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-93E168BF"><span data-gerby-tag="93E168BF"></span>
+<span class="equation-label"><a data-tag="93E168BF" href="../../tag/5D951DE4F0FD/">9.38</a></span>
+<div>\begin{equation}  \sum _ k f_ k\nabla _ p W_{k\bar k}=\sum _ i t_ i\nabla _ p Z_{i\bar i}, \qquad \sum _ k f_ k\nabla _{\bar1}\nabla _1W_{k\bar k} =\sum _ i t_ i\nabla _{\bar1}\nabla _1Z_{i\bar i}. \end{equation}</div>
+</div>
+<p>
+ The weights in these identities are evaluated at the point; they are not differentiated. 
+</p>
+<p>
+The large weights are controlled as follows. By (<a data-tag="1A10A952" href="../../tag/051408386360/">9.31</a>), the only weight $t_ i$ not bounded by $(n-1)f_1$ is $t_1$. In $Z_{1\bar1}$, every gradient index differs from $1$, by (<a data-tag="E3CADF96" href="../../tag/1525F23C956C/">9.30</a>). Thus a pure second derivative in $\nabla _ pZ_{1\bar1}$ has an index $q&gt;1$, and it can be weighted by $f_ q$, which is comparable to $\mathcal F$; here we use that pure derivatives commute in these coordinates. A mixed second derivative can similarly be placed in column $q$ by conjugate symmetry. All other $t_ i$ are bounded by a constant times every $f_ k$, and derivatives of coefficients cost $C\sqrt K\mathcal F$. Applying these observations to the first identity in (<a data-tag="93E168BF" href="../../tag/5D951DE4F0FD/">9.38</a>), and then to (<a data-tag="71E04BDB" href="../../tag/BE0A6E37B652/">9.37</a>), we obtain, for each $p$, 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-9EFE86ED"><span data-gerby-tag="9EFE86ED"></span>
+<span class="equation-label"><a data-tag="9EFE86ED" href="../../tag/EACA66A12E82/">9.39</a></span>
+<div>\begin{equation}  \left|\sum _ k f_ kv_{k\bar k p}\right| +\left|\sum _ k f_ kv_{k\bar k\bar p}\right| \leq C(S+\sqrt K\mathcal F). \end{equation}</div>
+</div>
+<p>
+ The connection terms in the differentiated equation contribute weighted mixed second derivatives and terms bounded by $C\sqrt K\mathcal F$, which are already on the right. The bounded derivatives of $h$ are absorbed using the positive lower bound for $\mathcal F$ in lemma <a data-tag="DDF2A98C" href="../../tag/DBC2334A4FC0/">9.12.2</a>. 
+</p>
+<p>
+Next we insert the second derivative of the equation into the eigenvalue estimate. Since partial derivatives of $v$ commute, 
+</p>
+<div class="equation">
+  \[  g_{1\bar1,k\bar k} =g_{k\bar k,1\bar1}+W_{1\bar1,k\bar k} -W_{k\bar k,1\bar1}+O(1).  \]
+</div>
+<p>
+ Differentiating the equation twice covariantly gives 
+</p>
+<div class="equation">
+  \[  \sum _ k f_ k\nabla _{\bar1}\nabla _1g_{k\bar k} =h_{1\bar1}+\mathcal C.  \]
+</div>
+<p>
+ The conversion to partial derivatives uses 
+</p>
+<div class="equation">
+  \[  \nabla _{\bar1}\nabla _1g_{k\bar k} =g_{k\bar k,1\bar1} -2\operatorname {Re}\sum _ q\overline{\Gamma ^ q_{1k}}g_{k\bar q,1} +O(\lambda ).  \]
+</div>
+<p>
+ We rewrite the derivative of $g$ in this term using $g_{k\bar q,1}=g_{1\bar q,k}+W_{k\bar q,1}-W_{1\bar q,k}+O(1)$ and its conjugate. The first part is absorbed by the off-diagonal squares in (<a data-tag="8FC9A968" href="../../tag/E4B294710238/">9.34</a>), at the cost of $C\lambda \mathcal F+C\sum _ k f_ k|g_{1\bar1,k}|$. The part involving $W_{1\bar q,k}$ is bounded by $C\lambda \mathcal F+C\sum _{k,p}f_ k|v_{pk}|$. For the remaining part we use 
+</p>
+<div class="equation">
+  \[  2\operatorname {Re}\sum _ q\overline{\Gamma ^ q_{1k}}W_{k\bar q,1} =W_{k\bar k,1\bar1} -\nabla _{\bar1}\nabla _1W_{k\bar k}+O(\sqrt K).  \]
+</div>
+<p>
+ This cancels the partial second derivative $-W_{k\bar k,1\bar1}$ above, and we obtain 
+</p>
+<div class="equation">
+<span class="equation-label">9.40</span>
+<div>\begin{align}  \sum _ k f_ k\widetilde\lambda _{k\bar k} \geq {}&amp; \mathcal C+\sum _ k f_ k (W_{1\bar1,k\bar k}-\nabla _{\bar1}\nabla _1W_{k\bar k})\notag \\ &amp; -C\left(\sum _ k f_ k|g_{1\bar1,k}| +\sum _{k,p}f_ k|v_{pk}|+\lambda \mathcal F\right).  \end{align}</div>
+</div>
+<p>
+The second contraction in (<a data-tag="93E168BF" href="../../tag/5D951DE4F0FD/">9.38</a>) bounds the negative torsion term here. In the part with weight $t_1$, the possible third derivatives are $v_{q1\bar1}$ and their conjugates with $q&gt;1$; all other parts have weights bounded by $Cf_1$. We commute partial derivatives and use 
+</p>
+<div class="equation">
+  \[  v_{1\bar1,k}=g_{1\bar1,k}-\chi _{1\bar1,k}-W_{1\bar1,k}.  \]
+</div>
+<p>
+ The exclusions in lemma <a data-tag="57B6169B" href="../../tag/6168D5D4EF96/">9.12.1</a> ensure that any remaining pure derivative $v_{11}$ carries only the small weight $Cf_1$, and derivatives of the connection contribute second derivatives with the same weighted bounds. It follows that 
+</p>
+<div class="equation">
+  \[  \left|\sum _ k f_ k\nabla _{\bar1}\nabla _1W_{k\bar k}\right| \leq C\left(\sum _ k f_ k|g_{1\bar1,k}| +\sum _{k,p}f_ k|v_{pk}|+\lambda \mathcal F\right).  \]
+</div>
+<p>
+ For the positive torsion term, write $W_{1\bar1}=\sum _ p(c^ pv_ p+\overline{c^ p}v_{\bar p})$ with fixed smooth coefficients $c^ p$. Two derivatives give $c^ p\sum _ k f_ kv_{pk\bar k}$ and its conjugate, plus terms bounded by $C(S+\sqrt K\mathcal F)$. The former are bounded by (<a data-tag="9EFE86ED" href="../../tag/EACA66A12E82/">9.39</a>), and in $S$ the mixed second derivatives can be bounded by $C\lambda $, giving 
+</p>
+<div class="equation">
+  \[  \left|\sum _ k f_ k W_{1\bar1,k\bar k}\right| \leq C\left(\sum _{k,p}f_ k|v_{pk}|+\lambda \mathcal F\right).  \]
+</div>
+<p>
+  Substitute these estimates in (<a data-tag="988193F6" href="../../tag/D807F632DAD7/">9.40</a>), multiply (<a data-tag="400F3D73" href="../../tag/143977813E90/">9.36</a>) by $f_ k$ and sum over $k$. The third derivatives in the latter are bounded by (<a data-tag="9EFE86ED" href="../../tag/EACA66A12E82/">9.39</a>) and $\phi '|\partial v|\leq C/\sqrt K$, and the resulting linear terms in the second derivatives are absorbed by a small part of $E/K$, at the cost of $C\mathcal F$. Since $\widetilde H$ has a local maximum, $\sum _ kf_ k\widetilde H_{k\bar k}\leq 0$, and thus 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-60112CCB"><span data-gerby-tag="60112CCB"></span>
+<span class="equation-label"><a data-tag="60112CCB" href="../../tag/35CF4803162E/">9.41</a></span>
+<div>\begin{equation}  \begin{split}  0\geq {}&amp; \frac{\mathcal C}{\lambda } -\sum _ k f_ k\frac{|a_ k|^2}{\lambda ^2} +\frac{E}{6K}+\phi ''\sum _ k f_ k|V_ k|^2 +\psi ''\sum _ k f_ k|v_ k|^2+\psi '\sum _ k f_ kv_{k\bar k}\\ &amp; -C\left(\sum _ k f_ k\frac{|g_{1\bar1,k}|}{\lambda }+\mathcal F\right). \end{split} \end{equation}</div>
+</div>
+<h5 class="tex-paragraph" data-gerby-tag="52860DFC" id="non-kahler-pluripotential-theory-heading:cancellation-when-the-smallest-eigenvalue-is-controlled"><span data-tag="52860DFC"></span> Cancellation when the smallest eigenvalue is controlled.</h5>
+<p>
+ Fix $0&lt;\delta &lt;1/2$, to be chosen after $D_1,D_2$. First suppose that $\lambda _ n\geq -\delta \lambda $. Put $I=\{ k:f_ k&gt;\delta ^{-1}f_1\} $, so that $1\notin I$. Equation (<a data-tag="41F3B64E" href="../../tag/1E20E0CF9A10/">9.35</a>) and $\phi ''=2(\phi ')^2$ give 
+</p>
+<div class="equation">
+  \begin{align*}  -\sum _{k\notin I}f_ k|a_ k|^2/\lambda ^2 &amp; \geq -\phi ''\sum _{k\notin I}f_ k|V_ k|^2 -2(\psi ')^2\delta ^{-1}f_1K,\\  -2\delta \sum _{k\in I}f_ k|a_ k|^2/\lambda ^2 &amp; \geq -2\delta \phi ”\sum _{k\in I}f_ k|V_ k|^2 -4\delta (\psi ')^2\sum _{k\in I}f_ k|v_ k|^2. \end{align*}
+</div>
+<p>
+  Choose $\delta $ small enough that $4\delta (\psi ')^2\leq \psi ''/2$ throughout $[-M,0]$. By (<a data-tag="A4B47DA7" href="../../tag/677E6AB0568A/">9.33</a>), 
+</p>
+<div class="equation">
+  \[  \frac{\mathcal C}{\lambda } \geq \sum _{k\in I}\frac{f_ k-f_1}{\lambda (\lambda -\lambda _ k)} |\nabla _1g_{k\bar1}|^2 \geq (1-2\delta )\sum _{k\in I} \frac{f_ k|\nabla _1g_{k\bar1}|^2}{\lambda ^2}.  \]
+</div>
+<p>
+ Here we used $(1-\delta )/(1+\delta )\geq 1-2\delta $. 
+</p>
+<p>
+ We need the following comparison of the two derivatives $\nabla _1g_{k\bar1}$ and $a_ k=\nabla _ kg_{1\bar1}$. For every $\varepsilon &gt;0$, provided $\lambda /K$ is sufficiently large depending on the fixed function $\psi $, 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-E589D4BE"><span data-gerby-tag="E589D4BE"></span>
+<span class="equation-label"><a data-tag="E589D4BE" href="../../tag/7B27AFD05F7E/">9.44</a></span>
+<div>\begin{equation}  \sum _{k\in I}f_ k\frac{|\nabla _1g_{k\bar1}|^2-|a_ k|^2}{\lambda ^2} \geq -\frac{E}{12K}-C\mathcal F -\varepsilon C|\psi '|\mathcal F -C_\varepsilon |\psi '|\sum _ k f_ k|v_ k|^2. \end{equation}</div>
+</div>
+<p>
+ To prove this, let $U=\sum _{p&gt;1,q}|v_{pq}|$. Commuting partial derivatives in $g$ gives, for $k&gt;1$, 
+</p>
+<div class="equation">
+  \[  \nabla _1g_{k\bar1}-a_ k =W_{k\bar1,1}-W_{1\bar1,k}+O(\lambda ),\qquad |W_{k\bar1,1}|+|W_{1\bar1,k}|\leq C(\lambda +U).  \]
+</div>
+<p>
+ The second inequality uses the absence of $v_1$ in $Z_{k\bar1}$, so that differentiation in the direction $1$ introduces no pure derivative $v_{11}$. All mixed second derivatives are bounded by $C\lambda $, and every other pure second derivative occurs in $U$. 
+</p>
+<p>
+ Use $|a+e|^2-|a|^2\geq -2|a||e|$, and then (<a data-tag="41F3B64E" href="../../tag/1E20E0CF9A10/">9.35</a>). For $k&gt;1$, the pure second derivatives in $V_ k$ all occur in $U$. With $H_ k=\sum _ p|v_{p\bar k}|$, the resulting negative terms, divided by $\lambda ^2$, are bounded by a constant times 
+</p>
+<div class="equation">
+  \[  K^{-1/2}H_ k+K^{-1/2}U +\frac{U^2}{\lambda \sqrt K}+1 +|\psi '||v_ k|+\frac{|\psi '|}{\lambda }|v_ k|U.  \]
+</div>
+<p>
+ Here we used $H_ k\leq C\lambda $ and $\lambda \geq K$ to simplify the cross terms. The weight comparison (<a data-tag="1A10A952" href="../../tag/051408386360/">9.31</a>), the symmetry of pure derivatives and the Cauchy–Schwarz inequality give $\mathcal F U^2\leq C E$. Consequently, after multiplication by $f_ k$ and summation, the first two terms are bounded by any fixed small fraction of $E/K$ plus $C\mathcal F$. The third is at most $CE/(\lambda \sqrt K)$, which is absorbed by another such fraction when $\lambda /K$ is large. For the last two terms we use 
+</p>
+<div class="equation">
+  \[  |v_ k|\leq \varepsilon +C_\varepsilon |v_ k|^2,\qquad |v_ k|U\leq |v_ k|^2+U^2.  \]
+</div>
+<p>
+ The contribution of $U^2$ is at most $C|\psi '|E/\lambda $, which can again be absorbed when $\lambda /K$ is large. Choosing the fractions with sum $1/12$ proves (<a data-tag="E589D4BE" href="../../tag/7B27AFD05F7E/">9.44</a>). 
+</p>
+<p>
+Insert this cancellation and the preceding inequalities into (<a data-tag="60112CCB" href="../../tag/35CF4803162E/">9.41</a>). The remaining derivative error satisfies, by (<a data-tag="41F3B64E" href="../../tag/1E20E0CF9A10/">9.35</a>), 
+</p>
+<div class="equation">
+  \[  C\sum _ k f_ k|g_{1\bar1,k}|/\lambda \leq \frac{E}{60K}+C\mathcal F +\varepsilon C|\psi '|\mathcal F +C_\varepsilon |\psi '|\sum _ k f_ k|v_ k|^2,  \]
+</div>
+<p>
+ after Young's inequality and an adjustment of constants. The torsion contraction also satisfies 
+</p>
+<div class="equation">
+  \[  \left|\sum _ k f_ kW_{k\bar k}\right| =\left|\sum _ i t_ iZ_{i\bar i}\right| \leq C\sum _ k f_ k|v_ k| \leq \varepsilon C\mathcal F+C_\varepsilon \sum _ k f_ k|v_ k|^2.  \]
+</div>
+<p>
+  The first inequality uses again the missing gradient index in $Z_{1\bar1}$. Since $\psi '&lt;0$ and $v_{k\bar k}=\lambda _ k-\chi _{k\bar k}-W_{k\bar k}$, we conclude, after decreasing the remaining coefficient of $E$ if necessary, that 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-687F302F"><span data-gerby-tag="687F302F"></span>
+<span class="equation-label"><a data-tag="687F302F" href="../../tag/9CFA88376131/">9.45</a></span>
+<div>\begin{equation}  \begin{split}  0\geq {}&amp;  f_1\left(\frac{\lambda ^2}{40K} -2(\psi ')^2\delta ^{-1}K\right) +\left(\frac{\psi ''}{2}-C_\varepsilon |\psi '|\right) \sum _ k f_ k|v_ k|^2\\ &amp; -C_0\mathcal F-\varepsilon C_0|\psi '|\mathcal F +|\psi '|\sum _ k f_ k(\chi _{k\bar k}-\lambda _ k). \end{split} \end{equation}</div>
+</div>
+<p>
+ For the first term we used $|v_{1\bar1}|^2\geq \lambda ^2/2-CK$, which follows from $\chi +W=O(\sqrt K)$, and $E\geq f_1|v_{1\bar1}|^2$. 
+</p>
+<p>
+For large $\lambda $, lemma <a data-tag="DDF2A98C" href="../../tag/DBC2334A4FC0/">9.12.2</a> bounds the last sum below by $\tau \mathcal F/2$. Choose first $\varepsilon $ with $\varepsilon C_0&lt;\tau /4$. Next choose $D_2$ so that $\psi ''/2&gt;C_\varepsilon |\psi '|$, and then choose $D_1$ so that $|\psi '|\tau /4&gt;C_0$ on $[-M,0]$. Finally choose $\delta $ as above. All these choices depend only on the fixed data. Inequality (<a data-tag="687F302F" href="../../tag/9CFA88376131/">9.45</a>) then forces $\lambda ^2\leq 80\, \delta ^{-1}\sup _{[-M,0]}|\psi '|^2K^2$, which proves the desired bound in the first case. 
+</p>
+<h5 class="tex-paragraph" data-gerby-tag="5550C2C7" id="non-kahler-pluripotential-theory-heading:the-remaining-eigenvalue-configuration"><span data-tag="5550C2C7"></span> The remaining eigenvalue configuration.</h5>
+<p>
+ Suppose now that $\lambda _ n&lt;-\delta \lambda $, keeping the same constants. Since $f_ n\geq \mathcal F/n$ and $|\chi +W|\leq C\sqrt K$, 
+</p>
+<div class="equation">
+  \[  \frac{E}{6K}\geq \frac{f_ n}{6K}|v_{n\bar n}|^2 \geq \frac{\delta ^2\lambda ^2}{12nK}\mathcal F-C\mathcal F.  \]
+</div>
+<p>
+  In (<a data-tag="60112CCB" href="../../tag/35CF4803162E/">9.41</a>), discard $\mathcal C$ and the term with $\psi ''$. Since $\psi $ is now fixed, $|\psi '\sum _ k f_ kv_{k\bar k}|\leq C\lambda \mathcal F$. Using $g_{1\bar1,k}=a_ k+O(\lambda )$ and Young's inequality, we bound the last error term by $\frac12\sum _ k f_ k|a_ k|^2/\lambda ^2+C\mathcal F$. This leaves 
+</p>
+<div class="equation">
+  \[  0\geq -\tfrac 32\sum _ k f_ k|a_ k|^2/\lambda ^2 +\frac{\delta ^2\lambda ^2}{12nK}\mathcal F +\phi ''\sum _ k f_ k|V_ k|^2-C\lambda \mathcal F.  \]
+</div>
+<p>
+ By (<a data-tag="41F3B64E" href="../../tag/1E20E0CF9A10/">9.35</a>) and the scalar inequality $\tfrac 32|a+b|^2\leq 2|a|^2+6|b|^2$, 
+</p>
+<div class="equation">
+  \[  \tfrac 32\sum _ k f_ k|a_ k|^2/\lambda ^2 \leq \phi ''\sum _ k f_ k|V_ k|^2+CK\mathcal F.  \]
+</div>
+<p>
+ Since $\lambda \geq K$, combining the last two inequalities and dividing by $\lambda \mathcal F&gt;0$ gives $\lambda /K\leq C$. This finishes both cases. Since $H$ attains its maximum at the chosen point, the bound for $\lambda _1/K$ there gives a bound at all points, and $|\lambda _ i|\leq (n-1)\lambda _1$ then bounds every entry of the complex Hessian, as asserted. 
+</p>
+<article class="env-proof">
+</article>
+</div></section><section class="reading-chunk" id="entry-143977813E90" data-section-entries="143977813E90"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="400F3D73"></span></div><div class="equation" id="non-kahler-pluripotential-theory-400F3D73"><span data-gerby-tag="400F3D73"></span><span class="equation-label"><a data-tag="400F3D73" href="../../tag/143977813E90/">9.36 </a></span><div>\[\begin{aligned}\begin{align} &amp; +\phi ”|V_ k|^2+\psi ”|v_ k|^2+\psi 'v_{k\bar k}-C.  \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-D807F632DAD7" data-section-entries="D807F632DAD7"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="988193F6"></span></div><div class="equation" id="non-kahler-pluripotential-theory-988193F6"><span data-gerby-tag="988193F6"></span><span class="equation-label"><a data-tag="988193F6" href="../../tag/D807F632DAD7/">9.40 </a></span><div>\[\begin{aligned}\begin{align} &amp; -C\left(\sum _ k f_ k|g_{1\bar1,k}| +\sum _{k,p}f_ k|v_{pk}|+\lambda \mathcal F\right).  \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-D4DE203BE3BF" data-section-entries="6E3495B1A225 89711B0B590A AC61FE141521 B2C22D2540A1 C26DE70CAF39 D4DE203BE3BF"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/D4DE203BE3BF/">9.14 A Liouville theorem for the limiting cone</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="5C496399"></span></div>
+<p>
+Rescaling at a point of large gradient removes the background and first-order terms of the Gauduchon equation and leaves a degenerate equation on $\mathbb C^ n$, whose solutions are maximal for a cone of matrices. We show that its bounded Lipschitz solutions are constant. The proof argues by induction on the dimension: if the energy of a solution in some complex direction becomes small on large balls, a limit is independent of one variable; if all directional energies stay positive, they give a strictly admissible comparison function. 
+</p>
+<p>
+On $\mathbb C^ n$ we use Euclidean coordinates $z=(z_1,\ldots ,z_ n)$, the identity matrix $I$, the Euclidean balls $B(x,r)$ and Euclidean volume $\mathrm{d}y$. In this section $\nabla $ and $\Delta $ denote the Euclidean real gradient and Laplacian, and $\partial _\xi $ denotes differentiation in a complex direction $\xi $. 
+</p>
+<p>
+ For $n\geq 2$ and a Hermitian matrix $H$, set 
+</p>
+<div class="equation">
+  \[  P_ n(H)=\frac{(\operatorname {tr}H)I-H}{n-1}.  \]
+</div>
+<p>
+ This is the map $P_\gamma $ of section <a data-tag="568821A3" href="../../tag/53E844FE515C/">9.12</a> for the Euclidean metric. It preserves nonnegativity and satisfies $P_ n(I)=I$ and $\operatorname {tr}P_ n(H)=\operatorname {tr}H$. For a real function $v$ write $H(v)=(v_{i\bar j})$ in Euclidean coordinates. A continuous function $v$ on an open set of $\mathbb C^ n$ is <em>admissible</em> if $P_ n(H(v))\geq 0$ in the sense of matrix-valued distributions. It is <em>maximal for this cone</em> if it is admissible and every smooth function $h$ touching $v$ from below at a point satisfies 
+</p>
+<div class="equation">
+  \[  P_ n(H(h))\not&gt;0  \]
+</div>
+<p>
+ at that point. Here touching means that $v-h$ has a local minimum with value zero, which need not be a strict minimum. Maximality is thus the viscosity supersolution condition for the degenerate equation $\det P_ n(H(v))=0$ on the boundary of the cone, together with distributional admissibility. 
+</p>
+<p>
+Taking the trace shows that admissible functions are subharmonic. Since $P_ n$ is linear, convolution preserves admissibility, and so do nonnegative linear combinations and integrals of admissible smooth functions. Translations and unitary changes of coordinates preserve both conditions, as do multiplication by a positive constant and addition of a constant. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-D0FAF6CD">
+<p><a class="environment-identifier" href="../../tag/6E3495B1A225/">Lemma <span data-tag="D0FAF6CD">9.14.1</span>.</a><span data-gerby-tag="D0FAF6CD"></span> Local uniform limits of admissible maximal functions are admissible and maximal. If $v$ is maximal on a bounded open set $D\subset \mathbb C^ n$, $h$ is smooth and admissible on $D$, both functions are continuous on $\overline D$, and $h\leq v$ on $\partial D$, then $h\leq v$ on $D$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $v_ j$ be admissible maximal functions converging locally uniformly to $v$. Distributional positivity is preserved under this convergence. For maximality, suppose that a smooth function $h$ touches $v$ from below at $z_0$ and $P_ n(H(h)(z_0))&gt;0$. Choose a small ball on which $v-h\geq 0$. Replacing $h$ by $h-\delta |z-z_0|^2$, with $\delta &gt;0$ sufficiently small, keeps its matrix strictly positive near $z_0$ and makes the minimum strict. Uniform convergence then produces interior minimum points of $v_ j-h+\delta |z-z_0|^2$ tending to $z_0$. Adding the minimum value to the test function gives a function touching $v_ j$ from below with strictly positive matrix, a contradiction. 
+    <p>
+      For comparison, choose $R$ with $\overline D\subset \{ |z|\leq R\} $. If $h&gt;v$ somewhere, then for small $\delta &gt;0$ the smooth function 
+    
+<div class="equation">
+  \[  h_\delta =h+\delta (|z|^2-R^2)  \]
+</div>
+<p>
+       still exceeds $v$ at some interior point and is at most $v$ on the boundary. Hence the negative minimum of $v-h_\delta $ is attained in the interior. But $P_ n(H(h_\delta ))=P_ n(H(h))+\delta I&gt;0$ there, which contradicts maximality after the minimum value is added to $h_\delta $. No boundary regularity of $D$ is needed for this argument. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-7A4BB576">
+<p><a class="environment-identifier" href="../../tag/AC61FE141521/">Theorem <span data-tag="7A4BB576">9.14.2</span>.</a><span data-gerby-tag="7A4BB576"></span> A bounded globally Lipschitz function on $\mathbb C^ n$, $n\geq 2$, that is maximal for this cone is constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $v$ be a bounded globally Lipschitz maximal function on $\mathbb C^ n$. We argue by induction on $n$. For $n=2$, $P_2(H)\geq 0$ is equivalent to $H\geq 0$, so $v$ is plurisubharmonic, and lemma <a data-tag="20F3C641" href="../../tag/E6AC64216A47/">1.3.5</a> shows that it is constant. 
+    <p>
+      We first explain the reduction in dimension for $n\geq 3$. If a function is independent of $z_ n$, its complex Hessian has the block form $H\oplus 0$. The first block of $P_ n(H\oplus 0)$ is 
+    
+<div class="equation">
+  \[  \frac{n-2}{n-1}P_{n-1}(H),  \]
+</div>
+<p>
+       and the last entry is $\operatorname {tr}H/(n-1)$. Nonnegativity of $P_{n-1}(H)$ implies $\operatorname {tr}H\geq 0$, and positive definiteness implies $\operatorname {tr}H&gt;0$. Thus $P_ n(H\oplus 0)$ is nonnegative, respectively positive definite, exactly when $P_{n-1}(H)$ is. The distributional version follows from the same linear identities. A test function in $n-1$ variables extends to $\mathbb C^ n$ independently of $z_ n$, so maximality also passes to $n-1$ variables. Consequently the induction hypothesis applies to bounded Lipschitz maximal functions that are independent of one complex variable. 
+    <p>
+      Suppose now that $v$ is nonconstant. Adding a constant and multiplying by a positive constant, we may assume that $\inf v=0$ and $\sup v=1$. Let $L$ be the Lipschitz constant of $v$. Choose a smooth radial nonnegative probability kernel $\eta $, supported in the closed unit ball and strictly positive in its interior. For a bounded measurable function $f$ and $r&gt;0$, write 
+    
+<div class="equation">
+  \[  [f]_ r(x)=\int _{\mathbb C^ n}f(x+y)\eta _ r(y)\, \mathrm{d}y, \qquad \eta _ r(y)=r^{-2n}\eta (y/r),\qquad v_\epsilon =[v]_\epsilon .  \]
+</div>
+<p>
+       Both $v$ and $v^2$ are subharmonic. For $v^2$, use $v_\epsilon \geq 0$ and $\Delta (v_\epsilon ^2)=2v_\epsilon \Delta v_\epsilon +2|\nabla v_\epsilon |^2\geq 0$, and pass to the uniform limit as $\epsilon \to 0$. 
+    <p>
+      For $f=v$ and for $f=v^2$, the averages $[f]_ r(x)$ increase with $r$, by the monotonicity of spherical means of subharmonic functions. Their limit as $r\to \infty $ is independent of $x$, since 
+    
+<div class="equation">
+  \[  |[f]_ r(x)-[f]_ r(y)| \leq \| f\| _\infty \| \eta _ r(\cdot -x)-\eta _ r(\cdot -y)\| _{L^1} \leq C\frac{|x-y|}{r}.  \]
+</div>
+<p>
+       By the submean inequality this limit is at least $f(x)$ for every $x$, while it is at most $\sup f=1$. Therefore 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-E4BE05CC"><span data-gerby-tag="E4BE05CC"></span>
+<span class="equation-label"><a data-tag="E4BE05CC" href="../../tag/B2C22D2540A1/">9.48</a></span>
+<div>\begin{equation}  [v]_ r(x)\longrightarrow 1,\qquad [v^2]_ r(x)\longrightarrow 1. \end{equation}</div>
+</div>
+<p>
+      We distinguish two cases. First suppose that there exist $\rho &gt;0$, sequences $\epsilon _ k\downarrow 0$ and $r_ k\to \infty $, points $x_ k$ and unit complex directions $\xi _ k$ such that 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-7944DFA6"><span data-gerby-tag="7944DFA6"></span>
+<span class="equation-label"><a data-tag="7944DFA6" href="../../tag/C26DE70CAF39/">9.49</a></span>
+<div>\begin{equation}  [v^2]_{r_ k}(x_ k)+[v]_\rho (x_ k)-2v(x_ k)\geq \frac43, \qquad \int _{B(x_ k,r_ k)}|\partial _{\xi _ k}v_{\epsilon _ k}|^2\, \mathrm{d}y \longrightarrow 0. \end{equation}</div>
+</div>
+<p>
+       Translate $x_ k$ to the origin and make $\xi _ k$ the last complex direction by a unitary change of coordinates. The resulting functions have the same bounds and Lipschitz constant, so by the Arzelà–Ascoli theorem and lemma <a data-tag="D0FAF6CD" href="../../tag/6E3495B1A225/">9.14.1</a> a subsequence converges locally uniformly to a maximal function $a$. The corresponding mollifications at scale $\epsilon _ k$ have the same local uniform limit, and by the integral condition their derivatives in the last complex direction tend to zero in $L^2$ on every fixed ball. Hence $\partial a/\partial z_ n=0$ in the sense of distributions. Since $a$ is real and continuous, it is independent of $z_ n$. 
+    <p>
+      The dimension reduction and the induction hypothesis show that $a$ is a constant $c\in [0,1]$. In the first inequality of (<a data-tag="7944DFA6" href="../../tag/C26DE70CAF39/">9.49</a>), the first term is at most one, while the average at the fixed radius $\rho $ and the value at the origin both tend to $c$. It would follow that $4/3\leq 1-c\leq 1$, a contradiction. 
+    <p>
+       In the remaining case, for every fixed $\rho &gt;0$ there is $C_\rho \geq 1$ such that, whenever $0&lt;\epsilon &lt;C_\rho ^{-1}$, $r&gt;C_\rho $, and 
+    
+<div class="equation">
+  \[  [v^2]_ r(x)+[v]_\rho (x)-2v(x)\geq \frac43,  \]
+</div>
+<p>
+       one has 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-6914E415"><span data-gerby-tag="6914E415"></span>
+<span class="equation-label"><a data-tag="6914E415" href="../../tag/89711B0B590A/">9.50</a></span>
+<div>\begin{equation}  \int _{B(x,r)}|\partial _\xi v_\epsilon |^2\, \mathrm{d}y \geq C_\rho ^{-1} \quad \hbox{for every unit complex direction }\xi . \end{equation}</div>
+</div>
+<p>
+       Indeed, if this failed for $C_\rho =k$ for every integer $k$, a diagonal choice would give sequences as in (<a data-tag="7944DFA6" href="../../tag/C26DE70CAF39/">9.49</a>). 
+    <p>
+      After a translation we may assume that $v(0)&lt;1/12$. By (<a data-tag="E4BE05CC" href="../../tag/B2C22D2540A1/">9.48</a>), choose $\rho $ with $[v]_\rho (0)&gt;3/4$, and then $r&gt;C_\rho $ with $[v^2]_ r(0)&gt;3/4$. The open set 
+    
+<div class="equation">
+  \[  D=\{ x:2v(x)&lt;[v^2]_ r(x)+[v]_\rho (x)-4/3\}   \]
+</div>
+<p>
+       contains the origin. We claim that, for some $c&gt;0$, 
+    
+<div class="equation">
+  \[  [v^2]_ r-c|z|^2  \]
+</div>
+<p>
+       is smooth and admissible on $D$. 
+    <p>
+      To prove the claim, differentiate the square of the smooth mollification: 
+    
+<div class="equation">
+  \[  H(v_\epsilon ^2) =2v_\epsilon H(v_\epsilon ) +2(\partial _ i v_\epsilon \, \overline{\partial _ jv_\epsilon })_{ij}.  \]
+</div>
+<p>
+       Denote by $A_\epsilon $ and $B_\epsilon $ the convolutions at the fixed radius $r$ of these two terms. The first satisfies $P_ n(A_\epsilon )\geq 0$, because $v_\epsilon \geq 0$, $v_\epsilon $ is admissible, and $P_ n$ is linear. 
+    <p>
+      The second satisfies $B_\epsilon \geq c_0I$ on $D$ for small $\epsilon $, with a constant $c_0&gt;0$. Here the passage from the unweighted integral in (<a data-tag="6914E415" href="../../tag/89711B0B590A/">9.50</a>) to the convolution needs care. The bound $|\nabla v_\epsilon |\leq L$ makes the energy of a sufficiently thin boundary annulus of $B(x,r)$ at most $C_\rho ^{-1}/2$, uniformly in $x,\epsilon ,\xi $. On the remaining smaller closed ball, the fixed kernel $\eta _ r$ has a positive minimum. For points $x\in D$, (<a data-tag="6914E415" href="../../tag/89711B0B590A/">9.50</a>) then gives a uniform positive lower bound for the weighted integral in every direction, which is the asserted matrix inequality for $B_\epsilon $. 
+    <p>
+      Choose $0&lt;c\leq c_0$. Since $P_ n$ preserves nonnegative matrices, 
+    
+<div class="equation">
+  \[  P_ n\bigl (H([v_\epsilon ^2]_ r)-cI\bigr )\geq 0 \quad \hbox{on }D.  \]
+</div>
+<p>
+       As $\epsilon \downarrow 0$, $v_\epsilon ^2\to v^2$ uniformly, and convolution at the fixed positive radius $r$ gives convergence of all derivatives. This proves the claim. 
+    <p>
+      The smooth function 
+    
+<div class="equation">
+  \[  h=\tfrac 12\bigl ([v^2]_ r-c|z|^2+[v]_\rho -4/3\bigr )  \]
+</div>
+<p>
+       is therefore admissible on $D$. The set $D'=\{ v&lt;h\} $ contains the origin, it is bounded because $v$ and its averages are bounded, and it lies in $D$. Moreover $v=h$ on $\partial D'$. Lemma <a data-tag="D0FAF6CD" href="../../tag/6E3495B1A225/">9.14.1</a>, applied on $D'$, gives $h\leq v$ there, which contradicts the definition of $D'$. This excludes the second case and proves the theorem. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+The Lipschitz bound is used both for the compactness of translates and for the annulus estimate. For $n&gt;1$, the conclusion would not follow from boundedness and subharmonicity alone, since $\mathbb C^ n=\mathbb R^{2n}$ carries nonconstant bounded subharmonic functions. 
+</p>
+</div></section><section class="reading-chunk" id="entry-40669ABC11F8" data-section-entries="3DCC81BE4D1E 40669ABC11F8 977E6E7B264D EFE7268223F4"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/40669ABC11F8/">9.15 The gradient bound by rescaling</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="5A7D0578"></span></div>
+<p>
+If the gradients of a family of solutions were unbounded, rescaling at points of maximal gradient would produce functions on growing Euclidean balls with gradient one at the origin. The Hessian estimate makes these functions compact in $C^1$ on every fixed ball, so a limit is a bounded Lipschitz function on $\mathbb C^ n$ with nonzero gradient at the origin. The rescaled determinant tends to zero, so the limit is maximal for the cone of section <a data-tag="5C496399" href="../../tag/D4DE203BE3BF/">9.14</a>, which contradicts theorem <a data-tag="7A4BB576" href="../../tag/AC61FE141521/">9.14.2</a>. 
+</p>
+<p>
+Consider a family of smooth solutions $(u,b)$ of the equation in theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a>, normalized by $\sup _ Xu=0$, with $\| F\| _{C^0}\leq M$ for a fixed $M&gt;0$. By proposition <a data-tag="212AEE83" href="../../tag/60FD5A56EE10/">9.10.1</a>, $\| u\| _{C^0}$ and $|b|$ are uniformly bounded. The following proposition shows that a Hessian estimate in terms of the squared gradient implies bounds for both. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-6B4FF351">
+<p><a class="environment-identifier" href="../../tag/EFE7268223F4/">Proposition <span data-tag="6B4FF351">9.15.1</span>.</a><span data-gerby-tag="6B4FF351"></span> Suppose there is a constant $K$ such that every solution in this family satisfies </p>
+<div class="equation" id="non-kahler-pluripotential-theory-F3BEB38B"><span data-gerby-tag="F3BEB38B"></span>
+<span class="equation-label"><a data-tag="F3BEB38B" href="../../tag/977E6E7B264D/">9.51</a></span>
+<div>\begin{equation}  \sup _ X|\mathrm{dd}^{\mathrm{c}}u|_\gamma \leq K\bigl (1+\sup _ X|\partial u|_\gamma ^2\bigr ). \end{equation}</div>
+</div>
+<p> Then $\sup _ X|\partial u|_\gamma $ and $\sup _ X|\mathrm{dd}^{\mathrm{c}}u|_\gamma $ are bounded by a constant depending only on $X,\gamma _0,\gamma ,M$ and $K$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We use the matrices $Q_ u$ of (<a data-tag="7EFE4E6E" href="../../tag/D281466AD7B7/">9.26</a>). Their background term $Q_0$ is fixed, and $Z$ is linear in the first derivatives of $u/(2\pi )$. 
+    <p>
+      Suppose that the gradient bound fails. Then there are solutions $(u_ j,b_ j)$ with prescribed functions $F_ j$ such that 
+    
+<div class="equation">
+  \[  A_ j=\sup _ X|\partial u_ j|_\gamma =|\partial u_ j(x_ j)|_\gamma \longrightarrow \infty .  \]
+</div>
+<p>
+       After passing to a subsequence, the points $x_ j$ lie in one fixed coordinate neighborhood. Translate the coordinates so that $x_ j$ becomes the origin, and apply a uniformly controlled complex linear change of coordinates so that the matrix of $\gamma $ at $x_ j$ is the identity; a coordinate ball of fixed radius remains available around every $x_ j$. On balls whose radii tend to infinity define 
+    
+<div class="equation">
+  \[  v_ j(z)=u_ j(x_ j+z/A_ j),  \]
+</div>
+<p>
+       in these coordinates. The coefficient matrices $g_ j(z)$ of $\gamma $ at the points $x_ j+z/A_ j$ converge smoothly to the identity on every fixed ball. In this notation 
+    
+<div class="equation">
+  \[  |v_ j|\leq C, \qquad |\partial v_ j|_{g_ j}\leq 1, \qquad |\partial v_ j(0)|=1.  \]
+</div>
+<p>
+       The assumed estimate (<a data-tag="F3BEB38B" href="../../tag/977E6E7B264D/">9.51</a>) gives a uniform bound for all complex Hessian entries of $v_ j$ on every fixed ball, since two derivatives contribute the factor $A_ j^{-2}$. Hence the Euclidean Laplacians of the $v_ j$ are uniformly bounded, and the interior estimates for the Laplacian give local $W^{2,p}$ bounds for every finite $p$. Choosing $p&gt;2n$ and using Sobolev embedding and compactness, we extract a diagonal subsequence converging in $C^1$ on compact subsets to a function $v$ on $\mathbb C^ n$. This function is bounded and globally Lipschitz, and 
+    
+<div class="equation">
+  \[  |\partial v(0)|=1.  \]
+</div>
+<p>
+      Now divide the matrix in (<a data-tag="7EFE4E6E" href="../../tag/D281466AD7B7/">9.26</a>) by $A_ j^2$ and evaluate it at the scaled points. The background term becomes $O(A_ j^{-2})$, and the first-order term becomes $O(A_ j^{-1})$, since one derivative of $u_ j$ is $A_ j$ times a derivative of $v_ j$. Since the complex Hessians of $v_ j$ are uniformly bounded and $g_ j\to I$, we obtain on any fixed ball 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-6161E4FA"><span data-gerby-tag="6161E4FA"></span>
+<span class="equation-label"><a data-tag="6161E4FA" href="../../tag/3DCC81BE4D1E/">9.52</a></span>
+<div>\begin{equation}  A_ j^{-2}Q_{u_ j} =P_ n\left(\frac{H(v_ j)}{2\pi }\right)+o(1), \qquad \det (A_ j^{-2}Q_{u_ j}) =A_ j^{-2n}\mathrm{e}^{(n-1)(F_ j+b_ j)}\longrightarrow 0. \end{equation}</div>
+</div>
+<p>
+       To be precise, we compute in the unitary frames obtained from the positive square roots $S_ j=g_ j^{-1/2}$. In these frames the principal matrix is $P_ n(S_ jH(v_ j)S_ j/(2\pi ))$, which differs from $P_ n(H(v_ j)/(2\pi ))$ by an error tending to zero uniformly; no derivatives of the frames are taken, and the determinant identity is exact in unitary frames. Since the matrices on the left of (<a data-tag="6161E4FA" href="../../tag/3DCC81BE4D1E/">9.52</a>) are positive and the positive factor $1/(2\pi )$ does not change the cone, passing to the limit in the sense of distributions gives $P_ n(H(v))\geq 0$. 
+    <p>
+      It remains to check maximality. Suppose that a smooth function $h$ touches $v$ from below at $z_0$ and $P_ n(H(h)(z_0))&gt;0$. Subtract $\delta |z-z_0|^2$ with $\delta &gt;0$ small; on a small ball this makes the contact strict and preserves strict positivity of the matrix. Local uniform convergence gives points $z_ j\to z_0$ at which $v_ j$ minus this perturbed test function has an interior local minimum. At such a minimum, 
+    
+<div class="equation">
+  \[  H(v_ j)(z_ j)\geq H(h)(z_ j)-\delta I.  \]
+</div>
+<p>
+       Because $P_ n$ preserves nonnegative matrices, (<a data-tag="6161E4FA" href="../../tag/3DCC81BE4D1E/">9.52</a>) now implies $A_ j^{-2}Q_{u_ j}(z_ j)\geq cI$ for a fixed $c&gt;0$ and all sufficiently large $j$. The determinant of this matrix is then at least $c^ n$, which contradicts the limit zero in (<a data-tag="6161E4FA" href="../../tag/3DCC81BE4D1E/">9.52</a>). Thus $v$ is maximal for the cone of section <a data-tag="5C496399" href="../../tag/D4DE203BE3BF/">9.14</a>. 
+    <p>
+      By theorem <a data-tag="7A4BB576" href="../../tag/AC61FE141521/">9.14.2</a>, $v$ is constant, which contradicts $|\partial v(0)|=1$. This proves the uniform gradient bound, and substitution in (<a data-tag="F3BEB38B" href="../../tag/977E6E7B264D/">9.51</a>) gives the uniform complex Hessian bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+For prescribed functions $F$ bounded in $C^2$, proposition <a data-tag="212AEE83" href="../../tag/60FD5A56EE10/">9.10.1</a> bounds $u$ and $b$, and theorem <a data-tag="9FC90E6F" href="../../tag/2763FB514B34/">9.13.1</a>, applied to $v=u/(2\pi )$ and $h=(n-1)(F+b)$, proves (<a data-tag="F3BEB38B" href="../../tag/977E6E7B264D/">9.51</a>). Thus both the gradient and the complex Hessian are uniformly bounded. 
+</p>
+</div></section><section class="reading-chunk" id="entry-6904C64D5831" data-section-entries="19E4D601D907 6904C64D5831"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/6904C64D5831/">9.16 Existence for the Gauduchon ansatz</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="86858F38"></span></div>
+<p>
+The potential, gradient and Hessian bounds put the matrices $Q_ u$ in a compact set of positive matrices. This yields uniform ellipticity after the real Hessian is projected to its complex part and transformed by $P_ n$, so local elliptic regularity gives the compactness needed for closedness in the continuity method; the adjoint probability measure gives openness. The maximum principle then proves uniqueness within the scalar ansatz. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-883D7160">
+<p><a class="environment-identifier" href="../../tag/19E4D601D907/">Lemma <span data-tag="883D7160">9.16.1</span>.</a><span data-gerby-tag="883D7160"></span> Let $\gamma _0,\gamma $ be as in theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a>. If the prescribed functions $F$ range over a set of smooth functions bounded in every $C^ k$ norm, then the smooth solutions $(u,b)$ with $\sup _ Xu=0$ are bounded in every $C^ k$ norm. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Work with $v=u/(2\pi )$ and write $Q=Q_ u$ for the matrix in (<a data-tag="7EFE4E6E" href="../../tag/D281466AD7B7/">9.26</a>). By proposition <a data-tag="212AEE83" href="../../tag/60FD5A56EE10/">9.10.1</a>, theorem <a data-tag="9FC90E6F" href="../../tag/2763FB514B34/">9.13.1</a>, proposition <a data-tag="6B4FF351" href="../../tag/EFE7268223F4/">9.15.1</a>, the function $v$, its gradient and its complex Hessian are uniformly bounded, and so are the constants $b$. Hence the eigenvalues of $Q$ are uniformly bounded above, and by the equation its determinant is uniformly bounded below. Every eigenvalue is therefore also bounded below by a positive constant. Choose fixed numbers $0&lt;a&lt;b_0$ such that $aI\leq Q\leq b_0I$ in unitary frames for every solution. 
+    <p>
+      The function $\Delta _\gamma v=\operatorname {tr}_\gamma (\mathrm i\partial \bar\partial v)$ is uniformly bounded, and $\Delta _\gamma $ is a fixed uniformly elliptic operator. Its interior $W^{2,p}$ estimates, applied on a finite cover, bound $v$ in $W^{2,p}$ for every finite $p$. Choose $p&gt;2n$ and $0&lt;\alpha &lt;1-2n/p$; Sobolev embedding gives a uniform $C^{1,\alpha }$ bound. Thus the matrix $R(x)=Q_0(x)+Z_ x(\partial v(x))$ is uniformly bounded in $C^\alpha $. 
+    <p>
+      On a coordinate ball, let $\mathcal H_ x(A)$ denote the Hermitian matrix of $\mathrm i\partial \bar\partial v$ at $x$ in a fixed smooth unitary frame, expressed as a function of the real Hessian $A=D^2_{\mathbb R}v(x)$. It is a real linear function of $A$ depending smoothly on $x$. If a real symmetric matrix $N$ is nonnegative, then $\mathcal H_ x(N)\geq 0$, and its trace is comparable to $\operatorname {tr}_{\mathbb R}N$ with uniform positive constants on the ball. This follows by evaluating on a vector and its rotation by $\mathrm i$, or from the coordinate formula for $v_{i\bar j}$. 
+    <p>
+      Freeze the function $\partial v(x)$ already obtained in $R(x)$, and define for all real symmetric matrices $A$ 
+    
+<div class="equation">
+  \[  \widetilde\Phi (A,x)= \inf _{aI\leq B\leq b_0I} \left\{ \log \det B+ \operatorname {tr}\left[B^{-1} \bigl (R(x)+P_ n(\mathcal H_ x(A))-B\bigr )\right]\right\} .  \]
+</div>
+<p>
+       The infimum is over a fixed compact set of positive Hermitian matrices, and each expression in braces is an affine function of $A$, so $\widetilde\Phi $ is concave in $A$. If $R(x)+P_ n(\mathcal H_ x(A))$ lies in that compact set, then $\widetilde\Phi (A,x)$ equals its logarithmic determinant: each expression in braces is a tangent affine function of the concave logarithmic determinant, and the tangent at that matrix itself attains equality. 
+    <p>
+      For $N\geq 0$, each of these affine functions increases by 
+    
+<div class="equation">
+  \[  \operatorname {tr}\bigl (B^{-1}P_ n(\mathcal H_ x(N))\bigr )  \]
+</div>
+<p>
+       when $A$ is replaced by $A+N$. Since $P_ n$ preserves positivity and trace, this increment lies between fixed positive multiples of $\operatorname {tr}_{\mathbb R}N$, uniformly in $B$ and $x$. Taking infima preserves both inequalities, so $\widetilde\Phi $ is uniformly elliptic on all real symmetric matrices. 
+    <p>
+       Smoothness of $\mathcal H_ x$ and the uniform $C^\alpha $ bound for $R$ also give 
+    
+<div class="equation">
+  \[  |\widetilde\Phi (A,x)-\widetilde\Phi (A,y)| \leq C|x-y|^\alpha (1+\| A\| ).  \]
+</div>
+<p>
+       These are the hypotheses of the local Evans–Krylov estimate for concave uniformly elliptic equations with Hölder dependence on $x$, in the formulation given in section <a data-tag="03AFF04F" href="../../tag/E1BC130DDD5C/">34.6</a>. The value $\widetilde\Phi (0,x)$ is uniformly bounded, by the compactness of the set of matrices $B$ and the bound for $R$. By the choice of $a$ and $b_0$, the given smooth function solves 
+    
+<div class="equation">
+  \[  \widetilde\Phi (D^2_{\mathbb R}v,x)=(n-1)(F+b)  \]
+</div>
+<p>
+       on the ball. The Evans–Krylov estimate, applied on smaller balls of a finite cover, yields a uniform $C^{2,\beta }$ bound for some $\beta &gt;0$. 
+    <p>
+      Differentiating the original matrix equation gives linear uniformly elliptic equations for the first derivatives of $v$, whose coefficients, including the first-order coefficients coming from $Z$, are now Hölder continuous. Local Schauder estimates give $C^{3,\beta }$ bounds, and differentiation and induction give all higher bounds. The finite coordinate cover makes the bounds global. The only regularity results used here are the standard $W^{2,p}$ estimates for the Laplacian, the Evans–Krylov estimate for concave equations, and the Schauder estimates. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+<article class="env-proof">
+<p>
+<strong>of theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a>.</strong>
+       Let 
+    
+<div class="equation">
+  \[  F_0=\log \frac{\gamma _0^ n}{\gamma ^ n},\qquad F_ t=(1-t)F_0+tF,\quad 0\leq t\leq 1.  \]
+</div>
+<p>
+       We use the continuity method along the path $F_ t$. At $t=0$, the pair $u=0$, $b=0$ solves the equation, since $\eta _0=\gamma _0$. During the continuity argument we normalize potentials by $\int _ Xu\, \gamma ^ n=0$; adding a constant does not affect the equation, and at the end we impose $\sup _ Xu=0$ instead. 
+    <p>
+      For openness, the derivative of the equation with respect to the mean-zero potential and the scalar is $(w,a)\mapsto \mathcal L_ uw-a$. Given a right-hand side $q$, integration against the adjoint probability measure of proposition <a data-tag="1A082A94" href="../../tag/706EB82AB6A2/">9.11.1</a> forces $a=-\int _ Xq\, \mathrm{d}\mu _ u^\gamma $. The Fredholm alternative then gives a unique mean-zero solution $w$, and Schauder estimates bound this inverse between Hölder spaces. Since positivity of $\Gamma _ u$ is an open condition, the implicit function theorem gives solutions for all nearby parameters. 
+    <p>
+      For closedness, note that the functions $F_ t$ are uniformly bounded in every $C^ k$ norm. After supremum normalization, proposition <a data-tag="212AEE83" href="../../tag/60FD5A56EE10/">9.10.1</a> bounds $u$ and $b$, the second-order and rescaling estimates bound the gradient and the complex Hessian, and lemma <a data-tag="883D7160" href="../../tag/19E4D601D907/">9.16.1</a> gives all higher bounds. Subtracting the mean preserves all derivative bounds and changes the potentials by uniformly bounded constants. A subsequence of mean-zero solutions along a convergent sequence of parameters therefore converges smoothly to a solution at the limiting parameter, and the bounds $aI\leq Q\leq b_0I$ preserve strict positivity in the limit. Thus the set of solvable parameters is nonempty, open and closed, hence equal to $[0,1]$. 
+    <p>
+       Finally, consider two solutions $(u,b)$ and $(w,c)$ for the same $F$. At a maximum of $u-w$ their gradients agree and their complex Hessians are ordered, so the first-order terms are equal there and, since $P_ n$ preserves the order, $Q_ u\leq Q_ w$. The equation then gives $b\leq c$, and at a minimum the reverse inequality gives $b\geq c$. Hence $b=c$. Along the segment between $u$ and $w$, the matrices $Q$ remain positive because the ansatz is affine in the potential. Integrating the derivative of the logarithmic determinant along that segment produces a uniformly elliptic scalar operator with first-order terms and no zeroth-order term that annihilates $u-w$. The maximum principle shows that $u-w$ is constant, and the supremum normalization makes the constant zero. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-9C1043361EBF" data-section-entries="1ECE72025D8E 8AC1A3B0F2AF 9C1043361EBF F90961841CA0"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/9C1043361EBF/">9.17 Normalization for the Gauduchon equation</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="437B764D"></span></div>
+<p>
+By theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a>, every smooth real function $F$ determines a scalar $b_\gamma (F)$, the constant $b$ of that theorem. As for the Monge–Ampère equation, its variation is governed by the adjoint probability measure $\mu _ u^\gamma $ of proposition <a data-tag="1A082A94" href="../../tag/706EB82AB6A2/">9.11.1</a> and by the concavity of the logarithmic determinant. To differentiate solutions, we fix a smooth positive volume form $\mathrm{d}V_0$ and use the normalization $\int _ Xu\, \mathrm{d}V_0=0$ in place of $\sup _ Xu=0$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-419F432F">
+<p><a class="environment-identifier" href="../../tag/1ECE72025D8E/">Lemma <span data-tag="419F432F">9.17.1</span>.</a><span data-gerby-tag="419F432F"></span> The solution $(u,b_\gamma (F))$, normalized by $\int _ Xu\, \mathrm{d}V_0=0$, depends smoothly on the parameters of every smooth finite-dimensional family of functions $F$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The map $\Gamma \mapsto \eta $ with $\eta ^{n-1}=\Gamma $ is smooth on positive forms, since in a frame it is the inverse of the smooth map $\eta \mapsto \eta ^{n-1}$, whose differential is invertible. The openness argument in the proof of theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a>, with the $\mathrm{d}V_0$-mean in place of the $\gamma ^ n$-mean, gives a bounded inverse for the derivative with respect to the potential and the scalar between the relevant Hölder spaces. The implicit function theorem gives local smooth solution maps, and uniqueness shows that they agree on overlaps. Applying this for every order of Hölder regularity gives the assertion for smooth data. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+ For a smooth family of prescribed functions $F_ t\in C^\infty (X,\mathbb R)$, with $t$ in an open interval of $\mathbb R$, let $u_ t$ be the corresponding solutions with $\int _ Xu_ t\, \mathrm{d}V_0=0$, and set $Q_ t=Q_{u_ t}$ as in (<a data-tag="7EFE4E6E" href="../../tag/D281466AD7B7/">9.26</a>). The expression 
+</p>
+<div class="equation">
+  \[  \operatorname {tr}\bigl ((Q_ t^{-1}\dot Q_ t)^2\bigr )  \]
+</div>
+<p>
+ is independent of the chosen frame and nonnegative, because $Q_ t^{-1}\dot Q_ t$ is similar to the Hermitian matrix $Q_ t^{-1/2}\dot Q_ t Q_ t^{-1/2}$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-67056566">
+<p><a class="environment-identifier" href="../../tag/F90961841CA0/">Theorem <span data-tag="67056566">9.17.2</span>.</a><span data-gerby-tag="67056566"></span> For a smooth family $F_ t$ and its solutions, </p>
+<div class="equation">
+  \begin{align*}  \dot b_\gamma (F_ t)&amp; =-\int _ X\dot F_ t\, \mathrm{d}\mu _{u_ t}^\gamma ,\\  \ddot b_\gamma (F_ t)&amp; =-\int _ X\ddot F_ t\, \mathrm{d}\mu _{u_ t}^\gamma -\frac1{n-1}\int _ X \operatorname {tr}\bigl ((Q_ t^{-1}\dot Q_ t)^2\bigr ) \, \mathrm{d}\mu _{u_ t}^\gamma . \end{align*}
+</div>
+<p> In particular, $b_\gamma $ is concave, and along $F_ t=F_0+tG$ its second derivative is strictly negative unless $G$ is constant. Moreover, for smooth real functions $F,G$ on $X$ and every real constant $a$, </p>
+<div class="equation">
+  \[  b_\gamma (F+a)=b_\gamma (F)-a, \qquad |b_\gamma (G)-b_\gamma (F)|\leq \| G-F\| _\infty .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By (<a data-tag="7EFE4E6E" href="../../tag/D281466AD7B7/">9.26</a>), 
+    
+<div class="equation">
+  \[  \mathcal G(u)=\frac1{n-1}\log \det _\gamma Q_ u.  \]
+</div>
+<p>
+       Differentiating $\mathcal G(u_ t)=F_ t+b_\gamma (F_ t)$ once gives $\mathcal L_{u_ t}\dot u_ t=\dot F_ t+\dot b_\gamma (F_ t)$, and integration against the adjoint probability measure gives the first formula. 
+    <p>
+      Because $\Gamma _ u$ is affine in $u$, its second derivative along the family is $\mathcal D_\gamma \ddot u_ t$. The formula for the second derivative of $\log \det $ used in the proof of theorem <a data-tag="C70BE558" href="../../tag/C611B2CA264A/">9.7.1</a> therefore gives 
+    
+<div class="equation">
+  \[  \mathcal L_{u_ t}\ddot u_ t -\frac1{n-1}\operatorname {tr}\bigl ((Q_ t^{-1}\dot Q_ t)^2\bigr ) =\ddot F_ t+\ddot b_\gamma (F_ t).  \]
+</div>
+<p>
+       Integrating against $\mu _{u_ t}^\gamma $ at this fixed parameter gives the second formula; no derivative of the measure is needed. 
+    <p>
+      For affine $F_ t$, we have $\ddot F_ t=0$, and positivity of the density of $\mu _{u_ t}^\gamma $ proves concavity. If the second derivative vanishes, then $\dot Q_ t=0$, so $\dot\Gamma _{u_ t}=0$ and $\mathcal L_{u_ t}\dot u_ t=0$. By proposition <a data-tag="1A082A94" href="../../tag/706EB82AB6A2/">9.11.1</a>, $\dot u_ t$ is constant, and the first differentiated equation forces $G$ to be constant. Conversely, adding a constant to $F$ changes only $b$, by the opposite constant. Finally, integrate the first derivative along the segment from $F$ to $G$: since $\mu _{u_ t}^\gamma $ is a probability measure, the derivative lies between $-\sup _ X(G-F)$ and $-\inf _ X(G-F)$, which proves the Lipschitz bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+ The Lipschitz bound extends $b_\gamma $ uniquely to continuous functions $F$. Constructing corresponding weak solutions would require, in addition, a volume measure for the $(n-1)$st roots of singular forms in the Aeppli ansatz, compactness of their potentials, and stability of the adjoint equation. 
+</p>
+<p>
+ On a surface with Gauduchon background form $\gamma _0$, conservation of the total mass makes the scalar and the adjoint probability measure explicit. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-D7692D79">
+<p><a class="environment-identifier" href="../../tag/8AC1A3B0F2AF/">Example <span data-tag="D7692D79">9.17.3</span>.</a><span data-gerby-tag="D7692D79"></span> If $n=2$ and $\gamma _0$ is Gauduchon, then $\Gamma _ u=\gamma _0+\mathrm{dd}^{\mathrm{c}}u=\eta _ u$, and $\eta _ u$ is also Gauduchon. The mass identity of theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">2.2.2</a> gives $\int _ X\eta _ u^2=\int _ X\gamma _0^2$. Therefore </p>
+<div class="equation">
+  \[  b_\gamma (F)=\log \int _ X\gamma _0^2- \log \int _ X\mathrm{e}^ F\gamma ^2, \qquad \mathrm{d}\mu _ u^\gamma =\frac{\mathrm{e}^ F\gamma ^2}{\int _ X\mathrm{e}^ F\gamma ^2}.  \]
+</div>
+<p> The adjoint equation of proposition <a data-tag="DAC00F18" href="../../tag/029A1D30A55E/">9.11.2</a> gives the same measure, because $\mathrm{dd}^{\mathrm{c}}\eta _ u=0$ and hence $\rho _ u$ is constant. Along $F+tG$, the second derivative of $b_\gamma $ is minus the variance of $G$ with respect to this probability measure. </p>
+</article>
+
+<p>
+In chapter <a data-tag="CFCFC994" href="../../tag/080A6052D542/">10</a> we return to the potential equation for $\omega +\mathrm{dd}^{\mathrm{c}}u$. Smooth approximation will extend its solvability to nonnegative, nonzero $L^ p$ densities, $p&gt;1$; control of the normalization constant and uniform convergence of the potentials will replace the derivative estimates used here. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../chapters/monge-ampere-equations/"><span>← Previous</span><small>12 Monge–Ampère equations and stability</small></a><a class="pager-next" rel="next" href="../../tag/92B1F482D72A/"><span>Next →</span><small>9 Smooth Monge–Ampère equations</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-smooth-monge-ampere-equations,
   author = {{Gerby contributors}},
   title = {12.1 Smooth Monge–Ampère equations},

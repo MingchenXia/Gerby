@@ -1,8 +1,1459 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/the-trace-operator/"><title>17.2 The trace operator · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/the-trace-operator/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/the-trace-operator/"><title>17.2 The trace operator · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/the-trace-operator/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/divisors-restriction/">Chapter 17: B-divisors and restriction</a></li><li><a href="../../sections/the-trace-operator/" aria-current="page">Section 17.2: The trace operator</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/the-theory-of-b-divisors/"><span>17.1</span> The theory of b-divisors</a></li><li><a href="../../sections/the-trace-operator/" aria-current="page"><span>17.2</span> The trace operator</a></li><li><a href="../../sections/restriction-and-intrinsic-trace-data/"><span>17.3</span> Restriction and intrinsic trace data</a></li><li><a href="../../sections/divisorial-currents-on-compact-modifications/"><span>17.4</span> Divisorial currents on compact modifications</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/the-trace-operator/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/the-trace-operator/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/D7547FA69C91/"><span>← Previous</span><small>Remark 11.2.10</small></a><a class="pager-next" rel="next" href="../../tag/007D02149D2D/"><span>Next →</span><small>8 The trace operator</small></a></nav><h1>17.2 The trace operator</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/007D02149D2D/">8 The trace operator</a><code class="tag-id">007D02149D2D</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/E3F1F75C84E9/">8.1 The definition of the trace operator</a><code class="tag-id">E3F1F75C84E9</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/482E170F0825/">Example 8.1.1</a><code class="tag-id">482E170F0825</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/DC6BE2600DA0/">Example 8.1.2</a><code class="tag-id">DC6BE2600DA0</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/82453E358B30/">Proposition 8.1.3</a><code class="tag-id">82453E358B30</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/2B91479A9BE3/">8.1 </a><code class="tag-id">2B91479A9BE3</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/ADF6E265888F/">Definition 8.1.4</a><code class="tag-id">ADF6E265888F</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/7AF21EBA8F4E/">8.5 </a><code class="tag-id">7AF21EBA8F4E</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/45EA06425921/">Proposition 8.1.5</a><code class="tag-id">45EA06425921</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/75F5F5ACD2FA/">Example 8.1.6</a><code class="tag-id">75F5F5ACD2FA</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/5239E9ADD0FF/">Definition 8.1.7</a><code class="tag-id">5239E9ADD0FF</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">remark</span><a href="../../tag/F5CDFD8547BC/">Remark 8.1.8</a><code class="tag-id">F5CDFD8547BC</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/B293F74D2022/">Proposition 8.1.9</a><code class="tag-id">B293F74D2022</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D2EC0F645F1C/">8.6 </a><code class="tag-id">D2EC0F645F1C</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/9C0808B7B91F/">8.7 </a><code class="tag-id">9C0808B7B91F</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/917FA516701F/">Example 8.1.10</a><code class="tag-id">917FA516701F</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/50B7DFD48C9D/">Example 8.1.11</a><code class="tag-id">50B7DFD48C9D</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/2272C87A04CE/">Example 8.1.12</a><code class="tag-id">2272C87A04CE</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/4411B718BF44/">8.8 </a><code class="tag-id">4411B718BF44</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">remark</span><a href="../../tag/ECCF7648C028/">Remark 8.1.13</a><code class="tag-id">ECCF7648C028</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/4A91513F4829/">8.2 Properties of the trace operator</a><code class="tag-id">4A91513F4829</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/F2C3DD7D449E/">Proposition 8.2.1</a><code class="tag-id">F2C3DD7D449E</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/58627BFD2457/">Proposition 8.2.2</a><code class="tag-id">58627BFD2457</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/531FFD6D4B64/">Example 8.2.3</a><code class="tag-id">531FFD6D4B64</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/DDEF49346283/">Lemma 8.2.4</a><code class="tag-id">DDEF49346283</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/3B7501D970A6/">8.10 </a><code class="tag-id">3B7501D970A6</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/DB90B2D3ADEB/">Proposition 8.2.5</a><code class="tag-id">DB90B2D3ADEB</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/E9AC29FB30B6/">8.11 </a><code class="tag-id">E9AC29FB30B6</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/71AECE2E70ED/">Theorem 8.2.6</a><code class="tag-id">71AECE2E70ED</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/A437169E35B2/">8.3 Relation to the classical restricted volumes</a><code class="tag-id">A437169E35B2</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D4594BE77AFC/">8.12 </a><code class="tag-id">D4594BE77AFC</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/03AF8A775E35/">8.13 </a><code class="tag-id">03AF8A775E35</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/AFC4F39F65CF/">Proposition 8.3.1</a><code class="tag-id">AFC4F39F65CF</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/DA6F88B54E6F/">8.14 </a><code class="tag-id">DA6F88B54E6F</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/7EFDFA26519B/">Theorem 8.3.2</a><code class="tag-id">7EFDFA26519B</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/3C4F71AC116E/">8.19 </a><code class="tag-id">3C4F71AC116E</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/6EEF71F49B54/">8.24 </a><code class="tag-id">6EEF71F49B54</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/E74D68200A33/">8.25 </a><code class="tag-id">E74D68200A33</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/EDE927CBCEA7/">8.4 Restricted volumes of line bundles</a><code class="tag-id">EDE927CBCEA7</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/230AF20F8E84/">Theorem 8.4.1</a><code class="tag-id">230AF20F8E84</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/92546FA16294/">8.28 </a><code class="tag-id">92546FA16294</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/97B6F891A18A/">8.29 </a><code class="tag-id">97B6F891A18A</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/4F486DDB8BD0/">Theorem 8.4.2</a><code class="tag-id">4F486DDB8BD0</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">remark</span><a href="../../tag/DB535DD3B5A9/">Remark 8.4.3</a><code class="tag-id">DB535DD3B5A9</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/6B19CA7EC662/">8.5 Analytic Bertini theorems</a><code class="tag-id">6B19CA7EC662</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/7931695F46E8/">Theorem 8.5.1</a><code class="tag-id">7931695F46E8</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">remark</span><a href="../../tag/6A24558044D5/">Remark 8.5.2</a><code class="tag-id">6A24558044D5</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/62AF47325D23/">8.57 </a><code class="tag-id">62AF47325D23</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">remark</span><a href="../../tag/E131A2FB1C6A/">Remark 8.5.3</a><code class="tag-id">E131A2FB1C6A</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/50ABF7A3834B/">Corollary 8.5.4</a><code class="tag-id">50ABF7A3834B</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/B590E31078F3/">Corollary 8.5.5</a><code class="tag-id">B590E31078F3</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/CB547C0AF98F/">Lemma 8.5.6</a><code class="tag-id">CB547C0AF98F</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/3AEE64F8D403/">Corollary 8.5.7</a><code class="tag-id">3AEE64F8D403</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/A2BD7EA3B4B4/">Proposition 8.5.8</a><code class="tag-id">A2BD7EA3B4B4</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/A172685DB2AD/">Lemma 8.5.9</a><code class="tag-id">A172685DB2AD</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/8F47DBEBF9D3/">Corollary 8.5.10</a><code class="tag-id">8F47DBEBF9D3</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/A7BAA368EEF9/">Lemma 8.5.11 (Reverse Bertini theorem)</a><code class="tag-id">A7BAA368EEF9</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/133BE510F62F/">8.64 </a><code class="tag-id">133BE510F62F</code><span class="entry-topic">The trace operator</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/C42AE95D23AF/">8.65 </a><code class="tag-id">C42AE95D23AF</code><span class="entry-topic">The trace operator</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/D7547FA69C91/"><span>← Previous</span><small>Remark 11.2.10</small></a><a class="pager-next" rel="next" href="../../tag/007D02149D2D/"><span>Next →</span><small>8 The trace operator</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/D7547FA69C91/"><span>← Previous</span><small>Remark 11.2.10</small></a><a class="pager-next" rel="next" href="../../tag/007D02149D2D/"><span>Next →</span><small>8 The trace operator</small></a></nav><h1>17.2 The trace operator</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-007D02149D2D" data-section-entries="007D02149D2D"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/007D02149D2D/">8 The trace operator</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="66D70026"></span></div>
+<p>
+The goal of this chapter is to give a meaning to the restriction of a quasi-psh singularity to a subvariety. If $\varphi \in \mathrm{QPSH}(X)$ and $Y\subseteq X$ is a subvariety, the naive restriction $\varphi |_ Y$ is often unsatisfactory: it may be identically $-\infty $, or it may fail to preserve quasi-equisingular approximations. 
+</p>
+<p>
+There is a useful analogy with the trace operator in real analysis. A Sobolev function on a domain cannot, in general, be restricted pointwise to the boundary; instead, it admits a trace obtained by approximation using smooth functions, and the trace is well-defined modulo almost everywhere equality. <a data-tag="66D70026" href="../../tag/007D02149D2D/">8</a> summarizes the corresponding dictionary. 
+</p>
+<div class="centered">
+<table class="source-table"><tr><td><p>
+ Real analysis 
+</p>
+</td><td><p>
+ Pluripotential theory 
+</p>
+</td></tr><tr><td><p>
+ smooth functions 
+</p>
+</td><td><p>
+ potentials with analytic singularities 
+</p>
+</td></tr><tr><td><p>
+ Sobolev functions 
+</p>
+</td><td><p>
+ potentials with $\mathcal I$-good singularities 
+</p>
+</td></tr><tr><td><p>
+ Sobolev convergence 
+</p>
+</td><td><p>
+ $d_ S$-convergence 
+</p>
+</td></tr><tr><td><p>
+ equality almost everywhere 
+</p>
+</td><td><p>
+ $P$-equivalence 
+</p>
+</td></tr></table>
+<p>
+<strong>Table 8.1</strong> A dictionary for the trace operator. 
+</p>
+</div>
+<p>
+ The situation here is similar. A singular quasi-psh function need not have a meaningful pointwise restriction to $Y$, but after replacing it by quasi-equisingular approximants and passing to the appropriate $d_ S$-limit of the pointwise restriction of these approximants to $Y$, one obtains a well-defined $P$-singularity type. This is the trace $\operatorname{Tr}_ Y(\varphi )$. 
+</p>
+<p>
+The trace operator is designed to be compatible with the two comparison theories developed earlier. It depends only on the $\mathcal{I}$-singularity type of $\varphi $, and itself is well-defined modulo $P$-equivalence. 
+</p>
+<p>
+The first part of the chapter defines the trace and proves its basic properties: independence of the quasi-equisingular approximation, monotonicity, linearity, compatibility with bimeromorphic pullback, and continuity under decreasing $d_ S$-limits. These results provide the analytic foundation for later applications. 
+</p>
+<p>
+The second part relates the trace operator to restricted volumes. For a big class $\alpha $ and a subvariety $Y$ not contained in the non-Kähler locus, the classical restricted volume $\operatorname{vol}_{X|Y}(\alpha )$ can be expressed as the non-pluripolar volume of the trace of a potential with minimal singularities. We also prove an asymptotic Riemann–Roch formula for the restricted multiplier ideal sheaves. 
+</p>
+<p>
+The final part develops analytic Bertini-type statements. These results describe when multiplier ideals restrict correctly to a general hypersurface and when $\mathcal I$-goodness is preserved under restriction. 
+</p>
+</div></section><section class="reading-chunk" id="entry-E3F1F75C84E9" data-section-entries="2272C87A04CE 2B91479A9BE3 4411B718BF44 45EA06425921 482E170F0825 50B7DFD48C9D 5239E9ADD0FF 75F5F5ACD2FA 7AF21EBA8F4E 82453E358B30 917FA516701F 9C0808B7B91F ADF6E265888F B293F74D2022 D2EC0F645F1C DC6BE2600DA0 E3F1F75C84E9 ECCF7648C028 F5CDFD8547BC"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/E3F1F75C84E9/">8.1 The definition of the trace operator</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="666B5269"></span></div>
+<p>
+Let $X$ be a connected compact Kähler manifold and $Y\subseteq X$ be an irreducible analytic subset. 
+</p>
+<p>
+The trace operator gives a way to restrict a quasi-plurisubharmonic function on $X$ to $\widetilde{Y}$, the normalization of $Y$. It follows from <span class="cite">[<span class="postnote">Proposition 3.6</span>, <a href="../../references/#RD185478816D7">GK20</a>]</span> that $\widetilde{Y}$ is a normal Kähler space. We refer to chapter <a data-tag="2291986D" href="../../tag/5131A8B4E30A/">B</a> for the pluripotential theory on unibranch Kähler spaces. 
+</p>
+<p>
+For later applications, we need this generality even if initially we are only interested in the smooth case. 
+</p>
+
+Before diving into the trace operator, let us try to understand what goes wrong with the naive restriction procedure: simply take $\varphi |_{\widetilde{Y}}$. Both examples below are local, but can easily be globalized since the singularities are isolated. <article class="env-example" id="sgpt-C05BBB82">
+<p><a class="environment-identifier" href="../../tag/482E170F0825/">Example <span data-tag="C05BBB82">8.1.1</span>.</a><span data-gerby-tag="C05BBB82"></span> Consider the case where $\varphi $ has log-log singularities as in example <a data-tag="BAA6FABC" href="../../tag/E548BFB3BF04/">3.1.14</a>. Locally we can take $\varphi (z)=-\log (-\log |z|^2)$. We have $\nu (\varphi ,0)=0$ but $\varphi |_0=-\infty $. So the naive restriction is not defined in this case. </p>
+</article>
+
+
+Even if the naive restriction is defined, it does not behave well. <article class="env-example" id="sgpt-070D1374">
+<p><a class="environment-identifier" href="../../tag/DC6BE2600DA0/">Example <span data-tag="070D1374">8.1.2</span>.</a><span data-gerby-tag="070D1374"></span> Consider a psh function $\varphi $ in two variables, say </p>
+<div class="equation">
+  \[  \varphi (z,w)=\left( -\log (-\log |z|^2)\right) \lor \left(\log |w|^2\right).  \]
+</div>
+<p> Take an arbitrary quasi-equisingular approximation $(\varphi _ j)_ j$. Then each $\varphi _ j$ is locally bounded since $\nu (\varphi ,(0,0))=0$. Let us consider the restrictions to $H=\{ z=0\} $. Then $\varphi _ j|_ H$ is still bounded, while </p>
+<div class="equation">
+  \[  \varphi |_ H(w)=\log |w|^2.  \]
+</div>
+<p> In other words, the restrictions $\varphi _ j|_ H$ fail to be a quasi-equisingular approximation of $\varphi |_ H$. </p>
+</article> Our trace operator gives an elegant way to solve both problems. 
+
+<p>
+We first observe that if $\varphi \in \mathrm{QPSH}(X)$ has analytic singularities and $\nu (\varphi ,Y)=0$, then $\varphi |_ Y\not\equiv -\infty $. Indeed, if $\varphi |_ Y\equiv -\infty $, then in a local presentation 
+</p>
+<div class="equation">
+  \[  \varphi =c\log (|f_1|^2+\cdots +|f_ N|^2)+\mathcal{O}(1)  \]
+</div>
+<p>
+ all generators $f_1,\ldots ,f_ N$ vanish along $Y$, which gives $\nu (\varphi ,Y)&gt;0$, a contradiction. 
+</p>
+<p>
+This observation will be crucial in the sequel. 
+</p>
+
+<article class="env-proposition" id="sgpt-8FF85CC2">
+<p><a class="environment-identifier" href="../../tag/82453E358B30/">Proposition <span data-tag="8FF85CC2">8.1.3</span>.</a><span data-gerby-tag="8FF85CC2"></span> Let $\varphi \in \mathrm{QPSH}(X)$ be a function such that $\nu (\varphi ,Y)=0$. Let $(\varphi _ i)_ i$, $(\psi _ i)_ i$ be quasi-equisingular approximations of $\varphi $. Then </p>
+<div class="equation" id="sgpt-8E5ACBA1"><span data-gerby-tag="8E5ACBA1"></span>
+<span class="equation-label"><a data-tag="8E5ACBA1" href="../../tag/2B91479A9BE3/">8.1</a></span>
+<div>\begin{equation}  \lim _{i\to \infty } d_ S\left(\varphi _ i|_{\widetilde{Y}},\psi _ i|_{\widetilde{Y}}\right)=0. \end{equation}</div>
+</div>
+</article> Here in (<a data-tag="8E5ACBA1" href="../../tag/2B91479A9BE3/">8.1</a>), $d_ S$ refers to any $d_{S,\theta }$, where $\theta $ is any closed smooth real $(1,1)$-form on $\widetilde{Y}$ representing a big cohomology class and satisfying $\varphi _ i|_{\widetilde{Y}},\psi _ i|_{\widetilde{Y}}\in \mathrm{PSH}(\widetilde{Y},\theta )$. For different choices of $\theta $, (<a data-tag="8E5ACBA1" href="../../tag/2B91479A9BE3/">8.1</a>) remains equivalent, as explained in corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      After subtracting a common constant from $\varphi $, $\varphi _ i$ and $\psi _ i$, we may assume that $\varphi _ i\leq 0$ for all $i\geq 1$. 
+    <p>
+      Take a Kähler form $\omega $ on $X$ such that $\varphi _ i,\psi _ i\in \mathrm{PSH}(X,\omega /2)$ for all $i\geq 1$. By corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>, we need to show that 
+    
+<div class="equation">
+  \[  \lim _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}}\left(\varphi _ i|_{\widetilde{Y}},\psi _ i|_{\widetilde{Y}}\right)=0.  \]
+</div>
+<p>
+       Assume that this fails. Then, up to replacing the sequences by subsequences, we may assume that the following limit exists and 
+    
+<div class="equation">
+  \[  \lim _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}}\left(\varphi _ i|_{\widetilde{Y}},\psi _ i|_{\widetilde{Y}}\right)&gt;0.  \]
+</div>
+<p>
+       Take a Kähler form $\tilde{\omega }$ on $\widetilde{Y}$. Then 
+    
+<div class="equation">
+  \[  \lim _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}+\tilde{\omega }}\left(\varphi _ i|_{\widetilde{Y}},\psi _ i|_{\widetilde{Y}}\right)&gt;0  \]
+</div>
+<p>
+       by corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>. 
+    <p>
+      By corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a>, after changing the background class from $\omega /2$ to $\omega $ if necessary, we have 
+    
+<div class="equation">
+  \[  \varphi _ i\xrightarrow {d_ S}P_{\omega }[\varphi ]_{\mathcal I},\quad \psi _ i\xrightarrow {d_ S}P_{\omega }[\varphi ]_{\mathcal I}.  \]
+</div>
+<p>
+       Let 
+    
+<div class="equation">
+  \[  \chi _ i\coloneqq \varphi _ i\lor \psi _ i.  \]
+</div>
+<p>
+       By proposition <a data-tag="35BF3BD5" href="../../tag/FDEBDB1E8A22/">6.2.23</a>, we have $\chi _ i\xrightarrow {d_ S} P_{\omega }[\varphi ]_{\mathcal{I}}$. Moreover, $(\chi _ i)_ i$ is again a quasi-equisingular approximation of the original potential $\varphi $ as follows from corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a>. 
+    <p>
+      The triangle inequality gives 
+    
+<div class="equation">
+  \[  d_ S(\varphi _ i|_{\widetilde{Y}},\psi _ i|_{\widetilde{Y}}) \leq d_ S(\varphi _ i|_{\widetilde{Y}},\chi _ i|_{\widetilde{Y}})+ d_ S(\psi _ i|_{\widetilde{Y}},\chi _ i|_{\widetilde{Y}}).  \]
+</div>
+<p>
+       Thus, after passing to a subsequence and interchanging the two quasi-equisingular approximations if necessary, we may assume that 
+    
+<div class="equation">
+  \[  \varliminf _{i\to \infty }d_ S(\varphi _ i|_{\widetilde{Y}},\chi _ i|_{\widetilde{Y}})&gt;0.  \]
+</div>
+<p>
+       Replacing $(\psi _ i)_ i$ by $(\chi _ i)_ i$, we may therefore assume that 
+    
+<div class="equation">
+  \[  \varphi _ i\leq \psi _ i  \]
+</div>
+<p>
+       for all $i$, while preserving the contradiction assumption. 
+    <p>
+      Take a decreasing sequence $(\epsilon _ j)_ j$ in $\mathbb {R}_{&gt;0}$ with limit $0$ such that $(1-\epsilon _ j)\varphi _ j\in \mathrm{PSH}(X,\omega )$. We first observe that 
+    
+<div class="equation">
+  \[  \lim _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}}\left(\varphi _ i|_{\widetilde{Y}},(1-\epsilon _ i)\varphi _ i|_{\widetilde{Y}}\right)=0.  \]
+</div>
+<p>
+       This is a consequence of <a data-tag="26714C3D" href="../../tag/7F9EDAFF39F9/">6.2.14</a>. Hence, by corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>, we find 
+    
+<div class="equation">
+  \[  \lim _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}+\tilde{\omega }}\left(\varphi _ i|_{\widetilde{Y}},(1-\epsilon _ i)\varphi _ i|_{\widetilde{Y}}\right)=0.  \]
+</div>
+<p>
+       Since $(\varphi _ i)_ i$ and $(\epsilon _ i)_ i$ are decreasing and $\varphi _ i\leq 0$, the sequence $\bigl ((1-\epsilon _ i)\varphi _ i|_{\widetilde{Y}}\bigr )_ i$ is decreasing. It has uniformly positive mass in the class $\omega |_{\widetilde{Y}}+\tilde{\omega }$. Hence corollary <a data-tag="0DAAB83B" href="../../tag/56D1BC5A2B85/">6.2.13</a>, together with the preceding estimate, gives a potential $\psi \in \mathrm{PSH}(\widetilde{Y},\omega |_{\widetilde{Y}}+\tilde{\omega })$ such that 
+    
+<div class="equation">
+  \[  \varphi _ i|_{\widetilde{Y}}\xrightarrow {d_ S}\psi .  \]
+</div>
+<p>
+       Hence, 
+    
+<div class="equation">
+  \[  \lim _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}+\tilde{\omega }}\left(\psi ,(1-\epsilon _ i)\varphi _ i|_{\widetilde{Y}}\right)=0.  \]
+</div>
+<p>
+      By proposition <a data-tag="C94FE791" href="../../tag/36EC36A38FAB/">1.6.11</a>, after choosing $j_ i$ inductively with $j_ i\geq i$ and $j_ i&gt;j_{i-1}$, we may assume that 
+    
+<div class="equation">
+  \[  \psi _{j_ i}\preceq (1-\epsilon _ i)\varphi _ i.  \]
+</div>
+<p>
+       Since we have arranged $\varphi _ j\leq \psi _ j$ for all $j$, it follows that 
+    
+<div class="equation">
+  \[  \varphi _{j_ i}\leq \psi _{j_ i}\preceq (1-\epsilon _ i)\varphi _ i.  \]
+</div>
+<p>
+       Hence, 
+    
+<div class="equation">
+  \[  \varphi _{j_ i}|_{\widetilde{Y}}\leq \psi _{j_ i}|_{\widetilde{Y}}\preceq (1-\epsilon _ i)\varphi _ i|_{\widetilde{Y}}.  \]
+</div>
+<p>
+       Therefore, by corollary <a data-tag="0C38E125" href="../../tag/255A623EA393/">6.2.6</a>, 
+    
+<div class="equation">
+  \[  \begin{aligned}  \varlimsup _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}+\tilde{\omega }}\left(\varphi _{j_ i}|_{\widetilde{Y}},\psi _{j_ i}|_{\widetilde{Y}}\right) \leq &amp;  \varlimsup _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}+\tilde{\omega }}\left(\varphi _{j_ i}|_{\widetilde{Y}},(1-\epsilon _ i)\varphi _ i|_{\widetilde{Y}}\right)\\  =&amp;  \varlimsup _{i\to \infty } d_{S,\omega |_{\widetilde{Y}}+\tilde{\omega }}\left(\psi ,(1-\epsilon _ i)\varphi _ i|_{\widetilde{Y}}\right)\\  = &amp;  0, \end{aligned}  \]
+</div>
+<p>
+       which is a contradiction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-DC6538A0">
+<a class="environment-identifier" href="../../tag/ADF6E265888F/">Definition <span data-tag="DC6538A0">8.1.4</span>.</a><span data-gerby-tag="DC6538A0"></span> Let $\varphi \in \mathrm{QPSH}(X)$ be a function such that $\nu (\varphi ,Y)=0$. We say a potential $\psi \in \mathrm{QPSH}(\widetilde{Y})$ is a<aside class="source-footnote" id="sgpt-a0000065616"><span class="footnote-label">Note.</span> Let us resume our analogy in the introduction of this chapter. In real analysis, the trace of a Sobolev function $f$ is only defined up to almost-everywhere equality; we say a particular function on $\partial \Omega $ is <em>a</em> trace of $f$. Likewise here, we say $\psi $ is <em>a</em> trace operator of $\varphi $ rather than that the $P$-equivalence class of $\psi $ is <em>the</em> trace operator of $\varphi $.</aside> <em>trace operator</em> of $\varphi $ along $Y$ if there is a quasi-equisingular approximation $(\varphi _ j)_{j&gt;0}$ of $\varphi $ such that 
+<div class="equation" id="sgpt-F9719B3C"><span data-gerby-tag="F9719B3C"></span>
+<span class="equation-label"><a data-tag="F9719B3C" href="../../tag/7AF21EBA8F4E/">8.5</a></span>
+<div>\begin{equation}  \varphi _ j|_{\widetilde{Y}}\xrightarrow {d_ S}\psi \footnotemark . \end{equation}</div>
+</div>
+ <aside class="source-footnote" id="sgpt-a0000065657"><span class="footnote-label">Note.</span> To be more precise, what we mean is the following: We can find a closed smooth real $(1,1)$-form on $X$ such that $\varphi \in \mathrm{PSH}(X,\theta )$. Then there is a Kähler form such that $\omega +\theta +\mathrm{dd}^{\mathrm{c}}\varphi _ j\geq 0$ for all $j\geq 1$. Take a Kähler form $\tilde{\omega }$ on $\widetilde{Y}$ so that $\tilde{\omega }\geq (\theta +\omega )|_{\widetilde{Y}}$ and $\psi \in \mathrm{PSH}(\widetilde{Y},\tilde{\omega })$. Then our condition means that $\varphi _ j|_{\widetilde{Y}}\xrightarrow {d_{S,\tilde{\omega }}}\psi $. This condition is independent of the choices of $\theta $, $\omega $ and $\tilde{\omega }$ by corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>.</aside> 
+</article> Indeed, choosing the background Kähler form on $\widetilde{Y}$ sufficiently positive, the restricted quasi-equisingular approximation is a decreasing sequence with masses bounded below by a positive constant; hence it converges by corollary <a data-tag="0DAAB83B" href="../../tag/56D1BC5A2B85/">6.2.13</a>. Observe that by proposition <a data-tag="8FF85CC2" href="../../tag/82453E358B30/">8.1.3</a>, the condition (<a data-tag="F9719B3C" href="../../tag/7AF21EBA8F4E/">8.5</a>) is independent of the choice of $(\varphi _ j)_ j$. 
+
+<p>
+Later on in theorem <a data-tag="6967BB91" href="../../tag/0BA5B8CFD15F/">12.3.14</a>, we shall prove that the trace operator corresponds to the natural way of restricting convex bodies in the toric setting. 
+</p>
+
+<article class="env-proposition" id="sgpt-5B8EBC49">
+<p><a class="environment-identifier" href="../../tag/45EA06425921/">Proposition <span data-tag="5B8EBC49">8.1.5</span>.</a><span data-gerby-tag="5B8EBC49"></span> Let $\varphi \in \mathrm{QPSH}(X)$ such that $\nu (\varphi ,Y)=0$. Suppose that $\psi $ and $\psi '$ are trace operators of $\varphi $ along $Y$. Then $\psi $ and $\psi '$ are $\mathcal{I}$-good and $\psi \sim _ P\psi '$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The restrictions of the analytic approximants have analytic singularities on $\widetilde{Y}$, so the claim follows from theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a>. The fact that $\psi \sim _ P\psi '$ follows from proposition <a data-tag="8FF85CC2" href="../../tag/82453E358B30/">8.1.3</a> and proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="sgpt-11E79380">
+<p><a class="environment-identifier" href="../../tag/75F5F5ACD2FA/">Example <span data-tag="11E79380">8.1.6</span>.</a><span data-gerby-tag="11E79380"></span>As a trivial example, when $Y$ is just a single point, then $\mathrm{QPSH}(Y)$ is canonically identified with $\mathbb {R}$. Any constant $c\in \mathbb {R}$ is a trace operator of a function $\varphi \in \mathrm{QPSH}(X)$ satisfying $\nu (\varphi ,Y)=0$. </p>
+</article>
+
+
+<article class="env-definition" id="sgpt-4261C2F9">
+<p><a class="environment-identifier" href="../../tag/5239E9ADD0FF/">Definition <span data-tag="4261C2F9">8.1.7</span>.</a><span data-gerby-tag="4261C2F9"></span> Let $\varphi \in \mathrm{QPSH}(X)$ such that $\nu (\varphi ,Y)=0$. We write $\operatorname{Tr}_{Y}(\varphi )$ for any trace operator of $\varphi $ along $Y$. </p>
+<p>Given a closed smooth real $(1,1)$-form $\theta $ on $X$. When $\operatorname{Tr}_ Y(\varphi )$ can be chosen to lie in $\mathrm{PSH}(\widetilde{Y},\theta |_{\widetilde{Y}})_{&gt;0}$, we write </p>
+<div class="equation">
+  \[  \operatorname{Tr}_ Y^{\theta }(\varphi )\coloneqq P_{\theta |_{\widetilde{Y}}}\bigl [ \operatorname{Tr}_ Y(\varphi ) \bigr ]=P_{\theta |_{\widetilde{Y}}}\bigl [ \operatorname{Tr}_ Y(\varphi ) \bigr ]_{\mathcal{I}}.  \]
+</div>
+</article> The trace operator $\operatorname{Tr}_ Y(\varphi )$ is therefore well-defined only up to $P$-equivalence by proposition <a data-tag="5B8EBC49" href="../../tag/45EA06425921/">8.1.5</a>. Also observe that if $\varphi \in \mathrm{PSH}(X,\theta )$ for some smooth closed real $(1,1)$-form $\theta $ on $X$, then for any Kähler form $\omega $ on $X$, the trace operator $\operatorname{Tr}_ Y^{\theta +\omega }(\varphi )$ is always defined. In particular, if $\theta _{\varphi }$ is a Kähler current, $\operatorname{Tr}^{\theta }_ Y(\varphi )$ is always defined. 
+
+
+<article class="env-remark" id="sgpt-834A0B6C">
+<p><a class="environment-identifier" href="../../tag/F5CDFD8547BC/">Remark <span data-tag="834A0B6C">8.1.8</span>.</a><span data-gerby-tag="834A0B6C"></span> As in <a data-tag="8E42F9ED" href="../../tag/877B9D0BDD26/">1.7.5</a>, the trace operator could also be applied to closed positive $(1,1)$-currents on $X$. If $T\in \mathcal{Z}_+(X,\alpha )$ for some pseudo-effective class $\alpha $ on $X$ (see definition <a data-tag="974CBF4D" href="../../tag/49CF4A9C5660/">1.7.3</a>) and $\beta \in \mathrm{H}^{1,1}(\widetilde{Y},\mathbb {R})$, then we write </p>
+<div class="equation">
+  \[  \operatorname{Tr}^{\beta }_ Y(T)  \]
+</div>
+<p> for any (if exists) closed positive $(1,1)$-current in $\beta $ representing $\operatorname{Tr}_ Y(T)$ when $\nu (T,Y)=0$. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-18696C0F">
+<p><a class="environment-identifier" href="../../tag/B293F74D2022/">Proposition <span data-tag="18696C0F">8.1.9</span>.</a><span data-gerby-tag="18696C0F"></span> Let $\varphi \in \mathrm{QPSH}(X)$ such that $\nu (\varphi ,Y)=0$. Assume that $\varphi |_ Y\not\equiv -\infty $. Then </p>
+<div class="equation">
+  \[  \varphi |_{\widetilde{Y}}\preceq _ P \operatorname{Tr}_ Y(\varphi ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take a Kähler form $\omega $ such that $\omega _{\varphi }$ is a Kähler current. Let $(\varphi _ j)_{j&gt;0}$ be a quasi-equisingular approximation of $\varphi $ in $\mathrm{PSH}(X,\omega )_{&gt;0}$. We may assume that $\varphi _ j\leq 0$ for all $j\geq 1$. 
+    <p>
+      Then 
+    
+<div class="equation" id="sgpt-4880A10B"><span data-gerby-tag="4880A10B"></span>
+<span class="equation-label"><a data-tag="4880A10B" href="../../tag/D2EC0F645F1C/">8.6</a></span>
+<div>\begin{equation}  \varphi _ j|_{\widetilde{Y}}\leq P_{\omega |_{\widetilde{Y}}}\left[\varphi _ j|_{\widetilde{Y}}\right] \end{equation}</div>
+</div>
+<p>
+       for all $j\geq 1$. In particular, 
+    
+<div class="equation">
+  \[  \varphi |_{\widetilde{Y}}\leq \inf _{j\geq 1}P_{\omega |_{\widetilde{Y}}}\left[\varphi _ j|_{\widetilde{Y}}\right].  \]
+</div>
+<p>
+       Thanks to corollary <a data-tag="D2436235" href="../../tag/F84D53FDA599/">6.2.11</a>, 
+    
+<div class="equation" id="sgpt-F9251B3D"><span data-gerby-tag="F9251B3D"></span>
+<span class="equation-label"><a data-tag="F9251B3D" href="../../tag/9C0808B7B91F/">8.7</a></span>
+<div>\begin{equation}  \operatorname{Tr}_ Y(\varphi )\sim _ P \inf _{j\geq 1} P_{\omega |_{\widetilde{Y}}}[\varphi _ j|_{\widetilde{Y}}]. \end{equation}</div>
+</div>
+<p>
+       We conclude our assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-example" id="sgpt-050DD15F">
+<p><a class="environment-identifier" href="../../tag/917FA516701F/">Example <span data-tag="050DD15F">8.1.10</span>.</a><span data-gerby-tag="050DD15F"></span> Let $\varphi \in \mathrm{QPSH}(X)$ such that $\nu (\varphi ,Y)=0$. Assume that $\varphi $ has analytic singularities. Then </p>
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\varphi )\sim _ P \varphi |_{\widetilde{Y}}.  \]
+</div>
+</article>
+
+
+<article class="env-example" id="sgpt-7F728F46">
+<p><a class="environment-identifier" href="../../tag/50B7DFD48C9D/">Example <span data-tag="7F728F46">8.1.11</span>.</a><span data-gerby-tag="7F728F46"></span> Let $\varphi \in \mathrm{QPSH}(X)$. Take a closed real smooth $(1,1)$-form $\theta $ on $X$ such that $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, then </p>
+<div class="equation">
+  \[  \operatorname{Tr}_ X(\varphi )\sim _ P P_{\theta }[\varphi ]_{\mathcal{I}},\quad \operatorname{Tr}^{\theta }_ X(\varphi ) = P_{\theta }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p> In particular, the trace operator can be regarded as a generalization of the $\mathcal{I}$-envelope. </p>
+</article>
+
+
+<article class="env-example" id="sgpt-628E430C">
+<p><a class="environment-identifier" href="../../tag/2272C87A04CE/">Example <span data-tag="628E430C">8.1.12</span>.</a><span data-gerby-tag="628E430C"></span> Assume that $\varphi \in \mathrm{PSH}(X,\theta )$ for some closed smooth real $(1,1)$-form $\theta $ on $X$, $\nu (\varphi ,Y)=0$ and </p>
+<div class="equation" id="sgpt-300FC4B6"><span data-gerby-tag="300FC4B6"></span>
+<span class="equation-label"><a data-tag="300FC4B6" href="../../tag/4411B718BF44/">8.8</a></span>
+<div>\begin{equation}  \lim _{\epsilon \searrow 0} \int _{\widetilde{Y}} \left( \theta |_{\widetilde{Y}} +\epsilon \omega |_{\widetilde{Y}}+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta +\epsilon \omega }(\varphi )\right)^{\dim Y} &gt;0 \end{equation}</div>
+</div>
+<p> for any arbitrary choice of a Kähler form $\omega $ on $X$. Then it follows from proposition <a data-tag="DE839E2D" href="../../tag/048490BEAC8C/">3.1.26</a> that $\operatorname{Tr}_ Y^{\theta }(\varphi )$ is defined, and its mass is exactly the above limit. </p>
+<p>As a consequence, we have the following formula: </p>
+<div class="equation">
+<span class="equation-label">8.9</span>
+<div>\begin{equation}  \int _{\widetilde{Y}} \left(\theta |_{\widetilde{Y}}+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^{\dim Y}=\lim _{\epsilon \searrow 0} \int _{\widetilde{Y}} \left( \theta |_{\widetilde{Y}} +\epsilon \omega |_{\widetilde{Y}}+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta +\epsilon \omega }(\varphi )\right)^{\dim Y}, \end{equation}</div>
+</div>
+<p> where the left-hand side is understood as $0$ if $\operatorname{Tr}_ Y^{\theta }(\varphi )$ is not defined. </p>
+</article>
+
+
+<article class="env-remark" id="sgpt-B648EFE4">
+<p><a class="environment-identifier" href="../../tag/ECCF7648C028/">Remark <span data-tag="B648EFE4">8.1.13</span>.</a><span data-gerby-tag="B648EFE4"></span> The trace operator allows us to introduce the following extension of the moving Seshadri constant. For $T\in \mathcal{Z}_+(X,\alpha )$ and $x\in X$, define </p>
+<div class="equation">
+  \[  \epsilon (T,x)\coloneqq \inf _{V\ni x}\left(\frac{\operatorname{vol}\operatorname{Tr}_ V^{\alpha |_{\widetilde{V}}} T}{\operatorname{mult}_ x V} \right)^{\frac{1}{\dim V}},  \]
+</div>
+<p> where $\operatorname{vol}\operatorname{Tr}_ V^{\alpha |_{\widetilde{V}}} T=0$ if $\operatorname{Tr}_ V^{\alpha |_{\widetilde{V}}} T$ is not defined. Here $V$ runs over all positive-dimensional closed irreducible analytic subsets of $X$ containing $x$. </p>
+<p>These moving Seshadri constants seem to be new. But since I do not have particularly good applications in mind, I will not study these objects in this book. </p>
+</article>
+
+</div></section><section class="reading-chunk" id="entry-4A91513F4829" data-section-entries="3B7501D970A6 4A91513F4829 531FFD6D4B64 58627BFD2457 71AECE2E70ED DB90B2D3ADEB DDEF49346283 E9AC29FB30B6 F2C3DD7D449E"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/4A91513F4829/">8.2 Properties of the trace operator</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="F936FFBD"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold and $Y\subseteq X$ be an irreducible analytic subset. 
+</p>
+
+We prove a few elementary properties of the trace operator. <article class="env-proposition" id="sgpt-F53735CE">
+<p><a class="environment-identifier" href="../../tag/F2C3DD7D449E/">Proposition <span data-tag="F53735CE">8.2.1</span>.</a><span data-gerby-tag="F53735CE"></span> Let $\varphi ,\psi \in \mathrm{QPSH}(X)$, $\lambda &gt;0$. Assume that $\nu (\varphi ,Y)=\nu (\psi ,Y)=0$. Then we have the following: </p>
+<ol>
+<li class="custom-item" id="sgpt-8EBAA3F6"><span data-gerby-tag="8EBAA3F6"></span><p>
+ Suppose that $\varphi \preceq _{\mathcal{I}}\psi $. Then $\operatorname{Tr}_ Y(\varphi )\preceq _ P \operatorname{Tr}_ Y(\psi )$. 
+</p>
+</li><li class="custom-item" id="sgpt-C40B5558"><span data-gerby-tag="C40B5558"></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\varphi +\psi )\sim _ P \operatorname{Tr}_ Y(\varphi )+\operatorname{Tr}_ Y(\psi ).  \]
+</div>
+</li><li class="custom-item" id="sgpt-9C0DECAC"><span data-gerby-tag="9C0DECAC"></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\lambda \varphi )\sim _ P \lambda \operatorname{Tr}_ Y(\varphi ).  \]
+</div>
+</li><li class="custom-item" id="sgpt-DD12A1FB"><span data-gerby-tag="DD12A1FB"></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\varphi \lor \psi )\sim _ P \operatorname{Tr}_ Y(\varphi )\lor \operatorname{Tr}_ Y(\psi ).  \]
+</div>
+</li>
+</ol>
+</article> As a consequence of <a data-tag="8EBAA3F6" href="../../tag/F2C3DD7D449E/#sgpt-8EBAA3F6">1</a>, the $P$-equivalence class of $\operatorname{Tr}_ Y(\varphi )$ depends only on the $\mathcal{I}$-equivalence class of $\varphi $. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take a closed smooth real $(1,1)$-form $\theta $ on $X$ such that $\theta _{\varphi }$, $\theta _{\psi }$ are both Kähler currents. Let $(\varphi _ j)_ j$ and $(\psi _ j)_ j$ be quasi-equisingular approximations of $\varphi $ and $\psi $ in $\mathrm{PSH}(X,\theta )$ respectively. We may assume that $\varphi _ j\leq 0$ and $\psi _ j\leq 0$ for all $j\geq 1$. 
+    <p>
+<a data-tag="8EBAA3F6" href="../../tag/F2C3DD7D449E/#sgpt-8EBAA3F6">1</a> We choose the quasi-equisingular approximations compatibly. By theorem <a data-tag="8CF7873D" href="../../tag/9348BF57481B/">1.6.10</a>, we may take $\varphi _ j$ and $\psi _ j$ with analytic singularities of types 
+    
+<div class="equation">
+  \[  \left(2^{-j},\mathcal I(2^ j\varphi )\right), \quad \left(2^{-j},\mathcal I(2^ j\psi )\right),  \]
+</div>
+<p>
+       respectively. Since $\varphi \preceq _{\mathcal I}\psi $, we have 
+    
+<div class="equation">
+  \[  \mathcal I(2^ j\varphi )\subseteq \mathcal I(2^ j\psi )  \]
+</div>
+<p>
+       for every $j$. Hence $\varphi _ j\preceq \psi _ j$ for every $j$. Restricting to $\widetilde{Y}$, we get $\varphi _ j|_{\widetilde{Y}}\preceq \psi _ j|_{\widetilde{Y}}$. Passing to the $d_ S$-limits by proposition <a data-tag="2E995FE9" href="../../tag/362688C3DDC9/">6.2.24</a>, we obtain 
+    
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\varphi )\preceq _ P\operatorname{Tr}_ Y(\psi ).  \]
+</div>
+<p>
+       Restricting to $\widetilde{Y}$ and passing to the $d_ S$-limits by proposition <a data-tag="2E995FE9" href="../../tag/362688C3DDC9/">6.2.24</a>, we obtain 
+    
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\varphi )\preceq _ P \operatorname{Tr}_ Y(\psi ).  \]
+</div>
+<p>
+<a data-tag="C40B5558" href="../../tag/F2C3DD7D449E/#sgpt-C40B5558">2</a> It follows from theorem <a data-tag="EFF6C6C5" href="../../tag/666CDCEAA1BE/">6.2.25</a> that $\varphi _ j+\psi _ j\xrightarrow {d_ S}P_{\theta }[\varphi ]_{\mathcal{I}}+P_{\theta }[\psi ]_{\mathcal{I}}$. However, by proposition <a data-tag="DD837F85" href="../../tag/F7C47263CB3C/">3.2.16</a> and proposition <a data-tag="9A8CECCD" href="../../tag/AC437613D2C1/">7.2.1</a>, we have 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]_{\mathcal{I}}+P_{\theta }[\psi ]_{\mathcal{I}}\sim _ P P_{2\theta }[\varphi +\psi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       Therefore, by proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a>, corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a> and proposition <a data-tag="6D58790D" href="../../tag/AB08C5138082/">1.6.2</a>, $(\varphi _ j+\psi _ j)_ j$ is a quasi-equisingular approximation of $\varphi +\psi $. We conclude using theorem <a data-tag="EFF6C6C5" href="../../tag/666CDCEAA1BE/">6.2.25</a>. 
+    <p>
+<a data-tag="9C0DECAC" href="../../tag/F2C3DD7D449E/#sgpt-9C0DECAC">3</a> Let $(\lambda _ j)_ j$ be an increasing sequence of positive rational numbers with limit $\lambda $. Then $(\lambda _ j\varphi _ j)_ j$ is a quasi-equisingular approximation of $\lambda \varphi $. Since $\lambda _ j/\lambda \to 1$, <a data-tag="26714C3D" href="../../tag/7F9EDAFF39F9/">6.2.14</a> gives 
+    
+<div class="equation">
+  \[  d_ S\left((\lambda _ j/\lambda )\varphi _ j|_{\widetilde{Y}},\varphi _ j|_{\widetilde{Y}}\right)\to 0.  \]
+</div>
+<p>
+       After scaling the background class, <a data-tag="7EA87568" href="../../tag/F0C01F4F75EB/">6.2.22</a> shows that $\lambda _ j\varphi _ j|_{\widetilde{Y}}$ and $\lambda \varphi _ j|_{\widetilde{Y}}$ have the same $d_ S$-limit. The assertion follows. 
+    <p>
+<a data-tag="DD12A1FB" href="../../tag/F2C3DD7D449E/#sgpt-DD12A1FB">4</a> By proposition <a data-tag="35BF3BD5" href="../../tag/FDEBDB1E8A22/">6.2.23</a>, we have 
+    
+<div class="equation">
+  \[  \varphi _ j\lor \psi _ j\xrightarrow {d_ S} P_{\theta }[\varphi ]_{\mathcal{I}}\lor P_{\theta }[\psi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       By proposition <a data-tag="DD837F85" href="../../tag/F7C47263CB3C/">3.2.16</a> and proposition <a data-tag="9A8CECCD" href="../../tag/AC437613D2C1/">7.2.1</a>, we have 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]_{\mathcal{I}}\lor P_{\theta }[\psi ]_{\mathcal{I}}\sim _ P P_{\theta }[\varphi \lor \psi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       Therefore, our assertion follows exactly as in the proof of <a data-tag="C40B5558" href="../../tag/F2C3DD7D449E/#sgpt-C40B5558">2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+
+The trace operator is continuous along $d_ S$-convergent decreasing sequences. <article class="env-proposition" id="sgpt-762F23ED">
+<p><a class="environment-identifier" href="../../tag/58627BFD2457/">Proposition <span data-tag="762F23ED">8.2.2</span>.</a><span data-gerby-tag="762F23ED"></span> Let $(\varphi _ j)_{j\in I}$ be a decreasing net in $\mathrm{QPSH}(X)$. Assume that there exists a closed real smooth $(1,1)$-form $\theta $ such that $\varphi _ j\in \mathrm{PSH}(X,\theta )$ for each $j\in I$. Assume that $\varphi _ j\xrightarrow {d_ S}\varphi \in \mathrm{QPSH}(X)$ and $\nu (\varphi ,Y)=0$. Then </p>
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\varphi _ j)\xrightarrow {d_ S}\operatorname{Tr}_ Y(\varphi ).  \]
+</div>
+</article> In view of corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a>, the trace operator preserves the property of being a quasi-equisingular approximation, thereby solving the problem in example <a data-tag="C05BBB82" href="../../tag/482E170F0825/">8.1.1</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It is enough to prove the sequential assertion. Indeed, suppose that the net statement fails. Then there is $\delta &gt;0$ such that for every $i_0\in I$ one can find $i\geq i_0$ with 
+    
+<div class="equation">
+  \[  d_ S(\operatorname{Tr}_ Y(\varphi _ i),\operatorname{Tr}_ Y(\varphi ))\geq \delta .  \]
+</div>
+<p>
+       Using also $\varphi _ i\xrightarrow {d_ S}\varphi $, we may choose an increasing sequence $i_ j\in I$ such that 
+    
+<div class="equation">
+  \[  d_ S(\varphi _{i_ j},\varphi )&lt;j^{-1},\quad d_ S(\operatorname{Tr}_ Y(\varphi _{i_ j}),\operatorname{Tr}_ Y(\varphi ))\geq \delta .  \]
+</div>
+<p>
+       The sequence $(\varphi _{i_ j})_ j$ is decreasing and converges to $\varphi $ in $d_ S$, contradicting the sequential assertion. 
+    <p>
+      Thus we assume that $(\varphi _ j)_{j\geq 1}$ is a decreasing sequence and that $\varphi _ j\xrightarrow {d_ S}\varphi $. 
+    <p>
+      Take a Kähler form $\omega $ on $X$ so that $\varphi _ j,\varphi \in \mathrm{PSH}(X,\omega )_{&gt;0}$. Replacing $\varphi _ j$ by $P_{\omega }[\varphi _ j]$, we may then assume that $(\varphi _ j)_ j$ is a decreasing sequence of model potentials. By proposition <a data-tag="9F2D0454" href="../../tag/A2F662346EB5/">6.2.26</a>, we have 
+    
+<div class="equation">
+  \[  P_{\omega }[\varphi ]=\inf _{j\geq 1}\varphi _ j.  \]
+</div>
+<p>
+       By proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a>, we may assume from now on that 
+    
+<div class="equation">
+  \[  \varphi =\inf _{j\geq 1}\varphi _ j.  \]
+</div>
+<p>
+       After adding a Kähler form to $\omega $, we may assume that $\omega _{\varphi }$ is a Kähler current. 
+    <p>
+      For each $j\geq 1$, choose a quasi-equisingular approximation $(\varphi _ j^ k)_{k\geq 1}$ of $\varphi _ j$ in $\mathrm{PSH}(X,\omega )$. Using the standard construction in theorem <a data-tag="8CF7873D" href="../../tag/9348BF57481B/">1.6.10</a>, we may choose these approximations compatibly in $j$, so that for each fixed $k$, 
+    
+<div class="equation">
+  \[  \varphi _{j+1}^ k\preceq \varphi _ j^ k  \]
+</div>
+<p>
+       We shall choose an increasing sequence of integers $k_ j$ and put 
+    
+<div class="equation">
+  \[  \eta _ j\coloneqq \varphi _ j^{k_ j}.  \]
+</div>
+<p>
+       The sequence $(k_ j)_ j$ is chosen inductively: Choose $k_1&gt;1$, for $j&gt;1$, we choose $k_ j$ large enough so that 
+    
+<ol>
+<li class="custom-item" id="sgpt-12206AA4"><span data-gerby-tag="12206AA4"></span><p>
+ $k_{j}\geq k_{j-1}$; 
+</p>
+</li><li class="custom-item" id="sgpt-3AA100C7"><span data-gerby-tag="3AA100C7"></span><p>
+ $d_{S,\omega }(\eta _ j,P_{\omega }[\varphi _ j]_{\mathcal{I}})\leq 1/(j-1)$; 
+</p>
+</li><li class="custom-item" id="sgpt-CC037033"><span data-gerby-tag="CC037033"></span><p>
+ $d_{S,\omega |_{\widetilde{Y}}}(\eta _ j|_{\widetilde{Y}},\operatorname{Tr}_ Y^{\omega }(\varphi _ j))&lt;1/(j-1)$. 
+</p>
+</li>
+</ol>
+<p>
+       It follows from the compatibility in $j$ and from $k_ j\geq k_{j-1}$ that $(\eta _ j)_ j$ is decreasing in singularity types. Indeed, 
+    
+<div class="equation">
+  \[  \eta _{j+1}=\varphi _{j+1}^{k_{j+1}}\preceq \varphi _{j+1}^{k_ j}\preceq \varphi _ j^{k_ j}=\eta _ j.  \]
+</div>
+<p>
+       By theorem <a data-tag="720E23D2" href="../../tag/88D575A3C46A/">6.2.27</a>, we have 
+    
+<div class="equation">
+  \[  P_{\omega }[\varphi _ j]_{\mathcal{I}}\xlongrightarrow {d_ S} P_{\omega }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       By <a data-tag="3AA100C7" href="../../tag/4A91513F4829/#sgpt-3AA100C7">2</a> and corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a>, we have $\eta _ j\xrightarrow {d_ S} P_{\omega }[\varphi ]_{\mathcal{I}}$. Observe that by proposition <a data-tag="9F2D0454" href="../../tag/A2F662346EB5/">6.2.26</a>, 
+    
+<div class="equation">
+  \[  P_{\omega }[\varphi ]_{\mathcal{I}}=\inf _{j&gt;0} P_{\omega }\left[\eta _ j\right].  \]
+</div>
+<p>
+       By proposition <a data-tag="685DEAD4" href="../../tag/10F9DDE25703/">3.2.15</a>, for each $j&gt;0$, $P_{\omega }[\eta _ j]$ has analytic singularities. By theorem <a data-tag="9B1B1327" href="../../tag/E1576893E02B/">6.2.31</a>, $(P_{\omega }[\eta _ j])_ j$ is a quasi-equisingular approximation of $P_{\omega }[\varphi ]_{\mathcal{I}}$. Therefore, by definition of the trace operator and proposition <a data-tag="F53735CE" href="../../tag/F2C3DD7D449E/">8.2.1</a> <a data-tag="8EBAA3F6" href="../../tag/F2C3DD7D449E/#sgpt-8EBAA3F6">1</a>, 
+    
+<div class="equation">
+  \[  \eta _ j|_{\widetilde{Y}}\xrightarrow {d_ S} \operatorname{Tr}_ Y(\varphi ).  \]
+</div>
+<p>
+       It follows from <a data-tag="CC037033" href="../../tag/4A91513F4829/#sgpt-CC037033">3</a> that 
+    
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\varphi _ j)\xrightarrow {d_ S}\operatorname{Tr}_ Y(\varphi ).  \]
+</div>
+<p>
+       We conclude the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-example" id="sgpt-E0CF7EEA">
+<p><a class="environment-identifier" href="../../tag/531FFD6D4B64/">Example <span data-tag="E0CF7EEA">8.2.3</span>.</a><span data-gerby-tag="E0CF7EEA"></span> The trace operator is not continuous along increasing sequences. Let us consider the case $X=\mathbb {P}^2$ with coordinates $(z_1,z_2)$ on $\mathbb {C}^2\subseteq X$. Let $\omega _{\mathrm{{FS}}}$ denote the Fubini–Study metric. The subvariety $Y\cong \mathbb {P}^1$ is defined by $z_2=0$. Consider an increasing sequence $(\varphi _ j)_ j$ in $\mathrm{PSH}(X,\omega _{\mathrm{FS}})$, whose potentials near $(0,0)$ are given by </p>
+<div class="equation">
+  \[  \log |z_1|^2\lor \left( j^{-1}\log |z_2|^2\right)+\mathcal{O}(1).  \]
+</div>
+<p> The pointwise restriction of these potentials to $Y$ are given locally by </p>
+<div class="equation">
+  \[  \log |z_1|^2+\mathcal{O}(1).  \]
+</div>
+<p> On the other hand, locally </p>
+<div class="equation">
+  \[  \log |z_1|^2\lor \left( j^{-1}\log |z_2|^2\right)\to 0  \]
+</div>
+<p> almost everywhere as $j\to \infty $. So the trace operator is not continuous along the sequence $(\varphi _ j)_ j$. </p>
+</article>
+
+
+<article class="env-lemma" id="sgpt-FCC832C0">
+<p><a class="environment-identifier" href="../../tag/DDEF49346283/">Lemma <span data-tag="FCC832C0">8.2.4</span>.</a><span data-gerby-tag="FCC832C0"></span> Let $\pi \colon Z\rightarrow X$ be a proper bimeromorphic morphism, where $Z$ is a connected Kähler manifold. Assume that $W$ (resp. $Y$) is an irreducible analytic subset of $Z$ (resp. $X$) such that the restriction $\Pi \colon W\rightarrow Y$ of $\pi $ is defined and is bimeromorphic, so that we have the following commutative diagram </p>
+<div class="equation">
+<img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/4a441c4a133434105b61.svg"/>
+</div>
+<p> Then for any $\varphi \in \mathrm{QPSH}(X)$ with $\nu (\varphi ,Y)=0$, we have </p>
+<div class="equation" id="sgpt-05E16F28"><span data-gerby-tag="05E16F28"></span>
+<span class="equation-label"><a data-tag="05E16F28" href="../../tag/3B7501D970A6/">8.10</a></span>
+<div>\begin{equation}  \widetilde{\Pi }^*\operatorname{Tr}_{Y}(\varphi )\sim _ P\operatorname{Tr}_ W(\pi ^*\varphi ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first observe that by Zariski's main theorem, $\nu (\pi ^*\varphi ,W)=0$. So the right-hand side of (<a data-tag="05E16F28" href="../../tag/3B7501D970A6/">8.10</a>) makes sense. 
+    <p>
+<strong>Step 1</strong>. Assume that $\varphi $ has analytic singularities. It suffices to apply example <a data-tag="050DD15F" href="../../tag/917FA516701F/">8.1.10</a> to reformulate (<a data-tag="05E16F28" href="../../tag/3B7501D970A6/">8.10</a>) as 
+    
+<div class="equation">
+  \[  \widetilde{\Pi }^*(\varphi |_{\widetilde{Y}})\sim _ P(\pi ^*\varphi )|_{\widetilde{W}}.  \]
+</div>
+<p>
+       In fact, the strict equality holds, which is nothing but the functoriality of pullbacks. 
+    <p>
+<strong>Step 2</strong>. Next we handle the general case. Choose a smooth closed real $(1,1)$-form $\theta $ such that $\theta _{\varphi }$ is a Kähler current. Take a quasi-equisingular approximation $(\varphi _ j)_ j$ of $\varphi $ in $\mathrm{PSH}(X,\theta )$. By corollary <a data-tag="5BFC7056" href="../../tag/36E768E33AFB/">7.1.11</a>, $(\pi ^*\varphi _ j)_ j$ is a quasi-equisingular approximation of $\pi ^*\varphi $. From Step 1, we know that for each $j$, 
+    
+<div class="equation">
+  \[  \widetilde{\Pi }^*\operatorname{Tr}_{Y}(\varphi _ j)\sim _ P\operatorname{Tr}_ W(\pi ^*\varphi _ j).  \]
+</div>
+<p>
+       Letting $j\to \infty $, the right-hand side converges to $\operatorname{Tr}_ W(\pi ^*\varphi )$ by the definition of the trace operator. On the left-hand side, the $d_ S$-convergence of $\operatorname{Tr}_ Y(\varphi _ j)$ to $\operatorname{Tr}_ Y(\varphi )$, together with <a data-tag="2BD0A7BD" href="../../tag/FB1663F2B6E1/">6.1.18</a> and corollary <a data-tag="B184098F" href="../../tag/94B2CC4C30BB/">6.2.8</a>, implies (<a data-tag="05E16F28" href="../../tag/3B7501D970A6/">8.10</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-B56231C4">
+<p><a class="environment-identifier" href="../../tag/DB90B2D3ADEB/">Proposition <span data-tag="B56231C4">8.2.5</span>.</a><span data-gerby-tag="B56231C4"></span> Let $\varphi \in \mathrm{QPSH}(X)$ with $\nu (\varphi ,Y)=0$. Assume that $Y$ is smooth. Then for any $\lambda &gt;0$, we have </p>
+<div class="equation" id="sgpt-B307FC53"><span data-gerby-tag="B307FC53"></span>
+<span class="equation-label"><a data-tag="B307FC53" href="../../tag/E9AC29FB30B6/">8.11</a></span>
+<div>\begin{equation}  \mathcal{I}(\lambda \operatorname{Tr}_ Y(\varphi ))\subseteq \operatorname{Res}_ Y\mathcal{I}(\lambda \varphi ). \end{equation}</div>
+</div>
+</article> See definition <a data-tag="92E7A73F" href="../../tag/AA412055CB86/">1.4.18</a> for the definition of $\operatorname{Res}_ Y$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take a Kähler form $\omega $ on $X$ such that $\omega _{\varphi }$ is a Kähler current. 
+    <p>
+      Let $(\varphi _ j)_ j$ be a quasi-equisingular approximation of $\varphi $ in $\mathrm{PSH}(X,\omega )$. 
+    <p>
+      For each $j\geq 1$, we have 
+    
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\varphi ) \preceq _ P \varphi _ j|_ Y.  \]
+</div>
+<p>
+       Indeed, $\operatorname{Tr}_ Y(\varphi )$ is $P$-equivalent to the decreasing $d_ S$-limit of the restrictions $\varphi _ j|_ Y$, hence it is more singular than each $\varphi _ j|_ Y$. 
+    <p>
+      For any $\lambda '&gt;\lambda &gt;0$, we can find $j&gt;0$ so that 
+    
+<div class="equation">
+  \[  \mathcal{I}(\lambda ' \varphi _ j)\subseteq \mathcal{I}(\lambda \varphi ).  \]
+</div>
+<p>
+       By corollary <a data-tag="B623A66E" href="../../tag/FE600747C81E/">6.1.9</a> and theorem <a data-tag="A72584DC" href="../../tag/151D57BCA31B/">1.4.19</a>, we have 
+    
+<div class="equation">
+  \[  \mathcal{I}(\lambda ' \operatorname{Tr}_ Y(\varphi ))\subseteq \mathcal{I}(\lambda ' \varphi _ j|_ Y)\subseteq \operatorname{Res}_ Y\mathcal{I}(\lambda '\varphi _ j)\subseteq \operatorname{Res}_ Y\mathcal{I}(\lambda \varphi ).  \]
+</div>
+<p>
+       Thanks to the strong openness theorem theorem <a data-tag="B37FCFC9" href="../../tag/917763AE5E35/">1.4.16</a>, we conclude (<a data-tag="B307FC53" href="../../tag/E9AC29FB30B6/">8.11</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+Lastly, we turn our attention to global sections. For this we will need the following global Ohsawa–Takegoshi extension theorem for the trace operator: 
+</p>
+
+<article class="env-theorem" id="sgpt-8698A3C7">
+<p><a class="environment-identifier" href="../../tag/71AECE2E70ED/">Theorem <span data-tag="8698A3C7">8.2.6</span>.</a><span data-gerby-tag="8698A3C7"></span> Let $L$ be a big line bundle on $X$ and let $\theta $ be a closed real smooth $(1,1)$-form on $X$ representing $c_1(L)$. Suppose that $\varphi \in \mathrm{PSH}(X,\theta )$ and $\theta _{\varphi }$ is a Kähler current. Assume that $Y$ is smooth and $\nu (\varphi ,Y)=0$. Let $T$ be a holomorphic line bundle on $X$. Then there exists $k_0$ such that for all $k \geq k_0$ and $s \in \mathrm{H}^0(Y, T|_ Y\otimes L|_ Y^ k\otimes \mathcal{I}(k \operatorname{Tr}_ Y^{\theta }(\varphi )))$, there exists an extension $\tilde s \in \mathrm{H}^0(X, T\otimes L^ k \otimes \mathcal{I}(k\varphi ))$. </p>
+</article> It is of interest to know whether one can control the $L^2$-norm of $\tilde{s}$ in the above result. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a Kähler form $\omega $ on $X$ and a Hermitian metric $h_ T$ on $T$. We may assume that $Y\neq X$ and that $\theta _{\varphi } \geq 3\delta \omega $ for some $\delta &gt;0$. Let $(\varphi _ j)_ j$ be the decreasing quasi-equisingular approximation of $\varphi $ in $\mathrm{PSH}(X,\theta )$. We can assume that $\theta _{\varphi _ j} \geq 2\delta \omega $ for all $j\geq 1$. Also, there exists $\epsilon _0 &gt;0$ such that $\theta _{(1+\epsilon )\varphi _ j} \geq \delta \omega $ for any $\epsilon \in (0,\epsilon _0)$. Take $k_0=k_0(\delta ,h_ T)$ as in theorem <a data-tag="EBB4B08B" href="../../tag/2985932B2B64/">1.8.12</a>. 
+    <p>
+      We fix $k \geq k_0$ and $s \in \mathrm{H}^0(Y, T|_ Y\otimes L|_ Y^ k\otimes \mathcal{I}(k\operatorname{Tr}_ Y^{\theta }(\varphi )))$. By theorem <a data-tag="B37FCFC9" href="../../tag/917763AE5E35/">1.4.16</a>, there exists $\epsilon \in (0,\epsilon _0)$ such that $s \in \mathrm{H}^0(Y, T|_ Y\otimes L|_ Y^ k\otimes \mathcal{I}(k(1+\epsilon )\operatorname{Tr}_ Y^{\theta }(\varphi )))$. 
+    <p>
+      Since $\operatorname{Tr}_ Y^{\theta }(\varphi ) \preceq _ P \varphi _ j|_ Y$, corollary <a data-tag="B623A66E" href="../../tag/FE600747C81E/">6.1.9</a> implies that $s \in \mathrm{H}^0(Y, T|_ Y\otimes L|_ Y^ k\otimes \mathcal{I}(k(1+\epsilon )\varphi _ j|_ Y))$. By theorem <a data-tag="EBB4B08B" href="../../tag/2985932B2B64/">1.8.12</a>, there exists $\tilde s_ j \in \mathrm{H}^0(X, T\otimes L^ k \otimes \mathcal{I}(k(1+\epsilon )\varphi _ j))$ such that $\tilde s_ j|_ Y =s$, for all $j$. 
+    <p>
+      But by definition of quasi-equisingular approximation, we obtain that for high enough $j$ the inclusion $\mathcal{I}(k(1+\epsilon )\varphi _ j) \subseteq \mathcal{I}(k\varphi )$ holds. As a result, $\tilde s_ j \in \mathrm{H}^0(X, T\otimes L^ k \otimes \mathcal{I}(k\varphi ))$ for high enough $j$, finishing the argument. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-A437169E35B2" data-section-entries="03AF8A775E35 3C4F71AC116E 6EEF71F49B54 7EFDFA26519B A437169E35B2 AFC4F39F65CF D4594BE77AFC DA6F88B54E6F E74D68200A33"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/A437169E35B2/">8.3 Relation to the classical restricted volumes</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="32BCCE77"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$ and $Y$ be a connected submanifold of dimension $m$. Fix a big class $\alpha \in \mathrm{H}^{1,1}(X,\mathbb {R})$. Take a closed smooth real $(1,1)$-form $\theta \in \alpha $. Fix a Kähler form $\omega $ on $X$. 
+</p>
+<p>
+Recall that the notions of non-Kähler locus and non-nef locus were defined in definition <a data-tag="A89DF3C0" href="../../tag/AEE3AF4068CD/">1.7.8</a> and definition <a data-tag="4680D0EE" href="../../tag/1AA67767FB84/">1.7.10</a>. 
+</p>
+<p>
+When $Y\not\subseteq \operatorname{nK}(\alpha )$, Matsumura (<span class="cite">[<span class="postnote">Definition 1.4</span>, <a href="../../references/#RBBC6294A49EB">Mat13</a>]</span>) defines the restricted volume of $\{ \theta \} $ to $Y$ in the following manner: 
+</p>
+<div class="equation" id="sgpt-7DD65246"><span data-gerby-tag="7DD65246"></span>
+<span class="equation-label"><a data-tag="7DD65246" href="../../tag/D4594BE77AFC/">8.12</a></span>
+<div>\begin{equation}  \operatorname{vol}_{X|Y}(\alpha )\coloneqq \sup _{\varphi } \int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi |_ Y\right)^{m}, \end{equation}</div>
+</div>
+<p>
+ where $\varphi $ runs over elements in $\mathrm{PSH}(X,\theta )$ with analytic singularities such that $\varphi |_ Y\not\equiv -\infty $. This definition is independent of the choice of $\theta $. 
+</p>
+<p>
+In case $Y\not\subseteq \operatorname{nn}(\alpha )$, Collins–Tosatti <span class="cite">[<a href="../../references/#R901DBFD5A18D">CT22</a>]</span> extend the above definition of restricted volume: 
+</p>
+<div class="equation" id="sgpt-BDB42FF6"><span data-gerby-tag="BDB42FF6"></span>
+<span class="equation-label"><a data-tag="BDB42FF6" href="../../tag/03AF8A775E35/">8.13</a></span>
+<div>\begin{equation}  \operatorname{vol}_{X|Y}(\alpha )\coloneqq \lim _{\epsilon \searrow 0}\sup _{\varphi } \int _ Y \left(\theta |_ Y + \epsilon \omega |_ Y +\mathrm{dd}^{\mathrm{c}}\varphi |_ Y\right)^ m. \end{equation}</div>
+</div>
+<p>
+ where $\varphi $ runs over elements in $\mathrm{PSH}(X,\theta +\epsilon \omega )$ with analytic singularities such that $\varphi |_ Y\not\equiv -\infty $. This definition is independent of the choice of $\theta $. 
+</p>
+<p>
+These definitions extend the more classical definition in the algebraic setting due to <span class="cite">[<a href="../../references/#R61B6FBA2AC0A">ELMNP09</a>]</span>. 
+</p>
+
+<article class="env-proposition" id="sgpt-3CF28B36">
+<p><a class="environment-identifier" href="../../tag/AFC4F39F65CF/">Proposition <span data-tag="3CF28B36">8.3.1</span>.</a><span data-gerby-tag="3CF28B36"></span> Assume that $Y\not\subseteq \operatorname{nK}(\alpha )$. Then </p>
+<div class="equation" id="sgpt-9ED8DED4"><span data-gerby-tag="9ED8DED4"></span>
+<span class="equation-label"><a data-tag="9ED8DED4" href="../../tag/DA6F88B54E6F/">8.14</a></span>
+<div>\begin{equation}  \operatorname{vol}_{X|Y}(\alpha )= \int _ Y \left( \theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(V_{\theta }) \right)^ m =\int _ Y (\theta |_ Y + \mathrm{dd}^{\mathrm{c}}V_\theta |_ Y)^ m. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We start with the first equality of (<a data-tag="9ED8DED4" href="../../tag/DA6F88B54E6F/">8.14</a>). Since $Y\not\subseteq \operatorname{nK}(\alpha )$, $V_{\theta }|_ Y \not\equiv -\infty $ as a consequence of <a data-tag="9D233D25" href="../../tag/F77E450F00FD/">2.4.6</a>, hence also $\nu (V_{\theta },Y)=0$. 
+    <p>
+      Take a quasi-equisingular approximation $(\varphi _ j)_{j&gt;0}$ of $V_{\theta }$ with $\varphi _ j\in \mathrm{PSH}(X,\theta +\epsilon _ j\omega )$ for a decreasing sequence $(\epsilon _ j)_{j&gt;0}$ converging to $0$. By the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, we have for each $j&gt;0$, 
+    
+<div class="equation">
+  \[  \int _ Y \left(\theta |_ Y+\epsilon _ j\omega |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m\geq \int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\chi |_ Y\right)^ m  \]
+</div>
+<p>
+       for every $\chi \in \mathrm{PSH}(X,\theta )$ with $\chi |_ Y\not\equiv -\infty $. Since $\chi $ is arbitrary, we conclude that 
+    
+<div class="equation">
+  \[  \lim _{j\to \infty }\int _ Y \left(\theta |_ Y+\epsilon _ j\omega |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m\geq \operatorname{vol}_{X|Y}(\alpha ).  \]
+</div>
+<p>
+       For any fixed $\epsilon &gt;0$, we have 
+    
+<div class="equation">
+  \[  \begin{split}  \lim _{j\to \infty } \int _ Y \left(\theta |_ Y+\epsilon _ j\omega |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m\leq &amp;  \lim _{j\to \infty } \int _ Y \left(\theta |_ Y+\epsilon \omega |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m\\  =&amp;  \int _ Y \left(\theta |_ Y+\epsilon \omega |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta +\epsilon \omega }(V_{\theta })\right)^ m. \end{split}  \]
+</div>
+<p>
+       Letting $\epsilon \to 0+$ and applying example <a data-tag="628E430C" href="../../tag/2272C87A04CE/">8.1.12</a>, we conclude that the $\leq $ direction in the first equality of (<a data-tag="9ED8DED4" href="../../tag/DA6F88B54E6F/">8.14</a>) holds. Moreover, $Y\not\subseteq \operatorname{nK}(\alpha )$ implies $\operatorname{vol}_{X|Y}(\alpha )&gt;0$ by (<a data-tag="7DD65246" href="../../tag/D4594BE77AFC/">8.12</a>). Hence the limiting mass in example <a data-tag="628E430C" href="../../tag/2272C87A04CE/">8.1.12</a> is positive, and $\operatorname{Tr}_ Y^\theta (V_\theta )$ is indeed defined in the present situation. 
+    <p>
+      For the reverse direction, by definition, for any fixed $\epsilon &gt;0$, we have 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _ Y \left(\theta |_ Y+\epsilon _ j\omega |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m &amp; \leq \int _ Y \left(\theta |_ Y+\epsilon \omega |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m\\ &amp; \leq \operatorname{vol}_{X|Y}(\{ \theta \} +\epsilon \{ \omega \} ) \end{aligned}  \]
+</div>
+<p>
+       for all large enough $j$. Therefore, for large $j$, by the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, we have 
+    
+<div class="equation">
+  \[  \int _ Y \left(\theta |_ Y+\epsilon _ j\omega |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(V_{\theta })\right)^ m\leq \operatorname{vol}_{X|Y}(\{ \theta \} +\epsilon \{ \omega \} ).  \]
+</div>
+<p>
+       Letting $j\to \infty $ and $\epsilon \searrow 0$, using the continuity of $\operatorname{vol}_{X|Y}$ (<span class="cite">[<span class="postnote">Corollary 4.11</span>, <a href="../../references/#RBBC6294A49EB">Mat13</a>]</span>) together with example <a data-tag="628E430C" href="../../tag/2272C87A04CE/">8.1.12</a>, we conclude the first equality of (<a data-tag="9ED8DED4" href="../../tag/DA6F88B54E6F/">8.14</a>). 
+    <p>
+      Now we address the second equality. Due to theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, the defining formula (<a data-tag="7DD65246" href="../../tag/D4594BE77AFC/">8.12</a>), and the definition of $V_\theta $, we obtain that 
+    
+<div class="equation">
+  \[  \operatorname{vol}_{X|Y}(\{ \theta \} ) \leq \int _ Y (\theta |_ Y + \mathrm{dd}^{\mathrm{c}}V_\theta |_ Y)^ m.  \]
+</div>
+<p>
+       The reverse inequality now follows from the first equality of (<a data-tag="9ED8DED4" href="../../tag/DA6F88B54E6F/">8.14</a>), theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> and the fact that $V_\theta |_ Y \preceq _ P \operatorname{Tr}_ Y^\theta (V_\theta )$ as proved in proposition <a data-tag="18696C0F" href="../../tag/B293F74D2022/">8.1.9</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="sgpt-30FD148B">
+<p><a class="environment-identifier" href="../../tag/7EFDFA26519B/">Theorem <span data-tag="30FD148B">8.3.2</span>.</a><span data-gerby-tag="30FD148B"></span> If $Y\not\subseteq \operatorname{nn}(\alpha )$, then </p>
+<div class="equation" id="sgpt-0E153B6A"><span data-gerby-tag="0E153B6A"></span>
+<span class="equation-label"><a data-tag="0E153B6A" href="../../tag/3C4F71AC116E/">8.19</a></span>
+<div>\begin{equation}  \begin{aligned}  \operatorname{vol}_{X|Y}(\alpha ) &amp; = \lim _{\epsilon \to 0+}\int _ Y \Bigl (\theta |_ Y + \epsilon \omega |_ Y + \mathrm{dd}^{\mathrm{c}}V_{\theta + \epsilon \omega }|_ Y\Bigr )^ m\\  =&amp; \lim _{\epsilon \to 0+}\int _ Y \left(\theta |_ Y + \epsilon \omega |_ Y + \mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta + \epsilon \omega }(V_{\theta + \epsilon \omega }) \right)^ m \\ &amp; =\int _ Y \left( \theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(V_{\theta }) \right)^ m, \end{aligned} \end{equation}</div>
+</div>
+<p> where the last term is understood as $0$ if $\operatorname{Tr}_ Y^{\theta }(V_{\theta })$ is not defined. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\nu (V_\theta , Y)=0$, we have $Y\not\subseteq \operatorname{nK}(\alpha +\epsilon \{ \omega \} )$ for all $\epsilon &gt;0$. Therefore, by (<a data-tag="BDB42FF6" href="../../tag/03AF8A775E35/">8.13</a>) and (<a data-tag="9ED8DED4" href="../../tag/DA6F88B54E6F/">8.14</a>), only the last equality of (<a data-tag="0E153B6A" href="../../tag/3C4F71AC116E/">8.19</a>) needs to be argued. 
+    <p>
+      Thanks to <a data-tag="D7978A34" href="../../tag/CC25BA40D9FE/">6.2.28</a>, we have 
+    
+<div class="equation">
+  \[  V_{\theta +\epsilon \omega }\xrightarrow {d_ S}V_{\theta }  \]
+</div>
+<p>
+       as $\epsilon \to 0+$. 
+    <p>
+      Therefore, using proposition <a data-tag="762F23ED" href="../../tag/58627BFD2457/">8.2.2</a>, we find 
+    
+<div class="equation">
+  \[  \operatorname{Tr}_ Y\left( V_{\theta +\epsilon \omega } \right) \xrightarrow {d_ S} \operatorname{Tr}_ Y\left(V_{\theta }\right).  \]
+</div>
+<p>
+       Set 
+    
+<div class="equation">
+  \[  M\coloneqq \lim _{\epsilon _0\to 0+}\int _ Y \left(\theta |_ Y+\epsilon _0\omega |_ Y\right)^ m_{\operatorname{Tr}_ Y^{\theta +\epsilon _0\omega }(V_{\theta })}.  \]
+</div>
+<p>
+       By example <a data-tag="628E430C" href="../../tag/2272C87A04CE/">8.1.12</a>, if $\operatorname{Tr}_ Y^{\theta }(V_{\theta })$ is defined, then 
+    
+<div class="equation">
+  \[  M=\int _ Y (\theta |_ Y)^ m_{\operatorname{Tr}_ Y^{\theta }(V_{\theta })},  \]
+</div>
+<p>
+       whereas if $\operatorname{Tr}_ Y^{\theta }(V_{\theta })$ is not defined, then $M=0$. Thus $M$ is the last term of (<a data-tag="0E153B6A" href="../../tag/3C4F71AC116E/">8.19</a>), with the convention made in the statement. 
+    <p>
+      Thanks to theorem <a data-tag="45C76D02" href="../../tag/713B9E26113B/">6.2.17</a>, for any $\epsilon _0&gt;0$, we have 
+    
+<div class="equation">
+  \[  \begin{aligned}  \lim _{\epsilon \to 0+}\int _ Y \left(\theta |_ Y + \epsilon _0 \omega |_ Y\right)^ m_{\operatorname{Tr}_ Y^{\theta + \epsilon _0 \omega }(V_{\theta + \epsilon \omega })} &amp; = \int _ Y (\theta |_ Y + \epsilon _0 \omega |_ Y)^ m_{\operatorname{Tr}_ Y^{\theta + \epsilon _0 \omega }(V_{\theta })}. \end{aligned}  \]
+</div>
+<p>
+       By the definition of $M$, this implies the existence of $(\epsilon _ j)_{j&gt;0}$ such that $0&lt;\epsilon _ j&lt;1/j$ and 
+    
+<div class="equation" id="sgpt-6906F73C"><span data-gerby-tag="6906F73C"></span>
+<span class="equation-label"><a data-tag="6906F73C" href="../../tag/6EEF71F49B54/">8.24</a></span>
+<div>\begin{equation}  \lim _{j\to \infty }\int _ Y \left(\theta |_ Y + j^{-1}\omega |_ Y\right)^ m_{\operatorname{Tr}_ Y^{\theta + j^{-1} \omega }(V_{\theta + \epsilon _ j \omega }) } = M. \end{equation}</div>
+</div>
+<p>
+       Moreover, for each $j&gt;0$, 
+    
+<div class="equation" id="sgpt-879E21DE"><span data-gerby-tag="879E21DE"></span>
+<span class="equation-label"><a data-tag="879E21DE" href="../../tag/E74D68200A33/">8.25</a></span>
+<div>\begin{equation}  \begin{aligned}  \int _ Y \left(\theta |_ Y + j^{-1} \omega |_ Y\right)^ m_{\operatorname{Tr}_ Y^{\theta + j^{-1} \omega }(V_{\theta + \epsilon _ j \omega }) } \geq &amp;  \int _ Y \left(\theta |_ Y + \epsilon _ j \omega |_ Y\right)^ m_{\operatorname{Tr}_ Y^{\theta + \epsilon _ j\omega }(V_{\theta + \epsilon _ j \omega }) } \\  \geq &amp;  M. \end{aligned} \end{equation}</div>
+</div>
+<p>
+       Indeed, the first inequality follows from the multi-linearity of the non-pluripolar products proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>. For the second one, if $M=0$ there is nothing to prove; if $M&gt;0$, then example <a data-tag="628E430C" href="../../tag/2272C87A04CE/">8.1.12</a> shows that $\operatorname{Tr}_ Y^\theta (V_\theta )$ is defined, and the inequality follows from the multi-linearity of the non-pluripolar products proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a> and the monotonicity theorem proposition <a data-tag="9C02A916" href="../../tag/82DCD8E3B1BA/">6.1.16</a>. Putting (<a data-tag="6906F73C" href="../../tag/6EEF71F49B54/">8.24</a>) and (<a data-tag="879E21DE" href="../../tag/E74D68200A33/">8.25</a>) together, it follows that 
+    
+<div class="equation">
+  \[  \lim _{j\to \infty }\int _ Y \left(\theta |_ Y + \epsilon _ j \omega |_ Y\right)^ m_{\operatorname{Tr}_ Y^{\theta + \epsilon _ j \omega }(V_{\theta + \epsilon _ j \omega }) } = M.  \]
+</div>
+<p>
+       Finally, since $\int _ Y \left(\theta |_ Y + \epsilon \omega |_ Y + \mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta + \epsilon \omega }(V_{\theta + \epsilon \omega }) \right)^ m$ depends monotonically on $\epsilon &gt;0$, we conclude that 
+    
+<div class="equation">
+  \[  \lim _{\epsilon \to 0+}\int _ Y \left(\theta |_ Y + \epsilon \omega |_ Y + \mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta + \epsilon \omega }(V_{\theta + \epsilon \omega }) \right)^ m=M.  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-EDE927CBCEA7" data-section-entries="230AF20F8E84 4F486DDB8BD0 92546FA16294 97B6F891A18A DB535DD3B5A9 EDE927CBCEA7"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/EDE927CBCEA7/">8.4 Restricted volumes of line bundles</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="C83527E1"></span></div>
+<p>
+ Let $X$ be a connected projective manifold of dimension $n$ and $Y\subseteq X$ be a connected submanifold of dimension $m$. Consider a big line bundle $L$ on $X$, a Hermitian metric $h_0$ on $L$ with $\theta =c_1(L,h_0)$. Let $A$ be a very ample line bundle on $X$. Take a Hermitian metric $h_ A$ on $A$ such that $\omega =\mathrm{dd}^{\mathrm{c}}h_ A$ is a Kähler form. 
+</p>
+
+Using the trace operator, one could prove the following generalization of theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a>: <article class="env-theorem" id="sgpt-29C95E85">
+<p><a class="environment-identifier" href="../../tag/230AF20F8E84/">Theorem <span data-tag="29C95E85">8.4.1</span>.</a><span data-gerby-tag="29C95E85"></span> Let $h$ be a (singular) plurisubharmonic metric on $L$ with $\nu (\mathrm{dd}^{\mathrm{c}}h,Y)=0$. Assume that </p>
+<div class="equation" id="sgpt-ACBFB771"><span data-gerby-tag="ACBFB771"></span>
+<span class="equation-label"><a data-tag="ACBFB771" href="../../tag/92546FA16294/">8.28</a></span>
+<div>\begin{equation}  \lim _{\epsilon \to 0+} \int _ Y\left(\operatorname{Tr}_ Y^{c_1(L|_ Y)+\epsilon \omega |_ Y}\bigl (c_1(L,h)\bigr ) \right)^ m&gt;0. \end{equation}</div>
+</div>
+<p> Then for any holomorphic line bundle $T$ on $X$ we have </p>
+<div class="equation" id="sgpt-1AC1CF41"><span data-gerby-tag="1AC1CF41"></span>
+<span class="equation-label"><a data-tag="1AC1CF41" href="../../tag/97B6F891A18A/">8.29</a></span>
+<div>\begin{equation}  \int _ Y \left(\operatorname{Tr}_ Y^{c_1(L|_ Y)}\bigl (c_1(L,h)\bigr )\right)^ m = \lim _{k \to \infty } \frac{m!}{k^ m} h^0\left(Y,T|_ Y\otimes L|_ Y^ k \otimes \operatorname{Res}_ Y\left(\mathcal{I}(h^{k})\right) \right). \end{equation}</div>
+</div>
+</article> Recall that $\operatorname{Res}_ Y$ is defined in definition <a data-tag="92E7A73F" href="../../tag/AA412055CB86/">1.4.18</a>. Observe that by example <a data-tag="628E430C" href="../../tag/2272C87A04CE/">8.1.12</a>, (<a data-tag="ACBFB771" href="../../tag/92546FA16294/">8.28</a>) implies that $\operatorname{Tr}_ Y^{c_1(L|_ Y)}(c_1(L,h))$ is defined. So (<a data-tag="1AC1CF41" href="../../tag/97B6F891A18A/">8.29</a>) is defined. 
+
+<p>
+We will identify $h$ with $\varphi \in \mathrm{PSH}(X,\theta )$ as in (<a data-tag="7FDFBD0B" href="../../tag/6C8BC3AC251D/">1.47</a>). 
+</p>
+<p>
+For the proof, recall that the ideal sheaf $\mathcal{I}_{\infty }$ is introduced in definition <a data-tag="133FCD5C" href="../../tag/99446B95B55B/">1.6.12</a>. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first assume that $\mathrm{dd}^{\mathrm{c}}h$ is a Kähler current. Let $(\varphi _ j)_ j$ be a quasi-equisingular approximation of $\varphi $ in $\mathrm{PSH}(X,\theta )$. After possibly replacing $(\varphi _ j)_ j$ by a subsequence, there exists $\epsilon _0 \in (0,1)\cap \mathbb {Q}$ such that the $\theta _{(1-\epsilon ) \varphi _ j}$'s are also Kähler currents for any $\epsilon \in (0,\epsilon _0)$. 
+    <p>
+      For any rational $\epsilon \in (0,\epsilon _0)$, and sufficiently large $k$, we have 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \frac{1}{m!}\int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^ m \\  =&amp;  \lim _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \mathcal{I}\left(k\operatorname{Tr}_ Y^{\theta }(\varphi )\right)\right) \quad \textup{by theorem \href{../../tag/FEA63C5AE11F/}{7.4.2}}\\  \leq &amp;  \varliminf _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \operatorname{Res}_ Y\left(\mathcal{I}(k\varphi )\right)\right) \quad \textup{ by proposition \href{../../tag/DB90B2D3ADEB/}{8.2.5}}\\  \leq &amp;  \varlimsup _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \operatorname{Res}_ Y\left(\mathcal{I}(k\varphi )\right)\right)\\  \leq &amp;  \varlimsup _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \operatorname{Res}_ Y\mathcal{I}\left(k\varphi _ j\right)\right) \\  \leq &amp;  \varlimsup _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \operatorname{Res}_ Y\mathcal{I}_{\infty }\left((1-\epsilon )k\varphi _ j\right)\right) \quad \textup{by \href{../../tag/2E0432C779A0/}{1.6.14}}\\  \leq &amp;  \varlimsup _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \mathcal{I}_{\infty }\left((1-\epsilon )k\varphi _ j|_ Y\right)\right)\\  \leq &amp;  \varlimsup _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \mathcal{I}\left((1-\epsilon ) k\varphi _ j|_ Y\right) \right)\\  = &amp;  \frac{1}{m!} \int _ Y \left(\theta |_ Y+(1-\epsilon )\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m\quad \textup{by theorem \href{../../tag/FEA63C5AE11F/}{7.4.2}}. \end{aligned}  \]
+</div>
+<p>
+       Here we used the observation that for any $\psi \in \mathrm{QPSH}(X)$ with analytic singularities with $\psi |_ Y\not\equiv -\infty $, we have 
+    
+<div class="equation">
+  \[  \operatorname{Res}_ Y \mathcal{I}_{\infty }(\psi )\subseteq \mathcal{I}_{\infty }\left(\psi |_ Y\right).  \]
+</div>
+<p>
+      Letting $\epsilon \to 0+$, <a data-tag="26714C3D" href="../../tag/7F9EDAFF39F9/">6.2.14</a> gives 
+    
+<div class="equation">
+  \[  (1-\epsilon )\varphi _ j|_ Y\xrightarrow {d_ S}\varphi _ j|_ Y.  \]
+</div>
+<p>
+       Hence, by theorem <a data-tag="45C76D02" href="../../tag/713B9E26113B/">6.2.17</a>, the last term converges to 
+    
+<div class="equation">
+  \[  \frac{1}{m!}\int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m.  \]
+</div>
+<p>
+       We conclude that 
+    
+<div class="equation">
+  \[  \begin{aligned}  \frac{1}{m!}\int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^ m\leq &amp;  \varliminf _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \operatorname{Res}_ Y\left(\mathcal{I}(k\varphi )\right)\right) \\  \leq &amp;  \varlimsup _{k \to \infty } \frac{1}{k^ m} h^0\left(Y, T|_ Y\otimes L|_ Y^ k\otimes \operatorname{Res}_ Y\left(\mathcal{I}(k\varphi )\right)\right)\\  \leq &amp;  \frac{1}{m!} \int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ Y\right)^ m. \end{aligned}  \]
+</div>
+<p>
+       Letting $j\to \infty $, we conclude (<a data-tag="1AC1CF41" href="../../tag/97B6F891A18A/">8.29</a>). 
+    <p>
+<strong>Step 2</strong>. We handle the general case. After adding a constant to $\varphi $, we may assume that $\varphi \leq 0$. 
+    <p>
+      Using proposition <a data-tag="B56231C4" href="../../tag/DB90B2D3ADEB/">8.2.5</a> and theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a> we obtain that 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^ m &amp; = \lim _{k \to \infty } \frac{m!}{k^ m} h^0\left(Y,T|_ Y \otimes L|_ Y^ k \otimes \mathcal{I}\left(k\operatorname{Tr}_ Y^{\theta }(\varphi )\right)\right)\\ &amp;  \leq \varliminf _{k \to \infty } \frac{m!}{k^ m} h^0\left(Y,T|_ Y \otimes L|_ Y^ k \otimes \operatorname{Res}_ Y\left(\mathcal{I}(k\varphi )\right)\right). \end{aligned}  \]
+</div>
+<p>
+       Now we address the other direction in (<a data-tag="1AC1CF41" href="../../tag/97B6F891A18A/">8.29</a>). Let $\phi \in \mathrm{H}^0(X,A)$ be a section that does not vanish identically on $Y$. Such $\phi $ exists since $A$ is very ample. 
+    <p>
+      We fix $k_0 \in \mathbb {N}$. For any $k \geq 0$, we have $k = q k_0 + r$ with $q,r \in \mathbb {N}$ and $r \in \{ 0,\ldots , k_0-1\} $. Also, we have an injective linear map 
+    
+<div class="equation">
+  \[  \mathrm{H}^0\left(Y,T|_ Y \otimes L|_ Y^ k \otimes \operatorname{Res}_ Y\mathcal{I}\left(k \varphi \right)\right)\xrightarrow {\cdot \phi ^{\otimes q}} \mathrm{H}^0\left(Y,T|_ Y\otimes L|_ Y^ k \otimes A|_ Y^ q \otimes \operatorname{Res}_ Y\mathcal{I}\left(k \varphi \right)\right).  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \varlimsup _{k\to \infty } \frac{m!}{k^ m} h^0\left(Y,T|_ Y \otimes L|_ Y^ k \otimes \operatorname{Res}_ Y\mathcal{I}\left(k\varphi \right)\right) \\  \leq &amp;  \varlimsup _{k\to \infty } \frac{m!}{k^ m} h^0\left(Y,T|_ Y \otimes L|_ Y^ k \otimes A|_ Y^ q\otimes \operatorname{Res}_ Y\mathcal{I}\left(k\varphi \right)\right) \\  \leq &amp;  \max _{r=0,\ldots ,k_0-1}\frac{1}{k_0^ m} \varlimsup _{q\to \infty } \frac{m!}{q^ m} h^0\left(Y,T|_ Y\otimes L|_ Y^{q k_0} \otimes A|_ Y^ q\otimes L|_ Y^{r}\otimes \operatorname{Res}_ Y\mathcal{I}\left((qk_0+r)\varphi \right)\right)\\  \leq &amp;  \max _{r=0,\ldots ,k_0-1}\frac{1}{k_0^ m} \varlimsup _{q\to \infty } \frac{m!}{q^ m} h^0\left(Y,T|_ Y\otimes L|_ Y^{q k_0} \otimes A|_ Y^ q\otimes L|_ Y^{r}\otimes \operatorname{Res}_ Y\mathcal{I}\left(k_0q \varphi \right)\right)\\  = &amp;  \int _ Y \left(\theta |_ Y+k_0^{-1}\omega |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta +k_0^{-1}\omega }(\varphi )\right)^ m\\  =&amp;  \int _ Y \left(\theta |_ Y+k_0^{-1}\omega |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^ m, \end{aligned}  \]
+</div>
+<p>
+       where the maximum is taken over the finitely many residue classes $k=qk_0+r$, the following inequality uses $k_0q\leq k$, the first equality follows by applying Step 1 for each $r$ to the big line bundle $L^{k_0} \otimes A$, the Kähler current $k_0 \theta _{\varphi } + \omega $, and twisting bundle $T \otimes L^ r$, and the second equality follows from proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">3.1.6</a>. Letting $k_0\to \infty $ and using the multi-linearity of the non-pluripolar product proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>, we conclude that 
+    
+<div class="equation">
+  \[  \varlimsup _{k\to \infty } \frac{m!}{k^ m} h^0\left(Y,T|_ Y \otimes L|_ Y^ k \otimes \operatorname{Res}_ Y\mathcal{I}\left(k \varphi \right)\right)\leq \int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^ m.  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="sgpt-7BE60ACE">
+<p><a class="environment-identifier" href="../../tag/4F486DDB8BD0/">Theorem <span data-tag="7BE60ACE">8.4.2</span>.</a><span data-gerby-tag="7BE60ACE"></span> Let $\varphi \in \mathrm{PSH}(X,\theta )$ such that $\nu (\varphi ,Y) =0$. Assume that $\theta _{\varphi }$ is a Kähler current. Then for any holomorphic line bundle $T$ on $X$ we have </p>
+<div class="equation">
+  \[  \int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^ m = \lim _{k \to \infty } \frac{m!}{k^ m} \dim _{\mathbb C}\left\{  s|_ Y: s\in \mathrm{H}^0\left(X,T\otimes L^ k \otimes \mathcal{I}(k\varphi )\right)\right\} .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is a consequence of theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a>, theorem <a data-tag="8698A3C7" href="../../tag/71AECE2E70ED/">8.2.6</a> and theorem <a data-tag="29C95E85" href="../../tag/230AF20F8E84/">8.4.1</a>: 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^ m &amp;  = \lim _{k \to \infty } \frac{m!}{k^ m} h^0\left(Y,T|_ Y\otimes L|_ Y^ k\otimes \mathcal{I}\left(k \operatorname{Tr}_ Y^{\theta }(\varphi )\right)\right)\\ &amp;  \leq \varliminf _{k \to \infty } \frac{m!}{k^ m} \dim _{\mathbb C}\left\{  s|_ Y: s\in \mathrm{H}^0\left(X,T\otimes L^ k \otimes \mathcal{I}(k\varphi )\right)\right\} \\ &amp;  \leq \varlimsup _{k \to \infty } \frac{m!}{k^ m} \dim _{\mathbb C}\left\{  s|_ Y: s\in \mathrm{H}^0\left(X,T\otimes L^ k \otimes \mathcal{I}(k\varphi )\right)\right\} \\ &amp;  \leq \lim _{k \to \infty } \frac{m!}{k^ m} h^0\left(Y ,T|_ Y\otimes L|_ Y^ k\otimes \operatorname{Res}_ Y\mathcal{I}(k\varphi )\right)\\ &amp;  = \int _ Y \left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)^ m. \end{aligned}  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-remark" id="sgpt-80068381">
+<p><a class="environment-identifier" href="../../tag/DB535DD3B5A9/">Remark <span data-tag="80068381">8.4.3</span>.</a><span data-gerby-tag="80068381"></span>One could also show that when (<a data-tag="ACBFB771" href="../../tag/92546FA16294/">8.28</a>) fails, the right-hand side of (<a data-tag="1AC1CF41" href="../../tag/97B6F891A18A/">8.29</a>) is $0$. See <span class="cite">[<a href="../../references/#RF370F1003FBF">DX24</a>]</span>. </p>
+</article>
+
+</div></section><section class="reading-chunk" id="entry-6B19CA7EC662" data-section-entries="133BE510F62F 3AEE64F8D403 50ABF7A3834B 62AF47325D23 6A24558044D5 6B19CA7EC662 7931695F46E8 8F47DBEBF9D3 A172685DB2AD A2BD7EA3B4B4 A7BAA368EEF9 B590E31078F3 C42AE95D23AF CB547C0AF98F E131A2FB1C6A"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/6B19CA7EC662/">8.5 Analytic Bertini theorems</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="950E72F5"></span></div>
+<p>
+ Let $X$ be a connected projective manifold of dimension $n\geq 1$. 
+</p>
+<p>
+The analytic Bertini theorem handles the restriction along a generic subvariety. 
+</p>
+
+<article class="env-theorem" id="sgpt-5C4012C7">
+<p><a class="environment-identifier" href="../../tag/7931695F46E8/">Theorem <span data-tag="5C4012C7">8.5.1</span>.</a><span data-gerby-tag="5C4012C7"></span> Let $\varphi \in \mathrm{QPSH}(X)$. Let $p\colon X\rightarrow \mathbb {P}^ N$ be a morphism ($N\geq 1$). Define </p>
+<div class="equation">
+  \[  \mathcal{G}\coloneqq \Bigl \{ H\in |\mathcal{O}_{\mathbb {P}^ N}(1)|: H'\coloneqq H\cap X \textup{ is smooth and } \mathcal{I}(\varphi |_{H'})=\operatorname{Res}_{H'}\bigl (\mathcal{I}(\varphi )\bigr )\Bigr \} .  \]
+</div>
+<p> Then $\mathcal{G}\subseteq |\mathcal{O}_{\mathbb {P}^ N}(1)|$ is co-pluripolar. </p>
+</article> Recall that co-pluripolar sets are defined in definition <a data-tag="D913BC74" href="../../tag/5458CA6608A5/">1.1.15</a>. We adopt the convention that $\mathcal{I}(-\infty )=0$. <article class="env-remark" id="sgpt-A6B3C395">
+<p><a class="environment-identifier" href="../../tag/6A24558044D5/">Remark <span data-tag="A6B3C395">8.5.2</span>.</a><span data-gerby-tag="A6B3C395"></span> Here and in the sequel, we slightly abuse the notation by writing $H\cap X$ for $p^{-1}H$, the scheme-theoretic inverse image of $H$. In other words, $H\cap X\coloneqq H\times _{\mathbb {P}^ N} X$. </p>
+<p>By definition, any $H\in |\mathcal{O}_{\mathbb {P}^ N}(1)|$ such that $p^{-1}H=\emptyset $ lies in $\mathcal{G}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take an ample line bundle $L$ with a smooth Hermitian metric $h$ such that $c_1(L,h)+\mathrm{dd}^{\mathrm{c}}\varphi \geq 0$, where $c_1(L,h)$ is the first Chern form of $(L,h)$, namely the curvature form of $h$. We introduce $\Lambda \coloneqq |\mathcal{O}_{\mathbb {P}^ N}(1)|$ to simplify our notations. 
+    <p>
+<strong>Step 1</strong>. We prove that the following set is co-pluripolar: 
+    
+<div class="equation">
+  \[  \begin{split}  \mathcal{G}_{L}\coloneqq \left\{ H\in \Lambda : H\cap X \text{ is smooth and } \mathrm{H}^0\Bigl (H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \mathcal{I}(\varphi |_{H\cap X})\Bigr )= \right.\\  \left. \mathrm{H}^0\Bigl (H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \operatorname{Res}_{H\cap X}\left(\mathcal{I}(\varphi )\right)\Bigr )\right\} . \end{split}  \]
+</div>
+<p>
+       Here $\omega _{H\cap X}$ denotes the dualizing sheaf of $H\cap X$. 
+    <p>
+      Let $U\subseteq \Lambda \times X$ be the closed subvariety whose $\mathbb {C}$-points correspond to pairs $(H,x)\in \Lambda \times X$ with $p(x)\in H$. Let $\pi _1\colon U\rightarrow \Lambda $ be the natural projection. We may assume that $\pi _1$ is surjective, as otherwise there is nothing to prove. 
+    <p>
+      Observe that $U$ is a local complete intersection scheme by <em>Krull's Hauptidealsatz</em> and <em>a fortiori</em> a Cohen–Macaulay scheme. It follows from miracle flatness <span class="cite">[<span class="postnote">Theorem 23.1</span>, <a href="../../references/#R6820C46DC4B4">Mat89</a>]</span> that the natural projection $\pi _2\colon U\rightarrow X$ is flat. As the fibers of $\pi _2$ over closed points of $X$ are isomorphic to $\mathbb {P}^{N-1}$, it follows that $\pi _2$ is smooth. Thus, $U$ is smooth as well. Moreover, observe that 
+    
+<div class="equation" id="sgpt-F86118EC"><span data-gerby-tag="F86118EC"></span>
+<span class="equation-label"><a data-tag="F86118EC" href="../../tag/62AF47325D23/">8.57</a></span>
+<div>\begin{equation}  \mathcal{I}(\pi _2^*\varphi )=\pi _2^*\mathcal{I}(\varphi ) \end{equation}</div>
+</div>
+<p>
+       by proposition <a data-tag="589D7C6B" href="../../tag/DE693424352F/">1.4.17</a>. 
+    <p>
+      In the following, we will construct pluripolar sets $\Sigma _1\subseteq \Sigma _2 \subseteq \Sigma _3\subseteq \Sigma _4\subseteq \Lambda $ such that the behavior of $\pi _1$ is improved successively on the complement of $\Sigma _ i$. 
+    <p>
+<strong>Step 1.1</strong>. The usual Bertini theorem shows that there is a proper Zariski closed set $\Sigma _1\subseteq \Lambda $ such that $\pi _1$ has smooth fibers outside $\Sigma _1$. Enlarging $\Sigma _1$, we may guarantee that $\pi _1$ and $\mathcal{I}(\pi _2^*\varphi )$ are both flat outside $\Sigma _1$. See <span class="cite">[<span class="postnote">Théorème 6.9.1</span>, <a href="../../references/#R8F795921F94F">EGAIV2</a>]</span>. Then after further enlarging $\Sigma _1$ we may assume that $p^{-1}(H)$ avoids all associated points of $\mathcal{O}_ X/\mathcal{I}(\varphi )$, for all $H\in \Lambda \setminus \Sigma _1$. Let $\pi _{1,H}$ denote the fiber of $\pi _1$ at $H$ and write $i_ H\colon \pi _{1,H}\rightarrow U$ for the inclusion morphism. We arrive at 
+    
+<div class="equation">
+  \[  \operatorname{Res}_{\pi _{1,H}}(\mathcal{I}(\pi _2^*\varphi ))=i_ H^*\mathcal{I}(\pi _2^*\varphi )  \]
+</div>
+
+       for all $H\in \Lambda \setminus \Sigma _1$.<aside class="source-footnote" id="sgpt-a0000069975"><span class="footnote-label">Note.</span> This subtle point was overlooked in the proof of <span class="cite">[<a href="../../references/#R93D65D1AB8EF">XiaBer</a>]</span>.</aside>
+<p>
+<strong>Step 1.2</strong>. By Grauert's coherence theorem, 
+    
+<div class="equation">
+  \[  \mathcal{F}^ i\coloneqq R^ i\pi _{1*}\left(\omega _{U/\Lambda }\otimes \pi _2^*L\otimes \mathcal{I}(\pi _2^*\varphi ) \right)  \]
+</div>
+<p>
+       is coherent for all $i$. Here $\omega _{U/\Lambda }$ denotes the relative dualizing sheaf of the morphism $U\rightarrow \Lambda $. Thus, there is a proper Zariski closed set $\Sigma _2\subseteq \Lambda $ such that 
+    
+<ol>
+<li class="custom-item" id="sgpt-A27A6126"><span data-gerby-tag="A27A6126"></span><p>
+ $\Sigma _2\supseteq \Sigma _1$. 
+</p>
+</li><li class="custom-item" id="sgpt-79061365"><span data-gerby-tag="79061365"></span><p>
+ The $\mathcal{F}^ i$'s are locally free outside $\Sigma _2$. 
+</p>
+</li>
+</ol>
+<p>
+       We write $\mathcal{F}=\mathcal{F}^0$. By cohomology and base change <span class="cite">[<span class="postnote">Theorem III.12.11</span>, <a href="../../references/#RA80E8EE5DA55">Har</a>]</span>, for any $H\in \Lambda \setminus \Sigma _2$, the fiber $\mathcal{F}|_ H$ of $\mathcal{F}$ is given by 
+    
+<div class="equation">
+  \[  \mathcal{F}|_ H= \mathrm{H}^0\left(\pi _{1,H},\omega _{U/\Lambda }|_{\pi _{1,H}}\otimes \pi _2^*L|_{\pi _{1,H}}\otimes \operatorname{Res}_{\pi _{1,H}}(\mathcal{I}(\pi _2^*\varphi )) \right).  \]
+</div>
+<p>
+<strong>Step 1.3</strong>. In order to proceed, we need to make use of the Hodge metric $h_{\mathcal{H}}$ on $\mathcal{F}$ defined in <span class="cite">[<a href="../../references/#R56956E1A6E04">HPS18</a>]</span>. We briefly recall its definition in our setting. By <span class="cite">[<span class="postnote">Section 22</span>, <a href="../../references/#R56956E1A6E04">HPS18</a>]</span>, we can find a proper Zariski closed set $\Sigma _3\subseteq \Lambda $ such that 
+    
+<ol>
+<li class="custom-item" id="sgpt-755B8566"><span data-gerby-tag="755B8566"></span><p>
+ $\Sigma _3\supseteq \Sigma _2$, 
+</p>
+</li><li class="custom-item" id="sgpt-ADE8FF2A"><span data-gerby-tag="ADE8FF2A"></span><p>
+ $\pi _1$ is smooth outside $\Sigma _3$, 
+</p>
+</li><li class="custom-item" id="sgpt-4FCF4EC2"><span data-gerby-tag="4FCF4EC2"></span><p>
+ both $\mathcal{F}$ and $\pi _{1*}\left(\omega _{U/\Lambda }\otimes \pi _2^*L \right)/\mathcal{F}$ are locally free outside $\Sigma _3$, and 
+</p>
+</li><li class="custom-item" id="sgpt-162429C8"><span data-gerby-tag="162429C8"></span><p>
+ for each $i$, 
+</p>
+<div class="equation">
+  \[  R^ i\pi _{1*}\left(\omega _{U/\Lambda }\otimes \pi _2^*L \right)  \]
+</div>
+<p>
+ is locally free outside $\Sigma _3$. 
+</p>
+</li>
+</ol>
+<p>
+       Then for any $H\in \Lambda \setminus \Sigma _3$, 
+    
+<div class="equation">
+  \[  \begin{gathered} \mathrm{H}^0\left(H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \mathcal{I}(\varphi |_{H\cap X})\right)\\ \subseteq \mathcal{F}|_ H\subseteq \mathrm{H}^0\left(H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\right). \end{gathered}  \]
+</div>
+<p>
+       See <span class="cite">[<span class="postnote">Lemma 22.1</span>, <a href="../../references/#R56956E1A6E04">HPS18</a>]</span>. 
+    <p>
+      Now we can give the definition of the Hodge metric on $\Lambda \setminus \Sigma _3$. Given any $H\in \Lambda \setminus \Sigma _3$, any $\alpha \in \mathcal{F}|_ H$, the Hodge metric is defined as 
+    
+<div class="equation">
+  \[  h_{\mathcal{H}}(\alpha ,\alpha ):=\int _{X\cap H} |\alpha |^2_{h}\mathrm{e}^{-\varphi }\in [0,\infty ].  \]
+</div>
+<p>
+       Observe that $h_{\mathcal{H}}(\alpha ,\alpha )&lt;\infty $ if and only if $\alpha \in \mathrm{H}^0(H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \mathcal{I}(\varphi |_{H\cap X}))$. Moreover, $h_{\mathcal{H}}(\alpha ,\alpha )&gt;0$ if $\alpha \neq 0$. It is shown in <span class="cite">[<a href="../../references/#R56956E1A6E04">HPS18</a>]</span> (cf. <span class="cite">[<span class="postnote">Theorem 3.3.5</span>, <a href="../../references/#R10D03B8DADBD">PT18</a>]</span>) that $h_{\mathcal{H}}$ is indeed a singular Hermitian metric, and it extends to a positive metric on $\mathcal{F}$. 
+    <p>
+<strong>Step 1.4</strong>. The determinant $\det h_{\mathcal{H}}$ is singular at all $H\in \Lambda \setminus \Sigma _3$ such that 
+    
+<div class="equation">
+  \[  \mathrm{H}^0\Bigl (H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \mathcal{I}(\varphi |_{H\cap X})\Bigr )\neq \mathcal{F}|_ H.  \]
+</div>
+<p>
+       As the map $\pi _2$ is smooth, we have $\pi _2^*\mathcal{I}(\varphi )= \mathcal{I}(\pi _2^*\varphi )$ by proposition <a data-tag="589D7C6B" href="../../tag/DE693424352F/">1.4.17</a>. Under the identification $\pi _{1,H}\cong H\cap X$, we have 
+    
+<div class="equation">
+  \[  \operatorname{Res}_{\pi _{1,H}}\Bigl (\pi _2^*\mathcal{I}(\varphi )\Bigr )\cong \operatorname{Res}_{H\cap X}\Bigl (\mathcal{I}(\varphi )\Bigr ).  \]
+</div>
+<p>
+       Thus, we have the following inclusions: 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \mathrm{H}^0\Bigl (H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \mathcal{I}\left(\varphi |_{H\cap X}\right)\Bigr )\\  \subseteq &amp;  \mathrm{H}^0\Bigl (H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \operatorname{Res}_{H\cap X}\bigl (\mathcal{I}(\varphi )\bigr )\Bigr ), \end{split}  \]
+</div>
+<p>
+       the right-hand side being $\mathcal{F}|_ H$. 
+    <p>
+      Recall that the first inclusion follows from theorem <a data-tag="A72584DC" href="../../tag/151D57BCA31B/">1.4.19</a>. Hence, $\det h_{\mathcal{H}}$ is singular at all $H\in |\mathcal{O}_{\mathbb {P}^ N}(1)|\setminus \Sigma _3$ such that 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \mathrm{H}^0\Bigl (H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \mathcal{I}\left(\varphi |_{H\cap X}\right)\Bigr )\\  \neq &amp;  \mathrm{H}^0\Bigl (H\cap X,\omega _{H\cap X}\otimes L|_{H\cap X}\otimes \operatorname{Res}_{H\cap X}\bigl (\mathcal{I}(\varphi )\bigr )\Bigr ). \end{split}  \]
+</div>
+<p>
+       Let $\Sigma _4$ be the union of $\Sigma _3$ and the set of all such $H$. Since the Hodge metric $h_{\mathcal{H}}$ is positive (<span class="cite">[<span class="postnote">Theorem 3.3.5</span>, <a href="../../references/#R10D03B8DADBD">PT18</a>]</span> and <span class="cite">[<span class="postnote">Theorem 21.1</span>, <a href="../../references/#R56956E1A6E04">HPS18</a>]</span>), its determinant $\det h_{\mathcal{H}}$ is also positive (<span class="cite">[<span class="postnote">Proposition 1.3</span>, <a href="../../references/#RCE35D9C3AF1D">Rau15</a>]</span> and <span class="cite">[<span class="postnote">Proposition 25.1</span>, <a href="../../references/#R56956E1A6E04">HPS18</a>]</span>), it follows that $\Sigma _4$ is pluripolar. As a consequence, $\mathcal{G}_{L}$ is co-pluripolar. 
+    <p>
+<strong>Step 2</strong>. 
+    <p>
+      Fix an ample invertible sheaf $S$ on $X$. The same result holds with $L\otimes S^{\otimes a}$ in place of $L$. Thus, the set 
+    
+<div class="equation">
+  \[  A\coloneqq \bigcap _{a=0}^{\infty }\mathcal{G}_{L\otimes S^{\otimes a}}  \]
+</div>
+<p>
+       is co-pluripolar. For each $H\in \Lambda $ such that $X\cap H$ is smooth and $\mathcal{I}(\varphi |_{X\cap H})\neq \operatorname{Res}_{H\cap X}(\mathcal{I}(\varphi ))$, let $\mathcal{K}$ be the following cokernel: 
+    
+<div class="equation">
+  \[  0\rightarrow \mathcal{I}\left(\varphi |_{X\cap H}\right)\rightarrow \operatorname{Res}_{H\cap X}\bigl (\mathcal{I}(\varphi )\bigr )\rightarrow \mathcal{K}\rightarrow 0.  \]
+</div>
+<p>
+       By Serre vanishing theorem, taking $a$ large enough, we may guarantee that 
+    
+<div class="equation">
+  \[  \mathrm{H}^1\Bigl (X\cap H,\omega _{X\cap H}\otimes (L\otimes S^{\otimes a})|_{X\cap H}\otimes \mathcal{I}(\varphi |_{X\cap H})\Bigr )=0  \]
+</div>
+<p>
+       and 
+    
+<div class="equation">
+  \[  \mathrm{H}^0\Bigl (X\cap H,\omega _{X\cap H}\otimes (L\otimes S^{\otimes a})|_{X\cap H}\otimes \mathcal{K}\Bigr )\neq 0.  \]
+</div>
+<p>
+       Then 
+    
+<div class="equation">
+  \[  \begin{split}  \mathrm{H}^0\Bigl (X\cap H,\omega _{X\cap H}\otimes (L\otimes S^{\otimes a})|_{X\cap H}\otimes \mathcal{I}\left(\varphi |_{X\cap H}\right)\Bigr )\neq \\  \mathrm{H}^0\Bigl (X\cap H,\omega _{X\cap H}\otimes (L\otimes S^{\otimes a})|_{X\cap H}\otimes \operatorname{Res}_{H\cap X}\left(\mathcal{I}(\varphi )\right)\Bigr ). \end{split}  \]
+</div>
+<p>
+       Thus, $H\not\in A$. We conclude that $\mathcal{G}$ is co-pluripolar. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-remark" id="sgpt-E49B70E4">
+<a class="environment-identifier" href="../../tag/E131A2FB1C6A/">Remark <span data-tag="E49B70E4">8.5.3</span>.</a><span data-gerby-tag="E49B70E4"></span> More generally, the same technique implies the following general result: Let $f\colon X\rightarrow Y$ be a projective morphism between complex manifolds and $(L,h)$ be a Hermitian pseudo-effective line bundle on $X$. Then for quasi-every<aside class="source-footnote" id="sgpt-a0000070656"><span class="footnote-label">Note.</span> That is, for all $y$ outside a pluripolar subset of $Y$.</aside> $y\in Y$, the fiber $X_ y$ is smooth and 
+<div class="equation">
+  \[  \mathcal{I}(\lambda h|_{X_ y})=\operatorname{Res}_{X_ y}\left( \mathcal{I}(\lambda h) \right).  \]
+</div>
+</article>
+
+
+In the sequel of this section, we fix a base-point free linear system $\Lambda $ on $X$. For the results below that assert connectedness, we assume in addition that the set of connected smooth members of $\Lambda $ is co-pluripolar in $\Lambda $. <article class="env-corollary" id="sgpt-C8037696">
+<p><a class="environment-identifier" href="../../tag/50ABF7A3834B/">Corollary <span data-tag="C8037696">8.5.4</span>.</a><span data-gerby-tag="C8037696"></span> Let $\varphi \in \mathrm{QPSH}(X)$. Then for quasi-every $H\in \Lambda $, we have $\varphi |_ H\not\equiv -\infty $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For quasi-every $H$, theorem <a data-tag="5C4012C7" href="../../tag/7931695F46E8/">8.5.1</a> gives 
+    
+<div class="equation">
+  \[  \mathcal I(\varphi |_ H)=\operatorname{Res}_ H\mathcal I(\varphi ).  \]
+</div>
+<p>
+       After removing the hyperplanes meeting the associated points of $\mathcal O_ X/\mathcal I(\varphi )$ improperly, the right-hand side is non-zero. Since $\mathcal I(-\infty )=0$, this implies $\varphi |_ H\not\equiv -\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="sgpt-CE9C5B76">
+<p><a class="environment-identifier" href="../../tag/B590E31078F3/">Corollary <span data-tag="CE9C5B76">8.5.5</span>.</a><span data-gerby-tag="CE9C5B76"></span> Assume that $n\geq 2$. Let $\varphi \in \mathrm{QPSH}(X)$. Then quasi-every $H\in \Lambda $ is connected and smooth, satisfies $\nu (\varphi ,H)=0$ and we have </p>
+<div class="equation">
+  \[  \operatorname{Tr}_ H(\varphi )\sim _{\mathcal{I}} \varphi |_ H.  \]
+</div>
+</article> The connectedness assumption on $H$ is used here because we developed most of the trace theory above for connected submanifolds. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First observe that the set $\{ x\in X:\nu (\varphi ,x)&gt;0\} $ is a countable union of proper analytic subsets by Siu's semicontinuity theorem theorem <a data-tag="C7387DB3" href="../../tag/6BAB6143467A/">1.4.4</a>. It follows that a very general element in $\Lambda $ is not contained in this set. 
+    <p>
+      Fix an ample line bundle $L$ so that there is a smooth Hermitian metric $h_ L$ such that $c_1(L,h_ L)+\mathrm{dd}^{\mathrm{c}}\varphi $ is a Kähler current. Thanks to theorem <a data-tag="5C4012C7" href="../../tag/7931695F46E8/">8.5.1</a> and the connectedness assumption on $\Lambda $, we can find a co-pluripolar set $\Lambda '\subseteq \Lambda $ such that each $H\in \Lambda '$ satisfies the following: 
+    
+<ol>
+<li class="custom-item" id="sgpt-845D6C86"><span data-gerby-tag="845D6C86"></span><p>
+ $H$ is smooth and connected; 
+</p>
+</li><li class="custom-item" id="sgpt-88FDD520"><span data-gerby-tag="88FDD520"></span><p>
+ $\nu (\varphi ,H)=0$; 
+</p>
+</li><li class="custom-item" id="sgpt-802BB463"><span data-gerby-tag="802BB463"></span><p>
+ $\mathcal{I}(k\varphi |_ H)=\operatorname{Res}_{H}(\mathcal{I}(k\varphi ))$ for all $k\in \mathbb {Z}_{&gt;0}$. 
+</p>
+</li>
+</ol>
+<p>
+       Put $\alpha _ H\coloneqq c_1(L,h_ L)|_ H$. It follows from theorem <a data-tag="29C95E85" href="../../tag/230AF20F8E84/">8.4.1</a> and theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a> that 
+    
+<div class="equation">
+  \[  \int _ H \left( \alpha _ H+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ H^{c_1(L,h_ L)}(\varphi )\right)^{n-1} = \int _ H \left( \alpha _ H+\mathrm{dd}^{\mathrm{c}}P_{c_1(L,h_ L)|_ H}\left[\varphi |_ H\right]_{\mathcal{I}} \right)^{n-1}.  \]
+</div>
+<p>
+       Since $\varphi |_ H\preceq _ P \operatorname{Tr}_ H(\varphi )$ by proposition <a data-tag="18696C0F" href="../../tag/B293F74D2022/">8.1.9</a>, we also have $\varphi |_ H\preceq _{\mathcal I}\operatorname{Tr}_ H(\varphi )$. Hence 
+    
+<div class="equation">
+  \[  P_{c_1(L,h_ L)|_ H}[\varphi |_ H]_{\mathcal I}\leq P_{c_1(L,h_ L)|_ H}[\operatorname{Tr}_ H(\varphi )]_{\mathcal I}.  \]
+</div>
+<p>
+       The trace is $\mathcal I$-good, so the right-hand side agrees with its $P$-envelope. The equality of the masses above and theorem <a data-tag="36606B5B" href="../../tag/7ADF30509E4E/">3.1.9</a> then imply that the two sides have the same $P$-singularity type, hence 
+    
+<div class="equation">
+  \[  \operatorname{Tr}_ H(\varphi )\sim _{\mathcal I}\varphi |_ H.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-4736F85E">
+<p><a class="environment-identifier" href="../../tag/CB547C0AF98F/">Lemma <span data-tag="4736F85E">8.5.6</span>.</a><span data-gerby-tag="4736F85E"></span> Assume that $n\geq 2$. Let $T$ be a closed positive $(1,1)$-current on $X$ with $\int _ X T^ n&gt;0$. Then quasi-every $H\in \Lambda $ is connected and smooth, $T|_ H$ is well-defined and satisfies </p>
+<div class="equation">
+  \[  \int _ H T|_ H^{n-1}&gt;0.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $T=\theta _{\varphi }$ for some smooth closed real $(1,1)$-form $\theta $ on $X$ and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Thanks to <a data-tag="44EC382B" href="../../tag/3AA4A74713F0/">2.4.19</a>, we can find $\psi \in \mathrm{PSH}(X,\theta )$ such that $\theta _{\psi }$ is a Kähler current and $\psi \leq \varphi $. By corollary <a data-tag="C8037696" href="../../tag/50ABF7A3834B/">8.5.4</a> and the connectedness assumption on $\Lambda $, we can find a co-pluripolar set $\Lambda '\subseteq \Lambda $ such that each $H\in \Lambda '$ satisfies: 
+    
+<ol>
+<li class="custom-item" id="sgpt-27593AE0"><span data-gerby-tag="27593AE0"></span><p>
+ $H$ is smooth and connected; 
+</p>
+</li><li class="custom-item" id="sgpt-70637789"><span data-gerby-tag="70637789"></span><p>
+ the restriction $\psi |_ H$ is not identically $-\infty $. 
+</p>
+</li>
+</ol>
+<p>
+       Since $\theta _\psi $ is a Kähler current, its restriction to such an $H$ has positive non-pluripolar mass. As $\psi |_ H\leq \varphi |_ H$, theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> gives 
+    
+<div class="equation">
+  \[  \int _ H(\theta |_ H+\mathrm{dd}^{\mathrm{c}}\varphi |_ H)^{n-1} \geq \int _ H(\theta |_ H+\mathrm{dd}^{\mathrm{c}}\psi |_ H)^{n-1}&gt;0.  \]
+</div>
+<p>
+       We conclude the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-C2F9E8AA">
+<p><a class="environment-identifier" href="../../tag/3AEE64F8D403/">Corollary <span data-tag="C2F9E8AA">8.5.7</span>.</a><span data-gerby-tag="C2F9E8AA"></span> Assume that $n\geq 2$. Let $T$ be a closed positive $(1,1)$-current on $X$ with $\operatorname{vol}T&gt;0$. Then quasi-every $H\in \Lambda $ is connected and smooth, and $\operatorname{Tr}_ H^{\{ T\} |_ H}(T)$ is well-defined and has positive volume. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $T=\theta +\mathrm{dd}^{\mathrm{c}}\varphi $ and set $\psi =P_{\theta }[\varphi ]_{\mathcal{I}}$. Then $\psi \sim _{\mathcal{I}}\varphi $ and 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\psi }^{n}=\operatorname{vol}T&gt;0.  \]
+</div>
+<p>
+       By <a data-tag="4736F85E" href="../../tag/CB547C0AF98F/">8.5.6</a>, for quasi-every $H\in \Lambda $, the hypersurface $H$ is connected and smooth, $\psi |_ H$ is well-defined, and 
+    
+<div class="equation">
+  \[  \int _ H \left(\theta |_ H+\mathrm{dd}^{\mathrm{c}}\psi |_ H\right)^{n-1}&gt;0.  \]
+</div>
+<p>
+       For such $H$, corollary <a data-tag="CE9C5B76" href="../../tag/B590E31078F3/">8.5.5</a> gives $\operatorname{Tr}_ H(\psi )\sim _{\mathcal{I}}\psi |_ H$. Since $\varphi \sim _{\mathcal{I}}\psi $, proposition <a data-tag="F53735CE" href="../../tag/F2C3DD7D449E/">8.2.1</a> also gives $\operatorname{Tr}_ H(\varphi )\sim _ P\operatorname{Tr}_ H(\psi )$. The assertion now follows from example <a data-tag="628E430C" href="../../tag/2272C87A04CE/">8.1.12</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="sgpt-DA8AC7B0">
+<p><a class="environment-identifier" href="../../tag/A2BD7EA3B4B4/">Proposition <span data-tag="DA8AC7B0">8.5.8</span>.</a><span data-gerby-tag="DA8AC7B0"></span> Assume that $n\geq 2$. Let $\varphi ,\psi \in \mathrm{QPSH}(X)$. Assume that $\varphi \preceq _ P \psi $. Then quasi-every $H\in \Lambda $ is connected and smooth, and $\varphi |_ H\preceq _ P \psi |_ H$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Thanks to <a data-tag="E8047F11" href="../../tag/005A077A0167/">6.1.8</a>, we may replace $\varphi $ by $\varphi \lor \psi $ and assume that $\varphi \sim _ P \psi $. It suffices to show that $\varphi |_ H\sim _ P \psi |_ H$ for quasi-every $H\in \Lambda $. 
+    <p>
+      Take a smooth closed real $(1,1)$-form $\theta $ on $X$ so that $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. It suffices to compare $\varphi $ and $\psi $ with $P_{\theta }[\varphi ]$, so without loss of generality, we may assume that $\psi $ is a model potential in $\mathrm{PSH}(X,\theta )_{&gt;0}$. Up to adding a constant to $\varphi $, we may then assume that $\varphi \leq \psi $. It follows from <a data-tag="8560C5E9" href="../../tag/1CC7CDBE65A9/">2.4.15</a> that we can find a sequence $(\eta _ j)_ j$ in $\mathrm{PSH}(X,\theta )_{&gt;0}$ such that 
+    
+<div class="equation">
+  \[  j^{-1}\eta _ j+\left(1-j^{-1}\right)\psi \leq \varphi  \]
+</div>
+<p>
+       for all $j\geq 2$. By corollary <a data-tag="C8037696" href="../../tag/50ABF7A3834B/">8.5.4</a>, <a data-tag="4736F85E" href="../../tag/CB547C0AF98F/">8.5.6</a>, we can find a co-pluripolar set $\Lambda '\subseteq \Lambda $ such that any $H\in \Lambda '$ satisfies: 
+    
+<ol>
+<li class="custom-item" id="sgpt-78D22964"><span data-gerby-tag="78D22964"></span><p>
+ $H$ is smooth and connected; 
+</p>
+</li><li class="custom-item" id="sgpt-43714987"><span data-gerby-tag="43714987"></span><p>
+ $\eta _ j|_ H\in \mathrm{PSH}(H,\theta |_ H)_{&gt;0}$ for all $j\geq 2$ and $\psi |_ H\in \mathrm{PSH}(H,\theta |_ H)_{&gt;0}$. 
+</p>
+</li>
+</ol>
+<p>
+       Therefore, taking proposition <a data-tag="9AB8A7BE" href="../../tag/CF5FECD1B547/">3.1.24</a> into account, we arrive at 
+    
+<div class="equation">
+  \[  j^{-1} P_{\theta |_ H}\bigl [\eta _ j|_ H\bigr ]+\left(1-j^{-1}\right)P_{\theta |_ H}\bigl [\psi |_ H\bigr ]\leq P_{\theta |_ H}\bigl [\varphi |_ H\bigr ]  \]
+</div>
+<p>
+       for all $j\geq 2$. The normalized envelopes $P_{\theta |_ H}[\eta _ j|_ H]$ are uniformly bounded in $L^1$, hence 
+    
+<div class="equation">
+  \[  j^{-1}P_{\theta |_ H}[\eta _ j|_ H]\xrightarrow {L^1} 0.  \]
+</div>
+<p>
+       We conclude that 
+    
+<div class="equation">
+  \[  P_{\theta |_ H}[\psi |_ H]\leq P_{\theta |_ H}[\varphi |_ H]  \]
+</div>
+<p>
+       and hence $\psi |_ H\preceq _ P \varphi |_ H$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-4800913A">
+<p><a class="environment-identifier" href="../../tag/A172685DB2AD/">Lemma <span data-tag="4800913A">8.5.9</span>.</a><span data-gerby-tag="4800913A"></span> Assume that $n\geq 2$. Let $\theta $ be a closed smooth $(1,1)$-form on $X$ representing a big cohomology class and $(\varphi _ j)_ j$ be a decreasing sequence in $\mathrm{PSH}(X,\theta )$. Assume that $\varphi \in \mathrm{PSH}(X,\theta )$ and $\varphi _ j\xrightarrow {d_ S}\varphi $. Furthermore, assume that $\varphi \leq \varphi _ j$ for each $j&gt;0$. Then quasi-every $H\in \Lambda $ is connected and smooth, $\varphi _ j|_ H\not\equiv -\infty $ for all $j\geq 1$, $\varphi |_ H\not\equiv -\infty $, and </p>
+<div class="equation">
+  \[  \varphi _ j|_ H\xrightarrow {d_ S}\varphi |_ H.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>, we may assume that $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. 
+    <p>
+      Using <a data-tag="8560C5E9" href="../../tag/1CC7CDBE65A9/">2.4.15</a>, we can find a decreasing sequence $(\epsilon _ j)_ j$ in $(0,1)$ with limit $0$ and $\eta _ j\in \mathrm{PSH}(X,\theta )_{&gt;0}$ such that $\eta _ j\leq \varphi _ j$ and 
+    
+<div class="equation">
+  \[  \epsilon _ j\eta _ j+(1-\epsilon _ j)\varphi _ j\leq \varphi .  \]
+</div>
+<p>
+       By corollary <a data-tag="C8037696" href="../../tag/50ABF7A3834B/">8.5.4</a>, <a data-tag="4736F85E" href="../../tag/CB547C0AF98F/">8.5.6</a>, we can find a co-pluripolar set $\Lambda '\subseteq \Lambda $ such that any $H\in \Lambda '$ satisfies: 
+    
+<ol>
+<li class="custom-item" id="sgpt-54F6BA0C"><span data-gerby-tag="54F6BA0C"></span><p>
+ $H$ is smooth and connected; 
+</p>
+</li><li class="custom-item" id="sgpt-A0253CA2"><span data-gerby-tag="A0253CA2"></span><p>
+ $\eta _ j|_ H\in \mathrm{PSH}(H,\theta |_ H)_{&gt;0}$ for all $j\geq 1$ and $\varphi |_ H\in \mathrm{PSH}(H,\theta |_ H)_{&gt;0}$. 
+</p>
+</li>
+</ol>
+<p>
+       Therefore, taking proposition <a data-tag="9AB8A7BE" href="../../tag/CF5FECD1B547/">3.1.24</a> into account, we arrive at 
+    
+<div class="equation">
+  \[  \epsilon _ j P_{\theta |_ H}\bigl [\eta _ j|_ H\bigr ]+\left(1-\epsilon _ j\right)P_{\theta |_ H}\bigl [\varphi _ j|_ H\bigr ]\leq P_{\theta |_ H}\bigl [\varphi |_ H\bigr ].  \]
+</div>
+<p>
+       Since the normalized envelopes $P_{\theta |_ H}[\eta _ j|_ H]$ are relatively compact in $L^1$, we have $\epsilon _ jP_{\theta |_ H}[\eta _ j|_ H]\to 0$ in $L^1$. Letting $j\to \infty $, we get 
+    
+<div class="equation">
+  \[  \lim _{j\to \infty } P_{\theta |_ H}\bigl [\varphi _ j|_ H\bigr ]\leq P_{\theta |_ H}\bigl [\varphi |_ H\bigr ].  \]
+</div>
+<p>
+       The reverse inequality is trivial, so we get an equality here. By theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> and proposition <a data-tag="DE839E2D" href="../../tag/048490BEAC8C/">3.1.26</a>, we conclude that 
+    
+<div class="equation">
+  \[  \lim _{j\to \infty }\int _ H \Bigl (\theta |_ H+\mathrm{dd}^{\mathrm{c}}\varphi _ j|_ H\Bigr )^{n-1}=\int _ H \Bigl (\theta |_ H+\mathrm{dd}^{\mathrm{c}}\varphi |_ H\Bigr )^{n-1}.  \]
+</div>
+<p>
+       Therefore, using corollary <a data-tag="D2436235" href="../../tag/F84D53FDA599/">6.2.11</a>, we conclude that $\varphi _ j|_ H\xrightarrow {d_ S}\varphi |_ H$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-1529C668">
+<p><a class="environment-identifier" href="../../tag/8F47DBEBF9D3/">Corollary <span data-tag="1529C668">8.5.10</span>.</a><span data-gerby-tag="1529C668"></span> Assume that $n\geq 2$. Let $\varphi \in \mathrm{QPSH}(X)$ be an $\mathcal{I}$-good potential. Then quasi-every $H\in \Lambda $ satisfies: </p>
+<ol>
+<li class="custom-item" id="sgpt-57DCC830"><span data-gerby-tag="57DCC830"></span><p>
+ $H$ is connected and smooth; 
+</p>
+</li><li class="custom-item" id="sgpt-C573C333"><span data-gerby-tag="C573C333"></span><p>
+ $\varphi |_ H$ is $\mathcal{I}$-good; 
+</p>
+</li><li class="custom-item" id="sgpt-C42E24BD"><span data-gerby-tag="C42E24BD"></span><p>
+ $\nu (\varphi ,H)=0$; 
+</p>
+</li><li class="custom-item" id="sgpt-147E444F"><span data-gerby-tag="147E444F"></span><p>
+ $\operatorname{Tr}_ H \varphi \sim _ P \varphi |_ H$. 
+</p>
+</li>
+</ol>
+<p> Furthermore, if $\theta $ is a closed smooth real $(1,1)$-form on $X$ such that $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, then we can further guarantee, on the same co-pluripolar set of $H\in \Lambda $, that $\operatorname{Tr}_ H(\varphi )$ has a representative $\operatorname{Tr}_ H(\varphi )\in \mathrm{PSH}(H,\theta |_ H)_{&gt;0}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a closed smooth real $(1,1)$-form $\theta _0$ representing a big class such that $\varphi \in \mathrm{PSH}(X,\theta _0)$ and $\theta _0+\mathrm{dd}^{\mathrm{c}}\varphi $ is a Kähler current. Let $(\varphi _ j)_ j$ be a quasi-equisingular approximation of $\varphi $ in $\mathrm{PSH}(X,\theta _0)_{&gt;0}$. Since $\varphi $ is $\mathcal I$-good, corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a>, theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a>, proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a> gives 
+    
+<div class="equation">
+  \[  \varphi _ j\xrightarrow {d_ S}\varphi .  \]
+</div>
+<p>
+       Applying <a data-tag="4800913A" href="../../tag/A172685DB2AD/">8.5.9</a>, we find a co-pluripolar set of $H\in \Lambda $ such that $H$ is connected and smooth, the restrictions $\varphi _ j|_ H$ and $\varphi |_ H$ are not identically $-\infty $, and 
+    
+<div class="equation">
+  \[  \varphi _ j|_ H\xrightarrow {d_ S}\varphi |_ H.  \]
+</div>
+<p>
+       For such an $H$, the potentials $\varphi _ j|_ H$ have analytic singularities, hence are $\mathcal I$-good by example <a data-tag="F35307AB" href="../../tag/12795171A873/">7.1.6</a>. It follows from corollary <a data-tag="A59B5FBB" href="../../tag/4662D2032EC0/">7.1.5</a> that $\varphi |_ H$ is $\mathcal I$-good. 
+    <p>
+      On the other hand, corollary <a data-tag="CE9C5B76" href="../../tag/B590E31078F3/">8.5.5</a> gives, after intersecting with another co-pluripolar set of parameters $H$, that $\nu (\varphi ,H)=0$ and 
+    
+<div class="equation">
+  \[  \operatorname{Tr}_ H(\varphi )\sim _{\mathcal I}\varphi |_ H.  \]
+</div>
+<p>
+       The trace $\operatorname{Tr}_ H(\varphi )$ is $\mathcal I$-good by proposition <a data-tag="5B8EBC49" href="../../tag/45EA06425921/">8.1.5</a>. Since both $\operatorname{Tr}_ H(\varphi )$ and $\varphi |_ H$ are $\mathcal I$-good, their $\mathcal I$-equivalence identifies their $\mathcal I$-envelopes, which agree with their $P$-envelopes. Hence 
+    
+<div class="equation">
+  \[  \operatorname{Tr}_ H(\varphi )\sim _ P\varphi |_ H.  \]
+</div>
+<p>
+      Finally corollary <a data-tag="C2F9E8AA" href="../../tag/3AEE64F8D403/">8.5.7</a> shows, after intersecting with one more co-pluripolar set of $H\in \Lambda $, that $\operatorname{Tr}_ H(\varphi )$ has a representative in $\mathrm{PSH}(H,\theta |_ H)_{&gt;0}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+For later use, let us also prove a reverse Bertini theorem here. <article class="env-lemma" id="sgpt-35707E8D">
+<p><a class="environment-identifier" href="../../tag/A7BAA368EEF9/">Lemma <span data-tag="35707E8D">8.5.11</span> <span class="named">(Reverse Bertini theorem)</span>.</a><span data-gerby-tag="35707E8D"></span> Let $X$ be a complex manifold, $f\colon X\rightarrow \Delta ^*$ be a projective surjective morphism to the punctured unit disk $\Delta ^*$. Let $(L,h)$, $(L,h')$ be Hermitian pseudo-effective line bundles on $X$ with the same underlying line bundle. Assume that there is a biholomorphic $S^1$-action on $(X,L)$ making $f$ equivariant and such that $h$ and $h'$ are invariant under this action. Assume that for quasi-every $z\in \Delta ^*$, $X_ z$ is smooth and $h|_{X_ z}\sim _{\mathcal{I}}h'|_{X_ z}$. Then $h\sim _{\mathcal{I}}h'$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We need to show that $\mathcal{I}(kh)=\mathcal{I}(kh')$ for every positive integer $k$. It suffices to prove the case $k=1$, since our assumptions are invariant after replacing $h$ and $h'$ by $h^ k$ and $h'^ k$. We will therefore prove $\mathcal{I}(h)=\mathcal{I}(h')$. First observe that it suffices to prove that 
+    
+<div class="equation" id="sgpt-B9BB87FF"><span data-gerby-tag="B9BB87FF"></span>
+<span class="equation-label"><a data-tag="B9BB87FF" href="../../tag/133BE510F62F/">8.64</a></span>
+<div>\begin{equation}  f_*\Bigl (K_{X}\otimes L\otimes \mathcal{I}(h)\Bigr )=f_*\Bigl (K_{X}\otimes L\otimes \mathcal{I}(h')\Bigr ) \end{equation}</div>
+</div>
+<p>
+       as subsheaves of $f_*(K_{X}\otimes L)$. In fact, suppose that (<a data-tag="B9BB87FF" href="../../tag/133BE510F62F/">8.64</a>) holds. Let $H$ be a $f$-ample invertible sheaf on $X$. Then (<a data-tag="B9BB87FF" href="../../tag/133BE510F62F/">8.64</a>) also holds with $L\otimes H^ m$ in place of $L$. It follows from Grauert–Remmert's version of Serre vanishing theorem <span class="cite">[<span class="postnote">Theorem 2.1(A)</span>, <a href="../../references/#RB806107AC6C1">BS76</a>]</span> that $\mathcal{I}(h)=\mathcal{I}(h')$. 
+    <p>
+      It remains to prove (<a data-tag="B9BB87FF" href="../../tag/133BE510F62F/">8.64</a>). Observe that both sides of (<a data-tag="B9BB87FF" href="../../tag/133BE510F62F/">8.64</a>) are locally free by <span class="cite">[<span class="postnote">Corollary 1.5</span>, <a href="../../references/#RCC7105615C15">Mat16</a>]</span>. We claim that it suffices to show that 
+    
+<div class="equation" id="sgpt-F3FB2AAC"><span data-gerby-tag="F3FB2AAC"></span>
+<span class="equation-label"><a data-tag="F3FB2AAC" href="../../tag/C42AE95D23AF/">8.65</a></span>
+<div>\begin{equation}  f_*\Bigl (K_{X}\otimes L\otimes \mathcal{I}(h)\Bigr ) \otimes \mathbb {C}(z)=f_*\Bigl (K_{X}\otimes L\otimes \mathcal{I}(h')\Bigr ) \otimes \mathbb {C}(z) \end{equation}</div>
+</div>
+<p>
+       for quasi-every $z\in \Delta ^*$. In fact, this implies that the same holds outside a countable subset of $\Delta ^*$. But the set where (<a data-tag="F3FB2AAC" href="../../tag/C42AE95D23AF/">8.65</a>) fails has to be $S^1$-invariant, it has to be empty. 
+    <p>
+      By cohomology and base change together with the analytic Bertini theorem <a data-tag="E49B70E4" href="../../tag/E131A2FB1C6A/">8.5.3</a>, for quasi-every $z\in \Delta ^*$, we have 
+    
+<div class="equation">
+  \[  \begin{split}  f_*\Bigl (K_{X}\otimes L\otimes \mathcal{I}(h)\Bigr ) \otimes \mathbb {C}(z)=\mathrm{H}^0\Bigl (X_ z,K_{X}|_{X_ z}\otimes L|_{X_ z}\otimes \mathcal{I}(h|_{X_ z})\Bigr ),\\  f_*\Bigl (K_{X}\otimes L\otimes \mathcal{I}(h')\Bigr ) \otimes \mathbb {C}(z)=\mathrm{H}^0\Bigl (X_ z,K_{X}|_{X_ z}\otimes L|_{X_ z}\otimes \mathcal{I}(h'|_{X_ z})\Bigr ). \end{split}  \]
+</div>
+<p>
+       But we assumed that for quasi-every $z$, $h|_{X_ z}\sim _{\mathcal{I}}h'|_{X_ z}$, it follows that for quasi-every $z\in \Delta ^*$, (<a data-tag="F3FB2AAC" href="../../tag/C42AE95D23AF/">8.65</a>) holds. The proof is complete. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+<blockquote class="motto">Comment se fait-il que M. Gauss ait osé vous faire dire que la plupart de vos théorèmes lui étaient connus et qu'il en avait fait la découverte dès 1808. Cet excès d'impudence n'est pas croyable de la part d'un homme qui a assez de mérite personnel pour n'avoir pas besoin de s'approprier les découvertes des autres. 
+— Adrien-Marie Legendre<aside class="source-footnote" id="sgpt-a0000072014"><span class="footnote-label">Note.</span> Adrien-Marie Legendre (1752–1833) was a French mathematician known for his foundational contributions to number theory, statistics, and mathematical analysis. Apart from his mathematical contributions, he also helped formalize the metric system during the French Revolution.</aside>, in a letter to Jacobi in 1827</blockquote>
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/D7547FA69C91/"><span>← Previous</span><small>Remark 11.2.10</small></a><a class="pager-next" rel="next" href="../../tag/007D02149D2D/"><span>Next →</span><small>8 The trace operator</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-the-trace-operator,
   author = {{Gerby contributors}},
   title = {17.2 The trace operator},

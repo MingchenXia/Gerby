@@ -1,8 +1,423 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/monge-ampere-energy-and-torsion/"><title>10.2 Monge–Ampère energy and torsion · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/monge-ampere-energy-and-torsion/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/monge-ampere-energy-and-torsion/"><title>10.2 Monge–Ampère energy and torsion · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/monge-ampere-energy-and-torsion/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/hermitian-torsion/">Chapter 10: Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../sections/monge-ampere-energy-and-torsion/" aria-current="page">Section 10.2: Monge–Ampère energy and torsion</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/torsion-and-the-variation-of-mass/"><span>10.1</span> Torsion and the variation of mass</a></li><li><a href="../../sections/monge-ampere-energy-and-torsion/" aria-current="page"><span>10.2</span> Monge–Ampère energy and torsion</a></li><li><a href="../../sections/gauduchon-metrics-and-linear-mass/"><span>10.3</span> Gauduchon metrics and linear mass</a></li><li><a href="../../sections/gauduchon-traces-and-the-topology-of-potentials/"><span>10.4</span> Gauduchon traces and the topology of potentials</a></li><li><a href="../../sections/normalization-and-weak-adjoint-measures/"><span>10.5</span> Normalization and weak adjoint measures</a></li><li><a href="../../sections/a-gauduchon-variational-volume/"><span>10.6</span> A Gauduchon variational volume</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/monge-ampere-energy-and-torsion/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/monge-ampere-energy-and-torsion/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/682711871907/"><span>← Previous</span><small>Proposition 2.5.1</small></a><a class="pager-next" rel="next" href="../../tag/1FC29EAFAA97/"><span>Next →</span><small>3 Monge–Ampère energy and torsion</small></a></nav><h1>10.2 Monge–Ampère energy and torsion</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/1FC29EAFAA97/">3 Monge–Ampère energy and torsion</a><code class="tag-id">1FC29EAFAA97</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/49D0776D0F6B/">3.1 Primitives of the Monge–Ampère one-form</a><code class="tag-id">49D0776D0F6B</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/8A9C3139B5B5/">Lemma 3.1.1</a><code class="tag-id">8A9C3139B5B5</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/8535B6F80ED4/">Lemma 3.1.2</a><code class="tag-id">8535B6F80ED4</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/7D069B347672/">Theorem 3.1.3</a><code class="tag-id">7D069B347672</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/B4B9D0AD937E/">3.1 </a><code class="tag-id">B4B9D0AD937E</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/B9357DC44463/">3.2 Radial energy and closed backgrounds</a><code class="tag-id">B9357DC44463</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1CE478F66A34/">3.2 </a><code class="tag-id">1CE478F66A34</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/E345C8B2A48C/">Proposition 3.2.1</a><code class="tag-id">E345C8B2A48C</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/AEF022344DD6/">3.3 First variation in a nonclosed background</a><code class="tag-id">AEF022344DD6</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/4793125897B2/">Proposition 3.3.1</a><code class="tag-id">4793125897B2</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/91AE93E20D38/">3.5 </a><code class="tag-id">91AE93E20D38</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/0009683E4137/">Proposition 3.3.2</a><code class="tag-id">0009683E4137</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/173E9E78941E/">3.12 </a><code class="tag-id">173E9E78941E</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/A10584C44FB2/">3.4 Symplectic completions and potential variations</a><code class="tag-id">A10584C44FB2</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/19D4882CC9D5/">Lemma 3.4.1</a><code class="tag-id">19D4882CC9D5</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/7C73F0133C9D/">3.13 </a><code class="tag-id">7C73F0133C9D</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/AE6CE389C569/">Proposition 3.4.2</a><code class="tag-id">AE6CE389C569</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/BAFFEA611460/">3.14 </a><code class="tag-id">BAFFEA611460</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/04BD04D6C676/">Theorem 3.4.3</a><code class="tag-id">04BD04D6C676</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/8B6CFC8EA37B/">3.15 </a><code class="tag-id">8B6CFC8EA37B</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/67DF1C6C0509/">Corollary 3.4.4</a><code class="tag-id">67DF1C6C0509</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/EF1FC602D899/">3.4.1 Completion energy on products of complex tori</a><code class="tag-id">EF1FC602D899</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/ACA94D5D202C/">Example 3.4.5</a><code class="tag-id">ACA94D5D202C</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/F9D5DB66D92A/">Example 3.4.6</a><code class="tag-id">F9D5DB66D92A</code><span class="entry-topic">Monge–Ampère energy and torsion</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/682711871907/"><span>← Previous</span><small>Proposition 2.5.1</small></a><a class="pager-next" rel="next" href="../../tag/1FC29EAFAA97/"><span>Next →</span><small>3 Monge–Ampère energy and torsion</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/682711871907/"><span>← Previous</span><small>Proposition 2.5.1</small></a><a class="pager-next" rel="next" href="../../tag/1FC29EAFAA97/"><span>Next →</span><small>3 Monge–Ampère energy and torsion</small></a></nav><h1>10.2 Monge–Ampère energy and torsion</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-1FC29EAFAA97" data-section-entries="1FC29EAFAA97"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/1FC29EAFAA97/">3 Monge–Ampère energy and torsion</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="40704AA7"></span></div>
+<p>
+Throughout this chapter, $\omega $ is a Hermitian form on $X$, and $\omega _ u=\omega +\mathrm{dd}^{\mathrm{c}}u$ and the space $\mathcal H_\omega $ of smooth strictly $\omega $-plurisubharmonic functions are as in chapter <a data-tag="A7900C78" href="../../tag/7B453010B5B8/">2</a>. 
+</p>
+<p>
+For a Kähler form, the Monge–Ampère operator is the gradient of an energy: there is a functional on $\mathcal H_\omega $ whose derivative at $u$ in every smooth real direction $v$ is $\int _ Xv\, \omega _ u^ n$. For a Hermitian form, such a primitive exists exactly when $\omega $ is closed. Symmetry of its mixed second derivatives first forces $\mathrm d(\omega _ u^{n-1})=0$, and varying the potential then forces $\mathrm d\omega =0$; this is stronger than the mass invariance of chapter <a data-tag="A7900C78" href="../../tag/7B453010B5B8/">2</a>. For a nonclosed background, integrating the Monge–Ampère one-form along radial segments still defines a functional, and its first variation shows which torsion terms enter the corresponding Euler equation. A different energy is available for Hermitian symplectic forms on fourfolds: along potential variations, this completion energy changes by minus the change of the volume. It is therefore constant along potential variations exactly when the mass is invariant, although even then the Monge–Ampère one-form has no primitive unless $\omega $ is closed. 
+</p>
+</div></section><section class="reading-chunk" id="entry-49D0776D0F6B" data-section-entries="49D0776D0F6B 7D069B347672 8535B6F80ED4 8A9C3139B5B5 B4B9D0AD937E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/49D0776D0F6B/">3.1 Primitives of the Monge–Ampère one-form</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="F6A75393"></span></div>
+<p>
+On $\mathcal H_\omega $ consider the <em>Monge–Ampère one-form</em>
+</p>
+<div class="equation">
+  \[  \alpha _ u(v)=\int _ Xv\, \omega _ u^ n,\qquad v\in C^\infty (X,\mathbb R).  \]
+</div>
+<p>
+ Let $U\subseteq \mathcal H_\omega $ be open in the $C^2$ topology on smooth functions. A <em>primitive</em> of $\alpha $ on $U$ is a functional $E$ on $U$ such that, for every $u\in U$ and every smooth real direction $v$, the directional derivative 
+</p>
+<div class="equation">
+  \[  DE_ u(v)=\left.\frac{\mathrm d}{\mathrm dt}\right|_{t=0}E(u+tv)  \]
+</div>
+<p>
+ exists and equals $\alpha _ u(v)$. Restrict $E$ to the intersection of $U$ with a finite-dimensional affine plane. Its first derivatives are values of $\alpha $, which depend smoothly on the parameters, so its mixed second derivatives agree. The following integration-by-parts criterion identifies the differential condition imposed by this symmetry. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-37DA4A81">
+<p><a class="environment-identifier" href="../../tag/8A9C3139B5B5/">Lemma <span data-tag="37DA4A81">3.1.1</span>.</a><span data-gerby-tag="37DA4A81"></span> For a smooth real $(n-1,n-1)$-form $\Omega $, the pairing $B(v,w)=\int _ Xw\mathrm{dd}^{\mathrm{c}}v\wedge \Omega $ is symmetric on smooth real functions if and only if $\mathrm{d}\Omega =0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">2.1.1</a>, $B(v,w)=\int _ Xv\mathrm{dd}^{\mathrm{c}}(w\Omega )$. Since $v$ is arbitrary, symmetry is therefore equivalent to the pointwise identity 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(w\Omega )-\mathrm{dd}^{\mathrm{c}}w\wedge \Omega =w\mathrm{dd}^{\mathrm{c}}\Omega +\mathrm{d}w\wedge \mathrm d^{\mathrm c}\Omega -\mathrm d^{\mathrm c}w\wedge \mathrm{d}\Omega =0  \]
+</div>
+<p>
+       for every smooth real $w$. Taking $w=1$ gives $\mathrm{dd}^{\mathrm{c}}\Omega =0$. The remaining expression is linear in the first jet of $w$, so we may complexify the test functions. At a chosen point, take a holomorphic linear function multiplied by a cutoff function, so that $\partial w=\lambda $ is an arbitrary $(1,0)$-covector and $\bar\partial w=0$ at that point. There the first-order expression equals 
+    
+<div class="equation">
+  \[  \frac{\mathrm i}{2\pi }\bigl (\partial w\wedge \bar\partial \Omega -\bar\partial w\wedge \partial \Omega \bigr ).  \]
+</div>
+<p>
+       It follows that $\lambda \wedge \bar\partial \Omega =0$ for every $(1,0)$-covector $\lambda $. Since the wedge pairing between $(1,0)$-covectors and forms of bidegree $(n-1,n)$ is nondegenerate, $\bar\partial \Omega =0$, and $\partial \Omega =0$ because $\Omega $ is real. Conversely, if $\mathrm{d}\Omega =0$, then $\partial \Omega =\bar\partial \Omega =0$ by type, so $\mathrm d^{\mathrm c}\Omega =0$, and the same product formula proves symmetry. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-9AB90E4C">
+<p><a class="environment-identifier" href="../../tag/8535B6F80ED4/">Lemma <span data-tag="9AB90E4C">3.1.2</span>.</a><span data-gerby-tag="9AB90E4C"></span> Let $T$ be a form of type $(2,1)+(1,2)$ on a complex vector space of dimension $n\geq 2$. If $T\wedge A^{n-2}=0$ for every real $(1,1)$-form $A$ in an open neighborhood of a positive form, then $T=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $n=2$ the assertion is immediate. Otherwise the expression $T\wedge A^{n-2}$ is polynomial in the real coefficients of $A$, so it vanishes for every real $(1,1)$-form $A$. Polarization and then complexification give $T\wedge A_1\wedge \cdots \wedge A_{n-2}=0$ for arbitrary complex $(1,1)$-forms $A_ j$, and such products span all forms of bidegree $(n-2,n-2)$. 
+    <p>
+      Since these wedges preserve type, the identity holds separately for the two type components of $T$. Wedging the identity for $T^{2,1}$ with arbitrary $(0,1)$-covectors, we obtain test forms spanning bidegree $(n-2,n-1)$, which pairs perfectly with bidegree $(2,1)$ into top degree. Thus $T^{2,1}=0$. The component $T^{1,2}$ is treated in the same way with $(1,0)$-covectors. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-788EACD6">
+<p><a class="environment-identifier" href="../../tag/7D069B347672/">Theorem <span data-tag="788EACD6">3.1.3</span>.</a><span data-gerby-tag="788EACD6"></span> For $n\geq 2$, the one-form $\alpha $ has a primitive on $\mathcal H_\omega $ if and only if $\mathrm{d}\omega =0$. In fact, a primitive on a $C^2$-open neighborhood of $0$ already forces $\mathrm{d}\omega =0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose that a primitive $E$ exists on such a neighborhood $U$. For $u\in U$ and smooth real directions $v,w$, the mixed second derivatives of $(s,t)\mapsto E(u+sv+tw)$ at the origin agree. After division by $n$, this equality reads 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-64D8C455"><span data-gerby-tag="64D8C455"></span>
+<span class="equation-label"><a data-tag="64D8C455" href="../../tag/B4B9D0AD937E/">3.1</a></span>
+<div>\begin{equation}  \int _ Xw\mathrm{dd}^{\mathrm{c}}v\wedge \omega _ u^{n-1} =\int _ Xv\mathrm{dd}^{\mathrm{c}}w\wedge \omega _ u^{n-1}. \end{equation}</div>
+</div>
+<p>
+       By lemma <a data-tag="37DA4A81" href="../../tag/8A9C3139B5B5/">3.1.1</a>, 
+    
+<div class="equation">
+  \[  0=\mathrm{d}(\omega _ u^{n-1}) =(n-1)\mathrm{d}\omega \wedge (\omega +\mathrm{dd}^{\mathrm{c}}u)^{n-2}.  \]
+</div>
+<p>
+       Fix a point $x$. A real quadratic polynomial in local coordinates, multiplied by a cutoff function equal to one near $x$, realizes any prescribed real $(1,1)$-form $H$ as $\mathrm{dd}^{\mathrm{c}}u(x)$. These functions can be chosen to depend linearly on $H$, with global $C^2$ norms bounded by a fixed constant times the coefficient norm of $H$. Thus every sufficiently small $H$ is realized by a potential in $U$, and the preceding identity holds at $x$ with $\omega (x)+H$ ranging over an open neighborhood of the positive form $\omega (x)$. Applying lemma <a data-tag="9AB90E4C" href="../../tag/8535B6F80ED4/">3.1.2</a> with $T=\mathrm{d}\omega (x)$, we conclude that $\mathrm{d}\omega (x)=0$. 
+    <p>
+      Since $x$ was arbitrary, $\mathrm{d}\omega =0$. Conversely, proposition <a data-tag="50609E2C" href="../../tag/E345C8B2A48C/">3.2.1</a> below constructs a primitive for a closed background. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+In dimension one every real $(1,1)$-form is closed, and proposition <a data-tag="50609E2C" href="../../tag/E345C8B2A48C/">3.2.1</a> always gives a primitive. For $n\geq 2$, the symmetry condition at a single potential $u$ is $\mathrm d(\omega _ u^{n-1})=0$; the theorem uses it on an open set of potentials. Mass invariance alone does not suffice. Indeed, let $X$ be a compact complex surface admitting no Kähler metric, and let $\omega $ be a Gauduchon form on $X$, that is, $\mathrm{dd}^{\mathrm{c}}\omega =0$ (definition <a data-tag="DD74A88E" href="../../tag/70139B6ABDC2/">4.1.1</a>); such forms exist by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>. The mass of $\omega $ is constant by corollary <a data-tag="9CD9DB11" href="../../tag/2C05FFD39C6D/">2.2.4</a>, but $\omega $ is not closed, so its Monge–Ampère one-form has no primitive. 
+</p>
+</div></section><section class="reading-chunk" id="entry-B9357DC44463" data-section-entries="1CE478F66A34 B9357DC44463 E345C8B2A48C"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/B9357DC44463/">3.2 Radial energy and closed backgrounds</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="5577367D"></span></div>
+<p>
+Integrating the Monge–Ampère one-form along the segment from $0$ to $u$ defines a functional for an arbitrary background. Let $\theta $ be a smooth real $(1,1)$-form on $X$. For $u\in C^\infty (X,\mathbb R)$, put $\theta _ u=\theta +\mathrm{dd}^{\mathrm{c}}u$ and define the <em>radial energy</em>
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-26510306"><span data-gerby-tag="26510306"></span>
+<span class="equation-label"><a data-tag="26510306" href="../../tag/1CE478F66A34/">3.2</a></span>
+<div>\begin{equation}  \begin{aligned}  E_\theta (u) &amp; =\int _0^1\int _ Xu(\theta +t\mathrm{dd}^{\mathrm{c}}u)^ n\, \mathrm{d}t\\ &amp; =\frac1{n+1}\sum _{j=0}^ n \int _ Xu\, \theta _ u^ j\wedge \theta ^{n-j}. \end{aligned} \end{equation}</div>
+</div>
+<p>
+ To obtain the second expression, write $\theta +t\mathrm{dd}^{\mathrm{c}}u=(1-t)\theta +t\theta _ u$, expand, and use 
+</p>
+<div class="equation">
+  \[  \binom nj\int _0^1t^ j(1-t)^{n-j}\, \mathrm dt=\frac1{n+1}.  \]
+</div>
+<p>
+ We write $DE_{\theta ,u}(v)$ for the derivative of $E_\theta $ at $u$ in the direction $v$. When $\theta $ is closed, integration by parts makes the derivatives of the mixed terms telescope. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-50609E2C">
+<p><a class="environment-identifier" href="../../tag/E345C8B2A48C/">Proposition <span data-tag="50609E2C">3.2.1</span>.</a><span data-gerby-tag="50609E2C"></span> If $\mathrm d\theta =0$, then $DE_{\theta ,u}(v)=\int _ Xv\theta _ u^ n$ for every pair of smooth real functions $u,v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Differentiate the finite sum in (<a data-tag="26510306" href="../../tag/1CE478F66A34/">3.2</a>). The term indexed by $j$ contributes 
+    
+<div class="equation">
+  \[  \int _ Xv\theta _ u^ j\wedge \theta ^{n-j} +j\int _ Xu\mathrm{dd}^{\mathrm{c}}v\wedge \theta _ u^{j-1}\wedge \theta ^{n-j},  \]
+</div>
+<p>
+       the second summand being absent for $j=0$. For $j\geq 1$, the form $\theta _ u^{j-1}\wedge \theta ^{n-j}$ is closed, so by lemma <a data-tag="37DA4A81" href="../../tag/8A9C3139B5B5/">3.1.1</a> we may interchange $u$ and $v$ in the second summand. Using $\mathrm{dd}^{\mathrm{c}}u=\theta _ u-\theta $, we can then write the contribution of the term with $j\geq 1$ as 
+    
+<div class="equation">
+  \[  (j+1)\int _ Xv\theta _ u^ j\wedge \theta ^{n-j} -j\int _ Xv\theta _ u^{j-1}\wedge \theta ^{n-j+1}.  \]
+</div>
+<p>
+       Together with the contribution $\int _ Xv\theta ^ n$ of the term $j=0$, these expressions telescope to $(n+1)\int _ Xv\theta _ u^ n$. Dividing by $n+1$ completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Thus, when $\mathrm d\omega =0$, the restriction of $E_\omega $ to $\mathcal H_\omega $ is the primitive required in theorem <a data-tag="788EACD6" href="../../tag/7D069B347672/">3.1.3</a>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-AEF022344DD6" data-section-entries="0009683E4137 173E9E78941E 4793125897B2 91AE93E20D38 AEF022344DD6"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/AEF022344DD6/">3.3 First variation in a nonclosed background</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="EB40C94C"></span></div>
+<p>
+For the Hermitian background $\theta =\omega $, the functional (<a data-tag="26510306" href="../../tag/1CE478F66A34/">3.2</a>) integrates $\alpha $ along the segment from $0$ to $u\in \mathcal H_\omega $. When $\omega $ is not closed, the derivative of $E_\omega $ differs from $\alpha $ by the terms produced when integration by parts differentiates the background powers. Computing this difference gives the Euler equation of $E_\omega $ even when no primitive exists. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-0618CCAD">
+<p><a class="environment-identifier" href="../../tag/4793125897B2/">Proposition <span data-tag="0618CCAD">3.3.1</span>.</a><span data-gerby-tag="0618CCAD"></span> For $u\in \mathcal H_\omega $ and $v\in C^\infty (X,\mathbb R)$, put $\Omega _ t=(\omega +t\mathrm{dd}^{\mathrm{c}}u)^{n-1}$ for $0\leq t\leq 1$. Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-4962D7D6"><span data-gerby-tag="4962D7D6"></span>
+<span class="equation-label"><a data-tag="4962D7D6" href="../../tag/91AE93E20D38/">3.5</a></span>
+<div>\begin{equation}  \begin{split}  DE_{\omega ,u}(v)-\int _ Xv\omega _ u^ n =n\int _0^1t\int _ Xv\bigl (&amp; u\mathrm{dd}^{\mathrm{c}}\Omega _ t +\mathrm{d}u\wedge \mathrm d^{\mathrm c}\Omega _ t\\ &amp; -\mathrm d^{\mathrm c}u\wedge \mathrm{d}\Omega _ t\bigr )\, \mathrm{d}t. \end{split} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Differentiating the radial integral in (<a data-tag="26510306" href="../../tag/1CE478F66A34/">3.2</a>) in the direction $v$ gives 
+    
+<div class="equation">
+  \[  DE_{\omega ,u}(v) =\int _0^1\left(\int _ Xv(\omega +t\mathrm{dd}^{\mathrm{c}}u)^ n +nt\int _ Xu\mathrm{dd}^{\mathrm{c}}v\wedge \Omega _ t\right)\mathrm dt.  \]
+</div>
+<p>
+       On the other hand, 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _ Xv\omega _ u^ n &amp; =\int _0^1\frac{\mathrm d}{\mathrm dt} \left(t\int _ Xv(\omega +t\mathrm{dd}^{\mathrm{c}}u)^ n\right)\mathrm dt\\ &amp; =\int _0^1\left(\int _ Xv(\omega +t\mathrm{dd}^{\mathrm{c}}u)^ n +nt\int _ Xv\mathrm{dd}^{\mathrm{c}}u\wedge \Omega _ t\right)\mathrm dt. \end{aligned}  \]
+</div>
+<p>
+       The terms without a factor $nt$ cancel in the difference, leaving 
+    
+<div class="equation">
+  \[  \begin{aligned}  DE_{\omega ,u}(v)-\int _ Xv\omega _ u^ n &amp; =n\int _0^1t\int _ X (u\mathrm{dd}^{\mathrm{c}}v-v\mathrm{dd}^{\mathrm{c}}u)\wedge \Omega _ t\, \mathrm dt\\ &amp; =n\int _0^1t\int _ Xv \bigl (\mathrm{dd}^{\mathrm{c}}(u\Omega _ t)-\mathrm{dd}^{\mathrm{c}}u\wedge \Omega _ t\bigr )\, \mathrm dt. \end{aligned}  \]
+</div>
+<p>
+       The second equality is lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">2.1.1</a>. Expanding the last parenthesis by the product rule in the proof of lemma <a data-tag="37DA4A81" href="../../tag/8A9C3139B5B5/">3.1.1</a> gives (<a data-tag="4962D7D6" href="../../tag/91AE93E20D38/">3.5</a>). When $n=1$, one has $\Omega _ t=1$ and the right-hand side vanishes. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-7B725E3F">
+<p><a class="environment-identifier" href="../../tag/0009683E4137/">Proposition <span data-tag="7B725E3F">3.3.2</span>.</a><span data-gerby-tag="7B725E3F"></span> If $n=2$, then every $u\in \mathcal H_\omega $ satisfies </p>
+<div class="equation">
+  \[  E_\omega (u)=\int _ Xu\omega ^2 +\int _ Xu\omega \wedge \mathrm{dd}^{\mathrm{c}}u +\frac13\int _ Xu(\mathrm{dd}^{\mathrm{c}}u)^2.  \]
+</div>
+<p> For every smooth real direction $v$, its differential satisfies </p>
+<div class="equation" id="non-kahler-pluripotential-theory-2315F834"><span data-gerby-tag="2315F834"></span>
+<span class="equation-label"><a data-tag="2315F834" href="../../tag/173E9E78941E/">3.12</a></span>
+<div>\begin{equation}  DE_{\omega ,u}(v)-\int _ Xv\omega _ u^2 =\int _ Xv\bigl (u\mathrm{dd}^{\mathrm{c}}\omega +\mathrm{d}u\wedge \mathrm d^{\mathrm c}\omega -\mathrm d^{\mathrm c}u\wedge \mathrm{d}\omega \bigr ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Expanding the radial integral gives the first identity. For $n=2$, one has $\Omega _ t=\omega +t\mathrm{dd}^{\mathrm{c}}u$, and since $\mathrm d$ and $\mathrm d^{\mathrm c}$ annihilate $\mathrm{dd}^{\mathrm{c}}u$, the derivatives $\mathrm d\Omega _ t$, $\mathrm d^{\mathrm c}\Omega _ t$ and $\mathrm{dd}^{\mathrm{c}}\Omega _ t$ are those of $\omega $. Formula (<a data-tag="4962D7D6" href="../../tag/91AE93E20D38/">3.5</a>) and $2\int _0^1t\, \mathrm dt=1$ give the second identity. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Consequently, if $n=2$ and $\mu $ is a fixed smooth real $(2,2)$-form on $X$, a critical point $u\in \mathcal H_\omega $ of the functional $E_\omega (u)-\int _ Xu\, \mu $ satisfies 
+</p>
+<div class="equation">
+  \[  \omega _ u^2+u\mathrm{dd}^{\mathrm{c}}\omega +\mathrm{d}u\wedge \mathrm d^{\mathrm c}\omega -\mathrm d^{\mathrm c}u\wedge \mathrm{d}\omega =\mu  \]
+</div>
+<p>
+ rather than the Monge–Ampère equation $\omega _ u^2=\mu $. On a Gauduchon surface the term $u\mathrm{dd}^{\mathrm{c}}\omega $ vanishes, but the first-order torsion terms can persist. The radial Euler equation can therefore differ from the Monge–Ampère equation even when the total mass is invariant. 
+</p>
+</div></section><section class="reading-chunk" id="entry-A10584C44FB2" data-section-entries="04BD04D6C676 19D4882CC9D5 67DF1C6C0509 7C73F0133C9D 8B6CFC8EA37B A10584C44FB2 AE6CE389C569 BAFFEA611460"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A10584C44FB2/">3.4 Symplectic completions and potential variations</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="D264D617"></span></div>
+<p>
+The radial energy is built from the Monge–Ampère one-form, and its first variation exhibits the torsion of the background. When a Hermitian form is the $(1,1)$-part of a closed real two-form, there is another natural energy: the squared $L^2$ norm of the smallest $(2,0)$-part needed to close it. In complex dimension four, adding a complex Hessian to the form changes this energy by minus the change of the volume. Its potential variations are therefore governed by the volume, and not by a primitive of the Monge–Ampère one-form. 
+</p>
+<p>
+Throughout this section we assume $n=4$. A Hermitian form $\omega $ is <em>Hermitian symplectic</em> if there is a smooth $(2,0)$-form $\rho $, called a <em>completion</em> of $\omega $, such that 
+</p>
+<div class="equation">
+  \[  \partial \rho =0,\qquad \bar\partial \rho =-\partial \omega .  \]
+</div>
+<p>
+ Equivalently, the real two-form $\omega +\rho +\bar\rho $ is closed. Applying $\bar\partial $ to the second equation shows that $\omega $ is pluriclosed, meaning $\mathrm{dd}^{\mathrm{c}}\omega =0$. Two completions differ by a closed holomorphic $(2,0)$-form, so the completions of $\omega $ form an affine space over the finite-dimensional space of closed holomorphic $(2,0)$-forms. The quadratic norm 
+</p>
+<div class="equation">
+  \[  \| \rho \| _{L^2(\omega )}^2 =\frac12\int _ X\rho \wedge \bar\rho \wedge \omega ^2  \]
+</div>
+<p>
+ is positive definite on $(2,0)$-forms, and minimizing it over this affine space gives a unique <em>canonical completion</em> $\rho _\omega $. It is characterized by being orthogonal to every closed holomorphic $(2,0)$-form. Define the <em>completion energy</em> and the volume of $\omega $ by 
+</p>
+<div class="equation">
+  \[  F(\omega )=\| \rho _\omega \| _{L^2(\omega )}^2, \qquad V(\omega )=\frac1{4!}\int _ X\omega ^4.  \]
+</div>
+<p>
+  The completion energy is nonnegative and vanishes exactly when $\omega $ is Kähler: a zero canonical completion forces $\partial \omega =0$, while a closed $\omega $ has the zero completion. 
+</p>
+<p>
+Since $\omega $ is pluriclosed, it defines an Aeppli cohomology class, whose real $(1,1)$-representatives are the forms $\omega +\partial \bar\tau +\bar\partial \tau $, with $\tau $ a smooth $(1,0)$-form. We call a real form $\psi =\partial \bar\tau +\bar\partial \tau $ an <em>Aeppli variation</em>. If $\rho $ completes $\omega $ and $\omega +t\psi $ is positive for a real $t$, then $\omega +t\psi $ has the completion $\rho +t\partial \tau $. In particular, the positive representatives $\omega +\partial \bar\tau +\bar\partial \tau &gt;0$ of the Aeppli class of $\omega $ are again Hermitian symplectic. Every positive potential variation $\omega +\mathrm{dd}^{\mathrm{c}}\varphi $ belongs to this class and has the same exterior derivative as $\omega $. We write $DF_\omega (\psi )$ for the derivative of $t\mapsto F(\omega +t\psi )$ at $t=0$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-FF812850">
+<p><a class="environment-identifier" href="../../tag/19D4882CC9D5/">Lemma <span data-tag="FF812850">3.4.1</span>.</a><span data-gerby-tag="FF812850"></span> Let $\omega $ be Hermitian symplectic, with canonical completion $\rho =\rho _\omega $. Every Aeppli variation $\psi =\partial \bar\tau +\bar\partial \tau $ satisfies </p>
+<div class="equation" id="non-kahler-pluripotential-theory-0A111F5B"><span data-gerby-tag="0A111F5B"></span>
+<span class="equation-label"><a data-tag="0A111F5B" href="../../tag/7C73F0133C9D/">3.13</a></span>
+<div>\begin{equation}  DF_\omega (\psi )=\int _ X\left( \operatorname {Re}(\partial \tau \wedge \bar\rho \wedge \omega ^2) +\rho \wedge \bar\rho \wedge \psi \wedge \omega \right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The canonical completion of $\omega +t\psi $ is $\rho +t\partial \tau -h(t)$, where $h(t)$ is a closed holomorphic $(2,0)$-form and $h(0)=0$. In a fixed basis of these holomorphic forms, the orthogonal projection defining $h(t)$ solves a positive definite Gram system whose coefficients are smooth in $t$. Since $\rho $ is orthogonal to closed holomorphic $(2,0)$-forms, the contribution of $h'(0)$ to the first derivative of the squared norm vanishes. We may therefore differentiate using the completion $\rho +t\partial \tau $. Differentiating its two factors and the factor $(\omega +t\psi )^2/2$ gives the formula. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-F8C97F67">
+<p><a class="environment-identifier" href="../../tag/AE6CE389C569/">Proposition <span data-tag="F8C97F67">3.4.2</span>.</a><span data-gerby-tag="F8C97F67"></span> Let $\omega $ be Hermitian symplectic. For every smooth real function $\varphi $ with $\omega _\varphi =\omega +\mathrm{dd}^{\mathrm{c}}\varphi &gt;0$, one has $\rho _{\omega _\varphi }=\rho _\omega $ and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-2DC35E8E"><span data-gerby-tag="2DC35E8E"></span>
+<span class="equation-label"><a data-tag="2DC35E8E" href="../../tag/BAFFEA611460/">3.14</a></span>
+<div>\begin{equation}  F(\omega _\varphi )+V(\omega _\varphi )=F(\omega )+V(\omega ). \end{equation}</div>
+</div>
+<p> Moreover, $DF_\omega (\mathrm{dd}^{\mathrm{c}}\varphi )=0$ for every smooth real $\varphi $ if and only if $\mathrm{dd}^{\mathrm{c}}(\omega ^3)=0$. Thus a critical point of $F$ in its Aeppli class is Gauduchon. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix any completion $\zeta $ of $\omega $ and put $\Theta _\zeta =\omega +\zeta +\bar\zeta $. Expansion by type gives 
+    
+<div class="equation">
+  \[  \frac1{4!}\int _ X\Theta _\zeta ^4 =V(\omega )+\frac12\int _ X\zeta \wedge \bar\zeta \wedge \omega ^2 +\frac14\int _ X\zeta ^2\wedge \bar\zeta ^2.  \]
+</div>
+<p>
+       Since $\partial \omega _\varphi =\partial \omega $, the forms $\omega _\varphi $ and $\omega $ have the same completions. With $\zeta $ fixed, replacing $\omega $ by $\omega _\varphi $ changes the closed form $\Theta _\zeta $ by an exact form, so the integral on the left is unchanged; so is the last integral on the right, which does not involve $\omega $. Hence 
+    
+<div class="equation">
+  \[  \| \zeta \| _{L^2(\omega _\varphi )}^2 -\| \zeta \| _{L^2(\omega )}^2=V(\omega )-V(\omega _\varphi ).  \]
+</div>
+<p>
+       This difference is independent of $\zeta $, so the two norms have the same minimizer, which gives $\rho _{\omega _\varphi }=\rho _\omega $ and (<a data-tag="2DC35E8E" href="../../tag/BAFFEA611460/">3.14</a>). Differentiating at $t=0$ along $\omega +t\mathrm{dd}^{\mathrm{c}}\varphi $ and using lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">2.1.1</a>, we obtain 
+    
+<div class="equation">
+  \[  DF_\omega (\mathrm{dd}^{\mathrm{c}}\varphi )=-\frac16\int _ X\varphi \mathrm{dd}^{\mathrm{c}}(\omega ^3).  \]
+</div>
+<p>
+       Since $\varphi $ is arbitrary, this proves the remaining assertions. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The <em>positive index</em> of a real quadratic form on a real vector space is the supremum of the dimensions of the finite-dimensional subspaces on which it is positive definite; the <em>negative index</em> is defined in the same way. Thus the positive index is infinite when the form is positive definite on subspaces of arbitrarily large finite dimension. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-69225BEF">
+<p><a class="environment-identifier" href="../../tag/04BD04D6C676/">Theorem <span data-tag="69225BEF">3.4.3</span>.</a><span data-gerby-tag="69225BEF"></span> Let $\omega $ be Hermitian symplectic, and let $H_\omega $ be the Hessian of $F$ at $\omega $ along the affine space of real representatives of the Aeppli class of $\omega $, so that $H_\omega (\psi ,\psi )$ is the second derivative of $t\mapsto F(\omega +t\psi )$ at $t=0$. If $\mathrm{dd}^{\mathrm{c}}(\omega ^2)\ne 0$, the restriction of $H_\omega $ to potential directions $\psi =\mathrm{dd}^{\mathrm{c}}\varphi $ has infinite positive and negative index. If $\mathrm{dd}^{\mathrm{c}}(\omega ^2)=0$, then $F(\omega +\mathrm{dd}^{\mathrm{c}}\varphi )=F(\omega )$ whenever $\omega +\mathrm{dd}^{\mathrm{c}}\varphi &gt;0$. Consequently, every local minimum of $F$ in an Aeppli class satisfies $\mathrm{dd}^{\mathrm{c}}(\omega ^2)=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: the Hessian formula.</em> Pluriclosedness and Stokes' theorem give $\int _ X\omega \wedge (\mathrm{dd}^{\mathrm{c}}\varphi )^3=\int _ X(\mathrm{dd}^{\mathrm{c}}\varphi )^4=0$. Thus the volume and, by (<a data-tag="2DC35E8E" href="../../tag/BAFFEA611460/">3.14</a>), the energy along a potential line $t\mapsto \omega +t\mathrm{dd}^{\mathrm{c}}\varphi $ are polynomials of degree at most two in $t$. Differentiating twice and integrating by parts, we obtain 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-56FBE8ED"><span data-gerby-tag="56FBE8ED"></span>
+<span class="equation-label"><a data-tag="56FBE8ED" href="../../tag/8B6CFC8EA37B/">3.15</a></span>
+<div>\begin{equation}  \begin{aligned}  H_\omega (\mathrm{dd}^{\mathrm{c}}\varphi ,\mathrm{dd}^{\mathrm{c}}\varphi ) &amp; =-\frac12\int _ X\omega ^2\wedge (\mathrm{dd}^{\mathrm{c}}\varphi )^2\\ &amp; =\frac12\int _ X\mathrm{dd}^{\mathrm{c}}(\omega ^2)\wedge \mathrm d\varphi \wedge \mathrm d^{\mathrm c}\varphi . \end{aligned} \end{equation}</div>
+</div>
+<p>
+       For the second equality, apply lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">2.1.1</a> once and then use the identity $\mathrm{dd}^{\mathrm{c}}(\varphi ^2/2)=\varphi \mathrm{dd}^{\mathrm{c}}\varphi +\mathrm d\varphi \wedge \mathrm d^{\mathrm c}\varphi $ against the closed form $\mathrm{dd}^{\mathrm{c}}(\omega ^2)$. 
+    <p>
+<em>Step 2: both indices are infinite if $\mathrm{dd}^{\mathrm{c}}(\omega ^2)\ne 0$.</em> Put $\Psi =\mathrm{dd}^{\mathrm{c}}(\omega ^2)$. At each point, $\xi \mapsto \Psi \wedge \mathrm i\xi \wedge \bar\xi $, divided by a positive volume form, is a Hermitian quadratic form in the $(1,0)$-covector $\xi $, and these quadratic forms determine $\Psi $. Their traces with respect to $\omega $ are positive multiples of the density $\Psi \wedge \omega $, whose integral vanishes by Stokes' theorem and $\mathrm{dd}^{\mathrm{c}}\omega =0$. If the quadratic forms took no strictly positive value, they would be negative semidefinite everywhere, with nonpositive traces of integral zero; the traces, and hence $\Psi $, would vanish identically. The same argument applies with the signs reversed. Therefore, if $\Psi \ne 0$, the quadratic forms take a strictly positive value somewhere and a strictly negative value somewhere. 
+    <p>
+      Fix one of the two signs. Choose holomorphic coordinates on a ball such that, with $x=\operatorname {Re}z_1$, the density $\Psi \wedge \mathrm dx\wedge \mathrm d^{\mathrm c}x$ has that sign on the ball; this is possible because $\mathrm dx\wedge \mathrm d^{\mathrm c}x$ is a positive multiple of $\mathrm i\, \mathrm dz_1\wedge \mathrm d\bar z_1$. For a nonzero real cutoff function $a$ supported in the ball, set $\varphi _ N=a\cos (Nx)$. Formula (<a data-tag="56FBE8ED" href="../../tag/8B6CFC8EA37B/">3.15</a>) gives 
+    
+<div class="equation">
+  \[  H_\omega (\mathrm{dd}^{\mathrm{c}}\varphi _ N,\mathrm{dd}^{\mathrm{c}}\varphi _ N) =\frac{N^2}{2}\int _ Xa^2\sin ^2(Nx)\Psi \wedge \mathrm dx\wedge \mathrm d^{\mathrm c}x+O(N),  \]
+</div>
+<p>
+       where the constant in $O(N)$ depends on $\Psi $, the chart and the cutoff, but not on $N$. By integration by parts in $x$, the integral tends to half the same integral without the factor $\sin ^2(Nx)$. Hence the Hessian has the chosen sign for large $N$. For a positive integer $k$, apply this construction on $k$ disjoint smaller balls in that region. By the local integral formula, the resulting nonzero directions are linearly independent and pairwise orthogonal for the Hessian, so their span is a $k$-dimensional subspace on which $H_\omega $ is definite of the chosen sign. Repeating the argument with the opposite sign proves that both indices are infinite. Each finite-dimensional span admits sufficiently small variations preserving positivity. 
+    <p>
+<em>Step 3: flatness if $\mathrm{dd}^{\mathrm{c}}(\omega ^2)=0$.</em> If $\Psi =0$, lemma <a data-tag="0C4D5A94" href="../../tag/BF56C7366FC6/">2.1.2</a> and pluriclosedness give $\mathrm{dd}^{\mathrm{c}}(\omega ^3)=3\omega \wedge \Psi =0$. Both derivatives at $t=0$ of the quadratic polynomial $t\mapsto F(\omega +t\mathrm{dd}^{\mathrm{c}}\varphi )$ vanish, so it is constant on the interval of $t$ for which $\omega +t\mathrm{dd}^{\mathrm{c}}\varphi &gt;0$. This interval contains $0$ and $1$ whenever $\omega +\mathrm{dd}^{\mathrm{c}}\varphi &gt;0$. Finally, a local minimum cannot have a potential direction along which the Hessian is negative, so it satisfies $\mathrm{dd}^{\mathrm{c}}(\omega ^2)=0$ by Step 2. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-645E67CA">
+<p><a class="environment-identifier" href="../../tag/67DF1C6C0509/">Corollary <span data-tag="645E67CA">3.4.4</span>.</a><span data-gerby-tag="645E67CA"></span> For a Hermitian symplectic form $\omega $ on $X$, the following conditions are equivalent: </p>
+<ol>
+<li><p>
+$F(\omega +\mathrm{dd}^{\mathrm{c}}\varphi )$ is independent of the smooth real function $\varphi $ with $\omega +\mathrm{dd}^{\mathrm{c}}\varphi &gt;0$; 
+</p>
+</li><li><p>
+$\mathrm{dd}^{\mathrm{c}}(\omega ^2)=0$; 
+</p>
+</li><li><p>
+$\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^4$ is independent of the bounded $\omega $-plurisubharmonic function $u$. 
+</p>
+</li>
+</ol>
+<p> The common mass in the third condition is $24V(\omega )$. Every local minimum of $F$ in an Aeppli class has these properties. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By (<a data-tag="2DC35E8E" href="../../tag/BAFFEA611460/">3.14</a>), the energy is constant along smooth positive potential variations if and only if their volume is. Since $\mathrm{dd}^{\mathrm{c}}\omega =0$, lemma <a data-tag="0C4D5A94" href="../../tag/BF56C7366FC6/">2.1.2</a>, theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">2.2.2</a> show that this smooth mass invariance is equivalent to $\mathrm{dd}^{\mathrm{c}}(\omega ^2)=0$ and to mass invariance for bounded potentials. The zero potential gives the common mass. The last assertion follows from theorem <a data-tag="69225BEF" href="../../tag/04BD04D6C676/">3.4.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-EF1FC602D899" data-section-entries="ACA94D5D202C EF1FC602D899 F9D5DB66D92A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/EF1FC602D899/">3.4.1 Completion energy on products of complex tori</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="D6BDDB5B"></span></div>
+<p>
+Products of two complex two-tori give explicit Hermitian symplectic forms in both regimes of theorem <a data-tag="69225BEF" href="../../tag/04BD04D6C676/">3.4.3</a>. Each factor carries a nonclosed form with an explicit completion. If both factors carry such a form, the product is critical for $F$ under every Aeppli variation although its potential Hessian is indefinite. If only one factor does, the energy is constant along potential variations but varies in the Aeppli class. 
+</p>
+<p>
+Consider the square complex two-torus $S=\mathbb C^2/(\mathbb Z+\mathrm i\mathbb Z)^2$. Let $z_ j=x_ j+\mathrm i y_ j$ be the coordinates on its cover and put $\eta =\mathrm i\sum _{j=1}^2\mathrm dz_ j\wedge \mathrm d\bar z_ j$. For $0&lt;s&lt;1$, the periodic forms 
+</p>
+<div class="equation">
+  \[  v_ s=\frac{s}{\pi }\mathrm e^{2\pi \mathrm i x_1}\mathrm dz_2, \qquad \alpha _ s=\eta +\partial \bar v_ s+\bar\partial v_ s  \]
+</div>
+<p>
+ are well defined on $S$. The Hermitian matrix of $\alpha _ s$ with respect to the forms $\mathrm i\, \mathrm dz_ j\wedge \mathrm d\bar z_ k$ is 
+</p>
+<div class="equation">
+  \[  \begin{pmatrix} 1
+
+&amp; -s\mathrm e^{-2\pi \mathrm i x_1}
+
+\\  -s\mathrm e^{2\pi \mathrm i x_1}
+
+&amp; 1
+
+\end{pmatrix},  \]
+</div>
+<p>
+ with eigenvalues $1-s$ and $1+s$, so $\alpha _ s$ is a Hermitian form. It has the completion $\rho _ s=\partial v_ s=\mathrm i s\mathrm e^{2\pi \mathrm i x_1}\mathrm dz_1\wedge \mathrm dz_2$, and with $\mu _0=\eta ^2/2$, 
+</p>
+<div class="equation">
+  \[  \frac{\alpha _ s^2}{2}=(1-s^2)\mu _0, \qquad \rho _ s\wedge \bar\rho _ s=s^2\mu _0.  \]
+</div>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-CC0FA29C">
+<p><a class="environment-identifier" href="../../tag/ACA94D5D202C/">Example <span data-tag="CC0FA29C">3.4.5</span>.</a><span data-gerby-tag="CC0FA29C"></span> On $X=S\times S$, let $\omega $ be the sum of the pullbacks of $\alpha _{1/\sqrt2}$ from the two factors. This form is Hermitian symplectic but not Kähler, and it is critical for $F$ under every Aeppli variation, including those with mixed factor components. If $V_0=\int _ S\mu _0$, then $F(\omega )=V_0^2/2&gt;0$. The potential Hessian of $F$ at $\omega $ has infinite positive and negative index, even though potential variations preserve $\mathrm d\omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Denote the two factor forms by $\alpha _ i,\rho _ i$, and put $\mu _ i=\alpha _ i^2/2$ and $\nu _ i=\rho _ i\wedge \bar\rho _ i$; we suppress pullbacks from the notation. Every holomorphic form on a complex torus has constant coefficients. On each factor, the $L^2$ pairing of $\rho _ i=\partial v_ i$ with a holomorphic two-form is a multiple of their wedge pairing, which vanishes by Stokes' theorem. On the product, pure and mixed two-forms are pointwise orthogonal, and the pairing with a pure-factor form is the vanishing pairing on that factor times the volume of the other factor. Thus $\rho =\rho _1+\rho _2$ is the canonical completion of $\omega $. Since $\mu _ i=\nu _ i$ is half the pullback of $\mu _0$, expansion gives $F(\omega )=\int _ X(\nu _1\wedge \mu _2+\mu _1\wedge \nu _2)=V_0^2/2$. 
+    <p>
+      Put $\Theta _ i=\alpha _ i+\rho _ i+\bar\rho _ i$ and let $\Theta =\Theta _1+\Theta _2$, which is closed. For an arbitrary real $(1,1)$-form $\psi $ and $(2,0)$-form $\sigma $ on $X$, expansion on the two factors gives 
+    
+<div class="equation">
+  \[  \operatorname {Re}(\sigma \wedge \bar\rho \wedge \omega ^2) +\rho \wedge \bar\rho \wedge \psi \wedge \omega =\frac1{12}(\psi +\sigma +\bar\sigma )\wedge \Theta ^3.  \]
+</div>
+<p>
+       Indeed, the mixed components of $\psi $ and $\sigma $ have odd degree on both factors and contribute zero. The pure components on the left give $(\psi +\sigma +\bar\sigma )\wedge (\Theta _1\wedge \mu _2+\Theta _2\wedge \mu _1)$, and since $\Theta _ i^2=4\mu _ i$, the cube on the right is twelve times the same complementary form. Apply lemma <a data-tag="FF812850" href="../../tag/19D4882CC9D5/">3.4.1</a> with $\psi =\partial \bar\tau +\bar\partial \tau $ and $\sigma =\partial \tau $. The derivative is $\frac1{12}\int _ X\mathrm d(\tau +\bar\tau )\wedge \Theta ^3=0$, since $\Theta $ is closed. This proves criticality under every Aeppli variation. 
+    <p>
+      Each $\partial \alpha _ i=-\bar\partial \rho _ i$ is nonzero, so $\omega $ is not Kähler. In $\partial \omega \wedge \bar\partial \omega $, the terms coming from a single factor vanish for dimension reasons, while the two cross terms are nonzero and have different bidegrees on the factors, so they cannot cancel. Hence $\mathrm d\omega \wedge \mathrm d^{\mathrm c}\omega \ne 0$, and since $\mathrm{dd}^{\mathrm{c}}\omega =0$, lemma <a data-tag="0C4D5A94" href="../../tag/BF56C7366FC6/">2.1.2</a> gives $\mathrm{dd}^{\mathrm{c}}(\omega ^2)\ne 0$. It remains to apply theorem <a data-tag="69225BEF" href="../../tag/04BD04D6C676/">3.4.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+If only one factor carries a nonclosed form, the energy becomes constant along potential variations, while the same explicit family shows that it still varies in the Aeppli class. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-4189BCA9">
+<p><a class="environment-identifier" href="../../tag/F9D5DB66D92A/">Example <span data-tag="4189BCA9">3.4.6</span>.</a><span data-gerby-tag="4189BCA9"></span> For $0&lt;s&lt;1$, let $\widehat\omega _ s$ on $X=S\times S$ be the sum of the pullbacks of $\alpha _ s$ from the first factor and of $\eta $ from the second, and set $V_0=\int _ S\mu _0$. Then $\mathrm d\widehat\omega _ s\ne 0$ and </p>
+<div class="equation">
+  \[  F(\widehat\omega _ s)=s^2V_0^2,\qquad V(\widehat\omega _ s)=(1-s^2)V_0^2.  \]
+</div>
+<p> The energy is constant on all positive smooth potential variations of $\widehat\omega _ s$, and every bounded $\widehat\omega _ s$-plurisubharmonic function has mass $24(1-s^2)V_0^2$. The form $\widehat\omega _ s$ is not a critical point of $F$ in its Aeppli class, and its Monge–Ampère one-form has no primitive on any $C^2$-open neighborhood of zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The pullback of $\rho _ s$ from the first factor is a completion of $\widehat\omega _ s$. It is canonical: pure and mixed holomorphic two-forms are orthogonal for the product metric, and its pairing with pure-factor forms vanishes by the Stokes argument in the proof of example <a data-tag="CC0FA29C" href="../../tag/ACA94D5D202C/">3.4.5</a>. The energy is therefore $\int _ X\rho _ s\wedge \bar\rho _ s\wedge \eta ^2/2=s^2V_0^2$. The volume is the product of the two surface volumes, which gives the second formula. 
+    <p>
+      The exterior derivatives of $\widehat\omega _ s$ come entirely from the first factor. Their wedge product $\mathrm d\widehat\omega _ s\wedge \mathrm d^{\mathrm c}\widehat\omega _ s$ vanishes for degree reasons, while $\mathrm{dd}^{\mathrm{c}}\widehat\omega _ s=0$. Thus $\mathrm{dd}^{\mathrm{c}}(\widehat\omega _ s^2)=0$ by lemma <a data-tag="0C4D5A94" href="../../tag/BF56C7366FC6/">2.1.2</a>, and corollary <a data-tag="645E67CA" href="../../tag/67DF1C6C0509/">3.4.4</a> gives the constancy of the energy and the common bounded mass. 
+    <p>
+      The forms $\widehat\omega _{(1+t)s}$ are positive for small $|t|$ and lie in the Aeppli class of $\widehat\omega _ s$, since $v_{(1+t)s}=(1+t)v_ s$. The derivative of their energy at $t=0$ is $2s^2V_0^2&gt;0$, so $\widehat\omega _ s$ is not a critical point in its Aeppli class. Finally, $\partial \alpha _ s=-\bar\partial \rho _ s\ne 0$. Hence $\mathrm d\widehat\omega _ s\ne 0$, and theorem <a data-tag="788EACD6" href="../../tag/7D069B347672/">3.1.3</a> shows that no primitive exists. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/682711871907/"><span>← Previous</span><small>Proposition 2.5.1</small></a><a class="pager-next" rel="next" href="../../tag/1FC29EAFAA97/"><span>Next →</span><small>3 Monge–Ampère energy and torsion</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-monge-ampere-energy-and-torsion,
   author = {{Gerby contributors}},
   title = {10.2 Monge–Ampère energy and torsion},

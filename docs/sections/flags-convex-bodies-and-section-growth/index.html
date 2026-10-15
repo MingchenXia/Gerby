@@ -1,8 +1,600 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/flags-convex-bodies-and-section-growth/"><title>16.4 Flags, convex bodies and section growth · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/flags-convex-bodies-and-section-growth/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/flags-convex-bodies-and-section-growth/"><title>16.4 Flags, convex bodies and section growth · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/flags-convex-bodies-and-section-growth/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/sections-okounkov/">Chapter 16: Sections, graded series, and Okounkov bodies</a></li><li><a href="../../sections/flags-convex-bodies-and-section-growth/" aria-current="page">Section 16.4: Flags, convex bodies and section growth</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/the-theory-of-okounkov-bodies/"><span>16.1</span> The theory of Okounkov bodies</a></li><li><a href="../../sections/almost-semigroups/"><span>16.2</span> Almost semigroups</a></li><li><a href="../../sections/holomorphic-sections-and-hermitian-mass/"><span>16.3</span> Holomorphic sections and Hermitian mass</a></li><li><a href="../../sections/flags-convex-bodies-and-section-growth/" aria-current="page"><span>16.4</span> Flags, convex bodies and section growth</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/flags-convex-bodies-and-section-growth/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/flags-convex-bodies-and-section-growth/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/6400AAE4BA1E/"><span>← Previous</span><small>Proposition 20.7.1</small></a><a class="pager-next" rel="next" href="../../tag/926A00196D5E/"><span>Next →</span><small>21 Flags, convex bodies and section growth</small></a></nav><h1>16.4 Flags, convex bodies and section growth</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/926A00196D5E/">21 Flags, convex bodies and section growth</a><code class="tag-id">926A00196D5E</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/954DDD998705/">21.1 Flag valuations and degree bounds</a><code class="tag-id">954DDD998705</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/2B103C3B777A/">Lemma 21.1.1</a><code class="tag-id">2B103C3B777A</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/EA8340BC8D54/">Theorem 21.1.2</a><code class="tag-id">EA8340BC8D54</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/E150336DE571/">21.1 </a><code class="tag-id">E150336DE571</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/E9A3FA804369/">21.2 The body of a graded section algebra</a><code class="tag-id">E9A3FA804369</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/E6B4502ECB3B/">Proposition 21.2.1</a><code class="tag-id">E6B4502ECB3B</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/071721B08FC2/">Corollary 21.2.2</a><code class="tag-id">071721B08FC2</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/72085A67E2A6/">21.3 Intrinsic dimension, lattice and growth</a><code class="tag-id">72085A67E2A6</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/CC2BF9294FA3/">Theorem 21.3.1</a><code class="tag-id">CC2BF9294FA3</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/E32D710594E0/">Proposition 21.3.2</a><code class="tag-id">E32D710594E0</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/F8F1527B70F2/">21.4 Moishezon manifolds and bounded mass</a><code class="tag-id">F8F1527B70F2</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/976C06708A77/">Lemma 21.4.1</a><code class="tag-id">976C06708A77</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/0F8B7237A1BA/">Theorem 21.4.2</a><code class="tag-id">0F8B7237A1BA</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/D45322F36C36/">21.5 Flags on a point blowup</a><code class="tag-id">D45322F36C36</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/744C8C462232/">Lemma 21.5.1</a><code class="tag-id">744C8C462232</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/1EBEF54DB76D/">Theorem 21.5.2</a><code class="tag-id">1EBEF54DB76D</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/EECB2B1DF1A4/">Corollary 21.5.3</a><code class="tag-id">EECB2B1DF1A4</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/1936F96341B0/">21.6 Curvature rank and section growth</a><code class="tag-id">1936F96341B0</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/C8B2CB1B6819/">Proposition 21.6.1</a><code class="tag-id">C8B2CB1B6819</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/14480FFA5B57/">Corollary 21.6.2</a><code class="tag-id">14480FFA5B57</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/FCAD080F93F6/">Lemma 21.6.3</a><code class="tag-id">FCAD080F93F6</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/CA93F87E4E8D/">Corollary 21.6.4</a><code class="tag-id">CA93F87E4E8D</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/5C0C7B20BA7A/">Proposition 21.6.5</a><code class="tag-id">5C0C7B20BA7A</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/D22F138F2F08/">Corollary 21.6.6</a><code class="tag-id">D22F138F2F08</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/DE28BE657AA4/">Example 21.6.7</a><code class="tag-id">DE28BE657AA4</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/9B3BD06F2362/">21.7 The Hopf flag and its lower-dimensional body</a><code class="tag-id">9B3BD06F2362</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/987D754E15F6/">Proposition 21.7.1</a><code class="tag-id">987D754E15F6</code><span class="entry-topic">Flags, convex bodies and section growth</span></li><li class="reference-entry"><span class="entry-kind">caption</span><a href="../../tag/555D3252DD76/">21.1 Figure</a><code class="tag-id">555D3252DD76</code><span class="entry-topic">Flags, convex bodies and section growth</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/6400AAE4BA1E/"><span>← Previous</span><small>Proposition 20.7.1</small></a><a class="pager-next" rel="next" href="../../tag/926A00196D5E/"><span>Next →</span><small>21 Flags, convex bodies and section growth</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/6400AAE4BA1E/"><span>← Previous</span><small>Proposition 20.7.1</small></a><a class="pager-next" rel="next" href="../../tag/926A00196D5E/"><span>Next →</span><small>21 Flags, convex bodies and section growth</small></a></nav><h1>16.4 Flags, convex bodies and section growth</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-926A00196D5E" data-section-entries="926A00196D5E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/926A00196D5E/">21 Flags, convex bodies and section growth</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="5250C348"></span></div>
+<p>
+Let $X$ be a connected compact complex manifold of dimension $n$, and let $L$ be a holomorphic line bundle on $X$. Along a complete flag of compact complex submanifolds, successive vanishing orders turn each section of $L^ m$ into a lattice point, and the Gauduchon degree bounds of chapter <a data-tag="74DE12F2" href="../../tag/725C2F97B643/">20</a> keep the normalized points in a compact convex body. For a graded algebra of sections with some nonzero piece of positive degree, counting these points gives the growth exponent and the leading coefficient of its graded pieces: the exponent is the transcendence degree of the field of section ratios, and the coefficient is an intrinsic lattice volume of the body. A smooth metric on $L$ supplies an additional bound: its maximal curvature rank on the semipositive locus bounds the growth dimension, even if its curvature has no global sign. 
+</p>
+<p>
+Not every compact complex manifold carries such a flag, but the blowup of a point does, and Hartogs extension identifies the sections on the blowup with those on $X$; the count therefore applies to every compact complex manifold. Growth of the maximal order $m^ n$ forces $X$ to admit a modification from a projective manifold, and hence to have the bounded mass property. On the Hopf threefold, where Hermitian masses are unbounded, positive-degree line bundles still have bodies that are triangles: their area detects quadratic section growth, although their three-dimensional volume vanishes. 
+</p>
+</div></section><section class="reading-chunk" id="entry-954DDD998705" data-section-entries="2B103C3B777A 954DDD998705 E150336DE571 EA8340BC8D54"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/954DDD998705/">21.1 Flag valuations and degree bounds</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="5E5BBF30"></span></div>
+<p>
+Successive vanishing orders along a flag compute the lexicographically smallest exponent in a local Taylor expansion. The coefficient of that exponent is a linear functional on sections, and this shows that the number of distinct values on a space of sections equals its dimension. At each step, the effective divisor that remains gives, through a Gauduchon degree, a linear bound for the next order. 
+</p>
+<p>
+Until section <a data-tag="3EA0B481" href="../../tag/D45322F36C36/">21.5</a>, suppose that $X$ carries a <em>complete flag</em>, that is, a chain 
+</p>
+<div class="equation">
+  \[  X=Y_0\supset Y_1\supset \cdots \supset Y_ n=\{ p\} ,  \]
+</div>
+<p>
+ where $p$ is a point and each $Y_ i$, $1\leq i\leq n$, is a smooth connected compact prime divisor in $Y_{i-1}$. For a nonnegative integer $m$ and a nonzero section $s\in H^0(X,L^ m)$, let $\nu _1(s)$ be its vanishing order along $Y_1$. Dividing $s$ by the corresponding power of the canonical section of $\mathcal O_ X(Y_1)$ and restricting to $Y_1$ gives a nonzero section of $L^ m(-\nu _1(s)Y_1)|_{Y_1}$. Repeating this procedure along the flag defines $\nu _2(s),\ldots ,\nu _ n(s)$, and the vector $\nu (s)=(\nu _1(s),\ldots ,\nu _ n(s))\in \mathbb N^ n$ is the <em>flag valuation</em> of $s$. 
+</p>
+<p>
+ Near $p$, choose holomorphic coordinates in which $Y_ i=\{ z_1=\cdots =z_ i=0\} $, and a nonvanishing local frame of $L$. Then $\nu (s)$ is the lexicographically smallest exponent occurring in the Taylor expansion of the local coefficient of $s$. Consequently, with respect to the lexicographic order on $\mathbb N^ n$, 
+</p>
+<div class="equation">
+  \[  \nu (st)=\nu (s)+\nu (t), \qquad \nu (s+t)\geq \min \{ \nu (s),\nu (t)\} ,  \]
+</div>
+<p>
+ where the first identity holds for nonzero sections $s,t$ of arbitrary degrees, and the second when $s,t$ have the same degree and $s+t\neq 0$. If $\nu (s)\neq \nu (t)$, equality holds in the second formula. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-EAA5A841">
+<p><a class="environment-identifier" href="../../tag/2B103C3B777A/">Lemma <span data-tag="EAA5A841">21.1.1</span>.</a><span data-gerby-tag="EAA5A841"></span> For every finite-dimensional vector subspace $V\subset H^0(X,L^ m)$, </p>
+<div class="equation">
+  \[  \# \{ \nu (s):0\neq s\in V\} =\dim V.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Sections with distinct valuations are linearly independent: in a nontrivial finite linear combination of them, the smallest valuation occurs in exactly one summand and cannot cancel. Hence there are at most $\dim V$ values. 
+    <p>
+      For the reverse inequality, we argue by induction on $\dim V$, the case $\dim V=0$ being immediate. The nonempty set of values has a smallest element $a$ in the lexicographic order. The Taylor coefficient of the monomial $z^ a$ is a nonzero linear functional on $V$. Its kernel has codimension one, and every nonzero element of the kernel has valuation strictly larger than $a$. By the induction hypothesis the kernel contributes $\dim V-1$ distinct values, all different from $a$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The valuations of sections of $L^ m$ grow at most linearly in $m$. To see this, pair the residual divisor at each stage of the construction with a Gauduchon metric on the corresponding member of the flag. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-36D35BB7">
+<p><a class="environment-identifier" href="../../tag/EA8340BC8D54/">Theorem <span data-tag="36D35BB7">21.1.2</span>.</a><span data-gerby-tag="36D35BB7"></span> There are constants $C_1,\ldots ,C_ n\geq 0$, depending only on $L$ and the chosen flag, such that </p>
+<div class="equation">
+  \[  0\leq \nu _ i(s)\leq C_ i m \quad (1\leq i\leq n)  \]
+</div>
+<p> for every $m\geq 1$ and every nonzero $s\in H^0(X,L^ m)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For each $i$, equip $Y_{i-1}$ with a Gauduchon metric $\gamma _ i$; when $Y_{i-1}$ is a curve, any Hermitian metric will do. Put $d_ i=\dim Y_{i-1}=n-i+1$ and 
+    
+<div class="equation">
+  \[  a_ i=\int _{Y_ i}\gamma _ i^{d_ i-1}&gt;0, \qquad A_ i=\deg _{\gamma _ i}(L|_{Y_{i-1}}).  \]
+</div>
+<p>
+       For $i=n$ the integral defining $a_ i$ is the integral of $1$ over the point $p$, so $a_ n=1$. 
+    <p>
+       For $j&lt;i$, also put 
+    
+<div class="equation">
+  \[  B_{ij}=\deg _{\gamma _ i} \left(\mathcal O_{Y_{j-1}}(Y_ j)|_{Y_{i-1}}\right).  \]
+</div>
+<p>
+       All these numbers depend only on $L$, the flag and the chosen metrics. 
+    <p>
+       At the $i$th stage of the construction of $\nu (s)$, the residual section is a section of the line bundle 
+    
+<div class="equation">
+  \[  M_{i-1}=L^ m|_{Y_{i-1}}\otimes \bigotimes _{j&lt;i}\mathcal O_{Y_{j-1}}(-\nu _ j(s)Y_ j)|_{Y_{i-1}}.  \]
+</div>
+<p>
+        Its zero divisor contains $\nu _ i(s)Y_ i$. The Poincaré–Lelong formula, tested against $\gamma _ i^{d_ i-1}$ as in the proof of theorem <a data-tag="6E03C7D3" href="../../tag/1DFDCCEF325D/">20.2.1</a>, therefore gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-BDA3B289"><span data-gerby-tag="BDA3B289"></span>
+<span class="equation-label"><a data-tag="BDA3B289" href="../../tag/E150336DE571/">21.1</a></span>
+<div>\begin{equation}  a_ i\nu _ i(s)\leq mA_ i-\sum _{j&lt;i}B_{ij}\nu _ j(s). \end{equation}</div>
+</div>
+<p>
+       Define recursively 
+    
+<div class="equation">
+  \[  C_ i=\frac{|A_ i|+\sum _{j&lt;i}|B_{ij}|C_ j}{a_ i}.  \]
+</div>
+<p>
+       Induction on $i$ in (<a data-tag="BDA3B289" href="../../tag/E150336DE571/">21.1</a>) gives $\nu _ i(s)\leq C_ i m$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-E9A3FA804369" data-section-entries="071721B08FC2 E6B4502ECB3B E9A3FA804369"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/E9A3FA804369/">21.2 The body of a graded section algebra</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="B9A34270"></span></div>
+<p>
+The valuations of the nonzero homogeneous elements of a graded algebra of sections form a semigroup whose part in degree $m$ has exactly as many elements as the dimension of the degree-$m$ piece. The linear bound of theorem <a data-tag="36D35BB7" href="../../tag/EA8340BC8D54/">21.1.2</a> places this semigroup in a cone with compact height-one slice, and a semigroup counting theorem relates the asymptotic count to the volume of this slice. 
+</p>
+<p>
+Let $W_\bullet =\bigoplus _{m\geq 0}W_ m$ be a graded subalgebra of the section ring $\bigoplus _{m\geq 0}H^0(X,L^ m)$, with $W_0=\mathbb C$. For a weight $u\in \mathrm{QPSH}(X)$, the bounded weighted section algebra $\mathcal W_\bullet (u)$ of section <a data-tag="DE44B21C" href="../../tag/C9CFDB0867F5/">20.4</a> is an example. 
+</p>
+<p>
+Set 
+</p>
+<div class="equation">
+  \[  S=\{ (0,0)\} \cup \{ (\nu (s),m):m\geq 1,\  0\neq s\in W_ m\} .  \]
+</div>
+<p>
+ This is an additive semigroup, because the product of two nonzero sections on the connected manifold $X$ is nonzero and valuations add. Choose constants $C_ i$ as in theorem <a data-tag="36D35BB7" href="../../tag/EA8340BC8D54/">21.1.2</a>. Then $S$ lies in the closed cone 
+</p>
+<div class="equation">
+  \[  \{ (x,t)\in \mathbb R^ n\times \mathbb R:t\geq 0,\  0\leq x_ i\leq C_ i t\} ,  \]
+</div>
+<p>
+ whose only point at height zero is the origin. Define 
+</p>
+<div class="equation">
+  \[  \Delta (W_\bullet )= \overline{\operatorname {conv}} \{ m^{-1}\nu (s):m\geq 1,\  0\neq s\in W_ m\} ,  \]
+</div>
+<p>
+ where $\overline{\operatorname {conv}}$ denotes the closed convex hull. If some positive-degree piece of $W_\bullet $ is nonzero, this is a compact convex subset of $\mathbb R^ n$; equivalently, it is the height-one slice of the closed convex cone generated by $S$. If every positive-degree piece is zero, $\Delta (W_\bullet )=\varnothing $. Write $\operatorname {vol}_{\mathbb R^ n}$ for Euclidean volume. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-A4601CA4">
+<p><a class="environment-identifier" href="../../tag/E6B4502ECB3B/">Proposition <span data-tag="A4601CA4">21.2.1</span>.</a><span data-gerby-tag="A4601CA4"></span> For every such algebra, </p>
+<div class="equation">
+  \[  \limsup _{m\to \infty }m^{-n}\dim W_ m \leq \operatorname {vol}_{\mathbb R^ n}\Delta (W_\bullet ).  \]
+</div>
+<p> In particular, if $\Delta (W_\bullet )$ has empty interior, then $\dim W_ m=o(m^ n)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The empty case is immediate. Otherwise, let $S_ m=\{ \nu (s):0\neq s\in W_ m\} $. By lemma <a data-tag="EAA5A841" href="../../tag/2B103C3B777A/">21.1.1</a>, $S_ m$ has $\dim W_ m$ elements, and $m^{-1}S_ m\subseteq \Delta (W_\bullet )$. Attach to each $a\in S_ m$ the half-open cube $m^{-1}(a+[0,1)^ n)$. These cubes are disjoint, their total volume is $m^{-n}\dim W_ m$, and their union is contained in 
+    
+<div class="equation">
+  \[  \Delta (W_\bullet )+[0,m^{-1}]^ n.  \]
+</div>
+<p>
+       These compact neighborhoods decrease to $\Delta (W_\bullet )$ as $m\to \infty $, so their volumes converge to its volume. This proves the inequality. A compact convex set has positive $n$-dimensional volume exactly when it has nonempty interior, which gives the last statement. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+We use the following semigroup counting theorem, recalled in <span class="cite">[<span class="postnote">Theorem C.2.1</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>. Let $r\geq 0$, and let $\Sigma \subset \mathbb Z^{r+1}$ be an additive semigroup that generates $\mathbb Z^{r+1}$ as a group and lies in a closed convex cone in $\mathbb R^ r\times \mathbb R_{\geq 0}$ whose height-one slice is compact and whose only point at height zero is the origin. Then the number of points of $\Sigma $ at height $m$, divided by $m^ r$, converges to the Euclidean volume of the height-one slice of the closed convex cone generated by $\Sigma $. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-8930F62C">
+<p><a class="environment-identifier" href="../../tag/071721B08FC2/">Corollary <span data-tag="8930F62C">21.2.2</span>.</a><span data-gerby-tag="8930F62C"></span> If the subgroup generated by $S$ is all of $\mathbb Z^{n+1}$, then </p>
+<div class="equation">
+  \[  \lim _{m\to \infty }m^{-n}\dim W_ m =\operatorname {vol}_{\mathbb R^ n}\Delta (W_\bullet ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The semigroup $S$ satisfies the cone conditions established above and, by hypothesis, generates $\mathbb Z^{n+1}$. The semigroup counting theorem therefore applies to it. By lemma <a data-tag="EAA5A841" href="../../tag/2B103C3B777A/">21.1.1</a>, the number of points of $S$ at height $m$ is $\dim W_ m$, and the height-one slice of the closed convex cone generated by $S$ is $\Delta (W_\bullet )$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-72085A67E2A6" data-section-entries="72085A67E2A6 CC2BF9294FA3 E32D710594E0"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/72085A67E2A6/">21.3 Intrinsic dimension, lattice and growth</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="DC5601F1"></span></div>
+<p>
+A body of zero volume in $\mathbb R^ n$ can still detect growth of lower order. The group generated by the valuation semigroup determines a degree period and a lattice in which the body is full-dimensional, and counting in this lattice gives the growth exponent and the leading coefficient. Ratios of sections identify the exponent with a transcendence degree, and since the coefficient is a limit of graded dimensions, it does not depend on the flag. 
+</p>
+<p>
+Throughout this section, some positive-degree piece of $W_\bullet $ is nonzero. Let $G\subset \mathbb Z^{n+1}$ be the subgroup generated by $S$, and let $\operatorname {pr}_{n+1}$ be the projection to the last coordinate. Define the <em>degree period</em> $e\geq 1$ by 
+</p>
+<div class="equation">
+  \[  \operatorname {pr}_{n+1}(G)=e\mathbb Z.  \]
+</div>
+<p>
+ Thus $e$ is the greatest common divisor of the degrees $m$ with $W_ m\neq 0$. Set 
+</p>
+<div class="equation">
+  \[  \Lambda =G\cap (\mathbb R^ n\times \{ 0\} ), \qquad d=\operatorname {rank}\Lambda .  \]
+</div>
+<p>
+ We regard $\Lambda $ as a lattice in its real span, a $d$-dimensional subspace of $\mathbb R^ n\times \{ 0\} $. Its lattice measure assigns volume one to a fundamental parallelepiped. On each translate of this span we use the translated measure, denoted by $\operatorname {vol}_\Lambda $; when $d=0$, a point has volume one. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-4EE23942">
+<p><a class="environment-identifier" href="../../tag/CC2BF9294FA3/">Theorem <span data-tag="4EE23942">21.3.1</span>.</a><span data-gerby-tag="4EE23942"></span> The affine dimension of $\Delta (W_\bullet )$ is $d$. Its lattice volume is finite and strictly positive, and </p>
+<div class="equation">
+  \[  \lim _{q\to \infty }\frac{\dim W_{eq}}{(eq)^ d} =\operatorname {vol}_\Lambda \Delta (W_\bullet ).  \]
+</div>
+<p> If $e$ does not divide $m$, then $W_ m=0$. In particular, $W_ m\neq 0$ for all sufficiently large multiples $m$ of $e$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $g_0=(b,e)\in G$ and an integral basis $\lambda _1,\ldots ,\lambda _ d$ of $\Lambda $. Every element of $G$ has a unique expression 
+    
+<div class="equation">
+  \[  \sum _{i=1}^ d a_ i\lambda _ i+qg_0, \qquad (a,q)\in \mathbb Z^ d\times \mathbb Z.  \]
+</div>
+<p>
+       These coordinates identify $G$ with $\mathbb Z^{d+1}$. Let $S'$ be the image of $S$ under this identification. It generates $\mathbb Z^{d+1}$, and the height of the image of $(x,m)\in S$ is $q=m/e\geq 0$. 
+    <p>
+      The points $(m^{-1}x,1)$, for $(x,m)\in S$ with $m&gt;0$, span the $(d+1)$-dimensional real vector space $\operatorname {span}_{\mathbb R}G$. Since they all have height one, their affine span has dimension $d$. Taking the convex hull and the closure does not change this affine span, which proves the dimension assertion. 
+    <p>
+      Intersect the cone containing $S$ with $\operatorname {span}_{\mathbb R}G$. The linear change of coordinates carries this intersection to a closed cone with compact height-one slice whose only point at height zero is the origin. Indeed, a vector $(x,m)$ with $|x|\leq Cm$ has horizontal coordinates bounded by a constant times $m$, hence by a constant times $q$. The height-one body of $S'$ is 
+    
+<div class="equation">
+  \[  \Delta '=e\bigl (\Delta (W_\bullet )-b/e\bigr ),  \]
+</div>
+<p>
+       where the right-hand side is expressed in the basis $\lambda _1,\ldots ,\lambda _ d$. It is full-dimensional in $\mathbb R^ d$, and therefore 
+    
+<div class="equation">
+  \[  \operatorname {vol}_{\mathbb R^ d}\Delta ' =e^ d\operatorname {vol}_\Lambda \Delta (W_\bullet )&gt;0.  \]
+</div>
+<p>
+       Apply the semigroup counting theorem of section <a data-tag="B9A34270" href="../../tag/E9A3FA804369/">21.2</a> to $S'$, which generates its full lattice. The points of $S'$ at height $q$ correspond bijectively to the valuations of the nonzero elements of $W_{eq}$, and by lemma <a data-tag="EAA5A841" href="../../tag/2B103C3B777A/">21.1.1</a> there are $\dim W_{eq}$ of them. Hence 
+    
+<div class="equation">
+  \[  \lim _{q\to \infty }\frac{\dim W_{eq}}{q^ d} =\operatorname {vol}_{\mathbb R^ d}\Delta '.  \]
+</div>
+<p>
+       Dividing by $e^ d$ gives the asserted limit, and its positivity gives eventual nonvanishing. For $d=0$ the body is a point of volume one, so the integer dimensions converge to one and are eventually equal to one. Finally, every degree with a nonzero section lies in the projection $e\mathbb Z$ of $G$, which proves the vanishing outside these multiples. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+ The growth dimension also has a description independent of the flag. Write $\mathcal M(X)$ for the field of meromorphic functions on $X$ and define the <em>section-ratio field</em>
+</p>
+<div class="equation">
+  \[  K(W_\bullet )=\{ s/t:s,t\in W_ m\text{ for some }m\geq 0, \  t\neq 0\} \subset \mathcal M(X).  \]
+</div>
+<p>
+ It is a field: sums and products of two such ratios, with denominators $t_1\in W_{m_1}$ and $t_2\in W_{m_2}$, can be written with the common denominator $t_1t_2$ in degree $m_1+m_2$, and inversion exchanges numerator and denominator. It contains $\mathbb C$ because $W_0=\mathbb C$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-41E2532A">
+<p><a class="environment-identifier" href="../../tag/E32D710594E0/">Proposition <span data-tag="41E2532A">21.3.2</span>.</a><span data-gerby-tag="41E2532A"></span> The transcendence degree of $K(W_\bullet )$ over $\mathbb C$ is exactly $d$. If $\Delta (W_\bullet )$ has nonempty interior in $\mathbb R^ n$, then $X$ has $n$ algebraically independent meromorphic functions. Moreover, $d$, the period $e$ and the intrinsic volume in theorem <a data-tag="4EE23942" href="../../tag/CC2BF9294FA3/">21.3.1</a> are the same for any two complete flags on $X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose first that $d&gt;0$. Choose sections $s_0,\ldots ,s_ d$ of positive degrees $m_0,\ldots ,m_ d$ whose normalized valuations $\nu (s_ i)/m_ i$ are affinely independent. Let $M$ be a common multiple of their degrees and put $t_ i=s_ i^{M/m_ i}\in W_ M$. The ratios $f_ i=t_ i/t_0$ belong to $K(W_\bullet )$. The flag valuation extends to quotients by subtraction, giving 
+    
+<div class="equation">
+  \[  \nu (f_ i)=M\left(\frac{\nu (s_ i)}{m_ i} -\frac{\nu (s_0)}{m_0}\right), \qquad 1\leq i\leq d.  \]
+</div>
+<p>
+       These vectors are linearly independent. Distinct monomials in the $f_ i$ therefore have distinct valuations, so the term of smallest valuation in a nonzero polynomial expression cannot cancel, and the ratios are algebraically independent. Thus the transcendence degree is at least $d$; this is trivial when $d=0$. 
+    <p>
+      Conversely, let $f_1,\ldots ,f_ r$, with $r\geq 1$, be algebraically independent elements of the field. Using the product of their denominators, write $f_ i=A_ i/B$ with $A_ i,B\in W_ M$ and $B\neq 0$ for a common positive degree $M$. For every integer $q\geq 1$ and every multi-index $a=(a_1,\ldots ,a_ r)\in \mathbb N^ r$ with $|a|=a_1+\cdots +a_ r\leq q$, the sections 
+    
+<div class="equation">
+  \[  B^{q-|a|}A_1^{a_1}\cdots A_ r^{a_ r}\in W_{Mq}  \]
+</div>
+<p>
+       are linearly independent, because division by $B^ q$ turns a linear relation among them into a polynomial relation among the $f_ i$. There are $\binom {q+r}{r}$ such sections. Since $W_ M\neq 0$, the degree $M$ is a multiple of $e$, and theorem <a data-tag="4EE23942" href="../../tag/CC2BF9294FA3/">21.3.1</a> gives $\dim W_{Mq}=O(q^ d)$. Comparing with the binomial lower bound forces $r\leq d$, which proves equality of the transcendence degree with $d$. A body with nonempty interior has $d=n$, and this gives the stated consequence for $X$. 
+    <p>
+      The field and the set of degrees with nonzero sections do not depend on the flag, so neither $d$ nor $e$ does. By theorem <a data-tag="4EE23942" href="../../tag/CC2BF9294FA3/">21.3.1</a>, the lattice volume is, for either flag, the limit of the same dimensions with the same normalization. It is therefore independent of the flag as well, although the bodies and their lattices may differ. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-F8F1527B70F2" data-section-entries="0F8B7237A1BA 976C06708A77 F8F1527B70F2"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/F8F1527B70F2/">21.4 Moishezon manifolds and bounded mass</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="C4509F9F"></span></div>
+<p>
+A compact complex manifold of dimension $n$ is <em>Moishezon</em> if it has $n$ algebraically independent meromorphic functions. By Moishezon's theorem, a compact irreducible complex space of dimension $n$ with $n$ algebraically independent meromorphic functions admits a modification from a smooth projective manifold; the source of this form of the theorem is given in section <a data-tag="50EFE828" href="../../tag/CAFE5EFFA7C8/">34.14</a>. Such a modification bounds the masses of Hermitian potentials on $X$: the pulled-back Hermitian form is dominated by a fixed Kähler form, whose Monge–Ampère mass does not change when a smooth potential is added. Recall that $X$ has the bounded mass property if the masses $\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}v)^ n$ of bounded $\omega $-plurisubharmonic functions $v$ are uniformly bounded for one, equivalently every, Hermitian form $\omega $ (definition <a data-tag="254B47C8" href="../../tag/EB45638CBB2C/">6.5.1</a>, proposition <a data-tag="C8F0BC96" href="../../tag/45F622BE862A/">6.5.2</a>). 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-F7BDD899">
+<p><a class="environment-identifier" href="../../tag/976C06708A77/">Lemma <span data-tag="F7BDD899">21.4.1</span>.</a><span data-gerby-tag="F7BDD899"></span> If a compact complex manifold $X$ admits a modification $\pi :Z\to X$ from a compact Kähler manifold, then $X$ has the bounded mass property. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a Hermitian form $\omega $ on $X$ and a Kähler form $\kappa $ on $Z$, and choose $C&gt;0$ with $\pi ^*\omega \leq C\kappa $. By proposition <a data-tag="C8F0BC96" href="../../tag/45F622BE862A/">6.5.2</a>, it suffices to bound the masses of smooth functions $u\in \mathrm{PSH}(X,\omega )$. Their pullbacks satisfy 
+    
+<div class="equation">
+  \[  0\leq \pi ^*\omega +\mathrm{dd}^{\mathrm{c}}(u\circ \pi ) \leq C\kappa +\mathrm{dd}^{\mathrm{c}}(u\circ \pi ).  \]
+</div>
+<p>
+       Taking top powers and integrating gives 
+    
+<div class="equation">
+  \[  \begin{split}  \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n &amp; =\int _ Z(\pi ^*\omega +\mathrm{dd}^{\mathrm{c}}(u\circ \pi ))^ n\\ &amp; \leq \int _ Z(C\kappa +\mathrm{dd}^{\mathrm{c}}(u\circ \pi ))^ n =C^ n\int _ Z\kappa ^ n. \end{split}  \]
+</div>
+<p>
+       The first equality follows by change of variables on the set where $\pi $ is biholomorphic, since smooth top-degree forms give the exceptional analytic sets zero mass. The inequality follows by expanding in the smooth semipositive difference $C\kappa -\pi ^*\omega $, and the last equality follows from Stokes' theorem because $\kappa $ is closed. The bound does not depend on $u$, which proves the bounded mass property. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-B609DF1D">
+<p><a class="environment-identifier" href="../../tag/0F8B7237A1BA/">Theorem <span data-tag="B609DF1D">21.4.2</span>.</a><span data-gerby-tag="B609DF1D"></span> If $X$ fails the bounded mass property, then for every complete flag on $X$, every holomorphic line bundle $L$ and every graded subalgebra $W_\bullet $ of its section ring as above, </p>
+<div class="equation">
+  \[  \operatorname {vol}_{\mathbb R^ n}\Delta (W_\bullet )=0, \qquad \dim W_ m=o(m^ n).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\Delta (W_\bullet )$ had nonempty interior, $X$ would have $n$ algebraically independent meromorphic functions by proposition <a data-tag="41E2532A" href="../../tag/E32D710594E0/">21.3.2</a>. Moishezon's theorem would then give a modification of $X$ from a smooth projective, hence Kähler, manifold, contradicting lemma <a data-tag="F7BDD899" href="../../tag/976C06708A77/">21.4.1</a>. The body therefore has empty interior, and proposition <a data-tag="A4601CA4" href="../../tag/E6B4502ECB3B/">21.2.1</a> gives both conclusions. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-D45322F36C36" data-section-entries="1EBEF54DB76D 744C8C462232 D45322F36C36 EECB2B1DF1A4"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/D45322F36C36/">21.5 Flags on a point blowup</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="3EA0B481"></span></div>
+<p>
+We now remove the assumption that $X$ carries a complete flag. A curve always does, since any point completes the flag. In dimension at least two, the exceptional divisor of the blowup of a point is a projective space and carries a complete flag of linear subspaces, while Hartogs extension identifies the sections on the blowup with those on $X$. The growth formula on the blowup therefore counts the original section spaces. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-41985179">
+<p><a class="environment-identifier" href="../../tag/744C8C462232/">Lemma <span data-tag="41985179">21.5.1</span>.</a><span data-gerby-tag="41985179"></span> Every connected compact complex manifold $X$ of dimension $n\geq 1$ admits a smooth compact modification $\pi :\widetilde X\to X$ such that $\widetilde X$ carries a complete flag and, for every holomorphic line bundle $L$ on $X$ and every $m\geq 0$, pullback is an isomorphism </p>
+<div class="equation">
+  \[  H^0(X,L^ m)\simeq H^0(\widetilde X,\pi ^*L^ m).  \]
+</div>
+<p> These isomorphisms are compatible with products. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $n=1$, take $\pi $ to be the identity and any point as the last member of the flag; the remaining assertions are then immediate. If $n\geq 2$, blow up a point $p\in X$. The local description of the blowup of $\mathbb C^ n$ at the origin shows that $\widetilde X$ is smooth and that its exceptional divisor is $E\simeq \mathbb P^{n-1}$. A nested sequence of linear subspaces of $E$, together with $\widetilde X$, gives a flag 
+    
+<div class="equation">
+  \[  \widetilde X\supset E\supset \mathbb P^{n-2} \supset \cdots \supset \mathbb P^0.  \]
+</div>
+<p>
+       Each member is smooth, compact and connected, and is a prime divisor in the preceding member. The modification is an isomorphism off $E$. 
+    <p>
+      Let $s$ be a section of $\pi ^*L^ m$. Off $E$, it gives a section of $L^ m$ on $X\setminus \{ p\} $. In a trivialization of $L^ m$ on a coordinate ball centered at $p$, its coefficient is holomorphic on the punctured ball, and by Hartogs' extension theorem, valid since $n\geq 2$, it extends holomorphically across $p$. The extension glues with the section away from $p$ to a section of $L^ m$ on $X$. Its pullback agrees with $s$ off $E$, hence everywhere by the identity theorem. This proves surjectivity; injectivity and compatibility with products follow because pullback is an isomorphism on the dense open set $\widetilde X\setminus E$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Given a graded subalgebra $W_\bullet $ of the section ring of $L$, choose a complete flag on the modification of lemma <a data-tag="41985179" href="../../tag/744C8C462232/">21.5.1</a> and apply the constructions of section <a data-tag="B9A34270" href="../../tag/E9A3FA804369/">21.2</a> on $\widetilde X$ to the pulled-back algebra $\widetilde W_ m=\pi ^*W_ m\subseteq H^0(\widetilde X,\pi ^*L^ m)$. The shape of the resulting body may depend on the point and on the flag, but its dimension and its normalized count are determined by $W_\bullet $. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-6F0F3D7F">
+<p><a class="environment-identifier" href="../../tag/1EBEF54DB76D/">Theorem <span data-tag="6F0F3D7F">21.5.2</span>.</a><span data-gerby-tag="6F0F3D7F"></span> Assume that some positive-degree piece of $W_\bullet $ is nonzero. There are an integer $0\leq d\leq n$, a degree period $e\geq 1$, and a number $V(W_\bullet )&gt;0$ such that </p>
+<div class="equation">
+  \[  \lim _{q\to \infty }\frac{\dim W_{eq}}{(eq)^ d}=V(W_\bullet ), \qquad W_ m=0\quad \hbox{if }e\nmid m.  \]
+</div>
+<p> Here $d$ is the transcendence degree of the section-ratio field $K(W_\bullet )$, $e$ is the greatest common divisor of the degrees $m$ with $W_ m\neq 0$, and $V(W_\bullet )$ is the intrinsic lattice volume of every body constructed on such a modification. In particular, these three quantities do not depend on the choice of the modification or the flag. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Pullback preserves the graded dimensions and the degrees with nonzero sections. Applying theorem <a data-tag="36D35BB7" href="../../tag/EA8340BC8D54/">21.1.2</a>, theorem <a data-tag="4EE23942" href="../../tag/CC2BF9294FA3/">21.3.1</a> on $\widetilde X$ gives the displayed limit and the positivity of the lattice volume. Pullback also identifies the section-ratio fields, since their elements are the corresponding ratios and pullback is injective on the dense set where $\pi $ is an isomorphism. Thus proposition <a data-tag="41E2532A" href="../../tag/E32D710594E0/">21.3.2</a> identifies $d$ with the transcendence degree of the original field. The unchanged degrees with nonzero sections determine $e$, and the limit of the unchanged dimensions determines $V(W_\bullet )$. None of the three depends on the auxiliary choices. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-6E937EC6">
+<p><a class="environment-identifier" href="../../tag/EECB2B1DF1A4/">Corollary <span data-tag="6E937EC6">21.5.3</span>.</a><span data-gerby-tag="6E937EC6"></span> For every holomorphic line bundle $L$ on a connected compact complex manifold $X$ of dimension $n$, </p>
+<div class="equation">
+  \[  h^0(X,L^ m)=O(m^ n).  \]
+</div>
+<p> If $X$ is not Moishezon, then, for each $L$, either all positive-degree section spaces of $L$ vanish, or there is an integer $d&lt;n$ for which </p>
+<div class="equation">
+  \[  h^0(X,L^ m)=O(m^ d).  \]
+</div>
+<p> In particular $m^{-n}h^0(X,L^ m)\to 0$. These conclusions apply when $X$ fails the bounded mass property. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If all positive-degree section spaces vanish, there is nothing to prove. Otherwise, apply the theorem to the full section ring. Since $W_ m=0$ for $e\nmid m$, the limit gives $h^0(X,L^ m)=O(m^ d)$ for all degrees, with $d\leq n$. If $d=n$, the section-ratio field contains $n$ algebraically independent meromorphic functions on $X$, so $X$ is Moishezon. Thus $d&lt;n$ when $X$ is not Moishezon. Finally, by Moishezon's theorem a Moishezon manifold admits a modification from a projective, hence Kähler, manifold, so it has the bounded mass property by lemma <a data-tag="F7BDD899" href="../../tag/976C06708A77/">21.4.1</a>. The contrapositive gives the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Since the multiplier-ideal section spaces $\mathcal H_ m(u)$ of section <a data-tag="03C5996E" href="../../tag/5F8226DC1A97/">20.1</a> are contained in $H^0(X,L^ m)$, the same upper bounds hold for them. Identifying weighted section spaces on a modification, however, requires a correction by the Jacobian; lemma <a data-tag="14CA6D10" href="../../tag/599D8A3D42BC/">1.22.15</a> gives the corresponding formula involving the relative canonical bundle. 
+</p>
+</div></section><section class="reading-chunk" id="entry-1936F96341B0" data-section-entries="14480FFA5B57 1936F96341B0 5C0C7B20BA7A C8B2CB1B6819 CA93F87E4E8D D22F138F2F08 DE28BE657AA4 FCAD080F93F6"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/1936F96341B0/">21.6 Curvature rank and section growth</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="0E5A4260"></span></div>
+<p>
+The dimension of a section-ratio field can be bounded by a smooth curvature form, even when that form changes rank and has no global sign. The key is to arrange that a maximum of a section norm occurs where the section map has its maximal rank. This gives a pointwise restriction on the growth counted by the preceding sections. 
+</p>
+<p>
+Keep the connected compact complex manifold $X$ and line bundle $L$, and choose a smooth Hermitian metric $h$ on $L$. In a local frame write $|e|_ h^2=\mathrm e^{-\chi }$ and put $\beta =\mathrm{dd}^{\mathrm{c}}\chi $, with the normalization of section <a data-tag="03C5996E" href="../../tag/5F8226DC1A97/">20.1</a>. Let $r=\max _ X\operatorname {rank}\beta $. No positivity of $\beta $, constant-rank condition or Kähler metric is assumed. Set $S_ h=\{ x:\beta _ x\geq 0\} $; when $S_ h$ is nonempty, let $r_ h^+=\max _{S_ h}\operatorname {rank}\beta $. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-77A30A69">
+<p><a class="environment-identifier" href="../../tag/C8B2CB1B6819/">Proposition <span data-tag="77A30A69">21.6.1</span>.</a><span data-gerby-tag="77A30A69"></span> For a nonzero subspace $W\subset H^0(X,L^ p)$, $p\geq 1$, let $B_ W$ be its common zero set and let $\Phi _ W:X\setminus B_ W\to \mathbb P(W^*)$ be its section map. If $d$ is the maximal rank of its differential, there is $x_*\notin B_ W$ such that </p>
+<div class="equation">
+  \[  \operatorname {rank}\mathrm d\Phi _ W|_{x_*}=d, \qquad \beta _{x_*}\geq 0, \qquad \operatorname {rank}\beta _{x_*}\geq d.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a basis $s_0,\ldots ,s_ N$ of $W$. Principalizing the ideal of their local coefficients gives a smooth compact modification $\pi :Y\to X$, isomorphic over $X\setminus B_ W$, and an effective divisor $D$ with 
+    
+<div class="equation">
+  \[  \pi ^*s_ j=s_ Dv_ j,\qquad v_ j\in H^0(Y,\pi ^*L^ p(-D)),  \]
+</div>
+<p>
+       where the $v_ j$ have no common zero. The resolved map $f=[v_0:\cdots :v_ N]:Y\to \mathbb P^ N$ has maximal differential rank $d$, since it agrees with $\Phi _ W\circ \pi $ on a dense open set. 
+    <p>
+      The critical set $C=\{ y:\operatorname {rank}\mathrm df_ y&lt;d\} $ is analytic. Proper mapping and the image-dimension theorem imply that $Z=f(Y)$ and $T=f(C)$ are compact analytic sets, with $\dim Z=d$ and $\dim T\leq d-1$ when $T$ is nonempty. For the last inequality apply the rank bound to the smooth locus of every irreducible component of $C$. By Chow's theorem $T$ is algebraic. Choose a homogeneous polynomial $P$ of degree $a\geq 1$ that vanishes on $T$ and does not vanish identically on $Z$. If $T$ is empty, take $P=1$ and $a=0$, which also covers $d=0$. 
+    <p>
+      Then $\sigma =P(s_0,\ldots ,s_ N)$ is a nonzero section of $L^{pa}$. Indeed, the set where $P(v_0,\ldots ,v_ N)\ne 0$ meets the dense locus where $\pi $ is an isomorphism. The smooth function 
+    
+<div class="equation">
+  \[  \Psi =\sum _ j|\sigma s_ j|_{h^{p(a+1)}}^2  \]
+</div>
+<p>
+       has a positive maximum $x_*$. At that point $\sigma \ne 0$ and some $s_ j\ne 0$, so $x_*\notin B_ W$ and its lift is outside $C$. The tuples $(\sigma s_ j)$ and $(s_ j)$ define the same projective map near $x_*$. For $\omega _{\mathrm{FS}}=\mathrm{dd}^{\mathrm{c}}\log (1+|w|^2)$ in an affine chart, the Hessian test gives 
+    
+<div class="equation">
+  \[  0\geq \mathrm{dd}^{\mathrm{c}}\log \Psi |_{x_*} =\Phi _ W^*\omega _{\mathrm{FS}}|_{x_*} -p(a+1)\beta _{x_*}.  \]
+</div>
+<p>
+       The first form on the right is semipositive of rank $d$. Thus $\beta _{x_*}$ is semipositive and its kernel is contained in the kernel of that form, proving the assertion. The polynomial degree may depend on $p$ and $W$; no bound on it is needed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For the complete section ring with a nonzero positive-degree piece, denote its section-ratio transcendence degree by $\kappa (L)$, the <em>Kodaira–Iitaka dimension</em>; put $\kappa (L)=-\infty $ when all positive powers have no sections. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-CBB2BC97">
+<p><a class="environment-identifier" href="../../tag/14480FFA5B57/">Corollary <span data-tag="CBB2BC97">21.6.2</span>.</a><span data-gerby-tag="CBB2BC97"></span> If $S_ h$ is empty, then $H^0(X,L^ p)=0$ for every $p\geq 1$. Otherwise </p>
+<div class="equation">
+  \[  \kappa (L)\leq r_ h^+\leq r, \qquad h^0(X,L^ p)=O(p^{r_ h^+}).  \]
+</div>
+<p> In this second case, every graded section algebra with a nonzero positive-degree piece has growth dimension at most $r_ h^+$, as do all its flag bodies, including those constructed on a point blowup. For every fixed weight $u\in \mathrm{QPSH}(X)$, the integrable spaces satisfy $\dim \mathcal H_ p(u)=O(p^{r_ h^+})$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The proposition applied to a single section excludes every positive power if $S_ h$ is empty. If all positive-degree section spaces vanish, the remaining section bounds are immediate and $\kappa (L)=-\infty $. Otherwise, suppose a graded algebra has a nonzero positive-degree piece. Write any finitely many algebraically independent elements of its ratio field with a common denominator in one positive degree, as in proposition <a data-tag="41E2532A" href="../../tag/E32D710594E0/">21.3.2</a>. They are coordinate ratios of a section map. Its resolved image is projective algebraic by proper mapping and Chow's theorem; its dimension is therefore at least their number. The proposition bounds this dimension by $r_ h^+$, so the field's transcendence degree is at most $r_ h^+$. 
+    <p>
+      Apply theorem <a data-tag="6F0F3D7F" href="../../tag/1EBEF54DB76D/">21.5.2</a> to this algebra and to the full section ring. The degree-period formula gives the growth bound in every degree, including the zero spaces outside the period. The earlier flag identification gives the body dimensions. Finally, $\mathcal H_ p(u)\subseteq H^0(X,L^ p)$, so the same upper bound holds even though the integrable spaces need not form a graded algebra. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-9E4E2992">
+<p><a class="environment-identifier" href="../../tag/FCAD080F93F6/">Lemma <span data-tag="9E4E2992">21.6.3</span>.</a><span data-gerby-tag="9E4E2992"></span> For every fixed holomorphic line bundle $A$ on $X$, </p>
+<div class="equation">
+  \[  h^0(X,L^ p\otimes A)=O(p^ r).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Induct on the dimension, simultaneously for all compact complex manifolds and all integer upper bounds on curvature rank. Dimension zero is immediate. If all these section spaces vanish, there is nothing to prove. Otherwise fix a nonzero section in degree $a\geq 1$ and resolve its zero divisor on a smooth compact modification $\mu :Y\to X$. With $M=\mu ^*L$, the pulled-back twist is $M^{-a}(D)$ for a fixed effective divisor $D$ whose components are smooth. Pullback is injective on sections, and the pulled-back curvature has rank at most $r$. 
+    <p>
+      Write $D=H_1+\cdots +H_ s$, allowing repeated components, and put $D_ j=H_1+\cdots +H_ j$. For $m=p-a&gt;0$, the divisor sequences give 
+    
+<div class="equation">
+  \[  h^0(Y,M^ m(D)) \leq h^0(Y,M^ m)+\sum _{j=1}^ s h^0\bigl (H_ j,(M|_{H_ j})^ m\otimes \mathcal O_ Y(D_ j)|_{H_ j}\bigr ).  \]
+</div>
+<p>
+       The first term is $O(m^ r)$ by the preceding corollary; every other term is $O(m^ r)$ by induction, since curvature rank cannot increase on restriction. The number of terms and their twists are fixed. Absorb the finitely many $p\leq a$ in the constant. On disconnected manifolds apply this argument componentwise; this also makes the induction valid for disconnected divisor components. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-600FAC41">
+<p><a class="environment-identifier" href="../../tag/CA93F87E4E8D/">Corollary <span data-tag="600FAC41">21.6.4</span>.</a><span data-gerby-tag="600FAC41"></span> For every fixed holomorphic vector bundle $E$ on $X$, </p>
+<div class="equation">
+  \[  h^0(X,L^ p\otimes E)=O(p^ r), \qquad h^ n(X,L^ p\otimes E)=O(p^ r).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $E$ of positive rank, let $\pi :Y=\mathbb P(E^*)\to X$ parametrize lines, and let $\mathcal O_ Y(1)$ be dual tautological. Fiberwise linear forms give $\pi _*\mathcal O_ Y(1)=E$, hence 
+    
+<div class="equation">
+  \[  H^0(X,L^ p\otimes E) =H^0(Y,(\pi ^*L)^ p\otimes \mathcal O_ Y(1)).  \]
+</div>
+<p>
+       The pulled-back curvature has rank at most $r$, so the fixed-line-twist lemma, proved in all dimensions, gives the first bound. Serre duality identifies the dual of the top cohomology with 
+    
+<div class="equation">
+  \[  H^0(X,(L^*)^ p\otimes E^*\otimes K_ X).  \]
+</div>
+<p>
+       The dual curvature is $-\beta $ and has the same rank; apply the degree-zero bound to $L^*$. A bundle of rank zero has zero cohomology and satisfies both bounds. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-04D312FB">
+<p><a class="environment-identifier" href="../../tag/5C0C7B20BA7A/">Proposition <span data-tag="04D312FB">21.6.5</span>.</a><span data-gerby-tag="04D312FB"></span> For every fixed holomorphic vector bundle $E$, the Euler characteristic $\chi (X,L^ p\otimes E)$ is a polynomial in $p$ of degree at most $r$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The analytic Hirzebruch–Riemann–Roch theorem gives 
+    
+<div class="equation">
+  \[  \chi (X,L^ p\otimes E) =\int _ X\mathrm e^{p\beta }\operatorname {ch}(E) \operatorname {td}(T^{1,0}X) =\sum _{j=0}^{r}\frac{p^ j}{j!} \int _ X\beta ^ j\wedge \operatorname {ch}(E) \wedge \operatorname {td}(T^{1,0}X).  \]
+</div>
+<p>
+       Here the integral selects real degree $2n$, and the Chern character and Todd forms are computed with fixed Hermitian metrics. The curvature normalization represents $c_1(L)$, and $\beta ^{r+1}=0$ pointwise by its rank bound. Every coefficient is independent of $p$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-B6742EC3">
+<p><a class="environment-identifier" href="../../tag/D22F138F2F08/">Corollary <span data-tag="B6742EC3">21.6.6</span>.</a><span data-gerby-tag="B6742EC3"></span> If $\dim X=2$, then $h^ q(X,L^ p\otimes E)=O(p^ r)$ for every fixed holomorphic vector bundle $E$ and $0\leq q\leq 2$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The endpoints have already been bounded. Since $\chi =h^0-h^1+h^2$, the middle dimension is at most $h^0+h^2+|\chi |=O(p^ r)$ by the Euler polynomial. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-AC157C58">
+<p><a class="environment-identifier" href="../../tag/DE28BE657AA4/">Example <span data-tag="AC157C58">21.6.7</span>.</a><span data-gerby-tag="AC157C58"></span> Let $0\leq r\leq n$, let $Y$ be any connected compact complex manifold of dimension $n-r$, and take $X=\mathbb P^ r\times Y$ and $L=\operatorname {pr}_1^*\mathcal O(1)$ with the pulled-back Fubini–Study metric. Its curvature has rank $r$, and </p>
+<div class="equation">
+  \[  h^0(X,L^ p)=\binom {p+r}{r}.  \]
+</div>
+<p> Thus the section-growth exponent cannot be reduced, including when $Y$ is non-Kähler. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      A section, expressed in a line-bundle frame on the projective factor, is a holomorphic function of $Y$ and hence is constant there. Restriction to any slice $\mathbb P^ r\times \{ y_0\} $ is therefore inverse to pullback on sections. Counting degree-$p$ homogeneous monomials in $r+1$ variables gives the formula; for $r=0$ it equals one. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+These bounds concern the closed curvature of a line bundle. They do not estimate the mass of a potential in an unrelated nonclosed Hermitian background, as proposition <a data-tag="18A0B7FF" href="../../tag/6400AAE4BA1E/">20.7.1</a> shows. In dimension at least three, the endpoint bounds and the Euler polynomial alone do not control the individual intermediate cohomology dimensions. The Hopf body computed next realizes the rank bound $n-1$ for the pulled-back positive line bundles of proposition <a data-tag="65E2EF41" href="../../tag/987D754E15F6/">21.7.1</a>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9B3BD06F2362" data-section-entries="555D3252DD76 987D754E15F6 9B3BD06F2362"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/9B3BD06F2362/">21.7 The Hopf flag and its lower-dimensional body</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="99A43ECF"></span></div>
+<p>
+On a scalar Hopf manifold, the coordinate subspaces give a complete flag ending at a point of an elliptic fiber. Along this flag, a homogeneous section reduces to a nowhere-vanishing section on the elliptic fiber, so the last coordinate of its valuation is zero; the remaining coordinates fill a simplex whose intrinsic volume gives the section growth. 
+</p>
+<p>
+Let $X_ n$ and $L_ k$, with $n\geq 2$ and $k\geq 0$, be as in section <a data-tag="E0B926E3" href="../../tag/82379C382500/">20.6</a>. In the covering coordinates $z_1,\ldots ,z_ n$, the image of $\{ z_1=\cdots =z_{n-1}=0\} \setminus \{ 0\} $ in $X_ n$ is an elliptic curve; choose a point $p$ on it. Consider the flag $Y_0=X_ n$, 
+</p>
+<div class="equation">
+  \[  Y_ i=\{ z_1=\cdots =z_ i=0\} /\langle \mathrm{e}^{-1}\rangle \quad (1\leq i\leq n-1),\qquad Y_ n=\{ p\} \subset Y_{n-1},  \]
+</div>
+<p>
+ where $/\langle \mathrm e^{-1}\rangle $ denotes the quotient of the punctured linear subspace by the contraction $z\mapsto \mathrm e^{-1}z$. Each member is smooth, compact and connected, and is a prime divisor in the preceding member. Take $W_ m=H^0(X_ n,L_ k^ m)$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-65E2EF41">
+<p><a class="environment-identifier" href="../../tag/987D754E15F6/">Proposition <span data-tag="65E2EF41">21.7.1</span>.</a><span data-gerby-tag="65E2EF41"></span> For this flag, </p>
+<div class="equation">
+  \[  \{ \nu (s):0\neq s\in W_ m\}  =\{ (a_1,\ldots ,a_{n-1},0):a_ i\in \mathbb N, \  \textstyle \sum _ i a_ i\leq km\} .  \]
+</div>
+<p> Consequently </p>
+<div class="equation">
+  \[  \Delta (W_\bullet )= \{ (x_1,\ldots ,x_{n-1},0):x_ i\geq 0, \  \textstyle \sum _ i x_ i\leq k\} .  \]
+</div>
+<p> Its $n$-dimensional volume is zero. When $k&gt;0$, its volume in the coordinate hyperplane $x_ n=0$, with the Euclidean measure for which the coordinate lattice has covolume one, is </p>
+<div class="equation">
+  \[  \frac{k^{n-1}}{(n-1)!} =\lim _{m\to \infty }\frac{\dim W_ m}{m^{n-1}}.  \]
+</div>
+<p> For $k=0$ the body is a point and $\dim W_ m=1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="9B32042B" href="../../tag/4ABE18AC08D2/">20.6.1</a>, sections of $L_ k^ m$ are homogeneous polynomials of degree $km$. Dividing successively by the highest powers of $z_1,\ldots ,z_{n-1}$ that divide the section, and restricting at each step, leaves a nonzero multiple of $z_ n^{km-a_1-\cdots -a_{n-1}}$, where $a_ i$ is the $i$th valuation. This residual section has no zeros on $Y_{n-1}$, so the last valuation is zero, and the preceding ones are nonnegative with sum at most $km$. 
+    <p>
+      Conversely, every such tuple is the valuation of the monomial 
+    
+<div class="equation">
+  \[  z_1^{a_1}\cdots z_{n-1}^{a_{n-1}} z_ n^{km-a_1-\cdots -a_{n-1}}.  \]
+</div>
+<p>
+       The normalized values lie in the displayed simplex and, for $m=1$, include all its vertices, so their closed convex hull is the simplex. For $k&gt;0$, its coordinate-lattice volume is $k^{n-1}/(n-1)!$, the leading coefficient of the binomial count in proposition <a data-tag="9B32042B" href="../../tag/4ABE18AC08D2/">20.6.1</a>. For $k=0$, only the constant polynomials remain. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/non-kahler-pluripotential-theory/6482ecda183b42eca9da.svg"/> <figcaption id="non-kahler-pluripotential-theory-144B454C"><span data-gerby-tag="144B454C"></span><a data-tag="144B454C" href="../../tag/555D3252DD76/">21.1</a> For the Hopf threefold and $k&gt;0$, the body is a triangle in a coordinate plane. Its area gives the quadratic section growth, while its ambient volume vanishes.</figcaption> </div>
+</figure>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/6400AAE4BA1E/"><span>← Previous</span><small>Proposition 20.7.1</small></a><a class="pager-next" rel="next" href="../../tag/926A00196D5E/"><span>Next →</span><small>21 Flags, convex bodies and section growth</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-flags-convex-bodies-and-section-growth,
   author = {{Gerby contributors}},
   title = {16.4 Flags, convex bodies and section growth},

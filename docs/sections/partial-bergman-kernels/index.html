@@ -1,8 +1,1556 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/partial-bergman-kernels/"><title>15.3 Partial Bergman kernels · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/partial-bergman-kernels/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/partial-bergman-kernels/"><title>15.3 Partial Bergman kernels · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/partial-bergman-kernels/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/ideal-goodness/">Chapter 15: Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../sections/partial-bergman-kernels/" aria-current="page">Section 15.3: Partial Bergman kernels</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/good-singularities/"><span>15.1</span> I-good singularities</a></li><li><a href="../../sections/multiplier-ideal-envelopes-and-goodness/"><span>15.2</span> Multiplier-ideal envelopes and I-goodness</a></li><li><a href="../../sections/partial-bergman-kernels/" aria-current="page"><span>15.3</span> Partial Bergman kernels</a></li><li><a href="../../sections/partial-kernels-and-quotient-equilibrium/"><span>15.4</span> Partial kernels and quotient equilibrium</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/partial-bergman-kernels/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/partial-bergman-kernels/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/0E6CABEB995A/"><span>← Previous</span><small>Theorem 16.7.3</small></a><a class="pager-next" rel="next" href="../../tag/065B04510A8A/"><span>Next →</span><small>14 Partial Bergman kernels</small></a></nav><h1>15.3 Partial Bergman kernels</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/065B04510A8A/">14 Partial Bergman kernels</a><code class="tag-id">065B04510A8A</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/9E595DC6361B/">14.1 Partial envelopes</a><code class="tag-id">9E595DC6361B</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/28F090ED5EFA/">Definition 14.1.1</a><code class="tag-id">28F090ED5EFA</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/19BBFEFEB969/">14.1 </a><code class="tag-id">19BBFEFEB969</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1F7034C27B5A/">14.2 </a><code class="tag-id">1F7034C27B5A</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/D0D0EA7C293D/">Example 14.1.2</a><code class="tag-id">D0D0EA7C293D</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/C9561913A3E8/">Proposition 14.1.3</a><code class="tag-id">C9561913A3E8</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/0F9B18404274/">Lemma 14.1.4</a><code class="tag-id">0F9B18404274</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/96B9EFFFBDA7/">14.11 </a><code class="tag-id">96B9EFFFBDA7</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/A86A369D4CBF/">Lemma 14.1.5</a><code class="tag-id">A86A369D4CBF</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/226F49B219B2/">14.12 </a><code class="tag-id">226F49B219B2</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/712499DFC37F/">Corollary 14.1.6</a><code class="tag-id">712499DFC37F</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/A1C36A6249C7/">Proposition 14.1.7</a><code class="tag-id">A1C36A6249C7</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/72097BEFEC59/">Corollary 14.1.8</a><code class="tag-id">72097BEFEC59</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/96B842B9BF11/">Corollary 14.1.9</a><code class="tag-id">96B842B9BF11</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/18E5130ACB80/">Lemma 14.1.10</a><code class="tag-id">18E5130ACB80</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/EC4A564BADAB/">14.21 </a><code class="tag-id">EC4A564BADAB</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/CE1417F951E3/">Corollary 14.1.11</a><code class="tag-id">CE1417F951E3</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/A99869D43853/">14.22 </a><code class="tag-id">A99869D43853</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/B13AC61C497D/">14.2 Partial equilibrium measures</a><code class="tag-id">B13AC61C497D</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/E4ED4F8B05A8/">Definition 14.2.1</a><code class="tag-id">E4ED4F8B05A8</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/D7B3984EBF7A/">Lemma 14.2.2</a><code class="tag-id">D7B3984EBF7A</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/2F195F41BD70/">14.23 </a><code class="tag-id">2F195F41BD70</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D22CB4C7F0CC/">14.24 </a><code class="tag-id">D22CB4C7F0CC</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/9790F808BF37/">Corollary 14.2.3</a><code class="tag-id">9790F808BF37</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/FFCF7AC9E703/">14.27 </a><code class="tag-id">FFCF7AC9E703</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/12F5599D8900/">Definition 14.2.4</a><code class="tag-id">12F5599D8900</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/765C3766A729/">Proposition 14.2.5</a><code class="tag-id">765C3766A729</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/0B2DE1BB9170/">14.31 </a><code class="tag-id">0B2DE1BB9170</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/94F4F91642C8/">14.32 </a><code class="tag-id">94F4F91642C8</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/8353FF09478E/">14.33 </a><code class="tag-id">8353FF09478E</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/D21332713DB8/">Lemma 14.2.6</a><code class="tag-id">D21332713DB8</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/32CDA8E3EB57/">14.39 </a><code class="tag-id">32CDA8E3EB57</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/A58ACF533BAE/">14.42 </a><code class="tag-id">A58ACF533BAE</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/11BA40C76F9B/">14.43 </a><code class="tag-id">11BA40C76F9B</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/9724C0B32032/">Proposition 14.2.7</a><code class="tag-id">9724C0B32032</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1BDE5E6D4627/">14.44 </a><code class="tag-id">1BDE5E6D4627</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/0211344889F8/">14.3 Quantization of partial equilibrium measures</a><code class="tag-id">0211344889F8</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/B2D64A3DB08E/">14.3.1 Bernstein–Markov measures</a><code class="tag-id">B2D64A3DB08E</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/E365D575C322/">Definition 14.3.1</a><code class="tag-id">E365D575C322</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/46ED22785DA5/">14.45 </a><code class="tag-id">46ED22785DA5</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/F1111E54880E/">14.48 </a><code class="tag-id">F1111E54880E</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/E97173FEFAFD/">Lemma 14.3.2</a><code class="tag-id">E97173FEFAFD</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/48A0DBADBA86/">Definition 14.3.3</a><code class="tag-id">48A0DBADBA86</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/FE92486453EB/">14.49 </a><code class="tag-id">FE92486453EB</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/A86573651304/">Proposition 14.3.4</a><code class="tag-id">A86573651304</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/774E9C5AFE10/">14.3.2 Partial Bergman kernels</a><code class="tag-id">774E9C5AFE10</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/C3C647253911/">Definition 14.3.5</a><code class="tag-id">C3C647253911</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">remark</span><a href="../../tag/129D3B333F18/">Remark 14.3.6</a><code class="tag-id">129D3B333F18</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/889A68CCEC83/">14.54 </a><code class="tag-id">889A68CCEC83</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/EA3E101DCA5E/">Theorem 14.3.7</a><code class="tag-id">EA3E101DCA5E</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/A6F9F2DF4A0D/">14.55 </a><code class="tag-id">A6F9F2DF4A0D</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/4C368CFA09EB/">Proposition 14.3.8</a><code class="tag-id">4C368CFA09EB</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/4DF720497AC6/">14.56 </a><code class="tag-id">4DF720497AC6</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/14347C41585E/">14.57 </a><code class="tag-id">14347C41585E</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1B7624ED3973/">14.58 </a><code class="tag-id">1B7624ED3973</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/C700200CB6BE/">14.59 </a><code class="tag-id">C700200CB6BE</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/CE5263973CB7/">14.60 </a><code class="tag-id">CE5263973CB7</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/725395815923/">14.61 </a><code class="tag-id">725395815923</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/A0F71B40AAE1/">Definition 14.3.9</a><code class="tag-id">A0F71B40AAE1</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/F547344ACE10/">Proposition 14.3.10</a><code class="tag-id">F547344ACE10</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D29819040D75/">14.63 </a><code class="tag-id">D29819040D75</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/04790CD84F49/">14.64 </a><code class="tag-id">04790CD84F49</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/922E6C36BCC8/">Lemma 14.3.11</a><code class="tag-id">922E6C36BCC8</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/C3210B1F6DE6/">14.69 </a><code class="tag-id">C3210B1F6DE6</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/4CE59F3C4805/">Corollary 14.3.12</a><code class="tag-id">4CE59F3C4805</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/5C6401E18EB3/">Lemma 14.3.13</a><code class="tag-id">5C6401E18EB3</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/2DBAE7A20C99/">14.72 </a><code class="tag-id">2DBAE7A20C99</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/3504DA07F50F/">14.73 </a><code class="tag-id">3504DA07F50F</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/F431300C59C4/">Proposition 14.3.14</a><code class="tag-id">F431300C59C4</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/FFF9581DFDD2/">14.74 </a><code class="tag-id">FFF9581DFDD2</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/5AAAC502B9E5/">14.75 </a><code class="tag-id">5AAAC502B9E5</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/AC1B69834497/">14.76 </a><code class="tag-id">AC1B69834497</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/B1F17F151050/">Corollary 14.3.15</a><code class="tag-id">B1F17F151050</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/AC691D964EDB/">Proposition 14.3.16</a><code class="tag-id">AC691D964EDB</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/0DFF36A22512/">Proposition 14.3.17</a><code class="tag-id">0DFF36A22512</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/7EA15066EE63/">14.88 </a><code class="tag-id">7EA15066EE63</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/CBCF54FCD801/">14.89 </a><code class="tag-id">CBCF54FCD801</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/FD0D14628CD8/">14.90 </a><code class="tag-id">FD0D14628CD8</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/8FD19D2B07C7/">14.93 </a><code class="tag-id">8FD19D2B07C7</code><span class="entry-topic">Partial Bergman kernels</span></li><li class="reference-entry"><span class="entry-kind">remark</span><a href="../../tag/E9D132FDBF95/">Remark 14.3.18</a><code class="tag-id">E9D132FDBF95</code><span class="entry-topic">Partial Bergman kernels</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/0E6CABEB995A/"><span>← Previous</span><small>Theorem 16.7.3</small></a><a class="pager-next" rel="next" href="../../tag/065B04510A8A/"><span>Next →</span><small>14 Partial Bergman kernels</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/0E6CABEB995A/"><span>← Previous</span><small>Theorem 16.7.3</small></a><a class="pager-next" rel="next" href="../../tag/065B04510A8A/"><span>Next →</span><small>14 Partial Bergman kernels</small></a></nav><h1>15.3 Partial Bergman kernels</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-065B04510A8A" data-section-entries="065B04510A8A"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/065B04510A8A/">14 Partial Bergman kernels</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="0013B08A"></span></div>
+<p>
+The classical Bergman kernel of a Hermitian line bundle $L$ on a compact Kähler manifold $X$ encodes, through its asymptotic expansion as the tensor power $L^ k$ goes to infinity, deep geometric information about the underlying metric. This chapter develops the corresponding <em>partial</em> Bergman kernel. The word partial refers to the fact that we only use sections cut out by an ideal, typically the multiplier ideal of an auxiliary psh weight on a closed subset $K\subseteq X$. 
+</p>
+<p>
+The main result is the convergence theorem theorem <a data-tag="FEA29A52" href="../../tag/EA3E101DCA5E/">14.3.7</a>. Given a $\theta $-psh potential $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, a closed non-pluripolar weighted subset $(K,v)$, and a Bernstein–Markov measure $\mu $, the normalized partial Bergman measures on $X$ converge weakly to the partial equilibrium measure of $(K,v,\varphi )$ as $k\to \infty $. This is the relative version of the theorem of Berman–Boucksom–Witt Nyström <span class="cite">[<a href="../../references/#R8426D9649EC6">BBWN11</a>]</span>, corresponding to the case $\varphi =V_\theta $. The assumptions are essentially the mildest ones under which the statement makes sense. 
+</p>
+<p>
+The first part of the chapter introduces the relative envelope operators. In section <a data-tag="9B7DE3ED" href="../../tag/9E595DC6361B/">14.1</a> we define the relative $P$-envelope $P_{\theta ,K}[\varphi ](v)$ and the relative $\mathcal{I}$-envelope $P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)$ by replacing the constraint $\eta \leq 0$ in the usual $P$- and $\mathcal{I}$-envelopes with the constraint $\eta |_ K\leq v$. We establish their basic properties, including monotonicity, mass-preservation, and the relation with the envelope operators of chapter <a data-tag="D8A4D4BA" href="../../tag/2AC9E2799656/">3</a>. 
+</p>
+<p>
+The second part develops the equilibrium theory associated with a weighted subset $(K,v)$. In section <a data-tag="89559DC1" href="../../tag/B13AC61C497D/">14.2</a> we show that the Monge–Ampère measure $\theta _{P_{\theta ,K}[\varphi ](v)}^ n$ is carried by the contact locus $\{ P_{\theta ,K}[\varphi ](v)|_ K=v\} \subseteq K$, which justifies the name <em>partial equilibrium measure</em>. The chapter concludes in section <a data-tag="93E844BE" href="../../tag/0211344889F8/">14.3</a> with the proof of the weak convergence of partial Bergman measures towards this partial equilibrium. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9E595DC6361B" data-section-entries="0F9B18404274 18E5130ACB80 19BBFEFEB969 1F7034C27B5A 226F49B219B2 28F090ED5EFA 712499DFC37F 72097BEFEC59 96B842B9BF11 96B9EFFFBDA7 9E595DC6361B A1C36A6249C7 A86A369D4CBF A99869D43853 C9561913A3E8 CE1417F951E3 D0D0EA7C293D EC4A564BADAB"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/9E595DC6361B/">14.1 Partial envelopes</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="9B7DE3ED"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$ and $K \subseteq X$ be a closed non-pluripolar set. Let $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a pseudo-effective cohomology class. 
+</p>
+
+<article class="env-definition" id="sgpt-F1197B05">
+<p><a class="environment-identifier" href="../../tag/28F090ED5EFA/">Definition <span data-tag="F1197B05">14.1.1</span>.</a><span data-gerby-tag="F1197B05"></span> Given a function $f\colon K\rightarrow [-\infty ,\infty ]$ and $\varphi \in \mathrm{PSH}(X,\theta )$, we introduce the <em>relative $P$-envelope</em> of $\varphi $ (with respect to $K,f,\theta $) as </p>
+<div class="equation" id="sgpt-972C80CA"><span data-gerby-tag="972C80CA"></span>
+<span class="equation-label"><a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a></span>
+<div>\begin{equation}  P_{\theta ,K}[\varphi ](f)\coloneqq \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq \varphi \Bigr \} . \end{equation}</div>
+</div>
+<p>Similarly, we define the <em>relative $\mathcal{I}$-envelope</em> of $\varphi $ (with respect to $K,f,\theta $) as </p>
+<div class="equation" id="sgpt-C267D870"><span data-gerby-tag="C267D870"></span>
+<span class="equation-label"><a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a></span>
+<div>\begin{equation}  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\coloneqq \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _{\mathcal{I}} \varphi \Bigr \} . \end{equation}</div>
+</div>
+</article> By $\eta |_ K\leq f$ quasi-everywhere, we mean that there is a pluripolar set $S\subseteq X$ so that $\eta |_{K\setminus S}\leq f|_{K\setminus S}$. In general the upper envelope in (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>) or (<a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a>) may be identically $\infty $. 
+
+<p>
+Observe that when $f$ is bounded from below, neither envelope is identically $-\infty $. 
+</p>
+
+The envelopes contain essentially all envelope operators that we have studied in this book: <article class="env-example" id="sgpt-88A58356">
+<p><a class="environment-identifier" href="../../tag/D0D0EA7C293D/">Example <span data-tag="88A58356">14.1.2</span>.</a><span data-gerby-tag="88A58356"></span> When $K=X$ and $f=0$, we have </p>
+<div class="equation">
+  \[  P_{\theta ,X}[\varphi ](0)=P_{\theta }[\varphi ],\quad P_{\theta ,X}[\varphi ]_{\mathcal{I}}(0)=P_{\theta }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p> When $K=X$, we have </p>
+<div class="equation">
+  \[  P_{\theta ,X}[\varphi ](f)=P_{\theta }[\varphi ](f).  \]
+</div>
+<p> These definitions reduce to the envelopes studied in chapter <a data-tag="D8A4D4BA" href="../../tag/2AC9E2799656/">3</a>. On the other hand, when $\varphi =V_{\theta }$, we have </p>
+<div class="equation">
+  \[  \begin{aligned}  P_{\theta ,K}[V_{\theta }](f) &amp; =P_{\theta ,K}[V_{\theta }]_{\mathcal{I}}(f)\\ &amp; =\operatorname *{sup}_{}{}\! {}^{*}\left\{  \eta \in \mathrm{PSH}(X,\theta ): \begin{array}{l} \eta |_ K \leq f \textup{ quasi-everywhere} \end{array} \right\} . \end{aligned}  \]
+</div>
+<p> In an even more special case where $\varphi =V_{\theta }$ and $K=X$, we find that </p>
+<div class="equation">
+  \[  P_{\theta ,X}[V_{\theta }](f)=\operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta \leq f \textup{ quasi-everywhere}\Bigr \} .  \]
+</div>
+<p> This is nothing but $P_{\theta }(f)$ as we studied in definition <a data-tag="BCD148F8" href="../../tag/434FC63292E2/">2.4.12</a>. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-4AD38E25">
+<p><a class="environment-identifier" href="../../tag/C9561913A3E8/">Proposition <span data-tag="4AD38E25">14.1.3</span>.</a><span data-gerby-tag="4AD38E25"></span> Let $f,g\colon K\rightarrow [-\infty ,\infty ]$ be functions and $\varphi ,\psi \in \mathrm{PSH}(X,\theta )$. Then we have the following: </p>
+<ol>
+<li class="custom-item" id="sgpt-F3BFA151"><span data-gerby-tag="F3BFA151"></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f);  \]
+</div>
+</li><li class="custom-item" id="sgpt-066E47B9"><span data-gerby-tag="066E47B9"></span><p>
+ assume that $f$ is bounded from above, then 
+</p>
+<div class="equation">
+  \[  \begin{aligned}  \left.P_{\theta ,K}[\varphi ](f)\right|_ K\leq &amp;  f\textup{ quasi-everywhere},\\  \left. P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\right|_ K\leq &amp;  f\textup{ quasi-everywhere}; \end{aligned}  \]
+</div>
+</li><li class="custom-item" id="sgpt-A674290C"><span data-gerby-tag="A674290C"></span><p>
+ suppose that $\varphi \preceq _{\mathcal{I}}\psi $, then 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\leq P_{\theta ,K}[\psi ]_{\mathcal{I}}(f);  \]
+</div>
+</li><li class="custom-item" id="sgpt-05C13635"><span data-gerby-tag="05C13635"></span><p>
+ if $f\leq g$, then 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq P_{\theta ,K}[\varphi ](g),\quad P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(g);  \]
+</div>
+</li><li class="custom-item" id="sgpt-BD077222"><span data-gerby-tag="BD077222"></span><p>
+ for any $t \in (0,1)$, we have 
+</p>
+<div class="equation">
+  \[  \begin{aligned}  P_{\theta ,K}\left[t\varphi +(1-t)\psi \right](f)\geq &amp;  tP_{\theta ,K}[\varphi ](f)+(1-t)P_{\theta ,K}[\psi ](f),\\  P_{\theta ,K}\left[t\varphi +(1-t)\psi \right]_{\mathcal{I}}(f)\geq &amp;  tP_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)+(1-t)P_{\theta ,K}[\psi ]_{\mathcal{I}}(f). \end{aligned}  \]
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="F3BFA151" href="../../tag/C9561913A3E8/#sgpt-F3BFA151">1</a> This follows from $\eta \preceq \varphi \Rightarrow \eta \preceq _{\mathcal I}\varphi $. 
+    <p>
+<a data-tag="066E47B9" href="../../tag/C9561913A3E8/#sgpt-066E47B9">2</a> This follows from proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a> and <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a>. 
+    <p>
+<a data-tag="A674290C" href="../../tag/C9561913A3E8/#sgpt-A674290C">3</a> This follows by inclusion of the defining candidate sets. 
+    <p>
+<a data-tag="05C13635" href="../../tag/C9561913A3E8/#sgpt-05C13635">4</a> This follows by inclusion of the defining candidate sets. 
+    <p>
+<a data-tag="BD077222" href="../../tag/C9561913A3E8/#sgpt-BD077222">5</a> If $\eta ,\eta '\in \mathrm{PSH}(X,\theta )$ are such that 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \eta |_ K\leq f\textup{ quasi-everywhere},\quad \eta '|_ K\leq f\textup{ quasi-everywhere},\\ &amp; \eta \preceq \varphi ,\quad \eta '\preceq \psi , \end{split}  \]
+</div>
+<p>
+       then for $t\in (0,1)$, 
+    
+<div class="equation">
+  \[  \left.\left(t\eta +(1-t)\eta '\right)\right|_ K\leq f\textup{ quasi-everywhere},\quad t\eta +(1-t)\eta ' \preceq t\varphi +(1-t)\psi .  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  t\eta +(1-t)\eta '\leq P_{\theta ,K}\left[t\varphi +(1-t)\psi \right](f).  \]
+</div>
+<p>
+       Since $\eta $ and $\eta '$ are arbitrary, the first inequality follows. The second follows from the same argument. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+Similar to the usual envelopes studied in chapter <a data-tag="D8A4D4BA" href="../../tag/2AC9E2799656/">3</a>, the $P$-partial envelopes are well-behaved only when $\varphi $ has positive mass. 
+</p>
+
+<article class="env-lemma" id="sgpt-D923A122">
+<p><a class="environment-identifier" href="../../tag/0F9B18404274/">Lemma <span data-tag="D923A122">14.1.4</span>.</a><span data-gerby-tag="D923A122"></span> Suppose that $f\colon K\rightarrow (-\infty ,\infty ]$ is bounded from below, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-CBC7F5DB"><span data-gerby-tag="CBC7F5DB"></span>
+<span class="equation-label"><a data-tag="CBC7F5DB" href="../../tag/96B9EFFFBDA7/">14.11</a></span>
+<div>\begin{equation}  P_{\theta ,K}[\varphi ](f)= \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq \varphi \Bigr \} . \end{equation}</div>
+</div>
+</article> In other words, in this situation, in the definition (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>), we may restrict to only those $\eta $ with positive mass. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By our assumption, we can find $C&gt;0$ so that $\varphi |_ K-C\leq f$. Then if $\eta $ is a candidate in (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>), $\eta \lor (\varphi -C)$ is also a candidate, and $\eta \lor (\varphi -C)\in \mathrm{PSH}(X,\theta )_{&gt;0}$. Therefore, $\eta \lor (\varphi -C)$ is also a candidate for the right-hand side of (<a data-tag="CBC7F5DB" href="../../tag/96B9EFFFBDA7/">14.11</a>). The equality (<a data-tag="CBC7F5DB" href="../../tag/96B9EFFFBDA7/">14.11</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+Note that in the most important cases, we can actually replace the condition $\eta \leq f$ quasi-everywhere in (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>) by everywhere. <article class="env-lemma" id="sgpt-72D04C56">
+<p><a class="environment-identifier" href="../../tag/A86A369D4CBF/">Lemma <span data-tag="72D04C56">14.1.5</span>.</a><span data-gerby-tag="72D04C56"></span> Let $f\colon K\rightarrow (-\infty ,\infty ]$ be bounded from below, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-7214BA9C"><span data-gerby-tag="7214BA9C"></span>
+<span class="equation-label"><a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a></span>
+<div>\begin{equation}  \begin{split}  P_{\theta ,K}[\varphi ](f)=&amp; \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ and } \eta \preceq \varphi \Bigr \} \\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ and } \eta \preceq \varphi \Bigr \} . \end{split} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Both $\geq $ directions in (<a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a>) are trivial. 
+    <p>
+      Conversely, let $\eta $ be a candidate in (<a data-tag="CBC7F5DB" href="../../tag/96B9EFFFBDA7/">14.11</a>). Let $S\subseteq X$ be a pluripolar set so that $\eta |_{K\setminus S}\leq f|_{K\setminus S}$. 
+    <p>
+      We now claim that we can choose $\chi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ with $\chi |_ S\equiv -\infty $ and $\chi \leq \eta $. 
+    <p>
+      Assume this for the moment. For any $\delta \in (0,1)$, we have 
+    
+<div class="equation">
+  \[  (1-\delta )\eta |_ K+\delta \chi |_ K\leq f,\quad (1-\delta )\eta +\delta \chi \preceq \varphi .  \]
+</div>
+<p>
+       Hence, $(1-\delta )\eta +\delta \chi $ is dominated by the right-hand side of (<a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a>). Letting $\delta \to 0+$, we conclude that $\eta $ is dominated by the right-hand side of (<a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a>) and hence, (<a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a>) follows. 
+    <p>
+      It remains to construct $\chi $. Since $\varphi $ has positive mass, the class $\{ \theta \} $ is big. Fix a Kähler form $\omega _0$ on $X$ and choose $\rho \in \mathrm{PSH}(X,\theta )$ with $\theta _{\rho }\geq 2\epsilon _0\omega _0$ for some $\epsilon _0&gt;0$. By theorem <a data-tag="976A8174" href="../../tag/0ED3DB1BD7C2/">1.1.17</a>, there is a quasi-psh function $q$ such that $q|_ S\equiv -\infty $. Choose $A&gt;0$ so that $A\omega _0+\mathrm{dd}^{\mathrm{c}}q\geq 0$. For $a&gt;0$ small enough, $\rho +aq\in \mathrm{PSH}(X,\theta )$ and still has pole $-\infty $ on $S$. Replacing $\rho $ by $\rho +aq$, we may therefore assume that $\rho |_ S\equiv -\infty $. Since $\int _ X \theta _{\eta }^ n&gt;0$, fixing such a $\rho $ and taking $\epsilon \in (0,1)$ small enough, we have 
+    
+<div class="equation">
+  \[  \int _ X \theta ^ n_{\epsilon \rho +(1-\epsilon )V_{\theta }}+\int _ X \theta _{\eta }^ n&gt;\int _ X \theta _{V_{\theta }}^ n.  \]
+</div>
+<p>
+       Thus, by proposition <a data-tag="504A148C" href="../../tag/F7C0BACE770D/">3.1.15</a> and theorem <a data-tag="195FDE1F" href="../../tag/5B751E9DFBC1/">3.1.18</a>, we have 
+    
+<div class="equation">
+  \[  \Bigl (\epsilon \rho +(1-\epsilon )V_{\theta }\Bigr ) \land \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}.  \]
+</div>
+<p>
+       It suffices to define this function as $\chi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-854E031E">
+<p><a class="environment-identifier" href="../../tag/712499DFC37F/">Corollary <span data-tag="854E031E">14.1.6</span>.</a><span data-gerby-tag="854E031E"></span> Suppose that $f\colon K\rightarrow \mathbb {R}$ is bounded, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then there is a constant $C=C(\sup _ K f,K,X)&gt;0$ such that </p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq C,\quad P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\leq C.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $K$ is non-pluripolar, <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a> then gives a constant $C&gt;0$, depending only on $\sup _ K f$, $K$ and $X$, such that every $\eta \in \mathrm{PSH}(X,\theta )$ satisfying $\eta |_ K\leq f$ quasi-everywhere satisfies $\eta \leq C$ on $X$. 
+    <p>
+      This applies to the candidates defining both envelopes. Hence both candidate families are locally uniformly bounded above, so their upper semicontinuous suprema are genuine $\theta $-psh functions. By proposition <a data-tag="4AD38E25" href="../../tag/C9561913A3E8/">14.1.3</a> <a data-tag="066E47B9" href="../../tag/C9561913A3E8/#sgpt-066E47B9">2</a>, both envelopes are dominated by $f$ quasi-everywhere on $K$. Applying <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a> once more gives 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq C,\quad P_{\theta ,K}[\varphi ]_{\mathcal I}(f)\leq C.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></article>
+
+<article class="env-proposition" id="sgpt-D6D912F2">
+<p><a class="environment-identifier" href="../../tag/A1C36A6249C7/">Proposition <span data-tag="D6D912F2">14.1.7</span>.</a><span data-gerby-tag="D6D912F2"></span> Let $f\colon K\rightarrow (-\infty ,\infty ]$ be a function bounded from below and $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Suppose that $\varphi \preceq _{P} \psi $. Then </p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq P_{\theta ,K}[\psi ](f).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\eta \in \mathrm{PSH}(X,\theta )_{&gt;0}$ be such that $\eta |_ K\leq f$ quasi-everywhere and $\eta \preceq \varphi $. Then $\eta \preceq _ P \psi $, and thanks to corollary <a data-tag="A6227B93" href="../../tag/21CC5153F56F/">6.1.22</a> for any $C&gt;0$, we have $\eta \land (\psi +C)\in \mathrm{PSH}(X,\theta )_{&gt;0}$. But then $\eta \land (\psi +C)$ is a candidate in the definition of $P_{\theta ,K}[\psi ](f)$, and we find 
+    
+<div class="equation">
+  \[  \eta \land (\psi +C)\leq P_{\theta ,K}[\psi ](f).  \]
+</div>
+<p>
+       By corollary <a data-tag="A6227B93" href="../../tag/21CC5153F56F/">6.1.22</a> again, we get 
+    
+<div class="equation">
+  \[  \eta =P_{\theta }[\psi ](\eta )\leq P_{\theta ,K}[\psi ](f).  \]
+</div>
+<p>
+       Our assertion follows now from <a data-tag="D923A122" href="../../tag/0F9B18404274/">14.1.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-DE13EB2D">
+<p><a class="environment-identifier" href="../../tag/72097BEFEC59/">Corollary <span data-tag="DE13EB2D">14.1.8</span>.</a><span data-gerby-tag="DE13EB2D"></span> Let $f\colon K\rightarrow (-\infty ,\infty ]$ be a function bounded from below and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation">
+  \[  \begin{aligned}  P_{\theta ,K}[\varphi ](f)= &amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _ P \varphi \Bigr \} \\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _ P \varphi \Bigr \} \\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ and } \eta \preceq _ P \varphi \Bigr \} \\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ and } \eta \preceq _ P \varphi \Bigr \} . \end{aligned}  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first apply proposition <a data-tag="D6D912F2" href="../../tag/A1C36A6249C7/">14.1.7</a>, 
+    
+<div class="equation">
+  \[  \begin{split}  P_{\theta ,K}[\varphi ](f)= &amp;  P_{\theta ,K}\left[P_{\theta }[\varphi ]\right](f)\\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _ P \varphi \Bigr \} . \end{split}  \]
+</div>
+<p>
+       Next observe that by <a data-tag="D923A122" href="../../tag/0F9B18404274/">14.1.4</a>, the latter can also be written as 
+    
+<div class="equation">
+  \[  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _ P \varphi \Bigr \} .  \]
+</div>
+<p>
+       Next we apply <a data-tag="72D04C56" href="../../tag/A86A369D4CBF/">14.1.5</a>; the remaining statements follow. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-3796A6E4">
+<p><a class="environment-identifier" href="../../tag/96B842B9BF11/">Corollary <span data-tag="3796A6E4">14.1.9</span>.</a><span data-gerby-tag="3796A6E4"></span> Let $f\colon K\rightarrow (-\infty ,\infty ]$ be a function bounded from below and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ be $\mathcal{I}$-good. Then </p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)=P_{\theta ,K}[\varphi ](f).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In fact, since $\varphi $ is $\mathcal{I}$-good, a potential $\eta \in \mathrm{PSH}(X,\theta )$ satisfies $\eta \preceq _ P \varphi $ if and only if $\eta \preceq _{\mathcal{I}} \varphi $. Therefore, our assertion follows from corollary <a data-tag="DE13EB2D" href="../../tag/72097BEFEC59/">14.1.8</a> and (<a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+Next, we make the following observations about the singularity types of our envelopes: <article class="env-lemma" id="sgpt-121EADE7">
+<p><a class="environment-identifier" href="../../tag/18E5130ACB80/">Lemma <span data-tag="121EADE7">14.1.10</span>.</a><span data-gerby-tag="121EADE7"></span> Let $f \colon K\rightarrow \mathbb {R}$ be a bounded function, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. We have </p>
+<div class="equation" id="sgpt-0D56B7C6"><span data-gerby-tag="0D56B7C6"></span>
+<span class="equation-label"><a data-tag="0D56B7C6" href="../../tag/EC4A564BADAB/">14.21</a></span>
+<div>\begin{equation}  P_{\theta ,K}[\varphi ](f)\sim P_{\theta }[\varphi ],\quad P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\sim P_{\theta }[\varphi ]_{\mathcal{I}}. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first prove the $P$-part of (<a data-tag="0D56B7C6" href="../../tag/EC4A564BADAB/">14.21</a>). 
+    <p>
+      If $\eta \in \mathrm{PSH}(X,\theta )$ with $\eta \preceq \varphi $ and $\eta \leq 0$, then $\eta +\inf _ K f$ is a candidate in the definition (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>), and hence, 
+    
+<div class="equation">
+  \[  \eta +\inf _ K f \leq P_{\theta ,K}[\varphi ](f).  \]
+</div>
+<p>
+       It follows that 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]+\inf _ K f \leq P_{\theta ,K}[\varphi ](f).  \]
+</div>
+<p>
+      Conversely, let $\eta \in \mathrm{PSH}(X,\theta )$ be such that 
+    
+<div class="equation">
+  \[  \eta |_ K\leq f,\quad \eta \preceq \varphi .  \]
+</div>
+<p>
+       Since $K$ is non-pluripolar, by <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a> we can find $C=C(\sup _ K f,K, X)&gt;0$ so that $\eta \leq C$. Hence $\eta -C$ is a candidate in the definition of $P_{\theta }[\varphi ]$, and hence 
+    
+<div class="equation">
+  \[  \eta -C\leq P_{\theta }[\varphi ].  \]
+</div>
+<p>
+       By <a data-tag="72D04C56" href="../../tag/A86A369D4CBF/">14.1.5</a>, this implies that 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f) \leq P_{\theta }[\varphi ] + C.  \]
+</div>
+<p>
+      The proof of the $\mathcal{I}$-part is similar, but we spell it out since this comparison will be used below. If $\eta \in \mathrm{PSH}(X,\theta )$ satisfies $\eta \leq 0$ and $\eta \preceq _{\mathcal{I}}\varphi $, then $\eta +\inf _ K f$ is a candidate in (<a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a>). Hence 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]_{\mathcal{I}}+\inf _ K f\leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f).  \]
+</div>
+<p>
+       Conversely, let $\eta \in \mathrm{PSH}(X,\theta )$ be a candidate in (<a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a>). Since $K$ is non-pluripolar and $f$ is bounded, the same compactness estimate gives a constant $C&gt;0$, independent of $\eta $, such that $\eta \leq C$. Then $\eta -C\leq 0$ and $\eta -C\preceq _{\mathcal{I}}\varphi $. By corollary <a data-tag="148EF361" href="../../tag/69E7C4B20FAE/">6.1.11</a>, 
+    
+<div class="equation">
+  \[  \eta -C\leq P_{\theta }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       Taking the upper envelope over all such $\eta $ gives 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\leq P_{\theta }[\varphi ]_{\mathcal{I}}+C.  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-71A3EC87">
+<p><a class="environment-identifier" href="../../tag/CE1417F951E3/">Corollary <span data-tag="71A3EC87">14.1.11</span>.</a><span data-gerby-tag="71A3EC87"></span> Let $f\colon K\rightarrow \mathbb {R}$ be a bounded function, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-927777D3"><span data-gerby-tag="927777D3"></span>
+<span class="equation-label"><a data-tag="927777D3" href="../../tag/A99869D43853/">14.22</a></span>
+<div>\begin{equation}  P_{\theta ,K}[\varphi ](f)=P_{\theta ,X}[\varphi ]\left( P_{\theta ,K}[V_{\theta }](f) \right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take any $\eta \in \mathrm{PSH}(X,\theta )$ with $\eta \preceq \varphi $ and $\eta |_ K\leq f$ quasi-everywhere, then 
+    
+<div class="equation">
+  \[  \eta \leq P_{\theta ,K}[\varphi ](f)\leq P_{\theta ,K}[V_{\theta }](f).  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  \eta \leq P_{\theta ,X}[\varphi ]\left( P_{\theta ,K}[V_{\theta }](f) \right).  \]
+</div>
+<p>
+       So we conclude the $\leq $ direction in (<a data-tag="927777D3" href="../../tag/A99869D43853/">14.22</a>). 
+    <p>
+      For the reverse direction, take $\eta \in \mathrm{PSH}(X,\theta )_{&gt;0}$ such that 
+    
+<div class="equation">
+  \[  \eta \preceq \varphi ,\quad \eta \leq P_{\theta ,K}[V_{\theta }](f) \quad \textup{quasi-everywhere}.  \]
+</div>
+<p>
+       Then $\eta |_ K\leq f$ quasi-everywhere by proposition <a data-tag="4AD38E25" href="../../tag/C9561913A3E8/">14.1.3</a>. Hence 
+    
+<div class="equation">
+  \[  \eta \leq P_{\theta ,K}[\varphi ](f).  \]
+</div>
+<p>
+       By corollary <a data-tag="DE13EB2D" href="../../tag/72097BEFEC59/">14.1.8</a>, the $\geq $ direction in (<a data-tag="927777D3" href="../../tag/A99869D43853/">14.22</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-B13AC61C497D" data-section-entries="0B2DE1BB9170 11BA40C76F9B 12F5599D8900 1BDE5E6D4627 2F195F41BD70 32CDA8E3EB57 765C3766A729 8353FF09478E 94F4F91642C8 9724C0B32032 9790F808BF37 A58ACF533BAE B13AC61C497D D21332713DB8 D22CB4C7F0CC D7B3984EBF7A E4ED4F8B05A8 FFCF7AC9E703"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/B13AC61C497D/">14.2 Partial equilibrium measures</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="89559DC1"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$, and $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a pseudo-effective cohomology class. 
+</p>
+
+<article class="env-definition" id="sgpt-BCC4C3CA">
+<p><a class="environment-identifier" href="../../tag/E4ED4F8B05A8/">Definition <span data-tag="BCC4C3CA">14.2.1</span>.</a><span data-gerby-tag="BCC4C3CA"></span> A <em>weighted subset</em> of $X$ is a pair $(K,v)$ consisting of a closed non-pluripolar subset $K\subseteq X$ and a function $v\in C^0(K)$. </p>
+</article> The next result motivates our terminology to call the measures $\theta _{P_{\theta ,K}[\varphi ](f)}^ n$ the <em>partial equilibrium measures</em> of our context: <article class="env-lemma" id="sgpt-EBEB10DF">
+<p><a class="environment-identifier" href="../../tag/D7B3984EBF7A/">Lemma <span data-tag="EBEB10DF">14.2.2</span>.</a><span data-gerby-tag="EBEB10DF"></span> Let $(K,v)$ be a weighted subset of $X$, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-0A546227"><span data-gerby-tag="0A546227"></span>
+<span class="equation-label"><a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a></span>
+<div>\begin{equation}  \int _{X\setminus K}\theta _{P_{\theta ,K}[\varphi ](v)}^ n=0,\quad \int _ K \mathds {1}_{\left\{ P_{\theta ,K}[\varphi ](v)|_ K\neq v\right\} }\theta _{P_{\theta ,K}[\varphi ](v)}^ n=0. \end{equation}</div>
+</div>
+<p> More precisely, we have </p>
+<div class="equation" id="sgpt-907FAB17"><span data-gerby-tag="907FAB17"></span>
+<span class="equation-label"><a data-tag="907FAB17" href="../../tag/D22CB4C7F0CC/">14.24</a></span>
+<div>\begin{equation}  \theta _{P_{\theta ,K}[\varphi ](v)}^ n\leq \mathds {1}_{\left\{ P_{\theta ,K}[\varphi ](v)|_ K=P_{\theta ,K}[V_{\theta }](v)|_ K=v\right\} }\, \theta _{P_{\theta ,K}[V_{\theta }](v)}^ n. \end{equation}</div>
+</div>
+</article> Here $\{ P_{\theta ,K}[\varphi ](v)|_ K\neq v\} $ and $\{ P_{\theta ,K}[\varphi ](v)|_ K=P_{\theta ,K}[V_{\theta }](v)|_ K=v\} $ are understood as consisting of points of $K$ satisfying these constraints. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first prove (<a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a>) when $\varphi = V_{\theta }$. 
+    <p>
+      Let $S\subseteq X$ be a proper analytic subset, such that $V_{\theta }$ is locally bounded on $X\setminus S$. Such $S$ exists by <a data-tag="9D233D25" href="../../tag/F77E450F00FD/">2.4.6</a>. Fix holomorphic balls $B\Subset B'\Subset X\setminus S$. 
+    <p>
+      By proposition <a data-tag="BAE53833" href="../../tag/1D624ECF05E9/">1.2.3</a> and <a data-tag="72D04C56" href="../../tag/A86A369D4CBF/">14.1.5</a>, we can take an increasing sequence $(\eta _ j)_ j$ in $\mathrm{PSH}(X,\theta )$ such that 
+    
+<div class="equation">
+  \[  \eta _ j\nearrow P_{\theta ,K}[V_{\theta }](v)\textup{ a.e.},\quad \eta _ j|_ K\leq v\textup{ for all }j\geq 1.  \]
+</div>
+<p>
+       Note that $P_{\theta ,K}[V_{\theta }](v)\sim V_{\theta }$ by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>. Take $C&gt;0$ so that 
+    
+<div class="equation">
+  \[  \left.\left( P_{\theta ,K}[V_{\theta }](v) \right)\right|_ K-C\leq v.  \]
+</div>
+<p>
+       Then we may replace $\eta _ j$ by $\eta _ j\lor (P_{\theta ,K}[V_{\theta }](v)-C)$ and assume that $\eta _ j\sim V_{\theta }$ for each $j$. In particular, $\eta _ j$ is locally bounded on $X\setminus S$. 
+    <p>
+      For each $j\geq 1$, let $\gamma _ j\in \mathrm{PSH}(X,\theta )$ be the balayage of $\eta _ j$ on $B$, defined in proposition <a data-tag="C2EEAB25" href="../../tag/5F9E17A436E9/">1.5.9</a>. Note that $(\gamma _ j)_ j$ is increasing due to proposition <a data-tag="E9311945" href="../../tag/EFFC20773E2E/">1.2.15</a>. 
+    <p>
+      For the first equality in (<a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a>), we may assume that $B\Subset X\setminus (S \cup K)$. It suffices to show that $\theta _{P_{\theta ,K}[V_{\theta }](v)}^ n$ does not charge $B$. 
+    <p>
+      Since $B$ lies outside $K$ by assumption, we also have $\gamma _ j|_ K=\eta _ j|_ K \leq v$ for all $j\geq 1$. In particular, $\gamma _ j\leq P_{\theta ,K}[V_{\theta }](v)$. 
+    <p>
+      It follows that $\gamma _ j \nearrow P_{\theta ,K}[V_{\theta }](v)$ almost everywhere as well. Testing against non-negative continuous functions supported in $B$ and using theorem <a data-tag="65F7AFC0" href="../../tag/B3DC3180FF35/">2.4.7</a>, we find that $\theta ^ n_{P_{\theta ,K}[V_{\theta }](v)}$ does not charge $B$, as desired. 
+    <p>
+      We next prove the second equality in (<a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a>). The proof is essentially the same as that of <a data-tag="7C47C63A" href="../../tag/2904B26253E2/">2.4.13</a>. 
+    <p>
+      It suffices to show that $\theta ^ n_{P_{\theta ,K}[V_{\theta }](v)}$ does not charge the set $K\cap \{ P_{\theta ,K}[V_{\theta }](v)|_ K&lt;v\} $. 
+    <p>
+      Let $x\in (X\setminus S) \cap K$ be a point such that $P_{\theta ,K}[V_{\theta }](v)(x)&lt;v(x)-\epsilon $ for some $\epsilon &gt;0$. We may assume that $x\in B$ and $B'$ is small enough, so that 
+    
+<ol>
+<li class="custom-item" id="sgpt-CEEDA9C6"><span data-gerby-tag="CEEDA9C6"></span><p>
+ $P_{\theta ,K}[V_{\theta }](v)|_{\overline{B'}}&lt;v(x)-\epsilon $. 
+</p>
+</li><li class="custom-item" id="sgpt-387210EA"><span data-gerby-tag="387210EA"></span><p>
+ $v|_{\overline{B'}\cap K}&gt;v(x)-\epsilon $. 
+</p>
+</li>
+</ol>
+<p>
+       By <a data-tag="CEEDA9C6" href="../../tag/B13AC61C497D/#sgpt-CEEDA9C6">1</a>, we have $\gamma _ j|_{\partial B}\leq v(x)-\epsilon $, hence by proposition <a data-tag="E9311945" href="../../tag/EFFC20773E2E/">1.2.15</a>, $\gamma _ j|_ B\leq v(x)-\epsilon $. By <a data-tag="387210EA" href="../../tag/B13AC61C497D/#sgpt-387210EA">2</a>, we have $\gamma _ j|_{B\cap K}\leq v|_{B\cap K}$. On the other hand, $\gamma _ j|_{K\setminus B}=\eta _{j}|_{K\setminus B}\leq v|_{K\setminus B}$. Therefore, $\gamma _ j|_ K\leq v$. It follows again that $\gamma _ j\leq P_{\theta ,K}[V_{\theta }](v)$. Therefore, we conclude as in the previous paragraph that $\gamma _ j\nearrow P_{\theta ,K}[V_{\theta }](v)$. Thus, testing against non-negative continuous functions supported in $B$, we conclude that $\theta ^ n_{P_{\theta ,K}[V_{\theta }](v)}$ does not charge $B$ again by theorem <a data-tag="65F7AFC0" href="../../tag/B3DC3180FF35/">2.4.7</a>. 
+    <p>
+<strong>Step 2</strong>. We handle the general case. 
+    <p>
+      By corollary <a data-tag="71A3EC87" href="../../tag/CE1417F951E3/">14.1.11</a>, 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](v) = P_{\theta ,X}[\varphi ]\left(P_{\theta ,K}[V_{\theta }](v)\right).  \]
+</div>
+<p>
+       Now corollary <a data-tag="496CCBFB" href="../../tag/B6EF8456606F/">3.1.8</a> gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  \theta _{P_{\theta ,K}[\varphi ](v)}^ n \leq &amp;  \mathds {1}_{\left\{ P_{\theta ,K}[\varphi ](v) = P_{\theta ,K}[V_{\theta }](v)\right\} } \theta _{P_{\theta ,K}[V_{\theta }](v)}^ n \\  \leq &amp;  \mathds {1}_{\left\{ P_{\theta ,K}[\varphi ](v)|_ K=P_{\theta ,K}[V_{\theta }](v)|_ K=v\right\} }\, \theta _{P_{\theta ,K}[V_{\theta }](v)}^ n, \end{aligned}  \]
+</div>
+<p>
+       where in the second inequality we have used Step 1. Hence (<a data-tag="907FAB17" href="../../tag/D22CB4C7F0CC/">14.24</a>) follows, and <em>a fortiori</em> (<a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a>) follows as well. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-4CFF5B20">
+<p><a class="environment-identifier" href="../../tag/9790F808BF37/">Corollary <span data-tag="4CFF5B20">14.2.3</span>.</a><span data-gerby-tag="4CFF5B20"></span> Let $v\in C^0(K)$ and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-A4662126"><span data-gerby-tag="A4662126"></span>
+<span class="equation-label"><a data-tag="A4662126" href="../../tag/FFCF7AC9E703/">14.27</a></span>
+<div>\begin{equation}  \begin{aligned}  \int _{(X\setminus K)\cup \left\{ P_{\theta ,K}[\varphi ](v)&lt;v\right\} }\theta ^ n_{P_{\theta ,K}[\varphi ](v)}=&amp;  0,\\  \int _{(X\setminus K)\cup \left\{ P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)&lt;v\right\} }\theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}=&amp;  0. \end{aligned} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first equation in (<a data-tag="A4662126" href="../../tag/FFCF7AC9E703/">14.27</a>) follows from <a data-tag="EBEB10DF" href="../../tag/D7B3984EBF7A/">14.2.2</a>. For the second, it suffices to observe that 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)=P_{\theta ,K}\left[P_{\theta }[\varphi ]_{\mathcal{I}}\right]_{\mathcal{I}}(v)=P_{\theta ,K}\left[P_{\theta }[\varphi ]_{\mathcal{I}}\right](v)  \]
+</div>
+<p>
+       by corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-definition" id="sgpt-685DB850">
+<p><a class="environment-identifier" href="../../tag/12F5599D8900/">Definition <span data-tag="685DB850">14.2.4</span>.</a><span data-gerby-tag="685DB850"></span> Given $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, we define the <em>partial equilibrium energy</em> functional $\mathcal{E}_{\theta ,K}^{\varphi }\colon C^0(K)\rightarrow \mathbb {R}$ as follows: given $v \in C^0(K)$, we set </p>
+<div class="equation">
+<span class="equation-label">14.30</span>
+<div>\begin{equation}  \mathcal{E}_{\theta ,K}^{\varphi }(v)\coloneqq E_{\theta }^{P_{\theta }[\varphi ]_{\mathcal{I}}}\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right). \end{equation}</div>
+</div>
+</article> Recall that the energy $E_{\theta }^{P_{\theta }[\varphi ]_{\mathcal{I}}}$ functional is defined in definition <a data-tag="40DF40B7" href="../../tag/8A07570966F8/">3.1.35</a>. 
+
+<p>
+Note that by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>, we have 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\in \mathcal{E}^{\infty }\left(X,\theta ;P_{\theta }[\varphi ]_{\mathcal{I}}\right),  \]
+</div>
+<p>
+ so $\mathcal{E}_{\theta ,K}^{\varphi }(v)\in \mathbb {R}$. 
+</p>
+
+<article class="env-proposition" id="sgpt-0540AF93">
+<p><a class="environment-identifier" href="../../tag/765C3766A729/">Proposition <span data-tag="0540AF93">14.2.5</span>.</a><span data-gerby-tag="0540AF93"></span> Let $v,f \in C^0(K)$ and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then $\mathbb {R}\ni t \mapsto \mathcal{E}_{\theta ,K}^{\varphi }(v+tf)$ is differentiable and </p>
+<div class="equation" id="sgpt-1D3D6779"><span data-gerby-tag="1D3D6779"></span>
+<span class="equation-label"><a data-tag="1D3D6779" href="../../tag/0B2DE1BB9170/">14.31</a></span>
+<div>\begin{equation}  \frac{\mathrm{d}}{\mathrm{d}t}\mathcal{E}_{\theta ,K}^{\varphi }(v+tf) = \int _ K f\,  \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)} \end{equation}</div>
+</div>
+<p> for all $t\in \mathbb {R}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $\varphi $ is $\mathcal{I}$-model by replacing $\varphi $ by $P_{\theta }[\varphi ]_{\mathcal{I}}$. 
+    <p>
+      Note that it suffices to prove (<a data-tag="1D3D6779" href="../../tag/0B2DE1BB9170/">14.31</a>) at $t=0$, which is equivalent to 
+    
+<div class="equation" id="sgpt-ED53530F"><span data-gerby-tag="ED53530F"></span>
+<span class="equation-label"><a data-tag="ED53530F" href="../../tag/94F4F91642C8/">14.32</a></span>
+<div>\begin{equation}  \lim _{t\to 0}\frac{E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)}{t}=\int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}. \end{equation}</div>
+</div>
+<p>
+       It suffices to prove the right derivative at $0$ for an arbitrary $f$; applying the same argument to $-f$ then gives the left derivative. In other words, we need to prove that 
+    
+<div class="equation" id="sgpt-0C5BB3ED"><span data-gerby-tag="0C5BB3ED"></span>
+<span class="equation-label"><a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a></span>
+<div>\begin{equation}  \lim _{t\to 0+}\frac{E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)}{t}=\int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}. \end{equation}</div>
+</div>
+<p>
+      We first reduce the proof of (<a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a>) to the case $f\leq 0$. Assume that this case is known. Choose $A\in \mathbb R$ such that $f-A\leq 0$ on $K$. Since for any $t&gt;0$, 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal I}\Bigl ( v+t(f-A) \Bigr )= P_{\theta ,K}[\varphi ]_{\mathcal I}(v+tf)-tA,  \]
+</div>
+<p>
+       then we have 
+    
+<div class="equation">
+  \[  \int _ K f\,  \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}=\int _ K (f-A)\,  \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}+A\int _ X \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}.  \]
+</div>
+<p>
+       By (<a data-tag="3F192A6A" href="../../tag/BC7744A40FEC/">3.71</a>), for any $t&gt;0$, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\varphi }\Bigl (P_{\theta ,K}[\varphi ]_{\mathcal{I}}\left(v+t(f-A)\right)\Bigr )=E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-tA\int _ X\theta _{\varphi }^ n.  \]
+</div>
+<p>
+       So the limit in (<a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a>) exists and is equal to the left-hand side of (<a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a>) with $f-A$ in place of $f$ plus $A\int _ X\theta _{\varphi }^ n$. So (<a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a>) for $f-A$ implies the desired formula for $f$ in view of <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a> and the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>. Hence we may assume that $f\leq 0$. 
+    <p>
+      Fix $t&gt;0$. Set 
+    
+<div class="equation">
+  \[  \eta _ t\coloneqq P_{\theta ,K}[\varphi ]_{\mathcal I}(v+tf),\quad \eta _0\coloneqq P_{\theta ,K}[\varphi ]_{\mathcal I}(v).  \]
+</div>
+<p>
+       By the comparison principle (<a data-tag="CCB92D06" href="../../tag/EAAF267DE59E/">3.59</a>) and proposition <a data-tag="ABE17BA7" href="../../tag/4280CB108A7E/">3.1.45</a>, we find 
+    
+<div class="equation">
+  \[  \begin{aligned}  E_{\theta }^{\varphi }(\eta _ t)-E_{\theta }^{\varphi }(\eta _0) ={}&amp; \frac{1}{n+1}\sum _{i=0}^ n\int _ X(\eta _ t-\eta _0)\,  \theta _{\eta _ t}^ i\wedge \theta _{\eta _0}^{n-i}\\  \leq {}&amp;  \int _ X(\eta _ t-\eta _0)\, \theta _{\eta _0}^ n. \end{aligned}  \]
+</div>
+<p>
+       By <a data-tag="EBEB10DF" href="../../tag/D7B3984EBF7A/">14.2.2</a> and corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a>, the measure $\theta _{\eta _0}^ n$ is carried by $K\cap \{ \eta _0=v\} $, and the measure $\theta _{\eta _ t}^ n$ is carried by $K\cap \{ \eta _ t=v+tf\} $. On $K\cap \{ \eta _0=v\} $, we have $\eta _ t\leq v+tf=\eta _0+tf$, hence 
+    
+<div class="equation">
+  \[  \eta _ t-\eta _0\leq tf.  \]
+</div>
+<p>
+       On $K\cap \{ \eta _ t=v+tf\} $, we have $\eta _0\leq v$, hence 
+    
+<div class="equation">
+  \[  \eta _ t-\eta _0\geq tf.  \]
+</div>
+<p>
+       It follows that 
+    
+<div class="equation">
+  \[  \int _ X(\eta _ t-\eta _0)\, \theta _{\eta _0}^ n \leq t\int _ K f\, \theta _{\eta _0}^ n  \]
+</div>
+<p>
+       and 
+    
+<div class="equation">
+  \[  \int _ X(\eta _ t-\eta _0)\, \theta _{\eta _ t}^ n \geq t\int _ K f\, \theta _{\eta _ t}^ n.  \]
+</div>
+<p>
+       Thus, letting $t\to 0+$, we get the inequality 
+    
+<div class="equation">
+  \[  \varlimsup _{t\to 0+}\frac{E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)}{t}\leq \int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}.  \]
+</div>
+<p>
+       Similarly, for $t&gt;0$, we have 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)\\  \geq &amp;  \int _ X \left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)-P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)\, \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)}^ n\\  \geq &amp;  t\int _ K f\, \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)}^ n. \end{aligned}  \]
+</div>
+<p>
+       Letting $t\to 0+$, we find 
+    
+<div class="equation">
+  \[  \varliminf _{t\to 0+}\frac{E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)}{t}\geq \int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}.  \]
+</div>
+<p>
+       Here we used the following elementary continuity consequence: 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)-t\| f\| _{C^0(K)} \leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf) \leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)  \]
+</div>
+<p>
+       for $t&gt;0$, and hence $P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf) \nearrow P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)$ almost everywhere when $t\to 0+$. Next we claim that 
+    
+<div class="equation">
+  \[  \int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}\leq \lim _{t\to 0+} \int _ K f\, \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)}^ n.  \]
+</div>
+<p>
+       Choose a continuous extension $\tilde f\in C^0(X)$ of $f$. Since <a data-tag="EBEB10DF" href="../../tag/D7B3984EBF7A/">14.2.2</a>, corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a> show that all the measures appearing here are carried by $K$, the integrals over $K$ against $f$ are the same as the integrals over $X$ against $\tilde f$. Thus corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">2.4.9</a> applies. 
+    <p>
+      We conclude (<a data-tag="ED53530F" href="../../tag/94F4F91642C8/">14.32</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-858E47C8">
+<p><a class="environment-identifier" href="../../tag/D21332713DB8/">Lemma <span data-tag="858E47C8">14.2.6</span>.</a><span data-gerby-tag="858E47C8"></span> Assume that $\{ \theta \} $ represents a big cohomology class. Fix a Kähler form $\omega $ on $X$ and a weighted subset $(K,v)$ of $X$. There exists a uniformly bounded increasing sequence $(v^-_ j)_ j$ in $C^\infty (X)$ and a uniformly bounded decreasing sequence $(v^+_ j)_ j$ in $C^\infty (X)$, such that </p>
+<div class="equation" id="sgpt-F9802846"><span data-gerby-tag="F9802846"></span>
+<span class="equation-label"><a data-tag="F9802846" href="../../tag/32CDA8E3EB57/">14.39</a></span>
+<div>\begin{equation}  \sup _ X |v_ j^-|\leq C,\quad \sup _ X |v_ j^+|\leq C \end{equation}</div>
+</div>
+<p> for some constant $C$ depending only on $\| v\| _{C^0(K)}$, $X$, $K$ and $\theta +\omega $. Furthermore, for any $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ and any $\delta \in [0,1]$ we have the following: </p>
+<ol>
+<li class="custom-item" id="sgpt-24DFFBF8"><span data-gerby-tag="24DFFBF8"></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  P_{\theta +\delta \omega ,X}[\varphi ](v_ j^+) \searrow P_{\theta +\delta \omega ,K}[\varphi ](v),  \]
+</div>
+<p>
+ and 
+</p>
+<div class="equation">
+  \[  P_{\theta +\delta \omega ,X}[\varphi ](v^-_ j) \nearrow P_{\theta +\delta \omega ,K}[\varphi ](v)  \]
+</div>
+<p>
+ almost everywhere. 
+</p>
+</li><li class="custom-item" id="sgpt-5CD3789A"><span data-gerby-tag="5CD3789A"></span><p>
+ Suppose in addition that $\varphi $ is $\mathcal{I}$-good, then 
+</p>
+<div class="equation">
+  \[  \lim _{j\to \infty }\mathcal{E}_{\theta ,X}^{\varphi }(v_ j^-)=\mathcal{E}_{\theta ,K}^{\varphi }(v),\quad \lim _{j\to \infty }\mathcal{E}_{\theta ,X}^{\varphi }(v_ j^+)=\mathcal{E}_{\theta ,K}^{\varphi }(v).  \]
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. First we construct $(v^-_ j)_ j$. 
+    <p>
+      Let 
+    
+<div class="equation">
+  \[  C_{K,v} \coloneqq \sup \left\{ \sup _ X \eta : \eta \in \mathrm{PSH}(X,\theta +\omega ), \eta |_ K \leq v\right\} .  \]
+</div>
+<p>
+       Since $K$ is non-pluripolar, we have $C_{K,v} \in \mathbb {R}$ by <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a>. Set 
+    
+<div class="equation">
+  \[  M_{K,v}\coloneqq \max \{ C_{K,v}+1,\sup _ K v\} .  \]
+</div>
+<p>
+       Now define $\widetilde v \colon X \to \mathbb {R}$ as 
+    
+<div class="equation">
+  \[  \widetilde{v}(x)=\left\{  \begin{aligned}  v(x),&amp; \quad x\in K;\\  M_{K,v},&amp; \quad x\in X\setminus K. \end{aligned} \right.  \]
+</div>
+<p>
+       Since $M_{K,v}\geq \sup _ K v$, the function $\widetilde v$ is lower semicontinuous. Therefore there exists an increasing and uniformly bounded sequence $(v^-_ j)_ j$ in $C^\infty (X)$ such that $v^-_ j \nearrow \widetilde v$ and 
+    
+<div class="equation">
+  \[  \| v_ j^-\| _{C^0(X)}\leq \| \tilde{v}\| _{L^{\infty }(X)}+1.  \]
+</div>
+<p>
+       The right-hand side can clearly be bounded by a constant as in (<a data-tag="F9802846" href="../../tag/32CDA8E3EB57/">14.39</a>). 
+    <p>
+<strong>Step 2</strong>. We construct $(v_ j^+)_ j$. 
+    <p>
+      Since 
+    
+<div class="equation">
+  \[  h \coloneqq P_{\theta + \omega ,K}[V_{\theta +\omega }](v) \lor \left(\inf _ K v -1\right)  \]
+</div>
+<p>
+       is usc, there exists a decreasing and uniformly bounded sequence $(v^+_ j)_ j$ in $C^\infty (X)$ such that $v^+_ j \searrow h$. We may guarantee that 
+    
+<div class="equation">
+  \[  \| v^+_ j\| _{C^0(X)}\leq \| h\| _{L^{\infty }(X)}+1.  \]
+</div>
+<p>
+       Note that $\inf _ K v-1\leq h\leq C_{K,v} \lor (\inf _ K v-1)$. So (<a data-tag="F9802846" href="../../tag/32CDA8E3EB57/">14.39</a>) is satisfied. 
+    <p>
+<strong>Step 3</strong>. We finish the proof. Fix $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ and $\delta \in [0,1]$. 
+    <p>
+      Note that <a data-tag="5CD3789A" href="../../tag/D21332713DB8/#sgpt-5CD3789A">2</a> follows from corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a>, <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>, proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a> and <a data-tag="24DFFBF8" href="../../tag/D21332713DB8/#sgpt-24DFFBF8">1</a>. Let us prove <a data-tag="24DFFBF8" href="../../tag/D21332713DB8/#sgpt-24DFFBF8">1</a>. 
+    <p>
+<strong>Step 3.1</strong>. We prove <a data-tag="24DFFBF8" href="../../tag/D21332713DB8/#sgpt-24DFFBF8">1</a> for $(v^-_ j)_ j$. 
+    <p>
+      Observe that $P_{\theta + \delta \omega ,X}[\varphi ](v^-_ j)$ is increasing in $j\geq 1$, and 
+    
+<div class="equation">
+  \[  P_{\theta + \delta \omega ,X}[\varphi ]\left(v^-_ j\right)\leq P_{\theta + \delta \omega ,K}[\varphi ](v).  \]
+</div>
+<p>
+       We claim that 
+    
+<div class="equation" id="sgpt-363892A8"><span data-gerby-tag="363892A8"></span>
+<span class="equation-label"><a data-tag="363892A8" href="../../tag/A58ACF533BAE/">14.42</a></span>
+<div>\begin{equation}  P_{\theta + \delta \omega ,X}[\varphi ]\left(v^-_ j\right) \nearrow P_{\theta + \delta \omega ,K}[\varphi ](v)\quad \textup{a.e.}. \end{equation}</div>
+</div>
+<p>
+       Let $\eta \in \mathrm{PSH}(X,\theta +\delta \omega )$ be a potential such that $\eta \preceq \varphi $ and $\eta |_ K\leq v$. Take some $\epsilon &gt;0$. Then, since $\eta $ is upper semicontinuous, $\widetilde v$ is lower semicontinuous and $\eta &lt; \epsilon +\widetilde v$, compactness gives $j_0&gt;0$ such that $\eta &lt; \epsilon + v^-_ j$ for $j \geq j_0$. Hence, 
+    
+<div class="equation">
+  \[  \eta \leq \epsilon +P_{\theta + \delta \omega ,X}[\varphi ](v^-_ j)  \]
+</div>
+<p>
+       for $j\geq j_0$. Therefore, 
+    
+<div class="equation">
+  \[  \eta \leq \operatorname *{sup}_{j\geq 1}{}\! {}^{*} P_{\theta + \delta \omega ,X}[\varphi ]\left(v^-_ j\right)+\epsilon .  \]
+</div>
+<p>
+       Letting $\epsilon \to 0+$, we find 
+    
+<div class="equation">
+  \[  \eta \leq \operatorname *{sup}_{j\geq 1}{}\! {}^{*} P_{\theta + \delta \omega ,X}[\varphi ]\left(v^-_ j\right).  \]
+</div>
+<p>
+       Since $\eta $ is arbitrary, (<a data-tag="363892A8" href="../../tag/A58ACF533BAE/">14.42</a>) follows. 
+    <p>
+<strong>Step 3.2</strong>. We prove <a data-tag="24DFFBF8" href="../../tag/D21332713DB8/#sgpt-24DFFBF8">1</a> for $(v^+_ j)_ j$. 
+    <p>
+      Note that $P_{\theta + \delta \omega ,X}[\varphi ](v^+_ j)$ is decreasing in $j$, and 
+    
+<div class="equation" id="sgpt-5C420E8C"><span data-gerby-tag="5C420E8C"></span>
+<span class="equation-label"><a data-tag="5C420E8C" href="../../tag/11BA40C76F9B/">14.43</a></span>
+<div>\begin{equation}  \chi \coloneqq \lim _{j\to \infty } P_{\theta + \delta \omega ,X}[\varphi ]\left(v^+_ j\right) \geq P_{\theta + \delta \omega ,K}[\varphi ](v). \end{equation}</div>
+</div>
+<p>
+       In particular, $\chi \in \mathrm{PSH}(X,\theta +\delta \omega )_{&gt;0}$, since $P_{\theta + \delta \omega ,K}[\varphi ](v)$ has the same singularity types as $P_{\theta + \delta \omega }[\varphi ]$ by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>. Observe that 
+    
+<div class="equation">
+  \[  P_{\theta + \delta \omega ,X}[\varphi ]\left(v_ j^+\right)\leq v_ j^+  \]
+</div>
+<p>
+       for all $j\geq 1$, since $v_ j^+$ is continuous. Thus, $\chi \leq h$. On the other hand, $h|_ K\leq v$ quasi-everywhere. So in particular, $\chi |_{K}\leq v$ quasi-everywhere. On the other hand, 
+    
+<div class="equation">
+  \[  \chi \leq P_{\theta + \delta \omega ,X}[\varphi ]\left(v^+_1\right)\sim _ P \varphi  \]
+</div>
+<p>
+       by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>. Hence, by corollary <a data-tag="DE13EB2D" href="../../tag/72097BEFEC59/">14.1.8</a>, 
+    
+<div class="equation">
+  \[  \chi \leq P_{\theta + \delta \omega ,K}[\varphi ](v).  \]
+</div>
+<p>
+       Therefore, (<a data-tag="5C420E8C" href="../../tag/11BA40C76F9B/">14.43</a>) is an equality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-80FF1720">
+<p><a class="environment-identifier" href="../../tag/9724C0B32032/">Proposition <span data-tag="80FF1720">14.2.7</span>.</a><span data-gerby-tag="80FF1720"></span> Let $(K,v)$ be a weighted subset of $X$. Let $(\varphi _ j)_ j$ be a sequence in $\mathrm{PSH}(X,\theta )_{&gt;0}$ and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then the following hold: </p>
+<ol>
+<li class="custom-item" id="sgpt-FA1325C7"><span data-gerby-tag="FA1325C7"></span><p>
+ If $(\varphi _ j)_ j$ is decreasing, and $\varphi _ j\xrightarrow {d_ S}\varphi $, then 
+</p>
+<div class="equation" id="sgpt-71281688"><span data-gerby-tag="71281688"></span>
+<span class="equation-label"><a data-tag="71281688" href="../../tag/1BDE5E6D4627/">14.44</a></span>
+<div>\begin{equation}  P_{\theta ,K}[\varphi _ j]_{\mathcal{I}}(v) \searrow P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v),\quad P_{\theta ,K}[\varphi _ j](v) \searrow P_{\theta ,K}[\varphi ](v). \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-0F8D1EB8"><span data-gerby-tag="0F8D1EB8"></span><p>
+ If $\varphi _ j \nearrow \varphi $ almost everywhere then 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi _ j]_{\mathcal{I}}(v) \nearrow P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\textup{ a.e.},\quad P_{\theta ,K}[\varphi _ j](v) \nearrow P_{\theta ,K}[\varphi ](v) \textup{ a.e.}.  \]
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We only give the proof for the relative $\mathcal{I}$-envelopes; the proof for the relative $P$-envelopes is identical, replacing $P_{\theta }[\bullet ]_{\mathcal{I}}$ by $P_{\theta }[\bullet ]$ and using corollary <a data-tag="DE13EB2D" href="../../tag/72097BEFEC59/">14.1.8</a> for the final candidate condition. 
+    <p>
+      Set 
+    
+<div class="equation">
+  \[  \eta _ j\coloneqq P_{\theta ,K}[\varphi _ j]_{\mathcal{I}}(v),\quad \eta \coloneqq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v).  \]
+</div>
+<p>
+       By <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>, $d_ S(\eta _ j,P_{\theta }[\varphi _ j]_{\mathcal{I}})=0$ and $d_ S(\eta ,P_{\theta }[\varphi ]_{\mathcal{I}})=0$ for all $j$. Moreover, theorem <a data-tag="720E23D2" href="../../tag/88D575A3C46A/">6.2.27</a> gives 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi _ j]_{\mathcal{I}}\xrightarrow {d_ S}P_{\theta }[\varphi ]_{\mathcal{I}}  \]
+</div>
+<p>
+       in case <a data-tag="FA1325C7" href="../../tag/9724C0B32032/#sgpt-FA1325C7">1</a>, and the same convergence holds in case <a data-tag="0F8D1EB8" href="../../tag/9724C0B32032/#sgpt-0F8D1EB8">2</a> by corollary <a data-tag="B875A97B" href="../../tag/77738CEC8071/">6.2.9</a> and theorem <a data-tag="720E23D2" href="../../tag/88D575A3C46A/">6.2.27</a>. Consequently, $\eta _ j\xrightarrow {d_ S}\eta $ in both cases. 
+    <p>
+      Assume first that $(\varphi _ j)_ j$ is decreasing. Then $(\eta _ j)_ j$ is decreasing and $\eta _ j\geq \eta $. Let $\eta _\infty \coloneqq \inf _ j \eta _ j$. The Monge–Ampère masses of $\eta _ j$ converge to the mass of $\eta $, by the preceding $d_ S$-convergence and theorem <a data-tag="45C76D02" href="../../tag/713B9E26113B/">6.2.17</a>. Since $\eta _ j\geq \eta _\infty \geq \eta $, the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> gives 
+    
+<div class="equation">
+  \[  \int _ X\theta _{\eta _\infty }^ n=\int _ X\theta _\eta ^ n.  \]
+</div>
+<p>
+       Hence $\eta _ j\xrightarrow {d_ S}\eta _\infty $ by corollary <a data-tag="D2436235" href="../../tag/F84D53FDA599/">6.2.11</a>. The uniqueness of the $d_ S$-limit gives $d_ S(\eta _\infty ,\eta )=0$. Since $\eta _\infty \geq \eta $, proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a> implies $\eta _\infty \sim _ P \eta $. In particular, $\eta _\infty \preceq _{\mathcal{I}}\varphi $ by corollary <a data-tag="B623A66E" href="../../tag/FE600747C81E/">6.1.9</a>. The condition $\eta _\infty \leq v$ on $K$ quasi-everywhere is inherited from the $\eta _ j$'s, so $\eta _\infty $ is a candidate for $P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)$. Thus $\eta _\infty \leq \eta $, and the reverse inequality was already observed. This proves the $\mathcal{I}$-part of <a data-tag="FA1325C7" href="../../tag/9724C0B32032/#sgpt-FA1325C7">1</a>. 
+    <p>
+      Assume next that $\varphi _ j\nearrow \varphi $ almost everywhere. Then $(\eta _ j)_ j$ is increasing and $\eta _ j\leq \eta $. Put $\tilde\eta \coloneqq \operatorname *{sup}_{}{}\! {}^{*}_ j \eta _ j$. By corollary <a data-tag="854E031E" href="../../tag/712499DFC37F/">14.1.6</a> and corollary <a data-tag="B875A97B" href="../../tag/77738CEC8071/">6.2.9</a>, we have $\eta _ j\xrightarrow {d_ S}\tilde\eta $. The $d_ S$-convergence above therefore gives $d_ S(\tilde\eta ,\eta )=0$, hence $\tilde\eta \sim _ P \eta $ by proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a>. In particular, $\tilde\eta \preceq _{\mathcal{I}}\varphi $ by corollary <a data-tag="B623A66E" href="../../tag/FE600747C81E/">6.1.9</a>. Also $\tilde\eta \leq v$ on $K$ quasi-everywhere by proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a>. Hence $\tilde\eta $ is a candidate for $P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)$, so $\tilde\eta \leq \eta $. Since $\eta _ j\leq \eta $ for all $j$, this proves $\eta _ j\nearrow \eta $ almost everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-0211344889F8" data-section-entries="0211344889F8"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/0211344889F8/">14.3 Quantization of partial equilibrium measures</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="93E844BE"></span></div>
+<p>
+Let $X$ be a connected compact Kähler manifold of dimension $n$, let $L$ be a pseudo-effective line bundle on $X$, and let $h$ be a Hermitian metric on $L$. Set $\theta =c_1(L,h)$. Let $(T,h_ T)$ be a Hermitian line bundle on $X$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-B2D64A3DB08E" data-section-entries="46ED22785DA5 48A0DBADBA86 A86573651304 B2D64A3DB08E E365D575C322 E97173FEFAFD F1111E54880E FE92486453EB"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/B2D64A3DB08E/">14.3.1 Bernstein–Markov measures</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="4C394C59"></span></div>
+<p>
+  Let $K\subseteq X$ be a closed non-pluripolar subset, and $v\colon K\rightarrow [-\infty ,\infty )$ be a measurable function. 
+</p>
+
+<article class="env-definition" id="sgpt-D06183ED">
+<p><a class="environment-identifier" href="../../tag/E365D575C322/">Definition <span data-tag="D06183ED">14.3.1</span>.</a><span data-gerby-tag="D06183ED"></span> Let $\mu $ be a Borel probability measure on $K$. We introduce the following functions on $\mathrm{H}^0(X,L^ k \otimes T)$ ($k\geq 1$), with values possibly equal to $\infty $:   </p>
+<div class="equation" id="sgpt-81BA06A0"><span data-gerby-tag="81BA06A0"></span>
+<span class="equation-label"><a data-tag="81BA06A0" href="../../tag/46ED22785DA5/">14.45</a></span>
+<div>\begin{equation}  \begin{aligned}  N^ k_{v,\mu }(s) \coloneqq &amp;  \left(\int _ K h^ k \otimes h_ T(s,s) \mathrm{e}^{-kv} \, \mathrm{d}\mu \right)^{1/2},\\  N^ k_{v,K}(s) \coloneqq &amp;  \sup _{K\setminus \{ v=-\infty \} } \left( h^ k \otimes h_ T(s,s)\mathrm{e}^{-kv}\right)^{1/2}. \end{aligned} \end{equation}</div>
+</div>
+</article> Observe that if $\mu $ puts no mass on $\{ v=-\infty \} $ then we always have 
+
+<div class="equation" id="sgpt-2E2D0803"><span data-gerby-tag="2E2D0803"></span>
+<span class="equation-label"><a data-tag="2E2D0803" href="../../tag/F1111E54880E/">14.48</a></span>
+<div>\begin{equation}  N^ k_{v,\mu }(s)\leq N^ k_{v,K}(s). \end{equation}</div>
+</div>
+
+We start with the following elementary observation: <article class="env-lemma" id="sgpt-B9D988D1">
+<p><a class="environment-identifier" href="../../tag/E97173FEFAFD/">Lemma <span data-tag="B9D988D1">14.3.2</span>.</a><span data-gerby-tag="B9D988D1"></span> Let $v_1,v_2\colon K\rightarrow [-\infty ,\infty )$ be two measurable functions such that </p>
+<ol>
+<li class="custom-item" id="sgpt-BBA04616"><span data-gerby-tag="BBA04616"></span><p>
+ $v_1\leq v_2$; 
+</p>
+</li><li class="custom-item" id="sgpt-34C1BACD"><span data-gerby-tag="34C1BACD"></span><p>
+ $\{ v_1=-\infty \} =\{ v_2=-\infty \} $. 
+</p>
+</li>
+</ol>
+<p> Then for any $s\in \mathrm{H}^0(X,L^ k\otimes T)$ ($k\geq 1$), we have </p>
+<div class="equation">
+  \[  N_{v_1,K}^ k(s)\geq N_{v_2,K}^ k(s).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows immediately from the definition (<a data-tag="81BA06A0" href="../../tag/46ED22785DA5/">14.45</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-definition" id="sgpt-F7906E4A">
+<p><a class="environment-identifier" href="../../tag/48A0DBADBA86/">Definition <span data-tag="F7906E4A">14.3.3</span>.</a><span data-gerby-tag="F7906E4A"></span> Let $(K,v)$ be a weighted subset of $X$. A Borel probability measure $\mu $ on $K$ is <em>Bernstein–Markov</em> with respect to $(K,v)$ if for each $\epsilon &gt;0$, there is a constant $C_\epsilon &gt;0$ such that </p>
+<div class="equation" id="sgpt-340F89A4"><span data-gerby-tag="340F89A4"></span>
+<span class="equation-label"><a data-tag="340F89A4" href="../../tag/FE92486453EB/">14.49</a></span>
+<div>\begin{equation}  N^ k_{v,K}(s) \leq C_\epsilon \mathrm{e}^{\epsilon k} N^ k_{v,\mu }(s) \end{equation}</div>
+</div>
+<p> for any $s \in \mathrm{H}^0(X,L^ k \otimes T)$ and any $k\in \mathbb {Z}_{&gt;0}$. We write $\mathrm{BM}(K,v)$ for the set of Bernstein–Markov measures with respect to $(K,v)$. </p>
+</article> As pointed out in <span class="cite">[<a href="../../references/#R8426D9649EC6">BBWN11</a>]</span>, any volume form on $X$ is Bernstein–Markov with respect to $(X,v)$, with $v \in C^\infty (X)$. 
+
+
+<article class="env-proposition" id="sgpt-595333F9">
+<p><a class="environment-identifier" href="../../tag/A86573651304/">Proposition <span data-tag="595333F9">14.3.4</span>.</a><span data-gerby-tag="595333F9"></span> Assume that $(K,v)$ is a weighted subset of $X$. Then </p>
+<ol>
+<li class="custom-item" id="sgpt-D6972580"><span data-gerby-tag="D6972580"></span><p>
+ $N^ k_{v,K}$ is a norm on $\mathrm{H}^0(X,L^ k\otimes T)$. 
+</p>
+</li><li class="custom-item" id="sgpt-0C077AB2"><span data-gerby-tag="0C077AB2"></span><p>
+ For any $\mu \in \mathrm{BM}(K,v)$, $N^ k_{v,\mu }$ is a norm on $\mathrm{H}^0(X,L^ k\otimes T)$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="D6972580" href="../../tag/A86573651304/#sgpt-D6972580">1</a> As $v$ is bounded, $N^ k_{v,K}$ is clearly finite on $\mathrm{H}^0(X,L^ k\otimes T)$. In order to show that it is a norm, it suffices to show that for any $s\in \mathrm{H}^0(X,L^ k\otimes T)$, $N^ k_{v,K}(s)=0$ implies that $s=0$. In fact, we have $s|_ K=0$, hence $s=0$ by the connectedness of $X$ and the assumption that $K$ is non-pluripolar. 
+    <p>
+<a data-tag="0C077AB2" href="../../tag/A86573651304/#sgpt-0C077AB2">2</a> As $v$ is bounded, clearly $N^ k_{v,\mu }$ is finite and satisfies the triangle inequality. Non-degeneracy follows from the fact that $N^ k_{v,K}$ is a norm and (<a data-tag="340F89A4" href="../../tag/FE92486453EB/">14.49</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-774E9C5AFE10" data-section-entries="04790CD84F49 0DFF36A22512 129D3B333F18 14347C41585E 1B7624ED3973 2DBAE7A20C99 3504DA07F50F 4C368CFA09EB 4CE59F3C4805 4DF720497AC6 5AAAC502B9E5 5C6401E18EB3 725395815923 774E9C5AFE10 7EA15066EE63 889A68CCEC83 8FD19D2B07C7 922E6C36BCC8 A0F71B40AAE1 A6F9F2DF4A0D AC1B69834497 AC691D964EDB B1F17F151050 C3210B1F6DE6 C3C647253911 C700200CB6BE CBCF54FCD801 CE5263973CB7 D29819040D75 E9D132FDBF95 EA3E101DCA5E F431300C59C4 F547344ACE10 FD0D14628CD8 FFF9581DFDD2"><div class="source-variant" data-gerby-book="sgpt"><h2><a href="../../tag/774E9C5AFE10/">14.3.2 Partial Bergman kernels</a></h2><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> <span data-gerby-tag="993AA18C"></span></div>
+<p>
+  In this section, we fix a weighted subset $(K,v)$ of $X$ and $\mu \in \mathrm{BM}(K,v)$. 
+</p>
+
+<article class="env-definition" id="sgpt-FDFD9AC2">
+<p><a class="environment-identifier" href="../../tag/C3C647253911/">Definition <span data-tag="FDFD9AC2">14.3.5</span>.</a><span data-gerby-tag="FDFD9AC2"></span> For any $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, we introduce the <em>partial Bergman kernels</em> of $\varphi $ (with respect to $(K,v)$) as follows: For any $k\geq 1$, we introduce </p>
+<div class="equation">
+<span class="equation-label">14.50</span>
+<div>\begin{equation}  \begin{aligned}  B^ k_{v,\varphi , \mu }(x) \coloneqq \sup \left\{ h^ k \otimes h_ T(s,s)\mathrm{e}^{-kv}(x):s \in \mathrm{H}^0\left(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi )\right),\right.\\  \left. N^ k_{v,\mu }(s) \leq 1 \right\} ,\quad x\in K. \end{aligned} \end{equation}</div>
+</div>
+<p>  We extend $B^ k_{v,\varphi , \mu }$ to the whole $X$ by setting it to be $0$ outside $K$. </p>
+<p>The <em>partial Bergman measures</em> of $\varphi $ (with respect to $(K,v)$) are defined as </p>
+<div class="equation">
+<span class="equation-label">14.53</span>
+<div>\begin{equation}  \beta ^ k_{v,\varphi ,\mu } \coloneqq \frac{n!}{k^ n} B^ k_{v,\varphi ,\mu } \, \mathrm{d}\mu \end{equation}</div>
+</div>
+<p>  for each $k\geq 1$. </p>
+</article>
+
+
+<article class="env-remark" id="sgpt-E840961E">
+<p><a class="environment-identifier" href="../../tag/129D3B333F18/">Remark <span data-tag="E840961E">14.3.6</span>.</a><span data-gerby-tag="E840961E"></span> Recall that in the definition of $\beta ^ k_{v,\varphi ,\mu }$, the singular metric $\varphi $ only appears through the conditions $s \in \mathrm{H}^0(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi ))$. The pointwise norm used to define $\beta ^ k_{v,\varphi ,\mu }$ and $N^ k_{v,\mu }$ is defined via $v$ not $\varphi $. </p>
+<p>This leads to the following seemingly paradoxical consequence, if $\psi \in \mathrm{PSH}(X,\theta )$ and $\varphi \preceq _{\mathcal{I}}\psi $, then </p>
+<div class="equation">
+  \[  \beta ^ k_{v,\varphi ,\mu }\leq \beta ^ k_{v,\psi ,\mu }\quad \forall \, k\geq 1.  \]
+</div>
+<p> We shall apply this consequence without further mention in the sequel. </p>
+</article>
+
+<p>
+Observe that 
+</p>
+<div class="equation">
+  \[  \int _ X \beta ^ k_{v,\varphi ,\mu }=\frac{n!}{k^ n}h^0\left(X,T\otimes L^ k \otimes \mathcal{I}(k\varphi )\right).  \]
+</div>
+<p>
+ In particular, 
+</p>
+<div class="equation" id="sgpt-4F6600EE"><span data-gerby-tag="4F6600EE"></span>
+<span class="equation-label"><a data-tag="4F6600EE" href="../../tag/889A68CCEC83/">14.54</a></span>
+<div>\begin{equation}  \lim _{k\to \infty }\int _ X \beta ^ k_{v,\varphi ,\mu }=\operatorname{vol}\left(\theta _{\varphi }\right)=\int _ X \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}^ n \end{equation}</div>
+</div>
+
+ by theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a> and <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>. The goal of this section is to improve this result to the convergence of the Bergman kernels themselves: <article class="env-theorem" id="sgpt-FEA29A52">
+<p><a class="environment-identifier" href="../../tag/EA3E101DCA5E/">Theorem <span data-tag="FEA29A52">14.3.7</span>.</a><span data-gerby-tag="FEA29A52"></span> Suppose that $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-8772EE97"><span data-gerby-tag="8772EE97"></span>
+<span class="equation-label"><a data-tag="8772EE97" href="../../tag/A6F9F2DF4A0D/">14.55</a></span>
+<div>\begin{equation}  \beta ^ k_{v,\varphi ,\mu } \rightharpoonup \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}^ n,\quad \textup{as }k\to \infty . \end{equation}</div>
+</div>
+</article>
+
+<p>
+The proof will be given at the end of this subsection. We shall prove a few preliminaries at first. 
+</p>
+<p>
+Take a Kähler form $\omega $ on $X$ so that 
+</p>
+<div class="equation">
+  \[  \int _ X \omega ^ n = 1.  \]
+</div>
+
+<article class="env-proposition" id="sgpt-067310A5">
+<p><a class="environment-identifier" href="../../tag/4C368CFA09EB/">Proposition <span data-tag="067310A5">14.3.8</span>.</a><span data-gerby-tag="067310A5"></span> Assume here that $K=X$. Let $\varphi \in \mathrm{PSH}(X,\theta )$ be a potential with analytic singularities such that $\theta _{\varphi }$ is a Kähler current. If $v \in C^\infty (X)$, then </p>
+<div class="equation" id="sgpt-398820A1"><span data-gerby-tag="398820A1"></span>
+<span class="equation-label"><a data-tag="398820A1" href="../../tag/4DF720497AC6/">14.56</a></span>
+<div>\begin{equation}  \beta ^ k_{v,\varphi ,\omega ^ n} \rightharpoonup \theta _{P_{\theta ,X}[\varphi ]_{\mathcal{I}}(v)}^ n=\theta _{P_{\theta ,X}[\varphi ](v)}^ n\quad \textup{as }k\to \infty . \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The equality part in (<a data-tag="398820A1" href="../../tag/4DF720497AC6/">14.56</a>) follows from corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a>. It remains to prove the weak convergence. 
+    <p>
+      Let $\tau $ be the weak limit of a subsequence of $(\beta ^ k_{v,\varphi ,\omega ^ n})_ k$. In view of (<a data-tag="4F6600EE" href="../../tag/889A68CCEC83/">14.54</a>), it suffices to show that 
+    
+<div class="equation" id="sgpt-958477F3"><span data-gerby-tag="958477F3"></span>
+<span class="equation-label"><a data-tag="958477F3" href="../../tag/14347C41585E/">14.57</a></span>
+<div>\begin{equation}  \tau \leq \theta _{P_{\theta ,X}[\varphi ](v)}^ n. \end{equation}</div>
+</div>
+<p>
+      We can obtain an upper bound of $\tau $ via the observation: 
+    
+<div class="equation">
+  \[  \beta ^ k_{v,\varphi ,\omega ^ n} \leq \beta ^ k_{v,V_{\theta },\omega ^ n}.  \]
+</div>
+<p>
+       After replacing $\varphi $ by $V_{\theta }$, the corresponding problem is handled by <span class="cite">[<span class="postnote">Theorem 1.2</span>, <a href="../../references/#RAEC9F9ABA6C0">Ber11</a>]</span>, giving us 
+    
+<div class="equation">
+  \[  \beta ^ k_{v,V_{\theta },\omega ^ n} \rightharpoonup \theta _{P_{\theta ,X}[V_{\theta }](v)}^ n=\mathds {1}_{\left\{ v = P_{\theta ,X}[V_{\theta }](v)\right\} }\, \theta _ v^ n \quad \textup{as }k\to \infty ,  \]
+</div>
+<p>
+       where the last identity is due to proposition <a data-tag="C372831F" href="../../tag/BE692352C556/">3.1.21</a>. 
+    <p>
+      We obtain that 
+    
+<div class="equation" id="sgpt-E044ED0C"><span data-gerby-tag="E044ED0C"></span>
+<span class="equation-label"><a data-tag="E044ED0C" href="../../tag/1B7624ED3973/">14.58</a></span>
+<div>\begin{equation}  \tau \leq \mathds {1}_{\left\{ v = P_{\theta ,X}[V_{\theta }](v)\right\} }\, \theta _ v^ n. \end{equation}</div>
+</div>
+<p>
+       Now observe that it suffices to show that 
+    
+<div class="equation" id="sgpt-97DB299E"><span data-gerby-tag="97DB299E"></span>
+<span class="equation-label"><a data-tag="97DB299E" href="../../tag/C700200CB6BE/">14.59</a></span>
+<div>\begin{equation}  \tau \left\{ P_{\theta ,X}[\varphi ](v) &lt; v\right\} =0. \end{equation}</div>
+</div>
+<p>
+       Assuming this, then (<a data-tag="E044ED0C" href="../../tag/1B7624ED3973/">14.58</a>) further gives 
+    
+<div class="equation">
+  \[  \tau \leq \mathds {1}_{\left\{ P_{\theta ,X}[\varphi ](v)= v\right\} }\, \theta _ v^ n= \theta _{P_{\theta ,X}[\varphi ](v)}^ n,  \]
+</div>
+<p>
+       where the equality follows from proposition <a data-tag="C372831F" href="../../tag/BE692352C556/">3.1.21</a>, and (<a data-tag="958477F3" href="../../tag/14347C41585E/">14.57</a>) follows. 
+    <p>
+      It now remains to argue (<a data-tag="97DB299E" href="../../tag/C700200CB6BE/">14.59</a>). Fix a Kähler form $\omega $ on $X$. Observe that 
+    
+<div class="equation">
+  \[  P_{\theta +\epsilon \omega ,X}[\varphi ](v) \sim \varphi  \]
+</div>
+<p>
+       for all $\epsilon \geq 0$ by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a> and proposition <a data-tag="685DEAD4" href="../../tag/10F9DDE25703/">3.2.15</a>. The family $P_{\theta +\epsilon \omega ,X}[\varphi ](v)$ is decreasing as $\epsilon \to 0+$. Let 
+    
+<div class="equation">
+  \[  \chi \coloneqq \inf _{\epsilon &gt;0}P_{\theta +\epsilon \omega ,X}[\varphi ](v).  \]
+</div>
+<p>
+       Then $\chi \in \mathrm{PSH}(X,\theta )$ since $\chi \geq P_{\theta ,X}[\varphi ](v)$. Moreover $\chi \leq v$ and $\chi \preceq \varphi $. Hence 
+    
+<div class="equation">
+  \[  \chi \leq P_{\theta ,X}[\varphi ](v).  \]
+</div>
+<p>
+       Thus, equality holds, and 
+    
+<div class="equation">
+  \[  P_{\theta +\epsilon \omega ,X}[\varphi ](v)\searrow P_{\theta ,X}[\varphi ](v).  \]
+</div>
+<p>
+       In other words, 
+    
+<div class="equation">
+  \[  \left\{ P_{\theta ,X}[\varphi ](v) &lt; v\right\} =\bigcup _{\epsilon \in \mathbb {Q}_{&gt;0}}\left\{ P_{\theta +\epsilon \omega ,X}[\varphi ](v) &lt; v\right\} .  \]
+</div>
+<p>
+       So in order to show (<a data-tag="97DB299E" href="../../tag/C700200CB6BE/">14.59</a>), we may fix $\epsilon &gt;0$ and argue that 
+    
+<div class="equation" id="sgpt-A5D08148"><span data-gerby-tag="A5D08148"></span>
+<span class="equation-label"><a data-tag="A5D08148" href="../../tag/CE5263973CB7/">14.60</a></span>
+<div>\begin{equation}  \tau \left\{ P_{\theta +\epsilon \omega ,X}[\varphi ](v) &lt; v\right\} =0. \end{equation}</div>
+</div>
+<p>
+      Let $k\geq 1$, and $s \in \mathrm{H}^0(X,L^ k \otimes T \otimes \mathcal I(k\varphi ))$ be a section such that $N^ k_{v,\omega ^ n}(s) \leq 1$. Then by <span class="cite">[<span class="postnote">Lemma 4.1</span>, <a href="../../references/#RAEC9F9ABA6C0">Ber11</a>]</span>, there exists $C&gt;0$ such that 
+    
+<div class="equation">
+  \[  h^ k\otimes h_ T(s,s)\mathrm{e}^{-kv} \leq B^ k_{v,\varphi ,\omega ^ n} \leq B^ k_{v,V_{\theta },\omega ^ n} \leq k^ n C.  \]
+</div>
+<p>
+       This implies that 
+    
+<div class="equation">
+  \[  \frac{1}{k}\log h^ k \otimes h_ T(s,s) \leq v + \frac{\log C }{k} + n \frac{\log k}{ k }.  \]
+</div>
+<p>
+       We define $\varphi _ k$ as in proposition <a data-tag="012CB98E" href="../../tag/2DDBBF280789/">1.8.13</a>. Take $\alpha _ k\nearrow 1$ as in proposition <a data-tag="012CB98E" href="../../tag/2DDBBF280789/">1.8.13</a>. After adding a constant to $\varphi $, we may assume that $\varphi \leq 0$ on $X$. After replacing $\alpha _ k$ by a subsequence, we also have $\alpha _ k\varphi \in \mathrm{PSH}(X,\theta +\epsilon \omega )$ for all $k&gt;0$, and $\alpha _ k\varphi \searrow \varphi $. Then 
+    
+<div class="equation">
+  \[  \frac{1}{k}\log h^ k \otimes h_ T(s,s)\preceq \varphi _ k\preceq \alpha _ k\varphi .  \]
+</div>
+<p>
+       We notice that $\frac{1}{k}\log h^ k \otimes h_ T(s,s) \in \mathrm{PSH}(X, \theta + \epsilon \omega )$ for all $k \geq k_0(\epsilon )$. Indeed, 
+    
+<div class="equation">
+  \[  \frac{1}{k}\log h^ k\otimes h_ T(s,s) \in \mathrm{PSH}\left(X,\theta + k^{-1} c_1(T,h_ T)\right)  \]
+</div>
+<p>
+       by proposition <a data-tag="C3111E63" href="../../tag/0C02CD3B5D59/">1.8.4</a>. 
+    <p>
+      In particular, 
+    
+<div class="equation">
+  \[  \frac{1}{k}\log h^ k \otimes h_ T(s,s)-\frac{\log C}{k}-n\frac{\log k}{k}\leq P_{\theta +\epsilon \omega ,X}[\alpha _ k \varphi ](v).  \]
+</div>
+<p>
+       Now taking supremum over all candidates $s$, we obtain that 
+    
+<div class="equation" id="sgpt-108FE6BB"><span data-gerby-tag="108FE6BB"></span>
+<span class="equation-label"><a data-tag="108FE6BB" href="../../tag/725395815923/">14.61</a></span>
+<div>\begin{equation}  B^ k_{v,\varphi ,\omega ^ n} \leq C k^ n \mathrm{e}^{k \left(P_{\theta +\epsilon \omega ,X}[\alpha _ k \varphi ](v)-v\right)},\quad k \geq k_0. \end{equation}</div>
+</div>
+<p>
+      Now we prove (<a data-tag="A5D08148" href="../../tag/CE5263973CB7/">14.60</a>). First observe that $\alpha _ k\varphi \xrightarrow {d_ S}\varphi $ by <a data-tag="26714C3D" href="../../tag/7F9EDAFF39F9/">6.2.14</a>. Thus, by proposition <a data-tag="80FF1720" href="../../tag/9724C0B32032/">14.2.7</a>, 
+    
+<div class="equation">
+  \[  P_{\theta +\epsilon \omega ,X}[\alpha _ k \varphi ](v) \searrow P_{\theta +\epsilon \omega ,X}[\varphi ](v)  \]
+</div>
+<p>
+       and we get that 
+    
+<div class="equation">
+  \[  \bigcup _{k=1}^{\infty }\left\{ P_{\theta +\epsilon \omega ,X}[\alpha _ k \varphi ](v) &lt; v\right\} =\left\{ P_{\theta +\epsilon \omega ,X}[\varphi ](v) &lt; v\right\} .  \]
+</div>
+<p>
+       It suffices to show that $\tau $ does not put mass on the set $\{ P_{\theta +\epsilon \omega ,X}[\alpha _ m \varphi ](v) &lt; v\} $ for each fixed $m$. Fix a positive rational $\delta &gt;0$, it suffices to show that $\tau $ puts no mass on $F\coloneqq \{ P_{\theta +\epsilon \omega ,X}[\alpha _ m \varphi ](v) &lt; v-\delta \} $. Note that $F$ is open, and (<a data-tag="108FE6BB" href="../../tag/725395815923/">14.61</a>) gives $\beta ^\ell _{v,\varphi ,\omega ^ n}(F)\to 0$. Therefore, $\tau $ puts no mass on $F$ as well, proving (<a data-tag="A5D08148" href="../../tag/CE5263973CB7/">14.60</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-BD2EC558">
+<p><a class="environment-identifier" href="../../tag/A0F71B40AAE1/">Definition <span data-tag="BD2EC558">14.3.9</span>.</a><span data-gerby-tag="BD2EC558"></span> Take $k\geq 1$ and $\varphi \in \mathrm{PSH}(X,\theta )$, let $\operatorname{Norm}\mathrm{H}^0(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi ))$ be the space of norms on the vector space $\mathrm{H}^0(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi ))$. </p>
+<p>Let $\mathcal{L}_{k,\varphi } \colon \operatorname{Norm}\mathrm{H}^0(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi )) \to \mathbb R$ be the <em>partial Donaldson functional</em>: </p>
+<div class="equation">
+<span class="equation-label">14.62</span>
+<div>\begin{equation}  \mathcal{L}_{k,\varphi }(H) = \frac{n!}{k^{n+1}} \log \frac{\operatorname{vol}\{ s \in \mathrm{H}^0\left(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi )\right) : H(s) \leq 1\} }{\operatorname{vol}\left\{ s\in \mathrm{H}^0\left(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi )\right) : N^ k_{0,\omega ^ n}(s) \leq 1\right\} }, \end{equation}</div>
+</div>
+<p>  where $\operatorname{vol}$ is a Lebesgue measure on $\mathrm{H}^0(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi ))$. The normalization does not matter. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-A936078C">
+<p><a class="environment-identifier" href="../../tag/F547344ACE10/">Proposition <span data-tag="A936078C">14.3.10</span>.</a><span data-gerby-tag="A936078C"></span> Let $w,w' \in C^0(X)$ and $\varphi \in \mathrm{PSH}(X,\theta )$ be a potential with analytic singularities such that $\theta _{\varphi }$ is a Kähler current. Then </p>
+<div class="equation" id="sgpt-0592A047"><span data-gerby-tag="0592A047"></span>
+<span class="equation-label"><a data-tag="0592A047" href="../../tag/D29819040D75/">14.63</a></span>
+<div>\begin{equation}  \lim _{k\to \infty } \left(\mathcal{L}_{k,\varphi }(N^ k_{w,\omega ^ n}) - \mathcal{L}_{k,\varphi }(N^ k_{w',\omega ^ n}) \right)= \mathcal{E}_{\theta ,X}^{\varphi }(w)-\mathcal{E}_{\theta ,X}^{\varphi }(w'). \end{equation}</div>
+</div>
+<p> In particular, </p>
+<div class="equation" id="sgpt-331AC021"><span data-gerby-tag="331AC021"></span>
+<span class="equation-label"><a data-tag="331AC021" href="../../tag/04790CD84F49/">14.64</a></span>
+<div>\begin{equation}  \lim _{k\to \infty }\mathcal{L}_{k,\varphi }(N^ k_{w,\omega ^ n})=\mathcal{E}_{\theta ,X}^{\varphi }(w)\, . \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First observe that by proposition <a data-tag="595333F9" href="../../tag/A86573651304/">14.3.4</a>, for any $k\geq 1$, $N^ k_{w,\omega ^ n}$ and $N^ k_{w',\omega ^ n}$ are both norms, hence the expressions inside the limit in (<a data-tag="0592A047" href="../../tag/D29819040D75/">14.63</a>) make sense. 
+    <p>
+      We first assume that $w,w'\in C^\infty (X)$. To start, we make the following observation: 
+    
+<div class="equation">
+  \[  \begin{aligned}  \mathcal{L}_{k,\varphi }(N^ k_{w,\omega ^ n}) - \mathcal{L}_{k,\varphi }(N^ k_{w',\omega ^ n})&amp; = \int _0^1 \frac{\mathrm{d}}{\mathrm{d}t} \mathcal{L}_{k,\varphi }(N^ k_{w' + t(w-w'),\omega ^ n})\, \mathrm{d}t\\ &amp;  = \int _0^1 \int _ X (w-w') \, \beta ^ k_{w' + t(w-w'),\varphi ,\omega ^ n}\,  \mathrm{d}t. \end{aligned}  \]
+</div>
+<p>
+       The second equality follows from differentiating the Gram matrix of the Hilbert norm $N^ k_{w'+t(w-w'),\omega ^ n}$: 
+    
+<div class="equation">
+  \[  \frac{\mathrm d}{\mathrm dt}\mathcal L_{k,\varphi } \left(N^ k_{w'+t(w-w'),\omega ^ n}\right)=\int _ X (w-w')\, \beta ^ k_{w'+t(w-w'),\varphi ,\omega ^ n}.  \]
+</div>
+<p>
+      By proposition <a data-tag="067310A5" href="../../tag/4C368CFA09EB/">14.3.8</a>, we have 
+    
+<div class="equation">
+  \[  \lim _{k\to \infty }\int _ X (w-w') \, \beta ^ k_{w' + t(w-w'),\varphi ,\omega ^ n}=\int _ X (w-w')\, \theta _{P_{\theta ,X}[\varphi ](w' + t(w-w'))}^ n.  \]
+</div>
+<p>
+       By theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a>, we have 
+    
+<div class="equation">
+  \[  \bigl |\int _ X (w-w')\beta ^ k_{w' + t(w-w'),\varphi ,\omega ^ n}\bigr | \leq C \sup _ X |w - w'|.  \]
+</div>
+<p>
+       Hence, by the dominated convergence theorem we obtain that 
+    
+<div class="equation">
+  \[  \begin{aligned}  \lim _{k\to \infty } \left(\mathcal{L}_{k,\varphi }(N^ k_{w,\omega ^ n}) - \mathcal{L}_{k,\varphi }(N^ k_{w',\omega ^ n})\right) &amp; = \int _0^1 \int _ X (w-w') \, \theta _{P_{\theta ,X}[\varphi ](w' + t(w-w'))}^ n \, \mathrm{d}t\\ &amp;  = \mathcal{E}_{\theta ,X}^{\varphi }(w)-\mathcal{E}_{\theta ,X}^{\varphi }(w'), \end{aligned}  \]
+</div>
+<p>
+       where in the last line we have used proposition <a data-tag="0540AF93" href="../../tag/765C3766A729/">14.2.5</a>. 
+    <p>
+      This proves (<a data-tag="0592A047" href="../../tag/D29819040D75/">14.63</a>) for smooth weights. 
+    <p>
+      For general $w,w'\in C^0(X)$, choose smooth functions $w_ j,w'_ j$ converging uniformly to $w,w'$, respectively. If $\| w_ j-w\| _{C^0}\leq \delta _ j$, then 
+    
+<div class="equation">
+  \[  \mathrm{e}^{-k\delta _ j/2}N^ k_{w,\omega ^ n}\leq N^ k_{w_ j,\omega ^ n}\leq \mathrm{e}^{k\delta _ j/2}N^ k_{w,\omega ^ n},  \]
+</div>
+<p>
+       and hence 
+    
+<div class="equation">
+  \[  \left|\mathcal{L}_{k,\varphi }(N^ k_{w_ j,\omega ^ n})-\mathcal{L}_{k,\varphi }(N^ k_{w,\omega ^ n})\right| \leq \frac{n!}{k^ n}h^0\left(X,L^ k\otimes T\otimes \mathcal{I}(k\varphi )\right)\delta _ j.  \]
+</div>
+<p>
+       The same estimate holds for $w'_ j$ and $w'$. Moreover, proposition <a data-tag="0540AF93" href="../../tag/765C3766A729/">14.2.5</a> shows that the energy side is Lipschitz with respect to the uniform norm of the weight. Letting first $k\to \infty $ in the smooth case, and then $j\to \infty $, proves (<a data-tag="0592A047" href="../../tag/D29819040D75/">14.63</a>) for continuous weights. Equation (<a data-tag="331AC021" href="../../tag/04790CD84F49/">14.64</a>) again follows by taking $w'=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-D7C4CF23">
+<p><a class="environment-identifier" href="../../tag/922E6C36BCC8/">Lemma <span data-tag="D7C4CF23">14.3.11</span>.</a><span data-gerby-tag="D7C4CF23"></span> Let $\varphi \in \mathrm{PSH}(X,\theta )$. Let $(K,v)$ be a weighted subset of $X$. Let $\mu \in \mathrm{BM}(K,v)$. Then </p>
+<div class="equation" id="sgpt-5FAF86FE"><span data-gerby-tag="5FAF86FE"></span>
+<span class="equation-label"><a data-tag="5FAF86FE" href="../../tag/C3210B1F6DE6/">14.69</a></span>
+<div>\begin{equation}  \lim _{k\to \infty } \big ( \mathcal{L}_{k,\varphi }(N^ k_{v,K}) - \mathcal{L}_{k,\varphi }(N^ k_{v,\mu })\big ) = 0\, . \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By (<a data-tag="2E2D0803" href="../../tag/F1111E54880E/">14.48</a>) and (<a data-tag="340F89A4" href="../../tag/FE92486453EB/">14.49</a>), for every $\epsilon &gt;0$ and all $k\geq 1$, 
+    
+<div class="equation">
+  \[  N^ k_{v,\mu }\leq N^ k_{v,K}\leq C_\epsilon \mathrm{e}^{\epsilon k}N^ k_{v,\mu }.  \]
+</div>
+<p>
+       The corresponding unit balls therefore satisfy inclusions with radii differing by at most the factor $C_\epsilon \mathrm{e}^{\epsilon k}$. Taking logarithmic volumes and multiplying by $n!k^{-n-1}$ gives 
+    
+<div class="equation">
+  \[  \left|\mathcal{L}_{k,\varphi }(N^ k_{v,K})-\mathcal{L}_{k,\varphi }(N^ k_{v,\mu })\right| \leq \frac{2n!}{k^{n+1}} h^0\left(X,L^ k\otimes T\otimes \mathcal{I}(k\varphi )\right)(\log C_\epsilon +\epsilon k).  \]
+</div>
+<p>
+       The right-hand side has limsup at most $2\epsilon \operatorname{vol}(\theta _\varphi )$ by theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a>. Letting $\epsilon \to 0+$ proves (<a data-tag="5FAF86FE" href="../../tag/C3210B1F6DE6/">14.69</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-599AE86F">
+<p><a class="environment-identifier" href="../../tag/4CE59F3C4805/">Corollary <span data-tag="599AE86F">14.3.12</span>.</a><span data-gerby-tag="599AE86F"></span> Let $w \in C^0(X)$, $\varphi \in \mathrm{PSH}(X,\theta )$ be a potential with analytic singularities such that $\theta _\varphi $ is a Kähler current. Then </p>
+<div class="equation">
+  \[  \lim _{k\to \infty }\mathcal{L}_{k,\varphi }(N^ k_{w,X})=\mathcal{E}_{\theta ,X}^{\varphi }(w).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows from <a data-tag="D7C4CF23" href="../../tag/922E6C36BCC8/">14.3.11</a> and proposition <a data-tag="A936078C" href="../../tag/F547344ACE10/">14.3.10</a>: indeed $\omega ^ n \in \mathrm{BM}(X,0)$, hence $\omega ^ n\in \mathrm{BM}(X,w)$ as $w$ is bounded. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+It would be helpful to consider the following auxiliary functions: 
+</p>
+<div class="equation">
+  \[  \begin{aligned}  P'_{\theta ,K}[\varphi ](v)\coloneqq &amp;  \sup \Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq v \textup{ and } \eta \preceq \varphi \Bigr \} ,\\  P'_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\coloneqq &amp;  \sup \Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq v \textup{ and } \eta \preceq _{\mathcal{I}} \varphi \Bigr \} . \end{aligned}  \]
+</div>
+
+We note the following maximum principles that follow from the above definitions: <article class="env-lemma" id="sgpt-B9F2699F">
+<p><a class="environment-identifier" href="../../tag/5C6401E18EB3/">Lemma <span data-tag="B9F2699F">14.3.13</span>.</a><span data-gerby-tag="B9F2699F"></span> Let $v\in C^0(K)$, $\varphi \in \mathrm{PSH}(X,\theta )$, and $\eta \in \mathrm{PSH}(X,\theta )$. Assume that $\eta \preceq \varphi $. Then </p>
+<div class="equation" id="sgpt-FCFBF669"><span data-gerby-tag="FCFBF669"></span>
+<span class="equation-label"><a data-tag="FCFBF669" href="../../tag/2DBAE7A20C99/">14.72</a></span>
+<div>\begin{equation}  \sup _ K (\eta -v) = \sup _{\{ \eta \neq -\infty \} } \left(\eta - P'_{\theta ,K}[\varphi ](v)\right)=\sup _{\left\{ P'_{\theta ,K}[\varphi ](v)\neq -\infty \right\} } \left(\eta - P'_{\theta ,K}[\varphi ](v)\right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We prove the first equality first. We write $S=\{ \eta =-\infty \} $. 
+    <p>
+      By definition, $P'_{\theta ,K}[\varphi ](v)|_ K\leq v$, so 
+    
+<div class="equation">
+  \[  \left.\left(\eta -P'_{\theta ,K}[\varphi ](v)\right)\right|_{K\setminus S}\geq \eta |_{K\setminus S}-v|_{K\setminus S}\, .  \]
+</div>
+<p>
+       This implies that 
+    
+<div class="equation">
+  \[  \sup _ K (\eta -v) \leq \sup _{X\setminus S} \left(\eta - P'_{\theta ,K}[\varphi ](v)\right).  \]
+</div>
+<p>
+      Conversely, observe that $\sup _ K(\eta -v)&gt;-\infty $ as $K$ is non-pluripolar. It follows that $\eta -\sup _ K (\eta -v)$ is a candidate in the definition of $P'_{\theta ,K}[\varphi ](v)$. Hence, 
+    
+<div class="equation" id="sgpt-D61422A1"><span data-gerby-tag="D61422A1"></span>
+<span class="equation-label"><a data-tag="D61422A1" href="../../tag/3504DA07F50F/">14.73</a></span>
+<div>\begin{equation}  \eta -\sup _ K (\eta -v)\leq P'_{\theta ,K}[\varphi ](v). \end{equation}</div>
+</div>
+<p>
+       This implies that 
+    
+<div class="equation">
+  \[  \sup _ K (\eta -v) \geq \sup _{X\setminus S} \left(\eta - P'_{\theta ,K}[\varphi ](v)\right),  \]
+</div>
+<p>
+       finishing the proof of the first identity in (<a data-tag="FCFBF669" href="../../tag/2DBAE7A20C99/">14.72</a>). 
+    <p>
+      In order to prove the latter identity, observe that 
+    
+<div class="equation">
+  \[  \left\{ P'_{\theta ,K}[\varphi ](v) =-\infty \right\}  \subseteq S  \]
+</div>
+<p>
+       as a consequence of (<a data-tag="D61422A1" href="../../tag/3504DA07F50F/">14.73</a>). On $\{ P'_{\theta ,K}[\varphi ](v)\neq -\infty \} \cap S$, we have $\eta -P'_{\theta ,K}[\varphi ](v)=-\infty $. Hence the last equality of (<a data-tag="FCFBF669" href="../../tag/2DBAE7A20C99/">14.72</a>) also follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-FC23DAC6">
+<p><a class="environment-identifier" href="../../tag/F431300C59C4/">Proposition <span data-tag="FC23DAC6">14.3.14</span>.</a><span data-gerby-tag="FC23DAC6"></span> Let $\varphi \in \mathrm{PSH}(X,\theta )$ be a potential with analytic singularities such that $\theta _{\varphi }$ is a Kähler current. Let $(K,v)$, $(K',v')$ be two weighted subsets of $X$. Then </p>
+<div class="equation" id="sgpt-7CAA1F1D"><span data-gerby-tag="7CAA1F1D"></span>
+<span class="equation-label"><a data-tag="7CAA1F1D" href="../../tag/FFF9581DFDD2/">14.74</a></span>
+<div>\begin{equation}  \lim _{k\to \infty } \left( \mathcal{L}_{k,\varphi }(N^ k_{v,K}) - \mathcal{L}_{k,\varphi }(N^ k_{v',K'}) \right) = \mathcal{E}_{\theta ,K}^{\varphi }(v)-\mathcal{E}_{\theta ,K'}^{\varphi }(v'). \end{equation}</div>
+</div>
+<p> In particular, </p>
+<div class="equation" id="sgpt-A2387DFE"><span data-gerby-tag="A2387DFE"></span>
+<span class="equation-label"><a data-tag="A2387DFE" href="../../tag/5AAAC502B9E5/">14.75</a></span>
+<div>\begin{equation}  \lim _{k\to \infty }\mathcal{L}_{k,\varphi }(N^ k_{v,K})=\mathcal{E}_{\theta ,K}^{\varphi }(v). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First observe that by proposition <a data-tag="595333F9" href="../../tag/A86573651304/">14.3.4</a>, for any $k&gt;0$, $N^ k_{v,K}$ and $N^ k_{v',K'}$ are both norms, hence the expressions inside the limit in (<a data-tag="7CAA1F1D" href="../../tag/FFF9581DFDD2/">14.74</a>) make sense. Moreover, (<a data-tag="A2387DFE" href="../../tag/5AAAC502B9E5/">14.75</a>) is just a special case of (<a data-tag="7CAA1F1D" href="../../tag/FFF9581DFDD2/">14.74</a>) for $K'=X$ and $v'= 0$. 
+    <p>
+      To prove (<a data-tag="7CAA1F1D" href="../../tag/FFF9581DFDD2/">14.74</a>) it is enough to show that for any fixed $w \in C^\infty (X)$ we have 
+    
+<div class="equation" id="sgpt-13A42282"><span data-gerby-tag="13A42282"></span>
+<span class="equation-label"><a data-tag="13A42282" href="../../tag/AC1B69834497/">14.76</a></span>
+<div>\begin{equation}  \lim _{k\to \infty } \big ( \mathcal{L}_{k,\varphi }(N^ k_{v,K}) - \mathcal{L}_{k,\varphi }(N^ k_{w,X}) \big ) = \mathcal{E}_{\theta ,K}^{\varphi }(v) - \mathcal{E}_{\theta ,X}^{\varphi }(w)\, . \end{equation}</div>
+</div>
+<p>
+      For $\epsilon \in (0,1)$ small enough, $\theta _{(1-\epsilon )\varphi }$ is still a Kähler current. Let us fix such $\epsilon $, along with an arbitrary $\epsilon ' \in (0,1)$. 
+    <p>
+      Let $(v^-_{j})_ j$ and $(v^+_{j})_ j$ be the sequences of smooth functions constructed in <a data-tag="858E47C8" href="../../tag/D21332713DB8/">14.2.6</a> for the data $(K,v)$. 
+    <p>
+      By proposition <a data-tag="012CB98E" href="../../tag/2DDBBF280789/">1.8.13</a> there exists $k_0(\epsilon ,\epsilon ') \in \mathbb N$ such that 
+    
+<div class="equation">
+  \[  \frac{1}{k} \log h^ k \otimes h_ T (s,s) \preceq (1-\epsilon )\varphi ,  \]
+</div>
+<p>
+       and $\frac{1}{k} \log h^ k \otimes h_ T (s,s) \in \mathrm{PSH}(X,\theta + \epsilon '\omega )$ for any $s \in \mathrm{H}^0(X,T\otimes L^ k \otimes \mathcal{I}(k\varphi ))$, as long as $k \geq k_0(\epsilon ,\epsilon ')$. 
+    <p>
+      In particular, <a data-tag="B9F2699F" href="../../tag/5C6401E18EB3/">14.3.13</a> gives that 
+    
+<div class="equation">
+  \[  \begin{aligned}  N^ k_{P'_{\theta + \epsilon '\omega ,K}[(1-\epsilon )\varphi ](v),X}(s)=&amp;  N^ k_{v,K}(s),\\  N^ k_{P'_{\theta + \epsilon '\omega ,X}[(1-\epsilon )\varphi ](v_{j}^-),X}(s)=&amp;  N^ k_{v_{j}^-,X}(s),\\  N^ k_{P'_{\theta + \epsilon '\omega ,X}[(1-\epsilon )\varphi ](v_{j}^+),X}(s)=&amp;  N^ k_{v^+_{j},X}(s). \end{aligned}  \]
+</div>
+<p>
+       As 
+    
+<div class="equation">
+  \[  P'_{\theta + \epsilon '\omega ,X}[(1-\epsilon )\varphi ](v_{j}^-) \leq P'_{\theta + \epsilon '\omega ,K}[(1-\epsilon )\varphi ](v) \leq P'_{\theta + \epsilon '\omega ,X}[(1-\epsilon )\varphi ](v_{j}^+),  \]
+</div>
+<p>
+       where the second inequality follows from <a data-tag="858E47C8" href="../../tag/D21332713DB8/">14.2.6</a> and the fact that $P'=P$ for the global continuous obstacles $v_ j^\pm $. By <a data-tag="B9D988D1" href="../../tag/E97173FEFAFD/">14.3.2</a> we have 
+    
+<div class="equation">
+  \[  N^ k_{v^+_{j},X}(s) \leq N^ k_{v,K}(s) \leq N^ k_{v_{j}^-,X}(s), \quad s \in \mathrm{H}^0(X,T \otimes L^ k \otimes \mathcal{I}(k\varphi )), k \geq k_0(\epsilon ,\epsilon ').  \]
+</div>
+<p>
+       Composing with $\mathcal{L}_{k,\varphi }$ we arrive at 
+    
+<div class="equation">
+  \[  \mathcal{L}_{k,\varphi }(N^ k_{v^-_{j},X})\leq \mathcal{L}_{k,\varphi }(N^ k_{v,K})\leq \mathcal{L}_{k,\varphi }(N^ k_{v^+_{j},X})\, , \quad k \geq k_0(\epsilon ,\epsilon ').  \]
+</div>
+<p>
+       For any $j&gt;0$, by corollary <a data-tag="599AE86F" href="../../tag/4CE59F3C4805/">14.3.12</a> we get 
+    
+<div class="equation">
+  \[  \begin{aligned}  \mathcal{E}_{\theta ,X}^{\varphi }(v^-_{j}) - \mathcal{E}_{\theta ,X}^{\varphi }(w)=&amp;  \lim _{k\to \infty } \left(\mathcal{L}_{k,\varphi }(N^ k_{v^-_{j},X})-\mathcal{L}_{k,\varphi }(N^ k_{w,X})\right)\\  \leq &amp;  \varliminf _{k\to \infty }\left(\mathcal{L}_{k,\varphi }(N^ k_{v,K})- \mathcal{L}_{k,\varphi }(N^ k_{w,X})\right)\\  \leq &amp;  \varlimsup _{k\to \infty }\left(\mathcal{L}_{k,\varphi }(N^ k_{v,K})- \mathcal{L}_{k,\varphi }(N^ k_{w,X})\right)\\  \leq &amp;  \lim _{k\to \infty } \left(\mathcal{L}_{k,\varphi }(N^ k_{v^+_{j},X})-\mathcal{L}_{k,\varphi }(N^ k_{w,X})\right)\\  =&amp;  \mathcal{E}_{\theta ,X}^{\varphi }(v^+_{j}) - \mathcal{E}_{\theta ,X}^{\varphi }(w). \end{aligned}  \]
+</div>
+<p>
+       Using <a data-tag="858E47C8" href="../../tag/D21332713DB8/">14.2.6</a>, we can let $j \to \infty $ to arrive at 
+    
+<div class="equation">
+  \[  \begin{split}  \mathcal{E}_{\theta ,K}^{\varphi }(v) -\mathcal{E}_{\theta ,X}^{\varphi }(w) &amp; \leq \varliminf _{k\to \infty }\left(\mathcal{L}_{k,\varphi }(N^ k_{v,K})- \mathcal{L}_{k,\varphi }(N^ k_{w,X})\right)\\ &amp; \leq \varlimsup _{k\to \infty }\left(\mathcal{L}_{k,\varphi }(N^ k_{v,K})- \mathcal{L}_{k,\varphi }(N^ k_{w,X})\right)\\ &amp;  \leq \mathcal{E}_{\theta ,K}^{\varphi }(v) -\mathcal{E}_{\theta ,X}^{\varphi }(w). \end{split}  \]
+</div>
+<p>
+       Hence, (<a data-tag="13A42282" href="../../tag/AC1B69834497/">14.76</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-B4A3ABB1">
+<p><a class="environment-identifier" href="../../tag/B1F17F151050/">Corollary <span data-tag="B4A3ABB1">14.3.15</span>.</a><span data-gerby-tag="B4A3ABB1"></span> Let $\varphi \in \mathrm{PSH}(X,\theta )$ be a potential with analytic singularities such that $\theta _{\varphi }$ is a Kähler current. Then </p>
+<div class="equation">
+  \[  \lim _{k\to \infty } \mathcal{L}_{k,\varphi }(N^ k_{v,\mu })= \mathcal{E}_{\theta ,K}^{\varphi }(v).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Our claim follows from proposition <a data-tag="FC23DAC6" href="../../tag/F431300C59C4/">14.3.14</a> and <a data-tag="D7C4CF23" href="../../tag/922E6C36BCC8/">14.3.11</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-00CF2454">
+<p><a class="environment-identifier" href="../../tag/AC691D964EDB/">Proposition <span data-tag="00CF2454">14.3.16</span>.</a><span data-gerby-tag="00CF2454"></span> Let $\varphi \in \mathrm{PSH}(X,\theta )$ be a potential with analytic singularities such that $\theta _{\varphi }$ is a Kähler current. Then </p>
+<div class="equation">
+  \[  \beta ^ k_{v,\varphi , \mu } \rightharpoonup \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}^ n=\theta _{P_{\theta ,K}[\varphi ](v)}^ n\quad \textup{as }k\to \infty .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $w\in C^0(X)$, let $f_ k,g\colon \mathbb {R}\rightarrow \mathbb {R}$ ($k\geq 1$) be defined as 
+    
+<div class="equation">
+  \[  f_ k(t)\coloneqq \mathcal{L}_{k,\varphi }(N^ k_{v+tw,\mu }),\quad g(t)\coloneqq \mathcal{E}_{\theta ,K}^{\varphi }(v+tw).  \]
+</div>
+<p>
+       By corollary <a data-tag="B4A3ABB1" href="../../tag/B1F17F151050/">14.3.15</a>, for all $t\in \mathbb {R}$, we have 
+    
+<div class="equation">
+  \[  \lim _{k\to \infty } f_ k(t)= g(t).  \]
+</div>
+<p>
+       Here we use that $\mu \in \mathrm{BM}(K,v+tw)$ for all fixed $t$, which follows from $\mu \in \mathrm{BM}(K,v)$ and the boundedness of $tw$ on $K$. Note that $f_ k$ is concave by Hölder's inequality. For each $k$, the function $f_ k$ is differentiable and 
+    
+<div class="equation">
+  \[  f_ k'(0)=\int _ X w\, \beta ^ k_{v,\varphi ,\mu }.  \]
+</div>
+<p>
+       This follows by differentiating the Gram matrix of the Hilbert norm $N^ k_{v+tw,\mu }$. The function $g$ is differentiable at $0$ by proposition <a data-tag="0540AF93" href="../../tag/765C3766A729/">14.2.5</a>, with 
+    
+<div class="equation">
+  \[  g'(0)=\int _ K w\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal I}(v)}.  \]
+</div>
+<p>
+       Applying <a data-tag="F7AADC82" href="../../tag/66B643EAC79A/">A.5.3</a> to the convex functions $-f_ k$ and $-g$ gives 
+    
+<div class="equation">
+  \[  \lim _{k\to \infty } f_ k'(0)=g'(0),  \]
+</div>
+<p>
+       which is equivalent to $\beta ^ k_{v, \varphi ,\mu } \rightharpoonup \theta _{P_{\theta ,K}[\varphi ](v)}^ n$, by proposition <a data-tag="0540AF93" href="../../tag/765C3766A729/">14.2.5</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-DB53BBEA">
+<p><a class="environment-identifier" href="../../tag/0DFF36A22512/">Proposition <span data-tag="DB53BBEA">14.3.17</span>.</a><span data-gerby-tag="DB53BBEA"></span> Suppose that $\varphi \in \mathrm{PSH}(X,\theta )$ is such that $\theta _{\varphi }$ is a Kähler current. Let $(K,v)$ be a weighted subset of $X$ and $\mu \in \mathrm{BM}(K,v)$. Then </p>
+<div class="equation" id="sgpt-7EB07DFE"><span data-gerby-tag="7EB07DFE"></span>
+<span class="equation-label"><a data-tag="7EB07DFE" href="../../tag/7EA15066EE63/">14.88</a></span>
+<div>\begin{equation}  \beta ^ k_{v,\varphi ,\mu } \rightharpoonup \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}^ n\quad \textup{as } k\to \infty . \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\tau $ be the weak limit of a subsequence of $\beta ^ k_{v,\varphi ,\mu }$. We claim that 
+    
+<div class="equation" id="sgpt-F9222C87"><span data-gerby-tag="F9222C87"></span>
+<span class="equation-label"><a data-tag="F9222C87" href="../../tag/CBCF54FCD801/">14.89</a></span>
+<div>\begin{equation}  \tau \leq \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}^ n. \end{equation}</div>
+</div>
+<p>
+       Observe that this claim implies the conclusion. In fact, by theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a>, we have equality of the total masses, so equality holds in (<a data-tag="F9222C87" href="../../tag/CBCF54FCD801/">14.89</a>). As $\tau $ is an arbitrary cluster point of the sequence $(\beta ^ k_{v,\varphi ,\mu })_ k$, we get (<a data-tag="7EB07DFE" href="../../tag/7EA15066EE63/">14.88</a>). 
+    <p>
+      It remains to prove (<a data-tag="F9222C87" href="../../tag/CBCF54FCD801/">14.89</a>). Let $(\varphi _ j)$ be a quasi-equisingular approximation of $\varphi $ in $\mathrm{PSH}(X,\theta )$. We may assume that $\theta _{\varphi _ j}$ is a Kähler current for all $j\geq 1$. By corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a>, we know that 
+    
+<div class="equation">
+  \[  \varphi _ j\xrightarrow {d_ S}P_{\theta }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       The quasi-equisingular approximation is decreasing, so applying the decreasing case of proposition <a data-tag="80FF1720" href="../../tag/9724C0B32032/">14.2.7</a> to the limit $P_{\theta }[\varphi ]_{\mathcal{I}}$, and using the definition of the relative $\mathcal{I}$-envelope, we get 
+    
+<div class="equation">
+  \[  P_{\theta ,K}\left[\varphi _ j\right]_{\mathcal{I}}(v)\searrow P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v).  \]
+</div>
+<p>
+       In particular, 
+    
+<div class="equation" id="sgpt-7A5E0C54"><span data-gerby-tag="7A5E0C54"></span>
+<span class="equation-label"><a data-tag="7A5E0C54" href="../../tag/FD0D14628CD8/">14.90</a></span>
+<div>\begin{equation}  \lim _{j\to \infty } \int _ X \theta _{P_{\theta ,K}\left[\varphi _ j\right]_{\mathcal{I}}(v)}^ n= \int _ X \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}^ n. \end{equation}</div>
+</div>
+<p>
+       Observe that 
+    
+<div class="equation">
+  \[  \beta ^ k_{v,\varphi ,\mu } \leq \beta ^ k_{v,\varphi _ j,\mu }  \]
+</div>
+<p>
+       for any $k \geq 1$. As $\mu \in \mathrm{BM}(K,v)$, by proposition <a data-tag="00CF2454" href="../../tag/AC691D964EDB/">14.3.16</a>, 
+    
+<div class="equation">
+  \[  \tau \leq \theta _{P_{\theta ,K}[\varphi _ j]_{\mathcal{I}}(v)}^ n,  \]
+</div>
+<p>
+       for any $j \geq 1$ fixed. By (<a data-tag="7A5E0C54" href="../../tag/FD0D14628CD8/">14.90</a>) and the semicontinuity theorem theorem <a data-tag="65F7AFC0" href="../../tag/B3DC3180FF35/">2.4.7</a>, we have 
+    
+<div class="equation">
+  \[  \theta _{P_{\theta ,K}\left[\varphi _ j\right]_{\mathcal{I}}(v)}^ n\rightharpoonup \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}^ n  \]
+</div>
+<p>
+       as $j\to \infty $. Therefore, (<a data-tag="F9222C87" href="../../tag/CBCF54FCD801/">14.89</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<article class="env-proof">
+<p>
+<strong>Proof of theorem <a data-tag="FEA29A52" href="../../tag/EA3E101DCA5E/">14.3.7</a>.</strong>
+       By <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a> and proposition <a data-tag="898F78D9" href="../../tag/363E28FF4A61/">3.2.8</a>, the three potentials below have the same multiplier ideals. Hence 
+    
+<div class="equation">
+  \[  \begin{aligned}  \mathrm{H}^0\left(X,L^ k \otimes T \otimes \mathcal{I}(k\varphi )\right) &amp; = \mathrm{H}^0\left(X,L^ k \otimes T \otimes \mathcal I(kP_{\theta }[\varphi ]_{\mathcal{I}})\right)\\ &amp; = \mathrm{H}^0\left(X,L^ k \otimes T \otimes \mathcal I\left(kP_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)\right). \end{aligned}  \]
+</div>
+<p>
+       This allows us to replace $\varphi $ with $P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)$. 
+    <p>
+      By <a data-tag="44EC382B" href="../../tag/3AA4A74713F0/">2.4.19</a>, there exists a sequence $(\varphi _ j)_ j$ in $\mathrm{PSH}(X,\theta )$ such that $\varphi _ j\nearrow \varphi $ a.e. and $\theta _{\varphi _ j}$ is a Kähler current for each $j\geq 1$. This gives 
+    
+<div class="equation">
+  \[  \beta ^ k_{v,\varphi _ j,\mu } \leq \beta ^ k_{v,\varphi ,\mu }.  \]
+</div>
+<p>
+       Let $\tau $ be the weak limit of a subsequence of $(\beta ^ k_{v,\varphi ,\mu })_ k$. Then by proposition <a data-tag="DB53BBEA" href="../../tag/0DFF36A22512/">14.3.17</a>, 
+    
+<div class="equation">
+  \[  \theta _{P_{\theta ,K} [\varphi _ j]_{\mathcal{I}}(v)}^ n\leq \tau .  \]
+</div>
+<p>
+       By proposition <a data-tag="80FF1720" href="../../tag/9724C0B32032/">14.2.7</a> and corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">2.4.9</a>, we have 
+    
+<div class="equation">
+  \[  \theta _{P_{\theta ,K} [\varphi _ j]_{\mathcal{I}}(v)}^ n \rightharpoonup \theta _{P_{\theta ,K} [\varphi ]_{\mathcal{I}}(v)}^ n.  \]
+</div>
+<p>
+       Hence, 
+    
+<div class="equation" id="sgpt-072EDAA2"><span data-gerby-tag="072EDAA2"></span>
+<span class="equation-label"><a data-tag="072EDAA2" href="../../tag/8FD19D2B07C7/">14.93</a></span>
+<div>\begin{equation}  \theta _{P_{\theta ,K} [\varphi ]_{\mathcal{I}}(v)}^ n\leq \tau . \end{equation}</div>
+</div>
+<p>
+       A comparison of total masses using (<a data-tag="4F6600EE" href="../../tag/889A68CCEC83/">14.54</a>) gives that equality holds in (<a data-tag="072EDAA2" href="../../tag/8FD19D2B07C7/">14.93</a>). As $\tau $ is arbitrary, we obtain (<a data-tag="8772EE97" href="../../tag/A6F9F2DF4A0D/">14.55</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-remark" id="sgpt-7B680A17">
+<p><a class="environment-identifier" href="../../tag/E9D132FDBF95/">Remark <span data-tag="7B680A17">14.3.18</span>.</a><span data-gerby-tag="7B680A17"></span> The results in this chapter can also be reformulated as the large deviation principle of a determinantal point process on $X$ using the Gärtner–Ellis theorem exactly as in <span class="cite">[<a href="../../references/#RCEC6AAA4D96B">Ber14</a>]</span>. We do not pursue this reformulation here. </p>
+</article>
+
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/0E6CABEB995A/"><span>← Previous</span><small>Theorem 16.7.3</small></a><a class="pager-next" rel="next" href="../../tag/065B04510A8A/"><span>Next →</span><small>14 Partial Bergman kernels</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-partial-bergman-kernels,
   author = {{Gerby contributors}},
   title = {15.3 Partial Bergman kernels},

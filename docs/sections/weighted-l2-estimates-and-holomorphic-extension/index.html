@@ -1,8 +1,959 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/weighted-l2-estimates-and-holomorphic-extension/"><title>6.1 Weighted L2 estimates and holomorphic extension · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/weighted-l2-estimates-and-holomorphic-extension/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/weighted-l2-estimates-and-holomorphic-extension/"><title>6.1 Weighted L2 estimates and holomorphic extension · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/weighted-l2-estimates-and-holomorphic-extension/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/singularities-regularization/">Chapter 6: Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../sections/weighted-l2-estimates-and-holomorphic-extension/" aria-current="page">Section 6.1: Weighted L2 estimates and holomorphic extension</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/weighted-l2-estimates-and-holomorphic-extension/" aria-current="page"><span>6.1</span> Weighted L2 estimates and holomorphic extension</a></li><li><a href="../../sections/lelong-numbers-and-multiplier-ideals/"><span>6.2</span> Lelong numbers and multiplier ideals</a></li><li><a href="../../sections/analytic-singularities-and-demailly-approximation/"><span>6.3</span> Analytic singularities and Demailly approximation</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/weighted-l2-estimates-and-holomorphic-extension/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/weighted-l2-estimates-and-holomorphic-extension/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../chapters/singularities-regularization/"><span>← Previous</span><small>6 Lelong numbers, multiplier ideals, and regularization</small></a><a class="pager-next" rel="next" href="../../tag/89143AD4638F/"><span>Next →</span><small>11 Weighted L2 estimates and holomorphic extension</small></a></nav><h1>6.1 Weighted L2 estimates and holomorphic extension</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/89143AD4638F/">11 Weighted L2 estimates and holomorphic extension</a><code class="tag-id">89143AD4638F</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/3F2EA9D1CB5E/">11.1 Hilbert spaces and closed operator complexes</a><code class="tag-id">3F2EA9D1CB5E</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/B9A2266E14FE/">Proposition 11.1.1</a><code class="tag-id">B9A2266E14FE</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/1EF937410C2F/">Proposition 11.1.2</a><code class="tag-id">1EF937410C2F</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/0C82C2C21EE7/">Lemma 11.1.3</a><code class="tag-id">0C82C2C21EE7</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/FDE87BE964C7/">Theorem 11.1.4</a><code class="tag-id">FDE87BE964C7</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/86B639827902/">11.2 Pseudoconvexity and boundary distance</a><code class="tag-id">86B639827902</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/10E4AE8BC531/">Definition 11.2.1</a><code class="tag-id">10E4AE8BC531</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/5898ED42C26F/">Lemma 11.2.2</a><code class="tag-id">5898ED42C26F</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/52930869627B/">Lemma 11.2.3 (Richberg)</a><code class="tag-id">52930869627B</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/EA195CC9592D/">Theorem 11.2.4</a><code class="tag-id">EA195CC9592D</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/FFB7E3647C0B/">Corollary 11.2.5</a><code class="tag-id">FFB7E3647C0B</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/EC970F3402EB/">Corollary 11.2.6</a><code class="tag-id">EC970F3402EB</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/4E04198982E6/">11.3 Interior density and the weighted estimate</a><code class="tag-id">4E04198982E6</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/0B44CA843C7B/">11.4 </a><code class="tag-id">0B44CA843C7B</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/F03962A0AC31/">Lemma 11.3.1</a><code class="tag-id">F03962A0AC31</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/3B7B834E5CD4/">11.5 </a><code class="tag-id">3B7B834E5CD4</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/866FA0174B79/">Proposition 11.3.2</a><code class="tag-id">866FA0174B79</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/038AC5695B6F/">11.10 </a><code class="tag-id">038AC5695B6F</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/35C885FDEB1E/">11.14 </a><code class="tag-id">35C885FDEB1E</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/F85650C9CE6A/">Theorem 11.3.3 (Hörmander)</a><code class="tag-id">F85650C9CE6A</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D557EE261608/">11.15 </a><code class="tag-id">D557EE261608</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/88735CB0C076/">Theorem 11.3.4</a><code class="tag-id">88735CB0C076</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/961105705CF9/">Lemma 11.3.5</a><code class="tag-id">961105705CF9</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/6FAB73FA6CE4/">11.4 Interpolation and extension across a hyperplane</a><code class="tag-id">6FAB73FA6CE4</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/66BCDC65B27D/">Proposition 11.4.1</a><code class="tag-id">66BCDC65B27D</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/0822DB927561/">Lemma 11.4.2</a><code class="tag-id">0822DB927561</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/EE99921A3F33/">Lemma 11.4.3</a><code class="tag-id">EE99921A3F33</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/D315377B239D/">Theorem 11.4.4 (Ohsawa–Takegoshi)</a><code class="tag-id">D315377B239D</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/5C2AD1325732/">11.21 </a><code class="tag-id">5C2AD1325732</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/FF641A8A654C/">11.22 </a><code class="tag-id">FF641A8A654C</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/F388046B5B2A/">11.23 </a><code class="tag-id">F388046B5B2A</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/33DEA3F4EDB8/">Corollary 11.4.5</a><code class="tag-id">33DEA3F4EDB8</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/BFB355F9DDF9/">Corollary 11.4.6</a><code class="tag-id">BFB355F9DDF9</code><span class="entry-topic">Weighted L2 estimates and holomorphic extension</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../chapters/singularities-regularization/"><span>← Previous</span><small>6 Lelong numbers, multiplier ideals, and regularization</small></a><a class="pager-next" rel="next" href="../../tag/89143AD4638F/"><span>Next →</span><small>11 Weighted L2 estimates and holomorphic extension</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../chapters/singularities-regularization/"><span>← Previous</span><small>6 Lelong numbers, multiplier ideals, and regularization</small></a><a class="pager-next" rel="next" href="../../tag/89143AD4638F/"><span>Next →</span><small>11 Weighted L2 estimates and holomorphic extension</small></a></nav><h1>6.1 Weighted L2 estimates and holomorphic extension</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-89143AD4638F" data-section-entries="89143AD4638F"><div class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><h2><a href="../../tag/89143AD4638F/">11 Weighted L2 estimates and holomorphic extension</a></h2><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> <span data-gerby-tag="CA9B0930"></span></div>
+<p>
+Many constructions in the rest of the book need a holomorphic function $F$ on a domain $\Omega \subset \mathbb C^ n$ with a prescribed value at a point, or a prescribed restriction to a hyperplane section, together with a bound for the weighted $L^2$ norm $\int _\Omega |F|^2\mathrm e^{-\varphi }\, \mathrm dV$, where $\varphi $ is a plurisubharmonic weight. Gluing by a partition of unity does not preserve holomorphicity: if $f$ is holomorphic near the support of a smooth cutoff function $\chi $, then $\chi f$ is a global smooth function, but $\bar\partial (\chi f)=f\, \bar\partial \chi $ need not vanish. If we can solve $\bar\partial u=f\, \bar\partial \chi $ with an estimate in a weighted $L^2$ norm, then $F=\chi f-u$ is holomorphic. The weight has two tasks: it must make the equation solvable with a bound on $u$, and, where values are prescribed, it must be so singular that the finiteness of the weighted norm forces $u$ to vanish there. 
+</p>
+<p>
+The basic existence theorem is Hörmander's estimate (theorem <a data-tag="BC607899" href="../../tag/F85650C9CE6A/">11.3.3</a>, theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a>). By the Hilbert space duality of section <a data-tag="E66223F4" href="../../tag/3F2EA9D1CB5E/">11.1</a>, a solution of $\bar\partial u=\alpha $ with a norm bound exists as soon as an a priori inequality holds for the adjoint operator. For compactly supported forms this inequality follows from an integration-by-parts identity, the Bochner–Kodaira–Morrey–Kohn identity, in which the complex Hessian of the weight appears as a curvature term. To pass from compactly supported forms to the whole domain of the adjoint without any assumption on the boundary, we work on pseudoconvex open sets and modify the weight near the boundary by means of a smooth strictly plurisubharmonic exhaustion function, whose existence is proved in section <a data-tag="5332C76B" href="../../tag/86B639827902/">11.2</a>. 
+</p>
+<p>
+In section <a data-tag="2C8FB5F3" href="../../tag/6FAB73FA6CE4/">11.4</a> we apply these estimates. Adding the logarithmic pole ${n\log |z-a|^2}$ to the weight prescribes the value of a holomorphic function at the point $a$ (proposition <a data-tag="C8B1D820" href="../../tag/66BCDC65B27D/">11.4.1</a>). For extension from a hyperplane, a bounded twist of the weight and an explicit one-variable weight of $\log \log $ type yield the Ohsawa–Takegoshi extension theorem, with a constant that depends only on the width of the domain in the normal direction (theorem <a data-tag="B7D417A7" href="../../tag/D315377B239D/">11.4.4</a>). Its consequences for point values and for integrable germs (corollary <a data-tag="B6B660C0" href="../../tag/33DEA3F4EDB8/">11.4.5</a>, corollary <a data-tag="141CB09D" href="../../tag/BFB355F9DDF9/">11.4.6</a>) are the analytic input for the multiplier ideals of chapter <a data-tag="1D553871" href="../../tag/8494F0D4F79D/">12</a> and the Bergman kernel approximation of chapter <a data-tag="51DFA402" href="../../tag/1A5FE90C1245/">13</a>. 
+</p>
+<p>
+Historical remarks and references for this chapter are collected in section <a data-tag="C124DC99" href="../../tag/E796BF553819/">B.11</a>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-3F2EA9D1CB5E" data-section-entries="0C82C2C21EE7 1EF937410C2F 3F2EA9D1CB5E B9A2266E14FE FDE87BE964C7"><div class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><h2><a href="../../tag/3F2EA9D1CB5E/">11.1 Hilbert spaces and closed operator complexes</a></h2><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> <span data-gerby-tag="E66223F4"></span></div>
+<p>
+A complex <em>Hilbert space</em> is a complex vector space with an inner product $\langle \cdot ,\cdot \rangle $ that is complete for the norm $\| x\| =\langle x,x\rangle ^{1/2}$; our inner products are linear in the first variable and conjugate-linear in the second. A <em>real</em> Hilbert space is defined in the same way, with a real vector space and a real inner product, which is then symmetric and bilinear. All results of this section hold for real Hilbert spaces, with the same proofs: the completeness, proved below, of the spaces $L^2(\mu )$ of real-valued functions, and proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a>, proposition <a data-tag="EF017A20" href="../../tag/1EF937410C2F/">11.1.2</a>, lemma <a data-tag="4B7D70BC" href="../../tag/0C82C2C21EE7/">11.1.3</a>, theorem <a data-tag="B9E2EF05" href="../../tag/FDE87BE964C7/">11.1.4</a>. Indeed, these proofs use only the axioms of an inner product and completeness. For real spaces one omits all complex conjugations, reads “conjugate-linear” as “linear”, uses only real values of $t$ in the proof of proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a>, and replaces the coefficients in $\mathbb Q+\mathrm i\mathbb Q$ in the proof of proposition <a data-tag="EF017A20" href="../../tag/1EF937410C2F/">11.1.2</a> by rational ones. 
+</p>
+<p>
+The Hilbert spaces of this chapter are weighted $L^2$ spaces. For a positive measure $\mu $ on a measurable space, $L^2(\mu )$ carries the inner product $\langle f,g\rangle =\int f\bar g\, \mathrm d\mu $, and it is complete. Indeed, let $(f_ j)$ be a Cauchy sequence in $L^2(\mu )$, and choose $j_1&lt;j_2&lt;\cdots $ with $\| f_{j_{k+1}}-f_{j_ k}\| \le 2^{-k}$. By the triangle inequality and the monotone convergence theorem, $g=\sum _ k|f_{j_{k+1}}-f_{j_ k}|$ satisfies $\| g\| \le 1$, so $g&lt;\infty $ almost everywhere. Hence $(f_{j_ k})$ converges almost everywhere to a function $f$, and the bound $|f-f_{j_ k}|\le \sum _{l\ge k}|f_{j_{l+1}}-f_{j_ l}|$ gives $\| f-f_{j_ k}\| \le 2^{1-k}$. A Cauchy sequence with a convergent subsequence converges, so $f_ j\to f$ in $L^2(\mu )$. Applying this to each coefficient, we see that spaces of $L^2$ differential forms, whose elements are finite tuples of functions in $L^2(\mu )$, are complete as well. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-6AE41760">
+<p><a class="environment-identifier" href="../../tag/B9A2266E14FE/">Proposition <span data-tag="6AE41760">11.1.1</span>.</a><span data-gerby-tag="6AE41760"></span> Let $H$ be a complex Hilbert space. Every nonempty closed convex subset of $H$ contains a unique point of smallest distance to a given point of $H$. If $M\subset H$ is a closed linear subspace, then $H=M\oplus M^\perp $ and $(M^\perp )^\perp =M$. Every bounded linear functional $L$ on $H$ has the form $L(x)=\langle x,y\rangle $ for a unique $y\in H$, and every bounded conjugate-linear functional $\ell $ on $H$ has the form $\ell (x)=\langle y,x\rangle $ for a unique $y\in H$; in both cases the norm of the functional is $\| y\| $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $C$ be a nonempty closed convex set and $x\in H$. Replacing $C$ by $C-x$, we may assume that $x=0$. Let $d=\inf _{z\in C}\| z\| $, and let $(x_ j)$ be a sequence in $C$ with $\| x_ j\| \to d$. Since $(x_ j+x_ k)/2\in C$ by convexity, the parallelogram identity gives 
+    
+<div class="equation">
+  \[  \| x_ j-x_ k\| ^2=2\| x_ j\| ^2+2\| x_ k\| ^2 -4\| (x_ j+x_ k)/2\| ^2 \le 2\| x_ j\| ^2+2\| x_ k\| ^2-4d^2.  \]
+</div>
+<p>
+       The right side tends to zero as $j,k\to \infty $, so $(x_ j)$ is a Cauchy sequence. Its limit lies in $C$, because $C$ is closed, and has norm $d$. If $x,x'\in C$ both have norm $d$, the same inequality with $x_ j=x$ and $x_ k=x'$ gives $\| x-x'\| ^2\le 0$, which proves uniqueness. 
+    <p>
+      Now let $M$ be a closed linear subspace and $x\in H$. Let $p$ be the point of $M$ closest to $x$, and put $r=x-p$. For $v\in M$ and $t\in \mathbb C$ we have $p+tv\in M$, and hence 
+    
+<div class="equation">
+  \[  0\le \| r-tv\| ^2-\| r\| ^2=-2\operatorname{Re}\bigl (\bar t\langle r,v\rangle \bigr )+|t|^2\| v\| ^2.  \]
+</div>
+<p>
+       Taking small real $t$ of both signs gives $\operatorname{Re}\langle r,v\rangle =0$, and taking $t\in \mathrm i\mathbb R$ gives $\operatorname{Im}\langle r,v\rangle =0$. Thus $r\in M^\perp $ and $x=p+r$. Since $M\cap M^\perp =\{ 0\} $, this decomposition is unique, so $H=M\oplus M^\perp $. Every element of $M$ is orthogonal to $M^\perp $, so $M\subset (M^\perp )^\perp $. Conversely, if $x\in (M^\perp )^\perp $ and $x=p+r$ as above, then $r=x-p$ lies in the linear subspace $(M^\perp )^\perp $ and in $M^\perp $, so $\| r\| ^2=\langle r,r\rangle =0$ and $x=p\in M$. We call $p$ the <em>orthogonal projection</em> of $x$ onto $M$; the map $P\colon x\mapsto p$ is linear by the uniqueness of the decomposition, and $\| Px\| \le \| x\| $, because $\| x\| ^2=\| p\| ^2+\| r\| ^2$. 
+    <p>
+      Finally, let $L$ be a bounded linear functional. If $L=0$ we take $y=0$. Otherwise $\ker L$ is a proper closed subspace. Choose $x_0\notin \ker L$, and let $e$ be its component in $(\ker L)^\perp $; then $e\ne 0$ and $L(e)=L(x_0)\ne 0$. For every $x\in H$ the vector $x-(L(x)/L(e))e$ lies in $\ker L$ and is therefore orthogonal to $e$, so that $\langle x,e\rangle =(L(x)/L(e))\| e\| ^2$. With $y=\overline{L(e)}\, e/\| e\| ^2$ this reads $L(x)=\langle x,y\rangle $. The Cauchy–Schwarz inequality shows that $L$ has norm at most $\| y\| $, and $L(y)=\| y\| ^2$ shows equality. If $y'$ also represents $L$, then $\langle x,y-y'\rangle =0$ for all $x$, and $x=y-y'$ gives $y=y'$. If $\ell $ is a bounded conjugate-linear functional, then $\overline\ell \colon x\mapsto \overline{\ell (x)}$ is a bounded linear functional with the same norm, and its representation $\overline{\ell (x)}=\langle x,y\rangle $ reads $\ell (x)=\langle y,x\rangle $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-EF017A20">
+<p><a class="environment-identifier" href="../../tag/1EF937410C2F/">Proposition <span data-tag="EF017A20">11.1.2</span>.</a><span data-gerby-tag="EF017A20"></span> Every bounded sequence in a Hilbert space $H$ has a weakly convergent subsequence, that is, a subsequence $(x_ j)$ for which there is $x\in H$ with $\langle x_ j,v\rangle \to \langle x,v\rangle $ for every $v\in H$. If $(x_ j)$ converges weakly to $x$, then $\| x\| \le \varliminf _ j\| x_ j\| $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $(x_ j)$ be a sequence with $\| x_ j\| \le C$, and let $V$ be the closed linear span of its terms. The finite linear combinations of the $x_ j$ with coefficients in $\mathbb Q+\mathrm i\mathbb Q$ form a countable dense subset of $V$. Applying the Gram–Schmidt process to it, and discarding the vectors that depend linearly on earlier ones, we obtain a finite or countable orthonormal family $(e_ k)$ whose linear span is dense in $V$. 
+    <p>
+      For each $k$ the sequence $(\langle x_ j,e_ k\rangle )_ j$ is bounded by $C$, so by a diagonal argument we may pass to a subsequence, still denoted $(x_ j)$, such that $\langle x_ j,e_ k\rangle $ converges to a number $a_ k$ for every $k$. For every $N$, Bessel's inequality gives $\sum _{k\le N}|\langle x_ j,e_ k\rangle |^2\le C^2$; letting $j\to \infty $ and then $N\to \infty $, we get $\sum _ k|a_ k|^2\le C^2$. Since $\| \sum _{N&lt;k\le N'}a_ ke_ k\| ^2=\sum _{N&lt;k\le N'}|a_ k|^2$ by Pythagoras' theorem, the partial sums of the series $x=\sum _ ka_ ke_ k$ form a Cauchy sequence; the series therefore converges in the closed, hence complete, subspace $V$, and $\| x\| ^2=\sum _ k|a_ k|^2\le C^2$. 
+    <p>
+      By the continuity of the inner product and the orthonormality of the $e_ k$, we have $\langle x,e_ k\rangle =a_ k=\lim _ j\langle x_ j,e_ k\rangle $ for every $k$; hence $\langle x_ j,v\rangle \to \langle x,v\rangle $ for every $v$ in the linear span of the $e_ k$. If $v\in V$ and $v'$ lies in that span with $\| v-v'\| &lt;\delta $, then $|\langle x_ j-x,v\rangle |\le |\langle x_ j-x,v'\rangle |+2C\delta $, so the convergence extends to all $v\in V$. For an arbitrary $v\in H$, write $v=v_1+v_2$ with $v_1\in V$ and $v_2\in V^\perp $ by proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a>; since $x_ j$ and $x$ lie in $V$, we get $\langle x_ j-x,v\rangle =\langle x_ j-x,v_1\rangle \to 0$. 
+    <p>
+      For the last assertion we may assume that $x\ne 0$. By the Cauchy–Schwarz inequality, $\| x\| ^2=\lim _ j\langle x_ j,x\rangle \le \varliminf _ j\| x_ j\| \, \| x\| $, and we divide by $\| x\| $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Differential operators are defined only on subspaces of $L^2$ spaces, so we need the following notions. Let $H_0$ and $H_1$ be Hilbert spaces. An <em>operator</em> $T$ from $H_0$ to $H_1$ is a linear map $T\colon \operatorname{Dom}T\to H_1$ defined on a linear subspace $\operatorname{Dom}T\subset H_0$, its <em>domain</em>. We write $\ker T$ for its kernel, $\operatorname {Ran}T=T(\operatorname{Dom}T)$ for its range, and $\operatorname {Gr}T=\{ (x,Tx):x\in \operatorname{Dom}T\} $ for its graph, a subspace of the Hilbert space $H_0\oplus H_1$ with the inner product $\langle (x,y),(x',y')\rangle =\langle x,x'\rangle +\langle y,y'\rangle $. The operator $T$ is <em>densely defined</em> if $\operatorname{Dom}T$ is dense in $H_0$, and <em>closed</em> if $\operatorname {Gr}T$ is closed; equivalently, $x_ j\in \operatorname{Dom}T$, $x_ j\to x$ and $Tx_ j\to y$ imply $x\in \operatorname{Dom}T$ and $Tx=y$. In particular, the kernel of a closed operator is a closed subspace. 
+</p>
+<p>
+If $T$ is densely defined, its <em>Hilbert adjoint</em> $T^*$, an operator from $H_1$ to $H_0$, is defined as follows: $y\in \operatorname{Dom}T^*$ if the linear functional $x\mapsto \langle Tx,y\rangle $ on $\operatorname{Dom}T$ is bounded with respect to the norm of $H_0$, and then $T^*y$ is the vector determined by 
+</p>
+<div class="equation">
+  \[  \langle Tx,y\rangle =\langle x,T^*y\rangle \qquad (x\in \operatorname{Dom}T).  \]
+</div>
+<p>
+ This vector is well defined: since $\operatorname{Dom}T$ is dense, the functional extends uniquely to a bounded linear functional on $H_0$, which proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a> represents by a unique vector.  
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-4B7D70BC">
+<p><a class="environment-identifier" href="../../tag/0C82C2C21EE7/">Lemma <span data-tag="4B7D70BC">11.1.3</span>.</a><span data-gerby-tag="4B7D70BC"></span> Let $T$ be a densely defined operator from $H_0$ to $H_1$. Then $T^*$ is closed and $\ker T^*=(\operatorname {Ran}T)^\perp $. If $T$ is also closed, then $T^*$ is densely defined and $T^{**}=T$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $y_ j\in \operatorname{Dom}T^*$, $y_ j\to y$ and $T^*y_ j\to w$, then for every $x\in \operatorname{Dom}T$ 
+    
+<div class="equation">
+  \[  \langle Tx,y\rangle =\lim _ j\langle Tx,y_ j\rangle =\lim _ j\langle x,T^*y_ j\rangle =\langle x,w\rangle ;  \]
+</div>
+<p>
+       hence $y\in \operatorname{Dom}T^*$ and $T^*y=w$, so $T^*$ is closed. A vector $y\in H_1$ is orthogonal to $\operatorname {Ran}T$ exactly when the functional $x\mapsto \langle Tx,y\rangle $ vanishes, that is, when $y\in \operatorname{Dom}T^*$ and $T^*y=0$. This proves $\ker T^*=(\operatorname {Ran}T)^\perp $. In the same way, $(a,b)\in H_0\oplus H_1$ is orthogonal to $\operatorname {Gr}T$ if and only if $\langle Tx,b\rangle =\langle x,-a\rangle $ for all $x\in \operatorname{Dom}T$, so 
+    
+<div class="equation">
+  \[  (\operatorname {Gr}T)^\perp =\{ (-T^*y,y):y\in \operatorname{Dom}T^*\} .  \]
+</div>
+<p>
+      Now let $T$ be closed, and let $v\in H_1$ be orthogonal to $\operatorname{Dom}T^*$. Since $\operatorname {Gr}T$ is closed, proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a> and the description of $(\operatorname {Gr}T)^\perp $ decompose $(0,v)$ as $(x,Tx)+(-T^*y,y)$ with $x\in \operatorname{Dom}T$ and $y\in \operatorname{Dom}T^*$. Thus $x=T^*y$ and $v=Tx+y$. Since $v$ is orthogonal to $y\in \operatorname{Dom}T^*$, we obtain 
+    
+<div class="equation">
+  \[  0=\langle v,y\rangle =\langle Tx,y\rangle +\| y\| ^2=\langle x,T^*y\rangle +\| y\| ^2=\| x\| ^2+\| y\| ^2,  \]
+</div>
+<p>
+       so $x=y=0$ and $v=0$. Hence $\operatorname{Dom}T^*$ is dense, and $T^{**}$ is defined. Let $J\colon H_1\oplus H_0\to H_0\oplus H_1$ and $J'\colon H_0\oplus H_1\to H_1\oplus H_0$ be the unitary maps $J(b,a)=(-a,b)$ and $J'(a,b)=(-b,a)$. The description of the orthogonal complement of a graph, applied to $T$ and to the densely defined operator $T^*$, reads $(\operatorname {Gr}T)^\perp =J(\operatorname {Gr}T^*)$ and $(\operatorname {Gr}T^*)^\perp =J'(\operatorname {Gr}T^{**})$. For a closed subspace $M$ we have $(M^\perp )^\perp =M$ by proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a>, and unitary maps carry orthogonal complements to orthogonal complements. Therefore 
+    
+<div class="equation">
+  \[  \operatorname {Gr}T=\bigl ((\operatorname {Gr}T)^\perp \bigr )^\perp =J\bigl ((\operatorname {Gr}T^*)^\perp \bigr ) =JJ'(\operatorname {Gr}T^{**})=\operatorname {Gr}T^{**},  \]
+</div>
+<p>
+       because $JJ'=-\mathrm{id}$ and graphs are linear subspaces. Thus $T^{**}=T$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The next theorem, the abstract form of Hörmander's method, produces a solution of $Tu=g$ from an inequality for the adjoint operator. The second operator $S$ allows us to require the inequality only on $\operatorname{Dom}T^*\cap \operatorname{Dom}S$; in the application in section <a data-tag="066AC58B" href="../../tag/4E04198982E6/">11.3</a>, smooth compactly supported forms are dense in this space, and for them the inequality follows from an integration by parts. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-B9E2EF05">
+<p><a class="environment-identifier" href="../../tag/FDE87BE964C7/">Theorem <span data-tag="B9E2EF05">11.1.4</span>.</a><span data-gerby-tag="B9E2EF05"></span> Let $H_0,H_1,H_2$ be Hilbert spaces, let $T$ from $H_0$ to $H_1$ be a closed densely defined operator, and let $S$ from $H_1$ to $H_2$ be a closed operator with $\operatorname {Ran}T\subset \ker S$. Let $g\in \ker S$ and $0\le M&lt;\infty $, and assume that </p>
+<div class="equation">
+  \[  |\langle g,f\rangle |^2\le M\bigl (\| T^*f\| ^2+\| Sf\| ^2\bigr ) \qquad (f\in \operatorname{Dom}T^*\cap \operatorname{Dom}S).  \]
+</div>
+<p> Then the equation $Tu=g$ has a solution $u\in \operatorname{Dom}T$ with $\| u\| ^2\le M$. Among all solutions there is a unique one of smallest norm, and it is orthogonal to $\ker T$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $S$ is closed, $\ker S$ is a closed subspace, and $H_1=\ker S\oplus (\ker S)^\perp $ by proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a>. Since $\operatorname {Ran}T\subset \ker S$, lemma <a data-tag="4B7D70BC" href="../../tag/0C82C2C21EE7/">11.1.3</a> gives $(\ker S)^\perp \subset (\operatorname {Ran}T)^\perp =\ker T^*$. Let $f\in \operatorname{Dom}T^*$, and write $f=f_0+f_1$ with $f_0\in \ker S$ and $f_1\in (\ker S)^\perp $. Then $f_1\in \operatorname{Dom}T^*$ and $T^*f_1=0$, so $f_0\in \operatorname{Dom}T^*\cap \operatorname{Dom}S$, $T^*f_0=T^*f$ and $Sf_0=0$. Moreover $\langle g,f\rangle =\langle g,f_0\rangle $, because $g\in \ker S$. The hypothesis applied to $f_0$ therefore gives 
+    
+<div class="equation">
+  \[  |\langle g,f\rangle |\le \sqrt M\, \| T^*f\| \qquad (f\in \operatorname{Dom}T^*).  \]
+</div>
+<p>
+      Consequently the map $\lambda \colon T^*f\mapsto \langle g,f\rangle $ is well defined on $\operatorname {Ran}T^*$: if $T^*f=T^*f'$, then $|\langle g,f-f'\rangle |\le \sqrt M\, \| T^*(f-f')\| =0$. It is conjugate-linear and bounded by $\sqrt M$, hence uniformly continuous, so it extends uniquely to a conjugate-linear functional $\tilde\lambda $ on the closed subspace $W=\overline{\operatorname {Ran}T^*}$, again bounded by $\sqrt M$. If $P_ W$ is the orthogonal projection onto $W$, then $x\mapsto \tilde\lambda (P_ Wx)$ is a conjugate-linear functional on $H_0$ of norm at most $\sqrt M$, because $\| P_ Wx\| \le \| x\| $. By the representation of conjugate-linear functionals in proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a>, there is $u\in H_0$ with $\| u\| \le \sqrt M$ and 
+    
+<div class="equation">
+  \[  \langle u,T^*f\rangle =\langle g,f\rangle \qquad (f\in \operatorname{Dom}T^*).  \]
+</div>
+<p>
+       Taking complex conjugates, we get $\langle T^*f,u\rangle =\langle f,g\rangle $ for all $f\in \operatorname{Dom}T^*$. Thus the functional $f\mapsto \langle T^*f,u\rangle $ is bounded on $\operatorname{Dom}T^*$, so $u\in \operatorname{Dom}T^{**}$ and $T^{**}u=g$. Since $T^{**}=T$ by lemma <a data-tag="4B7D70BC" href="../../tag/0C82C2C21EE7/">11.1.3</a>, we conclude that $u\in \operatorname{Dom}T$ and $Tu=g$. 
+    <p>
+      The solutions of $Tu=g$ form the affine subspace $u+\ker T$, which is closed because $\ker T$ is closed. If $P$ denotes the orthogonal projection onto $\ker T$, then $\| u+k\| ^2=\| u-Pu\| ^2+\| Pu+k\| ^2$ for $k\in \ker T$. Hence $u-Pu$ is the unique solution of smallest norm; it is orthogonal to $\ker T$, and its norm is at most $\| u\| \le \sqrt M$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-86B639827902" data-section-entries="10E4AE8BC531 52930869627B 5898ED42C26F 86B639827902 EA195CC9592D EC970F3402EB FFB7E3647C0B"><div class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><h2><a href="../../tag/86B639827902/">11.2 Pseudoconvexity and boundary distance</a></h2><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> <span data-gerby-tag="5332C76B"></span></div>
+<p>
+We shall prove Hörmander's estimate on open sets that are exhausted by the compact sublevel sets of a continuous plurisubharmonic function. These pseudoconvex open sets are characterized by the plurisubharmonicity of minus the logarithm of the boundary distance, and they carry smooth strictly plurisubharmonic exhaustion functions, which section <a data-tag="066AC58B" href="../../tag/4E04198982E6/">11.3</a> uses to localize the estimate. For $r&gt;0$ we write $\Delta _ r=\{ t\in \mathbb C:|t|&lt;r\} $ for the open disc of radius $r$ in $\mathbb C$, and $\Delta =\Delta _1$ for the unit disc; in this chapter the letter $\Delta $ always denotes a disc, never the Laplacian. 
+</p>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-CBC5C928">
+<p><a class="environment-identifier" href="../../tag/10E4AE8BC531/">Definition <span data-tag="CBC5C928">11.2.1</span>.</a><span data-gerby-tag="CBC5C928"></span> Let $n\ge 1$ and let $\Omega \subset \mathbb C^ n$ be open. An <em>exhaustion function</em> of $\Omega $ is a function $\rho \colon \Omega \to \mathbb R$ such that the sublevel set $\{ z\in \Omega :\rho (z)\le c\} $ is compact for every $c\in \mathbb R$. The open set $\Omega $ is <em>pseudoconvex</em> if it has a continuous plurisubharmonic exhaustion function. </p>
+</article>
+
+<p>
+A continuous exhaustion function attains its minimum on each nonempty sublevel set, so it is bounded below; adding a constant, we may take it nonnegative. An open set $\Omega $ is pseudoconvex if and only if each of its connected components is. Indeed, the restriction of a continuous plurisubharmonic exhaustion function of $\Omega $ to a component is a continuous plurisubharmonic exhaustion function of that component, because the component is open and closed in $\Omega $. Conversely, the components of $\Omega $ are open, and each of them contains a point with rational real coordinates, so there are at most countably many of them, say $\Omega _1,\Omega _2,\ldots $. If $\rho _ k\ge 0$ is a continuous plurisubharmonic exhaustion function of $\Omega _ k$, then the function equal to $\rho _ k+k$ on $\Omega _ k$ is a continuous plurisubharmonic exhaustion function of $\Omega $: it is continuous and plurisubharmonic because the components are open, and its sublevel set $\{ \le c\} $ is the finite union of the compact sets $\{ \rho _ k\le c-k\} $, $k\le c$. 
+</p>
+<p>
+Recall from proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a> that a real function $u$ of class $C^2$ on an open set is plurisubharmonic if and only if its complex Hessian matrix $(u_{j\bar k})$ is positive semidefinite at every point. Here, as in section <a data-tag="6AEFB312" href="../../tag/484A05EF6DF1/">8.2</a>, a function on an open set is plurisubharmonic if it is plurisubharmonic on each connected component. Recall also, from the discussion following proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>, that a function $u$ is strictly plurisubharmonic if every point has a neighborhood on which $u-\varepsilon |z|^2$ is plurisubharmonic for some $\varepsilon &gt;0$. For smooth $u$ this means that $(u_{j\bar k})$ is positive definite at every point, and then its smallest eigenvalue is a positive continuous function.  
+</p>
+<p>
+To recognize plurisubharmonic functions we use the following criterion, in which the harmonic majorants in the submean inequality are restricted to real parts of polynomials. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-9D57C20C">
+<p><a class="environment-identifier" href="../../tag/5898ED42C26F/">Lemma <span data-tag="9D57C20C">11.2.2</span>.</a><span data-gerby-tag="9D57C20C"></span> Let $U\subset \mathbb C^ N$ be open and let $v\colon U\to [-\infty ,\infty )$ be upper semicontinuous. Assume that for all $z_0\in U$ and $a\in \mathbb C^ N$ with $\{ z_0+ta:|t|\le 1\} \subset U$, and for every polynomial $P$ in one complex variable with $v(z_0+ta)\le \operatorname{Re}P(t)$ whenever $|t|=1$, we have $v(z_0)\le \operatorname{Re}P(0)$. Then </p>
+<div class="equation">
+  \[  v(z_0)\le \frac1{2\pi }\int _0^{2\pi }v(z_0+\mathrm e^{\mathrm i\theta }a)\, \mathrm d\theta  \]
+</div>
+<p> for all such $z_0$ and $a$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $z_0$ and $a$, and put $g(\theta )=v(z_0+\mathrm e^{\mathrm i\theta }a)$, an upper semicontinuous function on the circle. By lemma <a data-tag="A2C10798" href="../../tag/36C9571A59E0/">3.1.2</a> there are continuous real functions $g_ m$ decreasing to $g$ whose integrals decrease to the integral of $g$, which may be $-\infty $. Fix $m$ and $\delta &gt;0$. We approximate $g_ m$ uniformly by real trigonometric polynomials, using the Fejér kernel 
+    
+<div class="equation">
+  \[  F_ N(\theta )=\frac1N\Bigl |\sum _{k=0}^{N-1}\mathrm e^{\mathrm ik\theta }\Bigr |^2=\sum _{|k|&lt;N}\Bigl (1-\frac{|k|}N\Bigr )\mathrm e^{\mathrm ik\theta },\qquad N\ge 1.  \]
+</div>
+<p>
+       The two expressions agree because the product $\sum _{k,l=0}^{N-1}\mathrm e^{\mathrm i(k-l)\theta }$ contains exactly $N-|h|$ pairs $(k,l)$ with $k-l=h$, for each integer $h$ with $|h|&lt;N$. By the first expression $F_ N\ge 0$, and summing the geometric series gives $F_ N(\theta )=\sin ^2(N\theta /2)/(N\sin ^2(\theta /2))\le 1/(N\sin ^2(\theta /2))$ for $0&lt;|\theta |\le \pi $; by the second, $F_ N$ has integral one with respect to the normalized measure $\mathrm d\theta /(2\pi )$ on $[-\pi ,\pi ]$. 
+    <p>
+      Let $q_ N=g_ m*F_ N$ be the convolution with respect to $\mathrm d\theta /(2\pi )$, that is, $q_ N(\theta )=\frac1{2\pi }\int _{-\pi }^{\pi }g_ m(\theta -\tau )F_ N(\tau )\, \mathrm d\tau $. For $0&lt;\delta '\le \pi $ let $\omega (\delta ')$ be the largest oscillation of $g_ m$ over arcs of length at most $\delta '$, which tends to zero with $\delta '$ by uniform continuity. Splitting the integral at $|\tau |=\delta '$, we obtain 
+    
+<div class="equation">
+  \[  |q_ N(\theta )-g_ m(\theta )|\le \frac1{2\pi }\int _{-\pi }^{\pi }|g_ m(\theta -\tau )-g_ m(\theta )|F_ N(\tau )\, \mathrm d\tau \le \omega (\delta ')+\frac{2\max |g_ m|}{N\sin ^2(\delta '/2)},  \]
+</div>
+<p>
+       so $q_ N\to g_ m$ uniformly as $N\to \infty $. Inserting the second expression for $F_ N$ and substituting $\sigma =\theta -\tau $, we see that $q_ N(\theta )=\sum _{|k|&lt;N}c_ k\mathrm e^{\mathrm ik\theta }$ with $c_ k=(1-|k|/N)\frac1{2\pi }\int _{-\pi }^{\pi }g_ m(\sigma )\mathrm e^{-\mathrm ik\sigma }\, \mathrm d\sigma $. Since $g_ m$ is real, $c_{-k}=\bar c_ k$, so $q_ N(\theta )=\operatorname{Re}P(\mathrm e^{\mathrm i\theta })$ for the polynomial $P(t)=c_0+2\sum _{0&lt;k&lt;N}c_ kt^ k$, and $\operatorname{Re}P(0)=c_0$ is the mean of $g_ m$. Choose $N$ with $|q_ N-g_ m|&lt;\delta $. Then $\operatorname{Re}(P(t)+\delta )\ge g_ m\ge g$ on the circle, and the hypothesis gives 
+    
+<div class="equation">
+  \[  v(z_0)\le c_0+\delta =\frac1{2\pi }\int _0^{2\pi }g_ m\, \mathrm d\theta +\delta .  \]
+</div>
+<p>
+       Letting $\delta \to 0$ and then $m\to \infty $, we obtain the asserted inequality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Richberg's lemma approximates a continuous strictly plurisubharmonic function from above by smooth strictly plurisubharmonic functions, at the cost of half of the lower bound for the complex Hessian. Convolution does this locally; the local pieces are glued by a regularized maximum. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-9B1E27A8">
+<p><a class="environment-identifier" href="../../tag/52930869627B/">Lemma <span data-tag="9B1E27A8">11.2.3</span> <span class="named">(Richberg)</span>.</a><span data-gerby-tag="9B1E27A8"></span> Let $\Omega \subset \mathbb C^ n$ be open, let $u$ be a continuous function on $\Omega $, and let $a&gt;0$ be such that $u-a|z|^2$ is plurisubharmonic. Then for every continuous function $\varepsilon \colon \Omega \to (0,\infty )$ there is a smooth function $v$ on $\Omega $ with </p>
+<div class="equation">
+  \[  u\le v\le u+\varepsilon ,\qquad v-\tfrac a2|z|^2\in \mathrm{PSH}(\Omega ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: local approximations.</em> Let $(K_ m)_{m\ge 1}$ be a compact exhaustion of $\Omega $ (section <a data-tag="AD6522C4" href="../../tag/DAFA3E4936D2/">1.1</a>), so that $K_ m\subset \operatorname{Int}K_{m+1}$ and $\bigcup _ m\operatorname{Int}K_ m=\Omega $, and put $K_0=K_{-1}=\varnothing $. For each $m\ge 1$, the compact set $K_ m\setminus \operatorname{Int}K_{m-1}$ is covered by finitely many balls $B(c,r/3)$ with $c\in K_ m\setminus \operatorname{Int}K_{m-1}$ and $B(c,r)\Subset \operatorname{Int}K_{m+1}\setminus K_{m-2}$. Collecting these balls for all $m$, we obtain a sequence of balls $B_ i=B(c_ i,r_ i)\Subset \Omega $ whose inner balls $B(c_ i,r_ i/3)$ cover $\Omega $. The family $(B_ i)$ is locally finite: a compact subset of $\Omega $ lies in some $K_ m$, and a ball chosen at a stage $m'\ge m+2$ lies in the complement of $K_{m'-2}\supset K_ m$, so the compact set meets only the finitely many balls chosen at the stages $m'\le m+1$. 
+    <p>
+      The function $u=(u-a|z|^2)+a|z|^2$ is continuous and plurisubharmonic by proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>. Let $\rho _ h$, $h&gt;0$, be the radial mollifiers of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>. By proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(2), we have $u*\rho _ h\ge u$, and $(u-a|z|^2)*\rho _ h=u*\rho _ h-a|z|^2*\rho _ h$ is smooth and plurisubharmonic, hence has positive semidefinite complex Hessian by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1); by lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>, $u*\rho _ h\to u$ locally uniformly as $h\to 0$. Since $\rho _ h$ is radial, $\int y\rho _ h(y)\, \mathrm dV(y)=0$, and expanding $|z-y|^2=|z|^2-2\operatorname{Re}\langle z,y\rangle +|y|^2$ gives $|z|^2*\rho _ h=|z|^2+\int |y|^2\rho _ h(y)\, \mathrm dV(y)$, whose complex Hessian matrix is $I$. Hence the complex Hessian matrix of $u*\rho _ h$ is at least $aI$. 
+    <p>
+      For each $i$ choose $\delta _ i$ with $0&lt;\delta _ i&lt;a/2$ and $\delta _ ir_ i^2&lt;\min _{\overline B_ i}\varepsilon $, put $\eta _ i=\delta _ ir_ i^2/6$, and choose $h_ i&gt;0$ so small that $u*\rho _{h_ i}$ is defined near $\overline B_ i$ and satisfies $0\le u*\rho _{h_ i}-u&lt;\eta _ i$ there. Define 
+    
+<div class="equation">
+  \[  u_ i=u*\rho _{h_ i}+\delta _ i\bigl ((2r_ i/3)^2-|z-c_ i|^2\bigr ) \quad \text{on }B_ i.  \]
+</div>
+<p>
+       The quadratic term is at least $\delta _ ir_ i^2/3=2\eta _ i$ on the inner ball $B(c_ i,r_ i/3)$, is less than $-2\eta _ i$ where $|z-c_ i|&gt;\sqrt7\, r_ i/3$, and is at most $4\delta _ ir_ i^2/9$ everywhere. Therefore 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; u_ i&gt;u+\eta _ i&amp; &amp; \text{on }B(c_ i,r_ i/3),\\ &amp; u_ i&lt;u-\eta _ i&amp; &amp; \text{where }\sqrt7\, r_ i/3&lt;|z-c_ i|&lt;r_ i,\\ &amp; u_ i+\eta _ i&lt;u+\varepsilon &amp; &amp; \text{on }B_ i, \end{aligned}  \]
+</div>
+<p>
+       the last because $2\eta _ i+4\delta _ ir_ i^2/9=7\delta _ ir_ i^2/9&lt;\varepsilon $ on $B_ i$. The complex Hessian matrix of $u_ i$ is at least $(a-\delta _ i)I\ge (a/2)I$. 
+    <p>
+<em>Step 2: a regularized maximum.</em> Fix an even smooth function $\theta \ge 0$ on $\mathbb R$ with support in $(-1,1)$ and integral one, for instance the mollifier $\rho _{1/2}$ of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a> in dimension $d=1$. For an integer $p\ge 1$, positive numbers $\eta _1,\ldots ,\eta _ p$ and $t=(t_1,\ldots ,t_ p)\in \mathbb R^ p$, define 
+    
+<div class="equation">
+  \[  M_\eta (t)=\int _{\mathbb R^ p}\max _ i(t_ i+\eta _ i x_ i) \prod _ i\theta (x_ i)\, \mathrm dx.  \]
+</div>
+<p>
+       The substitution $y_ i=\eta _ ix_ i$ and the evenness of $\theta $ show that $M_\eta $ is the convolution of the continuous function $t\mapsto \max _ it_ i$ with the smooth compactly supported function $y\mapsto \prod _ i\eta _ i^{-1}\theta (y_ i/\eta _ i)$, so $M_\eta $ is smooth by differentiation under the integral sign (section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>). It has the following properties. 
+    
+<ol>
+<li><p>
+$M_\eta $ is convex and nondecreasing in each variable, since for fixed $x$ the function $t\mapsto \max _ i(t_ i+\eta _ ix_ i)$ is. 
+</p>
+</li><li><p>
+$\max _ it_ i\le M_\eta (t)\le \max _ i(t_ i+\eta _ i)$. The upper bound holds because $|x_ i|&lt;1$ on the support of the integrand. For the lower bound, integrate $\max _ j(t_ j+\eta _ jx_ j)\ge t_ i+\eta _ ix_ i$ and use $\int x_ i\theta (x_ i)\, \mathrm dx_ i=0$. 
+</p>
+</li><li><p>
+$M_\eta (t_1+c,\ldots ,t_ p+c)=M_\eta (t)+c$ for $c\in \mathbb R$. Differentiating in $c$, together with the first property, gives $\partial M_\eta /\partial t_ i\ge 0$ and $\sum _ i\partial M_\eta /\partial t_ i=1$. 
+</p>
+</li><li><p>
+If $t_ i+\eta _ i\le \max _{j\ne i}(t_ j-\eta _ j)$ for some $i$, then deleting the variable $t_ i$ and the parameter $\eta _ i$ does not change the value of $M_\eta $. Indeed, for $|x_ j|&lt;1$ we have $t_ i+\eta _ ix_ i&lt;t_ i+\eta _ i\le \max _{j\ne i}(t_ j-\eta _ j)&lt;\max _{j\ne i}(t_ j+\eta _ jx_ j)$, so the $i$-th term never realizes the maximum, and integrating out $x_ i$ removes it. 
+</p>
+</li>
+</ol>
+<p>
+       For smooth real functions $w_1,\ldots ,w_ p$, the chain rule gives 
+    
+<div class="equation">
+  \[  \partial _{z_ j}\partial _{\bar z_ k}M_\eta (w)=\sum _ i\frac{\partial M_\eta }{\partial t_ i}(w)\, \partial _{z_ j}\partial _{\bar z_ k}w_ i+\sum _{i,l}\frac{\partial ^2M_\eta }{\partial t_ i\partial t_ l}(w)\, \partial _{z_ j}w_ i\, \overline{\partial _{z_ k}w_ l}.  \]
+</div>
+<p>
+       The real Hessian matrix $G=(\partial ^2M_\eta /\partial t_ i\partial t_ l)$ is positive semidefinite, because the second derivative of the convex function $s\mapsto M_\eta (t+s\tau )$ is nonnegative for every $\tau \in \mathbb R^ p$. Hence the matrix given by the second sum is positive semidefinite: for $b\in \mathbb C^ n$ its quadratic form equals $\sum _{i,l}G_{il}\zeta _ i\bar\zeta _ l$ with $\zeta _ i=\sum _ j\partial _{z_ j}w_ i\, b_ j$, and writing $\zeta =\xi +\mathrm i\xi '$ with $\xi ,\xi '\in \mathbb R^ p$, this is $\xi ^{\mathsf T}G\xi +\xi '^{\mathsf T}G\xi '\ge 0$ by the symmetry of $G$. Therefore, by the third property, if each $w_ i$ has complex Hessian matrix at least $(a/2)I$, so does $M_\eta (w_1,\ldots ,w_ p)$. 
+    <p>
+<em>Step 3: gluing.</em> For $z\in \Omega $ let $I(z)=\{ i:z\in B_ i\} $, a finite nonempty set, and define $v(z)=M_\eta \bigl ((u_ i(z))_{i\in I(z)}\bigr )$ with the parameters $(\eta _ i)_{i\in I(z)}$. We show that $v$ is smooth near a fixed point $z_0$. Let $I_0=\{ i:z_0\in B_ i\} $ and $I_1=\{ i:z_0\in \partial B_ i\} $, finite sets by local finiteness, and choose $j$ with $z_0\in B(c_ j,r_ j/3)$. There is a neighborhood $W$ of $z_0$ that is contained in $B(c_ j,r_ j/3)$ and in $B_ i$ for $i\in I_0$, that meets $\overline B_ i$ only for $i\in I_0\cup I_1$, and whose intersection with $B_ i$, for $i\in I_1$, lies in the shell $\sqrt7\, r_ i/3&lt;|z-c_ i|&lt;r_ i$. For $z\in W$ we have $I_0\subset I(z)\subset I_0\cup I_1$, $j\in I_0$, and every $i\in I(z)\cap I_1$ satisfies 
+    
+<div class="equation">
+  \[  u_ i(z)+\eta _ i&lt;u(z)&lt;u_ j(z)-\eta _ j.  \]
+</div>
+<p>
+       By the fourth property of $M_\eta $, applied to these indices one at a time, $v=M_\eta \bigl ((u_ i)_{i\in I_0}\bigr )$ on $W$, which is smooth. Thus $v$ is smooth on $\Omega $, and by Step 2 its complex Hessian matrix is at least $(a/2)I$; hence $v-\tfrac a2|z|^2$ is smooth with positive semidefinite complex Hessian, and so it is plurisubharmonic by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1). Finally, every $z$ lies in some inner ball $B(c_ j,r_ j/3)$, and the second property of $M_\eta $ gives $v(z)\ge u_ j(z)&gt;u(z)$ and $v(z)\le \max _{i\in I(z)}(u_ i(z)+\eta _ i)&lt;u(z)+\varepsilon (z)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-F47F798D">
+<p><a class="environment-identifier" href="../../tag/EA195CC9592D/">Theorem <span data-tag="F47F798D">11.2.4</span>.</a><span data-gerby-tag="F47F798D"></span> Let $n\ge 1$ and let $\Omega \subsetneq \mathbb C^ n$ be an open set. If $\Omega $ is pseudoconvex, then $-\log \operatorname {dist}(z,\mathbb C^ n\setminus \Omega )$ is a continuous plurisubharmonic function on $\Omega $. Conversely, if this function is plurisubharmonic, then $\Omega $ is pseudoconvex. Every pseudoconvex open set in $\mathbb C^ n$ has a nonnegative smooth strictly plurisubharmonic exhaustion function. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Steps 1 and 2 deduce the plurisubharmonicity of $-\log \operatorname {dist}(\cdot ,\mathbb C^ n\setminus \Omega )$ from a submean inequality for the distance to the boundary in a fixed direction; Step 3 uses this function to construct a continuous exhaustion function, which lemma <a data-tag="9B1E27A8" href="../../tag/52930869627B/">11.2.3</a> smooths. 
+    <p>
+<em>Step 1: distances in a fixed direction.</em> Let $\Omega $ be pseudoconvex, with a continuous plurisubharmonic exhaustion function $\rho $. For $z\in \Omega $ and $\xi \in \mathbb C^ n$ put 
+    
+<div class="equation">
+  \[  \delta (z,\xi )=\sup \{ r&gt;0:z+\xi \Delta _ r\subset \Omega \} \in (0,\infty ],  \]
+</div>
+<p>
+       so that $\delta (z,0)=\infty $. The function $\delta $ is lower semicontinuous on $\Omega \times \mathbb C^ n$: if $r&lt;\delta (z,\xi )$, then the compact disc $z+\xi \overline\Delta _ r$ lies in $\Omega $, hence so does $z'+\xi '\overline\Delta _ r$ for all $(z',\xi ')$ close to $(z,\xi )$, and $\delta (z',\xi ')\ge r$ for these points. Thus $V=-\log \delta $ is an upper semicontinuous function on $\Omega \times \mathbb C^ n$ with values in $[-\infty ,\infty )$. We verify the hypothesis of lemma <a data-tag="9D57C20C" href="../../tag/5898ED42C26F/">11.2.2</a> for $V$ on the open set $\Omega \times \mathbb C^ n\subset \mathbb C^{2n}$. 
+    <p>
+      Let $(z_0+ta,\xi _0+tb)$, $|t|\le 1$, be a closed disc in $\Omega \times \mathbb C^ n$, and let $P$ be a polynomial with $V(z_0+ta,\xi _0+tb)\le \operatorname{Re}P(t)$ for $|t|=1$, that is, $\delta (z_0+ta,\xi _0+tb)\ge |\mathrm e^{-P(t)}|$. Consider the holomorphic map 
+    
+<div class="equation">
+  \[  h(t,w)=z_0+t a+w\mathrm e^{-P(t)}(\xi _0+t b),\qquad (t,w)\in \mathbb C^2.  \]
+</div>
+<p>
+       We have $h(t,0)=z_0+ta\in \Omega $ for $|t|\le 1$; and $h(t,w)\in \Omega $ for $|t|=1$ and $|w|&lt;1$, because then $|w\mathrm e^{-P(t)}|&lt;\delta (z_0+ta,\xi _0+tb)$. Let $R$ be the supremum of the numbers $r\ge 0$ with $h(\overline\Delta \times \overline\Delta _ r)\subset \Omega $. Since $h(\overline\Delta \times \{ 0\} )$ is a compact subset of $\Omega $ and $h$ is continuous, $R&gt;0$. We show that $R\ge 1$. 
+    <p>
+      Suppose that $R&lt;1$. Then $h(\partial \Delta \times \overline\Delta _ R)$ is a compact subset of $\Omega $; let $c$ be the maximum of $\rho $ on it. For $|w|&lt;R$ we have $h(\overline\Delta \times \{ w\} )\subset \Omega $, because every radius smaller than an admissible one is admissible; since this set is compact and $h$ is continuous, there is $r'&gt;1$ such that $t\mapsto h(t,w)$ maps the disc $\Delta _{r'}$ into $\Omega $, and hence into one connected component of $\Omega $. The function $t\mapsto \rho (h(t,w))$ is finite, hence subharmonic on $\Delta _{r'}$ by proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a>, and it is at most $c$ on $\partial \Delta $. By upper semicontinuity, $\varlimsup _{t\to \zeta }(\rho (h(t,w))-c)\le 0$ for every $\zeta \in \partial \Delta $, and the maximum principle of proposition <a data-tag="4517B555" href="../../tag/6D3B30A16AAE/">3.1.4</a> on the disc $\Delta $ gives $\rho (h(t,w))\le c$ for $|t|&lt;1$, hence for $|t|\le 1$. Thus $h(\overline\Delta \times \Delta _ R)$ lies in the compact set $\{ \rho \le c\} $, and so does its closure $h(\overline\Delta \times \overline\Delta _ R)$. This compact subset of $\Omega $ has positive distance from $\mathbb C^ n\setminus \Omega $, and the uniform continuity of $h$ on compact sets gives $h(\overline\Delta \times \overline\Delta _{R'})\subset \Omega $ for some $R'&gt;R$, contradicting the definition of $R$. 
+    <p>
+      Hence $R\ge 1$. In particular $h(0,w)=z_0+w\mathrm e^{-P(0)}\xi _0\in \Omega $ for $|w|&lt;1$, which means that $\delta (z_0,\xi _0)\ge \mathrm e^{-\operatorname{Re}P(0)}$, that is, $V(z_0,\xi _0)\le \operatorname{Re}P(0)$. By lemma <a data-tag="9D57C20C" href="../../tag/5898ED42C26F/">11.2.2</a>, $V$ satisfies the circle submean inequality on every closed complex disc in $\Omega \times \mathbb C^ n$. 
+    <p>
+<em>Step 2: the boundary distance.</em> Now let $\Omega \ne \mathbb C^ n$ and put $d(z)=\operatorname {dist}(z,\mathbb C^ n\setminus \Omega )$. For a unit vector $\xi $ we have $\delta (z,\xi )\ge d(z)$, because $z+\xi \Delta _{d(z)}$ lies in the ball $B(z,d(z))\subset \Omega $. Equality holds if $\xi $ points from $z$ to a nearest point of the closed set $\mathbb C^ n\setminus \Omega $, since that point, $z+d(z)\xi $, lies in $z+\xi \Delta _ r$ for every $r&gt;d(z)$. Hence 
+    
+<div class="equation">
+  \[  -\log d(z)=\max _{|\xi |=1}V(z,\xi ).  \]
+</div>
+<p>
+       For fixed $\xi $, the function $z\mapsto V(z,\xi )$ satisfies the circle submean inequality on every closed disc $\{ z_0+ta:|t|\le 1\} \subset \Omega $, by Step 1 with $b=0$, and it is bounded above by $-\log d$. Therefore 
+    
+<div class="equation">
+  \[  V(z_0,\xi )\le \frac1{2\pi }\int _0^{2\pi }V(z_0+\mathrm e^{\mathrm i\theta }a,\xi )\, \mathrm d\theta \le \frac1{2\pi }\int _0^{2\pi }-\log d(z_0+\mathrm e^{\mathrm i\theta }a)\, \mathrm d\theta ,  \]
+</div>
+<p>
+       and taking the maximum over $\xi $ gives the submean inequality for $-\log d$. Since $d$ is positive and $1$-Lipschitz, $-\log d$ is continuous. Its restriction to each connected component of each affine complex-line section of $\Omega $ is therefore subharmonic (definition <a data-tag="BEE8F6C5" href="../../tag/3E4C6A9CCF19/">3.1.1</a>): at a point $z_0+t_0a$ of such a section, the circle means over $\{ z_0+(t_0+r\mathrm e^{\mathrm i\theta })a\} $ dominate the value for all small $r&gt;0$. Hence $-\log d$, which is finite, is plurisubharmonic on each connected component of $\Omega $ by definition <a data-tag="2C78F54E" href="../../tag/6070D2D83EC6/">8.1.1</a>, that is, on $\Omega $. 
+    <p>
+<em>Step 3: smooth exhaustion functions.</em> Let $\Omega \ne \mathbb C^ n$ be an open set on which $-\log d$ is plurisubharmonic, and put 
+    
+<div class="equation">
+  \[  u(z)=|z|^2+\max \{ -\log d(z),0\} .  \]
+</div>
+<p>
+       Then $u$ is continuous, $u-|z|^2$ is plurisubharmonic by proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>, and $u$ is an exhaustion function of $\Omega $: the set $\{ u\le c\} $ is contained in the ball $\{ |z|^2\le c\} $ and in $\{ d\ge \mathrm e^{-c}\} $, so it is a closed and bounded subset of $\mathbb C^ n$ contained in $\Omega $, hence compact. In particular, $\Omega $ is pseudoconvex, which proves the converse statement. 
+    <p>
+      By lemma <a data-tag="9B1E27A8" href="../../tag/52930869627B/">11.2.3</a> with $a=1$ and $\varepsilon =1$, there is a smooth function $s$ with $u\le s\le u+1$ such that $s-|z|^2/2$ is plurisubharmonic. Then $s\ge u\ge 0$, and the complex Hessian matrix of $s$ is at least $I/2$ by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1) applied to $s-|z|^2/2$, so that $s$ is strictly plurisubharmonic. Moreover, since $s\ge u$, the sublevel set $\{ s\le c\} $ is a closed subset of the compact set $\{ u\le c\} $. Thus $s$ is a nonnegative smooth strictly plurisubharmonic exhaustion function. If $\Omega \ne \mathbb C^ n$ is pseudoconvex, Step 2 shows that $-\log d$ is plurisubharmonic, so this construction applies; for $\Omega =\mathbb C^ n$ we take $s=|z|^2$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-04AFE5BC">
+<p><a class="environment-identifier" href="../../tag/FFB7E3647C0B/">Corollary <span data-tag="04AFE5BC">11.2.5</span>.</a><span data-gerby-tag="04AFE5BC"></span> Products of pseudoconvex open sets are pseudoconvex. If $s$ is a smooth plurisubharmonic exhaustion function of an open set $\Omega \subset \mathbb C^ n$, then each sublevel set $\{ s&lt;c\} $, $c\in \mathbb R$, is pseudoconvex and relatively compact in $\Omega $. In particular, every pseudoconvex open set $\Omega \subset \mathbb C^ n$ is the union of an increasing sequence of pseudoconvex open sets $\Omega _ j\Subset \Omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\Omega \subset \mathbb C^ n$ and $\Omega '\subset \mathbb C^ m$ be pseudoconvex, with nonnegative continuous plurisubharmonic exhaustion functions $\rho $ and $\rho '$. The function $(z,w)\mapsto \rho (z)+\rho '(w)$ is continuous and plurisubharmonic on $\Omega \times \Omega '$, by proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a> applied to the two projections and by proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>. Its sublevel set $\{ \le c\} $ is a closed subset of the compact set $\{ \rho \le c\} \times \{ \rho '\le c\} $, so $\Omega \times \Omega '$ is pseudoconvex. 
+    <p>
+      Next let $s$ be as in the statement and $c\in \mathbb R$. The function $x\mapsto 1/(c-x)$ is convex and increasing on $(-\infty ,c)$, so the complex Hessian matrix of $1/(c-s)$ on the open set $\{ s&lt;c\} $, namely $(c-s)^{-2}(s_{j\bar k})+2(c-s)^{-3}\bigl (\partial _{z_ j}s\, \overline{\partial _{z_ k}s}\bigr )$ by the chain rule, is positive semidefinite. Hence $|z|^2+1/(c-s)$ is a smooth plurisubharmonic function on $\{ s&lt;c\} $, by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1). For $C\le 0$ its sublevel set $\{ \le C\} $ is empty. For $C&gt;0$ this sublevel set is closed in $\{ s&lt;c\} $ and contained in the set $\{ s\le c-1/C\} $, which is a compact subset of $\{ s&lt;c\} $; hence it is compact, and $\{ s&lt;c\} $ is pseudoconvex. Moreover $\{ s&lt;c\} $ is contained in the compact set $\{ s\le c\} $, so it is relatively compact in $\Omega $. 
+    <p>
+      Finally, if $\Omega $ is pseudoconvex, theorem <a data-tag="F47F798D" href="../../tag/EA195CC9592D/">11.2.4</a> provides a smooth plurisubharmonic exhaustion function $s$, and the sets $\Omega _ j=\{ s&lt;j\} $, $j\ge 1$, are pseudoconvex, relatively compact in $\Omega $, increasing, and have union $\Omega $. (Some of them may be empty or disconnected; definition <a data-tag="CBC5C928" href="../../tag/10E4AE8BC531/">11.2.1</a> allows arbitrary open sets.) 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+With the boundary distance at hand, the invariant exhaustion function required in Kiselman's minimum principle exists automatically on pseudoconvex domains. 
+</p>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-49E5B409">
+<p><a class="environment-identifier" href="../../tag/EC970F3402EB/">Corollary <span data-tag="49E5B409">11.2.6</span>.</a><span data-gerby-tag="49E5B409"></span> Let $m,k\ge 1$, and let $\Omega \subset \mathbb C^ m\times \mathbb C^ k$ be a pseudoconvex domain that is invariant under imaginary translations and whose nonempty real fibers $V_ z$ are convex, in the notation of section <a data-tag="12F6C9C4" href="../../tag/53A48113C242/">8.5</a>. If $u\in \mathrm{PSH}(\Omega )$ is invariant under imaginary translations, then the function $v(z)=\inf _{t\in V_ z}u(z,t)$ is plurisubharmonic or identically $-\infty $ on $p(\Omega )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We construct a function $\psi $ with the properties required in theorem <a data-tag="90492B74" href="../../tag/1F87EF4FCF69/">8.5.1</a>; the corollary then follows from that theorem. If $\Omega =\mathbb C^{m+k}$, let $\psi (z,w)=|z|^2+|\operatorname{Re}w|^2$. Otherwise let $d=\operatorname {dist}(\cdot ,\mathbb C^{m+k}\setminus \Omega )$ and put 
+    
+<div class="equation">
+  \[  \psi (z,w)=|z|^2+|\operatorname{Re}w|^2+ \max \{ -\log d(z,w),0\} .  \]
+</div>
+<p>
+       Imaginary translations are isometries of $\mathbb C^{m+k}$ that preserve $\Omega $ and its complement, so $d$ and $\psi $ are invariant under them. The function $\psi $ is plurisubharmonic by proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>: $-\log d$ is plurisubharmonic by theorem <a data-tag="F47F798D" href="../../tag/EA195CC9592D/">11.2.4</a>, and $|z|^2+|\operatorname{Re}w|^2$ is plurisubharmonic by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1), since its complex Hessian matrix is the diagonal matrix with entries $1$ in the $z$-directions and $\frac12$ in the $w$-directions, by the identity $(\operatorname{Re}w_ l)^2=\tfrac 12|w_ l|^2+\tfrac 12\operatorname{Re}(w_ l^2)$ for $1\le l\le k$. Finally, let $c\in \mathbb R$. Since $\psi $ is continuous, the set $\{ (z,t)\in \Omega _{\mathbb R}:\psi (z,t)\le c\} $ is closed in $\Omega _{\mathbb R}$. It is contained in $\{ |z|^2+|t|^2\le c\} $ and, if $\Omega \ne \mathbb C^{m+k}$, in the set $\{ d\ge \mathrm e^{-c}\} $, which is closed in $\mathbb C^{m+k}$ and contained in $\Omega $; it is therefore a closed and bounded subset of $\mathbb C^ m\times \mathbb R^ k$, hence compact. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-4E04198982E6" data-section-entries="038AC5695B6F 0B44CA843C7B 35C885FDEB1E 3B7B834E5CD4 4E04198982E6 866FA0174B79 88735CB0C076 961105705CF9 D557EE261608 F03962A0AC31 F85650C9CE6A"><div class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><h2><a href="../../tag/4E04198982E6/">11.3 Interior density and the weighted estimate</a></h2><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> <span data-gerby-tag="066AC58B"></span></div>
+<p>
+We now prove Hörmander's estimate, first for smooth weights (theorem <a data-tag="BC607899" href="../../tag/F85650C9CE6A/">11.3.3</a>) and then, by regularization, for arbitrary plurisubharmonic weights (theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a>). Throughout, $\Omega \subset \mathbb C^ n$ is open, $n\ge 1$, and $\mathrm dV=\mathrm dV_{2n}$ is Lebesgue measure. For a real function $q$ of class $C^2$ we write $H_ q=(q_{j\bar k})$ for its complex Hessian matrix, with $q_{j\bar k}=\partial _{z_ j}\partial _{\bar z_ k}q$ as in (<a data-tag="FB0DE6B6" href="../../tag/EFB1A41694DE/">7.5</a>), and we express our estimates through $H_ q$. This is the matrix denoted $\mathcal H(q)$ in section <a data-tag="7C99D798" href="../../tag/2044B813A798/">9.7</a>; we use the lighter notation here because $\mathcal H_0$, $\mathcal H_1$ and $\mathcal H_2$ will denote Hilbert spaces. By (<a data-tag="FB0DE6B6" href="../../tag/EFB1A41694DE/">7.5</a>), the inequality $\mathrm{dd}^{\mathrm{c}}q\ge \varepsilon \beta $, with $\beta $ as in (<a data-tag="DE37E2E0" href="../../tag/E58B935C99BA/">7.4</a>), is equivalent to $H_ q\ge \pi \varepsilon I$. 
+</p>
+<p>
+We also fix a smooth nonincreasing function $\kappa _0$ on $\mathbb R$ with $\kappa _0=1$ on $(-\infty ,0]$ and $\kappa _0=0$ on $[1,\infty )$. For instance, if $\rho _{1/2}$ is the mollifier of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a> in dimension $d=1$, then $\theta _0(x)=\rho _{1/2}(x-1/2)$ is smooth and nonnegative, has integral one and vanishes outside $[0,1]$, and $\kappa _0(x)=1-\int _{-\infty }^ x\theta _0(y)\, \mathrm dy$ has these properties. The cutoff functions of one real variable used below are obtained from $\kappa _0$ by affine changes of the variable. 
+</p>
+<p>
+We give $(0,1)$- and $(0,2)$-forms the pointwise norms 
+</p>
+<div class="equation">
+  \[  \Bigl |\sum _ jf_ j\, \mathrm d\bar z_ j\Bigr |^2=\sum _ j|f_ j|^2,\qquad \Bigl |\sum _{j&lt;k}g_{jk}\, \mathrm d\bar z_ j\wedge \mathrm d\bar z_ k\Bigr |^2=\sum _{j&lt;k}|g_{jk}|^2;  \]
+</div>
+<p>
+ for $n=1$ there are no nonzero $(0,2)$-forms. For a measurable function $\varphi \colon \Omega \to [-\infty ,\infty )$, which we call a <em>weight</em>, we write $L^2(\Omega ,\mathrm e^{-\varphi })$ for the Hilbert space of measurable functions $u$ with $\int _\Omega |u|^2\mathrm e^{-\varphi }\, \mathrm dV&lt;\infty $, modulo null functions, with the inner product $\langle u,v\rangle _\varphi =\int _\Omega u\bar v\, \mathrm e^{-\varphi }\, \mathrm dV$ and the norm $\| u\| _\varphi $. Similarly, $L^2_{(0,1)}(\Omega ,\mathrm e^{-\varphi })$ and $L^2_{(0,2)}(\Omega ,\mathrm e^{-\varphi })$ consist of the $(0,1)$- and $(0,2)$-forms $f$ with measurable coefficients and $\int _\Omega |f|^2\mathrm e^{-\varphi }\, \mathrm dV&lt;\infty $, with the analogous inner products. We write $L^2_{\mathrm{loc},(0,1)}(\Omega )$ for the $(0,1)$-forms with coefficients in $L^2_{\mathrm{loc}}(\Omega )$. The operator $\bar\partial $ is always taken in the sense of distributions.  
+</p>
+<p>
+Fix smooth real functions $\varphi _1,\varphi _2,\varphi _3$ on $\Omega $ and put 
+</p>
+<div class="equation">
+  \[  \mathcal H_0=L^2(\Omega ,\mathrm e^{-\varphi _1}),\quad \mathcal H_1=L^2_{(0,1)}(\Omega ,\mathrm e^{-\varphi _2}),\quad \mathcal H_2=L^2_{(0,2)}(\Omega ,\mathrm e^{-\varphi _3}).  \]
+</div>
+<p>
+ Let $T=\bar\partial $ from $\mathcal H_0$ to $\mathcal H_1$ and $S=\bar\partial $ from $\mathcal H_1$ to $\mathcal H_2$ be defined on their maximal domains 
+</p>
+<div class="equation">
+  \[  \operatorname{Dom}T=\{ u\in \mathcal H_0:\bar\partial u\in \mathcal H_1\} ,\qquad \operatorname{Dom}S=\{ f\in \mathcal H_1:\bar\partial f\in \mathcal H_2\} .  \]
+</div>
+<p>
+ Since the weights are continuous, convergence in $\mathcal H_0$, $\mathcal H_1$ or $\mathcal H_2$ implies convergence in $L^2$ on compact sets, and hence in the sense of distributions; therefore $T$ and $S$ are closed. Since the measures $\mathrm e^{-\varphi _ k}\, \mathrm dV$ are Radon measures, lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a> shows that smooth compactly supported functions and forms are dense in $\mathcal H_0$ and in $\mathcal H_1$; they belong to $\operatorname{Dom}T$ and $\operatorname{Dom}S$, so $T$ and $S$ are densely defined. Finally $\bar\partial \bar\partial =0$ on distributions, so $\operatorname {Ran}T\subset \ker S$. Thus $T$ and $S$ satisfy the hypotheses on the operators in theorem <a data-tag="B9E2EF05" href="../../tag/FDE87BE964C7/">11.1.4</a>, with $\mathcal H_ k$ in place of $H_ k$. 
+</p>
+<p>
+Let $f=\sum _ jf_ j\, \mathrm d\bar z_ j\in \operatorname{Dom}T^*$. For every $u\in C^\infty _ c(\Omega )$ we have 
+</p>
+<div class="equation">
+  \[  \sum _ j\int _\Omega \partial _{\bar z_ j}u\; \overline{f_ j}\, \mathrm e^{-\varphi _2}\, \mathrm dV=\langle Tu,f\rangle _{\mathcal H_1}=\langle u,T^*f\rangle _{\mathcal H_0}=\int _\Omega u\, \overline{T^*f}\, \mathrm e^{-\varphi _1}\, \mathrm dV.  \]
+</div>
+<p>
+ Integrating by parts on the left in the sense of distributions, we obtain $\mathrm e^{-\varphi _1}T^*f=-\sum _ j\partial _{z_ j}(f_ j\mathrm e^{-\varphi _2})$, that is, 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-6BEF6081"><span data-gerby-tag="6BEF6081"></span>
+<span class="equation-label"><a data-tag="6BEF6081" href="../../tag/0B44CA843C7B/">11.4</a></span>
+<div>\begin{equation}  T^*f=-\mathrm e^{\varphi _1-\varphi _2} \sum _ j\bigl (\partial _{z_ j}f_ j-(\partial _{z_ j}\varphi _2)f_ j\bigr ) \end{equation}</div>
+</div>
+<p>
+ in the sense of distributions. Conversely, if $f$ is a smooth compactly supported $(0,1)$-form, the same computation is valid for every $u\in \operatorname{Dom}T$, since it only pairs the distribution $\bar\partial u$ with the test form $f\mathrm e^{-\varphi _2}$; hence $f\in \operatorname{Dom}T^*$, and $T^*f$ is given by (<a data-tag="6BEF6081" href="../../tag/0B44CA843C7B/">11.4</a>). For a general $f$, however, (<a data-tag="6BEF6081" href="../../tag/0B44CA843C7B/">11.4</a>) describes $T^*f$ but does not characterize $\operatorname{Dom}T^*$: membership in $\operatorname{Dom}T^*$ also encodes a boundary condition, which compactly supported test functions cannot detect. The following lemma shows that this boundary condition does not matter for the estimate, provided the weights are suitably related. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-AC5FA970">
+<p><a class="environment-identifier" href="../../tag/F03962A0AC31/">Lemma <span data-tag="AC5FA970">11.3.1</span>.</a><span data-gerby-tag="AC5FA970"></span> Let $\varphi $ and $\psi $ be smooth real functions on $\Omega $, and put $\varphi _ k=\varphi +(k-3)\psi $ for $k=1,2,3$, so that $\varphi _1=\varphi -2\psi $, $\varphi _2=\varphi -\psi $ and $\varphi _3=\varphi $. Assume that there are functions $\chi _\nu \in C_ c^\infty (\Omega )$, $\nu \in \mathbb N$, with $0\le \chi _\nu \le 1$ and $|\bar\partial \chi _\nu |^2\le \mathrm e^\psi $, such that for every compact set $K\subset \Omega $ we have $\chi _\nu =1$ on a neighborhood of $K$ for all large $\nu $. Then, for the operators $T$ and $S$ defined by these weights, the smooth compactly supported $(0,1)$-forms are dense in $\operatorname{Dom}T^*\cap \operatorname{Dom}S$ for the graph norm $\| f\| _{\mathcal H_1}+\| T^*f\| _{\mathcal H_0}+\| Sf\| _{\mathcal H_2}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: cutting off.</em> Let $f\in \operatorname{Dom}T^*\cap \operatorname{Dom}S$, and write $\chi =\chi _\nu $. Since $\chi $ is real, $|\partial _{z_ j}\chi |=|\partial _{\bar z_ j}\chi |$, so the Cauchy–Schwarz inequality gives $|\sum _ j(\partial _{z_ j}\chi )f_ j|^2\le |\bar\partial \chi |^2|f|^2$. Lagrange's identity $\sum _{j&lt;k}|a_ jb_ k-a_ kb_ j|^2=|a|^2|b|^2-|\sum _ ja_ j\bar b_ j|^2$ gives likewise $|\bar\partial \chi \wedge f|^2\le |\bar\partial \chi |^2|f|^2$. Since $\varphi _1-2\varphi _2=-\varphi =-\varphi _3$ and $|\bar\partial \chi |^2\mathrm e^{-\varphi }\le \mathrm e^{-\varphi _2}$, the form $\bar\partial \chi \wedge f$ lies in $\mathcal H_2$, the function $\mathrm e^{\varphi _1-\varphi _2}\sum _ j(\partial _{z_ j}\chi )f_ j$ lies in $\mathcal H_0$, and both of their squared norms are at most 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-FC37ECEB"><span data-gerby-tag="FC37ECEB"></span>
+<span class="equation-label"><a data-tag="FC37ECEB" href="../../tag/3B7B834E5CD4/">11.5</a></span>
+<div>\begin{equation}  \int _\Omega |f|^2|\bar\partial \chi _\nu |^2\mathrm e^{-\varphi }\, \mathrm dV\le \| f\| _{\mathcal H_1}^2. \end{equation}</div>
+</div>
+<p>
+      Let $u\in \operatorname{Dom}T$. Then $\chi u\in \operatorname{Dom}T$ and $T(\chi u)=\chi Tu+u\, \bar\partial \chi $, because $u\, \bar\partial \chi \in \mathcal H_1$, the weights being bounded on the support of $\chi $. As $\chi $ is real and $\overline{\partial _{\bar z_ j}\chi }=\partial _{z_ j}\chi $, we get 
+    
+<div class="equation">
+  \[  \langle Tu,\chi f\rangle _{\mathcal H_1}=\langle T(\chi u),f\rangle _{\mathcal H_1}-\langle u\, \bar\partial \chi ,f\rangle _{\mathcal H_1} =\Bigl \langle u,\chi T^*f-\mathrm e^{\varphi _1-\varphi _2}\sum _ j(\partial _{z_ j}\chi )f_ j\Bigr \rangle _{\mathcal H_0}.  \]
+</div>
+<p>
+       Hence $\chi f\in \operatorname{Dom}T^*$, and the distributional product rule shows that $\chi f\in \operatorname{Dom}S$, with 
+    
+<div class="equation">
+  \[  \begin{split}  T^*(\chi f)-\chi T^*f &amp; =-\mathrm e^{\varphi _1-\varphi _2}\sum _ j(\partial _{z_ j}\chi )f_ j,\\  S(\chi f)-\chi Sf&amp; =\bar\partial \chi \wedge f. \end{split}  \]
+</div>
+<p>
+       By (<a data-tag="FC37ECEB" href="../../tag/3B7B834E5CD4/">11.5</a>), the squared norms of both differences are bounded by $\int |f|^2|\bar\partial \chi _\nu |^2\mathrm e^{-\varphi }\, \mathrm dV$. As $\nu \to \infty $, $\bar\partial \chi _\nu $ tends to zero pointwise, since it vanishes near each point for large $\nu $, and the integrand is dominated by the integrable function $|f|^2\mathrm e^{-\varphi _2}$. By dominated convergence, both differences tend to zero. Again by dominated convergence, $\chi _\nu f\to f$, $\chi _\nu T^*f\to T^*f$ and $\chi _\nu Sf\to Sf$. Therefore $\chi _\nu f\to f$ in the graph norm. 
+    <p>
+<em>Step 2: smoothing.</em> It remains to approximate a form $f\in \operatorname{Dom}T^*\cap \operatorname{Dom}S$ with compact support $K\subset \Omega $. By (<a data-tag="6BEF6081" href="../../tag/0B44CA843C7B/">11.4</a>), 
+    
+<div class="equation">
+  \[  \sum _ j\partial _{z_ j}f_ j=-\mathrm e^{\varphi _2-\varphi _1}T^*f+\sum _ j(\partial _{z_ j}\varphi _2)f_ j\in L^2_{\mathrm{loc}}(\Omega ),  \]
+</div>
+<p>
+       and $\bar\partial f=Sf\in L^2_{\mathrm{loc}}(\Omega )$. Let $f^\varepsilon =\sum _ j(f_ j*\rho _\varepsilon )\, \mathrm d\bar z_ j$, with $\rho _\varepsilon $ the mollifier of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>; for small $\varepsilon $ these forms are smooth and supported in a fixed compact neighborhood $K'$ of $K$ in $\Omega $. Convolution commutes with derivatives with constant coefficients (proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>), so $\bar\partial f^\varepsilon =(\bar\partial f)*\rho _\varepsilon $ and $\sum _ j\partial _{z_ j}f^\varepsilon _ j=(\sum _ j\partial _{z_ j}f_ j)*\rho _\varepsilon $. By lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>, $f^\varepsilon $, $\sum _ j\partial _{z_ j}f^\varepsilon _ j$ and $\bar\partial f^\varepsilon $ converge in $L^2(K')$ to $f$, $\sum _ j\partial _{z_ j}f_ j$ and $\bar\partial f$. Since (<a data-tag="6BEF6081" href="../../tag/0B44CA843C7B/">11.4</a>) applies to both $f^\varepsilon $ and $f$, and its remaining coefficients are smooth, $T^*f^\varepsilon \to T^*f$ in $L^2(K')$. The weights are bounded above and below on $K'$, so $f^\varepsilon \to f$ in the graph norm. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For compactly supported smooth forms, the inequality we need follows from an integration-by-parts identity, the Bochner–Kodaira–Morrey–Kohn identity in its flat weighted form. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-C1522855">
+<p><a class="environment-identifier" href="../../tag/866FA0174B79/">Proposition <span data-tag="C1522855">11.3.2</span>.</a><span data-gerby-tag="C1522855"></span> Let $\varphi $ be a smooth real function on $\Omega $, and let $\delta _ j$ be the differential operator $\delta _ jg=-\partial _{z_ j}g+(\partial _{z_ j}\varphi )g$, $1\le j\le n$. Then every smooth compactly supported $(0,1)$-form $f=\sum _ jf_ j\, \mathrm d\bar z_ j$ on $\Omega $ satisfies </p>
+<div class="equation">
+  \[  \begin{split} &amp; \int \Bigl |\sum _ j\delta _ j f_ j\Bigr |^2\mathrm e^{-\varphi }\, \mathrm dV +\int |\bar\partial f|^2\mathrm e^{-\varphi }\, \mathrm dV\\ &amp; \qquad =\int \sum _{j,k}\varphi _{j\bar k}f_ j\bar f_ k\, \mathrm e^{-\varphi }\, \mathrm dV +\int \sum _{j,k}|\partial _{\bar z_ k}f_ j|^2\mathrm e^{-\varphi }\, \mathrm dV. \end{split}  \]
+</div>
+<p> Consequently, if $\psi $ is a smooth real function and $T$ and $S$ are the operators defined by the weights $\varphi _ k=\varphi +(k-3)\psi $ of lemma <a data-tag="AC5FA970" href="../../tag/F03962A0AC31/">11.3.1</a>, then for every $t&gt;0$ </p>
+<div class="equation" id="foundations-of-pluripotential-theory-C1409CDC"><span data-gerby-tag="C1409CDC"></span>
+<span class="equation-label"><a data-tag="C1409CDC" href="../../tag/038AC5695B6F/">11.10</a></span>
+<div>\begin{equation}  \int \sum _{j,k}\varphi _{j\bar k}f_ j\bar f_ k\mathrm e^{-\varphi }\, \mathrm dV \le (1+t^{-1})\| T^*f\| _{\mathcal H_0}^2+\| Sf\| _{\mathcal H_2}^2 +(1+t)\int |f|^2|\bar\partial \psi |^2\mathrm e^{-\varphi }\, \mathrm dV. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For smooth compactly supported functions $g$ and $w$, integration by parts (Fubini's theorem and the fundamental theorem of calculus on lines) gives 
+    
+<div class="equation">
+  \[  \langle \partial _{\bar z_ j}g,w\rangle _\varphi =-\int g\, \partial _{\bar z_ j}\bigl (\bar w\mathrm e^{-\varphi }\bigr )\, \mathrm dV=\int g\, \overline{\bigl (-\partial _{z_ j}w+(\partial _{z_ j}\varphi )w\bigr )}\, \mathrm e^{-\varphi }\, \mathrm dV=\langle g,\delta _ jw\rangle _\varphi ,  \]
+</div>
+<p>
+       because $\varphi $ is real; thus $\delta _ j$ is the formal adjoint of $\partial _{\bar z_ j}$ for the inner product $\langle \cdot ,\cdot \rangle _\varphi $, and taking complex conjugates we also have $\langle \delta _ jw,g\rangle _\varphi =\langle w,\partial _{\bar z_ j}g\rangle _\varphi $. Since $\partial _{\bar z_ k}\bigl ((\partial _{z_ j}\varphi )g\bigr )=\varphi _{j\bar k}g+(\partial _{z_ j}\varphi )\partial _{\bar z_ k}g$ and the derivatives $\partial _{z_ j}$ and $\partial _{\bar z_ k}$ commute, we obtain the commutation relation 
+    
+<div class="equation">
+  \[  \partial _{\bar z_ k}(\delta _ jg)-\delta _ j(\partial _{\bar z_ k}g)=\varphi _{j\bar k}\, g.  \]
+</div>
+<p>
+       By the adjoint relation, then the commutation relation, and then the conjugate adjoint relation, 
+    
+<div class="equation">
+  \[  \begin{split}  \Bigl \| \sum _ j\delta _ jf_ j\Bigr \| _\varphi ^2&amp; =\sum _{j,k}\langle \delta _ jf_ j,\delta _ kf_ k\rangle _\varphi =\sum _{j,k}\langle \partial _{\bar z_ k}\delta _ jf_ j,f_ k\rangle _\varphi \\ &amp; =\sum _{j,k}\langle \varphi _{j\bar k}f_ j,f_ k\rangle _\varphi +\sum _{j,k}\langle \delta _ j\partial _{\bar z_ k}f_ j,f_ k\rangle _\varphi \\ &amp; =\int \sum _{j,k}\varphi _{j\bar k}f_ j\bar f_ k\mathrm e^{-\varphi }\, \mathrm dV+\sum _{j,k}\langle \partial _{\bar z_ k}f_ j,\partial _{\bar z_ j}f_ k\rangle _\varphi . \end{split}  \]
+</div>
+<p>
+       On the other hand, $\bar\partial f=\sum _{j&lt;k}(\partial _{\bar z_ j}f_ k-\partial _{\bar z_ k}f_ j)\, \mathrm d\bar z_ j\wedge \mathrm d\bar z_ k$, and expanding the squares gives 
+    
+<div class="equation">
+  \[  \| \bar\partial f\| _\varphi ^2=\sum _{j\ne k}\| \partial _{\bar z_ k}f_ j\| _\varphi ^2-\sum _{j\ne k}\langle \partial _{\bar z_ k}f_ j,\partial _{\bar z_ j}f_ k\rangle _\varphi .  \]
+</div>
+<p>
+       When we add the two identities, the terms with $j\ne k$ in the last sums cancel, and the remaining terms $\| \partial _{\bar z_ j}f_ j\| _\varphi ^2$ combine with $\sum _{j\ne k}\| \partial _{\bar z_ k}f_ j\| _\varphi ^2$ to give $\sum _{j,k}\| \partial _{\bar z_ k}f_ j\| _\varphi ^2$. This proves the identity. 
+    <p>
+      For the estimate, we have $\varphi _1-\varphi _2=-\psi $ and $\partial _{z_ j}\varphi _2=\partial _{z_ j}\varphi -\partial _{z_ j}\psi $, so (<a data-tag="6BEF6081" href="../../tag/0B44CA843C7B/">11.4</a>) reads 
+    
+<div class="equation">
+  \[  \sum _ j\delta _ jf_ j=\mathrm e^\psi T^*f+\sum _ j(\partial _{z_ j}\psi )f_ j.  \]
+</div>
+<p>
+       By the elementary inequality $|x+y|^2\le (1+t^{-1})|x|^2+(1+t)|y|^2$ for $x,y\in \mathbb C$, 
+    
+<div class="equation">
+  \[  \Bigl \| \sum _ j\delta _ jf_ j\Bigr \| _\varphi ^2\le (1+t^{-1})\int |T^*f|^2\mathrm e^{2\psi -\varphi }\, \mathrm dV+(1+t)\int \Bigl |\sum _ j(\partial _{z_ j}\psi )f_ j\Bigr |^2\mathrm e^{-\varphi }\, \mathrm dV.  \]
+</div>
+<p>
+       The first integral is $\| T^*f\| _{\mathcal H_0}^2$, because $\varphi _1=\varphi -2\psi $, and $|\sum _ j(\partial _{z_ j}\psi )f_ j|^2\le |\bar\partial \psi |^2|f|^2$ by the Cauchy–Schwarz inequality, since $|\partial _{z_ j}\psi |=|\partial _{\bar z_ j}\psi |$ for real $\psi $. Moreover $\| \bar\partial f\| _\varphi ^2=\| Sf\| _{\mathcal H_2}^2$, because $\varphi _3=\varphi $. Inserting these bounds into the identity and dropping its last, nonnegative, term, we obtain (<a data-tag="C1409CDC" href="../../tag/038AC5695B6F/">11.10</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+The right-hand side of $\bar\partial u=\alpha $ is measured by a norm dual to the complex Hessian of the weight. Let $A=(A_{j\bar k})$ be a positive semidefinite Hermitian $n\times n$ matrix, and write $A[b]=\sum _{j,k}A_{j\bar k}b_ j\bar b_ k$ for $b\in \mathbb C^ n$. For $\alpha \in \mathbb C^ n$, identified with the $(0,1)$-covector $\sum _ j\alpha _ j\, \mathrm d\bar z_ j$, the <em>dual energy</em> of $\alpha $ with respect to $A$ is 
+</p>
+<div class="equation">
+  \[  |\alpha |_{A^{-1}}^2 =\sup _{b\ne 0}\frac{|\sum _ j\alpha _ j\bar b_ j|^2}{A[b]}\in [0,\infty ],  \]
+</div>
+<p>
+ where a quotient with zero denominator is $0$ if its numerator vanishes and $+\infty $ otherwise. Directly from the definition, $|\sum _ j\alpha _ j\bar b_ j|^2\le |\alpha |_{A^{-1}}^2A[b]$ whenever $|\alpha |_{A^{-1}}&lt;\infty $. If $(e_ l)$ is an orthonormal basis of $\mathbb C^ n$ in which the Hermitian quadratic form $A[\cdot ]$ is diagonal, with $A[\sum _ lc_ le_ l]=\sum _ l\lambda _ l|c_ l|^2$, then $|\alpha |_{A^{-1}}^2=\sum _{\lambda _ l&gt;0}|\langle \alpha ,e_ l\rangle |^2/\lambda _ l$ if $\langle \alpha ,e_ l\rangle =0$ for every $l$ with $\lambda _ l=0$, and $|\alpha |_{A^{-1}}^2=\infty $ otherwise. In particular, the dual energy is a Hermitian quadratic form on the subspace of vectors where it is finite; it decreases when $A$ increases; and $|\alpha |_{A^{-1}}^2\le \lambda ^{-1}|\alpha |^2$ if $A\ge \lambda I$ with $\lambda &gt;0$.  
+</p>
+<p>
+We shall integrate dual energies over $\Omega $. Let $A$ be a continuous function on $\Omega $ with values in the positive semidefinite Hermitian matrices, and let $\alpha $ be a $(0,1)$-form on $\Omega $ with measurable coefficients. Then $x\mapsto |\alpha (x)|_{A(x)^{-1}}^2$ is measurable. To see this, let $Q$ be a countable dense subset of $\mathbb C^ n\setminus \{ 0\} $, and for $b\ne 0$ let $\sigma _ x(b)$ be the quotient in the definition, formed with $\alpha (x)$ and $A(x)$. For fixed $b$, its numerator is a measurable function of $x$ and its denominator a continuous one, so $x\mapsto \sigma _ x(b)$ is measurable. It therefore suffices to show that $\sup _{b\in Q}\sigma _ x(b)=\sup _{b\ne 0}\sigma _ x(b)$ for each $x$. Let $b\ne 0$ and choose $b_ k\in Q$ with $b_ k\to b$. If $A(x)[b]&gt;0$, then $\sigma _ x(b_ k)\to \sigma _ x(b)$, because the numerator and the denominator are continuous functions of $b$. If $A(x)[b]=0$ and $\sum _ j\alpha _ j(x)\bar b_ j\ne 0$, then the numerators of $\sigma _ x(b_ k)$ tend to a positive number while the denominators tend to $0$, so $\sigma _ x(b_ k)\to \infty =\sigma _ x(b)$. If both vanish, then $\sigma _ x(b)=0\le \sigma _ x(b_ k)$. 
+</p>
+<p>
+The largest eigenvalue $\| A(x)\| =\max _{|b|=1}A(x)[b]$ depends continuously on $x$, as the maximum over the unit sphere of a jointly continuous function, and $A\le (1+\| A\| )I$. Since the dual energy decreases when the matrix increases, we obtain 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-E6BBAFD0"><span data-gerby-tag="E6BBAFD0"></span>
+<span class="equation-label"><a data-tag="E6BBAFD0" href="../../tag/35C885FDEB1E/">11.14</a></span>
+<div>\begin{equation}  |\alpha |^2\le (1+\| A\| )\, |\alpha |_{A^{-1}}^2. \end{equation}</div>
+</div>
+<p>
+ Consequently, if $\varphi $ is a weight that is bounded above on every compact subset of $\Omega $ and $\int _\Omega |\alpha |_{A^{-1}}^2\mathrm e^{-\varphi }\, \mathrm dV&lt;\infty $, then $\alpha \in L^2_{\mathrm{loc},(0,1)}(\Omega )$: on a compact set $K\subset \Omega $ we have $1+\| A\| \le C_ K$ and $\varphi \le m_ K$ for real constants $C_ K$ and $m_ K$, so that $|\alpha |^2\le C_ K\mathrm e^{m_ K}|\alpha |_{A^{-1}}^2\mathrm e^{-\varphi }$ on $K$ by (<a data-tag="E6BBAFD0" href="../../tag/35C885FDEB1E/">11.14</a>), and $\int _ K|\alpha |^2\, \mathrm dV&lt;\infty $. In particular, $\bar\partial \alpha $ is defined in the sense of distributions. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-BC607899">
+<p><a class="environment-identifier" href="../../tag/F85650C9CE6A/">Theorem <span data-tag="BC607899">11.3.3</span> <span class="named">(Hörmander)</span>.</a><span data-gerby-tag="BC607899"></span> Let $\Omega \subset \mathbb C^ n$ be a pseudoconvex open set, $n\ge 1$, and let $\varphi $ be a smooth plurisubharmonic function on $\Omega $. Let $\alpha $ be a $(0,1)$-form on $\Omega $ with measurable coefficients such that </p>
+<div class="equation">
+  \[  M=\int _\Omega |\alpha |_{H_\varphi ^{-1}}^2\mathrm e^{-\varphi }\, \mathrm dV&lt;\infty  \]
+</div>
+<p> and $\bar\partial \alpha =0$. Then there is $u\in L^2(\Omega ,\mathrm e^{-\varphi })$ with $\bar\partial u=\alpha $ and $\int _\Omega |u|^2\mathrm e^{-\varphi }\, \mathrm dV\le M$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The idea is to modify the weight far out in $\Omega $ so that lemma <a data-tag="AC5FA970" href="../../tag/F03962A0AC31/">11.3.1</a> applies and the error term in (<a data-tag="C1409CDC" href="../../tag/038AC5695B6F/">11.10</a>) is absorbed by additional convexity, and then to let the modification recede to the boundary. 
+    <p>
+<em>Step 1: auxiliary functions.</em> The matrix $H_\varphi $ is positive semidefinite because $\varphi $ is plurisubharmonic, and by the discussion preceding the theorem, applied with $A=H_\varphi $, the finiteness of $M$ implies that $\alpha \in L^2_{\mathrm{loc},(0,1)}(\Omega )$. By theorem <a data-tag="F47F798D" href="../../tag/EA195CC9592D/">11.2.4</a>, $\Omega $ has a nonnegative smooth strictly plurisubharmonic exhaustion function $s$. Fix an integer $t\ge 1$. Let $\kappa _0$ be the function fixed at the beginning of this section, put $c_\kappa =\sup |\kappa _0'|$, and for integers $\nu \ge 1$ put $\chi _\nu =\kappa _0(s-t-1-\nu )$. Then $0\le \chi _\nu \le 1$, and $\chi _\nu \in C^\infty _ c(\Omega )$, because $\{ s\le t+2+\nu \} $ is compact; $\chi _\nu =1$ on $\{ s\le t+1+\nu \} $, hence on a neighborhood of any given compact set for large $\nu $; and $\bar\partial \chi _\nu =\kappa _0'(s-t-1-\nu )\, \bar\partial s$ vanishes on $\{ s&lt;t+2\} $ and satisfies $|\bar\partial \chi _\nu |^2\le c_\kappa ^2|\bar\partial s|^2$. We put 
+    
+<div class="equation">
+  \[  \psi =\bigl (1-\kappa _0(s-t-1)\bigr )\log \bigl (1+c_\kappa ^2|\bar\partial s|^2\bigr ).  \]
+</div>
+<p>
+       Then $\psi $ is smooth and nonnegative; $\psi $ and $\bar\partial \psi $ vanish on $\{ s\le t+1\} $, since $1-\kappa _0(x-t-1)$ and its derivative vanish for $x\le t+1$; and $|\bar\partial \chi _\nu |^2\le \mathrm e^\psi $ for every $\nu $, because $\mathrm e^\psi =1+c_\kappa ^2|\bar\partial s|^2$ on $\{ s\ge t+2\} $ and $\bar\partial \chi _\nu =0$ on $\{ s&lt;t+2\} $. 
+    <p>
+      Next we choose a smooth convex nondecreasing function $\gamma \colon \mathbb R\to [0,\infty )$ with $\gamma =0$ on $(-\infty ,t]$ such that 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-BE9F8064"><span data-gerby-tag="BE9F8064"></span>
+<span class="equation-label"><a data-tag="BE9F8064" href="../../tag/D557EE261608/">11.15</a></span>
+<div>\begin{equation}  \gamma (s)\ge 2\psi ,\qquad H_{\gamma (s)}\ge (1+t)|\bar\partial \psi |^2 I, \qquad \int _\Omega |\alpha |^2\mathrm e^{-\varphi -\gamma (s)+\psi }\, \mathrm dV&lt;\infty . \end{equation}</div>
+</div>
+<p>
+       For integers $l\ge 1$ the sets $K_ l=\{ t+l\le s\le t+l+1\} $ are compact. The smallest eigenvalue of $H_ s$ is a positive continuous function on $\Omega $ (see the discussion following proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>), so its minimum $\lambda _ l$ over $K_ l$ is positive (if $K_ l=\varnothing $, put $\lambda _ l=1$ and $m_ l=P_ l=I_ l=0$), and the numbers $m_ l=(1+t)\max _{K_ l}|\bar\partial \psi |^2$, $P_ l=2\max _{K_ l}\psi $ and $I_ l=\int _{K_ l}|\alpha |^2\mathrm e^{-\varphi +\psi }\, \mathrm dV$ are finite, since $\alpha \in L^2_{\mathrm{loc},(0,1)}(\Omega )$. Choose a smooth nondecreasing function $g\colon \mathbb R\to [0,\infty )$ that vanishes on $(-\infty ,t]$ and satisfies, for every $l\ge 1$, 
+    
+<div class="equation">
+  \[  g\ge m_ l/\lambda _ l\  \text{on }[t+l,t+l+1],\qquad \int _{t+l-1}^{t+l}g(x)\, \mathrm dx\ge \max \bigl \{ P_ l,\log ^+(2^ lI_ l)\bigr \} .  \]
+</div>
+<p>
+       For instance, let $\kappa _1(x)=1-\kappa _0(2x)$, a smooth nondecreasing function with $\kappa _1=0$ on $(-\infty ,0]$ and $\kappa _1=1$ on $[1/2,\infty )$, and put $g(x)=\sum _{l\ge 1}c_ l\kappa _1(x-t-l+1)$ with $c_ l=\max \{ m_ l/\lambda _ l,2P_ l,2\log ^+(2^ lI_ l)\} $. The sum is locally finite, since only the terms with $l&lt;x-t+1$ are nonzero at $x$, and all its terms vanish for $x\le t$. The $l$-th term equals $c_ l$ on $[t+l-1/2,\infty )$, so $g\ge c_ l$ on $[t+l,t+l+1]$ and $\int _{t+l-1}^{t+l}g(x)\, \mathrm dx\ge c_ l/2$. 
+    <p>
+      Put $\gamma (x)=\int _{-\infty }^ xg(y)\, \mathrm dy$. Then $\gamma $ is smooth, nondecreasing and convex, because $\gamma '=g$ is nondecreasing, and $\gamma =0$ on $(-\infty ,t]$. Since $\Omega $ is the union of $\{ s\le t+1\} $ and the sets $K_ l$, we may check the first two conditions in (<a data-tag="BE9F8064" href="../../tag/D557EE261608/">11.15</a>) on each of these sets. On $\{ s\le t+1\} $ they hold because $\psi $ and $\bar\partial \psi $ vanish there while $\gamma \ge 0$ and $H_{\gamma (s)}\ge 0$. On $K_ l$ we have $\gamma (s)\ge \gamma (t+l)\ge P_ l\ge 2\psi $, and the chain rule 
+    
+<div class="equation">
+  \[  H_{\gamma (s)}=\gamma '(s)H_ s+\gamma ''(s)\bigl (\partial _{z_ j}s\, \overline{\partial _{z_ k}s}\bigr )_{j,k}\ge \gamma '(s)H_ s  \]
+</div>
+<p>
+       gives $H_{\gamma (s)}\ge (m_ l/\lambda _ l)\lambda _ lI\ge (1+t)|\bar\partial \psi |^2I$. Finally, the integral in (<a data-tag="BE9F8064" href="../../tag/D557EE261608/">11.15</a>) over the compact set $\{ s\le t+1\} $ is finite, and its integral over $K_ l$ is at most $\mathrm e^{-\gamma (t+l)}I_ l\le 2^{-l}$, because $\gamma (s)\ge \gamma (t+l)\ge \log ^+(2^ lI_ l)$ there; summing over $l$, we obtain the third condition. 
+    <p>
+<em>Step 2: the estimate.</em> Put $\varphi _0=\varphi +\gamma (s)$ and $\varphi _ k=\varphi _0+(k-3)\psi $ for $k=1,2,3$, and let $T$ and $S$ be the corresponding operators. By the last condition in (<a data-tag="BE9F8064" href="../../tag/D557EE261608/">11.15</a>), $\alpha \in \mathcal H_1=L^2_{(0,1)}(\Omega ,\mathrm e^{-\varphi _2})$, and $\alpha \in \ker S$. Let $f$ be a smooth compactly supported $(0,1)$-form. We apply (<a data-tag="C1409CDC" href="../../tag/038AC5695B6F/">11.10</a>) with $\varphi _0$ in place of $\varphi $ and with the integer $t$ fixed in Step 1. Since $H_{\varphi _0}=H_\varphi +H_{\gamma (s)}$, the second condition in (<a data-tag="BE9F8064" href="../../tag/D557EE261608/">11.15</a>) absorbs the last term of (<a data-tag="C1409CDC" href="../../tag/038AC5695B6F/">11.10</a>), and we obtain 
+    
+<div class="equation">
+  \[  \int H_\varphi [f]\, \mathrm e^{-\varphi _0}\, \mathrm dV \le (1+t^{-1})\| T^*f\| _{\mathcal H_0}^2+\| Sf\| _{\mathcal H_2}^2.  \]
+</div>
+<p>
+       Moreover $\varphi -2\varphi _2=-\varphi _0-\gamma (s)+2\psi \le -\varphi _0$ by the first condition in (<a data-tag="BE9F8064" href="../../tag/D557EE261608/">11.15</a>). Since $M&lt;\infty $, the dual energy of $\alpha $ is finite almost everywhere, and the inequality $|\sum _ j\alpha _ j\bar f_ j|^2\le |\alpha |_{H_\varphi ^{-1}}^2H_\varphi [f]$ together with the Cauchy–Schwarz inequality gives 
+    
+<div class="equation">
+  \[  \begin{split}  |\langle \alpha ,f\rangle _{\mathcal H_1}|^2 &amp; \le \int |\alpha |_{H_\varphi ^{-1}}^2\mathrm e^{-\varphi }\, \mathrm dV\cdot \int H_\varphi [f]\, \mathrm e^{\varphi -2\varphi _2}\, \mathrm dV \le M\int H_\varphi [f]\, \mathrm e^{-\varphi _0}\, \mathrm dV\\ &amp; \le M(1+t^{-1})\bigl (\| T^*f\| _{\mathcal H_0}^2+\| Sf\| _{\mathcal H_2}^2\bigr ). \end{split}  \]
+</div>
+<p>
+       Both sides are continuous for the graph norm of lemma <a data-tag="AC5FA970" href="../../tag/F03962A0AC31/">11.3.1</a>, whose hypotheses hold by Step 1; hence the inequality extends to all $f\in \operatorname{Dom}T^*\cap \operatorname{Dom}S$. By theorem <a data-tag="B9E2EF05" href="../../tag/FDE87BE964C7/">11.1.4</a> there is $u_ t\in \mathcal H_0$ with $\bar\partial u_ t=\alpha $ and $\| u_ t\| _{\mathcal H_0}^2\le M(1+t^{-1})$. On $\{ s&lt;t\} $ both $\gamma (s)$ and $\psi $ vanish, so $\varphi _1=\varphi $ there and 
+    
+<div class="equation">
+  \[  \int _{\{ s&lt;t\} }|u_ t|^2\mathrm e^{-\varphi }\, \mathrm dV\le M(1+t^{-1}).  \]
+</div>
+<p>
+<em>Step 3: passage to the limit.</em> For each integer $l\ge 1$ the functions $u_ t$ with $t\ge l$ have squared norms at most $2M$ in $L^2(\{ s&lt;l\} ,\mathrm e^{-\varphi })$. By proposition <a data-tag="EF017A20" href="../../tag/1EF937410C2F/">11.1.2</a> and a diagonal argument, there is a sequence $t_ i\to \infty $ such that $u_{t_ i}$ converges weakly in $L^2(\{ s&lt;l\} ,\mathrm e^{-\varphi })$ for every $l$. The limits on different sublevel sets agree on their intersections, because restriction from $\{ s&lt;l+1\} $ to $\{ s&lt;l\} $ is a bounded linear map, and they define a function $u$ on $\Omega $. Weak convergence in these spaces implies convergence in the sense of distributions: a test function $\chi $ has support in some set $\{ s&lt;l\} $, and $\int u_{t_ i}\chi \, \mathrm dV=\langle u_{t_ i},\bar\chi \mathrm e^\varphi \rangle _\varphi $ with $\bar\chi \mathrm e^\varphi \in L^2(\{ s&lt;l\} ,\mathrm e^{-\varphi })$. Hence $\bar\partial u=\alpha $. By the lower semicontinuity of the norm in proposition <a data-tag="EF017A20" href="../../tag/1EF937410C2F/">11.1.2</a>, $\int _{\{ s&lt;l\} }|u|^2\mathrm e^{-\varphi }\, \mathrm dV\le \varliminf _ iM(1+t_ i^{-1})=M$ for every $l$, and the monotone convergence theorem gives $\int _\Omega |u|^2\mathrm e^{-\varphi }\, \mathrm dV\le M$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+We now allow arbitrary plurisubharmonic weights. We write the weight as $p+q$, where $p$ is plurisubharmonic, possibly singular, and $q$ is smooth. The complex Hessian of $p$ is discarded, and the right-hand side is measured by the dual energy with respect to $H_ q$ alone, which need not be positive definite. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-B3C17C48">
+<p><a class="environment-identifier" href="../../tag/88735CB0C076/">Theorem <span data-tag="B3C17C48">11.3.4</span>.</a><span data-gerby-tag="B3C17C48"></span> Let $\Omega \subset \mathbb C^ n$ be a pseudoconvex open set, $n\ge 1$, let $p\in \mathrm{PSH}(\Omega )$, and let $q$ be a smooth real function on $\Omega $ whose complex Hessian matrix $A=H_ q$ is positive semidefinite. Let $\alpha $ be a $(0,1)$-form on $\Omega $ with measurable coefficients such that </p>
+<div class="equation">
+  \[  M=\int _\Omega |\alpha |_{A^{-1}}^2\mathrm e^{-p-q}\, \mathrm dV&lt;\infty  \]
+</div>
+<p> and $\bar\partial \alpha =0$. Then the equation $\bar\partial u=\alpha $ has a solution with $\int _\Omega |u|^2\mathrm e^{-p-q}\, \mathrm dV\le M$. In particular, if $A\ge \lambda I$ for a positive continuous function $\lambda $ on $\Omega $, then $M$ may be replaced by $\int _\Omega \lambda ^{-1}|\alpha |^2\mathrm e^{-p-q}\, \mathrm dV$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We regularize $p$ on relatively compact pseudoconvex subsets of $\Omega $, apply theorem <a data-tag="BC607899" href="../../tag/F85650C9CE6A/">11.3.3</a> there, and pass to a weak limit. Since the weight $p+q$ is bounded above on compact sets, the discussion preceding theorem <a data-tag="BC607899" href="../../tag/F85650C9CE6A/">11.3.3</a> shows that $\alpha \in L^2_{\mathrm{loc},(0,1)}(\Omega )$, so that $\bar\partial \alpha $ is defined. By corollary <a data-tag="04AFE5BC" href="../../tag/FFB7E3647C0B/">11.2.5</a> there are pseudoconvex open sets $\Omega _1\subset \Omega _2\subset \cdots $ with $\Omega _ j\Subset \Omega $ and $\bigcup _ j\Omega _ j=\Omega $. Let $\rho _\varepsilon $ be the radial mollifier of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>, and choose $\varepsilon _ j\downarrow 0$ with $\varepsilon _ j&lt;\operatorname {dist}(\overline\Omega _ j,\mathbb C^ n\setminus \Omega )$. By proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(2), $p_ j=p*\rho _{\varepsilon _ j}$ is defined, smooth and plurisubharmonic on the open neighborhood $\{ z\in \Omega :\operatorname {dist}(z,\mathbb C^ n\setminus \Omega )&gt;\varepsilon _ j\} $ of $\overline\Omega _ j$, so its complex Hessian is positive semidefinite there, and $p_ j\downarrow p$ pointwise as $j\to \infty $. Put $\varphi _ j=p_ j+q$. Then $\varphi _ j$ is smooth with complex Hessian matrix $H_{\varphi _ j}\ge A\ge 0$ near $\overline\Omega _ j$, so it is plurisubharmonic there by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1), and $\varphi _ j\ge p+q$. Since the dual energy decreases when the matrix increases, 
+    
+<div class="equation">
+  \[  \int _{\Omega _ j}|\alpha |_{H_{\varphi _ j}^{-1}}^2\mathrm e^{-\varphi _ j}\, \mathrm dV \le \int _{\Omega _ j}|\alpha |_{A^{-1}}^2\mathrm e^{-p-q}\, \mathrm dV\le M.  \]
+</div>
+<p>
+       By theorem <a data-tag="BC607899" href="../../tag/F85650C9CE6A/">11.3.3</a> there is $u_ j$ on $\Omega _ j$ with $\bar\partial u_ j=\alpha $ and $\int _{\Omega _ j}|u_ j|^2\mathrm e^{-\varphi _ j}\, \mathrm dV\le M$. 
+    <p>
+      Let $K\subset \Omega $ be compact. Then $K\subset \Omega _ k$ for some $k$, and for $j\ge k$ we have $\varphi _ j\le \varphi _ k$ on $K$, because $p_ j$ decreases. Hence $\int _ K|u_ j|^2\, \mathrm dV\le \mathrm e^{\max _ K\varphi _ k}M$ for $j\ge k$, so the sequence $(u_ j)$ is eventually bounded in $L^2(K)$ for every compact set $K$. Let $(K_ m)$ be a compact exhaustion of $\Omega $ (section <a data-tag="AD6522C4" href="../../tag/DAFA3E4936D2/">1.1</a>). By proposition <a data-tag="EF017A20" href="../../tag/1EF937410C2F/">11.1.2</a> and a diagonal argument, we find a subsequence that converges weakly in $L^2(K_ m)$ for every $m$. The weak limits are compatible, because restriction from $K_{m+1}$ to $K_ m$ is a bounded linear map, and they define a function $u\in L^2_{\mathrm{loc}}(\Omega )$; since every compact subset of $\Omega $ lies in some $K_ m$, the subsequence converges weakly to $u$ in $L^2(K)$ for every compact $K\subset \Omega $. Then $u_ j\to u$ in the sense of distributions, and $\bar\partial u=\alpha $. 
+    <p>
+      Now let $K\subset \Omega $ be compact, and let $k$ be so large that $K\subset \Omega _ k$. On $L^2(K)$ the norm with weight $\mathrm e^{-\varphi _ k}$ is equivalent to the unweighted norm, so the subsequence also converges weakly for it, and the lower semicontinuity in proposition <a data-tag="EF017A20" href="../../tag/1EF937410C2F/">11.1.2</a> gives 
+    
+<div class="equation">
+  \[  \int _ K|u|^2\mathrm e^{-\varphi _ k}\, \mathrm dV\le \varliminf _ j\int _ K|u_ j|^2\mathrm e^{-\varphi _ k}\, \mathrm dV\le \varliminf _ j\int _ K|u_ j|^2\mathrm e^{-\varphi _ j}\, \mathrm dV\le M.  \]
+</div>
+<p>
+       This holds for all large $k$, and $\mathrm e^{-\varphi _ k}$ increases to $\mathrm e^{-p-q}$ as $k\to \infty $; so the monotone convergence theorem gives $\int _ K|u|^2\mathrm e^{-p-q}\, \mathrm dV\le M$, and exhausting $\Omega $ by compact sets proves the estimate. The last assertion follows from the pointwise inequality $|\alpha |_{A^{-1}}^2\le \lambda ^{-1}|\alpha |^2$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The density $\mathrm e^{-p-q}$ in theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a> takes values in $(0,\infty ]$. It is infinite exactly on the pole set $\{ p=-\infty \} $, which is a Lebesgue null set because $p$ is locally integrable (theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>), and it need not be locally integrable. Nevertheless, $L^2(\Omega ,\mathrm e^{-p-q})$ is a Hilbert space, and since $p+q$ is bounded above on compact sets, convergence in it implies convergence in $L^2_{\mathrm{loc}}(\Omega )$; we show both facts in the proof of lemma <a data-tag="941449DF" href="../../tag/961105705CF9/">11.3.5</a>(2) below. That lemma also provides a distinguished solution of $\bar\partial u=\alpha $ in such weighted spaces. We write $\mathcal O(\Omega )$ for the space of holomorphic functions on an open set $\Omega \subset \mathbb C^ n$. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-941449DF">
+<p><a class="environment-identifier" href="../../tag/961105705CF9/">Lemma <span data-tag="941449DF">11.3.5</span>.</a><span data-gerby-tag="941449DF"></span> Let $\Omega \subset \mathbb C^ n$ be open, $n\ge 1$. </p>
+<ol>
+<li><p>
+Every distribution $h$ on $\Omega $ with $\bar\partial h=0$ is a holomorphic function: there is $g\in \mathcal O(\Omega )$ with $\langle h,\chi \rangle =\int _\Omega g\chi \, \mathrm dV$ for every test function $\chi $. 
+</p>
+</li><li><p>
+Let $\varphi \colon \Omega \to [-\infty ,\infty )$ be a measurable function that is bounded above on every compact subset of $\Omega $. Then the elements of $L^2(\Omega ,\mathrm e^{-\varphi })$ represented by holomorphic functions form a closed subspace $\mathcal K$. Let $\alpha $ be a $(0,1)$-form with distribution coefficients such that the equation $\bar\partial u=\alpha $ has a solution in $L^2(\Omega ,\mathrm e^{-\varphi })$. Then among these solutions there is exactly one of smallest norm, and a solution is of smallest norm if and only if it is orthogonal to $\mathcal K$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) The real and imaginary parts of $h$, given by $\operatorname{Re}\langle h,\chi \rangle $ and $\operatorname{Im}\langle h,\chi \rangle $ for real test functions $\chi $, are real distributions. Since derivatives of distributions commute, (<a data-tag="FB0DE6B6" href="../../tag/EFB1A41694DE/">7.5</a>) shows that the Laplacian of $h$ is $4\sum _ j\partial _{z_ j}\partial _{\bar z_ j}h=0$. As the Laplacian has real coefficients, the real and imaginary parts of $h$ are harmonic distributions. By Weyl's lemma (theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a>) they are given by smooth functions, and hence $h$ is given by a smooth function $g$. By integration by parts, the classical derivatives $\partial _{\bar z_ j}g$ represent the distributions $\partial _{\bar z_ j}h=0$, so they vanish almost everywhere by proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>(4), and hence everywhere, being continuous functions. Thus $g$ is holomorphic. 
+    <p>
+      (2) Let $L\subset \Omega $ be compact, and let $m_ L$ be a real upper bound for $\varphi $ on $L$. For $u\in L^2(\Omega ,\mathrm e^{-\varphi })$ we have $\int _ L|u|^2\, \mathrm dV\le \mathrm e^{m_ L}\int _ L|u|^2\mathrm e^{-\varphi }\, \mathrm dV$. Hence $L^2(\Omega ,\mathrm e^{-\varphi })\subset L^2_{\mathrm{loc}}(\Omega )$, so that $\bar\partial u$ is defined in the sense of distributions, and convergence in $L^2(\Omega ,\mathrm e^{-\varphi })$ implies convergence in $L^2_{\mathrm{loc}}(\Omega )$, hence in the sense of distributions. The space $L^2(\Omega ,\mathrm e^{-\varphi })$ is a Hilbert space, by the completeness argument at the beginning of section <a data-tag="E66223F4" href="../../tag/3F2EA9D1CB5E/">11.1</a>, applied to the positive measure $\mathrm e^{-\varphi }\, \mathrm dV$. The set $\mathcal K$ is a linear subspace. It is closed: if $g_ j\in \mathcal K$ converge to $g$ in $L^2(\Omega ,\mathrm e^{-\varphi })$, then $g_ j\to g$ in the sense of distributions, so $\bar\partial g=\lim _ j\bar\partial g_ j=0$, and by (1) $g$ agrees almost everywhere with a holomorphic function, that is, $g\in \mathcal K$. 
+    <p>
+      Let $u_0$ be a solution of $\bar\partial u=\alpha $ in $L^2(\Omega ,\mathrm e^{-\varphi })$. By (1), an element $u$ of this space is a solution if and only if $\bar\partial (u-u_0)=0$, that is, $u-u_0\in \mathcal K$. Thus the solutions form the nonempty closed convex set $u_0+\mathcal K$, which by proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a> contains a unique element $u_{\min }$ of smallest norm. If a solution $u$ is orthogonal to $\mathcal K$, then $\| u+k\| ^2=\| u\| ^2+\| k\| ^2\geq \| u\| ^2$ for every $k\in \mathcal K$, so $u$ has smallest norm, that is, $u=u_{\min }$. Conversely, if $P$ is the orthogonal projection onto $\mathcal K$ (proposition <a data-tag="6AE41760" href="../../tag/B9A2266E14FE/">11.1.1</a>), then $u_{\min }-Pu_{\min }$ is a solution orthogonal to $\mathcal K$, hence equal to $u_{\min }$; so $u_{\min }$ is orthogonal to $\mathcal K$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+The solution of smallest norm in (2) is called the <em>minimal solution</em> of $\bar\partial u=\alpha $ in $L^2(\Omega ,\mathrm e^{-\varphi })$.  
+</p>
+</div></section><section class="reading-chunk" id="entry-6FAB73FA6CE4" data-section-entries="0822DB927561 33DEA3F4EDB8 5C2AD1325732 66BCDC65B27D 6FAB73FA6CE4 BFB355F9DDF9 D315377B239D EE99921A3F33 F388046B5B2A FF641A8A654C"><div class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><h2><a href="../../tag/6FAB73FA6CE4/">11.4 Interpolation and extension across a hyperplane</a></h2><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> <span data-gerby-tag="2C8FB5F3"></span></div>
+<p>
+We now construct holomorphic functions with a prescribed value at a point, or a prescribed restriction to a hyperplane, and with controlled weighted norms. In both cases, a smooth function with the right values is corrected by a solution of a $\bar\partial $-equation whose weight has a singular term forcing the correction to vanish where the values are prescribed. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-C8B1D820">
+<p><a class="environment-identifier" href="../../tag/66BCDC65B27D/">Proposition <span data-tag="C8B1D820">11.4.1</span>.</a><span data-gerby-tag="C8B1D820"></span> Let $r,L&gt;0$, let $\Omega \subset \mathbb C^ n$, $n\ge 1$, be a pseudoconvex open set of diameter at most $L$, let $a\in \mathbb C^ n$ with $B(a,2r)\subset \Omega $, and let $p\in \mathrm{PSH}(\Omega )$. If $h$ is holomorphic on $B(a,2r)$ and $\int _{B(a,2r)}|h|^2\mathrm e^{-p}\, \mathrm dV&lt;\infty $, then there is $F\in \mathcal O(\Omega )$ such that </p>
+<div class="equation">
+  \[  F(a)=h(a),\qquad \int _\Omega |F|^2\mathrm e^{-p}\, \mathrm dV\le C(n,r,L) \int _{B(a,2r)}|h|^2\mathrm e^{-p}\, \mathrm dV,  \]
+</div>
+<p> where the constant $C(n,r,L)$ depends only on $n$, $r$ and $L$, and not on $\Omega $, $p$, $h$ or $a$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a smooth function $\kappa $ on $\mathbb R$ with $0\le \kappa \le 1$, $\kappa =1$ on $(-\infty ,1]$ and $\kappa =0$ on $[3/2,\infty )$, for instance $\kappa (x)=\kappa _0(2x-2)$ with the function $\kappa _0$ fixed at the beginning of section <a data-tag="066AC58B" href="../../tag/4E04198982E6/">11.3</a>, and put $\chi (z)=\kappa (|z-a|/r)$. Then $\chi $ is smooth, because $\kappa $ is constant near $0$; it has compact support in $B(a,2r)$, equals one on $B(a,r)$, and satisfies $|\bar\partial \chi |\le c_0/r$ with $c_0=\sup |\kappa '|/2$, because $|\bar\partial |z-a||=1/2$ for $z\ne a$. Extend $\chi h$ by zero to $\Omega $. Then $\alpha =\bar\partial (\chi h)=h\, \bar\partial \chi $ is a smooth $\bar\partial $-closed form supported in the shell $r\le |z-a|\le 2r$. 
+    <p>
+      The function $p+n\log |z-a|^2$ is plurisubharmonic on $\Omega $ by proposition <a data-tag="F24BB0D4" href="../../tag/1A6F10A07BA5/">8.3.3</a>, proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>. We apply theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a> with this function in place of $p$ and with $q=|z-a|^2$, for which $A=I$. Since $\mathrm e^{-|z-a|^2}\le 1$ and $|z-a|^{-2n}\le r^{-2n}$ on the support of $\alpha $, we obtain a solution of $\bar\partial u=\alpha $ with 
+    
+<div class="equation">
+  \[  \int _\Omega |u|^2|z-a|^{-2n}\mathrm e^{-p-|z-a|^2}\, \mathrm dV \le c_0^2r^{-2n-2}\int _{B(a,2r)}|h|^2\mathrm e^{-p}\, \mathrm dV.  \]
+</div>
+<p>
+       On $B(a,r)$ we have $\bar\partial u=\alpha =0$, so $u$ is holomorphic there, by lemma <a data-tag="941449DF" href="../../tag/961105705CF9/">11.3.5</a>(1). Since $p$ is bounded above on $B(a,r)$, the factor $\mathrm e^{-p-|z-a|^2}$ is bounded below there by a positive constant. If $u(a)$ were nonzero, then $|u|$ would be bounded below by a positive constant near $a$, and the integral on the left would diverge, because $\int _{B(a,\rho )}|z-a|^{-2n}\, \mathrm dV$ is a positive multiple of $\int _0^\rho \tau ^{-2n}\tau ^{2n-1}\, \mathrm d\tau =\infty $ by integration in polar coordinates (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>). Thus $u(a)=0$. The function $F=\chi h-u$ satisfies $\bar\partial F=0$, so it is holomorphic by the same lemma, and $F(a)=h(a)$. Since $|z-a|&lt;L$ on $\Omega $, we have $|z-a|^{2n}\mathrm e^{|z-a|^2}\le L^{2n}\mathrm e^{L^2}$, and therefore 
+    
+<div class="equation">
+  \[  \int _\Omega |u|^2\mathrm e^{-p}\, \mathrm dV\le c_0^2L^{2n}\mathrm e^{L^2}r^{-2n-2}\int _{B(a,2r)}|h|^2\mathrm e^{-p}\, \mathrm dV.  \]
+</div>
+<p>
+       Finally, $|F|^2\le 2|\chi h|^2+2|u|^2$ and $|\chi h|\le |h|\mathbf1_{B(a,2r)}$ give the assertion with $C(n,r,L)=2+2c_0^2L^{2n}\mathrm e^{L^2}r^{-2n-2}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+For extension from a hyperplane we use the same method, with the pole $\log |z_ n|^2$ along the hyperplane $\{ z_ n=0\} $. Now, however, the cutoff must be concentrated in a thin neighborhood $\{ |z_ n|&lt;\varepsilon \} $ of the hyperplane, and then its $\bar\partial $-derivative has size of order $\varepsilon ^{-1}$. On the support of this derivative the factor $\mathrm e^{-\log |z_ n|^2}$ of the weight has size of order $\varepsilon ^{-2}$, while the support has area of order $\varepsilon ^2$ in the normal direction. With a fixed smooth function $q$, the bound of theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a> is therefore of order $\varepsilon ^{-2}$. The remedy is a bounded twist of the weight. Let $\psi $ be a smooth bounded plurisubharmonic function such that the dual energy $h$ of $\bar\partial \psi $ with respect to $H_\psi $ is less than one. The next lemma gives a solution of $\bar\partial u=\alpha $ whose norm with weight $(1-h)\mathrm e^{\psi -p}$ is bounded by a multiple of $\int |\alpha |_{H_\psi ^{-1}}^2\mathrm e^{\psi -p}\, \mathrm dV$, and this integral is small if the complex Hessian of $\psi $ is large near the hyperplane. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-0DF23005">
+<p><a class="environment-identifier" href="../../tag/0822DB927561/">Lemma <span data-tag="0DF23005">11.4.2</span>.</a><span data-gerby-tag="0DF23005"></span> Let $\Omega \subset \mathbb C^ n$ be a pseudoconvex open set, $n\ge 1$, let $p\in \mathrm{PSH}(\Omega )$, and let $\psi $ be a smooth bounded plurisubharmonic function on $\Omega $. Put $A=H_\psi $ and $h=|\bar\partial \psi |_{A^{-1}}^2$, where $\bar\partial \psi $ is identified with the vector $(\partial _{\bar z_ j}\psi )_ j$, and assume that $h&lt;1$ almost everywhere. Let $\alpha $ be a $(0,1)$-form on $\Omega $ with measurable coefficients such that $E=\int _\Omega |\alpha |_{A^{-1}}^2\mathrm e^{\psi -p}\, \mathrm dV&lt;\infty $ and $\bar\partial \alpha =0$, let $0\le a&lt;1$, and assume that $h\le a$ almost everywhere on $\{ \alpha \ne 0\} $. Then $\bar\partial u=\alpha $ has a solution with </p>
+<div class="equation">
+  \[  \int _\Omega (1-h)|u|^2\mathrm e^{\psi -p}\, \mathrm dV \le \frac{1+\sqrt a}{1-\sqrt a}\, E.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The idea is that, if $u$ is the minimal solution in $L^2(\Omega ,\mathrm e^{-p})$, then $u\mathrm e^\psi $ is the minimal solution of a twisted equation in $L^2(\Omega ,\mathrm e^{-p-\psi })$, to which we apply Hörmander's estimate. Put $m=\sup _\Omega |\psi |&lt;\infty $. Since $\mathrm e^{-m}\le \mathrm e^{\pm \psi }\le \mathrm e^ m$, the spaces $L^2(\Omega ,\mathrm e^{-p})$ and $L^2(\Omega ,\mathrm e^{-p-\psi })$ consist of the same functions, with equivalent norms, and so contain the same holomorphic functions. By the discussion preceding theorem <a data-tag="BC607899" href="../../tag/F85650C9CE6A/">11.3.3</a>, applied with the weight $p-\psi $, which is bounded above on compact sets, $\alpha \in L^2_{\mathrm{loc},(0,1)}(\Omega )$; so $\bar\partial \alpha $ is defined. Since $\mathrm e^{-p-\psi }\le \mathrm e^{2m}\mathrm e^{\psi -p}$, we have $\int _\Omega |\alpha |_{A^{-1}}^2\mathrm e^{-p-\psi }\, \mathrm dV\le \mathrm e^{2m}E&lt;\infty $. Hence theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a>, applied with the plurisubharmonic function $p$ and the smooth function $q=\psi $, whose complex Hessian matrix $A$ is positive semidefinite, shows that the equation $\bar\partial u=\alpha $ has a solution in $L^2(\Omega ,\mathrm e^{-p-\psi })=L^2(\Omega ,\mathrm e^{-p})$. Let $u$ be the minimal solution in $L^2(\Omega ,\mathrm e^{-p})$, given by lemma <a data-tag="941449DF" href="../../tag/961105705CF9/">11.3.5</a>(2). 
+    <p>
+      The function $v=u\mathrm e^\psi $ belongs to $L^2(\Omega ,\mathrm e^{-p-\psi })$ and solves 
+    
+<div class="equation">
+  \[  \bar\partial v=\beta =(\alpha +u\, \bar\partial \psi )\mathrm e^\psi .  \]
+</div>
+<p>
+       For every holomorphic $g$ in $L^2(\Omega ,\mathrm e^{-p-\psi })$ we have $\int v\bar g\, \mathrm e^{-p-\psi }\, \mathrm dV=\int u\bar g\, \mathrm e^{-p}\, \mathrm dV=0$, so $v$ is the minimal solution of $\bar\partial v=\beta $ in $L^2(\Omega ,\mathrm e^{-p-\psi })$, by lemma <a data-tag="941449DF" href="../../tag/961105705CF9/">11.3.5</a>(2). 
+    <p>
+      We now estimate $v$ by theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a>, applied again with $p$ and $q=\psi $. The form $\beta =\bar\partial v$ is $\bar\partial $-closed, and it lies in $L^2_{\mathrm{loc},(0,1)}(\Omega )$ because $\alpha $ and $u$ are locally square integrable and $\psi $ is smooth. Since $E&lt;\infty $ and $h&lt;1$, the dual energies of $\alpha $ and $\bar\partial \psi $ are finite almost everywhere, and at such points both vectors lie in the subspace on which the dual energy is a Hermitian quadratic form. The triangle inequality $|\alpha +u\, \bar\partial \psi |_{A^{-1}}\le |\alpha |_{A^{-1}}+|u|h^{1/2}$ therefore gives 
+    
+<div class="equation">
+  \[  \int |\beta |_{A^{-1}}^2\mathrm e^{-p-\psi }\, \mathrm dV=\int |\alpha +u\, \bar\partial \psi |_{A^{-1}}^2\mathrm e^{\psi -p}\, \mathrm dV\le 2E+2\sup _\Omega \mathrm e^\psi \int |u|^2\mathrm e^{-p}\, \mathrm dV&lt;\infty .  \]
+</div>
+<p>
+       So theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a> yields a solution of $\bar\partial w=\beta $ whose squared norm in $L^2(\Omega ,\mathrm e^{-p-\psi })$ is at most this integral, and the minimal solution $v$ has no larger norm. As $\int |v|^2\mathrm e^{-p-\psi }\, \mathrm dV=\int |u|^2\mathrm e^{\psi -p}\, \mathrm dV$, we obtain 
+    
+<div class="equation">
+  \[  \int |u|^2\mathrm e^{\psi -p}\, \mathrm dV \le \int |\alpha +u\, \bar\partial \psi |_{A^{-1}}^2\mathrm e^{\psi -p}\, \mathrm dV.  \]
+</div>
+<p>
+      At almost every point, let $\langle \cdot ,\cdot \rangle _{A^{-1}}$ be the Hermitian inner product associated with the dual energy on the subspace where it is finite; by the polarization identity $\langle x,y\rangle _{A^{-1}}=\frac14\sum _{k=0}^3\mathrm i^ k|x+\mathrm i^ ky|_{A^{-1}}^2$, the function $\langle \alpha ,\bar\partial \psi \rangle _{A^{-1}}$ is measurable. We expand 
+    
+<div class="equation">
+  \[  |\alpha +u\, \bar\partial \psi |_{A^{-1}}^2=|\alpha |_{A^{-1}}^2+2\operatorname{Re}\bigl (\bar u\langle \alpha ,\bar\partial \psi \rangle _{A^{-1}}\bigr )+h|u|^2, \qquad |\langle \alpha ,\bar\partial \psi \rangle _{A^{-1}}|\le |\alpha |_{A^{-1}}h^{1/2},  \]
+</div>
+<p>
+       the second inequality being the Cauchy–Schwarz inequality. The function $h|u|^2\mathrm e^{\psi -p}$ is integrable, since $h&lt;1$ almost everywhere and $u\in L^2(\Omega ,\mathrm e^{-p})$; moving its integral to the left, we find that $J=\int (1-h)|u|^2\mathrm e^{\psi -p}\, \mathrm dV$, which is finite, satisfies 
+    
+<div class="equation">
+  \[  J\le E+2\int |u|\, |\alpha |_{A^{-1}}h^{1/2}\mathrm e^{\psi -p}\, \mathrm dV.  \]
+</div>
+<p>
+       If $a=0$, then $h=0$ almost everywhere on $\{ \alpha \ne 0\} $, the last integral vanishes, and $J\le E$, as claimed. Let $a&gt;0$. The last integrand vanishes outside $\{ \alpha \ne 0\} $, where $h\le a$ and hence $h/(1-h)\le a/(1-a)$. For $t&gt;1$, the inequality $2xy\le t^{-1}x^2+ty^2$ with $x=(1-h)^{1/2}|u|$ and $y=(h/(1-h))^{1/2}|\alpha |_{A^{-1}}$ gives there 
+    
+<div class="equation">
+  \[  2|u|\, |\alpha |_{A^{-1}}h^{1/2}\le t^{-1}(1-h)|u|^2+\frac{ta}{1-a}|\alpha |_{A^{-1}}^2.  \]
+</div>
+<p>
+       Integrating, we obtain 
+    
+<div class="equation">
+  \[  J\le \left(1+\frac{ta}{1-a}\right)E+t^{-1}J.  \]
+</div>
+<p>
+       Since $J$ is finite, this gives $J\le \frac t{t-1}\bigl (1+\frac{ta}{1-a}\bigr )E$. Choose $t=1+a^{-1/2}$. Then $1+ta/(1-a)=(1+\sqrt a)/(1-a)=1/(1-\sqrt a)$ and $t/(t-1)=1+\sqrt a$, so $J\le (1+\sqrt a)E/(1-\sqrt a)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+The twisting function used for extension depends only on the normal variable. The next lemma records the one-variable calculus behind it. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-36B10D6C">
+<p><a class="environment-identifier" href="../../tag/EE99921A3F33/">Lemma <span data-tag="36B10D6C">11.4.3</span>.</a><span data-gerby-tag="36B10D6C"></span> Let $0&lt;\varepsilon &lt;1/4$. For $\zeta \in \mathbb C$ with $|\zeta |&lt;1/4$ put </p>
+<div class="equation">
+  \[  s=-\log (|\zeta |^2+\varepsilon ^2),\qquad \eta =s+\log s,\qquad \psi _\varepsilon =-\log \eta .  \]
+</div>
+<p> Then $\psi _\varepsilon $ is a smooth, bounded, strictly subharmonic function on the disc $\Delta _{1/4}$. Let $h=|\partial _{\bar\zeta }\psi _\varepsilon |^2/(\psi _\varepsilon )_{\zeta \bar\zeta }$. Then </p>
+<div class="equation">
+  \[  \begin{split}  (1-h)\mathrm e^{\psi _\varepsilon }&amp; \ge (6s^2)^{-1},\\  h&amp; \le \frac{2}{-\log (2\varepsilon ^2)}\quad \text{for }|\zeta |\le \varepsilon ,\\  \frac{\mathrm e^{\psi _\varepsilon }}{|\zeta |^2(\psi _\varepsilon )_{\zeta \bar\zeta }} &amp; \le 25/4\quad \text{for }\varepsilon /2\le |\zeta |\le \varepsilon . \end{split}  \]
+</div>
+<p> In particular $h&lt;1$ everywhere, and the bound for $h$ on the disc $|\zeta |\le \varepsilon $ tends to zero as $\varepsilon \to 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $|\zeta |^2+\varepsilon ^2&lt;1/8$, we have $s&gt;\log 8&gt;2$, so $\eta &gt;s&gt;2$ and $\psi _\varepsilon &lt;0$ is well defined. For fixed $\varepsilon $, $s$ ranges in a bounded interval, so $\psi _\varepsilon $ is bounded; and $\psi _\varepsilon =G(|\zeta |^2)$ for a function $G$ that is smooth near $[0,1/16)$, so $\psi _\varepsilon $ is smooth. 
+    <p>
+      For $\zeta \ne 0$ put $x=|\zeta |^2$, $t=\log x$ and $b=x/(x+\varepsilon ^2)\in (0,1)$, and denote derivatives with respect to $t$ by primes. Then $s'=-b$ and $b'=b(1-b)$, so $s''=-b(1-b)$. With $D=1+1/s$ we have $\eta '=s'+s'/s=-bD$ and $D'=-s'/s^2=b/s^2$. Hence $\psi _\varepsilon '=-\eta '/\eta =bD/\eta $ and $\psi _\varepsilon ''=(b'D+bD')/\eta -bD\eta '/\eta ^2$, that is, 
+    
+<div class="equation">
+  \[  \psi _\varepsilon '=\frac{bD}{\eta },\qquad \psi _\varepsilon ''=A+B,\quad A=\frac{b^2D^2}{\eta ^2},\quad B=\frac{b(1-b)D}{\eta }+\frac{b^2}{\eta s^2}&gt;0.  \]
+</div>
+<p>
+       For a function $g$ of $t=\log |\zeta |^2$ we have $\partial _{\bar\zeta }g=g'/\bar\zeta $ and $\partial _\zeta \partial _{\bar\zeta }g=g''/|\zeta |^2$. Hence $(\psi _\varepsilon )_{\zeta \bar\zeta }=\psi _\varepsilon ''/x&gt;0$ and $h=(\psi _\varepsilon ')^2/\psi _\varepsilon ''=A/(A+B)&lt;1$ for $\zeta \ne 0$. In general $\partial _{\bar\zeta }\psi _\varepsilon =G'(|\zeta |^2)\zeta $ and $(\psi _\varepsilon )_{\zeta \bar\zeta }=G''(|\zeta |^2)|\zeta |^2+G'(|\zeta |^2)$, so at $\zeta =0$ we have $\partial _{\bar\zeta }\psi _\varepsilon =0$ and $(\psi _\varepsilon )_{\zeta \bar\zeta }=G'(0)$, where $G'(x)=\psi _\varepsilon '/x=D/(\eta (x+\varepsilon ^2))&gt;0$; so $(\psi _\varepsilon )_{\zeta \bar\zeta }&gt;0$ and $h=0$ there. Thus $\psi _\varepsilon $ is strictly subharmonic, and $h&lt;1$ everywhere. 
+    <p>
+      For the first estimate let $\zeta \ne 0$. Since $B\ge b^2/(\eta s^2)$, we have $A/B\le D^2s^2/\eta =(s+1)^2/\eta $, and therefore 
+    
+<div class="equation">
+  \[  (1-h)\mathrm e^{\psi _\varepsilon }=\frac{B}{\eta (A+B)} \ge \frac1{\eta +(s+1)^2}\ge \frac1{6s^2},  \]
+</div>
+<p>
+       because $\eta \le 2s\le 2s^2$ and $(s+1)^2\le 4s^2$ for $s\ge 1$. At $\zeta =0$ we have $(1-h)\mathrm e^{\psi _\varepsilon }=1/\eta \ge 1/(6s^2)$ as well. For the second estimate let $0&lt;x\le \varepsilon ^2$. Then $b\le 1/2$, and $B\ge b(1-b)D/\eta $ gives 
+    
+<div class="equation">
+  \[  h\le \frac AB\le \frac{bD}{\eta (1-b)}\le \frac D\eta =\frac{s+1}{s\eta }\le \frac2s,  \]
+</div>
+<p>
+       since $s+1\le 2s\le 2\eta $; moreover $s\ge -\log (2\varepsilon ^2)$, because $x+\varepsilon ^2\le 2\varepsilon ^2$. Together with $h(0)=0$, this proves the second estimate. For the third, let $\varepsilon /2\le |\zeta |\le \varepsilon $. Then $1/5\le b\le 1/2$, so $\eta \psi _\varepsilon ''\ge \eta B\ge b(1-b)D\ge b(1-b)\ge 4/25$, and $\mathrm e^{\psi _\varepsilon }/(|\zeta |^2(\psi _\varepsilon )_{\zeta \bar\zeta })=1/(\eta \psi _\varepsilon '')\le 25/4$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-B7D417A7">
+<p><a class="environment-identifier" href="../../tag/D315377B239D/">Theorem <span data-tag="B7D417A7">11.4.4</span> <span class="named">(Ohsawa–Takegoshi)</span>.</a><span data-gerby-tag="B7D417A7"></span> There is an absolute constant $C$ with the following property. Let $n\ge 1$ and $R&gt;0$, let $\Omega \subset \mathbb C^{n-1}\times \Delta _ R$ be a pseudoconvex open set, where $\Delta _ R\subset \mathbb C$ is the disc of radius $R$ centered at $0$, and let $p\in \mathrm{PSH}(\Omega )$. Put $\Omega _0=\Omega \cap \{ z_ n=0\} $, which we identify with an open subset of $\mathbb C^{n-1}$. Then every holomorphic function $f$ on $\Omega _0$ with </p>
+<div class="equation">
+  \[  I=\int _{\Omega _0}|f|^2\mathrm e^{-p}\, \mathrm dV_{2n-2}&lt;\infty  \]
+</div>
+<p> has an extension $F\in \mathcal O(\Omega )$ such that </p>
+<div class="equation">
+  \[  F|_{\Omega _0}=f,\qquad \int _\Omega |F|^2\mathrm e^{-p}\, \mathrm dV_{2n}\le C R^2 I.  \]
+</div>
+<p> Here, for $n=1$, $\Omega _0$ is a point or empty, and $I$ is the weighted value of $|f|^2$ at that point, the integral with respect to the counting measure $\mathrm dV_0$. If $\Omega _0=\varnothing $ we take $F=0$. On a connected component of $\Omega _0$ on which the restriction of $p$ is identically $-\infty $, finiteness of $I$ forces $f=0$, and this component contributes zero to $I$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      After a normalization, Step 1 treats smooth weights on relatively compact pseudoconvex subsets, by correcting a cutoff of $f$ with lemma <a data-tag="0DF23005" href="../../tag/0822DB927561/">11.4.2</a>, lemma <a data-tag="36B10D6C" href="../../tag/EE99921A3F33/">11.4.3</a>, and Step 2 regularizes $p$ and passes to the limit. 
+    <p>
+<em>Normalization.</em> The substitution $z_ n=4R\zeta $ maps $\mathbb C^{n-1}\times \Delta _{1/4}$ onto $\mathbb C^{n-1}\times \Delta _ R$, preserves the hyperplane and the integral $I$, and multiplies Lebesgue measure on $\mathbb C^ n$ by $16R^2$. Hence it suffices to show the following: if $\Omega \subset \mathbb C^{n-1}\times \Delta _{1/4}$, then $f$ has an extension $F\in \mathcal O(\Omega )$ with $\int _\Omega |F|^2\mathrm e^{-p}\, \mathrm dV\le C_0I$ for an absolute constant $C_0$; then $C=16C_0$ works. From now on we write the points of $\Omega $ as $(z',\zeta )$ with $z'\in \mathbb C^{n-1}$ and $|\zeta |&lt;1/4$; for $n=1$ the variable $z'$ is absent. We may assume $\Omega _0\ne \varnothing $. 
+    <p>
+<em>Step 1: smooth weights on a relatively compact set.</em> Let $D\Subset \Omega $ be a pseudoconvex open set, let $U\subset \Omega $ be an open neighborhood of $\overline D$, and let $\varphi $ be a smooth plurisubharmonic function on $U$. We show that there are an open set $P\Subset \Omega _0$ with $\overline P\times \{ 0\} \subset U$ and a function $F\in \mathcal O(D)$ with $F(z',0)=f(z')$ whenever $(z',0)\in D$, such that 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-4CF8E5E9"><span data-gerby-tag="4CF8E5E9"></span>
+<span class="equation-label"><a data-tag="4CF8E5E9" href="../../tag/5C2AD1325732/">11.21</a></span>
+<div>\begin{equation}  \int _ D|F|^2\mathrm e^{-\varphi }\, \mathrm dV\le C_0\int _ P|f(z')|^2\mathrm e^{-\varphi (z',0)}\, \mathrm dV_{2n-2}(z'), \end{equation}</div>
+</div>
+<p>
+       where $C_0$ is an absolute constant; we write $I_ P$ for the integral over $P$ on the right. 
+    <p>
+      The set $K_0=\{ z':(z',0)\in \overline D\} $ is a compact subset of the open set $U_0=\{ z':(z',0)\in U\} \subset \Omega _0$; choose an open set $P$ with $K_0\subset P\Subset U_0$. There is $\varepsilon _0\in (0,1/4)$ such that every $(z',\zeta )\in D$ with $|\zeta |\le \varepsilon _0$ satisfies $z'\in P$: otherwise there would be points $(z'_ k,\zeta _ k)\in D$ with $\zeta _ k\to 0$ and $z'_ k\notin P$, and a subsequence would converge, $D$ being bounded, to a point $(z',0)\in \overline D$ with $z'\notin P$, which is impossible. Decreasing $\varepsilon _0$, we may also assume that $\overline P\times \overline\Delta _{\varepsilon _0}\subset U$ and, by the uniform continuity of $\varphi $ on this compact set, that 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-26B5D004"><span data-gerby-tag="26B5D004"></span>
+<span class="equation-label"><a data-tag="26B5D004" href="../../tag/FF641A8A654C/">11.22</a></span>
+<div>\begin{equation}  \mathrm e^{-\varphi (z',\zeta )}\le 2\mathrm e^{-\varphi (z',0)}\qquad (z'\in \overline P,\  |\zeta |\le \varepsilon _0). \end{equation}</div>
+</div>
+<p>
+      Fix a smooth function $\chi $ on $\mathbb R$ with $0\le \chi \le 1$, $\chi =1$ on $(-\infty ,1/4]$ and $\chi =0$ on $[1,\infty )$, for instance $\chi (x)=\kappa _0((4x-1)/3)$ with the function $\kappa _0$ fixed at the beginning of section <a data-tag="066AC58B" href="../../tag/4E04198982E6/">11.3</a>, and put $c_\chi =\sup |\chi '|^2$. For $0&lt;\varepsilon \le \varepsilon _0$ define $g_\varepsilon $ on $D$ by $g_\varepsilon (z',\zeta )=f(z')\chi (|\zeta |^2/\varepsilon ^2)$ if $z'\in P$, and $g_\varepsilon =0$ otherwise. The open sets $D\cap (P\times \mathbb C)$ and $D\cap \{ |\zeta |&gt;\varepsilon \} $ cover $D$ by the choice of $\varepsilon _0$, and $g_\varepsilon $ is smooth on each of them (on the second it vanishes); hence $g_\varepsilon $ is smooth on $D$, and $g_\varepsilon (z',0)=f(z')$ for $(z',0)\in D$. Since $f$ is holomorphic, 
+    
+<div class="equation">
+  \[  \alpha _\varepsilon =\bar\partial g_\varepsilon =f(z')\chi '(|\zeta |^2/\varepsilon ^2) \frac{\zeta }{\varepsilon ^2}\, \mathrm d\bar\zeta  \]
+</div>
+<p>
+       is a $\bar\partial $-closed smooth form supported in $\{ \varepsilon /2\le |\zeta |\le \varepsilon \} $. 
+    <p>
+      We solve $\bar\partial u=\alpha _\varepsilon $ on $D$ by lemma <a data-tag="0DF23005" href="../../tag/0822DB927561/">11.4.2</a>, with the function $\widetilde\varphi =\varphi +\log |\zeta |^2$ in place of $p$, which is plurisubharmonic on $D$ by proposition <a data-tag="F24BB0D4" href="../../tag/1A6F10A07BA5/">8.3.3</a>, proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>, and with $\psi =\psi _\varepsilon (\zeta )$ from lemma <a data-tag="36B10D6C" href="../../tag/EE99921A3F33/">11.4.3</a>, a smooth bounded function on $D$ which is plurisubharmonic by proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a>, applied to the projection $(z',\zeta )\mapsto \zeta $. The complex Hessian matrix $A=H_\psi $ has the single nonzero entry $(\psi _\varepsilon )_{\zeta \bar\zeta }$, so $|\bar\partial \psi |_{A^{-1}}^2$ is the function $h$ of lemma <a data-tag="36B10D6C" href="../../tag/EE99921A3F33/">11.4.3</a>; thus $h&lt;1$, and $h\le a_\varepsilon =2/(-\log (2\varepsilon ^2))$ on $\{ \alpha _\varepsilon \ne 0\} \subset \{ |\zeta |\le \varepsilon \} $. The dual energy of $\alpha _\varepsilon $ is $|f|^2|\chi '|^2|\zeta |^2\varepsilon ^{-4}/(\psi _\varepsilon )_{\zeta \bar\zeta }$, so the third estimate of lemma <a data-tag="36B10D6C" href="../../tag/EE99921A3F33/">11.4.3</a> and $|\zeta |\le \varepsilon $ give, on its support, 
+    
+<div class="equation">
+  \[  |\alpha _\varepsilon |_{A^{-1}}^2\mathrm e^{\psi _\varepsilon -\widetilde\varphi } =|f(z')|^2|\chi '|^2\varepsilon ^{-4}\frac{\mathrm e^{\psi _\varepsilon }}{(\psi _\varepsilon )_{\zeta \bar\zeta }}\mathrm e^{-\varphi } \le \frac{25}4c_\chi \varepsilon ^{-2}|f(z')|^2\mathrm e^{-\varphi (z',\zeta )}.  \]
+</div>
+<p>
+       By (<a data-tag="26B5D004" href="../../tag/FF641A8A654C/">11.22</a>) and Fubini's theorem, since every point of the support has $z'\in P$, 
+    
+<div class="equation">
+  \[  E=\int _ D|\alpha _\varepsilon |_{A^{-1}}^2\mathrm e^{\psi -\widetilde\varphi }\, \mathrm dV \le \frac{25}4c_\chi \varepsilon ^{-2}\cdot 2\pi \varepsilon ^2I_ P=\frac{25\pi }2c_\chi I_ P.  \]
+</div>
+<p>
+       If $\varepsilon $ is so small that $a_\varepsilon \le 1/4$, then $(1+\sqrt{a_\varepsilon })/(1-\sqrt{a_\varepsilon })\le 3$, and lemma <a data-tag="0DF23005" href="../../tag/0822DB927561/">11.4.2</a> gives $u_\varepsilon $ with $\bar\partial u_\varepsilon =\alpha _\varepsilon $ and $\int _ D(1-h)|u_\varepsilon |^2\mathrm e^{\psi _\varepsilon -\widetilde\varphi }\, \mathrm dV\le 3E$. By the first estimate of lemma <a data-tag="36B10D6C" href="../../tag/EE99921A3F33/">11.4.3</a>, $(1-h)\mathrm e^{\psi _\varepsilon }\ge 1/(6\log ^2(|\zeta |^2+\varepsilon ^2))$, and $\mathrm e^{-\widetilde\varphi }=\mathrm e^{-\varphi }|\zeta |^{-2}$. Hence, with $C_1=225\pi c_\chi $, 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-2DFB1DBB"><span data-gerby-tag="2DFB1DBB"></span>
+<span class="equation-label"><a data-tag="2DFB1DBB" href="../../tag/F388046B5B2A/">11.23</a></span>
+<div>\begin{equation}  \int _ D\frac{|u_\varepsilon |^2\mathrm e^{-\varphi }}{ |\zeta |^2\log ^2(|\zeta |^2+\varepsilon ^2)}\, \mathrm dV \le 18E\le C_1I_ P. \end{equation}</div>
+</div>
+<p>
+      On $D\cap \{ |\zeta |&lt;\varepsilon /2\} $ we have $\bar\partial u_\varepsilon =0$, so $u_\varepsilon $ is holomorphic there, by lemma <a data-tag="941449DF" href="../../tag/961105705CF9/">11.3.5</a>(1). Suppose that $u_\varepsilon (z'_0,0)\ne 0$ for some $(z'_0,0)\in D$. On a small polydisc around this point, $|u_\varepsilon |$ is bounded below by a positive constant, $\varphi $ is bounded above, and $\log ^2(|\zeta |^2+\varepsilon ^2)\le \log ^2(\varepsilon ^2)$; so the integrand in (<a data-tag="2DFB1DBB" href="../../tag/F388046B5B2A/">11.23</a>) is at least a positive constant times $|\zeta |^{-2}$, whose integral over a disc around $\zeta =0$ diverges. This contradicts (<a data-tag="2DFB1DBB" href="../../tag/F388046B5B2A/">11.23</a>). Hence $u_\varepsilon =0$ on $D\cap \{ \zeta =0\} $, and $F_\varepsilon =g_\varepsilon -u_\varepsilon $ is holomorphic on $D$, by the same lemma, because $\bar\partial F_\varepsilon =0$; moreover $F_\varepsilon (z',0)=f(z')$. 
+    <p>
+      It remains to estimate $F_\varepsilon $. For $0&lt;x=|\zeta |^2&lt;1/16$ we have $x&lt;x+\varepsilon ^2&lt;1/8$, so $x\log ^2(x+\varepsilon ^2)\le x\log ^2x\le 4\mathrm e^{-2}&lt;1$. Thus (<a data-tag="2DFB1DBB" href="../../tag/F388046B5B2A/">11.23</a>) gives $\int _ D|u_\varepsilon |^2\mathrm e^{-\varphi }\, \mathrm dV\le C_1I_ P$. By (<a data-tag="26B5D004" href="../../tag/FF641A8A654C/">11.22</a>) and Fubini's theorem, $\int _ D|g_\varepsilon |^2\mathrm e^{-\varphi }\, \mathrm dV\le 2\pi \varepsilon ^2I_ P\le I_ P$. Therefore $\int _ D|F_\varepsilon |^2\mathrm e^{-\varphi }\, \mathrm dV\le 2(1+C_1)I_ P$, which is (<a data-tag="4CF8E5E9" href="../../tag/5C2AD1325732/">11.21</a>) with $C_0=2(1+C_1)$. 
+    <p>
+<em>Step 2: the general case.</em> By corollary <a data-tag="04AFE5BC" href="../../tag/FFB7E3647C0B/">11.2.5</a> there are pseudoconvex open sets $D_1\subset D_2\subset \cdots $ with $D_ j\Subset \Omega $ and $\bigcup _ jD_ j=\Omega $. Choose $\varepsilon _ j\downarrow 0$ with $\varepsilon _ j&lt;\operatorname {dist}(\overline D_ j,\mathbb C^ n\setminus \Omega )$, and let $\rho _\varepsilon $ be the radial mollifier of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>; then, by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(2), $p_ j=p*\rho _{\varepsilon _ j}$ is a smooth plurisubharmonic function on the open neighborhood $U_ j=\{ z\in \Omega :\operatorname {dist}(z,\mathbb C^ n\setminus \Omega )&gt;\varepsilon _ j\} $ of $\overline D_ j$, and $p_ j\downarrow p$ pointwise. Step 1, applied to $D_ j$, $U_ j$ and $\varphi =p_ j$, gives $F_ j\in \mathcal O(D_ j)$ with $F_ j(z',0)=f(z')$ for $(z',0)\in D_ j$ and 
+    
+<div class="equation">
+  \[  \int _{D_ j}|F_ j|^2\mathrm e^{-p_ j}\, \mathrm dV\le C_0\int _{P_ j}|f(z')|^2\mathrm e^{-p_ j(z',0)}\, \mathrm dV_{2n-2}(z')\le C_0I,  \]
+</div>
+<p>
+       because $p_ j\ge p$. (On a component of $\Omega _0$ on which $p(\cdot ,0)\equiv -\infty $ we have $f=0$, and the last inequality holds with the convention $0\cdot \infty =0$.) 
+    <p>
+      We show that a subsequence of $(F_ j)$ converges locally uniformly on $\Omega $. Let $K\subset \Omega $ be compact. Then $K\subset D_ k$ for some $k$, and for $j\ge k$ we have $p_ j\le p_ k$ on $K$, so $\int _ K|F_ j|^2\, \mathrm dV\le \mathrm e^{\max _ Kp_ k}C_0I$. It follows that $(F_ j)$ is uniformly bounded on compact subsets of $\Omega $. Indeed, for a holomorphic function $G$ the complex Hessian matrix of $|G|^2$ is $\bigl (\partial _{z_\mu }G\, \overline{\partial _{z_\nu }G}\bigr )_{\mu ,\nu }$, which is positive semidefinite; so $|G|^2$ is plurisubharmonic by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1), and hence subharmonic by theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>. If $K\subset \Omega $ is compact, $\delta &gt;0$ and $K_\delta =\{ z:\operatorname {dist}(z,K)\le \delta \} \subset \Omega $, then the mean value inequality over balls in theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>, applied to $|F_ j|^2$, gives $|F_ j(z)|^2\le |B(z,\delta )|^{-1}\int _{K_\delta }|F_ j|^2\, \mathrm dV$ for $z\in K$ and large $j$, and the right side is bounded independently of $j$ by the preceding estimate applied to $K_\delta $. 
+    <p>
+      Next, let $K\subset \Omega $ be compact, and choose $r&gt;0$ such that the compact set $K'$ of points at distance at most $2\sqrt n\, r$ from $K$ lies in $\Omega $. For $z\in K'_0=\{ z:\operatorname {dist}(z,K)\le \sqrt n\, r\} $, the closed polydisc of radius $r$ centered at $z$ lies in $K'$, and the coefficient bound in (<a data-tag="655AD683" href="../../tag/E0E563B56BCE/">7.1</a>) with $a=z$ gives $|\partial _{z_ l}F_ j(z)|\le r^{-1}\max _{K'}|F_ j|$ for $1\le l\le n$ and all large $j$ (those with $K'\subset D_ j$). Since $\mathrm dF_ j=\sum _ l\partial _{z_ l}F_ j\, \mathrm dz_ l$, it follows that these $F_ j$ are Lipschitz with a common constant on every ball of radius $\sqrt n\, r$ centered at a point of $K$, so the sequence $(F_ j)$ is equicontinuous on $K$ from some index on. By proposition <a data-tag="C7F49DCE" href="../../tag/2963E35FB0D3/">1.6.4</a> on a compact exhaustion of $\Omega $ and a diagonal argument, a subsequence converges locally uniformly on $\Omega $ to a continuous function $F$. Since $\bar\partial F_ j=0$ and $F_ j\to F$ in the sense of distributions, $\bar\partial F=0$, and $F$ is holomorphic by lemma <a data-tag="941449DF" href="../../tag/961105705CF9/">11.3.5</a>(1). Moreover $F(z',0)=\lim _ jF_ j(z',0)=f(z')$ for $z'\in \Omega _0$. 
+    <p>
+      Finally, let $K\subset \Omega $ be compact, and let $k$ be so large that $K\subset D_ k$. For $j\ge k$ we have $p_ j\le p_ k$ on $K$, so locally uniform convergence gives 
+    
+<div class="equation">
+  \[  \int _ K|F|^2\mathrm e^{-p_ k}\, \mathrm dV=\lim _ j\int _ K|F_ j|^2\mathrm e^{-p_ k}\, \mathrm dV\le \varliminf _ j\int _{D_ j}|F_ j|^2\mathrm e^{-p_ j}\, \mathrm dV\le C_0I.  \]
+</div>
+<p>
+       This holds for all large $k$, and $\mathrm e^{-p_ k}$ increases to $\mathrm e^{-p}$ as $k\to \infty $; so the monotone convergence theorem gives $\int _ K|F|^2\mathrm e^{-p}\, \mathrm dV\le C_0I$, and exhausting $\Omega $ by compact sets gives $\int _\Omega |F|^2\mathrm e^{-p}\, \mathrm dV\le C_0I$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Applying the theorem once for each normal direction, we obtain extension from affine subspaces of any codimension, in particular from points. 
+</p>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-B6B660C0">
+<p><a class="environment-identifier" href="../../tag/33DEA3F4EDB8/">Corollary <span data-tag="B6B660C0">11.4.5</span>.</a><span data-gerby-tag="B6B660C0"></span> Let $C$ be the constant of theorem <a data-tag="B7D417A7" href="../../tag/D315377B239D/">11.4.4</a>. Let $\Omega \subset \mathbb C^ n$, $n\ge 1$, be a pseudoconvex open set of diameter at most $L&gt;0$, and let $p\in \mathrm{PSH}(\Omega )$. Then for every $a\in \Omega $ with $p(a)&gt;-\infty $ there is $F\in \mathcal O(\Omega )$ such that </p>
+<div class="equation">
+  \[  F(a)=1,\qquad \int _\Omega |F|^2\mathrm e^{-p}\, \mathrm dV \le C^ n L^{2n}\mathrm e^{-p(a)}.  \]
+</div>
+<p> More generally, let $V\subset \mathbb C^ n$ be an affine complex subspace of codimension $r$, $0\le r\le n$, and let $f$ be holomorphic on $\Omega \cap V$ with finite slice norm $\int _{\Omega \cap V}|f|^2\mathrm e^{-p}\, \mathrm dV_{2n-2r}$, computed with Lebesgue measure on $V$. Then there is $F\in \mathcal O(\Omega )$ with $F|_{\Omega \cap V}=f$ and $\int _\Omega |F|^2\mathrm e^{-p}\, \mathrm dV\le C^ rL^{2r}\int _{\Omega \cap V}|f|^2\mathrm e^{-p}\, \mathrm dV_{2n-2r}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We prove the second assertion; the first is the case $V=\{ a\} $, $r=n$ and $f=1$, whose slice norm with respect to the counting measure $\mathrm dV_0$ is $\mathrm e^{-p(a)}$. If $r=0$ we take $F=f$, and if $\Omega \cap V=\varnothing $ we take $F=0$. 
+    <p>
+      Assume now that $r\ge 1$ and $\Omega \cap V\ne \varnothing $. Choose $b\in \Omega \cap V$ and unitary affine coordinates $w=(w_1,\ldots ,w_ n)$ on $\mathbb C^ n$ centered at $b$ with $V=\{ w_1=\cdots =w_ r=0\} $, and put $\Omega _ k=\Omega \cap \{ w_1=\cdots =w_ k=0\} $ for $0\le k\le r$, an open subset of a space isomorphic to $\mathbb C^{n-k}$. Unitary coordinates preserve Lebesgue measure. Each $\Omega _ k$ with $k&lt;n$ is pseudoconvex: the restriction of a continuous plurisubharmonic exhaustion function of $\Omega $ to the closed subset $\Omega _ k$ of $\Omega $ is continuous and plurisubharmonic by proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a>, applied to the linear embedding of $\{ w_1=\cdots =w_ k=0\} $, and its sublevel sets are compact. By the discussion following definition <a data-tag="CBC5C928" href="../../tag/10E4AE8BC531/">11.2.1</a>, every connected component of $\Omega _ k$ is pseudoconvex as well. Since $\Omega $ is open and has diameter at most $L$, we have $|z-b|&lt;L$ for $z\in \Omega $ (a point $z\in \Omega $ with $|z-b|=L$ could be moved slightly away from $b$ inside $\Omega $), so the coordinate $w_ k$ takes its values in $\Delta _ L$ on $\Omega _{k-1}$. 
+    <p>
+      Put $f_ r=f$, let $1\le k\le r$, and assume that $f_ k\in \mathcal O(\Omega _ k)$ has finite norm $\int _{\Omega _ k}|f_ k|^2\mathrm e^{-p}\, \mathrm dV_{2n-2k}$. Let $W$ be a connected component of $\Omega _{k-1}$; ordering the coordinates as $(w_{k+1},\ldots ,w_ n,w_ k)$, we regard $W$ as an open subset of $\mathbb C^{n-k}\times \Delta _ L$ whose slice by $\{ w_ k=0\} $ is the open subset $W\cap \Omega _ k$ of $\Omega _ k$. By proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a>, the restriction of $p$ to $W$ is plurisubharmonic or identically $-\infty $. In the second case $\mathrm e^{-p}=\infty $ on $W\cap \Omega _ k$, so the finiteness of the norm of $f_ k$ forces $f_ k=0$ almost everywhere on $W\cap \Omega _ k$, hence everywhere there, since $f_ k$ is continuous, and we put $f_{k-1}=0$ on $W$. In the first case, theorem <a data-tag="B7D417A7" href="../../tag/D315377B239D/">11.4.4</a>, applied to $W$ with normal coordinate $w_ k$, gives a holomorphic function $f_{k-1}$ on $W$ extending the restriction of $f_ k$ to $W\cap \Omega _ k$, with 
+    
+<div class="equation">
+  \[  \int _ W|f_{k-1}|^2\mathrm e^{-p}\, \mathrm dV_{2n-2k+2}\le CL^2\int _{W\cap \Omega _ k}|f_ k|^2\mathrm e^{-p}\, \mathrm dV_{2n-2k}.  \]
+</div>
+<p>
+       The components $W$ are open, disjoint and cover $\Omega _{k-1}$, and the sets $W\cap \Omega _ k$ are disjoint and cover $\Omega _ k$. Hence these functions define $f_{k-1}\in \mathcal O(\Omega _{k-1})$ extending $f_ k$, and summing over $W$ gives 
+    
+<div class="equation">
+  \[  \int _{\Omega _{k-1}}|f_{k-1}|^2\mathrm e^{-p}\, \mathrm dV_{2n-2k+2}\le CL^2\int _{\Omega _ k}|f_ k|^2\mathrm e^{-p}\, \mathrm dV_{2n-2k}.  \]
+</div>
+<p>
+       Proceeding in this way for $k=r,r-1,\ldots ,1$ and multiplying the $r$ estimates, we see that $F=f_0$ has the required properties. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-141CB09D">
+<p><a class="environment-identifier" href="../../tag/BFB355F9DDF9/">Corollary <span data-tag="141CB09D">11.4.6</span>.</a><span data-gerby-tag="141CB09D"></span> Let $X$ be a complex manifold, let $Y\subset X$ be a complex submanifold, let $a\in Y$, and let $p$ be a plurisubharmonic function on a neighborhood of $a$ in $X$. Let $f$ be a holomorphic germ on $Y$ at $a$ such that $|f|^2\mathrm e^{-p|_ Y}$ is integrable on some neighborhood of $a$ in $Y$. Then there is a holomorphic germ $F$ on $X$ at $a$ with $F|_ Y=f$ such that $|F|^2\mathrm e^{-p}$ is integrable on some neighborhood of $a$ in $X$. Here integrability refers to smooth positive volume forms on $Y$ and $X$; since any two such forms are locally comparable, the notion does not depend on their choice. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $k=\dim Y$ and $n=\dim X$ near $a$. By the definition of a complex submanifold (definition <a data-tag="76F27E8E" href="../../tag/42A02A1A5EFE/">7.1.1</a>), there are holomorphic coordinates $w=(w',w'')\in \mathbb C^ k\times \mathbb C^{n-k}$ centered at $a$ in which $Y=\{ w''=0\} $; by proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a>, $p$ is plurisubharmonic near $0$ in these coordinates. On a compact neighborhood of $a$, the densities of smooth positive volume forms with respect to coordinate Lebesgue measure are bounded above and below by positive constants. Hence we may test integrability with Lebesgue measure $\mathrm dV_{2k}$ on $Y=\mathbb C^ k\times \{ 0\} $ and $\mathrm dV_{2n}$ in the coordinates $w$. 
+    <p>
+      Choose a ball $B$ around $0$ so small that $p$ is plurisubharmonic on a neighborhood of $\overline B$, that $f$ is defined on $B\cap Y$, and that $\int _{B\cap Y}|f|^2\mathrm e^{-p}\, \mathrm dV_{2k}&lt;\infty $. The ball $B$ is a bounded pseudoconvex domain, by corollary <a data-tag="04AFE5BC" href="../../tag/FFB7E3647C0B/">11.2.5</a> applied to the exhaustion function $|w|^2$ of $\mathbb C^ n$, and $B\cap Y$ is its intersection with the linear subspace $\{ w''=0\} $ of codimension $n-k$. By corollary <a data-tag="B6B660C0" href="../../tag/33DEA3F4EDB8/">11.4.5</a> there is $F\in \mathcal O(B)$ with $F|_{B\cap Y}=f$ and $\int _ B|F|^2\mathrm e^{-p}\, \mathrm dV_{2n}&lt;\infty $. (If $k=0$, the integral over $Y$ is the weighted value $|f(a)|^2\mathrm e^{-p(a)}$; if $p|_ Y$ is identically $-\infty $ near $a$, then $f=0$ and $F=0$, in accordance with the conventions of theorem <a data-tag="B7D417A7" href="../../tag/D315377B239D/">11.4.4</a>.) 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../chapters/singularities-regularization/"><span>← Previous</span><small>6 Lelong numbers, multiplier ideals, and regularization</small></a><a class="pager-next" rel="next" href="../../tag/89143AD4638F/"><span>Next →</span><small>11 Weighted L2 estimates and holomorphic extension</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-weighted-l2-estimates-and-holomorphic-extension,
   author = {{Gerby contributors}},
   title = {6.1 Weighted L2 estimates and holomorphic extension},

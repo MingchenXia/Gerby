@@ -15,3 +15,6 @@ window.MathJax = {
   options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
   chtml: {scale: 1}
 };
+if (typeof document !== 'undefined' && document.documentElement.dataset.readingMode === 'continuous') {
+  window.MathJax.loader.load.push('ui/lazy');
+}

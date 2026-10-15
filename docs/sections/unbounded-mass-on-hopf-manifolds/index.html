@@ -1,8 +1,1606 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/unbounded-mass-on-hopf-manifolds/"><title>20.1 Unbounded mass on Hopf manifolds · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/unbounded-mass-on-hopf-manifolds/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/unbounded-mass-on-hopf-manifolds/"><title>20.1 Unbounded mass on Hopf manifolds · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/unbounded-mass-on-hopf-manifolds/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/hopf-lck/">Chapter 20: Hopf and locally conformally Kähler geometry</a></li><li><a href="../../sections/unbounded-mass-on-hopf-manifolds/" aria-current="page">Section 20.1: Unbounded mass on Hopf manifolds</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/unbounded-mass-on-hopf-manifolds/" aria-current="page"><span>20.1</span> Unbounded mass on Hopf manifolds</a></li><li><a href="../../sections/locally-conformally-kahler-geometry/"><span>20.2</span> Locally conformally Kähler geometry</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/unbounded-mass-on-hopf-manifolds/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/unbounded-mass-on-hopf-manifolds/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../chapters/hopf-lck/"><span>← Previous</span><small>20 Hopf and locally conformally Kähler geometry</small></a><a class="pager-next" rel="next" href="../../tag/142249962360/"><span>Next →</span><small>8 Unbounded mass on Hopf manifolds</small></a></nav><h1>20.1 Unbounded mass on Hopf manifolds</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/142249962360/">8 Unbounded mass on Hopf manifolds</a><code class="tag-id">142249962360</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/92B2FB434C79/">Theorem 8.0.1 (Xia–Zhang)</a><code class="tag-id">92B2FB434C79</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/CFFF1A0C2E2E/">8.1 The Hopf metric and its mass</a><code class="tag-id">CFFF1A0C2E2E</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/25275E5CD565/">8.1 </a><code class="tag-id">25275E5CD565</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/DDEBFFAFCD1F/">Proposition 8.1.1</a><code class="tag-id">DDEBFFAFCD1F</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/C46F0B405DC2/">8.2 </a><code class="tag-id">C46F0B405DC2</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/70014772CD9C/">8.2 The radial–vertical block</a><code class="tag-id">70014772CD9C</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/6674C9FC8075/">Lemma 8.2.1</a><code class="tag-id">6674C9FC8075</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/814E85A56944/">8.5 </a><code class="tag-id">814E85A56944</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/1CD2386648C8/">8.3 Heat potentials and the mixed derivative</a><code class="tag-id">1CD2386648C8</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/097EB0CA92F4/">8.6 </a><code class="tag-id">097EB0CA92F4</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/27E901CC3829/">8.7 </a><code class="tag-id">27E901CC3829</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/14E6CDA9AAC4/">Lemma 8.3.1</a><code class="tag-id">14E6CDA9AAC4</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/9CCEEAD6F62C/">8.8 </a><code class="tag-id">9CCEEAD6F62C</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D87F1ADF41BF/">8.9 </a><code class="tag-id">D87F1ADF41BF</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/E73DDDEDFD02/">8.10 </a><code class="tag-id">E73DDDEDFD02</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/464524C306E0/">8.11 </a><code class="tag-id">464524C306E0</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/7C9989D90F66/">Lemma 8.3.2</a><code class="tag-id">7C9989D90F66</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/8EBD296AAFDA/">8.12 </a><code class="tag-id">8EBD296AAFDA</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/AB7F46061184/">Lemma 8.3.3</a><code class="tag-id">AB7F46061184</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/ED58C2434E12/">8.13 </a><code class="tag-id">ED58C2434E12</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/525E30DDFE7A/">8.4 Variation of the heat time</a><code class="tag-id">525E30DDFE7A</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/F445D65CCB92/">8.14 </a><code class="tag-id">F445D65CCB92</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/C76E171B8E17/">8.15 </a><code class="tag-id">C76E171B8E17</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/03733983FD0F/">8.16 </a><code class="tag-id">03733983FD0F</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/3F868B74CEBD/">Lemma 8.4.1</a><code class="tag-id">3F868B74CEBD</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/198FD1FE8553/">8.17 </a><code class="tag-id">198FD1FE8553</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/477FF03F5EC1/">8.18 </a><code class="tag-id">477FF03F5EC1</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/A811248FC3F3/">8.21 </a><code class="tag-id">A811248FC3F3</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1BA0538C7E35/">8.22 </a><code class="tag-id">1BA0538C7E35</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/7C466FD3CC31/">8.23 </a><code class="tag-id">7C466FD3CC31</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/D7D1053AF199/">8.5 A base correction and unbounded mass</a><code class="tag-id">D7D1053AF199</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/28A754700E01/">8.6 Higher-dimensional Hopf manifolds</a><code class="tag-id">28A754700E01</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/264893FAE204/">Lemma 8.6.1</a><code class="tag-id">264893FAE204</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D216F8E7C5AA/">8.24 </a><code class="tag-id">D216F8E7C5AA</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/D3E13E0C86B3/">Theorem 8.6.2</a><code class="tag-id">D3E13E0C86B3</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/77FC30E16968/">Corollary 8.6.3</a><code class="tag-id">77FC30E16968</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/CE2794970ECD/">8.7 Minimum mass and fiber averaging</a><code class="tag-id">CE2794970ECD</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/E42306969D71/">Proposition 8.7.1</a><code class="tag-id">E42306969D71</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/18B65325175F/">8.25 </a><code class="tag-id">18B65325175F</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/09DD8DF2EF76/">Corollary 8.7.2</a><code class="tag-id">09DD8DF2EF76</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/5746F7AEAB40/">8.8 Sharp damping under unitary rotations</a><code class="tag-id">5746F7AEAB40</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/9880531015C7/">8.8.1 Positive fiber flux</a><code class="tag-id">9880531015C7</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/BDDF6CEA3CFE/">8.26 </a><code class="tag-id">BDDF6CEA3CFE</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/EF821157486E/">Lemma 8.8.1</a><code class="tag-id">EF821157486E</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/74322EB52E76/">8.29 </a><code class="tag-id">74322EB52E76</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/712BD3EA719C/">Lemma 8.8.2</a><code class="tag-id">712BD3EA719C</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/316CC905C469/">Proposition 8.8.3</a><code class="tag-id">316CC905C469</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1160D828BCBB/">8.32 </a><code class="tag-id">1160D828BCBB</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/29C345F5CC8D/">8.33 </a><code class="tag-id">29C345F5CC8D</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/92674EE5B61B/">8.8.2 Heat concentration at large depth</a><code class="tag-id">92674EE5B61B</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/21E7B1647FA9/">Lemma 8.8.4</a><code class="tag-id">21E7B1647FA9</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/1394B3372728/">Theorem 8.8.5</a><code class="tag-id">1394B3372728</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/26883D1656D1/">8.34 </a><code class="tag-id">26883D1656D1</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/83FE97565E82/">8.35 </a><code class="tag-id">83FE97565E82</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/0ACED0B738A9/">Corollary 8.8.6</a><code class="tag-id">0ACED0B738A9</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/F1398FE81D8D/">Theorem 8.8.7</a><code class="tag-id">F1398FE81D8D</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/AC3F3934DA9F/">8.36 </a><code class="tag-id">AC3F3934DA9F</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/CF8AE8E2EB06/">8.37 </a><code class="tag-id">CF8AE8E2EB06</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/C7F482FD7515/">8.38 </a><code class="tag-id">C7F482FD7515</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/4B61F80092C8/">8.8.3 Concentration at the critical weight</a><code class="tag-id">4B61F80092C8</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/5F2A120794A6/">Lemma 8.8.8</a><code class="tag-id">5F2A120794A6</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/8BCBC6CB58C6/">Theorem 8.8.9</a><code class="tag-id">8BCBC6CB58C6</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/E636296BB209/">Corollary 8.8.10</a><code class="tag-id">E636296BB209</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/C99F8C57CD9A/">8.9 Limits of shrinking smooth potentials</a><code class="tag-id">C99F8C57CD9A</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/ABD574F21AEB/">8.39 </a><code class="tag-id">ABD574F21AEB</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/823EC0E922FD/">8.40 </a><code class="tag-id">823EC0E922FD</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/52E95F708FD4/">8.9.1 Positive quadratic measures</a><code class="tag-id">52E95F708FD4</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/1E196E409754/">Lemma 8.9.1</a><code class="tag-id">1E196E409754</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/4D8838BCFD12/">8.9.2 Orbital mixtures</a><code class="tag-id">4D8838BCFD12</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/A71DAFFE572E/">Proposition 8.9.2</a><code class="tag-id">A71DAFFE572E</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/7802C5C9B69D/">8.9.3 Fiber measures</a><code class="tag-id">7802C5C9B69D</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/D04CA3BB7868/">Lemma 8.9.3</a><code class="tag-id">D04CA3BB7868</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/1C279783821E/">Lemma 8.9.4</a><code class="tag-id">1C279783821E</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/7C4D0FB8D775/">Theorem 8.9.5</a><code class="tag-id">7C4D0FB8D775</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/510437B8C8BB/">8.9.4 Changing the Hermitian metric</a><code class="tag-id">510437B8C8BB</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/C1374FAD9C60/">Theorem 8.9.6</a><code class="tag-id">C1374FAD9C60</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D98350F0404C/">8.41 </a><code class="tag-id">D98350F0404C</code><span class="entry-topic">Unbounded mass on Hopf manifolds</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../chapters/hopf-lck/"><span>← Previous</span><small>20 Hopf and locally conformally Kähler geometry</small></a><a class="pager-next" rel="next" href="../../tag/142249962360/"><span>Next →</span><small>8 Unbounded mass on Hopf manifolds</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../chapters/hopf-lck/"><span>← Previous</span><small>20 Hopf and locally conformally Kähler geometry</small></a><a class="pager-next" rel="next" href="../../tag/142249962360/"><span>Next →</span><small>8 Unbounded mass on Hopf manifolds</small></a></nav><h1>20.1 Unbounded mass on Hopf manifolds</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-142249962360" data-section-entries="142249962360 92B2FB434C79"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/142249962360/">8 Unbounded mass on Hopf manifolds</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="AB469878"></span></div>
+<p>
+By proposition <a data-tag="079A7287" href="../../tag/57A94BD59310/">7.1.1</a>, every compact complex curve or surface has the bounded mass property. The property can fail in dimension three even when the metric is Gauduchon. We prove this on a Hopf threefold, then extend the construction to every scalar Hopf manifold of dimension at least three. 
+</p>
+<p>
+The threefold mass formula provides the starting point. Its linear term vanishes for a Gauduchon metric, and for the standard Hopf metric the quadratic term is a positive multiple of the Dirichlet energy along the elliptic fibers over $\mathbb P^2$. We therefore seek smooth potentials with large vertical energy whose perturbed forms stay positive. A fiber heat kernel supplies the concentration. Varying its time across the base controls the mixed derivatives; a function of the base then restores positivity without changing the vertical energy. The higher-dimensional extension follows by comparing the angular densities. 
+</p>
+<p>
+We next use the fiber structure to study minimum mass, damping and weak limits. Fiber averaging identifies the bounded potentials of minimum mass. For normalized potentials invariant under unitary rotations of the last two coordinates, a positive fiber flux yields the sharp square-root damping threshold; concentration at the endpoint separates individual finiteness from uniform tails and capacity continuity. Finally, we classify the excess measures produced by shrinking smooth potentials. They are exactly the lifts of base measures by the normalized area measures on the elliptic fibers, for the standard metric and for every other Hermitian metric on this threefold. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-B6188BE3">
+<p><a class="environment-identifier" href="../../tag/92B2FB434C79/">Theorem <span data-tag="B6188BE3">8.0.1</span> <span class="named">(Xia–Zhang)</span>.</a><span data-gerby-tag="B6188BE3"></span> The compact threefold </p>
+<div class="equation">
+  \[  X=(\mathbb C^3\setminus \{ 0\} )/\langle z\mapsto \mathrm{e}^{-1}z\rangle  \]
+</div>
+<p> admits a Gauduchon form $\omega $ and smooth real functions $V_ j$ such that </p>
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}V_ j&gt;0,\qquad \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}V_ j)^3\longrightarrow +\infty .  \]
+</div>
+<p> In particular, $X$ does not have the bounded mass property. </p>
+</article>
+
+</div></section><section class="reading-chunk" id="entry-CFFF1A0C2E2E" data-section-entries="25275E5CD565 C46F0B405DC2 CFFF1A0C2E2E DDEBFFAFCD1F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/CFFF1A0C2E2E/">8.1 The Hopf metric and its mass</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="9386B117"></span></div>
+<p>
+The projection to $\mathbb P^2$ separates the horizontal and vertical parts of the metric. We normalize the fiber measure to have mass one; this fixes the constants in the mass formula. 
+</p>
+<p>
+ On the covering space $\mathbb C^3\setminus \{ 0\} $, with coordinates $z=(z_0,z_1,z_2)$, put 
+</p>
+<div class="equation">
+  \[  s=\log |z|^2,\qquad \alpha =\mathrm{dd}^{\mathrm{c}}s,\qquad \beta =\mathrm{d}s\wedge \mathrm d^{\mathrm c}s =\frac{\mathrm i}{2\pi }\partial s\wedge \bar\partial s, \qquad \omega =\alpha +\beta .  \]
+</div>
+<p>
+ The contraction $z\mapsto \mathrm{e}^{-1}z$ changes $s$ by the constant $-2$, so these forms descend to $X$. A closed spherical shell between two successive radii is a compact fundamental domain; this also proves that the quotient is compact. Let $\omega _{\mathrm{FS}}$ be the Fubini–Study form on $\mathbb P^2$, given by $\mathrm{dd}^{\mathrm{c}}\log (1+|\xi |^2)$ in affine coordinates $\xi =(\xi _1,\xi _2)$. Projectivization gives a holomorphic map 
+</p>
+<div class="equation">
+  \[  \pi :X\longrightarrow \mathbb P^2, \qquad \alpha =\pi ^*\omega _{\mathrm{FS}},\qquad \int _{\mathbb P^2}\omega _{\mathrm{FS}}^2=1.  \]
+</div>
+<p>
+ The form $\alpha $ has rank two and is positive transversally to the fibers, while the rank-one form $\beta $ is positive on the vertical line. Their kernels intersect only in zero, and therefore $\omega &gt;0$. 
+</p>
+<p>
+We shall use the identities 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-78EF5D46"><span data-gerby-tag="78EF5D46"></span>
+<span class="equation-label"><a data-tag="78EF5D46" href="../../tag/25275E5CD565/">8.1</a></span>
+<div>\begin{equation}  \alpha ^3=0,\quad \beta ^2=0,\quad \mathrm{d}\alpha =0, \quad \mathrm{dd}^{\mathrm{c}}\beta =-\alpha ^2, \quad \mathrm{dd}^{\mathrm{c}}(\omega ^2)=0. \end{equation}</div>
+</div>
+<p>
+ The first three follow from the definitions and the dimension of the base. For the fourth, differentiating $\beta =\mathrm i\partial s\wedge \bar\partial s/(2\pi )$ gives $\mathrm{dd}^{\mathrm{c}}\beta =(\partial \bar\partial s)^2/(4\pi ^2)=-\alpha ^2$. Finally, $\omega ^2=\alpha ^2+2\alpha \wedge \beta $, so $\mathrm{dd}^{\mathrm{c}}(\omega ^2)=-2\alpha ^3=0$. Thus $\omega $ is Gauduchon, although $\mathrm{dd}^{\mathrm{c}}\omega =-\alpha ^2\ne 0$. 
+</p>
+<p>
+On the affine base chart $U_0=\{ [z_0:z_1:z_2]\in \mathbb P^2:z_0\ne 0\} \simeq \mathbb C^2$ write 
+</p>
+<div class="equation">
+  \[  \xi _ j=z_ j/z_0\quad (j=1,2),\qquad w=\log z_0.  \]
+</div>
+<p>
+ The choice of logarithm and the contraction change $w$ by elements of $\Lambda =\mathbb Z+2\pi \mathrm i\mathbb Z$. Hence 
+</p>
+<div class="equation">
+  \[  \pi ^{-1}(U_0)\simeq U_0\times E,\qquad E=\mathbb C/\Lambda ,\qquad \mathrm{d}A_ E=\frac{\mathrm i}{4\pi }\mathrm{d}w\wedge \mathrm{d}\bar w, \quad \int _ E\mathrm{d}A_ E=1.  \]
+</div>
+<p>
+ On another base chart the fiber coordinate changes by a holomorphic function of the base. Consequently, the vertical derivative $\partial _ w$ and the fiber integral below are globally defined. For a smooth function $V$ on $X$, write $V_ w=\partial V/\partial w$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-9156D54D">
+<p><a class="environment-identifier" href="../../tag/DDEBFFAFCD1F/">Proposition <span data-tag="9156D54D">8.1.1</span>.</a><span data-gerby-tag="9156D54D"></span> For every $V\in C^\infty (X,\mathbb R)$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-97C333D9"><span data-gerby-tag="97C333D9"></span>
+<span class="equation-label"><a data-tag="97C333D9" href="../../tag/C46F0B405DC2/">8.2</a></span>
+<div>\begin{equation}  \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}V)^3 =6+6\int _{\mathbb P^2} \left(\int _{\pi ^{-1}(y)}|V_ w|^2\, \mathrm{d}A_ E\right) \omega _{\mathrm{FS}}^2(y). \end{equation}</div>
+</div>
+<p> In particular, positivity of $\omega +\mathrm{dd}^{\mathrm{c}}V$ is not required. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\beta $ restricts to $2\mathrm{d}A_ E$ on each fiber, 
+    
+<div class="equation">
+  \[  \int _ X\omega ^3=3\int _ X\alpha ^2\wedge \beta =6.  \]
+</div>
+<p>
+       By (<a data-tag="81144FEA" href="../../tag/EB2FF7F930E4/">2.1</a>) and (<a data-tag="78EF5D46" href="../../tag/25275E5CD565/">8.1</a>), followed by an integration by parts against the closed form $\alpha ^2$, 
+    
+<div class="equation">
+  \[  \begin{split}  \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}V)^3-\int _ X\omega ^3 &amp; =3\int _ X V\mathrm{dd}^{\mathrm{c}}\omega \wedge \mathrm{dd}^{\mathrm{c}}V\\ &amp; =-3\int _ X V\alpha ^2\wedge \mathrm{dd}^{\mathrm{c}}V =3\int _ X\mathrm{d}V\wedge \mathrm d^{\mathrm c}V\wedge \alpha ^2. \end{split}  \]
+</div>
+<p>
+       Wedging with $\alpha ^2$ removes every component of $\mathrm{d}V\wedge \mathrm d^{\mathrm c}V$ except the vertical one, which is $\mathrm i|V_ w|^2\mathrm{d}w\wedge \mathrm{d}\bar w/(2\pi )=2|V_ w|^2\mathrm{d}A_ E$. Integration over the fibers proves the formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-70014772CD9C" data-section-entries="6674C9FC8075 70014772CD9C 814E85A56944"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/70014772CD9C/">8.2 The radial–vertical block</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="CD149B59"></span></div>
+<p>
+We look for potentials that depend on the base point only through its distance from the origin of the affine chart. In a suitable frame, the matrix of $\omega +\mathrm{dd}^{\mathrm{c}}V$ then consists of one tangential horizontal coefficient and a two-by-two radial–vertical block, whose Schur complement isolates the mixed derivative that must be controlled. Subscripts denote partial derivatives in the indicated variables. 
+</p>
+<p>
+For $\xi \ne 0$ introduce 
+</p>
+<div class="equation">
+  \[  x=\log |\xi |^2,\qquad \mu =\frac{\mathrm{e}^ x}{1+\mathrm{e}^ x},\qquad \mu _ x=\mu (1-\mu ).  \]
+</div>
+<p>
+ We use smooth real functions $V:\mathbb R\times E\to \mathbb R$, written $V=V(x,w)$, that are independent of $x$ for $x$ near $-\infty $ and constant in both variables for $x$ near $+\infty $. These conditions allow $V$ to be extended smoothly across $\xi =0$, and over the complement of the affine chart by the same constant. The region of the base where $V$ is nonconstant may depend on $V$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B57A176A">
+<p><a class="environment-identifier" href="../../tag/6674C9FC8075/">Lemma <span data-tag="B57A176A">8.2.1</span>.</a><span data-gerby-tag="B57A176A"></span> For such a function, at $\xi \ne 0$ the inequality $\omega +\mathrm{dd}^{\mathrm{c}}V&gt;0$ is equivalent to </p>
+<div class="equation" id="non-kahler-pluripotential-theory-556376D7"><span data-gerby-tag="556376D7"></span>
+<span class="equation-label"><a data-tag="556376D7" href="../../tag/814E85A56944/">8.5</a></span>
+<div>\begin{equation}  1+V_{w\bar w}&gt;0,\qquad \mu +V_ x&gt;0,\qquad Q[V]:=V_{xx}+\mu - \frac{|\mu +V_{x\bar w}|^2}{1+V_{w\bar w}}&gt;0. \end{equation}</div>
+</div>
+<p> At $\xi =0$, the inequality $\omega +\mathrm{dd}^{\mathrm{c}}V&gt;0$ is equivalent to $1+V_{w\bar w}&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In these coordinates, 
+    
+<div class="equation">
+  \[  s=w+\bar w+\log (1+\mathrm{e}^ x),\qquad \partial s=\mathrm{d}w+\mu \partial x,  \]
+</div>
+<p>
+       and 
+    
+<div class="equation">
+  \[  2\pi \alpha =\mathrm i\mu \partial \bar\partial x +\mathrm i\mu (1-\mu )\partial x\wedge \bar\partial x.  \]
+</div>
+<p>
+       Choose horizontal vectors of unit length for $2\pi \alpha $, one orthogonal to the radial direction and the other 
+    
+<div class="equation">
+  \[  e_ r=\frac{\xi _1\partial _{\xi _1}+\xi _2\partial _{\xi _2}}{\sqrt{\mu (1-\mu )}}.  \]
+</div>
+<p>
+       Adjoin the vertical vector $\partial _ w$. In this frame the matrix of $2\pi (\omega +\mathrm{dd}^{\mathrm{c}}V)$ is 
+    
+<div class="equation">
+  \[  \begin{pmatrix}  (\mu +V_ x)/\mu 
+
+&amp; 0
+
+&amp; 0
+
+\\  0
+
+&amp; (\mu +V_{xx})/[\mu (1-\mu )]
+
+&amp;  (\mu +V_{x\bar w})/\sqrt{\mu (1-\mu )}
+
+\\  0
+
+&amp; (\mu +V_{wx})/\sqrt{\mu (1-\mu )}
+
+&amp; 1+V_{w\bar w} 
+
+\end{pmatrix}.  \]
+</div>
+<p>
+       Taking the Schur complement of the last diagonal entry gives (<a data-tag="556376D7" href="../../tag/814E85A56944/">8.5</a>). At $\xi =0$, the derivatives of $V$ in the base directions vanish and $\partial s=\mathrm{d}w$, which gives the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+A rapid cutoff of a concentrated fiber potential can make the mixed derivative $V_{x\bar w}$ too large for this criterion. We therefore spread the concentration by the heat equation before cutting off, so that the fiber derivatives are already exponentially small in the cutoff region. 
+</p>
+</div></section><section class="reading-chunk" id="entry-1CD2386648C8" data-section-entries="097EB0CA92F4 14E6CDA9AAC4 1CD2386648C8 27E901CC3829 464524C306E0 7C9989D90F66 8EBD296AAFDA 9CCEEAD6F62C AB7F46061184 ED58C2434E12"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/1CD2386648C8/">8.3 Heat potentials and the mixed derivative</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="8E2FA323"></span></div>
+<p>
+The fiber potential will be built from the heat kernel of $E$. It has large vertical energy at small times and decays at large times, where it can be cut off, and a lower bound for its logarithmic Hessian controls vertical positivity. To control the radial–vertical block when the time varies, we also need an estimate relating the kernel to its logarithmic gradient. 
+</p>
+<p>
+For $t&gt;0$ define 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-33A3A76C"><span data-gerby-tag="33A3A76C"></span>
+<span class="equation-label"><a data-tag="33A3A76C" href="../../tag/097EB0CA92F4/">8.6</a></span>
+<div>\begin{equation}  k_ t(w)=\frac2t\sum _{\lambda \in \Lambda } \exp \left(-\frac{|w-\lambda |^2}{t}\right). \end{equation}</div>
+</div>
+<p>
+ This is a smooth positive $\Lambda $-periodic function of integral one: unfolding the integral reduces it to the Gaussian integral on $\mathbb C$, since $\mathrm{d}A_ E=\mathrm{d}a\, \mathrm{d}b/(2\pi )$ for $w=a+\mathrm ib$. For $(p,q)\in \mathbb Z^2$ set 
+</p>
+<div class="equation">
+  \[  \nu _{p,q}=p+\frac{\mathrm iq}{2\pi },\qquad \chi _{p,q}(w)=\mathrm{e}^{2\pi \mathrm ip\operatorname {Re}w+ \mathrm iq\operatorname {Im}w}.  \]
+</div>
+<p>
+ These characters form an orthonormal basis of $L^2(E,\mathrm{d}A_ E)$. Computing the Fourier coefficients by the same unfolding gives 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-746F570C"><span data-gerby-tag="746F570C"></span>
+<span class="equation-label"><a data-tag="746F570C" href="../../tag/27E901CC3829/">8.7</a></span>
+<div>\begin{equation}  k_ t=\sum _{p,q}\mathrm{e}^{-\pi ^2|\nu _{p,q}|^2t}\chi _{p,q}, \qquad \partial _ tk_ t=\partial _ w\partial _{\bar w}k_ t. \end{equation}</div>
+</div>
+<p>
+ All differentiated series converge locally uniformly for $t&gt;0$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4228F54D">
+<p><a class="environment-identifier" href="../../tag/14E6CDA9AAC4/">Lemma <span data-tag="4228F54D">8.3.1</span>.</a><span data-gerby-tag="4228F54D"></span> Let $0&lt;\eta &lt;1/10$ and define </p>
+<div class="equation">
+  \[  F_\eta (t,w)=-\eta \int _ t^\infty (k_ r(w)-1)\, \mathrm{d}r.  \]
+</div>
+<p> Then $F_\eta $ is smooth and real, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-6886B30B"><span data-gerby-tag="6886B30B"></span>
+<span class="equation-label"><a data-tag="6886B30B" href="../../tag/9CCEEAD6F62C/">8.8</a></span>
+<div>\begin{align}  (F_\eta )_ t=(F_\eta )_{w\bar w} &amp; =\eta (k_ t-1),\\  (\log k_ t)_{w\bar w}&amp; \geq -1/t,\\  \int _ E|(F_\eta )_ w(t,w)|^2\mathrm{d}A_ E &amp; =2\eta ^2\log (1/t)+O(\eta ^2)\quad (0&lt;t\leq 1).  \end{align}</div>
+</div>
+<p> The error term in (<a data-tag="8351AE1B" href="../../tag/E73DDDEDFD02/">8.10</a>) is uniform in $t$ and $\eta $. For fixed nonnegative integers $a,m$ there is also a uniform estimate </p>
+<div class="equation" id="non-kahler-pluripotential-theory-350919E5"><span data-gerby-tag="350919E5"></span>
+<span class="equation-label"><a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a></span>
+<div>\begin{equation}  \| \partial _ t^ aF_\eta (t,\cdot )\| _{C^ m(E)} \leq C_{a,m}\eta \mathrm{e}^{-t/4}\quad (t\geq 1). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Integrating the nonconstant Fourier modes gives 
+    
+<div class="equation">
+  \[  F_\eta (t,w)=-\frac{\eta }{\pi ^2} \sum _{(p,q)\ne (0,0)} \frac{\mathrm{e}^{-\pi ^2|\nu _{p,q}|^2t}}{|\nu _{p,q}|^2}\chi _{p,q}(w).  \]
+</div>
+<p>
+       This proves smoothness, reality and (<a data-tag="6886B30B" href="../../tag/9CCEEAD6F62C/">8.8</a>). The least nonzero value of $\pi ^2|\nu _{p,q}|^2$ is $1/4$, and any fixed number of differentiations introduces coefficients of polynomial growth in $|\nu _{p,q}|$. Factoring out $\mathrm{e}^{-t/4}$ for $t\geq 1$ therefore leaves a convergent Gaussian series, which proves (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>). 
+    <p>
+      To prove (<a data-tag="446B1FB1" href="../../tag/D87F1ADF41BF/">8.9</a>), fix a lift of $w$ and give $\Lambda $ the probability weights 
+    
+<div class="equation">
+  \[  P_\lambda = \frac{\mathrm{e}^{-|w-\lambda |^2/t}}{\sum _{\lambda '}\mathrm{e}^{-|w-\lambda '|^2/t}}.  \]
+</div>
+<p>
+       Logarithmic differentiation of the Gaussian sum yields 
+    
+<div class="equation">
+  \[  t\partial _{\bar w}\log k_ t=-\sum _\lambda (w-\lambda )P_\lambda ,  \]
+</div>
+<p>
+       and one more derivative gives 
+    
+<div class="equation">
+  \[  (\log k_ t)_{w\bar w} =-\frac1t+\frac1{t^2} \left(\sum _\lambda |w-\lambda |^2P_\lambda -\left|\sum _\lambda (w-\lambda )P_\lambda \right|^2\right).  \]
+</div>
+<p>
+       The expression in parentheses is a variance and is nonnegative. 
+    <p>
+       Finally, Parseval's identity gives, with $\mathcal E_\eta (t)$ denoting the energy in (<a data-tag="8351AE1B" href="../../tag/E73DDDEDFD02/">8.10</a>), 
+    
+<div class="equation">
+  \[  \mathcal E_\eta (t)=\frac{\eta ^2}{\pi ^2} \sum _{(p,q)\ne (0,0)} \frac{\mathrm{e}^{-2\pi ^2|\nu _{p,q}|^2t}}{|\nu _{p,q}|^2}, \qquad \mathcal E_\eta '(t)=-2\eta ^2(k_{2t}(0)-1).  \]
+</div>
+<p>
+       The Gaussian formula at the origin implies 
+    
+<div class="equation">
+  \[  k_{2t}(0)=\frac1t+ O\left(t^{-1}\mathrm{e}^{-1/(4t)}\right)\quad (0&lt;t\leq 1).  \]
+</div>
+<p>
+       To see this, isolate the zero lattice vector and use $\mathrm{e}^{-|\lambda |^2/(2t)}\leq \mathrm{e}^{-1/(4t)}\mathrm{e}^{-|\lambda |^2/4}$ for $\lambda \ne 0$. The error term is integrable near $t=0$, and $\mathcal E_\eta (1)=O(\eta ^2)$. Integrating the derivative between $t$ and $1$ proves (<a data-tag="8351AE1B" href="../../tag/E73DDDEDFD02/">8.10</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+The Schur complement subtracts a square involving the mixed derivative. When the time parameter is allowed to vary, the heat equation produces a compensating positive square, and the following bound relating the heat kernel to its logarithmic gradient controls the region where that square is small. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C16AAF0D">
+<p><a class="environment-identifier" href="../../tag/7C9989D90F66/">Lemma <span data-tag="C16AAF0D">8.3.2</span>.</a><span data-gerby-tag="C16AAF0D"></span> For a constant $C_0\geq 1$ depending only on $E$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-92026DD7"><span data-gerby-tag="92026DD7"></span>
+<span class="equation-label"><a data-tag="92026DD7" href="../../tag/8EBD296AAFDA/">8.12</a></span>
+<div>\begin{equation}  tk_ t(w)\leq C_0\exp \left( -\frac{|t\partial _{\bar w}\log k_ t(w)|^2}{C_0t}\right) \quad (0&lt;t\leq 1). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a nearest lattice point $\lambda _0$, and put $d=|w-\lambda _0|$ and $s_\lambda =|w-\lambda |^2-d^2\geq 0$. The distance $d$ is bounded by the diameter of a fundamental rectangle. By the triangle inequality, $s_\lambda \geq |\lambda -\lambda _0|^2/4-C$, and outside a fixed finite set of $\lambda $ we have $s_\lambda \geq |\lambda -\lambda _0|^2/8$. Consequently, 
+    
+<div class="equation">
+  \[  \sum _\lambda (1+|w-\lambda |)\mathrm{e}^{-s_\lambda /t}\leq C, \qquad tk_ t(w)\leq C\mathrm{e}^{-d^2/t}.  \]
+</div>
+<p>
+       The probability formula in the previous proof gives, with $G=|t\partial _{\bar w}\log k_ t|$, 
+    
+<div class="equation">
+  \[  G\leq d+\sum _{\lambda \ne \lambda _0}|w-\lambda |\mathrm{e}^{-s_\lambda /t}.  \]
+</div>
+<p>
+       If $d\geq 1/4$, this is at most $Cd$. If $d&lt;1/4$, the nonzero lattice distances are at least one and 
+    
+<div class="equation">
+  \[  s_\lambda \geq |\lambda -\lambda _0| (|\lambda -\lambda _0|-2d) \geq \tfrac 12|\lambda -\lambda _0|^2.  \]
+</div>
+<p>
+       Summing the resulting Gaussian bound gives $G\leq C(d+\mathrm{e}^{-c/t})$ in all cases. When $G&gt;2C\mathrm{e}^{-c/t}$, we have $d\geq G/(2C)$, and the bound $tk_ t\leq C\mathrm{e}^{-d^2/t}$ gives (<a data-tag="92026DD7" href="../../tag/8EBD296AAFDA/">8.12</a>). In the remaining case $G^2/t$ is bounded, and (<a data-tag="92026DD7" href="../../tag/8EBD296AAFDA/">8.12</a>) follows from $tk_ t\leq C$ after increasing $C_0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C63ECDFB">
+<p><a class="environment-identifier" href="../../tag/AB7F46061184/">Lemma <span data-tag="C63ECDFB">8.3.3</span>.</a><span data-gerby-tag="C63ECDFB"></span> There is a constant $C$ depending only on $E$ with the following property. For $0&lt;\kappa &lt;1/(200C_0)$, $0&lt;\eta &lt;1/10$, $0&lt;t\leq 1$ and $1/2\leq \mu \leq 1$, define $\sigma &gt;0$ and the functions $h,\zeta $ of $w\in E$ by </p>
+<div class="equation">
+  \[  \sigma ^2=\frac{2\kappa }{\eta }\log \frac1{\eta t},\qquad h=\eta k_ t,\qquad \zeta =\frac{\sigma }{\mu }\, t\partial _{\bar w}\log k_ t.  \]
+</div>
+<p> Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-3594E9CF"><span data-gerby-tag="3594E9CF"></span>
+<span class="equation-label"><a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a></span>
+<div>\begin{equation}  \kappa tk_ t- \frac{\mu ^2(1-\eta )h}{1-\eta +h} \left|\zeta -\frac1{1-\eta }\right|^2 \leq C\kappa \exp \left(-\frac1{C\sigma ^2t}\right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\sigma ^2t\geq 1/100$, the bound $tk_ t\leq C_0$ gives (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) after enlarging $C$. Assume therefore that $\sigma ^2t&lt;1/100$. If $|\zeta -(1-\eta )^{-1}|\geq 1/4$, the subtracted expression is at least $h/[100(1+h)]$. Since $\log (1/(\eta t))&gt;2$, the definition of $\sigma $ gives 
+    
+<div class="equation">
+  \[  \kappa t(1+h)\leq \frac{\eta }{400}+C_0\kappa \eta &lt;\frac{\eta }{100}.  \]
+</div>
+<p>
+       Multiplication by $k_ t/(1+h)$ shows that the left side of (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) is nonpositive. 
+    <p>
+      Otherwise $|\zeta |\geq 3/4$, so 
+    
+<div class="equation">
+  \[  |t\partial _{\bar w}\log k_ t|=\frac{\mu |\zeta |}{\sigma } \geq \frac3{8\sigma }.  \]
+</div>
+<p>
+       Discarding the nonnegative square and applying lemma <a data-tag="C16AAF0D" href="../../tag/7C9989D90F66/">8.3.2</a> gives (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) in this case as well. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-D87F1ADF41BF" data-section-entries="D87F1ADF41BF"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="446B1FB1"></span></div><div class="equation" id="non-kahler-pluripotential-theory-446B1FB1"><span data-gerby-tag="446B1FB1"></span><span class="equation-label"><a data-tag="446B1FB1" href="../../tag/D87F1ADF41BF/">8.9 </a></span><div>\[\begin{aligned}\begin{align}  (\log k_ t)_{w\bar w}&amp; \geq -1/t,\\ \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-E73DDDEDFD02" data-section-entries="E73DDDEDFD02"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="8351AE1B"></span></div><div class="equation" id="non-kahler-pluripotential-theory-8351AE1B"><span data-gerby-tag="8351AE1B"></span><span class="equation-label"><a data-tag="8351AE1B" href="../../tag/E73DDDEDFD02/">8.10 </a></span><div>\[\begin{aligned}\begin{align}  \int _ E|(F_\eta )_ w(t,w)|^2\mathrm{d}A_ E &amp; =2\eta ^2\log (1/t)+O(\eta ^2)\quad (0&lt;t\leq 1).  \end{align}\end{aligned}\]</div></div></div></section><section class="reading-chunk" id="entry-525E30DDFE7A" data-section-entries="03733983FD0F 198FD1FE8553 1BA0538C7E35 3F868B74CEBD 477FF03F5EC1 525E30DDFE7A 7C466FD3CC31 A811248FC3F3 C76E171B8E17 F445D65CCB92"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/525E30DDFE7A/">8.4 Variation of the heat time</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="CB19D1B3"></span></div>
+<p>
+The heat time will remain small on a fixed base ball and then increase with the radial variable until the fiber potential can be cut off. We choose its rate of increase so that the negative part of the Schur complement has small integral in the radial variable. Fix $\kappa $ as in lemma <a data-tag="C63ECDFB" href="../../tag/AB7F46061184/">8.3.3</a>. 
+</p>
+<p>
+All estimates below concern the limit $\eta \downarrow 0$, with $\kappa $ fixed. Write 
+</p>
+<div class="equation">
+  \[  L=\log (1/\eta ),\quad \varepsilon =\eta ^{1/\eta ^2},\quad q_0=\sqrt{\log \frac1{\eta \varepsilon }},\quad a=\sqrt{\frac\kappa {2\eta }}.  \]
+</div>
+<p>
+ Fix a smooth nondecreasing $\chi :\mathbb R\to [0,1]$, independent of $\eta $, equal to zero on $(-\infty ,0]$ and one on $[1,+\infty )$, with $\int _0^1\chi =1/2$. Define 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-9D908EA3"><span data-gerby-tag="9D908EA3"></span>
+<span class="equation-label"><a data-tag="9D908EA3" href="../../tag/F445D65CCB92/">8.14</a></span>
+<div>\begin{equation}  q(x)=q_0-\int _0^{ax}\chi (s)\, \mathrm{d}s, \qquad t(x)=\eta ^{-1}\mathrm{e}^{-q(x)^2}. \end{equation}</div>
+</div>
+<p>
+  Thus $t=\varepsilon $ on $x\leq 0$, and $q=q_0+1/2-ax$ on $x\geq a^{-1}$. Put 
+</p>
+<div class="equation">
+  \[  b=\frac{q_0-1/2}{a},\qquad x_* =\frac{q_0+1/2}{a}.  \]
+</div>
+<p>
+  For small $\eta $, we have $0&lt;a^{-1}&lt;b&lt;x_*$, with 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-265781F4"><span data-gerby-tag="265781F4"></span>
+<span class="equation-label"><a data-tag="265781F4" href="../../tag/C76E171B8E17/">8.15</a></span>
+<div>\begin{equation}  q(b)=1,\quad q(x_*)=0,\quad b,x_*=O\bigl (\sqrt{L/\eta }\bigr ),\quad \eta b=o(1). \end{equation}</div>
+</div>
+<p>
+ Fix also a smooth cutoff $\vartheta :\mathbb R\to [0,1]$, independent of $\eta $, zero on $(-\infty ,0]$ and one on $[1,+\infty )$, and define 
+</p>
+<div class="equation">
+  \[  W(x,w)=\vartheta (q(x))F_\eta (t(x),w).  \]
+</div>
+<p>
+ This function equals $F_\eta (\varepsilon ,w)$ for $x\leq 0$ and vanishes for $x\geq x_*$. Moreover, by (<a data-tag="6886B30B" href="../../tag/9CCEEAD6F62C/">8.8</a>), 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-E1761CA9"><span data-gerby-tag="E1761CA9"></span>
+<span class="equation-label"><a data-tag="E1761CA9" href="../../tag/03733983FD0F/">8.16</a></span>
+<div>\begin{equation}  1+W_{w\bar w}=1+\vartheta (q)\eta (k_ t-1)&gt;1-\eta . \end{equation}</div>
+</div>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-97523657">
+<p><a class="environment-identifier" href="../../tag/3F868B74CEBD/">Lemma <span data-tag="97523657">8.4.1</span>.</a><span data-gerby-tag="97523657"></span> For the functions just constructed, let </p>
+<div class="equation">
+  \[  d_\eta (x)=\max _{w\in E}\max \{ -Q[W](x,w),0\} .  \]
+</div>
+<p> For all sufficiently small $\eta $, the function $d_\eta $ is continuous, supported in $[0,b]$, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-37007888"><span data-gerby-tag="37007888"></span>
+<span class="equation-label"><a data-tag="37007888" href="../../tag/198FD1FE8553/">8.17</a></span>
+<div>\begin{equation}  \int _\mathbb Rd_\eta (x)\, \mathrm{d}x=o(1),\qquad \sup _{\mathbb R\times E}\max \{ -W_ x,0\} =o(1). \end{equation}</div>
+</div>
+<p> On $[-2,-1]\times E$, one also has $Q[W]\geq 2/27$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first derive an exact formula for $Q[W]$ on $[0,b]$, then bound its negative part separately on $[0,a^{-1}]$ and on $[a^{-1},b]$, integrate these bounds, and finally examine the ends of the radial line. 
+    <p>
+<em>Step 1: the Schur complement on $[0,b]$.</em> Write $F=F_\eta $ for the heat potential. On $[0,b]$ we have $q\geq 1$, hence $\vartheta (q)=1$ and $W=F(t(x),w)$. Set 
+    
+<div class="equation">
+  \[  h=\eta k_ t,\qquad \sigma =(\log t)_ x,\qquad \zeta =\frac{\sigma t}{\mu }\partial _{\bar w}\log k_ t.  \]
+</div>
+<p>
+       The heat equation gives $F_ t=h-\eta $, and the chain rule gives 
+    
+<div class="equation">
+  \[  W_ x=\sigma tF_ t,\quad W_{xx}=(\sigma _ x+\sigma ^2)tF_ t+\sigma ^2t^2F_{tt}, \quad W_{x\bar w}=\sigma tF_{t\bar w}.  \]
+</div>
+<p>
+       Substituting these in $Q[W]$, using $h_ t=h((\log k_ t)_{w\bar w}+|\partial _{\bar w}\log k_ t|^2)$, and completing the square, we obtain the exact identity 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-3FEE2B96"><span data-gerby-tag="3FEE2B96"></span>
+<span class="equation-label"><a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a></span>
+<div>\begin{equation}  \begin{split}  Q[W]={}&amp; \sigma ^2t\{ h[1+t(\log k_ t)_{w\bar w}]-\eta \}  +\sigma _ xtF_ t+\mu (1-\mu )-\frac{\mu ^2\eta }{1-\eta }\\ &amp; +\frac{\mu ^2(1-\eta )h}{1-\eta +h} \left|\zeta -\frac1{1-\eta }\right|^2. \end{split} \end{equation}</div>
+</div>
+<p>
+       By (<a data-tag="446B1FB1" href="../../tag/D87F1ADF41BF/">8.9</a>), the part $\sigma ^2th[1+t(\log k_ t)_{w\bar w}]$ is nonnegative. 
+    <p>
+<em>Step 2: the initial interval $[0,a^{-1}]$.</em> Here 
+    
+<div class="equation">
+  \[  \sigma =2aq\chi (ax),\qquad \sigma _ x=-\frac\kappa \eta \chi (ax)^2 +\frac\kappa \eta q\chi '(ax).  \]
+</div>
+<p>
+       Moreover $q_0-1/2\leq q\leq q_0$ and $t\leq \varepsilon \mathrm{e}^{q_0}$, and the latter tends to zero faster than any power of $\eta $. In particular, 
+    
+<div class="equation">
+  \[  \kappa q\chi '(ax)t\leq \eta ,\qquad \sigma ^2t\leq \eta ^2.  \]
+</div>
+<p>
+       At each point where $\chi (ax)&gt;0$, apply lemma <a data-tag="C63ECDFB" href="../../tag/AB7F46061184/">8.3.3</a> with $\kappa \chi (ax)^2$ in place of $\kappa $; its constant is uniform in $x$. The positive square in (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) then absorbs the negative term $-\kappa \chi ^2tk_ t$ coming from $\sigma _ xtF_ t$. The remaining part of $\sigma _ xtF_ t$, which involves $\chi '$, is at least $-\eta $, because $F_ t\geq -\eta $. The other negative terms in (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) are $O(\eta )$, and so is the exponential error of lemma <a data-tag="C63ECDFB" href="../../tag/AB7F46061184/">8.3.3</a>, since $\sigma ^2t\leq \eta ^2$. Thus $d_\eta \leq C\eta $ on this interval. At points where $\chi (ax)=0$, the smooth nonnegative function $\chi $ has a minimum, so $\chi '(ax)=0$ and directly 
+    
+<div class="equation">
+  \[  Q[W]=\mu -\frac{\mu ^2}{1-\eta +h}&gt;0,  \]
+</div>
+<p>
+       since $\mu \leq \mu (a^{-1})&lt;1-\eta $ for small $\eta $. 
+    <p>
+<em>Step 3: the interval $[a^{-1},b]$.</em> Here the formulas simplify to 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-F7AF9847"><span data-gerby-tag="F7AF9847"></span>
+<span class="equation-label"><a data-tag="F7AF9847" href="../../tag/A811248FC3F3/">8.21</a></span>
+<div>\begin{equation}  \sigma =2aq,\qquad \sigma _ x=-\kappa /\eta ,\qquad \mathrm{d}x=-\frac{\mathrm{d}q}{a}=\sqrt{\frac\eta {2\kappa }}\frac{\mathrm{d}t}{tq}. \end{equation}</div>
+</div>
+<p>
+       For $t\leq 1$, lemma <a data-tag="C63ECDFB" href="../../tag/AB7F46061184/">8.3.3</a> and (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) give 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-C1583CD9"><span data-gerby-tag="C1583CD9"></span>
+<span class="equation-label"><a data-tag="C1583CD9" href="../../tag/1BA0538C7E35/">8.22</a></span>
+<div>\begin{equation}  d_\eta (x)\leq 2\eta +2\kappa q^2t +C\kappa \exp \left(-\frac\eta {C\kappa q^2t}\right). \end{equation}</div>
+</div>
+<p>
+       Indeed, $-\eta \sigma ^2t=-2\kappa q^2t$ and $\sigma _ xtF_ t=-\kappa tk_ t+\kappa t$; these are the two terms for which the scale was chosen. When $t\geq 1$, we insert the exponential derivative estimates (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>) directly in the definition of $Q$. The denominator stays above $1-\eta $, and the chain rule gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-B5FBAE49"><span data-gerby-tag="B5FBAE49"></span>
+<span class="equation-label"><a data-tag="B5FBAE49" href="../../tag/7C466FD3CC31/">8.23</a></span>
+<div>\begin{equation}  d_\eta (x)\leq C\kappa q^2t^2\mathrm{e}^{-t/4}. \end{equation}</div>
+</div>
+<p>
+       The perturbing derivatives are bounded by constants times $\eta \mathrm{e}^{-t/4}$, $\eta \sigma t \mathrm{e}^{-t/4}$ and $\eta [(|\sigma _ x|+\sigma ^2)t+\sigma ^2t^2]\mathrm{e}^{-t/4}$. Since $q,t\geq 1$ here, each is bounded by a constant times the right side of (<a data-tag="B5FBAE49" href="../../tag/7C466FD3CC31/">8.23</a>). Since $1+W_{w\bar w}\geq 1-\eta $, subtracting the two quotients gives 
+    
+<div class="equation">
+  \[  |Q[W]-Q[0]|\leq |W_{xx}|+ C\bigl (|W_{x\bar w}|+|W_{x\bar w}|^2+|W_{w\bar w}|\bigr ).  \]
+</div>
+<p>
+       The square of the mixed derivative is at most $C\kappa \eta q^2t^2\mathrm{e}^{-t/2}$, so it satisfies the same bound. Since $Q[0]&gt;0$, this proves (<a data-tag="B5FBAE49" href="../../tag/7C466FD3CC31/">8.23</a>). 
+    <p>
+<em>Step 4: integration of the negative part.</em> The constant $2\eta $ and the initial interval contribute $O(\eta b)=o(1)$, by (<a data-tag="265781F4" href="../../tag/C76E171B8E17/">8.15</a>). In the small-time region, $q\geq \sqrt L$ and $t=\eta ^{-1}\mathrm{e}^{-q^2}$. Therefore 
+    
+<div class="equation">
+  \[  \int 2\kappa q^2t\, \mathrm{d}x \leq \frac{2\kappa }{a\eta } \int _{\sqrt L}^{\infty }q^2\mathrm{e}^{-q^2}\, \mathrm{d}q \leq C\sqrt{\eta L}=o(1).  \]
+</div>
+<p>
+        For the exponential term the integral is at most 
+    
+<div class="equation">
+  \[  \frac{C\kappa }{a} \int _{\sqrt L}^{q_0} \exp \left(-\frac{\eta ^2\mathrm{e}^{q^2}}{C\kappa q^2}\right)\, \mathrm{d}q.  \]
+</div>
+<p>
+       The interval $[\sqrt L,2\sqrt L]$ has length $O(\sqrt L)$. For $q\geq 2\sqrt L$ and sufficiently small $\eta $, $\eta ^2\mathrm{e}^{q^2}/q^2\geq \mathrm{e}^{q^2/4}$. The integrand on this remaining interval is bounded by $\exp (-\mathrm{e}^{q^2/4}/(C\kappa ))$, which is integrable on $[1,+\infty )$. The prefactor is $O(\sqrt\eta )$, and the initial interval contributes $O(\sqrt{\eta L})$, so the full expression is $o(1)$. In the large-time region, (<a data-tag="F7AF9847" href="../../tag/A811248FC3F3/">8.21</a>) gives 
+    
+<div class="equation">
+  \[  \int d_\eta (x)\, \mathrm{d}x \leq C\sqrt\eta \int _1^{1/(\mathrm{e}\eta )}qt \mathrm{e}^{-t/4}\, \mathrm{d}t \leq C\sqrt{\eta L}\int _1^\infty t \mathrm{e}^{-t/4}\, \mathrm{d}t=o(1).  \]
+</div>
+<p>
+       This proves the integral assertion on $[0,b]$. 
+    <p>
+<em>Step 5: the radial slope.</em> The negative part of $W_ x$ is uniformly small as well. For $t\leq 1$, we have $F_ t\geq -\eta $ and $0\leq \sigma \leq 2aq$, so 
+    
+<div class="equation">
+  \[  \max \{ -W_ x,0\} \leq \sqrt{2\kappa \eta }\,  t\sqrt{\log \frac1{\eta t}}\leq C\sqrt{\eta L}.  \]
+</div>
+<p>
+       The last inequality follows because $t\sqrt{L+\log (1/t)}$ is increasing on $(0,1]$ when $L&gt;1$. For $t\geq 1$ and $q\geq 1$, use $|W_ x|\leq C\sqrt\eta \, qt \mathrm{e}^{-t/4}$ and $q\leq \sqrt L$. 
+    <p>
+<em>Step 6: the ends.</em> It remains to consider the two ends, including the cutoff region. If $b\leq x\leq x_*$, then $0\leq q\leq 1$ and $1/(\mathrm{e}\eta )\leq t\leq 1/\eta $. The derivatives of the cutoffs and scale have at most polynomial growth in $\eta ^{-1}$. Thus (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>) implies 
+    
+<div class="equation">
+  \[  \sup _ w\bigl (|W_ x|+|Q[W]-Q[0]|\bigr ) \leq C\mathrm{e}^{-1/(5\mathrm{e}\eta )}.  \]
+</div>
+<p>
+       But $Q[0]=\mu (1-\mu )\geq \mathrm{e}^{-x_*}/4$ on this interval, and (<a data-tag="265781F4" href="../../tag/C76E171B8E17/">8.15</a>) shows that the error is $o(\mathrm{e}^{-x_*})$. Hence $Q[W]&gt;0$ there. For $x\geq x_*$, $W=0$ and positivity is immediate. For $x\leq 0$, $W_ x=0$ and 
+    
+<div class="equation">
+  \[  Q[W]\geq \mu \left(1-\frac\mu {1-\eta }\right)&gt;0,  \]
+</div>
+<p>
+       since $\mu \leq 1/2$. On $[-2,-1]$, the bounds $1/9\leq \mu \leq 3/10$ and $1-\eta \geq 9/10$ give $Q[W]\geq 2/27$. Finally, $Q[W]$ is continuous, with positive denominator, so the maximum of its negative part over the compact fiber $E$ is continuous in $x$. This proves the assertions about support and continuity, and completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-D7D1053AF199" data-section-entries="D7D1053AF199"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/D7D1053AF199/">8.5 A base correction and unbounded mass</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="0B1E0E4B"></span></div>
+<p>
+Adding a function of $x$ alone changes $Q[W]$ by its second derivative and leaves the vertical energy unchanged. The integral bound for $d_\eta $ lets us choose this second derivative larger than $d_\eta $ and compensate its integral on an interval where $Q[W]$ is uniformly positive. The correction has small first derivative, so the remaining horizontal coefficient stays positive as well. 
+</p>
+<article class="env-proof">
+<p>
+<strong>of theorem <a data-tag="B6188BE3" href="../../tag/92B2FB434C79/">8.0.1</a>.</strong>
+       Choose a smooth function $r_\eta \geq 0$ supported in $(-1/2,b+1/2)$ with 
+    
+<div class="equation">
+  \[  r_\eta &gt;d_\eta \  \hbox{on }[0,b],\qquad m_\eta :=\int _\mathbb Rr_\eta \, \mathrm{d}x\leq \int _\mathbb Rd_\eta \, \mathrm{d}x+\eta =o(1).  \]
+</div>
+<p>
+       Such a majorant exists by uniform approximation of the compactly supported continuous function $d_\eta $, followed by adding a positive bump on $[0,b]$; for each fixed $\eta $ the approximation error can be chosen small enough for the integral bound. Fix a smooth $\psi \geq 0$ supported in $(-2,-1)$ with integral one and set 
+    
+<div class="equation">
+  \[  g_\eta (x)=\int _{-\infty }^ x(x-s) (r_\eta (s)-m_\eta \psi (s))\, \mathrm{d}s, \qquad V_\eta =W+g_\eta .  \]
+</div>
+<p>
+       The negative part of $g_\eta ''$ lies to the left of its positive part, and their integrals agree. Consequently, 
+    
+<div class="equation">
+  \[  -m_\eta \leq g_\eta '\leq 0, \qquad g_\eta '=0\  \hbox{for }x\leq -2 \  \hbox{and for }x\geq b+1/2.  \]
+</div>
+<p>
+       Thus $g_\eta $ vanishes for $x\leq -2$ and is constant for $x\geq b+1/2$, and $V_\eta $ has the properties at the two ends required for smooth extension to $X$. 
+    <p>
+      Since $g_\eta $ is independent of $w$, the Schur complement changes by exactly its second derivative: 
+    
+<div class="equation">
+  \[  Q[V_\eta ]=Q[W]+r_\eta -m_\eta \psi .  \]
+</div>
+<p>
+       This is positive on $[0,b]$ because $r_\eta &gt;d_\eta $ there. On $(-2,-1)$ it is at least $2/27-m_\eta \| \psi \| _\infty &gt;0$ for small $\eta $. Elsewhere $Q[W]&gt;0$, $\psi =0$ and $r_\eta \geq 0$. The vertical coefficient remains above $1-\eta $ by (<a data-tag="E1761CA9" href="../../tag/03733983FD0F/">8.16</a>). For the remaining coefficient, if $x\leq -2$, both $W_ x$ and $g_\eta '$ vanish; if $-2\leq x\leq 0$, then $W_ x=0$ and $\mu \geq \mu (-2)&gt;0$, while $|g_\eta '|\leq m_\eta =o(1)$; and if $x\geq 0$, then $\mu \geq 1/2$ and $W_ x\geq -o(1)$. In all cases $\mu +(V_\eta )_ x&gt;0$ for sufficiently small $\eta $. Therefore lemma <a data-tag="B57A176A" href="../../tag/6674C9FC8075/">8.2.1</a> gives $\omega +\mathrm{dd}^{\mathrm{c}}V_\eta &gt;0$ on $X$. 
+    <p>
+      On the fixed ball $B=\{ |\xi |^2&lt;\mathrm{e}^{-3}\} \Subset U_0$, one has $V_\eta =F_\eta (\varepsilon ,w)$, including at $\xi =0$. Thus 
+    
+<div class="equation">
+  \[  \int _{\pi ^{-1}(y)}|(V_\eta )_ w|^2\mathrm{d}A_ E =2\eta ^2\log (1/\varepsilon )+O(\eta ^2) =2\log (1/\eta )+O(\eta ^2)\longrightarrow +\infty  \]
+</div>
+<p>
+       uniformly for $y\in B$. Since $\int _ B\omega _{\mathrm{FS}}^2&gt;0$, the mass identity (<a data-tag="97C333D9" href="../../tag/C46F0B405DC2/">8.2</a>) shows that $\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}V_\eta )^3\to +\infty $, and the theorem follows by taking $V_ j=V_{\eta _ j}$ along any sequence $\eta _ j\downarrow 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-28A754700E01" data-section-entries="264893FAE204 28A754700E01 77FC30E16968 D216F8E7C5AA D3E13E0C86B3"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/28A754700E01/">8.6 Higher-dimensional Hopf manifolds</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="7309D59A"></span></div>
+<p>
+The threefold mass formula locates the source of unbounded mass, but it does not by itself give a construction in higher dimension. The same heat potentials do work there: the radial–vertical block is unchanged, and each extra angular direction contributes a factor whose lower bound is uniform where the threefold mass diverges. 
+</p>
+<p>
+For $n\geq 3$, let 
+</p>
+<div class="equation">
+  \[  H_ n=(\mathbb C^ n\setminus \{ 0\} )/ \langle z\mapsto \mathrm e^{-1}z\rangle , \qquad p_ n:H_ n\longrightarrow \mathbb P^{n-1}.  \]
+</div>
+<p>
+ Put $s=\log |z|^2$, $\alpha _ n=\mathrm{dd}^{\mathrm{c}}s=p_ n^*\omega _{\mathrm{FS}}$, $\beta _ n=\mathrm ds\wedge \mathrm d^{\mathrm c}s$ and $\omega _ n=\alpha _ n+\beta _ n$, where $\int _{\mathbb P^{n-1}}\omega _{\mathrm{FS}}^{n-1}=1$. The forms descend and $\omega _ n$ is positive for the same reasons as in dimension three. The fiber is the same elliptic curve $E$, with $\int _ E\beta _ n=2$. Since $\alpha _ n$ has rank $n-1$ and $\beta _ n^2=0$, 
+</p>
+<div class="equation">
+  \[  \int _{H_ n}\omega _ n^ n=2n,\qquad \mathrm{dd}^{\mathrm{c}}(\omega _ n^{n-1})=-(n-1)\alpha _ n^ n=0.  \]
+</div>
+<p>
+ Thus $\omega _ n$ is Gauduchon. 
+</p>
+<p>
+On the affine chart write $\xi \in \mathbb C^{n-1}$, $x=\log |\xi |^2$, $w=\log z_0\pmod\Lambda $ and $\mu =\mathrm e^ x/(1+\mathrm e^ x)$ as before. For a smooth real function $V(x,w)$ with the endpoint properties of lemma <a data-tag="B57A176A" href="../../tag/6674C9FC8075/">8.2.1</a>, let $J_ n(V;x,w)$ be the density obtained by integrating $(\omega _ n+\mathrm{dd}^{\mathrm{c}}V)^ n$ over the angular variables, with angular probability measure. Thus 
+</p>
+<div class="equation">
+  \[  \int _{H_ n}(\omega _ n+\mathrm{dd}^{\mathrm{c}}V)^ n =\int _{\mathbb R\times E}J_ n(V;x,w)\, \mathrm dx\, \mathrm dA_ E.  \]
+</div>
+<p>
+ The endpoints and the complement of the affine chart have zero smooth volume. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-AD1F97DB">
+<p><a class="environment-identifier" href="../../tag/264893FAE204/">Lemma <span data-tag="AD1F97DB">8.6.1</span>.</a><span data-gerby-tag="AD1F97DB"></span> The positivity criterion (<a data-tag="556376D7" href="../../tag/814E85A56944/">8.5</a>) holds in every dimension $n\geq 3$, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-5EDCA6BD"><span data-gerby-tag="5EDCA6BD"></span>
+<span class="equation-label"><a data-tag="5EDCA6BD" href="../../tag/D216F8E7C5AA/">8.24</a></span>
+<div>\begin{equation}  J_ n(V;x,w)=\frac{n(n-1)}6 (\mu +V_ x)^{n-3}J_3(V;x,w). \end{equation}</div>
+</div>
+<p> Here $J_3$ is evaluated for the same function $V$ on the threefold. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $n-2$ horizontal angular vectors, one horizontal radial vector and the vertical vector $\partial _ w$. In the normalization of the proof of lemma <a data-tag="B57A176A" href="../../tag/6674C9FC8075/">8.2.1</a>, each angular entry is $A=(\mu +V_ x)/\mu $, and the radial–vertical block is 
+    
+<div class="equation">
+  \[  K_ V=\begin{pmatrix}  (\mu +V_{xx})/[\mu (1-\mu )]
+
+&amp;  (\mu +V_{x\bar w})/\sqrt{\mu (1-\mu )}
+
+\\  (\mu +V_{wx})/\sqrt{\mu (1-\mu )}
+
+&amp; 1+V_{w\bar w} 
+
+\end{pmatrix}.  \]
+</div>
+<p>
+       This follows by differentiating $s=w+\bar w+\log (1+\mathrm e^ x)$: the radial part of $\partial \bar\partial x$ is zero, whereas its angular part contributes $V_ x/\mu $. The Schur complement of the last entry gives the stated positivity criterion. At $\xi =0$ the same endpoint argument as in dimension three applies. 
+    <p>
+      Set $d=n-1$. The radial Fubini–Study probability density is $d\mu ^{d-1}\mathrm d\mu =d\mu ^ d(1-\mu )\mathrm dx$; it follows from the polar-coordinate determinant of $\mathrm{dd}^{\mathrm{c}}\log (1+|\xi |^2)$ and its integral is one. The background block $K_0$ has determinant one. Using the fiber mass two, therefore, 
+    
+<div class="equation">
+  \[  J_ n(V)=2nd\mu ^ d(1-\mu )A^{n-2}\det K_ V.  \]
+</div>
+<p>
+       For $n=3$ this is $12\mu ^2(1-\mu )A\det K_ V$. Comparing the two expressions proves (<a data-tag="5EDCA6BD" href="../../tag/D216F8E7C5AA/">8.24</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-74C19D43">
+<p><a class="environment-identifier" href="../../tag/D3E13E0C86B3/">Theorem <span data-tag="74C19D43">8.6.2</span>.</a><span data-gerby-tag="74C19D43"></span> For every $n\geq 3$, the Gauduchon metric $\omega _ n$ admits smooth potentials $V_\eta $ with $\omega _ n+\mathrm{dd}^{\mathrm{c}}V_\eta &gt;0$ whose total Monge–Ampère masses tend to infinity as $\eta \downarrow 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use exactly the functions $V_\eta =W+g_\eta $ constructed in the proof of theorem <a data-tag="B6188BE3" href="../../tag/92B2FB434C79/">8.0.1</a>, including the heat scale $\varepsilon =\eta ^{1/\eta ^2}$. Their endpoint properties give smooth potentials on every $H_ n$, and lemma <a data-tag="AD1F97DB" href="../../tag/264893FAE204/">8.6.1</a> gives strict positivity. The slope bounds in lemma <a data-tag="97523657" href="../../tag/3F868B74CEBD/">8.4.1</a> and $-m_\eta \leq g_\eta '\leq 0$ imply 
+    
+<div class="equation">
+  \[  \mu +(V_\eta )_ x\geq \tfrac 14 \qquad (x\geq 0)  \]
+</div>
+<p>
+       for all sufficiently small $\eta $. 
+    <p>
+      We must first localize the divergent threefold mass to this region. On $x&lt;0$, the heat potential is $W=F_\eta (\varepsilon ,w)$ and has no $x$ derivatives. The determinant formula in the preceding proof and $\int _ E F_{w\bar w}\, \mathrm dA_ E=0$ give 
+    
+<div class="equation">
+  \[  \int _ E J_3(V_\eta ;x,w)\, \mathrm dA_ E =12(\mu +g_\eta ') \bigl (g_\eta ''+\mu (1-\mu )\bigr ).  \]
+</div>
+<p>
+       Here $0&lt;\mu +g_\eta '\leq \mu $, and $g_\eta ''=r_\eta -m_\eta \psi $ with $\int r_\eta =m_\eta $ and $\int \psi =1$. Hence 
+    
+<div class="equation">
+  \[  \int _{x&lt;0}\! J_3(V_\eta )\, \mathrm dx\, \mathrm dA_ E \leq 12\int _{-\infty }^0\mu ^2(1-\mu )\, \mathrm dx +12\int _{\mathbb R}|g_\eta ''|\, \mathrm dx \leq \tfrac 32+24m_\eta .  \]
+</div>
+<p>
+       No bound on the amplitude of the fiber Hessian is required; its mean has been integrated exactly. Since the total threefold mass tends to infinity, its mass on $x\geq 0$ tends to infinity. The dimensional comparison now gives 
+    
+<div class="equation">
+  \[  \int _{H_ n}(\omega _ n+\mathrm{dd}^{\mathrm{c}}V_\eta )^ n \geq \frac{n(n-1)}6\, 4^{-(n-3)} \int _{x\geq 0}J_3(V_\eta )\, \mathrm dx\, \mathrm dA_ E \longrightarrow +\infty .  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-EBCD5FFB">
+<p><a class="environment-identifier" href="../../tag/77FC30E16968/">Corollary <span data-tag="EBCD5FFB">8.6.3</span>.</a><span data-gerby-tag="EBCD5FFB"></span> Every Hermitian metric on $H_ n$, $n\geq 3$, fails the bounded mass property. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a Hermitian form $h$, compactness gives $h\geq c\omega _ n$ for some $c&gt;0$. The potentials $cV_\eta $ satisfy $h+\mathrm{dd}^{\mathrm{c}}(cV_\eta )\geq c(\omega _ n+\mathrm{dd}^{\mathrm{c}}V_\eta )&gt;0$, and positivity of determinants bounds their masses below by $c^ n$ times the divergent masses in theorem <a data-tag="74C19D43" href="../../tag/D3E13E0C86B3/">8.6.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-CE2794970ECD" data-section-entries="09DD8DF2EF76 18B65325175F CE2794970ECD E42306969D71"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/CE2794970ECD/">8.7 Minimum mass and fiber averaging</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="81ADCBC0"></span></div>
+<p>
+We return to the threefold $X=H_3$ and its form $\omega $. 
+</p>
+<p>
+Averaging along the elliptic fibers removes the variation measured by (<a data-tag="97C333D9" href="../../tag/C46F0B405DC2/">8.2</a>). The Poincaré inequality on the fibers bounds the distance from a potential to its average by the excess mass. Bounded regularization preserves this inequality, which therefore identifies all bounded potentials of minimal mass and shows that potentials of almost minimal mass are close to them. 
+</p>
+<p>
+Let $E$ act on $X$ by scalar multiplication: $\tau _ a[z]=[\mathrm{e}^ a z]$ for $a\in E$. The action preserves $\alpha $, $\beta $ and $\omega $, and $\mathrm{d}A_ E$ is the Haar probability measure of $E$. For a bounded Borel function $u:X\to \mathbb R$, set 
+</p>
+<div class="equation">
+  \[  \mathrm{d}\nu =\frac{\omega ^3}{6}=\frac12\alpha ^2\wedge \beta , \qquad Au(p)=\int _ Eu(\tau _ a(p))\, \mathrm{d}A_ E(a) \quad (p\in X).  \]
+</div>
+<p>
+ Thus $Au$ is constant on each fiber, and $\nu $ is the probability measure whose disintegration along $\pi $ has fiber measures $\mathrm{d}A_ E$ and base measure $\omega _{\mathrm{FS}}^2$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-48EA3D0A">
+<p><a class="environment-identifier" href="../../tag/E42306969D71/">Proposition <span data-tag="48EA3D0A">8.7.1</span>.</a><span data-gerby-tag="48EA3D0A"></span> For every $u\in \mathrm{PSH}(X,\omega )\cap L^\infty (X)$, the average $Au$ is the pullback of a bounded $\omega _{\mathrm{FS}}$-plurisubharmonic function on $\mathbb P^2$, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-E385367F"><span data-gerby-tag="E385367F"></span>
+<span class="equation-label"><a data-tag="E385367F" href="../../tag/18B65325175F/">8.25</a></span>
+<div>\begin{equation}  \| u-Au\| _{L^2(X,\nu )}^2 \leq \frac23\left(\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^3-6\right). \end{equation}</div>
+</div>
+<p> The coefficient $2/3$ is optimal, even for smooth $u$ with $\omega +\mathrm{dd}^{\mathrm{c}}u&gt;0$. Moreover, </p>
+<div class="equation">
+  \[  \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^3=6 \quad \Longleftrightarrow \quad u=\pi ^*v\quad \text{for some } v\in \mathrm{PSH}(\mathbb P^2,\omega _{\mathrm{FS}})\cap L^\infty (\mathbb P^2).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First suppose that $u$ is smooth and $\omega +\mathrm{dd}^{\mathrm{c}}u&gt;0$. Averaging the positive forms $\tau _ a^*(\omega +\mathrm{dd}^{\mathrm{c}}u)$ gives $\omega +\mathrm{dd}^{\mathrm{c}}Au&gt;0$. Since $Au$ is smooth and constant on the fibers, $Au=\pi ^*v$ for a smooth function $v$ on $\mathbb P^2$. At each point, the kernel of $\partial s$ maps isomorphically onto the tangent space of the base, and $\beta $ vanishes on it. Restricting $\omega +\mathrm{dd}^{\mathrm{c}}Au=\pi ^*(\omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}v)+\beta $ to this kernel therefore shows that $\omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}v&gt;0$. 
+    <p>
+      For a smooth function $f:E\to \mathbb R$, the nonconstant Fourier characters in (<a data-tag="746F570C" href="../../tag/27E901CC3829/">8.7</a>), indexed by $(p,q)\in \mathbb Z^2\setminus \{ (0,0)\} $, have eigenvalues $\pi ^2p^2+q^2/4\geq 1/4$ for $-\partial _ w\partial _{\bar w}$. Parseval's identity therefore gives 
+    
+<div class="equation">
+  \[  \int _ E\left|f-\int _ Ef\, \mathrm{d}A_ E\right|^2\mathrm{d}A_ E \leq 4\int _ E|f_ w|^2\, \mathrm{d}A_ E.  \]
+</div>
+<p>
+       Applying this inequality on every fiber, integrating against $\omega _{\mathrm{FS}}^2$ and using the mass identity (<a data-tag="97C333D9" href="../../tag/C46F0B405DC2/">8.2</a>), we obtain (<a data-tag="E385367F" href="../../tag/18B65325175F/">8.25</a>). 
+    <p>
+      For bounded $u$, choose uniformly bounded smooth functions $u_ j\downarrow u$ with $\omega +\mathrm{dd}^{\mathrm{c}}u_ j&gt;0$ by theorem <a data-tag="177A90D1" href="../../tag/240BA0465940/">1.11.1</a>. Their averages decrease pointwise to $Au$ by dominated convergence. The corresponding smooth base potentials $v_ j$ decrease to a bounded $\omega _{\mathrm{FS}}$-plurisubharmonic function $v$, so $Au=\pi ^*v$. Dominated convergence gives $u_ j\to u$ and $Au_ j\to Au$ in $L^2(X,\nu )$, while bounded Bedford–Taylor continuity gives convergence of the total masses. Thus (<a data-tag="E385367F" href="../../tag/18B65325175F/">8.25</a>) passes to $u$. 
+    <p>
+      If the mass is $6$, the inequality gives $u=Au$ almost everywhere. Since both functions are bounded and quasi-plurisubharmonic, lemma <a data-tag="D292D808" href="../../tag/05BCBF7FAC9C/">1.3.4</a> gives equality everywhere. Conversely, if $u=\pi ^*v$ with bounded $v\in \mathrm{PSH}(\mathbb P^2,\omega _{\mathrm{FS}})$, choose smooth $v_ j\downarrow v$ with $\omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}v_ j&gt;0$ by theorem <a data-tag="177A90D1" href="../../tag/240BA0465940/">1.11.1</a>. The pullbacks decrease to $u$ and are uniformly bounded. They are strictly $\omega $-plurisubharmonic because the base forms are positive and $\beta $ is positive on the vertical line. Their vertical derivatives vanish, so (<a data-tag="97C333D9" href="../../tag/C46F0B405DC2/">8.2</a>) gives mass $6$ for each of them. Bounded Bedford–Taylor continuity gives the same mass for $u$. 
+    <p>
+      It remains to prove that the constant $2/3$ is optimal. Choose a nonzero real $\rho \in C_ c^\infty (U_0)$. For $\delta \in \mathbb R$, the function 
+    
+<div class="equation">
+  \[  u(\xi ,w)=\delta \rho (\xi )\cos (\operatorname {Im}w)  \]
+</div>
+<p>
+       extends by zero to a smooth function on $X$. For sufficiently small nonzero real $\delta $, it satisfies $\omega +\mathrm{dd}^{\mathrm{c}}u&gt;0$. Its fiber average is zero, and its only fiber frequencies are $(p,q)=(0,\pm 1)$, with eigenvalue $1/4$. Hence equality holds in the fiber inequality, and therefore in (<a data-tag="E385367F" href="../../tag/18B65325175F/">8.25</a>), with nonzero left-hand side. No smaller coefficient can hold. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-FAD077D5">
+<p><a class="environment-identifier" href="../../tag/09DD8DF2EF76/">Corollary <span data-tag="FAD077D5">8.7.2</span>.</a><span data-gerby-tag="FAD077D5"></span> The Hopf metric satisfies </p>
+<div class="equation">
+  \[  v_-(\omega )=6,\qquad v_+(\omega )=+\infty .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The lower bound $v_-(\omega )\geq 6$ follows from (<a data-tag="E385367F" href="../../tag/18B65325175F/">8.25</a>), and it is attained by constants. Theorem <a data-tag="B6188BE3" href="../../tag/92B2FB434C79/">8.0.1</a> gives $v_+(\omega )=+\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+In particular, for any sequence of bounded potentials whose masses tend to $6$, the differences from their fiber averages tend to zero in $L^2(X,\nu )$. This controls only the variation along the fibers; the averaged potentials can still be arbitrary bounded potentials on the base. 
+</p>
+<p>
+For nonpositive $u\in \mathrm{PSH}(X,\omega )$ on this threefold, proposition <a data-tag="818B97D0" href="../../tag/EE93EE2035F6/">7.3.1</a> gives finite damped measures for the weight $(1-u)^{-1}[\log (\mathrm{e}-u)]^{-a}$, $a&gt;1$, at the threshold $r_3=1$, with uniform tails and capacity continuity. The optimal damping rate for all normalized potentials on this threefold remains open. Under unitary rotations of the last two coordinates, theorem <a data-tag="D55E4A1B" href="../../tag/8BCBC6CB58C6/">8.8.9</a> gives the exact square-root threshold. 
+</p>
+</div></section><section class="reading-chunk" id="entry-5746F7AEAB40" data-section-entries="5746F7AEAB40"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/5746F7AEAB40/">8.8 Sharp damping under unitary rotations</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="21C274A8"></span></div>
+<p>
+The general damping estimate controls mass by the depth of a potential. On the standard Hopf threefold, unitary symmetry gives a stronger estimate: after integration along the elliptic fibers, a positive radial flux has total mass one. A semiconvexity estimate bounds the remaining radial coefficient by the square root of the depth. The resulting damping threshold is sharp, and at its endpoint finite measures can still concentrate on a pole divisor. 
+</p>
+<p>
+We retain the standard threefold $X$, form $\omega $, projection $\pi :X\to \mathbb P^2$, fiber $E$ and probability area $\mathrm dA_ E$ of this chapter. Let $\mathcal R$ be the class of $u\in \mathrm{PSH}(X,\omega )$ with $\sup _ Xu=0$ invariant under 
+</p>
+<div class="equation">
+  \[  (z_0,z')\longmapsto (z_0,Az'),\qquad A\in U(2),\quad z'=(z_1,z_2).  \]
+</div>
+<p>
+ This holomorphic action preserves $\omega $. The class includes bounded and unbounded potentials. For a positive $C^1$ nonincreasing function $W:[0,+\infty )\to (0,+\infty )$ tending to zero, write 
+</p>
+<div class="equation">
+  \begin{gather*}  \mu _ u=\mathrm{MA}^{\mathrm{ext}}_\omega (u),\qquad \nu _{W,u}=W(-u)\mu _ u,\\  Q_ T(W)=\sup _{t\geq T}(1+\sqrt{2t})W(t),\qquad Q(W)=Q_0(W). \end{gather*}
+</div>
+<p>
+ The weighted measure gives zero mass to the pole set, as does the extended non-pluripolar measure. Capacity always means $\operatorname {Cap}_\omega $ of section <a data-tag="0231BF16" href="../../tag/DD310AD8B258/">1.8</a>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9880531015C7" data-section-entries="1160D828BCBB 29C345F5CC8D 316CC905C469 712BD3EA719C 74322EB52E76 9880531015C7 BDDF6CEA3CFE EF821157486E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/9880531015C7/">8.8.1 Positive fiber flux</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="3F6E6DF1"></span></div>
+<p>
+Let $V$ be a smooth invariant $\omega $-plurisubharmonic function with $V\leq 0$. In the affine chart it has the form $V(x,w)$. The matrix calculation in the proof of lemma <a data-tag="B57A176A" href="../../tag/6674C9FC8075/">8.2.1</a> applies at every finite $x$, without assuming the special endpoint behavior of the heat family. Put 
+</p>
+<div class="equation">
+  \begin{gather*}  A_ V=\mu +V_ x,\qquad B_ V=1+V_{w\bar w},\qquad R_ V=\mu +V_{xx},\\  C_ V=\mu +V_{x\bar w},\qquad \Delta _ V=B_ VR_ V-|C_ V|^2. \end{gather*}
+</div>
+<p>
+ Let $\mathrm d\Omega $ be probability angular area in $\mathbb C^2$. The radial Fubini–Study measure is $2\mu ^2(1-\mu )\, \mathrm dx\, \mathrm d\Omega $, and $\omega ^3=6\omega _{\mathrm{FS}}^2\mathrm dA_ E$. Semipositivity gives $A_ V,B_ V,R_ V,\Delta _ V\geq 0$ and, without dividing by $B_ V$, 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-A2679B0D"><span data-gerby-tag="A2679B0D"></span>
+<span class="equation-label"><a data-tag="A2679B0D" href="../../tag/BDDF6CEA3CFE/">8.26</a></span>
+<div>\begin{equation}  \mathrm{MA}_\omega (V)=12 A_ V\Delta _ V\,  \mathrm dx\, \mathrm d\Omega \, \mathrm dA_ E. \end{equation}</div>
+</div>
+<p>
+ The complement of these radial coordinates has zero mass for a smooth top form. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-D3AC99F2">
+<p><a class="environment-identifier" href="../../tag/EF821157486E/">Lemma <span data-tag="D3AC99F2">8.8.1</span>.</a><span data-gerby-tag="D3AC99F2"></span> For every smooth invariant $\omega $-plurisubharmonic function, </p>
+<div class="equation">
+  \[  \int _{\mathbb R\times E}\Delta _ V\, \mathrm dx\, \mathrm dA_ E=1.  \]
+</div>
+<p> If in addition $V\leq 0$, then </p>
+<div class="equation">
+  \[  |V_ x|^2\leq -2V,\qquad 0\leq A_ V\leq 1+\sqrt{-2V}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Set $m(x)=\int _ EV\, \mathrm dA_ E$ and $e(x)=\int _ E|V_ w|^2\, \mathrm dA_ E$. Periodic integration by parts gives 
+    
+<div class="equation">
+  \[  \begin{split}  \int _ E V_{w\bar w}V_{xx}\, \mathrm dA_ E &amp; =-\operatorname {Re}\int _ EV_{\bar w}V_{xxw}\, \mathrm dA_ E,\\  e''&amp; =2\int _ E|V_{xw}|^2\, \mathrm dA_ E +2\operatorname {Re}\int _ EV_{\bar w}V_{xxw}\, \mathrm dA_ E. \end{split}  \]
+</div>
+<p>
+       The mean of every fiber derivative vanishes. Expanding $\Delta _ V$ yields 
+    
+<div class="equation">
+  \[  \int _ E\Delta _ V\, \mathrm dA_ E =m''+\mu (1-\mu )-\tfrac 12e''.  \]
+</div>
+<p>
+       Thus $f(x)=\log (1+\mathrm e^ x)+m(x)-e(x)/2$ is convex. 
+    <p>
+      Both $m$ and $e$ are smooth global functions on the projective base: local fiber coordinates change by holomorphic translations, preserving fiber Haar area, the vertical derivative and the Dirichlet integral. They are $U(2)$-invariant. Smoothness and radial invariance at $\xi =0$ give $m',e'\to 0$ at the negative end. At the positive end use a normal coordinate $z_0/z_1$ to the hyperplane $\{ z_0=0\} $ on the base. The invariant base functions are constant along this hyperplane and smooth across it; their $x$ derivatives tend to zero. This does not require that the pointwise potential be constant on its elliptic fibers at that end. Consequently $f'(-\infty )=0$ and $f'(+\infty )=1$. Integrating the nonnegative $f''$ proves the flux identity. 
+    <p>
+      For each fixed $w$, $R_ V\geq 0$ implies $V_{xx}\geq -1$ on all of $\mathbb R$. Hence for every real $h$, 
+    
+<div class="equation">
+  \[  V(x+h,w)\geq V(x,w)+hV_ x(x,w)-h^2/2.  \]
+</div>
+<p>
+       Taking $h=V_ x(x,w)$ and using $V\leq 0$ proves the derivative bound. Finally $\mu \leq 1$ proves the bound for $A_ V$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+Combining the positive density with lemma <a data-tag="D3AC99F2" href="../../tag/EF821157486E/">8.8.1</a> proves 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-532F18D1"><span data-gerby-tag="532F18D1"></span>
+<span class="equation-label"><a data-tag="532F18D1" href="../../tag/74322EB52E76/">8.29</a></span>
+<div>\begin{equation}  \int _ XW(-V)\mathrm{MA}_\omega (V)\leq 12Q(W),\qquad \int _{\{ -V&gt;T\} }W(-V)\mathrm{MA}_\omega (V)\leq 12Q_ T(W). \end{equation}</div>
+</div>
+<p>
+ The positive flux supplies the reference integral even though the unweighted Monge–Ampère masses are unbounded. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-7FEE6D51">
+<p><a class="environment-identifier" href="../../tag/712BD3EA719C/">Lemma <span data-tag="7FEE6D51">8.8.2</span>.</a><span data-gerby-tag="7FEE6D51"></span> Every bounded invariant $\omega $-plurisubharmonic function $u$, with $-L\leq u\leq 0$, admits smooth invariant $\omega $-plurisubharmonic approximants with the same bounds converging to $u$ in capacity. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The compact group $G=U(3)\times (\mathbb R/\mathbb Z)$ acts transitively and holomorphically on $X$ by unitary transformations and positive scalar multiplication. It preserves $\omega $. Choose a nonnegative smooth central approximate identity $\rho _\epsilon $ on $G$, supported near its identity, and put 
+    
+<div class="equation">
+  \[  u_\epsilon (p)=\int _ Gu(gp)\rho _\epsilon (g)\, \mathrm dg.  \]
+</div>
+<p>
+       Convolution on a compact homogeneous space is smooth. Averaging preserves the current inequality and the bounds, and centrality makes convolution commute with the $U(2)$ action. Transporting the bounded tests defining capacity shows that $\operatorname {Cap}_\omega $ is $G$-invariant. 
+    <p>
+      Suppose $L&gt;0$. By quasi-continuity, choose an open set $O$ of arbitrarily small capacity such that $u$ is continuous on $X\setminus O$. When $g$ is sufficiently close to the identity, $u(gp)$ and $u(p)$ are uniformly close whenever both points lie outside $O$. Thus, outside $O$ and for small kernel support, 
+    
+<div class="equation">
+  \[  \{ |u_\epsilon -u|&gt;\delta \}  \subset \{ P_\epsilon \mathbf1_ O&gt;\delta /(4L)\} ,\qquad P_\epsilon \mathbf1_ O(p)=\int _ G\mathbf1_ O(gp)\rho _\epsilon (g)\, \mathrm dg.  \]
+</div>
+<p>
+       Markov's inequality, followed by capacity invariance, gives 
+    
+<div class="equation">
+  \[  \begin{split}  \operatorname {Cap}_\omega \{ P_\epsilon \mathbf1_ O&gt;\delta /(4L)\}  &amp; \leq \frac{4L}{\delta }\sup _{0\leq v\leq 1} \int _ XP_\epsilon \mathbf1_ O\, (\omega +\mathrm{dd}^{\mathrm{c}}v)^3\\ &amp; \leq \frac{4L}{\delta }\operatorname {Cap}_\omega (O), \end{split}  \]
+</div>
+<p>
+       where the supremum runs over $v\in \mathrm{PSH}(X,\omega )$. Letting the capacity of $O$ tend to zero proves the claim. If $L=0$, $u=0$ and no approximation is needed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-C6081B4A">
+<p><a class="environment-identifier" href="../../tag/316CC905C469/">Proposition <span data-tag="C6081B4A">8.8.3</span>.</a><span data-gerby-tag="C6081B4A"></span> For every $u\in \mathcal R$ and $T\geq 0$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-8D779532"><span data-gerby-tag="8D779532"></span>
+<span class="equation-label"><a data-tag="8D779532" href="../../tag/1160D828BCBB/">8.32</a></span>
+<div>\begin{equation}  \nu _{W,u}(X)\leq 12Q(W),\qquad \nu _{W,u}(\{ -u&gt;T\} )\leq 12Q_ T(W). \end{equation}</div>
+</div>
+<p> If $\sqrt t\, W(t)\to 0$, the family $\{ \nu _{W,u}:u\in \mathcal R\} $ is uniformly absolutely continuous with respect to capacity, and $u\mapsto \nu _{W,u}$ is continuous from convergence in capacity to weak convergence of finite measures. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For bounded $u\leq 0$, apply lemma <a data-tag="7FEE6D51" href="../../tag/712BD3EA719C/">8.8.2</a>. The bounded capacity continuity of products and quasi-continuous coefficients in section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">1.6</a>, section <a data-tag="0231BF16" href="../../tag/DD310AD8B258/">1.8</a> passes the total estimate (<a data-tag="532F18D1" href="../../tag/74322EB52E76/">8.29</a>) to $u$. For the tail at $T&gt;0$, use continuous depth cutoffs majorizing $\mathbf1_{\{ -u&gt;T\} }$ and supported in $\{ -u&gt;T-\delta \} $, where $0&lt;\delta &lt;T$. The same product continuity gives a bound by $12Q_{T-\delta }(W)$. Continuity of $(1+\sqrt{2t})W(t)$ gives $Q_{T-\delta }(W)\to Q_ T(W)$. For $T=0$, use the total estimate. 
+    <p>
+      For unbounded $u$, the canonical truncations $u^ K=\max (u,-K)$ remain bounded and invariant. On $\{ u&gt;-K\} $ their measures agree with the finite-level restrictions defining $\mu _ u$. These restrictions increase to $\mu _ u$, so monotone convergence proves (<a data-tag="8D779532" href="../../tag/1160D828BCBB/">8.32</a>). 
+    <p>
+      Splitting at depth $T$ and rescaling $u^ T$ into a capacity test gives, for every Borel set $B$, 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-8081C1FC"><span data-gerby-tag="8081C1FC"></span>
+<span class="equation-label"><a data-tag="8081C1FC" href="../../tag/29C345F5CC8D/">8.33</a></span>
+<div>\begin{equation}  \nu _{W,u}(B)\leq W(0)(1+T)^3\operatorname {Cap}_\omega (B)+12Q_ T(W). \end{equation}</div>
+</div>
+<p>
+       Indeed $\omega +\mathrm{dd}^{\mathrm{c}}u^ T\leq (1+T)(\omega +\mathrm{dd}^{\mathrm{c}}(u^ T/(1+T)))$, and the latter potential has range of length at most one. If $\sqrt t\, W(t)\to 0$, then $Q_ T(W)\to 0$. Taking first $T$ large and then the capacity small proves uniform absolute continuity. 
+    <p>
+      Suppose $u_ j\to u$ in capacity in $\mathcal R$. For fixed $K$, the truncations $u_ j^ K$ converge in capacity to $u^ K$, and their weighted bounded products converge weakly. Outside $\{ u\leq -K\} $, locality identifies $\nu _{W,u^ K}$ with $\nu _{W,u}$. Both measures give this exceptional set mass at most $12Q_{K-1}(W)$ when $K&gt;1$, by their tail estimates; this also includes any truncation mass on $\{ u=-K\} $. Hence 
+    
+<div class="equation">
+  \[  \| \nu _{W,u^ K}-\nu _{W,u}\| _{\mathrm{TV}}\leq 24Q_{K-1}(W)  \]
+</div>
+<p>
+       uniformly over $u\in \mathcal R$. Letting $K\to +\infty $ removes the truncations and proves the claimed continuity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-92674EE5B61B" data-section-entries="0ACED0B738A9 1394B3372728 21E7B1647FA9 26883D1656D1 83FE97565E82 92674EE5B61B AC3F3934DA9F C7F482FD7515 CF8AE8E2EB06 F1398FE81D8D"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/92674EE5B61B/">8.8.2 Heat concentration at large depth</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="83DA14B9"></span></div>
+<p>
+The flux estimate suggests the depth scale at which a counterexample must place its mass. A faster initial heat time than in the unbounded-mass construction gives mass of order $\eta ^{-1}$ at depth of order $\eta ^{-2}$. Its integrated radial defect remains small after a fixed parameter is chosen, but no longer tends to zero. We therefore need a correction with a small fixed total slope. 
+</p>
+<p>
+We use the heat kernel $k_ t$ of (<a data-tag="33A3A76C" href="../../tag/097EB0CA92F4/">8.6</a>) and its potential $F_\eta $ of lemma <a data-tag="4228F54D" href="../../tag/14E6CDA9AAC4/">8.3.1</a>. The following value estimates complement the derivative bounds already proved. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-95282EC6">
+<p><a class="environment-identifier" href="../../tag/21E7B1647FA9/">Lemma <span data-tag="95282EC6">8.8.4</span>.</a><span data-gerby-tag="95282EC6"></span> Uniformly in $\eta $ and $w$, $F_\eta (t,w)\leq C\eta $ for $t&gt;0$, and $F_\eta (t,w)\geq -2\eta \log (1/t)-C\eta $ for $0&lt;t\leq 1$. Uniformly on $\sqrt t\leq |w|\leq 2\sqrt t$ near the origin of $E$, as $t\to 0$, </p>
+<div class="equation">
+  \begin{align*}  F_\eta (t,w)&amp; =2\eta \log t+O(\eta ),\\  t k_ t(w)&amp; =2\mathrm e^{-|w|^2/t}+O(\mathrm e^{-1/(Ct)}),\\  t\partial _{\bar w}\log k_ t(w)&amp; =-w+O(\mathrm e^{-1/(Ct)}). \end{align*}
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For the upper bound use $k_ r\geq 0$ on $(0,1]$ and (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>). The nonnegative Fourier coefficients imply $k_ r(w)\leq k_ r(0)$, and Gaussian summation gives $k_ r(0)\leq 2/r+C r^{-1}\mathrm e^{-1/(2r)}$ for $r\leq 1$. Its integrable error proves the lower bound. On the indicated annulus the nonzero-lattice terms and their derivatives are exponentially small relative to the zero-lattice term, proving the last two identities. For the first, split the defining integral at a fixed small $r_0$. On $[t,r_0]$ the nonzero-lattice contributions have bounded integral, and the difference between $(2/r)\mathrm e^{-|w|^2/r}$ and $2/r$ has integral at most $2|w|^2/t\leq 8$. The remaining integral is uniformly bounded. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-0C23AFD6">
+<p><a class="environment-identifier" href="../../tag/1394B3372728/">Theorem <span data-tag="0C23AFD6">8.8.5</span>.</a><span data-gerby-tag="0C23AFD6"></span> There are $A,B,D,\eta _0&gt;0$ such that for every $0&lt;\eta &lt;\eta _0$ there exist $u_\eta \in C^\infty (X,\mathbb R)\cap \mathcal R$ and a measurable $K_\eta \subset X$ satisfying </p>
+<div class="equation">
+  \begin{gather*}  \sup _ Xu_\eta =0,\qquad \omega +\mathrm{dd}^{\mathrm{c}}u_\eta &gt;0, \qquad 0\leq -u_\eta \leq B\eta ^{-2}\quad \text{on }X,\\  A\eta ^{-2}\leq -u_\eta \leq B\eta ^{-2}\quad \text{on }K_\eta , \qquad \int _{K_\eta }(\omega +\mathrm{dd}^{\mathrm{c}}u_\eta )^3\geq D\eta ^{-1}. \end{gather*}
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $\kappa $ as in lemma <a data-tag="C63ECDFB" href="../../tag/AB7F46061184/">8.3.3</a>, also with $\kappa &lt;1/100$. Choose a small fixed $c&gt;0$ later and set 
+    
+<div class="equation">
+  \begin{gather*}  \varepsilon =\mathrm e^{-c\eta ^{-3}},\qquad q_0=\sqrt{c\eta ^{-3}+\log (1/\eta )},\qquad a=\sqrt{\kappa /(2\eta )},\\  q(x)=q_0-\int _0^{ax}\chi (s)\, \mathrm ds,\qquad t(x)=\eta ^{-1}\mathrm e^{-q(x)^2},\\  b=(q_0-1/2)/a,\qquad x_*=(q_0+1/2)/a,\qquad Z_\eta (x,w)=\vartheta (q(x))F_\eta (t(x),w). \end{gather*}
+</div>
+<p>
+       Use the cutoffs $\chi $ and $\vartheta $ from the earlier heat-time construction. Then $Z_\eta =F_\eta (\varepsilon ,\cdot )$ for $x\leq 0$, $Z_\eta =0$ for $x\geq x_*$, and 
+    
+<div class="equation">
+  \[  \eta b,\eta x_*\longrightarrow \ell :=\sqrt{2c/\kappa },\qquad 1+(Z_\eta )_{w\bar w}&gt;1-\eta .  \]
+</div>
+<p>
+       The larger value of $q_0$ changes the integrated positivity defect; we estimate it at this scale. Write $r_-=\max (-r,0)$ for the negative part of a real number $r$. 
+    <p>
+      On $[0,b]$ we have $\vartheta =1$. Write $F=F_\eta $ and put $\sigma =(\log t)_ x$, $h=\eta k_ t$ and $\zeta =\sigma t\partial _{\bar w}\log k_ t/\mu $. The identity (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) applies to $Z_\eta $ on this interval. The contribution involving $h[1+t(\log k_ t)_{w\bar w}]$ is nonnegative. On $[0,a^{-1}]$, 
+    
+<div class="equation">
+  \[  \sigma =2aq\chi (ax),\quad \sigma _ x=-\frac\kappa \eta \chi (ax)^2+\frac\kappa \eta q\chi '(ax), \quad t\leq \varepsilon \mathrm e^{q_0}.  \]
+</div>
+<p>
+       This upper bound for $t$ is smaller than every power of $\eta $. Thus $\kappa q\chi 't\leq \eta $ and $\sigma ^2t\leq \eta ^2$. Use (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) with $\kappa \chi ^2$ where $\chi &gt;0$, and $F_ t\geq -\eta $ for the $\chi '$ term. It follows that $[Q[Z_\eta ]]_-\leq C\eta $. Where $\chi =0$ also $\chi '=0$, and $Q[Z_\eta ]=\mu -\mu ^2/(1-\eta +h)&gt;0$, since $x\leq a^{-1}=o(1)$. 
+    <p>
+      On $[a^{-1},b]$, $\sigma =2aq$, $\sigma _ x=-\kappa /\eta $, $\mathrm dx=-\mathrm dq/a$. For $t\leq 1$, (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) and (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) give 
+    
+<div class="equation">
+  \[  [Q[Z_\eta ]]_-\leq 2\eta +2\kappa q^2t+C\kappa \exp \left(-\frac\eta {C\kappa q^2t}\right).  \]
+</div>
+<p>
+       For $t\geq 1$, (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>) gives instead $[Q[Z_\eta ]]_-\leq C\kappa q^2t^2\mathrm e^{-t/4}$. Put $L=\log (1/\eta )$. Integrating the $q^2t$ term uses $\int _{\sqrt L}^\infty q^2\mathrm e^{-q^2}\, \mathrm dq\leq C\sqrt L\eta $. For the exponential term split at $2\sqrt L$: the initial interval has length $O(\sqrt L)$, and on the rest $\eta ^2\mathrm e^{q^2}/q^2\geq \mathrm e^{q^2/4}$ for small $\eta $. Its remaining integral is uniformly bounded even with upper endpoint infinity. For large time use $\mathrm dx=\sqrt{\eta /(2\kappa )}\, \mathrm dt/(tq)$, $q\leq \sqrt L$, and the integrability of $t\mathrm e^{-t/4}$. Including the constant term and initial interval yields 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-F993DC61"><span data-gerby-tag="F993DC61"></span>
+<span class="equation-label"><a data-tag="F993DC61" href="../../tag/26883D1656D1/">8.34</a></span>
+<div>\begin{equation}  \int _0^ b\max _{w\in E}[Q[Z_\eta ](x,w)]_-\, \mathrm dx \leq C\eta b+C\sqrt{\eta L}\leq C\ell +o(1). \end{equation}</div>
+</div>
+<p>
+       All constants here are independent of $q_0,c,\eta $ with fixed $\kappa $. The bound is small after choosing $c$, although it need not tend to zero. 
+    <p>
+      Also $\sup [(Z_\eta )_ x]_-=O(\sqrt{\eta L})$: for $t\leq 1$ use $F_ t\geq -\eta $ and $t\sqrt{L+\log (1/t)}\leq \sqrt L$; for $t\geq 1$ use (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>). On $[b,x_*]$, $0\leq q\leq 1$ and $(\mathrm e\eta )^{-1}\leq t\leq \eta ^{-1}$, so differentiated cutoffs and (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>) give 
+    
+<div class="equation">
+  \[  \sup _ w\bigl (|(Z_\eta )_ x|+|Q[Z_\eta ]-Q[0]|\bigr ) \leq C\mathrm e^{-1/(5\mathrm e\eta )}.  \]
+</div>
+<p>
+       Choose $c$ so that $\ell &lt;1/(10\mathrm e)$. Since $Q[0]=\mu (1-\mu )\geq \mathrm e^{-x_*}/4$ here, this implies $Q[Z_\eta ]&gt;0$ on the cutoff interval. For $x\leq 0$ use $Q[Z_\eta ]\geq \mu (1-\mu /(1-\eta ))&gt;0$, and for $x\geq x_*$ use $Z_\eta =0$. On $[-2,-1]$ the same formula gives $Q[Z_\eta ]\geq 2/27$. 
+    <p>
+      The continuous defect $d_\eta (x)=\max _ w[Q[Z_\eta ]]_-$ is therefore supported in $[0,b]$. Choose a smooth nonnegative $r_\eta $, supported in $(-1/2,b+1/2)$, with $r_\eta &gt;d_\eta $ on $[0,b]$ and $m_\eta :=\int r_\eta \leq \int d_\eta +\eta $. Uniform approximation and a positive bump give this choice for each fixed $\eta $; no uniform derivative bound is needed. Fix a smooth probability bump $\psi $ supported in $(-2,-1)$ and put 
+    
+<div class="equation">
+  \[  g_\eta (x)=\int _{-\infty }^ x(x-s)(r_\eta (s)-m_\eta \psi (s))\, \mathrm ds, \qquad V_\eta =Z_\eta +g_\eta .  \]
+</div>
+<p>
+       The support order implies $-m_\eta \leq g_\eta '\leq 0$; $g_\eta =0$ at the negative end and is constant at the positive end. Furthermore $g_\eta \leq 0$ and $|g_\eta |\leq m_\eta (b+3)=O_ c(\eta ^{-1})$. Shrink the fixed $c$ so that (<a data-tag="F993DC61" href="../../tag/26883D1656D1/">8.34</a>) ensures 
+    
+<div class="equation">
+  \[  m_\eta &lt;\min \{ \mu (-2)/2,\, 1/8,\, 1/(27\| \psi \| _\infty )\}   \]
+</div>
+<p>
+       for all sufficiently small $\eta $. Now $Q[V_\eta ]=Q[Z_\eta ]+r_\eta -m_\eta \psi &gt;0$ everywhere: use the majorant on $[0,b]$, the margin $2/27$ on $(-2,-1)$, and the established positivity elsewhere. The vertical coefficient is above $1-\eta $. For the horizontal coefficient, derivatives vanish for $x\leq -2$; on $[-2,0]$ use $\mu \geq \mu (-2)&gt;m_\eta $; on $[0,\infty )$ use $\mu \geq 1/2$ and $(Z_\eta )_ x\geq -o(1)$. Thus (<a data-tag="556376D7" href="../../tag/814E85A56944/">8.5</a>) gives a smooth globally strictly positive potential. 
+    <p>
+      On $x&lt;-3$, $V_\eta =F_\eta (\varepsilon ,\cdot )$ has fiber mean zero, so $0\leq \sup _ XV_\eta \leq C\eta $ by lemma <a data-tag="95282EC6" href="../../tag/21E7B1647FA9/">8.8.4</a> and $g_\eta \leq 0$. Set $u_\eta =V_\eta -\sup _ XV_\eta $. Where the cutoff is nonzero $t\geq \varepsilon $, giving 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-0CDB66A4"><span data-gerby-tag="0CDB66A4"></span>
+<span class="equation-label"><a data-tag="0CDB66A4" href="../../tag/83FE97565E82/">8.35</a></span>
+<div>\begin{equation}  0\leq -u_\eta \leq 2c\eta ^{-2}+O_ c(\eta ^{-1})+O(\eta ). \end{equation}</div>
+</div>
+<p>
+       Multiplication by a cutoff between zero and one preserves this lower bound for $Z_\eta $, including where $F_\eta $ is positive. 
+    <p>
+<em>Mass and depth on the concentration region.</em> Let $K_\eta $ consist of all radial angular directions and 
+    
+<div class="equation">
+  \[  q_0/2\leq q(x)\leq 3q_0/4,\qquad \sqrt{t(x)}\leq |w|\leq 2\sqrt{t(x)},  \]
+</div>
+<p>
+       using the small lift near zero in $E$. This lies in the linear transport region, with $\vartheta =1$, $x\asymp _ c\eta ^{-1}\to \infty $, $\sigma =2aq\asymp _ c\eta ^{-2}$, and superexponentially small $t$. Lemma <a data-tag="95282EC6" href="../../tag/21E7B1647FA9/">8.8.4</a> gives, uniformly, 
+    
+<div class="equation">
+  \[  0&lt;c_1\leq tk_ t\leq 3,\quad h\to \infty ,\quad \zeta \to 0,\quad \eta \sigma ^2t\to 0,\quad \mu \to 1.  \]
+</div>
+<p>
+       In (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) the first $h$ contribution is nonnegative, $\sigma _ xtF_ t=-\kappa t(k_ t-1)\geq -3\kappa $, and the completed square tends to one. Its other negative terms tend to zero. Thus $Q[Z_\eta ]\geq 1/4$ for small $\eta $. On the core $\psi =0$ and $g_\eta ''=r_\eta \geq 0$, so $Q[V_\eta ]\geq 1/4$. Also 
+    
+<div class="equation">
+  \[  \mu +(V_\eta )_ x\geq c_2\eta \sigma ,\qquad 1+(V_\eta )_{w\bar w}\geq c_1\eta /t.  \]
+</div>
+<p>
+       Indeed $(Z_\eta )_ x=\eta \sigma (tk_ t-t)$ and $\mu +g_\eta '&gt;0$ here; the vertical inequality follows from $1-\eta +\eta k_ t$. 
+    <p>
+      In (<a data-tag="A2679B0D" href="../../tag/BDDF6CEA3CFE/">8.26</a>), $\Delta _{V_\eta }=(1+(V_\eta )_{w\bar w})Q[V_\eta ]$. The fiber annulus has area $3t/2$. Integrating the preceding lower bounds and using $\sigma \, \mathrm dx=-2q\, \mathrm dq$ yields 
+    
+<div class="equation">
+  \[  \int _{K_\eta }(\omega +\mathrm{dd}^{\mathrm{c}}u_\eta )^3 \geq c_3\eta ^2\int _{q_0/2}^{3q_0/4}2q\, \mathrm dq =c_4\eta ^2q_0^2\geq c_5\eta ^{-1}.  \]
+</div>
+<p>
+      The annular value estimate also gives 
+    
+<div class="equation">
+  \[  -u_\eta =2\eta q^2+O_ c(\eta ^{-1})+O(\eta \log (1/\eta )).  \]
+</div>
+<p>
+       As $\eta q_0^2=c\eta ^{-2}+\eta \log (1/\eta )$, this is bounded above and below by fixed positive multiples of $\eta ^{-2}$ on the core. Together with (<a data-tag="0CDB66A4" href="../../tag/83FE97565E82/">8.35</a>), this proves the asserted mass and depth bounds. All these potentials are bounded: truncations beyond their individual depth equal them everywhere, so the defining extended product equals (<a data-tag="A2679B0D" href="../../tag/BDDF6CEA3CFE/">8.26</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-7E77F7F3">
+<p><a class="environment-identifier" href="../../tag/0ACED0B738A9/">Corollary <span data-tag="7E77F7F3">8.8.6</span>.</a><span data-gerby-tag="7E77F7F3"></span> Let $W:[0,\infty )\to (0,\infty )$ be nonincreasing. A uniform bound for the weighted masses </p>
+<div class="equation">
+  \[  \int _ X W(-u)\mathrm{MA}^{\mathrm{ext}}_\omega (u)  \]
+</div>
+<p> over all normalized $\omega $-psh potentials requires </p>
+<div class="equation">
+  \[  \sup _{T\gg 1}\sqrt T\, W(T)&lt;\infty .  \]
+</div>
+<p> Uniform deep tails over that class require $\sqrt T\, W(T)\to 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On $K_\eta $, monotonicity of $W$ gives 
+    
+<div class="equation">
+  \[  \int _ XW(-u_\eta )\mathrm{MA}^{\mathrm{ext}}_\omega (u_\eta ) \geq D\eta ^{-1}W(B\eta ^{-2}).  \]
+</div>
+<p>
+       Every sufficiently large $T$ equals $B\eta ^{-2}$ for some sufficiently small $\eta $, proving the necessary bound. Also $K_\eta \subset \{ -u_\eta &gt;A\eta ^{-2}/2\} $, so uniform deep tails force this lower bound to tend to zero. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-A0223436">
+<p><a class="environment-identifier" href="../../tag/F1398FE81D8D/">Theorem <span data-tag="A0223436">8.8.7</span>.</a><span data-gerby-tag="A0223436"></span> Suppose $W$ is positive and nonincreasing, finite on compact intervals, and </p>
+<div class="equation">
+  \[  \sup _{T\gg 1}\sqrt T W(T)=\infty .  \]
+</div>
+<p> Then there is a single $U\in \mathcal R$ such that </p>
+<div class="equation">
+  \[  \int _ XW(-U)\mathrm{MA}^{\mathrm{ext}}_\omega (U)=\infty .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First select the correction with additional local control. Put 
+    
+<div class="equation">
+  \[  x_{\rm pre}=(q_0+1/2-2\sqrt L)/a.  \]
+</div>
+<p>
+       Then $t(x_{\rm pre})=\eta ^3$, $x_{\rm pre}\to \infty $, and $b-x_{\rm pre}=O(\sqrt{\eta L})\to 0$. For a fixed large $K$ the preceding defect estimates give $d_\eta \leq (K/2)\eta $ on $[0,x_{\rm pre}]$: on the linear portion $q^2t\leq 4L\eta ^3$, and the exponential error is $O(\exp (-1/(C\kappa \eta ^2L)))=o(\eta )$. On the initial portion use the previously proved $C\eta $ bound. The integral of $d_\eta $ on $[x_{\rm pre},b]$ tends to zero by the same integrated estimates and this interval's length. 
+    <p>
+      Choose a fixed left cutoff, zero for $x\leq -1/2$ and one for $x\geq -1/4$, and a translated right cutoff, one for $x\leq x_{\rm pre}$ and zero for $x\geq x_{\rm pre}+1/4$. Let $r^0_\eta $ be $K\eta $ times their product. It strictly exceeds $d_\eta $ on $[0,x_{\rm pre}]$. The continuous function $e_\eta =\max (d_\eta -r^0_\eta ,0)$ is supported in $[x_{\rm pre},b]$. Add a smooth nonnegative majorant $s_\eta &gt;e_\eta $ on that interval, supported in $(x_{\rm pre}-1/4,b+1/2)$, with $\int s_\eta \leq \int e_\eta +\eta $. Set $r_\eta =r^0_\eta +s_\eta $. Then 
+    
+<div class="equation">
+  \[  r_\eta &gt;d_\eta \quad \text{on }[0,b],\qquad m_\eta =\int r_\eta \leq K\eta b+O(\sqrt{\eta L})+O(\eta ).  \]
+</div>
+<p>
+       After shrinking the fixed $c$, this is bounded by a fixed $m_0$ within all the positivity tolerances above. The conclusions of theorem <a data-tag="0C23AFD6" href="../../tag/1394B3372728/">8.8.5</a> therefore hold for this choice, with fixed $A,B,D$. On every fixed compact interval $I\Subset (0,\infty )$, for sufficiently small $\eta $ we have $r_\eta =K\eta $ and exactly 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-DE1838A5"><span data-gerby-tag="DE1838A5"></span>
+<span class="equation-label"><a data-tag="DE1838A5" href="../../tag/AC3F3934DA9F/">8.36</a></span>
+<div>\begin{equation}  g_\eta (x)=-m_\eta (x-\mu _\psi ) +K\eta (x^2/2+b_0x+b_1),\qquad \mu _\psi =\int s\psi (s)\, \mathrm ds. \end{equation}</div>
+</div>
+<p>
+       Here $b_0,b_1$ depend only on the fixed left cutoff. Globally $0\leq -g_\eta (x)\leq m_0(x+2)$ for $x\geq 0$. 
+    <p>
+      Let $G(w)=-\int _0^\infty (k_ r(w)-1)\, \mathrm dr$ for $w\ne 0$ on $E$. Gaussian integration gives the uniform bound 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-E793D07E"><span data-gerby-tag="E793D07E"></span>
+<span class="equation-label"><a data-tag="E793D07E" href="../../tag/CF8AE8E2EB06/">8.37</a></span>
+<div>\begin{equation}  -F_\eta (t,w)\leq C\eta \bigl (1+\log ^+(1/\operatorname {dist}_ E(w,0)^2)\bigr ),\quad t&gt;0. \end{equation}</div>
+</div>
+<p>
+       Indeed the nearest Gaussian has integral bounded by $C+2\log ^+(1/\operatorname {dist}_ E(w,0)^2)$ on $(0,1]$; the other lattice terms have bounded integral and large times decay. The same bound applies after the cutoff. On a fixed $I\Subset (0,\infty )$, $\vartheta =1$ for small $\eta $ and $t_\eta (x)\leq \exp (-c/(2\eta ^3))$. Every fixed $x$ derivative of $t_\eta $ has this bound times a polynomial in $\eta ^{-1}$. On compact fiber sets away from zero, 
+    
+<div class="equation">
+  \[  F_\eta (t_\eta (x),w)/\eta \longrightarrow G(w) \quad \text{in }C^\ell \text{ for every fixed }\ell .  \]
+</div>
+<p>
+       To verify derivatives, subtract $G$ from $G_ t=F_\eta (t,\cdot )/\eta $: $G_ t-G=\int _0^ t(k_ r-1)\, \mathrm dr=-t+O(\exp (-d^2/(Ct)))$ when $d$ stays positive. Differentiated Gaussian errors have only polynomial factors in $t^{-1}$, and repeated $x$ differentiation preserves their decay. Together with (<a data-tag="DE1838A5" href="../../tag/AC3F3934DA9F/">8.36</a>) and $0\leq \sup V_\eta \leq C\eta $, this gives uniform $C^\ell $ bounds for $u_\eta $ on each such fixed compact product set, for all sufficiently small $\eta $. The threshold may depend on the set and derivative order. 
+    <p>
+      Fix $a_ j=2^{-j-2}$, $j\geq 1$, so $\sum a_ j=1/4$. Choose scales $\eta _ j\downarrow 0$ recursively and write $u_ j=u_{\eta _ j}$, $K_ j=K_{\eta _ j}$. Require the minimum $x$ on $K_ j$ to exceed every earlier $x_{*,i}$ by two. Choose a relatively compact product neighborhood $O_ j$ of $K_ j$, with positive $x$ interval and fiber closure away from zero, on which the earlier $u_ i$ are constant. The $K_ j$ are pairwise disjoint. With $E_ j=\sum _{i&lt;j}a_ i\| u_ i\| _\infty $, impose 
+    
+<div class="equation">
+  \begin{gather*}  E_ j\leq a_ j\eta _ j^{-2},\qquad \eta _ j\leq a_ j,\\  a_ j\eta _ j\leq 2^{-j}a_ i\eta _ i\quad (i&lt;j). \end{gather*}
+</div>
+<p>
+       For each earlier $O_ i$, require the preceding uniform derivative bounds to hold for $u_ j$ through order $j$. All are finite constraints at stage $j$, achievable by making $\eta _ j$ smaller. They ensure that the future series $\sum _{k&gt;i}a_ ku_ k$ converges in $C^\infty $ on compact subsets of $O_ i$: for every fixed derivative order the sufficiently late terms have a uniform bound there, and $\sum a_ k&lt;\infty $. 
+    <p>
+      These constraints also give $\sum _{k&gt;j}a_ k\eta _ k\leq a_ j\eta _ j$. On $K_ j$ the coordinate and distance estimates are 
+    
+<div class="equation">
+  \[  x\leq C_ c\eta _ j^{-1},\qquad \log ^+(1/\operatorname {dist}_ E(w,0)^2)\leq C_ c\eta _ j^{-3}.  \]
+</div>
+<p>
+       Using (<a data-tag="E793D07E" href="../../tag/CF8AE8E2EB06/">8.37</a>), the global slope bound on $g_ k$, and the supremum constants, the future depth is at most 
+    
+<div class="equation">
+  \[  C_ c\eta _ j^{-3}\sum _{k&gt;j}a_ k\eta _ k +C_ c\eta _ j^{-1}\sum _{k&gt;j}a_ k \leq C_ c a_ j\eta _ j^{-2}+C_ c\eta _ j^{-1}/4.  \]
+</div>
+<p>
+       The last term is at most a fixed multiple of $a_ j\eta _ j^{-2}$ since $\eta _ j\leq a_ j$. Including the earlier and current terms, there is a fixed $C_*&gt;0$, independent of the scales, such that 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-52D85F1D"><span data-gerby-tag="52D85F1D"></span>
+<span class="equation-label"><a data-tag="52D85F1D" href="../../tag/C7F482FD7515/">8.38</a></span>
+<div>\begin{equation}  -\sum _ i a_ iu_ i\leq C_*a_ j\eta _ j^{-2}\quad \text{on }K_ j. \end{equation}</div>
+</div>
+<p>
+       Fix this constant before the scale choice. Since $\sqrt T W(T)$ is unbounded, at each stage choose arbitrarily large $T_ j$ such that 
+    
+<div class="equation">
+  \[  \frac D{\sqrt{C_*}}a_ j^{5/2}\sqrt{T_ j}W(T_ j)\geq 1, \qquad \eta _ j=\sqrt{C_*a_ j/T_ j},  \]
+</div>
+<p>
+       and so small a scale that all finite preceding constraints hold. Such values occur arbitrarily far out because $W$ is finite on compact intervals. Thus the recursive choice is possible. 
+    <p>
+      The smooth nonpositive partial sums $v_ N=\sum _{j\leq N}a_ ju_ j$ decrease, and 
+    
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}v_ N =(1-\sum _{j\leq N}a_ j)\omega +\sum _{j\leq N}a_ j(\omega +\mathrm{dd}^{\mathrm{c}}u_ j)\geq \tfrac 34\omega .  \]
+</div>
+<p>
+       By theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>, $\int _ X(-v_ N)\, \mathrm dV\leq C\sum _ j a_ j&lt;+\infty $. Thus corollary <a data-tag="23B5C3B7" href="../../tag/0AD144F69807/">1.4.3</a> gives a $\omega $-plurisubharmonic limit $v$ with $\omega +\mathrm{dd}^{\mathrm{c}}v\geq 3\omega /4$. Its supremum is finite and nonpositive. 
+    <p>
+      On $O_ j$ the earlier terms are constant and the future series converges smoothly. Thus $v$ is smooth there and $\omega +\mathrm{dd}^{\mathrm{c}}v\geq a_ j(\omega +\mathrm{dd}^{\mathrm{c}}u_ j)$ pointwise. The determinant inequality for positive Hermitian matrices gives on $K_ j$ 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\omega (v)\geq a_ j^3(\omega +\mathrm{dd}^{\mathrm{c}}u_ j)^3.  \]
+</div>
+<p>
+       On these sets the extended product is the smooth product: on a compact neighborhood of $K_ j$ all sufficiently deep canonical truncations equal $v$. Set $U=v-\sup _ Xv$. Since $\sup v\leq 0$, $-U\leq -v$, and its local currents are unchanged. Monotonicity of $W$ and (<a data-tag="52D85F1D" href="../../tag/C7F482FD7515/">8.38</a>) give 
+    
+<div class="equation">
+  \[  \int _{K_ j}W(-U)\mathrm{MA}^{\mathrm{ext}}_\omega (U) \geq D a_ j^3\eta _ j^{-1}W(C_*a_ j\eta _ j^{-2}) =\frac D{\sqrt{C_*}}a_ j^{5/2}\sqrt{T_ j}W(T_ j)\geq 1.  \]
+</div>
+<p>
+       The disjoint $K_ j$ prove infinite total mass for this single potential. They lie in its smooth locus, so no mass is assigned to poles. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-4B61F80092C8" data-section-entries="4B61F80092C8 5F2A120794A6 8BCBC6CB58C6 E636296BB209"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/4B61F80092C8/">8.8.3 Concentration at the critical weight</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="DC77550F"></span></div>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-B563F436">
+<p><a class="environment-identifier" href="../../tag/5F2A120794A6/">Lemma <span data-tag="B563F436">8.8.8</span>.</a><span data-gerby-tag="B563F436"></span> Suppose $\sqrt t\, W(t)$ is bounded but does not tend to zero. There are smooth $u_ j\in \mathcal R$ converging in capacity to $g\in \mathcal R$ such that a weak cluster measure of $\nu _{W,u_ j}$ gives positive mass to the pole divisor </p>
+<div class="equation">
+  \[  H=\pi ^{-1}\{ [z_0:z_1:z_2]:z_0=0\} ,  \]
+</div>
+<p> whereas $\nu _{W,g}(H)=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use the correction chosen in the proof of theorem <a data-tag="A0223436" href="../../tag/F1398FE81D8D/">8.8.7</a>. Its plateau and its late supplement satisfy 
+    
+<div class="equation">
+  \[  \int r^0_\eta =K\eta x_{\rm pre}+O(\eta ),\qquad \int s_\eta =O(\sqrt{\eta L})+O(\eta ),\qquad \eta x_{\rm pre}\to \ell .  \]
+</div>
+<p>
+       Therefore $m_\eta \to m:=K\ell &gt;0$. Shrink the fixed $c$ so that $m$ satisfies all the established positivity margins. On each fixed finite $x$ interval, $r_\eta $ and all its derivatives tend to zero; the late supplement escapes the interval. Thus $g_\eta $ converges smoothly there to 
+    
+<div class="equation">
+  \[  g(x)=-m\int _{-\infty }^ x(x-s)\psi (s)\, \mathrm ds.  \]
+</div>
+<p>
+       It is zero for $x\leq -2$ and equals $-m(x-\mu _\psi )$ for $x\geq -1$. The same margins give $\mu +g'&gt;0$ and $g''+\mu (1-\mu )\geq 0$ at finite $x$. Across $H$, its extension has logarithmic singularity of coefficient $m$: a local defining function $\zeta $ gives $g=m\log |\zeta |^2+O(1)$. Its upper semicontinuous extension is $\omega $-plurisubharmonic, has supremum zero and belongs to $\mathcal R$. 
+    <p>
+      The bound (<a data-tag="E793D07E" href="../../tag/CF8AE8E2EB06/">8.37</a>) and $F_\eta \leq C\eta $ imply that, on compact base sets away from $H$, each fixed-depth exceptional set lies in an exponentially shrinking tube about the local holomorphic zero section $w=0$. These tubes have capacity tending to zero. Indeed, on a relatively compact coordinate chart, $\log |w|^2$ is locally integrable and plurisubharmonic; the weighted Chern–Levine–Nirenberg estimate of section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">1.6</a> bounds the relative capacity of $\{ \log |w|^2&lt;-T\} $ by $C/T$. A finite cover and the local capacity comparison transfer this estimate to $\operatorname {Cap}_\omega $. 
+    <p>
+      The corrections converge uniformly on compact base sets away from $H$, including $\xi =0$, and the supremum normalization is $O(\eta )$. Since $g$ has its logarithmic pole on $H$, the estimate (<a data-tag="B2A1C46F" href="../../tag/3EF8F920CDD3/">1.26</a>) gives neighborhoods of $H$ with arbitrarily small capacity. Removing one such neighborhood proves $u_\eta \to g$ in capacity. 
+    <p>
+      Assume $\sqrt t\, W(t)$ is bounded but does not tend to zero. Choose the preceding sequence of cores with weighted mass bounded below by $c_0&gt;0$. The proved upper bound makes their full weighted measures uniformly finite, so a subsequence has a weak cluster measure $\nu $. For each fixed closed neighborhood $H_ r$ of $H$, all sufficiently late cores lie in $H_ r$. Portmanteau gives $\nu (H_ r)\geq c_0$; decreasing continuity of the finite measure gives $\nu (H)\geq c_0$. But $\nu _{W,g}(H)=0$ by its defining non-pluripolar truncation. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-D55E4A1B">
+<p><a class="environment-identifier" href="../../tag/8BCBC6CB58C6/">Theorem <span data-tag="D55E4A1B">8.8.9</span>.</a><span data-gerby-tag="D55E4A1B"></span> Within $\mathcal R$ the following assertions hold. </p>
+<ol>
+<li><p>
+Every individual $\nu _{W,u}$ is finite if and only if $\sup _{t\gg 1}\sqrt t\, W(t)&lt;\infty $. This is also equivalent to a uniform total-mass bound. In this case 
+</p>
+<div class="equation">
+  \[  \sup _{u\in \mathcal R}\nu _{W,u}(X)\leq 12Q(W).  \]
+</div>
+<p>
+ If the condition fails there is one $u\in \mathcal R$ with infinite measure. 
+</p>
+</li><li><p>
+Uniform deep tails hold if and only if $\sqrt t\, W(t)\to 0$. For all $u\in \mathcal R$ and $T\geq 0$, 
+</p>
+<div class="equation">
+  \[  \nu _{W,u}(\{ -u&gt;T\} )\leq 12Q_ T(W).  \]
+</div>
+<p>
+ The inequality is understood in the extended sense. 
+</p>
+</li><li><p>
+Uniform absolute continuity relative to $\operatorname {Cap}_\omega $ holds if and only if $\sqrt t\, W(t)\to 0$. 
+</p>
+</li><li><p>
+The assignment $u\mapsto \nu _{W,u}$ is a map into finite measures and is continuous from capacity convergence in $\mathcal R$ to weak measure convergence if and only if $\sqrt t\, W(t)\to 0$. When $\sqrt t\, W(t)$ is bounded but does not tend to zero, there are smooth $u_ j\in \mathcal R$ converging in capacity to $g\in \mathcal R$, whose weighted measures have a weak cluster measure charging the pole divisor of $g$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The sufficient conditions are proposition <a data-tag="C6081B4A" href="../../tag/316CC905C469/">8.8.3</a>. The necessary uniform mass and tail conditions follow from corollary <a data-tag="7E77F7F3" href="../../tag/0ACED0B738A9/">8.8.6</a>, whose smooth potentials are invariant. If $\sqrt t\, W(t)$ is unbounded, theorem <a data-tag="A0223436" href="../../tag/F1398FE81D8D/">8.8.7</a> disproves universal individual finiteness and prevents a map into finite measures. 
+    <p>
+      For uniform absolute continuity, the concentration regions of theorem <a data-tag="0C23AFD6" href="../../tag/1394B3372728/">8.8.5</a> lie in $\{ x\geq c_1/\eta \} $ for a fixed $c_1&gt;0$, hence in shrinking neighborhoods of $H$. The globally defined $h_ H=\log (|z_0|^2/|z|^2)$ has supremum zero and $\omega +\mathrm{dd}^{\mathrm{c}}h_ H=\beta +[H]\geq 0$. Its sublevel estimate (<a data-tag="B2A1C46F" href="../../tag/3EF8F920CDD3/">1.26</a>) shows that these neighborhoods have capacity tending to zero. If $\limsup _{t\to +\infty }\sqrt t\, W(t)&gt;0$, choose the scales so that $D\eta ^{-1}W(B\eta ^{-2})$ stays bounded below. The weighted masses on these regions then violate uniform absolute continuity. Finally, lemma <a data-tag="B563F436" href="../../tag/5F2A120794A6/">8.8.8</a> disproves capacity-to-weak continuity whenever $\sqrt t\, W(t)$ is bounded but does not tend to zero. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-CB3929C9">
+<p><a class="environment-identifier" href="../../tag/E636296BB209/">Corollary <span data-tag="CB3929C9">8.8.10</span>.</a><span data-gerby-tag="CB3929C9"></span> For a weight $W$ satisfying the assumptions of this section and agreeing for large $t$ with </p>
+<div class="equation">
+  \[  W_{p,a}(t)=(1+t)^{-p}[\log (\mathrm e+t)]^{-a},  \]
+</div>
+<p> universal individual finiteness and uniform total-mass bounds in $\mathcal R$ hold exactly when $p&gt;1/2$, or $p=1/2$ and $a\geq 0$. Uniform deep tails, uniform capacity absolute continuity and capacity-to-weak continuity hold exactly when $p&gt;1/2$, or $p=1/2$ and $a&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply theorem <a data-tag="D55E4A1B" href="../../tag/8BCBC6CB58C6/">8.8.9</a> to $\sqrt t\, W_{p,a}(t)\sim t^{1/2-p}(\log t)^{-a}$. A smooth decreasing modification on a compact interval changes none of these conditions. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The necessary conditions and the single infinite-measure example also apply to the class of all normalized potentials on $X$. The sufficient conditions proved here use the $U(2)$ symmetry. For the unrestricted class, proposition <a data-tag="818B97D0" href="../../tag/EE93EE2035F6/">7.3.1</a> still gives the sufficient condition $\int _0^{+\infty }(1+t)(-W'(t))\, \mathrm dt&lt;+\infty $; its optimal damping rate remains open. 
+</p>
+</div></section><section class="reading-chunk" id="entry-C99F8C57CD9A" data-section-entries="823EC0E922FD ABD574F21AEB C99F8C57CD9A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/C99F8C57CD9A/">8.9 Limits of shrinking smooth potentials</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="533E4B90"></span></div>
+<p>
+When the bounded mass property fails, corollary <a data-tag="7E0DACC0" href="../../tag/5804300415EA/">7.5.2</a> produces smooth potentials converging to zero whose Monge–Ampère measures keep an excess mass in the limit. On the Hopf threefold we can determine exactly which excess measures occur: they are the lifts of arbitrary base measures by the fiber probability measures. The proof combines the intermediate currents of proposition <a data-tag="C412D265" href="../../tag/708664A6CF93/">7.5.3</a> with averaging over the automorphism group. 
+</p>
+<p>
+On a general Hermitian manifold, the restrictions on the intermediate currents in proposition <a data-tag="C412D265" href="../../tag/708664A6CF93/">7.5.3</a> are still necessary; we do not know whether they are sufficient, or what the support and pluripolar behavior of shrinking defects can be in general. 
+</p>
+<p>
+We keep the Hopf threefold $X$, its projection $\pi :X\to \mathbb P^2$, and the forms $\omega =\alpha +\beta $ of the previous sections. For $p\in \mathbb P^2$, let $h_ p$ be the Haar probability measure on the elliptic fiber $\pi ^{-1}(p)$, that is, the measure $\mathrm{d}A_ E$ transported by the action of $E$. For a finite positive measure $\mu $ on the base, define its <em>fiberwise lift</em> $\mathcal L\mu $ by 
+</p>
+<div class="equation">
+  \[  \int _ X\varphi \, \mathrm{d}\mathcal L\mu =\int _{\mathbb P^2}\left(\int _{\pi ^{-1}(p)}\varphi \, \mathrm{d}h_ p\right)\mathrm{d}\mu (p), \qquad \varphi \in C(X).  \]
+</div>
+<p>
+ Since fiber integrals of continuous functions are continuous in $p$, the map $\mathcal L$ is weakly continuous. The normalization $\int _{\pi ^{-1}(p)}\beta =2$ gives 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-B7D58309"><span data-gerby-tag="B7D58309"></span>
+<span class="equation-label"><a data-tag="B7D58309" href="../../tag/ABD574F21AEB/">8.39</a></span>
+<div>\begin{equation}  \mathcal L\mu =\tfrac 12\beta \wedge \pi ^*\mu , \qquad \mathcal L(\omega _{\mathrm{FS}}^2)=\tfrac 16\omega ^3. \end{equation}</div>
+</div>
+<p>
+ Here $\pi ^*\mu $ denotes the pullback of a top-degree current by the submersion $\pi $; locally it is the base measure with constant coefficients in the fiber directions. 
+</p>
+<p>
+For a Hermitian form $\Omega $ on $X$, put 
+</p>
+<div class="equation">
+  \[  M_\Omega (f)=\int _ X(\Omega +\mathrm{dd}^{\mathrm{c}}f)^3,\qquad V_\Omega =\int _ X\Omega ^3  \]
+</div>
+<p>
+ for smooth real $f$, and let $b$ be a real number. A positive measure $\sigma $ on $X$ is called a <em>shrinking defect</em> for $(\Omega ,b)$ if, for every sequence $0&lt;\varepsilon _ j&lt;1$ tending to zero, there are smooth $U_ j\in \mathrm{PSH}(X,\Omega )$ and numbers $0&lt;r_ j&lt;\varepsilon _ j$ such that 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-990412BF"><span data-gerby-tag="990412BF"></span>
+<span class="equation-label"><a data-tag="990412BF" href="../../tag/823EC0E922FD/">8.40</a></span>
+<div>\begin{equation}  \sup _ XU_ j=0,\qquad w_ j=r_ jU_ j,\qquad M_\Omega (w_ j)=b,\qquad (\Omega +\mathrm{dd}^{\mathrm{c}}w_ j)^3\rightharpoonup \Omega ^3+\sigma . \end{equation}</div>
+</div>
+<p>
+ Here weak convergence means convergence against every continuous function on $X$. We first classify the shrinking defects for the metric $\omega $, for which $V_\omega =6$; we then write $m=b-6&gt;0$. Afterwards we pass to an arbitrary Hermitian form. 
+</p>
+</div></section><section class="reading-chunk" id="entry-52E95F708FD4" data-section-entries="1E196E409754 52E95F708FD4"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/52E95F708FD4/">8.9.1 Positive quadratic measures</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="6C46934F"></span></div>
+<p>
+The mass formula of proposition <a data-tag="9156D54D" href="../../tag/DDEBFFAFCD1F/">8.1.1</a> gives 
+</p>
+<div class="equation">
+  \[  M_\omega (\lambda f)-6=\lambda ^2\bigl (M_\omega (f)-6\bigr )  \]
+</div>
+<p>
+ for every smooth real $f$ and real $\lambda $. To use this scalar identity in a weak limit, we also need a positive measure that represents the quadratic term. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-2482D927">
+<p><a class="environment-identifier" href="../../tag/1E196E409754/">Lemma <span data-tag="2482D927">8.9.1</span>.</a><span data-gerby-tag="2482D927"></span> Let $f$ be smooth, $0&lt;t&lt;1$, and $\mathrm{dd}^{\mathrm{c}}f\geq -t\omega $. Set $H=\mathrm{dd}^{\mathrm{c}}f+t\omega $, $d=M_\omega (f)-6$, and $\nu =3\omega \wedge H^2$. Then $d\geq 0$ and </p>
+<div class="equation">
+  \[  \begin{gathered} \int _ X\omega ^2\wedge H=6t,\qquad \int _ X\omega \wedge H^2=d/3+6t^2,\qquad \int _ XH^3=td+6t^3,\\ \bigl \| (\omega +\mathrm{dd}^{\mathrm{c}}f)^3-\omega ^3-\nu \bigr \| _{\mathrm{TV}} \leq 36t+2td+24t^3. \end{gathered}  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The Gauduchon identity $\mathrm{dd}^{\mathrm{c}}\omega ^2=0$ gives $\int _ X\omega ^2\wedge \mathrm{dd}^{\mathrm{c}}f=0$, and Stokes' formula gives $\int _ X(\mathrm{dd}^{\mathrm{c}}f)^3=0$. Expanding the three integrals with these identities proves the asserted values, and proposition <a data-tag="9156D54D" href="../../tag/DDEBFFAFCD1F/">8.1.1</a> gives $d\geq 0$. The identity of measures 
+    
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}f)^3 =(1-t)^3\omega ^3+3(1-t)^2\omega ^2\wedge H +(1-t)\nu +H^3  \]
+</div>
+<p>
+       has four positive terms. After subtracting $\omega ^3+\nu $, the total masses of the remaining terms bound the total variation by $18t+18t+t(d+18t^2)+td+6t^3$, as asserted. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</div></section><section class="reading-chunk" id="entry-4D8838BCFD12" data-section-entries="4D8838BCFD12 A71DAFFE572E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/4D8838BCFD12/">8.9.2 Orbital mixtures</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="FBD88C47"></span></div>
+<p>
+Averaging a shrinking defect over automorphisms of $X$ produces new shrinking defects. The compact group $G=U(3)\times (\mathbb R/\mathbb Z)$ acts transitively on $X$ by the holomorphic maps $g[z]=[\mathrm{e}^ tAz]$, $g=(A,t)$, and preserves $\omega $. Let $h_ G$ be its Haar probability measure. For a probability measure $\rho $ on $G$ and a finite measure $\sigma $ on $X$, write 
+</p>
+<div class="equation">
+  \[  \mathcal A_\rho \sigma =\int _ Gg^*\sigma \, \mathrm{d}\rho (g).  \]
+</div>
+<p>
+ Here the pullback of a measure is defined by $\int _ X\varphi \, \mathrm{d}(g^*\sigma )=\int _ X\varphi \circ g^{-1}\, \mathrm{d}\sigma $. In particular, transitivity gives 
+</p>
+<div class="equation">
+  \[  \int _ Gg^*\zeta \, \mathrm{d}h_ G(g) =\frac{\zeta (X)}6\omega ^3  \]
+</div>
+<p>
+ for every finite measure $\zeta $ on $X$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-6A068BC0">
+<p><a class="environment-identifier" href="../../tag/A71DAFFE572E/">Proposition <span data-tag="6A068BC0">8.9.2</span>.</a><span data-gerby-tag="6A068BC0"></span>  If $\sigma $ is a shrinking defect for $(\omega ,6+m)$, then so is $\mathcal A_\rho \sigma $ for every probability measure $\rho $ on $G$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a sequence $\varepsilon _ j$ as in the definition. Take a sequence $f_ k=t_ ku_ k$ realizing $\sigma $ as in (<a data-tag="990412BF" href="../../tag/823EC0E922FD/">8.40</a>), so that $f_ k$ has mass $6+m$, and put $H_ k=\mathrm{dd}^{\mathrm{c}}f_ k+t_ k\omega $. By lemma <a data-tag="2482D927" href="../../tag/1E196E409754/">8.9.1</a>, the positive measures $\nu _ k=3\omega \wedge H_ k^2$ have masses $m+18t_ k^2$ and converge weakly to $\sigma $. 
+    <p>
+      The idea is to replace $f_ k$ by a normalized sum of $N$ random translates. First suppose that $\rho $ has density at most $L$ relative to $h_ G$. Choose $N$ independent random group elements $g_1,\ldots ,g_ N$ with law $\rho $, and set 
+    
+<div class="equation">
+  \[  W=N^{-1/2}\sum _{a=1}^ Nf_ k\circ g_ a,\qquad \tau =t_ k\sqrt N,\qquad K=\mathrm{dd}^{\mathrm{c}}W+\tau \omega =N^{-1/2}\sum _{a=1}^ Ng_ a^*H_ k\geq 0.  \]
+</div>
+<p>
+       The quadratic measure of $W$ is 
+    
+<div class="equation">
+  \[  3\omega \wedge K^2=D+C,\qquad D=N^{-1}\sum _{a=1}^ Ng_ a^*\nu _ k,\qquad C=\frac6N\sum _{a&lt;c}\omega \wedge g_ a^*H_ k\wedge g_ c^*H_ k\geq 0.  \]
+</div>
+<p>
+       Averaging $u_ k\circ g$ against $h_ G$ gives a constant, hence $\int _ Gg^*H_ k\, \mathrm{d}h_ G=t_ k\omega $. Consequently $B=\int _ Gg^*H_ k\, \mathrm{d}\rho \leq Lt_ k\omega $, and independence gives 
+    
+<div class="equation">
+  \[  \mathbb E[C(X)]=3(N-1)\int _ X\omega \wedge B^2 \leq 18(N-1)L^2t_ k^2.  \]
+</div>
+<p>
+       For any real $\varphi \in C(X)$ with $\| \varphi \| _\infty \leq 1$, the variance of $D(\varphi )$ is at most $(m+18t_ k^2)^2/N$. 
+    <p>
+      For general $\rho $, convolve it with the normalized restrictions of $h_ G$ to shrinking neighborhoods of the identity, which have positive Haar measure. This gives probability measures $\rho _ j\rightharpoonup \rho $ with bounded densities $L_ j$. Fix a countable dense set $(\varphi _ l)$ in the real unit ball of $C(X)$ and numbers $0&lt;\delta _ j&lt;\min (1,m/4)$ tending to zero. Choose $N_ j$ large enough that 
+    
+<div class="equation">
+  \[  \frac{j(m+18)^2}{N_ j\delta _ j^2}&lt;\frac14.  \]
+</div>
+<p>
+       Next choose $k_ j$ large enough that $t_{k_ j}&lt;1$, $\tau _ j=t_{k_ j}\sqrt{N_ j}&lt;\min (\varepsilon _ j/4,1/j,1/4)$, $18N_ jt_{k_ j}^2&lt;m/4$, and the expected cross-term mass is less than $\delta _ j/4$. Chebyshev's inequality for the first $j$ test functions and Markov's inequality for $C(X)$ show that some choice of $N_ j$ group elements satisfies 
+    
+<div class="equation">
+  \[  |D_ j(\varphi _ l)-(\mathcal A_{\rho _ j}\nu _{k_ j})(\varphi _ l)|&lt;\delta _ j \quad (l\leq j),\qquad C_ j(X)&lt;\delta _ j.  \]
+</div>
+<p>
+       We may also arrange $k_ j\to \infty $. For each fixed test function $\varphi $, the family $\{ \varphi \circ g^{-1}:g\in G\} $ is compact in $C(X)$, so a finite uniform net and the bounded masses of $\nu _ k$ show that $\int \varphi \circ g^{-1}\, \mathrm{d}\nu _ k\to \int \varphi \circ g^{-1}\, \mathrm{d}\sigma $ uniformly in $g$. It follows that $\mathcal A_{\rho _ j}\nu _{k_ j}\rightharpoonup \mathcal A_\rho \sigma $. The dense test functions and the bounded masses now imply $D_ j\rightharpoonup \mathcal A_\rho \sigma $, while $C_ j\to 0$ in total variation. 
+    <p>
+      By the integral identity of lemma <a data-tag="2482D927" href="../../tag/1E196E409754/">8.9.1</a>, 
+    
+<div class="equation">
+  \[  d_ j=M_\omega (W_ j)-6 =m+C_ j(X)-18(N_ j-1)t_{k_ j}^2\longrightarrow m, \qquad d_ j&gt;3m/4.  \]
+</div>
+<p>
+       Put $\lambda _ j=\sqrt{m/d_ j}$, so $\lambda _ j\to 1$ and $\lambda _ j&lt;2$. The average $a_ j=N_ j^{-1}\sum _ a u_{k_ j}\circ g_ a$ is smooth and $\omega $-plurisubharmonic. With 
+    
+<div class="equation">
+  \[  U_ j=a_ j-\sup _ Xa_ j,\qquad r_ j=\lambda _ j\tau _ j&lt;\varepsilon _ j,  \]
+</div>
+<p>
+       the potential $r_ jU_ j$ differs from $\lambda _ jW_ j$ by a constant and has exact mass $6+m$. Its positive quadratic measure is $\lambda _ j^2(D_ j+C_ j)$. The total-variation estimate of lemma <a data-tag="2482D927" href="../../tag/1E196E409754/">8.9.1</a>, with parameter $r_ j$, proves the required weak limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Since $v_+(\omega )=+\infty $, corollary <a data-tag="7E0DACC0" href="../../tag/5804300415EA/">7.5.2</a> gives a sequence with some defect of mass $m$. Passing to a further subsequence meets any prescribed bounds $\varepsilon _ j$ without changing the defect, so a shrinking defect of mass $m$ exists. Applying proposition <a data-tag="6A068BC0" href="../../tag/A71DAFFE572E/">8.9.2</a> with $\rho =h_ G$ shows that $(m/6)\omega ^3$ is a shrinking defect. In particular, the excess mass can persist as a smooth limiting density. 
+</p>
+</div></section><section class="reading-chunk" id="entry-7802C5C9B69D" data-section-entries="1C279783821E 7802C5C9B69D 7C4D0FB8D775 D04CA3BB7868"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/7802C5C9B69D/">8.9.3 Fiber measures</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="00DD5662"></span></div>
+<p>
+The intermediate currents force every shrinking defect to be a lift of a base measure, and the automorphisms of $X$ realize all such lifts. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-EAF329CC">
+<p><a class="environment-identifier" href="../../tag/D04CA3BB7868/">Lemma <span data-tag="EAF329CC">8.9.3</span>.</a><span data-gerby-tag="EAF329CC"></span> Let $f_ j=t_ ju_ j$, where $u_ j\in \mathrm{PSH}(X,\omega )$ are smooth, $\sup _ Xu_ j=0$ and $0&lt;t_ j\to 0$. Suppose that $M_\omega (f_ j)=6+m$ and $(\omega +\mathrm{dd}^{\mathrm{c}}f_ j)^3\rightharpoonup \omega ^3+\sigma $. Then there is a unique positive measure $\mu $ on $\mathbb P^2$, of mass $m$, such that </p>
+<div class="equation">
+  \[  \sigma =\mathcal L\mu ,\qquad (\mathrm{dd}^{\mathrm{c}}f_ j+t_ j\omega )^2\rightharpoonup \tfrac 16\pi ^*\mu .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $H_ j=\mathrm{dd}^{\mathrm{c}}f_ j+t_ j\omega $. By proposition <a data-tag="C412D265" href="../../tag/708664A6CF93/">7.5.3</a>, applied with $h=\omega $ and $n=3$, every convergent subsequence of $H_ j^2$ has a positive closed limit $K$ with $\sigma =3\omega \wedge K$; moreover $\alpha \wedge K=0$, because $\alpha $ is closed and semipositive, so that $\alpha \wedge K$ is a positive measure with $\int _ X\alpha \wedge K=0$. In holomorphic coordinates $(\xi _1,\xi _2,w)$ on a local trivialization of the elliptic bundle, the coefficient matrix of $K$ on the three exterior pairs is positive semidefinite as a matrix of measures. To see this directly, note that positivity of the matrices of $H_ j^2$ passes to the limit when they are tested against constant vectors, and take Radon–Nikodym derivatives with respect to the diagonal trace. Since $\alpha $ is strictly positive in the horizontal directions, the identity $\alpha \wedge K=0$ makes both diagonal entries containing $\mathrm{d}w$ vanish. Positivity then makes their rows and columns vanish, so only the horizontal top-degree coefficient remains. 
+    <p>
+      Since $K$ is closed, both real fiber derivatives of that coefficient vanish in the sense of distributions. Testing against a compactly supported base function times a nonconstant Fourier mode on $E=\mathbb C/(\mathbb Z+2\pi \mathrm{i}\mathbb Z)$ shows that every such mode vanishes. By density of trigonometric polynomials in $C(E)$, the coefficient is a base measure times the constant fiber area. Changes of bundle coordinates translate $w$ by a holomorphic function of the base and preserve that area. Thus $K=\pi ^*\tau $ for a positive measure $\tau $ on $\mathbb P^2$. 
+    <p>
+      Since $\alpha \wedge K=0$, (<a data-tag="B7D58309" href="../../tag/ABD574F21AEB/">8.39</a>) gives $\sigma =3\beta \wedge \pi ^*\tau =\mathcal L(6\tau )$. Therefore $\mu =6\tau =\pi _*\sigma $ is uniquely determined by $\sigma $, and it has mass $m$. In particular, every subsequential limit of $H_ j^2$ is the same, which proves convergence of the entire sequence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-13923C89">
+<p><a class="environment-identifier" href="../../tag/1C279783821E/">Lemma <span data-tag="13923C89">8.9.4</span>.</a><span data-gerby-tag="13923C89"></span> For every $p\in \mathbb P^2$, the measure $mh_ p$ is a shrinking defect for $(\omega ,6+m)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Start with smooth $f_ j=t_ ju_ j$ realizing the shrinking defect $(m/6)\omega ^3=\mathcal L(m\, \omega _{\mathrm{FS}}^2)$, and put $H_ j=\mathrm{dd}^{\mathrm{c}}f_ j+t_ j\omega $. By lemma <a data-tag="EAF329CC" href="../../tag/D04CA3BB7868/">8.9.3</a>, $H_ j^2\rightharpoonup (m/6)\alpha ^2$, while $H_ j$ has trace mass $O(t_ j)$. Fix $A\in GL(3,\mathbb C)$, regarded as an automorphism of $X$, and let $a$ be the induced projective transformation of $\mathbb P^2$. Choose $C_ A\geq 1$ with $A^*\omega \leq C_ A\omega $, and put 
+    
+<div class="equation">
+  \[  R_ A=C_ A\omega -A^*\omega \geq 0,\qquad H_ j^ A=\mathrm{dd}^{\mathrm{c}}(f_ j\circ A)+C_ At_ j\omega =A^*H_ j+t_ jR_ A.  \]
+</div>
+<p>
+       For this fixed $A$, the trace mass of $A^*H_ j$ is $O_ A(t_ j)$, and the positive difference $(H_ j^ A)^2-A^*(H_ j^2)$ has trace mass $O_ A(t_ j^2)$. Since $\alpha =\pi ^*\omega _{\mathrm{FS}}$, it follows that 
+    
+<div class="equation">
+  \[  (H_ j^ A)^2\rightharpoonup \frac m6\pi ^*(a^*\omega _{\mathrm{FS}}^2), \qquad 3\omega \wedge (H_ j^ A)^2\rightharpoonup \mathcal L(m a^*\omega _{\mathrm{FS}}^2).  \]
+</div>
+<p>
+       The limiting measure has mass $m$, so the integral identity of lemma <a data-tag="2482D927" href="../../tag/1E196E409754/">8.9.1</a>, applied with the parameter $C_ At_ j$, gives $d_ j^ A=M_\omega (f_ j\circ A)-6\to m$. For large $j$, multiply $f_ j\circ A$ by $\sqrt{m/d_ j^ A}\to 1$. The mass is then exactly $6+m$, and the weak limit is unchanged. The underlying normalized potential is $u_ j\circ A/C_ A\in \mathrm{PSH}(X,\omega )$, with parameter $C_ At_ j\sqrt{m/d_ j^ A}\to 0$. The total-variation estimate of lemma <a data-tag="2482D927" href="../../tag/1E196E409754/">8.9.1</a> therefore shows that $\mathcal L(m\, a^*\omega _{\mathrm{FS}}^2)$ is a shrinking defect; any prescribed bounds $\varepsilon _ j$ are met by passing to a sufficiently late subsequence. 
+    <p>
+      Now take $A_ l=\operatorname {diag}(R_ l^{-1},1,1)$, $R_ l\to +\infty $. Since 
+    
+<div class="equation">
+  \[  a_ l^*\omega _{\mathrm{FS}}^2=(a_ l^{-1})_*\omega _{\mathrm{FS}}^2,  \]
+</div>
+<p>
+       and $a_ l^{-1}[q_0:q_1:q_2]=[R_ lq_0:q_1:q_2]\to [1:0:0]$ outside the hyperplane $\{ q_0=0\} $, which has zero volume, dominated convergence gives $a_ l^*\omega _{\mathrm{FS}}^2\rightharpoonup \delta _{[1:0:0]}$. By weak continuity of $\mathcal L$, the shrinking defects $\mathcal L(m\, a_ l^*\omega _{\mathrm{FS}}^2)$ converge to $mh_{[1:0:0]}$. For each $l$, choose one corrected potential for $A_ l$, sufficiently late in its sequence that its parameter is less than $\varepsilon _ l$ and its measure differs from the corresponding limit by less than $1/l$ on the first $l$ functions of a fixed dense sequence of test functions. This diagonal sequence has the exact mass $6+m$ and the limit $\omega ^3+mh_{[1:0:0]}$. Unitary automorphisms move this fiber to any prescribed fiber. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-25FE67BD">
+<p><a class="environment-identifier" href="../../tag/7C4D0FB8D775/">Theorem <span data-tag="25FE67BD">8.9.5</span>.</a><span data-gerby-tag="25FE67BD"></span>  For $b&gt;6$, the shrinking defects for $(\omega ,b)$ are exactly $\mathcal L\mu $, where $\mu $ ranges over all positive measures on $\mathbb P^2$ of mass $b-6$. Each such defect has support $\pi ^{-1}(\operatorname {supp}\mu )$ and has no point atoms. It charges no pluripolar sets if and only if $\mu $ charges no pluripolar sets on $\mathbb P^2$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $m=b-6$. Necessity follows from lemma <a data-tag="EAF329CC" href="../../tag/D04CA3BB7868/">8.9.3</a>. Finite convex combinations of the measures $mh_ p$ are shrinking defects by lemma <a data-tag="13923C89" href="../../tag/1C279783821E/">8.9.4</a>, proposition <a data-tag="6A068BC0" href="../../tag/A71DAFFE572E/">8.9.2</a>, the latter applied to an atomic measure $\rho $ supported on unitary maps that move a fixed fiber to the desired fibers. Approximate an arbitrary base measure of mass $m$ by finite atomic measures of the same mass, using finite partitions of diameter tending to zero. Weak continuity of $\mathcal L$ and the diagonal choice on dense test functions used in the preceding proof give a realizing sequence for every prescribed sequence $\varepsilon _ j$. 
+    <p>
+      Every nonempty open subset of a fiber has positive Haar measure. Local trivializations therefore show that $\mathcal L\mu $ has support $\pi ^{-1}(\operatorname {supp}\mu )$, and the fiber measures have no point atoms. If $B$ is a pluripolar subset of the base, local plurisubharmonic functions whose pole sets contain $B$ pull back by the submersion to such functions on $X$. Hence $\pi ^{-1}(B)$ is pluripolar, and $\mathcal L\mu (\pi ^{-1}(B))=\mu (B)$; thus $\mathcal L\mu $ charges a pluripolar set whenever $\mu $ does. 
+    <p>
+      Conversely, suppose that $\mu $ charges no pluripolar subset of the base. Cover a pluripolar set in $X$ by countably many local product charts, each carrying a plurisubharmonic function $q(\xi ,w)\not\equiv -\infty $ whose pole set contains the part of the set in that chart. For a relatively compact disk $D$ in the fiber direction, the function 
+    
+<div class="equation">
+  \[  F(\xi )=\frac1{|D|}\int _ Dq(\xi ,w)\, \mathrm{d}A(w)  \]
+</div>
+<p>
+       is plurisubharmonic and not identically $-\infty $ on a smaller base chart. Indeed, local integrability of $q$ and Fubini's theorem show that $F$ is locally integrable, and in particular finite almost everywhere; a common upper bound and the reverse Fatou lemma give upper semicontinuity; and integrating the submean inequalities in the base directions gives the submean property. The restriction of $q$ to a fiber is either subharmonic with a pole set of zero area or identically $-\infty $. The fibers of the second kind lie over the pluripolar set $\{ F=-\infty \} $, which has zero $\mu $-measure. Integrating the Haar measures of the fibers against $\mu $ therefore shows that each local pole set has zero $\mathcal L\mu $-measure, and the countable cover proves the assertion for this pluripolar set. For arbitrary pluripolar subsets, the same argument applies to Borel pole sets containing them, with outer measure. Similarly, for the first implication, a Borel $\mathcal L\mu $-null set containing $\pi ^{-1}(B)$ has a measurable fiber-mass function equal to one on $B$, which gives the corresponding outer-measure statement. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+For every nonempty closed set $F\subseteq \mathbb P^2$, a measure $m\sum _{l\geq 1}2^{-l}\delta _{p_ l}$ carried by a countable dense subset $\{ p_ l\} $ of $F$ has support $F$. Thus every closed set of the form $\pi ^{-1}(F)$ is the support of a shrinking defect. The fibers themselves are pluripolar in a global sense: for the fiber over $[1:0:0]$, the function 
+</p>
+<div class="equation">
+  \[  \psi =\log \frac{|z_1|^2+|z_2|^2}{|z|^2},\qquad \mathrm{dd}^{\mathrm{c}}\psi \geq -\alpha ,\qquad \omega +\mathrm{dd}^{\mathrm{c}}\psi \geq \beta \geq 0.  \]
+</div>
+<p>
+ is $\omega $-plurisubharmonic, and its pole set is exactly that fiber; unitary maps give the other fibers. In particular, for $0\leq \lambda \leq 1$ and $p\in \mathbb P^2$, the measure 
+</p>
+<div class="equation">
+  \[  m\lambda h_ p+\frac{m(1-\lambda )}6\omega ^3  \]
+</div>
+<p>
+ is a shrinking defect. It gives mass $m\lambda $ to the pluripolar fiber $\pi ^{-1}(p)$, while every pluripolar set has mass at most $m\lambda $. For $0&lt;\lambda &lt;1$ its support is all of $X$, despite this positive mass on a pluripolar set. 
+</p>
+</div></section><section class="reading-chunk" id="entry-510437B8C8BB" data-section-entries="510437B8C8BB C1374FAD9C60 D98350F0404C"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/510437B8C8BB/">8.9.4 Changing the Hermitian metric</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="EFA514E6"></span></div>
+<p>
+For a general Hermitian form, the fiber Haar measures are replaced by the normalized area measures of the form. Let $\Omega $ be any Hermitian form on the Hopf threefold $X$. Its restriction to each elliptic fiber has positive area 
+</p>
+<div class="equation">
+  \[  A_\Omega (p)=\int _{\pi ^{-1}(p)}\Omega .  \]
+</div>
+<p>
+ These areas depend smoothly on $p$ and are bounded above and below by positive constants. Define the probability measures $h_ p^\Omega =\Omega |_{\pi ^{-1}(p)}/A_\Omega (p)$ on the fibers, and define the lift $\mathcal L_\Omega \mu $ of a finite positive measure $\mu $ on $\mathbb P^2$ by the formula defining $\mathcal L\mu $, with $h_ p^\Omega $ in place of $h_ p$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-56D45CF1">
+<p><a class="environment-identifier" href="../../tag/C1374FAD9C60/">Theorem <span data-tag="56D45CF1">8.9.6</span>.</a><span data-gerby-tag="56D45CF1"></span> For every Hermitian form $\Omega $ on $X$ and every $b&gt;V_\Omega $, the shrinking defects for $(\Omega ,b)$ are exactly </p>
+<div class="equation">
+  \[  \mathcal L_\Omega \mu ,\qquad \mu \geq 0,\qquad \mu (\mathbb P^2)=b-V_\Omega .  \]
+</div>
+<p> Their supports are $\pi ^{-1}(\operatorname {supp}\mu )$, they have no point atoms, and they charge no pluripolar sets exactly when $\mu $ charges no base pluripolar sets. Moreover, $v_+(\Omega )=+\infty $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $m=b-V_\Omega &gt;0$. For necessity, let $\sigma $ be a shrinking defect for $(\Omega ,b)$. Proposition <a data-tag="C412D265" href="../../tag/708664A6CF93/">7.5.3</a>, applied with $h=\Omega $, gives a positive closed limit $K$ of the squares of the intermediate forms with $\sigma =3\Omega \wedge K$, and $\alpha \wedge K=0$ as in the proof of lemma <a data-tag="EAF329CC" href="../../tag/D04CA3BB7868/">8.9.3</a>. The local coefficient and Fourier argument of that proof gives $K=\pi ^*\tau $ for a positive measure $\tau $ on $\mathbb P^2$. Consequently 
+    
+<div class="equation">
+  \[  \sigma =\mathcal L_\Omega \mu ,\qquad \mu =3A_\Omega \tau =\pi _*\sigma ,  \]
+</div>
+<p>
+       and $\mu $ has mass $m$. 
+    <p>
+      Conversely, fix such a $\mu $ and set $\tau =\mu /(3A_\Omega )$. By theorem <a data-tag="25FE67BD" href="../../tag/7C4D0FB8D775/">8.9.5</a>, choose a sequence $f_ j=t_ ju_ j$ realizing the shrinking defect $\mathcal L(6\tau )$ for $\omega $. The positive forms $H_ j=\mathrm{dd}^{\mathrm{c}}f_ j+t_ j\omega $ have trace mass $O(t_ j)$, and $H_ j^2\rightharpoonup \pi ^*\tau $ by lemma <a data-tag="EAF329CC" href="../../tag/D04CA3BB7868/">8.9.3</a>. Choose $C\geq 1$ with $\omega \leq C\Omega $, and put 
+    
+<div class="equation">
+  \[  R=C\Omega -\omega \geq 0,\qquad G_ j=\mathrm{dd}^{\mathrm{c}}f_ j+Ct_ j\Omega =H_ j+t_ jR\geq 0.  \]
+</div>
+<p>
+       The trace mass of $G_ j$ is $O(t_ j)$, and $G_ j^2-H_ j^2$ has trace mass $O(t_ j^2)$. Thus $G_ j^2\rightharpoonup \pi ^*\tau $ and $3\Omega \wedge G_ j^2\rightharpoonup \mathcal L_\Omega \mu $. 
+    <p>
+      Unlike $\omega $, the form $\Omega $ need not be Gauduchon, so the mass polynomial may have a linear term. Define 
+    
+<div class="equation">
+  \[  \ell _ j=3\int _ X\Omega ^2\wedge \mathrm{dd}^{\mathrm{c}}f_ j=O(t_ j),\qquad q_ j=3\int _ X\Omega \wedge (\mathrm{dd}^{\mathrm{c}}f_ j)^2\longrightarrow m.  \]
+</div>
+<p>
+       These estimates follow by expanding $\mathrm{dd}^{\mathrm{c}}f_ j=G_ j-Ct_ j\Omega $ and using the preceding trace bounds. Stokes' formula removes the cubic integral, so 
+    
+<div class="equation">
+  \[  M_\Omega (\lambda f_ j)=V_\Omega +\lambda \ell _ j+\lambda ^2q_ j.  \]
+</div>
+<p>
+       For large $j$, $q_ j&gt;0$. The positive root 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-8C1D8E62"><span data-gerby-tag="8C1D8E62"></span>
+<span class="equation-label"><a data-tag="8C1D8E62" href="../../tag/D98350F0404C/">8.41</a></span>
+<div>\begin{equation}  \lambda _ j=\frac{-\ell _ j+\sqrt{\ell _ j^2+4mq_ j}}{2q_ j} \longrightarrow 1 \end{equation}</div>
+</div>
+<p>
+       gives $M_\Omega (\lambda _ jf_ j)=b$. The normalized function $U_ j=u_ j/C$ is $\Omega $-plurisubharmonic, and $w_ j=\lambda _ j f_ j=r_ jU_ j$ with $r_ j=\lambda _ jCt_ j\to 0$. 
+    <p>
+      To identify the full weak limit, first note that expanding $G_ j=\mathrm{dd}^{\mathrm{c}}f_ j+Ct_ j\Omega $ gives 
+    
+<div class="equation">
+  \[  \int _ XG_ j^3=Ct_ jq_ j+(Ct_ j)^2\ell _ j+(Ct_ j)^3V_\Omega =O(t_ j).  \]
+</div>
+<p>
+       Hence $G_ j^3\to 0$ in total variation. The positive expansion 
+    
+<div class="equation">
+  \[  (\Omega +\mathrm{dd}^{\mathrm{c}}w_ j)^3 =(1-r_ j)^3\Omega ^3 +3(1-r_ j)^2\lambda _ j\Omega ^2\wedge G_ j +3(1-r_ j)\lambda _ j^2\Omega \wedge G_ j^2 +\lambda _ j^3G_ j^3  \]
+</div>
+<p>
+       converges weakly to $\Omega ^3+\mathcal L_\Omega \mu $, since the second and fourth terms tend to zero in total variation. Given prescribed bounds $\varepsilon _ j$, pass to a sufficiently late subsequence with $r_ j&lt;\varepsilon _ j$ at every index. This preserves the normalization, the exact mass and the weak limit. 
+    <p>
+      The fiber probabilities $h_ p^\Omega $ have smooth densities relative to $h_ p$ that are bounded above and below by positive constants, uniformly in $p$. Thus $\mathcal L_\Omega \mu $ and $\mathcal L\mu $ are bounded by fixed positive multiples of each other, and the assertions about support, point atoms and pluripolar sets follow from theorem <a data-tag="25FE67BD" href="../../tag/7C4D0FB8D775/">8.9.5</a>. The global functions with fiber poles also remain available: if $\Omega \geq c\omega $, then $c\psi \in \mathrm{PSH}(X,\Omega )$. 
+    <p>
+      Finally, for smooth $u\in \mathrm{PSH}(X,\omega )$ and $c&gt;0$ with $\Omega \geq c\omega $, 
+    
+<div class="equation">
+  \[  \Omega +\mathrm{dd}^{\mathrm{c}}(cu)\geq c(\omega +\mathrm{dd}^{\mathrm{c}}u),\qquad M_\Omega (cu)\geq c^3M_\omega (u).  \]
+</div>
+<p>
+       Since $v_+(\omega )=+\infty $ by corollary <a data-tag="FAD077D5" href="../../tag/09DD8DF2EF76/">8.7.2</a> and the supremum may be computed over smooth potentials (proposition <a data-tag="C8F0BC96" href="../../tag/45F622BE862A/">6.5.2</a>), it follows that $v_+(\Omega )=+\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../chapters/hopf-lck/"><span>← Previous</span><small>20 Hopf and locally conformally Kähler geometry</small></a><a class="pager-next" rel="next" href="../../tag/142249962360/"><span>Next →</span><small>8 Unbounded mass on Hopf manifolds</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-unbounded-mass-on-hopf-manifolds,
   author = {{Gerby contributors}},
   title = {20.1 Unbounded mass on Hopf manifolds},

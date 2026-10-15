@@ -1,8 +1,1403 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/restriction-and-intrinsic-trace-data/"><title>17.3 Restriction and intrinsic trace data · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/restriction-and-intrinsic-trace-data/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/restriction-and-intrinsic-trace-data/"><title>17.3 Restriction and intrinsic trace data · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/restriction-and-intrinsic-trace-data/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/divisors-restriction/">Chapter 17: B-divisors and restriction</a></li><li><a href="../../sections/restriction-and-intrinsic-trace-data/" aria-current="page">Section 17.3: Restriction and intrinsic trace data</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/the-theory-of-b-divisors/"><span>17.1</span> The theory of b-divisors</a></li><li><a href="../../sections/the-trace-operator/"><span>17.2</span> The trace operator</a></li><li><a href="../../sections/restriction-and-intrinsic-trace-data/" aria-current="page"><span>17.3</span> Restriction and intrinsic trace data</a></li><li><a href="../../sections/divisorial-currents-on-compact-modifications/"><span>17.4</span> Divisorial currents on compact modifications</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/restriction-and-intrinsic-trace-data/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/restriction-and-intrinsic-trace-data/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/C42AE95D23AF/"><span>← Previous</span><small>8.65 </small></a><a class="pager-next" rel="next" href="../../tag/E6AE4A881F9F/"><span>Next →</span><small>19 Restriction and intrinsic trace data</small></a></nav><h1>17.3 Restriction and intrinsic trace data</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/E6AE4A881F9F/">19 Restriction and intrinsic trace data</a><code class="tag-id">E6AE4A881F9F</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/65B836952506/">19.1 Restricted ideals and trace data</a><code class="tag-id">65B836952506</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/7CD874C73EC9/">Theorem 19.1.1</a><code class="tag-id">7CD874C73EC9</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/66AFB7F7397B/">19.1 </a><code class="tag-id">66AFB7F7397B</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/89D22AB4CBD8/">Proposition 19.1.2</a><code class="tag-id">89D22AB4CBD8</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/95B8C7040FB9/">19.2 Comparison with ordinary restriction</a><code class="tag-id">95B8C7040FB9</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/FE94B20EED19/">Proposition 19.2.1</a><code class="tag-id">FE94B20EED19</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/14C5248C16DA/">19.2.1 Logarithmic divisors with a small-curvature residual</a><code class="tag-id">14C5248C16DA</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/C4231F8A37FD/">Proposition 19.2.2</a><code class="tag-id">C4231F8A37FD</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/0A6FA0C6A351/">19.3 Realization on a compact curve</a><code class="tag-id">0A6FA0C6A351</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/879739B42EBB/">Theorem 19.3.1</a><code class="tag-id">879739B42EBB</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/29F47A0F8A5D/">19.2 </a><code class="tag-id">29F47A0F8A5D</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/57C6BC849EC1/">19.3 </a><code class="tag-id">57C6BC849EC1</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/B3BE3C08418A/">Proposition 19.3.2</a><code class="tag-id">B3BE3C08418A</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/E07C398EC98F/">19.4 The Poisson equation in the atomic trace type</a><code class="tag-id">E07C398EC98F</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/AFC6C3B6368C/">Theorem 19.4.1</a><code class="tag-id">AFC6C3B6368C</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/7EDE08C90FE8/">19.5 Singularity distance on a curve</a><code class="tag-id">7EDE08C90FE8</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/F8A7A320265A/">Proposition 19.5.1</a><code class="tag-id">F8A7A320265A</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D980BA19141E/">19.4 </a><code class="tag-id">D980BA19141E</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/FED68B5DF3EB/">19.5.1 Total variation of the atomic data</a><code class="tag-id">FED68B5DF3EB</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/A374F6B4426E/">Lemma 19.5.2</a><code class="tag-id">A374F6B4426E</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/2432A5A2AE14/">Theorem 19.5.3</a><code class="tag-id">2432A5A2AE14</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/D416A3AB0845/">Corollary 19.5.4</a><code class="tag-id">D416A3AB0845</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/53884234AA76/">19.6 The trace envelope</a><code class="tag-id">53884234AA76</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/787C2A9E0C8D/">Proposition 19.6.1</a><code class="tag-id">787C2A9E0C8D</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/AA3FC60BB1F2/">19.7 </a><code class="tag-id">AA3FC60BB1F2</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/9FDA3A326A26/">19.6.1 Limits of restricted analytic envelopes</a><code class="tag-id">9FDA3A326A26</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/5FE15106F340/">Theorem 19.6.2</a><code class="tag-id">5FE15106F340</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/5377E31C95CD/">19.10 </a><code class="tag-id">5377E31C95CD</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/DB975E954111/">19.6.2 Envelopes on modifications</a><code class="tag-id">DB975E954111</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/7EFA5C202804/">Theorem 19.6.3</a><code class="tag-id">7EFA5C202804</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/13DF98C40E87/">19.11 </a><code class="tag-id">13DF98C40E87</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/4C8D52A64B1A/">19.6.3 Exact realization on a Kähler submanifold</a><code class="tag-id">4C8D52A64B1A</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/D1551EE7322B/">Theorem 19.6.4</a><code class="tag-id">D1551EE7322B</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/A7CED8F92D7B/">19.6.4 Positive mass and prescribed equations</a><code class="tag-id">A7CED8F92D7B</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/5CC5BF99E84F/">Theorem 19.6.5</a><code class="tag-id">5CC5BF99E84F</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/C5512844A274/">Corollary 19.6.6</a><code class="tag-id">C5512844A274</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/3F27B145B165/">19.7 Exact traces over a curve</a><code class="tag-id">3F27B145B165</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D1F9CCD69DB1/">19.12 </a><code class="tag-id">D1F9CCD69DB1</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/A30F4066C584/">Theorem 19.7.1</a><code class="tag-id">A30F4066C584</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/34E4C9363222/">19.13 </a><code class="tag-id">34E4C9363222</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/06493A31E440/">19.8 Exact traces on Hopf manifolds</a><code class="tag-id">06493A31E440</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/974BDFDF0550/">19.14 </a><code class="tag-id">974BDFDF0550</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/A7CD7872B787/">19.8.1 Divisors under a dominant map</a><code class="tag-id">A7CD7872B787</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/C53A2B3087AB/">Lemma 19.8.1</a><code class="tag-id">C53A2B3087AB</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/09D69C0F18B7/">19.15 </a><code class="tag-id">09D69C0F18B7</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/286FEC8F6AC1/">19.8.2 The full trace envelope</a><code class="tag-id">286FEC8F6AC1</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/1D55891047AA/">19.16 </a><code class="tag-id">1D55891047AA</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/63EC1D93ABC1/">Theorem 19.8.2</a><code class="tag-id">63EC1D93ABC1</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/E6C82B883427/">19.17 </a><code class="tag-id">E6C82B883427</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/3B4C37A0F595/">19.18 </a><code class="tag-id">3B4C37A0F595</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/8065AC6F9F0F/">19.8.3 Mass and the ideal class</a><code class="tag-id">8065AC6F9F0F</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/13817C91E7B4/">Proposition 19.8.3</a><code class="tag-id">13817C91E7B4</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/B5F41C0BB745/">19.19 </a><code class="tag-id">B5F41C0BB745</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">example</span><a href="../../tag/D8423B168573/">Example 19.8.4</a><code class="tag-id">D8423B168573</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">corollary</span><a href="../../tag/313F5BBD3487/">Corollary 19.8.5</a><code class="tag-id">313F5BBD3487</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/F128B6972881/">19.8.4 Decreasing analytic models</a><code class="tag-id">F128B6972881</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/B0E6CF965FAB/">Proposition 19.8.6</a><code class="tag-id">B0E6CF965FAB</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/291ACA57C265/">19.9 Product realizations and their measures</a><code class="tag-id">291ACA57C265</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/AA3908FEC2B4/">Proposition 19.9.1</a><code class="tag-id">AA3908FEC2B4</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/D8F334251727/">19.20 </a><code class="tag-id">D8F334251727</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/BB2C048CAB3B/">19.21 </a><code class="tag-id">BB2C048CAB3B</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/65113AF2CE2F/">Proposition 19.9.2</a><code class="tag-id">65113AF2CE2F</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/070063ADB7C2/">19.10 Ordinary trace volumes on a nonclosed ruled surface</a><code class="tag-id">070063ADB7C2</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/691AF485D1C2/">19.22 </a><code class="tag-id">691AF485D1C2</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">lemma</span><a href="../../tag/72230836D2EE/">Lemma 19.10.1</a><code class="tag-id">72230836D2EE</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/9EDE5892D63B/">Theorem 19.10.2</a><code class="tag-id">9EDE5892D63B</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/EEBF58093B80/">19.25 </a><code class="tag-id">EEBF58093B80</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/9099C8F4472B/">19.26 </a><code class="tag-id">9099C8F4472B</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/F060F71204CB/">19.27 </a><code class="tag-id">F060F71204CB</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/4746F2B8424A/">19.10.1 Ambient ideal orders and ordinary type</a><code class="tag-id">4746F2B8424A</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/C33DAF9C7870/">Proposition 19.10.3</a><code class="tag-id">C33DAF9C7870</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">subsection</span><a href="../../tag/D36C5D62DF35/">19.10.2 Pullback and strict representatives</a><code class="tag-id">D36C5D62DF35</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/55D866148BAF/">Proposition 19.10.4</a><code class="tag-id">55D866148BAF</code><span class="entry-topic">Restriction and intrinsic trace data</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/E91643D06F3E/">Proposition 19.10.5</a><code class="tag-id">E91643D06F3E</code><span class="entry-topic">Restriction and intrinsic trace data</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/C42AE95D23AF/"><span>← Previous</span><small>8.65 </small></a><a class="pager-next" rel="next" href="../../tag/E6AE4A881F9F/"><span>Next →</span><small>19 Restriction and intrinsic trace data</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/C42AE95D23AF/"><span>← Previous</span><small>8.65 </small></a><a class="pager-next" rel="next" href="../../tag/E6AE4A881F9F/"><span>Next →</span><small>19 Restriction and intrinsic trace data</small></a></nav><h1>17.3 Restriction and intrinsic trace data</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-E6AE4A881F9F" data-section-entries="E6AE4A881F9F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/E6AE4A881F9F/">19 Restriction and intrinsic trace data</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="0BB6BD4A"></span></div>
+<p>
+Let $X$ be a connected compact complex manifold, let $Y\subset X$ be a connected compact complex submanifold of positive dimension, and fix a quasi-plurisubharmonic function $u\in \mathrm{QPSH}(X)$ whose generic Lelong number along $Y$ vanishes: $\nu (u,Y)=\inf _{y\in Y}\nu (u,y)=0$. 
+</p>
+<p>
+Even when all multiplier ideals of $u$ are trivial, its restriction to $Y$ can have logarithmic poles. To keep only information determined by the multiplier ideals of $u$ on $X$, we restrict the ideals themselves and take their asymptotic vanishing orders on modifications of $Y$. These orders form the divisorial trace data. Subadditivity of multiplier ideals and analytic approximation make the trace data additive under sums of potentials. 
+</p>
+<p>
+The next question is whether a potential on $Y$ realizes these numbers. On a curve, they form an atomic measure, whose Green potential has exactly the prescribed Lelong numbers. In higher dimension, restricted analytic envelopes converge to the largest potential satisfying the trace inequalities, but Lelong semicontinuity gives only a lower bound for its divisorial Lelong numbers. When $Y$ is Kähler, convergence in a sufficiently large closed background gives the reverse bound. Pullback from a curve gives another exact realization on non-Kähler targets. On a scalar Hopf manifold, elliptic symmetry and extraction of divisors on its projective base extend this construction to projective pullback data of arbitrary dimension. The product examples show that exact trace data still does not determine the Monge–Ampère mass. The final ruled family computes both mass extremes within one unbounded ordinary type, and a blowup separates positivity of its lower volume from existence of a strict current in that type. 
+</p>
+<p>
+Choose a smooth real $(1,1)$-form $\theta $ with $u\in \mathrm{PSH}(X,\theta )$ and a Hermitian form $\omega $ on $X$. We use the analytic approximants $u_ m$ of corollary <a data-tag="57629892" href="../../tag/8F2184BBF4C4/">1.15.2</a>: they have analytic type $(1/m,\mathcal I(mu))$ in the sense of section <a data-tag="BB3C41D4" href="../../tag/0D77FC17B23B/">1.13</a> and satisfy $\theta +\mathrm{dd}^{\mathrm{c}}u_ m\geq -\epsilon _ m\omega $ with $\epsilon _ m\downarrow 0$. By corollary <a data-tag="FD02E5E8" href="../../tag/50D99B4B0660/">1.22.18</a>, their restrictions to $Y$ are quasi-plurisubharmonic, in particular not identically $-\infty $. As in chapter <a data-tag="2AA407AC" href="../../tag/B724B74AE68C/">6</a>, $\mathrm{MA}^{\mathrm{ext}}$ denotes the extended non-pluripolar Monge–Ampère measure, also written $\mathrm{MA}$ when its total mass is finite. 
+</p>
+</div></section><section class="reading-chunk" id="entry-65B836952506" data-section-entries="65B836952506 66AFB7F7397B 7CD874C73EC9 89D22AB4CBD8"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/65B836952506/">19.1 Restricted ideals and trace data</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="F3E30196"></span></div>
+<p>
+The restriction of a multiplier ideal to $Y$ records the vanishing of its local generators along $Y$. Its vanishing order along a divisor on a modification of $Y$ can grow with the weight, even when the ideal is generically trivial on $Y$. 
+</p>
+<p>
+For $t&gt;0$ put 
+</p>
+<div class="equation">
+  \[  \mathfrak a_ t(u;Y)=\mathcal I(tu)\mathcal O_ Y.  \]
+</div>
+<p>
+ Here $\mathcal I(tu)\mathcal O_ Y$ denotes the image of $\mathcal I(tu)$ under the restriction map $\mathcal O_ X\to \mathcal O_ Y$. This is a coherent ideal sheaf on $Y$, and it is nonzero: since $\nu (u,Y)=0$, there is $y\in Y$ with $\nu (u,y)&lt;1/t$, and Skoda's integrability theorem gives $\mathcal I(tu)_ y=\mathcal O_{X,y}$. 
+</p>
+<p>
+In this chapter, a <em>divisor over $Y$</em> is a prime divisor $E$ on a connected smooth compact modification $\pi :Z\to Y$. For a nonzero coherent ideal $\mathfrak a$ on $Y$, let $\operatorname {ord}_ E(\mathfrak a)$ be the generic vanishing order along $E$ of the ideal generated by its pullback to $Z$; it is a nonnegative integer. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-BF417B5C">
+<p><a class="environment-identifier" href="../../tag/7CD874C73EC9/">Theorem <span data-tag="BF417B5C">19.1.1</span>.</a><span data-gerby-tag="BF417B5C"></span> For every divisor $E$ over $Y$, the limit </p>
+<div class="equation" id="non-kahler-pluripotential-theory-2D477734"><span data-gerby-tag="2D477734"></span>
+<span class="equation-label"><a data-tag="2D477734" href="../../tag/66AFB7F7397B/">19.1</a></span>
+<div>\begin{equation}  \tau _{Y,u}(E) :=\lim _{t\to \infty }\frac{\operatorname {ord}_ E\mathfrak a_ t(u;Y)}{t} =\sup _{t&gt;0}\frac{\operatorname {ord}_ E\mathfrak a_ t(u;Y)}{t} \end{equation}</div>
+</div>
+<p> exists and is finite, and it equals the limit along positive integers. These numbers depend only on the multiplier-ideal equivalence class of $u$ on $X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix the modification $\pi :Z\to Y$ carrying $E$, and write $b(t)=\operatorname {ord}_ E\mathfrak a_ t(u;Y)$ for $t&gt;0$. For $s,t&gt;0$, the subadditivity of multiplier ideals (the second inclusion in (<a data-tag="E69A666B" href="../../tag/582A3343A949/">1.41</a>)), followed by restriction to $Y$, gives 
+    
+<div class="equation">
+  \[  \mathfrak a_{s+t}\subseteq \mathfrak a_ s\mathfrak a_ t, \qquad b(s+t)\geq b(s)+b(t).  \]
+</div>
+<p>
+       Moreover, $b(t)\geq 0$. For fixed $s&gt;0$ and $t=ks+r$ with $k$ a nonnegative integer and $0\leq r&lt;s$, repeated superadditivity gives $b(t)\geq k b(s)$. Hence 
+    
+<div class="equation">
+  \[  \liminf _{t\to \infty }\frac{b(t)}t\geq \frac{b(s)}s.  \]
+</div>
+<p>
+       Taking the supremum over $s$ proves the existence of the limit and the supremum formula, with the value $+\infty $ allowed at this stage. In particular, the limit along positive integers is the same. 
+    <p>
+      For every sufficiently large integer $m$, the restriction $u_ m|_ Y$ has analytic type $(1/m,\mathfrak a_ m(u;Y))$ by section <a data-tag="BB3C41D4" href="../../tag/0D77FC17B23B/">1.13</a>, and therefore 
+    
+<div class="equation">
+  \[  \frac{b(m)}m =\nu \bigl ((u_ m|_ Y)\circ \pi ,E\bigr ).  \]
+</div>
+<p>
+       These numbers are uniformly bounded by corollary <a data-tag="FD02E5E8" href="../../tag/50D99B4B0660/">1.22.18</a>, so the limit along integers, and hence the supremum, is finite. Finally, the ideals $\mathfrak a_ t(u;Y)$ are unchanged when $u$ is replaced by a potential with the same multiplier ideals, which proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+We call the function $E\mapsto \tau _{Y,u}(E)$, defined on all divisors over $Y$, the <em>divisorial trace data</em> of $u$ along $Y$. 
+</p>
+<p>
+Inclusions of ideals give monotonicity and homogeneity of the trace data directly. For sums, subadditivity of multiplier ideals gives one inequality; for the reverse inequality, an analytic approximant of the sum controls sufficiently fine approximants of both summands. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-2FF1D678">
+<p><a class="environment-identifier" href="../../tag/89D22AB4CBD8/">Proposition <span data-tag="2FF1D678">19.1.2</span>.</a><span data-gerby-tag="2FF1D678"></span> Let $v\in \mathrm{QPSH}(X)$ also have zero generic Lelong number along $Y$, and recall that $u\preceq _{\mathcal I}v$ means $\mathcal I(ku)\subseteq \mathcal I(kv)$ for every real $k&gt;0$ (section <a data-tag="6855E01F" href="../../tag/9A10411F1BCD/">1.12</a>). Then, as functions on divisors over $Y$, </p>
+<ol>
+<li><p>
+$u\preceq _{\mathcal I}v$ implies $\tau _{Y,u}\geq \tau _{Y,v}$; 
+</p>
+</li><li><p>
+$\tau _{Y,au}=a\tau _{Y,u}$ for every $a&gt;0$; 
+</p>
+</li><li><p>
+$\tau _{Y,u+v}=\tau _{Y,u}+\tau _{Y,v}$; 
+</p>
+</li><li><p>
+$\tau _{Y,\max (u,v)}\leq \min \{ \tau _{Y,u},\tau _{Y,v}\} $. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The inclusions of ideals defining $\preceq _{\mathcal I}$ persist after restriction and reverse the vanishing orders, which proves (1). Replacing $t$ by $at$ in (<a data-tag="2D477734" href="../../tag/66AFB7F7397B/">19.1</a>) proves (2). Moreover, 
+    
+<div class="equation">
+  \[  \mathcal I(tu)+\mathcal I(tv)\subseteq \mathcal I(t\max (u,v)).  \]
+</div>
+<p>
+       Since the order of a sum of ideals is the minimum of their orders, restriction and passage to the limit prove (4); note that $\max (u,v)$ also has zero generic Lelong number along $Y$. Generic Lelong numbers of sums add, so $u+v$ has zero generic Lelong number along $Y$ as well. 
+    <p>
+      For (3), subadditivity of multiplier ideals gives $\tau _{Y,u+v}\geq \tau _{Y,u}+\tau _{Y,v}$. For the reverse inequality, fix a sufficiently large integer $k$ and the analytic approximant $S_ k$ of $u+v$ given by theorem <a data-tag="29F36148" href="../../tag/3CA98F11CC5B/">1.15.1</a>, of analytic type $(1/k,\mathcal I(k(u+v)))$; that theorem gives $u+v\leq S_ k$. Let $U_ m,V_ m$ be the corresponding approximants of $u$ and $v$. Lemma <a data-tag="B101C4D0" href="../../tag/3CF548646A75/">1.17.11</a> gives 
+    
+<div class="equation">
+  \[  U_ m+V_ m\leq (1-\delta _ m)S_ k+O(1),\qquad \delta _ m\downarrow 0.  \]
+</div>
+<p>
+       Here both $\delta _ m$ and the bounded error may depend on the fixed $k$. The restrictions of $U_ m$, $V_ m$ and $S_ k$ to $Y$ are not identically $-\infty $ by corollary <a data-tag="FD02E5E8" href="../../tag/50D99B4B0660/">1.22.18</a>. Restricting, pulling back to a fixed modification and taking the generic Lelong number along a divisor $E$ on it, we obtain 
+    
+<div class="equation">
+  \[  \frac{\operatorname {ord}_ E\mathfrak a_ m(u;Y)}m +\frac{\operatorname {ord}_ E\mathfrak a_ m(v;Y)}m \geq (1-\delta _ m) \frac{\operatorname {ord}_ E\mathfrak a_ k(u+v;Y)}k.  \]
+</div>
+<p>
+       Letting first $m\to \infty $, with $k$ fixed, and then $k\to \infty $, the finite limits of theorem <a data-tag="BF417B5C" href="../../tag/7CD874C73EC9/">19.1.1</a> give the reverse inequality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-95B8C7040FB9" data-section-entries="95B8C7040FB9 FE94B20EED19"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/95B8C7040FB9/">19.2 Comparison with ordinary restriction</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="949851E1"></span></div>
+<p>
+When the restriction $u|_ Y$ is not identically $-\infty $, the restriction theorem for multiplier ideals bounds the trace data by its divisorial Lelong numbers. For analytic singularities, comparison with the approximants gives the reverse inequality. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-04472093">
+<p><a class="environment-identifier" href="../../tag/FE94B20EED19/">Proposition <span data-tag="04472093">19.2.1</span>.</a><span data-gerby-tag="04472093"></span> If $v=u|_ Y$ is not identically $-\infty $, then </p>
+<div class="equation">
+  \[  \tau _{Y,u}(E)\leq \nu (v\circ \pi ,E)  \]
+</div>
+<p> for every divisor $E$ over $Y$. If $u$ has analytic singularities, equality holds. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The restriction theorem, which is the first inclusion in (<a data-tag="E69A666B" href="../../tag/582A3343A949/">1.41</a>), and lemma <a data-tag="43758780" href="../../tag/1525C5219E69/">1.17.8</a>, applied on $Y$, give for every $t&gt;0$ 
+    
+<div class="equation">
+  \[  \operatorname {ord}_ E\mathfrak a_ t(u;Y) \leq \operatorname {ord}_ E\mathcal I(tv) \leq t\nu (v\circ \pi ,E).  \]
+</div>
+<p>
+       Divide by $t$ and use theorem <a data-tag="BF417B5C" href="../../tag/7CD874C73EC9/">19.1.1</a>. 
+    <p>
+      If $u$ has analytic singularities, apply lemma <a data-tag="B101C4D0" href="../../tag/3CF548646A75/">1.17.11</a> to the pair $(u,0)$, with $s=u$, $U_ m=u_ m$ and $V_ m=0$. It gives 
+    
+<div class="equation">
+  \[  u_ m\leq (1-\delta _ m)u+O(1),\qquad \delta _ m\downarrow 0.  \]
+</div>
+<p>
+       Restricting to $Y$, pulling back by $\pi $ and taking the generic Lelong number along $E$, we obtain, since $u_ m$ has analytic type $(1/m,\mathcal I(mu))$, 
+    
+<div class="equation">
+  \[  \frac1m\operatorname {ord}_ E\mathfrak a_ m(u;Y) \geq (1-\delta _ m)\nu ((u|_ Y)\circ \pi ,E).  \]
+</div>
+<p>
+       Letting $m\to \infty $ proves the reverse inequality, hence equality. All the restrictions involved are quasi-plurisubharmonic, because $\nu (u,Y)=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The inequality can be strict, as the following local example shows. On a small bidisk in $\mathbb C^2$ with coordinates $(z,w)$, write 
+</p>
+<div class="equation">
+  \[  u(z,w)=\max \{ -\log (-\log |z|^2),\  \log |w|^2\} , \qquad Y=\{ z=0\} .  \]
+</div>
+<p>
+ The bidisk is chosen with $|z|&lt;\mathrm{e}^{-1}$, and the first function is extended by $-\infty $ along $z=0$. It is plurisubharmonic, since $s\mapsto -\log (-s)$ is increasing and convex for $s&lt;0$, and hence so is the maximum. For every $t&gt;0$, 
+</p>
+<div class="equation">
+  \[  \mathrm{e}^{-tu}\leq (-\log |z|^2)^ t,  \]
+</div>
+<p>
+ which is locally integrable. Thus all multiplier ideals of $u$ are trivial and the trace data vanishes, whereas $u|_ Y=\log |w|^2$ has Lelong number one at the origin. This example is taken from <span class="cite">[<span class="postnote">Example 8.1.2</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-14C5248C16DA" data-section-entries="14C5248C16DA C4231F8A37FD"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/14C5248C16DA/">19.2.1 Logarithmic divisors with a small-curvature residual</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="91CC8AC3"></span></div>
+<p>
+An ambient residual can be invisible to every multiplier ideal even when its restriction to $Y$ is identically $-\infty $. The restricted ideals then recover the imposed logarithmic divisor directly. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-F185905D">
+<p><a class="environment-identifier" href="../../tag/C4231F8A37FD/">Proposition <span data-tag="F185905D">19.2.2</span>.</a><span data-gerby-tag="F185905D"></span> Let $q\in \mathrm{QPSH}(X)$ satisfy (<a data-tag="7EF9FD2F" href="../../tag/4A552AB10BA9/">16.55</a>), and let $\Delta $ and $\sigma _\Delta $ be as in theorem <a data-tag="E6C58118" href="../../tag/0E6CABEB995A/">16.7.3</a>. For every $t&gt;0$, </p>
+<div class="equation">
+  \[  \mathcal I\bigl (t(\sigma _\Delta +q)\bigr ) =\mathcal I(t\sigma _\Delta ).  \]
+</div>
+<p> If $\Delta $ has simple normal crossings and $Y$ is contained in none of its positive-coefficient components, then for every divisor $E$ on every smooth connected compact modification $\rho :Z\to Y$, </p>
+<div class="equation">
+  \[  \tau _{Y,\sigma _\Delta +q}(E) =\sum _ ja_ j\operatorname {ord}_ E\rho ^*(D_ j|_ Y).  \]
+</div>
+<p> The formula imposes no condition on the naive restriction $q|_ Y$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first equality follows from lemma <a data-tag="23EAD3EF" href="../../tag/96F4F5465740/">16.7.1</a>, lemma <a data-tag="B63D3914" href="../../tag/5929CFA4B87F/">1.16.5</a>. In normal crossing coordinates, the weight for $t\sigma _\Delta $ is a smooth positive factor times $\prod _ j|z_ j|^{-2ta_ j}$. One-variable polar integration gives the exact formula 
+    
+<div class="equation">
+  \[  \mathcal I(t\sigma _\Delta ) =\mathcal O_ X\left(-\sum _ j\lfloor ta_ j\rfloor D_ j\right).  \]
+</div>
+<p>
+       Indeed, integrability of a germ of transverse order $k$ requires $k+1&gt;ta_ j$, so $k\geq \lfloor ta_ j\rfloor $; equality at the preceding order is divergent when $ta_ j$ is an integer. Necessity follows on an open set of the other variables where the leading coefficient is nonzero. After division by these powers, the remaining product weight is integrable, proving sufficiency. 
+    <p>
+      Since $Y$ is contained in no $D_ j$, each restricted defining equation is a nonzero holomorphic germ on $Y$. Its pullback to $Z$ is nonzero and has a finite nonnegative order $N_{j,E}$ along $E$. Restriction of the displayed principal ideal and then pullback therefore give the exact order $\sum _ j\lfloor ta_ j\rfloor N_{j,E}$. Dividing by $t$ proves the trace formula, including along all real weights. Moreover $\nu (\sigma _\Delta +q,Y)=0$: outside the finitely many divisors both summands have zero point Lelong number. Thus these orders are the intrinsic data of theorem <a data-tag="BF417B5C" href="../../tag/7CD874C73EC9/">19.1.1</a>. When $\Delta =0$, the ideal is $\mathcal O_ X$ and every trace is zero. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-0A6FA0C6A351" data-section-entries="0A6FA0C6A351 29F47A0F8A5D 57C6BC849EC1 879739B42EBB B3BE3C08418A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/0A6FA0C6A351/">19.3 Realization on a compact curve</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="A0609F50"></span></div>
+<p>
+We return to the compact setting, and until section <a data-tag="1B0982A7" href="../../tag/53884234AA76/">19.6</a> we assume that $Y$ is a curve. Since every modification of a compact smooth curve is an isomorphism, the divisors over $Y$ are its points, and the trace data prescribes an atomic curvature measure. Stokes' theorem bounds its total mass by the degree of the background on $Y$, and filling the remaining mass with a smooth measure gives a positive current whose potential realizes the data. 
+</p>
+<p>
+Set 
+</p>
+<div class="equation">
+  \[  D_ u=\sum _{p\in Y}\tau _{Y,u}(p)\, \delta _ p,  \]
+</div>
+<p>
+ where the sum is understood as the supremum of its finite subsums. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-C5D10418">
+<p><a class="environment-identifier" href="../../tag/879739B42EBB/">Theorem <span data-tag="C5D10418">19.3.1</span>.</a><span data-gerby-tag="C5D10418"></span> Put $M=\int _ Y\theta |_ Y$. Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-A72E940D"><span data-gerby-tag="A72E940D"></span>
+<span class="equation-label"><a data-tag="A72E940D" href="../../tag/29F47A0F8A5D/">19.2</a></span>
+<div>\begin{equation}  0\leq D_ u(Y)\leq M. \end{equation}</div>
+</div>
+<p> The finite atomic measure $D_ u$ determines a canonical ordinary singularity type of quasi-plurisubharmonic functions on $Y$: for every smooth positive form $\eta $ on $Y$ with $\int _ Y\eta =1$, this type has a representative $v\in \mathrm{PSH}(Y,\theta |_ Y)$ with </p>
+<div class="equation" id="non-kahler-pluripotential-theory-1A0E7E1A"><span data-gerby-tag="1A0E7E1A"></span>
+<span class="equation-label"><a data-tag="1A0E7E1A" href="../../tag/57C6BC849EC1/">19.3</a></span>
+<div>\begin{equation}  \theta |_ Y+\mathrm{dd}^{\mathrm{c}}v=D_ u+(M-D_ u(Y))\eta . \end{equation}</div>
+</div>
+<p> The extended Monge–Ampère measure of $v$ is $(M-D_ u(Y))\eta $. The ordinary type does not depend on $\eta $, on the choice of the smooth form $\theta $ with $u\in \mathrm{PSH}(X,\theta )$, or on the choice of $u$ within its multiplier-ideal class. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For integer $m$ let 
+    
+<div class="equation">
+  \[  D_ m=\frac1m\sum _{p\in Y} \operatorname {ord}_ p\mathfrak a_ m(u;Y)\, \delta _ p.  \]
+</div>
+<p>
+       A nonzero coherent ideal on a compact smooth curve has finitely many zeros, so this sum is finite. Since $u_ m|_ Y$ has analytic type $(1/m,\mathfrak a_ m(u;Y))$, the measure $D_ m$ is the atomic part of the positive current $(\theta +\epsilon _ m\omega )|_ Y+\mathrm{dd}^{\mathrm{c}}(u_ m|_ Y)$, and Stokes' theorem on the curve gives 
+    
+<div class="equation">
+  \[  D_ m(Y)\leq M+\epsilon _ m\int _ Y\omega |_ Y.  \]
+</div>
+<p>
+       For any finite subset of $Y$, passing to the limit in the sum of the corresponding coefficients by theorem <a data-tag="BF417B5C" href="../../tag/7CD874C73EC9/">19.1.1</a>, and then taking the supremum over finite subsets, gives (<a data-tag="A72E940D" href="../../tag/29F47A0F8A5D/">19.2</a>). In particular, the positive coefficients have at most countable support and define a finite measure. Write $d=D_ u(Y)$. 
+    <p>
+      Choose a Green kernel $G$ for $\mathrm{dd}^{\mathrm{c}}$ on the curve, normalized so that 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}_ xG(x,p)=\delta _ p-\eta ,\qquad G(x,p)\leq 0.  \]
+</div>
+<p>
+       Such a kernel exists: the Green kernel of the scalar Laplacian on the compact Riemann surface has, in a local coordinate $z$, the singularity $\log |z(x)-z(p)|^2$, it is uniformly bounded above, and $\sup _ p\int _ Y|G(x,p)|\eta (x)&lt;\infty $; subtracting a constant gives the sign condition. By Fubini's theorem, 
+    
+<div class="equation">
+  \[  w(x)=\int _ YG(x,p)\, \mathrm{d}D_ u(p)  \]
+</div>
+<p>
+       is integrable, and it is quasi-subharmonic with $\mathrm{dd}^{\mathrm{c}}w=D_ u-d\, \eta $. Its Lelong number at every point $p$ is the mass of $D_ u$ at $p$, namely $\tau _{Y,u}(p)$. 
+    <p>
+      Since $M\eta -\theta |_ Y$ is smooth with integral zero, the Poisson equation gives a smooth $s$ with $\mathrm{dd}^{\mathrm{c}}s=M\eta -\theta |_ Y$. Then $v=w+s$ satisfies (<a data-tag="1A0E7E1A" href="../../tag/57C6BC849EC1/">19.3</a>), and the right-hand side is positive because $M\geq d$. At every atom of $D_ u$, the positive Lelong number forces $v=-\infty $. The extended measure of $v$ is the restriction of the current in (<a data-tag="1A0E7E1A" href="../../tag/57C6BC849EC1/">19.3</a>) to the set where $v&gt;-\infty $; this set contains no atom of $D_ u$, and its complement is polar and therefore not charged by $\eta $. Hence the extended measure is $(M-d)\eta $. 
+    <p>
+      If another smooth form $\eta $ or another smooth background $\theta $ is used, the two constructed representatives have the same atomic curvature, and all other terms in their equations are smooth. Their difference therefore has smooth $\mathrm{dd}^{\mathrm{c}}$, so it is smooth by elliptic regularity, and in particular bounded. This proves independence of these choices at the level of ordinary types. Independence of the choice of $u$ within its multiplier-ideal class holds because the numbers defining $D_ u$ depend only on that class. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+We denote this ordinary type by $\operatorname {Tr}^{\mathrm{at}}_ Y(u)$ and call it the <em>atomic trace</em> of $u$ on the curve $Y$; the same symbol also denotes any of its representatives. All potentials on a curve with these Lelong numbers have the same multiplier ideals, but they need not have the same ordinary type; the construction selects the type whose curvature, apart from the atoms, is a smooth measure. Additivity of the trace data (theorem <a data-tag="2FF1D678" href="../../tag/89D22AB4CBD8/">19.1.2</a>) and linearity of the Green operator give 
+</p>
+<div class="equation">
+  \[  \operatorname {Tr}^{\mathrm{at}}_ Y(u+v) \sim \operatorname {Tr}^{\mathrm{at}}_ Y(u)+\operatorname {Tr}^{\mathrm{at}}_ Y(v), \qquad \operatorname {Tr}^{\mathrm{at}}_ Y(au)\sim a\operatorname {Tr}^{\mathrm{at}}_ Y(u) \quad (a&gt;0).  \]
+</div>
+<p>
+ Here $v\in \mathrm{QPSH}(X)$ is any function that also has zero generic Lelong number along $Y$. 
+</p>
+<p>
+Keep $D_ m$, $G$ and $w$ from the proof, and put $w_ m=\int _ YG(\cdot ,p)\, \mathrm{d}D_ m(p)$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-EEA361EC">
+<p><a class="environment-identifier" href="../../tag/B3BE3C08418A/">Proposition <span data-tag="EEA361EC">19.3.2</span>.</a><span data-gerby-tag="EEA361EC"></span> The measures $D_ m$ satisfy $D_ m\leq D_ u$ and converge to $D_ u$ in total variation, and they increase along dyadic indices. For a fixed nonpositive Green kernel, the potentials $w_{2^ j}$ decrease to $w$, and $w_ m\to w$ in $L^1(Y)$. Each $w_ m$ has the ordinary singularity type of $u_ m|_ Y$. </p>
+<p>If the restriction $u|_ Y$ is not identically $-\infty $, it is at least as singular as the atomic trace: </p>
+<div class="equation">
+  \[  u|_ Y\preceq \operatorname {Tr}^{\mathrm{at}}_ Y(u).  \]
+</div>
+<p> If $u$ has analytic singularities, the two are ordinarily equivalent. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The supremum formula in (<a data-tag="2D477734" href="../../tag/66AFB7F7397B/">19.1</a>) gives $D_ m\leq D_ u$ coefficient by coefficient. Since the coefficients converge and are dominated by those of the finite measure $D_ u$, dominated convergence gives $D_ m(Y)\to D_ u(Y)$, and hence convergence in total variation. Superadditivity with $s=t=m$ gives $D_{2m}\geq D_ m$, and since $G\leq 0$ the potentials $w_{2^ j}$ decrease. Monotone convergence for $-G$ identifies their pointwise limit with $w$, including at poles. The uniform $L^1$ bound for the kernel also gives 
+    
+<div class="equation">
+  \[  \| w_ m-w\| _{L^1(\eta )} \leq C\| D_ m-D_ u\| _{\mathrm{TV}}\longrightarrow 0.  \]
+</div>
+<p>
+       Each $D_ m$ is finitely supported, and locally both $w_ m$ and $u_ m|_ Y$ are the sum of the logarithmic singularities prescribed by $D_ m$ and a bounded function. Thus their ordinary types agree. 
+    <p>
+      If $a=u|_ Y$ is not identically $-\infty $, proposition <a data-tag="04472093" href="../../tag/FE94B20EED19/">19.2.1</a> gives $\nu (a,p)\geq \tau _{Y,u}(p)$ at every point. Since $\mathrm{dd}^{\mathrm{c}}w=D_ u-D_ u(Y)\eta $, lemma <a data-tag="F5990C9E" href="../../tag/65C35F77CB06/">1.17.4</a> implies $a\preceq w$. If $u$ has analytic singularities, proposition <a data-tag="04472093" href="../../tag/FE94B20EED19/">19.2.1</a> identifies the finitely many logarithmic coefficients of $u|_ Y$ with those of $D_ u$, and the bounded local remainders give ordinary equivalence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-E07C398EC98F" data-section-entries="AFC6C3B6368C E07C398EC98F"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/E07C398EC98F/">19.4 The Poisson equation in the atomic trace type</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="DFBA3531"></span></div>
+<p>
+Write $d=D_ u(Y)$, and let $w$ be the Green representative above. For every $\theta |_ Y$-plurisubharmonic potential in the ordinary type of $w$, the part of its curvature measure carried by polar sets is $D_ u$, and its extended measure is the remaining part, of total mass $M-d$. Prescribing the extended measure therefore amounts to solving a Poisson equation for the bounded difference from $w$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-46A3A7FE">
+<p><a class="environment-identifier" href="../../tag/AFC6C3B6368C/">Theorem <span data-tag="46A3A7FE">19.4.1</span>.</a><span data-gerby-tag="46A3A7FE"></span> Let $\mathrm{d}V$ be a smooth positive volume form on $Y$, and let $0\leq f\in L^ p(\mathrm{d}V)$, $p&gt;1$, with $\int _ Yf\, \mathrm{d}V&gt;0$. There is a solution $v$ in the atomic trace type of </p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_{\theta |_ Y}(v)=c f\, \mathrm{d}V, \qquad c&gt;0,  \]
+</div>
+<p> if and only if $M&gt;d$. In that case </p>
+<div class="equation">
+  \[  c=\frac{M-d}{\int _ Yf\, \mathrm{d}V},  \]
+</div>
+<p> and $v$ is unique up to an additive constant. If $M=d$, there is instead a potential in this type with extended measure zero, unique up to an additive constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Assume that $M&gt;d$, take the value of $c$ given above, and solve 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}s=d\, \eta +c f\, \mathrm{d}V-\theta |_ Y.  \]
+</div>
+<p>
+       The right-hand side has integral zero, so the elliptic $L^ p$ theory gives a solution $s\in W^{2,p}(Y)$, unique up to constants. In real dimension two, the Sobolev embedding for $p&gt;1$ makes $s$ continuous and bounded. The potential $v=w+s$ has the atomic trace type and satisfies 
+    
+<div class="equation">
+  \[  \theta |_ Y+\mathrm{dd}^{\mathrm{c}}v=D_ u+c f\, \mathrm{d}V\geq 0.  \]
+</div>
+<p>
+       Its extended measure is $c f\, \mathrm{d}V$, since this absolutely continuous measure does not charge the polar set of poles, while the atoms lie in it. For $M=d$, the same construction with $c=0$ has a smooth right-hand side and gives the asserted potential with zero extended measure. 
+    <p>
+      To prove necessity and uniqueness, let $a$ be any $\theta |_ Y$-plurisubharmonic potential in the ordinary type of $w$, and put $\mu =\theta |_ Y+\mathrm{dd}^{\mathrm{c}}a$. By corollary <a data-tag="1346CAB0" href="../../tag/F9517F96057F/">1.6.8</a>, ordinary equivalence with $w$ makes the polar part of $\mu $ equal to $D_ u$. Consequently 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_{\theta |_ Y}(a)=\mu -D_ u, \qquad \int _ Y\mathrm{MA}^{\mathrm{ext}}_{\theta |_ Y}(a)=M-d.  \]
+</div>
+<p>
+       Integrating the equation therefore forces the stated value of $c$, so a positive $c$ requires $M&gt;d$. If two potentials solve the equation with the same density and constant, their curvature currents both equal $D_ u+c f\, \mathrm{d}V$; their difference has zero $\mathrm{dd}^{\mathrm{c}}$ and is therefore constant on the compact connected curve. The same argument proves uniqueness in the case of zero extended measure. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-7EDE08C90FE8" data-section-entries="7EDE08C90FE8 D980BA19141E F8A7A320265A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/7EDE08C90FE8/">19.5 Singularity distance on a curve</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="A1D14047"></span></div>
+<p>
+On the curve $Y$, the singularity pseudometric $d_ S$ of <span class="cite">[<span class="postnote">Definition 6.2.1</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span> measures the difference of the masses of two ordered potentials. For the Green representatives $w$ and $w_ m$, it is half the atomic mass missing from $D_ m$. When $X$ is Kähler, this identifies the atomic trace with the Kähler trace of <span class="cite">[<span class="postnote">Section 8.1</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>, up to $P$-equivalence, that is, up to potentials with the same singularity envelope; the distance calculation itself uses only the geometry of the curve. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-1F1EC3FE">
+<p><a class="environment-identifier" href="../../tag/F8A7A320265A/">Proposition <span data-tag="1F1EC3FE">19.5.1</span>.</a><span data-gerby-tag="1F1EC3FE"></span> Choose a smooth positive form $\eta $ of integral one on $Y$ and choose $A&gt;D_ u(Y)$ so large that every restricted approximant $u_ m|_ Y$ is $A\eta $-plurisubharmonic. Define $w$ and $w_ m$ as above, with a fixed nonpositive Green kernel. Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-EADB8E52"><span data-gerby-tag="EADB8E52"></span>
+<span class="equation-label"><a data-tag="EADB8E52" href="../../tag/D980BA19141E/">19.4</a></span>
+<div>\begin{equation}  d_{S,A\eta }(w,u_ m|_ Y) =d_{S,A\eta }(w,w_ m) =\frac12\bigl (D_ u(Y)-D_ m(Y)\bigr ) \longrightarrow 0. \end{equation}</div>
+</div>
+<p> In particular, the atomic trace has $\mathcal I$-good singularities on the curve, in the sense recalled in chapter <a data-tag="564C86CB" href="../../tag/530E72454328/">16</a>. If $X$ is Kähler, the atomic trace represents the $P$-equivalence class of the Kähler trace. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The curvature bounds of corollary <a data-tag="57629892" href="../../tag/8F2184BBF4C4/">1.15.2</a>, restricted to $Y$, are dominated by a single form $A\eta $ once $A$ is large. Since $D_ m\leq D_ u$ and $G\leq 0$, we have $w\leq w_ m$. Also 
+    
+<div class="equation">
+  \[  A\eta +\mathrm{dd}^{\mathrm{c}}w=D_ u+(A-D_ u(Y))\eta , \qquad A\eta +\mathrm{dd}^{\mathrm{c}}w_ m=D_ m+(A-D_ m(Y))\eta .  \]
+</div>
+<p>
+       Hence their extended masses are $A-D_ u(Y)$ and $A-D_ m(Y)$, both positive. For $a,b\in \mathrm{PSH}(Y,A\eta )$ with $a\leq b$, the formula for the distance of ordered potentials <span class="cite">[<span class="postnote">Lemma 6.2.2</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span> reads 
+    
+<div class="equation">
+  \[  d_{S,A\eta }(a,b) =\frac12\left(\int _ Y\mathrm{MA}_{A\eta }(b) -\int _ Y\mathrm{MA}_{A\eta }(a)\right).  \]
+</div>
+<p>
+       Substituting $a=w$ and $b=w_ m$ proves the second equality in (<a data-tag="EADB8E52" href="../../tag/D980BA19141E/">19.4</a>). Since $u_ m|_ Y$ and $w_ m$ are ordinarily equivalent, their distance vanishes, which proves the first equality. The convergence of $D_ m$ in total variation proves the limit. 
+    <p>
+      Each $w_ m$ has finitely many logarithmic poles with rational coefficients, hence analytic singularities. The characterization in <span class="cite">[<span class="postnote">Theorem 7.1.1</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>, applied on the compact Kähler curve $Y$, shows that their $d_ S$-limit $w$ is $\mathcal I$-good. 
+    <p>
+      Finally, suppose that $X$ is Kähler. The Kähler trace is defined in <span class="cite">[<span class="postnote">Definition 8.1.1 and Proposition 8.1.2</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span> through a quasi-equisingular approximation of $u$ with analytic types $(2^{-j},\mathcal I(2^ ju))$, whose restriction to $Y$ has the ordinary type of $w_{2^ j}$. The same distance calculation shows that these restrictions converge to $w$ for $d_{S,A\eta }$, so $w$ represents the Kähler trace up to $P$-equivalence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-FED68B5DF3EB" data-section-entries="2432A5A2AE14 A374F6B4426E D416A3AB0845 FED68B5DF3EB"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/FED68B5DF3EB/">19.5.1 Total variation of the atomic data</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="ACEDF71D"></span></div>
+<p>
+The distance calculation extends to all multiplier-ideal envelopes $P_\beta [\cdot ]_{\mathcal I}$ of definition <a data-tag="4F9BDFEC" href="../../tag/F1F202AEE8FD/">16.2.1</a> on the curve $Y$. Such an envelope is determined by its atomic curvature, and the maximum of two of them has as atomic curvature the common part of the two atomic measures. The formula for the distance of ordered potentials can therefore compare envelopes whose poles are unrelated. Throughout this subsection, fix a smooth positive form $\beta $ on $Y$, put $A=\int _ Y\beta $, and choose a nonpositive Green kernel $G$ for $\eta =\beta /A$. All atomic measures below have countable support and finite total mass. 
+</p>
+<p>
+For a positive atomic measure $D$ with $D(Y)\leq A$, set 
+</p>
+<div class="equation">
+  \[  w_ D(x)=\int _ YG(x,p)\, \mathrm{d}D(p),\qquad q_ D=P_\beta [w_ D]_{\mathcal I}.  \]
+</div>
+<p>
+ As in the proof of theorem <a data-tag="C5D10418" href="../../tag/879739B42EBB/">19.3.1</a>, $w_ D$ is a quasi-plurisubharmonic function, not identically $-\infty $, with $\mathrm{dd}^{\mathrm{c}}w_ D=D-D(Y)\eta $. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-72AC7E8E">
+<p><a class="environment-identifier" href="../../tag/A374F6B4426E/">Lemma <span data-tag="72AC7E8E">19.5.2</span>.</a><span data-gerby-tag="72AC7E8E"></span> The function $w_ D$ is $\beta $-plurisubharmonic, and </p>
+<div class="equation">
+  \[  q_ D\sim w_ D,\qquad \int _ Y\mathrm{MA}_\beta (q_ D) =\int _ Y\mathrm{MA}_\beta (w_ D)=A-D(Y).  \]
+</div>
+<p> The map $D\mapsto q_ D$ is a bijection from the positive atomic measures of mass at most $A$ onto the set of all envelopes $P_\beta [a]_{\mathcal I}$, $a\in \mathrm{PSH}(Y,\beta )$, and $q_ D$ has positive mass exactly when $D(Y)&lt;A$. The measure $D$ is the atomic part of $\beta +\mathrm{dd}^{\mathrm{c}}q_ D$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      One has 
+    
+<div class="equation">
+  \[  \beta +\mathrm{dd}^{\mathrm{c}}w_ D=D+(A-D(Y))\eta \geq 0.  \]
+</div>
+<p>
+       Every atom of $D$ is a pole of $w_ D$, and the smooth measure $\eta $ charges no polar set, including any additional poles caused by accumulation of the atoms. Hence $\mathrm{MA}_\beta (w_ D)=(A-D(Y))\eta $. 
+    <p>
+      Put $q=q_ D$. By theorem <a data-tag="3A211D73" href="../../tag/7F20FD198864/">16.2.2</a>, $q$ has the same multiplier ideals, and hence the same Lelong numbers at points, as $w_ D$. Applied to $\mathrm{dd}^{\mathrm{c}}w_ D=D-D(Y)\eta $, lemma <a data-tag="F5990C9E" href="../../tag/65C35F77CB06/">1.17.4</a> gives $q\preceq w_ D$, and the envelope inequality $q\geq w_ D-\sup _ Yw_ D$ proves $q\sim w_ D$. By corollary <a data-tag="1346CAB0" href="../../tag/F9517F96057F/">1.6.8</a>, the polar part of $\beta +\mathrm{dd}^{\mathrm{c}}q$ is therefore also $D$, and Stokes' theorem gives the non-pluripolar mass $A-D(Y)$. 
+    <p>
+      For any $a\in \mathrm{PSH}(Y,\beta )$, its Lelong numbers at points give an atomic measure $D_ a$ of mass at most $A$. On a smooth curve these numbers determine all multiplier ideals, by theorem <a data-tag="8B4BE822" href="../../tag/3F1FC2F620B4/">1.16.3</a>. Thus $a\sim _{\mathcal I}w_{D_ a}$, so $P_\beta [a]_{\mathcal I}=q_{D_ a}$. If $D_ a(Y)=A$, the atoms exhaust the whole curvature measure, and the non-pluripolar mass is zero. This proves surjectivity and the description of the potentials of positive mass. Distinct atomic measures give distinct Lelong numbers, which proves injectivity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-12E10B47">
+<p><a class="environment-identifier" href="../../tag/2432A5A2AE14/">Theorem <span data-tag="12E10B47">19.5.3</span>.</a><span data-gerby-tag="12E10B47"></span> For positive atomic measures $D,E$ with masses less than $A$, </p>
+<div class="equation">
+  \[  \frac1{96}\| D-E\| _{\mathrm{TV}} \leq d_{S,\beta }(q_ D,q_ E) \leq \frac12\| D-E\| _{\mathrm{TV}}.  \]
+</div>
+<p> Thus the singularity distance is a metric on these ideal envelopes, and convergence for it is exactly convergence of the atomic measures in total variation. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $d_ S=d_{S,\beta }$ and $a\lor b=\max (a,b)$. For potentials $u,v\in \mathrm{PSH}(Y,\beta )$ of positive mass, besides the formula for ordered potentials we use the inequality <span class="cite">[<span class="postnote">Lemma 6.2.1</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>
+
+<div class="equation">
+  \[  d_ S(u,v)\leq d_ S(u,u\lor v)+d_ S(v,u\lor v) \leq 48d_ S(u,v)  \]
+</div>
+<p>
+       on a curve; here $48=3(1+1)2^{1+2}$ is the constant of that lemma in dimension one. 
+    <p>
+      Put $z=\max (w_ D,w_ E)$. By lemma <a data-tag="72AC7E8E" href="../../tag/A374F6B4426E/">19.5.2</a>, the polar parts of the curvature measures of $w_ D$ and $w_ E$ are $D$ and $E$. By (<a data-tag="D1876C85" href="../../tag/6FC7AD4CB464/">1.14</a>), the polar part of the curvature measure of $z$ is $D\wedge E$, the atomic measure with the smaller coefficient at each point. Stokes' theorem therefore gives 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\beta (z)(Y)=A-(D\wedge E)(Y).  \]
+</div>
+<p>
+       The formula for ordered potentials yields 
+    
+<div class="equation">
+  \[  \begin{aligned}  d_ S(w_ D,z)+d_ S(w_ E,z) &amp; =\frac12\bigl (D(Y)+E(Y)-2(D\wedge E)(Y)\bigr )\\ &amp; =\frac12\| D-E\| _{\mathrm{TV}}. \end{aligned}  \]
+</div>
+<p>
+       Combining this equality with the two inequalities above proves both bounds, since replacing $w_ D,w_ E$ by the ordinarily equivalent $q_ D,q_ E$ does not change the singularity distance. The lower bound and the injectivity in lemma <a data-tag="72AC7E8E" href="../../tag/A374F6B4426E/">19.5.2</a> make the pseudometric a metric on these envelopes. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-6182A818">
+<p><a class="environment-identifier" href="../../tag/D416A3AB0845/">Corollary <span data-tag="6182A818">19.5.4</span>.</a><span data-gerby-tag="6182A818"></span> For $0&lt;\varepsilon &lt;A$, the normalized ideal envelopes satisfying $\mathrm{MA}_\beta (q)(Y)\geq \varepsilon $ form a complete space for $d_{S,\beta }$. Analytic ideal envelopes are dense in this space. The space is not totally bounded. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="72AC7E8E" href="../../tag/A374F6B4426E/">19.5.2</a>, the space corresponds to the positive atomic measures of mass at most $A-\varepsilon $. This set is complete for total variation. Indeed, a Cauchy sequence has as limit a positive finite measure with the same mass bound. The union of the countable supports of the sequence is countable, and total-variation convergence shows that the limit gives zero mass to the complement of that union, so the limit is again atomic. The two metric estimates of theorem <a data-tag="12E10B47" href="../../tag/2432A5A2AE14/">19.5.3</a> transfer completeness to the ideal envelopes. 
+    <p>
+      Finite truncation, followed by rational approximation of each coefficient from below, preserves the mass bound and converges in total variation. The resulting Green potentials have finitely many logarithmic poles with rational coefficients, and their ideal envelopes have the same ordinary types by lemma <a data-tag="72AC7E8E" href="../../tag/A374F6B4426E/">19.5.2</a>. These envelopes therefore have analytic singularities, and the upper metric estimate proves density. 
+    <p>
+      Finally, fix $0&lt;a&lt;A-\varepsilon $. The measures $a\delta _ p$, for distinct $p\in Y$, have pairwise total-variation distance $2a$, so their ideal envelopes have pairwise $d_ S$ distance at least $a/48$. This infinite separated family rules out total boundedness. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+This topology differs from the one given by the $L^1$ metric on ideal envelopes of proposition <a data-tag="C2DA1190" href="../../tag/47A414940A74/">16.4.1</a>, since that metric is totally bounded. The sequence in proposition <a data-tag="5F66399A" href="../../tag/8B21A468DD06/">16.4.3</a> makes the difference quantitative: it converges for that $L^1$ metric while remaining at a fixed positive $d_ S$ distance from its limit. 
+</p>
+</div></section><section class="reading-chunk" id="entry-53884234AA76" data-section-entries="53884234AA76 787C2A9E0C8D AA3FC60BB1F2"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/53884234AA76/">19.6 The trace envelope</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="1B0982A7"></span></div>
+<p>
+We return to the general setting, in which $Y\subset X$ has arbitrary positive dimension. The curvature errors of the restricted approximants tend to zero, so normalized compactness gives a limit potential in the original background $\theta |_ Y$, whose divisorial Lelong numbers dominate the trace data. These inequalities define an envelope, and comparison with the resolved restricted ideals identifies it as the limit of the restricted analytic envelopes. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-32A8E4E3">
+<p><a class="environment-identifier" href="../../tag/787C2A9E0C8D/">Proposition <span data-tag="32A8E4E3">19.6.1</span>.</a><span data-gerby-tag="32A8E4E3"></span> There is a potential $v\in \mathrm{PSH}(Y,\theta |_ Y)$ such that </p>
+<div class="equation">
+  \[  \nu (v\circ \pi ,E)\geq \tau _{Y,u}(E) \quad \hbox{for every divisor }E\hbox{ over }Y.  \]
+</div>
+<p> In particular, $v\in \mathrm{PSH}(Y,\Omega _0)$ for every Hermitian form $\Omega _0\geq \theta |_ Y$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The restrictions $u_ m|_ Y$ have a common smooth lower bound for their curvature. After subtracting their suprema, normalized compactness gives a subsequence converging in $L^1$ to some $v$. The inequalities $(\theta +\epsilon _ m\omega )|_ Y+\mathrm{dd}^{\mathrm{c}}(u_ m|_ Y)\geq 0$ pass to the limit as $\epsilon _ m\to 0$, giving $\theta |_ Y+\mathrm{dd}^{\mathrm{c}}v\geq 0$. 
+    <p>
+       For each fixed compact modification $\pi :Z\to Y$, lemma <a data-tag="7BFD3B19" href="../../tag/C07C7BB26EF8/">1.22.13</a> gives $L^1$ convergence of the pullbacks along the same subsequence, and lemma <a data-tag="D9AC87CF" href="../../tag/E04E4D6C502E/">1.17.6</a> gives, at every point $z$ of a prime divisor $E\subset Z$, 
+    
+<div class="equation">
+  \[  \nu (v\circ \pi ,z) \geq \limsup _ m\nu ((u_ m|_ Y)\circ \pi ,z) \geq \lim _ m\frac{\operatorname {ord}_ E\mathfrak a_ m(u;Y)}m =\tau _{Y,u}(E).  \]
+</div>
+<p>
+       Taking the generic value along $E$ proves the assertion. No diagonal extraction over divisors is needed, since the pullback lemma applies to each modification once the subsequence on $Y$ has been fixed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+ For a smooth real $(1,1)$-form $\Omega $ on $Y$ for which the following family is nonempty, define 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-60970F7B"><span data-gerby-tag="60970F7B"></span>
+<span class="equation-label"><a data-tag="60970F7B" href="../../tag/AA3FC60BB1F2/">19.7</a></span>
+<div>\begin{equation}  \begin{split}  \mathcal T_\Omega (u;Y):=\Bigl (\sup \{ a\in \mathrm{PSH}(Y,\Omega ):\  &amp; a\leq 0,\\ &amp; \nu (a\circ \pi ,E)\geq \tau _{Y,u}(E) \text{ for every }E\} \Bigr )^*. \end{split} \end{equation}</div>
+</div>
+<p>
+ Here $E$ ranges over all divisors over $Y$, and we call the members of this family <em>trace competitors</em> for $\Omega $. By the preceding proposition, $v-\sup _ Yv$ is a trace competitor for $\Omega =\theta |_ Y$ and for every larger background. The envelope $\mathcal T_\Omega (u;Y)$ depends only on $\Omega $ and on the multiplier-ideal class of $u$ on $X$. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9FDA3A326A26" data-section-entries="5377E31C95CD 5FE15106F340 9FDA3A326A26"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/9FDA3A326A26/">19.6.1 Limits of restricted analytic envelopes</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="C7663CEE"></span></div>
+<p>
+On a log resolution of $\mathfrak a_ m(u;Y)$, the trace inequalities dominate every coefficient of the restricted analytic singularity, so each trace competitor is at least as singular as $u_ m|_ Y$. This gives a common lower barrier for the analytic envelopes. Semicontinuity of Lelong numbers puts every cluster point back into the family of trace competitors, where maximality identifies it. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-C09160F5">
+<p><a class="environment-identifier" href="../../tag/5FE15106F340/">Theorem <span data-tag="C09160F5">19.6.2</span>.</a><span data-gerby-tag="C09160F5"></span> Let $\Omega $ be a smooth real $(1,1)$-form on $Y$, let $h$ be a Hermitian form on $Y$, and let $\delta _ m\geq 0$ be numbers tending to zero such that, for all sufficiently large $m$, </p>
+<div class="equation">
+  \[  a_ m:=u_ m|_ Y\in \mathrm{PSH}(Y,\Omega +\delta _ m h).  \]
+</div>
+<p> Then the family of trace competitors for $\Omega $ is nonempty, $T=\mathcal T_\Omega (u;Y)$ belongs to $\mathrm{PSH}(Y,\Omega )$, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-082DC5D4"><span data-gerby-tag="082DC5D4"></span>
+<span class="equation-label"><a data-tag="082DC5D4" href="../../tag/5377E31C95CD/">19.10</a></span>
+<div>\begin{equation}  q_ m:=P_{\Omega +\delta _ m h}[a_ m] =P_{\Omega +\delta _ m h}[a_ m]_{\mathcal I} \longrightarrow T\quad \text{in }L^1(Y). \end{equation}</div>
+</div>
+<p> If $\delta _{2^ j}$ decreases in $j$, then $q_{2^ j}\searrow T$ pointwise. The limit depends only on $\Omega $ and the multiplier-ideal class of $u$ on $X$. Moreover, </p>
+<div class="equation">
+  \[  P_\Omega [T]_{\mathcal I}=P_\Omega [T]=T.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: $T$ is the largest trace competitor.</em> The argument of proposition <a data-tag="32A8E4E3" href="../../tag/787C2A9E0C8D/">19.6.1</a>, applied with the assumed curvature bounds, gives a normalized $\Omega $-plurisubharmonic limit $v$ of a subsequence of the $a_ m$, whose divisorial Lelong numbers dominate $\tau _{Y,u}$. Hence the family defining $T$ is nonempty, and its supremum lies between $v$ and zero. The family is stable under finite maxima, since the Lelong number of a maximum is the minimum of the two Lelong numbers, also after pullback. By Choquet's lemma and finite maxima, there is an increasing sequence of trace competitors whose limit has upper semicontinuous regularization $T$. Convergence of the pullbacks and semicontinuity of Lelong numbers show that $T$ satisfies every defining inequality. Thus $T$ is itself a trace competitor, and it is the largest one. 
+    <p>
+<em>Step 2: a common lower barrier.</em> Fix $m$, and let $\pi :Z\to Y$ be a log resolution of $\mathfrak a_ m(u;Y)$. For each prime component $E$ of the resulting divisor, (<a data-tag="2D477734" href="../../tag/66AFB7F7397B/">19.1</a>) gives 
+    
+<div class="equation">
+  \[  \nu (T\circ \pi ,E)\geq \tau _{Y,u}(E) \geq \frac1m\operatorname {ord}_ E\mathfrak a_ m(u;Y) =\nu (a_ m\circ \pi ,E).  \]
+</div>
+<p>
+       The criterion of lemma <a data-tag="21F427DD" href="../../tag/1D91BF7CA736/">1.17.10</a>, which involves only these finitely many divisors, gives $T\preceq a_ m$. Since $T\leq 0$ and $\delta _ m\geq 0$, the function $T$ is a competitor for $q_ m$. Moreover, proposition <a data-tag="849B1EFF" href="../../tag/EB95710FF4D7/">16.2.7</a> identifies the two envelopes in (<a data-tag="082DC5D4" href="../../tag/5377E31C95CD/">19.10</a>) and gives $q_ m\sim a_ m$. Therefore 
+    
+<div class="equation">
+  \[  T\leq q_ m\leq 0,\qquad \nu (q_ m\circ \pi ,E)=\frac1m\operatorname {ord}_ E\mathfrak a_ m(u;Y)  \]
+</div>
+<p>
+       for every divisor over $Y$. 
+    <p>
+<em>Step 3: convergence.</em> All $q_ m$ have supremum zero and a common smooth lower bound for their curvature. Let $q$ be any $L^1$ cluster point. It belongs to $\mathrm{PSH}(Y,\Omega )$, lies between $T$ and zero, and satisfies 
+    
+<div class="equation">
+  \[  \nu (q\circ \pi ,E)\geq \limsup _ m\nu (q_ m\circ \pi ,E) =\tau _{Y,u}(E)  \]
+</div>
+<p>
+       along the convergent subsequence, by the pullback and semicontinuity argument of proposition <a data-tag="32A8E4E3" href="../../tag/787C2A9E0C8D/">19.6.1</a> on each fixed compact modification. Thus $q$ is a trace competitor, so $q\leq T$, and hence $q=T$. Normalized compactness now gives $L^1$ convergence of the whole sequence. 
+    <p>
+<em>Step 4: monotonicity and the fixed-point identities.</em> Subadditivity gives $\mathfrak a_{2m}(u;Y)\subseteq \mathfrak a_ m(u;Y)^2$, hence $a_{2m}\preceq a_ m$. When the backgrounds $\Omega +\delta _{2^ j}h$ decrease, this implies $q_{2^{j+1}}\leq q_{2^ j}$. The lower bound by $T$ shows that the pointwise limit is not identically $-\infty $, and since it agrees with $T$ almost everywhere by $L^1$ convergence, it equals $T$ everywhere. The family defining $T$ depends only on $\Omega $ and on the multiplier ideals of $u$, which proves the asserted independence. 
+    <p>
+      Finally, $P_\Omega [T]_{\mathcal I}$ has the same multiplier ideals as $T$, hence the same divisorial Lelong numbers, so it is a trace competitor. Maximality and the inequality $P_\Omega [T]_{\mathcal I}\geq T$ give $P_\Omega [T]_{\mathcal I}=T$, and the identity $P_\Omega [T]=T$ follows from corollary <a data-tag="F9497834" href="../../tag/2506B7AD6F19/">16.2.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+Taking $\Omega =\theta |_ Y$, $h=\omega |_ Y$ and $\delta _ m=\epsilon _ m$ gives the limit in the original restricted background; along dyadic indices, the errors can be enlarged to a decreasing sequence with limit zero. In a fixed, sufficiently large Hermitian background one can take $\delta _ m=0$. 
+</p>
+<p>
+Inclusion of the families of trace competitors also orders the trace envelopes: increasing the prescribed data decreases $\mathcal T_\Omega $, whereas enlarging the background increases it whenever both envelopes are defined. 
+</p>
+</div></section><section class="reading-chunk" id="entry-DB975E954111" data-section-entries="13DF98C40E87 7EFA5C202804 DB975E954111"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/DB975E954111/">19.6.2 Envelopes on modifications</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="1977A361"></span></div>
+<p>
+Let $\pi :Z\to Y$ be a modification of connected compact complex manifolds. Extend the restricted ideals to $Z$ by taking the ideals $\mathfrak a_ t(u;Y)\mathcal O_ Z$ generated by their pullbacks. For a divisor $F$ on a further modification $\rho :W\to Z$, their asymptotic order is $\tau _{Y,u}(F)$, computed on $\pi \circ \rho :W\to Y$. For a smooth real $(1,1)$-form $\Gamma $ on $Z$, write $\mathcal T^\pi _\Gamma (u;Y)$ for the envelope on $Z$ defined as in (<a data-tag="60970F7B" href="../../tag/AA3FC60BB1F2/">19.7</a>), with background $\Gamma $ and the inequalities $\nu (a\circ \rho ,F)\geq \tau _{Y,u}(F)$ for all divisors $F$ over $Z$. Thus the trace data still comes from the multiplier ideals of $u$ on $X$. 
+</p>
+<p>
+For the pulled-back background $\pi ^*\Omega $, every competitor descends to $Y$, and a common refinement of two models identifies the divisorial inequalities on them. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-2FFFD9E5">
+<p><a class="environment-identifier" href="../../tag/7EFA5C202804/">Theorem <span data-tag="2FFFD9E5">19.6.3</span>.</a><span data-gerby-tag="2FFFD9E5"></span> Suppose $\Omega $ is a smooth real $(1,1)$-form on $Y$ for which $T=\mathcal T_\Omega (u;Y)$ is defined, and let $h$ be a Hermitian form on $Z$. Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-AB87D748"><span data-gerby-tag="AB87D748"></span>
+<span class="equation-label"><a data-tag="AB87D748" href="../../tag/13DF98C40E87/">19.11</a></span>
+<div>\begin{equation}  \mathcal T^\pi _{\pi ^*\Omega }(u;Y)=T\circ \pi , \qquad \mathcal T^\pi _{\pi ^*\Omega +\varepsilon h}(u;Y) \searrow T\circ \pi \quad (\varepsilon \downarrow 0). \end{equation}</div>
+</div>
+<p> The convergence is pointwise and in $L^1(Z)$, and the limit is independent of $h$. </p>
+<p>Let $\delta _ m\geq 0$ tend to zero and suppose, for all sufficiently large $m$, that </p>
+<div class="equation">
+  \[  b_ m:=(u_ m|_ Y)\circ \pi \in \mathrm{PSH}(Z,\pi ^*\Omega +\delta _ m h).  \]
+</div>
+<p> Then </p>
+<div class="equation">
+  \[  P_{\pi ^*\Omega +\delta _ m h}[b_ m] =P_{\pi ^*\Omega +\delta _ m h}[b_ m]_{\mathcal I} \longrightarrow T\circ \pi \quad \text{in }L^1(Z).  \]
+</div>
+<p> If $\delta _{2^ j}$ decreases, these envelopes decrease pointwise to $T\circ \pi $ along the dyadic indices. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For any nonempty family of trace competitors, the argument with finite maxima and semicontinuity in Step 1 of the proof of theorem <a data-tag="C09160F5" href="../../tag/5FE15106F340/">19.6.2</a> shows that the envelope is its largest member. By proposition <a data-tag="DC3CD043" href="../../tag/A7090F92CA39/">1.22.12</a>, every $\pi ^*\Omega $-plurisubharmonic function is uniquely of the form $a\circ \pi $ with $a\in \mathrm{PSH}(Y,\Omega )$, and since $\pi $ is surjective, $a\leq 0$ if and only if $a\circ \pi \leq 0$. If $a$ satisfies all trace inequalities over $Y$, then $a\circ \pi $ satisfies those over $Z$, since every modification of $Z$, composed with $\pi $, is a modification of $Y$. 
+    <p>
+      Conversely, suppose that $a\circ \pi $ satisfies the inequalities over $Z$. Let $E$ be a prime divisor on a smooth compact modification $V\to Y$. Resolving the graph of the bimeromorphic map between $V$ and $Z$ gives a smooth compact modification $W$ dominating both. The map $W\to V$ is an isomorphism near the generic point of $E$, so the strict transform $F$ of $E$ has the same ideal orders and generic Lelong numbers as $E$, and the inequality at $F$ over $Z$ is exactly the required inequality at $E$. Thus the two families of competitors correspond under pullback, and the largest member on $Z$ is $T\circ \pi $. This proves the first identity. 
+    <p>
+      For $\varepsilon &gt;0$, the pullback $T\circ \pi $ is still a competitor for $\mathcal T^\pi _{\pi ^*\Omega +\varepsilon h}(u;Y)$. These envelopes lie between $T\circ \pi $ and zero and decrease as $\varepsilon \downarrow 0$, so their limit $S$ satisfies $S\geq T\circ \pi $ and is $\pi ^*\Omega $-plurisubharmonic. The $L^1$ convergence of pullbacks and semicontinuity of Lelong numbers preserve every trace inequality, so $S$ belongs to the unperturbed family. Maximality gives $S\leq T\circ \pi $, hence equality. Since the lower bound $T\circ \pi $ is integrable on $Z$, dominated convergence gives $L^1$ convergence. 
+    <p>
+      For the final assertion, denote the analytic envelope in the statement by $q_ m$. The proof of theorem <a data-tag="C09160F5" href="../../tag/5FE15106F340/">19.6.2</a> applies to the global coherent ideals $\mathfrak a_ m(u;Y)\mathcal O_ Z$: resolving each of them and applying lemma <a data-tag="21F427DD" href="../../tag/1D91BF7CA736/">1.17.10</a> gives $T\circ \pi \preceq b_ m$. Hence 
+    
+<div class="equation">
+  \[  T\circ \pi \leq q_ m\leq 0,\qquad \nu (q_ m\circ \rho ,F) =\frac1m\operatorname {ord}_ F\mathfrak a_ m(u;Y)  \]
+</div>
+<p>
+       for every divisor $F$ over $Z$, where ordinary and ideal envelopes agree by proposition <a data-tag="849B1EFF" href="../../tag/EB95710FF4D7/">16.2.7</a>. Every $L^1$ cluster point is $\pi ^*\Omega $-plurisubharmonic and satisfies all trace inequalities, so the first identity in (<a data-tag="AB87D748" href="../../tag/13DF98C40E87/">19.11</a>) identifies it with $T\circ \pi $, and compactness gives convergence of the whole sequence. Subadditivity orders the dyadic analytic types, decreasing dyadic backgrounds then order the envelopes, and their pointwise limit is the same $L^1$ limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+For $\Omega =\theta |_ Y$, the last hypothesis holds with $\delta _ m=C\epsilon _ m$, where the constant $C$ satisfies $\pi ^*(\omega |_ Y)\leq Ch$. Thus the restricted analytic envelopes converge to the same pulled-back trace envelope on every compact model. Formula (<a data-tag="AB87D748" href="../../tag/13DF98C40E87/">19.11</a>) also gives compatibility under successive modifications. 
+</p>
+<p>
+For arbitrary changes of background, inclusion of the families of competitors orders the envelopes. Equality of their ordinary types would require a reverse bound on the singularities. For curve fibrations, the fixed divisorial potential of theorem <a data-tag="BC006EB4" href="../../tag/A30F4066C584/">19.7.1</a> gives this bound in every sufficiently large background. 
+</p>
+</div></section><section class="reading-chunk" id="entry-4C8D52A64B1A" data-section-entries="4C8D52A64B1A D1551EE7322B"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/4C8D52A64B1A/">19.6.3 Exact realization on a Kähler submanifold</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="24A51BBD"></span></div>
+<p>
+By theorem <a data-tag="C09160F5" href="../../tag/5FE15106F340/">19.6.2</a>, semicontinuity of Lelong numbers gives $\nu (\mathcal T_\Omega (u;Y)\circ \pi ,E)\geq \tau _{Y,u}(E)$. When $Y$ is Kähler, positive mass in a sufficiently large closed background strengthens this to equality: for decreasing sequences of model potentials whose limit has positive mass, the divisorial Lelong numbers converge. The envelope obtained in this way then gives the reverse inequality in every larger background. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-E4617F5C">
+<p><a class="environment-identifier" href="../../tag/D1551EE7322B/">Theorem <span data-tag="E4617F5C">19.6.4</span>.</a><span data-gerby-tag="E4617F5C"></span> Suppose $Y$ is Kähler. Choose a Hermitian form $\Omega _0\geq \theta |_ Y$ and a Kähler form $\kappa \geq 2\Omega _0$ on $Y$. For every Hermitian form $\Omega \geq \kappa $, </p>
+<div class="equation">
+  \[  \nu \bigl (\mathcal T_\Omega (u;Y)\circ \pi ,E\bigr ) =\tau _{Y,u}(E)  \]
+</div>
+<p> for every prime divisor $E$ on every smooth compact modification $\pi :Z\to Y$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The curvature errors $\epsilon _ m$ tend to zero, so $u_ m|_ Y\in \mathrm{PSH}(Y,\kappa )$ for all sufficiently large $m$. By theorem <a data-tag="C09160F5" href="../../tag/5FE15106F340/">19.6.2</a>, applied with $\Omega =\kappa $ and $\delta _ m=0$, the envelope fixed points 
+    
+<div class="equation">
+  \[  q_ j=P_\kappa [u_{2^ j}|_ Y]  \]
+</div>
+<p>
+       decrease to $T=\mathcal T_\kappa (u;Y)$, after discarding finitely many indices. The normalized potential $v$ of proposition <a data-tag="32A8E4E3" href="../../tag/787C2A9E0C8D/">19.6.1</a> belongs to $\mathrm{PSH}(Y,\Omega _0)\subset \mathrm{PSH}(Y,\kappa /2)$ and satisfies $v\leq T$, so $P_{\kappa /2}(T)\not\equiv -\infty $. Thus lemma <a data-tag="94A16878" href="../../tag/18D2E34A9D42/">13.5.2</a> and Stokes' theorem give, with $r=\dim Y$, 
+    
+<div class="equation">
+  \[  \int _ Y\mathrm{MA}_\kappa (T) \geq 2^{-r}\int _ Y\kappa ^ r&gt;0.  \]
+</div>
+<p>
+       For a decreasing sequence of envelope fixed points in a closed background, positive mass of the limit implies convergence of every divisorial Lelong number <span class="cite">[<span class="postnote">Proposition 3.1.12</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>. Applied on $Y$, this yields 
+    
+<div class="equation">
+  \[  \nu (T\circ \pi ,E) =\lim _ j\nu (q_ j\circ \pi ,E) =\lim _ j2^{-j}\operatorname {ord}_ E\mathfrak a_{2^ j}(u;Y) =\tau _{Y,u}(E).  \]
+</div>
+<p>
+       Here the middle equality uses the ordinary equivalence of each $q_ j$ with $u_{2^ j}|_ Y$. 
+    <p>
+       If $\Omega \geq \kappa $, then $T$ is a trace competitor for $\Omega $, so $T\leq T_\Omega =\mathcal T_\Omega (u;Y)$. Together with the defining inequalities of $T_\Omega $, this gives 
+    
+<div class="equation">
+  \[  \tau _{Y,u}(E)\leq \nu (T_\Omega \circ \pi ,E) \leq \nu (T\circ \pi ,E)=\tau _{Y,u}(E).  \]
+</div>
+<p>
+       This proves the assertion for every such $\Omega $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+Only $Y$ is required to be Kähler here; the closed theory is applied on $Y$. If $Y$ has the bounded mass property, corollary <a data-tag="DB7EBA57" href="../../tag/293D12D027CC/">30.5.5</a> gives the same exactness in a sufficiently large Hermitian background with positive lower mass. For a general non-Kähler $Y$, the envelope limit gives only the lower bound on its divisorial Lelong numbers. 
+</p>
+</div></section><section class="reading-chunk" id="entry-A7CED8F92D7B" data-section-entries="5CC5BF99E84F A7CED8F92D7B C5512844A274"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A7CED8F92D7B/">19.6.4 Positive mass and prescribed equations</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="3A121CB9"></span></div>
+<p>
+If a Hermitian background admits a trace competitor, then in the doubled background the same competitor lies in the half-sized background. This gives the trace envelope positive mass and the model condition needed for equations in its ordinary type. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-A7629629">
+<p><a class="environment-identifier" href="../../tag/5CC5BF99E84F/">Theorem <span data-tag="A7629629">19.6.5</span>.</a><span data-gerby-tag="A7629629"></span> Choose $\Omega _0$ and $v$ as in proposition <a data-tag="32A8E4E3" href="../../tag/787C2A9E0C8D/">19.6.1</a> and set $\Omega =2\Omega _0$. Then $T=\mathcal T_\Omega (u;Y)$ belongs to $\mathrm{PSH}(Y,\Omega )$ and satisfies all the divisorial inequalities in (<a data-tag="60970F7B" href="../../tag/AA3FC60BB1F2/">19.7</a>). Moreover, </p>
+<div class="equation">
+  \[  P_\Omega [T]_{\mathcal I}=T,\qquad P_\Omega [T]=T, \qquad P_{\Omega /2}(T)\not\equiv -\infty .  \]
+</div>
+<p> Writing $r=\dim Y$, its extended measure satisfies </p>
+<div class="equation">
+  \[  0&lt;\int _ Y\mathrm{MA}^{\mathrm{ext}}_\Omega (T)&lt;+\infty , \qquad \mathrm{MA}^{\mathrm{ext}}_\Omega (T) \leq \mathbf1_{\{ T=0\} }\Omega ^ r.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\theta |_ Y+\epsilon _ m\omega |_ Y\leq \Omega $ for all sufficiently large $m$, the restricted approximants belong to $\mathrm{PSH}(Y,\Omega )$. Theorem <a data-tag="C09160F5" href="../../tag/5FE15106F340/">19.6.2</a>, applied with $\delta _ m=0$, gives $T$, its defining inequalities and both fixed-point identities. 
+    <p>
+      Normalize $v$ so that $\sup _ Yv=0$. Since $v\in \mathrm{PSH}(Y,\Omega /2)$ is a trace competitor, it lies below $T$ and is a competitor for $P_{\Omega /2}(T)$. The contact estimate for envelope fixed points, proposition <a data-tag="FBC79CEA" href="../../tag/F0B070E89AE8/">13.1.6</a>, applied on $Y$, gives the bound for the measure and its finiteness, and lemma <a data-tag="94A16878" href="../../tag/18D2E34A9D42/">13.5.2</a> gives strict positivity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-6F35B281">
+<p><a class="environment-identifier" href="../../tag/C5512844A274/">Corollary <span data-tag="6F35B281">19.6.6</span>.</a><span data-gerby-tag="6F35B281"></span> Let $\Omega $ and $T$ be as in theorem <a data-tag="A7629629" href="../../tag/5CC5BF99E84F/">19.6.5</a>, let $\mathrm{d}V$ be a smooth positive volume form on $Y$, and let $0\leq f\in L^ p(\mathrm{d}V)$, $p&gt;1$, with $\int _ Y f\, \mathrm{d}V&gt;0$. For every $\lambda &gt;0$ there is a unique $a\in \mathrm{PSH}(Y,\Omega )$ with $a\sim T$ and </p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\Omega (a)=\mathrm{e}^{\lambda a}f\, \mathrm{d}V.  \]
+</div>
+<p> There are also a constant $c&gt;0$ and $a\in \mathrm{PSH}(Y,\Omega )$ with $a\sim T$ and $\mathrm{MA}^{\mathrm{ext}}_\Omega (a)=cf\, \mathrm{d}V$, and the constant $c$ is unique. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="A7629629" href="../../tag/5CC5BF99E84F/">19.6.5</a>, $T$ satisfies both parts of the model condition (<a data-tag="54840897" href="../../tag/237D346B8CBA/">13.26</a>) for the Hermitian background $\Omega $ on $Y$, so theorem <a data-tag="D77104B1" href="../../tag/7AFA75E73767/">14.11.1</a> applies. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+On a curve, lemma <a data-tag="F5990C9E" href="../../tag/65C35F77CB06/">1.17.4</a> shows that the trace inequalities are equivalent to domination by the Green representative $w$ in the ordinary sense. Thus 
+</p>
+<div class="equation">
+  \[  \mathcal T_{A\eta }(u;Y)=P_{A\eta }[w]=P_{A\eta }[w]_{\mathcal I}  \]
+</div>
+<p>
+ for every $A&gt;0$ with $A\geq D_ u(Y)$. The last equality, and the fact that the envelope has exactly the prescribed Lelong numbers, follow from lemma <a data-tag="72AC7E8E" href="../../tag/A374F6B4426E/">19.5.2</a>, also when the residual mass $A-D_ u(Y)$ is zero. 
+</p>
+</div></section><section class="reading-chunk" id="entry-3F27B145B165" data-section-entries="34E4C9363222 3F27B145B165 A30F4066C584 D1F9CCD69DB1"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/3F27B145B165/">19.7 Exact traces over a curve</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="D887442B"></span></div>
+<p>
+An exact representative on a curve also gives higher-dimensional examples by pullback. Multiplier ideals commute with pullback by a submersion, so the trace data on a modification is given by the trace data on the curve, multiplied by the multiplicities of the pulled-back fibers. The pulled-back Green potential has exactly these divisorial Lelong numbers, and its domination property identifies the ordinary type of the trace envelope. 
+</p>
+<p>
+In this section, $p:X\to M$ is a surjective holomorphic submersion of connected compact complex manifolds with connected fibers. Let $C\subset M$ be a connected compact smooth curve, put $Y=p^{-1}(C)$, and write $q=p|_ Y:Y\to C$; then $Y$ is a connected compact submanifold of $X$. Take $U\in \mathrm{QPSH}(M)$ with $\nu (U,C)=0$, and set $u=U\circ p$. The generic Lelong number of $u$ along $Y$ is zero, since in local product coordinates it equals that of $U$ along $C$. Write $\tau _{C,U}$ for the trace data of $U$ along $C$, defined as in section <a data-tag="F3E30196" href="../../tag/65B836952506/">19.1</a> with $(M,C,U)$ in place of $(X,Y,u)$, and let 
+</p>
+<div class="equation">
+  \[  D=\sum _{b\in C}\tau _{C,U}(b)\, \delta _ b, \qquad \delta =D(C)&lt;+\infty .  \]
+</div>
+<p>
+ Choose a smooth positive form $\eta $ of integral one on $C$ and a nonpositive Green kernel for $\eta $. The construction in the proof of theorem <a data-tag="C5D10418" href="../../tag/879739B42EBB/">19.3.1</a> gives $w\in \mathrm{QPSH}(C)$, not identically $-\infty $, with 
+</p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}w=D-\delta \eta .  \]
+</div>
+<p>
+  For $b\in C$, put $Y_ b=q^{-1}(b)$, and let $[Y_ b]$ be its current of integration. Set $v=w\circ q$. Pullback of distributions by a submersion is defined by duality with integration along the fibers; it commutes with differentiation and, in the present situation, with positive sums, so 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-987AD562"><span data-gerby-tag="987AD562"></span>
+<span class="equation-label"><a data-tag="987AD562" href="../../tag/D1F9CCD69DB1/">19.12</a></span>
+<div>\begin{equation}  \mathrm{dd}^{\mathrm{c}}v=\sum _{b\in C}\tau _{C,U}(b)[Y_ b]-\delta q^*\eta . \end{equation}</div>
+</div>
+<p>
+ Each fiber is a smooth connected prime divisor, and the sum is a positive closed current of finite mass, as also follows locally from the positivity of $\mathrm{dd}^{\mathrm{c}}(w\circ q)+\delta q^*\eta $. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-BC006EB4">
+<p><a class="environment-identifier" href="../../tag/A30F4066C584/">Theorem <span data-tag="BC006EB4">19.7.1</span>.</a><span data-gerby-tag="BC006EB4"></span> The potential $v$ realizes the entire divisorial trace data of $u$ along $Y$: </p>
+<div class="equation">
+  \[  \nu (v\circ \pi ,E)=\tau _{Y,u}(E)  \]
+</div>
+<p> for every prime divisor $E$ on every smooth compact modification $\pi :Z\to Y$. More explicitly, write $h=q\circ \pi $. If $h(E)=C$, both sides are zero. If $h(E)=\{ b\} $, choose a local coordinate $t_ b$ on $C$ vanishing at $b$; then both sides equal </p>
+<div class="equation">
+  \[  \operatorname {ord}_ E(t_ b\circ h)\, \tau _{C,U}(b).  \]
+</div>
+<p>Choose any Hermitian form $\Omega _0$ with $v\in \mathrm{PSH}(Y,\Omega _0)$, and set $\Omega =2\Omega _0$. Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-AF8F4C46"><span data-gerby-tag="AF8F4C46"></span>
+<span class="equation-label"><a data-tag="AF8F4C46" href="../../tag/34E4C9363222/">19.13</a></span>
+<div>\begin{equation}  \mathcal T_\Omega (u;Y)=P_\Omega [v]=P_\Omega [v]_{\mathcal I}\sim v. \end{equation}</div>
+</div>
+<p> The envelope has positive finite extended mass, and the conclusions of corollary <a data-tag="6F35B281" href="../../tag/C5512844A274/">19.6.6</a> on equations in its ordinary type hold. Its ordinary type does not depend on the choice of the Green kernel, of the form $\eta $, or of the sufficiently large background $\Omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Lemma <a data-tag="BD00E282" href="../../tag/2FA053FE56D9/">1.16.6</a> and restriction to $Y$ give 
+    
+<div class="equation">
+  \[  \mathfrak a_ t(u;Y)=\mathfrak a_ t(U;C)\mathcal O_ Y.  \]
+</div>
+<p>
+       The nonzero coherent ideal $\mathfrak a_ t(U;C)$ on the smooth curve is generated near $b$ by $t_ b^{k_ t(b)}$, where $k_ t(b)=\operatorname {ord}_ b\mathfrak a_ t(U;C)$. For a divisor $E$ with $h(E)=\{ b\} $, the order along $E$ of the extended ideal is therefore $k_ t(b)\operatorname {ord}_ E(t_ b\circ h)$. For a divisor dominating $C$, the generic order is zero, since the ideal on the curve has only finitely many zeros. Dividing by $t$ and letting $t\to \infty $ gives exactly the stated formula for $\tau _{Y,u}(E)$. 
+    <p>
+      For the Lelong numbers of $v\circ \pi $, suppose first that $h(E)=\{ b\} $. At a general point of $E$, a local equation $z_1=0$ of $E$ satisfies $t_ b\circ h=z_1^ k g$ with $g$ holomorphic and nonvanishing, and $k=\operatorname {ord}_ E(t_ b\circ h)$. Replacing $z_1$ by $z_1g^{1/k}$ for a local holomorphic $k$th root, we may assume $t_ b\circ h=z_1^ k$. The Lelong number of the one-variable function $w(z_1^ k)$ at $0$ is $k\nu (w,b)=k\tau _{C,U}(b)$, as follows from the definition through circular means, and this is also the generic Lelong number of $v\circ \pi $ along $E$ in these product coordinates. If $h(E)=C$, the regular locus of $E$ contains a point mapped to a point where $w$ is finite, because the nonconstant holomorphic map from that locus to $C$ has open image; the pullback is finite there, so its generic Lelong number along $E$ is zero. This proves exact realization on every compact model. 
+    <p>
+      By lemma <a data-tag="F5990C9E" href="../../tag/65C35F77CB06/">1.17.4</a> and (<a data-tag="987AD562" href="../../tag/D1F9CCD69DB1/">19.12</a>), a quasi-plurisubharmonic function $a$ on $Y$ satisfies $a\preceq v$ if and only if $\nu (a,Y_ b)\geq \tau _{C,U}(b)$ for every $b$ with $\tau _{C,U}(b)&gt;0$. These fiber inequalities are among the trace inequalities, and conversely domination by $v$ implies all trace inequalities on modifications, by the exact formula just proved. Thus the trace competitors for $\Omega $ are exactly the competitors for the ordinary envelope of $v$, and $\mathcal T_\Omega (u;Y)=P_\Omega [v]$. 
+    <p>
+      For $\psi =P_\Omega [v]_{\mathcal I}$, the Lelong numbers along the fibers are those of $v$, since $\psi $ and $v$ have the same multiplier ideals, and the same domination lemma gives $\psi \preceq v$. Hence 
+    
+<div class="equation">
+  \[  v-\sup _ Yv\leq P_\Omega [v]\leq \psi \preceq v.  \]
+</div>
+<p>
+       Since $\psi \leq 0$, it is a competitor for the ordinary envelope of $v$, so $\psi \leq P_\Omega [v]$. This proves (<a data-tag="AF8F4C46" href="../../tag/34E4C9363222/">19.13</a>). 
+    <p>
+      The potential $v-\sup _ Yv$ is a competitor for $P_{\Omega /2}(P_\Omega [v])$. The contact estimate for envelope fixed points, proposition <a data-tag="FBC79CEA" href="../../tag/F0B070E89AE8/">13.1.6</a>, gives finite mass, and lemma <a data-tag="94A16878" href="../../tag/18D2E34A9D42/">13.5.2</a> gives strict positivity. The two envelope properties give the model condition (<a data-tag="54840897" href="../../tag/237D346B8CBA/">13.26</a>), so theorem <a data-tag="D77104B1" href="../../tag/7AFA75E73767/">14.11.1</a> gives the stated equations. 
+    <p>
+      Two Green constructions on $C$ differ by a smooth function, by the Poisson argument in the proof of theorem <a data-tag="C5D10418" href="../../tag/879739B42EBB/">19.3.1</a>, so their pullbacks have the same ordinary type. Every background in the statement gives an envelope ordinarily equivalent to this pullback. This proves the asserted independence, at the level of ordinary types rather than of normalized potentials. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+The same construction respects sums and multiplication by positive real numbers at the level of ordinary types. Indeed, the trace measures on the curve add by theorem <a data-tag="2FF1D678" href="../../tag/89D22AB4CBD8/">19.1.2</a>, their Green representatives add for a fixed kernel, and pullback preserves sums. Each envelope in a sufficiently large background represents the corresponding ordinary type. 
+</p>
+</div></section><section class="reading-chunk" id="entry-06493A31E440" data-section-entries="06493A31E440 974BDFDF0550"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/06493A31E440/">19.8 Exact traces on Hopf manifolds</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="A2297212"></span></div>
+<p>
+The projective base of a scalar Hopf manifold has higher dimension than the curve in section <a data-tag="D887442B" href="../../tag/3F27B145B165/">19.7</a>. A divisor on a modification of the Hopf manifold can therefore map to a set of codimension greater than one in the base. Extracting its image as a divisor on a modified base reduces the trace constraint to a closed-background problem. The elliptic action then identifies the full trace envelope with the pullback of the base envelope. Thus exact realization is possible for these data even though the target has unbounded mass. 
+</p>
+<p>
+Fix $n\geq 3$ and put 
+</p>
+<div class="equation">
+  \[  X=H_{n+1},\qquad Y=H_ n\subset X,\qquad p:X\longrightarrow \mathbb P^ n,\qquad q=p|_ Y:Y\longrightarrow B=\mathbb P^{n-1},  \]
+</div>
+<p>
+ where $Y$ is defined by $z_ n=0$ and $B\subset \mathbb P^ n$ is the same hyperplane. Both maps are holomorphic submersions with connected elliptic fibers. Set $d=n-1$, and let $\kappa $ be the Fubini–Study form on $B$, normalized by $\int _ B\kappa ^ d=1$. With $s=\log |z|^2$ on the covering space of $Y$, the forms of section <a data-tag="7309D59A" href="../../tag/28A754700E01/">8.6</a> satisfy 
+</p>
+<div class="equation">
+  \[  \alpha =\mathrm{dd}^{\mathrm{c}}s=q^*\kappa ,\qquad \beta =\mathrm ds\wedge \mathrm d^{\mathrm c}s,\qquad \beta ^2=0,\qquad \int _{q^{-1}(x)}\beta =2.  \]
+</div>
+<p>
+ For $a,b&gt;0$ write $\Omega _{a,b}=a\alpha +b\beta $; this is a Hermitian form on $Y$. 
+</p>
+<p>
+Take $U\in \mathrm{QPSH}(\mathbb P^ n)$ with $\nu (U,B)=0$, set $u=U\circ p$, and choose $C\geq 1$ with $C\omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}U\geq 0$. Throughout the construction assume $a\geq 2C$ and $b&gt;0$. The submersion identity of lemma <a data-tag="BD00E282" href="../../tag/2FA053FE56D9/">1.16.6</a>, followed by restriction, gives 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-1A2EE314"><span data-gerby-tag="1A2EE314"></span>
+<span class="equation-label"><a data-tag="1A2EE314" href="../../tag/974BDFDF0550/">19.14</a></span>
+<div>\begin{equation}  \mathfrak b_ t=\mathcal I(tU)\mathcal O_ B, \qquad \mathfrak a_ t(u;Y)=\mathfrak b_ t\mathcal O_ Y \quad (t&gt;0). \end{equation}</div>
+</div>
+<p>
+ Local product coordinates also give $\nu (u,Y)=0$. The ideals $\mathfrak b_ t$ are nonzero, and their trace data $\tau _{B,U}$ is defined as in equation <a data-tag="2D477734" href="../../tag/66AFB7F7397B/">19.1</a>. We do not require $U|_ B$ to be a genuine quasi-plurisubharmonic function. 
+</p>
+</div></section><section class="reading-chunk" id="entry-A7CD7872B787" data-section-entries="09D69C0F18B7 A7CD7872B787 C53A2B3087AB"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/A7CD7872B787/">19.8.1 Divisors under a dominant map</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="3FCA3F97"></span></div>
+<p>
+The following reduction applies to every compact modification, without choosing finitely many divisors in advance. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-5028932D">
+<p><a class="environment-identifier" href="../../tag/C53A2B3087AB/">Lemma <span data-tag="5028932D">19.8.1</span>.</a><span data-gerby-tag="5028932D"></span> Let $f:Z\to M$ be a dominant holomorphic map of connected smooth compact complex manifolds, and let $D$ be a prime divisor on $Z$. If $f(D)\ne M$, there are a smooth compact modification $\sigma :M'\to M$, a prime divisor $F\subset M'$ dominated by $D$, and an integer $e\geq 1$ such that $f$ lifts holomorphically near a general point of $D$ and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-F47EE864"><span data-gerby-tag="F47EE864"></span>
+<span class="equation-label"><a data-tag="F47EE864" href="../../tag/09D69C0F18B7/">19.15</a></span>
+<div>\begin{equation}  \operatorname {ord}_ D(\mathfrak b\mathcal O_ Z) =e\operatorname {ord}_ F(\mathfrak b\mathcal O_{M'}), \qquad \nu (w\circ f,D)=e\nu (w\circ \sigma ,F) \end{equation}</div>
+</div>
+<p> for every nonzero coherent ideal $\mathfrak b$ on $M$ and every $w\in \mathrm{QPSH}(M)$. If $f(D)=M$, both quantities on the left are zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first extract a divisor on the base and then check the effect of ramification on its generic Lelong number. Put $r=\dim M$. Maintain a compact analytic graph proper over $Z$, isomorphic to $Z$ near a general point of $D$, with a dominant map to the current smooth modified base. Its divisor image $S$ is irreducible analytic by the proper mapping theorem. The graph may be singular away from this neighborhood. 
+    <p>
+      Near a general point of $D$, let $J_ D(f)$ be the least vanishing order of the coefficients of $f^*(\mathrm dy_1\wedge \cdots \wedge \mathrm dy_ r)$ in a smooth source frame. Dominance makes it a finite nonnegative integer. Changes of smooth coordinates multiply the target volume form by a unit and change the source frame by an invertible matrix, so this integer is independent of the coordinates. 
+    <p>
+      Suppose $S$ has codimension $c\geq 2$. Blow up its reduced coherent ideal. Over the smooth part of $S$, use coordinates with $S=\{ y_1=\cdots =y_ c=0\} $ and put 
+    
+<div class="equation">
+  \[  m=\min _{i\leq c}\operatorname {ord}_ D(f^*y_ i)\geq 1.  \]
+</div>
+<p>
+       Choose $y_1$ attaining this minimum. After removing a proper analytic subset of $D$, its leading coefficient is a unit, and all ratios $f^*y_ i/f^*y_1$ are holomorphic. The map therefore lifts near these points to the smooth blowup chart 
+    
+<div class="equation">
+  \[  (y_1,\ldots ,y_ c)=(s,st_2,\ldots ,st_ c).  \]
+</div>
+<p>
+       Resolve the target blowup by a proper analytic resolution which is an isomorphism over its whole smooth locus; the resolution input is recalled in <a data-tag="2D2FF42A" href="../../tag/81F92F228A7E/">34.13</a>. The resulting base is smooth and compact, and the lift near the general point of $D$ is preserved. Taking the main analytic graph of the resulting meromorphic lift again gives a compact graph proper over $Z$, unchanged in this neighborhood. 
+    <p>
+      In these coordinates, 
+    
+<div class="equation">
+  \[  \mathrm dy_1\wedge \cdots \wedge \mathrm dy_ r =s^{c-1}\mathrm ds\wedge \mathrm dt_2\wedge \cdots \wedge \mathrm dt_ c \wedge \mathrm dy_{c+1}\wedge \cdots \wedge \mathrm dy_ r.  \]
+</div>
+<p>
+       Consequently the new Jacobian order is $J_ D(f)-(c-1)m\geq 0$. It strictly decreases at every step. After finitely many steps the divisor image has codimension one: its image cannot dominate a modified base when its original image was proper. This proves extraction without resolving the source graph in a way that changes the general point of $D$. 
+    <p>
+      Let $e$ be the order along $D$ of the pullback of a local equation of the extracted divisor $F$. Near its general point, the ideal $\mathfrak b\mathcal O_{M'}$ is a power of that equation times a unit ideal. Pullback gives the ideal-order identity in (<a data-tag="F47EE864" href="../../tag/09D69C0F18B7/">19.15</a>). 
+    <p>
+      The map $D\to F$ has tangential rank $r-1$ at general smooth points. Use the tangential base coordinates as source coordinates and absorb the unit in the normal pullback into a local holomorphic $e$th root. The resulting local form of the map is 
+    
+<div class="equation">
+  \[  (z_1,z_2,\ldots ,z_ r,z')\longmapsto (z_1^ e,z_2,\ldots ,z_ r).  \]
+</div>
+<p>
+       After a smooth local correction, Siu's divisorial removal from section <a data-tag="0D05D1AE" href="../../tag/2C2417A75DF4/">1.17</a> writes 
+    
+<div class="equation">
+  \[  w\circ \sigma =c_0\log |y_1|^2+R, \qquad c_0=\nu (w\circ \sigma ,F),  \]
+</div>
+<p>
+       with $R$ plurisubharmonic and $\nu (R,F)=0$. By the non-strict Lelong level theorem in <a data-tag="86D804B1" href="../../tag/E911F3E2C8E9/">1.13.1</a>, its full point Lelong number is zero at a very general point of $F$. Skoda's theorem then makes $\mathrm e^{-tR}$ locally integrable for every $t&gt;0$ at this point. 
+    <p>
+      For $e&gt;1$, choose $1&lt;p&lt;e/(e-1)$ and let $p'$ be its conjugate exponent. The density $|y_1|^{2/e-2}$ belongs locally to $L^ p$. Change of variables and Hölder's inequality, using integrability of $\mathrm e^{-tp'R}$, give 
+    
+<div class="equation">
+  \[  \int \mathrm e^{-tR(z_1^ e,z_2,\ldots ,z_ r)}\, \mathrm dV_ z =c_ e\int \mathrm e^{-tR(y)}|y_1|^{2/e-2}\, \mathrm dV_ y&lt;+\infty  \]
+</div>
+<p>
+       on sufficiently small corresponding polydisks. Free source variables contribute a finite product factor; for $e=1$ Fubini's theorem suffices. A positive generic divisor coefficient $c'$ of the pulled-back residual would instead force nonintegrability for $tc'\geq 1$. The residual coefficient is therefore zero, and the logarithmic term has coefficient $ec_0$. This proves the Lelong identity even if $R|_ F\equiv -\infty $. 
+    <p>
+      Finally, if $f(D)=M$, the map is a submersion near a very general point of $D$. A nonzero ideal is a unit at a general image point, and Skoda's theorem at an image point of zero Lelong number, followed by Fubini's theorem in product coordinates, gives zero generic Lelong number on $D$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-286FEC8F6AC1" data-section-entries="1D55891047AA 286FEC8F6AC1 3B4C37A0F595 63EC1D93ABC1 E6C82B883427"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/286FEC8F6AC1/">19.8.2 The full trace envelope</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="7B01A68B"></span></div>
+<p>
+Let $w_ a=\mathcal T_{a\kappa }(U;B)$. The closed-background construction of theorem <a data-tag="E4617F5C" href="../../tag/D1551EE7322B/">19.6.4</a> applies with $\Omega _0=C\kappa $. It gives 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-7D8083D5"><span data-gerby-tag="7D8083D5"></span>
+<span class="equation-label"><a data-tag="7D8083D5" href="../../tag/1D55891047AA/">19.16</a></span>
+<div>\begin{equation}  \begin{gathered} \nu (w_ a\circ \sigma ,F)=\tau _{B,U}(F) \quad \hbox{for every divisor }F\hbox{ over }B,\\ (a/2)^ d\leq \int _ B\mathrm{MA}_{a\kappa }(w_ a)\leq a^ d. \end{gathered} \end{equation}</div>
+</div>
+<p>
+  The lower bound comes from the trace majorant in the half-sized background, and the upper bound from closed mass monotonicity. In particular, the mass is positive, as required for convergence of the divisorial Lelong numbers of the decreasing base models. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-E3D6C8A2">
+<p><a class="environment-identifier" href="../../tag/63EC1D93ABC1/">Theorem <span data-tag="E3D6C8A2">19.8.2</span>.</a><span data-gerby-tag="E3D6C8A2"></span> For the projective pullback data above, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-C8294D75"><span data-gerby-tag="C8294D75"></span>
+<span class="equation-label"><a data-tag="C8294D75" href="../../tag/E6C82B883427/">19.17</a></span>
+<div>\begin{equation}  \mathcal T_{\Omega _{a,b}}(u;Y)=q^*w_ a. \end{equation}</div>
+</div>
+<p> For every Hermitian form $\Omega \geq \Omega _{a,b}$, every smooth compact modification $\pi :Z\to Y$, and every prime divisor $D\subset Z$, </p>
+<div class="equation">
+  \[  \nu \bigl (\mathcal T_\Omega (u;Y)\circ \pi ,D\bigr )=\tau _{Y,u}(D).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply lemma <a data-tag="5028932D" href="../../tag/C53A2B3087AB/">19.8.1</a> to $f=q\circ \pi $. If $D$ dominates $B$, both the trace order and the Lelong number of $q^*w_ a$ are zero. Otherwise the ideal identity (<a data-tag="1A2EE314" href="../../tag/974BDFDF0550/">19.14</a>) and the extracted divisor $F$ give 
+    
+<div class="equation">
+  \[  \tau _{Y,u}(D)=e\tau _{B,U}(F) =e\nu (w_ a\circ \sigma ,F) =\nu (q^*w_ a\circ \pi ,D).  \]
+</div>
+<p>
+       Thus the same potential $q^*w_ a$, independent of the choice of $D$, is an exact trace competitor on every compact model. 
+    <p>
+      The compact elliptic group $\mathbb C^*/\langle \mathrm e^{-1}\rangle $ acts by scalar multiplication on $Y$. It preserves $\alpha $, $\beta $ and all ideals in (<a data-tag="1A2EE314" href="../../tag/974BDFDF0550/">19.14</a>). It also preserves the full competitor family: for a translation $\rho $, the constraint for $v\circ \rho $ on $\pi $ is the constraint for $v$ on the modification $\rho \circ \pi $, with the same ideal order. By theorem <a data-tag="C09160F5" href="../../tag/5FE15106F340/">19.6.2</a>, the envelope is the largest member of this family, so it is invariant under the group. The action is transitive on each fiber; local holomorphic sections of $q$ therefore show that the envelope descends to a genuine quasi-plurisubharmonic function $v$ on $B$. 
+    <p>
+      For a basic potential, positivity is equivalent to positivity on the base: 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-AC48900E"><span data-gerby-tag="AC48900E"></span>
+<span class="equation-label"><a data-tag="AC48900E" href="../../tag/3B4C37A0F595/">19.18</a></span>
+<div>\begin{equation}  \Omega _{a,b}+\mathrm{dd}^{\mathrm{c}}q^*v\geq 0 \quad \Longleftrightarrow \quad a\kappa +\mathrm{dd}^{\mathrm{c}}v\geq 0. \end{equation}</div>
+</div>
+<p>
+       Indeed, wedge the left-hand current with the smooth semipositive form $\beta $ and push forward by $q$. Since $\beta ^2=0$ and its fiber integral is two, the resulting positive current is $2(a\kappa +\mathrm{dd}^{\mathrm{c}}v)$. Conversely, pull back the base inequality and add $b\beta \geq 0$. 
+    <p>
+      Every smooth compact modification $\sigma :B'\to B$ lifts to the smooth compact modification $Y\times _ B B'\to Y$. The inverse image of a prime divisor $F\subset B'$ is prime, because the fibers are connected, and has generic multiplicity one. The trace constraint on this divisor says exactly that $v$ satisfies the constraint at $F$ on $B'$. Thus $v\leq w_ a$. The opposite inequality follows from the exact competitor $q^*w_ a$, proving (<a data-tag="C8294D75" href="../../tag/E6C82B883427/">19.17</a>). 
+    <p>
+      For $\Omega \geq \Omega _{a,b}$, this competitor lies below $T_\Omega =\mathcal T_\Omega (u;Y)$. The defining lower bound and the order of the two potentials give 
+    
+<div class="equation">
+  \[  \tau _{Y,u}(D)\leq \nu (T_\Omega \circ \pi ,D) \leq \nu (q^*w_ a\circ \pi ,D)=\tau _{Y,u}(D),  \]
+</div>
+<p>
+       which proves exactness in every such background. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-8065AC6F9F0F" data-section-entries="13817C91E7B4 313F5BBD3487 8065AC6F9F0F B5F41C0BB745 D8423B168573"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/8065AC6F9F0F/">19.8.3 Mass and the ideal class</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="CA9369F7"></span></div>
+<p>
+The mass of a basic potential is computed by the closed base and the area of the elliptic fiber. The formula below holds for all $a,b&gt;0$. It computes one representative; the target still fails the bounded mass property by corollary <a data-tag="EBCD5FFB" href="../../tag/77FC30E16968/">8.6.3</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-743E7F6A">
+<p><a class="environment-identifier" href="../../tag/13817C91E7B4/">Proposition <span data-tag="743E7F6A">19.8.3</span>.</a><span data-gerby-tag="743E7F6A"></span> For every $v\in \mathrm{PSH}(B,a\kappa )$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-40F8BFD2"><span data-gerby-tag="40F8BFD2"></span>
+<span class="equation-label"><a data-tag="40F8BFD2" href="../../tag/B5F41C0BB745/">19.19</a></span>
+<div>\begin{equation}  \int _ Y\mathrm{MA}_{\Omega _{a,b}}(q^*v) =2nb\int _ B\mathrm{MA}_{a\kappa }(v). \end{equation}</div>
+</div>
+<p> In particular, the trace envelope in (<a data-tag="C8294D75" href="../../tag/E6C82B883427/">19.17</a>) has mass between $2nb(a/2)^ d$ and $2nba^ d$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Normalize $v\leq 0$ and put $v_ j=\max (v,-j)$. For bounded potentials, the horizontal current has rank at most $d=n-1$ and $\beta ^2=0$, so the bounded local product gives 
+    
+<div class="equation">
+  \[  (\Omega _{a,b}+\mathrm{dd}^{\mathrm{c}}q^*v_ j)^ n =nb\, \beta \wedge q^*(a\kappa +\mathrm{dd}^{\mathrm{c}}v_ j)^ d.  \]
+</div>
+<p>
+       This identity follows by local decreasing regularization on base charts and the bounded product convergence of chapter <a data-tag="2AA407AC" href="../../tag/B724B74AE68C/">6</a>; it does not require $\beta $ to be closed. Restrict to $q^{-1}\{ v&gt;-j\} $ and pass to the increasing non-pluripolar measures. Fiber integration gives (<a data-tag="40F8BFD2" href="../../tag/B5F41C0BB745/">19.19</a>), and (<a data-tag="7D8083D5" href="../../tag/1D55891047AA/">19.16</a>) gives the two bounds. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-498EBF5F">
+<p><a class="environment-identifier" href="../../tag/D8423B168573/">Example <span data-tag="498EBF5F">19.8.4</span>.</a><span data-gerby-tag="498EBF5F"></span> Set </p>
+<div class="equation">
+  \[  U([z_0:\cdots :z_ n]) =\log \frac{\sum _{i=0}^{n-2}|z_ i|^2}{\sum _{i=0}^ n|z_ i|^2}, \qquad P=[0:\cdots :0:1]\in B.  \]
+</div>
+<p> Then $\nu (U,B)=0$ and, for every $t&gt;0$, </p>
+<div class="equation">
+  \[  \mathfrak b_ t=\mathfrak m_ P^{\max \{ \lfloor t-d+1\rfloor ,0\} }, \qquad \tau _{Y,u}(D)=\operatorname {ord}_ D(\mathfrak m_ P\mathcal O_ Z)  \]
+</div>
+<p> for every divisor $D$ on every smooth compact modification $Z\to Y$, with the ideal extended through $q$. The potential $q^*(U|_ B)$ is an exact realizer, singular along the elliptic fiber above $P$. For this explicit potential it suffices to take $a&gt;1$, and </p>
+<div class="equation">
+  \[  \int _ Y\mathrm{MA}_{\Omega _{a,b}}(q^*(U|_ B))=2nb(a^ d-1).  \]
+</div>
+<p> It need not equal the normalized trace envelope. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The singular locus of $U$ is the projective line defined by $z_0=\cdots =z_{n-2}=0$, of codimension $d$. Its smooth-center multiplier ideals are given by lemma <a data-tag="94144E8D" href="../../tag/C21A2A6F9E07/">1.16.1</a>; restriction to $B$ gives the displayed powers of $\mathfrak m_ P$. Dividing their orders by $t$ proves the trace formula. Exactness of the ordinary restriction follows from proposition <a data-tag="04472093" href="../../tag/FE94B20EED19/">19.2.1</a>, since the ambient pullback has analytic singularities. 
+    <p>
+      On the point blowup $\sigma :\widetilde B\to B$, let $F$ be the exceptional divisor, $H=[\sigma ^*\kappa ]$, and let $\eta $ be the pullback of the Fubini–Study form by the resolved projection to $\mathbb P^{d-1}$. The logarithm defining $U|_ B$ gives 
+    
+<div class="equation">
+  \[  \sigma ^*(a\kappa )+\mathrm{dd}^{\mathrm{c}}(U|_ B\circ \sigma ) =[F]+(a-1)\sigma ^*\kappa +\eta .  \]
+</div>
+<p>
+       The residual form is smooth semipositive for $a&gt;1$, with class $aH-F$. Its smooth top product off $F$ computes the non-pluripolar mass, and the smooth measure does not charge $F$. Since $H|_ F=0$, all mixed intersections involving both $H$ and $F$ vanish; $H^ d=1$ and $F^ d=(-1)^{d-1}$ give $(aH-F)^ d=a^ d-1$. Formula (<a data-tag="40F8BFD2" href="../../tag/B5F41C0BB745/">19.19</a>) now supplies the elliptic factor $2nb$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-232A15E7">
+<p><a class="environment-identifier" href="../../tag/313F5BBD3487/">Corollary <span data-tag="232A15E7">19.8.5</span>.</a><span data-gerby-tag="232A15E7"></span> The ideal singularity class of $\mathcal T_{\Omega _{a,b}}(u;Y)$ is independent of $a\geq 2C$ and $b&gt;0$, and depends only on the multiplier-ideal class of $U$. These classes respect addition and positive scaling of the ambient data: for $U_1,U_2$ with zero generic Lelong number along $B$ and $\lambda &gt;0$, in sufficiently large invariant backgrounds, </p>
+<div class="equation">
+  \[  \mathcal T(u_1+u_2;Y)\sim _{\mathcal I} \mathcal T(u_1;Y)+\mathcal T(u_2;Y), \qquad \mathcal T(\lambda u_1;Y)\sim _{\mathcal I} \lambda \mathcal T(u_1;Y),  \]
+</div>
+<p> where the backgrounds on the individual envelopes are omitted from the notation. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      All sufficiently large base backgrounds give the same divisorial Lelong numbers (<a data-tag="7D8083D5" href="../../tag/1D55891047AA/">19.16</a>). On the compact Kähler base, equality of these numbers on all compact models is equivalent to equality of the multiplier ideals at every real positive weight; see the closed criterion recalled in <a data-tag="2D2FF42A" href="../../tag/81F92F228A7E/">34.13</a>. Hence all $w_ a$ have the same ideal class. The submersion identity of lemma <a data-tag="BD00E282" href="../../tag/2FA053FE56D9/">1.16.6</a> transfers the equality to $q^*w_ a$, which does not depend on $b$. Equal ambient multiplier ideals also give equal trace data. 
+    <p>
+      By theorem <a data-tag="2FF1D678" href="../../tag/89D22AB4CBD8/">19.1.2</a>, the trace data of $U_1+U_2$ is the sum of those of $U_1$ and $U_2$. The sum of two exact base realizers has precisely these divisorial Lelong numbers, so the same closed criterion identifies its ideal class with that of the base trace envelope for $U_1+U_2$. Positive scaling is identical. Pullback gives both assertions on $Y$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The ideal-class conclusion here concerns the invariant backgrounds $\Omega _{a,b}$. Exactness in every larger Hermitian background follows from theorem <a data-tag="E3D6C8A2" href="../../tag/63EC1D93ABC1/">19.8.2</a>, but does not by itself identify an ordinary or ideal class in all those backgrounds. The criterion in the proof is applied on $B$, not assumed on a general non-Kähler manifold. 
+</p>
+</div></section><section class="reading-chunk" id="entry-F128B6972881" data-section-entries="B0E6CF965FAB F128B6972881"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/F128B6972881/">19.8.4 Decreasing analytic models</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="E9AB16CE"></span></div>
+<p>
+Let $U_ m$ be the ambient multiplier-ideal approximants used in theorem <a data-tag="C09160F5" href="../../tag/5FE15106F340/">19.6.2</a>. After discarding finitely many dyadic indices, their restrictions belong to $\mathrm{PSH}(B,a\kappa )$. Put 
+</p>
+<div class="equation">
+  \[  w_ j=P_{a\kappa }[U_{2^ j}|_ B],\qquad v_ j=q^*w_ j.  \]
+</div>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-67C2EC80">
+<p><a class="environment-identifier" href="../../tag/B0E6CF965FAB/">Proposition <span data-tag="67C2EC80">19.8.6</span>.</a><span data-gerby-tag="67C2EC80"></span> The potentials $v_ j$ are the full ordinary analytic models </p>
+<div class="equation">
+  \[  v_ j=P_{\Omega _{a,b}}[q^*(U_{2^ j}|_ B)].  \]
+</div>
+<p> They decrease to $\mathcal T_{\Omega _{a,b}}(u;Y)$ in $L^1(Y)$. For every smooth compact modification $\pi :Z\to Y$, their pullbacks converge in $L^1(Z)$, and for every prime divisor $D\subset Z$, </p>
+<div class="equation">
+  \[  \nu (v_ j\circ \pi ,D)\longrightarrow \tau _{Y,u}(D).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $h\in \mathrm{PSH}(B,a\kappa )$, each finite obstacle envelope $P_{\Omega _{a,b}}(q^*h+A,0)$ is invariant under the elliptic action. Its full supremum descends to the base, where (<a data-tag="AC48900E" href="../../tag/3B4C37A0F595/">19.18</a>) gives the background condition. Surjectivity makes the obstacle inequalities equivalent on $Y$ and $B$. Hence 
+    
+<div class="equation">
+  \[  P_{\Omega _{a,b}}(q^*h+A,0) =q^*P_{a\kappa }(h+A,0).  \]
+</div>
+<p>
+       Letting $A\to +\infty $ and taking upper semicontinuous regularizations proves $P_{\Omega _{a,b}}[q^*h]=q^*P_{a\kappa }[h]$. Analytic type follows from proposition <a data-tag="849B1EFF" href="../../tag/EB95710FF4D7/">16.2.7</a>. 
+    <p>
+      The base models decrease to $w_ a$ by theorem <a data-tag="C09160F5" href="../../tag/5FE15106F340/">19.6.2</a>. Their pullbacks therefore decrease to $q^*w_ a$ and converge in $L^1(Y)$ by genuine decreasing quasi-plurisubharmonic convergence. The extracted-divisor formula (<a data-tag="F47EE864" href="../../tag/09D69C0F18B7/">19.15</a>) transfers convergence of all base divisorial Lelong numbers to every $D$ over $Y$; horizontal divisors have coefficient zero throughout. Finally, lemma <a data-tag="7BFD3B19" href="../../tag/C07C7BB26EF8/">1.22.13</a> gives $L^1$ convergence on each compact modification. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+These results answer the trace question for arbitrary genuine projective data pulled back to the Hopf pair $(H_{n+1},H_ n)$, including nonanalytic data. They neither require bounded mass on $H_ n$ nor supply convergence of extremal singularity volumes there. The unrestricted realization problem of <a data-tag="2F167D62" href="../../tag/D81AB6932636/">33.8.1</a> still concerns data without this projective pullback structure. 
+</p>
+</div></section><section class="reading-chunk" id="entry-291ACA57C265" data-section-entries="291ACA57C265 65113AF2CE2F AA3908FEC2B4 BB2C048CAB3B D8F334251727"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/291ACA57C265/">19.9 Product realizations and their measures</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="25E77DCA"></span></div>
+<p>
+For a sum of potentials pulled back from the two factors of a product with a curve, dimension reasons force every term of the Monge–Ampère expansion to contain exactly one factor from the curve. The resulting product formula computes the measure of the pulled-back Green representative and solves equations with separated densities. Adding a potential from the other factor with trivial multiplier ideals can keep every trace coefficient while changing finite mass to infinite mass. 
+</p>
+<p>
+In this section, $C$ is a compact connected curve with a smooth positive form $\eta $ of integral one, and $(Z,\omega _ Z)$ is a compact connected Hermitian manifold of dimension $k\geq 1$. On $Y=C\times Z$, let $q:Y\to C$ and $r:Y\to Z$ be the projections. Choose $A&gt;0$ and set 
+</p>
+<div class="equation">
+  \[  \Omega =q^*(A\eta )+r^*\omega _ Z.  \]
+</div>
+<p>
+ For positive Borel measures $\mu $ on $C$ and $\nu $ on $Z$, $\mu \otimes \nu $ denotes their product measure. The extended measures below are $\sigma $-finite by theorem <a data-tag="059FFA20" href="../../tag/99C7ACBB2589/">6.1.2</a>, so this notation is meaningful also when a total mass is infinite. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-F41D101E">
+<p><a class="environment-identifier" href="../../tag/AA3908FEC2B4/">Proposition <span data-tag="F41D101E">19.9.1</span>.</a><span data-gerby-tag="F41D101E"></span> For $w\in \mathrm{PSH}(C,A\eta )$ and $h\in \mathrm{PSH}(Z,\omega _ Z)$, the potential $a=w\circ q+h\circ r$ is $\Omega $-plurisubharmonic and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-B8614D53"><span data-gerby-tag="B8614D53"></span>
+<span class="equation-label"><a data-tag="B8614D53" href="../../tag/D8F334251727/">19.20</a></span>
+<div>\begin{equation}  \mathrm{MA}^{\mathrm{ext}}_\Omega (a) =(k+1)\,  \mathrm{MA}^{\mathrm{ext}}_{A\eta }(w) \otimes \mathrm{MA}^{\mathrm{ext}}_{\omega _ Z}(h). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The curvature current of $a$ is the sum of the pullbacks of the two positive currents $A\eta +\mathrm{dd}^{\mathrm{c}}w$ and $\omega _ Z+\mathrm{dd}^{\mathrm{c}}h$, which proves positivity. 
+    <p>
+      Suppose first that both potentials are bounded. Expanding the bounded product by multilinearity, only the terms with one factor from $C$ and $k$ factors from $Z$ survive: two factors from $C$ vanish for dimension reasons, and so do $k+1$ factors from $Z$. The binomial coefficient is $k+1$, which gives the formula for bounded potentials once the exterior product $q^*(A\eta +\mathrm{dd}^{\mathrm{c}}w)\wedge r^*(\omega _ Z+\mathrm{dd}^{\mathrm{c}}h)^ k$ is identified with the product measure $(A\eta +\mathrm{dd}^{\mathrm{c}}w)\otimes (\omega _ Z+\mathrm{dd}^{\mathrm{c}}h)^ k$. To justify this identification at the present regularity, add local plurisubharmonic corrections on each factor and regularize by decreasing convolution on smaller product charts. For the smooth approximants the identity is the exterior product of forms. Local Bedford–Taylor convergence, together with the finite expansion in the smooth background, gives weak convergence of the factor measures, with uniformly bounded variation on compact subcharts. The product measures then converge weakly: one first tests against products of continuous functions on the two factors and then uses uniform approximation by finite sums of such products. This proves the identity in the limit. 
+    <p>
+      For general potentials, subtract constants so that $w,h\leq 0$, and set $w_ j=\max (w,-j)$ and $h_ j=\max (h,-j)$. On 
+    
+<div class="equation">
+  \[  R_ j=\{ w&gt;-j\} \times \{ h&gt;-j\}   \]
+</div>
+<p>
+       the sum agrees with the bounded potential $w_ j\circ q+h_ j\circ r$. This set is plurifine open and Borel, and it lies in $\{ a&gt;-2j\} $. Locality of the products of bounded truncations therefore identifies the restriction to $R_ j$ of the extended measure of $a$ with that of the bounded sum. By the bounded case, this is $k+1$ times the product of the restrictions of the truncated measures, which are exactly the restrictions of the two extended measures of the factors. 
+    <p>
+      The sets $R_ j$ increase to the product of the complements of the two pole sets, and both sides of (<a data-tag="B8614D53" href="../../tag/D8F334251727/">19.20</a>) give zero mass to the remaining set: for the left-hand side it is the pole set of $a$, and for the right-hand side this follows because each factor measure charges no pluripolar set and the product measures are $\sigma $-finite. Monotone convergence of positive measures proves the formula, even when the total mass is infinite. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Suppose now that $D$ is a finite atomic measure on $C$, for instance the trace measure of section <a data-tag="D887442B" href="../../tag/3F27B145B165/">19.7</a>, put $\delta =D(C)$, and let $w$ be the Green potential with $\mathrm{dd}^{\mathrm{c}}w=D-\delta \eta $. For $A&gt;\delta $, the potential $v=w\circ q$ satisfies 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-AE7ED965"><span data-gerby-tag="AE7ED965"></span>
+<span class="equation-label"><a data-tag="AE7ED965" href="../../tag/BB2C048CAB3B/">19.21</a></span>
+<div>\begin{equation}  \mathrm{MA}^{\mathrm{ext}}_\Omega (v) =(k+1)(A-\delta )\, \eta \otimes \omega _ Z^ k. \end{equation}</div>
+</div>
+<p>
+ Thus its measure is smooth and positive, although $v$ may have infinitely many singular fibers. This identity concerns the extended measure, whose definition discards the divisorial part of the curvature current. 
+</p>
+<p>
+The product formula also solves equations with separated densities in this ordinary type. Fix a smooth positive volume form $\mathrm{d}V_ Z$ on $Z$ and $p&gt;1$, and let $0\leq f\in L^ p(C,\eta )$ and $0\leq g\in L^ p(Z,\mathrm{d}V_ Z)$ have positive integrals. By theorem <a data-tag="46A3A7FE" href="../../tag/AFC6C3B6368C/">19.4.1</a>, applied on $C$ in the background $A\eta $, there is $w_ f\sim w$ with 
+</p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_{A\eta }(w_ f)=c_ C f\eta , \qquad c_ C=\frac{A-\delta }{\int _ Cf\eta }.  \]
+</div>
+<p>
+  By theorem <a data-tag="4F61922B" href="../../tag/C8D798C2D2F0/">10.1.1</a>, there are a bounded $h_ g\in \mathrm{PSH}(Z,\omega _ Z)$ and $c_ Z&gt;0$ with 
+</p>
+<div class="equation">
+  \[  \mathrm{MA}_{\omega _ Z}(h_ g)=c_ Zg\, \mathrm{d}V_ Z.  \]
+</div>
+<p>
+ The sum $a=w_ f\circ q+h_ g\circ r$ is ordinarily equivalent to $v$, and 
+</p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\Omega (a) =(k+1)c_ Cc_ Z\, (f\eta )\otimes (g\, \mathrm{d}V_ Z).  \]
+</div>
+<p>
+ The product density belongs to $L^ p$ by Fubini's theorem. This is an explicit construction for separated densities; existence for general $L^ p$ densities, in a sufficiently large background, follows from corollary <a data-tag="6F35B281" href="../../tag/C5512844A274/">19.6.6</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-572802DA">
+<p><a class="environment-identifier" href="../../tag/65113AF2CE2F/">Proposition <span data-tag="572802DA">19.9.2</span>.</a><span data-gerby-tag="572802DA"></span> Suppose that $Z$ does not have the bounded mass property, that is, $v_+(\omega _ Z)=+\infty $ in the notation of definition <a data-tag="254B47C8" href="../../tag/EB45638CBB2C/">6.5.1</a>, and that $A&gt;\delta $. Then there is $a\in \mathrm{PSH}(Y,\Omega )$ such that </p>
+<div class="equation">
+  \[  a\sim _{\mathcal I}v,\qquad \int _ Y\mathrm{MA}^{\mathrm{ext}}_\Omega (v)&lt;+\infty , \qquad \int _ Y\mathrm{MA}^{\mathrm{ext}}_\Omega (a)=+\infty .  \]
+</div>
+<p> Both potentials have the same divisorial Lelong numbers on every modification; when $D$ is the trace measure of section <a data-tag="D887442B" href="../../tag/3F27B145B165/">19.7</a>, these are the trace data computed in theorem <a data-tag="BC006EB4" href="../../tag/A30F4066C584/">19.7.1</a>. The product manifold $Y$ does not have the bounded mass property. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose the nonpositive potential $H$ of theorem <a data-tag="F56A8389" href="../../tag/AEE72111FEDA/">6.6.1</a> on $Z$; it has infinite extended mass, and $\mathrm{e}^{-tH}$ is integrable for every $t&gt;0$. Put $a=w\circ q+H\circ r$. The product formula and $A-\delta &gt;0$ show that the mass of $a$ is infinite, while (<a data-tag="AE7ED965" href="../../tag/BB2C048CAB3B/">19.21</a>) gives the finite positive mass of $v$. 
+    <p>
+      We prove equality of the multiplier ideals locally, for every $t&gt;0$. Since $H\leq 0$, integrability against $\mathrm{e}^{-ta}$ implies integrability against $\mathrm{e}^{-tv}$, so $\mathcal I(ta)\subseteq \mathcal I(tv)$. Conversely, lemma <a data-tag="BD00E282" href="../../tag/2FA053FE56D9/">1.16.6</a> gives $\mathcal I(tv)=\mathcal I(tw)\mathcal O_ Y$. Local generators pulled back from $C$ are square integrable against $\mathrm{e}^{-tw}$, so by Fubini's theorem they are also square integrable against $\mathrm{e}^{-tw}\mathrm{e}^{-tH}=\mathrm{e}^{-ta}$; multiplication by bounded holomorphic functions and finite sums preserve this local integrability. Thus $\mathcal I(tv)\subseteq \mathcal I(ta)$, which proves equality at every positive weight. Theorem <a data-tag="8B4BE822" href="../../tag/3F1FC2F620B4/">1.16.3</a> then gives equality of all divisorial Lelong numbers after modification. 
+    <p>
+      Finally, since $a$ has infinite mass, proposition <a data-tag="7095F67A" href="../../tag/1342466C71A9/">6.5.3</a> shows that $Y$ does not have the bounded mass property. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For a concrete ambient realization, take a compact complex manifold $M$ containing the curve $C$, a potential $U\in \mathrm{QPSH}(M)$ with $\nu (U,C)=0$, and $X=M\times Z$. Then $Y=C\times Z$ and $u=U\circ \operatorname {pr}_ M$, where $\operatorname {pr}_ M:X\to M$ is the projection, satisfy the hypotheses of theorem <a data-tag="BC006EB4" href="../../tag/A30F4066C584/">19.7.1</a> with $p=\operatorname {pr}_ M$. The factor $Z$ can be the Hopf threefold of theorem <a data-tag="B6188BE3" href="../../tag/92B2FB434C79/">8.0.1</a>. Small logarithmic poles of $U$ at finitely many points of $C$ already give nonzero trace data, and the construction on the curve also allows any countable trace data arising from the multiplier ideals of $U$. 
+</p>
+<p>
+The mass formula of section <a data-tag="5A33875F" href="../../tag/BB144FEBF316/">28.7</a> uses more information: the restriction itself in a closed background, with a finite divisorial part and a bounded remainder on a Kähler model. Its residual class is nef and computes the mass of that restriction. Divisorial trace data alone does not provide such a remainder, as the preceding example shows. 
+</p>
+</div></section><section class="reading-chunk" id="entry-070063ADB7C2" data-section-entries="070063ADB7C2 691AF485D1C2 72230836D2EE 9099C8F4472B 9EDE5892D63B EEBF58093B80 F060F71204CB"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/070063ADB7C2/">19.10 Ordinary trace volumes on a nonclosed ruled surface</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="ECB5F6D3"></span></div>
+<p>
+The preceding product formula computes the mass of a separated representative. When the background itself varies along the curve, even bounded changes of the representative can change its mass. On a product of projective lines we can optimize over the entire ordinary singularity type, including potentials depending on both factors. The residual pole will be unbounded with zero Lelong number. Its multiplier ideals see the imposed divisor, whereas its ordinary type also retains this residual pole. 
+</p>
+<p>
+In this section let $Y=\mathbb P^1\times \mathbb P^1$, let $w$ be the probability Fubini–Study form on $\mathbb P^1$, and denote its pullbacks by $w_1,w_2$. Fix $p\in \mathbb P^1$, and let $G_ p\leq 0$ be the Green potential satisfying $\mathrm{dd}^{\mathrm{c}}G_ p=[p]-w$ and $\sup G_ p=0$. Functions on the first factor are also viewed as functions on $Y$. Put 
+</p>
+<div class="equation">
+  \[  D=\{ p\} \times \mathbb P^1,\qquad U=1-(1-G_ p)^\alpha ,\qquad r=bG_ p+U, \qquad 0&lt;\alpha &lt;1,  \]
+</div>
+<p>
+ where $b\geq 0$. The term $bG_ p$ is identically zero when $b=0$. Choose $c&gt;0$ and a smooth positive function $a$ on the first curve, and set 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-B87CC3FB"><span data-gerby-tag="B87CC3FB"></span>
+<span class="equation-label"><a data-tag="B87CC3FB" href="../../tag/691AF485D1C2/">19.22</a></span>
+<div>\begin{equation}  \theta =cw_1+aw_2. \end{equation}</div>
+</div>
+<p>
+ Thus $\theta $ is Hermitian and is nonclosed precisely when $a$ is nonconstant. The function $r$ specifies an ordinary type; whether that type has $\theta $-plurisubharmonic representatives will follow from the next theorem. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-8F6D11C0">
+<p><a class="environment-identifier" href="../../tag/72230836D2EE/">Lemma <span data-tag="8F6D11C0">19.10.1</span>.</a><span data-gerby-tag="8F6D11C0"></span> There are $U_ L\sim U$ with $\sup U_ L=0$, $\mathrm{dd}^{\mathrm{c}}U_ L\geq -\epsilon _ Lw$ and $\epsilon _ L\downarrow 0$, such that $U_ L\to 0$ in $L^1(\mathbb P^1)$. Each has zero Lelong number at $p$ and is locally bounded off $p$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $t\leq 0$ put $\chi (t)=1-(1-t)^\alpha $. Then 
+    
+<div class="equation">
+  \[  \chi '(t)=\alpha (1-t)^{\alpha -1}&gt;0,\qquad \chi ''(t)=\alpha (1-\alpha )(1-t)^{\alpha -2}&gt;0.  \]
+</div>
+<p>
+       For $L&gt;0$ set $\epsilon _ L=\chi '(-L)$, $C_ L=-\epsilon _ LL-\chi (-L)$, and define 
+    
+<div class="equation">
+  \[  \chi _ L(t)= \begin{cases}  \chi (t)+C_ L,&amp; t&lt;-L,\\  \epsilon _ Lt,&amp; -L\leq t\leq 0. \end{cases}  \]
+</div>
+<p>
+       The values and first derivatives match, and $\chi _ L$ is convex and increasing with derivative at most $\epsilon _ L$. Off $p$, the chain rule gives $\mathrm{dd}^{\mathrm{c}}\chi _ L(G_ p)\geq -\epsilon _ Lw$. Canonical extension across $p$ retains this bound by the removable-singularity theorem, so $U_ L=\chi _ L(G_ p)$ has the required curvature. Near $p$ it differs from $U$ by $C_ L$, and elsewhere both are bounded. Its growth is sublogarithmic, hence its Lelong number is zero. 
+    <p>
+      Writing $x=1+L$, we have $C_ L=(1-\alpha )x^\alpha +\alpha x^{\alpha -1}-1\geq 0$. Also $\chi (t)\leq \epsilon _ Lt$ for $-L\leq t\leq 0$, by integrating $\chi '\geq \epsilon _ L$ on this interval. It follows that $U\leq U_ L\leq 0$. Since $\epsilon _ L\to 0$, the functions tend to zero off $p$, and dominated convergence gives the $L^1$ limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-D8182E16">
+<p><a class="environment-identifier" href="../../tag/9EDE5892D63B/">Theorem <span data-tag="D8182E16">19.10.2</span>.</a><span data-gerby-tag="D8182E16"></span> The ordinary type of $r$ has $\theta $-plurisubharmonic representatives if and only if $b&lt;c$. In this range it contains a strict current: some $v\sim r$ satisfies $\theta +\mathrm{dd}^{\mathrm{c}}v\geq \delta (w_1+w_2)$ with $\delta &gt;0$. Every $v\in \mathrm{PSH}(Y,\theta )$ with $v\sim r$ has positive finite extended mass, given by </p>
+<div class="equation" id="non-kahler-pluripotential-theory-282093CE"><span data-gerby-tag="282093CE"></span>
+<span class="equation-label"><a data-tag="282093CE" href="../../tag/EEBF58093B80/">19.25</a></span>
+<div>\begin{equation}  \int _ Y\mathrm{MA}^{\mathrm{ext}}_\theta (v) =\int _ Y\theta ^2-2b a(p)+2\int _ Yv\, \mathrm{dd}^{\mathrm{c}}\theta . \end{equation}</div>
+</div>
+<p> The volumes of definition <a data-tag="24DFEC22" href="../../tag/52560A3D59BD/">13.3.1</a> are </p>
+<div class="equation" id="non-kahler-pluripotential-theory-F6BA579E"><span data-gerby-tag="F6BA579E"></span>
+<span class="equation-label"><a data-tag="F6BA579E" href="../../tag/9099C8F4472B/">19.26</a></span>
+<div>\begin{equation}  \underline{\operatorname {vol}}_\theta (v)=2(c-b)\min a, \qquad \overline{\operatorname {vol}}_\theta (v)=2(c-b)\max a. \end{equation}</div>
+</div>
+<p> Both values are limits of masses of representatives of this ordinary type. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first remove the logarithmic divisor. If $v\sim r$, then $\nu (v,D)=b$, so lemma <a data-tag="71AD1E73" href="../../tag/3AA98220C897/">1.17.1</a> gives $\theta +\mathrm{dd}^{\mathrm{c}}v-b[D]\geq 0$. Taking $q=v-bG_ p$ in $L^1$ and then its quasi-plurisubharmonic representative gives 
+    
+<div class="equation">
+  \[  q\in \mathrm{PSH}(Y,\beta ),\qquad q\sim U,\qquad \beta =kw_1+aw_2,\qquad k=c-b.  \]
+</div>
+<p>
+       Indeed the ordinary inequalities hold off $D$ and extend canonically across it. Conversely such a $q$ gives $v=bG_ p+q$ with 
+    
+<div class="equation">
+  \[  \theta +\mathrm{dd}^{\mathrm{c}}v=b[D]+\beta +\mathrm{dd}^{\mathrm{c}}q.  \]
+</div>
+<p>
+       Their locally bounded products agree off $D$, and both extended measures give $D$ zero mass. Thus their extended measures agree everywhere. 
+    <p>
+      If $k&gt;0$, choose $L$ with $\epsilon _ L&lt;k/2$. The potential $bG_ p+U_ L$ belongs to the specified type and satisfies 
+    
+<div class="equation">
+  \[  \theta +\mathrm{dd}^{\mathrm{c}}(bG_ p+U_ L) \geq b[D]+(k-\epsilon _ L)w_1+aw_2 \geq \min (k/2,\min a)(w_1+w_2).  \]
+</div>
+<p>
+       For necessity, average $q$ over the unitary group acting transitively on the second projective line, with its Haar probability measure. The background is invariant. The average has a genuine first-factor representative $q_0\sim U$ and $kw+\mathrm{dd}^{\mathrm{c}}q_0\geq 0$. One can first average in $L^1$ and then take the canonical representative; the curvature inequality and the ordinary bounds pass to it. The positive curve measure has total mass $k$, excluding $k&lt;0$. When $k=0$, $q_0$ is harmonic on the compact curve and therefore constant, contradicting $q_0\sim U$. 
+    <p>
+      It remains to compute the mass for every competitor, before using the average. Choose a closed Kähler form $K=C(w_1+w_2)\geq \beta $ and a fixed $u_0=U_ L$ as above. The closed positive current $S_0=K+\mathrm{dd}^{\mathrm{c}}u_0$ has no coefficient mass on $D$, since its first-factor curvature has no atom at $p$. The product formula gives 
+    
+<div class="equation">
+  \[  \langle S_0\rangle =S_0,\qquad \langle S_0^2\rangle =2C(Cw_1+\mathrm{dd}^{\mathrm{c}}u_0)\wedge w_2, \qquad \int _ Y\langle S_0^2\rangle =\int _ YK^2.  \]
+</div>
+<p>
+       For $S=K+\mathrm{dd}^{\mathrm{c}}q$, both $S$ and $S_0$ are closed positive currents in the same Kähler class, with bounded difference of potentials and small unbounded locus $D$. The classical closed-class comparison of non-pluripolar products, applied in both singularity orders in degrees one and two, gives 
+    
+<div class="equation">
+  \[  \{ \langle S\rangle \} =\{ K\} ,\qquad \int _ Y\langle S^2\rangle =\int _ YK^2.  \]
+</div>
+<p>
+       Here the degree-one non-pluripolar current is the restriction of $S$ off $D$ and is closed. Hence the positive current $S-\langle S\rangle $ has zero trace against $K$, and vanishes. This proves $\langle S\rangle =S$. Equivalently, absence of polar coefficient mass follows from proposition <a data-tag="F9AAD931" href="../../tag/09F56C9DE42C/">1.25.3</a>. The closed comparison is used only for $K$. 
+    <p>
+      Put $R=\beta -K$. Bedford–Taylor expansion off $D$, followed by extension by zero, now yields 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\beta (q) =\langle S^2\rangle +2R\wedge S+R^2.  \]
+</div>
+<p>
+       The first term is finite by closed comparison, the second has finite variation because $S$ has finite trace, and the last is smooth. Since none has coefficient mass on $D$, this is also an identity on $Y$. Distributional Stokes therefore gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-AB4D6D19"><span data-gerby-tag="AB4D6D19"></span>
+<span class="equation-label"><a data-tag="AB4D6D19" href="../../tag/F060F71204CB/">19.27</a></span>
+<div>\begin{equation}  \int _ Y\mathrm{MA}^{\mathrm{ext}}_\beta (q) =\int _ Y\beta ^2+2\int _ Yq\, \mathrm{dd}^{\mathrm{c}}\beta =2\int _{\mathbb P^1}a(kw+\mathrm{dd}^{\mathrm{c}}q_0). \end{equation}</div>
+</div>
+<p>
+       The pairing uses only $q\in L^1$. Averaging preserves it, since $\mathrm{dd}^{\mathrm{c}}\beta =\mathrm{dd}^{\mathrm{c}}a\wedge w_2$. The last measure is positive of total mass $k$, proving the bounds in (<a data-tag="F6BA579E" href="../../tag/9099C8F4472B/">19.26</a>) for all original competitors. Substituting $q=v-bG_ p$ and $\int G_ p\mathrm{dd}^{\mathrm{c}}a=a(p)-\int aw$ proves (<a data-tag="282093CE" href="../../tag/EEBF58093B80/">19.25</a>). 
+    <p>
+      To approach either bound, choose a point $x$ where $a$ takes the corresponding extreme value, smooth strictly positive measures $\zeta _ j$ of mass $k$ tending weakly to $k\delta _ x$, and smooth $g_ j$ with $\mathrm{dd}^{\mathrm{c}}g_ j=\zeta _ j-kw$. Choose $L_ j$ so that $\epsilon _{L_ j}$ is less than half the minimum density of $\zeta _ j$ relative to $w$ and $|\int U_{L_ j}\mathrm{dd}^{\mathrm{c}}a|&lt;1/j$. Then 
+    
+<div class="equation">
+  \[  v_ j=bG_ p+g_ j+U_{L_ j}\sim r,\qquad \beta +\mathrm{dd}^{\mathrm{c}}(g_ j+U_{L_ j})\geq \tfrac 12\zeta _ j+aw_2&gt;0.  \]
+</div>
+<p>
+       Their masses tend to $2ka(x)$ by (<a data-tag="AB4D6D19" href="../../tag/F060F71204CB/">19.27</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+No finite first moment is used here. For the reference $u_0=U_ L$, the closed first moment $\int _ Y(-u_0)\langle (K+\mathrm{dd}^{\mathrm{c}}u_0)^2\rangle $ is finite exactly when $\alpha &lt;1/2$. Near $p$ put $t=-G_ p$. Then $-u_0\asymp t^\alpha $ and $\chi ''(G_ p)\asymp t^{\alpha -2}$, while angular integration of $\mathrm dG_ p\wedge \mathrm d^{\mathrm c}G_ p$ is comparable to $\mathrm dt$. The singular contribution is thus comparable to $\int ^\infty t^{2\alpha -2}\, \mathrm dt$. The smooth contributions are integrable, and the mass formula includes the divergent range. 
+</p>
+</div></section><section class="reading-chunk" id="entry-4746F2B8424A" data-section-entries="4746F2B8424A C33DAF9C7870"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/4746F2B8424A/">19.10.1 Ambient ideal orders and ordinary type</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="99314401"></span></div>
+<p>
+To realize these data as intrinsic traces, set $X=Y\times \mathbb P^1$ and identify $Y$ with $Y\times \{ z_0\} $ for a fixed $z_0$. Write $w_3$ for the third-factor form and let $\operatorname {pr}_ Y:X\to Y$ be the projection. With $L$ as in the theorem, put 
+</p>
+<div class="equation">
+  \[  \Theta =\operatorname {pr}_ Y^*\theta +w_3, \qquad u_ X=\operatorname {pr}_ Y^*(bG_ p+U_ L), \qquad D_ X=D\times \mathbb P^1.  \]
+</div>
+<p>
+ Then $u_ X\in \mathrm{PSH}(X,\Theta )$ and $\nu (u_ X,Y)=0$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-B1896FDF">
+<p><a class="environment-identifier" href="../../tag/C33DAF9C7870/">Proposition <span data-tag="B1896FDF">19.10.3</span>.</a><span data-gerby-tag="B1896FDF"></span> For every real $s&gt;0$, </p>
+<div class="equation">
+  \[  \mathcal I(su_ X)=\mathcal O_ X(-\lfloor sb\rfloor D_ X), \qquad \mathcal I(su_ X)\mathcal O_ Y =\mathcal O_ Y(-\lfloor sb\rfloor D).  \]
+</div>
+<p> For every prime divisor $E$ on every smooth compact modification $\pi :Y'\to Y$, the intrinsic trace data are </p>
+<div class="equation">
+  \[  \tau _{Y,u_ X}(E)=b\operatorname {ord}_ E(\pi ^*D).  \]
+</div>
+<p> Nevertheless the ordinary type of $bG_ p+U_ L$ has no analytic representative. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Near $D_ X$, choose a transverse coordinate $z_1$. A germ whose exact transverse order is $j$ has a nonzero leading tangential coefficient. With $t=-\log |z_1|^2$, its radial integrability against $\mathrm e^{-su_ X}$ is determined by 
+    
+<div class="equation">
+  \[  \exp \bigl (-(j+1-sb)t+s t^\alpha \bigr ).  \]
+</div>
+<p>
+       Bounded errors in this exponent do not change convergence. It is integrable exactly when $j+1&gt;sb$, and diverges at equality. Local holomorphic bounds give sufficiency, and a region where the leading tangential coefficient is nonzero gives necessity by Fubini. This proves the ambient ideal formula in the book's convention $|f|^2\mathrm e^{-su_ X}$. Restriction and pullback of this principal ideal give order $\lfloor sb\rfloor \operatorname {ord}_ E(\pi ^*D)$. Divide by $s$ and use theorem <a data-tag="BF417B5C" href="../../tag/7CD874C73EC9/">19.1.1</a>. 
+    <p>
+      The residual $U_ L$ has trivial multiplier ideals at every weight, but is unbounded. At a generic point of $D$, an analytic type with divisorial coefficient $b$ is $b\log |z_1|^2+O(1)$. Our residual tends to $-\infty $ like $-t^\alpha $, excluding ordinary equivalence. This also covers $b=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-D36C5D62DF35" data-section-entries="55D866148BAF D36C5D62DF35 E91643D06F3E"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/D36C5D62DF35/">19.10.2 Pullback and strict representatives</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="C2AC0740"></span></div>
+<p>
+The lower volume above is positive, and its type contains a strict current on $Y$. A modification preserves both optimized masses but can destroy this last property when the ordinary type is fixed. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-38774E62">
+<p><a class="environment-identifier" href="../../tag/55D866148BAF/">Proposition <span data-tag="38774E62">19.10.4</span>.</a><span data-gerby-tag="38774E62"></span> For every modification $\pi :Y'\to Y$ and $v\in \mathrm{PSH}(Y,\theta )$ with $v\sim r$, </p>
+<div class="equation">
+  \[  \underline{\operatorname {vol}}_{\pi ^*\theta }(\pi ^*v) =\underline{\operatorname {vol}}_\theta (v),\qquad \overline{\operatorname {vol}}_{\pi ^*\theta }(\pi ^*v) =\overline{\operatorname {vol}}_\theta (v).  \]
+</div>
+<p> These masses and the ideal orders are also unchanged by a smooth gauge $(\theta ,v,r)\mapsto (\theta +\mathrm{dd}^{\mathrm{c}}f,v-f,r-f)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="DC3CD043" href="../../tag/A7090F92CA39/">1.22.12</a>, every $\pi ^*\theta $-plurisubharmonic potential descends. Since $\pi $ is surjective, ordinary inequalities are equivalent before and after pullback. Thus the competitors are in bijection. On the locus where $\pi $ is an isomorphism, locality identifies their products. Both extended products give the excluded analytic subsets zero mass, so 
+    
+<div class="equation">
+  \[  \pi _*\mathrm{MA}^{\mathrm{ext}}_{\pi ^*\theta }(\pi ^*v) =\mathrm{MA}^{\mathrm{ext}}_\theta (v).  \]
+</div>
+<p>
+       Taking the infimum and supremum proves the identities. Smooth gauge preserves the actual currents and measures; it preserves multiplier ideals because $\mathrm e^{sf}$ is locally bounded above and below. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-9068EA67">
+<p><a class="environment-identifier" href="../../tag/E91643D06F3E/">Proposition <span data-tag="9068EA67">19.10.5</span>.</a><span data-gerby-tag="9068EA67"></span> Suppose $b&lt;c$ and let $\pi :Y'\to Y$ be a nonempty finite composition of point blowups. There is a strict current $\pi ^*\theta +\mathrm{dd}^{\mathrm{c}}v'$ with $v'\leq \pi ^*r+C$, but none with $v'\sim \pi ^*r$. Both ordinary-type volumes retain the values in (<a data-tag="F6BA579E" href="../../tag/9099C8F4472B/">19.26</a>). Blowup centers may lie on $D$ or on earlier exceptional curves. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $\beta =(c-b)w_1+aw_2$. The representatives of lemma <a data-tag="8F6D11C0" href="../../tag/72230836D2EE/">19.10.1</a> show that $U$ satisfies (<a data-tag="7EF9FD2F" href="../../tag/4A552AB10BA9/">16.55</a>); by lemma <a data-tag="23EAD3EF" href="../../tag/96F4F5465740/">16.7.1</a> so does $\pi ^*U$. The logarithmic divisor is $b\pi ^*D$, whose smooth curvature is $b\pi ^*w_1$, so its residual background is $\pi ^*\beta $. If a strict current existed in the ordinary type of $\pi ^*r$, theorem <a data-tag="E6C58118" href="../../tag/0E6CABEB995A/">16.7.3</a> would give a smooth $f$ with $\pi ^*\beta +\mathrm{dd}^{\mathrm{c}}f&gt;0$. The exceptional curve $E$ of the last blowup is contracted by the composite map. Restriction to this smooth curve would give $\mathrm{dd}^{\mathrm{c}}(f|_ E)&gt;0$, contrary to its zero integral by Stokes. Only the smooth function $f$ is restricted, so this argument applies also when the original potential has a pole along $E$. 
+    <p>
+      For the one-sided assertion, start with the strict representative $v_0=bG_ p+U_ L$ from theorem <a data-tag="D8182E16" href="../../tag/9EDE5892D63B/">19.10.2</a>. Suppose $v_ j$ is strict with lower bound $\delta _ jh_ j&gt;0$ on the current surface, and let $\pi _{j+1}$ be the next point blowup. For its exceptional divisor $E_{j+1}$, choose a smooth metric on $\mathcal O(E_{j+1})$ with curvature $\eta _{j+1}$ negative along the vertical tangent, and write $\mathrm{dd}^{\mathrm{c}}\ell _{j+1}=[E_{j+1}]-\eta _{j+1}$. For all sufficiently small $t_ j&gt;0$, $\pi _{j+1}^*h_ j-t_ j\eta _{j+1}&gt;0$. To see this, in a blowup chart $(x,z)\mapsto (x,xz)$ the pullback has a uniformly positive horizontal coefficient, mixed coefficient $O(|x|)$ and Schur complement at least $c_1|x|^2$. The perturbation adds a positive vertical term at least $t_ jc_2$, while its error in the Schur complement is bounded by $C(t_ j|x|+t_ j|x|^2+t_ j^2)$. Shrink the exceptional neighborhood and then choose $t_ j$ small; on its compact complement positivity persists under small perturbations. Thus 
+    
+<div class="equation">
+  \[  v_{j+1}=\pi _{j+1}^*v_ j+\delta _ jt_ j\ell _{j+1}  \]
+</div>
+<p>
+       is strict. These genuine quasi-plurisubharmonic pullbacks are defined even over pole centers. The logarithmic terms are bounded above, so induction gives $v'\leq \pi ^*r+C$. Finally proposition <a data-tag="38774E62" href="../../tag/55D866148BAF/">19.10.4</a> preserves both volumes in the pulled-back ordinary type. The additional exceptional poles of the one-sided witness are not competitors in that fixed type. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+ For example take $c=1$, $b=1/4$, $\alpha =3/4$ and $a=2+\tau $, where $\tau =(|z|^2-1)/(|z|^2+1)$ is the height on the first sphere. The lower and upper volumes are $3/2$ and $9/2$. The choice $L=31$ has $\epsilon _ L=(3/4)32^{-1/4}&lt;3/8$ and gives a strict representative with infinite closed first moment. The intrinsic ideal orders are $\frac14\operatorname {ord}_ E(\pi ^*D)$. Every nonempty finite composition of point blowups, including centers on $D$, preserves both volumes and permits one-sided strictness while excluding a strict representative in the same ordinary type. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/C42AE95D23AF/"><span>← Previous</span><small>8.65 </small></a><a class="pager-next" rel="next" href="../../tag/E6AE4A881F9F/"><span>Next →</span><small>19 Restriction and intrinsic trace data</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-restriction-and-intrinsic-trace-data,
   author = {{Gerby contributors}},
   title = {17.3 Restriction and intrinsic trace data},

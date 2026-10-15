@@ -1,8 +1,253 @@
-<!doctype html><html lang="en" data-asset-revision="625d0febc110" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/test-curves-and-legendre-duality/"><title>14.5 Test curves and Legendre duality · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/test-curves-and-legendre-duality/">
-<link rel="icon" href="../../assets/favicon.svg?v=625d0febc110" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/collection.css?v=625d0febc110"><link rel="stylesheet" href="../../assets/formalization.css?v=625d0febc110"><script src="../../assets/math-config.js?v=625d0febc110"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=625d0febc110"></script><script type="module" src="../../assets/formalization.mjs?v=625d0febc110"></script><script type="module" src="../../assets/collection.mjs?v=625d0febc110"></script><script type="module" src="../../assets/comments.mjs?v=625d0febc110"></script></head>
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/test-curves-and-legendre-duality/"><title>14.5 Test curves and Legendre duality · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/test-curves-and-legendre-duality/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
 <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/energy-geodesics/">Chapter 14: Energy, geodesics, rays, and test curves</a></li><li><a href="../../sections/test-curves-and-legendre-duality/" aria-current="page">Section 14.5: Test curves and Legendre duality</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/relative-energy-and-perron-segments/"><span>14.1</span> Relative energy and Perron segments</a></li><li><a href="../../sections/geodesic-rays-in-the-space-of-potentials/"><span>14.2</span> Geodesic rays in the space of potentials</a></li><li><a href="../../sections/test-curves/"><span>14.3</span> Test curves</a></li><li><a href="../../sections/perron-interpolation-and-the-geodesic-equation/"><span>14.4</span> Perron interpolation and the geodesic equation</a></li><li><a href="../../sections/test-curves-and-legendre-duality/" aria-current="page"><span>14.5</span> Test curves and Legendre duality</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/test-curves-and-legendre-duality/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/test-curves-and-legendre-duality/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
-<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/DE987FD1A354/"><span>← Previous</span><small>Proposition 17.8.1</small></a><a class="pager-next" rel="next" href="../../tag/D5DBDCE92D6A/"><span>Next →</span><small>18 Test curves and Legendre duality</small></a></nav><h1>14.5 Test curves and Legendre duality</h1><p>Definitions, results, and proofs on this subject.</p><ul class="entry-list"><li class="reference-entry"><span class="entry-kind">chapter</span><a href="../../tag/D5DBDCE92D6A/">18 Test curves and Legendre duality</a><code class="tag-id">D5DBDCE92D6A</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/22C33F2E9103/">18.1 Envelope test curves and rays</a><code class="tag-id">22C33F2E9103</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/7D4FF1072CEF/">Definition 18.1.1</a><code class="tag-id">7D4FF1072CEF</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">definition</span><a href="../../tag/ECDB430D0021/">Definition 18.1.2</a><code class="tag-id">ECDB430D0021</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/FA178FC8EDED/">18.2 Perron maximality</a><code class="tag-id">FA178FC8EDED</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/548B64628B04/">Theorem 18.2.1</a><code class="tag-id">548B64628B04</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/DD25DD31A00B/">18.1 </a><code class="tag-id">DD25DD31A00B</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/DB66318C651A/">18.3 Recovering the singularity envelopes</a><code class="tag-id">DB66318C651A</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">theorem</span><a href="../../tag/062DEC0E6527/">Theorem 18.3.1</a><code class="tag-id">062DEC0E6527</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">section</span><a href="../../tag/58086AECC383/">18.4 A logarithmic pole on the projective line</a><code class="tag-id">58086AECC383</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/3B7363400CA2/">18.2 </a><code class="tag-id">3B7363400CA2</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">proposition</span><a href="../../tag/377F0AD20B28/">Proposition 18.4.1</a><code class="tag-id">377F0AD20B28</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">equation</span><a href="../../tag/9BA75154C113/">18.5 </a><code class="tag-id">9BA75154C113</code><span class="entry-topic">Test curves and Legendre duality</span></li><li class="reference-entry"><span class="entry-kind">caption</span><a href="../../tag/FFC4E521CBE1/">18.1 Figure</a><code class="tag-id">FFC4E521CBE1</code><span class="entry-topic">Test curves and Legendre duality</span></li></ul><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/DE987FD1A354/"><span>← Previous</span><small>Proposition 17.8.1</small></a><a class="pager-next" rel="next" href="../../tag/D5DBDCE92D6A/"><span>Next →</span><small>18 Test curves and Legendre duality</small></a></nav>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/DE987FD1A354/"><span>← Previous</span><small>Proposition 17.8.1</small></a><a class="pager-next" rel="next" href="../../tag/D5DBDCE92D6A/"><span>Next →</span><small>18 Test curves and Legendre duality</small></a></nav><h1>14.5 Test curves and Legendre duality</h1><p>Definitions, results, and proofs on this subject.</p><div class="section-reading"><section class="reading-chunk" id="entry-D5DBDCE92D6A" data-section-entries="D5DBDCE92D6A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/D5DBDCE92D6A/">18 Test curves and Legendre duality</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="1FA4A6D3"></span></div>
+<p>
+Let $X$ be a connected compact complex manifold of dimension $n\geq 1$, and let $\theta $ be a smooth real $(1,1)$-form. Fix $\varphi \in \mathrm{PSH}(X,\theta )$ with $P_\theta [\varphi ]=\varphi $, where $P_\theta [\cdot ]$ is the ordinary singularity envelope of definition <a data-tag="B32B7383" href="../../tag/65C9C3635D58/">1.19.4</a>; thus $\varphi \leq 0$ and $\sup _ X\varphi =0$. A fixed smooth positive volume form defines the $L^1(X)$ topology. 
+</p>
+<p>
+Legendre duality in the parameter exchanges two maximality conditions: each member of a test curve is a fixed point of the singularity envelope, while every finite segment of the corresponding ray is a Perron segment in the sense of chapter <a data-tag="C1B5B965" href="../../tag/E4ED60C8BCA5/">17</a>. Replacing a finite segment of the ray by the Perron segment with the same endpoints changes each inverse transform only by a bounded amount, so the envelope condition forces Perron maximality. Conversely, comparison with affine paths built from obstacle envelopes shows that the inverse transforms of a ray of Perron segments are envelope fixed points. The argument uses only convexity, the minimum principle and the Perron construction, and therefore applies to nonclosed backgrounds as well as to Kähler forms. 
+</p>
+<p>
+The transforms are the pointwise Legendre transforms of section <a data-tag="E3A3B448" href="../../tag/63DEBF0DF568/">1.20.1</a>, and the proofs follow the envelope arguments for the Ross–Witt Nyström correspondence in <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-22C33F2E9103" data-section-entries="22C33F2E9103 7D4FF1072CEF ECDB430D0021"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/22C33F2E9103/">18.1 Envelope test curves and rays</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="9CC58656"></span></div>
+<p>
+The members of a test curve become more singular as the parameter increases. The cutoff of the curve becomes the slope of the transformed ray, while its limit as the parameter tends to $-\infty $ gives the initial potential. 
+</p>
+
+<article class="env-definition" id="non-kahler-pluripotential-theory-2383065F">
+<p><a class="environment-identifier" href="../../tag/7D4FF1072CEF/">Definition <span data-tag="2383065F">18.1.1</span>.</a><span data-gerby-tag="2383065F"></span> An <em>envelope test curve</em> with initial potential $\varphi $ consists of a real number $c$ and potentials $\Gamma _\tau \in \mathrm{PSH}(X,\theta )$ for $\tau &lt;c$ such that </p>
+<ol>
+<li><p>
+$\tau \mapsto \Gamma _\tau $ is pointwise concave and decreasing; 
+</p>
+</li><li><p>
+$P_\theta [\Gamma _\tau ]=\Gamma _\tau $ for every $\tau &lt;c$; 
+</p>
+</li><li><p>
+$(\sup _{\tau &lt;c}\Gamma _\tau )^*=\varphi $. 
+</p>
+</li>
+</ol>
+<p> Its cutoff is $c$. We extend it by </p>
+<div class="equation">
+  \[  \Gamma _ c=\lim _{\tau \uparrow c}\Gamma _\tau , \qquad \Gamma _\tau \equiv -\infty \quad (\tau &gt;c).  \]
+</div>
+</article>
+
+<p>
+Each $\Gamma _\tau $ is an envelope fixed point and hence has supremum zero, so theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>, corollary <a data-tag="23B5C3B7" href="../../tag/0AD144F69807/">1.4.3</a> give $\Gamma _ c\in \mathrm{PSH}(X,\theta )$. 
+</p>
+
+<article class="env-definition" id="non-kahler-pluripotential-theory-FE46532A">
+<p><a class="environment-identifier" href="../../tag/ECDB430D0021/">Definition <span data-tag="FE46532A">18.1.2</span>.</a><span data-gerby-tag="FE46532A"></span> An <em>envelope ray</em> with initial potential $\varphi $ and slope $c$ is a subgeodesic $u_ t$, $t&gt;0$, such that </p>
+<ol>
+<li><p>
+$u_ t\to \varphi $ in $L^1(X)$ as $t\downarrow 0$, and, with $u_0=\varphi $, the restriction of the ray to every interval $(a,b)$ with $0\leq a&lt;b&lt;\infty $ is the Perron segment from $u_ a$ to $u_ b$; 
+</p>
+</li><li><p>
+$P_\theta [u_ t]=\varphi $ for every $t&gt;0$; 
+</p>
+</li><li><p>
+$\sup _ Xu_ t=ct$ for every $t&gt;0$. 
+</p>
+</li>
+</ol>
+</article>
+
+<p>
+For an envelope test curve, write $U_ t$ for its forward transform (<a data-tag="4ECCCD44" href="../../tag/0CEA269E6373/">1.70</a>), the pointwise supremum of $\Gamma _\tau +t\tau $ over $\tau &lt;c$. For a family $(u_ t)_{t&gt;0}$, write $\widehat u_\tau $ for its inverse transform (<a data-tag="07B75289" href="../../tag/932E0DC4EFDD/">1.71</a>), the pointwise infimum of $u_ t-t\tau $ over $t&gt;0$. The forward transform is a subgeodesic by theorem <a data-tag="F5C5A87A" href="../../tag/5EA08D4F62B2/">1.20.6</a>; it remains to show that its finite segments are Perron segments. 
+</p>
+</div></section><section class="reading-chunk" id="entry-FA178FC8EDED" data-section-entries="548B64628B04 DD25DD31A00B FA178FC8EDED"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/FA178FC8EDED/">18.2 Perron maximality</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="105CD9AA"></span></div>
+<p>
+The slope and the singularity envelope of the transformed ray follow directly from the normalization of the test curve. To prove Perron maximality, we replace the transform on a finite interval by the Perron segment with the same endpoints. The estimate (<a data-tag="45786325" href="../../tag/DD25DD31A00B/">18.1</a>) keeps each inverse transform in its original ordinary singularity type, where the envelope condition forces equality. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-0C9A47EA">
+<p><a class="environment-identifier" href="../../tag/548B64628B04/">Theorem <span data-tag="0C9A47EA">18.2.1</span>.</a><span data-gerby-tag="0C9A47EA"></span> The forward transform of an envelope test curve with cutoff $c$ is an envelope ray with the same initial potential and slope $c$. Moreover, $U_ t-ct$ decreases as $t$ increases. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="F5C5A87A" href="../../tag/5EA08D4F62B2/">1.20.6</a>, $U_ t$ is a subgeodesic. The inequalities 
+    
+<div class="equation">
+  \[  \Gamma _\tau +t\tau \leq U_ t\leq \varphi +ct  \]
+</div>
+<p>
+       give $\sup _ XU_ t\geq t\tau $ for each $\tau &lt;c$, since $\sup _ X\Gamma _\tau =0$, and $\sup _ XU_ t\leq ct$. Letting $\tau \uparrow c$ proves $\sup _ XU_ t=ct$. The formula 
+    
+<div class="equation">
+  \[  U_ t-ct=\sup _{\tau &lt;c}\bigl (\Gamma _\tau -t(c-\tau )\bigr )  \]
+</div>
+<p>
+       shows that $U_ t-ct$ is decreasing in $t$. 
+    <p>
+      Since $\Gamma _\tau \preceq U_ t\preceq \varphi $, monotonicity of the singularity envelope gives 
+    
+<div class="equation">
+  \[  \Gamma _\tau =P_\theta [\Gamma _\tau ]\leq P_\theta [U_ t] \leq P_\theta [\varphi ]=\varphi .  \]
+</div>
+<p>
+       Taking the regularized supremum in $\tau $ proves $P_\theta [U_ t]=\varphi $. 
+    <p>
+      The local envelope theorem in section <a data-tag="575A3488" href="../../tag/8EA2EE30DE99/">1.19</a> gives $\sup _{\tau &lt;c}\Gamma _\tau =\varphi $ almost everywhere, and at those points the bounds $\Gamma _\tau +t\tau \leq U_ t\leq \varphi +ct$ imply $U_ t\to \varphi $ as $t\downarrow 0$. For any fixed $\tau _0&lt;c$ and $0&lt;t\leq 1$, they also give 
+    
+<div class="equation">
+  \[  \Gamma _{\tau _0}-|\tau _0|\leq U_ t\leq \varphi +|c|.  \]
+</div>
+<p>
+       Both bounds are integrable, so dominated convergence gives $U_ t\to \varphi $ in $L^1$ as $t\downarrow 0$. 
+    <p>
+      It remains to prove Perron maximality. Fix $0\leq a&lt;b$ and replace $U_ t$ on $(a,b)$ by the Perron segment from $U_ a$ to $U_ b$, with $U_0=\varphi $ when $a=0$; it exists by proposition <a data-tag="071B00B3" href="../../tag/5D2A9C4885B8/">17.2.1</a>, because the restriction of $U_ t$ itself runs between these endpoints. The joint upper limits of the Perron segment at $a$ and $b$ allow gluing by lemma <a data-tag="CCB07C8A" href="../../tag/0CFD6850F9F8/">1.3.2</a>, proposition <a data-tag="567E9FED" href="../../tag/15E98759958F/">17.1.2</a>. The resulting subgeodesic $v_ t$ dominates $U_ t$ and equals it outside $(a,b)$, where therefore $v_ t\leq ct$. On $(a,b)$, the chord bound (<a data-tag="3B675915" href="../../tag/3E2013A813CD/">17.1</a>) together with $U_ a\leq ca$ and $U_ b\leq cb$ gives $v_ t\leq ct$ as well. 
+    <p>
+      For $\tau &lt;c$, put $\chi _\tau =\inf _{t&gt;0}(v_ t-t\tau )$. Since $v_ t-t\tau \geq U_ t-t\tau \geq \Gamma _\tau $, proposition <a data-tag="9EFFCF0A" href="../../tag/ED1DA0551379/">1.20.3</a> gives $\chi _\tau \in \mathrm{PSH}(X,\theta )$. We claim that 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-45786325"><span data-gerby-tag="45786325"></span>
+<span class="equation-label"><a data-tag="45786325" href="../../tag/DD25DD31A00B/">18.1</a></span>
+<div>\begin{equation}  \Gamma _\tau \leq \chi _\tau \leq \Gamma _\tau +(b-a)(c-\tau ). \end{equation}</div>
+</div>
+<p>
+       The first inequality was just noted. For the second, let $s&gt;0$. If $s\in [a,b]$, then $v_ b=U_ b$, and since $U_ t-ct$ is decreasing, 
+    
+<div class="equation">
+  \[  \chi _\tau \leq U_ b-b\tau \leq U_ s-s\tau +(b-s)(c-\tau ).  \]
+</div>
+<p>
+       If $s\notin [a,b]$, then $\chi _\tau \leq v_ s-s\tau =U_ s-s\tau $. In both cases $\chi _\tau \leq U_ s-s\tau +(b-a)(c-\tau )$. Taking the infimum over $s&gt;0$ and using lemma <a data-tag="30DCC863" href="../../tag/FAE98D3A3F69/">1.20.5</a> proves (<a data-tag="45786325" href="../../tag/DD25DD31A00B/">18.1</a>). 
+    <p>
+      Moreover, $v_ t\leq ct$ gives $\chi _\tau \leq t(c-\tau )$ for every $t&gt;0$, hence $\chi _\tau \leq 0$. By (<a data-tag="45786325" href="../../tag/DD25DD31A00B/">18.1</a>), $\chi _\tau $ has the ordinary type of $\Gamma _\tau $, so it is a competitor for $P_\theta [\Gamma _\tau ]=\Gamma _\tau $. Thus $\chi _\tau =\Gamma _\tau $. Recovering $v_ t$ from its inverse transforms by lemma <a data-tag="3F11F21A" href="../../tag/742009E66DA3/">1.20.4</a> gives $v_ t=U_ t$, which proves Perron maximality on every finite interval. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-DB66318C651A" data-section-entries="062DEC0E6527 DB66318C651A"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/DB66318C651A/">18.3 Recovering the singularity envelopes</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="D1B252F6"></span></div>
+<p>
+The minimum principle shows that the inverse transforms are $\theta $-plurisubharmonic, but their envelope property uses the whole ray. For an inverse transform $g$ and $C&gt;0$, the envelope $P_\theta (g+C,0)$ of the obstacle $\min (g+C,0)$ gives an admissible affine path on every interval $[0,M]$, lying below the ray translated by an affine function of $t$. Letting the length $M$ vary, and then letting the relative time $t/M$ tend to zero, removes the additive constant $C$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-1786FAA0">
+<p><a class="environment-identifier" href="../../tag/062DEC0E6527/">Theorem <span data-tag="1786FAA0">18.3.1</span>.</a><span data-gerby-tag="1786FAA0"></span> If $u_ t$ is an envelope ray of slope $c$ with initial potential $\varphi $, its inverse transform is an envelope test curve with cutoff $c$ and initial potential $\varphi $. The forward and inverse transforms are mutually inverse bijections between the envelope test curves of definition <a data-tag="2383065F" href="../../tag/7D4FF1072CEF/">18.1.1</a> and the envelope rays of definition <a data-tag="FE46532A" href="../../tag/ECDB430D0021/">18.1.2</a> with initial potential $\varphi $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="909C5329" href="../../tag/ADD743D2224C/">1.20.1</a>, for each $x$ the function $t\mapsto u_ t(x)-ct$ is either finite and convex or identically $-\infty $. It is bounded above by zero, so it is decreasing. Since $\sup _ X(u_ t-ct)=0$, theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>, corollary <a data-tag="23B5C3B7" href="../../tag/0AD144F69807/">1.4.3</a> give 
+    
+<div class="equation">
+  \[  \widehat u_ c=\inf _{t&gt;0}(u_ t-ct)\in \mathrm{PSH}(X,\theta ).  \]
+</div>
+<p>
+       For $\tau &lt;c$, we have $\widehat u_ c\leq \widehat u_\tau \leq u_1-\tau $, so proposition <a data-tag="9EFFCF0A" href="../../tag/ED1DA0551379/">1.20.3</a> gives $\widehat u_\tau \in \mathrm{PSH}(X,\theta )$. Also 
+    
+<div class="equation">
+  \[  \widehat u_\tau \leq \inf _{t&gt;0}t(c-\tau )=0 \quad (\tau \leq c),  \]
+</div>
+<p>
+       while the bound $\widehat u_\tau \leq t(c-\tau )$ with $t\to \infty $ shows $\widehat u_\tau \equiv -\infty $ for $\tau &gt;c$. Concavity and monotonicity in $\tau $ hold because $\widehat u_\tau $ is an infimum of affine functions of $\tau $ with negative slopes $-t$. 
+    <p>
+       Fix $\tau &lt;c$ and write $g=\widehat u_\tau $. The inequality $g\leq u_ M-M\tau $, valid for every $M&gt;0$, gives 
+    
+<div class="equation">
+  \[  P_\theta [g]\leq P_\theta [u_ M]=\varphi .  \]
+</div>
+<p>
+       For $C&gt;0$ put $q_ C=P_\theta (g+C,0)$. Since $g\leq 0$, the function $g$ is a competitor, so $q_ C\not\equiv -\infty $, and 
+    
+<div class="equation">
+  \[  g\leq q_ C\leq P_\theta [g]\leq \varphi , \qquad q_ C-C\leq g\leq u_ M-M\tau .  \]
+</div>
+<p>
+       The affine path $q_ C-Ct/M$ is admissible for the endpoints $\varphi $ and $u_ M-M\tau $ on $[0,M]$. Adding $-t\tau $ gives a bijection between the competitor families for the endpoints $\varphi ,u_ M$ and $\varphi ,u_ M-M\tau $, by proposition <a data-tag="16B06DB1" href="../../tag/1A5A4BBF82E3/">17.1.1</a>, so the Perron segment for the latter endpoints is $u_ t-t\tau $. For $0&lt;s\leq 1$ this yields 
+    
+<div class="equation">
+  \[  q_ C-Cs\leq u_{sM}-sM\tau .  \]
+</div>
+<p>
+       Taking the infimum over $M&gt;0$ gives $q_ C-Cs\leq g$, and letting $s\downarrow 0$ gives $q_ C\leq g$. Thus $q_ C=g$ for every $C&gt;0$, and letting $C\to \infty $ in the definition of $P_\theta [g]$ proves $P_\theta [g]=g$. 
+    <p>
+      Let $\psi =(\sup _{\tau &lt;c}\widehat u_\tau )^*$; since $\widehat u_\tau =P_\theta [\widehat u_\tau ]\leq \varphi $, we have $\psi \leq \varphi $. Because $u_ t-ct$ is decreasing in $t$, the limit of $u_ t(x)$ as $t\downarrow 0$ exists at every $x$, and an almost everywhere convergent sequence given by the $L^1$ convergence $u_ t\to \varphi $ identifies it with $\varphi $ almost everywhere. At these points, the endpoint identity in lemma <a data-tag="3F11F21A" href="../../tag/742009E66DA3/">1.20.4</a> gives 
+    
+<div class="equation">
+  \[  \sup _{\tau &lt;c}\inf _{t&gt;0}(u_ t(x)-t\tau )=\varphi (x).  \]
+</div>
+<p>
+       Therefore $\psi =\varphi $ by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>. 
+    <p>
+      As $\tau \uparrow c$, the transforms decrease to $\widehat u_ c$, since the infima over $t&gt;0$ and over $\tau &lt;c$ commute; this is the convention for the value at the cutoff. Finally, lemma <a data-tag="3F11F21A" href="../../tag/742009E66DA3/">1.20.4</a> recovers $u_ t$ from its inverse transforms, also at points where $t\mapsto u_ t(x)$ is identically $-\infty $, and lemma <a data-tag="30DCC863" href="../../tag/FAE98D3A3F69/">1.20.5</a> recovers each test curve from its forward transform. Hence the correspondence is a bijection. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-58086AECC383" data-section-entries="377F0AD20B28 3B7363400CA2 58086AECC383 9BA75154C113 FFC4E521CBE1"><div class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><h2><a href="../../tag/58086AECC383/">18.4 A logarithmic pole on the projective line</a></h2><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> <span data-gerby-tag="E70193C4"></span></div>
+<p>
+Let $X=\mathbb P^1$ and $\varphi =0$. The envelope of a multiple of a logarithmic pole is obtained by replacing part of a convex function by a tangent line. The corresponding ray is smooth, and all its slices are bounded; the pole appears only in the behavior of the ray as $t\to \infty $. In the affine coordinate $z$, take 
+</p>
+<div class="equation">
+  \[  \theta =\mathrm{dd}^{\mathrm{c}}\log (1+|z|^2),\qquad g(z)=\log \frac{|z|^2}{1+|z|^2}.  \]
+</div>
+<p>
+ The form $\theta $ extends to the Fubini–Study form of $\mathbb P^1$, which has integral one. The potential $g$ is $\theta $-plurisubharmonic, has a logarithmic pole at zero, and extends smoothly across infinity, with value zero there. 
+</p>
+<p>
+ Put $H(\lambda )=-\lambda \log \lambda -(1-\lambda )\log (1-\lambda )$ for $0&lt;\lambda &lt;1$, with $H(0)=H(1)=0$. For $0&lt;\lambda &lt;1$, define 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-CB283DA0"><span data-gerby-tag="CB283DA0"></span>
+<span class="equation-label"><a data-tag="CB283DA0" href="../../tag/3B7363400CA2/">18.2</a></span>
+<div>\begin{equation}  \Gamma _\lambda (z)= \begin{cases}  \lambda \log |z|^2-\log (1+|z|^2)+H(\lambda ), &amp;  |z|^2\leq \lambda /(1-\lambda ),\\  0, &amp;  |z|^2\geq \lambda /(1-\lambda ). \end{cases} \end{equation}</div>
+</div>
+<p>
+ Set $\Gamma _\lambda =0$ for $\lambda \leq 0$, $\Gamma _1=g$, and $\Gamma _\lambda =-\infty $ for $\lambda &gt;1$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-42E4DFA8">
+<p><a class="environment-identifier" href="../../tag/377F0AD20B28/">Proposition <span data-tag="42E4DFA8">18.4.1</span>.</a><span data-gerby-tag="42E4DFA8"></span> The family $(\Gamma _\lambda )$ is an envelope test curve with initial potential zero and cutoff one. Its forward transform is </p>
+<div class="equation" id="non-kahler-pluripotential-theory-1A6C8986"><span data-gerby-tag="1A6C8986"></span>
+<span class="equation-label"><a data-tag="1A6C8986" href="../../tag/9BA75154C113/">18.5</a></span>
+<div>\begin{equation}  U_ t(z)=\log \frac{1+\mathrm{e}^ t|z|^2}{1+|z|^2},\qquad t&gt;0. \end{equation}</div>
+</div>
+<p> At $z=0$ its value is zero, and at infinity its value is $t$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $0&lt;\lambda &lt;1$. For $s=\log |z|^2$, let $q_\lambda (s)=\Gamma _\lambda (z)+\log (1+\mathrm{e}^ s)$. In the first region of (<a data-tag="CB283DA0" href="../../tag/3B7363400CA2/">18.2</a>) this is the affine function $\lambda s+H(\lambda )$, which is tangent to $\log (1+\mathrm{e}^ s)$ at $s_\lambda =\log (\lambda /(1-\lambda ))$, and in the second region it is $\log (1+\mathrm{e}^ s)$. Its derivative is continuous at the junction and nondecreasing, so $q_\lambda $ is convex. By corollary <a data-tag="B26E2825" href="../../tag/B98B62E1E7D5/">1.20.2</a>, $\Gamma _\lambda $ is $\theta $-plurisubharmonic away from zero, and it extends across its logarithmic pole by lemma <a data-tag="E113365A" href="../../tag/F3A890BB2575/">1.3.7</a>. It vanishes near infinity and has the ordinary type of $\lambda g$. 
+    <p>
+      To prove $\Gamma _\lambda =P_\theta [\lambda g]$, let $v\leq 0$ be a competitor with $v\preceq \lambda g$. On the punctured disk $0&lt;|z|^2&lt;\lambda /(1-\lambda )$, the function 
+    
+<div class="equation">
+  \[  v-\Gamma _\lambda =v+\log (1+|z|^2)-\lambda \log |z|^2-H(\lambda )  \]
+</div>
+<p>
+       is subharmonic, since $v+\log (1+|z|^2)$ is subharmonic and $\log |z|^2$ is harmonic there. Since $v\preceq \lambda g$, this difference is bounded above near zero, so it extends subharmonically across zero by lemma <a data-tag="E113365A" href="../../tag/F3A890BB2575/">1.3.7</a>. Its upper limits at the boundary circle are at most zero, since $v\leq 0$ and $\Gamma _\lambda =0$ there. The maximum principle gives $v\leq \Gamma _\lambda $ on the disk (at zero both have the value $-\infty $), and outside the disk the same inequality follows from $\Gamma _\lambda =0$. Thus every competitor lies below $\Gamma _\lambda $, which is itself a competitor, so $\Gamma _\lambda =P_\theta [\lambda g]$. Since the envelope depends only on the ordinary type, also $P_\theta [\Gamma _\lambda ]=\Gamma _\lambda $. The zero potential is an envelope fixed point as well. 
+    <p>
+      For a fixed $0&lt;|z|&lt;\infty $, put $p=|z|^2/(1+|z|^2)$. The function $\lambda \mapsto \Gamma _\lambda (z)$ is zero for $\lambda \leq p$. For $p&lt;\lambda &lt;1$ its derivative is 
+    
+<div class="equation">
+  \[  \log |z|^2+\log \frac{1-\lambda }{\lambda }.  \]
+</div>
+<p>
+       It vanishes at $\lambda =p$ and decreases in $\lambda $, which proves that $\lambda \mapsto \Gamma _\lambda (z)$ is concave and decreasing. At $z=0$, the function is zero for $\lambda \leq 0$ and $-\infty $ for $\lambda &gt;0$; at $z=\infty $, it is zero for $\lambda \leq 1$. These functions are concave and decreasing as well. Finally, $\sup _{\lambda &lt;1}\Gamma _\lambda =0$, and the limit as $\lambda \uparrow 1$ is $g$, so the family is an envelope test curve with cutoff one. 
+    <p>
+       For finite nonzero $z$ and $t&gt;0$, the supremum defining $U_ t(z)$ is attained at a parameter $\lambda &gt;p$, namely at 
+    
+<div class="equation">
+  \[  \lambda =\frac{\mathrm{e}^ t|z|^2}{1+\mathrm{e}^ t|z|^2},  \]
+</div>
+<p>
+       and substituting this value into the first line of (<a data-tag="CB283DA0" href="../../tag/3B7363400CA2/">18.2</a>) gives (<a data-tag="1A6C8986" href="../../tag/9BA75154C113/">18.5</a>). At $z=0$, only the parameters $\lambda \leq 0$ give finite values, and the supremum is zero; at $z=\infty $, the supremum of $t\lambda $ over $\lambda &lt;1$ is $t$. In the coordinate $w=1/z$, the formula reads $\log ((|w|^2+\mathrm e^ t)/(|w|^2+1))$, so the ray is smooth in both charts. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+Each slice of this ray is bounded and has envelope zero, whereas its inverse transforms for $0&lt;\lambda \leq 1$ have logarithmic poles. At $z=0$, the parameters $\lambda \leq 0$ determine the transform: omitting them would give the wrong value $U_ t(0)=-\infty $. 
+</p>
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/non-kahler-pluripotential-theory/312ee083b7f5fcb3f11d.svg"/> <figcaption id="non-kahler-pluripotential-theory-5BEA8F3F"><span data-gerby-tag="5BEA8F3F"></span><a data-tag="5BEA8F3F" href="../../tag/FFC4E521CBE1/">18.1</a> The explicit test curve and its ray, at points with $\log |z|^2=-2$ (solid), $0$ (dashed), and $2$ (dotted). The parameter functions on the left are concave; their transforms on the right are convex.</figcaption> </div>
+</figure>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/DE987FD1A354/"><span>← Previous</span><small>Proposition 17.8.1</small></a><a class="pager-next" rel="next" href="../../tag/D5DBDCE92D6A/"><span>Next →</span><small>18 Test curves and Legendre duality</small></a></nav>
 <details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-test-curves-and-legendre-duality,
   author = {{Gerby contributors}},
   title = {14.5 Test curves and Legendre duality},
