@@ -50,6 +50,21 @@ def attribution_markup(node):
     return str(copy)
 
 
+def replacement_fragment(original, markup):
+    replacement = BeautifulSoup(markup, 'html.parser')
+    # Parser-generated footnote IDs are not stable source identities. Reuse
+    # this export's pairing metadata when a reviewed paragraph retains notes.
+    for selector in ('aside.source-footnote', '.source-footnotemark'):
+        old, new = original.select(selector), replacement.select(selector)
+        if new and len(old) != len(new):
+            raise ValueError('Review a prose edit that changes only some of its footnotes')
+        for current, retained in zip(old, new):
+            for key in ('id', 'data-footnote-mark'):
+                if current.has_attr(key):
+                    retained[key] = current[key]
+    return replacement
+
+
 def source_locator_targets(cite, locators, current_tag):
     """Resolve explicit SGPT coordinates only; never guess from similar names."""
     keys = [a.get('href', '').removeprefix('/bibliography/') for a in cite.select('a')]
@@ -128,7 +143,7 @@ def apply_reading_edits(entries, topic_chapters, registry_path):
                     continue
                 if node.select('.cite, aside.source-footnote'):
                     retain(source, node, entry, variant)
-                node.replace_with(BeautifulSoup(edit['replacement_html'], 'html.parser'))
+                node.replace_with(replacement_fragment(node, edit['replacement_html']))
                 counts['reviewed_edits'] += 1
             # Pure bibliographical footnotes must not interrupt an existing proof.
             for node in list(soup.select('aside.source-footnote')):

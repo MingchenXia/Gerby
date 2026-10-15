@@ -8,7 +8,7 @@ from hashlib import sha256
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from reading_edits import apply_reading_edits, normalized_text, source_locator_targets, validate_reading_edits
+from reading_edits import apply_reading_edits, normalized_text, source_locator_targets, validate_reading_edits, replacement_fragment
 
 
 class ReadingEditsTests(unittest.TestCase):
@@ -81,6 +81,12 @@ class ReadingEditsTests(unittest.TestCase):
             path.write_text(json.dumps({'version': 1, 'paragraphs': [{'source': 'sgpt', 'text_sha256': sha256(b'Old intro.').hexdigest(), 'replacement_html': '<p>New intro.</p>'}]}))
             with self.assertRaisesRegex(ValueError, 'Review changed source prose'):
                 validate_reading_edits({'sgpt': [{'html': '<p>Changed source intro.</p>'}]}, path)
+
+    def test_reviewed_note_keeps_the_current_exports_pairing_metadata(self):
+        original = BeautifulSoup('<p><aside class="source-footnote" id="current-note" data-footnote-mark="current-mark">A note.</aside></p>', 'html.parser').p
+        replacement = replacement_fragment(original, '<p><aside class="source-footnote" id="old-note" data-footnote-mark="">An adapted note.</aside></p>')
+        self.assertEqual(replacement.aside['id'], 'current-note')
+        self.assertEqual(replacement.aside['data-footnote-mark'], 'current-mark')
 
 
 if __name__ == '__main__':
