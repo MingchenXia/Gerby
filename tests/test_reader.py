@@ -15,7 +15,7 @@ from reader import Reader, bibtex
 
 class ReaderTests(unittest.TestCase):
     def setUp(self):
-        self.records = [{"tag": f"{n:08X}", "label": f"def:internal_label_{n}", "title": f"Definition 1.1.{n}", "semantic_title": f"Internal label {n}", "kind": "definition", "topic": topic, "html": f'<article class="env-definition"><p>Definition 1.1.{n}. A statement.</p></article>'} for n, topic in enumerate(("Alpha", "Alpha", "Beta", "Gamma"), 1)]
+        self.records = [{"tag": f"{n:08X}", "label": f"def:internal_label_{n}", "title": f"Definition 1.1.{n}", "semantic_title": f"Internal label {n}", "number": f"1.1.{n}", "caption": "", "kind": "definition", "topic": topic, "html": f'<article class="env-definition"><p>Definition 1.1.{n}. A statement.</p></article>'} for n, topic in enumerate(("Alpha", "Alpha", "Beta", "Gamma"), 1)]
         self.config = {"version": 1, "entries": [], "topics": [{"slug": name.lower(), "title": name} for name in ("Alpha", "Beta", "Gamma")], "chapters": [{"slug": "first", "title": "First chapter", "topics": ["alpha", "beta"]}, {"slug": "second", "title": "Second chapter", "topics": ["gamma"]}]}
         self.book = {"slug": "source", "title": "Test source", "author": "Test author", "status": "published", "repository": "https://github.com/example/source"}
 
@@ -52,7 +52,7 @@ class ReaderTests(unittest.TestCase):
     def test_nested_statements_and_proofs_are_readable_once(self):
         for record in self.records[:2]:
             record['html'] = record['html'].replace('<article ', f'<article id="{record["tag"]}" ')
-        parent = {'tag': '00000010', 'label': 'sec:alpha', 'title': '1 Alpha', 'kind': 'section', 'topic': 'Alpha', 'section': True, 'html': '<h2 id="sec:alpha">1 Alpha</h2><p>Opening explanation.</p>' + self.records[0]['html'] + '<article class="env-proof"><p>Proof. The required argument.</p></article><p>Connecting explanation.</p>' + self.records[1]['html']}
+        parent = {'tag': '00000010', 'label': 'sec:alpha', 'title': '1 Alpha', 'caption': 'Alpha', 'number': '1', 'kind': 'section', 'topic': 'Alpha', 'section': True, 'html': '<h2 id="sec:alpha">1 Alpha</h2><p>Opening explanation.</p>' + self.records[0]['html'] + '<article class="env-proof"><p>Proof. The required argument.</p></article><p>Connecting explanation.</p>' + self.records[1]['html']}
         self.records.insert(0, parent)
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -99,7 +99,7 @@ class ReaderTests(unittest.TestCase):
         old = '<article id="22222222"><p>Definition 1. The repeated statement.</p></article><article class="env-proof"><p>Old source proof.</p></article>'
         preferred = '<article id="33333333"><p>Definition 2. The preferred statement.</p></article><article class="env-proof"><p>Preferred proof.</p></article>'
         entries = {
-            'AAAAAAAA': {'tag': 'AAAAAAAA', 'topic': 'alpha', 'variants': [{'source': 'a', 'tag': '11111111', 'label': 'sec:alpha', 'title': '1 Alpha', 'section': True, 'html': '<h2 id="sec:alpha">1 Alpha</h2>' + old}]},
+            'AAAAAAAA': {'tag': 'AAAAAAAA', 'topic': 'alpha', 'variants': [{'source': 'a', 'tag': '11111111', 'label': 'sec:alpha', 'title': '1 Alpha', 'caption': 'Alpha', 'number': '1', 'section': True, 'html': '<h2 id="sec:alpha">1 Alpha</h2>' + old}]},
             'BBBBBBBB': {'tag': 'BBBBBBBB', 'topic': 'alpha', 'variants': [{'source': 'b', 'tag': '33333333', 'label': 'def:new', 'title': 'Definition 2', 'html': preferred}, {'source': 'a', 'tag': '22222222', 'label': 'def:old', 'title': 'Definition 1', 'html': old}]}
         }
         html = continuous_section(list(entries.values()), entries, source_roots(entries), {'a': {'title': 'Source A'}, 'b': {'title': 'Source B'}}, {}, {}, '../../', {})
@@ -153,8 +153,9 @@ class ReaderTests(unittest.TestCase):
                 self.assertNotIn("internal_label_", soup.get_text())
                 self.assertNotIn("Internal label", soup.get_text())
             search = json.loads((root / "search.json").read_text())
-            self.assertEqual(search[0]["title"], "Definition 1.1.1")
-            self.assertIn("def:internal_label_1", search[0]["aliases"])
+            first = next(row for row in search if "def:internal_label_1" in row["aliases"])
+            self.assertEqual(first["title"], "Definition 1.1.1")
+            self.assertIn("def:internal_label_1", first["aliases"])
 
     def test_comments_follow_stable_routes_and_always_offer_a_github_fallback(self):
         with tempfile.TemporaryDirectory() as temporary:

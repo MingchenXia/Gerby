@@ -13,7 +13,9 @@ from urllib.parse import unquote, urlsplit
 
 from bs4 import BeautifulSoup
 from unidecode import unidecode
-from reader import Reader, display_title
+from reader import Reader, display_title, tag_code
+from numbering import renumber_markup
+from structure import arrange_sections
 from proof_expansions import apply_expansions, check_dependencies
 
 
@@ -178,10 +180,17 @@ def chapter_structure(topics, configuration):
     return {key: c for key, c in chapters.items() if c["topics"]}, assigned
 
 
-def prepare_fragment(variant, source_tags, references, root, component_anchors=None):
+def prepare_fragment(variant, source_tags, references, root, component_anchors=None, numbering=None):
     source = variant["source"]
     fragment = variant["html"].replace(r"\begin{bgroup}", "{").replace(r"\end{bgroup}", "}")
-    fragment = re.sub(r"\\label(?:\[[^]]*\])?\s*\{[^{}]*\}", "", fragment)
+    def math_label(match):
+        target = (numbering or {}).get((source, match[1]), {})
+        # Align rows need a tag inside their parent's TeX; standalone pages
+        # already have an HTML equation label.
+        if target.get("math_row") and not (variant.get("math_row") and target.get("tag") == variant["tag"]):
+            return r"\tag{" + target["number"] + "}"
+        return ""
+    fragment = re.sub(r"\\label(?:\[[^]]*\])?\s*\{([^{}]*)\}", math_label, fragment)
     image = r"\\gerbyimage\{([^}]+)\}\{([^}]+)\}"
     def illustration(match):
         return '<img class="source-figure" src="/asset/' + escape(match[1], quote=True) + '" alt="' + escape(match[2], quote=True) + '" loading="lazy">'
@@ -198,11 +207,14 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
         if source_tags[key] is None:
             return match[2]
         url = root + "tag/" + source_tags[key] + "/" + (component_anchors or {}).get(key, "")
-        return r"\href{" + url + "}{" + match[2] + "}"
+        number = (numbering or {}).get(key, {}).get("number", match[2])
+        return r"\href{" + url + "}{" + number + "}"
     fragment = re.sub(r"\\gerbyref\{([A-F0-9]{8})\}\{([^{}]+)\}", math_reference, fragment)
     if r"\gerbyref" in fragment or "TeXFragment object at" in fragment:
         raise ValueError(f"An invalid mathematical reference remains: {source}/{variant['label']}")
     soup = BeautifulSoup(fragment, "html.parser")
+    if numbering is not None:
+        renumber_markup(soup, source, numbering)
     for anchor in soup.select("a[data-proof-entry]"):
         anchor["href"] = root + "tag/" + anchor["data-proof-entry"] + "/"
     for paragraph in list(soup.find_all("p")):
@@ -242,8 +254,17 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
             badge["data-gerby-tag"] = identifier
             element.insert(0, badge)
     first = soup.find(re.compile(r"^h[1-6]$"))
+    for equation in soup.select(".equation"):
+        if equation.find(class_="equation-label", recursive=False):
+            equation["class"] = [*equation.get("class", []), "numbered-equation"]
     if variant.get("section") and first:
         first.decompose()
+    for marker in soup.select("[data-gerby-tag]"):
+        canonical = (numbering or {}).get((source, marker["data-gerby-tag"]), {}).get("canonical_tag")
+        if canonical:
+            code = soup.new_tag("code", attrs={"class": "tag-id"})
+            code.string = canonical
+            marker.append(code)
     prefix = source + "-"
     identifiers = {item["id"] for item in soup.select("[id]")}
     for item in soup.select("[id]"):
@@ -265,6 +286,8 @@ def asset_revision():
 def entry_list(entries, topics, root):
     items = []
     for entry in entries:
+        if entry.get("section_intro"):
+            continue
         items.append(f'<li class="reference-entry"><span class="entry-kind">{escape(entry["kind"])}</span><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a><code class="tag-id">{entry["tag"]}</code><span class="entry-topic">{escape(topics[entry["topic"]]["title"])}</span></li>')
     return '<ul class="entry-list">' + "".join(items) + '</ul>'
 
@@ -284,7 +307,7 @@ def source_roots(entries):
     return roots
 
 
-def continuous_section(relevant, entries, roots, sources, source_tags, references, root, anchors):
+def continuous_section(relevant, entries, roots, sources, source_tags, references, root, anchors, numbering=None):
     """Read full source fragments once, retaining prose between statements."""
     covered, chunks = set(), []
     topic = relevant[0]["topic"]
@@ -333,8 +356,8 @@ def continuous_section(relevant, entries, roots, sources, source_tags, reference
         if represented & covered:
             raise ValueError(f"A section repeats entries: {sorted(represented & covered)}")
         covered.update(represented)
-        body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors)
-        heading = f'<h2><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a></h2>' if variant.get("section") else ""
+        body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors, numbering)
+        heading = f'<h2><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a>{tag_code(entry["tag"])}</h2>' if variant.get("section") and not entry.get("section_intro") else ""
         badge = f'<span data-gerby-tag="{variant["tag"]}"></span>'
         chunks.append(f'<section class="reading-chunk" id="entry-{entry["tag"]}" data-section-entries="{" ".join(sorted(represented))}"><div class="source-variant" data-gerby-book="{source}">{heading}{badge}{body}</div></section>')
     expected = {entry["tag"] for entry in relevant}
@@ -370,6 +393,7 @@ def build_collection(books, destination, configuration):
         exports, dependencies = apply_expansions(exports, registry, statement_fingerprint)
     entries, topics, source_tags = organize(exports, configuration)
     check_dependencies(entries, dependencies)
+    configuration = arrange_sections(entries, topics, configuration)
     chapters, topic_chapters = chapter_structure(topics, configuration)
     comments = json.loads((Path(__file__).resolve().parents[1] / "comments.json").read_text())
     reader = Reader(chapters, topics, entries, sources, comments)
@@ -390,17 +414,22 @@ def build_collection(books, destination, configuration):
     write("", introduction + '<nav class="home-links" aria-label="Explore Gerby"><a href="chapters/">Table of contents</a><a href="search/">Search</a><a href="references/">Bibliography</a><a href="comments/">Comments</a><a href="sources/">Sources</a><a href="https://github.com/MingchenXia/Gerby">GitHub</a></nav><h2>Table of contents</h2>' + reader.contents(""), "Gerby", "")
     write("chapters", '<h1>Table of contents</h1>' + reader.contents("../"), "Table of contents", "../")
     for key, chapter in chapters.items():
-        content = f'<p class="eyebrow">Chapter {chapter["number"]}</p><h1>{escape(chapter["title"])}</h1><p>{escape(chapter.get("description", ""))}</p>'
-        content += '<h2>Sections</h2>' + reader.section_list(key, "../../", anchors=True)
+        content = f'<p class="eyebrow">Chapter {chapter["number"]}</p><h1>{escape(chapter["title"])}{tag_code(chapter["tag"])}</h1><p>{escape(chapter.get("description", ""))}</p>'
+        content += '<h2>Sections and subsections</h2>' + reader.section_list(key, "../../", anchors=True, subsections=True)
         write("chapters/" + key, content, chapter["title"], "../../")
+        if chapter["tag"] in entries:
+            raise ValueError("A chapter tag collides with an entry")
+        redirect(destination / "tag" / chapter["tag"] / "index.html", destination / "chapters" / key / "index.html", destination)
     roots = source_roots(entries)
     for topic, section in reader.sections.items():
-        content = f'<h1>{section["number"]} {escape(section["title"])}</h1>'
+        content = f'<h1>{section["number"]} {escape(section["title"])}{tag_code(section["tag"])}</h1>'
         description = topics[topic].get("description", "")
         if description and description != "Definitions, results, and proofs on this subject.":
             content += f'<p>{escape(description)}</p>'
-        content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors)
+        content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors, reader.numbering)
         write("sections/" + topic, content, section["title"], "../../")
+        if section["tag"] not in entries:
+            redirect(destination / "tag" / section["tag"] / "index.html", destination / "sections" / topic / "index.html", destination)
     redirect(destination / "topics" / "index.html", destination / "chapters" / "index.html", destination)
     for key, topic in topics.items():
         redirect(destination / "topics" / key / "index.html", destination / "sections" / key / "index.html", destination)
@@ -418,7 +447,9 @@ def build_collection(books, destination, configuration):
         if configured["topic"] in configuration.get("excluded_topics", []):
             redirect(destination / "tag" / configured["tag"] / "index.html", contents, destination)
     write("entries", '<h1>All entries</h1><p>Search across every source, or follow the shared chapter order below.</p>' + "".join(f'<h2><a href="../chapters/{key}/">{chapter["number"]}. {escape(chapter["title"])}</a></h2>' + entry_list([e for e in entries.values() if e["topic"] in chapter["topics"]], topics, "../") for key, chapter in chapters.items()), "All entries", "../")
-    search, public_entries, merges = [], [], []
+    search = [{"tag": chapter["tag"], "title": f'{chapter["number"]} {chapter["title"]}', "search_title": chapter["title"], "kind": "chapter", "topic": chapter["title"], "text": "", "aliases": []} for chapter in chapters.values()]
+    search += [{"tag": section["tag"], "title": f'{section["number"]} {section["title"]}', "search_title": section["title"], "kind": "section", "topic": chapters[section["chapter"]]["title"], "text": "", "aliases": []} for section in reader.sections.values() if not any(e.get("section_intro") for e in section["entries"])]
+    public_entries, merges, section_search = [], [], {}
     for entry in entries.values():
         tag, root = entry["tag"], "../../"
         chapter_key = topic_chapters[entry["topic"]]
@@ -431,16 +462,28 @@ def build_collection(books, destination, configuration):
         for number, variant in enumerate(entry["variants"]):
             source, local = variant["source"], variant["tag"]
             badge = f'<span data-gerby-tag="{local}"></span>'
-            body = prepare_fragment(variant, source_tags, reference_map, root, anchors)
+            body = prepare_fragment(variant, source_tags, reference_map, root, anchors, reader.numbering)
             if number:
                 body = '<details class="source-alternative"><summary>Read the alternative statement and proof</summary>' + body + '</details>'
             content += f'<section class="source-variant" data-gerby-book="{source}">{badge}{body}</section>'
-            texts.append(BeautifulSoup(variant["html"], "html.parser").get_text(" ", strip=True))
+            texts.append(BeautifulSoup(body, "html.parser").get_text(" ", strip=True))
             variants.append({"book": source, "tag": local, "label": variant["label"], "revision": editions[source]["commit"]})
-        write("tag/" + tag, content, entry["title"], root)
+        if entry.get("section_intro"):
+            redirect(destination / "tag" / tag / "index.html", destination / "sections" / entry["topic"] / "index.html", destination, anchor="#entry-" + tag)
+        else:
+            write("tag/" + tag, content, display_title(entry), root)
         component_aliases = [value for v in entry["components"] for value in (v["tag"], v["label"])]
-        search.append({"tag": tag, "title": display_title(entry), "search_title": entry["title"], "kind": entry["kind"], "topic": chapter["title"], "section": reader.sections[entry["topic"]]["number"] + " " + topics[entry["topic"]]["title"], "text": " ".join(texts), "aliases": [v["tag"] for v in variants] + [v["label"] for v in variants] + component_aliases})
-        public_entries.append({"tag": tag, "title": display_title(entry), "kind": entry["kind"], "chapter": chapter_key, "topic": entry["topic"], "sources": variants, "components": [{"book": v["source"], "tag": v["tag"], "label": v["label"]} for v in entry["components"]]})
+        search_record = {"tag": tag, "title": display_title(entry), "search_title": entry["title"], "kind": entry["kind"], "topic": chapter["title"], "section": reader.sections[entry["topic"]]["number"] + " " + topics[entry["topic"]]["title"], "text": " ".join(texts), "aliases": [v["tag"] for v in variants] + [v["label"] for v in variants] + component_aliases}
+        if entry["section_intro"] and entry["topic"] in section_search:
+            previous = section_search[entry["topic"]]
+            previous["aliases"] += [tag, *search_record["aliases"]]
+            previous["text"] += " " + search_record["text"]
+        else:
+            search.append(search_record)
+            if entry["section_intro"]:
+                search_record["kind"] = "section"
+                section_search[entry["topic"]] = search_record
+        public_entries.append({"tag": tag, "number": entry["number"], "section_intro": entry["section_intro"], "title": display_title(entry), "kind": entry["kind"], "chapter": chapter_key, "topic": entry["topic"], "sources": variants, "components": [{"book": v["source"], "tag": v["tag"], "label": v["label"]} for v in entry["components"]]})
         if len(variants) > 1:
             merges.append({"tag": tag, "title": entry["title"], "note": entry["merge_note"], "sources": variants})
         for variant in entry["variants"] + entry["components"]:
@@ -481,7 +524,8 @@ def build_collection(books, destination, configuration):
     write("search", '<h1>Search</h1><form class="page-search" role="search"><label for="page-search">Keywords, a statement number, or a permanent tag</label><input id="page-search" type="search" name="q" autocomplete="off" aria-controls="page-search-results"><button type="submit">Search</button></form><div id="page-search-results" aria-live="polite"></div>', "Search", "../")
     write("comments", '<h1>Comments and corrections</h1><p>Each chapter, section, and entry has its own comment thread. Use the Comments link on a reading page for a question or correction about that page.</p><p><a href="https://github.com/MingchenXia/Gerby/discussions">Browse all discussions on GitHub</a></p><p>The comment thread below is for general feedback about the reference. Markdown and mathematical notation are supported by GitHub Discussions. Please identify the statement and give enough detail for others to check a proposed correction.</p>', "Comments", "../")
     (destination / "search.json").write_text(json.dumps(search, ensure_ascii=False) + "\n")
-    (destination / "collection.json").write_text(json.dumps({"version": 1, "chapters": list(chapters.values()), "topics": list(topics.values()), "entries": public_entries}, ensure_ascii=False, indent=2) + "\n")
+    public_topics = [{**topic, "number": reader.sections[key]["number"], "tag": reader.sections[key]["tag"]} for key, topic in topics.items()]
+    (destination / "collection.json").write_text(json.dumps({"version": 1, "chapters": list(chapters.values()), "topics": public_topics, "entries": public_entries}, ensure_ascii=False, indent=2) + "\n")
     (destination / "navigation.json").write_text(json.dumps([reader.pages[route] for route in reader.order], ensure_ascii=False, indent=2) + "\n")
     audit = {"groups": merges, "duplicate_entries_unified": sum(len(e["variants"]) - 1 for e in entries.values()), "numbered_clauses_in_parent_statements": len(anchors), "source_tags": sum(len(records) for records in inventories.values()), "canonical_entries": len(entries)}
     (destination / "deduplication.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
@@ -491,7 +535,20 @@ def build_collection(books, destination, configuration):
 def check_links(destination):
     pages = {path.resolve(): BeautifulSoup(path.read_text(), "html.parser") for path in destination.rglob("*.html")}
     identifiers = {path: {item["id"] for item in soup.select("[id]")} for path, soup in pages.items()}
+    numbers = {}
+    if (destination / "collection.json").exists():
+        entries = {entry["tag"]: entry for entry in json.loads((destination / "collection.json").read_text())["entries"]}
+        for inventory in (destination / "sources").glob("*/tags.json"):
+            for record in json.loads(inventory.read_text()):
+                canonical = record["canonical_tag"]
+                if canonical:
+                    numbers[inventory.parent.name, record["tag"]] = record["title"].strip() if record.get("anchor") else entries[canonical]["number"]
     for page, soup in pages.items():
+        for wrapper in soup.select("[data-gerby-book]"):
+            for marker in wrapper.select("[data-tag]"):
+                expected = numbers.get((wrapper["data-gerby-book"], marker["data-tag"]))
+                if expected is not None and marker.get_text(strip=True) != expected:
+                    raise ValueError(f"Stale source numbering on {page}: {marker['data-tag']}: expected {expected}")
         if len(identifiers[page]) != len(soup.select('[id]')):
             raise ValueError(f"Duplicate identifiers on {page}")
         for element in soup.select("[href], script[src], img[src]"):

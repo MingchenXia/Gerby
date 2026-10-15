@@ -16,7 +16,7 @@ The collection integrates four sources, tracking their `main` branches:
 
 Only each manuscript's active input graph is included. Excluded drafts and private research material are not exported.
 
-The collection has **21 shared chapters**, ordered by mathematical subject across the books, with 78 more specific subjects inside them. Chapter 1 contains only conventions; manuscript prefaces, acknowledgments, introductions, and part overviews are omitted. Original statement numbering is retained; source metadata and exact revisions are collected under Sources rather than repeated beside every statement. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
+The collection has **25 shared chapters**, ordered by mathematical subject across the books, with 435 sections inside them. Chapter 1 contains only conventions; manuscript prefaces, acknowledgments, introductions, and part overviews are omitted. Reader numbering follows the current Gerby chapters and sections; source metadata and exact revisions are collected under Sources rather than repeated beside every statement. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
 
 Reviewed duplicates have one canonical entry and one search result. Alternative source wording, proofs, and formalization badges remain accessible within that entry. Numbered clauses stay inside their parent statements, retaining their own tags and badges. `collection.json` records each reviewed statement fingerprint: a changed statement requires a new review before it can be merged again. Results with different hypotheses remain separate.
 
@@ -24,9 +24,9 @@ All interface text and project documentation are in English. The source texts an
 
 The reading interface follows the Stacks Project: compact navigation, a breadcrumb trail, and a reading column with page tools at the side. It adapts to computers, tablets, and phones; long equations and tables scroll inside the reading column.
 
-- Chapter pages list **sections only**. Section pages show the full text, definitions, theorems, equations, and proofs directly, with individual entry permalinks. Nested statements and equations are displayed once rather than repeated as separate list items.
+- Chapter pages list **sections and subsections**. Section pages show the full text, definitions, theorems, equations, and proofs directly, with individual entry permalinks. Nested statements and equations are displayed once rather than repeated as separate list items.
 - **Previous** and **Next** links appear above and below each page, following one complete order through chapters, sections, and statements. Breadcrumbs return directly to the containing section or chapter.
-- Statement headings use manuscript names and numbers, such as **Definition 1.2.3**. Internal LaTeX labels are searchable identifiers and are never shown as reader headings. Permanent tags are hidden initially and can be revealed with **Show tags**.
+- Statement headings retain manuscript names and use generated Gerby numbers, such as **Definition 3.2.1**. Internal LaTeX labels are searchable identifiers and are never shown as reader headings. Permanent tags are hidden initially and can be revealed with **Show tags**.
 - Search accepts mathematical subjects, phrases, statement numbers, or tags. An exact unambiguous tag opens its entry directly. Each page also has a permalink and a copyable BibTeX citation.
 
 The color palette follows the [Stacks Project](https://stacks.math.columbia.edu/): white pages, black text, blue links (`#1d5cb4`), and warm gray navigation (`#d9d8d1` and `#edece6`). Theme colors are defined in `site/assets/book.css` and shared across the collection.
@@ -58,6 +58,7 @@ Supply a source repository link and, when available, its formalization repositor
 - `formalizations.json` records declaration mappings and verification evidence.
 - `proofs/registry.json` and its HTML fragments add proofs and necessary qualifications to the shared reading edition. Statement and original-proof fingerprints require review when upstream mathematics changes; see [proof expansion review](documentation/proof-expansions.md).
 - `adapters/` exports each source through the pinned official Gerby renderer.
+- [Integration layout and numbering](documentation/integration-layout.md) defines section promotion, redundant-heading removal, current-section numbering, equation layout, and tag visibility.
 - [Deployment and updates](documentation/deployment.md) documents the export and publishing contracts.
 
 ## Updates without CI
