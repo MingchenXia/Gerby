@@ -20,9 +20,20 @@ Reviewed duplicates have one canonical entry and one search result. Alternative 
 
 All interface text and project documentation are in English. The source texts and formal proofs remain in their original repositories and retain their licenses.
 
-The reading layout adapts to computers, tablets, and phones. Wide screens keep the chapter navigation beside the text; smaller screens offer an expandable chapter list, full-width reading, and touch-friendly search and navigation. Long equations and tables scroll within the page's reading column.
+The reading interface follows the Stacks Project: compact navigation, a breadcrumb trail, and a reading column with page tools at the side. It adapts to computers, tablets, and phones; long equations and tables scroll inside the reading column.
+
+- Chapter pages list **sections only**. Each section has its own page containing its entries.
+- **Previous** and **Next** links appear above and below each page, following one complete order through chapters, sections, and statements. Breadcrumbs return directly to the containing section or chapter.
+- Statement headings use manuscript names and numbers, such as **Definition 1.2.3**. Internal LaTeX labels are searchable identifiers and are never shown as reader headings. Permanent tags are hidden initially and can be revealed with **Show tags**.
+- Search accepts mathematical subjects, phrases, statement numbers, or tags. An exact unambiguous tag opens its entry directly. Each page also has a permalink and a copyable BibTeX citation.
 
 The color palette follows the [Stacks Project](https://stacks.math.columbia.edu/): white pages, black text, blue links (`#1d5cb4`), and warm gray navigation (`#d9d8d1` and `#edece6`). Theme colors are defined in `site/assets/book.css` and shared across the collection.
+
+## Comments
+
+Every reading page has its own public comment thread, backed by [GitHub Discussions](https://github.com/MingchenXia/Gerby/discussions). The inline [giscus](https://giscus.app/) panel lets readers sign in with GitHub, comment, reply, and react. Readers can also open or start the same page's discussion directly on GitHub. The maintainer moderates the threads there. No credentials are included in the site.
+
+GitHub Discussions is enabled. Inline comments require the [giscus GitHub App](https://github.com/apps/giscus) to be installed for **only `MingchenXia/Gerby`**. `comments.json` holds the public repository and discussion-category IDs; `giscus.json` limits the allowed site origins. Threads use stable page identifiers, so changing a heading or manuscript revision does not create a new thread. A GitHub link remains available when the embedded service cannot load. See [comment setup and moderation](documentation/comments.md).
 
 ## Formalization badges
 
@@ -61,7 +72,7 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 npm ci --prefix vendor --ignore-scripts --no-audit --no-fund
 .venv/bin/python -m unittest discover -s tests
-node --test tests/formalization.test.mjs
+node --test tests/*.test.mjs
 .venv/bin/python scripts/build.py --fetch
 python3 -m http.server 8000 --directory _site
 ```
@@ -77,4 +88,4 @@ The on-request updater requires a clean `main` checkout and uses a fast-forward 
 
 ## Gerby on GitHub Pages
 
-[Gerby](https://gerby-project.github.io/) provides the LaTeX-to-tag renderer used here. This static export includes shared chapters, individual entries, full-text search, cited references, formalization badges, and self-hosted MathJax. GitHub Pages does not run the Flask/database backend, so accounts and server-side comments are not included.
+[Gerby](https://gerby-project.github.io/) provides the LaTeX-to-tag renderer used here. This static export includes chapters and sections, individual entries, full-text search, citations, formalization badges, and self-hosted MathJax. GitHub Pages serves the reading edition; comments persist in GitHub Discussions through giscus. The Flask/database backend is not required.

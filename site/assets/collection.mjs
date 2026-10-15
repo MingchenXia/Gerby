@@ -1,7 +1,5 @@
-const input = document.querySelector('#collection-search');
-const results = document.querySelector('#search-results');
 const chapters = document.querySelector('.chapter-navigation');
-const compactLayout = window.matchMedia('(max-width: 1099px)');
+const compactLayout = window.matchMedia('(max-width: 999px)');
 
 // Keep the reading column clear on small screens, including after a rotation.
 function arrangeNavigation() {
@@ -33,33 +31,92 @@ if (content) new ResizeObserver(fitMathematics).observe(content);
 window.MathJax?.startup?.promise?.then(fitMathematics);
 document.fonts?.ready.then(fitMathematics);
 
-let index;
-let request = 0;
-input?.addEventListener('input', async () => {
-  const current = ++request;
-  const query = input.value.trim().toLowerCase();
-  results.replaceChildren();
-  if (query.length < 2) return;
-  try {
-    index ??= await fetch(document.documentElement.dataset.searchIndex).then(response => {
-      if (!response.ok) throw new Error('Search unavailable');
-      return response.json();
-    });
-    if (current !== request) return;
-    const matches = index.filter(item => `${item.title} ${item.tag} ${item.topic} ${item.aliases.join(' ')} ${item.text}`.toLowerCase().includes(query));
-    const summary = document.createElement('p');
-    summary.textContent = `${matches.length} matching entr${matches.length === 1 ? 'y' : 'ies'}`;
-    results.append(summary);
-    for (const item of matches.slice(0, 30)) {
-      const anchor = document.createElement('a');
-      anchor.href = `${document.documentElement.dataset.collectionRoot}tag/${item.tag}/`;
-      anchor.textContent = `${item.title} · ${item.topic}`;
-      results.append(anchor);
+const {exactEntry, searchEntries} = await import(`./search.mjs?v=${document.documentElement.dataset.assetRevision}`);
+
+let indexPromise;
+function loadIndex() {
+  return indexPromise ??= fetch(document.documentElement.dataset.searchIndex).then(response => {
+    if (!response.ok) throw new Error('Search unavailable');
+    return response.json();
+  }).catch(error => { indexPromise = null; throw error; });
+}
+function bindSearch(input, results, fullPage = false) {
+  if (!input || !results) return;
+  let request = 0;
+  async function update() {
+    const current = ++request;
+    const query = input.value.trim();
+    results.replaceChildren();
+    if (query.length < 2) return;
+    results.textContent = 'Searching…';
+    try {
+      const index = await loadIndex();
+      if (current !== request) return;
+      const matches = searchEntries(index, query);
+      results.replaceChildren();
+      const summary = document.createElement('p');
+      summary.textContent = `${matches.length} matching entr${matches.length === 1 ? 'y' : 'ies'}`;
+      results.append(summary);
+      let shown = 0;
+      const more = document.createElement(fullPage ? 'button' : 'a');
+      if (fullPage) more.type = 'button';
+      else more.href = `${document.documentElement.dataset.collectionRoot}search/?q=${encodeURIComponent(query)}`;
+      function append() {
+        const end = Math.min(shown + (fullPage ? 50 : 8), matches.length);
+        for (const item of matches.slice(shown, end)) {
+          const anchor = document.createElement('a');
+          anchor.href = `${document.documentElement.dataset.collectionRoot}tag/${item.tag}/`;
+          const title = document.createElement('strong');
+          title.textContent = item.title;
+          const context = document.createElement('small');
+          context.textContent = item.section ?? item.topic;
+          anchor.append(title, context);
+          results.insertBefore(anchor, more.parentElement ? more : null);
+        }
+        shown = end;
+        more.textContent = fullPage ? `Show more (${shown} of ${matches.length})` : 'View all search results';
+        if (shown < matches.length) results.append(more);
+        else more.remove();
+      }
+      more.addEventListener('click', fullPage ? append : () => {});
+      append();
+    } catch {
+      if (current === request) results.textContent = 'Search is temporarily unavailable. Please try again.';
     }
-  } catch {
-    if (current === request) results.textContent = 'Search is temporarily unavailable.';
   }
-});
+  input.addEventListener('input', update);
+  input.form?.addEventListener('submit', async event => {
+    event.preventDefault();
+    try {
+      const match = exactEntry(await loadIndex(), input.value);
+      if (match) location.href = `${document.documentElement.dataset.collectionRoot}tag/${match.tag}/`;
+      else if (fullPage) { history.replaceState(null, '', `?q=${encodeURIComponent(input.value)}`); update(); }
+      else location.href = `${document.documentElement.dataset.collectionRoot}search/?q=${encodeURIComponent(input.value)}`;
+    } catch { update(); }
+  });
+  input.addEventListener('keydown', event => { if (event.key === 'Escape' && !fullPage) results.replaceChildren(); });
+  if (fullPage) { input.value = new URLSearchParams(location.search).get('q') ?? ''; update(); }
+}
+bindSearch(document.querySelector('#collection-search'), document.querySelector('#search-results'));
+bindSearch(document.querySelector('#page-search'), document.querySelector('#page-search-results'), true);
+
+document.querySelectorAll('[data-toc]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.toc-chapter').forEach(chapter => { chapter.open = button.dataset.toc === 'expand'; });
+}));
+const tagSwitch = document.querySelector('[data-show-tags]');
+try { if (tagSwitch) tagSwitch.checked = localStorage.getItem('gerby-show-tags') === 'true'; } catch {}
+function showTags() {
+  document.documentElement.dataset.showTags = String(Boolean(tagSwitch?.checked));
+  try { localStorage.setItem('gerby-show-tags', String(Boolean(tagSwitch?.checked))); } catch {}
+}
+tagSwitch?.addEventListener('change', showTags);
+showTags();
+document.querySelectorAll('[data-copy-link], [data-copy-citation]').forEach(button => button.addEventListener('click', async () => {
+  const value = button.dataset.copyLink ?? document.querySelector('#citation-text').value;
+  const status = button.parentElement.querySelector('.copy-status');
+  try { await navigator.clipboard.writeText(value); status.textContent = 'Copied.'; }
+  catch { status.textContent = 'Select and copy the permalink or citation above.'; }
+}));
 
 // A clause permalink may target a retained source version that is collapsed.
 function revealFragment() {

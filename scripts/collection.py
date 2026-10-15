@@ -13,6 +13,7 @@ from urllib.parse import unquote, urlsplit
 
 from bs4 import BeautifulSoup
 from unidecode import unidecode
+from reader import Reader, display_title
 
 
 def slugify(title):
@@ -173,6 +174,7 @@ def chapter_structure(topics, configuration):
 def prepare_fragment(variant, source_tags, references, root, component_anchors=None):
     source = variant["source"]
     fragment = variant["html"].replace(r"\begin{bgroup}", "{").replace(r"\end{bgroup}", "}")
+    fragment = re.sub(r"\\label(?:\[[^]]*\])?\s*\{[^{}]*\}", "", fragment)
     image = r"\\gerbyimage\{([^}]+)\}\{([^}]+)\}"
     def illustration(match):
         return '<img class="source-figure" src="/asset/' + escape(match[1], quote=True) + '" alt="' + escape(match[2], quote=True) + '" loading="lazy">'
@@ -242,29 +244,14 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
 @cache
 def asset_revision():
     folder = Path(__file__).resolve().parents[1] / "site" / "assets"
-    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs", "favicon.svg")
+    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs", "favicon.svg", "comments.mjs", "search.mjs")
     return sha256(b"".join((folder / name).read_bytes() for name in names)).hexdigest()[:12]
-
-
-def shell(content, title, chapters, root=""):
-    navigation = "".join(f'<li><a href="{root}chapters/{escape(key)}/"><span>{chapter["number"]}.</span> {escape(chapter["title"])}</a></li>' for key, chapter in chapters.items())
-    assets = root + "assets/"
-    version = asset_revision()
-    return f'''<!doctype html>
-<html lang="en" data-search-index="{root}search.json" data-collection-root="{root}">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><title>{escape(title)} · Gerby</title>
-<link rel="icon" href="{assets}favicon.svg?v={version}" type="image/svg+xml"><link rel="stylesheet" href="{assets}book.css?v={version}"><link rel="stylesheet" href="{assets}collection.css?v={version}"><link rel="stylesheet" href="{assets}formalization.css?v={version}">
-<script src="{assets}math-config.js?v={version}"></script><script defer src="{assets}mathjax/tex-chtml.js?v={version}"></script><script type="module" src="{assets}formalization.mjs?v={version}"></script><script type="module" src="{assets}collection.mjs?v={version}"></script></head>
-<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="{root}" aria-label="Gerby home">g <span>Gerby</span></a><nav aria-label="Primary"><a href="{root}chapters/">Chapters</a><a href="{root}entries/">All entries</a><a href="{root}sources/">Sources</a></nav></header>
-<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
-<div class="collection-search"><label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></div><details class="chapter-navigation" open><summary>Browse chapters <span>{len(chapters)} chapters</span></summary><nav aria-label="Shared chapters"><ol>{navigation}</ol></nav></details><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
-<main id="content" tabindex="-1">{content}<footer class="book-footer">Gerby · Mingchen Xia · <a href="{root}sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>'''
 
 
 def entry_list(entries, topics, root):
     items = []
     for entry in entries:
-        items.append(f'<li class="reference-entry"><span class="entry-kind">{escape(entry["kind"])}</span><a href="{root}tag/{entry["tag"]}/">{escape(entry["title"])}</a><code>{entry["tag"]}</code><span class="entry-topic">{escape(topics[entry["topic"]]["title"])}</span></li>')
+        items.append(f'<li class="reference-entry"><span class="entry-kind">{escape(entry["kind"])}</span><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a><code class="tag-id">{entry["tag"]}</code><span class="entry-topic">{escape(topics[entry["topic"]]["title"])}</span></li>')
     return '<ul class="entry-list">' + "".join(items) + '</ul>'
 
 
@@ -291,6 +278,8 @@ def build_collection(books, destination, configuration):
             shutil.copytree(folder / "assets", destination / "assets" / "sources" / source, dirs_exist_ok=True)
     entries, topics, source_tags = organize(exports, configuration)
     chapters, topic_chapters = chapter_structure(topics, configuration)
+    comments = json.loads((Path(__file__).resolve().parents[1] / "comments.json").read_text())
+    reader = Reader(chapters, topics, entries, sources, comments)
     anchors = {(v["source"], v["tag"]): "#" + v["source"] + "-" + v["tag"] for entry in entries.values() for v in entry["components"]}
     references, reference_map = {}, {}
     for source, records in reference_exports.items():
@@ -302,36 +291,28 @@ def build_collection(books, destination, configuration):
     def write(route, content, title, root):
         page = destination / route / "index.html" if route else destination / "index.html"
         page.parent.mkdir(parents=True, exist_ok=True)
-        page.write_text(shell(content, title, chapters, root))
+        page.write_text(reader.shell(content, route, root, asset_revision()))
 
-    def chapter_cards(root):
-        cards = []
-        for key, chapter in chapters.items():
-            relevant = [e for e in entries.values() if e["topic"] in chapter["topics"]]
-            origins = {v["source"] for e in relevant for v in e["variants"]}
-            cards.append(f'<a class="topic-card" href="{root}chapters/{key}/"><span class="eyebrow">Chapter {chapter["number"]}</span><h2>{escape(chapter["title"])}</h2><p class="chapter-description">{escape(chapter["description"])}</p><p>{len(relevant)} entries · {len(origins)} source{"s" if len(origins) != 1 else ""}</p></a>')
-        return '<div class="topic-grid">' + "".join(cards) + '</div>'
-
-    introduction = f'<section class="collection-intro"><p class="eyebrow">A shared mathematical reference</p><h1>One collection.<br><em>Connected mathematics.</em></h1><p>Definitions, results, and proofs from contributing texts, organized into shared chapters by mathematical subject.</p><p class="collection-count">{len(entries):,} entries · {len(chapters)} chapters · {len(sources)} sources</p></section>'
-    write("", introduction + '<h2>Explore the chapters</h2>' + chapter_cards(""), "Gerby", "")
-    write("chapters", '<h1>Chapters</h1><p>The chapter order follows the mathematics across the contributing texts. Original numbering remains in the source attributions.</p>' + chapter_cards("../"), "Chapters", "../")
+    introduction = f'<section class="collection-intro"><h1>Gerby</h1><p>A mathematical reference combining definitions, results, and proofs from contributing texts.</p><p class="collection-count">{len(entries):,} entries · {len(chapters)} chapters · {len(topics)} sections · {len(sources)} sources</p></section>'
+    write("", introduction + '<nav class="home-links" aria-label="Explore Gerby"><a href="chapters/">Table of contents</a><a href="search/">Search</a><a href="references/">Bibliography</a><a href="comments/">Comments</a><a href="sources/">Sources</a><a href="https://github.com/MingchenXia/Gerby">GitHub</a></nav><h2>Table of contents</h2>' + reader.contents(""), "Gerby", "")
+    write("chapters", '<h1>Table of contents</h1>' + reader.contents("../"), "Table of contents", "../")
     for key, chapter in chapters.items():
-        content = f'<p class="eyebrow">Chapter {chapter["number"]}</p><h1>{escape(chapter["title"])}</h1><p>{escape(chapter["description"])}</p>'
-        for topic in chapter["topics"]:
-            relevant = [entry for entry in entries.values() if entry["topic"] == topic]
-            origins = sorted({sources[v["source"]]["title"] for e in relevant for v in e["variants"]})
-            content += f'<section class="chapter-section" id="{topic}"><h2>{escape(topics[topic]["title"])}</h2><p class="chapter-sources">Contributions from {escape("; ".join(origins))}.</p>' + entry_list(relevant, topics, "../../") + '</section>'
+        content = f'<p class="eyebrow">Chapter {chapter["number"]}</p><h1>{escape(chapter["title"])}</h1><p>{escape(chapter.get("description", ""))}</p>'
+        content += '<h2>Sections</h2>' + reader.section_list(key, "../../", anchors=True)
         write("chapters/" + key, content, chapter["title"], "../../")
-    write("topics", '<h1>Subjects</h1><p>Subjects are arranged within the shared chapters.</p>' + chapter_cards("../"), "Subjects", "../")
+    for topic, section in reader.sections.items():
+        content = f'<h1>{section["number"]} {escape(section["title"])}</h1><p>{escape(topics[topic].get("description", ""))}</p>'
+        write("sections/" + topic, content + entry_list(section["entries"], topics, "../../"), section["title"], "../../")
+    redirect(destination / "topics" / "index.html", destination / "chapters" / "index.html", destination)
     for key, topic in topics.items():
-        redirect(destination / "topics" / key / "index.html", destination / "chapters" / topic_chapters[key] / "index.html", destination, anchor="#" + key)
+        redirect(destination / "topics" / key / "index.html", destination / "sections" / key / "index.html", destination)
     write("entries", '<h1>All entries</h1><p>Search across every source, or follow the shared chapter order below.</p>' + "".join(f'<h2><a href="../chapters/{key}/">{chapter["number"]}. {escape(chapter["title"])}</a></h2>' + entry_list([e for e in entries.values() if e["topic"] in chapter["topics"]], topics, "../") for key, chapter in chapters.items()), "All entries", "../")
     search, public_entries, merges = [], [], []
     for entry in entries.values():
         tag, root = entry["tag"], "../../"
         chapter_key = topic_chapters[entry["topic"]]
         chapter = chapters[chapter_key]
-        content = f'<p class="eyebrow"><a href="{root}chapters/{chapter_key}/">Chapter {chapter["number"]} · {escape(chapter["title"])}</a> · Tag <code>{tag}</code></p><h1>{escape(entry["title"])}</h1>'
+        content = f'<h1>{escape(display_title(entry))}<code class="tag-id">{tag}</code></h1>'
         if len(entry["variants"]) > 1:
             note = entry["merge_note"] or "Repeated statement: one entry retains the original source versions and proofs."
             content += f'<p class="merge-note">{escape(note)}</p>'
@@ -348,8 +329,8 @@ def build_collection(books, destination, configuration):
             variants.append({"book": source, "tag": local, "label": variant["label"], "revision": editions[source]["commit"]})
         write("tag/" + tag, content, entry["title"], root)
         component_aliases = [value for v in entry["components"] for value in (v["tag"], v["label"])]
-        search.append({"tag": tag, "title": entry["title"], "kind": entry["kind"], "topic": chapter["title"], "text": " ".join(texts), "aliases": [v["tag"] for v in variants] + [v["label"] for v in variants] + component_aliases})
-        public_entries.append({"tag": tag, "title": entry["title"], "kind": entry["kind"], "chapter": chapter_key, "topic": entry["topic"], "sources": variants, "components": [{"book": v["source"], "tag": v["tag"], "label": v["label"]} for v in entry["components"]]})
+        search.append({"tag": tag, "title": display_title(entry), "search_title": entry["title"], "kind": entry["kind"], "topic": chapter["title"], "section": reader.sections[entry["topic"]]["number"] + " " + topics[entry["topic"]]["title"], "text": " ".join(texts), "aliases": [v["tag"] for v in variants] + [v["label"] for v in variants] + component_aliases})
+        public_entries.append({"tag": tag, "title": display_title(entry), "kind": entry["kind"], "chapter": chapter_key, "topic": entry["topic"], "sources": variants, "components": [{"book": v["source"], "tag": v["tag"], "label": v["label"]} for v in entry["components"]]})
         if len(variants) > 1:
             merges.append({"tag": tag, "title": entry["title"], "note": entry["merge_note"], "sources": variants})
         for variant in entry["variants"] + entry["components"]:
@@ -379,12 +360,15 @@ def build_collection(books, destination, configuration):
                 redirect(old_folder / "tag" / configured["tag"] / "index.html", destination / "tag" / configured["tag"] / "index.html", destination)
         redirect(old_folder / "bibliography" / "index.html", destination / "references" / "index.html", destination, {key: identifier for (origin, key), identifier in reference_map.items() if origin == source})
     write("sources", source_list + '</ul><p><a href="../deduplication.json">Reviewed duplicate groups and retained source tags</a></p>', "Sources", "../")
-    reference_content = '<h1>References</h1><p>Bibliographic references cited across the shared collection.</p>'
+    reference_content = '<h1>Bibliography</h1><p>Bibliographic references cited across the shared collection.</p>'
     for identifier, record in sorted(references.items()):
         reference_content += f'<div class="bibliography-entry" id="{identifier}">{record["html"]}</div>'
     write("references", reference_content, "References", "../")
+    write("search", '<h1>Search</h1><form class="page-search" role="search"><label for="page-search">Keywords, a statement number, or a permanent tag</label><input id="page-search" type="search" name="q" autocomplete="off" aria-controls="page-search-results"><button type="submit">Search</button></form><div id="page-search-results" aria-live="polite"></div>', "Search", "../")
+    write("comments", '<h1>Comments and corrections</h1><p>Each chapter, section, and entry has its own comment thread. Use the Comments link on a reading page for a question or correction about that page.</p><p><a href="https://github.com/MingchenXia/Gerby/discussions">Browse all discussions on GitHub</a></p><p>The comment thread below is for general feedback about the reference. Markdown and mathematical notation are supported by GitHub Discussions. Please identify the statement and give enough detail for others to check a proposed correction.</p>', "Comments", "../")
     (destination / "search.json").write_text(json.dumps(search, ensure_ascii=False) + "\n")
     (destination / "collection.json").write_text(json.dumps({"version": 1, "chapters": list(chapters.values()), "topics": list(topics.values()), "entries": public_entries}, ensure_ascii=False, indent=2) + "\n")
+    (destination / "navigation.json").write_text(json.dumps([reader.pages[route] for route in reader.order], ensure_ascii=False, indent=2) + "\n")
     audit = {"groups": merges, "duplicate_entries_unified": sum(len(e["variants"]) - 1 for e in entries.values()), "numbered_clauses_in_parent_statements": len(anchors), "source_tags": sum(len(records) for records in inventories.values()), "canonical_entries": len(entries)}
     (destination / "deduplication.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
     return {"entries": len(entries), "topics": len(topics), "chapters": len(chapters), "sources": len(sources)}

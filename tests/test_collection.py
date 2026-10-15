@@ -102,6 +102,13 @@ class CollectionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Unresolved mathematical reference"):
             prepare_fragment({**self.record, "source": "second", "html": html}, {("first", "1234ABCD"): "ABCD1234"}, {}, "../../")
 
+    def test_tex_labels_are_not_exposed_inside_reader_formulas(self):
+        html = r'\begin{equation}\label{eq:internal_name}x=y\end{equation}'
+        result = prepare_fragment({**self.record, "source": "first", "html": html}, {}, {}, "../../")
+        self.assertNotIn(r"\label", result)
+        self.assertNotIn("internal_name", result)
+        self.assertIn("x=y", result)
+
 
 if __name__ == "__main__":
     unittest.main()
