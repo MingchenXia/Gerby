@@ -6,15 +6,17 @@ A shared mathematical reference combining definitions, theorems, and proofs from
 
 ## Content and organization
 
-The collection integrates three sources, tracking their `main` branches:
+The collection integrates four sources, tracking their `main` branches:
 
 - [Foundations of pluripotential theory](https://github.com/MingchenXia/foundations-of-pluripotential-theory).
 - [Singularities in global pluripotential theory (SGPT)](https://github.com/MingchenXia/SGPT).
 - **Singularities in Hermitian pluripotential theory**, from the author's private `non-kahler-pluripotential-theory` repository. Only the authorized reading edition is published; the source repository remains private.
 
+- **Classical potential theory: Kelvin transforms and half-spaces**, the selected Helms contribution from the private `Gerby-Literature` repository. It includes the Kelvin covariance identity, nonnegative half-space representation, and bounded boundary-data Poisson integral, with complete reconstructed proofs and exact attribution. The retained book scan and private research records are not published.
+
 Only each manuscript's active input graph is included. Excluded drafts and private research material are not exported.
 
-The collection has **21 shared chapters**, ordered by mathematical subject across the books, with 72 more specific subjects inside them. Chapter 1 contains only conventions; manuscript prefaces, acknowledgments, introductions, and part overviews are omitted. Original statement numbering is retained; source metadata and exact revisions are collected under Sources rather than repeated beside every statement. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
+The collection has **21 shared chapters**, ordered by mathematical subject across the books, with 73 more specific subjects inside them. Chapter 1 contains only conventions; manuscript prefaces, acknowledgments, introductions, and part overviews are omitted. Original statement numbering is retained; source metadata and exact revisions are collected under Sources rather than repeated beside every statement. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
 
 Reviewed duplicates have one canonical entry and one search result. Alternative source wording, proofs, and formalization badges remain accessible within that entry. Numbered clauses stay inside their parent statements, retaining their own tags and badges. `collection.json` records each reviewed statement fingerprint: a changed statement requires a new review before it can be merged again. Results with different hypotheses remain separate.
 
@@ -85,7 +87,7 @@ Open `http://localhost:8000`. With authorized push access to `MingchenXia/Gerby`
 .venv/bin/python scripts/update.py
 ```
 
-The on-request updater requires a clean `main` checkout and uses a fast-forward pull. It never overwrites uncommitted edits. To preview an existing source checkout, set `FOUNDATIONS_SOURCE_DIR`, `SGPT_SOURCE_DIR`, or `NON_KAHLER_SOURCE_DIR` to its absolute path before building; requested update checks ignore preview overrides and fetch the tracked sources afresh.
+The on-request updater requires a clean `main` checkout and uses a fast-forward pull. It never overwrites uncommitted edits. To preview an existing source checkout, set `FOUNDATIONS_SOURCE_DIR`, `SGPT_SOURCE_DIR`, `NON_KAHLER_SOURCE_DIR`, or `LITERATURE_SOURCE_DIR` to its absolute path before building; requested update checks ignore preview overrides and fetch the tracked sources afresh.
 
 ## Gerby on GitHub Pages
 

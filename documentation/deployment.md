@@ -16,7 +16,7 @@ The published `upstream.json` contains the build time, the project commit used t
 
 ## Shared collection
 
-Sources are registered in `books.json`; their status becomes `published` when an adapter is ready. The current sources track the main branches of Foundations, SGPT and the private Hermitian book. Public sources use HTTPS; the private source uses the local authenticated Git credential helper. No credentials or private research files are exported.
+Sources are registered in `books.json`; their status becomes `published` when an adapter is ready. The current sources track the main branches of Foundations, SGPT, the private Hermitian book, and the selected classical-potential-theory article in Gerby-Literature. Public sources use HTTPS; the private source uses the local authenticated Git credential helper. No credentials or private research files are exported.
 
 Each adapter receives `SOURCE_DIRECTORY OUTPUT_DIRECTORY` and exports:
 
@@ -27,7 +27,7 @@ Each adapter receives `SOURCE_DIRECTORY OUTPUT_DIRECTORY` and exports:
 - `assets/`: illustrations referenced by the active manuscript, including locally rendered vector diagrams;
 - temporary reading/tag pages used to validate complete source tag and badge coverage.
 
-`scripts/collection.py` combines exports into `/chapters/`, `/sections/`, `/entries/`, `/tag/TAG/`, `/references/`, `/comments/`, `/search/`, and `/sources/`. Every included source subject must be explicitly assigned to one shared chapter. The current 21-chapter order follows mathematical dependencies across the books, with 72 independently addressable sections. Chapter pages contain section links, not statement lists. `/topics/` permalinks redirect to the corresponding sections. Source-specific pages become redirects, preserving old permalinks. Source records are internal provenance, not separate reading collections. Search includes every retained contribution's text and aliases; visible headings use the manuscript's numbered titles instead of names derived from internal labels.
+`scripts/collection.py` combines exports into `/chapters/`, `/sections/`, `/entries/`, `/tag/TAG/`, `/references/`, `/comments/`, `/search/`, and `/sources/`. Every included source subject must be explicitly assigned to one shared chapter. The current 21-chapter order follows mathematical dependencies across the books, with 73 independently addressable sections. Chapter pages contain section links, not statement lists. `/topics/` permalinks redirect to the corresponding sections. Source-specific pages become redirects, preserving old permalinks. Source records are internal provenance, not separate reading collections. Search includes every retained contribution's text and aliases; visible headings use the manuscript's numbered titles instead of names derived from internal labels.
 
 `scripts/reader.py` defines one reading sequence, including each chapter, its sections, and every canonical entry exactly once. Each page has reciprocal Previous/Next links at both ends, contextual breadcrumbs, a permalink, a BibTeX citation, and a comment panel. `navigation.json` records this order. Tags remain stable and are hidden in reader lists until requested. Serialized TeX label commands are stripped from presentation formulas after cross-references have been resolved.
 
@@ -49,7 +49,7 @@ The adapters follow only the input graph activated by `book.tex`. They use the p
 
 Unknown commands, missing fragments, missing badge markers, tag collisions and broken local links fail the build. Foundations requires explicit labels on numbered headings and theorems. The added sources retain their existing labels; unlabelled headings/results receive a source-content identifier without editing the manuscript. Bibliography exports contain only entries cited by the active manuscript, deduplicated by DOI or normalized title/year/author identity. TikZ diagrams are compiled locally with shell escape disabled and exported as SVG; no full book PDF rebuild is involved. References inside formulas are resolved against the source label inventory before being mapped to canonical entry links. Unresolved references and internal parser object names fail publication. Shared assets carry content revisions so returning readers load updated rendering code. Source image paths must stay inside the manuscript directory. Internal image links are checked along with page links and fragments. Mathematics renders with self-hosted MathJax.
 
-For a local preview, `FOUNDATIONS_SOURCE_DIR`, `SGPT_SOURCE_DIR`, and `NON_KAHLER_SOURCE_DIR` can select existing checkouts. Its repository identity and exact commit are checked. The on-request updater explicitly removes preview overrides before fetching sources, so a stale preview checkout cannot silently become a deployment.
+For a local preview, `FOUNDATIONS_SOURCE_DIR`, `SGPT_SOURCE_DIR`, `NON_KAHLER_SOURCE_DIR`, and `LITERATURE_SOURCE_DIR` can select existing checkouts. Its repository identity and exact commit are checked. The on-request updater explicitly removes preview overrides before fetching sources, so a stale preview checkout cannot silently become a deployment.
 
 ## Formalization status
 
@@ -70,3 +70,23 @@ The hourly Gerby automation was deleted. Updates and source revision checks now 
 ## Single-branch consolidation
 
 The `gh-pages` history is merged into `main`, with its complete validated reading edition relocated byte for byte into `docs/`. The edition receipt continues to identify the commit that actually rendered that content. This consolidation does not refresh the source books. The next requested update may rebuild once to record the changed publishing infrastructure; later generated-only publication commits are ignored when checking project freshness.
+
+## Selected literature contributions
+
+The `classical-potential-theory` source tracks `Gerby-Literature/main` and exports
+only `integrations/R0001/book.tex`, `results/R0001/proof.tex`,
+`results/R0002/proof.tex`, `results/R0003/proof.tex`, and
+`integrations/R0001/references.bib`. Its adapter checks this input graph and
+rejects added, repeated, nested, or escaping inputs pending review. It preserves
+the article's section/theorem numbering and prerequisites while replacing only
+its print layout. Complete source-tag and badge coverage uses the shared official
+Gerby renderer. The selected subject belongs to `classical-potentials`.
+
+The three results reconstruct Helms (1969), Theorems 2.24--2.26, printed
+pp. 36--42, with exact citations. The covariance formula, weighted admissibility
+and converse, derivative estimates, normalization and boundary-tail arguments
+are explicit. Existing ball Poisson and measure-selection entries remain linked
+prerequisites. The already-covered ball representation is derived as an ingredient
+and is not registered as a redundant new theorem. No formalization is recorded.
+The retained scan, OCR, dossiers, findings register and unreviewed book material
+are outside the export. This integration does not complete the whole-book review.
