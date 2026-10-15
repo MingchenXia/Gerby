@@ -15,6 +15,14 @@ GitHub schedules can be delayed. For an immediate update, run the workflow manua
 
 ## Book integration
 
+The first registered book is **Foundations of pluripotential theory**, tracking the `main` branch of its private upstream repository. CI uses the read-only deploy key named **Gerby automatic publishing (read-only)**, stored only in the encrypted `FOUNDATIONS_SOURCE_SSH_KEY` Actions secret. It checks out the manuscript directories and root files, excluding the private research/reference library from the working tree and public artifact. `FOUNDATIONS_SOURCE_DIR` passes that fresh checkout to the build; the repository identity and exact commit are checked before conversion.
+
+Its adapter uses the official pinned Gerby renderer. A web-only preamble emulates the source's shared section theorem counter while preserving its mathematics macros. The upstream source is never rewritten. Only the input graph activated by `book.tex` is published; inactive chapter skeletons are excluded. Unknown LaTeX commands, missing labels on numbered headings/theorems, missing fragments, and tag-inventory gaps fail the build instead of silently dropping content.
+
+Permanent eight-character tags are derived from each source label with SHA-256. The build rejects collisions. Tags do not depend on theorem numbering or chapter order; renaming a source label needs an explicit permalink migration. Named frontmatter headings receive separate synthetic labels. The exported `tags.json` records every mapping.
+
+The static edition includes a complete reading page, individual tag pages, bibliography entries actually cited in the active text, full-text tag search, and self-hosted MathJax assets. Formalization badges default to **Not recorded** until mappings are supplied.
+
 Each book needs its own entry in `books.json`. An illustrative entry is:
 
 ```json
@@ -37,7 +45,7 @@ Once the actual LaTeX structure is known, add `adapters/<slug>.py` and set `stat
 python3 adapters/<slug>.py SOURCE_DIRECTORY OUTPUT_DIRECTORY
 ```
 
-An adapter must run the Gerby conversion/export, write `OUTPUT_DIRECTORY/index.html`, preserve tag permalinks and assets, and use relative links compatible with `/Gerby/`. Dependencies belong in the workflow when the first adapter is added; the empty catalogue needs none. Each book has its own output directory and independent tag namespace.
+An adapter must run the Gerby conversion/export, write `OUTPUT_DIRECTORY/index.html`, preserve tag permalinks and assets, and use relative links compatible with `/Gerby/`. Dependencies are pinned in `requirements.txt` and `vendor/package-lock.json`. Each book has its own output directory and independent tag namespace.
 
 For a published book, the build checks that every HTML page has the formalization badge integration before it can be deployed. See [formalizations.md](formalizations.md). The adapter must mark each theorem/tag with `data-gerby-tag` and include the shared badge module and stylesheet; source-specific integration tests must confirm marker coverage against the book's tag inventory.
 

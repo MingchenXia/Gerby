@@ -7,6 +7,7 @@ from hashlib import sha256
 from html import escape
 from html.parser import HTMLParser
 import json
+import os
 from pathlib import Path, PurePosixPath
 import re
 import shutil
@@ -56,6 +57,8 @@ def validate(books, formalizations):
         for field in ("entrypoint", "tags"):
             if field in book:
                 relative_path(book[field])
+        if "checkout_env" in book:
+            require(isinstance(book["checkout_env"], str) and re.fullmatch(r"[A-Z][A-Z0-9_]+", book["checkout_env"]), "Invalid checkout environment name")
     keys = set()
     for item in formalizations["entries"]:
         require(isinstance(item, dict), "Formalization entries must be objects")
@@ -89,6 +92,16 @@ def source_key(record):
 def fetch_source(record, cache):
     key = source_key(record)
     if key not in cache:
+        checkout = os.environ.get(record.get("checkout_env", ""))
+        if checkout:
+            destination = Path(checkout).resolve()
+            commit = subprocess.check_output(["git", "-C", str(destination), "rev-parse", "HEAD"], text=True).strip()
+            require(re.fullmatch(r"[a-f0-9]{40}", commit), "Invalid checked-out revision")
+            remote = subprocess.check_output(["git", "-C", str(destination), "remote", "get-url", "origin"], text=True).strip()
+            normalize = lambda value: value.removesuffix(".git").replace("git@github.com:", "https://github.com/")
+            require(normalize(remote) == normalize(key[0]), "Pre-checked source repository does not match the book registry")
+            cache[key] = {"path": destination, "commit": commit}
+            return cache[key]
         destination = ROOT / "_sources" / sha256("\0".join(key).encode()).hexdigest()[:16]
         if destination.exists():
             shutil.rmtree(destination)
@@ -183,6 +196,14 @@ def build(fetch=False):
     if destination.exists():
         shutil.rmtree(destination)
     shutil.copytree(ROOT / "site", destination)
+    mathjax = ROOT / "vendor" / "node_modules" / "mathjax" / "es5"
+    if any(book["status"] == "published" for book in books["books"]):
+        require(mathjax.is_dir(), "Missing mathematics assets: run npm ci --prefix vendor")
+        shutil.copytree(mathjax, destination / "assets" / "mathjax")
+        for filename in ("LICENSE", "NOTICE"):
+            license_file = mathjax.parent / filename
+            if license_file.is_file():
+                shutil.copyfile(license_file, destination / "assets" / "mathjax" / filename)
     for book in books["books"]:
         if book["status"] != "published":
             continue

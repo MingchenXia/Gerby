@@ -8,7 +8,7 @@ This repository hosts the catalogue and the publishing infrastructure. Book sour
 
 ## Current state
 
-The catalogue is live. No books or formalization repositories have been supplied yet. Gerby conversion and proof-checking adapters will be configured against the first actual source repositories; no book or proof is claimed to be published or verified yet.
+The catalogue publishes the active draft of **Foundations of pluripotential theory**. Its private source repository stays private; the public artifact contains only the generated reading edition. No formalization repositories have been supplied yet, so its tags show **Not recorded**.
 
 ## Adding books and formalizations
 
@@ -30,16 +30,20 @@ Formalization badges are tied to exact commits. When an upstream formalization m
 
 ## Local preview
 
-Requires Python 3.11+ and Node.js 22+ for checks; no package installation is needed for the catalogue.
+Requires Python 3.11+, Git, and Node.js 22+. Install the pinned renderer and self-hosted mathematics assets, then provide a local checkout of the private book:
 
 ```sh
-python3 -m unittest discover -s tests
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+npm ci --prefix vendor --ignore-scripts
+.venv/bin/python -m unittest discover -s tests
 node --test tests/formalization.test.mjs
-python3 scripts/build.py
+export FOUNDATIONS_SOURCE_DIR=/absolute/path/to/foundations-of-pluripotential-theory
+.venv/bin/python scripts/build.py --fetch
 python3 -m http.server 8000 --directory _site
 ```
 
-Open `http://localhost:8000`. Use `python3 scripts/build.py --fetch` to fetch current upstream sources and run configured conversion adapters, as CI does. Published books always require a fresh source fetch.
+Open `http://localhost:8000`. CI checks out the current book revision with a repository-specific read-only deploy key before running the same build. Published books always require a fresh source checkout.
 
 ## Gerby and GitHub Pages
 
