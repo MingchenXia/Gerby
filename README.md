@@ -14,7 +14,7 @@ The collection integrates three sources, tracking their `main` branches:
 
 Only each manuscript's active input graph is included. Excluded drafts and private research material are not exported.
 
-The collection has **21 shared chapters**, ordered by mathematical subject across the books, with 72 more specific subjects inside them. Chapter 1 contains only conventions; manuscript prefaces, acknowledgments, introductions, and part overviews are omitted. Source titles and original numbering appear as attribution within entries. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
+The collection has **21 shared chapters**, ordered by mathematical subject across the books, with 72 more specific subjects inside them. Chapter 1 contains only conventions; manuscript prefaces, acknowledgments, introductions, and part overviews are omitted. Original statement numbering is retained; source metadata and exact revisions are collected under Sources rather than repeated beside every statement. The chapter structure is curated independently of the original tables of contents. Existing book and topic URLs continue to resolve.
 
 Reviewed duplicates have one canonical entry and one search result. Alternative source wording, proofs, and formalization badges remain accessible within that entry. Numbered clauses stay inside their parent statements, retaining their own tags and badges. `collection.json` records each reviewed statement fingerprint: a changed statement requires a new review before it can be merged again. Results with different hypotheses remain separate.
 
@@ -54,6 +54,7 @@ Supply a source repository link and, when available, its formalization repositor
 - `books.json` registers contributing source repositories and tracked revisions.
 - `collection.json` defines the shared chapters, subject assignments, and reviewed canonical entries.
 - `formalizations.json` records declaration mappings and verification evidence.
+- `proofs/registry.json` and its HTML fragments add proofs and necessary qualifications to the shared reading edition. Statement and original-proof fingerprints require review when upstream mathematics changes; see [proof expansion review](documentation/proof-expansions.md).
 - `adapters/` exports each source through the pinned official Gerby renderer.
 - [Deployment and updates](documentation/deployment.md) documents the export and publishing contracts.
 

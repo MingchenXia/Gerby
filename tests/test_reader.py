@@ -42,6 +42,11 @@ class ReaderTests(unittest.TestCase):
             self.assertEqual(len(section.select('main .env-definition')), 2)
             self.assertEqual(section.select_one('html')['data-reading-mode'], 'continuous')
             self.assertIn('A statement.', section.select_one('main').get_text())
+            self.assertFalse(section.select('.source-attribution'))
+            self.assertNotIn('From Test source', section.select_one('main').get_text())
+            entry = BeautifulSoup(next((root / 'tag').glob('*/index.html')).read_text(), 'html.parser')
+            self.assertFalse(entry.select('.source-attribution'))
+            self.assertTrue(entry.select('[data-gerby-book="source"] [data-gerby-tag]'))
             check_links(root)
 
     def test_nested_statements_and_proofs_are_readable_once(self):

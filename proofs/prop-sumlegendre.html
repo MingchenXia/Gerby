@@ -1,0 +1,9 @@
+<p><em>Proof.</em> For every decomposition $p=\sum_i p_i$, the defining inequalities for the conjugates give $(\sum_iF_i)^*(p)\leq\sum_iF_i^*(p_i)$. It remains to prove the reverse inequality when the left side is finite. The case $r=1$ is immediate.</p>
+
+<p>For $r\geq2$, put
+\[V(z_1,\ldots,z_{r-1})=\inf_x\left\{\sum_{i&lt;r}F_i(x+z_i)+F_r(x)-\langle p,x\rangle\right\}.\]
+This is convex, being an infimum over the fibers of a convex epigraph. Its value at zero is $-(\sum_iF_i)^*(p)$, which is finite. Choose $x_0$ in the common relative interior in the hypothesis. The product of the effective domains has $(x_0,\ldots,x_0)$ in its relative interior. The linear map $(x_1,\ldots,x_r)\mapsto(x_1-x_r,\ldots,x_{r-1}-x_r)$ maps a relative neighborhood of this point onto a relative neighborhood of zero in its image affine span: a surjective linear map between finite-dimensional spaces has a continuous linear right inverse. Consequently zero lies in the relative interior of $\operatorname{Dom}V$.</p>
+
+<p>The function $V$ cannot take $-\infty$ anywhere. If it did, combining that point with a point of its effective domain on the opposite side of zero would force $V(0)=-\infty$. It is therefore proper, and <a data-proof-entry="72D7B299EAB8">existence of supporting slopes</a> gives $p_1,\ldots,p_{r-1}$ with $V(z)\geq V(0)+\sum_{i&lt;r}\langle p_i,z_i\rangle$. Set $p_r=p-\sum_{i&lt;r}p_i$. Substituting arbitrary $x_i=x+z_i$ in this inequality yields
+\[\sum_i\bigl(F_i(x_i)-\langle p_i,x_i\rangle\bigr)\geq V(0).\]
+Taking independent infima proves $\sum_iF_i^*(p_i)\leq-V(0)=(\sum_iF_i)^*(p)$. Together with the first inequality this is equality. If the conjugate on the left is $+\infty$, the first inequality forces every decomposition cost to be $+\infty$, so the formula still holds.</p>
