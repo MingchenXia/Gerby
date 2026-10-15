@@ -78,7 +78,8 @@ class Reader:
         for topic in self.chapters[chapter]["topics"]:
             section = self.sections[topic]
             active = ' aria-current="page"' if current == topic else ""
-            identifier = f' id="{topic}"' if anchors else ""
+            anchor = "section-" + topic if topic in {"comments", "cite", "content", "collection-search", "citation-text", "search-results"} else topic
+            identifier = f' id="{anchor}"' if anchors else ""
             rows.append(f'<li{identifier}><a href="{self.href("sections/" + topic, root)}"{active}><span>{section["number"]}</span> {escape(section["title"])}</a></li>')
         return '<ol class="section-list">' + "".join(rows) + '</ol>'
 

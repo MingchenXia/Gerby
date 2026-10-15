@@ -100,6 +100,19 @@ class ReaderTests(unittest.TestCase):
                         target = (page.parent / links[0]["href"] / "index.html").resolve()
                         self.assertEqual(target, (root / routes[index + offset] / "index.html").resolve())
 
+    def test_a_section_named_comments_does_not_replace_the_comment_panel_anchor(self):
+        self.records[-1]['topic'] = 'Comments'
+        self.config['topics'][-1] = {'slug': 'comments', 'title': 'Comments'}
+        self.config['chapters'][-1]['topics'] = ['comments']
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.build(root)
+            soup = BeautifulSoup((root / 'chapters/second/index.html').read_text(), 'html.parser')
+            self.assertEqual(len(soup.select('#comments')), 1)
+            self.assertEqual(soup.select_one('#comments')['class'], ['comments-panel'])
+            self.assertTrue(soup.select_one('#section-comments a'))
+            check_links(root)
+
     def test_labels_are_searchable_but_not_reader_headings_or_result_titles(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
