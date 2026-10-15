@@ -14,6 +14,7 @@ from urllib.parse import unquote, urlsplit
 from bs4 import BeautifulSoup
 from unidecode import unidecode
 from reader import Reader, display_title
+from proof_expansions import apply_expansions, check_dependencies
 
 
 def slugify(title):
@@ -85,7 +86,7 @@ def organize(exports, configuration):
             topic_title = record.get("topic") or "General"
             topic = configured["topic"] if configured else slugify(topic_title)
             topic_title = configuration.get("topic_titles", {}).get(topic, topic_title)
-            topics.setdefault(topic, {"slug": topic, "title": topic_title, "description": "Definitions, results, and proofs on this subject."})
+            topics.setdefault(topic, {"slug": topic, "title": topic_title, "description": ""})
             entry = entries.setdefault(canonical, {"tag": canonical, "title": configured["title"] if configured else record.get("semantic_title", record["title"]), "topic": topic, "kind": record["kind"], "variants": [], "components": [], "merge_note": configured.get("merge_note", "") if configured else ""})
             entry["variants"].append({"source": source, **record})
             key = source, record["tag"]
@@ -202,6 +203,8 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
     if r"\gerbyref" in fragment or "TeXFragment object at" in fragment:
         raise ValueError(f"An invalid mathematical reference remains: {source}/{variant['label']}")
     soup = BeautifulSoup(fragment, "html.parser")
+    for anchor in soup.select("a[data-proof-entry]"):
+        anchor["href"] = root + "tag/" + anchor["data-proof-entry"] + "/"
     for paragraph in list(soup.find_all("p")):
         if paragraph.find(["article", "div", "aside", "figure", "h1", "h2", "h3", "ul", "ol", "table"], recursive=False):
             paragraph.unwrap()
@@ -332,8 +335,8 @@ def continuous_section(relevant, entries, roots, sources, source_tags, reference
         covered.update(represented)
         body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors)
         heading = f'<h2><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a></h2>' if variant.get("section") else ""
-        provenance = f'<div class="source-attribution">From <a href="{root}sources/{source}/">{escape(sources[source]["title"])}</a> <span data-gerby-tag="{variant["tag"]}"></span></div>'
-        chunks.append(f'<section class="reading-chunk" id="entry-{entry["tag"]}" data-section-entries="{" ".join(sorted(represented))}"><div class="source-variant" data-gerby-book="{source}">{heading}{provenance}{body}</div></section>')
+        badge = f'<span data-gerby-tag="{variant["tag"]}"></span>'
+        chunks.append(f'<section class="reading-chunk" id="entry-{entry["tag"]}" data-section-entries="{" ".join(sorted(represented))}"><div class="source-variant" data-gerby-book="{source}">{heading}{badge}{body}</div></section>')
     expected = {entry["tag"] for entry in relevant}
     if covered != expected:
         raise ValueError(f"Section reading coverage differs: missing {sorted(expected - covered)}, extra {sorted(covered - expected)}")
@@ -361,7 +364,12 @@ def build_collection(books, destination, configuration):
         inventories[source] = json.loads((folder / "tags.json").read_text())
         if (folder / "assets").is_dir():
             shutil.copytree(folder / "assets", destination / "assets" / "sources" / source, dirs_exist_ok=True)
+    dependencies = {}
+    if configuration.get("proof_expansions"):
+        registry = Path(__file__).resolve().parents[1] / configuration["proof_expansions"]
+        exports, dependencies = apply_expansions(exports, registry, statement_fingerprint)
     entries, topics, source_tags = organize(exports, configuration)
+    check_dependencies(entries, dependencies)
     chapters, topic_chapters = chapter_structure(topics, configuration)
     comments = json.loads((Path(__file__).resolve().parents[1] / "comments.json").read_text())
     reader = Reader(chapters, topics, entries, sources, comments)
@@ -387,7 +395,10 @@ def build_collection(books, destination, configuration):
         write("chapters/" + key, content, chapter["title"], "../../")
     roots = source_roots(entries)
     for topic, section in reader.sections.items():
-        content = f'<h1>{section["number"]} {escape(section["title"])}</h1><p>{escape(topics[topic].get("description", ""))}</p>'
+        content = f'<h1>{section["number"]} {escape(section["title"])}</h1>'
+        description = topics[topic].get("description", "")
+        if description and description != "Definitions, results, and proofs on this subject.":
+            content += f'<p>{escape(description)}</p>'
         content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors)
         write("sections/" + topic, content, section["title"], "../../")
     redirect(destination / "topics" / "index.html", destination / "chapters" / "index.html", destination)
@@ -419,12 +430,11 @@ def build_collection(books, destination, configuration):
         variants, texts = [], []
         for number, variant in enumerate(entry["variants"]):
             source, local = variant["source"], variant["tag"]
-            meta = sources[source]
-            provenance = f'<div class="source-attribution">From <a href="{root}sources/{source}/">{escape(meta["title"])}</a> · {escape(variant["title"])} <span data-gerby-tag="{local}"></span></div>'
+            badge = f'<span data-gerby-tag="{local}"></span>'
             body = prepare_fragment(variant, source_tags, reference_map, root, anchors)
             if number:
-                body = '<details class="source-alternative"><summary>Read this source version and its proof notes</summary>' + body + '</details>'
-            content += f'<section class="source-variant" data-gerby-book="{source}">{provenance}{body}</section>'
+                body = '<details class="source-alternative"><summary>Read the alternative statement and proof</summary>' + body + '</details>'
+            content += f'<section class="source-variant" data-gerby-book="{source}">{badge}{body}</section>'
             texts.append(BeautifulSoup(variant["html"], "html.parser").get_text(" ", strip=True))
             variants.append({"book": source, "tag": local, "label": variant["label"], "revision": editions[source]["commit"]})
         write("tag/" + tag, content, entry["title"], root)

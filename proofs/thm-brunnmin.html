@@ -1,0 +1,9 @@
+<p><em>Proof.</em> We prove the stated multiplicative form by induction on $n$. If either body has zero volume, its right-hand side is zero and positivity suffices. In dimension zero all volumes are $1$. In dimension one the bodies are intervals: their Minkowski combination has length $(1-t)a+tb\geq a^{1-t}b^t$ by the weighted arithmetic--geometric mean inequality.</p>
+
+<p>Assume the result in dimension $n-1$ and let $A=K&#x27;$, $B=K$, $C=(1-t)A+tB$ have positive-volume input bodies. Slice them by the first coordinate and put $f(x)=\operatorname{vol}_{n-1}(A_x)$, $g(y)=\operatorname{vol}_{n-1}(B_y)$ and $h(s)=\operatorname{vol}_{n-1}(C_s)$. Slice inclusion and the induction hypothesis give
+\[h((1-t)x+ty)\geq f(x)^{1-t}g(y)^t.\]
+On the interiors of their projection intervals, $f$ and $g$ are positive and continuous. Continuity follows from the proved Hausdorff continuity of slices and volume continuity in dimension $n-1$; endpoint values do not affect integrals.</p>
+
+<p>Normalize $f,g$ to have integral $1$, and divide $h$ by $(\operatorname{vol}A)^{1-t}(\operatorname{vol}B)^t$. Their inequality has the same form. Let $T$ be the increasing map matching the cumulative integrals of $f$ and $g$. On the two open projection intervals it is continuously differentiable and satisfies $T&#x27;(x)=f(x)/g(T(x))$. The map $S(x)=(1-t)x+tT(x)$ is increasing, so change of variables and the slice inequality give
+\[\int h\geq\int h(S(x))S&#x27;(x)\,\mathrm dx\geq\int f(x)^{1-t}g(T(x))^t\left((1-t)+t\frac{f(x)}{g(T(x))}\right)\,\mathrm dx\geq\int f=1.\]
+The last inequality is the weighted arithmetic--geometric mean inequality applied to $1$ and $f(x)/g(T(x))$. The changes of variables can first be made on compact subintervals and then passed to the full intervals by monotone convergence. Undoing normalization and using Fubini proves $\operatorname{vol}C\geq(\operatorname{vol}A)^{1-t}(\operatorname{vol}B)^t$, as required.</p>
