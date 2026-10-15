@@ -12,8 +12,8 @@ from urllib.error import URLError
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY = "https://github.com/MingchenXia/Gerby.git"
-PUBLIC_RECEIPT = "https://mingchenxia.github.io/Gerby/upstream.json"
+REPOSITORY = "https://github.com/MingchenXia/Pome.git"
+PUBLIC_RECEIPT = "https://mingchenxia.github.io/Pome/upstream.json"
 
 
 def deployment_current(receipt):
@@ -28,13 +28,13 @@ def deployment_current(receipt):
 
 def request_deployment(receipt):
     if deployment_current(receipt):
-        print("The public Gerby site is current.")
+        print("The public Pome site is current.")
         return
     # Native Pages delivery only; manuscript builds and tests remain local.
-    subprocess.run(["gh", "api", "-X", "POST", "repos/MingchenXia/Gerby/pages/builds"], check=True, cwd=ROOT)
+    subprocess.run(["gh", "api", "-X", "POST", "repos/MingchenXia/Pome/pages/builds"], check=True, cwd=ROOT)
     for _ in range(24):
         if deployment_current(receipt):
-            print("Verified the new edition at https://mingchenxia.github.io/Gerby/")
+            print("Verified the new edition at https://mingchenxia.github.io/Pome/")
             return
         time.sleep(15)
     raise RuntimeError("Files are uploaded, but the public Pages revision is not current yet; retry publication")
@@ -74,10 +74,10 @@ def publish():
     if git("branch", "--show-current", capture=True) != "main":
         raise ValueError("Publication requires the main branch")
     if git("status", "--porcelain", capture=True):
-        raise ValueError("Commit or save local Gerby changes before publication")
+        raise ValueError("Commit or save local Pome changes before publication")
     remote = git("remote", "get-url", "origin", capture=True).removesuffix(".git").replace("git@github.com:", "https://github.com/")
     if remote != REPOSITORY.removesuffix(".git"):
-        raise ValueError("The publication remote does not match the Gerby repository")
+        raise ValueError("The publication remote does not match the Pome repository")
     git("pull", "--ff-only", "origin", "main")
     if not project_unchanged(receipt.get("publishing_commit")):
         raise ValueError("The project changed after this build; rebuild before publication")
@@ -85,7 +85,7 @@ def publish():
     git("add", "--all", "--", "docs")
     unchanged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode == 0
     if not unchanged:
-        git("commit", "-m", "Publish shared Gerby reference from main/docs [skip ci]")
+        git("commit", "-m", "Publish shared Pome reference from main/docs [skip ci]")
     git("-c", "http.version=HTTP/1.1", "-c", "http.postBuffer=104857600", "push", "origin", "main")
     print("Prebuilt files are published in main/docs.")
     request_deployment(receipt)

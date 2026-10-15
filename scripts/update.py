@@ -33,7 +33,7 @@ def current_revision(repository, ref):
 def update(force=False):
     # Never overwrite an editor's uncommitted work or change their branch.
     if run("git", "status", "--porcelain", capture=True):
-        raise ValueError("Commit or save local Gerby changes before requested publication")
+        raise ValueError("Commit or save local Pome changes before requested publication")
     if run("git", "branch", "--show-current", capture=True) != "main":
         raise ValueError("The local updater requires the main branch")
     run("git", "pull", "--ff-only", "origin", "main")
@@ -45,7 +45,7 @@ def update(force=False):
     receipt = json.loads((ROOT / "docs" / "upstream.json").read_text())
     if not force and project_unchanged(receipt.get("publishing_commit")) and receipt["sources"] == revisions:
         if deployment_current(receipt):
-            print("No changes: the public Gerby collection is current.")
+            print("No changes: the public Pome collection is current.")
         else:
             request_deployment(receipt)
         return

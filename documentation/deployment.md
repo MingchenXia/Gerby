@@ -1,6 +1,6 @@
 # Deployment and updates
 
-The public project is [MingchenXia/Gerby](https://github.com/MingchenXia/Gerby), served at [mingchenxia.github.io/Gerby/](https://mingchenxia.github.io/Gerby/). The homepage remains at its existing address.
+The public project is [MingchenXia/Pome](https://github.com/MingchenXia/Pome), served at [mingchenxia.github.io/Pome/](https://mingchenxia.github.io/Pome/). The personal homepage at the domain root keeps its existing address. The project and repository were renamed from Gerby to Pome; permanent entry tags, source namespaces, and comment thread keys remain stable.
 
 ## Publication without GitHub Actions CI
 
@@ -27,7 +27,7 @@ Each adapter receives `SOURCE_DIRECTORY OUTPUT_DIRECTORY` and exports:
 - `assets/`: illustrations referenced by the active manuscript, including locally rendered vector diagrams;
 - temporary reading/tag pages used to validate complete source tag and badge coverage.
 
-`scripts/collection.py` combines exports into `/chapters/`, `/sections/`, `/entries/`, `/tag/TAG/`, `/references/`, `/comments/`, `/search/`, and `/sources/`. Every included source subject must be explicitly assigned to one shared chapter. The current 25-chapter order follows mathematical dependencies across the books, with 491 independently addressable sections. Chapter pages contain section and subsection links. `/topics/` permalinks redirect to the corresponding sections. Source-specific pages become redirects, preserving old permalinks. Source records are internal provenance, not separate reading collections. Search includes every retained contribution's text and aliases; visible headings retain mathematical names and use numbers generated from the current Gerby section. See [the integration layout contract](integration-layout.md).
+`scripts/collection.py` combines exports into `/chapters/`, `/sections/`, `/entries/`, `/tag/TAG/`, `/references/`, `/comments/`, `/search/`, and `/sources/`. Every included source subject must be explicitly assigned to one shared chapter. The current 25-chapter order follows mathematical dependencies across the books, with 491 independently addressable sections. Chapter pages contain section and subsection links. `/topics/` permalinks redirect to the corresponding sections. Source-specific pages become redirects, preserving old permalinks. Source records are internal provenance, not separate reading collections. Search includes every retained contribution's text and aliases; visible headings retain mathematical names and use numbers generated from the current Pome section. See [the integration layout contract](integration-layout.md).
 
 `scripts/reader.py` defines one reading sequence, including each chapter, its sections, and every canonical entry exactly once. Each page has reciprocal Previous/Next links at both ends, contextual breadcrumbs, a permalink, a BibTeX citation, and a comment panel. `navigation.json` records this order. Tags remain stable and are hidden in reader lists until requested. Serialized TeX label commands are stripped from presentation formulas after cross-references have been resolved.
 
@@ -41,7 +41,7 @@ Comments use [GitHub Discussions through giscus](comments.md), independently of 
 
 Uncurated global tags are twelve uppercase SHA-256 characters derived from `(source slug, source label)`, preventing collisions between identical labels in different texts. `collection.json` reserves canonical tags and can explicitly merge labels from several sources into one entry. Each variant retains its own attribution and formalization marker. The six initially published tags retain their original eight-character identifiers. Topic slugs are based on subject titles rather than source titles. Chapter order, subject membership, and canonical entry titles are curated independently of the books' chapter numbering. Repeated definitions may retain distinct scope explanations in their source versions; theorem hypotheses are never erased to force a merge.
 
-Reviewed duplicate members carry a SHA-256 fingerprint of their mathematical statement (ignoring only labels, index metadata, and whitespace). Changes or missing members fail the build and require a fresh review. Unreviewed exact duplicate definitions/results also fail publication. Repeated equations are unified only inside an already unified parent statement. Numbered list clauses are indexed through their parent when its HTML contains the original clause anchor. Their permalinks, search aliases, and badges remain available. `deduplication.json` publishes the group audit. Alternative source versions are collapsed initially and open automatically when a clause permalink targets them.
+Reviewed duplicate members carry a SHA-256 fingerprint of their mathematical statement (ignoring only labels, index metadata, and whitespace). Changes or missing members fail the build and require a fresh review. Unreviewed exact duplicate definitions/results also fail publication. Repeated equations are unified only inside an already unified parent statement. Numbered list clauses are indexed through their parent when its HTML contains the original clause anchor. Their permalinks and search aliases remain available; logical clauses share the parent statement’s formalization status. `deduplication.json` publishes the group audit. Alternative source versions are collapsed initially and open automatically when a clause permalink targets them.
 
 ## Manuscript adapters
 
@@ -65,7 +65,7 @@ The collection contains 5,896 canonical entries in 21 shared chapters. Twelve re
 
 The integration preserves 28 SVG diagrams, three source PNGs, footnotes, tables, and 364 cited bibliographic identities. Local validation covers the parser regressions (optional labels, underscores, dotless math symbols), stale duplicate reviews, distinct hypotheses, clause anchors, chapter coverage, image paths, every internal link/fragment, and badge behavior. A temporary MathJax 3.2.2 checker parsed over 64,000 distinct mathematical excerpts without syntax errors after the web compatibility fixes. This checks rendering syntax, not mathematical validity. No formalization mappings have been supplied.
 
-The hourly Gerby automation was deleted. Updates and source revision checks now run only when requested by the author. No GitHub Actions CI was run.
+The hourly Pome automation was deleted. Updates and source revision checks now run only when requested by the author. No GitHub Actions CI was run.
 
 ## Single-branch consolidation
 
@@ -89,7 +89,7 @@ It includes a recalled covered parameter lemma used by the added arguments.
 
 Subjects follow the existing classical and capacity chapters. The first three
 published results keep their canonical and source tags and Kelvin-section URL.
-Their reader numbers follow their current Gerby section, independently of article positions. The
+Their reader numbers follow their current Pome section, independently of article positions. The
 expanded conventions retain the earlier prerequisite tag and appear under
 Conventions. The other source subjects cover harmonic analysis, Green
 potentials, polar sets and sweeping, Perron and fine limits, and energy and

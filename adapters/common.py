@@ -98,6 +98,16 @@ def compatibility():
 
 def register_commands(document):
     from plasTeX import Command
+    from plasTeX.Base.LaTeX.Footnotes import footnotemark as FootnoteMark
+    class footnotemark(FootnoteMark):
+        @property
+        def source(self):
+            # Keep manuscript source/fingerprints intact during parsing. Math
+            # bodies need an identifiable marker only during HTML rendering.
+            if self.ownerDocument.userdata.get("gerby-render-footnotes"):
+                return r"\gerbyfootnotemark{" + self.id + "}"
+            return super().source
+    document.context.addGlobal("footnotemark", footnotemark)
     def identifier(tokens):
         text = tokens if isinstance(tokens, str) else "".join(token.source for token in tokens)
         return re.sub(r"\s+", "", text)
@@ -313,6 +323,7 @@ def render_fragments(source, working, prepare=None):
             return super().cleanup(document, files, postProcess)
     try:
         os.chdir(working)
+        document.userdata["gerby-render-footnotes"] = True
         StaticRenderer().render(document)
     finally:
         os.chdir(previous)

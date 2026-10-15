@@ -8,7 +8,10 @@ name: motto
 <blockquote class="motto">{{ obj }}</blockquote>
 
 name: footnote footnotetext
-<aside class="source-footnote" id="{{ obj.id }}"><span class="footnote-label">Note.</span> {{ obj }}</aside>
+<aside class="source-footnote" id="{{ obj.id }}" data-footnote-mark="{% if obj.mark is not none %}{{ obj.mark.id }}{% endif %}"><span class="footnote-label">Note.</span> {{ obj }}</aside>
+
+name: footnotemark
+<span class="source-footnotemark" id="{{ obj.id }}"></span>
 
 name: resizebox
 {{ obj }}

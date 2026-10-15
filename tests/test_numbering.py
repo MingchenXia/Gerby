@@ -43,6 +43,18 @@ class NumberingTests(unittest.TestCase):
         _, numbers = self.arrange()
         self.assertEqual(numbers["second", variant["tag"]]["number"], "3.2.1")
 
+    def test_logical_clauses_keep_tags_but_share_the_statement_badge(self):
+        clause = {"source": "first", "tag": "00000009", "label": "item:condition", "number": "1"}
+        self.entries["00000003"]["components"] = [clause]
+        _, numbers = self.arrange()
+        variant = {**self.entries["00000003"]["variants"][0], "html": '<article id="00000003"><ol><li id="00000009">A condition.</li></ol></article>'}
+        result = prepare_fragment(variant, {}, {}, '../../', numbering=numbers)
+        soup = BeautifulSoup(result, 'html.parser')
+        self.assertTrue(soup.find(id='first-00000009'))
+        self.assertFalse(soup.select('[data-gerby-tag="00000009"]'))
+        self.assertTrue(soup.select('[data-gerby-tag="00000003"]'))
+        self.assertTrue(soup.find(id='first-00000009').select_one('.tag-id'))
+
     def test_html_and_math_references_change_without_touching_mathematics(self):
         _, numbers = self.arrange()
         variant = {**self.entries["00000003"]["variants"][0], "html": '<a class="environment-identifier" href="/tag/00000003">Theorem <span data-tag="00000003">4.1</span>.</a><p>By (<a href="/tag/00000004" data-tag="00000004">2</a>), $d=2$.</p>' + r'\[x=2\quad\text{by \gerbyref{00000003}{4.1}}\]'}

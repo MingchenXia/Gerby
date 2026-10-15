@@ -1,4 +1,4 @@
-"""Combine Gerby exports into shared chapters with reviewed canonical entries."""
+"""Combine Pome exports into shared chapters with reviewed canonical entries."""
 from __future__ import annotations
 
 from hashlib import sha256
@@ -16,7 +16,11 @@ from unidecode import unidecode
 from reader import Reader, display_title, tag_code
 from numbering import renumber_markup
 from structure import arrange_sections
+from footnotes import collect_notes, number_notes, relocate_notes
 from proof_expansions import apply_expansions, check_dependencies
+from reading_edits import apply_reading_edits, validate_reading_edits
+from numbering import assign_numbers
+from search_index import write_search_index
 
 
 def slugify(title):
@@ -180,9 +184,9 @@ def chapter_structure(topics, configuration):
     return {key: c for key, c in chapters.items() if c["topics"]}, assigned
 
 
-def prepare_fragment(variant, source_tags, references, root, component_anchors=None, numbering=None):
+def prepare_fragment(variant, source_tags, references, root, component_anchors=None, numbering=None, footnotes=None):
     source = variant["source"]
-    fragment = variant["html"].replace(r"\begin{bgroup}", "{").replace(r"\end{bgroup}", "}")
+    fragment = relocate_notes(variant["html"], source, footnotes).replace(r"\begin{bgroup}", "{").replace(r"\end{bgroup}", "}")
     def math_label(match):
         target = (numbering or {}).get((source, match[1]), {})
         # Align rows need a tag inside their parent's TeX; standalone pages
@@ -194,7 +198,7 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
     image = r"\\gerbyimage\{([^}]+)\}\{([^}]+)\}"
     def illustration(match):
         return '<img class="source-figure" src="/asset/' + escape(match[1], quote=True) + '" alt="' + escape(match[2], quote=True) + '" loading="lazy">'
-    # Gerby serializes math bodies as TeX. A diagram inside display math must
+    # Pome serializes math bodies as TeX. A diagram inside display math must
     # become an image outside the math delimiters, retaining its equation tag.
     fragment = re.sub(r"\\\[\s*" + image + r"\s*\\\]", illustration, fragment)
     fragment = re.sub(r"\\begin\{equation\*?\}\s*(?:\\label\{[^}]+\}\s*)?" + image + r"\s*\\end\{equation\*?\}", illustration, fragment)
@@ -260,11 +264,15 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
     if variant.get("section") and first:
         first.decompose()
     for marker in soup.select("[data-gerby-tag]"):
-        canonical = (numbering or {}).get((source, marker["data-gerby-tag"]), {}).get("canonical_tag")
+        record = (numbering or {}).get((source, marker["data-gerby-tag"]), {})
+        canonical = record.get("canonical_tag")
         if canonical:
             code = soup.new_tag("code", attrs={"class": "tag-id"})
             code.string = canonical
             marker.append(code)
+        if record.get("clause"):
+            # A logical condition has an anchor/tag, not an independent proof.
+            del marker["data-gerby-tag"]
     prefix = source + "-"
     identifiers = {item["id"] for item in soup.select("[id]")}
     for item in soup.select("[id]"):
@@ -279,7 +287,7 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
 @cache
 def asset_revision():
     folder = Path(__file__).resolve().parents[1] / "site" / "assets"
-    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs", "favicon.svg", "comments.mjs", "search.mjs")
+    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs", "pome-mascot.png", "comments.mjs", "search.mjs")
     return sha256(b"".join((folder / name).read_bytes() for name in names)).hexdigest()[:12]
 
 
@@ -292,12 +300,14 @@ def entry_list(entries, topics, root):
     return '<ul class="entry-list">' + "".join(items) + '</ul>'
 
 
-def source_roots(entries):
+def source_roots(entries, note_candidates=None):
     """Locate exported entries inside the larger source sections containing them."""
     roots = {}
-    for entry in entries.values():
+    for position, entry in enumerate(entries.values()):
         for variant in entry["variants"]:
             soup = BeautifulSoup(variant["html"], "html.parser")
+            if note_candidates is not None:
+                collect_notes(note_candidates, soup, entry, variant, position)
             node = next((found for identifier in (variant["tag"], variant["label"], *variant.get("aliases", [])) if (found := soup.find(id=identifier))), None)
             if node:
                 key = variant["source"], node["id"]
@@ -307,7 +317,7 @@ def source_roots(entries):
     return roots
 
 
-def continuous_section(relevant, entries, roots, sources, source_tags, references, root, anchors, numbering=None):
+def continuous_section(relevant, entries, roots, sources, source_tags, references, root, anchors, numbering=None, footnotes=None):
     """Read full source fragments once, retaining prose between statements."""
     covered, chunks = set(), []
     topic = relevant[0]["topic"]
@@ -356,7 +366,7 @@ def continuous_section(relevant, entries, roots, sources, source_tags, reference
         if represented & covered:
             raise ValueError(f"A section repeats entries: {sorted(represented & covered)}")
         covered.update(represented)
-        body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors, numbering)
+        body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors, numbering, footnotes)
         heading = f'<h2><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a>{tag_code(entry["tag"])}</h2>' if variant.get("section") and not entry.get("section_intro") else ""
         badge = f'<span data-gerby-tag="{variant["tag"]}">{tag_code(entry["tag"]) if entry.get("section_intro") else ""}</span>'
         chunks.append(f'<section class="reading-chunk" id="entry-{entry["tag"]}" data-section-entries="{" ".join(sorted(represented))}"><div class="source-variant" data-gerby-book="{source}">{heading}{badge}{body}</div></section>')
@@ -374,7 +384,7 @@ def redirect(path, target, destination, fragments=None, anchor=""):
     relative += anchor
     assets = Path(os.path.relpath(destination / "assets", path.parent)).as_posix() + "/"
     fragment_anchors = "".join(f'<span hidden id="{escape(identifier, quote=True)}"></span>' for identifier in (fragments or {}))
-    path.write_text(f'''<!doctype html><html lang="en" data-redirect="{escape(relative, quote=True)}" data-fragments='{escape(json.dumps(fragments or {}), quote=True)}'><head><meta charset="utf-8"><title>Continue to Gerby</title><link rel="canonical" href="{escape(relative, quote=True)}"><script defer src="{assets}redirect.js"></script></head><body>{fragment_anchors}<p>This content is part of the shared Gerby reference. <a href="{escape(relative, quote=True)}">Continue to the shared entry</a>.</p></body></html>''')
+    path.write_text(f'''<!doctype html><html lang="en" data-redirect="{escape(relative, quote=True)}" data-fragments='{escape(json.dumps(fragments or {}), quote=True)}'><head><meta charset="utf-8"><title>Continue to Pome</title><link rel="canonical" href="{escape(relative, quote=True)}"><script defer src="{assets}redirect.js"></script></head><body>{fragment_anchors}<p>This content is part of the shared Pome reference. <a href="{escape(relative, quote=True)}">Continue to the shared entry</a>.</p></body></html>''')
 
 
 def build_collection(books, destination, configuration):
@@ -389,6 +399,9 @@ def build_collection(books, destination, configuration):
         if (folder / "assets").is_dir():
             shutil.copytree(folder / "assets", destination / "assets" / "sources" / source, dirs_exist_ok=True)
     dependencies = {}
+    reading_registry = Path(__file__).resolve().parents[1] / configuration['reading_edits'] if configuration.get('reading_edits') else None
+    if reading_registry:
+        validate_reading_edits(exports, reading_registry)
     if configuration.get("proof_expansions"):
         registry = Path(__file__).resolve().parents[1] / configuration["proof_expansions"]
         exports, dependencies = apply_expansions(exports, registry, statement_fingerprint)
@@ -396,6 +409,8 @@ def build_collection(books, destination, configuration):
     check_dependencies(entries, dependencies)
     configuration = arrange_sections(entries, topics, configuration)
     chapters, topic_chapters = chapter_structure(topics, configuration)
+    assign_numbers(chapters, entries)
+    reading_notes, reading_audit = apply_reading_edits(entries, topic_chapters, reading_registry) if reading_registry else ([], {})
     comments = json.loads((Path(__file__).resolve().parents[1] / "comments.json").read_text())
     reader = Reader(chapters, topics, entries, sources, comments)
     anchors = {(v["source"], v["tag"]): "#" + v["source"] + "-" + v["tag"] for entry in entries.values() for v in entry["components"]}
@@ -411,8 +426,8 @@ def build_collection(books, destination, configuration):
         page.parent.mkdir(parents=True, exist_ok=True)
         page.write_text(reader.shell(content, route, root, asset_revision()))
 
-    introduction = f'<section class="collection-intro"><h1>Gerby</h1><p>A mathematical reference combining definitions, results, and proofs from contributing texts.</p><p class="collection-count">{len(entries):,} entries · {len(chapters)} chapters · {len(topics)} sections · {len(sources)} sources</p></section>'
-    write("", introduction + '<nav class="home-links" aria-label="Explore Gerby"><a href="chapters/">Table of contents</a><a href="search/">Search</a><a href="references/">Bibliography</a><a href="comments/">Comments</a><a href="sources/">Sources</a><a href="https://github.com/MingchenXia/Gerby">GitHub</a></nav><h2>Table of contents</h2>' + reader.contents(""), "Gerby", "")
+    introduction = f'<section class="collection-intro"><div><h1>Pome</h1><p>A mathematical reference combining definitions, results, and proofs from contributing texts.</p><p class="collection-count">{len(entries):,} entries · {len(chapters)} chapters · {len(topics)} sections · {len(sources)} sources</p></div><img class="home-mascot" src="assets/pome-mascot.png" alt="Pome pomegranate mascot" width="128" height="128"></section>'
+    write("", introduction + '<nav class="home-links" aria-label="Explore Pome"><a href="chapters/">Table of contents</a><a href="search/">Search</a><a href="references/">Bibliography</a><a href="comments/">Comments</a><a href="sources/">Sources</a><a href="https://github.com/MingchenXia/Pome">GitHub</a></nav><h2>Table of contents</h2>' + reader.contents(""), "Pome", "")
     write("chapters", '<h1>Table of contents</h1>' + reader.contents("../"), "Table of contents", "../")
     for key, chapter in chapters.items():
         content = f'<p class="eyebrow">Chapter {chapter["number"]}</p><h1>{escape(chapter["title"])}{tag_code(chapter["tag"])}</h1><p>{escape(chapter.get("description", ""))}</p>'
@@ -421,10 +436,12 @@ def build_collection(books, destination, configuration):
         if chapter["tag"] in entries:
             raise ValueError("A chapter tag collides with an entry")
         redirect(destination / "tag" / chapter["tag"] / "index.html", destination / "chapters" / key / "index.html", destination)
-    roots = source_roots(entries)
+    note_candidates = {}
+    roots = source_roots(entries, note_candidates)
+    footnotes = number_notes(note_candidates)
     for topic, section in reader.sections.items():
         content = f'<h1>{section["number"]} {escape(section["title"])}{tag_code(section["tag"])}</h1>'
-        content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors, reader.numbering)
+        content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors, reader.numbering, footnotes)
         write("sections/" + topic, content, section["title"], "../../")
         if section["tag"] not in entries:
             redirect(destination / "tag" / section["tag"] / "index.html", destination / "sections" / topic / "index.html", destination)
@@ -459,12 +476,13 @@ def build_collection(books, destination, configuration):
         variants, texts = [], []
         for number, variant in enumerate(entry["variants"]):
             source, local = variant["source"], variant["tag"]
-            badge = f'<span data-gerby-tag="{local}"></span>'
-            body = prepare_fragment(variant, source_tags, reference_map, root, anchors, reader.numbering)
+            body = prepare_fragment(variant, source_tags, reference_map, root, anchors, reader.numbering, footnotes)
+            parsed_body = BeautifulSoup(body, "html.parser")
+            badge = '' if parsed_body.find(attrs={"data-gerby-tag": local}) else f'<span data-gerby-tag="{local}"></span>'
             if number:
                 body = '<details class="source-alternative"><summary>Read the alternative statement and proof</summary>' + body + '</details>'
             content += f'<section class="source-variant" data-gerby-book="{source}">{badge}{body}</section>'
-            texts.append(BeautifulSoup(body, "html.parser").get_text(" ", strip=True))
+            texts.append(parsed_body.get_text(" ", strip=True))
             variants.append({"book": source, "tag": local, "label": variant["label"], "revision": editions[source]["commit"]})
         if entry.get("section_intro"):
             fragments = {v["source"] + "-" + v["tag"]: v["source"] + "-" + v["tag"] for v in entry["components"]}
@@ -491,12 +509,22 @@ def build_collection(books, destination, configuration):
                 redirect(destination / "tag" / old / "index.html", destination / "tag" / tag / "index.html", destination, anchor=anchors.get((variant["source"], variant["tag"]), ""))
     source_list = '<h1>Sources</h1><p>Contributions share one chapter structure. Attribution and exact revisions remain available for every entry. These are working mathematical texts; inclusion does not certify a proof or a formalization.</p><ul class="entry-list">'
     for source, book in sources.items():
-        source_list += f'<li><a href="{source}/">{escape(book["title"])}</a> · {escape(book.get("author", ""))}</li>'
+        author = re.sub(r'\bGerby\b(?!-)', 'Pome', book.get('author', ''))
+        source_list += f'<li><a href="{source}/">{escape(book["title"])}</a> · {escape(author)}</li>'
         relevant = [entry for entry in entries.values() if any(v["source"] == source for v in entry["variants"])]
-        source_content = f'<p class="eyebrow">Source attribution</p><h1>{escape(book["title"])}</h1><p>{escape(book.get("author", ""))}</p><p>These contributions appear throughout the shared chapters.</p>'
+        source_content = f'<p class="eyebrow">Source attribution</p><h1>{escape(book["title"])}</h1><p>{escape(author)}</p><p>These contributions appear throughout the shared chapters.</p>'
         if book.get("visibility") == "private":
             source_content += '<p class="source-notice">This reading edition is published by permission. The source repository remains private; its revision links require access. Research files and source archives are not included.</p>'
         source_content += f'<p><a href="{escape(book["repository"])}/commit/{editions[source]["commit"]}">Source revision {editions[source]["commit"][:12]} ↗</a></p>'
+        source_notes = [note for note in reading_notes if note['source'] == source]
+        if source_notes:
+            source_content += '<h2>Attribution and further reading</h2><p>Original source commentary and bibliographical references accompany the corresponding Pome entries here.</p>'
+            for note in source_notes:
+                entry = entries[note['tag']]
+                variant = {'source': source, 'label': note['label'], 'tag': entry['variants'][0]['tag'], 'html': note['html']}
+                body = prepare_fragment(variant, source_tags, reference_map, '../../', anchors, reader.numbering)
+                source_content += f'<details class="source-attribution"><summary><a href="../../tag/{entry["tag"]}/">{escape(display_title(entry))}</a></summary>{body}</details>'
+        source_content += '<h2>Contributed entries</h2>'
         write("sources/" + source, source_content + entry_list(relevant, topics, "../../"), book["title"], "../../")
         source_folder = destination / "sources" / source
         (source_folder / "tags.json").write_text(json.dumps([{**record, "canonical_tag": source_tags[(source, record["tag"])], "anchor": anchors.get((source, record["tag"]), "")} for record in inventories[source]], indent=2) + "\n")
@@ -521,13 +549,14 @@ def build_collection(books, destination, configuration):
         reference_content += f'<div class="bibliography-entry" id="{identifier}">{record["html"]}</div>'
     write("references", reference_content, "References", "../")
     write("search", '<h1>Search</h1><form class="page-search" role="search"><label for="page-search">Keywords, a statement number, or a permanent tag</label><input id="page-search" type="search" name="q" autocomplete="off" aria-controls="page-search-results"><button type="submit">Search</button></form><div id="page-search-results" aria-live="polite"></div>', "Search", "../")
-    write("comments", '<h1>Comments and corrections</h1><p>Each chapter, section, and entry has its own comment thread. Use the Comments link on a reading page for a question or correction about that page.</p><p><a href="https://github.com/MingchenXia/Gerby/discussions">Browse all discussions on GitHub</a></p><p>The comment thread below is for general feedback about the reference. Markdown and mathematical notation are supported by GitHub Discussions. Please identify the statement and give enough detail for others to check a proposed correction.</p>', "Comments", "../")
-    (destination / "search.json").write_text(json.dumps(search, ensure_ascii=False) + "\n")
+    write("comments", '<h1>Comments and corrections</h1><p>Each chapter, section, and entry has its own comment thread. Use the Comments link on a reading page for a question or correction about that page.</p><p><a href="https://github.com/MingchenXia/Pome/discussions">Browse all discussions on GitHub</a></p><p>The comment thread below is for general feedback about the reference. Markdown and mathematical notation are supported by GitHub Discussions. Please identify the statement and give enough detail for others to check a proposed correction.</p>', "Comments", "../")
+    write_search_index(search, destination)
     public_topics = [{**topic, "number": reader.sections[key]["number"], "tag": reader.sections[key]["tag"]} for key, topic in topics.items()]
     (destination / "collection.json").write_text(json.dumps({"version": 1, "chapters": list(chapters.values()), "topics": public_topics, "entries": public_entries}, ensure_ascii=False, indent=2) + "\n")
     (destination / "navigation.json").write_text(json.dumps([reader.pages[route] for route in reader.order], ensure_ascii=False, indent=2) + "\n")
     audit = {"groups": merges, "duplicate_entries_unified": sum(len(e["variants"]) - 1 for e in entries.values()), "numbered_clauses_in_parent_statements": len(anchors), "source_tags": sum(len(records) for records in inventories.values()), "canonical_entries": len(entries)}
     (destination / "deduplication.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
+    (destination / 'reading-edition.json').write_text(json.dumps(reading_audit, indent=2) + '\n')
     return {"entries": len(entries), "topics": len(topics), "chapters": len(chapters), "sources": len(sources)}
 
 

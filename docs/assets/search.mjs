@@ -25,3 +25,17 @@ export function searchEntries(index, query) {
     return {item, score, position};
   }).filter(Boolean).sort((a, b) => b.score - a.score || a.position - b.position).map(result => result.item);
 }
+
+export async function loadSearchIndex(url, request = fetch) {
+  async function read(target) {
+    const response = await request(target);
+    if (!response.ok) throw new Error('Search unavailable');
+    return response.json();
+  }
+  const data = await read(url);
+  if (Array.isArray(data)) return data;
+  if (data?.version !== 2 || !Array.isArray(data.chunks) || !data.chunks.length) throw new Error('Search unavailable');
+  const chunks = await Promise.all(data.chunks.map(path => read(new URL(path, url).href)));
+  if (!chunks.every(Array.isArray)) throw new Error('Search unavailable');
+  return chunks.flat();
+}

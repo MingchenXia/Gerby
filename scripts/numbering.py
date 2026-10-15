@@ -38,7 +38,7 @@ def assign_numbers(chapters, entries):
                 # (i), (ii), etc. or alter the mathematical list structure.
                 for clause in entry.get("components", []):
                     tag = sha256((clause["source"] + "\0" + clause["label"]).encode()).hexdigest()[:12].upper()
-                    references[clause["source"], clause["tag"]] = {"number": clause["number"], "section": False, "tag": clause["tag"], "canonical_tag": tag}
+                    references[clause["source"], clause["tag"]] = {"number": clause["number"], "section": False, "tag": clause["tag"], "canonical_tag": tag, "clause": True}
     return references
 
 

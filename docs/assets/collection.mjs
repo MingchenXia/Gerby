@@ -31,14 +31,11 @@ if (content) new ResizeObserver(fitMathematics).observe(content);
 window.MathJax?.startup?.promise?.then(fitMathematics);
 document.fonts?.ready.then(fitMathematics);
 
-const {exactEntry, searchEntries} = await import(`./search.mjs?v=${document.documentElement.dataset.assetRevision}`);
+const {exactEntry, searchEntries, loadSearchIndex} = await import(`./search.mjs?v=${document.documentElement.dataset.assetRevision}`);
 
 let indexPromise;
 function loadIndex() {
-  return indexPromise ??= fetch(document.documentElement.dataset.searchIndex).then(response => {
-    if (!response.ok) throw new Error('Search unavailable');
-    return response.json();
-  }).catch(error => { indexPromise = null; throw error; });
+  return indexPromise ??= loadSearchIndex(new URL(document.documentElement.dataset.searchIndex, location.href).href).catch(error => { indexPromise = null; throw error; });
 }
 function bindSearch(input, results, fullPage = false) {
   if (!input || !results) return;

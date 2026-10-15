@@ -185,7 +185,11 @@ class ReaderTests(unittest.TestCase):
                 soup = BeautifulSoup((root / page["route"] / "index.html").read_text(), "html.parser")
                 panel = soup.select_one('[data-comment-term]')
                 terms.append(panel['data-comment-term'])
-                self.assertEqual(panel['data-repo'], 'MingchenXia/Gerby')
+                self.assertEqual(panel['data-repo'], 'MingchenXia/Pome')
+                self.assertTrue(panel['data-comment-term'].startswith('Gerby /'))
+                self.assertTrue(soup.select_one('link[rel="canonical"]')['href'].startswith('https://mingchenxia.github.io/Pome/'))
+                self.assertEqual(soup.select_one('.brand').get_text(strip=True), 'Pome')
+                self.assertTrue(soup.select_one('.brand img')['src'].split('?')[0].endswith('assets/pome-mascot.png'))
                 self.assertIn('discussions/new?', panel.select_one('.comment-actions a:last-child')['href'])
             self.assertEqual(len(terms), len(set(terms)))
 
