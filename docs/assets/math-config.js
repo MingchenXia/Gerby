@@ -1,14 +1,13 @@
 window.MathJax = {
-  loader: {load: ['[tex]/html', '[tex]/textmacros']},
+  loader: {load: ['[tex]/html', '[tex]/textmacros', '[tex]/mathtools']},
   tex: {
-    packages: {'[+]': ['html', 'textmacros']},
+    packages: {'[+]': ['html', 'textmacros', 'mathtools']},
     inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true,
     macros: {
       mathds: ['\\mathbb{#1}', 1],
       xlongrightarrow: ['\\xrightarrow{#1}', 1],
       adjustlimits: '',
       index: ['', 1],
-      footnotemark: '^{\\ast}',
       fint: '\\mathop{\\rlap{-}\\!\\int}\\nolimits'
     }
   },
