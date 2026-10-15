@@ -56,6 +56,8 @@ class ReadingEditsTests(unittest.TestCase):
         cite = BeautifulSoup('<span class="cite"><span class="postnote">Theorem 3.4.1</span><a href="/bibliography/SGPT">SGPT</a></span>', 'html.parser').span
         self.assertEqual(source_locator_targets(cite, {('statement', '3.4.1'): {'tag': 'A'}}, 'A'), [])
         self.assertEqual(source_locator_targets(cite, {}, 'B'), [])
+        wrong_kind = {('statement', '3.4.1'): {'tag': 'B', 'source_kind': 'definition'}}
+        self.assertEqual(source_locator_targets(cite, wrong_kind, 'A'), [])
 
     def test_motto_and_its_notes_move_together_without_duplicate_ids(self):
         entries = {'A': self.entry('A', '<blockquote class="motto">A quote<aside class="source-footnote" id="n">An author biography.</aside>.</blockquote><p>A condition $x=1$.</p>')}

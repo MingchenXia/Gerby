@@ -95,6 +95,12 @@ def source_locator_targets(cite, locators, current_tag):
         targets = [locators.get((family, n)) for n in numbers]
     if not targets or any(t is None or t['tag'] == current_tag for t in targets):
         return []
+    mentions = re.findall(r'\b(theorem|lemma|proposition|corollary|definition|example|remark)s?\s+((?:[A-Z]|\d+)\.(?:\d+\.)*\d+)', text, re.I)
+    kinds = {number: kind.lower() for kind, number in mentions}
+    for number, target in zip(numbers, targets):
+        expected = kinds.get(number, mentions[0][0].lower() if mentions else None)
+        if expected and target.get('source_kind', target.get('kind')) != expected:
+            return []
     return list({t['tag']: t for t in targets}.values())
 
 
@@ -115,7 +121,7 @@ def apply_reading_edits(entries, topic_chapters, registry_path):
                 continue
             family = 'heading' if v.get('section') else 'statement'
             if v['kind'] not in {'equation', 'item'} and v.get('number'):
-                locators[family, v['number']] = entry
+                locators[family, v['number']] = {**entry, 'source_kind': v['kind']}
             if v.get('section'):
                 locators['caption', v['caption'].casefold()] = entry
     notes, counts = {}, {'reviewed_edits': 0, 'internal_references': 0, 'source_notes': 0}
