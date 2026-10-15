@@ -1,0 +1,218 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/green-functions-and-potentials/"><title>3.5 Green functions and potentials · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/green-functions-and-potentials/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/classical-potentials/">Chapter 3: Harmonic and subharmonic functions</a></li><li><a href="../../sections/green-functions-and-potentials/" aria-current="page">Section 3.5: Green functions and potentials</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/harmonic-functions-and-the-dirichlet-problem/"><span>3.1</span> Harmonic functions and the Dirichlet problem</a></li><li><a href="../../sections/kelvin-transforms-and-half-space-potentials/"><span>3.2</span> Kelvin transforms and half-space potentials</a></li><li><a href="../../sections/classical-harmonic-analysis/"><span>3.3</span> Classical harmonic analysis</a></li><li><a href="../../sections/subharmonic-functions/"><span>3.4</span> Subharmonic functions</a></li><li><a href="../../sections/green-functions-and-potentials/" aria-current="page"><span>3.5</span> Green functions and potentials</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/green-functions-and-potentials/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/green-functions-and-potentials/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/8B711E470600/"><span>← Previous</span><small>Theorem 3.5.2</small></a><a class="pager-next" rel="next" href="../../tag/E0853C6A83C4/"><span>Next →</span><small>11 Harmonic lowering and greatest harmonic minorants</small></a></nav><h1>3.5 Green functions and potentials</h1><div class="section-reading"><section class="reading-chunk" id="entry-E0853C6A83C4" data-section-entries="2791D284428C AC0C4669DCBF E0853C6A83C4"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/E0853C6A83C4/">11 Harmonic lowering and greatest harmonic minorants</a></h2><span data-gerby-tag="C4871086"></span>
+<p>
+  The following arguments use superharmonic functions in the nontrivial componentwise sense. Harmonic lowering $L_ Bu$ equals the Poisson integral of $u|_{\partial B}$ in $B\Subset \Omega $, and equals $u$ outside $B$. The checked comparison and Poisson boundary lower-limit statements show that $L_ Bu$ is superharmonic and $L_ Bu\le u$: at a boundary point it is lsc, and its sphere averages are at most those of $u$, with the same center value. In $B$ it is harmonic, and elsewhere locality applies. 
+</p>
+
+<article class="env-lemma" id="classical-potential-theory-96A4D4C8">
+<p><a class="environment-identifier" href="../../tag/AC0C4669DCBF/">Lemma <span data-tag="96A4D4C8">11.1</span>.</a><span data-gerby-tag="96A4D4C8"></span> Let $\mathcal F$ be a nonempty family of superharmonic functions on an open set $\Omega $, closed under pairwise minimum and under every harmonic lowering. Its infimum is harmonic or identically $-\infty $ on each component. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On a ball $B\Subset \Omega $ its infimum is also $\inf _{u\in \mathcal F}L_ Bu$, since $L_ Bu\le u$ and $L_ Bu\in \mathcal F$. The lowered harmonic functions form a downward directed family: $L_ B(\min (u,v))\le \min (L_ Bu,L_ Bv)$ by positivity of the Poisson kernel. A downward directed family of harmonic functions has harmonic infimum or infimum identically $-\infty $ on a ball. To see this from the checked Harnack convergence theorem, negate and restrict to the cofinal subfamily above one fixed member; its differences from that member are nonnegative harmonic. If bounded at one point, Harnack chains bound them on compact subsets, and harmonic compactness shows their directed supremum harmonic. If unbounded at a point, Harnack chains make the supremum infinity everywhere. Thus the infimum is locally harmonic or locally identically $-\infty $. The regions of these two alternatives are disjoint open sets; connectedness of each component leaves only one alternative. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-theorem" id="classical-potential-theory-C3FD3CE0">
+<p><a class="environment-identifier" href="../../tag/2791D284428C/">Theorem <span data-tag="C3FD3CE0">11.2</span>.</a><span data-gerby-tag="C3FD3CE0"></span> Let $u$ be superharmonic on $\Omega $ and $W\subset \Omega $ open. Choose balls $B_ j\Subset W$ covering $W$, with each chosen ball repeated infinitely often, and set $u_0=u$, $u_ j=L_{B_ j}u_{j-1}$. Then $u_ j$ decreases to $u_\infty $, equal to $u$ outside $W$, and harmonic or identically $-\infty $ on each component of $W$. If $u$ has a harmonic minorant on $W$, the restriction $u_\infty |_ W$ is its unique greatest harmonic minorant, independent of the ball sequence. This operation is additive on superharmonic functions having harmonic minorants. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Lowering makes the sequence decrease and leaves it fixed outside $W$. On each fixed ball, the subsequence of stages just lowered there is harmonic and decreases to the same limit; the checked harmonic monotone convergence theorem makes that limit harmonic or $-\infty $. Connectedness propagates the alternative as in the preceding proof. If $v$ is any harmonic minorant on $W$, positivity of the Poisson kernel proves inductively $v\le u_ j$ there. Thus $v\le u_\infty \le u$, which excludes $-\infty $ and proves maximality and uniqueness. For two functions use the same sequence of balls. Linearity of each lowering gives $(u+v)_ j=u_ j+v_ j$; the limits are finite on $W$ when harmonic minorants exist, so their sum is the corresponding greatest harmonic minorant. No claim is made that the unregularized $u_\infty $ is superharmonic across $\partial W$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section><section class="reading-chunk" id="entry-870251679082" data-section-entries="870251679082 9E37095B7A8A F3C6870EA9A8"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/870251679082/">12 Minimal Green functions on general open sets</a></h2><span data-gerby-tag="D6A0F97E"></span>
+<p>
+  Write $\Phi _ a(x)=\Phi (x-a)$, with the normalization of Lemma <a data-tag="6C6775C3" href="../../tag/B0CFE200676D/">10.1</a>. A minimal Green function on an open set $\Omega $ is a nonnegative kernel $G$ such that $G(a,\cdot )=\Phi _ a+h_ a$, $h_ a$ harmonic on $\Omega $, and $G(a,\cdot )\le \Phi _ a+w$ whenever $w$ is superharmonic on $\Omega $ and $\Phi _ a+w\ge 0$. At $a$, both kernels have value infinity; differences of singular kernels below mean the harmonic extension of their difference off the pole. 
+</p>
+
+<article class="env-theorem" id="classical-potential-theory-772DDE67">
+<p><a class="environment-identifier" href="../../tag/F3C6870EA9A8/">Theorem <span data-tag="772DDE67">12.1</span>.</a><span data-gerby-tag="772DDE67"></span> For $a\in \Omega $ put $\mathcal B_ a=\{ \Phi _ a+w\ge 0:w\text{ superharmonic on }\Omega \} $. A minimal Green function exists exactly when all these classes are nonempty, and then $G(a,\cdot )=\inf \mathcal B_ a$ and it is unique. Existence holds for every open set if $d\ge 3$, every bounded open set if $d=2$, every open subset of a Greenian open set, and every planar open set which is not dense or is disconnected. The whole plane, and the plane minus a closed discrete set, have no Green function. In $\mathbb R^ d$, $d\ge 3$, the Green function is $\Phi _ a$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The class $\mathcal B_ a$ is closed under minimum and lowering on balls away from $a$, since $\Phi _ a$ is harmonic there and lowering preserves superharmonicity of $w$. Its infimum $v$ is nonnegative and harmonic away from $a$ by Lemma <a data-tag="96A4D4C8" href="../../tag/AC0C4669DCBF/">11.1</a>. On a ball about $a$, every member dominates the ball Green function: their harmonic singularities cancel and the superharmonic difference has nonnegative boundary lower limits. Hence $v$ also dominates that ball Green function. The local Bôcher lemma gives $v=c\Phi _ a+h$ with $c\ge 0$; the preceding domination forces $c\ge 1$. This expression defines harmonic $h$ across $a$ and on all of $\Omega $. Now $v/c=\Phi _ a+h/c\ge 0$ belongs to $\mathcal B_ a$, so $v\le v/c\le v$. If $c&gt;1$, this would force $v=0$ off $a$, contradicting the ball domination. Thus $c=1$, and $v$ is the required minimal kernel. Uniqueness and necessity follow at once from the definition. 
+    <p>
+      For $d\ge 3$, $\Phi _ a\ge 0$ is an admissible member. For a bounded planar set, $\Phi _ a+C\ge 0$ for a sufficiently large constant. Restriction of an existing Green kernel supplies a member on any smaller open set. If a planar open set avoids a closed ball, translate and dilate so that it avoids $\overline{B(0,1)}$. For $a,y$ in it, 
+    
+<div class="equation">
+  \[  \log \frac{2|a||y|}{|a-y|} =\Phi _ a(y)+\log |y|+\log (2|a|)\ge 0,  \]
+</div>
+<p>
+       since $|1/a-1/y|&lt;2$. The last two terms are harmonic in $y$ there. For a disconnected planar open set, each component avoids a ball in another component and is Greenian. For a pole in one component, extend its harmonic correction by $-\Phi _ a$ on all the others; the resulting admissible member is zero on those other components. This proves existence for the union. 
+    <p>
+      A planar Green kernel would have a harmonic correction $h_ a\ge -\Phi _ a=\log |\cdot -a|$, which tends to infinity at infinity. On arbitrarily large circles the minimum principle would then force $h_ a(0)$ to exceed every constant, impossible. A minimal kernel is bounded outside every ball $B\Subset \Omega $ containing its pole. Indeed let $m=\max _{\partial B}G(a,\cdot )&gt;0$, and replace it outside $B$ by $\min (G(a,\cdot ),2m)$. This agrees with $G$ near the sphere, is superharmonic, and after subtracting $\Phi _ a$ is superharmonic across the pole. Minimality bounds $G$ by this replacement. On a plane minus a closed discrete set, this bound and the Bôcher lemma remove every deleted point as a bounded harmonic singularity. The resulting nonnegative kernel has a harmonic correction on the whole plane, contradicting the preceding minimum-principle argument. Finally in dimension at least three on the whole space, $G=\Phi _ a+h_ a\le \Phi _ a$ makes $h_ a\le 0$ entire harmonic, hence constant by Liouville. Its constant must be zero because $G\ge 0$ and $\Phi _ a\to 0$ at infinity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="classical-potential-theory-093A6B54">
+<p><a class="environment-identifier" href="../../tag/9E37095B7A8A/">Theorem <span data-tag="093A6B54">12.2</span>.</a><span data-gerby-tag="093A6B54"></span> Minimal Green functions are monotone under inclusion of open sets and increase to $G_\Omega $ along an increasing exhaustion of a Greenian $\Omega $. They are symmetric, zero between different components, and strictly positive within one component. They are jointly continuous off the diagonal and tend to infinity jointly at the diagonal. For $\overline{B(b,r)}\subset \Omega $, the spherical average $\int _{\partial B(b,r)}G(z,y)\, d\sigma (y)$ is a finite continuous function of $z\in \Omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Restriction is admissible, proving domain monotonicity. Along an exhaustion the increasing limit is bounded above by $G_\Omega $ off the pole, hence harmonic there. The harmonic corrections $G_ j(a,\cdot )-\Phi _ a$ also increase and are bounded above by $h_ a$; harmonic monotone convergence across the pole makes their limit harmonic on all of $\Omega $. The limit is a nonnegative admissible kernel and is therefore $G_\Omega $ by minimality. 
+    <p>
+      Every harmonic minorant $v$ of $G(a,\cdot )$ satisfies $v\le 0$, since $G-v$ is admissible and minimality gives $G\le G-v$. Thus its greatest harmonic minorant is zero. In the simultaneous lowering process of the preceding theorem, applied to $G(a,\cdot )=\Phi _ a+h_ a$, the harmonic correction is invariant, so 
+    
+<div class="equation">
+  \[  0=(\Phi _ a)_\infty +h_ a,\qquad G(a,y)=\Phi _ a(y)-(\Phi _ a)_\infty (y).  \]
+</div>
+<p>
+       We verify that $q(a,y)=(\Phi _ a)_\infty (y)$ is harmonic in $a$ for each fixed $y$. Choose a locally finite cover of $\Omega $ by relatively compact balls, and enumerate it with repetitions. Such a cover is obtained by covering the compact layers of a nested compact exhaustion by finitely many small balls lying in adjacent exhaustion layers; only finitely many distinct balls meet each compact subset. Its union of boundary spheres $C$ is relatively closed. At a finite lowering stage, integration of $\Phi _ a(z)$ against the successive compact-sphere Poisson kernels is harmonic in $a$ away from those spheres and, until a ball containing $y$ has been used, possibly away from $y$. Differentiation is justified locally by positive distance from the finite union of spheres and bounded derivatives of the fundamental kernel; iterated finite integrals preserve those bounds. Once a ball containing $y$ has been used, there is no remaining point-pole exception. Consequently, on $\Omega \setminus C$ the decreasing stage limits are harmonic or $-\infty $. They are finite because $q(a,y)=-h_ a(y)$ for all $a,y$, as the preceding identity shows; hence they are harmonic there. 
+    <p>
+      For any prescribed $a_0$, choose the locally finite covering balls so that none of their boundary spheres contains $a_0$. This is possible in each finite layer by perturbing radii while retaining the covering; the local finiteness construction is unchanged. Then $a_0\notin C$, and $q(\cdot ,y)$ is harmonic near $a_0$. The greatest-minorant characterization makes $q$ independent of the chosen cover. Thus it is harmonic on all of $\Omega $. For fixed $y$, $\Phi _ y-q(\cdot ,y)$ is nonnegative and admissible, so $G(a,y)\ge G(y,a)$; interchange $a,y$ for equality. On components not containing $a$, a competitor equal to zero there and unchanged on the pole component proves $G=0$ there. Within the pole component, the strong minimum principle on the punctured domain gives strict positivity. 
+    <p>
+      Take disjoint compact balls around two distinct points, lying in slightly larger disjoint balls in $\Omega $. Harnack bounds in the first variable and the established bound away from a pole in the second variable bound $G$ uniformly on their product. Harmonic interior derivative estimates in each variable then give uniform equicontinuity there, hence joint continuity by the triangle inequality. Near a diagonal point, domain monotonicity bounds $G$ below by the Green function of one fixed ball containing both variables. Its explicit formula tends to infinity there. 
+    <p>
+      Finally, away from the averaging sphere, joint continuity on a compact product gives continuity of the spherical integral. On the sphere itself, compare its normalized averages at radii $r+\eta $ and $r-\eta $. Superharmonic spherical-mean monotonicity places the radius-$r$ average between these two continuous functions of the pole $z$. At a fixed pole on the sphere, the radial averages converge as $\eta \to 0$: their continuity in radius follows from annular mean concavity, proved from the annular divergence formula and monotone smooth approximation. They are finite by local surface integrability of a superharmonic function on interior spheres. The squeeze gives continuity at the pole on the sphere. Multiply by the constant surface area to pass from means to the stated integrals. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</div></section><section class="reading-chunk" id="entry-47255929FFC0" data-section-entries="47255929FFC0 9453A8C660CC 977ECF0867E0"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/47255929FFC0/">13 Potentials and global Riesz decomposition</a></h2><span data-gerby-tag="D60EF605"></span>
+<p>
+  Throughout this section $G_\Omega $ is the unnormalized minimal Green kernel, $-\Delta G_\Omega (\cdot ,y)=c_ d\delta _ y$. Measures are positive Radon measures; they need not have finite total mass. A potential means $p=G_\Omega \mu $ which is not identically infinity on any component. 
+</p>
+
+<article class="env-theorem" id="classical-potential-theory-1CC53DC8">
+<p><a class="environment-identifier" href="../../tag/977ECF0867E0/">Theorem <span data-tag="1CC53DC8">13.1</span>.</a><span data-gerby-tag="1CC53DC8"></span> The integral $G_\Omega \mu $ is lsc and supermean, hence superharmonic on every component where it is nontrivial. Every finite measure has a potential. For any potential, </p>
+<div class="equation">
+  \[  -\Delta (G_\Omega \mu )=c_ d\mu  \]
+</div>
+<p> in distributions. Its greatest harmonic minorant is zero. It is harmonic on an open set exactly when that set has $\mu $-measure zero. Two potentials whose difference is harmonic almost everywhere on an open set have equal measures there. If $S\subset \Omega $ is open, $\mu $ is supported in $S$ and $G_\Omega \mu $ is a potential, then $G_\Omega \mu =G_ S\mu +h$ on $S$ with $h\ge 0$ harmonic. Reciprocity $\int G\mu \, d\nu =\int G\nu \, d\mu $ holds in $[0,\infty ]$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fatou's lemma applied to the nonnegative continuous extended kernel gives lsc; Tonelli and the supermean inequality for each pole give supermeans. If $\mu $ is finite and gives zero mass to a closed interior ball containing $x$, the bound for $G(x,\cdot )$ outside that ball makes its potential finite at $x$, hence superharmonic on that component. Split a finite measure into its part on a small interior ball and its complement. Each part misses some interior ball in the component, so both have superharmonic potentials and their sum is superharmonic. Apply this separately to every component, using that $G$ vanishes between components. 
+    <p>
+      A potential $p$ is locally integrable by superharmonic local integrability. For $\varphi \in C_ c^\infty (\Omega )$, 
+    
+<div class="equation">
+  \[  \iint G(x,y)|\Delta \varphi (x)|\, dx\, d\mu (y) =\int p(x)|\Delta \varphi (x)|\, dx&lt;\infty .  \]
+</div>
+<p>
+       Thus signed Fubini is legitimate, and the fundamental-solution identity plus harmonicity of the correction gives $\int p\Delta \varphi =-c_ d\int \varphi \, d\mu $. In particular a harmonic potential has zero measure; more generally subtracting the distributional identities proves equality of measures wherever the difference is harmonic. If $\mu (U)=0$, Weyl's lemma gives a harmonic representative on $U$; canonical representative uniqueness identifies it pointwise with $p$. 
+    <p>
+      For the greatest minorant use the same sequence of harmonic lowerings for $p$ and for every kernel $G(\cdot ,y)$. Induction and nonnegative Tonelli show $p_ j(x)=\int G_ j(x,y)\, d\mu (y)$. For each $y$, $G_ j(x,y)\downarrow 0$, because the greatest harmonic minorant of the minimal Green kernel is zero. In each connected component choose $x_0$ with $p(x_0)&lt;\infty $. Dominated convergence gives $p_\infty (x_0)=0$; its nonnegative harmonic minorant is therefore zero on that component by the minimum principle. This is a componentwise argument, even when $\Omega $ is disconnected. 
+    <p>
+      On $S$, domain monotonicity gives $0\le G_ S\mu \le p$. Both potentials are locally integrable; their distributional difference is harmonic and nonnegative almost everywhere, hence a nonnegative harmonic $h$. Equality $p=G_ S\mu +h$ holds everywhere by uniqueness of superharmonic representatives. Finally symmetry of $G$ and nonnegative Tonelli give reciprocity, including infinite values. None of these arguments separates divergent fundamental and harmonic-correction integrals. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-theorem" id="classical-potential-theory-7D92FC91">
+<p><a class="environment-identifier" href="../../tag/9453A8C660CC/">Theorem <span data-tag="7D92FC91">13.2</span>.</a><span data-gerby-tag="7D92FC91"></span> Let $u$ be superharmonic on a Greenian open set $\Omega $. Its unique Riesz measure is $\nu =-\Delta u/c_ d$. For each open $W\Subset \Omega $, </p>
+<div class="equation">
+  \[  u=G_ W(\nu |_ W)+h_ W\quad \hbox{on }W,  \]
+</div>
+<p> where $h_ W$ is the greatest harmonic minorant there. If $u\ge 0$ on $\Omega $, the same formula holds globally with $W=\Omega $ and a nonnegative harmonic $h$. Thus a nonnegative superharmonic function is a Green potential exactly when its greatest harmonic minorant is zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The checked distributional characterization gives the positive Radon measure $\nu $. We first suppose $u$ is bounded below by a constant $m$ on its Greenian domain $D$ (either $D=W\Subset \Omega $, or $D=\Omega $ and $m=0$). For a compact $K\subset D$ put $p_ K=G_ D(\nu |_ K)$, a potential of a finite measure. The locally integrable difference $u-p_ K$ has nonpositive Laplacian, so it has a superharmonic representative $w_ K$, and $u=w_ K+p_ K$ everywhere by canonical representative uniqueness. 
+    <p>
+      The function $p_ K$ is bounded outside some compact neighborhood $K'\Subset D$. Here is the required uniformity: cover $K$ by finitely many small balls whose closures lie in $D$. On each, Harnack chains bound $G_ D(x,y)$ for $y$ in its smaller concentric ball by a fixed multiple of $G_ D(x,y_ i)$, whenever $x$ lies outside the union of the larger balls. Each fixed-pole kernel is bounded away from its pole; integrating the resulting finite uniform bound against $\nu |_ K$ proves the assertion. Choose $K'$ containing these larger closed balls. On $D\setminus K'$, $w_ K=u-p_ K\ge m-M$; on $K'$ it is bounded below by lsc and compactness. Hence $w_ K$ has a constant harmonic minorant on all of $D$. 
+    <p>
+      The greatest-minorant operation is additive, and $p_ K$ has greatest minorant zero. Thus $H_ Du=H_ Dw_ K\ge m$ because $u\ge m$. Consequently $w_ K\ge m$ and $p_ K\le u-m$. Exhaust $D$ by increasing compact $K_ j$. Monotone convergence gives $p=G_ D(\nu |_ D)\le u-m$. This is finite almost everywhere, hence a potential. Its Riesz measure is $\nu |_ D$, so $u-p$ is harmonic in distributions and has a harmonic representative $h$. Canonical uniqueness gives $u=p+h$ everywhere, and additivity of greatest minorants makes $h=H_ Du$. When $m=0$, $h\ge 0$. Applying this construction to every relatively compact $W$ proves the local assertion without assuming $u$ bounded below on the entire $\Omega $. Uniqueness of $\nu $ follows from its distributional identity, and the last characterization follows from the zero-minorant property of potentials. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-7AECB61AA15F" data-section-entries="64E880580F0E 7AECB61AA15F 9CF388990FE4"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/7AECB61AA15F/">14 Continuity of potentials and bounded densities</a></h2><span data-gerby-tag="FFB6C391"></span>
+
+<article class="env-theorem" id="classical-potential-theory-A8E456D8">
+<p><a class="environment-identifier" href="../../tag/64E880580F0E/">Theorem <span data-tag="A8E456D8">14.1</span>.</a><span data-gerby-tag="A8E456D8"></span> Let $\mu $ have compact support $K\Subset \Omega $. If $(G_\Omega \mu )|_ K$ is continuous at $a\in K$, then $G_\Omega \mu $ is continuous at $a$, in the extended sense. If $G_\Omega \mu $ is finite on $K$, then for every $\varepsilon &gt;0$ there is a compact $C\subset K$ with $\mu (K\setminus C)&lt;\varepsilon $ for which $G_\Omega (\mu |_ C)$ is finite and continuous throughout $\Omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Near $K$ the Green potential differs from its fundamental potential by a harmonic function. Both potentials are locally integrable and have the same distributional Laplacian, so Weyl's lemma gives a harmonic difference. Adding that harmonic function preserves superharmonicity; canonical representatives then identify the equality everywhere, including infinite values. No joint continuity of a cancelled diagonal kernel is assumed. 
+    <p>
+      It suffices to prove the first assertion for $U\mu (x)=\int \Phi (x-y)d\mu (y)$. If $U\mu (a)=\infty $, lsc suffices. Otherwise choose a small ball $B$ about $a$ and split $\mu =\mu '+\mu ''$, with $\mu '=\mu |_ B$, so that the local singular integral $U\mu '(a)&lt;\eta $. In the planar case take all relevant distances less than one so this local kernel is nonnegative. The remainder $U\mu ''$ is harmonic near $a$. If $z_ x\in K$ is a nearest point to $x$, then $z_ x\to a$ as $x\to a$, and $|z_ x-y|\le 2|x-y|$ for $y\in K$. For $d\ge 3$ this gives $U\mu '(x)\le 2^{d-2}U\mu '(z_ x)$. For $d=2$ it gives $U\mu '(x)\le U\mu '(z_ x)+(\log 2)\mu '(B)$. The restriction of $U\mu '$ to $K$ is continuous at $a$, being the difference of the assumed continuous restriction of $U\mu $ and the harmonic remainder. Thus the limsup of the local contribution is at most $2^{d-2}\eta $, or $\eta +(\log 2)\mu (B)$ in dimension two. In that case $\mu (\{ a\} )=0$ by finiteness of the potential, so $\mu (B)\to 0$ as the radius shrinks. The harmonic remainder is continuous; letting $\eta \to 0$ proves continuity. 
+    <p>
+      For the second assertion, Lusin's theorem gives compact $C\subset K$ with lost mass less than $\varepsilon $ and $G\mu |_ C$ finite continuous. On $C$, $G(\mu |_ C)=G\mu -G(\mu |_{K\setminus C})$ is upper semicontinuous, since the second term is lsc; it is also lsc. It is therefore continuous on $C$, and the first assertion gives continuity at every point of $C$. Off $C$ it is harmonic. This proves global finite continuity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="classical-potential-theory-1DF5E8AD">
+<p><a class="environment-identifier" href="../../tag/9CF388990FE4/">Theorem <span data-tag="1DF5E8AD">14.2</span>.</a><span data-gerby-tag="1DF5E8AD"></span> If $f\in L^1(\Omega )\cap L^\infty (\Omega )$, then $G_\Omega f$ is finite continuous on $\Omega $. For a ball and compactly supported measure its potential tends to zero at every boundary point. More generally suppose $\Omega $ is connected, has finite volume for $d\ge 3$, and is bounded for $d=2$. If $G_\Omega (x,y_0)\to 0$ as $x\to a\in \partial \Omega $ for one $y_0\in \Omega $, then $G_\Omega f(x)\to 0$ for every bounded measurable $f$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Separate the positive and negative parts of $f$. They are finite measures, so have superharmonic potentials. On an interior ball, the contribution from its complement is harmonic; the local contribution differs from a fundamental potential by a harmonic function. Its singular integral over a ball of radius $r$ is uniformly at most $\| f\| _\infty s_{d-1}r^2/2$ for $d\ge 3$, and $2\pi \| f\| _\infty \int _0^ r s\log (1/s)ds$ in the plane, after adding a harmless local constant. These bounds tend to zero. To justify that a ball centered elsewhere has no larger integral of the radial decreasing positive kernel, use its layer-cake representation: intersection with every centered superlevel ball has volume at most the smaller of the two ball volumes. The nonsingular part is continuous by dominated convergence, proving the first assertion and finiteness. 
+    <p>
+      For the boundary assertions, Harnack chains in the pole variable make $G(x,\cdot )\to 0$ uniformly on any fixed compact subset when it tends to zero at one pole. The explicit ball kernel supplies this condition at every ball boundary point, so compactly supported potentials tend to zero. Exhaust $\Omega $ by compact $K_ j$. In dimension at least three, $G(x,y)\le |x-y|^{2-d}$, and the layer-cake estimate just proved yields 
+    
+<div class="equation">
+  \[  \sup _ x\int _{\Omega \setminus K_ j}G(x,y)|f(y)|dy \le \tfrac 12s_{d-1}\| f\| _\infty (|\Omega \setminus K_ j|/v_ d)^{2/d}\longrightarrow 0.  \]
+</div>
+<p>
+       For a bounded planar domain choose $D&gt;\operatorname {diam}\Omega $; $G(x,y)\le \log (D/|x-y|)$ by minimality, and the same estimate is the integral of this radial kernel over a disk of the tail's area, tending to zero. Thus the compact-support integrals approximate $Gf$ uniformly in $x$, and their boundary limits are zero. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-589DA36A9C17" data-section-entries="27ABF8BDD497 589DA36A9C17"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/589DA36A9C17/">15 The generalized Laplacian</a></h2><span data-gerby-tag="D44FD249"></span>
+
+  For a continuous function $u$, write $\widetilde\Delta u(x)=\lim _{r\downarrow 0}2d(M_ ru(x)-u(x))/r^2$ whenever this finite limit exists, where $M_ r$ is the normalized sphere mean. <article class="env-theorem" id="classical-potential-theory-20EFF2F0">
+<p><a class="environment-identifier" href="../../tag/27ABF8BDD497/">Theorem <span data-tag="20EFF2F0">15.1</span>.</a><span data-gerby-tag="20EFF2F0"></span> For bounded continuous $f\in L^1(\Omega )$ on a Greenian open set, $\widetilde\Delta (G_\Omega f)=-c_ df$ pointwise. If $u$ is continuous and $\widetilde\Delta u=0$ on an open set, then $u$ is harmonic there. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Near a fixed $x$, the contribution of the measure outside a small closed ball is harmonic, and the local Green potential differs from its fundamental potential by a harmonic function. Harmonic functions contribute zero to the generalized Laplacian. The sphere average of $\Phi (\cdot -y)$ at center $x$ is $\Phi (r)$ when $|x-y|\le r$ and $\Phi (x-y)$ otherwise. For the second case this is the harmonic mean property. For the first, rotation invariance gives a radial harmonic function of $y$ inside the sphere, smooth there by differentiation, hence constant, with its value at the center equal to $\Phi (r)$. Here is uniform control at the sphere: its surface measure in any ball of radius $s$ centered on or near it is at most $Cs^{d-1}$, by finitely many bounded graph charts. Layer-cake integration therefore bounds its fundamental singular integral on such a cap by $Cs$ for $d\ge 3$, and by $Cs(1+|\log s|)$ for $d=2$. These bounds tend to zero uniformly in the pole. The remaining kernel is uniformly continuous, proving continuity across the sphere. Consequently 
+    
+<div class="equation">
+  \[  \frac{2d}{r^2}(M_ rGf(x)-Gf(x)) =\frac{2d}{r^2}\int _{|y-x|&lt;r}[\Phi (r)-\Phi (x-y)]f(y)dy.  \]
+</div>
+<p>
+       The bracket is nonpositive. Its absolute integral is $\pi r^2/2$ for $d=2$, since $2\pi \int _0^ r s\log (r/s)ds=\pi r^2/2$; for $d\ge 3$ it is $s_{d-1}r^2(1/2-1/d)$. Thus the expression for constant $f(x)$ is exactly $-c_ df(x)$, while the error is at most $c_ d\sup _{|y-x|&lt;r}|f(y)-f(x)|$, tending to zero. 
+    <p>
+      For the converse fix a ball $B\Subset \Omega $, let $H$ be the continuous Poisson solution with boundary values $u$, and let $w=G_ B1$, continuous, zero at the boundary, with $\widetilde\Delta w=-c_ d$ by the first part. For $t&gt;0$, both $u-H+tw$ and $H-u+tw$ have strictly negative generalized Laplacian. Hence at every point they satisfy the strict local supermean inequality for all sufficiently small radii. The elementary minimum principle for continuous locally supermean functions, proved by the open-and-closed minimum set argument, implies they are nonnegative on $B$ because their boundary values are zero. Let $t\downarrow 0$; then $u=H$. As $B$ was arbitrary, $u$ is harmonic. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</div></section><section class="reading-chunk" id="entry-B78F0B018AE7" data-section-entries="7C49056207BE B78F0B018AE7"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/B78F0B018AE7/">19 A global extension finite outside a prescribed ball</a></h2><span data-gerby-tag="7748F1C2"></span>
+
+<article class="env-lemma" id="classical-potential-theory-26E5895E">
+<p><a class="environment-identifier" href="../../tag/7C49056207BE/">Lemma <span data-tag="26E5895E">19.1</span>.</a><span data-gerby-tag="26E5895E"></span> If $u$ is superharmonic on $B(a,R)$ and $0&lt;r&lt;R$, there is an entire superharmonic function equal to $u$ on $B(a,r)$ and finite outside $\overline{B(a,r)}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Shrink $R$ while keeping $r&lt;R$, and subtract a lower bound so $u\ge 0$ on a neighborhood of the new closed ball. Reduce $u$ onto $K=\overline{B(a,r)}$ relative to $B(a,R)$. The regularized reduction $p$ equals $u$ inside $K$, is a potential with measure supported in $K$, and is harmonic outside $K$. Its measure is finite by compact support, so $p\to 0$ on the outer sphere. Harmonic reflection extends it to a slightly larger annulus; denote the extension again by $p$. Let $F(x)=\alpha (\Phi (x-a)-\Phi (Re_1))$. It is radial harmonic outside $a$ and zero on the outer sphere. The normal derivative of $\Phi $ is strictly negative there. Since $p$ is smooth on a compact collar of that sphere and zero on it, a sufficiently large $\alpha &gt;0$ makes $F\ge p$ on the inner half of a thinner collar and $F\le p$ on its outer half: divide the radial differences by $|x-a|-R$ and use uniform continuity of the radial derivatives. Define $u^*=p$ inside the sphere and $u^*=F$ outside. In the collar it is the minimum of two harmonic functions, hence superharmonic, so locality proves it is entire superharmonic. It is finite outside $K$. Finally restore the subtracted constant. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/8B711E470600/"><span>← Previous</span><small>Theorem 3.5.2</small></a><a class="pager-next" rel="next" href="../../tag/E0853C6A83C4/"><span>Next →</span><small>11 Harmonic lowering and greatest harmonic minorants</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-green-functions-and-potentials,
+  author = {{Gerby contributors}},
+  title = {3.5 Green functions and potentials},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/green-functions-and-potentials/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/green-functions-and-potentials/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fgreen-functions-and-potentials%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fgreen-functions-and-potentials%2F&amp;body=Page%3A+%5B3.5+Green+functions+and+potentials%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fgreen-functions-and-potentials%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+5c6ddc6e1f61af126ad0d8da0b9f3338888bb5c6+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>
