@@ -148,7 +148,8 @@ def apply_reading_edits(entries, topic_chapters, registry_path):
             # Pure bibliographical footnotes must not interrupt an existing proof.
             for node in list(soup.select('aside.source-footnote')):
                 text = normalized_text(node)
-                if node.select_one('.cite') and re.match(r'Note\. (?:The original argument in|In (?:the (?:original article|proof of)|\[)|The proof of|We remind the readers that the (?:statement|third displayed))', text):
+                inline = node.get('data-footnote-mark', node.get('id')) == node.get('id')
+                if inline and node.select_one('.cite') and re.match(r'Note\. (?:The original argument in|In (?:the (?:original article|proof of)|\[)|The proof of|We remind the readers that the (?:statement|third displayed))', text):
                     retain(source, node, entry, variant)
                     node.decompose()
             # A source locator in a proved statement's caption is attribution.
