@@ -116,7 +116,9 @@ def render_fragments(source, working):
     config["images"]["imager"] = "none"
     config["images"]["vector-imager"] = "none"
     document = TeXDocument(config=config)
-    tex = TeX(document, myfile=str(working / "book.tex"))
+    os.environ.setdefault("TEXINPUTS", str(working) + os.pathsep)
+    tex = TeX(document)
+    tex.input(tex_source)
     document.userdata["working-dir"] = str(working)
     document.userdata["jobname"] = "book"
     tex.parse()
@@ -217,7 +219,8 @@ def shell(content, title, records, revision, root=""):
 
 def export(source, output):
     source, output = source.resolve(), output.resolve()
-    revision = os.environ.get("GERBY_SOURCE_COMMIT") or subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip()
+    revision = subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip()
+    subprocess.run(["git", "-C", str(source), "diff", "--exit-code", "HEAD", "--", "book.tex", "chapters", "frontmatter", "style", "ComplexGeometry.bib"], check=True, stdout=subprocess.DEVNULL)
     if not re.fullmatch(r"[a-f0-9]{40}", revision):
         raise ValueError("Missing exact source revision")
     output.mkdir(parents=True, exist_ok=True)
