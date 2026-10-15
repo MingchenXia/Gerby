@@ -36,7 +36,7 @@ def prepare(source, slug, assets, theorems):
         if not original.is_relative_to(source.resolve()) or not original.is_file():
             raise ValueError(f"Missing source illustration: {filename}")
         name = sha256(original.read_bytes()).hexdigest()[:20] + original.suffix.lower()
-        shutil.copyfile(original, assets / name)
+        (assets / name).write_bytes(original.read_bytes())
         return rf"\gerbyimage{{{slug}/{name}}}{{Source illustration}}"
 
     body = re.sub(r"\\includegraphics(?:\[[^]]*\])?\{([^}]+)\}", graphic, body)
@@ -56,7 +56,7 @@ def prepare(source, slug, assets, theorems):
             if result.returncode:
                 raise ValueError(f"Diagram rendering failed; inspect {folder / 'build.log'}")
             subprocess.run(["pdftocairo", "-svg", str(folder / "figure.pdf"), str(vector)], check=True)
-        shutil.copyfile(vector, assets / (identifier + ".svg"))
+        (assets / (identifier + ".svg")).write_bytes(vector.read_bytes())
         return rf"\gerbyimage{{{slug}/{identifier}.svg}}{{Mathematical diagram from the source}}"
 
     body = re.sub(r"\\begin\{(tikzpicture|tikzcd)\}.*?\\end\{\1\}", diagram, body, flags=re.S)
