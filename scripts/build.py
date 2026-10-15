@@ -109,7 +109,10 @@ def fetch_source(record, cache):
         if destination.exists():
             shutil.rmtree(destination)
         destination.parent.mkdir(parents=True, exist_ok=True)
-        subprocess.run(["git", "clone", "--filter=blob:none", "--depth=1", "--no-checkout", key[0], str(destination)], check=True)
+        # The managed credential route for private sources uses Git's canonical
+        # .git URL; the public provenance keeps the registered repository URL.
+        transport = key[0] if key[0].endswith(".git") else key[0] + ".git"
+        subprocess.run(["git", "clone", "--filter=blob:none", "--depth=1", "--no-checkout", transport, str(destination)], check=True)
         if key[1] == "HEAD":
             subprocess.run(["git", "-C", str(destination), "checkout", "--detach", "HEAD"], check=True)
         else:

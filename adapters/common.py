@@ -25,11 +25,13 @@ AUTHOR = "Mingchen Xia"
 DIRECTORY = ""
 BIBLIOGRAPHY = "ComplexGeometry.bib"
 ASSETS = None
+DEFAULT_TOPIC = "Project notes"
 
 
-def configure(slug, title, repository, author="Mingchen Xia", directory="", bibliography="ComplexGeometry.bib"):
-    global SLUG, TITLE, REPOSITORY, AUTHOR, DIRECTORY, BIBLIOGRAPHY
+def configure(slug, title, repository, author="Mingchen Xia", directory="", bibliography="ComplexGeometry.bib", topic="Project notes"):
+    global SLUG, TITLE, REPOSITORY, AUTHOR, DIRECTORY, BIBLIOGRAPHY, DEFAULT_TOPIC
     SLUG, TITLE, REPOSITORY, AUTHOR, DIRECTORY, BIBLIOGRAPHY = slug, title, repository, author, directory, bibliography
+    DEFAULT_TOPIC = topic
 SECTIONS = {"part", "chapter", "section", "subsection", "subsubsection", "paragraph", "subparagraph"}
 THEOREMS = "case conjecture corollary definition example exercise lemma note problem property proposition question solution remark".split()
 
@@ -194,7 +196,7 @@ def nodes_in_order(node):
         yield from nodes_in_order(child)
 
 
-def render_fragments(source, working):
+def render_fragments(source, working, prepare=None):
     compatibility()
     from plasTeX import TeXDocument
     from plasTeX.TeX import TeX
@@ -204,7 +206,7 @@ def render_fragments(source, working):
     from plasTeX.Logging import getLogger
     problems = ParseProblems()
     getLogger().addHandler(problems)
-    tex_source = prepare_tex(source)
+    tex_source = (prepare or prepare_tex)(source)
     (working / "book.tex").write_text(tex_source)
     config += gerby_config
     config["general"]["renderer"] = "Gerby"
@@ -226,9 +228,10 @@ def render_fragments(source, working):
     tex.parse()
     if problems.problems:
         raise ValueError("Unsupported manuscript commands: " + "; ".join(problems.problems))
-    starred = dict(re.findall(r"\\chapter\*\{([^{}]+)\}\s*\\label\{([^}]+)\}", tex_source))
-    for node in document.getElementsByTagName("chapter"):
-        if node.ref is None and node.title.textContent.strip() in starred:
+    headings = "|".join(sorted(SECTIONS, key=len, reverse=True))
+    starred = dict(re.findall(r"\\(?:" + headings + r")\*\{([^{}]+)\}\s*\\label\{([^}]+)\}", tex_source))
+    for node in nodes_in_order(document):
+        if node.nodeName in SECTIONS and node.ref is None and node.title.textContent.strip() in starred:
             document.context.label(starred[node.title.textContent.strip()], node)
             node.ref = document.createDocumentFragment()
     labelled = {}
@@ -284,7 +287,7 @@ def render_fragments(source, working):
         parent = node
         while parent.parentNode is not None and parent.nodeName != "chapter":
             parent = parent.parentNode
-        topic = parent.title.textContent.strip() if parent.nodeName == "chapter" else "Project notes"
+        topic = parent.title.textContent.strip() if parent.nodeName == "chapter" else DEFAULT_TOPIC
         ancestor = node.parentNode
         while ancestor is not None and ancestor.nodeName not in SECTIONS | {"thmenv"}:
             ancestor = ancestor.parentNode
@@ -402,7 +405,7 @@ def shell(content, title, records, revision, root=""):
 <main id="content">{content}<footer class="book-footer">{escape(AUTHOR)} · Draft edition · Source revision <a href="{REPOSITORY}/commit/{revision}">{revision[:12]}</a><br>Tags identify source labels. Formalization status is recorded independently of the mathematical text.</footer></main></div></body></html>'''
 
 
-def export(source, output):
+def export(source, output, prepare=None):
     global ASSETS
     source, output = source.resolve(), output.resolve()
     ASSETS = output / "assets"
@@ -413,7 +416,7 @@ def export(source, output):
         raise ValueError("Missing exact source revision")
     output.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="gerby-foundations-") as temporary:
-        records = render_fragments(source / DIRECTORY, Path(temporary))
+        records = render_fragments(source / DIRECTORY, Path(temporary), prepare=prepare)
     index = f'<div class="book-title"><p class="eyebrow">An online draft</p><h1>{TITLE}</h1><p>{escape(AUTHOR)}</p></div>'
     index += "".join(decorate(record["html"], "") for record in records if record["section"])
     (output / "index.html").write_text(shell(index, TITLE, records, revision))

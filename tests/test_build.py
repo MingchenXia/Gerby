@@ -2,6 +2,8 @@ import copy
 import importlib.util
 from pathlib import Path
 import unittest
+from unittest.mock import patch
+import tempfile
 
 spec = importlib.util.spec_from_file_location("build", Path(__file__).resolve().parents[1] / "scripts/build.py")
 build = importlib.util.module_from_spec(spec)
@@ -62,6 +64,14 @@ class RegistryTests(unittest.TestCase):
         self.books["books"][0]["repository"] = "https://example.com/book"
         with self.assertRaises(ValueError):
             build.validate(self.books, {"version": 1, "entries": []})
+
+    def test_fetch_uses_git_transport_without_changing_source_identity(self):
+        source = {"repository": "https://github.com/owner/private-source", "ref": "main"}
+        cache = {}
+        with tempfile.TemporaryDirectory() as temporary, patch.object(build, "ROOT", Path(temporary)), patch.object(build.subprocess, "run") as run, patch.object(build.subprocess, "check_output", return_value="a" * 40):
+            result = build.fetch_source(source, cache)
+        self.assertEqual(run.call_args_list[0].args[0][-2], source["repository"] + ".git")
+        self.assertEqual(cache[build.source_key(source)]["commit"], result["commit"])
 
     def test_catalogue_escapes_titles_and_has_no_pending_read_link(self):
         markup = build.book_markup(self.books["books"])

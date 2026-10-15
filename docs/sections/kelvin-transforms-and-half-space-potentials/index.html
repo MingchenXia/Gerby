@@ -1,0 +1,204 @@
+<!doctype html><html lang="en" data-reading-mode="continuous" data-asset-revision="f482373f72f9" data-search-index="../../search.json" data-collection-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#d9d8d1"><meta name="giscus:backlink" content="https://mingchenxia.github.io/Gerby/sections/kelvin-transforms-and-half-space-potentials/"><title>3.2 Kelvin transforms and half-space potentials · Gerby</title><link rel="canonical" href="https://mingchenxia.github.io/Gerby/sections/kelvin-transforms-and-half-space-potentials/">
+<link rel="icon" href="../../assets/favicon.svg?v=f482373f72f9" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/collection.css?v=f482373f72f9"><link rel="stylesheet" href="../../assets/formalization.css?v=f482373f72f9"><script src="../../assets/math-config.js?v=f482373f72f9"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f482373f72f9"></script><script type="module" src="../../assets/formalization.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/collection.mjs?v=f482373f72f9"></script><script type="module" src="../../assets/comments.mjs?v=f482373f72f9"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../" aria-label="Gerby home">Gerby</a><nav aria-label="Primary"><a href="../../chapters/">Contents</a><a href="../../references/">Bibliography</a><a href="../../comments/">Comments</a></nav><form class="quick-search" action="../../search/" role="search"><label class="visually-hidden" for="collection-search">Search Gerby</label><input id="collection-search" name="q" type="search" placeholder="Keywords or a tag" autocomplete="off" aria-controls="search-results"><div id="search-results" aria-live="polite"></div></form></header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../chapters/">Table of contents</a></li><li><a href="../../chapters/classical-potentials/">Chapter 3: Harmonic and subharmonic functions</a></li><li><a href="../../sections/kelvin-transforms-and-half-space-potentials/" aria-current="page">Section 3.2: Kelvin transforms and half-space potentials</a></li></ol></nav><div class="reading-layout"><aside class="sidebar"><details class="chapter-navigation" open><summary>Browse and page tools</summary><div class="reader-tools"><h2>In this chapter</h2><ol class="section-list"><li><a href="../../sections/harmonic-functions-and-the-dirichlet-problem/"><span>3.1</span> Harmonic functions and the Dirichlet problem</a></li><li><a href="../../sections/kelvin-transforms-and-half-space-potentials/" aria-current="page"><span>3.2</span> Kelvin transforms and half-space potentials</a></li><li><a href="../../sections/subharmonic-functions/"><span>3.3</span> Subharmonic functions</a></li></ol><div class="page-tools"><a href="#comments">Comments</a><a href="#cite">Cite this page</a><a href="https://mingchenxia.github.io/Gerby/sections/kelvin-transforms-and-half-space-potentials/">Permalink</a><button type="button" data-copy-link="https://mingchenxia.github.io/Gerby/sections/kelvin-transforms-and-half-space-potentials/">Copy link</button><label class="tag-switch"><input type="checkbox" data-show-tags> Show tags</label><span class="copy-status" role="status"></span></div><details class="all-chapters"><summary>All chapters</summary><nav aria-label="All chapters"><ol><li><a href="../../chapters/orientation/">1. Conventions</a></li><li><a href="../../chapters/measures-distributions/">2. Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/">3. Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/">4. Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/">5. Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/">6. Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/">7. Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/">8. Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/">9. Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/">10. Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/">11. Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/">12. Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/">13. Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/">14. Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/">15. Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/">16. Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/">17. B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/">18. Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/">19. Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/">20. Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/">21. Open problems and historical notes</a></li></ol></nav></details><p><a href="../../sources/">Sources and revisions</a><br><a href="../../entries/">All entries</a><br><a href="https://github.com/MingchenXia/Gerby">GitHub repository</a></p></div></details></aside>
+<main id="content" tabindex="-1"><nav class="page-navigation" aria-label="Page navigation"><a class="pager-prev" rel="prev" href="../../tag/476CFD04AAC6/"><span>← Previous</span><small>Theorem 2.5.2</small></a><a class="pager-next" rel="next" href="../../tag/61B2D7362CC0/"><span>Next →</span><small>Prerequisites and conventions</small></a></nav><h1>3.2 Kelvin transforms and half-space potentials</h1><div class="section-reading"><section class="reading-chunk" id="entry-61B2D7362CC0" data-section-entries="61B2D7362CC0"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/61B2D7362CC0/">Prerequisites and conventions</a></h2><span data-gerby-tag="59016F1B"></span>
+<p>
+These notes reconstruct the arguments of Helms <span class="cite">[<span class="postnote">§2.6, pp. 36–42</span>, <a href="../../references/#R86D43E80975C">Helms1969</a>]</span>. They use real dimension $d\geq 2$, the ordinary Euclidean Laplacian, and unnormalized surface area. Helms's $\sigma _ n$ is our $s_{d-1}$ when $n=d$. 
+</p>
+<p>
+The prerequisites are multivariable differential and integral calculus, Lebesgue integration (including dominated convergence), and two results already available in <em>Foundations of pluripotential theory</em> at the revision cited in <span class="cite">[<a href="../../references/#R3FF1266E2282">Foundations2026</a>]</span>: the ball Poisson formula and the selection theorem for locally bounded positive Radon measures. Their statements and proofs are available at Gerby tags <a href="https://mingchenxia.github.io/Gerby/tag/08ED9D7CF1CF/">08ED9D7CF1CF</a> and <a href="https://mingchenxia.github.io/Gerby/tag/F9F4241C5BD2/">F9F4241C5BD2</a>, respectively. In the selection theorem, measures supported on a common compact set with bounded masses have a weakly convergent subsequence. We derive the required positive harmonic ball representation from these inputs in the proof of Theorem <a data-tag="1C8A330A" href="../../tag/6BC86EEF03A9/">2.1</a>. 
+</p>
+</div></section><section class="reading-chunk" id="entry-9A02E6F8D636" data-section-entries="0E9BCA99B831 97BA27062B9F 9A02E6F8D636"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/9A02E6F8D636/">1 Inversion and the Kelvin transform</a></h2><span data-gerby-tag="F836687A"></span>
+<p>
+  Fix an integer $d\geq 2$. We use $\Delta =\sum _{j=1}^ d\partial _ j^2$ and write $s_{d-1}$ for the area of the unit sphere in $\mathbb R^ d$. For $a\in \mathbb R^ d$, $\rho &gt;0$ and $x\neq a$, put 
+</p>
+<div class="equation">
+  \[  T(x)=a+\frac{\rho ^2(x-a)}{|x-a|^2},\qquad (Ku)(x)=\left(\frac{\rho }{|x-a|}\right)^{d-2}u(T(x)).  \]
+</div>
+<p>
+ The factor is $1$ when $d=2$. 
+</p>
+
+<article class="env-theorem" id="classical-potential-theory-B1AA5815">
+<p><a class="environment-identifier" href="../../tag/97BA27062B9F/">Theorem <span data-tag="B1AA5815">1.1</span> <span class="named">(Kelvin transform)</span>.</a><span data-gerby-tag="B1AA5815"></span> Let $U\subset \mathbb R^ d\setminus \{ a\} $ be open and let $u\in C^2(U)$. Then $Ku\in C^2(T(U))$ and </p>
+<div class="equation" id="classical-potential-theory-074F2D29"><span data-gerby-tag="074F2D29"></span>
+<span class="equation-label"><a data-tag="074F2D29" href="../../tag/0E9BCA99B831/">1</a></span>
+<div>\begin{equation}  \Delta (Ku)(x)=\left(\frac{\rho }{|x-a|}\right)^{d+2} (\Delta u)(T(x)). \end{equation}</div>
+</div>
+<p> Moreover, $T^2$ and $K^2$ are the identity. Thus the Kelvin transform preserves harmonicity and nonnegativity in both directions. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Translate $a$ to $0$, and set $r=|x|$, $e=x/r$, $Q=I-2ee^{\mathsf T}$, $y=T(x)=\rho ^2x/r^2$ and $w(x)=\rho ^{d-2}r^{2-d}$. The matrix $Q$ is symmetric and orthogonal, and $Qx=-x$. Differentiating $y_ j=\rho ^2x_ jr^{-2}$ gives 
+    
+<div class="equation">
+  \[  Dy=\rho ^2r^{-2}Q,\qquad \Delta y_ j=-2(d-2)\rho ^2x_ jr^{-4}.  \]
+</div>
+<p>
+       For completeness, $\Delta r^\alpha =\alpha (\alpha +d-2)r^{\alpha -2}$ follows by differentiating $\partial _ jr^\alpha =\alpha x_ jr^{\alpha -2}$ and summing. Applying the product rule to $x_ jr^{-2}$ proves the second identity above. The same radial formula yields 
+    
+<div class="equation">
+  \[  \nabla w=(2-d)\rho ^{d-2}r^{-d}x,\qquad \Delta w=0.  \]
+</div>
+<p>
+       The chain rule and the orthogonality of $Q$ now give 
+    
+<div class="equation">
+  \begin{align*}  \Delta (u\circ T) &amp; =\rho ^4r^{-4}(\Delta u)(y) -2(d-2)\rho ^2r^{-4}x\cdot \nabla u(y),\\  2\nabla w\cdot \nabla (u\circ T) &amp; =2(d-2)\rho ^ d r^{-d-2}x\cdot \nabla u(y). \end{align*}
+</div>
+<p>
+       In $\Delta (w(u\circ T))$, the terms containing $x\cdot \nabla u(y)$ therefore cancel, leaving $\rho ^{d+2}r^{-d-2}(\Delta u)(y)$. This proves (<a data-tag="074F2D29" href="../../tag/0E9BCA99B831/">1</a>), including $d=2$. 
+    <p>
+      Since $|T(x)|=\rho ^2/|x|$, substitution gives $T(T(x))=x$ and $w(x)w(T(x))=1$. In particular $T$ is a smooth diffeomorphism of $\mathbb R^ d\setminus \{ 0\} $ onto itself, so $T(U)$ is open and $K^2u=u$. The positive weight $w$ preserves signs. The Laplacian identity and involutivity prove the assertion about harmonicity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+This is Helms's Theorem 2.24 <span class="cite">[<span class="postnote">p. 36</span>, <a href="../../references/#R86D43E80975C">Helms1969</a>]</span>, with the Laplacian calculation made explicit. No assertion is made at the inversion center, which is outside both domains. 
+</p>
+</div></section><section class="reading-chunk" id="entry-5C12992087C2" data-section-entries="2009D781FC4A 21F1298C637C 5C12992087C2 6BC86EEF03A9 8F7C774A9D89 B95428ABB7D8 F3ED29BBAD39"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/5C12992087C2/">2 Nonnegative harmonic functions on a half-space</a></h2><span data-gerby-tag="92B43D8F"></span>
+<p>
+  Put $H=\{ x=(x',t)\in \mathbb R^{d-1}\times \mathbb R:t&gt;0\} $ and identify $\partial H$ with $\mathbb R^{d-1}$. For $z\in \mathbb R^{d-1}$ set 
+</p>
+<div class="equation" id="classical-potential-theory-2C60ADF3"><span data-gerby-tag="2C60ADF3"></span>
+<span class="equation-label"><a data-tag="2C60ADF3" href="../../tag/21F1298C637C/">2</a></span>
+<div>\begin{equation}  P_ H(x,z)=\frac{2}{s_{d-1}} \frac{t}{(|x'-z|^2+t^2)^{d/2}}. \end{equation}</div>
+</div>
+
+<article class="env-theorem" id="classical-potential-theory-1C8A330A">
+<p><a class="environment-identifier" href="../../tag/6BC86EEF03A9/">Theorem <span data-tag="1C8A330A">2.1</span> <span class="named">(Half-space representation)</span>.</a><span data-gerby-tag="1C8A330A"></span> Every nonnegative harmonic function $h$ on $H$ has a representation </p>
+<div class="equation" id="classical-potential-theory-C0A46F1A"><span data-gerby-tag="C0A46F1A"></span>
+<span class="equation-label"><a data-tag="C0A46F1A" href="../../tag/F3ED29BBAD39/">3</a></span>
+<div>\begin{equation}  h(x',t)=ct+\int _{\mathbb R^{d-1}}P_ H((x',t),z)\, d\nu (z), \end{equation}</div>
+</div>
+<p> where $c\geq 0$ and $\nu $ is a positive Radon measure satisfying </p>
+<div class="equation" id="classical-potential-theory-358F89A3"><span data-gerby-tag="358F89A3"></span>
+<span class="equation-label"><a data-tag="358F89A3" href="../../tag/8F7C774A9D89/">4</a></span>
+<div>\begin{equation}  \int _{\mathbb R^{d-1}}(1+|z|^2)^{-d/2}\, d\nu (z)&lt;\infty . \end{equation}</div>
+</div>
+<p> Conversely, any such pair defines a nonnegative harmonic function on $H$. The measure need not have finite total mass. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first derive the ball representation needed here from the ball Poisson formula and compactness of bounded positive measures on a compact set. Let $v\geq 0$ be harmonic on $B=B(b,R)$ and let $0&lt;r&lt;R$. On $\partial B$ define the measure 
+    
+<div class="equation">
+  \[  d\mu _ r(\zeta )=v\bigl (b+(r/R)(\zeta -b)\bigr )\, dS(\zeta ).  \]
+</div>
+<p>
+       The mean-value property gives $\mu _ r(\partial B)=s_{d-1}R^{d-1}v(b)$. For a sequence $r_ j\uparrow R$, compactness therefore gives a subsequence converging weakly to a finite positive measure $\mu $ on $\partial B$. To apply the Euclidean measure-selection theorem, extend $\mu _{r_ j}$ by zero to $\mathbb R^ d$; their common compact support gives uniform tightness, and their weak limit is supported on that same closed sphere. For $|x-b|&lt;r$, the ball Poisson formula, followed by the dilation from $\partial B$ to $\partial B(b,r)$, reads 
+    
+<div class="equation">
+  \[  v(x)=\int _{\partial B}\left(\frac rR\right)^{d-1} \frac{r^2-|x-b|^2}{s_{d-1}r\, |x-b-(r/R)(\zeta -b)|^ d}\, d\mu _ r(\zeta ).  \]
+</div>
+<p>
+       For fixed $x\in B$ the integrands converge uniformly on $\partial B$ as $r\uparrow R$. The masses are uniformly bounded, so weak convergence gives 
+    
+<div class="equation" id="classical-potential-theory-8DE08FAD"><span data-gerby-tag="8DE08FAD"></span>
+<span class="equation-label"><a data-tag="8DE08FAD" href="../../tag/2009D781FC4A/">5</a></span>
+<div>\begin{equation}  v(x)=\int _{\partial B}\frac{R^2-|x-b|^2}{s_{d-1}R|x-\zeta |^ d}\, d\mu (\zeta ). \end{equation}</div>
+</div>
+<p>
+       This argument also covers $v(b)=0$, in which case all measures and $v$ vanish. 
+    <p>
+      Take $a=-e_ d$, $b=-e_ d/2$, $R=1/2$, and $T(x)=a+(x-a)/|x-a|^2$. Write $q=T(x)$ and $L=|x-a|$. Direct expansion gives 
+    
+<div class="equation" id="classical-potential-theory-BA5E751A"><span data-gerby-tag="BA5E751A"></span>
+<span class="equation-label"><a data-tag="BA5E751A" href="../../tag/B95428ABB7D8/">6</a></span>
+<div>\begin{equation}  |q-a|=L^{-1},\qquad \frac14-|q-b|^2=\frac{t}{L^2},\qquad |T(x)-T(y)|=\frac{|x-y|}{|x-a||y-a|}. \end{equation}</div>
+</div>
+<p>
+       For the last identity, square both sides and expand the inner products; the numerator on the left becomes $|x-a|^2+|y-a|^2-2(x-a)\cdot (y-a)=|x-y|^2$ after multiplying by $|x-a|^2|y-a|^2$. The middle identity and $T^2=1$ show that $T$ maps $H$ onto $B(b,1/2)$ and maps $\partial H$ onto $\partial B\setminus \{ a\} $. 
+    <p>
+      By Theorem <a data-tag="B1AA5815" href="../../tag/97BA27062B9F/">1.1</a>, $v(q)=|q-a|^{2-d}h(T(q))$ is nonnegative and harmonic on $B$. Apply (<a data-tag="8DE08FAD" href="../../tag/2009D781FC4A/">5</a>) and split $\mu =m\delta _ a+\mu _0$, where $\mu _0(\{ a\} )=0$. Since $h(x)=L^{2-d}v(T(x))$, the atom contributes $2mt/s_{d-1}$. Let $\sigma =T_*\mu _0$ on $\partial H$, and put 
+    
+<div class="equation">
+  \[  c=2m/s_{d-1},\qquad d\nu (z)=|(z,0)-a|^ d\, d\sigma (z).  \]
+</div>
+<p>
+       The measure $\sigma $ is finite and positive, and its continuous positive weight is bounded on compact sets. Hence $\nu $ is a positive Radon measure. The distance identity in (<a data-tag="BA5E751A" href="../../tag/B95428ABB7D8/">6</a>) transforms the remaining integral into 
+    
+<div class="equation">
+  \[  L^{2-d}\frac{2}{s_{d-1}} \int _{\partial B\setminus \{ a\} } \frac{t/L^2}{|T(x)-\zeta |^ d}\, d\mu _0(\zeta ) =\frac{2t}{s_{d-1}}\int _{\mathbb R^{d-1}} \frac{d\nu (z)}{|x-(z,0)|^ d}.  \]
+</div>
+<p>
+       Also $|(z,0)-a|^ d=(1+|z|^2)^{d/2}$, so the integral in (<a data-tag="358F89A3" href="../../tag/8F7C774A9D89/">4</a>) equals $\sigma (\mathbb R^{d-1})&lt;\infty $. This proves the required representation. 
+    <p>
+      For the converse, each kernel is smooth and harmonic as a function of $x\in H$. Indeed, with $r=|x-(z,0)|$, the radial differentiation formula used above gives $\Delta r^{-d}=2d r^{-d-2}$ and $\partial _ t r^{-d}=-dt r^{-d-2}$. Consequently $\Delta (t r^{-d})=2dt r^{-d-2}-2dt r^{-d-2}=0$. On a compact subset $K\subset H$, $t$ is bounded above and away from $0$, and $|x'|$ is bounded. Writing $v=x-(z,0)$, differentiation gives 
+    
+<div class="equation">
+  \begin{align*}  \partial _ i(t r^{-d})&amp; =\delta _{id}r^{-d}-dtv_ i r^{-d-2},\\  \partial _ j\partial _ i(t r^{-d}) &amp; =-d(\delta _{id}v_ j+\delta _{jd}v_ i+t\delta _{ij})r^{-d-2} +d(d+2)tv_ iv_ j r^{-d-4}. \end{align*}
+</div>
+<p>
+       For $|z|$ large, $r\geq |z|/2$ and $|v_ i|\leq r$, so these formulas bound the kernel and all its $x$ derivatives of orders at most two by $C_ K(1+|z|^2)^{-d/2}$. For bounded $z$, the lower bound on $t$ supplies the same estimate after increasing $C_ K$. These estimates also hold on a compact neighborhood of $K$ inside $H$, so dominated convergence justifies two differentiations under the integral. Condition (<a data-tag="358F89A3" href="../../tag/8F7C774A9D89/">4</a>) gives finiteness and harmonicity; positivity is immediate. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+<p>
+The existence assertion is Helms's Theorem 2.25 <span class="cite">[<span class="postnote">pp. 37–39</span>, <a href="../../references/#R86D43E80975C">Helms1969</a>]</span>. The weighted integrability condition and the converse above spell out the precise admissible class of measures. 
+</p>
+</div></section><section class="reading-chunk" id="entry-FA92650B78EB" data-section-entries="9ADD2DF19642 AB2849CD8791 FA92650B78EB"><div class="source-variant" data-gerby-book="classical-potential-theory"><h2><a href="../../tag/FA92650B78EB/">3 Bounded boundary data</a></h2><span data-gerby-tag="924C0649"></span>
+
+<article class="env-theorem" id="classical-potential-theory-BB6DAC3F">
+<p><a class="environment-identifier" href="../../tag/9ADD2DF19642/">Theorem <span data-tag="BB6DAC3F">3.1</span> <span class="named">(Half-space Poisson integral)</span>.</a><span data-gerby-tag="BB6DAC3F"></span> Let $f:\mathbb R^{d-1}\to \mathbb R$ be bounded and Lebesgue measurable, and let $c\in \mathbb R$. Then </p>
+<div class="equation">
+  \[  u(x',t)=ct+\int _{\mathbb R^{d-1}}P_ H((x',t),z)f(z)\, dz  \]
+</div>
+<p> is harmonic on $H$, and $|u(x',t)-ct|\leq \| f\| _\infty $. If $f$ is continuous at $z_0$, then $u(x',t)\to f(z_0)$ as $(x',t)\to (z_0,0)$ within $H$, with no restriction on the approach. Moreover $u(0,t)/t\to c$ as $t\to \infty $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first verify the normalization 
+    
+<div class="equation" id="classical-potential-theory-E7E82020"><span data-gerby-tag="E7E82020"></span>
+<span class="equation-label"><a data-tag="E7E82020" href="../../tag/AB2849CD8791/">7</a></span>
+<div>\begin{equation}  \int _{\mathbb R^{d-1}}P_ H((x',t),z)\, dz=1. \end{equation}</div>
+</div>
+<p>
+       Translation and the substitution $z=x'+tw$ reduce the integral to $\frac{2}{s_{d-1}}\int _{\mathbb R^{d-1}}(1+|w|^2)^{-d/2}\, dw$. The map 
+    
+<div class="equation">
+  \[  F(w)=\frac{(w,1)}{\sqrt{1+|w|^2}}  \]
+</div>
+<p>
+       parametrizes the upper hemisphere. With $m=d-1$, its metric matrix is $DF^{\mathsf T}DF=(1+|w|^2)^{-1}I-(1+|w|^2)^{-2}ww^{\mathsf T}$. Its eigenvalues are $(1+|w|^2)^{-1}$ in the $m-1$ perpendicular directions and $(1+|w|^2)^{-2}$ in the direction of $w$. The square root of its determinant is $(1+|w|^2)^{-d/2}$. At $w=0$ this formula holds by continuity. The surface area formula and reflection in the equatorial plane show that the last integral is $s_{d-1}/2$, proving (<a data-tag="E7E82020" href="../../tag/AB2849CD8791/">7</a>). This also treats $d=2$, when $m=1$ and there are no perpendicular directions. 
+    <p>
+      The weighted measure $|f(z)|\, dz$ satisfies (<a data-tag="358F89A3" href="../../tag/8F7C774A9D89/">4</a>), by the same integral at $(0,1)$. Applying the differentiation estimates in the proof of Theorem <a data-tag="1C8A330A" href="../../tag/6BC86EEF03A9/">2.1</a> to the positive and negative parts of $f$ proves harmonicity. The positivity and normalization of $P_ H$ give the stated bound. 
+    <p>
+      Fix $\varepsilon &gt;0$. At a continuity point $z_0$, choose $\delta &gt;0$ so that $|f(z)-f(z_0)|&lt;\varepsilon $ for $|z-z_0|&lt;\delta $. The contribution of this set to $|\int P_ H(x,z)(f(z)-f(z_0))\, dz|$ is at most $\varepsilon $. If $|x'-z_0|&lt;\delta /2$ and $|z-z_0|\geq \delta $, then $|z-x'|\geq \delta /2$. Writing $s_{d-2}$ for the area of the unit sphere in $\mathbb R^{d-1}$ (in particular $s_0=2$), polar integration gives 
+    
+<div class="equation">
+  \[  \int _{|z-z_0|\geq \delta }P_ H(x,z)\, dz \leq \frac{2t}{s_{d-1}}s_{d-2}\int _{\delta /2}^{\infty }r^{-2}\, dr =\frac{4s_{d-2}}{s_{d-1}}\frac{t}{\delta }.  \]
+</div>
+<p>
+       Thus 
+    
+<div class="equation">
+  \[  |u(x',t)-f(z_0)|\leq |c|t+\varepsilon + \frac{8s_{d-2}}{s_{d-1}}\| f\| _\infty \frac{t}{\delta }  \]
+</div>
+<p>
+       near $(z_0,0)$. Letting $(x',t)\to (z_0,0)$ and then $\varepsilon \downarrow 0$ proves the boundary limit. Finally $|u(0,t)/t-c|\leq \| f\| _\infty /t\to 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+This proves Helms's Theorem 2.26 <span class="cite">[<span class="postnote">pp. 39–42</span>, <a href="../../references/#R86D43E80975C">Helms1969</a>]</span>, including the normalization integral and differentiation under the integral sign. For continuous bounded boundary data, varying $c$ gives distinct harmonic solutions with the same finite boundary values. This states nonuniqueness without a growth condition; it does not classify all such solutions. 
+</p>
+</div></section></div><nav class="page-navigation" aria-label="Page navigation bottom"><a class="pager-prev" rel="prev" href="../../tag/476CFD04AAC6/"><span>← Previous</span><small>Theorem 2.5.2</small></a><a class="pager-next" rel="next" href="../../tag/61B2D7362CC0/"><span>Next →</span><small>Prerequisites and conventions</small></a></nav>
+<details class="citation" id="cite"><summary>Cite this page</summary><label for="citation-text">BibTeX citation</label><textarea id="citation-text" readonly rows="7">@misc{gerby-sections-kelvin-transforms-and-half-space-potentials,
+  author = {{Gerby contributors}},
+  title = {3.2 Kelvin transforms and half-space potentials},
+  howpublished = {Gerby},
+  url = {https://mingchenxia.github.io/Gerby/sections/kelvin-transforms-and-half-space-potentials/}
+}</textarea><button type="button" data-copy-citation>Copy citation</button><span class="copy-status" role="status"></span></details>
+<section class="comments-panel" id="comments" aria-labelledby="comments-heading" data-comment-term="Gerby /sections/kelvin-transforms-and-half-space-potentials/" data-repo="MingchenXia/Gerby" data-repo-id="R_kgDOVKfctw" data-category="General" data-category-id="DIC_kwDOVKfct84DIf0F">
+<h2 id="comments-heading">Comments<span data-comment-count></span></h2><p>Corrections, questions, and mathematical discussion are welcome. Sign in with GitHub to comment. Comments are public.</p>
+<div class="comment-actions"><a href="https://github.com/MingchenXia/Gerby/discussions?discussions_q=%22Gerby+%2Fsections%2Fkelvin-transforms-and-half-space-potentials%2F%22">Read this page’s discussion on GitHub</a><a href="https://github.com/MingchenXia/Gerby/discussions/new?category=general&amp;title=Gerby+%2Fsections%2Fkelvin-transforms-and-half-space-potentials%2F&amp;body=Page%3A+%5B3.2+Kelvin+transforms+and+half-space+potentials%5D%28https%3A%2F%2Fmingchenxia.github.io%2FGerby%2Fsections%2Fkelvin-transforms-and-half-space-potentials%2F%29%0A%0AWrite+your+comment+below.%0A%0A%3C%21--+sha1%3A+4e4660f8940b8a4f6d20e361d6c06e25c159ca7b+--%3E">Post a comment on GitHub</a></div>
+<button type="button" data-load-comments>Load comments</button><p class="comment-status" role="status"></p><div class="giscus"></div><noscript><p>Use the GitHub links above to read or leave comments.</p></noscript></section><footer class="book-footer">Gerby · <a href="../../sources/">Sources and revisions</a> · <a href="../../comments/">Comments</a></footer></main></div></body></html>
