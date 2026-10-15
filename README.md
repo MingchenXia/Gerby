@@ -20,6 +20,8 @@ Reviewed duplicates have one canonical entry and one search result. Alternative 
 
 All interface text and project documentation are in English. The source texts and formal proofs remain in their original repositories and retain their licenses.
 
+The reading layout adapts to computers, tablets, and phones. Wide screens keep the chapter navigation beside the text; smaller screens offer an expandable chapter list, full-width reading, and touch-friendly search and navigation. Long equations and tables scroll within the page's reading column.
+
 ## Formalization badges
 
 Every tagged statement displays a badge:
