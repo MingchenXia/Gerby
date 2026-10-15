@@ -9,6 +9,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from publish import deployment_current, request_deployment
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -44,7 +46,10 @@ def update(force=False):
     run("git", "fetch", "origin", "gh-pages")
     receipt = json.loads(run("git", "show", "FETCH_HEAD:upstream.json", capture=True))
     if not force and receipt.get("publishing_commit") == publishing_commit and receipt["sources"] == revisions:
-        print("No changes: the published Gerby collection is current.")
+        if deployment_current(receipt):
+            print("No changes: the public Gerby collection is current.")
+        else:
+            request_deployment(receipt)
         return
     requirements = ROOT / "requirements.txt"
     cache = ROOT / "_update"

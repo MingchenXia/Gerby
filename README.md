@@ -42,7 +42,7 @@ An hourly local Codex automation checks both this project and the registered ups
 
 ## Local build and publication
 
-Requires Python 3.11+, Git, Node.js, and npm. No private-source key is needed for the current public source.
+Requires Python 3.11+, Git, Node.js, and npm; publication also uses the authenticated GitHub CLI (`gh`). No private-source key is needed for the current public source.
 
 ```sh
 python3 -m venv .venv
