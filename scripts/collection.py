@@ -137,7 +137,6 @@ def organize(exports, configuration):
             del entries[tag]
         else:
             equation_groups[key] = tag
-    used = {entry["topic"] for entry in entries.values()}
     exact = {}
     for entry in entries.values():
         variant = entry["variants"][0]
@@ -148,6 +147,11 @@ def organize(exports, configuration):
         if key in exact:
             raise ValueError(f"Review an exact duplicate before publication: {exact[key]} / {variant['source']}/{variant['label']}")
         exact[key] = variant["source"] + "/" + variant["label"]
+    excluded = set(configuration.get("excluded_topics", []))
+    entries = {tag: entry for tag, entry in entries.items() if entry["topic"] not in excluded}
+    # Keep excluded source tags distinguishable from unresolved references.
+    source_tags = {key: tag if tag in entries else None for key, tag in source_tags.items()}
+    used = {entry["topic"] for entry in entries.values()}
     topics = {key: value for key, value in topics.items() if key in used}
     return entries, topics, source_tags
 
@@ -160,6 +164,8 @@ def chapter_structure(topics, configuration):
             raise ValueError("Duplicate shared chapter")
         chapters[key] = {**chapter, "number": number, "topics": []}
         for topic in chapter["topics"]:
+            if topic in configuration.get("excluded_topics", []):
+                raise ValueError(f"An excluded topic belongs to a chapter: {topic}")
             if topic in assigned:
                 raise ValueError(f"A topic belongs to two chapters: {topic}")
             assigned[topic] = key
@@ -188,6 +194,8 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
         key = source, match[1]
         if key not in source_tags:
             raise ValueError(f"Unresolved mathematical reference: {source}/{match[1]}")
+        if source_tags[key] is None:
+            return match[2]
         url = root + "tag/" + source_tags[key] + "/" + (component_anchors or {}).get(key, "")
         return r"\href{" + url + "}{" + match[2] + "}"
     fragment = re.sub(r"\\gerbyref\{([A-F0-9]{8})\}\{([^{}]+)\}", math_reference, fragment)
@@ -203,6 +211,9 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
         local = anchor["href"].split("/")[-1]
         if (source, local) not in source_tags:
             raise ValueError(f"Unresolved source tag: {source}/{local}")
+        if source_tags[(source, local)] is None:
+            anchor.unwrap()
+            continue
         fragment = (component_anchors or {}).get((source, local), "")
         anchor["href"] = root + "tag/" + source_tags[(source, local)] + "/" + fragment
     for anchor in soup.select('a[href^="/bibliography/"]'):
@@ -382,6 +393,19 @@ def build_collection(books, destination, configuration):
     redirect(destination / "topics" / "index.html", destination / "chapters" / "index.html", destination)
     for key, topic in topics.items():
         redirect(destination / "topics" / key / "index.html", destination / "sections" / key / "index.html", destination)
+    # Removed front matter leaves the reading edition, while old permalinks
+    # continue to reach the collection rather than a missing page.
+    contents = destination / "chapters" / "index.html"
+    for topic in configuration.get("excluded_topics", []):
+        for route in ("topics", "sections"):
+            redirect(destination / route / topic / "index.html", contents, destination)
+    for source, records in exports.items():
+        for record in records:
+            if source_tags[(source, record["tag"])] is None:
+                redirect(destination / "tag" / global_tag(source, record["label"]) / "index.html", contents, destination)
+    for configured in configuration["entries"]:
+        if configured["topic"] in configuration.get("excluded_topics", []):
+            redirect(destination / "tag" / configured["tag"] / "index.html", contents, destination)
     write("entries", '<h1>All entries</h1><p>Search across every source, or follow the shared chapter order below.</p>' + "".join(f'<h2><a href="../chapters/{key}/">{chapter["number"]}. {escape(chapter["title"])}</a></h2>' + entry_list([e for e in entries.values() if e["topic"] in chapter["topics"]], topics, "../") for key, chapter in chapters.items()), "All entries", "../")
     search, public_entries, merges = [], [], []
     for entry in entries.values():
@@ -430,10 +454,14 @@ def build_collection(books, destination, configuration):
         redirect(old_folder / "index.html", source_folder / "index.html", destination)
         for record in inventories[source]:
             canonical = source_tags[(source, record["tag"])]
-            redirect(old_folder / record["page"], destination / "tag" / canonical / "index.html", destination, anchor=anchors.get((source, record["tag"]), ""))
+            target = destination / "tag" / canonical / "index.html" if canonical else contents
+            redirect(old_folder / record["page"], target, destination, anchor=anchors.get((source, record["tag"]), ""))
         for configured in configuration["entries"]:
-            if configured["tag"] in entries and any(m["source"] == source for m in configured["members"]):
-                redirect(old_folder / "tag" / configured["tag"] / "index.html", destination / "tag" / configured["tag"] / "index.html", destination)
+            if any(m["source"] == source for m in configured["members"]):
+                if configured["tag"] in entries:
+                    redirect(old_folder / "tag" / configured["tag"] / "index.html", destination / "tag" / configured["tag"] / "index.html", destination)
+                elif configured["topic"] in configuration.get("excluded_topics", []):
+                    redirect(old_folder / "tag" / configured["tag"] / "index.html", contents, destination)
         redirect(old_folder / "bibliography" / "index.html", destination / "references" / "index.html", destination, {key: identifier for (origin, key), identifier in reference_map.items() if origin == source})
     write("sources", source_list + '</ul><p><a href="../deduplication.json">Reviewed duplicate groups and retained source tags</a></p>', "Sources", "../")
     reference_content = '<h1>Bibliography</h1><p>Bibliographic references cited across the shared collection.</p>'

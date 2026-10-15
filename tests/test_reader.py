@@ -64,6 +64,32 @@ class ReaderTests(unittest.TestCase):
             self.assertEqual(len(ids), len(set(ids)))
             check_links(root)
 
+    def test_excluded_front_matter_leaves_reading_order_and_preserves_old_urls(self):
+        self.config['excluded_topics'] = ['beta']
+        self.config['chapters'][0]['topics'] = ['alpha']
+        self.config['entries'] = [{'tag': 'ABCDEF12', 'title': 'Removed overview', 'topic': 'beta', 'members': [{'source': 'source', 'label': self.records[2]['label']}]}]
+        self.records[0]['html'] += '<p>See <a href="/tag/00000003">the overview</a>.</p>' + r'\[x=\gerbyref{00000003}{1}\]'
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pages = self.build(root)
+            self.assertFalse(any(p.get('section') == 'beta' for p in pages))
+            chapter = BeautifulSoup((root / 'chapters/first/index.html').read_text(), 'html.parser')
+            self.assertEqual([a.get_text(' ', strip=True) for a in chapter.select('main .section-list a')], ['1.1 Alpha'])
+            section = BeautifulSoup((root / 'sections/alpha/index.html').read_text(), 'html.parser')
+            self.assertIn('See the overview.', section.get_text())
+            self.assertFalse(section.select('a[href*="ABCDEF12"]'))
+            self.assertIn(r'\[x=1\]', section.get_text())
+            collection = json.loads((root / 'collection.json').read_text())
+            self.assertEqual({t['slug'] for t in collection['topics']}, {'alpha', 'gamma'})
+            self.assertEqual(len(collection['entries']), 3)
+            self.assertNotIn('ABCDEF12', {r['tag'] for r in json.loads((root / 'search.json').read_text())})
+            for route in ('sections/beta', 'topics/beta', 'tag/ABCDEF12', 'books/source/tag/00000003', 'books/source/tag/ABCDEF12'):
+                path = root / route / 'index.html'
+                soup = BeautifulSoup(path.read_text(), 'html.parser')
+                self.assertEqual((path.parent / soup.html['data-redirect'] / 'index.html').resolve(), (root / 'chapters/index.html').resolve())
+                self.assertNotIn('Definition 1.1.3', soup.get_text())
+            check_links(root)
+
     def test_section_keeps_only_the_preferred_version_of_a_shared_result(self):
         old = '<article id="22222222"><p>Definition 1. The repeated statement.</p></article><article class="env-proof"><p>Old source proof.</p></article>'
         preferred = '<article id="33333333"><p>Definition 2. The preferred statement.</p></article><article class="env-proof"><p>Preferred proof.</p></article>'
