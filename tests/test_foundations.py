@@ -105,6 +105,9 @@ See \cref{def:with_underscore,eq:with_underscore}.
             self.assertNotIn(r'\gerbyfootnotemark', definition['statement_tex'])
             self.assertIn(r'\gerbyfootnotemark{', definition['html'])
             self.assertIn('data-footnote-mark=', definition['html'])
+            import re
+            mark = re.search(r'\\gerbyfootnotemark\{([^}]+)\}', definition['html'])[1]
+            self.assertIn('data-footnote-mark="' + mark + '"', definition['html'])
 
 
 if __name__ == "__main__":
