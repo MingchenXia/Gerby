@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Properties of plurisubharmonic functions · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>6C47792FE6D9</code></p><h1>Properties of plurisubharmonic functions</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 1.2 Properties of plurisubharmonic functions <span data-gerby-tag="9CBF08D0"></span></div>
+<p>
+  In this section, we explore the basic properties of plurisubharmonic functions. 
+</p>
+<p>
+Let $X$ be a complex manifold. 
+</p>
+
+<article class="env-proposition" id="sgpt-728E0F43">
+<p><a class="environment-identifier" href="../../tag/0372195E73A0/">Proposition <span data-tag="728E0F43">1.2.1</span>.</a><span data-gerby-tag="728E0F43"></span> Let $\varphi \in \mathrm{PSH}(X)$. Then for any $p\geq 1$, $\varphi \in L^ p_{\mathrm{loc}}(X)$. </p>
+</article> See <span class="cite">[<span class="postnote">Theorem 1.46, Theorem 1.48</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>.<aside class="source-footnote" id="sgpt-a0000002073"><span class="footnote-label">Note.</span> We remind the readers that the third displayed formula in the proof of <span class="cite">[<span class="postnote">Theorem 1.48</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> Step 2 is wrong. But this is irrelevant for our purpose.</aside>
+
+
+<article class="env-proposition" id="sgpt-17642020">
+<p><a class="environment-identifier" href="../../tag/01C3654494E2/">Proposition <span data-tag="17642020">1.2.2</span>.</a><span data-gerby-tag="17642020"></span> </p>
+<ol>
+<li class="custom-item" id="sgpt-88F500A2"><span data-gerby-tag="88F500A2"></span><p>
+ Assume that $(\varphi _ i)_{i\in I}$ is a non-empty family in $\mathrm{PSH}(X)$ that is locally uniformly bounded from above. Then $\operatorname *{sup}_{i\in I}{}\! {}^{*} \varphi _ i\in \mathrm{PSH}(X)$. 
+</p>
+</li><li class="custom-item" id="sgpt-AA511F06"><span data-gerby-tag="AA511F06"></span><p>
+ Assume that $(\varphi _ i)_{i\in I}$ is a decreasing net in $\mathrm{PSH}(X)$ such that $\varphi \coloneqq \inf _{i\in I}\varphi _ i$ is not identically $-\infty $ on any connected component of $X$. Then $\varphi \in \mathrm{PSH}(X)$. Furthermore, $\varphi _ i\xrightarrow {L^1_{\mathrm{loc}}} \varphi $. 
+</p>
+</li>
+</ol>
+</article> Here $\operatorname *{sup}_{}{}\! {}^{*}$ denotes the upper semicontinuous regularization of the supremum. When $I$ is a finite family, observe that 
+
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ i= \sup _{i\in I}\varphi _ i.  \]
+</div>
+<p>
+ When $I=\{ 1,\ldots ,m\} $, we write 
+</p>
+<div class="equation">
+  \[  \varphi _1\lor \cdots \lor \varphi _ m\coloneqq \sup _{i\in I}\varphi _ i.  \]
+</div>
+
+ We refer to <span class="cite">[<span class="postnote">Proposition 1.28, Proposition 1.40</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span><aside class="source-footnote" id="sgpt-a0000002185"><span class="footnote-label">Note.</span> In <span class="cite">[<span class="postnote">Proposition 1.28</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, the second part is only stated for sequences, the net version is obvious using the sub-mean value inequality and the monotone convergence theorem for nets as in <span class="cite">[<span class="postnote">Proposition 7.12</span>, <a href="../../references/#R20821ABFFCDB">Fol99</a>]</span>.</aside><aside class="source-footnote" id="sgpt-a0000002188"><span class="footnote-label">Note.</span> The proof of <span class="cite">[<span class="postnote">Proposition 1.40</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> contains a gap: The measurability of $u$ is not established during the proof, so the claim $u \ast \chi _{\epsilon }$ converges to $u$ in $L^1_{\mathrm{loc}}$ is not valid. One needs to choose the sequence $(v_ j)_ j$ carefully so that $v\leq u$, and use the fact that $v \ast \chi _{\epsilon }$ converges to $v$ in $L^1_{\mathrm{loc}}$ instead.</aside>. 
+
+
+<article class="env-proposition" id="sgpt-BAE53833">
+<p><a class="environment-identifier" href="../../tag/1D624ECF05E9/">Proposition <span data-tag="BAE53833">1.2.3</span> <span class="named">(Choquet's lemma)</span>.</a><span data-gerby-tag="BAE53833"></span> Assume that $X$ has countably many connected components. Assume that $(\varphi _ i)_{i\in I}$ is a non-empty family in $\mathrm{PSH}(X)$ that is locally uniformly bounded from above. There exists a countable subset $J\subseteq I$ such that </p>
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*} \varphi _ i=\operatorname *{sup}_{j\in J}{}\! {}^{*} \varphi _ j.  \]
+</div>
+</article> In the sequel, we say a subset $B\subseteq X$ is a <em>holomorphic ball</em> if $B$ has smooth boundary in $X$, and $B$ is biholomorphic to an open ball in $\mathbb {C}^ n$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $X$ is connected. Since by our convention, the complex manifold $X$ is paracompact, it can be covered by countably many holomorphic balls, so we can easily reduce to the case where $X$ is an open ball in $\mathbb {C}^ n$. In this case, the result is proved in <span class="cite">[<span class="postnote">Lemma 4.31</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-78810EBE">
+<p><a class="environment-identifier" href="../../tag/E2A24FD63150/">Proposition <span data-tag="78810EBE">1.2.4</span>.</a><span data-gerby-tag="78810EBE"></span> A pluripolar set $E\subseteq X$ is a Lebesgue null set. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is a trivial consequence of proposition <a data-tag="728E0F43" href="../../tag/0372195E73A0/">1.2.1</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-65281287">
+<p><a class="environment-identifier" href="../../tag/E10B5F00D3ED/">Proposition <span data-tag="65281287">1.2.5</span>.</a><span data-gerby-tag="65281287"></span> Let $(\varphi _ i)_{i\in I}$ be a non-empty family in $\mathrm{PSH}(X)$ that is locally uniformly bounded from above. Then the set </p>
+<div class="equation">
+  \[  \left\{ x\in X: \sup _{i\in I}\varphi _ i&lt;\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ i \right\}   \]
+</div>
+<p> is pluripolar and hence Lebesgue null. </p>
+</article> See <span class="cite">[<span class="postnote">Corollary 4.28</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>. 
+
+
+<article class="env-proposition" id="sgpt-019E88AA">
+<p><a class="environment-identifier" href="../../tag/FA3AF40B9A0A/">Proposition <span data-tag="019E88AA">1.2.6</span>.</a><span data-gerby-tag="019E88AA"></span> Suppose that $\varphi ,\psi \in \mathrm{PSH}(X)$. If $\varphi \leq \psi $ almost everywhere, then $\varphi \leq \psi $ everywhere. </p>
+<p>In particular, if $\varphi =\psi $ almost everywhere, then $\varphi =\psi $ everywhere. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Replace $\varphi $ by $\varphi \lor \psi $. Then $\varphi ,\psi $ are two plurisubharmonic functions that coincide almost everywhere. The uniqueness statement in theorem <a data-tag="A3F3EE67" href="../../tag/FEFFC91695E0/">1.1.14</a> gives $\varphi =\psi $. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-132F2D3F">
+<p><a class="environment-identifier" href="../../tag/459E68F98F06/">Proposition <span data-tag="132F2D3F">1.2.7</span>.</a><span data-gerby-tag="132F2D3F"></span> Let $(E_ i)_{i\in \mathbb {Z}_{&gt;0}}$ be a sequence of pluripolar sets in $X$. Then </p>
+<div class="equation">
+  \[  E\coloneqq \bigcup _{i=1}^{\infty }E_ i  \]
+</div>
+<p> is also pluripolar. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The problem is local, so we may assume that $X\subseteq \mathbb {C}^ n$ is a bounded domain. In this case, by theorem <a data-tag="E14B3385" href="../../tag/DB05CEAF06C1/">1.1.16</a> for each $i\in \mathbb {Z}_{&gt;0}$ we can choose $\psi _ i\in \mathrm{PSH}(\mathbb {C}^ n)$ such that 
+    
+<div class="equation">
+  \[  \psi _ i|_{E_ i}\equiv -\infty ,\quad \psi _ i|_ X\leq 0  \]
+</div>
+<p>
+       for all $i&gt;0$. By proposition <a data-tag="728E0F43" href="../../tag/0372195E73A0/">1.2.1</a>, we have $\psi _ i|_ X\in L^1(X)$ for all $i&gt;0$. After rescaling, we may also assume that $\| \psi _ i\| _{L^1(X)}\leq 1$ for all $i&gt;0$. 
+    <p>
+      We then define 
+    
+<div class="equation">
+  \[  \psi =\sum _{i=1}^{\infty }2^{-i} \psi _ i|_ X.  \]
+</div>
+<p>
+       Then $\psi \in \mathrm{PSH}(X)$ according to proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a> and $\psi |_{E}=-\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-corollary" id="sgpt-6A1C7D0B">
+<p><a class="environment-identifier" href="../../tag/E23F3D6154AB/">Corollary <span data-tag="6A1C7D0B">1.2.8</span>.</a><span data-gerby-tag="6A1C7D0B"></span> Let $(\varphi _ j)_{j\in \mathbb {Z}_{&gt;0}}$ be a sequence in $\mathrm{PSH}(X)$ such that $\varphi _ j\xrightarrow {L^1_{\mathrm{loc}}}\varphi \in \mathrm{PSH}(X)$. Then </p>
+<div class="equation" id="sgpt-563415A5"><span data-gerby-tag="563415A5"></span>
+<span class="equation-label"><a data-tag="563415A5" href="../../tag/02A6B28E8E8F/">1.2</a></span>
+<div>\begin{equation} \label{eq:L1limsup1} \varphi =\mathop{\vphantom {\operatorname {sup}^{*}}\inf }\limits _{j&gt;0} \operatorname *{sup}_{k\geq j}{}\! {}^{*}\varphi _ k, \end{equation}</div>
+</div>
+<p> and the set </p>
+<div class="equation">
+  \[  \left\{ x\in X: \varphi (x)\neq \varlimsup _{j\to \infty }\varphi _ j(x)\right\}   \]
+</div>
+<p> is pluripolar. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $X$ is connected. 
+    <p>
+      We first observe that $(\varphi _ j)_ j$ is locally uniformly bounded from above. This follows from <span class="cite">[<span class="postnote">Exercise 1.20</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>. 
+    <p>
+      For each $j\geq 1$, let 
+    
+<div class="equation">
+  \[  \psi _ j=\operatorname *{sup}_{k\geq j}{}\! {}^{*}\varphi _ k.  \]
+</div>
+<p>
+       Then $\psi _ j\in \mathrm{PSH}(X)$ by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a>. Moreover, $(\psi _ j)_ j$ is a decreasing sequence and $\psi _ j\geq \varphi _ j$ for all $j$. After considering a subsequence of $(\varphi _ j)_ j$ which converges to $\varphi $ almost everywhere, we get $\varphi \leq \psi \coloneqq \inf _ j \psi _ j$ almost everywhere. In particular, $\psi \in \mathrm{PSH}(X)$ by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a>. 
+    <p>
+      On the other hand, by proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a>, there exist pluripolar sets $Z_ j\subseteq X$ such that 
+    
+<div class="equation">
+  \[  \psi _ j=\sup _{k\geq j}\varphi _ k  \]
+</div>
+<p>
+       on $X\setminus Z_ j$. Let 
+    
+<div class="equation">
+  \[  Z=\bigcup _{j=1}^{\infty } Z_ j.  \]
+</div>
+<p>
+       Then $Z$ is a pluripolar set by proposition <a data-tag="132F2D3F" href="../../tag/459E68F98F06/">1.2.7</a>, and for any $x\in X\setminus Z$, we have $\psi (x)=\varlimsup _ j \varphi _ j(x)$. Moreover, $\psi =\varphi $ almost everywhere by <span class="cite">[<span class="postnote">Theorem 1.46</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, and hence everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. Hence we conclude (<a data-tag="563415A5" href="../../tag/02A6B28E8E8F/">1.2</a>). Moreover, for all $x\in X\setminus Z$, 
+    
+<div class="equation">
+  \[  \varphi (x)=\varlimsup _{j\to \infty } \varphi _ j(x).  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="sgpt-1E88697D">
+<p><a class="environment-identifier" href="../../tag/DAE812E1A818/">Theorem <span data-tag="1E88697D">1.2.9</span> <span class="named">(Brelot, Grauert–Remmert)</span>.</a><span data-gerby-tag="1E88697D"></span> Let $Z$ be an analytic subset in $X$ and $\varphi \in \mathrm{PSH}(X\setminus Z)$. Then the function $\varphi $ admits an extension to $\mathrm{PSH}(X)$ in the following two cases: </p>
+<ol>
+<li class="custom-item" id="sgpt-7EBFD328"><span data-gerby-tag="7EBFD328"></span><p>
+ The set $Z$ has codimension at least $2$ everywhere. 
+</p>
+</li><li class="custom-item" id="sgpt-8621511D"><span data-gerby-tag="8621511D"></span><p>
+ The set $Z$ has codimension at least $1$ everywhere and $\varphi $ is locally bounded from above near each point of $Z$. 
+</p>
+</li>
+</ol>
+<p> In both cases, the extension is unique and is given by </p>
+<div class="equation" id="sgpt-D2476700"><span data-gerby-tag="D2476700"></span>
+<span class="equation-label"><a data-tag="D2476700" href="../../tag/09298412E7CE/">1.3</a></span>
+<div>\begin{equation} \label{eq:GRextvarphiexp} \varphi (x)=\varlimsup _{X\setminus Z\ni y\to x}\varphi (y),\quad x\in Z. \end{equation}</div>
+</div>
+</article>
+
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/63f84933566e4a704f5c.svg"/> <figcaption id="sgpt-5C095515"><span data-gerby-tag="5C095515"></span><a data-tag="5C095515" href="../../tag/F6B6F57ED80E/">1.2</a> Notation in the proof of theorem <a data-tag="1E88697D" href="../../tag/DAE812E1A818/">1.2.9</a> <a data-tag="7EBFD328" href="../../tag/DAE812E1A818/#sgpt-7EBFD328">1</a>.</figcaption> </div>
+</figure>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The extension is unique thanks to proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. We shall prove the existence. 
+    <p>
+<a data-tag="8621511D" href="../../tag/DAE812E1A818/#sgpt-8621511D">2</a> Thanks to the uniqueness of the extension, the problem is local, so we may assume that $X$ is a domain in $\mathbb {C}^ n$ with $n&gt;0$ and there is a non-zero holomorphic function $f$ on $X$ vanishing on $Z$. For each $\epsilon &gt;0$, we claim that the function $\varphi _{\epsilon }$ defined by 
+    
+<div class="equation">
+  \[  \varphi _{\epsilon }(x)\coloneqq \left\{  \begin{aligned}  \varphi (x)+\epsilon \log |f(x)|^2,&amp; \quad x\in X\setminus Z;\\  -\infty ,&amp; \quad x\in Z \end{aligned} \right.  \]
+</div>
+<p>
+       is plurisubharmonic on $X$. By definition <a data-tag="8C5B3349" href="../../tag/6070D2D83EC6/">1.1.3</a>, it suffices to verify the case $n=1$. In this case, we may assume that $Z=\{ 0\} $. It is clear that $ \varphi _{\epsilon }\in \mathrm{SH}(X\setminus Z)$. It suffices to verify the sub-mean value inequality at $0$, which is immediate. 
+    <p>
+      Next observe that the net $\varphi _{\epsilon }$ is increasing as $\epsilon \searrow 0$ and $\varphi _{\epsilon }$ is locally uniformly bounded from above. It follows from proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a> that $\tilde{\varphi }\coloneqq \operatorname *{sup}_{\epsilon &gt;0}{}\! {}^{*}\varphi _{\epsilon }\in \mathrm{PSH}(X)$. Moreover, $\tilde{\varphi }$ clearly extends $\varphi $. Note that (<a data-tag="D2476700" href="../../tag/09298412E7CE/">1.3</a>) follows from the construction. 
+    <p>
+<a data-tag="7EBFD328" href="../../tag/DAE812E1A818/#sgpt-7EBFD328">1</a> We invite the reader to consult <a data-tag="5C095515" href="../../tag/F6B6F57ED80E/">1.2</a> for the notations used in the proof. 
+    <p>
+      Thanks to <a data-tag="8621511D" href="../../tag/DAE812E1A818/#sgpt-8621511D">2</a>, it suffices to verify that $\varphi $ is locally bounded from above near each point of $Z$. The problem is local, so we may assume that $X$ is a domain in $\mathbb {C}^ n$ with $n\geq 2$. 
+    <p>
+      Suppose the assertion fails. Then there exist $z\in Z$ and a sequence $(x_ j)_{j\geq 1}$ in $X\setminus Z$ converging to $z$ such that 
+    
+<div class="equation" id="sgpt-4C0D9E4B"><span data-gerby-tag="4C0D9E4B"></span>
+<span class="equation-label"><a data-tag="4C0D9E4B" href="../../tag/CD940E826F95/">1.6</a></span>
+<div>\begin{equation} \label{eq:limphiinfty_temp1} \lim _{j\to \infty } \varphi (x_ j)=\infty . \end{equation}</div>
+</div>
+
+       Since $Z$ has codimension at least $2$<aside class="source-footnote" id="sgpt-a0000002816"><span class="footnote-label">Note.</span> In fact, codimension at least $1$ suffices for this step.</aside>, we may choose a complex line $L$ through $z$ which meets $Z$ in a discrete set; after shrinking $X$ we may further assume that 
+    
+<div class="equation">
+  \[  L\cap Z=\{ z\} .  \]
+</div>
+<p>
+       Pick an open ball $B_ n(z,r)\Subset X$. After adding a constant to $\varphi $, we may arrange $\varphi &lt;0$ on $L\cap \partial B_ n(z,r)$. Since $\varphi $ is upper semicontinuous, there is an open neighborhood $U\subseteq X\setminus Z$ of $L\cap \partial B_ n(z,r)$ such that 
+    
+<div class="equation">
+  \[  \varphi |_ U&lt;0.  \]
+</div>
+<p>
+      For each $j\geq 1$ we now choose a complex line $L_ j$ through $x_ j$, disjoint from $Z\cap B_ n(z,r)$, with $L_ j\to L$ as $j\to \infty $ (the convergence being in the Grassmannian of affine complex lines in $\mathbb {C}^ n$). The existence of such $L_ j$ is precisely where the assumption $\operatorname {codim} Z\geq 2$ enters: after replacing $B_ n(z,r)$ by a slightly smaller ball if necessary, the closure of $Z\cap B_ n(z,r)$ is analytic in a neighborhood of the closed ball. The projection to the space of directions is proper on this compact analytic set, so by Remmert's theorem its image is contained in a proper analytic subset of $\mathbb {P}^{n-1}$. Hence its complement contains directions arbitrarily close to that of $L$. 
+    <p>
+      For $j$ large enough we now have 
+    
+<div class="equation">
+  \[  L_ j\cap \partial B_ n(z,r)\subseteq U,  \]
+</div>
+<p>
+       so applying the maximum principle to $\varphi |_{L_ j\cap X}$ at $x_ j$ yields $\varphi (x_ j)&lt;0$, contradicting (<a data-tag="4C0D9E4B" href="../../tag/CD940E826F95/">1.6</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-029C16D4">
+<p><a class="environment-identifier" href="../../tag/741322DD572F/">Lemma <span data-tag="029C16D4">1.2.10</span>.</a><span data-gerby-tag="029C16D4"></span> Let $\varphi \in \mathrm{PSH}((\Delta ^*)^ n)$ be an $(S^1)^ n$-invariant plurisubharmonic function. Then $\varphi $ is finite everywhere. </p>
+</article> Here 
+
+<div class="equation">
+  \[  \Delta ^*\coloneqq \{ z\in \mathbb {C}: 0&lt;|z|&lt;1\}   \]
+</div>
+<p>
+ denotes the punctured unit disk. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It clearly suffices to handle the case $n=1$. In this case, by <span class="cite">[<span class="postnote">Theorem 2.12</span>, <a href="../../references/#R08601174C95B">HK76</a>]</span>, the map 
+    
+<div class="equation">
+  \[  \log r\mapsto \int _{0}^{1} \varphi \left(r\mathrm{e}^{2\pi \mathrm{i}\theta }\right)\, \mathrm{d}\theta =\varphi (r)  \]
+</div>
+<p>
+       is a convex function of $\log r$. So, the set $\{ r\in (0,1): \varphi (r)=-\infty \} $ is convex. But $\varphi $ is almost everywhere finite by proposition <a data-tag="728E0F43" href="../../tag/0372195E73A0/">1.2.1</a>. Since $\varphi $ is $S^1$-invariant, $\varphi |_{(0,1)}$ is almost everywhere finite. It follows from the convexity that it is everywhere finite. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="sgpt-E0DBA4DC">
+<p><a class="environment-identifier" href="../../tag/BB26476C13FA/">Proposition <span data-tag="E0DBA4DC">1.2.11</span> <span class="named">(Kiselman's principle)</span>.</a><span data-gerby-tag="E0DBA4DC"></span> Let $\Omega \subseteq \mathbb {C}^ m\times \mathbb {C}^ n$ be a pseudoconvex domain. Assume that for each $z\in \mathbb {C}^ m$, the set </p>
+<div class="equation">
+  \[  \Omega _ z\coloneqq \bigl \{ w\in \mathbb {C}^ n: (z,w)\in \Omega \bigr \}   \]
+</div>
+<p> has the form $E+\mathrm{i}\mathbb {R}^ n$, where $E\subseteq \mathbb {R}^ n$ is a subset. Let $\varphi \in \mathrm{PSH}(\Omega )$, assume that $\varphi $ is independent of the imaginary part of the variable in $\mathbb {C}^ n$. Let $\Omega '$ be the projection of $\Omega $ to $\mathbb {C}^ m$. Define $\psi \colon \Omega '\rightarrow [-\infty ,\infty )$ as follows: </p>
+<div class="equation">
+  \[  \psi (z)=\inf _{w\in \Omega _ z}\varphi (z,w).  \]
+</div>
+<p> Then either $\psi \equiv -\infty $ or $\psi \in \mathrm{PSH}(\Omega ')$. </p>
+</article> See <span class="cite">[<span class="postnote">Theorem 7.5</span>, <a href="../../references/#R67A7837FBEE7">DemBook</a>]</span> for the proof as well as the notion of pseudoconvex domains. 
+
+
+<article class="env-lemma" id="sgpt-4B736FC3">
+<p><a class="environment-identifier" href="../../tag/49CC56CB484C/">Lemma <span data-tag="4B736FC3">1.2.12</span>.</a><span data-gerby-tag="4B736FC3"></span> Let $\Omega \subseteq \mathbb {C}^ n$ be a domain and $\Omega '\subseteq \Omega $ be a subdomain. Consider $\varphi \in \mathrm{PSH}(\Omega )$ and $\psi \in \mathrm{PSH}(\Omega ')$. Assume that </p>
+<div class="equation" id="sgpt-EC6B79C1"><span data-gerby-tag="EC6B79C1"></span>
+<span class="equation-label"><a data-tag="EC6B79C1" href="../../tag/504311AA3518/">1.7</a></span>
+<div>\begin{equation} \label{eq:gluecond} \varliminf _{\substack {\Omega '\ni y\to x,\\ \psi (y)\neq -\infty }}\bigl (\varphi (y)-\psi (y)\bigr )\geq 0 \end{equation}</div>
+</div>
+<p> for any $x\in \Omega \cap \partial \Omega '$. Define </p>
+<div class="equation">
+  \[  \eta (z)=\left\{  \begin{aligned}  \varphi (z)\lor \psi (z),&amp; \quad \text{if }z\in \Omega ',\\  \varphi (z),&amp; \quad \text{if }z\in \Omega \setminus \Omega '. \end{aligned} \right.  \]
+</div>
+<p> Then $\eta \in \mathrm{PSH}(\Omega )$. </p>
+</article> This is essentially <span class="cite">[<span class="postnote">Proposition 1.30</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>. Since the statement in the reference is slightly misleading for our purposes, we include the proof for clarification. 
+
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/8d034d89540a184a5c4e.svg"/> <figcaption id="sgpt-EAB05CBB"><span data-gerby-tag="EAB05CBB"></span><a data-tag="EAB05CBB" href="../../tag/660980D172BD/">1.3</a> Gluing procedure</figcaption> </div>
+</figure>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      See <a data-tag="EAB05CBB" href="../../tag/660980D172BD/">1.3</a> for the notations used in the proof. 
+    <p>
+      Take $\epsilon &gt;0$. We first define 
+    
+<div class="equation">
+  \[  \eta _{\epsilon }(z)=\begin{cases}  \varphi (z)\lor (\psi (z)-2\epsilon ),&amp;  \textup{if }z\in \Omega ';\\  \varphi (z),&amp;  \textup{if }z\in \Omega \setminus \Omega '. \end{cases}  \]
+</div>
+<p>
+       We claim that 
+    
+<div class="equation">
+  \[  \eta _{\epsilon }\in \mathrm{PSH}(\Omega ).  \]
+</div>
+<p>
+       By our assumption, for each $x\in \Omega \cap \partial \Omega '$, we can find an open neighborhood $U_ x\subseteq \Omega $ such that for any $y\in U_ x\cap \Omega '$, we have $\varphi (y)\geq \psi (y)-\epsilon $. Therefore, by taking a union of the $U_ x$'s for various $x$, there is an open neighborhood $U$ of $\Omega \cap \partial \Omega '$ such that 
+    
+<div class="equation">
+  \[  \varphi (y)\geq \psi (y)-\epsilon ,\quad \forall y\in U\cap \Omega '.  \]
+</div>
+<p>
+       Since $U$ contains $\Omega \cap \partial \Omega '$, the set $(\Omega \setminus \Omega ')\cup U$ is open in $\Omega $. On this open set we have $\eta _{\epsilon }=\varphi $, hence $\eta _{\epsilon }$ is plurisubharmonic there. It is plurisubharmonic on $\Omega '$ by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a>. These two descriptions agree on the overlap $U\cap \Omega '$, so our claim follows from the local nature of plurisubharmonicity. 
+    <p>
+      Next we observe that as $\epsilon $ decreases to $0$, the functions $\eta _{\epsilon }$ increase to $\eta $. The family $(\eta _\epsilon )_{0&lt;\epsilon \leq 1}$ is locally uniformly bounded from above. This is clear away from $\Omega \cap \partial \Omega '$. Near $\Omega \cap \partial \Omega '$, applying the previous estimate with $\epsilon =1$ gives an open neighborhood $U_1$ of $\Omega \cap \partial \Omega '$ such that $\psi \leq \varphi +1$ on $U_1\cap \Omega '$, hence $\eta _\epsilon \leq \varphi +1$ on $U_1$ for all $0&lt;\epsilon \leq 1$. Therefore, $\eta ^*\in \mathrm{PSH}(\Omega )$ by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a>. 
+    <p>
+      It remains to observe that $\eta $ is upper semicontinuous. This is only non-trivial on the boundary of $\Omega '$. Take $x\in \Omega \cap \partial \Omega '$ and let $(y_ i)_{i&gt;0}$ be a sequence in $\Omega '$ with limit $x$. We first show that 
+    
+<div class="equation" id="sgpt-40BF1567"><span data-gerby-tag="40BF1567"></span>
+<span class="equation-label"><a data-tag="40BF1567" href="../../tag/19FE6DB3F44A/">1.12</a></span>
+<div>\begin{equation} \label{eq:limsuppsiphitemp1} \varlimsup _{i\to \infty } \psi (y_ i)\leq \varphi (x). \end{equation}</div>
+</div>
+<p>
+       We may assume that $\psi (y_ i)\neq -\infty $ for all $i&gt;0$ and the left-hand side of (<a data-tag="40BF1567" href="../../tag/19FE6DB3F44A/">1.12</a>) is not $-\infty $. Then we can compute 
+    
+<div class="equation">
+  \[  \varlimsup _{i\to \infty } \psi (y_ i)\leq \varlimsup _{i\to \infty } \psi (y_ i)+\varliminf _{i\to \infty } \bigl (\varphi (y_ i)-\psi (y_ i)\bigr )\leq \varlimsup _{i\to \infty }\varphi (y_ i)\leq \varphi (x).  \]
+</div>
+<p>
+       Combining this with the upper semicontinuity of $\varphi $, we get 
+    
+<div class="equation">
+  \[  \varlimsup _{i\to \infty }\bigl (\varphi (y_ i)\lor \psi (y_ i)\bigr )\leq \varphi (x)=\eta (x).  \]
+</div>
+<p>
+       This proves upper semicontinuity across $\Omega \cap \partial \Omega '$. Therefore, $\eta =\eta ^*\in \mathrm{PSH}(\Omega )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+Note that the boundary condition (<a data-tag="EC6B79C1" href="../../tag/504311AA3518/">1.7</a>) enters the proof only through (<a data-tag="40BF1567" href="../../tag/19FE6DB3F44A/">1.12</a>), therefore, we can formulate a variant of <a data-tag="4B736FC3" href="../../tag/49CC56CB484C/">1.2.12</a>: <article class="env-corollary" id="sgpt-A3A928E4">
+<a class="environment-identifier" href="../../tag/79C564A098F9/">Corollary <span data-tag="A3A928E4">1.2.13</span>.</a><span data-gerby-tag="A3A928E4"></span> Let $\Omega \subseteq \mathbb {C}^ n$ be a domain and $\Omega '\subseteq \Omega $ be a subdomain<aside class="source-footnote" id="sgpt-a0000003453"><span class="footnote-label">Note.</span> In <span class="cite">[<span class="postnote">Proposition 1.30</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, Guedj–Zeriahi assumed in addition that $\Omega '$ is relatively compact in $\Omega $. This assumption is not necessary for the proof, and the applications of this proposition in <span class="cite">[<a href="../../references/#RA2F733890274">GZ17</a>]</span> usually do not satisfy this condition.</aside>. Consider $\varphi \in \mathrm{PSH}(\Omega )$ and $\psi \in \mathrm{PSH}(\Omega ')$. Assume that 
+<div class="equation">
+  \[  \varlimsup _{\Omega '\ni y\to x}\psi (y)\leq \varphi (x)  \]
+</div>
+<p> for any $x\in \Omega \cap \partial \Omega '$. Define </p>
+<div class="equation">
+  \[  \eta (z)=\begin{cases}  \varphi (z)\lor \psi (z),&amp; \quad \textup{if }z\in \Omega ';\\  \varphi (z),&amp; \quad \textup{if }z\in \Omega \setminus \Omega '. \end{cases}  \]
+</div>
+<p> Then $\eta \in \mathrm{PSH}(\Omega )$. </p>
+</article>
+
+
+Using the ideas of <a data-tag="4B736FC3" href="../../tag/49CC56CB484C/">1.2.12</a> and the solution of the homogeneous Monge–Ampère equations on a strong pseudoconvex domain, one can prove the following: <article class="env-proposition" id="sgpt-1F7D0D7B">
+<p><a class="environment-identifier" href="../../tag/3EDBDD31B3F1/">Proposition <span data-tag="1F7D0D7B">1.2.14</span>.</a><span data-gerby-tag="1F7D0D7B"></span> Let $\Omega \subseteq \mathbb {C}^ n$ be a domain, let $D \Subset \Omega $ be a strongly pseudoconvex domain, and let $\varphi \in \mathrm{PSH}(\Omega )$ be locally bounded. Then there exists a unique locally bounded $\psi \in \mathrm{PSH}(\Omega )$ such that </p>
+<div class="equation">
+  \[  \begin{cases}  \left(\mathrm{dd}^{\mathrm{c}}\psi \right)^ n = 0&amp;  \textup{on } D,\\  \psi = \varphi &amp;  \textup{on } \Omega \setminus D. \end{cases}  \]
+</div>
+<p> Moreover, $\psi \geq \varphi $. </p>
+</article> See <span class="cite">[<span class="postnote">Proposition 9.1</span>, <a href="../../references/#RFBA7994335E9">BT82</a>]</span> for the proof. We sometimes say $\psi $ is the <em>balayage</em> of $\varphi $ on $D$. 
+
+
+Let us also recall the following domination principle: <article class="env-proposition" id="sgpt-E9311945">
+<p><a class="environment-identifier" href="../../tag/EFFC20773E2E/">Proposition <span data-tag="E9311945">1.2.15</span>.</a><span data-gerby-tag="E9311945"></span> Let $\Omega \subseteq \mathbb {C}^ n$ be a bounded domain. Let $\varphi ,\psi \in \mathrm{PSH}(\Omega )$ be locally bounded. Assume that </p>
+<ol>
+<li class="custom-item" id="sgpt-04357FB5"><span data-gerby-tag="04357FB5"></span><p>
+ for each $z\in \partial \Omega $, we have 
+</p>
+<div class="equation">
+  \[  \varliminf _{\Omega \ni w\to z} \Bigl (\psi (w)-\varphi (w)\Bigr )\geq 0;  \]
+</div>
+</li><li class="custom-item" id="sgpt-D83B065C"><span data-gerby-tag="D83B065C"></span><p>
+ $\varphi \leq \psi $ a.e. with respect to $(\mathrm{dd}^{\mathrm{c}}\psi )^ n$, 
+</p>
+</li>
+</ol>
+<p> Then $\varphi \leq \psi $. </p>
+</article> This is <span class="cite">[<span class="postnote">Corollary 3.31</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>.<aside class="source-footnote" id="sgpt-a0000003633"><span class="footnote-label">Note.</span> The statement in the reference is flawed, but the proof is correct.</aside>
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

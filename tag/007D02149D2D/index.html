@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The trace operator · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/divisors-restriction/">Chapter 17 · B-divisors and restriction</a> · Tag <code>007D02149D2D</code></p><h1>The trace operator</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 8 The trace operator <span data-gerby-tag="66D70026"></span></div>
+<p>
+The goal of this chapter is to give a meaning to the restriction of a quasi-psh singularity to a subvariety. If $\varphi \in \mathrm{QPSH}(X)$ and $Y\subseteq X$ is a subvariety, the naive restriction $\varphi |_ Y$ is often unsatisfactory: it may be identically $-\infty $, or it may fail to preserve quasi-equisingular approximations. 
+</p>
+<p>
+There is a useful analogy with the trace operator in real analysis. A Sobolev function on a domain cannot, in general, be restricted pointwise to the boundary; instead, it admits a trace obtained by approximation using smooth functions, and the trace is well-defined modulo almost everywhere equality. <a data-tag="66D70026" href="../../tag/007D02149D2D/">8</a> summarizes the corresponding dictionary. 
+</p>
+<div class="centered">
+<table class="source-table"><tr><td><p>
+ Real analysis 
+</p>
+</td><td><p>
+ Pluripotential theory 
+</p>
+</td></tr><tr><td><p>
+ smooth functions 
+</p>
+</td><td><p>
+ potentials with analytic singularities 
+</p>
+</td></tr><tr><td><p>
+ Sobolev functions 
+</p>
+</td><td><p>
+ potentials with $\mathcal I$-good singularities 
+</p>
+</td></tr><tr><td><p>
+ Sobolev convergence 
+</p>
+</td><td><p>
+ $d_ S$-convergence 
+</p>
+</td></tr><tr><td><p>
+ equality almost everywhere 
+</p>
+</td><td><p>
+ $P$-equivalence 
+</p>
+</td></tr></table>
+<p>
+<strong>Table 8.1</strong> A dictionary for the trace operator. 
+</p>
+</div>
+<p>
+ The situation here is similar. A singular quasi-psh function need not have a meaningful pointwise restriction to $Y$, but after replacing it by quasi-equisingular approximants and passing to the appropriate $d_ S$-limit of the pointwise restriction of these approximants to $Y$, one obtains a well-defined $P$-singularity type. This is the trace $\operatorname{Tr}_ Y(\varphi )$. 
+</p>
+<p>
+The trace operator is designed to be compatible with the two comparison theories developed earlier. It depends only on the $\mathcal{I}$-singularity type of $\varphi $, and itself is well-defined modulo $P$-equivalence. 
+</p>
+<p>
+The first part of the chapter defines the trace and proves its basic properties: independence of the quasi-equisingular approximation, monotonicity, linearity, compatibility with bimeromorphic pullback, and continuity under decreasing $d_ S$-limits. These results provide the analytic foundation for later applications. 
+</p>
+<p>
+The second part relates the trace operator to restricted volumes. For a big class $\alpha $ and a subvariety $Y$ not contained in the non-Kähler locus, the classical restricted volume $\operatorname{vol}_{X|Y}(\alpha )$ can be expressed as the non-pluripolar volume of the trace of a potential with minimal singularities. We also prove an asymptotic Riemann–Roch formula for the restricted multiplier ideal sheaves. 
+</p>
+<p>
+The final part develops analytic Bertini-type statements. These results describe when multiplier ideals restrict correctly to a general hypersurface and when $\mathcal I$-goodness is preserved under restriction. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

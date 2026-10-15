@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Partial equilibrium measures · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/ideal-goodness/">Chapter 15 · Multiplier-ideal models and partial equilibrium</a> · Tag <code>B13AC61C497D</code></p><h1>Partial equilibrium measures</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 14.2 Partial equilibrium measures <span data-gerby-tag="89559DC1"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$, and $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a pseudo-effective cohomology class. 
+</p>
+
+<article class="env-definition" id="sgpt-BCC4C3CA">
+<p><a class="environment-identifier" href="../../tag/E4ED4F8B05A8/">Definition <span data-tag="BCC4C3CA">14.2.1</span>.</a><span data-gerby-tag="BCC4C3CA"></span> A <em>weighted subset</em> of $X$ is a pair $(K,v)$ consisting of a closed non-pluripolar subset $K\subseteq X$ and a function $v\in C^0(K)$. </p>
+</article> The next result motivates our terminology to call the measures $\theta _{P_{\theta ,K}[\varphi ](f)}^ n$ the <em>partial equilibrium measures</em> of our context: <article class="env-lemma" id="sgpt-EBEB10DF">
+<p><a class="environment-identifier" href="../../tag/D7B3984EBF7A/">Lemma <span data-tag="EBEB10DF">14.2.2</span>.</a><span data-gerby-tag="EBEB10DF"></span> Let $(K,v)$ be a weighted subset of $X$, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-0A546227"><span data-gerby-tag="0A546227"></span>
+<span class="equation-label"><a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a></span>
+<div>\begin{equation} \label{eq:intXminusKthetan_vanish} \int _{X\setminus K}\theta _{P_{\theta ,K}[\varphi ](v)}^ n=0,\quad \int _ K \mathds {1}_{\left\{ P_{\theta ,K}[\varphi ](v)|_ K\neq v\right\} }\theta _{P_{\theta ,K}[\varphi ](v)}^ n=0. \end{equation}</div>
+</div>
+<p> More precisely, we have </p>
+<div class="equation" id="sgpt-907FAB17"><span data-gerby-tag="907FAB17"></span>
+<span class="equation-label"><a data-tag="907FAB17" href="../../tag/D22CB4C7F0CC/">14.24</a></span>
+<div>\begin{equation} \label{eq:thetaPKuv} \theta _{P_{\theta ,K}[\varphi ](v)}^ n\leq \mathds {1}_{\left\{ P_{\theta ,K}[\varphi ](v)|_ K=P_{\theta ,K}[V_{\theta }](v)|_ K=v\right\} }\, \theta _{P_{\theta ,K}[V_{\theta }](v)}^ n. \end{equation}</div>
+</div>
+</article> Here $\{ P_{\theta ,K}[\varphi ](v)|_ K\neq v\} $ and $\{ P_{\theta ,K}[\varphi ](v)|_ K=P_{\theta ,K}[V_{\theta }](v)|_ K=v\} $ are understood as consisting of points of $K$ satisfying these constraints. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first prove (<a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a>) when $\varphi = V_{\theta }$. 
+    <p>
+      Let $S\subseteq X$ be a proper analytic subset, such that $V_{\theta }$ is locally bounded on $X\setminus S$. Such $S$ exists by <a data-tag="9D233D25" href="../../tag/F77E450F00FD/">2.4.6</a>. Fix holomorphic balls $B\Subset B'\Subset X\setminus S$. 
+    <p>
+      By proposition <a data-tag="BAE53833" href="../../tag/1D624ECF05E9/">1.2.3</a> and <a data-tag="72D04C56" href="../../tag/A86A369D4CBF/">14.1.5</a>, we can take an increasing sequence $(\eta _ j)_ j$ in $\mathrm{PSH}(X,\theta )$ such that 
+    
+<div class="equation">
+  \[  \eta _ j\nearrow P_{\theta ,K}[V_{\theta }](v)\textup{ a.e.},\quad \eta _ j|_ K\leq v\textup{ for all }j\geq 1.  \]
+</div>
+<p>
+       Note that $P_{\theta ,K}[V_{\theta }](v)\sim V_{\theta }$ by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>. Take $C&gt;0$ so that 
+    
+<div class="equation">
+  \[  \left.\left( P_{\theta ,K}[V_{\theta }](v) \right)\right|_ K-C\leq v.  \]
+</div>
+<p>
+       Then we may replace $\eta _ j$ by $\eta _ j\lor (P_{\theta ,K}[V_{\theta }](v)-C)$ and assume that $\eta _ j\sim V_{\theta }$ for each $j$. In particular, $\eta _ j$ is locally bounded on $X\setminus S$. 
+    <p>
+      For each $j\geq 1$, let $\gamma _ j\in \mathrm{PSH}(X,\theta )$ be the balayage of $\eta _ j$ on $B$, defined in proposition <a data-tag="C2EEAB25" href="../../tag/5F9E17A436E9/">1.5.9</a>. Note that $(\gamma _ j)_ j$ is increasing due to proposition <a data-tag="E9311945" href="../../tag/EFFC20773E2E/">1.2.15</a>. 
+    <p>
+      For the first equality in (<a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a>), we may assume that $B\Subset X\setminus (S \cup K)$. It suffices to show that $\theta _{P_{\theta ,K}[V_{\theta }](v)}^ n$ does not charge $B$. 
+    <p>
+      Since $B$ lies outside $K$ by assumption, we also have $\gamma _ j|_ K=\eta _ j|_ K \leq v$ for all $j\geq 1$. In particular, $\gamma _ j\leq P_{\theta ,K}[V_{\theta }](v)$. 
+    <p>
+      It follows that $\gamma _ j \nearrow P_{\theta ,K}[V_{\theta }](v)$ almost everywhere as well. Testing against non-negative continuous functions supported in $B$ and using theorem <a data-tag="65F7AFC0" href="../../tag/B3DC3180FF35/">2.4.7</a>, we find that $\theta ^ n_{P_{\theta ,K}[V_{\theta }](v)}$ does not charge $B$, as desired. 
+    <p>
+      We next prove the second equality in (<a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a>). The proof is essentially the same as that of <a data-tag="7C47C63A" href="../../tag/2904B26253E2/">2.4.13</a>. 
+    <p>
+      It suffices to show that $\theta ^ n_{P_{\theta ,K}[V_{\theta }](v)}$ does not charge the set $K\cap \{ P_{\theta ,K}[V_{\theta }](v)|_ K&lt;v\} $. 
+    <p>
+      Let $x\in (X\setminus S) \cap K$ be a point such that $P_{\theta ,K}[V_{\theta }](v)(x)&lt;v(x)-\epsilon $ for some $\epsilon &gt;0$. We may assume that $x\in B$ and $B'$ is small enough, so that 
+    
+<ol>
+<li class="custom-item" id="sgpt-CEEDA9C6"><span data-gerby-tag="CEEDA9C6"></span><p>
+ $P_{\theta ,K}[V_{\theta }](v)|_{\overline{B'}}&lt;v(x)-\epsilon $. 
+</p>
+</li><li class="custom-item" id="sgpt-387210EA"><span data-gerby-tag="387210EA"></span><p>
+ $v|_{\overline{B'}\cap K}&gt;v(x)-\epsilon $. 
+</p>
+</li>
+</ol>
+<p>
+       By <a data-tag="CEEDA9C6" href="../../tag/B13AC61C497D/#sgpt-CEEDA9C6">1</a>, we have $\gamma _ j|_{\partial B}\leq v(x)-\epsilon $, hence by proposition <a data-tag="E9311945" href="../../tag/EFFC20773E2E/">1.2.15</a>, $\gamma _ j|_ B\leq v(x)-\epsilon $. By <a data-tag="387210EA" href="../../tag/B13AC61C497D/#sgpt-387210EA">2</a>, we have $\gamma _ j|_{B\cap K}\leq v|_{B\cap K}$. On the other hand, $\gamma _ j|_{K\setminus B}=\eta _{j}|_{K\setminus B}\leq v|_{K\setminus B}$. Therefore, $\gamma _ j|_ K\leq v$. It follows again that $\gamma _ j\leq P_{\theta ,K}[V_{\theta }](v)$. Therefore, we conclude as in the previous paragraph that $\gamma _ j\nearrow P_{\theta ,K}[V_{\theta }](v)$. Thus, testing against non-negative continuous functions supported in $B$, we conclude that $\theta ^ n_{P_{\theta ,K}[V_{\theta }](v)}$ does not charge $B$ again by theorem <a data-tag="65F7AFC0" href="../../tag/B3DC3180FF35/">2.4.7</a>. 
+    <p>
+<strong>Step 2</strong>. We handle the general case. 
+    <p>
+      By corollary <a data-tag="71A3EC87" href="../../tag/CE1417F951E3/">14.1.11</a>, 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](v) = P_{\theta ,X}[\varphi ]\left(P_{\theta ,K}[V_{\theta }](v)\right).  \]
+</div>
+<p>
+       Now corollary <a data-tag="496CCBFB" href="../../tag/B6EF8456606F/">3.1.8</a> gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  \theta _{P_{\theta ,K}[\varphi ](v)}^ n \leq &amp;  \mathds {1}_{\left\{ P_{\theta ,K}[\varphi ](v) = P_{\theta ,K}[V_{\theta }](v)\right\} } \theta _{P_{\theta ,K}[V_{\theta }](v)}^ n \\  \leq &amp;  \mathds {1}_{\left\{ P_{\theta ,K}[\varphi ](v)|_ K=P_{\theta ,K}[V_{\theta }](v)|_ K=v\right\} }\, \theta _{P_{\theta ,K}[V_{\theta }](v)}^ n, \end{aligned}  \]
+</div>
+<p>
+       where in the second inequality we have used Step 1. Hence (<a data-tag="907FAB17" href="../../tag/D22CB4C7F0CC/">14.24</a>) follows, and <em>a fortiori</em> (<a data-tag="0A546227" href="../../tag/2F195F41BD70/">14.23</a>) follows as well. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-4CFF5B20">
+<p><a class="environment-identifier" href="../../tag/9790F808BF37/">Corollary <span data-tag="4CFF5B20">14.2.3</span>.</a><span data-gerby-tag="4CFF5B20"></span> Let $v\in C^0(K)$ and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-A4662126"><span data-gerby-tag="A4662126"></span>
+<span class="equation-label"><a data-tag="A4662126" href="../../tag/FFCF7AC9E703/">14.27</a></span>
+<div>\begin{equation} \label{eq:thetandoesnotcharge1} \begin{aligned}  \int _{(X\setminus K)\cup \left\{ P_{\theta ,K}[\varphi ](v)&lt;v\right\} }\theta ^ n_{P_{\theta ,K}[\varphi ](v)}=&amp;  0,\\  \int _{(X\setminus K)\cup \left\{ P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)&lt;v\right\} }\theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}=&amp;  0. \end{aligned} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first equation in (<a data-tag="A4662126" href="../../tag/FFCF7AC9E703/">14.27</a>) follows from <a data-tag="EBEB10DF" href="../../tag/D7B3984EBF7A/">14.2.2</a>. For the second, it suffices to observe that 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)=P_{\theta ,K}\left[P_{\theta }[\varphi ]_{\mathcal{I}}\right]_{\mathcal{I}}(v)=P_{\theta ,K}\left[P_{\theta }[\varphi ]_{\mathcal{I}}\right](v)  \]
+</div>
+<p>
+       by corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-definition" id="sgpt-685DB850">
+<p><a class="environment-identifier" href="../../tag/12F5599D8900/">Definition <span data-tag="685DB850">14.2.4</span>.</a><span data-gerby-tag="685DB850"></span> Given $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, we define the <em>partial equilibrium energy</em> functional $\mathcal{E}_{\theta ,K}^{\varphi }\colon C^0(K)\rightarrow \mathbb {R}$ as follows: given $v \in C^0(K)$, we set </p>
+<div class="equation">
+<span class="equation-label">14.30</span>
+<div>\begin{equation}  \mathcal{E}_{\theta ,K}^{\varphi }(v)\coloneqq E_{\theta }^{P_{\theta }[\varphi ]_{\mathcal{I}}}\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right). \end{equation}</div>
+</div>
+</article> Recall that the energy $E_{\theta }^{P_{\theta }[\varphi ]_{\mathcal{I}}}$ functional is defined in definition <a data-tag="40DF40B7" href="../../tag/8A07570966F8/">3.1.35</a>. 
+
+<p>
+Note that by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>, we have 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\in \mathcal{E}^{\infty }\left(X,\theta ;P_{\theta }[\varphi ]_{\mathcal{I}}\right),  \]
+</div>
+<p>
+ so $\mathcal{E}_{\theta ,K}^{\varphi }(v)\in \mathbb {R}$. 
+</p>
+
+<article class="env-proposition" id="sgpt-0540AF93">
+<p><a class="environment-identifier" href="../../tag/765C3766A729/">Proposition <span data-tag="0540AF93">14.2.5</span>.</a><span data-gerby-tag="0540AF93"></span> Let $v,f \in C^0(K)$ and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then $\mathbb {R}\ni t \mapsto \mathcal{E}_{\theta ,K}^{\varphi }(v+tf)$ is differentiable and </p>
+<div class="equation" id="sgpt-1D3D6779"><span data-gerby-tag="1D3D6779"></span>
+<span class="equation-label"><a data-tag="1D3D6779" href="../../tag/0B2DE1BB9170/">14.31</a></span>
+<div>\begin{equation} \label{eq:ddtI} \frac{\mathrm{d}}{\mathrm{d}t}\mathcal{E}_{\theta ,K}^{\varphi }(v+tf) = \int _ K f\,  \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)} \end{equation}</div>
+</div>
+<p> for all $t\in \mathbb {R}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $\varphi $ is $\mathcal{I}$-model by replacing $\varphi $ by $P_{\theta }[\varphi ]_{\mathcal{I}}$. 
+    <p>
+      Note that it suffices to prove (<a data-tag="1D3D6779" href="../../tag/0B2DE1BB9170/">14.31</a>) at $t=0$, which is equivalent to 
+    
+<div class="equation" id="sgpt-ED53530F"><span data-gerby-tag="ED53530F"></span>
+<span class="equation-label"><a data-tag="ED53530F" href="../../tag/94F4F91642C8/">14.32</a></span>
+<div>\begin{equation} \label{eq:to_prove_1} \lim _{t\to 0}\frac{E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)}{t}=\int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}. \end{equation}</div>
+</div>
+<p>
+       It suffices to prove the right derivative at $0$ for an arbitrary $f$; applying the same argument to $-f$ then gives the left derivative. In other words, we need to prove that 
+    
+<div class="equation" id="sgpt-0C5BB3ED"><span data-gerby-tag="0C5BB3ED"></span>
+<span class="equation-label"><a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a></span>
+<div>\begin{equation} \label{eq:to_prove_2} \lim _{t\to 0+}\frac{E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)}{t}=\int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}. \end{equation}</div>
+</div>
+<p>
+      We first reduce the proof of (<a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a>) to the case $f\leq 0$. Assume that this case is known. Choose $A\in \mathbb R$ such that $f-A\leq 0$ on $K$. Since for any $t&gt;0$, 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal I}\Bigl ( v+t(f-A) \Bigr )= P_{\theta ,K}[\varphi ]_{\mathcal I}(v+tf)-tA,  \]
+</div>
+<p>
+       then we have 
+    
+<div class="equation">
+  \[  \int _ K f\,  \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}=\int _ K (f-A)\,  \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}+A\int _ X \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}.  \]
+</div>
+<p>
+       By (<a data-tag="3F192A6A" href="../../tag/BC7744A40FEC/">3.71</a>), for any $t&gt;0$, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\varphi }\Bigl (P_{\theta ,K}[\varphi ]_{\mathcal{I}}\left(v+t(f-A)\right)\Bigr )=E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-tA\int _ X\theta _{\varphi }^ n.  \]
+</div>
+<p>
+       So the limit in (<a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a>) exists and is equal to the left-hand side of (<a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a>) with $f-A$ in place of $f$ plus $A\int _ X\theta _{\varphi }^ n$. So (<a data-tag="0C5BB3ED" href="../../tag/8353FF09478E/">14.33</a>) for $f-A$ implies the desired formula for $f$ in view of <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a> and the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>. Hence we may assume that $f\leq 0$. 
+    <p>
+      Fix $t&gt;0$. Set 
+    
+<div class="equation">
+  \[  \eta _ t\coloneqq P_{\theta ,K}[\varphi ]_{\mathcal I}(v+tf),\quad \eta _0\coloneqq P_{\theta ,K}[\varphi ]_{\mathcal I}(v).  \]
+</div>
+<p>
+       By the comparison principle (<a data-tag="CCB92D06" href="../../tag/EAAF267DE59E/">3.59</a>) and proposition <a data-tag="ABE17BA7" href="../../tag/4280CB108A7E/">3.1.45</a>, we find 
+    
+<div class="equation">
+  \[  \begin{aligned}  E_{\theta }^{\varphi }(\eta _ t)-E_{\theta }^{\varphi }(\eta _0) ={}&amp; \frac{1}{n+1}\sum _{i=0}^ n\int _ X(\eta _ t-\eta _0)\,  \theta _{\eta _ t}^ i\wedge \theta _{\eta _0}^{n-i}\\  \leq {}&amp;  \int _ X(\eta _ t-\eta _0)\, \theta _{\eta _0}^ n. \end{aligned}  \]
+</div>
+<p>
+       By <a data-tag="EBEB10DF" href="../../tag/D7B3984EBF7A/">14.2.2</a> and corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a>, the measure $\theta _{\eta _0}^ n$ is carried by $K\cap \{ \eta _0=v\} $, and the measure $\theta _{\eta _ t}^ n$ is carried by $K\cap \{ \eta _ t=v+tf\} $. On $K\cap \{ \eta _0=v\} $, we have $\eta _ t\leq v+tf=\eta _0+tf$, hence 
+    
+<div class="equation">
+  \[  \eta _ t-\eta _0\leq tf.  \]
+</div>
+<p>
+       On $K\cap \{ \eta _ t=v+tf\} $, we have $\eta _0\leq v$, hence 
+    
+<div class="equation">
+  \[  \eta _ t-\eta _0\geq tf.  \]
+</div>
+<p>
+       It follows that 
+    
+<div class="equation">
+  \[  \int _ X(\eta _ t-\eta _0)\, \theta _{\eta _0}^ n \leq t\int _ K f\, \theta _{\eta _0}^ n  \]
+</div>
+<p>
+       and 
+    
+<div class="equation">
+  \[  \int _ X(\eta _ t-\eta _0)\, \theta _{\eta _ t}^ n \geq t\int _ K f\, \theta _{\eta _ t}^ n.  \]
+</div>
+<p>
+       Thus, letting $t\to 0+$, we get the inequality 
+    
+<div class="equation">
+  \[  \varlimsup _{t\to 0+}\frac{E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)}{t}\leq \int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}.  \]
+</div>
+<p>
+       Similarly, for $t&gt;0$, we have 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)\\  \geq &amp;  \int _ X \left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)-P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)\, \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)}^ n\\  \geq &amp;  t\int _ K f\, \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)}^ n. \end{aligned}  \]
+</div>
+<p>
+       Letting $t\to 0+$, we find 
+    
+<div class="equation">
+  \[  \varliminf _{t\to 0+}\frac{E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)\right)-E_{\theta }^{\varphi }\left(P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\right)}{t}\geq \int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}.  \]
+</div>
+<p>
+       Here we used the following elementary continuity consequence: 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)-t\| f\| _{C^0(K)} \leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf) \leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)  \]
+</div>
+<p>
+       for $t&gt;0$, and hence $P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf) \nearrow P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)$ almost everywhere when $t\to 0+$. Next we claim that 
+    
+<div class="equation">
+  \[  \int _ K f\, \theta ^ n_{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)}\leq \lim _{t\to 0+} \int _ K f\, \theta _{P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v+tf)}^ n.  \]
+</div>
+<p>
+       Choose a continuous extension $\tilde f\in C^0(X)$ of $f$. Since <a data-tag="EBEB10DF" href="../../tag/D7B3984EBF7A/">14.2.2</a>, corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a> show that all the measures appearing here are carried by $K$, the integrals over $K$ against $f$ are the same as the integrals over $X$ against $\tilde f$. Thus corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">2.4.9</a> applies. 
+    <p>
+      We conclude (<a data-tag="ED53530F" href="../../tag/94F4F91642C8/">14.32</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-858E47C8">
+<p><a class="environment-identifier" href="../../tag/D21332713DB8/">Lemma <span data-tag="858E47C8">14.2.6</span>.</a><span data-gerby-tag="858E47C8"></span> Assume that $\{ \theta \} $ represents a big cohomology class. Fix a Kähler form $\omega $ on $X$ and a weighted subset $(K,v)$ of $X$. There exists a uniformly bounded increasing sequence $(v^-_ j)_ j$ in $C^\infty (X)$ and a uniformly bounded decreasing sequence $(v^+_ j)_ j$ in $C^\infty (X)$, such that </p>
+<div class="equation" id="sgpt-F9802846"><span data-gerby-tag="F9802846"></span>
+<span class="equation-label"><a data-tag="F9802846" href="../../tag/32CDA8E3EB57/">14.39</a></span>
+<div>\begin{equation} \label{eq:unf_bd_vj} \sup _ X |v_ j^-|\leq C,\quad \sup _ X |v_ j^+|\leq C \end{equation}</div>
+</div>
+<p> for some constant $C$ depending only on $\| v\| _{C^0(K)}$, $X$, $K$ and $\theta +\omega $. Furthermore, for any $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ and any $\delta \in [0,1]$ we have the following: </p>
+<ol>
+<li class="custom-item" id="sgpt-24DFFBF8"><span data-gerby-tag="24DFFBF8"></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  P_{\theta +\delta \omega ,X}[\varphi ](v_ j^+) \searrow P_{\theta +\delta \omega ,K}[\varphi ](v),  \]
+</div>
+<p>
+ and 
+</p>
+<div class="equation">
+  \[  P_{\theta +\delta \omega ,X}[\varphi ](v^-_ j) \nearrow P_{\theta +\delta \omega ,K}[\varphi ](v)  \]
+</div>
+<p>
+ almost everywhere. 
+</p>
+</li><li class="custom-item" id="sgpt-5CD3789A"><span data-gerby-tag="5CD3789A"></span><p>
+ Suppose in addition that $\varphi $ is $\mathcal{I}$-good, then 
+</p>
+<div class="equation">
+  \[  \lim _{j\to \infty }\mathcal{E}_{\theta ,X}^{\varphi }(v_ j^-)=\mathcal{E}_{\theta ,K}^{\varphi }(v),\quad \lim _{j\to \infty }\mathcal{E}_{\theta ,X}^{\varphi }(v_ j^+)=\mathcal{E}_{\theta ,K}^{\varphi }(v).  \]
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. First we construct $(v^-_ j)_ j$. 
+    <p>
+      Let 
+    
+<div class="equation">
+  \[  C_{K,v} \coloneqq \sup \left\{ \sup _ X \eta : \eta \in \mathrm{PSH}(X,\theta +\omega ), \eta |_ K \leq v\right\} .  \]
+</div>
+<p>
+       Since $K$ is non-pluripolar, we have $C_{K,v} \in \mathbb {R}$ by <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a>. Set 
+    
+<div class="equation">
+  \[  M_{K,v}\coloneqq \max \{ C_{K,v}+1,\sup _ K v\} .  \]
+</div>
+<p>
+       Now define $\widetilde v \colon X \to \mathbb {R}$ as 
+    
+<div class="equation">
+  \[  \widetilde{v}(x)=\left\{  \begin{aligned}  v(x),&amp; \quad x\in K;\\  M_{K,v},&amp; \quad x\in X\setminus K. \end{aligned} \right.  \]
+</div>
+<p>
+       Since $M_{K,v}\geq \sup _ K v$, the function $\widetilde v$ is lower semicontinuous. Therefore there exists an increasing and uniformly bounded sequence $(v^-_ j)_ j$ in $C^\infty (X)$ such that $v^-_ j \nearrow \widetilde v$ and 
+    
+<div class="equation">
+  \[  \| v_ j^-\| _{C^0(X)}\leq \| \tilde{v}\| _{L^{\infty }(X)}+1.  \]
+</div>
+<p>
+       The right-hand side can clearly be bounded by a constant as in (<a data-tag="F9802846" href="../../tag/32CDA8E3EB57/">14.39</a>). 
+    <p>
+<strong>Step 2</strong>. We construct $(v_ j^+)_ j$. 
+    <p>
+      Since 
+    
+<div class="equation">
+  \[  h \coloneqq P_{\theta + \omega ,K}[V_{\theta +\omega }](v) \lor \left(\inf _ K v -1\right)  \]
+</div>
+<p>
+       is usc, there exists a decreasing and uniformly bounded sequence $(v^+_ j)_ j$ in $C^\infty (X)$ such that $v^+_ j \searrow h$. We may guarantee that 
+    
+<div class="equation">
+  \[  \| v^+_ j\| _{C^0(X)}\leq \| h\| _{L^{\infty }(X)}+1.  \]
+</div>
+<p>
+       Note that $\inf _ K v-1\leq h\leq C_{K,v} \lor (\inf _ K v-1)$. So (<a data-tag="F9802846" href="../../tag/32CDA8E3EB57/">14.39</a>) is satisfied. 
+    <p>
+<strong>Step 3</strong>. We finish the proof. Fix $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ and $\delta \in [0,1]$. 
+    <p>
+      Note that <a data-tag="5CD3789A" href="../../tag/D21332713DB8/#sgpt-5CD3789A">2</a> follows from corollary <a data-tag="3796A6E4" href="../../tag/96B842B9BF11/">14.1.9</a>, <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>, proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a> and <a data-tag="24DFFBF8" href="../../tag/D21332713DB8/#sgpt-24DFFBF8">1</a>. Let us prove <a data-tag="24DFFBF8" href="../../tag/D21332713DB8/#sgpt-24DFFBF8">1</a>. 
+    <p>
+<strong>Step 3.1</strong>. We prove <a data-tag="24DFFBF8" href="../../tag/D21332713DB8/#sgpt-24DFFBF8">1</a> for $(v^-_ j)_ j$. 
+    <p>
+      Observe that $P_{\theta + \delta \omega ,X}[\varphi ](v^-_ j)$ is increasing in $j\geq 1$, and 
+    
+<div class="equation">
+  \[  P_{\theta + \delta \omega ,X}[\varphi ]\left(v^-_ j\right)\leq P_{\theta + \delta \omega ,K}[\varphi ](v).  \]
+</div>
+<p>
+       We claim that 
+    
+<div class="equation" id="sgpt-363892A8"><span data-gerby-tag="363892A8"></span>
+<span class="equation-label"><a data-tag="363892A8" href="../../tag/A58ACF533BAE/">14.42</a></span>
+<div>\begin{equation} \label{eq:Pthetapdeltaomega_temp1} P_{\theta + \delta \omega ,X}[\varphi ]\left(v^-_ j\right) \nearrow P_{\theta + \delta \omega ,K}[\varphi ](v)\quad \textup{a.e.}. \end{equation}</div>
+</div>
+<p>
+       Let $\eta \in \mathrm{PSH}(X,\theta +\delta \omega )$ be a potential such that $\eta \preceq \varphi $ and $\eta |_ K\leq v$. Take some $\epsilon &gt;0$. Then, since $\eta $ is upper semicontinuous, $\widetilde v$ is lower semicontinuous and $\eta &lt; \epsilon +\widetilde v$, compactness gives $j_0&gt;0$ such that $\eta &lt; \epsilon + v^-_ j$ for $j \geq j_0$. Hence, 
+    
+<div class="equation">
+  \[  \eta \leq \epsilon +P_{\theta + \delta \omega ,X}[\varphi ](v^-_ j)  \]
+</div>
+<p>
+       for $j\geq j_0$. Therefore, 
+    
+<div class="equation">
+  \[  \eta \leq \operatorname *{sup}_{j\geq 1}{}\! {}^{*} P_{\theta + \delta \omega ,X}[\varphi ]\left(v^-_ j\right)+\epsilon .  \]
+</div>
+<p>
+       Letting $\epsilon \to 0+$, we find 
+    
+<div class="equation">
+  \[  \eta \leq \operatorname *{sup}_{j\geq 1}{}\! {}^{*} P_{\theta + \delta \omega ,X}[\varphi ]\left(v^-_ j\right).  \]
+</div>
+<p>
+       Since $\eta $ is arbitrary, (<a data-tag="363892A8" href="../../tag/A58ACF533BAE/">14.42</a>) follows. 
+    <p>
+<strong>Step 3.2</strong>. We prove <a data-tag="24DFFBF8" href="../../tag/D21332713DB8/#sgpt-24DFFBF8">1</a> for $(v^+_ j)_ j$. 
+    <p>
+      Note that $P_{\theta + \delta \omega ,X}[\varphi ](v^+_ j)$ is decreasing in $j$, and 
+    
+<div class="equation" id="sgpt-5C420E8C"><span data-gerby-tag="5C420E8C"></span>
+<span class="equation-label"><a data-tag="5C420E8C" href="../../tag/11BA40C76F9B/">14.43</a></span>
+<div>\begin{equation} \label{eq:defchilimPthetadeltaomega} \chi \coloneqq \lim _{j\to \infty } P_{\theta + \delta \omega ,X}[\varphi ]\left(v^+_ j\right) \geq P_{\theta + \delta \omega ,K}[\varphi ](v). \end{equation}</div>
+</div>
+<p>
+       In particular, $\chi \in \mathrm{PSH}(X,\theta +\delta \omega )_{&gt;0}$, since $P_{\theta + \delta \omega ,K}[\varphi ](v)$ has the same singularity types as $P_{\theta + \delta \omega }[\varphi ]$ by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>. Observe that 
+    
+<div class="equation">
+  \[  P_{\theta + \delta \omega ,X}[\varphi ]\left(v_ j^+\right)\leq v_ j^+  \]
+</div>
+<p>
+       for all $j\geq 1$, since $v_ j^+$ is continuous. Thus, $\chi \leq h$. On the other hand, $h|_ K\leq v$ quasi-everywhere. So in particular, $\chi |_{K}\leq v$ quasi-everywhere. On the other hand, 
+    
+<div class="equation">
+  \[  \chi \leq P_{\theta + \delta \omega ,X}[\varphi ]\left(v^+_1\right)\sim _ P \varphi  \]
+</div>
+<p>
+       by <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>. Hence, by corollary <a data-tag="DE13EB2D" href="../../tag/72097BEFEC59/">14.1.8</a>, 
+    
+<div class="equation">
+  \[  \chi \leq P_{\theta + \delta \omega ,K}[\varphi ](v).  \]
+</div>
+<p>
+       Therefore, (<a data-tag="5C420E8C" href="../../tag/11BA40C76F9B/">14.43</a>) is an equality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-80FF1720">
+<p><a class="environment-identifier" href="../../tag/9724C0B32032/">Proposition <span data-tag="80FF1720">14.2.7</span>.</a><span data-gerby-tag="80FF1720"></span> Let $(K,v)$ be a weighted subset of $X$. Let $(\varphi _ j)_ j$ be a sequence in $\mathrm{PSH}(X,\theta )_{&gt;0}$ and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then the following hold: </p>
+<ol>
+<li class="custom-item" id="sgpt-FA1325C7"><span data-gerby-tag="FA1325C7"></span><p>
+ If $(\varphi _ j)_ j$ is decreasing, and $\varphi _ j\xrightarrow {d_ S}\varphi $, then 
+</p>
+<div class="equation" id="sgpt-71281688"><span data-gerby-tag="71281688"></span>
+<span class="equation-label"><a data-tag="71281688" href="../../tag/1BDE5E6D4627/">14.44</a></span>
+<div>\begin{equation} \label{eq:PthetaKvarphij1} P_{\theta ,K}[\varphi _ j]_{\mathcal{I}}(v) \searrow P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v),\quad P_{\theta ,K}[\varphi _ j](v) \searrow P_{\theta ,K}[\varphi ](v). \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-0F8D1EB8"><span data-gerby-tag="0F8D1EB8"></span><p>
+ If $\varphi _ j \nearrow \varphi $ almost everywhere then 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi _ j]_{\mathcal{I}}(v) \nearrow P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)\textup{ a.e.},\quad P_{\theta ,K}[\varphi _ j](v) \nearrow P_{\theta ,K}[\varphi ](v) \textup{ a.e.}.  \]
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We only give the proof for the relative $\mathcal{I}$-envelopes; the proof for the relative $P$-envelopes is identical, replacing $P_{\theta }[\bullet ]_{\mathcal{I}}$ by $P_{\theta }[\bullet ]$ and using corollary <a data-tag="DE13EB2D" href="../../tag/72097BEFEC59/">14.1.8</a> for the final candidate condition. 
+    <p>
+      Set 
+    
+<div class="equation">
+  \[  \eta _ j\coloneqq P_{\theta ,K}[\varphi _ j]_{\mathcal{I}}(v),\quad \eta \coloneqq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v).  \]
+</div>
+<p>
+       By <a data-tag="121EADE7" href="../../tag/18E5130ACB80/">14.1.10</a>, $d_ S(\eta _ j,P_{\theta }[\varphi _ j]_{\mathcal{I}})=0$ and $d_ S(\eta ,P_{\theta }[\varphi ]_{\mathcal{I}})=0$ for all $j$. Moreover, theorem <a data-tag="720E23D2" href="../../tag/88D575A3C46A/">6.2.27</a> gives 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi _ j]_{\mathcal{I}}\xrightarrow {d_ S}P_{\theta }[\varphi ]_{\mathcal{I}}  \]
+</div>
+<p>
+       in case <a data-tag="FA1325C7" href="../../tag/9724C0B32032/#sgpt-FA1325C7">1</a>, and the same convergence holds in case <a data-tag="0F8D1EB8" href="../../tag/9724C0B32032/#sgpt-0F8D1EB8">2</a> by corollary <a data-tag="B875A97B" href="../../tag/77738CEC8071/">6.2.9</a> and theorem <a data-tag="720E23D2" href="../../tag/88D575A3C46A/">6.2.27</a>. Consequently, $\eta _ j\xrightarrow {d_ S}\eta $ in both cases. 
+    <p>
+      Assume first that $(\varphi _ j)_ j$ is decreasing. Then $(\eta _ j)_ j$ is decreasing and $\eta _ j\geq \eta $. Let $\eta _\infty \coloneqq \inf _ j \eta _ j$. The Monge–Ampère masses of $\eta _ j$ converge to the mass of $\eta $, by the preceding $d_ S$-convergence and theorem <a data-tag="45C76D02" href="../../tag/713B9E26113B/">6.2.17</a>. Since $\eta _ j\geq \eta _\infty \geq \eta $, the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> gives 
+    
+<div class="equation">
+  \[  \int _ X\theta _{\eta _\infty }^ n=\int _ X\theta _\eta ^ n.  \]
+</div>
+<p>
+       Hence $\eta _ j\xrightarrow {d_ S}\eta _\infty $ by corollary <a data-tag="D2436235" href="../../tag/F84D53FDA599/">6.2.11</a>. The uniqueness of the $d_ S$-limit gives $d_ S(\eta _\infty ,\eta )=0$. Since $\eta _\infty \geq \eta $, proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a> implies $\eta _\infty \sim _ P \eta $. In particular, $\eta _\infty \preceq _{\mathcal{I}}\varphi $ by corollary <a data-tag="B623A66E" href="../../tag/FE600747C81E/">6.1.9</a>. The condition $\eta _\infty \leq v$ on $K$ quasi-everywhere is inherited from the $\eta _ j$'s, so $\eta _\infty $ is a candidate for $P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)$. Thus $\eta _\infty \leq \eta $, and the reverse inequality was already observed. This proves the $\mathcal{I}$-part of <a data-tag="FA1325C7" href="../../tag/9724C0B32032/#sgpt-FA1325C7">1</a>. 
+    <p>
+      Assume next that $\varphi _ j\nearrow \varphi $ almost everywhere. Then $(\eta _ j)_ j$ is increasing and $\eta _ j\leq \eta $. Put $\tilde\eta \coloneqq \operatorname *{sup}_{}{}\! {}^{*}_ j \eta _ j$. By corollary <a data-tag="854E031E" href="../../tag/712499DFC37F/">14.1.6</a> and corollary <a data-tag="B875A97B" href="../../tag/77738CEC8071/">6.2.9</a>, we have $\eta _ j\xrightarrow {d_ S}\tilde\eta $. The $d_ S$-convergence above therefore gives $d_ S(\tilde\eta ,\eta )=0$, hence $\tilde\eta \sim _ P \eta $ by proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a>. In particular, $\tilde\eta \preceq _{\mathcal{I}}\varphi $ by corollary <a data-tag="B623A66E" href="../../tag/FE600747C81E/">6.1.9</a>. Also $\tilde\eta \leq v$ on $K$ quasi-everywhere by proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a>. Hence $\tilde\eta $ is a candidate for $P_{\theta ,K}[\varphi ]_{\mathcal{I}}(v)$, so $\tilde\eta \leq \eta $. Since $\eta _ j\leq \eta $ for all $j$, this proves $\eta _ j\nearrow \eta $ almost everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

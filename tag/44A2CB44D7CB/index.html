@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Positive endpoints and one-sided limits · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>44A2CB44D7CB</code></p><h1>Positive endpoints and one-sided limits</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 14.34.4 Positive endpoints and one-sided limits <span data-gerby-tag="8204763C"></span></div>
+<p>
+For $\lambda \in \Lambda _ h(f)$, write $U_\lambda $ for the greatest solution given by theorem <a data-tag="40C9E96E" href="../../tag/9016C2906071/">14.34.1</a>. When the exponents stay above a fixed $\tau &gt;0$, the solution of a bounded truncated equation at exponent $\tau $ is a common upper barrier for all subsolutions. Together with the maximality of greatest solutions, this barrier gives an order estimate between $U_{\lambda _1}$ and $U_{\lambda _2}$, which controls the positive endpoint of $\Lambda _ h(f)$ and the limits of $U_\lambda $ from the right. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-8797F96A">
+<p><a class="environment-identifier" href="../../tag/A9F34BD594E1/">Lemma <span data-tag="8797F96A">14.34.9</span>.</a><span data-gerby-tag="8797F96A"></span> For every $\tau &gt;0$, there is a nonnegative $t_\tau \in \mathrm{PSH}(X,h)\cap C(X)$ such that every exponential subsolution at an exponent $\lambda \geq \tau $ lies below $t_\tau $. Put $K_\tau =\sup _ Xt_\tau $. If $\tau \leq \lambda _1\leq \lambda _2$ belong to $\Lambda _ h(f)$, then </p>
+<div class="equation">
+  \[  U_{\lambda _2}\geq U_{\lambda _1} -K_\tau \frac{\lambda _2-\lambda _1}{\lambda _2}.  \]
+</div>
+<p> Consequently, $\lambda \mapsto U_\lambda +K_\tau \log (\lambda /\tau )$ is nondecreasing on $\Lambda _ h(f)\cap [\tau ,+\infty )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Set $q=\min (f,1)$, a nonzero bounded density. By theorem <a data-tag="8B6379D9" href="../../tag/CFA579B45DF9/">10.1.2</a>, there is a continuous $w\in \mathrm{PSH}(X,h)$ with $\mathrm{MA}_ h(w)=\mathrm e^{\tau w}q\, \mathrm dV$. Put $t_\tau =w+\max (0,-\inf _ Xw)$. Then $t_\tau \geq 0$ and $t_\tau \geq w$, so for $\lambda \geq \tau $, 
+    
+<div class="equation">
+  \[  \mathrm{MA}_ h(t_\tau )=\mathrm e^{\tau w}q\, \mathrm dV \leq \mathrm e^{\lambda t_\tau }f\, \mathrm dV.  \]
+</div>
+<p>
+       Let $u$ be an exponential subsolution at an exponent $\lambda \geq \tau $, and let $\epsilon &gt;0$. On $\{ t_\tau &lt;u-\epsilon \} $, 
+    
+<div class="equation">
+  \[  \mathrm{MA}_ h(t_\tau ) \leq \mathrm e^{\lambda (u-\epsilon )}f\, \mathrm dV \leq \mathrm e^{-\lambda \epsilon } \mathrm{MA}^{\mathrm{ext}}_ h(u-\epsilon ).  \]
+</div>
+<p>
+       The bounded function $t_\tau $ satisfies $P_{h/2}(t_\tau )\not\equiv -\infty $, and $u-\epsilon \preceq t_\tau $. Thus theorem <a data-tag="1F4338C0" href="../../tag/D70D1E469F9D/">14.1.2</a> gives $t_\tau \geq u-\epsilon $, and letting $\epsilon \downarrow 0$ gives $t_\tau \geq u$. 
+    <p>
+      For the order estimate, put $\delta =K_\tau (\lambda _2-\lambda _1)/\lambda _2$. By the first part, $U_{\lambda _1}\leq t_\tau \leq K_\tau $, so $(\lambda _2-\lambda _1)U_{\lambda _1}\leq \lambda _2\delta $, that is, $\lambda _1U_{\lambda _1}\geq \lambda _2(U_{\lambda _1}-\delta )$. Since the Monge–Ampère measure is unchanged by adding constants, 
+    
+<div class="equation">
+  \begin{align*}  \mathrm{MA}^{\mathrm{ext}}_ h(U_{\lambda _1}-\delta ) &amp; =\mathrm e^{\lambda _1U_{\lambda _1}}f\, \mathrm dV\\ &amp; \geq \mathrm e^{\lambda _2(U_{\lambda _1}-\delta )}f\, \mathrm dV. \end{align*}
+</div>
+<p>
+       Thus $U_{\lambda _1}-\delta $ is an exponential subsolution at $\lambda _2$, and the maximality of $U_{\lambda _2}$ gives $U_{\lambda _2}\geq U_{\lambda _1}-\delta $. Finally, $1-x^{-1}\leq \log x$ for $x\geq 1$; with $x=\lambda _2/\lambda _1$ this gives $\delta \leq K_\tau \log (\lambda _2/\lambda _1)$, which proves the monotonicity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-8C8ABD0B">
+<p><a class="environment-identifier" href="../../tag/9E30269224CD/">Proposition <span data-tag="8C8ABD0B">14.34.10</span>.</a><span data-gerby-tag="8C8ABD0B"></span> Suppose $\Lambda _ h(f)\ne \varnothing $ and $a=\inf \Lambda _ h(f)&gt;0$. Then $a\in \Lambda _ h(f)$ if and only if there are exponents $\lambda _ j&gt;a$ decreasing to $a$ and solutions $u_ j$ at exponent $\lambda _ j$ with $\inf _ j\sup _ Xu_ j&gt; -\infty $. </p>
+<p>If $a\notin \Lambda _ h(f)$, then every sequence of solutions $u_ j$ at exponents $\lambda _ j&gt;a$ decreasing to $a$ satisfies </p>
+<div class="equation">
+  \begin{gather*}  \sup _ Xu_ j\longrightarrow -\infty ,\qquad \mathrm e^{\lambda _ ju_ j}\longrightarrow 0\  \text{uniformly on }X,\\  \| \mathrm{MA}^{\mathrm{ext}}_ h(u_ j)\| _{\mathrm{TV}} \longrightarrow 0, \end{gather*}
+</div>
+<p> where the exponential is zero on the pole sets. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose first that $a\in \Lambda _ h(f)$, let $u_ a$ be a solution at $a$, and put $s=u_ a-\max (0,\sup _ Xu_ a)$. As in the proof of proposition <a data-tag="FF33BCE4" href="../../tag/B2DB6BD3AC4D/">14.34.7</a>, $s$ is an exponential subsolution at every $\lambda \geq a$, so $U_\lambda \geq s$. Hence the greatest solutions at any exponents $\lambda _ j\downarrow a$ have suprema at least $\sup _ Xs&gt;-\infty $. 
+    <p>
+      Conversely, let $\lambda _ j$ and $u_ j$ be as in the statement. The lemma with $\tau =a$ gives the common upper bound $u_ j\leq K_ a$. Write $M_ j=\sup _ Xu_ j$. After extraction, $M_ j\to M\in \mathbb R$ and, by theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>, $u_ j-M_ j\to v$ in $L^1$ for some $v\in \mathrm{PSH}(X,h)$. Then $u_ j\to u=v+M$ in $L^1$ and, after a further extraction, almost everywhere. Since $a\leq \lambda _ j\leq \lambda _1$, $u_ j\leq K_ a$ and $K_ a\geq 0$, the densities $\mathrm e^{\lambda _ ju_ j}f$ are bounded by $\mathrm e^{\lambda _1K_ a}f$, and dominated convergence gives 
+    
+<div class="equation">
+  \[  \mathrm e^{\lambda _ ju_ j}f\longrightarrow \mathrm e^{au}f \quad \text{in }L^1(\mathrm dV).  \]
+</div>
+<p>
+       Lemma <a data-tag="0BA4348E" href="../../tag/8298FD96E154/">14.27.1</a> now gives $\mathrm{MA}^{\mathrm{ext}}_ h(u)\geq \mathrm e^{au}f\, \mathrm dV$. Thus $u$ is an exponential subsolution at $a$, and theorem <a data-tag="40C9E96E" href="../../tag/9016C2906071/">14.34.1</a> gives a solution at $a$. 
+    <p>
+      Finally, suppose $a\notin \Lambda _ h(f)$, and let $u_ j$ be solutions at exponents $\lambda _ j\downarrow a$. If $\sup _ Xu_ j$ did not tend to $-\infty $, a subsequence would satisfy the condition just shown to imply $a\in \Lambda _ h(f)$. Hence $M_ j\to -\infty $. Once $M_ j&lt;0$, since $\lambda _ j\geq a&gt;0$, 
+    
+<div class="equation">
+  \[  0\leq \mathrm e^{\lambda _ ju_ j}\leq \mathrm e^{\lambda _ jM_ j}\leq \mathrm e^{aM_ j} \longrightarrow 0,  \]
+</div>
+<p>
+       and the total mass $\int _ X\mathrm e^{\lambda _ ju_ j}f\, \mathrm dV$ is at most $\mathrm e^{aM_ j}\| f\| _{L^1}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-A5BAF7B3">
+<p><a class="environment-identifier" href="../../tag/B1974D837A1A/">Proposition <span data-tag="A5BAF7B3">14.34.11</span>.</a><span data-gerby-tag="A5BAF7B3"></span> For every $a\in \Lambda _ h(f)$, the greatest solutions satisfy </p>
+<div class="equation">
+  \[  U_\lambda \longrightarrow U_ a \quad \text{in }L^1\text{ and in capacity}\quad (\lambda \downarrow a),  \]
+</div>
+<p> and their Monge–Ampère measures converge in total variation to $\mathrm e^{aU_ a}f\, \mathrm dV$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $K=K_ a$ be the constant of the lemma with $\tau =a$, and let $\lambda _ j&gt;a$ decrease to $a$. By the lemma, the functions 
+    
+<div class="equation">
+  \[  V_ j=U_{\lambda _ j}+K\log (\lambda _ j/a)  \]
+</div>
+<p>
+       decrease and satisfy $V_ j\geq U_ a$. Their limit $V$ therefore belongs to $\mathrm{PSH}(X,h)$ and satisfies $V\geq U_ a$. Dominated convergence between the integrable bounds $U_ a$ and $V_1$ gives $V_ j\to V$ in $L^1$, and lemma <a data-tag="39D08A06" href="../../tag/505602F4CB54/">1.8.12</a> gives convergence in capacity. Since the added constants tend to zero, $U_{\lambda _ j}\to V$ in both senses. 
+    <p>
+      The nonpositive functions $U_{\lambda _ j}-K$ satisfy 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_ h(U_{\lambda _ j}-K)=\mathrm e^{\lambda _ j(U_{\lambda _ j}-K)}\, \mathrm e^{\lambda _ jK}f\, \mathrm dV,  \]
+</div>
+<p>
+       and $\mathrm e^{\lambda _ jK}f\to \mathrm e^{aK}f$ in $L^1$. Theorem <a data-tag="18231A32" href="../../tag/9F0AB366D34B/">14.33.1</a> therefore gives $\mathrm{MA}^{\mathrm{ext}}_ h(V)=\mathrm e^{aV}f\, \mathrm dV$, together with total-variation convergence of the measures $\mathrm{MA}^{\mathrm{ext}}_ h(U_{\lambda _ j})$. Hence $V$ is a solution at $a$, so $V\leq U_ a$ by maximality, while $V\geq U_ a$ by construction. Thus $V=U_ a$. Since every sequence of exponents converging to $a$ from above has a decreasing subsequence, this proves the assertions. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The corrected order also controls approach from the left. The limit solves the equation at the limiting exponent; maximality gives an inequality with the greatest solution there, but does not force equality. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-25F6D608">
+<p><a class="environment-identifier" href="../../tag/0535F55900CB/">Proposition <span data-tag="25F6D608">14.34.12</span>.</a><span data-gerby-tag="25F6D608"></span> Suppose $\Lambda _ h(f)\ne \varnothing $, and put $a_0=\inf \Lambda _ h(f)$. For every $a&gt;a_0$, there is $L_ a\in \mathrm{PSH}(X,h)$ such that </p>
+<div class="equation">
+  \[  U_\lambda \longrightarrow L_ a \quad \text{in }L^1\text{ and in capacity}\quad (\lambda \uparrow a).  \]
+</div>
+<p> It satisfies </p>
+<div class="equation">
+  \[  L_ a\leq U_ a,\qquad \mathrm{MA}^{\mathrm{ext}}_ h(L_ a)=\mathrm e^{aL_ a}f\, \mathrm dV.  \]
+</div>
+<p> The equation measures converge in total variation to this finite measure. The left limit is independent of the auxiliary exponent and of the cofinal sequence used to construct it. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $\tau \in \Lambda _ h(f)$ with $0&lt;\tau &lt;a$; the upper-interval property gives such a choice. Put $K=K_\tau $ from lemma <a data-tag="8797F96A" href="../../tag/A9F34BD594E1/">14.34.9</a> and 
+    
+<div class="equation">
+  \[  V_\lambda =U_\lambda +K\log (\lambda /\tau ) \qquad (\lambda \in \Lambda _ h(f),\  \lambda \geq \tau ).  \]
+</div>
+<p>
+       This family is increasing. For a sequence $\lambda _ j\uparrow a$ with $\tau \leq \lambda _ j&lt;a$, its members lie between the integrable potentials $V_\tau $ and $V_ a$. The upper-envelope construction in section <a data-tag="575A3488" href="../../tag/8EA2EE30DE99/">1.19</a> gives 
+    
+<div class="equation">
+  \[  V^-_ a=\left(\sup _{\tau \leq \lambda &lt;a}V_\lambda \right)^* =\left(\lim _ jV_{\lambda _ j}\right)^*\in \mathrm{PSH}(X,h).  \]
+</div>
+<p>
+       Indeed cofinality and the order give the same pointwise supremum for every such sequence. Regularization changes it only on a pluripolar set. Dominated convergence between the integrable bounds gives $L^1$ convergence to $V^-_ a$, and lemma <a data-tag="39D08A06" href="../../tag/505602F4CB54/">1.8.12</a> gives convergence in capacity. Since the added constants converge, set 
+    
+<div class="equation">
+  \[  L_ a=V^-_ a-K\log (a/\tau ).  \]
+</div>
+<p>
+       Then $U_{\lambda _ j}\to L_ a$ in both topologies and $L_ a\leq U_ a$; the latter inequality survives regularization because $V_ a$ is upper semicontinuous. 
+    <p>
+      The potentials $U_{\lambda _ j}-K$ and their limit $L_ a-K$ are nonpositive. Apply theorem <a data-tag="18231A32" href="../../tag/9F0AB366D34B/">14.33.1</a> with exponents tending to $a&gt;0$ and densities $\mathrm e^{\lambda _ jK}f\to \mathrm e^{aK}f$ in $L^1$. It proves the exact equation and total-variation convergence. 
+    <p>
+      Every sequence approaching $a$ from the left has a cofinal increasing subsequence. If potential convergence in either topology, or total-variation convergence of the equation measures, failed, a sequence staying outside a fixed neighbourhood of the proposed limit would therefore have an increasing subsequence, contrary to the preceding argument. This proves the full left limit and measure convergence. Repeating the construction with another $\tau $ gives the same $L^1$ limit; canonical quasi-plurisubharmonic representatives that agree almost everywhere agree everywhere. Thus the auxiliary choice does not change $L_ a$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-E486FE66">
+<p><a class="environment-identifier" href="../../tag/5E68200DBADD/">Proposition <span data-tag="E486FE66">14.34.13</span>.</a><span data-gerby-tag="E486FE66"></span> Suppose $\Lambda _ h(f)\ne \varnothing $, put $a_0=\inf \Lambda _ h(f)$, and let $L_ a$ be the left limit of proposition <a data-tag="25F6D608" href="../../tag/0535F55900CB/">14.34.12</a>. The set </p>
+<div class="equation">
+  \[  D=\{ a&gt;a_0:L_ a\ne U_ a\}   \]
+</div>
+<p> is at most countable. At every $a&gt;a_0$ with $a\notin D$, the greatest solutions are continuous in $L^1$ and in capacity as $\lambda \to a$, and their equation measures converge in total variation to $\mathrm e^{aU_ a}f\, \mathrm dV$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $a_0&lt;\alpha &lt;\beta $, choose an admitted $0&lt;\tau &lt;\alpha $, and use the corrected family $V_\lambda $ from the preceding proof on $[\alpha ,\beta ]$. Its integrals 
+    
+<div class="equation">
+  \[  I(\lambda )=\int _ XV_\lambda \, \mathrm dV  \]
+</div>
+<p>
+       form a finite bounded increasing real function. For $a\in (\alpha ,\beta ]$, the left-limit proposition gives 
+    
+<div class="equation">
+  \[  I(a)-I(a-)=\int _ X(U_ a-L_ a)\, \mathrm dV.  \]
+</div>
+<p>
+       If $L_ a\ne U_ a$, this quantity is positive: the integrable nonnegative difference cannot vanish almost everywhere without equality of the canonical potentials. For any finite ordered collection of such points, the sum of their jumps is at most $I(\beta )-I(\alpha )$. Consequently there are only finitely many jumps at least $1/m$ for each positive integer $m$, and at most countably many positive jumps. A countable cover by intervals with rational endpoints inside $(a_0,+\infty )$ proves the assertion about $D$. 
+    <p>
+      If $a\notin D$, the left limit is $U_ a$, and proposition <a data-tag="A5BAF7B3" href="../../tag/B1974D837A1A/">14.34.11</a> supplies the same right limit in both topologies and for the equation measures. Splitting an arbitrary approaching sequence into its two sides proves the stated two-sided convergence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Whether an actual jump occurs, or all left limits equal the greatest solution, remains undecided. An intrinsic criterion on $f$ and the existence or nonexistence of a positive excluded endpoint remain separate questions. These one-sided limits concern greatest solutions at positive exponents; they do not identify limits of arbitrary solutions with other singularities or supply a zero-exponent limit. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

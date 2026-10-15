@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Stability for concave equations · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>A73917A5BC62</code></p><h1>Stability for concave equations</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 10.8 Stability for concave equations <span data-gerby-tag="684EBF0C"></span></div>
+<p>
+We now consider fully nonlinear equations defined by a concave symmetric function of the eigenvalues of $\omega ^{-1}(\chi +\mathrm{dd}^{\mathrm{c}}u)$. For such equations, a fixed admissible reference with a strict asymptotic gap replaces the determinant bounds used above: it bounds the positive matrix perturbations of the reference along which the operator stays below a given level. An auxiliary Monge–Ampère equation, whose density is concentrated where the difference of two solutions is nearly maximal, then shows that this set cannot be small. The resulting stability estimate remains uniform when the positive right-hand sides tend to zero. 
+</p>
+<p>
+Throughout this section and the next, $n\geq 2$, and $\chi $ is a fixed smooth real $(1,1)$-form on $X$. In these two sections the letter $f$ denotes the function of eigenvalues introduced below, not the density fixed at the beginning of the chapter. For a smooth real function $w$ and an endomorphism $A$ of $T^{1,0}X$ that is Hermitian with respect to $\omega $, put 
+</p>
+<div class="equation">
+  \[  A_ w=\omega ^{-1}(\chi +\mathrm{dd}^{\mathrm{c}}w),\qquad F(A)=f(\lambda (A)),  \]
+</div>
+<p>
+ where $\lambda (A)\in \mathbb R^ n$ is the vector of eigenvalues of $A$. Let $\Gamma $ be an open convex symmetric cone with $\Gamma _ n\subseteq \Gamma \subseteq \Gamma _1$, where $\Gamma _ n$ is the positive orthant and $\Gamma _1=\{ \sum _ i\lambda _ i&gt;0\} $. Assume that $f\in C^\infty (\Gamma )\cap C^0(\overline\Gamma )$ is symmetric, concave, positive on $\Gamma $, zero on $\partial \Gamma $, and satisfies 
+</p>
+<div class="equation">
+  \[  f_ i&gt;0,\qquad \lim _{t\to \infty }f(t\lambda )=+\infty \quad (\lambda \in \Gamma ),  \]
+</div>
+<p>
+ where $f_ i=\partial f/\partial \lambda _ i$. We call $w$ <em>admissible</em> if $\lambda (A_ w)\in \Gamma $ everywhere. Write $e_1,\ldots ,e_ n$ for the standard basis of $\mathbb R^ n$ and $\mathbf1=(1,\ldots ,1)$. For $\mu \in \Gamma $, define 
+</p>
+<div class="equation">
+  \[  f_{\infty ,i}(\mu )=\lim _{t\to \infty }f(\mu +te_ i),\qquad f_\infty (\mu )=\min _ i f_{\infty ,i}(\mu ),  \]
+</div>
+<p>
+ allowing the value $+\infty $. Fix a smooth admissible function $\underline u$ and positive constants $H_0,\delta _0$. We consider smooth admissible solutions $u$ of 
+</p>
+<div class="equation">
+  \[  F(A_ u)=h,\qquad 0&lt;h\leq H_0,\qquad f_\infty (\lambda (A_{\underline u}(x)))\geq h(x)+\delta _0,  \]
+</div>
+<p>
+ where the right-hand side $h$ is a positive function on $X$; the last condition is the strict asymptotic gap at the reference $\underline u$. The right-hand sides satisfying these two conditions form the <em>family</em> of right-hand sides, and the solutions are normalized by $\inf _ Xu=0$. We call $X,\omega ,\chi ,f,\Gamma ,\underline u,H_0,\delta _0$ the <em>fixed data</em>; all constants in this section depend only on them. Norms are taken with respect to $\omega ^ n$, and $\langle a\rangle _\omega =(\int _ X\omega ^ n)^{-1}\int _ Xa\omega ^ n$ denotes the average of a function $a$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-50965839">
+<p><a class="environment-identifier" href="../../tag/C3049F567279/">Lemma <span data-tag="50965839">10.8.1</span>.</a><span data-gerby-tag="50965839"></span> There are a positive continuous function $H$ on $X$ and constants $r,R,\delta &gt;0$ with the following properties. Every right-hand side in the family satisfies $h\leq H$; on $X$, </p>
+<div class="equation">
+  \[  \mu -2r\mathbf1\in \Gamma ,\qquad f_\infty (\mu -2r\mathbf1)\geq H+3\delta , \qquad \mu =\lambda (A_{\underline u});  \]
+</div>
+<p> and at every point of $X$, every positive semidefinite Hermitian endomorphism $P$ satisfies </p>
+<div class="equation">
+  \[  F(A_{\underline u}-r\operatorname {Id}+P)\leq H+2\delta \quad \Longrightarrow \quad P\leq R\operatorname {Id}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Each $f_{\infty ,i}$ is an increasing limit of positive concave functions, hence concave with values in $(0,+\infty ]$. Suppose it is infinite at one point and finite at another point of $\Gamma $. Extend the segment joining them slightly beyond the second point, inside the open cone. The second point is then an interior point of the longer segment, so concavity forces the value there to be infinite, a contradiction. Thus $f_{\infty ,i}$ is either finite everywhere, and then continuous, or infinite everywhere. By symmetry, the same alternative holds for every $i$. 
+    <p>
+      Take $\delta =\frac18\min \{ \delta _0,\min _ Xf(\mu )\} &gt;0$. In the finite case set $H=\min \{ H_0,f_\infty (\mu )-4\delta \} $; otherwise set $H=H_0$. Since $f_\infty (\mu )\geq f(\mu )\geq 8\delta $, this function is positive. The conditions on the family give $h\leq H$ and $f_\infty (\mu )\geq H+4\delta $. Since $\mu (X)$ is a compact subset of $\Gamma $ and the functions $f_{\infty ,i}$ are continuous (or identically infinite), a sufficiently small $r&gt;0$ gives $\mu -2r\mathbf1\in \Gamma $ and $f_\infty (\mu -2r\mathbf1)\geq H+3\delta $ on $X$. 
+    <p>
+      If the matrix bound failed, there would be points $x_ j\to x_*$ and $P_ j\geq 0$ with unbounded norms and $F(A_{\underline u}(x_ j)-r\operatorname {Id}+P_ j)\leq H(x_ j)+2\delta $. By monotonicity of eigenvalues, the ordered eigenvalues $\lambda ^{(j)}$ of $A_{\underline u}(x_ j)-r\operatorname {Id}+P_ j$ satisfy $\lambda _ i^{(j)}\geq \mu _ i(x_ j)-r$. Their sum tends to infinity, so some component $k$ tends to infinity along a subsequence. For every fixed $t&gt;0$, eventually 
+    
+<div class="equation">
+  \[  \lambda ^{(j)}\geq \mu (x_*)-2r\mathbf1+te_ k.  \]
+</div>
+<p>
+       Since $f$ is increasing in each variable, letting $t\to \infty $ shows that the lower limit of $F(A_{\underline u}(x_ j)-r\operatorname {Id}+P_ j)$ is at least $f_\infty (\mu (x_*)-2r\mathbf1)\geq H(x_*)+3\delta $, which contradicts the upper bound $H(x_ j)+2\delta $. Adding positive semidefinite matrices preserves the cone, so all these comparisons take place in $\Gamma $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-2DCE6D3A">
+<p><a class="environment-identifier" href="../../tag/877A402699F6/">Proposition <span data-tag="2DCE6D3A">10.8.2</span>.</a><span data-gerby-tag="2DCE6D3A"></span> Every solution satisfies $0\leq u\leq C$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $\theta =\chi +\mathrm{dd}^{\mathrm{c}}\underline u$ and $w=u-\underline u-\sup _ X(u-\underline u)\leq 0$. Since $\Gamma \subseteq \Gamma _1$, we have $\operatorname {tr}_\omega \mathrm{dd}^{\mathrm{c}}w\geq -\operatorname {tr}_\omega \theta \geq -C$. The Green-kernel argument in the proof of proposition <a data-tag="212AEE83" href="../../tag/60FD5A56EE10/">9.10.1</a>, applied to the operator $\operatorname {tr}_\omega \mathrm{dd}^{\mathrm{c}}$, therefore bounds $\| w\| _{L^1}$ uniformly. 
+    <p>
+      Center a holomorphic coordinate ball of fixed size at a minimum point of $w$, and rescale it to the real unit ball. For a fixed sufficiently small $\varepsilon &gt;0$, set $q=w+\varepsilon |x|^2$ and $m=\min _ Xw$. The real contact-set construction of (<a data-tag="54915159" href="../../tag/8F909795AE16/">9.22</a>) gives a compact set $E$ on which 
+    
+<div class="equation">
+  \[  D^2q\geq 0,\qquad q\leq m+\varepsilon /2, \qquad |B_{\varepsilon /2}|\leq \int _ E\det D^2q\, \mathrm dx.  \]
+</div>
+<p>
+       On $E$, $\mathrm{dd}^{\mathrm{c}}w\geq -C\varepsilon \omega $. Choose $\varepsilon $ so that $C\varepsilon &lt;r$. Then $P=\omega ^{-1}(\mathrm{dd}^{\mathrm{c}}w+r\omega )\geq 0$ and 
+    
+<div class="equation">
+  \[  F(A_{\underline u}-r\operatorname {Id}+P)=F(A_ u)=h\leq H.  \]
+</div>
+<p>
+       Lemma <a data-tag="50965839" href="../../tag/C3049F567279/">10.8.1</a> bounds $P$, and hence the complex trace of the Hessian of $q$. The nonnegative real Hessian of $q$ on $E$ therefore has bounded trace, and hence bounded determinant, so the contact inequality implies $|E|\geq c&gt;0$. Since $w\leq m+\varepsilon /2$ on $E$, the $L^1$ bound gives $c(-m-\varepsilon /2)\leq C$. This bounds the oscillation of $w$, hence that of $u$; with the normalization $\inf _ Xu=0$, this is the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-B08640AA">
+<p><a class="environment-identifier" href="../../tag/0F1A655FC651/">Theorem <span data-tag="B08640AA">10.8.3</span>.</a><span data-gerby-tag="B08640AA"></span> There is a constant $C$, depending only on the fixed data, such that any two normalized solutions $u_1,u_2$ with right-hand sides $h_1,h_2$ in the family satisfy </p>
+<div class="equation">
+  \[  \| u_1-u_2\| _\infty \leq C\bigl (\| h_1-h_2\| _\infty +\| u_1-u_2\| _{L^1}\bigr ).  \]
+</div>
+<p> In particular, $C$ does not depend on a positive lower bound for the $h_ i$ or on bounds for their derivatives. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Set $a=u_1-\underline u$, $b=u_2-\underline u$ and $\theta =\chi +\mathrm{dd}^{\mathrm{c}}\underline u$. By proposition <a data-tag="2DCE6D3A" href="../../tag/877A402699F6/">10.8.2</a>, $|a|,|b|\leq C_0$ for a fixed $C_0\geq 1$. It suffices to bound $s=\max _ X(b-a)$ when it is positive; the opposite difference is handled by interchanging the solutions. 
+    <p>
+      Fix $r,R,\delta $ from lemma <a data-tag="50965839" href="../../tag/C3049F567279/">10.8.1</a> and put $\alpha =r\omega $. For every smooth positive $\rho $ with 
+    
+<div class="equation">
+  \[  \rho \geq \tfrac 12,\qquad \langle \rho \rangle _\alpha =1,\qquad \langle \rho ^2\rangle _\alpha \leq 4,  \]
+</div>
+<p>
+       theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">9.1.1</a> gives a smooth solution 
+    
+<div class="equation">
+  \[  (\alpha +\mathrm{dd}^{\mathrm{c}}\psi )^ n=c\rho \alpha ^ n,\qquad \alpha +\mathrm{dd}^{\mathrm{c}}\psi &gt;0,\qquad \sup _ X\psi =0.  \]
+</div>
+<p>
+       At a maximum of $\psi $, $c\rho \leq 1$, so $c\leq 2$. Apply theorem <a data-tag="FD57C562" href="../../tag/EA32B8891E2B/">10.3.3</a> with $p=2$ and background $\alpha $. Its potential and lower-density bounds give fixed $c_0,C_\psi &gt;0$ with 
+    
+<div class="equation">
+  \[  c\geq c_0,\qquad -C_\psi \leq \psi \leq 0.  \]
+</div>
+<p>
+       These constants depend only on the three bounds for $\rho $, and not on the cutoff function chosen below. 
+    <p>
+      Choose $\kappa &gt;0$ so that $2C_0\kappa \leq 1/4$, $\kappa C_0\leq 1/16$ and $\kappa C_\psi /2\leq 1/16$. Next choose $M\geq 1$ with $2^{-n}c_0Mr^ n&gt;R^ n$, and then $\varepsilon _0&gt;0$ with 
+    
+<div class="equation">
+  \[  \tfrac {16}{7}\varepsilon _0\leq \min \{ (2M)^{-1},M^{-2}\} .  \]
+</div>
+<p>
+       If one of the inequalities 
+    
+<div class="equation">
+  \[  \| h_1-h_2\| _\infty \leq \kappa \delta s, \qquad \langle (b-a)_+\rangle _\omega \leq \varepsilon _0s.  \]
+</div>
+<p>
+       fails, then $s\leq C(\| h_1-h_2\| _\infty +\| u_1-u_2\| _{L^1})$, with $C$ depending only on $\kappa ,\delta ,\varepsilon _0$ and the volume of $X$. We assume both and derive a contradiction. Put $t=\kappa s$; since $s\leq 2C_0$, we have $t\leq 1/4$. On $\Omega =\{ (1-t)b-a&gt;s/2\} $, we have $b-a&gt;7s/16$, so by Chebyshev's inequality the relative volume of $\Omega $ is at most $16\varepsilon _0/7$. 
+    <p>
+      Take a smooth $\zeta :\mathbb R\to [0,1]$, zero on $(-\infty ,1/2]$ and one on $[3/4,\infty )$, and set 
+    
+<div class="equation">
+  \[  \rho =b_0+M\zeta \bigl (((1-t)b-a)/s\bigr ),\qquad b_0=1-M\bigl \langle \zeta \bigl (((1-t)b-a)/s\bigr )\bigr \rangle _\omega .  \]
+</div>
+<p>
+       The second term is supported in $\Omega $, so $1/2\leq b_0\leq 1$ and $\langle \rho ^2\rangle _\alpha \leq 2+2M^2(16\varepsilon _0/7)\leq 4$; here we use that averages with respect to $\alpha =r\omega $ and $\omega $ agree. Thus the auxiliary solution for this $\rho $ satisfies the bounds with the same constants $c_0,C_\psi $. 
+    <p>
+      At a point where $b-a=s$, the function $\Phi =(1-t)b-a+t\psi /2$ is at least $7s/8$, by the choice of $\kappa $. At a maximum point $x_0$ of $\Phi $, therefore, $(1-t)b-a\geq 7s/8$ because $\psi \leq 0$, and so $\rho (x_0)\geq M$. The second derivative test gives, at $x_0$, 
+    
+<div class="equation">
+  \[  P=\alpha +\mathrm{dd}^{\mathrm{c}}\bigl ((a-(1-t)b)/t\bigr ) \geq \tfrac 12(\alpha +\mathrm{dd}^{\mathrm{c}}\psi )+\tfrac 12\alpha &gt;0.  \]
+</div>
+<p>
+       The identity 
+    
+<div class="equation">
+  \[  \theta +\mathrm{dd}^{\mathrm{c}}a =t\bigl ((\theta -\alpha )+P\bigr )+(1-t)(\theta +\mathrm{dd}^{\mathrm{c}}b)  \]
+</div>
+<p>
+       and concavity imply 
+    
+<div class="equation">
+  \[  F\bigl (\omega ^{-1}((\theta -\alpha )+P)\bigr ) \leq h_2+(h_1-h_2)/t\leq H+\delta .  \]
+</div>
+<p>
+       Both forms in the convex combination are admissible, since $\mu -r\mathbf1\in \Gamma $ and $P&gt;0$. By lemma <a data-tag="50965839" href="../../tag/C3049F567279/">10.8.1</a>, $P\leq R\omega $. On the other hand, $P\geq \frac12(\alpha +\mathrm{dd}^{\mathrm{c}}\psi )$, so the auxiliary equation gives 
+    
+<div class="equation">
+  \[  R^ n\geq P^ n/\omega ^ n \geq 2^{-n}c\rho r^ n\geq 2^{-n}c_0Mr^ n&gt;R^ n,  \]
+</div>
+<p>
+       a contradiction. Hence one of the two smallness inequalities fails, which gives the required bound for $s$. Interchanging the solutions proves the theorem. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-08818D38">
+<p><a class="environment-identifier" href="../../tag/E9194EDCB1FF/">Corollary <span data-tag="08818D38">10.8.4</span>.</a><span data-gerby-tag="08818D38"></span> Let $\mathcal H$ be a set of right-hand sides in the family that is equicontinuous. Then the normalized solutions with right-hand sides in $\mathcal H$ form a precompact subset of $C^0(X)$ and have a common modulus of continuity. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Admissibility and $\Gamma \subseteq \Gamma _1$ give $\operatorname {tr}_\omega \mathrm{dd}^{\mathrm{c}}u\geq -C$. By theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>, there is a smooth function $\rho _0&gt;0$ with $\mathrm{dd}^{\mathrm{c}}(\rho _0\omega ^{n-1})=0$, so that $\int _ X\mathrm{dd}^{\mathrm{c}}\varphi \wedge \rho _0\omega ^{n-1}=0$ for every smooth $\varphi $. Integrating the product rule $\mathrm{dd}^{\mathrm{c}}(u^2)=2u\mathrm{dd}^{\mathrm{c}}u+2\mathrm du\wedge \mathrm d^{\mathrm c}u$ against $\rho _0\omega ^{n-1}$, and using $0\leq u\leq C$ from proposition <a data-tag="2DCE6D3A" href="../../tag/877A402699F6/">10.8.2</a>, we obtain a uniform bound for $\int _ X|\mathrm du|_\omega ^2\omega ^ n$, because $\rho _0$ is bounded above and below. Rellich's theorem therefore gives precompactness in $L^1$. 
+    <p>
+      Given a sequence of such solutions, the Arzelà–Ascoli theorem gives a subsequence whose right-hand sides converge uniformly, since they are equicontinuous and bounded by $H_0$. A further subsequence of the solutions is Cauchy in $L^1$, and theorem <a data-tag="B08640AA" href="../../tag/0F1A655FC651/">10.8.3</a> makes it uniformly Cauchy. This proves precompactness in $C^0(X)$. A common modulus of continuity follows from a finite uniform $\varepsilon /3$-net, since each of its finitely many members is uniformly continuous. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

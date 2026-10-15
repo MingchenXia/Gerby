@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Compactness with a common lower barrier · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>D6040BDF0454</code></p><h1>Compactness with a common lower barrier</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 14.8 Compactness with a common lower barrier <span data-gerby-tag="88CBEE53"></span></div>
+<p>
+We return to a semipositive big background $\theta $. Convergence of potentials in $L^1$ does not by itself imply convergence of their Monge–Ampère measures. We give a criterion for convergence in capacity when the potentials stay within a bounded distance of a reference admitting a smaller-background envelope. This common lower barrier ensures that all finite and infinite rooftop envelopes of the sequence are $\theta $-plurisubharmonic. A small error integral of each potential against its own Monge–Ampère measure bounds the corresponding error of the rooftops by a summable tail. Weighted lower semicontinuity passes this bound to the limit, and singular domination identifies the limit of the lower envelopes with the $L^1$ limit. Squeezing the sequence between lower and upper envelopes then gives convergence in capacity, and a domination of the measures also controls their mass on deep sublevels. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-805DF158">
+<p><a class="environment-identifier" href="../../tag/A15C1A7CB4F8/">Theorem <span data-tag="805DF158">14.8.1</span>.</a><span data-gerby-tag="805DF158"></span> Let $\theta \geq 0$ be big. Suppose $\varphi \in \mathrm{PSH}(X,\theta )$ satisfies $P_{\delta \theta }(\varphi )\not\equiv -\infty $ for some $0&lt;\delta &lt;1$. Let $u_ j\in \mathrm{PSH}(X,\theta )$ satisfy, for a fixed $C$, </p>
+<div class="equation">
+  \[  \varphi -C\leq u_ j\leq \varphi +C,\qquad u_ j\longrightarrow u\text{ in }L^1(X).  \]
+</div>
+<p> If </p>
+<div class="equation" id="non-kahler-pluripotential-theory-F81301C1"><span data-gerby-tag="F81301C1"></span>
+<span class="equation-label"><a data-tag="F81301C1" href="../../tag/B172EB5C34CB/">14.10</a></span>
+<div>\begin{equation} \label{eq:common-barrier-self-error} I_ j:=\int _ X|\mathrm{e}^{u_ j}-\mathrm{e}^ u|\,  \mathrm{MA}^{\mathrm{ext}}_\theta (u_ j)\longrightarrow 0, \end{equation}</div>
+</div>
+<p> then $u_ j\to u$ in capacity. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The canonical representative of the limit also lies between $\varphi -C$ and $\varphi +C$. It suffices to show that every subsequence has a further subsequence converging in capacity. We may therefore assume that $I_ j\leq 2^{-j}$ and that $u_ j\to u$ almost everywhere. For $N\geq j$ define 
+    
+<div class="equation">
+  \[  p_{j,N}=P_\theta (\min \{ u_ j,\ldots ,u_ N\} ),\qquad p_ j=P_\theta \left(\inf _{\ell \geq j}u_\ell \right).  \]
+</div>
+<p>
+        All these envelopes lie between $\varphi -C$ and $\varphi +C$. The contact theorem and ordered contact give an inequality for the finite rooftops. Partition the contact set of $p_{j,N}$ according to the first index $\ell $ for which $p_{j,N}=u_\ell $. On the corresponding piece, the measure of $p_{j,N}$ is bounded by that of $u_\ell $, and $\mathrm{e}^{p_{j,N}}=\mathrm{e}^{u_\ell }$. Therefore 
+    
+<div class="equation">
+  \[  \int _ X|\mathrm{e}^{p_{j,N}}-\mathrm{e}^ u|\,  \mathrm{MA}^{\mathrm{ext}}_\theta (p_{j,N}) \leq \sum _{\ell =j}^ N I_\ell \leq 2^{1-j}.  \]
+</div>
+<p>
+       Only positive measures enter this argument, so it applies also when their total masses are infinite. 
+    <p>
+      As $N\to \infty $, $p_{j,N}$ decreases to $p_ j$; the limit is the envelope of the infimum because every competitor lies below every finite rooftop. The sequence $p_ j$ increases, and its canonical limit $p$ is $\theta $-plurisubharmonic. By lemma <a data-tag="39D08A06" href="../../tag/505602F4CB54/">1.8.12</a>, both monotone limits hold in capacity. Applying lemma <a data-tag="F1DA4E83" href="../../tag/64174941A7D1/">6.3.1</a> to the bounded nonnegative weights $|\mathrm{e}^{p_{j,N}}-\mathrm{e}^ u|$, first in $N$ and then in $j$, we obtain 
+    
+<div class="equation">
+  \[  \int _ X|\mathrm{e}^ p-\mathrm{e}^ u|\, \mathrm{MA}^{\mathrm{ext}}_\theta (p)=0.  \]
+</div>
+<p>
+       The inequalities $p_ j\leq u_\ell $ for all $\ell \geq j$ imply $p\leq u$, first almost everywhere and then for the canonical representatives. Also $p\sim u\sim \varphi $. Off the pole sets, $\mathrm{e}^ p&lt;\mathrm{e}^ u$ exactly on $\{ p&lt;u\} $, so $\mathrm{MA}^{\mathrm{ext}}_\theta (p)(\{ p&lt;u\} )=0$. Since $P_{\delta \theta }(\varphi )-C$ is a competitor for $P_{\delta \theta }(p)$, the latter is not identically $-\infty $. Theorem <a data-tag="1F4338C0" href="../../tag/D70D1E469F9D/">14.1.2</a>, applied with coefficient zero, gives $p\geq u$, and hence $p=u$. 
+    <p>
+      Finally, by Hartogs' lemma and the almost-everywhere convergence, $U_ j=(\sup _{\ell \geq j}u_\ell )^*$ decreases to $u$. The inequalities $p_ j\leq u_ j\leq U_ j$, together with the convergence in capacity of both monotone sequences, prove the claim. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-786C08E2">
+<p><a class="environment-identifier" href="../../tag/EFAF50966FDF/">Proposition <span data-tag="786C08E2">14.8.2</span>.</a><span data-gerby-tag="786C08E2"></span> In theorem <a data-tag="805DF158" href="../../tag/A15C1A7CB4F8/">14.8.1</a>, the two bounds on $u_ j$ may be replaced by </p>
+<div class="equation">
+  \[  \varphi -C\leq u_ j\leq C,  \]
+</div>
+<p> provided that the $L^1$ limit satisfies $u\preceq \varphi $. In particular, the approximants may be bounded while $\varphi $ is unbounded. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The $L^1$ limit satisfies $u\geq \varphi -C$, so the additional hypothesis gives $u\sim \varphi $. We repeat the construction of the finite rooftops in the theorem. Every $p_{j,N}$ is still $\theta $-plurisubharmonic and lies between $\varphi -C$ and $C$, which is enough for contact support and for the boundedness of the exponential weights. The resulting inequality is again 
+    
+<div class="equation">
+  \[  \int _ X|\mathrm{e}^{p_{j,N}}-\mathrm{e}^ u|\,  \mathrm{MA}^{\mathrm{ext}}_\theta (p_{j,N})\leq 2^{1-j}.  \]
+</div>
+<p>
+       The limits $p_ j$ exist because of the common lower bound, and $p_ j\leq u$ follows from $p_ j\leq u_\ell $ for every $\ell \geq j$ and almost-everywhere convergence. Thus $\varphi -C\leq p_ j\leq u$, so all $p_ j$ and their increasing limit $p$ have the same ordinary singularity type as $\varphi $. Monotone convergence in capacity and weighted lower semicontinuity give $\mathrm{MA}^{\mathrm{ext}}_\theta (p)(\{ p&lt;u\} )=0$, and singular domination applies to $(p,u)$ exactly as before, so $p=u$. The upper envelopes of the tails decrease to $u$, and the same squeezing argument gives convergence in capacity. Neither the finite rooftops nor the individual approximants needed to have the singularity type of $\varphi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-C466047F">
+<p><a class="environment-identifier" href="../../tag/F856D22ADF4C/">Corollary <span data-tag="C466047F">14.8.3</span>.</a><span data-gerby-tag="C466047F"></span> In the setting of theorem <a data-tag="805DF158" href="../../tag/A15C1A7CB4F8/">14.8.1</a>, with the bounds $\varphi -C\leq u_ j\leq \varphi +C$, suppose either </p>
+<ol>
+<li><p>
+$\mathrm{MA}^{\mathrm{ext}}_\theta (u_ j)\leq \nu $ for a fixed finite non-pluripolar measure $\nu $; or 
+</p>
+</li><li><p>
+$\mathrm{MA}^{\mathrm{ext}}_\theta (u_ j)\leq A\omega _{w_ j}^ n$, where $A$ is fixed and $w_ j\in \mathrm{PSH}(X,\omega )$ are uniformly bounded and converge in capacity to a bounded $w$. 
+</p>
+</li>
+</ol>
+<p> Then $u_ j\to u$ in capacity, all the measures $\mathrm{MA}^{\mathrm{ext}}_\theta (u_ j)$ and $\mathrm{MA}^{\mathrm{ext}}_\theta (u)$ have finite mass, and </p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\theta (u_ j) \rightharpoonup \mathrm{MA}^{\mathrm{ext}}_\theta (u).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In the first case, lemma <a data-tag="266C64AB" href="../../tag/983B3E6349BB/">1.23.1</a>, applied to the exponentials $\mathrm{e}^{u_ j}$, proves (<a data-tag="F81301C1" href="../../tag/B172EB5C34CB/">14.10</a>). In the second case we use lemma <a data-tag="35EBF005" href="../../tag/27CEBF2AA643/">1.23.4</a> instead, since these exponentials are bounded and have a common lower bound for their curvature. In both cases the criterion gives convergence in capacity. 
+    <p>
+      The masses are uniformly bounded by those of the dominating measures. For the deep sublevels we use $u_ j\geq \varphi -C$, which gives $\{ u_ j&lt;-T\} \subset \{ \varphi &lt;C-T\} $. In the first case the masses of these sublevels are at most $\nu (\{ \varphi &lt;C-T\} )$, which tends to zero as $T\to \infty $ because $\nu $ does not charge the pole set of $\varphi $. In the second case lemma <a data-tag="3894071E" href="../../tag/F56E1BEB2997/">1.8.9</a> bounds them by $C'\operatorname {Cap}_\omega (\{ \varphi &lt;C-T\} )$, which also tends to zero. The tail criterion theorem <a data-tag="312860F2" href="../../tag/8B2A9680933C/">7.4.1</a>, in the general-background form of theorem <a data-tag="F68A89DA" href="../../tag/18CDC482A9DD/">7.6.1</a>, now gives finiteness of the limiting measure and weak convergence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The reference $\varphi $ in these results need not be an envelope fixed point; the smaller-background condition suffices. Envelope fixed points enter when the two barriers must be derived from an a priori estimate, as in theorem <a data-tag="43068D46" href="../../tag/413B92CD2B72/">14.11.3</a>. When no common lower barrier is available, one has to be constructed in a relative envelope class; this problem is treated in section <a data-tag="47D3724C" href="../../tag/1E3C2CEF22BF/">31.6</a>. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

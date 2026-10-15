@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The quotient and the smooth equation · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hermitian-torsion/">Chapter 10 · Hermitian geometry, torsion, and Gauduchon duality</a> · Tag <code>43BF29E33E59</code></p><h1>The quotient and the smooth equation</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 26.1 The quotient and the smooth equation <span data-gerby-tag="613DD04A"></span></div>
+<p>
+For a Gauduchon metric $\gamma $, Stokes' theorem shows that the pairing $\int _ X\theta \wedge \gamma ^{n-1}$ is unchanged by a smooth $\mathrm{dd}^{\mathrm{c}}$ change of $\theta $; this pairing will be the numerator of our quotient. For the denominator, put 
+</p>
+<div class="equation">
+  \[  D_\mu (\gamma )=\int _ X \left(\frac{\mu }{\gamma ^ n}\right)^{1/n}\gamma ^ n.  \]
+</div>
+<p>
+ This number is positive. Like the numerator, it is multiplied by $r^{n-1}$ when $\gamma $ is multiplied by a positive constant $r$, so the quotient below depends only on the ray of $\gamma $. 
+</p>
+
+<article class="env-definition" id="non-kahler-pluripotential-theory-6E1DBC11">
+<p><a class="environment-identifier" href="../../tag/0C4AF7E2CEBB/">Definition <span data-tag="6E1DBC11">26.1.1</span>.</a><span data-gerby-tag="6E1DBC11"></span> For a pseudoeffective smooth real $(1,1)$-form $\theta $ on $X$, define </p>
+<div class="equation">
+  \[  \lambda _\mu (\theta )= \inf _{\gamma \text{ Gauduchon}} \frac{\displaystyle \int _ X\theta \wedge \gamma ^{n-1}}{D_\mu (\gamma )}, \qquad \mathcal V_\mu (\theta )=\lambda _\mu (\theta )^ n.  \]
+</div>
+<p> We call $\mathcal V_\mu (\theta )$ the <em>Gauduchon variational volume</em> of $\theta $ with respect to $\mu $, and $\lambda _\mu (\theta )$ its <em>root volume</em>. In dimension one every Hermitian metric is Gauduchon, and every quotient equals $\int _ X\theta $. </p>
+</article>
+
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-CEFAD6D9">
+<p><a class="environment-identifier" href="../../tag/4AF37F3C8091/">Proposition <span data-tag="CEFAD6D9">26.1.2</span>.</a><span data-gerby-tag="CEFAD6D9"></span> For a pseudoeffective $\theta $, the number $\lambda _\mu (\theta )$ is finite and nonnegative. It is unchanged by a smooth $\mathrm{dd}^{\mathrm{c}}$ change of $\theta $, positively homogeneous of degree one, and concave on the cone of pseudoeffective forms. If $\beta $ is a smooth real $(1,1)$-form and $\beta -\theta $ is pseudoeffective, then </p>
+<div class="equation">
+  \[  \lambda _\mu (\beta )\geq \lambda _\mu (\theta ).  \]
+</div>
+<p> Finally, $\lambda _\mu $ is upper semicontinuous under smooth convergence within this cone. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $u\in \mathrm{PSH}(X,\theta )$. For every Gauduchon metric $\gamma $, Stokes' theorem for currents and the Gauduchon condition give 
+    
+<div class="equation">
+  \[  \int _ X\theta \wedge \gamma ^{n-1} =\int _ X(\theta +\mathrm{dd}^{\mathrm{c}}u)\wedge \gamma ^{n-1}\geq 0.  \]
+</div>
+<p>
+       Thus every quotient is nonnegative, and testing one fixed Gauduchon metric gives a finite upper bound. The same identity shows that each quotient is unchanged by a smooth $\mathrm{dd}^{\mathrm{c}}$ change of the background, and, applied to $\beta -\theta $, it proves the monotonicity. 
+    <p>
+      Each quotient is a linear function of the background, so their infimum is concave and positively homogeneous. Each individual quotient is also continuous in the smooth topology. Given a smoothly converging sequence, we bound the infimum by any one quotient, take the upper limit, and finally take the infimum over the test metric. This proves upper semicontinuity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+The smooth equation identifies both the value of the quotient and every minimizing metric. Let $\mathscr P$ be the set of backgrounds $\theta $ admitting a smooth real function $u$ with $\theta +\mathrm{dd}^{\mathrm{c}}u&gt;0$. Choosing such a Hermitian representative of $\theta $ and writing $\mu $ as a smooth positive density relative to its volume form, we may apply theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">9.1.1</a>. It gives, for each $\theta \in \mathscr P$, a unique positive form $\Omega _\theta $, which we call the <em>solution form</em>, and a unique constant $c_\theta (\mu )&gt;0$ such that 
+</p>
+<div class="equation">
+  \[  \Omega _\theta =\theta +\mathrm{dd}^{\mathrm{c}}u_\theta , \qquad \Omega _\theta ^ n=c_\theta (\mu )\mu .  \]
+</div>
+<p>
+ The potential $u_\theta $ is unique after any fixed additive normalization. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-876DF057">
+<p><a class="environment-identifier" href="../../tag/2DB664A6EFDF/">Theorem <span data-tag="876DF057">26.1.3</span>.</a><span data-gerby-tag="876DF057"></span> For every $\theta \in \mathscr P$, </p>
+<div class="equation">
+  \[  \lambda _\mu (\theta )=c_\theta (\mu )^{1/n}, \qquad \mathcal V_\mu (\theta )=c_\theta (\mu ).  \]
+</div>
+<p> The infimum in definition <a data-tag="6E1DBC11" href="../../tag/0C4AF7E2CEBB/">26.1.1</a> is attained. When $n\geq 2$, its minimizing Gauduchon metrics are precisely the constant multiples of the Gauduchon metric conformal to $\Omega _\theta $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For any Hermitian metric $\gamma $, the arithmetic–geometric mean inequality for the eigenvalues of $\Omega _\theta $ relative to $\gamma $ gives the pointwise inequality 
+    
+<div class="equation">
+  \[  \Omega _\theta \wedge \gamma ^{n-1} \geq \left(\frac{\Omega _\theta ^ n}{\gamma ^ n}\right)^{1/n}\gamma ^ n =c_\theta (\mu )^{1/n} \left(\frac{\mu }{\gamma ^ n}\right)^{1/n}\gamma ^ n.  \]
+</div>
+<p>
+       If $\gamma $ is Gauduchon, integration and Stokes' theorem replace $\Omega _\theta $ in the numerator by $\theta $. Every test quotient is therefore at least $c_\theta (\mu )^{1/n}$. 
+    <p>
+      For $n\geq 2$, take the Gauduchon metric $\gamma =\mathrm{e}^ g\Omega _\theta $ conformal to $\Omega _\theta $, given by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>, where $g$ is a smooth real function. Since all eigenvalues of $\Omega _\theta $ relative to $\gamma $ are equal at every point, equality holds pointwise and hence in the quotient. This proves the formula and attainment. Conversely, if a Gauduchon metric attains the infimum, the nonnegative smooth difference of the two sides of the pointwise inequality has zero integral. It therefore vanishes everywhere, and the equality case of the arithmetic–geometric mean inequality makes $\gamma $ conformal to $\Omega _\theta $. Since the Gauduchon metric in a conformal class is unique up to a constant factor, this proves the last assertion. 
+    <p>
+      For $n=1$, we integrate the equation and use $\int _ X\mathrm{dd}^{\mathrm{c}}u_\theta =0$. This gives $c_\theta (\mu )=\int _ X\theta $, which equals every quotient in the definition. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+For a Hermitian background $\omega $, a smooth positive probability volume $\mathrm{d}V$ and a nonzero nonnegative density $f\in L^1(\mathrm{d}V)$, the analogous quotient, with $\mu $ replaced by $f\, \mathrm{d}V$, computes the subsolution threshold $b_\omega (f)$ of section <a data-tag="CF1C0A46" href="../../tag/72CDE5ADD348/">14.27</a>; see theorem <a data-tag="0DF693AB" href="../../tag/346B39C3F0B6/">14.28.1</a>. Attainment in this extremal problem, and the regularity of the extremal tests, are studied from section <a data-tag="3314ED2C" href="../../tag/54ADA5D399DA/">26.6</a> on. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-E0F8050A">
+<p><a class="environment-identifier" href="../../tag/A486E36565B6/">Corollary <span data-tag="E0F8050A">26.1.4</span>.</a><span data-gerby-tag="E0F8050A"></span> If $\theta $ is big, then $\lambda _\mu (\theta )&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the definition of bigness, there are a Hermitian form $h$ and $\delta &gt;0$ such that $\theta -\delta h$ is pseudoeffective. Monotonicity, homogeneity and the theorem, applied to $h\in \mathscr P$, give $\lambda _\mu (\theta )\geq \delta \lambda _\mu (h)&gt;0$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The converse fails for nef nonclosed backgrounds: theorem <a data-tag="7A1559DF" href="../../tag/ECAB6BFB33FD/">26.13.2</a> gives, on a projective manifold, a nef background of positive volume that is not big. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

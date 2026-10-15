@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bounded traces and smoothness · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>5FD96F70C06E</code></p><h1>Bounded traces and smoothness</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 14.17.2 Bounded traces and smoothness <span data-gerby-tag="D9E3E8F3"></span></div>
+<p>
+We begin with the criterion used in the last step of the proof. A bounded trace of a positive current bounds all its coefficient measures, so a continuous solution with bounded trace is a strong solution with $W^{2,q}$ regularity for every finite $q$. The equation then bounds the eigenvalues from below, so it becomes uniformly elliptic. Since the solution is not yet known to be $C^2$, the Evans–Krylov theory is applied to it as a viscosity solution of a concave extension of the operator. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-00738DAE">
+<p><a class="environment-identifier" href="../../tag/7DF8FE8A18D7/">Proposition <span data-tag="00738DAE">14.17.3</span>.</a><span data-gerby-tag="00738DAE"></span> Let $B\subset \mathbb C^ n$ be a coordinate ball, let $\vartheta $ be a smooth real $(1,1)$-form there and let $F\in C^\infty (B)$ be strictly positive. Suppose $u$ is continuous, $T=\vartheta +\mathrm{dd}^{\mathrm{c}}u\geq 0$, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-2112DF2E"><span data-gerby-tag="2112DF2E"></span>
+<span class="equation-label"><a data-tag="2112DF2E" href="../../tag/7A41D9785A7C/">14.17</a></span>
+<div>\begin{equation} \label{eq:interior-local-ma} T^ n=F\beta ^ n. \end{equation}</div>
+</div>
+<p> For a point $p\in B$, the following conditions, each required on some neighborhood of $p$, are equivalent: </p>
+<ol>
+<li><p>
+$u$ is smooth; 
+</p>
+</li><li><p>
+$T\geq \delta \beta $ for some $\delta &gt;0$; 
+</p>
+</li><li><p>
+$\operatorname {tr}_\beta T$ has a locally bounded measure density. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $C$ so that $v=u+C|z|^2$ is plurisubharmonic, and use nonnegative radial mollifiers for which $v_\eta \downarrow v$. The smooth matrix convolutions $T_\eta =T*\chi _\eta $ can be written as 
+    
+<div class="equation">
+  \[  T_\eta =(\vartheta *\chi _\eta -C\beta )+\mathrm{dd}^{\mathrm{c}}v_\eta .  \]
+</div>
+<p>
+       Bedford–Taylor monotone continuity and smooth convergence of the background imply $T_\eta ^ k\to T^ k$ for every $k$. 
+    <p>
+<em>(2)$\Rightarrow $(3).</em> Assume (2). For every Hermitian matrix $M\geq \delta I$, 
+    
+<div class="equation">
+  \[  \det M\geq \delta ^{n-1}\bigl (\operatorname {tr} M-(n-1)\delta \bigr ).  \]
+</div>
+<p>
+       Apply this to the regularizations and pass to currents. Equation (<a data-tag="2112DF2E" href="../../tag/7A41D9785A7C/">14.17</a>) gives 
+    
+<div class="equation">
+  \[  \operatorname {tr}_\beta T\leq \delta ^{1-n}F+(n-1)\delta ,  \]
+</div>
+<p>
+       which is (3). 
+    <p>
+<em>(3)$\Rightarrow $(1).</em> Assume (3), say $\operatorname {tr}_\beta T\leq L$. Positivity makes every coefficient of the matrix-valued current $T$ a bounded density. Hence the Euclidean Laplacian of $u$ is locally bounded, and interior Poisson estimates give $u\in W^{2,q}_{\mathrm{loc}}$ for every finite $q$. Mollification converges in $W^{2,q}$; taking $q&gt;2n$ identifies the bounded-potential determinant with the ordinary almost-everywhere determinant. Thus $\det _\beta T=F$ almost everywhere. On a smaller ball with $F\geq m&gt;0$, all eigenvalues of $T$ are at most $L$ and their product is at least $m$, so 
+    
+<div class="equation">
+  \[  \frac{m}{L^{n-1}}I\leq T\leq LI  \]
+</div>
+<p>
+       almost everywhere. 
+    <p>
+       It remains to show that this strong solution is smooth. Let $P$ be the real linear map from real symmetric $2n\times 2n$ Hessian matrices to Hermitian $n\times n$ matrices, sending $D^2u$ to the coefficient matrix of $\mathrm{dd}^{\mathrm{c}}u$ relative to $\beta $, and let $\Theta (x)$ be the matrix of $\vartheta $. With $\delta =mL^{1-n}$, define the concave extension 
+    
+<div class="equation">
+  \[  G(x,M)=\inf _{\delta I\leq A\leq LI} \left\{ \log \det A+\operatorname {tr}\! \left[A^{-1}\bigl (\Theta (x)+P(M)-A\bigr )\right]\right\} -\log F(x).  \]
+</div>
+<p>
+       For fixed $A$, write $\mathcal E_ A(x,M)$ for the expression in braces minus $\log F(x)$. The tangent-plane formula for $\log \det $ gives 
+    
+<div class="equation">
+  \[  G(x,D^2u)=0\quad \text{almost everywhere}.  \]
+</div>
+<p>
+       The operator $G$ is concave and uniformly elliptic on real symmetric matrices. The affine operators $\mathcal E_ A$ have constant principal matrices with eigenvalues bounded above and below in terms of $\delta $ and $L$. Their $x$-dependence is smooth uniformly in $A$, so $G$ has a uniform local Lipschitz modulus in $x$. 
+    <p>
+      We claim that $u$ is a viscosity solution of $G(x,D^2u)=0$. Suppose that a smooth function $\psi $ touches $u$ from above at $x_0$ and that $G(x_0,D^2\psi )&lt;0$. Some fixed matrix $A$ then satisfies $\mathcal E_ A(x,D^2\psi )&lt;-\eta $ on a small ball. Since $G(x,D^2u)=0$ almost everywhere, $\mathcal E_ A(x,D^2u)\geq 0$ there. Thus $u-\psi $ has an interior maximum and satisfies 
+    
+<div class="equation">
+  \[  \operatorname {tr}\! \left(A^{-1}P(D^2(u-\psi ))\right)\geq \eta \quad \text{almost everywhere}.  \]
+</div>
+<p>
+       After a small quadratic perturbation makes the contact strict, this contradicts the Aleksandrov maximum principle <span class="cite">[<span class="postnote">Chapter 9, Theorem 9.1</span>, <a href="../../references/#R8F926DA7BC71">GT01</a>]</span>. If instead $\psi $ touches $u$ from below and $G(x_0,D^2\psi )&gt;0$, then $\mathcal E_ A(x,D^2\psi )&gt;\eta $ for every admissible $A$ on a small ball. At almost every point choose an admissible $A(x)$ with $\mathcal E_{A(x)}(x,D^2u)&lt;\eta /2$. A measurable choice is obtained by taking the first qualifying element of a countable dense family. The function $\psi -u$ then violates the same maximum principle for the measurable uniformly elliptic coefficients $A(x)^{-1}$. This proves the claim. 
+    <p>
+      The classical variable-coefficient Evans–Krylov theorem gives $u\in C^{2,\alpha }_{\mathrm{loc}}$ for some $0&lt;\alpha &lt;1$. The original equation is now uniformly elliptic with smooth data. Difference quotients satisfy linear equations whose principal coefficients are averages of inverse matrices along positive definite segments. Interior Schauder estimates first give $u\in C^{3,\alpha }_{\mathrm{loc}}$ and then, by iteration, $u\in C^\infty $. This proves (3)$\Rightarrow $(1). 
+    <p>
+<em>(1)$\Rightarrow $(2).</em> If $u$ is smooth, then $T$ is a smooth semipositive form with determinant $F&gt;0$, so it is positive definite; on a smaller neighborhood this gives (2). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

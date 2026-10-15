@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Legendre transform · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/toric-convex/">Chapter 18 · Toric and convex geometry</a> · Tag <code>67B012704E18</code></p><h1>Legendre transform</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · A.2 Legendre transform <span data-gerby-tag="0AFC58F8"></span></div>
+<p>
+ Let $N$ be a real vector space of finite dimension and $M$ be the dual vector space. The pairing $M\times N\rightarrow \mathbb {R}$ will be denoted by $\langle \bullet , \bullet \rangle $. 
+</p>
+
+<article class="env-definition" id="sgpt-8B018B53">
+<p><a class="environment-identifier" href="../../tag/2E5E29E9A58B/">Definition <span data-tag="8B018B53">A.2.1</span>.</a><span data-gerby-tag="8B018B53"></span> Let $F\in \mathrm{Conv}(N)$ be a convex function. We define the <em>Legendre transform</em> of $F$ as the function $F^*\in \mathrm{Conv}(M)$: </p>
+<div class="equation" id="sgpt-E288ED21"><span data-gerby-tag="E288ED21"></span>
+<span class="equation-label"><a data-tag="E288ED21" href="../../tag/E1AD8A1437E2/">A.6</a></span>
+<div>\begin{equation} \label{eq:Legtrandef} F^*(m)\coloneqq \sup _{n\in N} \left( \langle m,n \rangle -F(n) \right)=\sup _{n\in \operatorname{RelInt}\operatorname{Dom}F} \left( \langle m,n \rangle -F(n) \right). \end{equation}</div>
+</div>
+</article> The latter equality follows from <span class="cite">[<span class="postnote">Corollary 12.2.2</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. 
+
+
+Recall the well-known Legendre–Fenchel duality <span class="cite">[<span class="postnote">Theorem 12.2</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. <article class="env-theorem" id="sgpt-1A7E065D">
+<p><a class="environment-identifier" href="../../tag/258227E5D497/">Theorem <span data-tag="1A7E065D">A.2.2</span>.</a><span data-gerby-tag="1A7E065D"></span> Let $F\in \mathrm{Conv}(N)$. Then $F^*$ is a closed convex function. The function $F^*$ is proper if and only if $F$ is. </p>
+<p>Moreover, we have $(\operatorname{cl}F)^*=F^*$ and </p>
+<div class="equation">
+  \[  F^{**}=\operatorname{cl}F.  \]
+</div>
+</article>
+
+
+<article class="env-example" id="sgpt-8297B2F5">
+<p><a class="environment-identifier" href="../../tag/1A7C0B007516/">Example <span data-tag="8297B2F5">A.2.3</span>.</a><span data-gerby-tag="8297B2F5"></span> Let $P\subseteq M$ be a closed convex subset. Then </p>
+<div class="equation">
+  \[  \operatorname{Supp}_ P^*=\chi _ P,\quad \chi _ P^*=\operatorname{Supp}_ P.  \]
+</div>
+<p> See <span class="cite">[<span class="postnote">Theorem 13.2</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. </p>
+</article>
+
+
+The following special case will be useful to us in the sequel. <article class="env-corollary" id="sgpt-8B97E76A">
+<p><a class="environment-identifier" href="../../tag/8C4DFDD0ADE0/">Corollary <span data-tag="8B97E76A">A.2.4</span>.</a><span data-gerby-tag="8B97E76A"></span> Let $F\colon (0,\infty )\rightarrow [-\infty ,\infty )$ be a convex function. If we define $G\colon \mathbb {R}\rightarrow (-\infty ,\infty ]$ by </p>
+<div class="equation">
+  \[  G(\tau )=\sup _{t&gt;0} \Bigl ( t\tau -F(t) \Bigr ),  \]
+</div>
+<p> then $G$ is a convex function and </p>
+<div class="equation" id="sgpt-E5A98A42"><span data-gerby-tag="E5A98A42"></span>
+<span class="equation-label"><a data-tag="E5A98A42" href="../../tag/E918B6149A40/">A.7</a></span>
+<div>\begin{equation} \label{eq:Leginvpartdef} F(t)=G^*(t),\quad \forall t&gt;0. \end{equation}</div>
+</div>
+<p> Moreover, </p>
+<div class="equation" id="sgpt-0B27C94F"><span data-gerby-tag="0B27C94F"></span>
+<span class="equation-label"><a data-tag="0B27C94F" href="../../tag/3B0DC2BF53F0/">A.8</a></span>
+<div>\begin{equation} \label{eq:LegratQ} G(\tau )=\sup _{t\in \mathbb {R}_{&gt;0}} \Bigl ( t\tau -F(t) \Bigr )=\sup _{t\in \mathbb {Q}_{&gt;0}} \Bigl ( t\tau -F(t) \Bigr ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We distinguish two cases. 
+    <p>
+      First suppose that $F(t)=-\infty $ for some $t&gt;0$. Then $F(t)=-\infty $ for all $t&gt;0$ by the convexity of $F$. Our assertions are clear in this case. 
+    <p>
+      Next assume that $F(t)\neq -\infty $ for all $t&gt;0$. In this case, theorem <a data-tag="E08C711A" href="../../tag/7E0B71CF3B0E/">A.1.15</a> guarantees that $F$ admits a closed proper extension $\tilde{F}\in \mathrm{Conv}(\mathbb {R})$ with 
+    
+<div class="equation">
+  \[  \tilde{F}(t)=\infty ,\quad \forall t&lt;0.  \]
+</div>
+<p>
+       It follows from (<a data-tag="E288ED21" href="../../tag/E1AD8A1437E2/">A.6</a>) that 
+    
+<div class="equation">
+  \[  G(\tau )=\tilde{F}^*(\tau ),\quad \forall \tau \in \mathbb {R}.  \]
+</div>
+<p>
+       Now theorem <a data-tag="1A7E065D" href="../../tag/258227E5D497/">A.2.2</a> implies (<a data-tag="E5A98A42" href="../../tag/E918B6149A40/">A.7</a>). Finally (<a data-tag="0B27C94F" href="../../tag/3B0DC2BF53F0/">A.8</a>) follows from the continuity of $F$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-68683BF6">
+<p><a class="environment-identifier" href="../../tag/C3CC440747D6/">Proposition <span data-tag="68683BF6">A.2.5</span>.</a><span data-gerby-tag="68683BF6"></span> Let $F\colon N\rightarrow [-\infty ,\infty ]$. Define $F^*\colon M\rightarrow [-\infty ,\infty ]$ by </p>
+<div class="equation">
+  \[  F^*(m)\coloneqq \sup _{n\in N} \left( \langle m,n \rangle -F(n) \right).  \]
+</div>
+<p> Then </p>
+<div class="equation">
+  \[  F^*=(\operatorname{cl}\operatorname{CE}F)^*.  \]
+</div>
+</article> See <span class="cite">[<span class="postnote">Corollary 12.1.1</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. 
+
+
+<article class="env-definition" id="sgpt-CFC2EECD">
+<p><a class="environment-identifier" href="../../tag/D6A0CB1B8846/">Definition <span data-tag="CFC2EECD">A.2.6</span>.</a><span data-gerby-tag="CFC2EECD"></span> Let $F\in \mathrm{Conv}(N)$ and $n\in N$. An element $m\in M$ is a <em>subgradient</em> (in the sense of Alexandrov) of $F$ at $n$ if </p>
+<div class="equation" id="sgpt-E139A43B"><span data-gerby-tag="E139A43B"></span>
+<span class="equation-label"><a data-tag="E139A43B" href="../../tag/F6F028287E9D/">A.9</a></span>
+<div>\begin{equation} \label{eq:subgrad} F(n')\geq F(n)+\langle n'-n,m \rangle ,\quad \forall n'\in N. \end{equation}</div>
+</div>
+<p>The set of subgradients of $F$ at $n$ is denoted by $\nabla F(n)$. </p>
+<p>More generally, for any subset $E\subseteq N$, we write </p>
+<div class="equation">
+  \[  \nabla F(E)=\bigcup _{n\in E}\nabla F(n).  \]
+</div>
+</article>
+
+
+<article class="env-definition" id="sgpt-55AFB02F">
+<p><a class="environment-identifier" href="../../tag/08E83421373C/">Definition <span data-tag="55AFB02F">A.2.7</span>.</a><span data-gerby-tag="55AFB02F"></span> Given $F,F'\in \mathrm{Conv}(N)$, we write $F\preceq _ P F'$ if   </p>
+<div class="equation">
+  \[  \overline{\nabla F(N)}\subseteq \overline{\nabla F'(N)}.  \]
+</div>
+<p> We write $F\sim _ P F'$ if $F\preceq _ P F'$ and $F'\preceq _ P F$. </p>
+</article>
+
+
+<article class="env-theorem" id="sgpt-C31EF083">
+<p><a class="environment-identifier" href="../../tag/A57F525B7ABC/">Theorem <span data-tag="C31EF083">A.2.8</span>.</a><span data-gerby-tag="C31EF083"></span> Suppose that $F\in \mathrm{Conv}^{\mathrm{prop}}(N)$. Then the following hold: </p>
+<ol>
+<li class="custom-item" id="sgpt-00AE752E"><span data-gerby-tag="00AE752E"></span><p>
+ For any $n\not\in \operatorname{Dom}F$, $\nabla F(n)=\varnothing $; 
+</p>
+</li><li class="custom-item" id="sgpt-87BEAA1A"><span data-gerby-tag="87BEAA1A"></span><p>
+ for any $n\in \operatorname{RelInt}\operatorname{Dom}F$, $\nabla F(n)\neq \varnothing $; moreover, for any $n'\in N$, we have 
+</p>
+<div class="equation">
+  \[  \partial _{n'} F(n)=\sup \left\{ \langle n', m \rangle : m\in \nabla F(n)\right\} ;  \]
+</div>
+</li><li class="custom-item" id="sgpt-BC4EA9B4"><span data-gerby-tag="BC4EA9B4"></span><p>
+ for $n\in N$, the set $\nabla F(n)$ is non-empty and bounded if and only if $n\in \operatorname{Int}\operatorname{Dom}F$. 
+</p>
+</li>
+</ol>
+</article> For the proof, we refer to <span class="cite">[<span class="postnote">Theorem 23.4</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. 
+
+
+<article class="env-proposition" id="sgpt-DAE71CEF">
+<p><a class="environment-identifier" href="../../tag/8B18F2B2DE3B/">Proposition <span data-tag="DAE71CEF">A.2.9</span>.</a><span data-gerby-tag="DAE71CEF"></span> Let $F\in \mathrm{Conv}^{\mathrm{prop}}(N)$. Then </p>
+<div class="equation">
+  \[  \nabla F(N)\subseteq \operatorname{Dom}F^*.  \]
+</div>
+<p> If moreover $F$ is closed, we have </p>
+<div class="equation" id="sgpt-80612EBA"><span data-gerby-tag="80612EBA"></span>
+<span class="equation-label"><a data-tag="80612EBA" href="../../tag/C0D69D19C109/">A.10</a></span>
+<div>\begin{equation} \label{eq:relintdomFstar} \operatorname{RelInt}\operatorname{Dom}F^*\subseteq \nabla F(N). \end{equation}</div>
+</div>
+<p> In particular, if $F$ is a proper closed convex function on $N$, then </p>
+<div class="equation">
+  \[  \overline{\nabla F(N)}=\overline{\operatorname{Dom}F^*}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose that $m\in \nabla F(n)$ for some $n\in N$. Then (<a data-tag="E139A43B" href="../../tag/F6F028287E9D/">A.9</a>) holds. In particular, 
+    
+<div class="equation">
+  \[  \langle m,n'\rangle -F(n')\leq \langle m,n\rangle -F(n).  \]
+</div>
+<p>
+       It follows that 
+    
+<div class="equation">
+  \[  F^*(m)\leq \langle m,n\rangle -F(n)&lt;\infty .  \]
+</div>
+<p>
+       (<a data-tag="80612EBA" href="../../tag/C0D69D19C109/">A.10</a>) is proved in <span class="cite">[<span class="postnote">Corollary 23.5.1</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. For the last assertion, it suffices to observe that $\overline{\operatorname{RelInt}\operatorname{Dom}F^*}=\overline{\operatorname{Dom}F^*}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="sgpt-24FD3947">
+<p><a class="environment-identifier" href="../../tag/7A76E56311F5/">Proposition <span data-tag="24FD3947">A.2.10</span>.</a><span data-gerby-tag="24FD3947"></span> Let $\{ F_ i\} _{i\in I}$ be a non-empty family in $\mathrm{Conv}^{\mathrm{prop}}(N)$. Then </p>
+<div class="equation">
+  \[  \left(\bigwedge _{i\in I} F_ i\right)^*=\bigvee _{i\in I} F_ i^*,\quad \left(\bigvee _{i\in I} \operatorname{cl}F_ i\right)^*=\operatorname{cl}\bigwedge _{i\in I} F_ i^*.  \]
+</div>
+<p> If $I$ is finite and $\overline{\operatorname{Dom}F_ i}$ is independent of the choice of $i\in I$, then </p>
+<div class="equation">
+  \[  \left(\bigvee _{i\in I} F_ i\right)^*=\bigwedge _{i\in I} F_ i^*.  \]
+</div>
+</article> Recall that $\wedge $ is defined in definition <a data-tag="05FE0DDE" href="../../tag/6561D15F1216/">A.1.9</a> and $\lor $ in definition <a data-tag="59330ADD" href="../../tag/4D25259F16EC/">A.1.10</a>. See <span class="cite">[<span class="postnote">Theorem 16.5</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span> for the proof. 
+
+
+<article class="env-proposition" id="sgpt-D54B6947">
+<p><a class="environment-identifier" href="../../tag/36CA6A68994E/">Proposition <span data-tag="D54B6947">A.2.11</span>.</a><span data-gerby-tag="D54B6947"></span> Let $F_1,\ldots ,F_ r\in \mathrm{Conv}^{\mathrm{prop}}(N)$ ($r\in \mathbb {Z}_{&gt;0}$). Assume that </p>
+<div class="equation">
+  \[  \bigcap _{i=1}^ r\operatorname{RelInt}\operatorname{Dom}(F_ i)\neq \varnothing ,  \]
+</div>
+<p> then for any $m\in M$, </p>
+<div class="equation">
+  \[  \left( \sum _{i=1}^ r F_ i \right)^*(m)=\inf \left\{ \sum _{i=1}^ r F_ i^*(m_ i):m_1,\ldots ,m_ r\in M, \sum _{i=1}^ r m_ i=m \right\} .  \]
+</div>
+</article> See <span class="cite">[<span class="postnote">Theorem 16.4</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span> for the proof. 
+
+
+<article class="env-proposition" id="sgpt-B696EB2E">
+<a class="environment-identifier" href="../../tag/6FCC352452C3/">Proposition <span data-tag="B696EB2E">A.2.12</span>.</a><span data-gerby-tag="B696EB2E"></span> Let $P\subseteq M$ be a convex body<aside class="source-footnote" id="sgpt-a0000123438"><span class="footnote-label">Note.</span> Here a convex body refers to a non-empty compact convex subset, not necessarily having non-empty interior.</aside> and $F\in \mathrm{Conv}^{\mathrm{prop}}(N)$. The following are equivalent: 
+<ol>
+<li class="custom-item" id="sgpt-17F2CA1E"><span data-gerby-tag="17F2CA1E"></span><p>
+ $F\preceq \operatorname{Supp}_ P$; 
+</p>
+</li><li class="custom-item" id="sgpt-31567017"><span data-gerby-tag="31567017"></span><p>
+ $\operatorname{Dom}F=N$ and $F^*|_{M\setminus P}\equiv \infty $; 
+</p>
+</li><li class="custom-item" id="sgpt-0732ADAC"><span data-gerby-tag="0732ADAC"></span><p>
+ $\operatorname{Dom}F=N$ and $\nabla F(N)\subseteq P$. 
+</p>
+</li>
+</ol>
+<p> Moreover, under these conditions, </p>
+<div class="equation" id="sgpt-6F32FFC1"><span data-gerby-tag="6F32FFC1"></span>
+<span class="equation-label"><a data-tag="6F32FFC1" href="../../tag/D5ABA398BA7B/">A.11</a></span>
+<div>\begin{equation} \label{eq:Fsupequal} F(n)-\operatorname{Supp}_ P(n)\leq F(0),\quad \forall n\in N. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="17F2CA1E" href="../../tag/6FCC352452C3/#sgpt-17F2CA1E">1</a> $\implies $ <a data-tag="31567017" href="../../tag/6FCC352452C3/#sgpt-31567017">2</a>. It is clear that $\operatorname{Dom}F=N$ since $\operatorname{Dom}\operatorname{Supp}_ P=N$. From $F\preceq \operatorname{Supp}_ P$ and example <a data-tag="8297B2F5" href="../../tag/1A7C0B007516/">A.2.3</a>, we know that 
+    
+<div class="equation">
+  \[  \chi _ P=\operatorname{Supp}_ P^*\preceq F^*.  \]
+</div>
+<p>
+       So <a data-tag="31567017" href="../../tag/6FCC352452C3/#sgpt-31567017">2</a> follows. 
+    <p>
+<a data-tag="31567017" href="../../tag/6FCC352452C3/#sgpt-31567017">2</a> $\implies $ <a data-tag="0732ADAC" href="../../tag/6FCC352452C3/#sgpt-0732ADAC">3</a>. This follows from proposition <a data-tag="DAE71CEF" href="../../tag/8B18F2B2DE3B/">A.2.9</a>. 
+    <p>
+<a data-tag="0732ADAC" href="../../tag/6FCC352452C3/#sgpt-0732ADAC">3</a> $\implies $ <a data-tag="17F2CA1E" href="../../tag/6FCC352452C3/#sgpt-17F2CA1E">1</a>. The function $t\mapsto F(tn)$ is convex on $[0,1]$, hence absolutely continuous and differentiable almost everywhere. For almost every $t\in (0,1)$, 
+    
+<div class="equation">
+  \[  \frac{\mathrm d}{\mathrm dt}F(tn)=\partial _ n F(tn) \leq \operatorname{Supp}_ P(n)  \]
+</div>
+<p>
+       by theorem <a data-tag="C31EF083" href="../../tag/A57F525B7ABC/">A.2.8</a> and the assumption $\nabla F(N)\subseteq P$. Integrating in $t$ gives 
+    
+<div class="equation">
+  \[  F(n)-F(0)\leq \operatorname{Supp}_ P(n).  \]
+</div>
+<p>
+       In particular, (<a data-tag="6F32FFC1" href="../../tag/D5ABA398BA7B/">A.11</a>) also follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

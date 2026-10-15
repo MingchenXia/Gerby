@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Plurisubharmonic metrics on line bundles · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>A59F8B8F06A8</code></p><h1>Plurisubharmonic metrics on line bundles</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 1.8 Plurisubharmonic metrics on line bundles <span data-gerby-tag="31C674CC"></span></div>
+<p>
+ A natural source of quasi-plurisubharmonic functions is the metrics on line bundles. 
+</p>
+<p>
+Let $X$ be a connected Kähler manifold and $L$ be a holomorphic line bundle on $X$. Usually, we do not distinguish $L$ from the associated invertible sheaf $\mathcal{O}_ X(L)$. 
+</p>
+
+<article class="env-definition" id="sgpt-F0EBD09A">
+<p><a class="environment-identifier" href="../../tag/C5880C6F61FA/">Definition <span data-tag="F0EBD09A">1.8.1</span>.</a><span data-gerby-tag="F0EBD09A"></span> Let $V$ be a $1$-dimensional complex linear space. A <em>Hermitian form</em> $h$ on $V$ is a map $h\colon V\times V\rightarrow \mathbb {C}$ such that </p>
+<ol>
+<li class="custom-item" id="sgpt-240D6069"><span data-gerby-tag="240D6069"></span><p>
+ $h$ is $\mathbb {C}$-linear in the second variable and conjugate linear in the first, and 
+</p>
+</li><li class="custom-item" id="sgpt-B42466CA"><span data-gerby-tag="B42466CA"></span>
+<div class="equation">
+  \[  |v|_ h^2\coloneqq h(v,v)\in \mathbb {R}_{&gt;0}  \]
+</div>
+<p>
+ for each $v\in V\setminus \{ 0\} $. 
+</p>
+</li>
+</ol>
+<p> We usually identify $h$ with the quadratic form $V\rightarrow \mathbb {R}$ sending $v$ to $|v|_ h^2$. We write $|v|_ h=\sqrt{|v|_ h^2}$ for any $v\in V$. </p>
+<p>The <em>singular Hermitian form</em>  on $V$ is the map $V\rightarrow \{ 0,\infty \} $ sending $0$ to $0$ and other elements to $\infty $. </p>
+</article> <article class="env-definition" id="sgpt-97FEBA2C">
+<p><a class="environment-identifier" href="../../tag/90891EB78EA0/">Definition <span data-tag="97FEBA2C">1.8.2</span>.</a><span data-gerby-tag="97FEBA2C"></span> Let $V_1$ and $V_2$ be $1$-dimensional complex linear spaces. Given two maps $h_ i\colon V_ i\rightarrow [0,\infty ]$ ($i=1,2$), each of which is either a Hermitian form or a singular Hermitian form, we define the <em>tensor product</em> $h_1\otimes h_2\colon V_1\otimes V_2\rightarrow [0,\infty ]$ as follows:  </p>
+<ol>
+<li class="custom-item" id="sgpt-3B0FA25B"><span data-gerby-tag="3B0FA25B"></span><p>
+ If either $h_1$ or $h_2$ is singular, we define $h_1\otimes h_2$ as the singular Hermitian form; 
+</p>
+</li><li class="custom-item" id="sgpt-AD45480E"><span data-gerby-tag="AD45480E"></span><p>
+ otherwise, define $h_1\otimes h_2$ as the usual tensor product: For any $v_1\in V_1$, $v_2\in V_2$, set 
+</p>
+<div class="equation">
+  \[  h_1\otimes h_2(v_1\otimes v_2)=h_1(v_1)h_2(v_2).  \]
+</div>
+</li>
+</ol>
+</article>
+
+
+<article class="env-definition" id="sgpt-41CAE7BB">
+<p><a class="environment-identifier" href="../../tag/293669D813B8/">Definition <span data-tag="41CAE7BB">1.8.3</span>.</a><span data-gerby-tag="41CAE7BB"></span> A <em>Hermitian metric</em> $h$ on $L$ is a family of Hermitian forms $(h_ x)_{x\in X}$, such that </p>
+<ol>
+<li class="custom-item" id="sgpt-C77A1E50"><span data-gerby-tag="C77A1E50"></span><p>
+ for each $x\in X$, $h_ x$ is a Hermitian form on $L_ x$, and 
+</p>
+</li><li class="custom-item" id="sgpt-DA040B04"><span data-gerby-tag="DA040B04"></span><p>
+ for each local holomorphic section $s$ of $\mathcal{O}_ X(L)$, the map $x\mapsto |s(x)|^2_{h_ x}$ is smooth. 
+</p>
+</li>
+</ol>
+ The pair $(L,h)$ is called a <em>Hermitian line bundle</em>. We shall write $\mathrm{dd}^{\mathrm{c}}h=c_1(L,h)$<aside class="source-footnote" id="sgpt-a0000008706"><span class="footnote-label">Note.</span> The unusual notation $\mathrm{dd}^{\mathrm{c}}h$ is sometimes referred to as the <em>Göteborg notation</em> because it is widely used by complex geometers in Göteborg (usually spelled as Gothenburg in English, the second largest (yet very poorly known) city in Sweden). As I identify myself as <em>Göteborgare</em>, I do not feel guilty about this notation.</aside> for the first Chern form of $h$<aside class="source-footnote" id="sgpt-a0000008714"><span class="footnote-label">Note.</span> In the literature, people sometimes define the <em>curvature form</em> of $(L,h)$ as $\Theta _{h}=-2\pi \mathrm{i}\mathrm{dd}^{\mathrm{c}}h$.</aside>, normalized so that 
+<div class="equation">
+  \[  [c_1(L,h)]=c_1(L).  \]
+</div>
+<p> The map $x\mapsto |s(x)|_{h_ x}$ will be denoted by $|s|_ h$. </p>
+<p>To be more precise, if $U\subseteq X$ is an open subset on which $L$ admits a nowhere vanishing holomorphic section $s$, then we define </p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}h)|_ U=\mathrm{dd}^{\mathrm{c}}\left(-\log |s|_ h^2\right).  \]
+</div>
+</article>
+
+
+<article class="env-proposition" id="sgpt-C3111E63">
+<p><a class="environment-identifier" href="../../tag/0C02CD3B5D59/">Proposition <span data-tag="C3111E63">1.8.4</span> <span class="named">(Lelong–Poincaré)</span>.</a><span data-gerby-tag="C3111E63"></span> Let $s\in \mathrm{H}^0(X,L)$ be non-zero and $h$ be a Hermitian metric on $L$. Then </p>
+<div class="equation" id="sgpt-1CF29A95"><span data-gerby-tag="1CF29A95"></span>
+<span class="equation-label"><a data-tag="1CF29A95" href="../../tag/1322FD7BDF4F/">1.45</a></span>
+<div>\begin{equation} \label{eq:LP} c_1(L,h)+\mathrm{dd}^{\mathrm{c}}\log |s|_ h^2=[Z(s)], \end{equation}</div>
+</div>
+<p> where $Z(s)$ is the zero divisor defined by $s$ and $[\bullet ]$ denote the associated current of integration. </p>
+</article> See <span class="cite">[<span class="postnote">(3.11)</span>, <a href="../../references/#R9CCDADAD3527">Dem12</a>]</span>. Again, we want to check that our conventions are compatible by investigating the following simple example. <article class="env-example" id="sgpt-795A3A28">
+<p><a class="environment-identifier" href="../../tag/0D9E7B0EE3DC/">Example <span data-tag="795A3A28">1.8.5</span>.</a><span data-gerby-tag="795A3A28"></span> Let $X=\mathbb {P}^1$ and $L=\mathcal{O}_{\mathbb {P}^1}(1)$. The homogeneous coordinates on $\mathbb {P}^1$ will be denoted by $[X_0:X_1]$. At a point $x=[X_0:X_1]\in \mathbb {P}^1$, the fiber $L_ x$ is identified with the dual of $[x]$, where $[x]\subseteq \mathbb {C}^2$ is the line represented by $x$. </p>
+<p>In order to introduce the Hermitian metric $h$ on $L$, we fix the standard Hermitian norm $\| \bullet \| $ on $\mathbb {C}^2$. Then given $\lambda \in L_ x=[x]^{\vee }$, we introduce </p>
+<div class="equation">
+  \[  |\lambda |_{h_ x}=\frac{|\lambda (\tilde{x})|}{\| \tilde{x}\| },  \]
+</div>
+<p> where $\tilde{x}$ is an arbitrary non-zero element in $[x]$. The reader can easily verify that $h$ is indeed a Hermitian metric on $L$. The Hermitian metric $h$ is known as the <em>Fubini–Study metric</em>. </p>
+<p>A holomorphic section $s\in \mathrm{H}^0(X,L)$ can be formally identified with a linear form $a_0X_0+a_1X_1$: At $x\in X$, the corresponding linear form on $[x]$ is given by sending $(X_0,X_1)$ to $a_0X_0+a_1X_1$. </p>
+<p>Next we compute $\mathrm{dd}^{\mathrm{c}}h=c_1(L,h)$. For this purpose, we cover $\mathbb {P}^1$ by $\mathbb {C}=\mathbb {P}^1\setminus \{ \infty \} $ and $\mathbb {P}^1\setminus \{ 0\} $. Both are holomorphic coordinate charts with coordinate function $z=X_0/X_1$ and $z^{-1}=X_1/X_0$ respectively. </p>
+<p>We claim that on $\mathbb {C}$, </p>
+<div class="equation" id="sgpt-DBEF15BA"><span data-gerby-tag="DBEF15BA"></span>
+<span class="equation-label"><a data-tag="DBEF15BA" href="../../tag/3C9B623060E7/">1.46</a></span>
+<div>\begin{equation} \label{eq:curvFS} \mathrm{dd}^{\mathrm{c}}h=\mathrm{dd}^{\mathrm{c}}\log (1+|z|^2). \end{equation}</div>
+</div>
+<p> In fact, let $t$ be the nowhere vanishing section of $L$ on $\mathbb {C}$ corresponding to $X_1$. Then for $z\in \mathbb {C}$, we have an obvious lift $(z,1)\in [z]$, so </p>
+<div class="equation">
+  \[  |t|_ h^2(z)=\frac{1}{|z|^2+1}.  \]
+</div>
+<p> So (<a data-tag="DBEF15BA" href="../../tag/3C9B623060E7/">1.46</a>) follows. </p>
+<p>In order to obtain a non-trivial case of the Lelong–Poincaré formula, we need to consider a section which vanishes at some points in $\mathbb {C}$. Let $s$ be the holomorphic section of $L$ corresponding to $X_0$. Then </p>
+<div class="equation">
+  \[  \log |s|_ h^2(z)=\log \frac{|z|^2}{|z|^2+1}  \]
+</div>
+<p> for any $z\in \mathbb {C}$ using the same argument as above. Therefore, we find that restricted to $\mathbb {C}$, we have </p>
+<div class="equation">
+  \[  c_1(L,h)+\mathrm{dd}^{\mathrm{c}}\log |s|_ h^2=\mathrm{dd}^{\mathrm{c}}f=[0],  \]
+</div>
+<p> where $f(z)=\log |z|^2$. So the Lelong–Poincaré formula (<a data-tag="1CF29A95" href="../../tag/1322FD7BDF4F/">1.45</a>) is verified in this case. </p>
+<p>The Kähler form $\mathrm{dd}^{\mathrm{c}}h$ on $\mathbb {P}^1$ is also known as the <em>Fubini–Study metric</em>. </p>
+</article>
+
+
+<article class="env-definition" id="sgpt-E8691D70">
+<a class="environment-identifier" href="../../tag/A43467D63B4A/">Definition <span data-tag="E8691D70">1.8.6</span>.</a><span data-gerby-tag="E8691D70"></span> A (singular) <em>plurisubharmonic metric</em> (or <em>psh metric</em> for short)<aside class="source-footnote" id="sgpt-a0000008993"><span class="footnote-label">Note.</span> In the literature, people usually refer to such metrics as <em>positively curved singular Hermitian metrics</em>. I dislike this terminology, as having positive curvature only determines a plurisubharmonic metric almost everywhere, not everywhere.</aside> $h$ on $L$ is a family $(h_ x)_{x\in X}$ such that 
+<ol>
+<li class="custom-item" id="sgpt-A2EC5B95"><span data-gerby-tag="A2EC5B95"></span><p>
+ for each $x\in X$, $h_ x$ is either a Hermitian form on $L_ x$ or the singular Hermitian form on $L_ x$, and 
+</p>
+</li><li class="custom-item" id="sgpt-66E0E36E"><span data-gerby-tag="66E0E36E"></span><p>
+ there is a Hermitian metric $h_0$ on $L$ and $\varphi \in \mathrm{PSH}(X,c_1(L,h_0))$ such that for each $x\in X$ and each $v\in L_ x$, we have 
+</p>
+<div class="equation" id="sgpt-7FDFBD0B"><span data-gerby-tag="7FDFBD0B"></span>
+<span class="equation-label"><a data-tag="7FDFBD0B" href="../../tag/6C8BC3AC251D/">1.47</a></span>
+<div>\begin{equation} \label{eq:htwist} |v|^2_{h_ x}= \left\{  \begin{aligned}  0,&amp; \quad \textup{if }v=0;\\  |v|^2_{h_{0,x}}\mathrm{e}^{-\varphi (x)},&amp; \quad \textup{if }v\neq 0. \end{aligned} \right. \end{equation}</div>
+</div>
+</li>
+</ol>
+<p> The <em>(first) Chern current</em> of $h$ is by definition </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}h=c_1(L,h)\coloneqq c_1(L,h_0)+\mathrm{dd}^{\mathrm{c}}\varphi .  \]
+</div>
+<p> The set of psh metrics on $L$ will be denoted by $\mathrm{PSH}(L)$. </p>
+</article> We shall write the plurisubharmonic metric defined by (<a data-tag="7FDFBD0B" href="../../tag/6C8BC3AC251D/">1.47</a>) as $h_0\exp (-\varphi )$<aside class="source-footnote" id="sgpt-a0000009082"><span class="footnote-label">Note.</span> Be careful, this is not $h_0^2\exp (-\varphi )$, as I prefer to think of $h_0$ as a quadratic form.</aside>. With these conventions, $c_1(L,h)$ does not depend on the choice of $h_0$. 
+
+<p>
+Given a local holomorphic section $s$ of $L$, we shall use the following notations interchangeably to denote the map $x\mapsto h_ x(s)$: 
+</p>
+<div class="equation">
+  \[  |s|^2_ h=h(s)=h(s,s).  \]
+</div>
+
+<article class="env-remark" id="sgpt-9FDF2438">
+<p><a class="environment-identifier" href="../../tag/D2F8C4BB2BD4/">Remark <span data-tag="9FDF2438">1.8.7</span>.</a><span data-gerby-tag="9FDF2438"></span> In the literature, some people prefer the convention that in (<a data-tag="7FDFBD0B" href="../../tag/6C8BC3AC251D/">1.47</a>), neither side has the square. Our choice seems to be the most natural one given our normalization of $\mathrm{dd}^{\mathrm{c}}$. </p>
+</article>
+
+<p>
+Observe that once a Hermitian metric $h_0$ on $L$ is given, the construction in <a data-tag="66E0E36E" href="../../tag/A43467D63B4A/#sgpt-66E0E36E">2</a> gives a bijection between $\mathrm{PSH}(X,c_1(L,h_0))$ and the set of plurisubharmonic metrics on $L$. 
+</p>
+<p>
+Based on this correspondence, plurisubharmonic metrics have the same functoriality property as quasi-plurisubharmonic functions in proposition <a data-tag="A6E84762" href="../../tag/726DDFDDA8F2/">1.1.13</a>. In particular, given a connected closed submanifold $Y$ of $X$, $h|_ Y$ is a plurisubharmonic metric as long as it is not singular everywhere. 
+</p>
+
+<article class="env-definition" id="sgpt-2EA0CC8C">
+<p><a class="environment-identifier" href="../../tag/9834FE8F2B0D/">Definition <span data-tag="2EA0CC8C">1.8.8</span>.</a><span data-gerby-tag="2EA0CC8C"></span> Given two holomorphic line bundles $L_1$, $L_2$ on $X$ and plurisubharmonic metrics $h_1$ on $L_1$ and $h_2$ on $L_2$, we define the <em>tensor product</em> plurisubharmonic metric $h_1\otimes h_2$ on $L_1\otimes L_2$ as follows: for each $x\in X$, define  </p>
+<div class="equation">
+  \[  (h_1\otimes h_2)_ x=h_{1,x}\otimes h_{2,x}  \]
+</div>
+<p> in the sense of definition <a data-tag="97FEBA2C" href="../../tag/90891EB78EA0/">1.8.2</a>. </p>
+</article> We can easily verify that $h_1\otimes h_2$ is indeed a plurisubharmonic metric on $L_1\otimes L_2$. 
+
+
+<article class="env-example" id="sgpt-866F3C9A">
+<p><a class="environment-identifier" href="../../tag/CC1C409253F3/">Example <span data-tag="866F3C9A">1.8.9</span>.</a><span data-gerby-tag="866F3C9A"></span> We continue with our example example <a data-tag="795A3A28" href="../../tag/0D9E7B0EE3DC/">1.8.5</a>. Let $X=\mathbb {P}^1$ and $L=\mathcal{O}_{\mathbb {P}^1}(1)$. Let $h^0$ denote the Fubini–Study metric on $L$ as defined in example <a data-tag="795A3A28" href="../../tag/0D9E7B0EE3DC/">1.8.5</a>. Note that we have changed the notation from $h$ to $h^0$. Let $\omega =\mathrm{dd}^{\mathrm{c}}h^0$. </p>
+<p>We construct $\varphi \in \mathrm{PSH}(X,\omega )$ as follows: On $\mathbb {C}$, define </p>
+<div class="equation" id="sgpt-3C92A163"><span data-gerby-tag="3C92A163"></span>
+<span class="equation-label"><a data-tag="3C92A163" href="../../tag/6B76079BBD9C/">1.50</a></span>
+<div>\begin{equation} \label{eq:logsingP1ex} \varphi (z)=\log \frac{|z|^2}{1+|z|^2}. \end{equation}</div>
+</div>
+ Then $\varphi \in \mathrm{PSH}(\mathbb {C},\omega |_{\mathbb {C}})$ by (<a data-tag="DBEF15BA" href="../../tag/3C9B623060E7/">1.46</a>). Setting $\varphi (\infty )=0$, we can easily verify that $\varphi \in \mathrm{PSH}(\mathbb {P}^1,\omega )$.<aside class="source-footnote" id="sgpt-a0000009239"><span class="footnote-label">Note.</span> This can also be verified using the Grauert–Remmert extension theorem theorem <a data-tag="1E88697D" href="../../tag/DAE812E1A818/">1.2.9</a>.</aside> 
+<p>We then get a plurisubharmonic metric $h=h^0\exp (-\varphi )$. To be more explicit, the fiber metric $h$ at $0$ is singular, $h_{\infty }=h^0_{\infty }$, while for $z\in \mathbb {C}\setminus \{ 0\} $ and $\lambda \in [z]^{\vee }$, we have </p>
+<div class="equation">
+  \[  |\lambda |_{h_ z}=\frac{|\lambda (z,1)|}{|z|}.  \]
+</div>
+</article>
+
+<p>
+In the remainder of this section, we assume that $X$ is compact. 
+</p>
+
+<article class="env-definition" id="sgpt-FBA740A0">
+<p><a class="environment-identifier" href="../../tag/9FE903B6E5A8/">Definition <span data-tag="FBA740A0">1.8.10</span>.</a><span data-gerby-tag="FBA740A0"></span>Assume that $L$ is a pseudo-effective line bundle on $X$. A <em>Fubini–Study metric</em> on $L$ is a psh metric $h$ on $L$ of the following form: There exists $m\in \mathbb {Z}_{&gt;0}$, finitely many sections $s_1,\ldots ,s_ N\in \mathrm{H}^0(X,L^ m)$ and $\lambda _1,\ldots ,\lambda _ N\in \mathbb {Q}$ such that for any local nowhere vanishing holomorphic section $s$ of $L$, we have </p>
+<div class="equation">
+  \[  |s|_ h^2=\min _{i=1,\ldots ,N}\left| \frac{s^{\otimes m}}{\mathrm{e}^{\lambda _ i/2}s_ i}\right|^{2m^{-1}}.  \]
+</div>
+<p> We write $\mathrm{FS}(L)$ for the set of Fubini–Study metrics on $L$. </p>
+</article> If we fix a reference smooth Hermitian metric $h_0$ on $L$ with $\theta =\mathrm{dd}^{\mathrm{c}}h_0$, we can write $h=h_0\exp (-\varphi )$ with 
+
+<div class="equation">
+  \[  \varphi =\frac{1}{m}\max _{i=1,\ldots ,N}\left(\log |s_ i|^2_{h_0^{m}}+\lambda _ i\right).  \]
+</div>
+<p>
+ Similarly, we write $\mathrm{FS}(X,\theta )$ for the set of such functions. 
+</p>
+
+<article class="env-definition" id="sgpt-CE1E7AF0">
+<p><a class="environment-identifier" href="../../tag/8FCD7BEEDD56/">Definition <span data-tag="CE1E7AF0">1.8.11</span>.</a><span data-gerby-tag="CE1E7AF0"></span> Assume that $L$ is a pseudo-effective line bundle on $X$. The set $\widetilde{\mathrm{FS}}(L)$ of <em>generalized Fubini–Study metrics</em> is the smallest subset of $\mathrm{PSH}(L)$ containing $\mathrm{FS}(L)$ which is closed under the following two operations: </p>
+<ol>
+<li class="custom-item" id="sgpt-BEB28165"><span data-gerby-tag="BEB28165"></span><p>
+ $\mathbb {Q}$-convex combinations: if $h_1,h_2\in \widetilde{\mathrm{FS}}(L)$ and $t\in (0,1)$, then 
+</p>
+<div class="equation">
+  \[  h_1^ t \otimes h_2^{1-t}\in \widetilde{\mathrm{FS}}(L);  \]
+</div>
+</li><li class="custom-item" id="sgpt-519DCA00"><span data-gerby-tag="519DCA00"></span><p>
+ minima: if $h_1,h_2\in \widetilde{\mathrm{FS}}(L)$, then 
+</p>
+<div class="equation">
+  \[  \min \{ h_1,h_2\} \in \widetilde{\mathrm{FS}}(L).  \]
+</div>
+</li>
+</ol>
+</article>
+
+
+We shall need the following Ohsawa–Takegoshi type extension theorem. <article class="env-theorem" id="sgpt-EBB4B08B">
+<a class="environment-identifier" href="../../tag/2985932B2B64/">Theorem <span data-tag="EBB4B08B">1.8.12</span>.</a><span data-gerby-tag="EBB4B08B"></span> Assume that $L$ is big and $T$ is a holomorphic line bundle on $X$. Fix a Hermitian metric $h_ T$ on $T$. Fix a Hermitian metric $h$ on $L$ and let $\theta =c_1(L,h)$. Take a Kähler form $\omega $ on $X$. Let $Y\subseteq X$ be a connected closed submanifold of dimension $m$. Suppose that $\varphi \in \mathrm{PSH}(X,\theta - \delta \omega )$ for some $\delta &gt;0$ and $\varphi |_ Y\not\equiv -\infty $. Then there exists $k_0(\delta ,h_ T)&gt;0$ such that for all $k \geq k_0$ and $s \in \mathrm{H}^0(Y, T\otimes L|_ Y^ k \otimes \mathcal{I}(k\varphi |_ Y))$<aside class="source-footnote" id="sgpt-a0000009467"><span class="footnote-label">Note.</span> Here and in the sequel, we usually abbreviate $\otimes k$ in the superscript as $k$ to save space.</aside>, there exists an extension $\tilde s \in \mathrm{H}^0(X, T\otimes L^ k \otimes \mathcal{I}(k\varphi ))$ such that 
+<div class="equation">
+  \[  \int _ X |\tilde{s}|^2_{h^ k\otimes h_ T}\mathrm{e}^{-k\varphi }\, \omega ^ n \leq C \int _ Y |s|^2_{(h^ k\otimes h_ T)|_ Y} \mathrm{e}^{-k\varphi |_ Y}\, \omega |_ Y^ m,  \]
+</div>
+<p> where $C&gt;0$ is an absolute constant, independent of the data $(\varphi ,s,k)$. </p>
+</article> This is a special case of <span class="cite">[<span class="postnote">Theorem 1.4</span>, <a href="../../references/#R5FA972FB182E">His12</a>]</span>. 
+
+
+Let us also recall a simple result about the Bergman kernel approximations: <article class="env-proposition" id="sgpt-012CB98E">
+<p><a class="environment-identifier" href="../../tag/2DDBBF280789/">Proposition <span data-tag="012CB98E">1.8.13</span>.</a><span data-gerby-tag="012CB98E"></span> Let $(L,h)$ be a Hermitian line bundle on $X$ and set $\theta =c_1(L,h)$. Let $(T,h_ T)$ be a Hermitian line bundle on $X$. Assume that $\varphi \in \mathrm{PSH}(X,\theta )$ is a potential with analytic singularities such that $\theta _{\varphi }$ is a Kähler current. Fix a Kähler form $\omega $ on $X$. For each $k\geq 1$, we let </p>
+<div class="equation" id="sgpt-38D0631B"><span data-gerby-tag="38D0631B"></span>
+<span class="equation-label"><a data-tag="38D0631B" href="../../tag/1EE7A6DB1803/">1.51</a></span>
+<div>\begin{equation} \label{eq:Bergman_seq_def} \varphi _ k \coloneqq \frac{1}{k} \log \sup _{\substack {s \in \mathrm{H}^0(X,L^ k \otimes T)\\ \int _ X |s|^2_{h^ k \otimes h_ T}\mathrm{e}^{-k\varphi } \omega ^ n \leq 1}} |s|^2_{h^ k \otimes h_ T}. \end{equation}</div>
+</div>
+<p> Then for all sufficiently large $k$, </p>
+<div class="equation">
+  \[  \varphi \preceq \varphi _ k\preceq \alpha _ k \varphi ,  \]
+</div>
+<p> where $\alpha _ k\in (0,1)$ is an increasing sequence with limit $1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First we prove $\varphi \preceq \varphi _ k$. Since $\theta _{\varphi }$ is a Kähler current, there is $\delta &gt;0$ such that $\varphi \in \mathrm{PSH}(X,\theta -\delta \omega )$. Let $x\in X$ with $\varphi (x)&gt;-\infty $. Applying theorem <a data-tag="EBB4B08B" href="../../tag/2985932B2B64/">1.8.12</a> to the point $Y=\{ x\} $, for all sufficiently large $k$ and every unit vector $e_ x\in (L^ k\otimes T)_ x$, there is a section $\tilde{s}\in \mathrm{H}^0(X,L^ k\otimes T\otimes \mathcal{I}(k\varphi ))$ with $\tilde{s}(x)=e_ x$ and 
+    
+<div class="equation">
+  \[  \int _ X |\tilde{s}|^2_{h^ k\otimes h_ T}\mathrm{e}^{-k\varphi }\omega ^ n\leq C\mathrm{e}^{-k\varphi (x)}.  \]
+</div>
+<p>
+       After rescaling $\tilde{s}$, the definition of $\varphi _ k$ gives 
+    
+<div class="equation">
+  \[  \varphi _ k(x)\geq \varphi (x)-\frac{\log C}{k}.  \]
+</div>
+<p>
+       This proves $\varphi \preceq \varphi _ k$. 
+    <p>
+      The other part of the inequality follows from <a data-tag="D0481B70" href="../../tag/2E0432C779A0/">1.6.14</a> and (<a data-tag="1B435B03" href="../../tag/D1A302A4CDD6/">1.42</a>). 
+    <p>
+      More precisely, if $s_1,\ldots ,s_ N$ is an orthonormal basis of $\mathrm{H}^0(X,L^ k\otimes T\otimes \mathcal{I}(k\varphi ))$, with respect to the $L^2$-norm: 
+    
+<div class="equation">
+  \[  s\mapsto \left( \int _ X |s|^2_{h^ k\otimes h_ T}\mathrm{e}^{-k\varphi }\, \omega ^ n \right)^{1/2},  \]
+</div>
+<p>
+       then by (<a data-tag="1B435B03" href="../../tag/D1A302A4CDD6/">1.42</a>), 
+    
+<div class="equation">
+  \[  s_ i\in \mathrm{H}^0\left(X,L^ k\otimes T\otimes \mathcal{I}_{\infty }\left((k-c^{-1}n)_+\varphi \right)\right),  \]
+</div>
+<p>
+       where $c&gt;0$ depends only on $\varphi $. So there is $C_ k&gt;0$ so that 
+    
+<div class="equation">
+  \[  \sum _{i=1}^ N |s_ i|^2_{h^ k\otimes h_ T}\mathrm{e}^{-(k-c^{-1}n)_+\varphi }\leq C_ k\quad \textup{quasi-everywhere}.  \]
+</div>
+<p>
+       In other words, 
+    
+<div class="equation">
+  \[  \varphi _ k\preceq \frac{1}{k}\left( k-c^{-1}n \right)_+ \varphi .  \]
+</div>
+<p>
+       It suffices to take $\alpha _ k=(1-k^{-1}c^{-1}n)_+$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+<blockquote class="motto">Pour exprimer d'une manière frappante que le monument que j'élève sera placé sous l'invocation de la Science, j'ai décidé d'inscrire en lettres d'or sur la grande frise du premier étage et à la place d'honneur, les noms des plus grands savants<aside class="source-footnote" id="sgpt-a0000009793"><span class="footnote-label">Note.</span> Gaspard Monge, Comte de Péluse (1746–1818), known oddly by his family name instead of <em>de Péluse</em>, is one of the 72 names scribed on the Eiffel tower. Apart from being a mathematician, he was also a politician, active mainly after the French Revolution.</aside> qui ont honoré la France depuis 1789 jusqu'à nos jours. 
+— Gustave Eiffel, 1889</blockquote>
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

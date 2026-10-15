@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sobolev capacity and two Hessian factors · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/local-monge-ampere/">Chapter 7 · Local Monge–Ampère theory and Hessian equations</a> · Tag <code>FB2B0B645AB5</code></p><h1>Sobolev capacity and two Hessian factors</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 12.9 Sobolev capacity and two Hessian factors <span data-gerby-tag="768093BC"></span></div>
+<p>
+To multiply a varying coefficient measure by a bounded potential, weak convergence of the measures is not enough. We first control the sets on which a potential can be discontinuous. The linear trace of an admissible form supplies this control through Sobolev capacity. Its Gauduchon multiplier must be chosen in the conformal class of $\omega $, since an admissible form need not be positive in every tangent direction. 
+</p>
+<p>
+Choose $\rho &gt;0$ by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a> and put 
+</p>
+<div class="equation">
+  \[  T=\rho \omega ^{n-1},\qquad \mathrm{dd}^{\mathrm{c}}T=0,\qquad A=\int _ X\omega \wedge T&gt;0.  \]
+</div>
+<p>
+ Write $H^1(X)=W^{1,2}(X,\mathbb R)$ and use the equivalent Sobolev norm 
+</p>
+<div class="equation">
+  \[  \| f\| _{H^1}^2=\int _ Xf^2\omega ^ n+ \int _ X\mathrm df\wedge \mathrm d^{\mathrm c}f\wedge T.  \]
+</div>
+<p>
+ For an open set $G\subset X$ define 
+</p>
+<div class="equation">
+  \[  \operatorname {Cap}_1(G) =\inf \{ \| f\| _{H^1}^2:f\in H^1(X),\  f\geq 1 \text{ almost everywhere on }G\} ,  \]
+</div>
+<p>
+ and for an arbitrary set $E$ take the infimum over open $G\supset E$. Thus this capacity is defined by Sobolev energy; it is distinct from an $m$-Hessian capacity. Truncation allows $0\leq f\leq 1$ in the infimum for open sets.  
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C1F34765">
+<p><a class="environment-identifier" href="../../tag/EB20E121128A/">Lemma <span data-tag="C1F34765">12.9.1</span>.</a><span data-gerby-tag="C1F34765"></span> The capacity $\operatorname {Cap}_1$ is countably subadditive. For a smooth real $f$ and $a&gt;0$, </p>
+<div class="equation">
+  \[  \operatorname {Cap}_1(\{ |f|&gt;a\} )\leq a^{-2}\| f\| _{H^1}^2.  \]
+</div>
+<p> If a positive Radon measure $\mu $ satisfies $|\int _ X\phi \, \mathrm d\mu |\leq C\| \phi \| _{H^1}$ for every smooth real $\phi $, then for every Borel set $E$, </p>
+<div class="equation">
+  \[  \mu (E)\leq C\operatorname {Cap}_1(E)^{1/2}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For open $G_ i$ choose Sobolev functions $0\leq f_ i\leq 1$ equal to one almost everywhere on $G_ i$, with a summably small excess in their squared norms over the capacity infima. The Sobolev chain rule gives 
+    
+<div class="equation">
+  \[  \| \max _{i\leq N}f_ i\| _{H^1}^2\leq \sum _{i\leq N}\| f_ i\| _{H^1}^2.  \]
+</div>
+<p>
+       Indeed, almost everywhere the gradient of the maximum is the gradient of an active function, and the squared value is bounded by the sum of the squared values. If the sum is finite, these maxima converge in $L^2$, are bounded in $H^1$, and have a weak $H^1$ limit equal to one almost everywhere on $\bigcup _ iG_ i$. Lower semicontinuity proves subadditivity for open sets. Taking open supersets proves it for arbitrary sets. If the sum is infinite there is nothing to prove. The level-set estimate follows by testing with $\min \{ 1,|f|/a\} $ and the same Sobolev chain rule. 
+    <p>
+      Fix a compact $K\subset G$ and a Sobolev competitor $0\leq f\leq 1$ for the open set $G$. Positive local mollification and a partition of unity give smooth nonnegative $f_\epsilon \to f$ in $H^1$ that satisfy $f_\epsilon \geq 1$ on $K$ for small $\epsilon $: every convolution ball meeting $K$ then lies in $G$, where $f=1$ almost everywhere. The assumed estimate gives $\mu (K)\leq C\lim _\epsilon \| f_\epsilon \| _{H^1}=C\| f\| _{H^1}$. Take the infimum over $f$ and then the supremum over compact $K\subset G$ to obtain the estimate for $G$. Outer regularity and open supersets give it for every Borel $E$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-1DDAECA7">
+<p><a class="environment-identifier" href="../../tag/FFBF9CD42640/">Lemma <span data-tag="1DDAECA7">12.9.2</span>.</a><span data-gerby-tag="1DDAECA7"></span> Every bounded admissible $u$ belongs to $H^1(X)$. Its trace </p>
+<div class="equation">
+  \[  \mu _ u=(\omega +\mathrm{dd}^{\mathrm{c}}u)\wedge T  \]
+</div>
+<p> is a positive Radon measure of total mass $A$. If $\| u\| _\infty \leq M$, then </p>
+<div class="equation">
+  \[  \| u\| _{H^1}\leq C(1+M),\qquad \mu _ u(E)\leq C(1+M)\operatorname {Cap}_1(E)^{1/2}  \]
+</div>
+<p> for every Borel $E$. On each fixed relatively compact coordinate chart, the total variation of every coefficient of $\mathrm{dd}^{\mathrm{c}}u$ is also bounded on $E$ by $C(1+M)\operatorname {Cap}_1(E)^{1/2}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First let $u$ be smooth admissible. The first-cone inequality gives $\mu _ u\geq 0$, since $T$ is conformal to $\omega ^{n-1}$, and $\mathrm{dd}^{\mathrm{c}}T=0$ gives $\mu _ u(X)=A$. Applying distributional Stokes to $\mathrm{dd}^{\mathrm{c}}(u^2)$ yields the energy identity 
+    
+<div class="equation">
+  \[  \int _ X\mathrm du\wedge \mathrm d^{\mathrm c}u\wedge T =-\int _ Xu\, \mathrm{dd}^{\mathrm{c}}u\wedge T =-\int _ Xu\, \mathrm d\mu _ u+\int _ Xu\omega \wedge T \leq 2MA.  \]
+</div>
+<p>
+       Together with the $L^2$ bound this controls $\| u\| _{H^1}$. For bounded admissible $u$, choose smooth admissible $u_ j\downarrow u$ by <a data-tag="0FD1E681" href="../../tag/68BE4F589DCE/">12.5.5</a>, discard a finite initial segment, and take $\| u_ j\| _\infty \leq M+1$ as in <a data-tag="968D4676" href="../../tag/C35233382EB9/">12.8.1</a>. Bounded convergence gives strong $L^2$ convergence. The energy bound gives weak $H^1$ compactness, and every weak cluster point agrees with $u$ in $L^2$; thus the entire sequence converges weakly to $u$ in $H^1$. This proves the Sobolev bound. The trace measures converge weakly to $\mu _ u$, preserving positivity and total mass. 
+    <p>
+      For any smooth real $\phi $, the first-order Stokes identity is 
+    
+<div class="equation">
+  \[  \int _ X\phi \, \mathrm{dd}^{\mathrm{c}}u\wedge T =-\int _ X\mathrm d\phi \wedge \mathrm d^{\mathrm c}u\wedge T +\int _ X\phi \, \mathrm d^{\mathrm c}u\wedge \mathrm dT.  \]
+</div>
+<p>
+       It remains valid for $u\in H^1$ by smooth Sobolev approximation. Both terms are bounded by $C\| u\| _{H^1}\| \phi \| _{H^1}$; the background term $\int \phi \omega \wedge T$ is bounded by $C\| \phi \| _{H^1}$. The preceding capacity lemma gives the bound for $\mu _ u$. In particular the derivative $\mathrm dT$ has not been discarded. 
+    <p>
+      For a smooth admissible approximant, write the eigenvalues of $\omega +\mathrm{dd}^{\mathrm{c}}u_ j$ in an $\omega $-unitary frame as $\lambda _ i$. Since $m\geq 2$, 
+    
+<div class="equation">
+  \[  \sum _ i\lambda _ i^2\leq \left(\sum _ i\lambda _ i\right)^2, \qquad \sum _ i\lambda _ i\geq 0.  \]
+</div>
+<p>
+       Consequently every coefficient of this form is dominated by its trace. On a fixed coordinate chart this bounds the coefficient variations of $\mathrm{dd}^{\mathrm{c}}u_ j$ by $C(\mu _{u_ j}+\omega ^ n)$. Passing to the weak measure limits of <a data-tag="968D4676" href="../../tag/C35233382EB9/">12.8.1</a> gives the same domination by $C(\mu _ u+\omega ^ n)$. Finally $\int _ E\omega ^ n\leq \operatorname {Cap}_1(E)$ and $\operatorname {Cap}_1(E)\leq \| 1\| _{H^1}^2$ absorb the smooth term into the claimed square-root estimate. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-8E387C3E">
+<p><a class="environment-identifier" href="../../tag/A82044827575/">Lemma <span data-tag="8E387C3E">12.9.3</span>.</a><span data-gerby-tag="8E387C3E"></span> Every bounded canonical admissible potential is continuous on the complement of an open set of arbitrarily small $\operatorname {Cap}_1$. The same open set can be chosen for any countable family of such potentials. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose smooth admissible $u_ j\downarrow u$. By the preceding lemma these functions converge weakly to $u$ in $H^1$. Mazur's lemma gives finite convex combinations $w_ N$ of terms with $j\geq N$ such that 
+    
+<div class="equation">
+  \[  \| w_ N-u\| _{H^1}\leq 8^{-N}.  \]
+</div>
+<p>
+       Because $u\leq w_ N\leq u_ N$, they converge pointwise to the canonical function $u$, not just to an unspecified almost-everywhere representative. Put 
+    
+<div class="equation">
+  \[  G_{N_0}=\bigcup _{N\geq N_0} \{ |w_{N+1}-w_ N|&gt;2^{-N}\} .  \]
+</div>
+<p>
+       The capacity tools imply 
+    
+<div class="equation">
+  \[  \operatorname {Cap}_1(G_{N_0}) \leq \sum _{N\geq N_0}4^ N\| w_{N+1}-w_ N\| _{H^1}^2 \leq C\sum _{N\geq N_0}16^{-N}\longrightarrow 0.  \]
+</div>
+<p>
+       Outside $G_{N_0}$, the successive differences form a uniformly summable series. Thus $w_ N$ converge uniformly there and their limit $u$ is continuous on that closed set. For a countable family, choose the exceptional open sets with capacities less than $\epsilon 2^{-i}$ and take their union. Countable subadditivity proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-C0AF8E7E">
+<p><a class="environment-identifier" href="../../tag/B40742E0DD08/">Proposition <span data-tag="C0AF8E7E">12.9.4</span>.</a><span data-gerby-tag="C0AF8E7E"></span> Suppose $u_ j\downarrow u$ and $v_ j\downarrow v$ are bounded canonical admissible potentials with a common uniform bound. Then </p>
+<div class="equation">
+  \[  v_ j\mathrm{dd}^{\mathrm{c}}u_ j\longrightarrow v\mathrm{dd}^{\mathrm{c}}u  \]
+</div>
+<p> weakly as currents with signed measure coefficients. The same conclusion holds for $v_ j\mu _{u_ j}\to v\mu _ u$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Bounded convergence gives $u_ j\to u$ in $L^1$. Their complex Hessians therefore converge in distributions. The preceding coefficient bounds are uniform, so this is weak convergence of each signed coefficient measure against continuous compactly supported tests. The trace measures also converge weakly. Every one of these measures has total variation bounded by $C_ M\operatorname {Cap}_1(E)^{1/2}$ on a Borel set $E$. 
+    <p>
+      Fix $\epsilon &gt;0$. Quasicontinuity supplies an open $G$ with $\operatorname {Cap}_1(G)&lt;\epsilon $ on whose complement $v$ and every $v_ j$ are continuous. Dini's theorem on the compact set $X\setminus G$ gives uniform convergence there. Extend $v|_{X\setminus G}$ to a continuous function $F$ on $X$ with the same uniform bound, by Tietze's theorem. For any one of the signed coefficient measures $\nu _ j\to \nu $ and a fixed continuous compactly supported test $\psi $, subtract $F\nu _ j$ and $F\nu $. The resulting error is at most 
+    
+<div class="equation">
+  \[  C_{M,\psi }\bigl (\| v_ j-v\| _{X\setminus G} +\epsilon ^{1/2}\bigr ).  \]
+</div>
+<p>
+       The term with $F$ converges by weak measure convergence. First let $j\to \infty $ and then $\epsilon \downarrow 0$. This proves the assertion for the Hessian coefficients and for the positive trace measures. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-A19E0DE8">
+<p><a class="environment-identifier" href="../../tag/0241EC758621/">Theorem <span data-tag="A19E0DE8">12.9.5</span>.</a><span data-gerby-tag="A19E0DE8"></span> For two bounded admissible potentials $u,v$, the recursive current $D_2(u,v)=\mathrm{dd}^{\mathrm{c}}(v\mathrm{dd}^{\mathrm{c}}u)$ is symmetric in its arguments. If $u_ j\downarrow u$ and $v_ j\downarrow v$ are bounded admissible sequences with a common uniform bound, then </p>
+<div class="equation">
+  \[  D_2(u_ j,v_ j)\longrightarrow D_2(u,v)  \]
+</div>
+<p> in distributions. Their shifted positive currents </p>
+<div class="equation">
+  \[  Q_2(u,v)=\bigl (\omega ^2+\omega \wedge \mathrm{dd}^{\mathrm{c}}u +\omega \wedge \mathrm{dd}^{\mathrm{c}}v+D_2(u,v)\bigr )\wedge \omega ^{n-m}  \]
+</div>
+<p> converge weakly as positive currents. For $m=2$ these are positive Radon measures. For $m&gt;2$, the unwedged $D_2$ also converges weakly as a current with measure coefficients. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For smooth admissible approximations $u_ k\downarrow u$ and $v_ k\downarrow v$, the weighted convergence proposition gives 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(v_ k\mathrm{dd}^{\mathrm{c}}u_ k)\longrightarrow \mathrm{dd}^{\mathrm{c}}(v\mathrm{dd}^{\mathrm{c}}u).  \]
+</div>
+<p>
+       The smooth current on the left is $\mathrm{dd}^{\mathrm{c}}v_ k\wedge \mathrm{dd}^{\mathrm{c}}u_ k$ and is symmetric. Applying the same argument in the opposite order proves $D_2(u,v)=D_2(v,u)$. For the bounded sequences in the statement, weighted convergence followed by $\mathrm{dd}^{\mathrm{c}}$ gives the asserted simultaneous distributional limit. 
+    <p>
+      The displayed subset expansion is the current of <a data-tag="61CC9D08" href="../../tag/846671D5582A/">12.8.3</a> with $p=2$. Its lower-degree terms converge weakly, so its whole distributional limit is $Q_2(u,v)$. Positivity and the uniform local mass bounds turn this into weak convergence of currents of order zero. When $m&gt;2$, the same conclusion for $D_2$ follows from the uniform coefficient bounds below degree $m$ in <a data-tag="354EA0C7" href="../../tag/EB2FA13CDDE0/">12.8.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+The capacity estimate depends on using a first Hessian. A product of two Hessians can already charge a set of zero Sobolev capacity. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-350D7B3A">
+<p><a class="environment-identifier" href="../../tag/2A6BE9847309/">Lemma <span data-tag="350D7B3A">12.9.6</span>.</a><span data-gerby-tag="350D7B3A"></span> Let $E$ be a compact subset of a smooth real submanifold of codimension two contained in a coordinate chart. Then $\operatorname {Cap}_1(E)=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to treat a compact subset of a submanifold chart, since finitely many such subsets cover $E$ and the capacity is subadditive. Choose real coordinates $(s,t)$ there, with $t\in \mathbb R^2$ and the submanifold given by $t=0$. Choose $0\leq \eta \leq 1$ smooth, supported in this chart and equal to one near the compact subset. Put $r=|t|$. For $0&lt;\epsilon &lt;1/2$ define 
+    
+<div class="equation">
+  \[  h_\epsilon (r)= \begin{cases}  1,&amp; 0\leq r\leq \epsilon ^2,\\  \displaystyle \frac{\log (\epsilon /r)}{\log (1/\epsilon )}, &amp; \epsilon ^2&lt;r&lt;\epsilon ,\\  0,&amp; r\geq \epsilon . \end{cases}  \]
+</div>
+<p>
+       The Sobolev function $f_\epsilon =\eta h_\epsilon $ equals one on an open neighborhood of that subset. On the fixed compact coordinate set the Sobolev norm is equivalent to the Euclidean one. Integration in the two normal variables gives 
+    
+<div class="equation">
+  \[  \| f_\epsilon \| _{H^1}^2 \leq C\left(\epsilon ^2+ \int _{\epsilon ^2}^{\epsilon } \frac{\mathrm dr}{r\log (1/\epsilon )^2}\right) =C\left(\epsilon ^2+\frac1{\log (1/\epsilon )}\right) \longrightarrow 0.  \]
+</div>
+<p>
+       The derivatives of $\eta $ contribute at most $C\epsilon ^2$. Taking the infimum over open neighborhoods proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-36B886BE">
+<p><a class="environment-identifier" href="../../tag/AEB4F2397BBF/">Example <span data-tag="36B886BE">12.9.7</span>.</a><span data-gerby-tag="36B886BE"></span> There are bounded continuous $\omega $-plurisubharmonic potentials $u,v$ and a compact Borel set $E$ such that </p>
+<div class="equation">
+  \[  \operatorname {Cap}_1(E)=0,\qquad \int _ E Q_2(u,v)\wedge \omega ^{m-2}&gt;0.  \]
+</div>
+<p> Consequently the first-Hessian capacity estimate does not extend to this positive two-factor measure, even within the continuous $\omega $-plurisubharmonic subclass. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose holomorphic coordinates $z_ j=x_ j+\mathrm i y_ j$ and a smooth nonnegative cutoff $\chi $ supported in the chart and equal to one on a smaller coordinate box. Extend 
+    
+<div class="equation">
+  \[  u=a\chi |x_1|,\qquad v=a\chi |x_2|  \]
+</div>
+<p>
+       by zero outside the chart. These functions are globally continuous and bounded. To check their curvature, replace $|x_ j|$ by $g_\delta (x_ j)=(x_ j^2+\delta ^2)^{1/2}$, with $0&lt;\delta \leq 1$. The Hessian of $\chi g_\delta $ has the nonnegative term $\chi \mathrm{dd}^{\mathrm{c}}g_\delta $; all its remaining terms are uniformly bounded forms, since $g_\delta $ and $g_\delta '$ are uniformly bounded on the fixed support. Thus $\mathrm{dd}^{\mathrm{c}}(\chi g_\delta )\geq -C\omega $ with $C$ independent of $\delta $. Choosing $a&gt;0$ sufficiently small gives $\omega +\mathrm{dd}^{\mathrm{c}}(a\chi g_\delta )\geq \omega /2$ for both coordinates. Their decreasing limits $u,v$ are therefore $\omega $-plurisubharmonic and admissible. 
+    <p>
+      On the box where $\chi =1$, set $\alpha _ j=\frac{\mathrm i}{4\pi }\mathrm dz_ j\wedge \mathrm d\bar z_ j$. The book's normalization gives 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}g_\delta (x_ j)=\tfrac 12g_\delta ''(x_ j)\alpha _ j, \qquad g_\delta ''(x_ j) =\frac{\delta ^2}{(x_ j^2+\delta ^2)^{3/2}} \longrightarrow 2\delta _{\{ x_ j=0\} }.  \]
+</div>
+<p>
+       The measures $g_\delta ^{\prime \prime }(t)\, \mathrm dt$ have mass two, while their mass outside any fixed neighborhood of zero tends to zero. The two smooth factors depend on distinct real variables, so their product is an approximate identity in $(x_1,x_2)$ and converges to the tensor-product measure. By <a data-tag="A19E0DE8" href="../../tag/0241EC758621/">12.9.5</a>, locally 
+    
+<div class="equation">
+  \[  D_2(u,v)=a^2\delta _{\{ x_1=0\} }\delta _{\{ x_2=0\} } \alpha _1\wedge \alpha _2.  \]
+</div>
+<p>
+       Choose $E$ to be a compact piece of $\{ x_1=x_2=0\} $ inside this box with nonempty relative interior. The preceding lemma gives $\operatorname {Cap}_1(E)=0$. On this box, the positive measure $D_2(u,v)\wedge \omega ^{n-2}$ has strictly positive mass on $E$, since $\omega $ is strictly positive. The smooth term $\omega ^ n$ and the two single-Hessian terms in the expansion 
+    
+<div class="equation">
+  \[  Q_2(u,v)\wedge \omega ^{m-2} =\omega ^ n+\omega ^{n-1}\wedge (\mathrm{dd}^{\mathrm{c}}u+\mathrm{dd}^{\mathrm{c}}v) +D_2(u,v)\wedge \omega ^{n-2}  \]
+</div>
+<p>
+       have zero mass on $E$: each single-Hessian term is absolutely continuous in the other normal real variable. Hence the asserted mass is strictly positive. A bound by $C\operatorname {Cap}_1(F)^ b$ for all Borel $F$, with any $b&gt;0$, would contradict this choice of $E$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The preceding Sobolev-capacity estimate therefore cannot be iterated to control higher-degree coefficient measures. A local Hessian capacity supplies that control in the next section. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

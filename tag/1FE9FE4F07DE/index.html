@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Decreasing weights and capacity continuity · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-pluripolar-mass/">Chapter 11 · Non-pluripolar measures and mass</a> · Tag <code>1FE9FE4F07DE</code></p><h1>Decreasing weights and capacity continuity</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 7.3 Decreasing weights and capacity continuity <span data-gerby-tag="98C69425"></span></div>
+<p>
+For a general decreasing weight $w$, writing $w(s)=\int _ s^\infty (-w'(t))\, \mathrm{d}t$ and integrating the finite-depth estimate (<a data-tag="652B715F" href="../../tag/F3E7262939D2/">7.1</a>) in $t$ bounds both the total mass and the mass on deep sublevel sets. Above any fixed depth, the damped measure is a weighted product of bounded potentials, which is continuous under convergence in capacity; the tail bound then removes the restriction to a fixed depth. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-818B97D0">
+<p><a class="environment-identifier" href="../../tag/EE93EE2035F6/">Theorem <span data-tag="818B97D0">7.3.1</span>.</a><span data-gerby-tag="818B97D0"></span> Let $w:[0,+\infty )\to (0,+\infty )$ be continuously differentiable and nonincreasing, with $w(t)\to 0$ as $t\to +\infty $. For $T\geq 0$ define </p>
+<div class="equation">
+  \[  B_ w(T)=\int _ T^\infty (1+t)^{r_ n}(-w'(t))\, \mathrm{d}t.  \]
+</div>
+<p> Assume $B_ w(0)&lt;+\infty $. For nonpositive $u\in \mathrm{PSH}(X,\omega )$, the damped measures $\nu _{w,u}=w(-u)\mu _ u$ satisfy </p>
+<div class="equation">
+  \[  \nu _{w,u}(X)\leq C_\omega B_ w(0),\qquad \nu _{w,u}(\{ u&lt;-T\} )\leq C_\omega B_ w(T).  \]
+</div>
+<p> For every Borel set $E$ and $T\geq 0$, </p>
+<div class="equation">
+  \[  \nu _{w,u}(E)\leq w(0)(1+T)^ n\operatorname {Cap}_\omega (E)+C_\omega B_ w(T).  \]
+</div>
+<p> In particular, these measures are uniformly absolutely continuous with respect to capacity. If nonpositive $u_ j,u\in \mathrm{PSH}(X,\omega )$ satisfy $u_ j\to u$ in capacity, then $\nu _{w,u_ j}\rightharpoonup \nu _{w,u}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $s=-u$. Since $w(s)=\int _ s^\infty (-w'(t))\, \mathrm{d}t$ for finite $s$, and since $\mu _ u$ does not charge the pole set $\{ s=+\infty \} $, Tonelli's theorem and lemma <a data-tag="1442AF83" href="../../tag/357B2DE7779E/">7.1.2</a> give 
+    
+<div class="equation">
+  \[  \int _ X w(s)\, \mathrm{d}\mu _ u =\int _0^\infty (-w'(t))\mu _ u(\{ s\leq t\} )\, \mathrm{d}t \leq C_\omega B_ w(0).  \]
+</div>
+<p>
+       Restricting the integral to $\{ s&gt;T\} $ gives the same bound with $B_ w(T)$ in place of $B_ w(0)$, since the inner set is then $\{ T&lt;s\leq t\} $, which is empty unless $t&gt;T$. 
+    <p>
+      For the capacity bound, the second estimate in (<a data-tag="652B715F" href="../../tag/F3E7262939D2/">7.1</a>) gives 
+    
+<div class="equation">
+  \[  \int _{E\cap \{ s\leq T\} }w(s)\, \mathrm{d}\mu _ u \leq w(0)(1+T)^ n\operatorname {Cap}_\omega (E).  \]
+</div>
+<p>
+       Adding the tail estimate for $\{ s&gt;T\} $ proves the asserted bound. Since $B_ w(T)\to 0$, choosing first $T$ large and then the capacity small gives uniform absolute continuity. 
+    <p>
+      To prove continuity, fix a continuous nonincreasing $\eta :[0,+\infty )\to [0,1]$, equal to one on $[0,1]$ and zero on $[2,+\infty )$, and put $\eta _ T(s)=\eta (s/T)$. For fixed $T&gt;0$, set $v_{j,T}=\max (u_ j,-2T)$ and $g_ T(t)=\eta _ T(-t)w(-t)$ on $[-2T,0]$. Since $g_ T(-2T)=0$, locality gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-D09F0B51"><span data-gerby-tag="D09F0B51"></span>
+<span class="equation-label"><a data-tag="D09F0B51" href="../../tag/D2588BCCC6F7/">7.2</a></span>
+<div>\begin{equation} \label{eq:weighted-truncation-identity} \eta _ T(-u_ j)w(-u_ j)\mu _{u_ j} =g_ T(v_{j,T})\, \mathrm{MA}_\omega (v_{j,T}). \end{equation}</div>
+</div>
+<p>
+       Truncation preserves convergence in capacity. The functions $g_ T(v_{j,T})$ are uniformly bounded and quasi-continuous, and they converge in capacity to the corresponding function for $u$. The weighted continuity of bounded products in section <a data-tag="936B251D" href="../../tag/5E507B6993DC/">1.6</a>, section <a data-tag="0231BF16" href="../../tag/DD310AD8B258/">1.8</a> therefore gives weak convergence of the measures in (<a data-tag="D09F0B51" href="../../tag/D2588BCCC6F7/">7.2</a>) for each fixed $T$. The measure $(1-\eta _ T(-u_ j))\nu _{w,u_ j}$ is carried by $\{ u_ j&lt;-T\} $, so by the tail bound its integral against a continuous test function $f$ is at most $C_\omega B_ w(T)\| f\| _\infty $, uniformly in $j$; the same holds for $u$. Letting $T\to \infty $ completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For $w(t)=\mathrm{e}^{-pt}$, $p&gt;0$, the integral $B_ w(0)$ is finite because the exponential dominates the polynomial factor. Thus the exponentially damped measures of theorem <a data-tag="F35021C5" href="../../tag/4394319FDE01/">7.2.2</a> are continuous under convergence in capacity. By that theorem, their tails also satisfy 
+</p>
+<div class="equation">
+  \[  \nu _{p,u}(\{ u&lt;-T\} ) \leq \mathrm{e}^{-pT/2}\nu _{p/2,u}(X) \leq C_ p\mathrm{e}^{-pT/2}.  \]
+</div>
+<p>
+ For polynomial weights, the general estimate takes the following explicit form. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-CC944952">
+<p><a class="environment-identifier" href="../../tag/B72AF5B37CB7/">Theorem <span data-tag="CC944952">7.3.2</span>.</a><span data-gerby-tag="CC944952"></span> For every $q&gt;r_ n$, the damped measures </p>
+<div class="equation">
+  \[  \sigma _{q,u}:=(1-u)^{-q}\mu _ u  \]
+</div>
+<p> have uniformly bounded mass for $u\in \mathrm{PSH}(X,\omega )$, $u\leq 0$. More precisely, </p>
+<div class="equation">
+  \[  \sigma _{q,u}(\{ u&lt;-T\} ) \leq C\frac{q}{q-r_ n}(1+T)^{r_ n-q}\quad (T\geq 0),  \]
+</div>
+<p> where $C$ depends only on $\omega $. There is also a constant $C_ q$ such that, for every Borel set $E\subset X$, </p>
+<div class="equation">
+  \[  \sigma _{q,u}(E)\leq C_ q\operatorname {Cap}_\omega (E)^{(q-r_ n)/(q+n-r_ n)}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $w(t)=(1+t)^{-q}$, direct integration gives 
+    
+<div class="equation">
+  \[  B_ w(T)=q\int _ T^\infty (1+t)^{r_ n-q-1}\, \mathrm{d}t =\frac{q}{q-r_ n}(1+T)^{r_ n-q}.  \]
+</div>
+<p>
+       Thus proposition <a data-tag="818B97D0" href="../../tag/EE93EE2035F6/">7.3.1</a> gives the mass and tail estimates. For the capacity bound put $\delta =\operatorname {Cap}_\omega (E)$. If $0&lt;\delta \leq 1$, choose $T=\delta ^{-1/(q+n-r_ n)}\geq 1$ in that theorem. Both $T^ n\delta $ and $T^{r_ n-q}$ equal $\delta ^{(q-r_ n)/(q+n-r_ n)}$, so its two terms have the required bound. If $\delta =0$, let $T\to \infty $; if $\delta &gt;1$, use the total mass bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+For $n\geq 2$, the capacity exponent is $1-n/(q+2)$. The threshold $q&gt;n-2$ comes from the mixed-mass estimate in proposition <a data-tag="079A7287" href="../../tag/57A94BD59310/">7.1.1</a>. 
+</p>
+<p>
+ Logarithmic factors give weights at the threshold. For $n\geq 3$ and $a&gt;1$, put $r=n-2&gt;0$ and 
+</p>
+<div class="equation">
+  \[  w(t)=(1+t)^{-r}[\log (\mathrm{e}+t)]^{-a}.  \]
+</div>
+<p>
+ Differentiation gives 
+</p>
+<div class="equation">
+  \[  (1+t)^ r(-w'(t)) =\frac{r}{(1+t)[\log (\mathrm{e}+t)]^ a} +\frac{a}{(\mathrm{e}+t)[\log (\mathrm{e}+t)]^{a+1}}.  \]
+</div>
+<p>
+ The ratios $(\mathrm{e}+t)/(1+t)$ are bounded. The substitution $y=\log (\mathrm{e}+t)$ therefore bounds the integrals of the two terms over $[T,+\infty )$ by fixed multiples of $[\log (\mathrm{e}+T)]^{1-a}$ and $[\log (\mathrm{e}+T)]^{-a}$, respectively. Since $a&gt;1$ and $\log (\mathrm{e}+T)\geq 1$, we obtain $B_ w(T)\leq C_{n,a}[\log (\mathrm{e}+T)]^{1-a}$. Hence, by proposition <a data-tag="818B97D0" href="../../tag/EE93EE2035F6/">7.3.1</a>, the damped measures $(1-u)^{-(n-2)}[\log (\mathrm{e}-u)]^{-a}\mu _ u$ have uniformly bounded mass, their mass on $\{ u&lt;-T\} $ is at most a constant times $[\log (\mathrm{e}+T)]^{1-a}$, and they are continuous under convergence in capacity. In dimensions one and two, $r_ n=0$ and $B_ w(T)=w(T)$, so every weight satisfying the monotonicity, differentiability and vanishing conditions of proposition <a data-tag="818B97D0" href="../../tag/EE93EE2035F6/">7.3.1</a> can be used. 
+</p>
+<p>
+Damping can restore convergence when every undamped measure has infinite mass. When the bounded mass property fails, take the potential $U$ constructed in the proof of theorem <a data-tag="F56A8389" href="../../tag/AEE72111FEDA/">6.6.1</a>, whose current has integrable coefficients by proposition <a data-tag="85E051EB" href="../../tag/D889AEAF2866/">6.7.1</a>, and normalize it by $\sup _ XU=0$. For $0&lt;\varepsilon &lt;1$, the potentials $\varepsilon U$ converge to zero in capacity as $\varepsilon \downarrow 0$: by (<a data-tag="B2A1C46F" href="../../tag/3EF8F920CDD3/">1.26</a>), the capacity of $\{ \varepsilon U&lt;-\delta \} $ is at most $C\varepsilon /\delta $ for each fixed $\delta &gt;0$ and small $\varepsilon $. Consequently, for $p&gt;0$ and $q&gt;r_ n$, 
+</p>
+<div class="equation">
+  \[  \mathrm{e}^{p\varepsilon U}\mu _{\varepsilon U}\rightharpoonup \omega ^ n, \qquad (1-\varepsilon U)^{-q}\mu _{\varepsilon U}\rightharpoonup \omega ^ n,  \]
+</div>
+<p>
+ although $\mu _{\varepsilon U}(X)=+\infty $ for every $0&lt;\varepsilon &lt;1$. The full currents also converge to $\omega $ in the coefficient $L^1$ norm, and their Gauduchon traces converge in total variation. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Toric plurisubharmonic functions · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/toric-convex/">Chapter 18 · Toric and convex geometry</a> · Tag <code>E5B138E4CBB0</code></p><h1>Toric plurisubharmonic functions</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 5.2 Toric plurisubharmonic functions <span data-gerby-tag="7CB2EEF8"></span></div>
+<p>
+We continue to use the notations of section <a data-tag="2FF2CFF2" href="../../tag/DD9C13434AA7/">5.1</a>. 
+</p>
+
+<article class="env-lemma" id="sgpt-E83EC1C9">
+<p><a class="environment-identifier" href="../../tag/1F4ACCC03A78/">Lemma <span data-tag="E83EC1C9">5.2.1</span>.</a><span data-gerby-tag="E83EC1C9"></span> Let $F\colon N_{\mathbb {R}}\rightarrow [-\infty ,\infty ]$ be a function. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-1E9ADD6B"><span data-gerby-tag="1E9ADD6B"></span><p>
+ $F$ is convex and takes values in $\mathbb {R}$, and 
+</p>
+</li><li class="custom-item" id="sgpt-1BB94231"><span data-gerby-tag="1BB94231"></span><p>
+ $\operatorname{Trop}^*F$ is plurisubharmonic on $T(\mathbb {C})$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may choose an identification $N\cong \mathbb {Z}^ n$ so that we have an identification $T(\mathbb {C})\cong \mathbb {C}^{*n}$. Then $\operatorname{Trop}$ is identified with the map 
+    
+<div class="equation">
+  \[  \operatorname{Trop}\colon \mathbb {C}^{*n}\rightarrow \mathbb {R}^ n,\quad (z_1,\ldots ,z_ n)\mapsto \left(\log |z_1|^2,\ldots ,\log |z_ n|^2\right).  \]
+</div>
+<p>
+<a data-tag="1E9ADD6B" href="../../tag/1F4ACCC03A78/#sgpt-1E9ADD6B">1</a> $\implies $ <a data-tag="1BB94231" href="../../tag/1F4ACCC03A78/#sgpt-1BB94231">2</a>. By the standard convolution regularization of finite convex functions, let $F_ k\in C^{\infty }(\mathbb {R}^ n)\cap \mathrm{Conv}(\mathbb {R}^ n)$ be a decreasing sequence with limit $F$. It follows from a straightforward computation that 
+    
+<div class="equation" id="sgpt-0CC34C82"><span data-gerby-tag="0CC34C82"></span>
+<span class="equation-label"><a data-tag="0CC34C82" href="../../tag/836C60871D35/">5.6</a></span>
+<div>\begin{equation} \label{eq:ddctrop} \begin{split}  \mathrm{dd}^{\mathrm{c}}\operatorname{Trop}^*F_ k(z_1,\ldots ,z_ n) =&amp; \frac{\mathrm{i}}{2\pi } \sum _{i,j=1}^ n \partial _{ij}F_ k\left(\log |z_1|^2,\ldots ,\log |z_ n|^2\right)\\ &amp; \times z_ i^{-1}\overline{z_ j}^{-1}\mathrm{d}z_ i\wedge \mathrm{d}\overline{z_ j}. \end{split} \end{equation}</div>
+</div>
+<p>
+       So $\operatorname{Trop}^* F_ k$ is plurisubharmonic. It follows from proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a> that $\operatorname{Trop}^* F$ is plurisubharmonic. 
+    <p>
+<a data-tag="1BB94231" href="../../tag/1F4ACCC03A78/#sgpt-1BB94231">2</a> $\implies $ <a data-tag="1E9ADD6B" href="../../tag/1F4ACCC03A78/#sgpt-1E9ADD6B">1</a>. It follows from <a data-tag="029C16D4" href="../../tag/741322DD572F/">1.2.10</a> that $F$ is finite. Moreover, by radial regularization, we may find a decreasing sequence $\varphi _ k$ of $(S^1)^ n$-invariant smooth psh functions on $\mathbb {C}^{*n}$ with limit $\operatorname{Trop}^*F$. Write $\varphi _ k=\operatorname{Trop}^* F_ k$ for some function $F_ k\colon \mathbb {R}^ n\rightarrow \mathbb {R}$; it follows from (<a data-tag="0CC34C82" href="../../tag/836C60871D35/">5.6</a>) that $F_ k$ is convex for all $k$. Therefore, $F$ is convex by <a data-tag="E17DE993" href="../../tag/2F4F518BD56D/">A.1.12</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Next we define a canonical Kähler form in $c_1(L)$. 
+</p>
+<p>
+Let $G_0\colon M_{\mathbb {R}}\rightarrow (-\infty ,\infty ]$ be defined as 
+</p>
+<div class="equation" id="sgpt-50EC1BC2"><span data-gerby-tag="50EC1BC2"></span>
+<span class="equation-label"><a data-tag="50EC1BC2" href="../../tag/CC04BEE427C7/">5.9</a></span>
+<div>\begin{equation} \label{eq:G0def} G_0(m)\coloneqq \begin{cases}  \sum \limits _{\rho \in \Sigma (1)} \left(\langle m, u_{\rho }\rangle +a_{\rho }\right)\log \left(\langle m, u_{\rho }\rangle +a_{\rho }\right)\footnotemark ,&amp; \textup{if }m\in P,\\  \infty ,&amp;  \textup{otherwise}. \end{cases} \end{equation}</div>
+</div>
+
+<aside class="source-footnote" id="sgpt-a0000043827"><span class="footnote-label">Note.</span> We understand that $0\log 0=0$ in this expression.</aside>
+
+<p>
+This is a closed proper convex function and $G_0\sim \chi _ P$, where $\sim $ is the relation defined in definition <a data-tag="6BFB1D0E" href="../../tag/CC63E6A637E8/">A.1.17</a>. 
+</p>
+<p>
+Let 
+</p>
+<div class="equation" id="sgpt-65082F0A"><span data-gerby-tag="65082F0A"></span>
+<span class="equation-label"><a data-tag="65082F0A" href="../../tag/AA66EBA79840/">5.12</a></span>
+<div>\begin{equation} \label{eq:F0def} F_0=G_0^* \in \mathcal{E}^{\infty }(N_{\mathbb {R}},P). \end{equation}</div>
+</div>
+<p>
+ Here $G_0^*$ is the Legendre transform of $G_0$, as recalled in definition <a data-tag="8B018B53" href="../../tag/2E5E29E9A58B/">A.2.1</a>. The set $\mathcal{E}^{\infty }(N_{\mathbb {R}},P)$ is defined in definition <a data-tag="23A0B6A4" href="../../tag/2AEBD4E3830A/">A.3.1</a>. 
+</p>
+<p>
+By Guillemin's theorem <span class="cite">[<a href="../../references/#R2E74632F7C5C">Gui94</a>, <a href="../../references/#R8415C23FB772">CDG03</a>]</span>, $\mathrm{dd}^{\mathrm{c}}\operatorname{Trop}^* F_0$ can be extended to a unique Kähler form $\omega $ in $c_1(L)$. The Kähler form $\omega $ is clearly $T_ c$-invariant. 
+</p>
+<p>
+For each $\rho \in \Sigma (1)$, we write 
+</p>
+<div class="equation">
+  \[  r_{\rho }(m)=\log \left(\langle m,u_{\rho }\rangle +a_{\rho }\right)+1,\quad m\in P.  \]
+</div>
+<p>
+ It follows from (<a data-tag="50EC1BC2" href="../../tag/CC04BEE427C7/">5.9</a>) that 
+</p>
+<div class="equation" id="sgpt-725355E9"><span data-gerby-tag="725355E9"></span>
+<span class="equation-label"><a data-tag="725355E9" href="../../tag/C0E06297D5EF/">5.13</a></span>
+<div>\begin{equation} \label{eq:nablaG0} \nabla G_0(m)=\sum _{\rho \in \Sigma (1)} r_{\rho }(m)u_{\rho },\quad m\in \operatorname{Int}P. \end{equation}</div>
+</div>
+
+<article class="env-example" id="sgpt-4CFC750F">
+<p><a class="environment-identifier" href="../../tag/CD7BA5BA48AF/">Example <span data-tag="4CFC750F">5.2.2</span>.</a><span data-gerby-tag="4CFC750F"></span> Let us move on with our favorite example example <a data-tag="14DFB401" href="../../tag/4214559F0471/">5.1.1</a>. We continue to use the same notations. In this case, </p>
+<div class="equation">
+  \[  G_0(m)= \begin{cases}  m\log m+(1-m)\log (1-m),&amp;  \textup{if } m\in [0,1],\\  \infty ,&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+ The Legendre transform is given<aside class="source-footnote" id="sgpt-a0000043945"><span class="footnote-label">Note.</span> While reading an advanced mathematical textbook/paper, I usually tend to trust the authors for their elementary computations. A few years ago, I was asked to present the result of a landmark paper written by two respected mathematicians on a conference. After spending a few days on the elementary integrals, I found out that all non-trivial constants in that paper were wrong. So I ask the readers to really verify this expression, if it is not obvious to you.</aside> by 
+<div class="equation">
+  \[  F_0(n)=\log \left(1+\mathrm{e}^ n\right).  \]
+</div>
+<p> Composing with the tropicalization map, we find that </p>
+<div class="equation">
+  \[  \omega |_{\mathbb {C}^*}(z)=\mathrm{dd}^{\mathrm{c}}\log \left(1+|z|^2\right).  \]
+</div>
+<p> This is exactly the Fubini–Study metric as we have seen in example <a data-tag="795A3A28" href="../../tag/0D9E7B0EE3DC/">1.8.5</a>. </p>
+<p>We can now explain one subtlety: in our expression (<a data-tag="50EC1BC2" href="../../tag/CC04BEE427C7/">5.9</a>), there is no factor $1/2$ before the sum; the absence of the factor $1/2$ matches the choice $\operatorname{Trop}(z)=\log |z|^2$ rather than $\log |z|$ in our tropicalization map (<a data-tag="4AC25346" href="../../tag/EA1385DD984D/">5.4</a>). </p>
+</article>
+
+
+Let $\mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ denote the set of $T_ c$-invariant $\omega $-psh functions. <article class="env-theorem" id="sgpt-E09727EF">
+<p><a class="environment-identifier" href="../../tag/8B5B73657BF7/">Theorem <span data-tag="E09727EF">5.2.3</span>.</a><span data-gerby-tag="E09727EF"></span> There are canonical bijections between the following three sets: </p>
+<ol>
+<li class="custom-item" id="sgpt-C473B218"><span data-gerby-tag="C473B218"></span><p>
+ The set of $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$, 
+</p>
+</li><li class="custom-item" id="sgpt-2A4AD318"><span data-gerby-tag="2A4AD318"></span><p>
+ the set $\mathcal{P}(N_{\mathbb {R}},P)$ in definition <a data-tag="23A0B6A4" href="../../tag/2AEBD4E3830A/">A.3.1</a>, namely, the set of convex functions $F\colon N_{\mathbb {R}}\rightarrow \mathbb {R}$ satisfying $F\preceq \operatorname{Supp}_ P$, and 
+</p>
+</li><li class="custom-item" id="sgpt-A2F088B9"><span data-gerby-tag="A2F088B9"></span><p>
+ the set of closed proper convex functions $G\in \mathrm{Conv}(M_{\mathbb {R}})$ satisfying 
+</p>
+<div class="equation">
+  \[  G|_{M_{\mathbb {R}}\setminus P}\equiv \infty .  \]
+</div>
+</li>
+</ol>
+</article> For the notions of closedness and properness, we refer to definition <a data-tag="8139C078" href="../../tag/4FA12A948A00/">A.1.2</a> and definition <a data-tag="BBDFED14" href="../../tag/61B746F5E884/">A.1.13</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The bijection between <a data-tag="2A4AD318" href="../../tag/8B5B73657BF7/#sgpt-2A4AD318">2</a> and <a data-tag="A2F088B9" href="../../tag/8B5B73657BF7/#sgpt-A2F088B9">3</a> is the classical Legendre duality. Given $F$ as in <a data-tag="2A4AD318" href="../../tag/8B5B73657BF7/#sgpt-2A4AD318">2</a>, we construct $G=F^*$ and <em>vice versa</em>, see proposition <a data-tag="B696EB2E" href="../../tag/6FCC352452C3/">A.2.12</a>. 
+    <p>
+      The map from <a data-tag="C473B218" href="../../tag/8B5B73657BF7/#sgpt-C473B218">1</a> to <a data-tag="2A4AD318" href="../../tag/8B5B73657BF7/#sgpt-2A4AD318">2</a> is given as follows: Given $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$, since $\varphi $ is $T_ c$-invariant, we can find $f\colon N_{\mathbb {R}}\rightarrow [-\infty ,\infty )$ such that 
+    
+<div class="equation" id="sgpt-A720B136"><span data-gerby-tag="A720B136"></span>
+<span class="equation-label"><a data-tag="A720B136" href="../../tag/0CA6FBB8B2BF/">5.16</a></span>
+<div>\begin{equation} \label{ex:varphitropf} \varphi |_{T(\mathbb {C})}=\operatorname{Trop}^*f. \end{equation}</div>
+</div>
+<p>
+       We then define $F=f+F_0$. Then $\operatorname{Trop}^* F\in \mathrm{PSH}(T(\mathbb {C}))$. By <a data-tag="E83EC1C9" href="../../tag/1F4ACCC03A78/">5.2.1</a>, $F(n)$ is finite for any $n\in N_{\mathbb {R}}$ and $F$ is convex. Moreover, $F\preceq \operatorname{Supp}_ P$ since $\varphi $ is bounded from above on the compact space $X$ and $F_0\preceq \operatorname{Supp}_ P$. 
+    <p>
+      Conversely, given a map $F\in \mathcal{P}(N_{\mathbb {R}},P)$, then 
+    
+<div class="equation">
+  \[  \operatorname{Trop}^*(F-F_0)\in \mathrm{PSH}\left(T(\mathbb {C}),\omega |_{T(\mathbb {C})}\right).  \]
+</div>
+<p>
+       Since $F\preceq \operatorname{Supp}_ P$ and $F_0\sim \operatorname{Supp}_ P$, the difference $F-F_0$ is bounded from above. Hence the corresponding local psh potentials are locally bounded from above near $X\setminus T(\mathbb {C})$. It follows from theorem <a data-tag="1E88697D" href="../../tag/DAE812E1A818/">1.2.9</a> that this function can be extended uniquely to an $\omega $-psh function on $X$. The uniqueness of the extension guarantees its $T_ c$-invariance. 
+    <p>
+      The two maps are inverse to each other by construction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+Given $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$, we will write $F_{\varphi }$ and $G_{\varphi }$ for the convex functions given by theorem <a data-tag="E09727EF" href="../../tag/8B5B73657BF7/">5.2.3</a>. From the proof, we have the following relations: 
+</p>
+<div class="equation" id="sgpt-C5EFC336"><span data-gerby-tag="C5EFC336"></span>
+<span class="equation-label"><a data-tag="C5EFC336" href="../../tag/40DB9807D05A/">5.17</a></span>
+<div>\begin{equation} \label{eq:FvarphidefGdef} \varphi |_{T(\mathbb {C})}=\operatorname{Trop}^*\left(F_{\varphi }-F_0\right),\quad G_{\varphi }=F_{\varphi }^*. \end{equation}</div>
+</div>
+<p>
+ In particular, $\varphi |_{T(\mathbb {C})}$ is locally bounded. We will frequently use this result without further explanation. 
+</p>
+
+<article class="env-example" id="sgpt-908B1003">
+<p><a class="environment-identifier" href="../../tag/9BDBC1FA226A/">Example <span data-tag="908B1003">5.2.4</span>.</a><span data-gerby-tag="908B1003"></span> Let us take our favorite example example <a data-tag="4CFC750F" href="../../tag/CD7BA5BA48AF/">5.2.2</a> again. We will continue to use the same notations. </p>
+<p>Recall that in example <a data-tag="866F3C9A" href="../../tag/CC1C409253F3/">1.8.9</a> and example <a data-tag="BAA6FABC" href="../../tag/E548BFB3BF04/">3.1.14</a>, we constructed two $S^1$-invariant functions in $\mathrm{PSH}(X,\omega )$. </p>
+<p>We begin with the function $\varphi $ in example <a data-tag="866F3C9A" href="../../tag/CC1C409253F3/">1.8.9</a>. Recall that </p>
+<div class="equation">
+  \[  \varphi (z)=\log \frac{|z|^2}{|z|^2+1}  \]
+</div>
+<p> for $z\in \mathbb {C}$. The function $f\colon \mathbb {R}\rightarrow \mathbb {R}$ in (<a data-tag="A720B136" href="../../tag/0CA6FBB8B2BF/">5.16</a>) is therefore </p>
+<div class="equation">
+  \[  f(n)=\log \frac{\mathrm{e}^{n}}{1+\mathrm{e}^{n}}.  \]
+</div>
+<p> Therefore, $F_{\varphi }\colon \mathbb {R}\rightarrow \mathbb {R}$ is </p>
+<div class="equation">
+  \[  F_{\varphi }(n)=n.  \]
+</div>
+<p> Correspondingly, $G_{\varphi }\colon \mathbb {R}\rightarrow \mathbb {R}$ is </p>
+<div class="equation">
+  \[  G_{\varphi }(m)= \begin{cases}  0,&amp; \textup{if } m=1;\\  \infty ,&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+<p>Similarly, if $\psi $ denotes the function in example <a data-tag="BAA6FABC" href="../../tag/E548BFB3BF04/">3.1.14</a>, then the function $f$ in (<a data-tag="A720B136" href="../../tag/0CA6FBB8B2BF/">5.16</a>) is </p>
+<div class="equation">
+  \[  f(n)= \begin{cases}  -\log \left(\mathrm{e}^ n+1 \right)+(-\log (-n))\lor (n+2),&amp; \textup{if } n&lt;-\log 2;\\  2+\log \frac{\mathrm{e}^{n}}{1+\mathrm{e}^{n}},&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+<p> Therefore, </p>
+<div class="equation">
+  \[  F_{\psi }(n)= \begin{cases}  (-\log (-n))\lor (n+2),&amp; \textup{if } n&lt;-\log 2;\\  2+n,&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+<p> The Legendre transform is tricky to compute. Let $\lambda $ be the large solution of $\log x=x-2$. So $\lambda \approx 3.146$. The smaller solution is around $0.159&lt;\log 2\approx 0.693$. It might be helpful to have a look at the poorly drawn picture <a data-tag="2081A008" href="../../tag/1AC4B1EDD9A2/">5.2</a>. </p>
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/ff0eaf6f88f80d66b2ca.svg"/> <figcaption id="sgpt-2081A008"><span data-gerby-tag="2081A008"></span><a data-tag="2081A008" href="../../tag/1AC4B1EDD9A2/">5.2</a> The graphs of $\log x$ and $x-2$.</figcaption> </div>
+</figure>
+<p>It is immediate that $G_{\psi }(m)=\infty $ unless $m\in [0,1]$. Let us assume that $m\in [0,1]$. Then </p>
+<div class="equation">
+  \[  \begin{aligned}  G_{\psi }(m)=&amp; \sup _{n\in \mathbb {R}} \left( mn-F_{\psi }(n)\right)\\  =&amp;  \sup _{n&lt;-\log 2} \left( mn-(-\log (-n))\lor (n+2)\right) \lor \sup _{n\geq -\log 2} (mn-n-2)\\  =&amp;  \sup _{n&gt;\log 2} \left( -mn+(\log n)\land (n-2)\right) \lor \left((1-m)\log 2-2\right). \end{aligned}  \]
+</div>
+<p> Let us focus on the first part, which can be decomposed further into </p>
+<div class="equation">
+  \[  \begin{aligned} &amp;  \sup _{n&gt;\log 2} \left( -mn+(\log n)\land (n-2)\right)\\  =&amp;  \sup _{n\in \left(\log 2,\lambda \right]} (n-2-mn) \lor \sup _{n&gt;\lambda } (\log n-mn)\\  =&amp;  \left( (1-m)\lambda -2 \right) \lor \sup _{n&gt;\lambda } \left(\log n-mn\right). \end{aligned}  \]
+</div>
+<p> The latter part can be computed easily: </p>
+<div class="equation">
+  \[  \sup _{n&gt;\lambda } \left(\log n-mn\right)= \begin{cases}  -\log m-1,&amp; \textup{if } m\in \left(0,\lambda ^{-1}\right];\\  \log \lambda -m\lambda ,&amp;  \textup{if }m\in \left(\lambda ^{-1},1\right]. \end{cases}  \]
+</div>
+<p> Putting everything together, we find </p>
+<div class="equation">
+  \[  G_{\psi }(m)= \begin{cases}  (-\log m-1)\lor \left( (1-m)\lambda -2 \right) ,&amp; \textup{if } m\in \left(0,\lambda ^{-1}\right];\\  (\log \lambda -m\lambda )\lor \left( (1-m)\lambda -2 \right),&amp;  \textup{if }m\in \left(\lambda ^{-1},1\right]. \end{cases}  \]
+</div>
+<p> This can be further simplified, the final result is </p>
+<div class="equation">
+  \[  G_{\psi }(m)= \begin{cases}  -\log m-1 ,&amp; \textup{if } m\in \left(0,\lambda ^{-1}\right];\\  (1-m)\lambda -2 ,&amp;  \textup{if }m\in \left(\lambda ^{-1},1\right];\\  \infty ,&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+<p> The graph of $G_{\psi }$ on $(0,1]$ is sketched in <a data-tag="F7EE11EC" href="../../tag/CC775DD29F71/">5.3</a>. </p>
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/0406224df7f0eff8d01a.svg"/> <figcaption id="sgpt-F7EE11EC"><span data-gerby-tag="F7EE11EC"></span><a data-tag="F7EE11EC" href="../../tag/CC775DD29F71/">5.3</a> The graph of $G_{\psi }$ on $(0,1]$.</figcaption> </div>
+</figure>
+</article>
+
+
+We observe a few elementary facts. <article class="env-proposition" id="sgpt-5B5DEF1B">
+<p><a class="environment-identifier" href="../../tag/EEFA0F6B0CF6/">Proposition <span data-tag="5B5DEF1B">5.2.5</span>.</a><span data-gerby-tag="5B5DEF1B"></span> Given $\varphi ,\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. The following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-57E474D0"><span data-gerby-tag="57E474D0"></span><p>
+ $\varphi \preceq \psi $, 
+</p>
+</li><li class="custom-item" id="sgpt-3423ADB1"><span data-gerby-tag="3423ADB1"></span><p>
+ $F_{\varphi }\preceq F_{\psi }$, and 
+</p>
+</li><li class="custom-item" id="sgpt-43AD6A18"><span data-gerby-tag="43AD6A18"></span><p>
+ $G_{\psi }\preceq G_{\varphi }$. 
+</p>
+</li>
+</ol>
+<p> The same holds if we replace all $\preceq $'s by $\leq $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The equivalence between <a data-tag="57E474D0" href="../../tag/EEFA0F6B0CF6/#sgpt-57E474D0">1</a> and <a data-tag="3423ADB1" href="../../tag/EEFA0F6B0CF6/#sgpt-3423ADB1">2</a> follows from the definition (<a data-tag="C5EFC336" href="../../tag/40DB9807D05A/">5.17</a>). The equivalence between <a data-tag="3423ADB1" href="../../tag/EEFA0F6B0CF6/#sgpt-3423ADB1">2</a> and <a data-tag="43AD6A18" href="../../tag/EEFA0F6B0CF6/#sgpt-43AD6A18">3</a> follows from the definition of the Legendre transform. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+Similarly, we have <article class="env-proposition" id="sgpt-83878EA6">
+<p><a class="environment-identifier" href="../../tag/D60ADA8CEE9B/">Proposition <span data-tag="83878EA6">5.2.6</span>.</a><span data-gerby-tag="83878EA6"></span> Given $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ and $C\in \mathbb {R}$. We have </p>
+<div class="equation">
+  \[  F_{\varphi +C}=F_{\varphi }+C,\quad G_{\varphi +C}=G_{\varphi }-C.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first equality follows from (<a data-tag="C5EFC336" href="../../tag/40DB9807D05A/">5.17</a>). The second is obtained by taking the Legendre transform. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-E2F47062">
+<p><a class="environment-identifier" href="../../tag/419A1D9F18A9/">Proposition <span data-tag="E2F47062">5.2.7</span>.</a><span data-gerby-tag="E2F47062"></span> Given $\varphi ,\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ with $\varphi \land \psi \not\equiv -\infty $, then $\varphi \land \psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ and </p>
+<div class="equation">
+  \[  F_{\varphi \land \psi }=F_{\varphi }\land F_{\psi },\quad G_{\varphi \land \psi }=G_{\varphi }\lor G_{\psi }.  \]
+</div>
+</article> The operators $\land $ and $\lor $ are defined in definition <a data-tag="05FE0DDE" href="../../tag/6561D15F1216/">A.1.9</a> and definition <a data-tag="59330ADD" href="../../tag/4D25259F16EC/">A.1.10</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="1DAD76E2" href="../../tag/C1971A5F3DFD/">3.1.2</a>, we have $\varphi \land \psi \in \mathrm{PSH}(X,\omega )$. Since $\varphi $ and $\psi $ are $T_ c$-invariant, the set of candidates in the definition of $\varphi \land \psi $ is preserved by the action of $T_ c$. Hence $\varphi \land \psi $ is $T_ c$-invariant as well. So $\varphi \land \psi $ is the biggest element in $\mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ which is dominated by both $\varphi $ and $\psi $. In view of theorem <a data-tag="E09727EF" href="../../tag/8B5B73657BF7/">5.2.3</a> and proposition <a data-tag="5B5DEF1B" href="../../tag/EEFA0F6B0CF6/">5.2.5</a>, $G_{\varphi \land \psi }$ is the smallest closed proper convex function $G$ on $M_{\mathbb {R}}$ dominating both $G_{\varphi }$ and $G_{\psi }$, which is just $G_{\varphi }\lor G_{\psi }$. 
+    <p>
+      For the statement about $F$, we use proposition <a data-tag="24FD3947" href="../../tag/7A76E56311F5/">A.2.10</a>: 
+    
+<div class="equation">
+  \[  F_{\varphi \land \psi }=(G_\varphi \lor G_\psi )^*=\operatorname{cl}(F_\varphi \land F_\psi ).  \]
+</div>
+<p>
+       Since $\varphi \land \psi \not\equiv -\infty $, $F_{\varphi \land \psi }=(G_\varphi \lor G_\psi )^*$ is finite on all of $N_{\mathbb R}$. It follows that $F_\varphi \land F_\psi &gt;-\infty $, and hence is finite on all of $N_{\mathbb R}$ as well. Being finite and convex on $N_{\mathbb R}$, it is continuous, hence closed. Therefore 
+    
+<div class="equation">
+  \[  F_{\varphi \land \psi }=F_\varphi \land F_\psi .  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></article>
+
+<article class="env-example" id="sgpt-0AF82F81">
+<p><a class="environment-identifier" href="../../tag/2B1E84EAAE13/">Example <span data-tag="0AF82F81">5.2.8</span>.</a><span data-gerby-tag="0AF82F81"></span> Now we can give an example of $\varphi ,\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ with $\varphi \land \psi \equiv -\infty $. </p>
+<p>We take $P=[0,1]$ so that $X=\mathbb {P}^1$ and $\omega $ is the Fubini–Study metric. Let $\varphi \in \mathrm{PSH}(X,\omega )$ be such that </p>
+<div class="equation">
+  \[  \varphi (z)=\log \frac{|z|^2}{|z|^2+1}  \]
+</div>
+<p> for $z\in \mathbb {C}$. We have computed that $G_{\varphi }$ in example <a data-tag="908B1003" href="../../tag/9BDBC1FA226A/">5.2.4</a>: </p>
+<div class="equation">
+  \[  G_{\varphi }(m)= \begin{cases}  0,&amp; \textup{if } m=1,\\  \infty ,&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+<p> Now we define $\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ as the unique function such that </p>
+<div class="equation">
+  \[  \psi (z)=\log \frac{1}{|z|^2+1}  \]
+</div>
+<p> for $z\in \mathbb {C}$. Then a similar computation shows that </p>
+<div class="equation">
+  \[  G_{\psi }(m)= \begin{cases}  0,&amp; \textup{if } m=0,\\  \infty ,&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+<p> Now we claim that $\varphi \land \psi \equiv -\infty $. Otherwise, we would have </p>
+<div class="equation">
+  \[  G_{\varphi \land \psi }=G_{\varphi }\lor G_{\psi }\equiv \infty ,  \]
+</div>
+<p> which is not proper. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-A47B98F5">
+<p><a class="environment-identifier" href="../../tag/73034E124A9A/">Proposition <span data-tag="A47B98F5">5.2.9</span>.</a><span data-gerby-tag="A47B98F5"></span> Let $\{ \varphi _ i\} _{i\in I}$ be a non-empty family in $\mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ uniformly bounded from above. Then $\operatorname *{sup}_{i\in I}{}\! {}^{*} \varphi _ i\in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ and </p>
+<div class="equation">
+  \[  F_{\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ i}=\bigvee _{i\in I}F_{\varphi _ i},\quad G_{\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ i}=\operatorname{cl}\bigwedge _{i\in I} G_{\varphi _ i}.  \]
+</div>
+<p> Moreover, if $I$ is finite, then </p>
+<div class="equation">
+  \[  G_{\max _{i\in I}\varphi _ i}=\bigwedge _{i\in I} G_{\varphi _ i}.  \]
+</div>
+<p>Similarly, if $\{ \varphi _ i\} _{i\in I}$ is a decreasing net in $\mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ such that $\inf _{i\in I}\varphi _ i\not\equiv -\infty $, then $\inf _{i\in I}\varphi _ i\in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ and </p>
+<div class="equation">
+  \[  F_{\inf _{i\in I}\varphi _ i}=\inf _{i\in I}F_{\varphi _ i},\quad G_{\inf _{i\in I}\varphi _ i}=\bigvee _{i\in I}G_{\varphi _ i}.  \]
+</div>
+</article> Recall that the closure $\operatorname{cl}$ is defined in definition <a data-tag="BBDFED14" href="../../tag/61B746F5E884/">A.1.13</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Thanks to <a data-tag="E17DE993" href="../../tag/2F4F518BD56D/">A.1.12</a> and proposition <a data-tag="11AD2691" href="../../tag/68114EF2F29C/">A.1.7</a>, in both cases, the statement for $F$ is clear. The corresponding statement for $G$ is obtained via proposition <a data-tag="24FD3947" href="../../tag/7A76E56311F5/">A.2.10</a>. When $I$ is finite, the convex function $\bigvee _ i F_{\varphi _ i}$ is finite on all $N_{\mathbb R}$, hence closed. Therefore no additional closure is needed. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+The complex Monge–Ampère operator is closely related to the real one: <article class="env-proposition" id="sgpt-D3D075B2">
+<p><a class="environment-identifier" href="../../tag/725063C1ED05/">Proposition <span data-tag="D3D075B2">5.2.10</span>.</a><span data-gerby-tag="D3D075B2"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Then </p>
+<div class="equation" id="sgpt-C605E8F4"><span data-gerby-tag="C605E8F4"></span>
+<span class="equation-label"><a data-tag="C605E8F4" href="../../tag/C2BF3D2E88B4/">5.41</a></span>
+<div>\begin{equation} \label{eq:tropMAmea} \operatorname{Trop}_* \left(\omega |_{T(\mathbb {C})}+\mathrm{dd}^{\mathrm{c}}\varphi |_{T(\mathbb {C})} \right)^ n=\operatorname{MA}_{\mathbb {R}}(F_{\varphi }). \end{equation}</div>
+</div>
+<p> In particular, </p>
+<div class="equation">
+  \[  \int _ X \omega _{\varphi }^ n =\int _{N_{\mathbb {R}}}\operatorname{MA}_{\mathbb {R}}(F_{\varphi })=n! \operatorname{vol}\overline{\{ G_{\varphi }&lt;\infty \} }  \]
+</div>
+<p> and </p>
+<div class="equation">
+  \[  \int _ X \omega ^ n=n!\operatorname{vol}P.  \]
+</div>
+</article> Here the real Monge–Ampère operator is defined in definition <a data-tag="AA859A41" href="../../tag/FF5885207F9E/">A.4.1</a>. The normalization of the Lebesgue measure $\operatorname{vol}$ on $M_{\mathbb {R}}$ is such that the fundamental lattice cube has measure $1$.<aside class="source-footnote" id="sgpt-a0000045172"><span class="footnote-label">Note.</span> In some references like <span class="cite">[<a href="../../references/#R9EF220339211">GKZ08</a>]</span>, the normalization is so that the fundamental lattice cube has measure $n!$. Be careful when making comparisons with these references.</aside>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We only need to prove (<a data-tag="C605E8F4" href="../../tag/C2BF3D2E88B4/">5.41</a>). By proposition <a data-tag="558435FF" href="../../tag/C0908AA2E3B2/">A.3.5</a>, we can find a decreasing sequence 
+    
+<div class="equation">
+  \[  F_ j\in \mathcal E^\infty (N_{\mathbb R},P)\cap C^\infty (N_{\mathbb R})  \]
+</div>
+<p>
+       with limit $F_\varphi $. By theorem <a data-tag="E09727EF" href="../../tag/8B5B73657BF7/">5.2.3</a>, each $F_ j$ corresponds to a bounded toric potential $\varphi _ j\in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. 
+    <p>
+      By theorem <a data-tag="D55DFFA9" href="../../tag/032A3F745585/">2.1.4</a> and theorem <a data-tag="13A7CF49" href="../../tag/2DC9BC6F295A/">A.4.4</a>, it suffices to establish (<a data-tag="C605E8F4" href="../../tag/C2BF3D2E88B4/">5.41</a>) for the $\varphi _ j$'s. We may therefore reduce to the case where $F_{\varphi }$ is smooth. We write $F=F_{\varphi }$ to simplify the notations. The notations $a_ i=\log |z_ i|^2$ will be used, where $i=1,\ldots ,n$. 
+    <p>
+      Next we fix an identification $N=\mathbb {Z}^ n$. Fix a test function $f\in C^{0}_ c(N_{\mathbb {R}})$. We need to show that 
+    
+<div class="equation">
+  \[  \int _{\mathbb {C}^{*n}}f(a_1,\ldots ,a_ n) \left(\mathrm{dd}^{\mathrm{c}}\operatorname{Trop}^* F(z_1,\ldots ,z_ n)\right)^ n=\int _{\mathbb {R}^ n} f\, \operatorname{MA}_{\mathbb {R}}(F).  \]
+</div>
+<p>
+       Using proposition <a data-tag="9D911AE4" href="../../tag/84CD4F8DE81D/">A.4.2</a> and (<a data-tag="0CC34C82" href="../../tag/836C60871D35/">5.6</a>), this reduces to 
+    
+<div class="equation" id="sgpt-18998857"><span data-gerby-tag="18998857"></span>
+<span class="equation-label"><a data-tag="18998857" href="../../tag/E34E6BC222DC/">5.42</a></span>
+<div>\begin{equation} \label{eq:realcplxMAtemp1} \begin{split}  \left( \frac{\mathrm{i}}{2\pi }\right)^ n\int _{\mathbb {C}^{*n}}f(a_1,\ldots ,a_ n) \left(\sum _{i,j=1}^ n \partial _{i,j}F(a_1,\ldots ,a_ n)z_ i^{-1}\overline{z_ j}^{-1}\mathrm{d}z_ i\wedge \mathrm{d}\overline{z_ j}\right)^ n=\\  n!\int _{\mathbb {R}^ n} f \det \nabla ^2 F\, \mathrm{d}\operatorname{vol}. \end{split} \end{equation}</div>
+</div>
+<p>
+       Expanding the bracket, we get 
+    
+<div class="equation">
+  \[  \begin{aligned}  \left(\sum _{i,j=1}^ n \partial _{i,j}Fz_ i^{-1}\overline{z_ j}^{-1}\mathrm{d}z_ i\wedge \mathrm{d}\overline{z_ j}\right)^ n =&amp;  \sum _{i_1,\ldots ,i_ n=1}^ n \sum _{j_1,\ldots ,j_ n=1}^ n \partial _{i_1j_1}F\cdots \partial _{i_ nj_ n}F\cdot \\ &amp; \mathrm{d}\log z_{i_1}\wedge \mathrm{d}\log \overline{z_{j_1}}\wedge \cdots \wedge \mathrm{d}\log z_{i_ n}\wedge \mathrm{d}\log \overline{z_{j_ n}}, \end{aligned}  \]
+</div>
+<p>
+       where $\mathrm{d}\log z_ i=z_ i^{-1}\mathrm{d}z_ i$ and $\mathrm{d}\log \overline{z_ i}=\overline{z_ i}^{-1}\mathrm{d}\overline{z_ i}$ are understood. 
+    <p>
+      Using the apparent symmetry, the expression on the right-hand side becomes 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \sum _{\sigma ,\tau \in \mathfrak {S}_ n}\prod _{k=1}^ n \partial _{\sigma (k)\tau (k)}F\, \mathrm{d}\log z_{\sigma (1)}\wedge \mathrm{d}\log \overline{z_{\tau (1)}}\wedge \cdots \wedge \mathrm{d}\log z_{\sigma (n)}\wedge \mathrm{d}\log \overline{z_{\tau (n)}},\\  =&amp;  n!\sum _{\tau \in \mathfrak {S}_ n}\prod _{k=1}^ n \partial _{k\tau (k)}F\, \mathrm{d}\log z_{1}\wedge \mathrm{d}\log \overline{z_{\tau (1)}}\wedge \cdots \wedge \mathrm{d}\log z_{n}\wedge \mathrm{d}\log \overline{z_{\tau (n)}}\\  =&amp;  n!\sum _{\tau \in \mathfrak {S}_ n}\operatorname {sgn}(\tau )\prod _{k=1}^ n \partial _{k\tau (k)}F\, \mathrm{d}\log z_{1}\wedge \mathrm{d}\log \overline{z_1}\wedge \cdots \wedge \mathrm{d}\log z_{n}\wedge \mathrm{d}\log \overline{z_ n}\\  =&amp;  n! \det \nabla ^2 F\mathrm{d}\log z_{1}\wedge \mathrm{d}\log \overline{z_1}\wedge \cdots \wedge \mathrm{d}\log z_{n}\wedge \mathrm{d}\log \overline{z_ n}, \end{aligned}  \]
+</div>
+<p>
+       where $\mathfrak {S}_ n$ is the permutation group on $\{ 1,\ldots ,n\} $ and $\operatorname {sgn}(\tau )$ is the sign of $\tau $. 
+    <p>
+      Next, switch to polar coordinates for each $z_ i$: Let $z_ i=r_ i\exp (\mathrm{i}\theta _ i)$ and recall that $r_ i=\exp (a_ i/2)$. Then the left-hand side of (<a data-tag="18998857" href="../../tag/E34E6BC222DC/">5.42</a>) becomes 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \frac{n!}{(2\pi )^ n}\int _{\mathbb {R}^ n\times [0,2\pi )^ n} f \det \nabla ^2 F \, \mathrm{d}a_1\wedge \mathrm{d}\theta _1\wedge \cdots \wedge \mathrm{d}a_ n\wedge \mathrm{d}\theta _ n\\  =&amp;  n!\int _{\mathbb {R}^ n}f\det \nabla ^2 F \, \mathrm{d}a_1\wedge \cdots \wedge \mathrm{d}a_ n, \end{split}  \]
+</div>
+<p>
+       which is exactly what we have expected. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+Next we study the envelope operators developed in chapter <a data-tag="D8A4D4BA" href="../../tag/2AC9E2799656/">3</a> in the toric setting. <article class="env-definition" id="sgpt-5F9D28E3">
+<p><a class="environment-identifier" href="../../tag/CC64AE504A19/">Definition <span data-tag="5F9D28E3">5.2.11</span>.</a><span data-gerby-tag="5F9D28E3"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. We define its <em>Newton body</em> as </p>
+<div class="equation">
+  \[  \Delta (\omega ,\varphi )\coloneqq \overline{\{ G_{\varphi }&lt;\infty \} }\subseteq P.  \]
+</div>
+<p>  Note that $\Delta (\omega ,\varphi )$ is a convex body. </p>
+</article> By proposition <a data-tag="DAE71CEF" href="../../tag/8B18F2B2DE3B/">A.2.9</a>, we have 
+
+<div class="equation">
+  \[  \Delta (\omega ,\varphi )=\overline{\nabla F_{\varphi }(N_{\mathbb {R}})}.  \]
+</div>
+
+<article class="env-example" id="sgpt-5ECA56A2">
+<p><a class="environment-identifier" href="../../tag/E6289865C7A4/">Example <span data-tag="5ECA56A2">5.2.12</span>.</a><span data-gerby-tag="5ECA56A2"></span> By (<a data-tag="50EC1BC2" href="../../tag/CC04BEE427C7/">5.9</a>), we have </p>
+<div class="equation">
+  \[  \Delta (\omega ,0)=P.  \]
+</div>
+<p> In the case of example <a data-tag="908B1003" href="../../tag/9BDBC1FA226A/">5.2.4</a>, we have </p>
+<div class="equation">
+  \[  \Delta (\omega ,\varphi )=\{ 1\} ,\quad \Delta (\omega ,\psi )=[0,1].  \]
+</div>
+<p> Observe that in the latter case, </p>
+<div class="equation">
+  \[  \{ G_{\psi }&lt;\infty \} \subsetneq P.  \]
+</div>
+</article>
+
+
+<article class="env-proposition" id="sgpt-FA27516A">
+<p><a class="environment-identifier" href="../../tag/11748980D2DF/">Proposition <span data-tag="FA27516A">5.2.13</span>.</a><span data-gerby-tag="FA27516A"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Then $P_{\omega }[\varphi ]\in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$ and </p>
+<div class="equation" id="sgpt-4CBB9F73"><span data-gerby-tag="4CBB9F73"></span>
+<span class="equation-label"><a data-tag="4CBB9F73" href="../../tag/F8C4AC16B8F2/">5.53</a></span>
+<div>\begin{equation} \label{eq:toricPenv} G_{P_{\omega }[\varphi ]}(x)= \begin{cases}  G_0(x),&amp; \textup{if } x\in \Delta (\omega ,\varphi );\\  \infty ,&amp; \textup{otherwise}. \end{cases} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By (<a data-tag="AD69C4D8" href="../../tag/FA68BB354359/">3.4</a>), we have 
+    
+<div class="equation">
+  \[  P_{\omega }[\varphi ]=\operatorname *{sup}_{C\in \mathbb {R}}{}\! {}^{*}\bigl ((\varphi +C)\land 0\bigr ).  \]
+</div>
+<p>
+       It follows from proposition <a data-tag="83878EA6" href="../../tag/D60ADA8CEE9B/">5.2.6</a>, proposition <a data-tag="E2F47062" href="../../tag/419A1D9F18A9/">5.2.7</a> and proposition <a data-tag="A47B98F5" href="../../tag/73034E124A9A/">5.2.9</a> that $P_{\omega }[\varphi ]\in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Moreover, by the same propositions, we have 
+    
+<div class="equation">
+  \[  G_{P_{\omega }[\varphi ]}=\operatorname{cl}\inf _{C\in \mathbb {R}} \left( G_{0}\lor (G_{\varphi }-C) \right).  \]
+</div>
+<p>
+       We spell out the last closure. Set 
+    
+<div class="equation">
+  \[  K=\inf _{C\in \mathbb {R}} \left( G_{0}\lor (G_{\varphi }-C) \right).  \]
+</div>
+<p>
+       If $x\in \operatorname{Dom}G_{\varphi }$, then $G_{\varphi }(x)-C\leq G_0(x)$ for $C$ large enough, hence $K(x)=G_0(x)$. If $x\notin \operatorname{Dom}G_{\varphi }$, then $K(x)=\infty $. Since $\Delta (\omega ,\varphi )=\overline{\operatorname{Dom}G_{\varphi }}$ and $G_0$ is continuous on $P$, the lower semicontinuous regularization $\operatorname{cl}K$ is equal to $G_0$ on $\Delta (\omega ,\varphi )$ and equal to $\infty $ outside $\Delta (\omega ,\varphi )$. This is exactly (<a data-tag="4CBB9F73" href="../../tag/F8C4AC16B8F2/">5.53</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Recall that $\mathrm{H}^0(X,L)$ can be identified with the vector space generated by $\chi ^ m$ for all $m\in P\cap M$, see <span class="cite">[<span class="postnote">Proposition 4.3.3</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span>. In other words, a character $\chi ^ m$ of $T$ gives a global section of $L$ if and only if $m\in P$. This gives a beautiful characterization of the lattice points in $P$. The following theorem of Yi Yao gives an analogous characterization of the lattice points in the Newton body. 
+</p>
+
+<article class="env-theorem" id="sgpt-59CD0BEC">
+<p><a class="environment-identifier" href="../../tag/E109952155FB/">Theorem <span data-tag="59CD0BEC">5.2.14</span> <span class="named">(Yao)</span>.</a><span data-gerby-tag="59CD0BEC"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Let $m\in M$. </p>
+<ol>
+<li class="custom-item" id="sgpt-5CB08E77"><span data-gerby-tag="5CB08E77"></span><p>
+ Suppose that $m\in \Delta (\omega ,\varphi )$. Then $\chi ^ m\in \mathrm{H}^0(X,L\otimes \mathcal{I}(\varphi ))$. 
+</p>
+</li><li class="custom-item" id="sgpt-0772D430"><span data-gerby-tag="0772D430"></span><p>
+ Let $\sigma \in \Sigma $ be a cone of dimension $p$, with rays $\rho _1,\ldots ,\rho _ p$. Let $c_1,\ldots ,c_ p&gt;0$ satisfy $\sum _{i=1}^ p c_ i=1$, and set $u=\sum _{i=1}^ p c_ i u_{\rho _ i}$. If 
+</p>
+<div class="equation" id="sgpt-6282A82C"><span data-gerby-tag="6282A82C"></span>
+<span class="equation-label"><a data-tag="6282A82C" href="../../tag/C40469D9226B/">5.56</a></span>
+<div>\begin{equation} \label{eq:mawayC1} \langle m,-u\rangle -\operatorname{Supp}_{\Delta (\omega ,\varphi )}(-u)&gt;1, \end{equation}</div>
+</div>
+<p>
+ then $\chi ^ m\not\in \mathrm{H}^0(X,L\otimes \mathcal{I}(\varphi ))$. 
+</p>
+</li>
+</ol>
+</article> In <a data-tag="0772D430" href="../../tag/E109952155FB/#sgpt-0772D430">2</a>, there are exactly $p$ rays in $\sigma (1)$ since $\sigma $ is smooth. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $\Delta =\Delta (\omega ,\varphi )$. By proposition <a data-tag="0437CA76" href="../../tag/8AE79B76D6D2/">3.2.13</a>, proposition <a data-tag="FA27516A" href="../../tag/11748980D2DF/">5.2.13</a>, we may replace $\varphi $ by $P_{\omega }[\varphi ]$ without changing its multiplier ideal or Newton body. We may therefore assume that $F_{\varphi }-\operatorname{Supp}_{\Delta }$ is bounded on $N_{\mathbb {R}}$. Set 
+    
+<div class="equation">
+  \[  H(\nu )=\langle m,\nu \rangle -\operatorname{Supp}_{\Delta }(\nu ),\quad \nu \in N_{\mathbb {R}}.  \]
+</div>
+<p>
+       Since $\Delta $ is compact, $H$ is Lipschitz and positively homogeneous. 
+    <p>
+      Observe also that $\mathrm{H}^0(X,L\otimes \mathcal{I}(\varphi ))$ is a $T_ c$-invariant subspace of $\mathrm{H}^0(X,L)$. Since the $T_ c$-weight spaces in $\mathrm{H}^0(X,L)$ are the lines $\mathbb {C}\chi ^ m$, it is the direct sum of suitable $\mathbb {C}\chi ^ m$'s. 
+    <p>
+      If $m\notin P$, then $\chi ^ m$ is not a section of $L$. Suppose henceforth that $m\in M\cap P$. Membership in $\mathrm{H}^0(X,L\otimes \mathcal{I}(\varphi ))$ is equivalent to the finiteness of 
+    
+<div class="equation" id="sgpt-918E6F30"><span data-gerby-tag="918E6F30"></span>
+<span class="equation-label"><a data-tag="918E6F30" href="../../tag/39F3ED71C89D/">5.57</a></span>
+<div>\begin{equation} \label{eq:torictobefinite1} \int _{T(\mathbb {C})}|\chi ^ m|^2\exp (-\operatorname{Trop}^*F_0-\varphi )\, \omega ^ n. \end{equation}</div>
+</div>
+<p>
+       Since $\operatorname{Trop}^*F_0+\varphi =\operatorname{Trop}^*F_{\varphi }$, the boundedness of $F_{\varphi }-\operatorname{Supp}_{\Delta }$ and proposition <a data-tag="D3D075B2" href="../../tag/725063C1ED05/">5.2.10</a> show that this is equivalent to the finiteness of 
+    
+<div class="equation">
+  \[  \int _{N_{\mathbb {R}}}\exp (H(\nu ))\, \operatorname{MA}_{\mathbb {R}}(F_0)(\nu ).  \]
+</div>
+<p>
+       Changing variables by $\nu =\nabla G_0(m')$, we obtain the equivalent integral 
+    
+<div class="equation" id="sgpt-3CFDEC74"><span data-gerby-tag="3CFDEC74"></span>
+<span class="equation-label"><a data-tag="3CFDEC74" href="../../tag/428CD3ABF6EF/">5.58</a></span>
+<div>\begin{equation} \label{eq:torictobefinite2} \int _ P\exp \left(\langle m,\nabla G_0(m')\rangle -\operatorname{Supp}_{\Delta }(\nabla G_0(m'))\right)\, \mathrm{d}m'. \end{equation}</div>
+</div>
+<p>
+       If $m\in \Delta $, its integrand is at most $1$, proving <a data-tag="5CB08E77" href="../../tag/E109952155FB/#sgpt-5CB08E77">1</a>. 
+    <p>
+      To prove <a data-tag="0772D430" href="../../tag/E109952155FB/#sgpt-0772D430">2</a>, extend $\sigma $ to a maximal cone $\tau \in \Sigma $. Its primitive ray generators $u_1,\ldots ,u_ n$ form a basis of $N$, and we may arrange that $u_ i=u_{\rho _ i}$ for $1\leq i\leq p$. If $e_1,\ldots ,e_ n$ is the dual basis of $M$, then $z_ i=\chi ^{e_ i}$ are coordinates on the affine chart $U_{\tau }\cong \mathbb {C}^ n$. 
+    <p>
+      Let $v\in P\cap M$ be the vertex corresponding to $\tau $. The character $\chi ^ v$ is a local frame of $L$ on $U_{\tau }$. Writing 
+    
+<div class="equation">
+  \[  \nu =\operatorname{Trop}(z)=\sum _{i=1}^ n\log |z_ i|^2\, u_ i,  \]
+</div>
+<p>
+       the weight of the singular metric in this frame is $F_{\varphi }(\nu )-\langle v,\nu \rangle $. The local representative of $\chi ^ m$ is $\chi ^{m-v}$, so its squared norm is 
+    
+<div class="equation">
+  \[  \exp \left(\langle m,\nu \rangle -F_{\varphi }(\nu )\right).  \]
+</div>
+<p>
+       On the unit polydisc, $\omega ^ n$ is comparable to Euclidean volume. Set $t_ i=-\log |z_ i|^2$. Integrating out the angular variables and using the boundedness of $F_{\varphi }-\operatorname{Supp}_{\Delta }$, the weighted integral over this polydisc is finite if and only if the following integral is finite: 
+    
+<div class="equation">
+  \[  \int _{[0,\infty )^ n}\exp \left(H\left(-\sum _{i=1}^ n t_ i u_ i\right)-\sum _{i=1}^ n t_ i\right)\, \mathrm{d}t.  \]
+</div>
+<p>
+      Restrict this integral to the tube parametrized by $s&gt;1$ and $0&lt;y_ i&lt;1$ for $2\leq i\leq n$, with 
+    
+<div class="equation">
+  \[  t_1=c_1s,\qquad t_ i=c_ is+y_ i\quad (2\leq i\leq p),\qquad t_ i=y_ i\quad (p&lt;i\leq n).  \]
+</div>
+<p>
+       The Jacobian is $c_1&gt;0$. Since $H$ is Lipschitz and positively homogeneous and $\sum _{i=1}^ p c_ i=1$, the exponent on this tube is 
+    
+<div class="equation">
+  \[  H\left(-\sum _{i=1}^ n t_ i u_ i\right)-\sum _{i=1}^ n t_ i =s\bigl (H(-u)-1\bigr )+\mathcal{O}(1),  \]
+</div>
+<p>
+       with a bounded error uniform in $s$ and the $y_ i$'s. The local integral is therefore bounded from below by a positive multiple of 
+    
+<div class="equation">
+  \[  \int _1^{\infty }\exp \left(s\bigl (H(-u)-1\bigr )\right)\, \mathrm{d}s,  \]
+</div>
+<p>
+       which diverges under (<a data-tag="6282A82C" href="../../tag/C40469D9226B/">5.56</a>). This proves <a data-tag="0772D430" href="../../tag/E109952155FB/#sgpt-0772D430">2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-7B8DBCB8">
+<p><a class="environment-identifier" href="../../tag/05A4124B7E31/">Corollary <span data-tag="7B8DBCB8">5.2.15</span>.</a><span data-gerby-tag="7B8DBCB8"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Then </p>
+<div class="equation">
+  \[  \lim _{k\to \infty }\frac{n!}{k^ n}h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi )\right)= n!\operatorname{vol}\Delta (\omega ,\varphi ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take $k&gt;0$. Let $F_{0,k}$ denote the Guillemin potential associated with the polytope $kP$. On $T(\mathbb C)$, set 
+    
+<div class="equation">
+  \[  \widetilde\varphi _ k=\operatorname{Trop}^*(kF_\varphi -F_{0,k}).  \]
+</div>
+<p>
+       Then $\widetilde\varphi _ k$ is the toric potential, with respect to the reference metric associated with $kP$, corresponding to the singular metric $h^ k\exp (-k\varphi )$ on $L^ k$. It differs from $k\varphi $ by the smooth toric function $\operatorname{Trop}^*(kF_0-F_{0,k})$. Hence 
+    
+<div class="equation">
+  \[  \mathcal I(\widetilde\varphi _ k)=\mathcal I(k\varphi ).  \]
+</div>
+<p>
+       Moreover, the convex function associated with $\widetilde\varphi _ k$ is $kF_\varphi $, so its Legendre transform is 
+    
+<div class="equation">
+  \[  (kF_\varphi )^*(m)=kG_\varphi (m/k).  \]
+</div>
+<p>
+       Thus the Newton body of $\widetilde\varphi _ k$ is $k\Delta (\omega ,\varphi )$. 
+    <p>
+      Applying theorem <a data-tag="59CD0BEC" href="../../tag/E109952155FB/">5.2.14</a> <a data-tag="5CB08E77" href="../../tag/E109952155FB/#sgpt-5CB08E77">1</a> to the line bundle $L^ k$ and the potential $k\varphi $, whose Newton body is $k\Delta (\omega ,\varphi )$, we have 
+    
+<div class="equation">
+  \[  \#  \left( k\Delta (\omega ,\varphi )\cap M\right)\leq h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi )\right).  \]
+</div>
+<p>
+       Here $\# $ denotes the number of elements. Therefore, 
+    
+<div class="equation">
+  \[  \lim _{k\to \infty }k^{-n}\# \left( k\Delta (\omega ,\varphi )\cap M\right)\leq \varliminf _{k\to \infty } k^{-n} h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi )\right).  \]
+</div>
+<p>
+       The left-hand side is just $\operatorname{vol}\Delta (\omega ,\varphi )$, as follows from theorem <a data-tag="282DA4DD" href="../../tag/85641516C8CA/">C.2.3</a>. So we conclude that 
+    
+<div class="equation">
+  \[  \varliminf _{k\to \infty }\frac{n!}{k^ n}h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi )\right)\geq n!\operatorname{vol}\Delta (\omega ,\varphi ).  \]
+</div>
+<p>
+       It remains to prove the reverse inequality. 
+    <p>
+      We choose an identification $M\cong \mathbb {Z}^ n$. In particular, there is a natural distance $\mathrm{d}$ on $M_{\mathbb {R}}\cong \mathbb {R}^ n$. Given a convex body $K$ and $\epsilon &gt;0$, we let 
+    
+<div class="equation">
+  \[  K^{\epsilon }\coloneqq \left\{ x\in \mathbb {R}^ n: \mathrm{d}(x,K)\leq \epsilon \right\} .  \]
+</div>
+<p>
+       This is again a convex body, since it can be realized as the Minkowski sum of $K$ with a closed ball of radius $\epsilon $. 
+    <p>
+      Applying theorem <a data-tag="59CD0BEC" href="../../tag/E109952155FB/">5.2.14</a> <a data-tag="0772D430" href="../../tag/E109952155FB/#sgpt-0772D430">2</a> to the polytope $kP$ and the potential $\widetilde\varphi _ k$, we can find $C&gt;0$ uniform in $k$ such that for each $k\in \mathbb {Z}_{&gt;0}$, 
+    
+<div class="equation">
+  \[  \bigl \{  m\in M:\chi ^ m\in \mathrm{H}^0(X,L^ k\otimes \mathcal{I}(k\varphi ))\bigr \}  \subseteq \left(k\Delta (\omega ,\varphi )\right)^ C.  \]
+</div>
+<p>
+       Indeed, if a point $m\in kP\cap M$ is at distance at least $C$ from $k\Delta (\omega ,\varphi )$, the separating hyperplane theorem gives a unit vector $v\in N_{\mathbb R}$ such that 
+    
+<div class="equation">
+  \[  \langle m,v\rangle -\operatorname{Supp}_{k\Delta (\omega ,\varphi )}(v)\geq C.  \]
+</div>
+<p>
+       Since the fan $\Sigma $ is finite and covers $N_{\mathbb R}$, there is a constant $\Lambda &gt;0$ with the following property: every unit vector $v\in N_{\mathbb R}$ can be written in the form 
+    
+<div class="equation">
+  \[  v=-\lambda \sum _ i c_ i u_{\rho _ i},\quad 0&lt;\lambda \leq \Lambda ,\quad c_ i&gt;0,\quad \sum _ i c_ i=1,  \]
+</div>
+<p>
+       where the rays $\rho _ i$ are contained in a single cone of $\Sigma $. Put 
+    
+<div class="equation">
+  \[  u\coloneqq \sum _ i c_ i u_{\rho _ i}.  \]
+</div>
+<p>
+       Since the support function is positively homogeneous, we have 
+    
+<div class="equation">
+  \[  \begin{aligned}  \langle m,-u\rangle -\operatorname{Supp}_{k\Delta (\omega ,\varphi )}(-u)&amp; =\lambda ^{-1}\left(\langle m,v\rangle -\operatorname{Supp}_{k\Delta (\omega ,\varphi )}(v)\right)\\ &amp; \geq C/\Lambda . \end{aligned}  \]
+</div>
+<p>
+       Choosing $C&gt;\Lambda $ makes (<a data-tag="6282A82C" href="../../tag/C40469D9226B/">5.56</a>) applicable, uniformly in $k$. 
+    <p>
+      Fix $\epsilon &gt;0$. Then for large enough $k$, we have 
+    
+<div class="equation">
+  \[  \left(k\Delta (\omega ,\varphi )\right)^{C}\subseteq k\left(\Delta (\omega ,\varphi )^{\epsilon }\right).  \]
+</div>
+<p>
+       It follows that 
+    
+<div class="equation">
+  \[  h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi )\right)\leq \#  \left( k\left(\Delta (\omega ,\varphi )^{\epsilon }\right) \cap M\right).  \]
+</div>
+<p>
+       Applying theorem <a data-tag="282DA4DD" href="../../tag/85641516C8CA/">C.2.3</a> again, we conclude that 
+    
+<div class="equation">
+  \[  \varlimsup _{k\to \infty } \frac{n!}{k^ n} h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi )\right)\leq n! \operatorname{vol}\left(\Delta (\omega ,\varphi )^{\epsilon }\right).  \]
+</div>
+<p>
+       Letting $\epsilon \to 0+$ and applying theorem <a data-tag="D4B8C3D6" href="../../tag/66339C0E3C21/">C.1.4</a>, we find 
+    
+<div class="equation">
+  \[  \varlimsup _{k\to \infty } \frac{n!}{k^ n} h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi )\right)\leq n! \operatorname{vol}\Delta (\omega ,\varphi ).  \]
+</div>
+<p>
+       Our assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-example" id="sgpt-8DAF6F77">
+<p><a class="environment-identifier" href="../../tag/37CEF2EAED80/">Example <span data-tag="8DAF6F77">5.2.16</span>.</a><span data-gerby-tag="8DAF6F77"></span> In general, in the setup of theorem <a data-tag="59CD0BEC" href="../../tag/E109952155FB/">5.2.14</a>, there exists $m\in M\cap (P\setminus \Delta (\omega ,\varphi ))$ such that $\chi ^ m\in \mathrm{H}^0(X,L\otimes \mathcal{I}(\varphi ))$. </p>
+<p>As a concrete example, let us take $P=[0,1]$. Take $\varphi $ so that $\Delta (\omega ,\varphi )=[0,1/2]$. We claim that $\chi ^1$ is $L^2$-integrable. </p>
+<p>It suffices to verify the convergence of (<a data-tag="3CFDEC74" href="../../tag/428CD3ABF6EF/">5.58</a>). Recall that </p>
+<div class="equation">
+  \[  \nabla G_0(m')=\log \frac{m'}{1-m'},\quad m'\in [0,1],  \]
+</div>
+<p> while </p>
+<div class="equation">
+  \[  \operatorname{Supp}_{[0,1/2]}(a)= \begin{cases}  a/2,&amp; \textup{if }a&gt;0;\\  0,&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+<p> Therefore, (<a data-tag="3CFDEC74" href="../../tag/428CD3ABF6EF/">5.58</a>) becomes </p>
+<div class="equation">
+  \[  \int _0^{1/2} \frac{m'}{1-m'}\, \mathrm{d}m'+\int _{1/2}^1 \left(\frac{m'}{1-m'}\right)^{1/2}\, \mathrm{d}m'&lt;\infty .  \]
+</div>
+</article>
+
+
+We interpret various classes of potentials studied in <a data-tag="60D02775" href="../../tag/B22CE32B08DB/">3.1.3</a> in the toric setting. <article class="env-proposition" id="sgpt-E3528B31">
+<p><a class="environment-identifier" href="../../tag/852502204924/">Proposition <span data-tag="E3528B31">5.2.17</span>.</a><span data-gerby-tag="E3528B31"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-2E9E576D"><span data-gerby-tag="2E9E576D"></span><p>
+ $\varphi \in \mathcal{E}^{\infty }(X,\omega )$; 
+</p>
+</li><li class="custom-item" id="sgpt-71A65229"><span data-gerby-tag="71A65229"></span><p>
+ $F_{\varphi }\in \mathcal{E}^{\infty }(N_{\mathbb {R}},P)$; 
+</p>
+</li><li class="custom-item" id="sgpt-D4524A1B"><span data-gerby-tag="D4524A1B"></span><p>
+ $G_{\varphi }\sim G_0$. 
+</p>
+</li>
+</ol>
+</article> The notation $\mathcal{E}^{\infty }(N_{\mathbb {R}},P)$ is defined in definition <a data-tag="23A0B6A4" href="../../tag/2AEBD4E3830A/">A.3.1</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows immediately from proposition <a data-tag="5B5DEF1B" href="../../tag/EEFA0F6B0CF6/">5.2.5</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-161233E3">
+<p><a class="environment-identifier" href="../../tag/55BFC442EA72/">Proposition <span data-tag="161233E3">5.2.18</span>.</a><span data-gerby-tag="161233E3"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-83B4275E"><span data-gerby-tag="83B4275E"></span><p>
+ $\varphi \in \mathcal{E}(X,\omega )$; 
+</p>
+</li><li class="custom-item" id="sgpt-215EF3B9"><span data-gerby-tag="215EF3B9"></span><p>
+ $F_{\varphi }\in \mathcal{E}(N_{\mathbb {R}},P)$; 
+</p>
+</li><li class="custom-item" id="sgpt-F5E7FBF2"><span data-gerby-tag="F5E7FBF2"></span><p>
+ $\overline{\operatorname{Dom}G_{\varphi }}=P$. 
+</p>
+</li>
+</ol>
+</article> The notation $\mathcal{E}(N_{\mathbb {R}},P)$ is defined in definition <a data-tag="23A0B6A4" href="../../tag/2AEBD4E3830A/">A.3.1</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="83B4275E" href="../../tag/55BFC442EA72/#sgpt-83B4275E">1</a> $\iff $ <a data-tag="F5E7FBF2" href="../../tag/55BFC442EA72/#sgpt-F5E7FBF2">3</a>. By proposition <a data-tag="D3D075B2" href="../../tag/725063C1ED05/">5.2.10</a>, 
+    
+<div class="equation">
+  \[  \int _ X \omega _{\varphi }^ n=\int _{T(\mathbb {C})} \left(\omega |_{T(\mathbb {C})}+\mathrm{dd}^{\mathrm{c}}\varphi |_{T(\mathbb {C})} \right)^ n= n! \operatorname{vol}\overline{\operatorname{Dom}G_{\varphi }},\quad \int _ X \omega ^ n=n!\operatorname{vol}P,  \]
+</div>
+<p>
+       where in the first equality, we use the fact that $\omega _{\varphi }^ n$ does not charge pluripolar sets proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="A7B5A81A" href="../../tag/9E81D36B1290/#sgpt-A7B5A81A">4</a>. 
+    <p>
+      Therefore, <a data-tag="83B4275E" href="../../tag/55BFC442EA72/#sgpt-83B4275E">1</a> and <a data-tag="F5E7FBF2" href="../../tag/55BFC442EA72/#sgpt-F5E7FBF2">3</a> are equivalent. 
+    <p>
+<a data-tag="215EF3B9" href="../../tag/55BFC442EA72/#sgpt-215EF3B9">2</a> $\iff $ <a data-tag="F5E7FBF2" href="../../tag/55BFC442EA72/#sgpt-F5E7FBF2">3</a>. This follows from proposition <a data-tag="DAE71CEF" href="../../tag/8B18F2B2DE3B/">A.2.9</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="sgpt-B3280F36">
+<p><a class="environment-identifier" href="../../tag/75730375E037/">Proposition <span data-tag="B3280F36">5.2.19</span>.</a><span data-gerby-tag="B3280F36"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Then </p>
+<div class="equation" id="sgpt-4A4855E9"><span data-gerby-tag="4A4855E9"></span>
+<span class="equation-label"><a data-tag="4A4855E9" href="../../tag/F02AE1451B98/">5.63</a></span>
+<div>\begin{equation} \label{eq:Eomega_toric} E_{\omega }(\varphi )=n!\int _ P \left(G_{0}-G_{\varphi }\right)\, \mathrm{d}\operatorname{vol}. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$, write 
+    
+<div class="equation">
+  \[  \mathcal C(\psi )\coloneqq n!\int _ P\left(G_0-G_\psi \right)\, \mathrm{d}\operatorname{vol}.  \]
+</div>
+<p>
+<strong>Step 1</strong>. We assume that $\varphi $ is bounded. 
+    <p>
+      Put $h=F_{\varphi }-F_0$, $\varphi _ t=t\varphi $ and 
+    
+<div class="equation">
+  \[  F_ t\coloneqq F_0+th  \]
+</div>
+<p>
+       for $t\in [0,1]$. Then $F_ t=F_{\varphi _ t}$ and $G_ t\coloneqq F_ t^*=G_{\varphi _ t}$. Since $\varphi $ is bounded, $h$ is bounded and continuous; in particular, $F_ t\in \mathcal E^\infty (N_{\mathbb R},P)$ for every $t\in [0,1]$. 
+    <p>
+      We claim that 
+    
+<div class="equation" id="sgpt-8AAF050B"><span data-gerby-tag="8AAF050B"></span>
+<span class="equation-label"><a data-tag="8AAF050B" href="../../tag/3654D70C9AC4/">5.64</a></span>
+<div>\begin{equation} \label{eq:Etoric_convex_derivative} \frac{\mathrm d}{\mathrm dt}\mathcal C(\varphi _ t)=\int _{N_{\mathbb R}}h\, \operatorname{MA}_{\mathbb R}(F_ t). \end{equation}</div>
+</div>
+<p>
+       Let $s&gt;0$ and $t,t+s\in [0,1]$. At a point $m\in \operatorname{Int}P$ where both $G_ t$ and $G_{t+s}$ are differentiable, we have 
+    
+<div class="equation">
+  \[  \begin{aligned}  G_{t+s}(m)&amp; \geq G_ t(m)-s h\bigl (\nabla G_ t(m)\bigr ),\\  G_ t(m)&amp; \geq G_{t+s}(m)+s h\bigl (\nabla G_{t+s}(m)\bigr ). \end{aligned}  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  h\bigl (\nabla G_{t+s}(m)\bigr )\leq \frac{G_ t(m)-G_{t+s}(m)}{s}\leq h\bigl (\nabla G_ t(m)\bigr ).  \]
+</div>
+<p>
+       Integrating the last inequality and using <a data-tag="E51EE4AF" href="../../tag/8DE662F4EFE6/">A.4.6</a> gives 
+    
+<div class="equation">
+  \[  \int _{N_{\mathbb R}}h\, \operatorname{MA}_{\mathbb R}(F_{t+s})\leq \frac{\mathcal C(\varphi _{t+s})-\mathcal C(\varphi _ t)}{s}\leq \int _{N_{\mathbb R}}h\, \operatorname{MA}_{\mathbb R}(F_ t).  \]
+</div>
+<p>
+       Letting $s\to 0+$ and using theorem <a data-tag="13A7CF49" href="../../tag/2DC9BC6F295A/">A.4.4</a> for $F_{t+s}\to F_ t$, we obtain the right derivative in (<a data-tag="8AAF050B" href="../../tag/3654D70C9AC4/">5.64</a>). The left derivative follows in the same way. Hence (<a data-tag="8AAF050B" href="../../tag/3654D70C9AC4/">5.64</a>) holds. 
+    <p>
+      By proposition <a data-tag="D3D075B2" href="../../tag/725063C1ED05/">5.2.10</a>, the right-hand side of (<a data-tag="8AAF050B" href="../../tag/3654D70C9AC4/">5.64</a>) is 
+    
+<div class="equation">
+  \[  \int _ X\varphi \, \omega _{\varphi _ t}^ n.  \]
+</div>
+<p>
+       On the other hand, <a data-tag="0228912D" href="../../tag/8B9E394D5AE5/">3.1.56</a> gives 
+    
+<div class="equation">
+  \[  \frac{\mathrm d}{\mathrm dt}E_{\omega }(\varphi _ t)=\int _ X\varphi \, \omega _{\varphi _ t}^ n.  \]
+</div>
+<p>
+       Thus $E_{\omega }(\varphi _ t)-\mathcal C(\varphi _ t)$ is constant in $t$. It vanishes at $t=0$, hence (<a data-tag="4A4855E9" href="../../tag/F02AE1451B98/">5.63</a>) follows by taking $t=1$. 
+    <p>
+<strong>Step 2</strong>. We handle the general case. 
+    <p>
+      Both sides of (<a data-tag="4A4855E9" href="../../tag/F02AE1451B98/">5.63</a>) change by the same additive constant when we replace $\varphi $ by $\varphi +A$, namely by 
+    
+<div class="equation">
+  \[  A\int _ X\omega ^ n=A\, n!\operatorname{vol}P.  \]
+</div>
+<p>
+       We may therefore assume that $\varphi \leq 0$. For $C&gt;0$, put 
+    
+<div class="equation">
+  \[  \varphi _ C\coloneqq \varphi \lor (-C).  \]
+</div>
+<p>
+       Then $\varphi _ C\in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )\cap L^{\infty }(X)$ and $\varphi _ C\searrow \varphi $ as $C\to \infty $. By proposition <a data-tag="A47B98F5" href="../../tag/73034E124A9A/">5.2.9</a>, $G_{\varphi _ C}\nearrow G_{\varphi }$. Applying Step 1 to $\varphi _ C$, we get 
+    
+<div class="equation">
+  \[  E_{\omega }(\varphi _ C)=n!\int _ P \left(G_0-G_{\varphi _ C}\right)\, \mathrm{d}\operatorname{vol}.  \]
+</div>
+<p>
+       Letting $C\to \infty $, the left-hand side converges to $E_{\omega }(\varphi )$ by proposition <a data-tag="CAA3508A" href="../../tag/37860FDCEAB5/">3.1.39</a>. On the right-hand side, since $\varphi _ C\leq 0$, we have $G_{\varphi _ C}\geq G_0$, and the monotone convergence theorem applied to $G_{\varphi _ C}-G_0\nearrow G_{\varphi }-G_0$ gives (<a data-tag="4A4855E9" href="../../tag/F02AE1451B98/">5.63</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-6A6D1C02">
+<p><a class="environment-identifier" href="../../tag/E80DDB8667C8/">Corollary <span data-tag="6A6D1C02">5.2.20</span>.</a><span data-gerby-tag="6A6D1C02"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\omega )$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-E3BDA3E7"><span data-gerby-tag="E3BDA3E7"></span><p>
+ $\varphi \in \mathcal{E}^1(X,\omega )$; 
+</p>
+</li><li class="custom-item" id="sgpt-061E0D35"><span data-gerby-tag="061E0D35"></span><p>
+ $F_{\varphi }\in \mathcal{E}^1(N_{\mathbb {R}},P)$; 
+</p>
+</li><li class="custom-item" id="sgpt-9230C723"><span data-gerby-tag="9230C723"></span><p>
+ $G_{\varphi }\in L^1(P)$. 
+</p>
+</li>
+</ol>
+</article> The notation $\mathcal{E}^1(N_{\mathbb {R}},P)$ is defined in definition <a data-tag="23A0B6A4" href="../../tag/2AEBD4E3830A/">A.3.1</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The equivalence between <a data-tag="E3BDA3E7" href="../../tag/E80DDB8667C8/#sgpt-E3BDA3E7">1</a> and <a data-tag="9230C723" href="../../tag/E80DDB8667C8/#sgpt-9230C723">3</a> follows from proposition <a data-tag="B3280F36" href="../../tag/75730375E037/">5.2.19</a>. The equivalence between <a data-tag="061E0D35" href="../../tag/E80DDB8667C8/#sgpt-061E0D35">2</a> and <a data-tag="9230C723" href="../../tag/E80DDB8667C8/#sgpt-9230C723">3</a> is the definition of $\mathcal{E}^1(N_{\mathbb {R}},P)$, since $F_{\varphi }^*=G_{\varphi }$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-definition" id="sgpt-6187F826">
+<p><a class="environment-identifier" href="../../tag/0B726BDBFF06/">Definition <span data-tag="6187F826">5.2.21</span>.</a><span data-gerby-tag="6187F826"></span> We define    </p>
+<div class="equation">
+  \[  \begin{aligned}  \mathcal{E}^{\infty }_{\mathrm{tor}}(X,\omega )= &amp;  \mathcal{E}^{\infty }(X,\omega ) \cap \mathrm{PSH}_{\mathrm{tor}}(X,\omega ),\\  \mathcal{E}^{1}_{\mathrm{tor}}(X,\omega )= &amp;  \mathcal{E}^{1}(X,\omega ) \cap \mathrm{PSH}_{\mathrm{tor}}(X,\omega ),\\  \mathcal{E}_{\mathrm{tor}}(X,\omega )= &amp;  \mathcal{E}(X,\omega ) \cap \mathrm{PSH}_{\mathrm{tor}}(X,\omega ). \end{aligned}  \]
+</div>
+</article>
+
+
+<article class="env-corollary" id="sgpt-51BB575D">
+<p><a class="environment-identifier" href="../../tag/12D008DD3794/">Corollary <span data-tag="51BB575D">5.2.22</span>.</a><span data-gerby-tag="51BB575D"></span> Let $\varphi ,\psi \in \mathcal{E}^1_{\mathrm{tor}}(X,\omega )$. Then </p>
+<div class="equation">
+  \[  d_1(\varphi ,\psi )= n!\int _ P \left( 2\left(G_{\varphi }\lor G_{\psi }\right)-G_{\varphi }-G_{\psi }\right)\, \mathrm{d}\operatorname{vol}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows from proposition <a data-tag="B3280F36" href="../../tag/75730375E037/">5.2.19</a>, proposition <a data-tag="E2F47062" href="../../tag/419A1D9F18A9/">5.2.7</a> and definition <a data-tag="7B786AE5" href="../../tag/08EFAEA550B1/">4.3.1</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+<section class="part-introduction"> </section>
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

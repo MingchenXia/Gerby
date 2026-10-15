@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Curvature rank and section growth · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/sections-okounkov/">Chapter 16 · Sections, graded series, and Okounkov bodies</a> · Tag <code>1936F96341B0</code></p><h1>Curvature rank and section growth</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 21.6 Curvature rank and section growth <span data-gerby-tag="0E5A4260"></span></div>
+<p>
+The dimension of a section-ratio field can be bounded by a smooth curvature form, even when that form changes rank and has no global sign. The key is to arrange that a maximum of a section norm occurs where the section map has its maximal rank. This gives a pointwise restriction on the growth counted by the preceding sections. 
+</p>
+<p>
+Keep the connected compact complex manifold $X$ and line bundle $L$, and choose a smooth Hermitian metric $h$ on $L$. In a local frame write $|e|_ h^2=\mathrm e^{-\chi }$ and put $\beta =\mathrm{dd}^{\mathrm{c}}\chi $, with the normalization of section <a data-tag="03C5996E" href="../../tag/5F8226DC1A97/">20.1</a>. Let $r=\max _ X\operatorname {rank}\beta $. No positivity of $\beta $, constant-rank condition or Kähler metric is assumed. Set $S_ h=\{ x:\beta _ x\geq 0\} $; when $S_ h$ is nonempty, let $r_ h^+=\max _{S_ h}\operatorname {rank}\beta $. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-77A30A69">
+<p><a class="environment-identifier" href="../../tag/C8B2CB1B6819/">Proposition <span data-tag="77A30A69">21.6.1</span>.</a><span data-gerby-tag="77A30A69"></span> For a nonzero subspace $W\subset H^0(X,L^ p)$, $p\geq 1$, let $B_ W$ be its common zero set and let $\Phi _ W:X\setminus B_ W\to \mathbb P(W^*)$ be its section map. If $d$ is the maximal rank of its differential, there is $x_*\notin B_ W$ such that </p>
+<div class="equation">
+  \[  \operatorname {rank}\mathrm d\Phi _ W|_{x_*}=d, \qquad \beta _{x_*}\geq 0, \qquad \operatorname {rank}\beta _{x_*}\geq d.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a basis $s_0,\ldots ,s_ N$ of $W$. Principalizing the ideal of their local coefficients gives a smooth compact modification $\pi :Y\to X$, isomorphic over $X\setminus B_ W$, and an effective divisor $D$ with 
+    
+<div class="equation">
+  \[  \pi ^*s_ j=s_ Dv_ j,\qquad v_ j\in H^0(Y,\pi ^*L^ p(-D)),  \]
+</div>
+<p>
+       where the $v_ j$ have no common zero. The resolved map $f=[v_0:\cdots :v_ N]:Y\to \mathbb P^ N$ has maximal differential rank $d$, since it agrees with $\Phi _ W\circ \pi $ on a dense open set. 
+    <p>
+      The critical set $C=\{ y:\operatorname {rank}\mathrm df_ y&lt;d\} $ is analytic. Proper mapping and the image-dimension theorem imply that $Z=f(Y)$ and $T=f(C)$ are compact analytic sets, with $\dim Z=d$ and $\dim T\leq d-1$ when $T$ is nonempty. For the last inequality apply the rank bound to the smooth locus of every irreducible component of $C$. By Chow's theorem $T$ is algebraic. Choose a homogeneous polynomial $P$ of degree $a\geq 1$ that vanishes on $T$ and does not vanish identically on $Z$. If $T$ is empty, take $P=1$ and $a=0$, which also covers $d=0$. 
+    <p>
+      Then $\sigma =P(s_0,\ldots ,s_ N)$ is a nonzero section of $L^{pa}$. Indeed, the set where $P(v_0,\ldots ,v_ N)\ne 0$ meets the dense locus where $\pi $ is an isomorphism. The smooth function 
+    
+<div class="equation">
+  \[  \Psi =\sum _ j|\sigma s_ j|_{h^{p(a+1)}}^2  \]
+</div>
+<p>
+       has a positive maximum $x_*$. At that point $\sigma \ne 0$ and some $s_ j\ne 0$, so $x_*\notin B_ W$ and its lift is outside $C$. The tuples $(\sigma s_ j)$ and $(s_ j)$ define the same projective map near $x_*$. For $\omega _{\mathrm{FS}}=\mathrm{dd}^{\mathrm{c}}\log (1+|w|^2)$ in an affine chart, the Hessian test gives 
+    
+<div class="equation">
+  \[  0\geq \mathrm{dd}^{\mathrm{c}}\log \Psi |_{x_*} =\Phi _ W^*\omega _{\mathrm{FS}}|_{x_*} -p(a+1)\beta _{x_*}.  \]
+</div>
+<p>
+       The first form on the right is semipositive of rank $d$. Thus $\beta _{x_*}$ is semipositive and its kernel is contained in the kernel of that form, proving the assertion. The polynomial degree may depend on $p$ and $W$; no bound on it is needed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For the complete section ring with a nonzero positive-degree piece, denote its section-ratio transcendence degree by $\kappa (L)$, the <em>Kodaira–Iitaka dimension</em>; put $\kappa (L)=-\infty $ when all positive powers have no sections. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-CBB2BC97">
+<p><a class="environment-identifier" href="../../tag/14480FFA5B57/">Corollary <span data-tag="CBB2BC97">21.6.2</span>.</a><span data-gerby-tag="CBB2BC97"></span> If $S_ h$ is empty, then $H^0(X,L^ p)=0$ for every $p\geq 1$. Otherwise </p>
+<div class="equation">
+  \[  \kappa (L)\leq r_ h^+\leq r, \qquad h^0(X,L^ p)=O(p^{r_ h^+}).  \]
+</div>
+<p> In this second case, every graded section algebra with a nonzero positive-degree piece has growth dimension at most $r_ h^+$, as do all its flag bodies, including those constructed on a point blowup. For every fixed weight $u\in \mathrm{QPSH}(X)$, the integrable spaces satisfy $\dim \mathcal H_ p(u)=O(p^{r_ h^+})$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The proposition applied to a single section excludes every positive power if $S_ h$ is empty. If all positive-degree section spaces vanish, the remaining section bounds are immediate and $\kappa (L)=-\infty $. Otherwise, suppose a graded algebra has a nonzero positive-degree piece. Write any finitely many algebraically independent elements of its ratio field with a common denominator in one positive degree, as in proposition <a data-tag="41E2532A" href="../../tag/E32D710594E0/">21.3.2</a>. They are coordinate ratios of a section map. Its resolved image is projective algebraic by proper mapping and Chow's theorem; its dimension is therefore at least their number. The proposition bounds this dimension by $r_ h^+$, so the field's transcendence degree is at most $r_ h^+$. 
+    <p>
+      Apply theorem <a data-tag="6F0F3D7F" href="../../tag/1EBEF54DB76D/">21.5.2</a> to this algebra and to the full section ring. The degree-period formula gives the growth bound in every degree, including the zero spaces outside the period. The earlier flag identification gives the body dimensions. Finally, $\mathcal H_ p(u)\subseteq H^0(X,L^ p)$, so the same upper bound holds even though the integrable spaces need not form a graded algebra. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-9E4E2992">
+<p><a class="environment-identifier" href="../../tag/FCAD080F93F6/">Lemma <span data-tag="9E4E2992">21.6.3</span>.</a><span data-gerby-tag="9E4E2992"></span> For every fixed holomorphic line bundle $A$ on $X$, </p>
+<div class="equation">
+  \[  h^0(X,L^ p\otimes A)=O(p^ r).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Induct on the dimension, simultaneously for all compact complex manifolds and all integer upper bounds on curvature rank. Dimension zero is immediate. If all these section spaces vanish, there is nothing to prove. Otherwise fix a nonzero section in degree $a\geq 1$ and resolve its zero divisor on a smooth compact modification $\mu :Y\to X$. With $M=\mu ^*L$, the pulled-back twist is $M^{-a}(D)$ for a fixed effective divisor $D$ whose components are smooth. Pullback is injective on sections, and the pulled-back curvature has rank at most $r$. 
+    <p>
+      Write $D=H_1+\cdots +H_ s$, allowing repeated components, and put $D_ j=H_1+\cdots +H_ j$. For $m=p-a&gt;0$, the divisor sequences give 
+    
+<div class="equation">
+  \[  h^0(Y,M^ m(D)) \leq h^0(Y,M^ m)+\sum _{j=1}^ s h^0\bigl (H_ j,(M|_{H_ j})^ m\otimes \mathcal O_ Y(D_ j)|_{H_ j}\bigr ).  \]
+</div>
+<p>
+       The first term is $O(m^ r)$ by the preceding corollary; every other term is $O(m^ r)$ by induction, since curvature rank cannot increase on restriction. The number of terms and their twists are fixed. Absorb the finitely many $p\leq a$ in the constant. On disconnected manifolds apply this argument componentwise; this also makes the induction valid for disconnected divisor components. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-600FAC41">
+<p><a class="environment-identifier" href="../../tag/CA93F87E4E8D/">Corollary <span data-tag="600FAC41">21.6.4</span>.</a><span data-gerby-tag="600FAC41"></span> For every fixed holomorphic vector bundle $E$ on $X$, </p>
+<div class="equation">
+  \[  h^0(X,L^ p\otimes E)=O(p^ r), \qquad h^ n(X,L^ p\otimes E)=O(p^ r).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $E$ of positive rank, let $\pi :Y=\mathbb P(E^*)\to X$ parametrize lines, and let $\mathcal O_ Y(1)$ be dual tautological. Fiberwise linear forms give $\pi _*\mathcal O_ Y(1)=E$, hence 
+    
+<div class="equation">
+  \[  H^0(X,L^ p\otimes E) =H^0(Y,(\pi ^*L)^ p\otimes \mathcal O_ Y(1)).  \]
+</div>
+<p>
+       The pulled-back curvature has rank at most $r$, so the fixed-line-twist lemma, proved in all dimensions, gives the first bound. Serre duality identifies the dual of the top cohomology with 
+    
+<div class="equation">
+  \[  H^0(X,(L^*)^ p\otimes E^*\otimes K_ X).  \]
+</div>
+<p>
+       The dual curvature is $-\beta $ and has the same rank; apply the degree-zero bound to $L^*$. A bundle of rank zero has zero cohomology and satisfies both bounds. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-04D312FB">
+<p><a class="environment-identifier" href="../../tag/5C0C7B20BA7A/">Proposition <span data-tag="04D312FB">21.6.5</span>.</a><span data-gerby-tag="04D312FB"></span> For every fixed holomorphic vector bundle $E$, the Euler characteristic $\chi (X,L^ p\otimes E)$ is a polynomial in $p$ of degree at most $r$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The analytic Hirzebruch–Riemann–Roch theorem gives 
+    
+<div class="equation">
+  \[  \chi (X,L^ p\otimes E) =\int _ X\mathrm e^{p\beta }\operatorname {ch}(E) \operatorname {td}(T^{1,0}X) =\sum _{j=0}^{r}\frac{p^ j}{j!} \int _ X\beta ^ j\wedge \operatorname {ch}(E) \wedge \operatorname {td}(T^{1,0}X).  \]
+</div>
+<p>
+       Here the integral selects real degree $2n$, and the Chern character and Todd forms are computed with fixed Hermitian metrics. The curvature normalization represents $c_1(L)$, and $\beta ^{r+1}=0$ pointwise by its rank bound. Every coefficient is independent of $p$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-B6742EC3">
+<p><a class="environment-identifier" href="../../tag/D22F138F2F08/">Corollary <span data-tag="B6742EC3">21.6.6</span>.</a><span data-gerby-tag="B6742EC3"></span> If $\dim X=2$, then $h^ q(X,L^ p\otimes E)=O(p^ r)$ for every fixed holomorphic vector bundle $E$ and $0\leq q\leq 2$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The endpoints have already been bounded. Since $\chi =h^0-h^1+h^2$, the middle dimension is at most $h^0+h^2+|\chi |=O(p^ r)$ by the Euler polynomial. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-AC157C58">
+<p><a class="environment-identifier" href="../../tag/DE28BE657AA4/">Example <span data-tag="AC157C58">21.6.7</span>.</a><span data-gerby-tag="AC157C58"></span> Let $0\leq r\leq n$, let $Y$ be any connected compact complex manifold of dimension $n-r$, and take $X=\mathbb P^ r\times Y$ and $L=\operatorname {pr}_1^*\mathcal O(1)$ with the pulled-back Fubini–Study metric. Its curvature has rank $r$, and </p>
+<div class="equation">
+  \[  h^0(X,L^ p)=\binom {p+r}{r}.  \]
+</div>
+<p> Thus the section-growth exponent cannot be reduced, including when $Y$ is non-Kähler. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      A section, expressed in a line-bundle frame on the projective factor, is a holomorphic function of $Y$ and hence is constant there. Restriction to any slice $\mathbb P^ r\times \{ y_0\} $ is therefore inverse to pullback on sections. Counting degree-$p$ homogeneous monomials in $r+1$ variables gives the formula; for $r=0$ it equals one. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+These bounds concern the closed curvature of a line bundle. They do not estimate the mass of a potential in an unrelated nonclosed Hermitian background, as proposition <a data-tag="18A0B7FF" href="../../tag/6400AAE4BA1E/">20.7.1</a> shows. In dimension at least three, the endpoint bounds and the Euler polynomial alone do not control the individual intermediate cohomology dimensions. The Hopf body computed next realizes the rank bound $n-1$ for the pulled-back positive line bundles of proposition <a data-tag="65E2EF41" href="../../tag/987D754E15F6/">21.7.1</a>. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Monge–Ampère measures · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/toric-convex/">Chapter 18 · Toric and convex geometry</a> · Tag <code>EAC3497DDCF4</code></p><h1>Monge–Ampère measures</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · A.4 Monge–Ampère measures <span data-gerby-tag="A7526AB7"></span></div>
+<p>
+  Let $N$ be a free Abelian group of finite rank $n$ (i.e., a lattice) and $M$ be its dual lattice. There is a canonical Lebesgue-type measure on $M_{\mathbb {R}}$, denoted by $\mathrm{d}\operatorname{vol}$, normalized so that the smallest cubes in $M$ have volume $1$. Similarly, the canonical measure on $N_{\mathbb {R}}$ is normalized in the same way and is denoted by $\mathrm{d}\operatorname{vol}$ as well. 
+</p>
+<p>
+We will write 
+</p>
+<div class="equation">
+  \[  N_{\mathbb {R}}=N\otimes _{\mathbb {Z}}\mathbb {R},\quad M_{\mathbb {R}}=M\otimes _{\mathbb {Z}}\mathbb {R}.  \]
+</div>
+
+<article class="env-definition" id="sgpt-AA859A41">
+<p><a class="environment-identifier" href="../../tag/FF5885207F9E/">Definition <span data-tag="AA859A41">A.4.1</span>.</a><span data-gerby-tag="AA859A41"></span> Let $F$ be a finite convex function on $N_{\mathbb {R}}$. We define the <em>real Monge–Ampère measure</em> $\operatorname{MA}_{\mathbb {R}}F$ as the Alexandrov measure on $N_{\mathbb {R}}$ given as follows: for each Borel measurable set $E\subseteq N_{\mathbb {R}}$, define </p>
+<div class="equation" id="sgpt-0F8A32F1"><span data-gerby-tag="0F8A32F1"></span>
+<span class="equation-label"><a data-tag="0F8A32F1" href="../../tag/54CA724C5825/">A.13</a></span>
+<div>\begin{equation} \label{eq:MARFE} \operatorname{MA}_{\mathbb {R}}F(E)\coloneqq n!\int _{\nabla F(E)} \mathrm{d}\operatorname{vol}. \end{equation}</div>
+</div>
+<p> The measurability and countable additivity in this definition are standard properties of the subgradient map; see for example <span class="cite">[<span class="postnote">Section 2.1</span>, <a href="../../references/#R3F94D157564B">Fig17</a>]</span>. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-9D911AE4">
+<p><a class="environment-identifier" href="../../tag/84CD4F8DE81D/">Proposition <span data-tag="9D911AE4">A.4.2</span>.</a><span data-gerby-tag="9D911AE4"></span> Suppose that $F\in C^{1,1}(N_{\mathbb {R}})\cap \mathrm{Conv}(N_{\mathbb {R}})$. Fix an identification $N=\mathbb {Z}^ n$. Then </p>
+<div class="equation">
+  \[  \operatorname{MA}_{\mathbb {R}}F=n!\cdot \det \nabla ^2 F \, \mathrm{d}\operatorname{vol}.  \]
+</div>
+</article> See <span class="cite">[<span class="postnote">Example 2.2</span>, <a href="../../references/#R3F94D157564B">Fig17</a>]</span>. 
+
+
+<article class="env-proposition" id="sgpt-A4553D04">
+<p><a class="environment-identifier" href="../../tag/F30A95FDA78E/">Proposition <span data-tag="A4553D04">A.4.3</span>.</a><span data-gerby-tag="A4553D04"></span> Let $P\subseteq M_{\mathbb {R}}$ be a convex body and $F\in \mathcal{P}(N_{\mathbb {R}},P)$. Then $F\in \mathcal{E}(N_{\mathbb {R}},P)$ if and only if </p>
+<div class="equation" id="sgpt-89EC1CA1"><span data-gerby-tag="89EC1CA1"></span>
+<span class="equation-label"><a data-tag="89EC1CA1" href="../../tag/492151B44AFA/">A.14</a></span>
+<div>\begin{equation} \label{eq:cvxfullmass} \int _{N_{\mathbb {R}}}\operatorname{MA}_{\mathbb {R}}F=n! \operatorname{vol}P. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $F\in \mathcal{P}(N_{\mathbb {R}},P)$, the function $F$ is closed and has domain $N_{\mathbb {R}}$. By proposition <a data-tag="DAE71CEF" href="../../tag/8B18F2B2DE3B/">A.2.9</a>, $\overline{\nabla F(N_{\mathbb {R}})}=\overline{\operatorname{Dom}F^*}$, so this closure is convex. As $\nabla F(N_{\mathbb {R}})$ contains the relative interior of $\operatorname{Dom}F^*$, the definition of $\operatorname{MA}_{\mathbb {R}}$ shows that (<a data-tag="89EC1CA1" href="../../tag/492151B44AFA/">A.14</a>) is equivalent to 
+    
+<div class="equation">
+  \[  \operatorname{vol}\overline{\nabla F(N_{\mathbb {R}})}=\operatorname{vol}P.  \]
+</div>
+<p>
+      We first handle the case where $\operatorname{Int}P\neq \varnothing $. By proposition <a data-tag="B696EB2E" href="../../tag/6FCC352452C3/">A.2.12</a>, $\overline{\nabla F(N_{\mathbb {R}})}\subseteq P$. Hence the latter is equivalent to 
+    
+<div class="equation">
+  \[  \overline{\nabla F(N_{\mathbb {R}})}=P.  \]
+</div>
+<p>
+       Indeed, a proper closed subset of the full-dimensional convex body $P$ has complement containing a non-empty relatively open subset of $P$, hence has strictly smaller volume. 
+    <p>
+      Now assume that $\operatorname{Int}P=\varnothing $, then $\operatorname{vol}\overline{\nabla F(N_{\mathbb {R}})}=\operatorname{vol}P=0$ by proposition <a data-tag="B696EB2E" href="../../tag/6FCC352452C3/">A.2.12</a>. The assertion is clear. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="sgpt-13A7CF49">
+<p><a class="environment-identifier" href="../../tag/2DC9BC6F295A/">Theorem <span data-tag="13A7CF49">A.4.4</span>.</a><span data-gerby-tag="13A7CF49"></span> Let $F,F_ j\in \mathcal{P}(N_{\mathbb {R}},P)$ ($j\in \mathbb {Z}_{&gt;0}$). Assume that $F_ j\to F$. Then </p>
+<div class="equation">
+  \[  \operatorname{MA}_{\mathbb {R}}(F_ j)\rightharpoonup \operatorname{MA}_{\mathbb {R}}(F)  \]
+</div>
+<p> weakly. </p>
+</article> See <span class="cite">[<span class="postnote">Proposition 2.6</span>, <a href="../../references/#R3F94D157564B">Fig17</a>]</span>. 
+
+
+There is a well-known comparison principle. <article class="env-theorem" id="sgpt-231B34C1">
+<p><a class="environment-identifier" href="../../tag/ED65AA5C2E92/">Theorem <span data-tag="231B34C1">A.4.5</span>.</a><span data-gerby-tag="231B34C1"></span> Let $F,F'\in \mathcal{P}(N_{\mathbb {R}},P)$. Assume that $F\preceq F'$. Then </p>
+<div class="equation">
+  \[  \overline{\nabla F(N_{\mathbb {R}})}\subseteq \overline{\nabla F'(N_{\mathbb {R}})},\quad \int _{N_{\mathbb {R}}} \operatorname{MA}_{\mathbb {R}}(F)\leq \int _{N_{\mathbb {R}}} \operatorname{MA}_{\mathbb {R}}(F').  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to observe that $F'{}^*\preceq F^*$, and hence the first assertion follows from proposition <a data-tag="DAE71CEF" href="../../tag/8B18F2B2DE3B/">A.2.9</a>. By the definition of the real Monge–Ampère measure, 
+    
+<div class="equation">
+  \[  \int _{N_{\mathbb R}}\operatorname{MA}_{\mathbb R}F=n!\operatorname{vol}\overline{\nabla F(N_{\mathbb R})}.  \]
+</div>
+<p>
+       So the second assertion follows from the first. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="sgpt-E51EE4AF">
+<p><a class="environment-identifier" href="../../tag/8DE662F4EFE6/">Lemma <span data-tag="E51EE4AF">A.4.6</span>.</a><span data-gerby-tag="E51EE4AF"></span> Let $F\in \mathcal{E}(N_{\mathbb {R}},P)$ and set $G=F^*$. Then the map $\nabla G$ pushes forward $n!\, \mathrm{d}\operatorname{vol}|_{P}$ to $\operatorname{MA}_{\mathbb R}(F)$. Equivalently, for every bounded Borel function $h$ on $N_{\mathbb R}$, </p>
+<div class="equation">
+  \[  \int _{N_{\mathbb R}} h\, \operatorname{MA}_{\mathbb R}(F)= n!\int _ P h(\nabla G(m))\, \mathrm{d}\operatorname{vol}(m).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\operatorname{vol}P=0$, the assertion is clear from proposition <a data-tag="B696EB2E" href="../../tag/6FCC352452C3/">A.2.12</a> and the definition of $\operatorname{MA}_{\mathbb R}$. We may therefore assume that $P$ has non-empty interior. 
+    <p>
+      Since $F\in \mathcal P(N_{\mathbb R},P)$, we have $\operatorname{Dom}G\subseteq P$ by proposition <a data-tag="B696EB2E" href="../../tag/6FCC352452C3/">A.2.12</a>. On the other hand, by the definition of $\mathcal E(N_{\mathbb R},P)$ and proposition <a data-tag="DAE71CEF" href="../../tag/8B18F2B2DE3B/">A.2.9</a>, 
+    
+<div class="equation">
+  \[  P=\overline{\nabla F(N_{\mathbb R})}\subseteq \overline{\operatorname{Dom}G}.  \]
+</div>
+<p>
+       Hence $\overline{\operatorname{Dom}G}=P$. Since $\operatorname{Dom}G$ is convex, $G$ is finite on $\operatorname{Int}P$ and is equal to $\infty $ outside $P$. Let $D$ be the set of points in $\operatorname{Int}P$ at which $G$ is differentiable. By <span class="cite">[<span class="postnote">Theorem 25.5</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>, $P\setminus D$ has measure zero. By <span class="cite">[<span class="postnote">Theorem 23.5</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>, $m\in \nabla F(n)$ if and only if $n\in \nabla G(m)$. Hence for any Borel set $E\subseteq N_{\mathbb R}$, 
+    
+<div class="equation">
+  \[  \{ m\in D:\nabla G(m)\in E\} =D\cap \nabla F(E).  \]
+</div>
+<p>
+       It follows from definition <a data-tag="AA859A41" href="../../tag/FF5885207F9E/">A.4.1</a> that 
+    
+<div class="equation">
+  \[  n!\operatorname{vol}\{ m\in P:\nabla G(m)\in E\} =n!\operatorname{vol}\nabla F(E)=\operatorname{MA}_{\mathbb R}(F)(E).  \]
+</div>
+<p>
+       Our assertions follow. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+Finally, let us recall a mixed version of the real Monge–Ampère measure: <article class="env-theorem" id="sgpt-AE125FCA">
+<p><a class="environment-identifier" href="../../tag/59E2455286B4/">Theorem <span data-tag="AE125FCA">A.4.7</span>.</a><span data-gerby-tag="AE125FCA"></span> There is a symmetric map assigning to every $n$-tuple of finite convex functions $F_1,\ldots ,F_ n$ on $N_{\mathbb R}$ a positive Radon measure </p>
+<div class="equation">
+  \[  \operatorname{MA}_{\mathbb R}(F_1,\ldots ,F_ n)  \]
+</div>
+<p> on $N_{\mathbb R}$ with the following properties: </p>
+<ol>
+<li class="custom-item" id="sgpt-739D93A8"><span data-gerby-tag="739D93A8"></span><p>
+ For every $q\in \mathbb Z_{&gt;0}$, finite convex functions $F_1,\ldots ,F_ q$ on $N_{\mathbb R}$, and $\lambda _1,\ldots ,\lambda _ q\geq 0$, 
+</p>
+<div class="equation">
+  \[  \operatorname{MA}_{\mathbb R}(\lambda _1F_1+\cdots +\lambda _ qF_ q) =\sum _{i_1,\ldots ,i_ n=1}^ q \lambda _{i_1}\cdots \lambda _{i_ n} \operatorname{MA}_{\mathbb R}(F_{i_1},\ldots ,F_{i_ n}).  \]
+</div>
+</li><li class="custom-item" id="sgpt-B6782951"><span data-gerby-tag="B6782951"></span><p>
+ For every finite convex function $F$ on $N_{\mathbb R}$, 
+</p>
+<div class="equation">
+  \[  \operatorname{MA}_{\mathbb R}(F,\ldots ,F)=\operatorname{MA}_{\mathbb R}(F).  \]
+</div>
+</li><li class="custom-item" id="sgpt-AE3AB3A2"><span data-gerby-tag="AE3AB3A2"></span><p>
+ The map $\operatorname{MA}_{\mathbb R}$ is additive and positively homogeneous of degree $1$ in each entry. In other words, for finite convex functions $F,G,F_2,\ldots ,F_ n$ on $N_{\mathbb R}$ and $\lambda ,\mu \geq 0$, 
+</p>
+<div class="equation">
+  \[  \operatorname{MA}_{\mathbb R}(\lambda F+\mu G,F_2,\ldots ,F_ n) =\lambda \operatorname{MA}_{\mathbb R}(F,F_2,\ldots ,F_ n) +\mu \operatorname{MA}_{\mathbb R}(G,F_2,\ldots ,F_ n).  \]
+</div>
+</li>
+</ol>
+</article> This is <span class="cite">[<span class="postnote">Theorem 4.3(a),(b),(f)</span>, <a href="../../references/#R3596A337696F">CLM22</a>]</span>, multiplied by $n!$ to match the normalization in definition <a data-tag="AA859A41" href="../../tag/FF5885207F9E/">A.4.1</a>. The positivity is part of the construction: it is the non-negativity of the mixed discriminant in the smooth case and follows in general by weak continuity. The mixed real Monge–Ampère measure was also studied in <span class="cite">[<a href="../../references/#RCFD50741DF59">TW02</a>, <a href="../../references/#RA6156BC4A101">PR04</a>]</span>. 
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

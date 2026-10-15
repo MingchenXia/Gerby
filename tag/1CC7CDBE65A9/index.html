@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lemma 2.4.15 · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-pluripolar-mass/">Chapter 11 · Non-pluripolar measures and mass</a> · Tag <code>1CC7CDBE65A9</code></p><h1>Lemma 2.4.15</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · Lemma 2.4.15 <span data-gerby-tag="8560C5E9"></span></div><article class="env-lemma" id="sgpt-8560C5E9">
+<p><a class="environment-identifier" href="../../tag/1CC7CDBE65A9/">Lemma <span data-tag="8560C5E9">2.4.15</span>.</a><span data-gerby-tag="8560C5E9"></span> Let $\varphi ,\psi \in \mathrm{PSH}(X,\theta )$, $\varphi \preceq \psi $ and $\int _ X \theta _{\varphi }^ n&gt;0$. Then for any </p>
+<div class="equation" id="sgpt-07191B44"><span data-gerby-tag="07191B44"></span>
+<span class="equation-label"><a data-tag="07191B44" href="../../tag/D1F48E296303/">2.47</a></span>
+<div>\begin{equation} \label{eq:arangetemp} a\in \left( 1, \left(\frac{\int _ X \theta _{\psi }^ n}{\int _ X \theta _{\psi }^ n-\int _ X \theta _{\varphi }^ n}\right)^{1/n} \right)\footnotemark , \end{equation}</div>
+</div>
+<p> there is $\eta \in \mathrm{PSH}(X,\theta )_{&gt;0}$ such that </p>
+<div class="equation" id="sgpt-2CBC3411"><span data-gerby-tag="2CBC3411"></span>
+<span class="equation-label"><a data-tag="2CBC3411" href="../../tag/CD0083D5C7BC/">2.48</a></span>
+<div>\begin{equation} \label{eq:path_env} a^{-1}\eta +\left(1-a^{-1}\right)\psi \leq \varphi . \end{equation}</div>
+</div>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Without loss of generality, we may assume that $\varphi \leq \psi \leq 0$. 
+    <p>
+<strong>Step 1</strong>. We show the existence of $\eta \in \mathrm{PSH}(X,\theta )$ satisfying (<a data-tag="2CBC3411" href="../../tag/CD0083D5C7BC/">2.48</a>). 
+    <p>
+<strong>Step 1.1</strong>. We first consider the case where $\psi \sim \varphi $. In this case, we can take $\eta =\varphi -C$ enough $C&gt;0$. But since by (<a data-tag="807E2DDB" href="../../tag/8921383DCB12/">2.52</a>), we also have $P_{\theta }(a\varphi +(1-a)\psi )\leq \psi $, we find that 
+    
+<div class="equation">
+  \[  P_{\theta }\Bigl (a\varphi +(1-a)\psi \Bigr )\sim \varphi \sim \psi  \]
+</div>
+<p>
+       in this case. 
+    <p>
+<strong>Step 1.2</strong>. We make a first reduction of the problem. 
+    <p>
+      Now for each $\gamma \in \mathrm{PSH}(X,\theta )$, we let 
+    
+<div class="equation">
+  \[  P_{\theta }[\gamma ]\coloneqq \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{ \eta \in \mathrm{PSH}(X,\theta ): \eta \leq \min \{ \gamma +C,0\} \textup{ for some }C&gt;0 \Bigr \} \footnotemark .  \]
+</div>
+
+<aside class="source-footnote" id="sgpt-a0000015147"><span class="footnote-label">Note.</span> This is precisely the $P$-envelope to be introduced later in definition <a data-tag="15C6153F" href="../../tag/395DB7860949/">3.1.4</a>.</aside>
+<p>
+      Observe that due to corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">2.4.9</a> and theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, we have 
+    
+<div class="equation" id="sgpt-3F24E12A"><span data-gerby-tag="3F24E12A"></span>
+<span class="equation-label"><a data-tag="3F24E12A" href="../../tag/00E5A7157825/">2.53</a></span>
+<div>\begin{equation} \label{eq:intthetaP_pr_mass_temp1} \int _ X \theta _{P_{\theta }[\gamma ]}^ n=\int _ X \theta _{\gamma }^ n. \end{equation}</div>
+</div>
+<p>
+       Further, $0\geq P_{\theta }[\gamma ]\geq \gamma $ if $\gamma \leq 0$. 
+    <p>
+      We now define an increasing transfinite sequence $(\psi _{\alpha })_{\alpha }$ consisting of non-positive functions in $\mathrm{PSH}(X,\theta )$ as follows: 
+    
+<ol>
+<li class="custom-item" id="sgpt-A9EFB2A3"><span data-gerby-tag="A9EFB2A3"></span><p>
+ $\psi _0=\psi $; 
+</p>
+</li><li class="custom-item" id="sgpt-E7CCB266"><span data-gerby-tag="E7CCB266"></span><p>
+ $\psi _{\alpha +1}=P_{\theta }[\psi _{\alpha }]$; 
+</p>
+</li><li class="custom-item" id="sgpt-55FB308F"><span data-gerby-tag="55FB308F"></span><p>
+ if $\alpha $ is a limit ordinal, we define 
+</p>
+<div class="equation">
+  \[  \psi _{\alpha }=\operatorname *{sup}_{\beta &lt;\alpha }{}\! {}^{*} \psi _{\beta }.  \]
+</div>
+</li>
+</ol>
+<p>
+       Observe that 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\psi _{\alpha }}^ n=\int _ X \theta _{\psi }^ n  \]
+</div>
+<p>
+       by corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">2.4.9</a> and (<a data-tag="3F24E12A" href="../../tag/00E5A7157825/">2.53</a>). Since $\mathrm{PSH}(X,\theta )$ is indeed a set, the transfinite sequence must stabilize, say at some $\phi \in \mathrm{PSH}(X,\theta )$. Note that $0 \geq \phi \geq \psi $, and $P_{\theta }[\phi ]=\phi $. 
+    <p>
+      Note that the interval (<a data-tag="07191B44" href="../../tag/D1F48E296303/">2.47</a>) remains the same if we replace $\psi $ by $\phi $. Take $a$ in this interval, it suffices to prove the existence of $\eta \in \mathrm{PSH}(X,\theta )$ so that 
+    
+<div class="equation" id="sgpt-22F1305F"><span data-gerby-tag="22F1305F"></span>
+<span class="equation-label"><a data-tag="22F1305F" href="../../tag/8E31B7D70F87/">2.54</a></span>
+<div>\begin{equation} \label{eq:path_env_temp1} a^{-1}\eta +\left(1-a^{-1}\right)\phi \leq \varphi . \end{equation}</div>
+</div>
+<p>
+      Let us record the following observation for later use. Suppose that $\tau \in \mathrm{PSH}(X,\theta )$ and $\tau \preceq \phi $. Then 
+    
+<div class="equation" id="sgpt-579DE607"><span data-gerby-tag="579DE607"></span>
+<span class="equation-label"><a data-tag="579DE607" href="../../tag/CEDD9EE9573E/">2.55</a></span>
+<div>\begin{equation} \label{eq:modelpot_sup_temp1} \sup _{\{ \phi \neq -\infty \} } (\tau -\phi )=\sup _ X \tau . \end{equation}</div>
+</div>
+<p>
+       Observe that $\phi \leq 0$, so on the set $\{ \phi \neq -\infty \} $, we have 
+    
+<div class="equation">
+  \[  \tau -\phi \geq \tau .  \]
+</div>
+<p>
+       So the $\geq $ direction in (<a data-tag="579DE607" href="../../tag/CEDD9EE9573E/">2.55</a>) follows from corollary <a data-tag="D0879581" href="../../tag/31032260EF62/">1.3.18</a>. Conversely, by assumption, we can find a constant $C&gt;0$ so that 
+    
+<div class="equation">
+  \[  \tau -\sup _ X \tau \leq \min \{ \phi +C,0 \} .  \]
+</div>
+<p>
+       It follows that $\tau -\sup _ X \tau \leq P_{\theta }[\phi ]=\phi $. Therefore, the reverse inequality follows, and (<a data-tag="579DE607" href="../../tag/CEDD9EE9573E/">2.55</a>) follows. 
+    <p>
+      For each $k&gt;0$, we introduce 
+    
+<div class="equation">
+  \[  \varphi _ k=\varphi \lor \left(\phi -k\right),\quad \eta _ k\coloneqq P_{\theta }\Bigl ( a \varphi _ k+(1-a)\phi \Bigr ).  \]
+</div>
+<p>
+       Since $\varphi _ k\sim \phi $, using Step 1.1, we have $\eta _ k\in \mathrm{PSH}(X,\theta )$ and $\eta _ k\sim \phi $ as well. 
+    <p>
+      Note that $(\eta _ k)_ k$ is decreasing in $k$. Let 
+    
+<div class="equation">
+  \[  \eta \coloneqq \inf _{k\in \mathbb {N}} \eta _ k.  \]
+</div>
+<p>
+       Note that $\eta $ automatically satisfies (<a data-tag="22F1305F" href="../../tag/8E31B7D70F87/">2.54</a>). It remains to show that $\eta \not\equiv -\infty $. 
+    <p>
+<strong>Step 1.3</strong>. We prove that $\eta \not\equiv -\infty $. 
+    <p>
+      Suppose, for contradiction, that $\sup _ X \eta _ k\to -\infty $. For each $k&gt;0$, let 
+    
+<div class="equation">
+  \[  \gamma _ k\coloneqq a^{-1}\eta _ k+\left(1-a^{-1}\right)\phi ,\quad D_ k\coloneqq \left\{ \gamma _ k=\varphi _ k\right\} .  \]
+</div>
+<p>
+       We claim that 
+    
+<div class="equation" id="sgpt-49BC5178"><span data-gerby-tag="49BC5178"></span>
+<span class="equation-label"><a data-tag="49BC5178" href="../../tag/87D0AE27AE70/">2.56</a></span>
+<div>\begin{equation} \label{eq:1Dkan_temp1} \theta _{\eta _ k}^ n\leq a^ n\mathds {1}_{D_ k}\,  \theta _{\varphi _ k}^ n. \end{equation}</div>
+</div>
+<p>
+      Since $\gamma _ k\leq \varphi _ k$ with equality on $D_ k$, <a data-tag="6959A57D" href="../../tag/F56651914DE1/">2.4.10</a> gives 
+    
+<div class="equation">
+  \[  \mathds {1}_{D_ k}\,  \theta _{\gamma _ k}^ n\leq \mathds {1}_{D_ k}\,  \theta _{\varphi _ k}^ n.  \]
+</div>
+<p>
+       On the other hand, 
+    
+<div class="equation">
+  \[  \theta _{\gamma _ k}=a^{-1}\theta _{\eta _ k}+\left(1-a^{-1}\right)\theta _{\phi },  \]
+</div>
+<p>
+       so positivity and multilinearity of the non-pluripolar product imply 
+    
+<div class="equation">
+  \[  a^{-n}\theta _{\eta _ k}^ n\leq \theta _{\gamma _ k}^ n.  \]
+</div>
+<p>
+       Finally, it follows from theorem <a data-tag="DD169AC1" href="../../tag/A60C61FA5696/">2.4.14</a> that 
+    
+<div class="equation">
+  \[  \mathds {1}_{D_ k}\, \theta _{\eta _ k}^ n=\theta _{\eta _ k}^ n.  \]
+</div>
+<p>
+       Putting these results together, we conclude (<a data-tag="49BC5178" href="../../tag/87D0AE27AE70/">2.56</a>). 
+    <p>
+      Fix $j&gt;k&gt;0$. Note that 
+    
+<div class="equation" id="sgpt-12ED989D"><span data-gerby-tag="12ED989D"></span>
+<span class="equation-label"><a data-tag="12ED989D" href="../../tag/2263D1F9CA2F/">2.57</a></span>
+<div>\begin{equation} \label{eq:intthetavarphijn_temp1} \int _{\{ \varphi \leq \phi -k \} } \theta _{\varphi _ j}^ n=\int _ X \theta _{\varphi _ j}^ n-\int _{\{ \varphi &gt;\phi -k \} } \theta _{\varphi _ j}^ n=\int _ X \theta _{\phi }^ n-\int _{\{ \varphi &gt;\phi -k \} } \theta _{\varphi }^ n, \end{equation}</div>
+</div>
+<p>
+       where we applied theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> and proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="1C036AD6" href="../../tag/9E81D36B1290/#sgpt-1C036AD6">1</a> in the second equality. 
+    <p>
+      Next, we compute 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _{\left\{  \eta _ j\leq \phi -ak \right\} } \theta _{\eta _ j}^ n\leq &amp;  a^ n \int _{\left\{  \eta _ j\leq \phi -ak \right\} } \mathds {1}_{D_ j}\,  \theta _{\varphi _ j}^ n &amp;  \textup{by (\href{../../tag/87D0AE27AE70/}{2.56})}\\  \leq &amp;  a^ n \int _{\left\{  a\varphi _ j+(1-a)\phi \leq \phi -ak \right\} \cap \left\{ \phi \neq -\infty \right\}  } \theta _{\varphi _ j}^ n\\  = &amp;  a^ n \int _{\left\{  \varphi _ j\leq \phi -k \right\} } \theta _{\varphi _ j}^ n\\  = &amp;  a^ n \int _{\left\{  \varphi \leq \phi -k \right\} } \theta _{\varphi _ j}^ n\\  \leq &amp;  a^ n\left( \int _ X \theta _{\phi }^ n- \int _{\left\{ \varphi &gt;\phi -k \right\} } \theta _{\varphi }^ n \right)&amp; \textup{ by (\href{../../tag/2263D1F9CA2F/}{2.57})}. \end{aligned}  \]
+</div>
+<p>
+       Next thanks to (<a data-tag="579DE607" href="../../tag/CEDD9EE9573E/">2.55</a>), 
+    
+<div class="equation">
+  \[  \sup _{ \left\{ \phi \neq -\infty \right\}  } \left(\eta _ j-\phi \right)=\sup _ X \eta _ j\to -\infty .  \]
+</div>
+<p>
+       In particular, for a fixed $k$, if $j$ is large enough, we have 
+    
+<div class="equation">
+  \[  \left\{ \eta _ j\leq \phi -ak \right\} =X.  \]
+</div>
+<p>
+       Therefore, for a fixed $k$, for any large enough $j$, 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\phi }^ n=\int _ X \theta _{\eta _ j}^ n\leq a^ n\left( \int _ X \theta _{\phi }^ n- \int _{\{ \varphi &gt;\phi -k\} } \theta _{\varphi }^ n\right).  \]
+</div>
+<p>
+       Letting $k\to \infty $, we find 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\phi }^ n\leq a^ n \left(\int _ X \theta _{\phi }^ n-\int _ X \theta _{\varphi }^ n \right).  \]
+</div>
+<p>
+       This is a contradiction with our choice of $a$. 
+    <p>
+<strong>Step 2</strong>. Next we argue that $P_{\theta }(a\varphi +(1-a)\psi )\in \mathrm{PSH}(X,\theta )_{&gt;0}$. Choose 
+    
+<div class="equation">
+  \[  a'\in \left( a, \left(\frac{\int _ X \theta _{\psi }^ n}{\int _ X \theta _{\psi }^ n-\int _ X \theta _{\varphi }^ n}\right)^{1/n} \right).  \]
+</div>
+<p>
+       It follows from (<a data-tag="0B4F3961" href="../../tag/23948CFE8AEE/">2.49</a>) that 
+    
+<div class="equation" id="sgpt-5F43EA2E"><span data-gerby-tag="5F43EA2E"></span>
+<span class="equation-label"><a data-tag="5F43EA2E" href="../../tag/1C8D5126D276/">2.63</a></span>
+<div>\begin{equation} \label{eq:Pthetalowerbdtemp1} P_{\theta }\Bigl (a\varphi +(1-a)\psi \Bigr )\geq \frac{a}{a'} P_{\theta }\Bigl (a'\varphi +(1-a')\psi \Bigr )+\frac{a'-a}{a'}\varphi . \end{equation}</div>
+</div>
+<p>
+       Therefore, by theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, we have 
+    
+<div class="equation" id="sgpt-506958A0"><span data-gerby-tag="506958A0"></span>
+<span class="equation-label"><a data-tag="506958A0" href="../../tag/675086676ABE/">2.64</a></span>
+<div>\begin{equation} \label{eq:Pthetalowerbdtemp2} \int _ X \theta _{P_{\theta }\left(a\varphi +(1-a)\psi \right)}^ n\geq \frac{(a'-a)^ n}{a'^ n}\int _ X \theta _{\varphi }^ n&gt;0. \end{equation}</div>
+</div>
+<p>
+       We conclude the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Affine growth and projective envelopes · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/envelopes-models/">Chapter 13 · Singularity types, envelopes, and models</a> · Tag <code>6EE0CD52DB46</code></p><h1>Affine growth and projective envelopes</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 13.1.1 Affine growth and projective envelopes <span data-gerby-tag="9EFC597A"></span></div>
+<p>
+The contact property concerns the regularized envelope. For the classical weighted extremal functions on $\mathbb C^ n$, the obstacle is imposed at every point of a compact set, and one may ask when the regularized envelope still touches the obstacle there. Compactifying $\mathbb C^ n$ to $\mathbb P^ n$ turns the logarithmic growth allowance into a semipositive background. This correspondence distinguishes contact of the raw supremum with the obstacle from contact of its upper semicontinuous regularization, and it shows how both depend on the growth allowance. 
+</p>
+<p>
+In the rest of this section we work on $\mathbb C^ n$ and on $\mathbb P^ n$ rather than on $X$. Write $\chi (z)=\log (1+\lVert z\rVert ^2)$ on $\mathbb C^ n$, and let $\omega _{\mathrm{FS}}$ be the Fubini–Study form on $\mathbb P^ n$ with this local potential, so that $\int _{\mathbb P^ n}\omega _{\mathrm{FS}}^ n=1$ with our normalization of $\mathrm{dd}^{\mathrm{c}}$. For $\delta &gt;0$ put 
+</p>
+<div class="equation">
+  \[  \theta _\delta =\tfrac \delta 2\omega _{\mathrm{FS}},\qquad \mathcal L_\delta = \{ u\in \mathrm{PSH}(\mathbb C^ n): u(z)\leq \delta \log ^+\lVert z\rVert +C_ u\} .  \]
+</div>
+<p>
+ Here $\log ^+=\max (\log ,0)$, and $C_ u$ is a constant depending on $u$. Thus $\mathcal L_\delta $ is the class of plurisubharmonic functions of logarithmic growth at most $\delta $. Let $\mathcal L_\delta ^+$ consist of the members of $\mathcal L_\delta $ that are also bounded below by $\delta \log ^+\lVert z\rVert -C$ for some constant $C$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-1D066C6B">
+<p><a class="environment-identifier" href="../../tag/5C02C050C6B5/">Lemma <span data-tag="1D066C6B">13.1.7</span>.</a><span data-gerby-tag="1D066C6B"></span> The map $u\mapsto u-\delta \chi /2$, followed by the canonical extension across the hyperplane at infinity, is a bijection from $\mathcal L_\delta $ onto $\mathrm{PSH}(\mathbb P^ n,\theta _\delta )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use homogeneous coordinates $[Z_0:\cdots :Z_ n]$ and the affine chart $Z_0\ne 0$. On a chart $Z_ i\ne 0$ meeting $H=\{ Z_0=0\} $, the local plurisubharmonic representative of $p=u-\delta \chi /2$ is 
+    
+<div class="equation">
+  \[  p+\frac\delta 2\log \frac{\sum _{j=0}^ n|Z_ j|^2}{|Z_ i|^2} =u+\delta \log |Z_0/Z_ i|.  \]
+</div>
+<p>
+       This function is locally bounded above near $H$, by the growth bound on $u$, because the norm of the affine coordinates is at most a constant, depending on the chart, divided by $|Z_0/Z_ i|$. By lemma <a data-tag="E113365A" href="../../tag/F3A890BB2575/">1.3.7</a>, it therefore extends canonically across $H$. Since the local potentials of $\theta _\delta $ differ by smooth functions on overlaps, the extensions agree there. 
+    <p>
+      Conversely, every $p\in \mathrm{PSH}(\mathbb P^ n,\theta _\delta )$ is bounded above, since $\mathbb P^ n$ is compact. The function $u=p+\delta \chi /2$ is plurisubharmonic on the affine chart, and 
+    
+<div class="equation">
+  \[  0\leq \tfrac 12\chi -\log ^+\lVert z\rVert \leq \tfrac 12\log 2  \]
+</div>
+<p>
+       gives the required growth bound. Neither function is identically $-\infty $ on the affine chart. Uniqueness of the canonical extension shows that the two maps are inverse to each other. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Fix a non-pluripolar compact set $K\subset \mathbb C^ n$ and a bounded real function $\psi $ on $K$. Define the raw and the regularized envelope 
+</p>
+<div class="equation">
+  \[  V_\delta =\sup \{ u\in \mathcal L_\delta :u|_ K\leq \psi \} , \qquad F_\delta =V_\delta ^*,  \]
+</div>
+<p>
+ where the obstacle condition is imposed at every point of $K$. On $\mathbb P^ n$ put 
+</p>
+<div class="equation">
+  \[  G_\delta =\sup \{ p\in \mathrm{PSH}(\mathbb P^ n,\theta _\delta ): p|_ K\leq \psi -\delta \chi /2\} .  \]
+</div>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-040D3FB9">
+<p><a class="environment-identifier" href="../../tag/B1F342A8772A/">Proposition <span data-tag="040D3FB9">13.1.8</span>.</a><span data-gerby-tag="040D3FB9"></span> The regularized envelope $G_\delta ^*$ on $\mathbb P^ n$ is bounded and $\theta _\delta $-plurisubharmonic. On the affine chart, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-A828980C"><span data-gerby-tag="A828980C"></span>
+<span class="equation-label"><a data-tag="A828980C" href="../../tag/E8DF064EB371/">13.1</a></span>
+<div>\begin{equation} \label{eq:affine-projective-envelope} V_\delta =\tfrac \delta 2\chi +G_\delta ,\qquad F_\delta =\tfrac \delta 2\chi +G_\delta ^*\in \mathcal L_\delta ^+. \end{equation}</div>
+</div>
+<p> Moreover, $V_\delta =F_\delta $ almost everywhere. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="1D066C6B" href="../../tag/5C02C050C6B5/">13.1.7</a>, the map $u\mapsto u-\delta \chi /2$ is a bijection between the two families of competitors, which proves the identity for $V_\delta $. Constants below $\inf _ K(\psi -\delta \chi /2)$ are competitors for $G_\delta $. 
+    <p>
+      Since all competitors for $G_\delta $ lie below the constant $\sup _ K(\psi -\delta \chi /2)$ on $K$, lemma <a data-tag="9A752415" href="../../tag/294BB4EEA84F/">1.19.1</a> gives a common upper bound for them. Together with a constant competitor, the upper-envelope theorem shows that $G_\delta ^*$ is bounded and $\theta _\delta $-plurisubharmonic. Addition of the smooth function $\delta \chi /2$ in (<a data-tag="A828980C" href="../../tag/E8DF064EB371/">13.1</a>) commutes with regularization, and the two-sided bounds for $G_\delta ^*$ give $F_\delta \in \mathcal L_\delta ^+$. 
+    <p>
+      Locally, adding a potential of $\theta _\delta $ makes the competitors plurisubharmonic. The upper-envelope theorem recalled in chapter <a data-tag="710BAAFB" href="../../tag/EDB5A2485B58/">1</a> shows that regularization changes their supremum only on a pluripolar set. Thus $G_\delta =G_\delta ^*$ almost everywhere, and adding $\delta \chi /2$ gives the same assertion for $V_\delta $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+The regularized envelope does not change if the obstacle is imposed only outside a pluripolar subset of $K$. Within the growth class this can be seen directly: a function in $\mathcal L_\delta $ with poles on the exceptional set repairs each competitor. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-BB5AED1C">
+<p><a class="environment-identifier" href="../../tag/7A591F1F87FA/">Lemma <span data-tag="BB5AED1C">13.1.9</span>.</a><span data-gerby-tag="BB5AED1C"></span> For every pluripolar set $E\subseteq \mathbb C^ n$ and every $\delta &gt;0$, there is $b\in \mathcal L_\delta $ with $b=-\infty $ on $E$. Given a non-pluripolar compact set $K$, it can be chosen with $b\leq 0$ on $K$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $E_ j=E\cap \overline B(0,j)$. Each $E_ j$ is pluripolar as a subset of $\mathbb P^ n$: it is locally pluripolar near every affine point, and a neighborhood of the hyperplane at infinity does not meet this bounded set. By Josefson's theorem on compact manifolds, <span class="cite">[<span class="postnote">Theorem 1.1.5</span>, <a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>, there is a quasi-plurisubharmonic function on $\mathbb P^ n$, not identically $-\infty $, that equals $-\infty $ on $E_ j$. Rescaling it so that it becomes $\theta _1$-plurisubharmonic and subtracting its supremum gives 
+    
+<div class="equation">
+  \[  p_ j\in \mathrm{PSH}(\mathbb P^ n,\theta _1),\qquad p_ j\leq 0,\qquad p_ j|_{E_ j}=-\infty .  \]
+</div>
+<p>
+       The $L^1$ norms of these normalized potentials are uniformly bounded by theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>. The partial sums 
+    
+<div class="equation">
+  \[  p_ N=\sum _{j=1}^ N2^{-j}p_ j  \]
+</div>
+<p>
+       decrease, have uniformly bounded $L^1$ norms, and remain $\theta _1$-plurisubharmonic because $\theta _1\geq 0$ and the coefficients sum to at most one. By corollary <a data-tag="23B5C3B7" href="../../tag/0AD144F69807/">1.4.3</a>, their limit $p$ belongs to $\mathrm{PSH}(\mathbb P^ n,\theta _1)$. Every point of $E$ is a pole of one of the summands, hence $p=-\infty $ on $E$. By lemma <a data-tag="1D066C6B" href="../../tag/5C02C050C6B5/">13.1.7</a>, 
+    
+<div class="equation">
+  \[  b=\delta (p+\chi /2)\in \mathcal L_\delta  \]
+</div>
+<p>
+       has the required properties. Its supremum on $K$ is finite, since $b$ is bounded above on the compact set $K$ and is not identically $-\infty $ on $K$, which is non-pluripolar. Subtracting this supremum gives $b\leq 0$ on $K$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-194112C6">
+<p><a class="environment-identifier" href="../../tag/0C3E3295B18F/">Corollary <span data-tag="194112C6">13.1.10</span>.</a><span data-gerby-tag="194112C6"></span> The envelope $F_\delta $ is unchanged if $u|_ K\leq \psi $ is imposed only quasi-everywhere, or only on $K\setminus E$ for any pluripolar $E\subseteq K$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $u\in \mathcal L_\delta $ satisfy $u\leq \psi $ on $K\setminus E$, where $E$ is pluripolar. Choose $b$ as in the lemma, with $b=-\infty $ on $E$ and $b\leq 0$ on $K$, and put $m=\inf _ K\psi $. For $\epsilon &gt;0$ define 
+    
+<div class="equation">
+  \[  u_\epsilon =\frac{u+\epsilon b+\epsilon m}{1+\epsilon }.  \]
+</div>
+<p>
+       This function belongs to $\mathcal L_\delta $. On $K\setminus E$, the inequalities $u\leq \psi $, $b\leq 0$ and $m\leq \psi $ give $u_\epsilon \leq \psi $, and on $E$ the pole of $b$ gives $u_\epsilon =-\infty $. Thus $u_\epsilon $ is a competitor for $V_\delta $, so $u_\epsilon \leq F_\delta $; moreover, $u_\epsilon \to u$ almost everywhere as $\epsilon \downarrow 0$. By lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>, $u\leq F_\delta $ everywhere. Taking the supremum over $u$ and regularizing proves the asserted equalities. 
+    <p>
+      Alternatively, apply proposition <a data-tag="F8E56269" href="../../tag/F031A16FF76F/">1.19.6</a> on $\mathbb P^ n$ with the big background $\theta _\delta $ and the bounded obstacle $\psi -\delta \chi /2$, and then use (<a data-tag="A828980C" href="../../tag/E8DF064EB371/">13.1</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+These equalities concern regularized envelopes. The raw envelope $V_\delta $ is still defined with the obstacle imposed at every point of $K$. 
+</p>
+<p>
+Changing $\delta $ changes both the background $\theta _\delta $ and the obstacle $\psi -\delta \chi /2$. Nevertheless, the set of parameters for which contact holds has a simple structure. Put 
+</p>
+<div class="equation">
+  \[  \Lambda =\{ \delta &gt;0:V_\delta |_ K=\psi \} ,\qquad \Lambda _{\mathrm{reg}}(a)= \{ \delta \in \Lambda :F_\delta (a)=\psi (a)\} \quad (a\in K).  \]
+</div>
+<p>
+ The parameters $\delta \in \Lambda $ are those for which the raw envelope touches the obstacle at every point of $K$; we say that <em>raw contact</em> holds for them. For $a\in K$, the parameters in $\Lambda _{\mathrm{reg}}(a)$ are those for which, in addition, the regularized envelope touches the obstacle at $a$; we say that <em>regular contact</em> holds at $a$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-EC8842ED">
+<p><a class="environment-identifier" href="../../tag/6D209F2CFC94/">Theorem <span data-tag="EC8842ED">13.1.11</span>.</a><span data-gerby-tag="EC8842ED"></span> The set $\Lambda $ is empty, $(0,\infty )$, or $[\lambda ,\infty )$ for some $\lambda &gt;0$. If $\Lambda =[\lambda ,\infty )$, each $\Lambda _{\mathrm{reg}}(a)$ is empty, $\{ \lambda \} $, or $\Lambda $. If $\Lambda =(0,\infty )$, each $\Lambda _{\mathrm{reg}}(a)$ is empty or $\Lambda $. The same alternatives hold for $\bigcap _{a\in K}\Lambda _{\mathrm{reg}}(a)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $m=\inf _ K\psi $. Inclusion of the growth classes and scaling of competitors give, for $0&lt;\alpha &lt;\beta $, 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-73F034AC"><span data-gerby-tag="73F034AC"></span>
+<span class="equation-label"><a data-tag="73F034AC" href="../../tag/5251FBE769B2/">13.2</a></span>
+<div>\begin{equation} \label{eq:affine-growth-raw-slope} 0\leq V_\beta -V_\alpha \leq \frac{\beta -\alpha }{\alpha }(V_\alpha -m). \end{equation}</div>
+</div>
+<p>
+       Indeed, if $u$ is a competitor for $V_\beta $, then $(\alpha /\beta )(u-m)+m$ is a competitor for $V_\alpha $, since $\psi \geq m$. The constant $m$ is also a competitor, so all terms are finite and the right-hand side is nonnegative. The estimate shows that $V_\delta (z)$ depends continuously on $\delta &gt;0$ at every point $z$. Since $V_\delta \leq \psi $ on $K$ and $V_\delta $ increases with $\delta $, the set $\Lambda $ is closed upwards, and by continuity it is relatively closed in $(0,\infty )$. This proves the three possible forms of $\Lambda $. 
+    <p>
+      For $0\leq t\leq 1$, convex combinations of competitors give 
+    
+<div class="equation">
+  \[  V_{(1-t)\alpha +t\beta }\geq (1-t)V_\alpha +tV_\beta .  \]
+</div>
+<p>
+       By the preceding proposition, the same inequality holds for the regularized envelopes almost everywhere, and hence everywhere by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>. Thus $F_\delta (z)$ is a concave nondecreasing function of $\delta $ at every point $z$. 
+    <p>
+      For $a\in K$ and $\delta \in \Lambda $, the defect $d_\delta =F_\delta (a)-\psi (a)$ is nonnegative, concave and nondecreasing in $\delta $. Suppose $d_\alpha =0$, and that there is $\eta \in \Lambda $ with $\eta &lt;\alpha $. For every $\beta &gt;\alpha $, write $\alpha $ as a convex combination of $\eta $ and $\beta $ with positive weights. Concavity then forces both nonnegative defects $d_\eta $ and $d_\beta $ to vanish, and monotonicity gives $d_\delta =0$ for all $\delta \in \Lambda $ with $\delta &lt;\alpha $. Hence a zero of the defect at a parameter other than the smallest element of $\Lambda $ forces every defect to vanish. This proves the alternatives for each $\Lambda _{\mathrm{reg}}(a)$, and intersecting them gives the alternatives for $\bigcap _{a\in K}\Lambda _{\mathrm{reg}}(a)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Thus raw contact persists as the growth allowance increases, whereas regular contact at a point may hold only at the smallest contact parameter. The correspondence with $\mathbb P^ n$ keeps the background and the obstacle matched throughout this variation. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

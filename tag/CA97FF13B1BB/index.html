@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The mass polynomial · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hermitian-torsion/">Chapter 10 · Hermitian geometry, torsion, and Gauduchon duality</a> · Tag <code>CA97FF13B1BB</code></p><h1>The mass polynomial</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 2.2 The mass polynomial <span data-gerby-tag="B762878D"></span></div>
+<p>
+For a smooth real function $u$ on $X$, write $\omega _ u=\omega +\mathrm{dd}^{\mathrm{c}}u$, and set 
+</p>
+<div class="equation">
+  \[  \mathcal H_\omega =\{ u\in C^\infty (X,\mathbb R):\omega +\mathrm{dd}^{\mathrm{c}}u&gt;0\} , \qquad \mathrm M_\omega (u)=\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n.  \]
+</div>
+<p>
+ The set $\mathcal H_\omega $ of smooth strictly $\omega $-plurisubharmonic functions is convex and open in the $C^2$ topology, while the mass $\mathrm M_\omega (u)$ is defined for every smooth real $u$. Expanding it along a smooth direction gives a polynomial whose nonconstant coefficients detect the complex Hessians of the powers of the background. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-D4902E5B">
+<p><a class="environment-identifier" href="../../tag/2B3316345A4A/">Theorem <span data-tag="D4902E5B">2.2.1</span>.</a><span data-gerby-tag="D4902E5B"></span> For every smooth real function $u$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-81144FEA"><span data-gerby-tag="81144FEA"></span>
+<span class="equation-label"><a data-tag="81144FEA" href="../../tag/EB2FF7F930E4/">2.1</a></span>
+<div>\begin{equation} \label{eq:mass-expansion} \mathrm M_\omega (u)=\int _ X\omega ^ n+ \sum _{k=1}^{n-1}\binom nk \int _ X u(\mathrm{dd}^{\mathrm{c}}u)^{k-1}\wedge \mathrm{dd}^{\mathrm{c}}(\omega ^{n-k}). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Expand $(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n$ by the binomial theorem. The term with $k=n$ integrates to zero, since it is exact: 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}u)^ n=\mathrm{d}\bigl (\mathrm d^{\mathrm c}u\wedge (\mathrm{dd}^{\mathrm{c}}u)^{n-1}\bigr ).  \]
+</div>
+<p>
+       For $1\leq k\leq n-1$, apply lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">2.1.1</a> with $f=u$ and $T=(\mathrm{dd}^{\mathrm{c}}u)^{k-1}\wedge \omega ^{n-k}$. Since both $\mathrm{d}$ and $\mathrm d^{\mathrm c}$ annihilate $\mathrm{dd}^{\mathrm{c}}u$, 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}T=(\mathrm{dd}^{\mathrm{c}}u)^{k-1}\wedge \mathrm{dd}^{\mathrm{c}}(\omega ^{n-k}),  \]
+</div>
+<p>
+       which gives the $k$th term of (<a data-tag="81144FEA" href="../../tag/EB2FF7F930E4/">2.1</a>). When $n=1$, the sum is empty and the mass is constant. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+If every $\mathrm{dd}^{\mathrm{c}}(\omega ^ j)$ with $1\leq j\leq n-1$ vanishes, (<a data-tag="81144FEA" href="../../tag/EB2FF7F930E4/">2.1</a>) shows that the mass is constant. Conversely, varying the potential in several independent directions recovers each of these forms by polarization. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-5CD99CBA">
+<p><a class="environment-identifier" href="../../tag/FB90FC741F25/">Theorem <span data-tag="5CD99CBA">2.2.2</span> <span class="named">(Chiose)</span>.</a><span data-gerby-tag="5CD99CBA"></span> Assume $n\geq 2$. The following conditions are equivalent: </p>
+<ol>
+<li><p>
+$\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n$ is independent of $u\in \mathcal H_\omega $; 
+</p>
+</li><li><p>
+$\mathrm{dd}^{\mathrm{c}}(\omega ^ j)=0$ for $1\leq j\leq n-1$; 
+</p>
+</li><li><p>
+$\mathrm{dd}^{\mathrm{c}}\omega =0$ and $\mathrm{d}\omega \wedge \mathrm d^{\mathrm c}\omega =0$. 
+</p>
+</li>
+</ol>
+<p> They are also equivalent to the condition that $\int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n$ be the same for all bounded $\omega $-plurisubharmonic functions $u$, where $(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n$ is the Bedford–Taylor product of section <a data-tag="EBD0702C" href="../../tag/5E2B332B89B4/">1.7</a>. Under these conditions the common mass is $\int _ X\omega ^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: the first condition implies the second.</em> Let $u$ be a smooth real function. For $|t|$ small, $tu$ belongs to $\mathcal H_\omega $ for both signs of $t$, so the polynomial $t\mapsto \int _ X(\omega +t\mathrm{dd}^{\mathrm{c}}u)^ n$ is constant on an interval and its nonconstant coefficients vanish. For $1\leq j\leq n-1$ this gives 
+    
+<div class="equation">
+  \[  \int _ X\omega ^ j\wedge (\mathrm{dd}^{\mathrm{c}}u)^{n-j}=0.  \]
+</div>
+<p>
+       Replace $u$ by a linear combination of $n-j$ smooth real functions $u_1,\ldots ,u_{n-j}$ and compare the coefficients of the monomial in which every parameter appears once. We obtain 
+    
+<div class="equation">
+  \[  \int _ X\omega ^ j\wedge \mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_{n-j}=0.  \]
+</div>
+<p>
+       Integrating by parts in the first factor and using that $u_1$ is arbitrary, we obtain the pointwise identity 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(\omega ^ j)\wedge \mathrm{dd}^{\mathrm{c}}u_2\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_{n-j}=0  \]
+</div>
+<p>
+       for every choice of the remaining functions. At a given point, the complex Hessians of these functions can be prescribed arbitrarily: multiply a quadratic polynomial in a coordinate chart by a cutoff function equal to one near that point. Since the identity is multilinear, we may complexify it and use the quadratic monomials $z_ a\bar z_ b$. Wedge products of their complex Hessians give all coordinate forms of the complementary bidegree, and pairing with these forms shows that every coefficient of $\mathrm{dd}^{\mathrm{c}}(\omega ^ j)$ vanishes. When $j=n-1$ there are no remaining factors, and the same conclusion follows directly from the arbitrariness of $u_1$. This proves the second condition. 
+    <p>
+<em>Step 2: the remaining equivalences for smooth potentials.</em> The second condition implies the first by theorem <a data-tag="D4902E5B" href="../../tag/2B3316345A4A/">2.2.1</a>. For $n\geq 3$, the identities for $j=1,2$ and lemma <a data-tag="0C4D5A94" href="../../tag/BF56C7366FC6/">2.1.2</a> give $\mathrm{dd}^{\mathrm{c}}\omega =0$ and 
+    
+<div class="equation">
+  \[  0=\mathrm{dd}^{\mathrm{c}}(\omega ^2)=2\omega \wedge \mathrm{dd}^{\mathrm{c}}\omega +2\mathrm{d}\omega \wedge \mathrm d^{\mathrm c}\omega ,  \]
+</div>
+<p>
+       so the second condition implies the third. For $n=2$, the second condition is $\mathrm{dd}^{\mathrm{c}}\omega =0$, while $\mathrm{d}\omega \wedge \mathrm d^{\mathrm c}\omega $ vanishes for degree reasons; the implication is again immediate. Conversely, lemma <a data-tag="0C4D5A94" href="../../tag/BF56C7366FC6/">2.1.2</a> derives all the identities of the second condition from the third. 
+    <p>
+<em>Step 3: bounded potentials.</em> Assume the first condition and let $u$ be a bounded $\omega $-plurisubharmonic function. By theorem <a data-tag="177A90D1" href="../../tag/240BA0465940/">1.11.1</a>, there are uniformly bounded functions $u_ j\in \mathcal H_\omega $ decreasing to $u$. Their masses all equal $\int _ X\omega ^ n$, and the continuity of the bounded products of section <a data-tag="EBD0702C" href="../../tag/5E2B332B89B4/">1.7</a> along such sequences passes this common value to the limit. Conversely, every element of $\mathcal H_\omega $ is a bounded $\omega $-plurisubharmonic function, so constancy for bounded potentials implies the first condition. The zero potential shows that the common mass is $\int _ X\omega ^ n$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+In particular, a closed background has invariant mass. Under the equivalent conditions above, (<a data-tag="81144FEA" href="../../tag/EB2FF7F930E4/">2.1</a>) even gives $\mathrm M_\omega (u)=\int _ X\omega ^ n$ for every smooth real $u$, not only for $u\in \mathcal H_\omega $. In dimension one the mass is always $\int _ X\omega $. 
+</p>
+<p>
+Mass invariance can also hold in a nonclosed background. In theorem <a data-tag="83265DB4" href="../../tag/17E4315391CC/">26.17.6</a>, a pluriclosed metric with nonzero exterior derivative satisfies all the lower-power identities above. Those identities fix its bounded-potential mass, even though a family of scalar perturbations can have its least relative eigenvalue tend to zero. 
+</p>
+<p>
+The first variation of the mass involves only the complex Hessian of the power $\omega _ u^{n-1}$ of the perturbed form. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-940AB63B">
+<p><a class="environment-identifier" href="../../tag/5C29873687ED/">Proposition <span data-tag="940AB63B">2.2.3</span>.</a><span data-gerby-tag="940AB63B"></span> For smooth real functions $u,v$ on $X$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-658A588E"><span data-gerby-tag="658A588E"></span>
+<span class="equation-label"><a data-tag="658A588E" href="../../tag/0B024E0A2A47/">2.2</a></span>
+<div>\begin{equation} \label{eq:mass-first-variation} \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}\mathrm M_\omega (u+tv) =n\int _ X v\mathrm{dd}^{\mathrm{c}}(\omega _ u^{n-1}). \end{equation}</div>
+</div>
+<p> If $\mathrm M_\omega $ is constant on $\mathcal H_\omega $, then $\mathrm{dd}^{\mathrm{c}}(\omega _ u^{n-1})=0$ for every $u\in \mathcal H_\omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\mathrm M_\omega (u+tv)$ is a polynomial in $t$, its derivative at $t=0$ is 
+    
+<div class="equation">
+  \[  n\int _ X\mathrm{dd}^{\mathrm{c}}v\wedge \omega _ u^{n-1},  \]
+</div>
+<p>
+       and lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">2.1.1</a> turns this into the right-hand side of (<a data-tag="658A588E" href="../../tag/0B024E0A2A47/">2.2</a>). For the second assertion, fix $u\in \mathcal H_\omega $. For every smooth real direction $v$, the segment $u+tv$ lies in $\mathcal H_\omega $ when $|t|$ is sufficiently small, so the right-hand side of (<a data-tag="658A588E" href="../../tag/0B024E0A2A47/">2.2</a>) vanishes for all smooth real $v$. Hence the smooth top-degree form $\mathrm{dd}^{\mathrm{c}}(\omega _ u^{n-1})$ vanishes. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-9CD9DB11">
+<p><a class="environment-identifier" href="../../tag/2C05FFD39C6D/">Corollary <span data-tag="9CD9DB11">2.2.4</span>.</a><span data-gerby-tag="9CD9DB11"></span> If $n=2$, then for every smooth real function $u$ on $X$, </p>
+<div class="equation">
+  \[  \mathrm M_\omega (u)=\int _ X\omega ^2+2\int _ Xu\mathrm{dd}^{\mathrm{c}}\omega .  \]
+</div>
+<p> Consequently, $\mathrm M_\omega $ is constant on $\mathcal H_\omega $ if and only if $\mathrm{dd}^{\mathrm{c}}\omega =0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The formula is the case $n=2$ of (<a data-tag="81144FEA" href="../../tag/EB2FF7F930E4/">2.1</a>), and it shows that $\mathrm{dd}^{\mathrm{c}}\omega =0$ implies constancy. Conversely, if the mass is constant, proposition <a data-tag="940AB63B" href="../../tag/5C29873687ED/">2.2.3</a> at $u=0$ gives $\mathrm{dd}^{\mathrm{c}}\omega =0$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The identity $\mathrm{dd}^{\mathrm{c}}(\omega ^{n-1})=0$ makes the first variation vanish at $u=0$; Hermitian forms satisfying it are the Gauduchon metrics of chapter <a data-tag="67BD8090" href="../../tag/1009E65ECC4C/">4</a>. On a surface this identity already gives mass invariance. In dimension three, however, (<a data-tag="81144FEA" href="../../tag/EB2FF7F930E4/">2.1</a>) reads 
+</p>
+<div class="equation">
+  \[  \mathrm M_\omega (u)=\int _ X\omega ^3 +3\int _ Xu\mathrm{dd}^{\mathrm{c}}(\omega ^2) +3\int _ Xu\mathrm{dd}^{\mathrm{c}}u\wedge \mathrm{dd}^{\mathrm{c}}\omega .  \]
+</div>
+<p>
+ Vanishing of $\mathrm{dd}^{\mathrm{c}}(\omega ^2)$ removes the linear term, while $\mathrm{dd}^{\mathrm{c}}\omega $ still governs the quadratic term. Thus stationarity of the mass at one potential must be distinguished from its invariance on $\mathcal H_\omega $; an explicit example is given in example <a data-tag="324594DA" href="../../tag/28F39F2B7C2C/">4.8.3</a>. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

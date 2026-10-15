@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Heat concentration at large depth · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hopf-lck/">Chapter 20 · Hopf and locally conformally Kähler geometry</a> · Tag <code>92674EE5B61B</code></p><h1>Heat concentration at large depth</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 8.8.2 Heat concentration at large depth <span data-gerby-tag="83DA14B9"></span></div>
+<p>
+The flux estimate suggests the depth scale at which a counterexample must place its mass. A faster initial heat time than in the unbounded-mass construction gives mass of order $\eta ^{-1}$ at depth of order $\eta ^{-2}$. Its integrated radial defect remains small after a fixed parameter is chosen, but no longer tends to zero. We therefore need a correction with a small fixed total slope. 
+</p>
+<p>
+We use the heat kernel $k_ t$ of (<a data-tag="33A3A76C" href="../../tag/097EB0CA92F4/">8.6</a>) and its potential $F_\eta $ of lemma <a data-tag="4228F54D" href="../../tag/14E6CDA9AAC4/">8.3.1</a>. The following value estimates complement the derivative bounds already proved. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-95282EC6">
+<p><a class="environment-identifier" href="../../tag/21E7B1647FA9/">Lemma <span data-tag="95282EC6">8.8.4</span>.</a><span data-gerby-tag="95282EC6"></span> Uniformly in $\eta $ and $w$, $F_\eta (t,w)\leq C\eta $ for $t&gt;0$, and $F_\eta (t,w)\geq -2\eta \log (1/t)-C\eta $ for $0&lt;t\leq 1$. Uniformly on $\sqrt t\leq |w|\leq 2\sqrt t$ near the origin of $E$, as $t\to 0$, </p>
+<div class="equation">
+  \begin{align*}  F_\eta (t,w)&amp; =2\eta \log t+O(\eta ),\\  t k_ t(w)&amp; =2\mathrm e^{-|w|^2/t}+O(\mathrm e^{-1/(Ct)}),\\  t\partial _{\bar w}\log k_ t(w)&amp; =-w+O(\mathrm e^{-1/(Ct)}). \end{align*}
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For the upper bound use $k_ r\geq 0$ on $(0,1]$ and (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>). The nonnegative Fourier coefficients imply $k_ r(w)\leq k_ r(0)$, and Gaussian summation gives $k_ r(0)\leq 2/r+C r^{-1}\mathrm e^{-1/(2r)}$ for $r\leq 1$. Its integrable error proves the lower bound. On the indicated annulus the nonzero-lattice terms and their derivatives are exponentially small relative to the zero-lattice term, proving the last two identities. For the first, split the defining integral at a fixed small $r_0$. On $[t,r_0]$ the nonzero-lattice contributions have bounded integral, and the difference between $(2/r)\mathrm e^{-|w|^2/r}$ and $2/r$ has integral at most $2|w|^2/t\leq 8$. The remaining integral is uniformly bounded. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-0C23AFD6">
+<p><a class="environment-identifier" href="../../tag/1394B3372728/">Theorem <span data-tag="0C23AFD6">8.8.5</span>.</a><span data-gerby-tag="0C23AFD6"></span> There are $A,B,D,\eta _0&gt;0$ such that for every $0&lt;\eta &lt;\eta _0$ there exist $u_\eta \in C^\infty (X,\mathbb R)\cap \mathcal R$ and a measurable $K_\eta \subset X$ satisfying </p>
+<div class="equation">
+  \begin{gather*}  \sup _ Xu_\eta =0,\qquad \omega +\mathrm{dd}^{\mathrm{c}}u_\eta &gt;0, \qquad 0\leq -u_\eta \leq B\eta ^{-2}\quad \text{on }X,\\  A\eta ^{-2}\leq -u_\eta \leq B\eta ^{-2}\quad \text{on }K_\eta , \qquad \int _{K_\eta }(\omega +\mathrm{dd}^{\mathrm{c}}u_\eta )^3\geq D\eta ^{-1}. \end{gather*}
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $\kappa $ as in lemma <a data-tag="C63ECDFB" href="../../tag/AB7F46061184/">8.3.3</a>, also with $\kappa &lt;1/100$. Choose a small fixed $c&gt;0$ later and set 
+    
+<div class="equation">
+  \begin{gather*}  \varepsilon =\mathrm e^{-c\eta ^{-3}},\qquad q_0=\sqrt{c\eta ^{-3}+\log (1/\eta )},\qquad a=\sqrt{\kappa /(2\eta )},\\  q(x)=q_0-\int _0^{ax}\chi (s)\, \mathrm ds,\qquad t(x)=\eta ^{-1}\mathrm e^{-q(x)^2},\\  b=(q_0-1/2)/a,\qquad x_*=(q_0+1/2)/a,\qquad Z_\eta (x,w)=\vartheta (q(x))F_\eta (t(x),w). \end{gather*}
+</div>
+<p>
+       Use the cutoffs $\chi $ and $\vartheta $ from the earlier heat-time construction. Then $Z_\eta =F_\eta (\varepsilon ,\cdot )$ for $x\leq 0$, $Z_\eta =0$ for $x\geq x_*$, and 
+    
+<div class="equation">
+  \[  \eta b,\eta x_*\longrightarrow \ell :=\sqrt{2c/\kappa },\qquad 1+(Z_\eta )_{w\bar w}&gt;1-\eta .  \]
+</div>
+<p>
+       The larger value of $q_0$ changes the integrated positivity defect; we estimate it at this scale. Write $r_-=\max (-r,0)$ for the negative part of a real number $r$. 
+    <p>
+      On $[0,b]$ we have $\vartheta =1$. Write $F=F_\eta $ and put $\sigma =(\log t)_ x$, $h=\eta k_ t$ and $\zeta =\sigma t\partial _{\bar w}\log k_ t/\mu $. The identity (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) applies to $Z_\eta $ on this interval. The contribution involving $h[1+t(\log k_ t)_{w\bar w}]$ is nonnegative. On $[0,a^{-1}]$, 
+    
+<div class="equation">
+  \[  \sigma =2aq\chi (ax),\quad \sigma _ x=-\frac\kappa \eta \chi (ax)^2+\frac\kappa \eta q\chi '(ax), \quad t\leq \varepsilon \mathrm e^{q_0}.  \]
+</div>
+<p>
+       This upper bound for $t$ is smaller than every power of $\eta $. Thus $\kappa q\chi 't\leq \eta $ and $\sigma ^2t\leq \eta ^2$. Use (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) with $\kappa \chi ^2$ where $\chi &gt;0$, and $F_ t\geq -\eta $ for the $\chi '$ term. It follows that $[Q[Z_\eta ]]_-\leq C\eta $. Where $\chi =0$ also $\chi '=0$, and $Q[Z_\eta ]=\mu -\mu ^2/(1-\eta +h)&gt;0$, since $x\leq a^{-1}=o(1)$. 
+    <p>
+      On $[a^{-1},b]$, $\sigma =2aq$, $\sigma _ x=-\kappa /\eta $, $\mathrm dx=-\mathrm dq/a$. For $t\leq 1$, (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) and (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) give 
+    
+<div class="equation">
+  \[  [Q[Z_\eta ]]_-\leq 2\eta +2\kappa q^2t+C\kappa \exp \left(-\frac\eta {C\kappa q^2t}\right).  \]
+</div>
+<p>
+       For $t\geq 1$, (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>) gives instead $[Q[Z_\eta ]]_-\leq C\kappa q^2t^2\mathrm e^{-t/4}$. Put $L=\log (1/\eta )$. Integrating the $q^2t$ term uses $\int _{\sqrt L}^\infty q^2\mathrm e^{-q^2}\, \mathrm dq\leq C\sqrt L\eta $. For the exponential term split at $2\sqrt L$: the initial interval has length $O(\sqrt L)$, and on the rest $\eta ^2\mathrm e^{q^2}/q^2\geq \mathrm e^{q^2/4}$ for small $\eta $. Its remaining integral is uniformly bounded even with upper endpoint infinity. For large time use $\mathrm dx=\sqrt{\eta /(2\kappa )}\, \mathrm dt/(tq)$, $q\leq \sqrt L$, and the integrability of $t\mathrm e^{-t/4}$. Including the constant term and initial interval yields 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-F993DC61"><span data-gerby-tag="F993DC61"></span>
+<span class="equation-label"><a data-tag="F993DC61" href="../../tag/26883D1656D1/">8.34</a></span>
+<div>\begin{equation} \label{eq:rotational-integrated-defect} \int _0^ b\max _{w\in E}[Q[Z_\eta ](x,w)]_-\, \mathrm dx \leq C\eta b+C\sqrt{\eta L}\leq C\ell +o(1). \end{equation}</div>
+</div>
+<p>
+       All constants here are independent of $q_0,c,\eta $ with fixed $\kappa $. The bound is small after choosing $c$, although it need not tend to zero. 
+    <p>
+      Also $\sup [(Z_\eta )_ x]_-=O(\sqrt{\eta L})$: for $t\leq 1$ use $F_ t\geq -\eta $ and $t\sqrt{L+\log (1/t)}\leq \sqrt L$; for $t\geq 1$ use (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>). On $[b,x_*]$, $0\leq q\leq 1$ and $(\mathrm e\eta )^{-1}\leq t\leq \eta ^{-1}$, so differentiated cutoffs and (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>) give 
+    
+<div class="equation">
+  \[  \sup _ w\bigl (|(Z_\eta )_ x|+|Q[Z_\eta ]-Q[0]|\bigr ) \leq C\mathrm e^{-1/(5\mathrm e\eta )}.  \]
+</div>
+<p>
+       Choose $c$ so that $\ell &lt;1/(10\mathrm e)$. Since $Q[0]=\mu (1-\mu )\geq \mathrm e^{-x_*}/4$ here, this implies $Q[Z_\eta ]&gt;0$ on the cutoff interval. For $x\leq 0$ use $Q[Z_\eta ]\geq \mu (1-\mu /(1-\eta ))&gt;0$, and for $x\geq x_*$ use $Z_\eta =0$. On $[-2,-1]$ the same formula gives $Q[Z_\eta ]\geq 2/27$. 
+    <p>
+      The continuous defect $d_\eta (x)=\max _ w[Q[Z_\eta ]]_-$ is therefore supported in $[0,b]$. Choose a smooth nonnegative $r_\eta $, supported in $(-1/2,b+1/2)$, with $r_\eta &gt;d_\eta $ on $[0,b]$ and $m_\eta :=\int r_\eta \leq \int d_\eta +\eta $. Uniform approximation and a positive bump give this choice for each fixed $\eta $; no uniform derivative bound is needed. Fix a smooth probability bump $\psi $ supported in $(-2,-1)$ and put 
+    
+<div class="equation">
+  \[  g_\eta (x)=\int _{-\infty }^ x(x-s)(r_\eta (s)-m_\eta \psi (s))\, \mathrm ds, \qquad V_\eta =Z_\eta +g_\eta .  \]
+</div>
+<p>
+       The support order implies $-m_\eta \leq g_\eta '\leq 0$; $g_\eta =0$ at the negative end and is constant at the positive end. Furthermore $g_\eta \leq 0$ and $|g_\eta |\leq m_\eta (b+3)=O_ c(\eta ^{-1})$. Shrink the fixed $c$ so that (<a data-tag="F993DC61" href="../../tag/26883D1656D1/">8.34</a>) ensures 
+    
+<div class="equation">
+  \[  m_\eta &lt;\min \{ \mu (-2)/2,\, 1/8,\, 1/(27\| \psi \| _\infty )\}   \]
+</div>
+<p>
+       for all sufficiently small $\eta $. Now $Q[V_\eta ]=Q[Z_\eta ]+r_\eta -m_\eta \psi &gt;0$ everywhere: use the majorant on $[0,b]$, the margin $2/27$ on $(-2,-1)$, and the established positivity elsewhere. The vertical coefficient is above $1-\eta $. For the horizontal coefficient, derivatives vanish for $x\leq -2$; on $[-2,0]$ use $\mu \geq \mu (-2)&gt;m_\eta $; on $[0,\infty )$ use $\mu \geq 1/2$ and $(Z_\eta )_ x\geq -o(1)$. Thus (<a data-tag="556376D7" href="../../tag/814E85A56944/">8.5</a>) gives a smooth globally strictly positive potential. 
+    <p>
+      On $x&lt;-3$, $V_\eta =F_\eta (\varepsilon ,\cdot )$ has fiber mean zero, so $0\leq \sup _ XV_\eta \leq C\eta $ by lemma <a data-tag="95282EC6" href="../../tag/21E7B1647FA9/">8.8.4</a> and $g_\eta \leq 0$. Set $u_\eta =V_\eta -\sup _ XV_\eta $. Where the cutoff is nonzero $t\geq \varepsilon $, giving 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-0CDB66A4"><span data-gerby-tag="0CDB66A4"></span>
+<span class="equation-label"><a data-tag="0CDB66A4" href="../../tag/83FE97565E82/">8.35</a></span>
+<div>\begin{equation} \label{eq:rotational-global-depth} 0\leq -u_\eta \leq 2c\eta ^{-2}+O_ c(\eta ^{-1})+O(\eta ). \end{equation}</div>
+</div>
+<p>
+       Multiplication by a cutoff between zero and one preserves this lower bound for $Z_\eta $, including where $F_\eta $ is positive. 
+    <p>
+<em>Mass and depth on the concentration region.</em> Let $K_\eta $ consist of all radial angular directions and 
+    
+<div class="equation">
+  \[  q_0/2\leq q(x)\leq 3q_0/4,\qquad \sqrt{t(x)}\leq |w|\leq 2\sqrt{t(x)},  \]
+</div>
+<p>
+       using the small lift near zero in $E$. This lies in the linear transport region, with $\vartheta =1$, $x\asymp _ c\eta ^{-1}\to \infty $, $\sigma =2aq\asymp _ c\eta ^{-2}$, and superexponentially small $t$. Lemma <a data-tag="95282EC6" href="../../tag/21E7B1647FA9/">8.8.4</a> gives, uniformly, 
+    
+<div class="equation">
+  \[  0&lt;c_1\leq tk_ t\leq 3,\quad h\to \infty ,\quad \zeta \to 0,\quad \eta \sigma ^2t\to 0,\quad \mu \to 1.  \]
+</div>
+<p>
+       In (<a data-tag="3FEE2B96" href="../../tag/477FF03F5EC1/">8.18</a>) the first $h$ contribution is nonnegative, $\sigma _ xtF_ t=-\kappa t(k_ t-1)\geq -3\kappa $, and the completed square tends to one. Its other negative terms tend to zero. Thus $Q[Z_\eta ]\geq 1/4$ for small $\eta $. On the core $\psi =0$ and $g_\eta ''=r_\eta \geq 0$, so $Q[V_\eta ]\geq 1/4$. Also 
+    
+<div class="equation">
+  \[  \mu +(V_\eta )_ x\geq c_2\eta \sigma ,\qquad 1+(V_\eta )_{w\bar w}\geq c_1\eta /t.  \]
+</div>
+<p>
+       Indeed $(Z_\eta )_ x=\eta \sigma (tk_ t-t)$ and $\mu +g_\eta '&gt;0$ here; the vertical inequality follows from $1-\eta +\eta k_ t$. 
+    <p>
+      In (<a data-tag="A2679B0D" href="../../tag/BDDF6CEA3CFE/">8.26</a>), $\Delta _{V_\eta }=(1+(V_\eta )_{w\bar w})Q[V_\eta ]$. The fiber annulus has area $3t/2$. Integrating the preceding lower bounds and using $\sigma \, \mathrm dx=-2q\, \mathrm dq$ yields 
+    
+<div class="equation">
+  \[  \int _{K_\eta }(\omega +\mathrm{dd}^{\mathrm{c}}u_\eta )^3 \geq c_3\eta ^2\int _{q_0/2}^{3q_0/4}2q\, \mathrm dq =c_4\eta ^2q_0^2\geq c_5\eta ^{-1}.  \]
+</div>
+<p>
+      The annular value estimate also gives 
+    
+<div class="equation">
+  \[  -u_\eta =2\eta q^2+O_ c(\eta ^{-1})+O(\eta \log (1/\eta )).  \]
+</div>
+<p>
+       As $\eta q_0^2=c\eta ^{-2}+\eta \log (1/\eta )$, this is bounded above and below by fixed positive multiples of $\eta ^{-2}$ on the core. Together with (<a data-tag="0CDB66A4" href="../../tag/83FE97565E82/">8.35</a>), this proves the asserted mass and depth bounds. All these potentials are bounded: truncations beyond their individual depth equal them everywhere, so the defining extended product equals (<a data-tag="A2679B0D" href="../../tag/BDDF6CEA3CFE/">8.26</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-7E77F7F3">
+<p><a class="environment-identifier" href="../../tag/0ACED0B738A9/">Corollary <span data-tag="7E77F7F3">8.8.6</span>.</a><span data-gerby-tag="7E77F7F3"></span> Let $W:[0,\infty )\to (0,\infty )$ be nonincreasing. A uniform bound for the weighted masses </p>
+<div class="equation">
+  \[  \int _ X W(-u)\mathrm{MA}^{\mathrm{ext}}_\omega (u)  \]
+</div>
+<p> over all normalized $\omega $-psh potentials requires </p>
+<div class="equation">
+  \[  \sup _{T\gg 1}\sqrt T\, W(T)&lt;\infty .  \]
+</div>
+<p> Uniform deep tails over that class require $\sqrt T\, W(T)\to 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On $K_\eta $, monotonicity of $W$ gives 
+    
+<div class="equation">
+  \[  \int _ XW(-u_\eta )\mathrm{MA}^{\mathrm{ext}}_\omega (u_\eta ) \geq D\eta ^{-1}W(B\eta ^{-2}).  \]
+</div>
+<p>
+       Every sufficiently large $T$ equals $B\eta ^{-2}$ for some sufficiently small $\eta $, proving the necessary bound. Also $K_\eta \subset \{ -u_\eta &gt;A\eta ^{-2}/2\} $, so uniform deep tails force this lower bound to tend to zero. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-A0223436">
+<p><a class="environment-identifier" href="../../tag/F1398FE81D8D/">Theorem <span data-tag="A0223436">8.8.7</span>.</a><span data-gerby-tag="A0223436"></span> Suppose $W$ is positive and nonincreasing, finite on compact intervals, and </p>
+<div class="equation">
+  \[  \sup _{T\gg 1}\sqrt T W(T)=\infty .  \]
+</div>
+<p> Then there is a single $U\in \mathcal R$ such that </p>
+<div class="equation">
+  \[  \int _ XW(-U)\mathrm{MA}^{\mathrm{ext}}_\omega (U)=\infty .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First select the correction with additional local control. Put 
+    
+<div class="equation">
+  \[  x_{\rm pre}=(q_0+1/2-2\sqrt L)/a.  \]
+</div>
+<p>
+       Then $t(x_{\rm pre})=\eta ^3$, $x_{\rm pre}\to \infty $, and $b-x_{\rm pre}=O(\sqrt{\eta L})\to 0$. For a fixed large $K$ the preceding defect estimates give $d_\eta \leq (K/2)\eta $ on $[0,x_{\rm pre}]$: on the linear portion $q^2t\leq 4L\eta ^3$, and the exponential error is $O(\exp (-1/(C\kappa \eta ^2L)))=o(\eta )$. On the initial portion use the previously proved $C\eta $ bound. The integral of $d_\eta $ on $[x_{\rm pre},b]$ tends to zero by the same integrated estimates and this interval's length. 
+    <p>
+      Choose a fixed left cutoff, zero for $x\leq -1/2$ and one for $x\geq -1/4$, and a translated right cutoff, one for $x\leq x_{\rm pre}$ and zero for $x\geq x_{\rm pre}+1/4$. Let $r^0_\eta $ be $K\eta $ times their product. It strictly exceeds $d_\eta $ on $[0,x_{\rm pre}]$. The continuous function $e_\eta =\max (d_\eta -r^0_\eta ,0)$ is supported in $[x_{\rm pre},b]$. Add a smooth nonnegative majorant $s_\eta &gt;e_\eta $ on that interval, supported in $(x_{\rm pre}-1/4,b+1/2)$, with $\int s_\eta \leq \int e_\eta +\eta $. Set $r_\eta =r^0_\eta +s_\eta $. Then 
+    
+<div class="equation">
+  \[  r_\eta &gt;d_\eta \quad \text{on }[0,b],\qquad m_\eta =\int r_\eta \leq K\eta b+O(\sqrt{\eta L})+O(\eta ).  \]
+</div>
+<p>
+       After shrinking the fixed $c$, this is bounded by a fixed $m_0$ within all the positivity tolerances above. The conclusions of theorem <a data-tag="0C23AFD6" href="../../tag/1394B3372728/">8.8.5</a> therefore hold for this choice, with fixed $A,B,D$. On every fixed compact interval $I\Subset (0,\infty )$, for sufficiently small $\eta $ we have $r_\eta =K\eta $ and exactly 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-DE1838A5"><span data-gerby-tag="DE1838A5"></span>
+<span class="equation-label"><a data-tag="DE1838A5" href="../../tag/AC3F3934DA9F/">8.36</a></span>
+<div>\begin{equation} \label{eq:rotational-controlled-correction} g_\eta (x)=-m_\eta (x-\mu _\psi ) +K\eta (x^2/2+b_0x+b_1),\qquad \mu _\psi =\int s\psi (s)\, \mathrm ds. \end{equation}</div>
+</div>
+<p>
+       Here $b_0,b_1$ depend only on the fixed left cutoff. Globally $0\leq -g_\eta (x)\leq m_0(x+2)$ for $x\geq 0$. 
+    <p>
+      Let $G(w)=-\int _0^\infty (k_ r(w)-1)\, \mathrm dr$ for $w\ne 0$ on $E$. Gaussian integration gives the uniform bound 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-E793D07E"><span data-gerby-tag="E793D07E"></span>
+<span class="equation-label"><a data-tag="E793D07E" href="../../tag/CF8AE8E2EB06/">8.37</a></span>
+<div>\begin{equation} \label{eq:rotational-off-pole-value} -F_\eta (t,w)\leq C\eta \bigl (1+\log ^+(1/\operatorname {dist}_ E(w,0)^2)\bigr ),\quad t&gt;0. \end{equation}</div>
+</div>
+<p>
+       Indeed the nearest Gaussian has integral bounded by $C+2\log ^+(1/\operatorname {dist}_ E(w,0)^2)$ on $(0,1]$; the other lattice terms have bounded integral and large times decay. The same bound applies after the cutoff. On a fixed $I\Subset (0,\infty )$, $\vartheta =1$ for small $\eta $ and $t_\eta (x)\leq \exp (-c/(2\eta ^3))$. Every fixed $x$ derivative of $t_\eta $ has this bound times a polynomial in $\eta ^{-1}$. On compact fiber sets away from zero, 
+    
+<div class="equation">
+  \[  F_\eta (t_\eta (x),w)/\eta \longrightarrow G(w) \quad \text{in }C^\ell \text{ for every fixed }\ell .  \]
+</div>
+<p>
+       To verify derivatives, subtract $G$ from $G_ t=F_\eta (t,\cdot )/\eta $: $G_ t-G=\int _0^ t(k_ r-1)\, \mathrm dr=-t+O(\exp (-d^2/(Ct)))$ when $d$ stays positive. Differentiated Gaussian errors have only polynomial factors in $t^{-1}$, and repeated $x$ differentiation preserves their decay. Together with (<a data-tag="DE1838A5" href="../../tag/AC3F3934DA9F/">8.36</a>) and $0\leq \sup V_\eta \leq C\eta $, this gives uniform $C^\ell $ bounds for $u_\eta $ on each such fixed compact product set, for all sufficiently small $\eta $. The threshold may depend on the set and derivative order. 
+    <p>
+      Fix $a_ j=2^{-j-2}$, $j\geq 1$, so $\sum a_ j=1/4$. Choose scales $\eta _ j\downarrow 0$ recursively and write $u_ j=u_{\eta _ j}$, $K_ j=K_{\eta _ j}$. Require the minimum $x$ on $K_ j$ to exceed every earlier $x_{*,i}$ by two. Choose a relatively compact product neighborhood $O_ j$ of $K_ j$, with positive $x$ interval and fiber closure away from zero, on which the earlier $u_ i$ are constant. The $K_ j$ are pairwise disjoint. With $E_ j=\sum _{i&lt;j}a_ i\| u_ i\| _\infty $, impose 
+    
+<div class="equation">
+  \begin{gather*}  E_ j\leq a_ j\eta _ j^{-2},\qquad \eta _ j\leq a_ j,\\  a_ j\eta _ j\leq 2^{-j}a_ i\eta _ i\quad (i&lt;j). \end{gather*}
+</div>
+<p>
+       For each earlier $O_ i$, require the preceding uniform derivative bounds to hold for $u_ j$ through order $j$. All are finite constraints at stage $j$, achievable by making $\eta _ j$ smaller. They ensure that the future series $\sum _{k&gt;i}a_ ku_ k$ converges in $C^\infty $ on compact subsets of $O_ i$: for every fixed derivative order the sufficiently late terms have a uniform bound there, and $\sum a_ k&lt;\infty $. 
+    <p>
+      These constraints also give $\sum _{k&gt;j}a_ k\eta _ k\leq a_ j\eta _ j$. On $K_ j$ the coordinate and distance estimates are 
+    
+<div class="equation">
+  \[  x\leq C_ c\eta _ j^{-1},\qquad \log ^+(1/\operatorname {dist}_ E(w,0)^2)\leq C_ c\eta _ j^{-3}.  \]
+</div>
+<p>
+       Using (<a data-tag="E793D07E" href="../../tag/CF8AE8E2EB06/">8.37</a>), the global slope bound on $g_ k$, and the supremum constants, the future depth is at most 
+    
+<div class="equation">
+  \[  C_ c\eta _ j^{-3}\sum _{k&gt;j}a_ k\eta _ k +C_ c\eta _ j^{-1}\sum _{k&gt;j}a_ k \leq C_ c a_ j\eta _ j^{-2}+C_ c\eta _ j^{-1}/4.  \]
+</div>
+<p>
+       The last term is at most a fixed multiple of $a_ j\eta _ j^{-2}$ since $\eta _ j\leq a_ j$. Including the earlier and current terms, there is a fixed $C_*&gt;0$, independent of the scales, such that 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-52D85F1D"><span data-gerby-tag="52D85F1D"></span>
+<span class="equation-label"><a data-tag="52D85F1D" href="../../tag/C7F482FD7515/">8.38</a></span>
+<div>\begin{equation} \label{eq:rotational-series-depth} -\sum _ i a_ iu_ i\leq C_*a_ j\eta _ j^{-2}\quad \text{on }K_ j. \end{equation}</div>
+</div>
+<p>
+       Fix this constant before the scale choice. Since $\sqrt T W(T)$ is unbounded, at each stage choose arbitrarily large $T_ j$ such that 
+    
+<div class="equation">
+  \[  \frac D{\sqrt{C_*}}a_ j^{5/2}\sqrt{T_ j}W(T_ j)\geq 1, \qquad \eta _ j=\sqrt{C_*a_ j/T_ j},  \]
+</div>
+<p>
+       and so small a scale that all finite preceding constraints hold. Such values occur arbitrarily far out because $W$ is finite on compact intervals. Thus the recursive choice is possible. 
+    <p>
+      The smooth nonpositive partial sums $v_ N=\sum _{j\leq N}a_ ju_ j$ decrease, and 
+    
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}v_ N =(1-\sum _{j\leq N}a_ j)\omega +\sum _{j\leq N}a_ j(\omega +\mathrm{dd}^{\mathrm{c}}u_ j)\geq \tfrac 34\omega .  \]
+</div>
+<p>
+       By theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>, $\int _ X(-v_ N)\, \mathrm dV\leq C\sum _ j a_ j&lt;+\infty $. Thus corollary <a data-tag="23B5C3B7" href="../../tag/0AD144F69807/">1.4.3</a> gives a $\omega $-plurisubharmonic limit $v$ with $\omega +\mathrm{dd}^{\mathrm{c}}v\geq 3\omega /4$. Its supremum is finite and nonpositive. 
+    <p>
+      On $O_ j$ the earlier terms are constant and the future series converges smoothly. Thus $v$ is smooth there and $\omega +\mathrm{dd}^{\mathrm{c}}v\geq a_ j(\omega +\mathrm{dd}^{\mathrm{c}}u_ j)$ pointwise. The determinant inequality for positive Hermitian matrices gives on $K_ j$ 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\omega (v)\geq a_ j^3(\omega +\mathrm{dd}^{\mathrm{c}}u_ j)^3.  \]
+</div>
+<p>
+       On these sets the extended product is the smooth product: on a compact neighborhood of $K_ j$ all sufficiently deep canonical truncations equal $v$. Set $U=v-\sup _ Xv$. Since $\sup v\leq 0$, $-U\leq -v$, and its local currents are unchanged. Monotonicity of $W$ and (<a data-tag="52D85F1D" href="../../tag/C7F482FD7515/">8.38</a>) give 
+    
+<div class="equation">
+  \[  \int _{K_ j}W(-U)\mathrm{MA}^{\mathrm{ext}}_\omega (U) \geq D a_ j^3\eta _ j^{-1}W(C_*a_ j\eta _ j^{-2}) =\frac D{\sqrt{C_*}}a_ j^{5/2}\sqrt{T_ j}W(T_ j)\geq 1.  \]
+</div>
+<p>
+       The disjoint $K_ j$ prove infinite total mass for this single potential. They lie in its smooth locus, so no mass is assigned to poles. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

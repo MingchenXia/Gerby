@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Diffuse product poles · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/ideal-goodness/">Chapter 15 · Multiplier-ideal models and partial equilibrium</a> · Tag <code>2F85E85CE543</code></p><h1>Diffuse product poles</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · Diffuse product poles <span data-gerby-tag="2F89E773"></span></div>
+<p>
+Even polar currents on all modifications, with any choice of Gauduchon forms, miss some ordinary models. A maximum of diffuse polar potentials on the factors of a polydisk has a joint pole set of Hausdorff dimension zero, so all its first polar currents vanish. Nevertheless, its bounded truncations keep a fixed positive amount of top-degree mass near that set. The non-pluripolar product loses this mass, so the volume of the model drops, although the polar comparison does not see any pole. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-5913A45C">
+<p><a class="environment-identifier" href="../../tag/D3CEEE21DA5C/">Lemma <span data-tag="5913A45C">16.6.67</span>.</a><span data-gerby-tag="5913A45C"></span> Let $\Delta \subset \mathbb C$ be the unit disk. There are a compact set $K\Subset \Delta $ of Hausdorff dimension zero and a negative subharmonic function $g$ on $\Delta $, smooth and harmonic off $K$, with </p>
+<div class="equation">
+  \[  \{ g=-\infty \} =K,\qquad \nu (g,a)=0\quad (a\in \Delta ), \qquad g|_{\partial \Delta }=0.  \]
+</div>
+<p> For $n\geq 2$, put $D=\Delta ^ n$, $S=K^ n$ and </p>
+<div class="equation">
+  \[  h(z)=\max _{1\leq j\leq n}g(z_ j),\qquad h_ L=\max \{ h,-L\} \quad (L&gt;0).  \]
+</div>
+<p> The function $h$ is locally Lipschitz off $S$, and its bounded local Monge–Ampère measure $(\mathrm{dd}^{\mathrm{c}}h)^ n$ vanishes there. The measures $(\mathrm{dd}^{\mathrm{c}}h_ L)^ n$ all have the same finite mass $M&gt;0$. Their supports are compact and converge to $S$ as $L\to \infty $, in the sense that they lie in any given neighborhood of $S$ for all large $L$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use the binary Cantor set and the nonatomic probability measure $\sigma $ of example <a data-tag="B922B395" href="../../tag/730582377A86/">30.12.7</a>, placed in a small real interval in $\Delta $. Its intervals of level $k$ have length $r_ k=\exp (-4^{k+1})$ and mass $2^{-k}$. For every $s&gt;0$, 
+    
+<div class="equation">
+  \[  2^ kr_ k^ s\longrightarrow 0,\qquad 2^{nk}(\sqrt n r_ k)^ s\longrightarrow 0.  \]
+</div>
+<p>
+       Covering $K$ by its $2^ k$ intervals of level $k$, and $S$ by the $2^{nk}$ products of such intervals, which have diameter at most $\sqrt nr_ k$, shows that $K$ and $S$ have Hausdorff dimension zero. Define the Green potential of the disk 
+    
+<div class="equation">
+  \[  g(z)=\int _\Delta \log \left|\frac{z-y}{1-\bar yz}\right|^2\, \mathrm d\sigma (y).  \]
+</div>
+<p>
+       Then $\mathrm{dd}^{\mathrm{c}}g=\sigma $, with the normalization of $\mathrm{dd}^{\mathrm{c}}$ fixed in the conventions. The Green kernel is nonpositive, vanishes on the boundary and is smooth away from its pole. On a fixed smaller disk it is at most $\log |z-y|^2+C$. For $z\in K$, integration over the interval of level $k$ containing $z$, together with nonpositivity of the kernel elsewhere, gives 
+    
+<div class="equation">
+  \[  g(z)\leq 2^{-k}(2\log r_ k+C)\longrightarrow -\infty .  \]
+</div>
+<p>
+       Outside $K$ the potential is finite, smooth and harmonic. Its Lelong number at $a$ is $\sigma (\{ a\} )=0$. Since $K$ stays away from the boundary, $g$ is smooth near the boundary and tends uniformly to zero there. 
+    <p>
+      Near a point off $S$, some coordinate $z_ j$ lies outside $K$, and the finite value $g(z_ j)$ locally exceeds all branches $g(z_ i)$ with $z_ i$ near $K$. Hence $h$ is locally the maximum of at most $n$ pluriharmonic functions, and in particular it is locally Lipschitz. For $m\leq n$ pluriharmonic functions $a_ j$, use the smooth approximations 
+    
+<div class="equation">
+  \[  \varepsilon \log \sum _{j=1}^ m e^{a_ j/\varepsilon },  \]
+</div>
+<p>
+       which decrease to $\max _ ja_ j$ as $\varepsilon \downarrow 0$. Their complex Hessian is a positive multiple of the weighted covariance of the forms $\partial a_ j$, with probability weights proportional to $e^{a_ j/\varepsilon }$. The centered forms satisfy one weighted linear relation, so this Hessian has rank at most $m-1&lt;n$, and its $n$th power vanishes. Bounded decreasing convergence in theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">1.6.1</a> gives the same conclusion for the maximum. 
+    <p>
+      The bounded truncation $h_ L$ is continuous, since near a pole of any curve potential the corresponding branch lies below the constant $-L$. The same argument, applied to the $n+1$ branches $g(z_1),\ldots ,g(z_ n),-L$, shows that $(\mathrm{dd}^{\mathrm{c}}h_ L)^ n$ is carried by 
+    
+<div class="equation">
+  \[  Q_ L=\{ z:g(z_ j)=-L\text{ for every }j\} .  \]
+</div>
+<p>
+       Indeed, off $Q_ L$ one branch lies strictly below the maximum. Discarding it, together with any branches near poles, leaves at most $n$ pluriharmonic branches locally, so the measure vanishes there. Since $Q_ L$ is compact, the Chern–Levine–Nirenberg estimate (<a data-tag="0B0E74EF" href="../../tag/F138661713A9/">1.4</a>) gives finite mass. 
+    <p>
+      For $L,L'&gt;0$, the functions $h_ L$ and $h_{L'}$ agree near $\partial D$, since $h$ tends uniformly to zero there. Integration by parts for bounded potentials gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}h_ L)^ n-(\mathrm{dd}^{\mathrm{c}}h_{L'})^ n =\mathrm{dd}^{\mathrm{c}}\left((h_ L-h_{L'}) \sum _{j=0}^{n-1}(\mathrm{dd}^{\mathrm{c}}h_ L)^ j \wedge (\mathrm{dd}^{\mathrm{c}}h_{L'})^{n-1-j}\right).  \]
+</div>
+<p>
+       The current on the right has compact support, so its integral is zero. To see that the common mass $M$ is positive, fix $L$ and choose $\varepsilon &gt;0$ so small that 
+    
+<div class="equation">
+  \[  U=\{ h_ L&lt;\varepsilon (|z|^2-n-1)\}   \]
+</div>
+<p>
+       is nonempty. This set is relatively compact in $D$, because $h_ L$ tends to zero at the boundary while the quadratic function is strictly negative on $\overline D$. The comparison (<a data-tag="49BA5BCF" href="../../tag/A9D318047BDA/">1.8</a>) for bounded potentials gives 
+    
+<div class="equation">
+  \[  0&lt;\int _ U(\varepsilon \mathrm{dd}^{\mathrm{c}}|z|^2)^ n \leq \int _ U(\mathrm{dd}^{\mathrm{c}}h_ L)^ n\leq M.  \]
+</div>
+<p>
+       Finally, $g$ is bounded on compact subsets of $\overline\Delta \setminus K$. Its sublevel sets $\{ g\leq -L\} $ therefore converge to $K$ as $L\to \infty $, and $Q_ L$ converges to $S$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+For a separable maximum, the full top-degree product of theorem <a data-tag="2291BBE0" href="../../tag/1BBBF8109419/">1.6.9</a> can be computed exactly. Its restriction to the pole set, which we call the <em>residual measure</em>, depends only on the product of the weights of the branches, so different positive weights can give the same residual measure and different singularity types. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-141FB985">
+<p><a class="environment-identifier" href="../../tag/4C3ACB006A19/">Lemma <span data-tag="141FB985">16.6.68</span>.</a><span data-gerby-tag="141FB985"></span> Use the Green potential $g$, the probability measure $\sigma $ and the sets $D=\Delta ^ n$, $S=K^ n$ of lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a>. For $s,L&gt;0$ and $a=(a_1,\ldots ,a_ n)\in (0,+\infty )^ n$, put </p>
+<div class="equation">
+  \[  \mu _ s=\mathrm{dd}^{\mathrm{c}}\max (g,-s),\qquad h_ a(z)=\max _ j a_ jg(z_ j),  \]
+</div>
+<p> and $h_{a,L}=\max (h_ a,-L)$. Each $\mu _ s$ is a nonatomic probability measure supported on $\{ g=-s\} $, and $\mu _ s\to \sigma $ weakly as $s\to \infty $. The bounded products satisfy </p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}h_{a,L})^ n =\left(\prod _{j=1}^ n a_ j\right) \mu _{L/a_1}\otimes \cdots \otimes \mu _{L/a_ n}.  \]
+</div>
+<p> The function $h_ a$ has pole set $S$, is locally Lipschitz off $S$, and has zero bounded top-degree product there. Its full product in the sense of theorem <a data-tag="2291BBE0" href="../../tag/1BBBF8109419/">1.6.9</a> is </p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}h_ a)^ n_{\mathrm{full}} =\left(\prod _{j=1}^ n a_ j\right)\sigma ^{\otimes n}.  \]
+</div>
+<p> In particular, the common mass $M$ in lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a> is $1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The truncation $\max (g,-s)$ agrees with $g$ near the boundary of $\Delta $. Their difference is a compactly supported integrable function, so its complex Hessian has integral zero, and $\mu _ s(\Delta )=\sigma (\Delta )=1$. The truncation is constant near $K$ and harmonic off $K$ wherever $g\ne -s$, which proves the support assertion. Since the truncation is bounded, $\mu _ s$ has no point masses, by theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">1.6.1</a>. Decreasing local $L^1$ convergence to $g$ gives $\mu _ s\to \mathrm{dd}^{\mathrm{c}}g=\sigma $; for large $s$, the supports lie in one fixed compact subset of $\Delta $. 
+    <p>
+      The rank argument of lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a> applies with the weights $a_ j$. Away from $S$, the finite branches dominate the branches near poles, so $h_ a$ is locally a Lipschitz maximum of at most $n$ pluriharmonic functions, with zero top-degree product. For the bounded maximum with the constant branch $-L$, the same argument shows that its top-degree product is supported on 
+    
+<div class="equation">
+  \[  Q_{a,L}=\{ z:a_ jg(z_ j)=-L\text{ for every }j\} .  \]
+</div>
+<p>
+       Indeed, off this set one branch lies strictly below the maximum, leaving at most $n$ active pluriharmonic branches; this also applies near branches with poles, which lie below the constant branch. 
+    <p>
+      Near a point of $Q_{a,L}$ at which all the differentials $\mathrm dg(z_ j)$ are nonzero, set $x_ j=a_ jg(z_ j)+L$. Each $x_ j$ is the real part of a local holomorphic coordinate in its own factor. For $\varepsilon &gt;0$, smooth the maximum locally by 
+    
+<div class="equation">
+  \[  f_\varepsilon (x)=\varepsilon \log \left(1+\sum _{j=1}^ n e^{x_ j/\varepsilon }\right),  \]
+</div>
+<p>
+       with weights 
+    
+<div class="equation">
+  \[  w_0=\frac1{1+\sum _ j e^{x_ j/\varepsilon }},\qquad w_ j=e^{x_ j/\varepsilon }w_0.  \]
+</div>
+<p>
+       Then $-L+f_\varepsilon $ decreases to $h_{a,L}$. The Hessian matrix of $f_\varepsilon $ in the variables $x_ j$ is $\varepsilon ^{-1}(\operatorname {diag}(w_ j)-(w_ jw_ k)_{j,k})$, whose determinant is $\varepsilon ^{-n}w_0\prod _ jw_ j$. Hence 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}f_\varepsilon )^ n =n!\varepsilon ^{-n}w_0\prod _{j=1}^ n w_ j \bigwedge _{j=1}^ n(\mathrm dx_ j\wedge \mathrm d^{\mathrm c}x_ j).  \]
+</div>
+<p>
+       The scalar kernel on $\mathbb R^ n$ is an approximate identity of mass $1$. To check the constant, write $y=x/\varepsilon $. The map 
+    
+<div class="equation">
+  \[  y\longmapsto \left(\frac{e^{y_ j}}{1+\sum _ k e^{y_ k}}\right)_{j=1}^ n  \]
+</div>
+<p>
+       is a diffeomorphism onto the open simplex $\{ w_ j&gt;0,\  \sum _ jw_ j&lt;1\} $, with Jacobian $w_0\prod _ jw_ j$. The simplex has volume $1/n!$, so the kernel above has integral $1$. Integrability of the fixed kernel in $y$ gives concentration at $x=0$ as $\varepsilon \downarrow 0$. 
+    <p>
+      Bounded decreasing convergence of products therefore identifies the local limit with the tensor product of the one-variable level measures. In the $j$th factor, the chain rule for $\max (x_ j,0)$ gives 
+    
+<div class="equation">
+  \[  \delta _0(x_ j)\, \mathrm dx_ j\wedge \mathrm d^{\mathrm c}x_ j =a_ j\mathrm{dd}^{\mathrm{c}}\max (g,-L/a_ j),  \]
+</div>
+<p>
+       where the Dirac notation denotes the level measure in the real normal coordinate $x_ j$. The critical points of the nonconstant harmonic function $g$ off $K$ are isolated. In each coordinate neighborhood, their inverse images are analytic hypersurfaces, hence pluripolar. The bounded top-degree product gives them zero mass by theorem <a data-tag="219D82A9" href="../../tag/8B1218AE4FDC/">1.6.1</a>, and so does the candidate tensor measure, because each $\mu _{L/a_ j}$ has no point masses. Thus the formula extends across these points and, together with the support assertion, holds on all of $D$. 
+    <p>
+      Tensor products of the curve probabilities converge to $\sigma ^{\otimes n}$: this follows first for products of continuous functions of one variable, and then for all continuous test functions by uniform approximation on a common compact product. Finally, $h_{a,L}\downarrow h_ a$, whose unbounded locus is the closed set $S$ of Hausdorff dimension zero. By theorem <a data-tag="2291BBE0" href="../../tag/1BBBF8109419/">1.6.9</a>, the weak limit is the full top-degree product of $h_ a$. Taking $a_ j=1$ proves $M=1$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-EBFD683C">
+<p><a class="environment-identifier" href="../../tag/5F93C15013C0/">Proposition <span data-tag="EBFD683C">16.6.69</span>.</a><span data-gerby-tag="EBFD683C"></span> Let $X$ be a connected compact Kähler manifold of dimension $n\geq 2$, with Kähler form $\omega $. There are a normalized ordinary model $p\ne 0$ and $\delta &gt;0$ such that $p,0\in \mathcal M_\delta (\omega )$, all multiplier ideals of $p$ are trivial, and </p>
+<div class="equation">
+  \[  \mathbf1_{\{ p\circ \pi =-\infty \} } \bigl (\pi ^*\omega +\mathrm{dd}^{\mathrm{c}}(p\circ \pi )\bigr )=0  \]
+</div>
+<p> for every smooth modification $\pi :Y\to X$. Consequently, for every family of modifications and every choice of Gauduchon forms as in <a data-tag="DF87F4D5" href="../../tag/6C8B6C6B86C3/">None</a>, </p>
+<div class="equation">
+  \[  \delta _\omega ^{\mathrm{pol}}(p,0)=0,\qquad d_\omega (p,0)&gt;0.  \]
+</div>
+<p> Thus the polar comparison does not separate ordinary models of positive lower volume, and the closure of the analytic models for this comparison contains the model $p$, which is not an ideal model. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Place the polydisk of lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a> in a holomorphic coordinate chart of $X$. Choose a smooth cutoff function $0\leq \chi \leq 1$, compactly supported in that polydisk and equal to one on a neighborhood of $S$, and extend $H=\chi h$ by zero. Then $H$ is quasi-plurisubharmonic and not identically $-\infty $. Indeed, outside $S$ the gradients of $h$ are locally bounded, so the terms containing derivatives of $\chi $ in 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(\chi h)=\chi \mathrm{dd}^{\mathrm{c}}h +h\mathrm{dd}^{\mathrm{c}}\chi +\mathrm d\chi \wedge \mathrm d^{\mathrm c}h +\mathrm dh\wedge \mathrm d^{\mathrm c}\chi  \]
+</div>
+<p>
+       have bounded coefficients on their compact support, while the first term is positive. Hence $\mathrm{dd}^{\mathrm{c}}H\geq -C\omega $ for some $C&gt;0$. Take $0&lt;t&lt;1/C$ and put $u=tH$. Then $u\leq 0$, $\sup _ Xu=0$, the pole set of $u$ is $S$, and 
+    
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}u\geq (1-tC)\omega .  \]
+</div>
+<p>
+      Set $u_ k=\max (u,-k)$. By Stokes' theorem in the closed background, the bounded currents $\omega +\mathrm{dd}^{\mathrm{c}}u_ k$ have total Monge–Ampère mass $A=\int _ X\omega ^ n$. Near $S$, where $\chi =1$, 
+    
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u_ k)^ n =(\omega +t\mathrm{dd}^{\mathrm{c}}h_{k/t})^ n \geq t^ n(\mathrm{dd}^{\mathrm{c}}h_{k/t})^ n.  \]
+</div>
+<p>
+       For large $k$, the whole support of the measure on the right lies in this neighborhood; these measures have mass $t^ nM$ and their supports converge to $S$. Take a subsequence along which both these local measures and the global measures $(\omega +\mathrm{dd}^{\mathrm{c}}u_ k)^ n$ converge weakly. The global limit has mass at least $t^ nM$ on $S$. Off $S$, the function $u$ is locally bounded, and $u_ k=u$ eventually on every compact set, so there the global limit is the non-pluripolar measure of $u$. It follows that 
+    
+<div class="equation">
+  \[  (1-tC)^ nA \leq \int _ X\mathrm{MA}_\omega (u) \leq A-t^ nM&lt;A.  \]
+</div>
+<p>
+       The lower bound follows from the current inequality above and bounded local products off the Lebesgue-null set $S$. 
+    <p>
+      In a closed Kähler background, bounded changes of a potential do not change its non-pluripolar mass. Both singularity volumes of $u$ therefore equal this positive number. By theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a>, $p=P_\omega [u]$ is a normalized ordinary model with the same volumes. In particular $p\ne 0$, and $d_\omega (p,0)=A-\overline{\operatorname {vol}}_\omega (p)&gt;0$. Taking for $\delta $ half the lower volume of $p$ puts both models in $\mathcal M_\delta (\omega )$. Also $u\leq p\leq 0$, so the pole set of $p$ is contained in $S$. 
+    <p>
+      Fix a smooth modification $\pi $, and let $E_ i$ be the irreducible divisorial components of its exceptional locus, away from which $\pi $ is an isomorphism. The polar current $R$ of $p\circ \pi $ is closed and positive by proposition <a data-tag="528E605C" href="../../tag/4A6AA259F9D8/">1.25.6</a>. On the set where $\pi $ is an isomorphism, $R$ is carried by the inverse image of $S$, which has Hausdorff dimension zero in each relatively compact chart; by corollary <a data-tag="5103AFE8" href="../../tag/C6F4FBF73B9E/">1.13.2</a>, $R$ vanishes there. The support theorem for closed positive currents therefore gives 
+    
+<div class="equation">
+  \[  R=\sum _ i b_ i[E_ i],\qquad b_ i\geq 0;  \]
+</div>
+<p>
+       see <span class="cite">[<span class="postnote">Chapter III, Corollaries 2.11 and 2.14, pp. 141–143</span>, <a href="../../references/#R67A7837FBEE7">DemCADG</a>]</span>. Components of codimension at least two carry no closed $(1,1)$-current of order zero, and the sum is finite by compactness. Since $R\leq \pi ^*\omega +\mathrm{dd}^{\mathrm{c}}(p\circ \pi )$, its coefficients satisfy $b_ i\leq \nu (p\circ \pi ,E_ i)$. 
+    <p>
+      If $\pi (E_ i)$ is not contained in $S$, some regular point of $E_ i$ maps outside $S$. Near such a point $u\circ \pi $, and hence $p\circ \pi $, is bounded below, so the generic Lelong number of $p\circ \pi $ along $E_ i$ vanishes and $b_ i=0$. Every remaining image $\pi (E_ i)$ is an irreducible analytic set contained in the set $S$ of Hausdorff dimension zero, hence a point $a=(a_1,\ldots ,a_ n)$. Near that point, $u=t\max _ jg(z_ j)$. At a general point of $E_ i$, with a local equation $\zeta $ of $E_ i$, the first coordinate satisfies 
+    
+<div class="equation">
+  \[  z_1\circ \pi -a_1=\zeta ^ m f,\qquad m\geq 1,\quad f\ne 0.  \]
+</div>
+<p>
+       A local holomorphic $m$th root of the unit $f$ turns this expression into $\zeta '^ m$ for another local equation $\zeta '$ of $E_ i$. Taking circular means gives 
+    
+<div class="equation">
+  \[  \nu (g(a_1+\zeta '^ m),E_ i)=m\nu (g,a_1)=0.  \]
+</div>
+<p>
+       Since $p\circ \pi \geq u\circ \pi \geq t\, g(z_1\circ \pi )$ there, again $b_ i=0$. Thus $R=0$ for every modification. 
+    <p>
+      The same local comparison gives zero Lelong numbers for $u$, and hence for $p\geq u$, at every point. Skoda's local integrability theorem, recalled in <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span>, then makes $\mathrm e^{-sp}$ locally integrable for every $s&gt;0$, so all multiplier ideals of $p$ are trivial. The ideal envelope of $p$ is therefore the zero model, and since $p\ne 0$, $p$ is not an ideal model. The zero model has analytic singularities, and $\delta _\omega ^{\mathrm{pol}}(p,0)=0$ puts $p$ in the closure of the analytic models for the polar comparison. This proves the final assertions. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+The lost top-degree mass also measures distances along the scaled family. Closed positive currents of lower degree cannot charge the pole set, which has Hausdorff dimension zero, so they cause no further loss of volume. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-6A1CE214">
+<p><a class="environment-identifier" href="../../tag/2D7E515584AA/">Corollary <span data-tag="6A1CE214">16.6.70</span>.</a><span data-gerby-tag="6A1CE214"></span> Fix $H=\chi h$, $S=K^ n$, $C&gt;0$ and $M&gt;0$ from the construction in proposition <a data-tag="EBFD683C" href="../../tag/5F93C15013C0/">16.6.69</a>, and put $A=\int _ X\omega ^ n$. Choose $0&lt;t_0&lt;1/C$. For $0&lt;t\leq t_0$ set </p>
+<div class="equation">
+  \[  u_ t=tH,\qquad p_ t=P_\omega [u_ t],  \]
+</div>
+<p> and define $u_0=p_0=0$ separately. Both singularity volumes of $p_ t$ equal </p>
+<div class="equation">
+  \[  V(p_ t)=A-Mt^ n,\qquad 0\leq t\leq t_0.  \]
+</div>
+<p> For all $s,t\in [0,t_0]$, </p>
+<div class="equation">
+  \[  d_\omega (p_ s,p_ t)=M|s^ n-t^ n|, \qquad \delta _\omega ^{\mathrm{pol}}(p_ s,p_ t)=0.  \]
+</div>
+<p> Thus this family, with the restriction of $d_\omega $, is a complete ordered interval, isometric to $[0,Mt_0^ n]$. Every $p_ t$ with $t&gt;0$ is not an ideal model and has trivial multiplier ideals. For any prescribed $0&lt;\delta &lt;A$, one can choose $t_0&gt;0$ so that the whole interval lies in $\mathcal M_\delta (\omega )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $t&gt;0$. Let $u_{t,k}=\max (tH,-k)$ and $\Theta _ k=\omega +\mathrm{dd}^{\mathrm{c}}u_{t,k}$. These bounded closed positive currents satisfy, for $1\leq j\leq n$, 
+    
+<div class="equation">
+  \[  \int _ X\Theta _ k^ j\wedge \omega ^{n-j}=A.  \]
+</div>
+<p>
+       Indeed, subtract $\omega ^ j$, write the difference as a telescoping sum of mixed products, and integrate $\mathrm{dd}^{\mathrm{c}}\bigl (u_{t,k}\sum _{i=0}^{j-1}\Theta _ k^ i\wedge \omega ^{j-1-i}\bigr )\wedge \omega ^{n-j}$ by parts for bounded potentials. 
+    <p>
+      Choose an open neighborhood $U$ of $S$ on which $\chi =1$. There $\Theta _ k=\omega +t\mathrm{dd}^{\mathrm{c}}h_{k/t}$, so positivity gives 
+    
+<div class="equation">
+  \[  t^ j(\mathrm{dd}^{\mathrm{c}}h_{k/t})^ j\wedge \omega ^{n-j} \leq \Theta _ k^ j\wedge \omega ^{n-j}.  \]
+</div>
+<p>
+       For the finitely many $1\leq j&lt;n$, take a common subsequence along which the local closed positive currents $(\mathrm{dd}^{\mathrm{c}}h_{k/t})^ j$ converge weakly on $U$, with limits $R_ j$; the inequalities above give the required local bounds on their traces. Along a further subsequence, the global measures $\Theta _ k^ n$ and the local top-degree measures also converge weakly. By lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a>, the latter have mass $M$ and supports eventually contained in a fixed compact subset of $U$ and converging to $S$. Their extensions by zero therefore converge, along a further subsequence, to a measure $\rho $ supported on $S$ with $\rho (S)=M$. 
+    <p>
+      Since $S$ has Hausdorff dimension zero, corollary <a data-tag="5103AFE8" href="../../tag/C6F4FBF73B9E/">1.13.2</a> shows that every $R_ j$, $j&lt;n$, has coefficient measures vanishing on $S$. The smooth measure $\omega ^ n$ also gives $S$ zero mass. On $U$ we expand 
+    
+<div class="equation">
+  \[  \Theta _ k^ n=\sum _{j=0}^ n\binom nj t^ j(\mathrm{dd}^{\mathrm{c}}h_{k/t})^ j\wedge \omega ^{n-j}.  \]
+</div>
+<p>
+       If $\eta $ is the chosen global weak limit, this expansion gives $\eta (S)=t^ n\rho (S)=Mt^ n$, while $\eta (X)=A$. Off $S$, the function $u_ t$ is locally bounded and its truncations eventually agree with it on each compact set, so there $\eta $ agrees with $\mathrm{MA}_\omega (u_ t)$. The non-pluripolar measure gives $S$ zero mass, which proves 
+    
+<div class="equation">
+  \[  \int _ X\mathrm{MA}_\omega (u_ t)=A-Mt^ n.  \]
+</div>
+<p>
+       This argument uses only a weak subsequential limit in top degree; it does not define an unbounded Bedford–Taylor product on $S$. 
+    <p>
+      The current inequality $\omega +\mathrm{dd}^{\mathrm{c}}u_ t\geq (1-Ct)\omega $ gives $A-Mt^ n\geq (1-Ct_0)^ nA&gt;0$. Invariance of non-pluripolar mass under bounded changes in the closed background and theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a> now give the formula for both singularity volumes of the normalized ordinary model $p_ t$. Since $H\leq 0$, monotonicity of the ordinary envelope gives $p_ s\geq p_ t$ for $s\leq t$, and the zero endpoint satisfies the same order. Thus $\max (p_ s,p_ t)=p_ s$, and the formula for ordered pairs in (<a data-tag="C5D6189D" href="../../tag/451874D2170D/">30.13</a>) gives $d_\omega (p_ s,p_ t)=M(t^ n-s^ n)$. Hence $p_ t\mapsto Mt^ n$ is an isometry onto $[0,Mt_0^ n]$, and the interval is complete. 
+    <p>
+      The proof of proposition <a data-tag="EBFD683C" href="../../tag/5F93C15013C0/">16.6.69</a> applies to every $0&lt;t\leq t_0$: all first polar currents vanish on all modifications, and all multiplier ideals are trivial. The polar currents also vanish for $p_0=0$, so the polar comparison vanishes on the family. For $t&gt;0$, the strict volume deficit makes $p_ t\ne 0$, and its trivial ideals then show that it is not an ideal model. Finally, choose $t_0&lt;1/C$ so small that $(1-Ct_0)^ nA&gt;\delta $; the uniform lower bound for the volumes puts every $p_ t$ in $\mathcal M_\delta (\omega )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+In a nonclosed background, the mass of a potential also involves the terms with derivatives of the background in the mass expansion (<a data-tag="81144FEA" href="../../tag/EB2FF7F930E4/">2.1</a>). Bounded cutoff approximations separate these lower-degree terms from the loss of top-degree mass on $S$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-FA2166DE">
+<p><a class="environment-identifier" href="../../tag/6396018F7822/">Proposition <span data-tag="FA2166DE">16.6.71</span>.</a><span data-gerby-tag="FA2166DE"></span> Let $X$ be a connected compact complex manifold of dimension $n\geq 2$, with Hermitian form $\omega $. Place the polydisk of lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a> in a coordinate chart. Choose a smooth function $0\leq \chi \leq 1$, compactly supported there and equal to one near $S=K^ n$, and extend $H=\chi h$ and $H_ L=\chi h_ L$ by zero. There is $C&gt;0$ such that $\mathrm{dd}^{\mathrm{c}}H\geq -C\omega $ and $\mathrm{dd}^{\mathrm{c}}H_ L\geq -C\omega $ for all sufficiently large $L$. Put $A=\int _ X\omega ^ n$. The limits </p>
+<div class="equation">
+  \[  c_ j=\lim _{L\to \infty }\int _ X H_ L(\mathrm{dd}^{\mathrm{c}}H_ L)^{j-1}\wedge \mathrm{dd}^{\mathrm{c}}(\omega ^{n-j}), \qquad 1\leq j&lt;n,  \]
+</div>
+<p> exist and are finite, and, for $0&lt;t&lt;1/C$, </p>
+<div class="equation">
+  \[  \int _ X\mathrm{MA}_\omega (tH) =A+\sum _{j=1}^{n-1}\binom nj c_ jt^ j-Mt^ n.  \]
+</div>
+<p> If $\mathrm{dd}^{\mathrm{c}}(\omega ^ q)=0$ for $1\leq q&lt;n$, this mass is $A-Mt^ n$. On a surface the formula is </p>
+<div class="equation">
+  \[  \int _ X\mathrm{MA}_\omega (tH) =A+2t\int _ X H\mathrm{dd}^{\mathrm{c}}\omega -Mt^2.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Outside a fixed neighborhood of $S$, the truncations $h_ L$ eventually agree with $h$ on every compact set, in particular on the supports of the derivatives of $\chi $. The cutoff calculation in proposition <a data-tag="EBFD683C" href="../../tag/5F93C15013C0/">16.6.69</a> therefore gives a lower bound $-C\omega $ for $\mathrm{dd}^{\mathrm{c}}H_ L$ and $\mathrm{dd}^{\mathrm{c}}H$, uniform in $L$. 
+    <p>
+      Let $\kappa =\mathrm{dd}^{\mathrm{c}}|z|^2$ on the coordinate polydisk $D$, and choose $B&gt;0$ so that $T_ L=B\kappa +\mathrm{dd}^{\mathrm{c}}H_ L$ is positive and closed on $D$. The potentials of $T_ L$ are locally bounded. Since $H_ L$ has compact support, integration by parts for bounded potentials gives, for $1\leq j\leq n$, 
+    
+<div class="equation">
+  \[  \int _ D T_ L^ j\wedge \kappa ^{n-j} =B^ j\int _ D\kappa ^ n.  \]
+</div>
+<p>
+       Indeed, every nonconstant term of the binomial expansion is the complex Hessian of a compactly supported current built from bounded products, wedged with a closed power of $\kappa $. Thus the traces in all degrees are bounded independently of $L$. 
+    <p>
+      For $j&lt;n$, every subsequential weak limit of $T_ L^ j$ has coefficient measures vanishing on $S$, by corollary <a data-tag="5103AFE8" href="../../tag/C6F4FBF73B9E/">1.13.2</a>. Off $S$, local boundedness and eventual equality identify it with $(B\kappa +\mathrm{dd}^{\mathrm{c}}H)^ j$. These two properties determine the limit uniquely. Expanding $(T_ L-B\kappa )^ j$ therefore shows that $(\mathrm{dd}^{\mathrm{c}}H_ L)^ j$ converges weakly to a finite signed current $W_ j$ with no coefficient mass on $S$. It vanishes near $\partial D$ and extends by zero to $X$. Integration by parts for bounded potentials gives 
+    
+<div class="equation">
+  \[  \int _ X(\mathrm{dd}^{\mathrm{c}}H_ L)^ j\wedge \omega ^{n-j} =\int _ X H_ L(\mathrm{dd}^{\mathrm{c}}H_ L)^{j-1} \wedge \mathrm{dd}^{\mathrm{c}}(\omega ^{n-j}).  \]
+</div>
+<p>
+       The left side converges to $\int _ XW_ j\wedge \omega ^{n-j}$, which proves that $c_ j$ exists and is finite. 
+    <p>
+      Fix $0&lt;t&lt;1/C$. The positive measures $(\omega +t\mathrm{dd}^{\mathrm{c}}H_ L)^ n$ have uniformly bounded mass, by their local expansion in powers of $T_ L$ and smooth forms. Their total masses satisfy 
+    
+<div class="equation">
+  \[  \int _ X(\omega +t\mathrm{dd}^{\mathrm{c}}H_ L)^ n =A+\sum _{j=1}^{n-1}\binom nj t^ j \int _ X(\mathrm{dd}^{\mathrm{c}}H_ L)^ j\wedge \omega ^{n-j},  \]
+</div>
+<p>
+       since the top power $(\mathrm{dd}^{\mathrm{c}}H_ L)^ n$ integrates to zero by Stokes' theorem for bounded potentials. Let $\eta $ be a weak subsequential limit. Its total mass is $A+\sum _{j=1}^{n-1}\binom nj c_ jt^ j$. 
+    <p>
+      Near $S$, where $\chi =1$, expand $(\omega +t\mathrm{dd}^{\mathrm{c}}h_ L)^ n$. All the limits of lower degree give $S$ zero mass, while the top-degree measures have mass $M$ and supports converging to $S$, by lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a>. Hence $\eta (S)=Mt^ n$. Off $S$, eventual equality with the locally bounded function $tH$ identifies $\eta $ with the non-pluripolar measure of $tH$. Subtracting the mass on $S$ proves the formula. 
+    <p>
+      If $\mathrm{dd}^{\mathrm{c}}(\omega ^ q)=0$ for $1\leq q&lt;n$, every $c_ j$ is zero. For $n=2$, dominated $L^1$ convergence $H_ L\to H$ gives $c_1=\int _ XH\mathrm{dd}^{\mathrm{c}}\omega $, which proves the formula on surfaces. These formulas give the masses of the potentials $tH$ themselves. Passing to singularity volumes in a nonclosed background requires control of the masses of all potentials ordinarily equivalent to $tH$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+When $\mathrm{dd}^{\mathrm{c}}(\omega ^ q)=0$ for $1\leq q&lt;n$, this control is available. The residual measure on the pole set is unchanged under bounded perturbations by lemma <a data-tag="7F7BF53B" href="../../tag/F7D352207205/">1.6.10</a>, while all bounded global truncations have the same total mass by mass invariance. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-9C99C48A">
+<p><a class="environment-identifier" href="../../tag/C441ECFEBCE3/">Corollary <span data-tag="9C99C48A">16.6.72</span>.</a><span data-gerby-tag="9C99C48A"></span> Let $\omega $ be a Hermitian form on a connected compact complex manifold $X$ of dimension $n\geq 2$, and assume </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(\omega ^ q)=0,\qquad 1\leq q&lt;n.  \]
+</div>
+<p> For the cutoff $H$ of proposition <a data-tag="FA2166DE" href="../../tag/6396018F7822/">16.6.71</a> and $0&lt;t&lt;1/C$, every $v\in \mathrm{PSH}(X,\omega )$ with $v\sim tH$ satisfies </p>
+<div class="equation">
+  \[  \int _ X\mathrm{MA}_\omega (v)=A-Mt^ n,\qquad A=\int _ X\omega ^ n.  \]
+</div>
+<p> Consequently, all conclusions of corollary <a data-tag="6A1CE214" href="../../tag/2D7E515584AA/">16.6.70</a> hold in this background: the ordinary models have both volumes equal to $A-Mt^ n$, they form a complete ordered interval with distances $M|s^ n-t^ n|$, and their first polar currents vanish on all modifications, so their polar comparison vanishes. For any $0&lt;\delta &lt;A$, the interval can be chosen inside $\mathcal M_\delta (\omega )$. The models with positive parameter are not ideal models, and their multiplier ideals are trivial. </p>
+<p>In particular, these conclusions hold on every connected compact complex surface equipped with a Gauduchon form. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">2.2.2</a>, every bounded $\omega $-plurisubharmonic potential has mass $A$. Thus $v_+(\omega )=A$ for the upper mass of definition <a data-tag="254B47C8" href="../../tag/EB45638CBB2C/">6.5.1</a>, and $X$ has the bounded mass property by proposition <a data-tag="C8F0BC96" href="../../tag/45F622BE862A/">6.5.2</a>. 
+    <p>
+      Fix $v\sim tH$. Its pole set is $S$, and it is locally bounded off $S$. In a coordinate neighborhood of $S$, choose a smooth local correction $q$ such that $a=v+q$ is plurisubharmonic. Since $\chi =1$ there, $a-th$ is bounded near $S$. By theorem <a data-tag="2291BBE0" href="../../tag/1BBBF8109419/">1.6.9</a>, the full product of $h$ is the weak limit of the measures $(\mathrm{dd}^{\mathrm{c}}h_ L)^ n$, and the support and mass assertions of lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a> show that this limit is supported on $S$ with total mass $M$. The invariance of residual measures in lemma <a data-tag="7F7BF53B" href="../../tag/F7D352207205/">1.6.10</a> therefore gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}a)^ n_{\mathrm{full}}(S)=Mt^ n.  \]
+</div>
+<p>
+      Set $v_ k=\max (v,-k)$. After each fixed local smooth correction, these functions decrease to a plurisubharmonic function whose unbounded locus lies in $S$. The theorem on full local products and the expansion (<a data-tag="DC74A20E" href="../../tag/C87F0ACE9C76/">1.21</a>) identify the weak limit of $(\omega +\mathrm{dd}^{\mathrm{c}}v_ k)^ n$ with a global positive measure $T_ v$ of total mass $A$; the local expressions agree on overlaps because they are limits of the same bounded global measures. By corollary <a data-tag="5103AFE8" href="../../tag/C6F4FBF73B9E/">1.13.2</a>, every closed positive power $(\mathrm{dd}^{\mathrm{c}}a)^ j_{\mathrm{full}}$ with $j&lt;n$ has coefficient measures vanishing on $S$, and smooth forms also give $S$ zero mass. Hence only the top-degree power contributes on $S$, and $T_ v(S)=Mt^ n$. Off $S$, the truncations eventually agree with $v$ on each compact set, so there $T_ v$ equals the non-pluripolar measure of $v$. Removing the mass on $S$ proves the formula for every representative $v\sim tH$. 
+    <p>
+      Both singularity volumes of $tH$ thus equal $A-Mt^ n$. The current inequality $\omega +\mathrm{dd}^{\mathrm{c}}(tH)\geq (1-Ct)\omega $ shows that this volume is positive, uniformly for $0&lt;t\leq t_0&lt;1/C$. By theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a>, ordinary projection preserves both volumes and gives the normalized models. Their order and distances follow as in corollary <a data-tag="6A1CE214" href="../../tag/2D7E515584AA/">16.6.70</a>, with the zero endpoint defined separately. 
+    <p>
+      The support and Lelong-number argument in the proof of proposition <a data-tag="EBFD683C" href="../../tag/5F93C15013C0/">16.6.69</a> uses that the background is smooth and that its polar restriction is closed, but not that the background is closed. It therefore gives vanishing first polar currents on all modifications and trivial multiplier ideals at all weights in the present setting as well. The strict volume deficit shows that every model with positive parameter is not an ideal model. Choosing $t_0$ small enough puts the interval in $\mathcal M_\delta (\omega )$. Finally, on a surface the only condition is $\mathrm{dd}^{\mathrm{c}}\omega =0$, which is the Gauduchon condition, and Gauduchon forms exist by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+In an arbitrary Hermitian background, bounded equivalence still preserves the loss of top-degree mass on the pole set. The total mass of the limit of the truncations, however, can vary with the representative, through the terms with derivatives of the background. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-40AEE1A3">
+<p><a class="environment-identifier" href="../../tag/5988333AF401/">Proposition <span data-tag="40AEE1A3">16.6.73</span>.</a><span data-gerby-tag="40AEE1A3"></span> Let $\omega $ be a Hermitian form on a connected compact complex manifold $X$ of dimension $n\geq 2$. Fix the cutoff $H$, the constant $C$ and the mass $M$ of proposition <a data-tag="FA2166DE" href="../../tag/6396018F7822/">16.6.71</a>, and $0&lt;t&lt;1/C$. For every $v\in \mathrm{PSH}(X,\omega )$ with $v\sim tH$, put $v_ k=\max (v,-k)$. The limits </p>
+<div class="equation">
+  \[  c_ j(v)=\lim _{k\to \infty }\int _ X v_ k(\mathrm{dd}^{\mathrm{c}}v_ k)^{j-1}\wedge \mathrm{dd}^{\mathrm{c}}(\omega ^{n-j}), \qquad 1\leq j&lt;n,  \]
+</div>
+<p> exist and are finite, and </p>
+<div class="equation">
+  \[  \int _ X\mathrm{MA}_\omega (v) =A+\sum _{j=1}^{n-1}\binom nj c_ j(v)-Mt^ n, \qquad A=\int _ X\omega ^ n.  \]
+</div>
+<p> In particular, with the lower and upper masses $v_\pm (\omega )$ of definition <a data-tag="254B47C8" href="../../tag/EB45638CBB2C/">6.5.1</a>, </p>
+<div class="equation">
+  \[  v_-(\omega )-Mt^ n \leq \int _ X\mathrm{MA}_\omega (v) \leq v_+(\omega )-Mt^ n.  \]
+</div>
+<p> On a surface this mass is $A+2\int _ Xv\mathrm{dd}^{\mathrm{c}}\omega -Mt^2$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The pole set of $v$ is $S$, and $v$ is locally bounded off $S$. On each relatively compact coordinate neighborhood, choose a fixed smooth local correction $q$ such that $v+q$ and every $v_ k+q$ are plurisubharmonic. By theorem <a data-tag="2291BBE0" href="../../tag/1BBBF8109419/">1.6.9</a>, all closed powers of $\mathrm{dd}^{\mathrm{c}}(v_ k+q)$ converge weakly to finite currents of order zero. Expanding $\mathrm{dd}^{\mathrm{c}}v_ k=\mathrm{dd}^{\mathrm{c}}(v_ k+q)-\mathrm{dd}^{\mathrm{c}}q$ gives weak convergence of $(\mathrm{dd}^{\mathrm{c}}v_ k)^ j$ in every degree $j$. The local limits patch together, because the bounded currents $(\mathrm{dd}^{\mathrm{c}}v_ k)^ j$ are global; write $W_ j$ for the limits. 
+    <p>
+      Integration by parts for bounded potentials gives 
+    
+<div class="equation">
+  \[  \int _ X(\mathrm{dd}^{\mathrm{c}}v_ k)^ j\wedge \omega ^{n-j} =\int _ Xv_ k(\mathrm{dd}^{\mathrm{c}}v_ k)^{j-1} \wedge \mathrm{dd}^{\mathrm{c}}(\omega ^{n-j});  \]
+</div>
+<p>
+       this follows by uniformly bounded decreasing regularization, as in theorem <a data-tag="D4902E5B" href="../../tag/2B3316345A4A/">2.2.1</a>, theorem <a data-tag="177A90D1" href="../../tag/240BA0465940/">1.11.1</a>. Pairing $W_ j$ with the smooth form $\omega ^{n-j}$ shows that $c_ j(v)$ exists and is finite. The top power $(\mathrm{dd}^{\mathrm{c}}v_ k)^ n$ has zero integral for every $k$, by Stokes' theorem for bounded potentials. Expanding the positive bounded measures $(\omega +\mathrm{dd}^{\mathrm{c}}v_ k)^ n$ therefore gives a global positive weak limit $T_ v$ of finite total mass $A+\sum _{j=1}^{n-1}\binom nj c_ j(v)$. 
+    <p>
+      Near $S$, compare $a=v+q$ with $th$; their difference is bounded there. The full top-degree product of $h$ has mass $M$ and is supported on $S$, by theorem <a data-tag="2291BBE0" href="../../tag/1BBBF8109419/">1.6.9</a>, lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a>. Hence lemma <a data-tag="7F7BF53B" href="../../tag/F7D352207205/">1.6.10</a> gives $(\mathrm{dd}^{\mathrm{c}}a)^ n_{\mathrm{full}}(S)=Mt^ n$. Every closed power of lower degree has zero coefficient mass on $S$, by corollary <a data-tag="5103AFE8" href="../../tag/C6F4FBF73B9E/">1.13.2</a>. In the expansion with the smooth form $\omega -\mathrm{dd}^{\mathrm{c}}q$, only the top power therefore contributes to $T_ v(S)$, and $T_ v(S)=Mt^ n$. Off $S$, the truncations eventually agree with $v$, so $T_ v$ is the non-pluripolar measure of $v$ there. Subtracting the mass on $S$ proves the formula. 
+    <p>
+      Each measure $(\omega +\mathrm{dd}^{\mathrm{c}}v_ k)^ n$ has total mass between $v_-(\omega )$ and $v_+(\omega )$. Passing to the weak limit and subtracting $Mt^ n$ gives the two bounds, the upper one in the extended real sense. In dimension two, $L^1$ convergence of $v_ k$ to $v$ gives $c_1(v)=\int _ Xv\mathrm{dd}^{\mathrm{c}}\omega $, which proves the formula on surfaces. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-F0894832">
+<p><a class="environment-identifier" href="../../tag/065C30217B81/">Corollary <span data-tag="F0894832">16.6.74</span>.</a><span data-gerby-tag="F0894832"></span> On a connected compact complex surface with Hermitian form $\omega $, fix the preceding cutoff and $0&lt;t&lt;1/C$. The non-pluripolar mass is constant on the ordinary type of $u=tH$ if and only if $\omega $ is Gauduchon. More precisely, for every smooth real $f$ and every sufficiently small real $\varepsilon $, </p>
+<div class="equation">
+  \[  \int _ X\mathrm{MA}_\omega (u+\varepsilon f) -\int _ X\mathrm{MA}_\omega (u) =2\varepsilon \int _ Xf\mathrm{dd}^{\mathrm{c}}\omega .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the current inequality $\omega +\mathrm{dd}^{\mathrm{c}}u\geq (1-Ct)\omega $, the potential $u+\varepsilon f$ is $\omega $-plurisubharmonic for both signs of $\varepsilon $, provided $|\varepsilon |$ is small: choose $c_ f&gt;0$ with $-c_ f\omega \leq \mathrm{dd}^{\mathrm{c}}f\leq c_ f\omega $ and take $|\varepsilon |&lt;(1-Ct)/c_ f$. These potentials differ boundedly from $u$, so proposition <a data-tag="40AEE1A3" href="../../tag/5988333AF401/">16.6.73</a> gives the stated difference. 
+    <p>
+      If $\mathrm{dd}^{\mathrm{c}}\omega =0$, the same proposition gives mass $A-Mt^2$ for every potential ordinarily equivalent to $u$. Conversely, write $\mathrm{dd}^{\mathrm{c}}\omega =\rho \omega ^2$ with $\rho $ smooth and real. If this form is not zero, choose $f=\rho $. Then $\int _ Xf\mathrm{dd}^{\mathrm{c}}\omega =\int _ X\rho ^2\omega ^2&gt;0$, so the masses of the smooth perturbations above vary. Thus constancy of the mass forces $\mathrm{dd}^{\mathrm{c}}\omega =0$, which is the Gauduchon condition on a surface. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+When the background has both the bounded mass property and positive lower mass, the bounds in proposition <a data-tag="40AEE1A3" href="../../tag/5988333AF401/">16.6.73</a> still give a definite volume gap between these models and zero. This extends the obstruction for first polar currents beyond backgrounds with invariant mass. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-F3BC8980">
+<p><a class="environment-identifier" href="../../tag/6136A0B71CE1/">Proposition <span data-tag="F3BC8980">16.6.75</span>.</a><span data-gerby-tag="F3BC8980"></span> Let $X$ be a connected compact complex manifold of dimension $n\geq 2$, with a Hermitian form $\omega $ satisfying </p>
+<div class="equation">
+  \[  0&lt;v_-(\omega )\leq v_+(\omega )&lt;+\infty .  \]
+</div>
+<p> Fix $H,C,M$ from proposition <a data-tag="FA2166DE" href="../../tag/6396018F7822/">16.6.71</a>. For $0&lt;t&lt;1/C$ with $Mt^ n&lt;v_-(\omega )$, the normalized ordinary model $p_ t=P_\omega [tH]$ satisfies </p>
+<div class="equation">
+  \[  \begin{split}  0&lt;v_-(\omega )-Mt^ n &amp; \leq \underline{\operatorname {vol}}_\omega (p_ t) \leq \overline{\operatorname {vol}}_\omega (p_ t)\\ &amp; \leq v_+(\omega )-Mt^ n. \end{split}  \]
+</div>
+<p> Its first polar currents vanish on every smooth modification, all its multiplier ideals are trivial, and </p>
+<div class="equation">
+  \[  d_\omega (p_ t,0)\geq Mt^ n&gt;0,\qquad \delta _\omega ^{\mathrm{pol}}(p_ t,0)=0  \]
+</div>
+<p> for every family of modifications and every choice of Gauduchon forms. Thus $p_ t$ is not an ideal model, and it belongs to the closure of the analytic models for the polar comparison. For any $0&lt;\delta &lt;v_-(\omega )$, all sufficiently small positive parameters give $p_ t,0\in \mathcal M_\delta (\omega )$. </p>
+<p>In particular, these conclusions apply to every Hermitian form on every connected compact complex surface. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Taking the infimum and the supremum in proposition <a data-tag="40AEE1A3" href="../../tag/5988333AF401/">16.6.73</a> gives the bounds for the singularity volumes of $tH$. The lower volume is positive, so by theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a> ordinary projection preserves both volumes. Since $tH\leq p_ t\leq 0$ and $\sup _ XtH=0$, the model is normalized. 
+    <p>
+      The type of zero consists of the bounded potentials, so its upper volume is $v_+(\omega )$. Since $p_ t\leq 0$, (<a data-tag="C5D6189D" href="../../tag/451874D2170D/">30.13</a>) gives $d_\omega (p_ t,0)=v_+(\omega )-\overline{\operatorname {vol}}_\omega (p_ t)\geq Mt^ n$. In particular $p_ t\ne 0$. 
+    <p>
+      The part of the proof of proposition <a data-tag="EBFD683C" href="../../tag/5F93C15013C0/">16.6.69</a> that uses supports and Lelong numbers applies to this model: its pole set lies in $S$, its polar restriction is closed and positive, and every exceptional divisor whose image lies in $S$ maps to a point. Since the curve potential $g$ has zero Lelong numbers, every divisorial coefficient vanishes. The lower bound $p_ t\geq tH$ and Skoda's integrability theorem give trivial multiplier ideals at all weights. Hence the ideal envelope of $p_ t$ is the zero model, while $p_ t\ne 0$. All first polar comparisons with zero vanish, which proves that $p_ t$ is not an ideal model and lies in the closure of the analytic models. 
+    <p>
+      Given $0&lt;\delta &lt;v_-(\omega )$, choose $t_0&lt;1/C$ with $Mt_0^ n&lt;v_-(\omega )-\delta $. The lower bound for the volume then puts zero and every $p_ t$ with $0&lt;t\leq t_0$ in $\mathcal M_\delta (\omega )$. 
+    <p>
+      On a compact complex surface, a Gauduchon form has finite upper mass by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>, theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">2.2.2</a>. By the metric independence in proposition <a data-tag="C8F0BC96" href="../../tag/45F622BE862A/">6.5.2</a>, every Hermitian form then has finite upper mass, and corollary <a data-tag="FFC1B483" href="../../tag/435BD74C27A9/">26.18.5</a> gives positive lower mass. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The residual measure distinguishes the parameters of the family $p_ t$ even after ordinary projection. Volume addition controls the volumes over the whole range $0&lt;t&lt;1/C$, so the ordered family is still a complete interval in a general Hermitian background, where the terms $c_ j(v)$ of proposition <a data-tag="40AEE1A3" href="../../tag/5988333AF401/">16.6.73</a> need not vanish. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-13C065BA">
+<p><a class="environment-identifier" href="../../tag/9829FC8151FB/">Corollary <span data-tag="13C065BA">16.6.76</span>.</a><span data-gerby-tag="13C065BA"></span> Assume $0&lt;v_-(\omega )\leq v_+(\omega )&lt;+\infty $, as in proposition <a data-tag="F3BC8980" href="../../tag/6136A0B71CE1/">16.6.75</a>, and fix $0&lt;t_0&lt;1/C$. Set $p_ t=P_\omega [tH]$ for $0&lt;t\leq t_0$, define $p_0=0$ separately, and write </p>
+<div class="equation">
+  \[  L(t)=\underline{\operatorname {vol}}_\omega (p_ t),\qquad U(t)=\overline{\operatorname {vol}}_\omega (p_ t).  \]
+</div>
+<p> For $0\leq t\leq t_0$, </p>
+<div class="equation">
+  \[  (1-Ct)^ n v_-(\omega )\leq L(t)\leq U(t) \leq v_+(\omega )-Mt^ n.  \]
+</div>
+<p> The models are pairwise distinct, and $p_ s\geq p_ t$ for $s\leq t$. For either $V=L$ or $V=U$, and $0\leq s&lt;t\leq t_0$, </p>
+<div class="equation">
+  \[  \left(\frac{1-Ct}{1-Cs}\right)^ n V(s) \leq V(t)\leq V(s).  \]
+</div>
+<p> Consequently </p>
+<div class="equation">
+  \[  d_\omega (p_ s,p_ t)=|U(s)-U(t)| \leq \frac{nC v_+(\omega )}{1-Ct_0}|s-t|, \qquad \delta _\omega ^{\mathrm{pol}}(p_ s,p_ t)=0.  \]
+</div>
+<p> With the restriction of $d_\omega $, the family is a complete ordered interval, isometric to $[0,v_+(\omega )-U(t_0)]$. Every model with positive parameter is not an ideal model and has trivial multiplier ideals. For any $0&lt;\delta &lt;v_-(\omega )$, $t_0$ can be chosen so that the whole interval lies in $\mathcal M_\delta (\omega )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $u_ t=tH$ for $t&gt;0$ and $u_0=0$. For $0&lt;t&lt;1/C$, the potential $u_ t$ is $Ct\omega $-plurisubharmonic. Adding it to the zero potential in the background $(1-Ct)\omega $, proposition <a data-tag="A9C88774" href="../../tag/1C00C4C5A656/">30.1.2</a> and homogeneity show that either singularity volume of $u_ t$ is at least $(1-Ct)^ n$ times the corresponding volume of zero. In particular, the lower volume of $u_ t$ is positive on the whole range $0&lt;t&lt;1/C$, and ordinary projection preserves both volumes by theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a>. The upper bound follows from proposition <a data-tag="40AEE1A3" href="../../tag/5988333AF401/">16.6.73</a>, and the zero endpoint has $L(0)=v_-(\omega )$ and $U(0)=v_+(\omega )$. 
+    <p>
+      Near $S$, one has $u_ t=th$. After a fixed smooth local correction, invariance of residual measures and lemma <a data-tag="5913A45C" href="../../tag/D3CEEE21DA5C/">16.6.67</a> show that $u_ t$ has residual measure of mass $Mt^ n$, and by theorem <a data-tag="769C1489" href="../../tag/C0F29EF85157/">30.3.5</a> so does $p_ t$. Zero has residual measure zero, since its corrected top-degree measure is smooth. Thus two models of the family coincide only if their parameters are equal. 
+    <p>
+      For $s&lt;t$, set $c=(1-Ct)/(1-Cs)$. Then $0&lt;c&lt;1$ and 
+    
+<div class="equation">
+  \[  u_ t=cu_ s+(t-cs)H,\qquad C(t-cs)=1-c.  \]
+</div>
+<p>
+       The second summand is $(1-c)\omega $-plurisubharmonic. Addition and homogeneity give $V(t)\geq c^ nV(s)$, whereas monotonicity gives $V(t)\leq V(s)$. The same computation holds for $s=0$, with the separately defined zero potential. Monotonicity of the envelope gives $p_ s\geq p_ t$, so (<a data-tag="C5D6189D" href="../../tag/451874D2170D/">30.13</a>) gives $d_\omega (p_ s,p_ t)=U(s)-U(t)$. Since $U(s)\leq v_+(\omega )$, the Lipschitz bound follows from 
+    
+<div class="equation">
+  \[  1-c^ n\leq n(1-c) =\frac{nC(t-s)}{1-Cs} \leq \frac{nC(t-s)}{1-Ct_0}.  \]
+</div>
+<p>
+       By this bound, $U$ is continuous. Distinct ordinary models of positive lower volume are separated by proposition <a data-tag="6F23D12A" href="../../tag/38359A611D4C/">30.6.3</a>, so $U$ is strictly decreasing. Thus $t\mapsto v_+(\omega )-U(t)$ identifies the family isometrically with the closed interval in the statement, which proves completeness. 
+    <p>
+      The support and Lelong-number argument in the proof of proposition <a data-tag="EBFD683C" href="../../tag/5F93C15013C0/">16.6.69</a> applies on the whole range $0&lt;t&lt;1/C$: all first polar currents vanish and all multiplier ideals are trivial. The deficit $Mt^ n$ of the upper volume separates every positive parameter from zero, which proves that the models with positive parameter are not ideal models and that their polar comparisons vanish. Finally, choose $t_0&lt;1/C$ with $(1-Ct_0)^ nv_-(\omega )&gt;\delta $ to place the whole interval in $\mathcal M_\delta (\omega )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The residual measure distinguishes the parameters of one ordered family, but its total mass alone cannot distinguish poles placed in different regions. Cutoffs with disjoint supports give a pair whose maximum is exactly zero, so that the volume comparison remains explicit. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-80EE7259">
+<p><a class="environment-identifier" href="../../tag/085AE6785656/">Proposition <span data-tag="80EE7259">16.6.77</span>.</a><span data-gerby-tag="80EE7259"></span> Let $\omega $ be a Hermitian form on a connected compact complex manifold $X$ of dimension $n\geq 2$, with $0&lt;v_-(\omega )\leq v_+(\omega )&lt;+\infty $. Fix $0&lt;\delta &lt;v_-(\omega )$. For every sufficiently small $r&gt;0$, there are distinct normalized ordinary models $p_1,p_2\in \mathcal M_\delta (\omega )$ and disjoint compact sets $S_1,S_2$ of Hausdorff dimension zero such that the full Monge–Ampère measures $\Phi _{p_ i}$ of theorem <a data-tag="769C1489" href="../../tag/C0F29EF85157/">30.3.5</a>, the weak limits of the Monge–Ampère measures of the bounded truncations, satisfy </p>
+<div class="equation">
+  \[  R_ i:=\mathbf1_{S_1\cup S_2}\Phi _{p_ i},\qquad R_ i(X)=r,\qquad \operatorname {supp}R_ i\subset S_ i.  \]
+</div>
+<p> Both models are not ideal models, all their multiplier ideals are trivial, and their first polar currents vanish on every smooth modification. Moreover, </p>
+<div class="equation">
+  \[  \max (p_1,p_2)=0,\qquad d_\omega (p_1,p_2)\geq 2r, \qquad \delta _\omega ^{\mathrm{pol}}(p_1,p_2)=0.  \]
+</div>
+<p> If $\mathrm{dd}^{\mathrm{c}}(\omega ^ q)=0$ for $1\leq q&lt;n$, both singularity volumes of both models equal $A-r$, where $A=\int _ X\omega ^ n$, and their distance is exactly $2r$. Thus the first polar currents together with the total residual mass do not separate ordinary models, and when $\mathrm{dd}^{\mathrm{c}}(\omega ^ q)=0$ for $1\leq q&lt;n$, they still do not separate them after both singularity volumes are added. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose two disjoint coordinate polydisks, and in each apply the construction of proposition <a data-tag="FA2166DE" href="../../tag/6396018F7822/">16.6.71</a>, obtaining a cutoff $H_ i$ with pole set $S_ i$, curvature constant $C_ i&gt;0$ and truncation mass $M_ i&gt;0$. For small $r&gt;0$ put 
+    
+<div class="equation">
+  \[  t_ i=(r/M_ i)^{1/n},\qquad u_ i=t_ iH_ i,\qquad p_ i=P_\omega [u_ i].  \]
+</div>
+<p>
+       Choose $r$ so small that $C_ it_ i&lt;1$ and $(1-C_ it_ i)^ nv_-(\omega )&gt;\delta $ for both $i$. By corollary <a data-tag="13C065BA" href="../../tag/9829FC8151FB/">16.6.76</a>, the $p_ i$ are normalized ordinary models in $\mathcal M_\delta (\omega )$; they are not ideal models, their multiplier ideals are trivial and their first polar currents vanish. Their upper volumes $U_ i$ satisfy $U_ i\leq v_+(\omega )-r$. 
+    <p>
+      The full top-degree product of $h$ in the $i$th chart is a positive measure $\rho _ i$ supported on $S_ i$, of mass $M_ i$. Near $S_ i$ one has $u_ i=t_ ih$, so invariance of residual measures under bounded changes and theorem <a data-tag="769C1489" href="../../tag/C0F29EF85157/">30.3.5</a> give $\mathbf1_{S_ i}\Phi _{p_ i}=t_ i^ n\rho _ i$, extended by zero outside that chart. Outside the compact support of $H_ i$, the bounds $u_ i\leq p_ i\leq 0$ force $p_ i=0$. In particular $p_ i$ is smooth near $S_ j$ for $j\ne i$, and its full measure there is $\omega ^ n$, which gives $S_ j$ zero mass. Hence $R_ i=t_ i^ n\rho _ i$. These measures have the same total mass $r&gt;0$ and disjoint supports, so they differ. 
+    <p>
+      Since the cutoffs have disjoint supports, at every point at least one $p_ i$ vanishes, and both are nonpositive; this proves $\max (p_1,p_2)=0$. By definition <a data-tag="82BBCEC3" href="../../tag/A220D62C8412/">30.6.1</a>, 
+    
+<div class="equation">
+  \[  d_\omega (p_1,p_2)=2v_+(\omega )-U_1-U_2\geq 2r.  \]
+</div>
+<p>
+       All first polar coordinates of both models are zero, so their polar comparison vanishes. When $\mathrm{dd}^{\mathrm{c}}(\omega ^ q)=0$ for $1\leq q&lt;n$, corollary <a data-tag="9C99C48A" href="../../tag/C441ECFEBCE3/">16.6.72</a> gives both volumes equal to $A-M_ it_ i^ n=A-r$, and $v_+(\omega )=A$. Substituting these values gives the exact distance $2r$ and the final assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Knowing the location and the size of the whole residual measure still does not determine the model. For anisotropic maxima on the same pole set, the residual measure depends only on the product of the weights, whereas the volume of the maximum of two such potentials detects the individual weights. On a compact box of positive weights, this comparison has an explicit metric interpretation. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-136FBC90">
+<p><a class="environment-identifier" href="../../tag/FC2CCCE62C86/">Proposition <span data-tag="136FBC90">16.6.78</span>.</a><span data-gerby-tag="136FBC90"></span> Let $\omega $ be a Hermitian form on a connected compact complex manifold $X$ of dimension $n\geq 2$, with $\mathrm{dd}^{\mathrm{c}}(\omega ^ q)=0$ for $1\leq q&lt;n$. Put $A=\int _ X\omega ^ n$, fix $0&lt;\delta &lt;A$ and $0&lt;\alpha &lt;\beta $, and write $B=[\alpha ,\beta ]^ n$. There are a compact set $S\subset X$ of Hausdorff dimension zero, a nonatomic probability measure $\rho $ supported on $S$, and $t_0&gt;0$ with the following properties. For each fixed $0&lt;t\leq t_0$, normalized ordinary models $p_ a\in \mathcal M_\delta (\omega )$ are defined for all $a\in B$ and satisfy </p>
+<div class="equation">
+  \[  \mathbf1_ S\Phi _{p_ a}=t^ n\left(\prod _ j a_ j\right)\rho , \qquad \underline{\operatorname {vol}}_\omega (p_ a) =\overline{\operatorname {vol}}_\omega (p_ a) =A-t^ n\prod _ j a_ j.  \]
+</div>
+<p> For $a,b\in B$, set $c_ j=\min (a_ j,b_ j)$. Then </p>
+<div class="equation">
+  \[  d_\omega (p_ a,p_ b) =t^ n\left(\prod _ j a_ j+\prod _ j b_ j-2\prod _ j c_ j\right).  \]
+</div>
+<p> The restriction of $d_\omega $ to this family is a metric, and </p>
+<div class="equation">
+  \[  t^ n\alpha ^{n-1}\max _ j|a_ j-b_ j| \leq d_\omega (p_ a,p_ b) \leq t^ n\beta ^{n-1}\sum _ j|a_ j-b_ j|.  \]
+</div>
+<p> Thus $a\mapsto p_ a$ identifies $B$ homeomorphically with a compact complete metric space. Every model in the family is not an ideal model, all its multiplier ideals are trivial, and its first polar currents vanish on every smooth modification. For $\alpha ^ n&lt;P&lt;\beta ^ n$, the subfamily defined by $\prod _ j a_ j=P$ is complete and homeomorphic to a convex polytope of real dimension $n-1$. Throughout this subfamily, the residual measure on $S$ is $Pt^ n\rho $ and both singularity volumes are $A-Pt^ n$. Hence these data, even together with all multiplier ideals and the first polar currents on all modifications, do not separate ordinary models. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Place the polydisk $D$ of lemma <a data-tag="141FB985" href="../../tag/4C3ACB006A19/">16.6.68</a> in a coordinate chart, and use one cutoff function $0\leq \chi \leq 1$, compactly supported there and equal to one near $S=K^ n$. For $a\in B$, extend $H_ a=\chi h_ a$ by zero and put $u_ a=tH_ a$. We first prove a curvature bound that is uniform in $a$. 
+    <p>
+      Choose a compact neighborhood $\Sigma $ of the supports of the derivatives of $\chi $, disjoint from $S$. The isotropic maximum $\max _ j g(z_ j)$ is bounded below on $\Sigma $ by $-B_0$, for some $B_0&gt;0$. Since $g\leq 0$ and $a_ j\leq \beta $, it follows that $-\beta B_0\leq h_ a\leq 0$ there. If the $j$th branch $a_ jg(z_ j)$ attains the maximum, then $a_ jg(z_ j)\geq -\beta B_0$, so $g(z_ j)\geq -\beta B_0/\alpha $. Within the fixed compact range of the coordinates, this superlevel set stays away from $K$, and $g$ and its gradient are bounded on a neighborhood of it. Thus all maximizing branches have uniformly bounded gradients, and the maxima $h_ a$ satisfy one local Lipschitz bound on $\Sigma $, independent of $a\in B$. 
+    <p>
+      In the distributional product rule for $\mathrm{dd}^{\mathrm{c}}(\chi h_ a)$, the term $\chi \mathrm{dd}^{\mathrm{c}}h_ a$ is positive. The remaining terms contain derivatives of $\chi $ together with $h_ a$ or its first derivatives, so the preceding bounds control their coefficients uniformly. The cutoff argument of proposition <a data-tag="FA2166DE" href="../../tag/6396018F7822/">16.6.71</a> therefore gives one $C&gt;0$ with $\mathrm{dd}^{\mathrm{c}}H_ a\geq -C\omega $ for every $a\in B$. Choose $t_0&lt;1/C$ with $t_0^ n\beta ^ n&lt;A-\delta $. Then all $u_ a$, $0&lt;t\leq t_0$, are normalized and satisfy $\omega +\mathrm{dd}^{\mathrm{c}}u_ a\geq (1-Ct)\omega $. 
+    <p>
+      By theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">2.2.2</a>, all bounded $\omega $-plurisubharmonic functions have mass $A$, so $v_-(\omega )=v_+(\omega )=A$. For any $v\sim u_ a$, the global limit of the measures of the truncations has total mass $A$, as in the proof of corollary <a data-tag="9C99C48A" href="../../tag/C441ECFEBCE3/">16.6.72</a>. Near $S$, the difference between $v$ plus a smooth local correction and $th_ a$ is bounded. By lemma <a data-tag="7F7BF53B" href="../../tag/F7D352207205/">1.6.10</a>, lemma <a data-tag="141FB985" href="../../tag/4C3ACB006A19/">16.6.68</a>, the residual measure of $v$ is 
+    
+<div class="equation">
+  \[  t^ n\left(\prod _ j a_ j\right)\rho ,\qquad \rho =\sigma ^{\otimes n},  \]
+</div>
+<p>
+       extended by zero from the chart. Every corrected closed power of lower degree gives $S$ zero coefficient mass, so this is also the restriction to $S$ of the global limit of the truncations. Off $S$ that limit equals the non-pluripolar measure, which proves that every such representative has mass 
+    
+<div class="equation">
+  \[  V(u_ a)=A-t^ n\prod _ j a_ j&gt;\delta .  \]
+</div>
+<p>
+       Hence, by theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a>, ordinary projection preserves both singularity volumes, and by theorem <a data-tag="769C1489" href="../../tag/C0F29EF85157/">30.3.5</a> it preserves the residual measure. Setting $p_ a=P_\omega [u_ a]$ proves the formulas for the residual measure and the volumes simultaneously for all $a\in B$. 
+    <p>
+      For $a,b\in B$ and $c_ j=\min (a_ j,b_ j)$, positivity of the weights and $g\leq 0$ give, pointwise and also at the poles, 
+    
+<div class="equation">
+  \[  \max (h_ a,h_ b)=h_ c,\qquad \max (u_ a,u_ b)=u_ c.  \]
+</div>
+<p>
+       The invariance of the comparison under ordinary projection in proposition <a data-tag="6F23D12A" href="../../tag/38359A611D4C/">30.6.3</a> and the definition of the comparison give 
+    
+<div class="equation">
+  \[  \begin{split}  d_\omega (p_ a,p_ b)&amp; =d_\omega (u_ a,u_ b)\\ &amp; =t^ n\left(\prod _ j a_ j+\prod _ j b_ j-2\prod _ j c_ j\right). \end{split}  \]
+</div>
+<p>
+       For the boxes $R_ a=\prod _ j[0,a_ j]\subset \mathbb R^ n$ and Lebesgue measure $\lambda $, the last expression is $t^ n\lambda (R_ a\mathbin {\triangle }R_ b)$, since $R_ a\cap R_ b=R_ c$; equivalently, it is $t^ n\| \mathbf1_{R_ a}-\mathbf1_{R_ b}\| _{L^1(\lambda )}$. This proves the triangle inequality within the family. A slab in the coordinate where $|a_ j-b_ j|$ is largest, with every other coordinate in $[0,\alpha ]$, lies in the symmetric difference up to its boundary, and its volume gives the lower bound. The symmetric difference is covered by the $n$ coordinate slabs between $a_ j$ and $b_ j$, with every other coordinate in $[0,\beta ]$, and their total volume gives the upper bound. In particular, the distance separates the parameters, and the two estimates show that it induces the Euclidean topology of $B$. A sequence that is Cauchy for the distance has Cauchy weights in the Euclidean sense, whose limit lies in $B$, and the upper bound gives convergence for the distance. Compactness follows from the same bounds. 
+    <p>
+      The support and Lelong-number argument in the proof of proposition <a data-tag="EBFD683C" href="../../tag/5F93C15013C0/">16.6.69</a> applies for every positive weight vector. Every exceptional divisor mapping into $S$ maps to a point, and comparison with $ta_1g(z_1\circ \pi )$ shows that the generic Lelong number along it is zero. Thus every first polar current is zero. The same comparison gives zero Lelong numbers at all points and trivial multiplier ideals at all weights. The strict volume deficit $t^ n\prod _ j a_ j$ shows that $p_ a\ne 0$, whereas the ideal envelope of $p_ a$ is zero, so $p_ a$ is not an ideal model. 
+    <p>
+      Finally, the constraint $\prod _ ja_ j=P$ defines a closed subset of $B$, so the subfamily is complete. Taking logarithms coordinatewise identifies it with 
+    
+<div class="equation">
+  \[  [\log \alpha ,\log \beta ]^ n \cap \left\{ x\in \mathbb R^ n:\sum _ jx_ j=\log P\right\} .  \]
+</div>
+<p>
+       For $\alpha ^ n&lt;P&lt;\beta ^ n$, this convex polytope meets the interior of the cube at the point with $x_ j=(\log P)/n$ for all $j$, and it has dimension $n-1$. The formulas for the volume and the residual measure are constant on it, while the distance separates its members. For example, taking $\alpha =1/2$, $\beta =2$, $P=1$, $a=(2,1/2,1,\ldots ,1)$ and $b=(1,1,1,\ldots ,1)$ gives two models with common residual measure $t^ n\rho $, both volumes equal to $A-t^ n$, and distance $t^ n$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Finally, even the full residual measure on the pole set can miss anisotropy. In proposition <a data-tag="136FBC90" href="../../tag/FC2CCCE62C86/">16.6.78</a>, distinct ordinary models of positive volume have the same residual measure, the same singularity volumes, the same multiplier ideals and the same first polar currents on every modification, while their volume comparison is positive. A general extension must therefore record more than these data. 
+</p>
+
+<article class="env-problem" id="non-kahler-pluripotential-theory-8E2AAD40">
+<p><a class="environment-identifier" href="../../tag/07524033446C/">Problem <span data-tag="8E2AAD40">16.6.79</span>.</a><span data-gerby-tag="8E2AAD40"></span> Extend the complete topology of theorem <a data-tag="B2475A61" href="../../tag/126E2D85CA62/">30.11.3</a> to ordinary models of zero lower volume and to backgrounds without bounded mass, in such a way that the closure of the analytic models is exactly the locus of ideal models. The extension should recover the curve topology of corollary <a data-tag="9002ECF9" href="../../tag/FB89848D2500/">30.12.3</a> and the background compatibility of section <a data-tag="EF333005" href="../../tag/B2557A0A9699/">30.9</a>, section <a data-tag="C10F56FD" href="../../tag/E6BBFE91C762/">30.10</a>, including higher-dimensional limits that lose bigness or positive lower volume. </p>
+</article>
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

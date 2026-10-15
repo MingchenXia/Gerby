@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A polynomial boundary trace estimate · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>94BAFACA36D1</code></p><h1>A polynomial boundary trace estimate</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · A polynomial boundary trace estimate <span data-gerby-tag="684B939D"></span></div>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-68359EE0">
+<p><a class="environment-identifier" href="../../tag/6586F9B3B128/">Proposition <span data-tag="68359EE0">14.17.5</span>.</a><span data-gerby-tag="68359EE0"></span> Let $B$ be the unit ball. Fix smooth $\vartheta $, smooth $F&gt;0$ near $\overline B$, and $M&lt;\infty $. There are $C,N&lt;\infty $, depending only on these fixed data, such that every smooth solution $u$ with boundary value $g\in C^\infty (\partial B)$ of </p>
+<div class="equation">
+  \[  T=\vartheta +\mathrm{dd}^{\mathrm{c}}u&gt;0, \qquad T^ n=F\beta ^ n, \qquad \lVert u\rVert _{L^\infty (B)}\leq M, \qquad u|_{\partial B}=g,  \]
+</div>
+<p> satisfies </p>
+<div class="equation" id="non-kahler-pluripotential-theory-72BB6E32"><span data-gerby-tag="72BB6E32"></span>
+<span class="equation-label"><a data-tag="72BB6E32" href="../../tag/F89A683ED708/">14.22</a></span>
+<div>\begin{equation} \label{eq:interior-polynomial-global-trace} \sup _{\overline B}\operatorname {tr}_\beta T \leq C\bigl (1+\lVert g\rVert _{C^4(\partial B)}\bigr )^ N. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We follow the classical boundary estimates for the Dirichlet problem on a ball and keep track of the dependence on $L=1+\lVert g\rVert _{C^4}$. Barriers bound the first derivatives, and differentiation along rotations bounds the mixed normal–tangential second derivatives on the boundary. A lower bound for the tangential block of $T$ then bounds the double normal derivative through the equation, and lemma <a data-tag="08DA38DC" href="../../tag/3EBB652C42D7/">14.17.4</a> reduces the interior bound to the boundary bound. 
+    <p>
+<em>Step 1: first derivatives.</em> Fix a sufficiently large constant $K&gt;0$, depending only on the fixed data. Extend $g$ to $G$ on $\overline B$ with $\lVert G\rVert _{C^4}\leq CL$. For $A=CL$ large enough, 
+    
+<div class="equation">
+  \[  \underline u=G+A(|z|^2-1), \qquad \underline T=\vartheta +\mathrm{dd}^{\mathrm{c}}\underline u\geq K\beta , \qquad \underline T^ n\geq F\beta ^ n.  \]
+</div>
+<p>
+       Proposition <a data-tag="175BF5DC" href="../../tag/D2F8F8FD5A17/">14.17.2</a> gives $\underline u\leq u$. If $h$ solves $\Delta _\beta h=-C_\vartheta $ with $h=g$ on $\partial B$ and $C_\vartheta \geq \sup \operatorname {tr}_\beta \vartheta $, then $u\leq h$. Boundary differentiation of these barriers gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-6F1E4A1B"><span data-gerby-tag="6F1E4A1B"></span>
+<span class="equation-label"><a data-tag="6F1E4A1B" href="../../tag/A09942AD8934/">14.23</a></span>
+<div>\begin{equation} \label{eq:interior-first-boundary} |\partial _\nu u|+|\nabla _{\tan }u|\leq CL \quad \text{on }\partial B. \end{equation}</div>
+</div>
+<p>
+      Let $H=\operatorname {tr}_ T\beta $, $\mathcal L=\operatorname {tr}_ T\mathrm{dd}^{\mathrm{c}}$, and $w=u-\underline u\geq 0$, the linearized operator and the barrier function used below. Taking $K$ fixed and sufficiently large gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-EBE3C157"><span data-gerby-tag="EBE3C157"></span>
+<span class="equation-label"><a data-tag="EBE3C157" href="../../tag/F834489897B3/">14.24</a></span>
+<div>\begin{equation} \label{eq:interior-w-barrier} \mathcal Lw=n-\operatorname {tr}_ T\underline T\leq -(1+H). \end{equation}</div>
+</div>
+<p>
+       Let $E=\sum _ k(z_ k\partial _{z_ k}+\bar z_ k\partial _{\bar z_ k})$ be the real radial field. Write $\Theta $ for the coefficient matrix of $\vartheta $. Differentiating $\log \det T=\log F$ and commuting $E$ with complex second derivatives yields 
+    
+<div class="equation">
+  \[  \mathcal L(Eu)=E(\log F)+2n-\operatorname {tr}_ T(E\Theta +2\Theta ).  \]
+</div>
+<p>
+       Hence $|\mathcal L(Eu)|\leq C(1+H)$. The same estimate holds for $Zu$ when $Z$ is an infinitesimal unitary rotation. Applying the minimum principle to $CL+C'w\pm Yu$, with $Y=E$ or $Z$, gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-FCE596BB"><span data-gerby-tag="FCE596BB"></span>
+<span class="equation-label"><a data-tag="FCE596BB" href="../../tag/13E61CA163BF/">14.25</a></span>
+<div>\begin{equation} \label{eq:interior-first-fields} |Eu|+|Zu|\leq CL\quad \text{on }B. \end{equation}</div>
+</div>
+<p>
+<em>Step 2: mixed second derivatives on the boundary.</em> For a rotation $Z$, the function $R_ Z=Z(u-G)$ vanishes on $\partial B$ and satisfies $|\mathcal LR_ Z|\leq CL(1+H)$. The barriers $CLw\pm R_ Z$ and (<a data-tag="EBE3C157" href="../../tag/F834489897B3/">14.24</a>) imply $|\partial _\nu R_ Z|\leq CL^2$ on the boundary. Rotations span the real tangent space of $\partial B$, so all real mixed normal–tangential second derivatives are $O(L^2)$. Pure tangential second derivatives are $O(L)$ by differentiating $u=g$ twice and using (<a data-tag="6F1E4A1B" href="../../tag/A09942AD8934/">14.23</a>). Thus all complex Hessian entries except the complex normal–normal entry are $O(L^2)$. 
+    <p>
+<em>Step 3: the double normal derivative.</em> It remains to bound the tangential block of $T$ from below. For $n\geq 2$, let 
+    
+<div class="equation">
+  \[  \lambda _0=\min \{ T_ p(\xi ,\bar\xi ):p\in \partial B, \  \xi \in T_ p^{1,0}(\partial B),\  |\xi |_\beta =1\} .  \]
+</div>
+<p>
+       Choose a minimizing pair $(p,\xi )$ and extend $\xi $ to a smooth unit tangential field near $p$, with uniformly bounded derivatives. On the sphere, any smooth function vanishing there satisfies 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(u-G)(\xi ,\bar\xi )=\frac12E(u-G).  \]
+</div>
+<p>
+       Define 
+    
+<div class="equation">
+  \[  a(z)=(\vartheta +\mathrm{dd}^{\mathrm{c}}G)_ z(\xi (z),\overline{\xi (z)})-\frac12EG(z), \qquad P=a+\frac12Eu-\lambda _0.  \]
+</div>
+<p>
+       Then $P\geq 0$ on the nearby spherical boundary and $P(p)=0$. The boundary first-derivative bound also gives $\lambda _0\leq CL$ by the tangential identity above. Consequently 
+    
+<div class="equation">
+  \[  |P|\leq CL, \qquad |\mathcal LP|\leq CL(1+H).  \]
+</div>
+<p>
+       On a fixed cap $D=B\cap B_ r(p)$ consider 
+    
+<div class="equation">
+  \[  \Psi =P+C_1Lw+C_2L|z-p|^2.  \]
+</div>
+<p>
+       Choose $C_2$ so that $\Psi \geq 0$ on the interior spherical part of $\partial D$, and then $C_1$ so that $\mathcal L\Psi \leq 0$ by (<a data-tag="EBE3C157" href="../../tag/F834489897B3/">14.24</a>). The minimum principle yields $\Psi \geq 0$. At $p$ the normal derivative of $|z-p|^2$ vanishes, and therefore 
+    
+<div class="equation">
+  \[  \partial _\nu P+C_1L\partial _\nu w\leq 0.  \]
+</div>
+<p>
+       Equations (<a data-tag="6F1E4A1B" href="../../tag/A09942AD8934/">14.23</a>)–(<a data-tag="FCE596BB" href="../../tag/13E61CA163BF/">14.25</a>) now give $D^2u(\nu ,\nu )(p)\leq CL^2$, hence $\operatorname {tr}_\beta T(p)\leq CL^2$. Positivity and $\det _\beta T=F$ imply 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-C598084B"><span data-gerby-tag="C598084B"></span>
+<span class="equation-label"><a data-tag="C598084B" href="../../tag/4327E0F53426/">14.26</a></span>
+<div>\begin{equation} \label{eq:interior-tangential-lower} \lambda _0\geq cL^{-2(n-1)}. \end{equation}</div>
+</div>
+<p>
+       At any boundary point write 
+    
+<div class="equation">
+  \[  T=\begin{pmatrix} B_0
+
+&amp; b
+
+\\  b^*
+
+&amp; d
+
+\end{pmatrix}  \]
+</div>
+<p>
+       in tangential–normal blocks, with $B_0$ an $(n-1)\times (n-1)$ Hermitian matrix, $b\in \mathbb C^{n-1}$ and $d\in \mathbb R$. We have $|b|\leq CL^2$ and $B_0\geq \lambda _0I$. The determinant equation and the Schur complement give 
+    
+<div class="equation">
+  \[  d=\frac{F}{\det B_0}+b^*B_0^{-1}b \leq (\sup F)\lambda _0^{-(n-1)}+CL^4\lambda _0^{-1},  \]
+</div>
+<p>
+       which is polynomial in $L$. For $n=1$, the trace is $F$ and this argument is unnecessary. 
+    <p>
+<em>Step 4: the interior.</em> Choose a fixed quadratic $q$ with $\vartheta +\mathrm{dd}^{\mathrm{c}}q\geq \varepsilon \beta $. Apply lemma <a data-tag="08DA38DC" href="../../tag/3EBB652C42D7/">14.17.4</a> with one fixed $A$. At an interior maximum of its auxiliary function the trace is uniformly bounded, while at a boundary maximum the preceding estimate applies. Since the remaining terms are uniformly bounded, (<a data-tag="72BB6E32" href="../../tag/F89A683ED708/">14.22</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

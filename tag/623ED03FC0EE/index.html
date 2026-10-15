@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Radial densities and metric completeness · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/positivity-cohomology/">Chapter 9 · Cohomology, positivity, and geometric loci</a> · Tag <code>623ED03FC0EE</code></p><h1>Radial densities and metric completeness</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 28.12 Radial densities and metric completeness <span data-gerby-tag="F258F71E"></span></div>
+<p>
+For a radially symmetric equation, the mass of the density inside a ball determines the radial derivative of the potential and hence both eigenvalues of its Hessian. Boundedness of the potential and finiteness of the distance to the center are then expressed by two different integrals of this derivative, and suitable singular densities separate the two properties. Throughout this section $n\geq 2$, the Fubini–Study form on $\mathbb P^ n$ is normalized by $\int _{\mathbb P^ n}\omega _{\mathrm{FS}}^ n=1$, and on the standard affine chart with coordinates $y\in \mathbb C^ n$ we put $\omega _{\mathrm E}=\mathrm{dd}^{\mathrm{c}}|y|^2$, so that $\int _{\{ |y|^2&lt;S\} }\omega _{\mathrm E}^ n=S^ n$ for $S&gt;0$. We write $s=|y|^2$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-04E2602C">
+<p><a class="environment-identifier" href="../../tag/A86593744D2D/">Theorem <span data-tag="04E2602C">28.12.1</span>.</a><span data-gerby-tag="04E2602C"></span> Fix $\lambda &gt;0$ and a smooth positive function $D:(0,\infty )\to (0,\infty )$ such that $D(s)=\lambda ^ n/(1+s)^{n+1}$ for all sufficiently large $s$, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-4B9CC959"><span data-gerby-tag="4B9CC959"></span>
+<span class="equation-label"><a data-tag="4B9CC959" href="../../tag/E811914EE11D/">28.26</a></span>
+<div>\begin{equation} \label{eq:radial-total-mass} n\int _0^\infty s^{n-1}D(s)\, \mathrm{d} s=\lambda ^ n. \end{equation}</div>
+</div>
+<p>  Let $\mu _ D$ be the measure on $\mathbb P^ n$ equal to $D(|y|^2)\omega _{\mathrm E}^ n$ on the affine chart and to zero on the hyperplane at infinity; near that hyperplane it agrees with $(\lambda \omega _{\mathrm{FS}})^ n$. Then the equation $\langle (\lambda \omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}q)^ n\rangle =\mu _ D$ has a unique normalized full-mass solution $q$. It is smooth off $y=0$, and on the affine chart its <em>total local potential</em> $\lambda \log (1+|y|^2)+q(y)$ is a radial function $U(s)$ satisfying </p>
+<div class="equation" id="non-kahler-pluripotential-theory-C9BCFBD2"><span data-gerby-tag="C9BCFBD2"></span>
+<span class="equation-label"><a data-tag="C9BCFBD2" href="../../tag/F205E7AE4ECC/">28.27</a></span>
+<div>\begin{equation} \label{eq:radial-mass-ode} \begin{aligned}  m(s)^ n&amp; =n\int _0^ s t^{n-1}D(t)\, \mathrm{d} t,\qquad m(s)=sU'(s),\\  m'(s)&amp; =\frac{s^{n-1}D(s)}{m(s)^{n-1}}&gt;0. \end{aligned} \end{equation}</div>
+</div>
+<p> The tangential and radial eigenvalues of its Hessian are $m/s$ and $m'$. For any sufficiently small $s_0&gt;0$, the solution is bounded, equivalently has minimal singularities, precisely when </p>
+<div class="equation" id="non-kahler-pluripotential-theory-F156DAD6"><span data-gerby-tag="F156DAD6"></span>
+<span class="equation-label"><a data-tag="F156DAD6" href="../../tag/B8FF1DABE923/">28.30</a></span>
+<div>\begin{equation} \label{eq:radial-bounded-criterion} \int _0^{s_0}\frac{m(s)}s\, \mathrm{d} s&lt;\infty . \end{equation}</div>
+</div>
+<p> The distance from the origin for the metric $\lambda \omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}q$ on $\mathbb P^ n\setminus \{ 0\} $ is finite precisely when </p>
+<div class="equation" id="non-kahler-pluripotential-theory-0D7D0F91"><span data-gerby-tag="0D7D0F91"></span>
+<span class="equation-label"><a data-tag="0D7D0F91" href="../../tag/585DD6478F46/">28.31</a></span>
+<div>\begin{equation} \label{eq:radial-distance-criterion} \int _0^{s_0}\frac{\sqrt{m'(s)}}{2\sqrt{s}}\, \mathrm{d} s&lt;\infty . \end{equation}</div>
+</div>
+<p> If this integral diverges, the metric on $\mathbb P^ n\setminus \{ 0\} $ is complete. </p>
+<p>Let $\pi :X=\operatorname {Bl}_0\mathbb P^ n\to \mathbb P^ n$ be the blowup at the origin, with exceptional divisor $E$, and let $s_ E$ and $\Theta _ E$ be as in section <a data-tag="145169B4" href="../../tag/3F1CADE9F6C1/">14.22</a>. For $\theta =\pi ^*(\lambda \omega _{\mathrm{FS}})+c\Theta _ E$ with $c&gt;0$, the full-mass solution on $X$ whose measure is the pullback of $\mu _ D$ has potential $c\log |s_ E|^2+q\circ \pi +C$, generic Lelong number exactly $c$ along $E$, and mass $\lambda ^ n$. In a blowup chart $\pi (z,w)=(z,zw)$, its density relative to the Euclidean volume form of the coordinates $(z,w)$, normalized as above, is </p>
+<div class="equation" id="non-kahler-pluripotential-theory-9B0E5C82"><span data-gerby-tag="9B0E5C82"></span>
+<span class="equation-label"><a data-tag="9B0E5C82" href="../../tag/C19D1AD0E901/">28.32</a></span>
+<div>\begin{equation} \label{eq:blowup-radial-density} |z|^{2(n-1)}D\bigl (|z|^2(1+|w|^2)\bigr ). \end{equation}</div>
+</div>
+<p> Its ordinary singularity type is minimal precisely under (<a data-tag="F156DAD6" href="../../tag/B8FF1DABE923/">28.30</a>). In the unbounded cases, the residual $q\circ \pi $ grows sublogarithmically and has zero generic Lelong number, but the type is not minimal. The metric off $E$ satisfies the same completeness criterion (<a data-tag="0D7D0F91" href="../../tag/585DD6478F46/">28.31</a>). </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Define $m$ by the first equation in (<a data-tag="C9BCFBD2" href="../../tag/F205E7AE4ECC/">28.27</a>). It is positive for $s&gt;0$ and tends to zero at the origin. By (<a data-tag="4B9CC959" href="../../tag/E811914EE11D/">28.26</a>) and the prescribed outer density, $m(s)=\lambda s/(1+s)$ for large $s$: the two expressions for $m^ n$ have the same limit at infinity and the same derivative for large $s$. Integrate $U'=m/s$, choosing the additive constant so that $U(s)=\lambda \log (1+s)$ for large $s$. The Hessian of $U(|y|^2)$ has eigenvalues $m/s$ and $m'$, and its determinant is $(m/s)^{n-1}m'=D$. Thus $q=U(|y|^2)-\lambda \log (1+|y|^2)$ extends by zero outside the affine chart and defines a positive current that is smooth off the origin. Subtracting its supremum gives the normalization. 
+    <p>
+      Since $U$ is increasing, it is bounded above near zero, so lemma <a data-tag="E113365A" href="../../tag/F3A890BB2575/">1.3.7</a> gives a plurisubharmonic extension across the origin, possibly with the value $-\infty $ there. If $U$ is unbounded, then $m(s)\to 0$ implies $U(s)=o(|\log s|)$: for each $\epsilon &gt;0$, bound $m$ by $\epsilon $ on a small interval and integrate $m/s$. The closed non-pluripolar product equals $\mu _ D$ off the origin and puts no mass at the origin; the measure $\mu _ D$ has no atom there and has mass $\lambda ^ n$ by (<a data-tag="4B9CC959" href="../../tag/E811914EE11D/">28.26</a>). Hence $q$ is a full-mass solution, and it is unique by the uniqueness of full-mass solutions in the closed theory, discussed in section <a data-tag="1F937B17" href="../../tag/2200D43D6A26/">34.19</a>. Integrating $U'=m/s$ shows that $U$ is bounded near the origin precisely under (<a data-tag="F156DAD6" href="../../tag/B8FF1DABE923/">28.30</a>). 
+    <p>
+      Write $R=|y|$. For a path approaching the origin, the metric norm of its velocity is at least a fixed multiple of $\sqrt{m'(R^2)}|\dot R|$, and radial paths attain this bound up to a fixed constant. Since $\mathrm{d} R=\mathrm{d} s/(2\sqrt{s})$, this gives (<a data-tag="0D7D0F91" href="../../tag/585DD6478F46/">28.31</a>). The metric is smooth and positive on compact subsets away from the origin, so divergence of the integral is equivalent to completeness of the metric on $\mathbb P^ n\setminus \{ 0\} $. 
+    <p>
+      On the blowup, apply proposition <a data-tag="7C4F9B6C" href="../../tag/E42F32DA29D8/">14.22.1</a> and use the squared Jacobian $|z|^{2(n-1)}$. The closed non-pluripolar product is the extension by zero of the pullback density, has mass $\lambda ^ n=\operatorname {vol}([\theta ])$, and is unique in its full-mass class. By theorem <a data-tag="059FFA20" href="../../tag/99C7ACBB2589/">6.1.2</a>, the extended operator agrees with it on potentials that are continuous off $E$, even when the residual tends to $-\infty $ along $E$. Sublogarithmic growth gives the residual zero Lelong number, so the coefficient along $E$ is exactly $c$, but it does not give a bounded difference from $c\log |s_ E|^2$. The metric off $E$ is isometric to the metric on $\mathbb P^ n\setminus \{ 0\} $, which proves the same distance criterion. 
+    <p>
+      The inner asymptotics considered below can be glued to the prescribed outer density while keeping (<a data-tag="4B9CC959" href="../../tag/E811914EE11D/">28.26</a>): take a small inner amplitude or radius, join through a smooth positive annulus, and add a nonnegative smooth annular bump to supply the remaining mass. Thus each of these asymptotic behaviors occurs for a density satisfying the hypotheses of the theorem. The assertions below concern the total local potential $U$; subtracting a smooth background potential can change a leading smooth term. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+In the next theorem, $f\sim g$ means that $f/g\to 1$ as $s\downarrow 0$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-0ABAA07A">
+<p><a class="environment-identifier" href="../../tag/FF884313C070/">Theorem <span data-tag="0ABAA07A">28.12.2</span>.</a><span data-gerby-tag="0ABAA07A"></span> For the normalized family in theorem <a data-tag="04E2602C" href="../../tag/A86593744D2D/">28.12.1</a>, put $L=\log (1/s)$ for $0&lt;s&lt;1$. </p>
+<ol>
+<li><p>
+If $D(s)\sim Cs^{\ell -n+1}L^{-b}$ with $C&gt;0$, $\ell &gt;-1$ and $b\in \mathbb R$, put $\gamma =(\ell +1)/n$ and $K=(C/\gamma )^{1/n}$. Then 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-B68D1FAA"><span data-gerby-tag="B68D1FAA"></span>
+<span class="equation-label"><a data-tag="B68D1FAA" href="../../tag/940248BAAEE2/">28.33</a></span>
+<div>\begin{equation} \label{eq:power-log-asymptotics} m\sim Ks^\gamma L^{-b/n},\qquad U(s)-U(0)\sim \frac K\gamma s^\gamma L^{-b/n},\qquad m'\sim \gamma K s^{\gamma -1}L^{-b/n}. \end{equation}</div>
+</div>
+<p>
+ The residual is bounded and Hölder continuous. In bounded blowup charts, its metric is comparable to $L^{-b/n}(|z|^{2\gamma -2}|\mathrm{d} z|^2+|z|^{2\gamma }|\mathrm{d} w|^2)$, and its distance to $E$ is of order $|z|^\gamma (\log (1/|z|))^{-b/(2n)}$. In particular, the metric is incomplete near $E$. 
+</p>
+</li><li><p>
+If $D(s)\sim Cs^{-n}L^{-b}$, the local mass is finite precisely for $b&gt;1$. In that range put $a=(b-1)/n$ and $K=(nC/(b-1))^{1/n}$. Then 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-18B139C9"><span data-gerby-tag="18B139C9"></span>
+<span class="equation-label"><a data-tag="18B139C9" href="../../tag/CC16B5AD8D47/">28.34</a></span>
+<div>\begin{equation} \label{eq:single-log-asymptotics} m\sim KL^{-a},\qquad m'\sim Ka s^{-1}L^{-a-1}. \end{equation}</div>
+</div>
+<p>
+ The potential has a finite limit at the origin, the solution has minimal singularities, and the distance is finite, each precisely when $b&gt;n+1$; in that case $U(s)-U(0)\sim K L^{1-a}/(a-1)$. At $b=n+1$, $U$ diverges as $-K\log L$, and for $1&lt;b&lt;n+1$ as $-K L^{1-a}/(1-a)$. In these unbounded cases the solutions have full mass but not minimal singularities, and their metrics are complete near $E$. Their densities on the blowup lie in no $L^ p$ with $p&gt;1$. 
+</p>
+</li><li><p>
+If $D(s)\sim Cs^{-n}L^{-(n+1)}(\log L)^{-d}$ with $d\in \mathbb R$, put $C_*=C^{1/n}$. Then 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-E66FC427"><span data-gerby-tag="E66FC427"></span>
+<span class="equation-label"><a data-tag="E66FC427" href="../../tag/5C6F9700C172/">28.35</a></span>
+<div>\begin{equation} \label{eq:iterated-log-asymptotics} m\sim C_*L^{-1}(\log L)^{-d/n},\qquad m'\sim C_*s^{-1}L^{-2}(\log L)^{-d/n}. \end{equation}</div>
+</div>
+<p>
+ The potential is bounded precisely when $d&gt;n$, with $U(s)-U(0)$ of order $(\log L)^{1-d/n}$. At $d=n$ it diverges as $-C_*\log \log L$, and for $d&lt;n$ as $-C_*(\log L)^{1-d/n}/(1-d/n)$. The distance is finite precisely when $d&gt;2n$, with remaining length of order $(\log L)^{1-d/(2n)}$. Thus for $n&lt;d\leq 2n$ the residual is bounded and continuous but not Hölder, the solution has minimal singularities, and the metric is complete near $E$. All these critical densities have finite mass and lie in no $L^ p$ with $p&gt;1$. 
+</p>
+</li>
+</ol>
+<p> In all cases the logarithmic coefficient of the solution along $E$ is $c$, whereas by proposition <a data-tag="7C4F9B6C" href="../../tag/E42F32DA29D8/">14.22.1</a> a strict barrier can be chosen with coefficient $c+\delta $, for some $\delta &gt;0$ independent of $\ell ,b,d$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We use the exact expressions (<a data-tag="C9BCFBD2" href="../../tag/F205E7AE4ECC/">28.27</a>). Each asymptotic formula follows by bounding $D$ between $(1\pm \epsilon )$ times its model and integrating the model; no derivative of an unspecified error term is taken. In the first case $m^ n\sim nC s^{\ell +1}L^{-b}/(\ell +1)$, which yields (<a data-tag="B68D1FAA" href="../../tag/940248BAAEE2/">28.33</a>). Both Hessian eigenvalues are then comparable to $s^{\gamma -1}L^{-b/n}$, and the substitution of blowup coordinates gives the assertions about the metric and the distance. The positive power of $s$ makes the potential Hölder continuous, after the logarithmic factor is absorbed by a slightly smaller exponent. 
+    <p>
+      In the second case, $n\int _0^ s t^{-1}C(\log (1/t))^{-b}\, \mathrm{d} t$ is finite precisely for $b&gt;1$, and it is then asymptotic to $nC L^{1-b}/(b-1)$. This gives (<a data-tag="18B139C9" href="../../tag/CC16B5AD8D47/">28.34</a>). Since $\mathrm{d} U=-m\, \mathrm{d} L$, boundedness of $U$ is equivalent to convergence of $\int ^\infty L^{-a}\, \mathrm{d} L$, that is, to $a&gt;1$. The distance is a constant multiple of $\int ^\infty L^{-(a+1)/2}\, \mathrm{d} L$ and has the same strict threshold. Explicit primitives give the stated finite and divergent behavior, including the logarithm at $a=1$. On the blowup the density is comparable to $|z|^{-2}(\log (1/|z|))^{-b}$; for every $p&gt;1$, its $p$th power acquires an exponentially growing factor in logarithmic coordinates, so the density is not in $L^ p$. 
+    <p>
+      In the third case, $m^ n\sim C L^{-n}(\log L)^{-d}$. The criteria for the potential and for the distance become convergence of 
+    
+<div class="equation">
+  \[  \int ^\infty L^{-1}(\log L)^{-d/n}\, \mathrm{d} L \quad \text{and}\quad \int ^\infty L^{-1}(\log L)^{-d/(2n)}\, \mathrm{d} L,  \]
+</div>
+<p>
+       respectively. Their thresholds are $d&gt;n$ and $d&gt;2n$, and direct integration gives the stated tails and divergent behavior. A bounded tail of order a positive power of $\log L$ tends to zero more slowly than every positive power of $|z|$, so the potential is not Hölder continuous. The mass integral is finite for every real $d$ because the principal factor is $L^{-(n+1)}$ with $n\geq 2$, and the same exponential argument excludes $L^ p$ for $p&gt;1$. In particular, all the endpoint cases occur within the prescribed family of theorem <a data-tag="04E2602C" href="../../tag/A86593744D2D/">28.12.1</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

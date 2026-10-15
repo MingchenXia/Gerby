@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A trace estimate with a prescribed potential · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/local-monge-ampere/">Chapter 7 · Local Monge–Ampère theory and Hessian equations</a> · Tag <code>54309E0621C2</code></p><h1>A trace estimate with a prescribed potential</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 12.3 A trace estimate with a prescribed potential <span data-gerby-tag="1509BA6F"></span></div>
+<p>
+In a coordinate chart write $\omega =(\mathrm i/(2\pi ))g_{i\bar j}\, \mathrm dz_ i\wedge \mathrm d\bar z_ j$. Covariant derivatives use the Chern connection of $g$. For a smooth strictly admissible $u$, put 
+</p>
+<div class="equation">
+  \[  H_{i\bar j}=g_{i\bar j}+u_{i\bar j},\qquad W=g^{-1}H, \qquad L=\sum _ iF_ i\nabla _{i\bar i}  \]
+</div>
+<p>
+ in a unitary frame diagonalizing $H$. Use $f,\mathcal F,S,Q$ from section <a data-tag="97706797" href="../../tag/F677D35E0BD7/">12.1</a>. Since $m\geq 2$, one has $|\lambda _ i|&lt;S\leq n\lambda _1$. 
+</p>
+<p>
+We shall estimate equations whose density involves another admissible potential $v$. In an approximation argument the derivatives of $v$ may diverge. The logarithmic weight below absorbs these derivatives using only uniform closeness to one fixed smooth comparison function. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-92E99AC3">
+<p><a class="environment-identifier" href="../../tag/B276B9DFAC29/">Lemma <span data-tag="92E99AC3">12.3.1</span>.</a><span data-gerby-tag="92E99AC3"></span> For $\epsilon &gt;0$, let $\chi (t)=-(1/12)\log (2\epsilon -t)$ on $|t|\leq \epsilon $. Suppose $q=\chi '(t)\geq 8$. For any $a,b\in \mathbb C$, </p>
+<div class="equation">
+  \[  \chi ''(t)|a-b|^2-(9q^2+2q)|a|^2-q|a| \geq q^2|a|^2-1-84q^2|b|^2.  \]
+</div>
+<p> In particular, let $v,\widetilde\varphi $ be smooth real functions with $|v-\widetilde\varphi |\leq \epsilon $, and take derivatives in an $\omega $-unitary frame. For a positive diagonal linearized operator with coefficients $B_ p$, setting $t=v-\widetilde\varphi $, $a=v_ p$, $b=\widetilde\varphi _ p$ and summing gives an error bounded by $(1+84q^2\sup |\partial \widetilde\varphi |_\omega ^2)\sum _ pB_ p$. The condition $q\geq 8$ holds throughout this interval if $\epsilon \leq 1/288$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Young's inequality gives $|a-b|^2\geq (7/8)|a|^2-7|b|^2$. Since $\chi ''=12q^2$, the coefficient of $|a|^2$ after subtracting $9q^2$ is $3q^2/2$. Moreover, $2q\leq q^2/4$ and $q|a|\leq q^2|a|^2/4+1$. The remaining coefficient is at least $q^2$, and the error involving $b$ is $84q^2|b|^2$. Finally $q\geq 1/(36\epsilon )$, which proves the last assertion. The weighted version follows by summing the scalar inequality with positive coefficients. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-2489DE92">
+<p><a class="environment-identifier" href="../../tag/61C6DAF48B41/">Lemma <span data-tag="2489DE92">12.3.2</span>.</a><span data-gerby-tag="2489DE92"></span> Suppose $f\geq f_0&gt;0$, $C_ H,C_ G\geq 0$, and $q$ satisfies </p>
+<div class="equation">
+  \[  q\geq 8,\qquad q\geq \frac{2nm!C_ H}{f_0},\qquad q^2\geq \frac{4m!C_ G}{f_0}.  \]
+</div>
+<p> For $0\leq r\leq 1/2$, $a,b\in \mathbb C^ n$ and $M\in C_{n,m}$, put $W_ M=\sum _ iF_ iM_{i\bar i}$ and </p>
+<div class="equation">
+  \begin{align*}  E={}&amp; q(W_ M-\mathcal F)-\frac{C_ H}{\lambda _1}|M_{1\bar1}| -\frac{C_ G}{S}\sum _ i|a_ i|^2\\ &amp; +\sum _ iF_ i\bigl (12q^2|a_ i-b_ i|^2 -(9q^2+2q+rq^2)|a_ i|^2-q|a_ i|\bigr ). \end{align*}
+</div>
+<p> Then </p>
+<div class="equation">
+  \[  E\geq \frac q2W_ M+\frac{q^2}{4}\sum _ iF_ i|a_ i|^2 -(q+1+84q^2\max _ i|b_ i|^2)\mathcal F.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="92E99AC3" href="../../tag/B276B9DFAC29/">12.3.1</a> gives 
+    
+<div class="equation">
+  \[  12q^2|a_ i-b_ i|^2-(9q^2+2q)|a_ i|^2-q|a_ i| \geq q^2|a_ i|^2-1-84q^2|b_ i|^2.  \]
+</div>
+<p>
+       Subtracting $rq^2|a_ i|^2$ leaves at least $q^2|a_ i|^2/2$. Since $S\leq n\lambda _1$, <a data-tag="53FFB5F3" href="../../tag/7710D01DF6F5/">12.1.3</a> and the hypothesis on $q$ imply 
+    
+<div class="equation">
+  \[  \frac{C_ H}{\lambda _1}|M_{1\bar1}| \leq \frac{nC_ H}{S}\operatorname {tr}M\leq \frac q2 W_ M.  \]
+</div>
+<p>
+       The lower bound for each $F_ i$ similarly gives 
+    
+<div class="equation">
+  \[  \frac{C_ G}{S}\sum _ i|a_ i|^2 \leq \frac{q^2}{4}\sum _ iF_ i|a_ i|^2.  \]
+</div>
+<p>
+       Combining these inequalities yields the assertion. The error depends on the fixed comparison vector $b$ and is not discarded. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+For $\Psi (t)=-2At+(A\tau /2)t^2$, $|t|\leq M$ and $\tau M\leq 1$, one has $-3A\leq \Psi '\leq -A$. The two cases for the smallest eigenvalue will reduce to the following numerical estimate. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-F29B74F3">
+<p><a class="environment-identifier" href="../../tag/FDAFFF47B8A3/">Proposition <span data-tag="F29B74F3">12.3.3</span>.</a><span data-gerby-tag="F29B74F3"></span> Fix $a&gt;0$, $b,d,e\geq 0$ and $0&lt;\delta &lt;1$. Let $K\geq 1$ and $0&lt;f_0\leq f\leq f_1$. Suppose the following inequality holds according to the sign of $\lambda _ n+\delta \lambda _1$: </p>
+<ol>
+<li><p>
+If $\lambda _ n&lt;-\delta \lambda _1$, then $0\geq aQ/K-bK\mathcal F-d\lambda _1\mathcal F-e$. 
+</p>
+</li><li><p>
+If $\lambda _ n\geq -\delta \lambda _1$, then $0\geq aQ/K-bKF_1-e$. 
+</p>
+</li>
+</ol>
+<p> Then $S\leq CK$ and $\lambda _1\leq CK$, with $C$ depending only on the fixed displayed data and $n,m$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In the first case, symmetry and concavity of $F$ imply $F_ n\geq F_ i$ for every $i$, so $Q\geq \delta ^2\lambda _1^2\mathcal F/n$. To see the derivative ordering, apply monotonicity of the gradient of a concave function to $\lambda $ and the vector obtained by exchanging its $i$th and $n$th coordinates. Divide the assumed inequality by $K\mathcal F$, use $\mathcal F\geq 1$, and set $t=\lambda _1/K$. It yields $a\delta ^2t^2/n\leq b+dt+e$, which bounds $t$. Since $S\leq n\lambda _1$, the trace bound follows. In the second case, either $\lambda _1^2\leq 2bK^2/a$, which gives the same trace bound directly, or $aQ/(2K)\geq bKF_1$. The assumed inequality then gives $Q\leq 2eK/a$. <a data-tag="C6051641" href="../../tag/473C52E484B0/">12.1.4</a> bounds $S$ by a multiple of $K$. Finally the $\Gamma _2$ identity gives $\lambda _1\leq (\sum _ i\lambda _ i^2)^{1/2}&lt;S$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The geometric computation uses a lower support for the largest eigenvalue, as in the second-order argument for the Gauduchon equation. The perturbation affects only this support; derivatives of $F$ remain evaluated at the original matrix $W$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-5B02068A">
+<p><a class="environment-identifier" href="../../tag/C357698AC1AF/">Lemma <span data-tag="5B02068A">12.3.4</span>.</a><span data-gerby-tag="5B02068A"></span> At a point with $\lambda _1&gt;1$, the largest eigenvalue has a smooth local lower support $\widetilde\lambda $, equal to $\lambda _1$ at the point, for which </p>
+<div class="equation">
+  \[  L\log \widetilde\lambda \geq \frac{f_{1\bar1}}{\lambda _1}+N -\sum _ iF_ i|Z_ i|^2-C\mathcal F -\frac{C}{\lambda _1^2}\sum _ iF_ i|H_{1\bar1;i}|,  \]
+</div>
+<p> where </p>
+<div class="equation">
+  \[  N=-\frac{D^2F_ W(\nabla _1W,\nabla _{\bar1}W)}{\lambda _1}, \qquad Z_ i=\frac{H_{i\bar1;1}}{\lambda _1}.  \]
+</div>
+<p> Here $C$ depends only on the fixed metric. Derivatives of $F$ are evaluated at $W$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a smooth unitary frame parallel for the Chern connection at the point and diagonalizing $H$ there. The positive semidefinite tensor $B$, diagonal in this frame with entries $0,\beta ,\ldots ,\beta $, satisfies $\nabla B=0$ at the point and $|\nabla ^2B|\leq C\beta $. For $0&lt;\beta &lt;1$, the largest eigenvalue of $W-B$ is simple, lies below that of $W$, and agrees with it at the point. This gives the required smooth support. Only its largest eigenvalue is perturbed; the equation still uses $F(W)$. Differentiating the normalized eigenvector equation gives 
+    
+<div class="equation">
+  \[  \widetilde\lambda _{;k}=H_{1\bar1;k},\qquad \widetilde\lambda _{;k\bar k}\geq H_{1\bar1;k\bar k} +\sum _{p&gt;1}\frac{|H_{p\bar1;k}|^2+|H_{1\bar p;k}|^2}{\lambda _1-\lambda _ p+\beta }-C\beta .  \]
+</div>
+<p>
+       The denominators are at most $(n+1)\lambda _1$. Let $U=\partial \bar\partial u$, and take $T^ p_{ki}=\Gamma ^ p_{ki}-\Gamma ^ p_{ik}$. The first commutations are 
+    
+<div class="equation">
+  \[  U_{i\bar j;k}=U_{k\bar j;i}-T^ p_{ki}U_{p\bar j},\qquad U_{i\bar j;\bar k}=U_{i\bar k;\bar j} -\overline{T^ p_{kj}}U_{i\bar p}.  \]
+</div>
+<p>
+       Apply the first identity, commute one mixed pair of covariant derivatives, and apply the conjugate identity. The result has the form 
+    
+<div class="equation">
+  \[  U_{1\bar1;k\bar k}=U_{k\bar k;1\bar1} -2\operatorname {Re}\sum _ p U_{k\bar p;1}\overline{T^ p_{k1}}+E_ k, \qquad |E_ k|\leq C|U|.  \]
+</div>
+<p>
+       Indeed the mixed commutator contracts curvature with $U$, differentiating the first torsion coefficient contracts $\nabla T$ with $U$, and the second use of the first identities produces contractions of two torsion coefficients with $U$. Thus all the omitted terms satisfy the displayed bound. Since $g$ is parallel, the same derivative relations apply to $H$ apart from the explicit $g$ terms in the first commutation. At the diagonal point $|U|\leq C\lambda _1$. For $p&gt;1$, rewrite $U_{k\bar p;1}=U_{1\bar p;k}+T^ j_{k1}U_{j\bar p}$. Young's inequality absorbs its third derivative into the positive eigenvalue square, at the cost of $C\lambda _1$. Consequently 
+    
+<div class="equation">
+  \[  \widetilde\lambda _{;k\bar k}\geq H_{k\bar k;1\bar1} -2\operatorname {Re}(H_{k\bar1;1}\overline{T^1_{k1}})-C\lambda _1.  \]
+</div>
+<p>
+       Differentiate $F(W)=f$ twice and sum this inequality with weights $F_ k$. Write $D_ k=H_{1\bar1;k}$ and $t_ k=T^1_{k1}$. The first commutation, using $U_{1\bar1}=\lambda _1-1$, gives 
+    
+<div class="equation">
+  \[  D_ k=\lambda _1Z_ k-(\lambda _1-1)t_ k.  \]
+</div>
+<p>
+       The negative logarithmic square and the remaining torsion term therefore satisfy 
+    
+<div class="equation">
+  \[  -\frac{|D_ k|^2}{\lambda _1^2}-2\operatorname {Re}(Z_ k\bar t_ k) \geq -|Z_ k|^2-C-C\lambda _1^{-2}|D_ k|.  \]
+</div>
+<p>
+       For example, expanding the left side leaves $-|Z_ k|^2-2\lambda _1^{-1}\operatorname {Re}(Z_ k\bar t_ k)-(1-\lambda _1^{-1})^2|t_ k|^2$, and $\lambda _1|Z_ k|\leq |D_ k|+C\lambda _1$. This proves the claim, uniformly for small $\beta $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-F5FC1413">
+<p><a class="environment-identifier" href="../../tag/174BDA603BF2/">Lemma <span data-tag="F5FC1413">12.3.5</span>.</a><span data-gerby-tag="F5FC1413"></span> Put $s=|\partial u|_ g^2$ and $K=1+\sup _ Xs$. For every $\eta &gt;0$ one has </p>
+<div class="equation">
+  \[  Ls\geq \sum _{i,k}F_ i(|u_{ki}|^2+|u_{k\bar i}|^2) +2\operatorname {Re}\sum _ k f_ k u_{\bar k}-\eta Q-C_\eta K\mathcal F.  \]
+</div>
+<p> The constant depends only on the metric and $\eta $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Differentiate the squared norm using metric compatibility. Its quadratic part is the displayed sum. Commuting the remaining third derivatives gives 
+    
+<div class="equation">
+  \[  u_{ki\bar i}=u_{i\bar i;k}-T^ p_{ik}u_{p\bar i} +R^ p_{i\bar i k}u_ p, \qquad u_{\bar k i\bar i}=u_{i\bar i;\bar k} -\overline{T^ p_{ik}}u_{i\bar p}.  \]
+</div>
+<p>
+       The first differentiated equation is $\sum _ iF_ i u_{i\bar i;k}=f_ k$, because the background $g$ is parallel. At the diagonal point the torsion errors are bounded by $C\sqrt K\sum _ iF_ i(|\lambda _ i|+1)$, and the curvature errors by $CK\mathcal F$. Use 
+    
+<div class="equation">
+  \[  C\sqrt K F_ i|\lambda _ i| \leq \eta ' F_ i\lambda _ i^2+C_{\eta '}KF_ i  \]
+</div>
+<p>
+       with a sufficiently small $\eta '$ for the finite sum. This gives the asserted bound. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-77D3B686">
+<p><a class="environment-identifier" href="../../tag/23966DC8CDBF/">Proposition <span data-tag="77D3B686">12.3.6</span>.</a><span data-gerby-tag="77D3B686"></span> Fix $M,B\geq 1$ and a smooth real $h(x,t)$ on a neighborhood of $X\times [-B-1,B+1]$. There is $0&lt;\varepsilon \leq 1$, depending only on $M,B,h,\omega ,n,m$, with the following property. For every smooth real $\varphi $ with $\| \varphi \| _\infty \leq B$, there is $C&lt;\infty $, depending also on its $C^2$ norm, such that if smooth real $u,v$ satisfy </p>
+<div class="equation">
+  \begin{gather*}  W\in \Gamma _ m,\qquad I+v_{i\bar j}\in \overline{\Gamma _ m},\\  \| u\| _\infty \leq M,\qquad \| v-\varphi \| _\infty \leq \varepsilon ,\\  F(W)=\exp \bigl ((u+h(x,v))/m\bigr ), \end{gather*}
+</div>
+<p> then </p>
+<div class="equation">
+  \[  \operatorname {tr}_\omega (\omega +\mathrm{dd}^{\mathrm{c}}u) \leq C\bigl (1+\sup _ X|\partial u|_ g^2\bigr ).  \]
+</div>
+<p> The cone condition on $v$ is understood in a unitary frame. The tolerance $\varepsilon $ uses no derivatives of $\varphi $; the constant $C$ uses no derivatives of $v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $\varepsilon \leq 1$ the density has fixed bounds $0&lt;f_0\leq f\leq f_1$. Its first derivative is 
+    
+<div class="equation">
+  \[  f_ k=\frac fm(u_ k+h_ k(x,v)+h_ t(x,v)v_ k).  \]
+</div>
+<p>
+       The nonnegative $u_ k$ contribution can be dropped from the gradient lemma. At a point with $\lambda _1&gt;1$, differentiating once more gives 
+    
+<div class="equation">
+  \[  f_{1\bar1}\geq -C(1+|\partial v|^2+|1+v_{1\bar1}|).  \]
+</div>
+<p>
+       Here $u_{1\bar1}=\lambda _1-1&gt;0$, the square from differentiating the exponential is nonnegative, and all derivatives of $h$ are bounded on the fixed interval. 
+    <p>
+      Set 
+    
+<div class="equation">
+  \begin{align*}  \Phi (s)&amp; =-\tfrac 12\log (1-s/(2K)),\qquad \Psi (u)=-2Au+(A\tau /2)u^2,\\  \chi (t)&amp; =-\tfrac 1{12}\log (2\varepsilon -t),\qquad \tau =(M+1)^{-1}. \end{align*}
+</div>
+<p>
+       Then $(4K)^{-1}\leq \Phi '\leq (2K)^{-1}$, $\Phi ''=2(\Phi ')^2$, $-3A\leq \Psi '\leq -A$, $\Psi ''=A\tau $, and $q=\chi '$ lies between $1/(36\varepsilon )$ and $1/(12\varepsilon )$, with $\chi ''=12q^2$. Take a maximum of $G=\log \lambda _1+\Phi (s)+\Psi (u)+\chi (v-\varphi )$ and use the smooth lower support from the eigenvalue lemma. At this point put 
+    
+<div class="equation">
+  \[  a_ i=v_ i,\quad b_ i=\varphi _ i,\quad P_ v=I+v_{i\bar j},\quad W_ v=\sum _ iF_ i(P_ v)_{i\bar i},\quad x_ i=\Phi 's_ i,\quad y_ i=\Psi 'u_ i.  \]
+</div>
+<p>
+       The first derivative condition and the torsion identity give 
+    
+<div class="equation">
+  \[  H_{1\bar1;i}/\lambda _1=-x_ i-y_ i-q(a_ i-b_ i),\qquad Z_ i=-x_ i-y_ i-qa_ i+e_ i,\quad e_ i=qb_ i+(1-\lambda _1^{-1})T^1_{i1}.  \]
+</div>
+<p>
+       Thus $|e_ i|\leq E_0$, with $E_0$ independent of $A$ and of derivatives of $v$. 
+    <p>
+      We make the initial maximum inequality explicit. The gradient lemma and the identity $u_{i\bar j}=(\lambda _ i-1)\delta _{ij}$ give, after multiplication by $\Phi '$, 
+    
+<div class="equation">
+  \[  \Phi 'Ls\geq \frac1{8K}\sum _{i,k}F_ i(|u_{ki}|^2+|u_{k\bar i}|^2) +\frac{3}{64K}Q-C\mathcal F -\frac{C_ G'}S\sum _ i|a_ i|^2.  \]
+</div>
+<p>
+       To justify the constants, retain half of the positive quadratic term, use $(\lambda _ i-1)^2\geq \lambda _ i^2/2-1$, and choose the torsion parameter to cost at most $Q/(128K)$. The remaining density-gradient error is $C|a|/\sqrt K$. Young's inequality bounds it by $C_ G'|a|^2/S+cS/K$; choose $C_ G'$ large enough that the quadratic coercivity lemma absorbs $cS/K$ by $Q/(128K)$, with a fixed constant error. This leaves $3Q/(64K)$. The linear $H_{1\bar1;i}$ error in the eigenvalue lemma is estimated using the first derivative condition. Its $x_ i$ term costs at most half of the retained quadratic sum and $C\mathcal F$. Its $y_ i$ term costs at most $\Psi ''\sum _ iF_ i|u_ i|^2/4+\mathcal F$ whenever $\lambda _1\geq L_0(A)$, where $L_0(A)$ is fixed independently of $K,v$. Its $qa_ i$ term costs at most $q\sum _ iF_ i|a_ i|$ when $\lambda _1$ exceeds a fixed metric constant; its $qb_ i$ term costs $C\mathcal F$. If either eigenvalue threshold fails, the required bound follows directly. Otherwise, with fixed $C_ H,C_ G,C_0$ independent of $A$, the second derivative condition gives 
+    
+<div class="equation">
+  \begin{align*}  0\geq {}&amp; N-\sum _ iF_ i|Z_ i|^2+2\sum _ iF_ i|x_ i|^2 +\tfrac 34\Psi ''\sum _ iF_ i|u_ i|^2+\frac{Q}{32K} +\Psi '(f-\mathcal F)-C_0\mathcal F\\ &amp; +q(W_ v-\mathcal F)-\frac{C_ H}{\lambda _1}|(P_ v)_{1\bar1}| -\frac{C_ G}S\sum _ i|a_ i|^2 +\sum _ iF_ i\bigl (12q^2|a_ i-b_ i|^2-q|a_ i|\bigr ). \end{align*}
+</div>
+<p>
+       The fixed $qL\varphi $ term is included in $C_0$. Choose $\varepsilon $ so the lower bound for $q$ meets all thresholds of the derivative-absorption lemma. These thresholds depend on $M,B,h$ and the metric, and not on derivatives of $\varphi $. This choice precedes that of $A$. 
+    <p>
+      First suppose $\lambda _ n&lt;-\delta \lambda _1$. Concavity gives $N\geq 0$, and 
+    
+<div class="equation">
+  \[  -|Z_ i|^2+2|x_ i|^2 \geq -6|y_ i|^2-6q^2|a_ i|^2-6E_0^2.  \]
+</div>
+<p>
+       The derivative-absorption lemma applies after decreasing the right side further by $(3q^2+2q)|a_ i|^2$. Drop its nonnegative reserves and $\Psi ''$ term. Since $\Psi 'f\geq -3Af_1$, this gives 
+    
+<div class="equation">
+  \[  0\geq \frac{Q}{32K}-(54A^2+C_*)K\mathcal F-3Af_1,  \]
+</div>
+<p>
+       where $C_*$ is fixed independently of $A,\delta $. 
+    <p>
+      Now suppose $\lambda _ n\geq -\delta \lambda _1$, and let $I=\{ i:F_ i&gt;\delta ^{-1}F_1\} $. For $i\in I$, $\lambda _ i&lt;\lambda _1$ and 
+    
+<div class="equation">
+  \[  \frac{F_ i-F_1}{\lambda _1-\lambda _ i} \geq \frac{(1-\delta )F_ i}{(1+\delta )\lambda _1} \geq \frac{(1-2\delta )F_ i}{\lambda _1}.  \]
+</div>
+<p>
+       The spectral formula for $D^2F$, including its nonpositive diagonal part, therefore gives $N\geq (1-2\delta )\sum _{i\in I}F_ i|Z_ i|^2$. This uses the original eigenvalues; repeated eigenvalues do not occur in $I$. Using $x_ i=-Z_ i-y_ i-qa_ i+e_ i$ and $|z+w|^2\geq \delta |z|^2-\delta |w|^2/(1-\delta )$, one obtains 
+    
+<div class="equation">
+  \begin{align*}  N-\sum _{i\in I}F_ i|Z_ i|^2+2\sum _{i\in I}F_ i|x_ i|^2 &amp; \geq -\frac{4\delta (\Psi ')^2}{1-\delta }\sum _{i\in I}F_ i|u_ i|^2\\ &amp; \quad -r q^2\sum _{i\in I}F_ i|a_ i|^2-rE_0^2\mathcal F, \qquad r=\frac{8\delta }{1-\delta }. \end{align*}
+</div>
+<p>
+       Choose $\delta \leq \min \{ 1/17,\tau /(72A+\tau )\} $. Then the first coefficient is at most $\Psi ''/2$, and $r\leq 1/2$. On the complementary indices the preceding elementary bound gives 
+    
+<div class="equation">
+  \[  -\sum _{i\notin I}F_ i|Z_ i|^2+2\sum _{i\notin I}F_ i|x_ i|^2 \geq -\frac{54A^2+6nE_0^2}{\delta }KF_1 -6q^2\sum _{i\notin I}F_ i|a_ i|^2.  \]
+</div>
+<p>
+       Apply the derivative-absorption lemma, with penalty $r$ on $I$ and zero outside it; adding the unused negative $(9q^2+2q)|a_ i|^2$ on $I$, and $(3q^2+2q)|a_ i|^2$ off $I$, only decreases its input. The constants in its fixed-comparison error and the high-index $rE_0^2$ error are bounded independently of $A,\delta $. Enlarge $C_*$ to include them. We obtain 
+    
+<div class="equation">
+  \[  0\geq \frac{Q}{32K}-\frac{54A^2+6nE_0^2}{\delta }KF_1 +(A-C_*)\mathcal F-3Af_1.  \]
+</div>
+<p>
+       Take $A\geq \max \{ 1,C_*+1\} $, then fix the displayed $\delta $ and the threshold $L_0(A)$. Both case inequalities now satisfy the hypotheses of the conditional eigenvalue proposition, with fixed data. Hence $\lambda _1\leq CK$ at the maximum point. Finally $\Phi ,\Psi ,\chi $ have oscillations bounded independently of $K$ and of derivatives of $v$. Comparing $G$ at any other point with its maximum gives the same bound for $\lambda _1$ everywhere. Since $S\leq n\lambda _1$, this proves the trace estimate. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-F3B99C42">
+<p><a class="environment-identifier" href="../../tag/BEA27E46DAEE/">Corollary <span data-tag="F3B99C42">12.3.7</span>.</a><span data-gerby-tag="F3B99C42"></span> Under the hypotheses of the proposition, one has </p>
+<div class="equation">
+  \[  \sup _ X|\partial u|_ g+\sup _ X|\partial \bar\partial u|_ g\leq C,  \]
+</div>
+<p> with a constant depending on the same fixed data and no derivatives of $v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The Hessian density is $F(W)^ m\leq f_1^ m$. Apply the trace-to-gradient blowup proposition to the fixed background $\theta =\omega $ and the preceding trace estimate. It gives the uniform gradient bound. The trace is then uniformly bounded, and the $\Gamma _2$ identity bounds the absolute value of every eigenvalue of $W$ by its trace. Subtracting the identity matrix gives the complex-Hessian bound. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The bound controls the complex Hessian. An estimate for all entries of the real Hessian is not needed: the Euclidean Laplacian supplies finite $L^ p$ estimates for those derivatives. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

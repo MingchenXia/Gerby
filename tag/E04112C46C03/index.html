@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Relative envelope classes · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/envelopes-models/">Chapter 13 · Singularity types, envelopes, and models</a> · Tag <code>E04112C46C03</code></p><h1>Relative envelope classes</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 13.4 Relative envelope classes <span data-gerby-tag="9D1660C3"></span></div>
+<p>
+Fix a reference potential $\varphi \in \mathrm{PSH}(X,\theta )$. For $b\geq 1$, the stretched obstacle $bu-(b-1)\varphi =\varphi +b(u-\varphi )$ magnifies the difference between $u$ and $\varphi $ by the factor $b$, and so becomes more singular where $u$ lies below $\varphi $. Requiring a competitor below every finite stretch defines a relative class that is stable under convex combinations and finite rooftops. 
+</p>
+<p>
+For $u\in \mathrm{PSH}(X,\theta )$ and $b\geq 1$, define the family of competitors 
+</p>
+<div class="equation">
+  \[  \mathcal A_ b(u,\varphi )= \left\{ h\in \mathrm{PSH}(X,\theta ): b^{-1}h+(1-b^{-1})\varphi \leq u\right\} .  \]
+</div>
+<p>
+ For $b=1$ the inequality means $h\leq u$. Away from the poles of $u$ and $\varphi $, the inequality means $h\leq bu-(b-1)\varphi $. The convex combination on the left is defined everywhere, so the definition does not require a value of $bu-(b-1)\varphi $ at common poles. When $\mathcal A_ b(u,\varphi )$ is nonempty, we write 
+</p>
+<div class="equation">
+  \[  Q_ b(u,\varphi )=P_\theta (bu-(b-1)\varphi )  \]
+</div>
+<p>
+ for its upper envelope. Since the obstacle is finite almost everywhere, the competitors have a common upper bound by section <a data-tag="575A3488" href="../../tag/8EA2EE30DE99/">1.19</a>, so $Q_ b(u,\varphi )$ is then a $\theta $-plurisubharmonic function; in particular, it is not identically $-\infty $. The upper-envelope theorem gives its defining inequality almost everywhere, and lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a> makes it pointwise; thus $Q_ b(u,\varphi )$ is the largest member of $\mathcal A_ b(u,\varphi )$. 
+</p>
+
+<article class="env-definition" id="non-kahler-pluripotential-theory-1025E1CB">
+<p><a class="environment-identifier" href="../../tag/7EF949B941B4/">Definition <span data-tag="1025E1CB">13.4.1</span>.</a><span data-gerby-tag="1025E1CB"></span> The <em>relative envelope class</em> of $\varphi $ is </p>
+<div class="equation">
+  \[  \mathcal E_{\mathrm{env}}(X,\theta ,\varphi ) =\{ u\in \mathrm{PSH}(X,\theta ):u\preceq \varphi , \  \mathcal A_ b(u,\varphi )\ne \varnothing \text{ for every }b\geq 1\} .  \]
+</div>
+</article>
+
+<p>
+When the background $\theta $ is fixed, we abbreviate $\mathcal E_\varphi =\mathcal E_{\mathrm{env}}(X,\theta ,\varphi )$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-823A46CF">
+<p><a class="environment-identifier" href="../../tag/49C69232C604/">Proposition <span data-tag="823A46CF">13.4.2</span>.</a><span data-gerby-tag="823A46CF"></span> The class $\mathcal E_{\mathrm{env}}(X,\theta ,\varphi )$ is convex, contains all potentials of the singularity type of $\varphi $, and is stable under bounded changes of its members. If $u$ belongs to it, $v\in \mathrm{PSH}(X,\theta )$, $u\leq v$ and $v\preceq \varphi $, then $v$ belongs to it. In particular, it is stable under maxima of two members. Replacing $\varphi $ by another member of $\mathrm{PSH}(X,\theta )$ of the same singularity type does not change the class. For every smooth real function $f$, </p>
+<div class="equation">
+  \[  u\in \mathcal E_{\mathrm{env}}(X,\theta ,\varphi ) \quad \Longleftrightarrow \quad u-f\in \mathcal E_{\mathrm{env}}(X,\theta +\mathrm{dd}^{\mathrm{c}}f,\varphi -f).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $u\geq \varphi -C$, then $h=\varphi -bC$ belongs to $\mathcal A_ b(u,\varphi )$ for each $b$; hence every $u\sim \varphi $ belongs to the class. More generally, if $u'\geq u-C$ and $h\in \mathcal A_ b(u,\varphi )$, then $h-bC\in \mathcal A_ b(u',\varphi )$. Since the condition $u\preceq \varphi $ is also unchanged by bounded changes of $u$, the class is stable under such changes. A convex combination of two competitors is a competitor for the same convex combination of the two potentials, which proves convexity. Finally, a competitor for $u$ is a competitor for any larger $v$, and the assumption $v\preceq \varphi $ gives the remaining condition. 
+    <p>
+      If $\varphi '\in \mathrm{PSH}(X,\theta )$ and $\varphi '\sim \varphi $, choose $C\geq 0$ with $|\varphi '-\varphi |\leq C$ off their common pole set. For $h\in \mathcal A_ b(u,\varphi )$, the function $h-(b-1)C$ belongs to $\mathcal A_ b(u,\varphi ')$: the required inequality holds off the poles, and it extends everywhere by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>. The reverse implication follows by interchanging the references, and $u\preceq \varphi $ is equivalent to $u\preceq \varphi '$. 
+    <p>
+      For the last assertion, note that $h\mapsto h-f$ is a bijection from $\mathrm{PSH}(X,\theta )$ onto $\mathrm{PSH}(X,\theta +\mathrm{dd}^{\mathrm{c}}f)$. It preserves the order $\preceq $ and transforms each stretching inequality into 
+    
+<div class="equation">
+  \[  b^{-1}(h-f)+(1-b^{-1})(\varphi -f)\leq u-f.  \]
+</div>
+<p>
+       This identity also holds at poles, because $f$ is smooth and finite. Thus the corresponding families of competitors are in bijection for every $b\geq 1$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-732C08AC">
+<p><a class="environment-identifier" href="../../tag/C172793BD93F/">Lemma <span data-tag="732C08AC">13.4.3</span>.</a><span data-gerby-tag="732C08AC"></span> If $u\in \mathcal E_\varphi $ and $u\leq \varphi $, then $Q_ b(u,\varphi )\in \mathcal E_\varphi $ for every $b\geq 1$. More generally, if $u,w\in \mathcal E_\varphi $ and $u\leq w$, then $Q_ b(u,w)\in \mathcal E_\varphi $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $b,s\geq 1$ and put $h=Q_{bs}(u,\varphi )$. Its defining inequality gives, off the pole sets, 
+    
+<div class="equation">
+  \[  s^{-1}h+(1-s^{-1})\varphi \leq bu-(b-1)\varphi .  \]
+</div>
+<p>
+       The left-hand side is $\theta $-plurisubharmonic, so it is at most $Q_ b(u,\varphi )$. Hence $h\in \mathcal A_ s(Q_ b(u,\varphi ),\varphi )$ for every $s$. Also $Q_ b(u,\varphi )\leq u\leq \varphi $, so $Q_ b(u,\varphi )\preceq \varphi $. The inequalities between convex combinations extend across the poles by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>, which proves the first assertion. 
+    <p>
+      For the second assertion, choose a constant $C$ such that $u-C\leq \varphi $ and $w-C\leq \varphi $. Since $Q_ b(u-C,w-C)=Q_ b(u,w)-C$ and class membership is unchanged by translation, we may assume $u,w\leq \varphi $. Because $u\leq w\leq \varphi $, the obstacle for $Q_ b(u,w)$ lies above that for $Q_ b(u,\varphi )$ and below $u$. Thus 
+    
+<div class="equation">
+  \[  Q_ b(u,\varphi )\leq Q_ b(u,w)\leq u\leq \varphi .  \]
+</div>
+<p>
+       Since $Q_ b(u,\varphi )\in \mathcal E_\varphi $ by the first assertion, the stability under increase proved in proposition <a data-tag="823A46CF" href="../../tag/49C69232C604/">13.4.2</a> gives the conclusion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-644EC8A3">
+<p><a class="environment-identifier" href="../../tag/46B23EB58AAB/">Proposition <span data-tag="644EC8A3">13.4.4</span>.</a><span data-gerby-tag="644EC8A3"></span> If $u_1,\ldots ,u_ N\in \mathcal E_\varphi $, $N\geq 1$, then the rooftop envelope $P_\theta (\min _ iu_ i)$ is not identically $-\infty $ and belongs to $\mathcal E_\varphi $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Adding a common constant to all $u_ i$, we may assume $u_ i\leq \varphi $. By lemma <a data-tag="732C08AC" href="../../tag/C172793BD93F/">13.4.3</a>, proposition <a data-tag="823A46CF" href="../../tag/49C69232C604/">13.4.2</a>, 
+    
+<div class="equation">
+  \[  h=\frac1N\sum _{i=1}^ N Q_ N(u_ i,\varphi )\in \mathcal E_\varphi .  \]
+</div>
+<p>
+       Each summand is at most $\varphi $. For every $i$, the defining inequality of $Q_ N(u_ i,\varphi )$ therefore gives 
+    
+<div class="equation">
+  \[  h\leq N^{-1}Q_ N(u_ i,\varphi )+(1-N^{-1})\varphi \leq u_ i.  \]
+</div>
+<p>
+       These inequalities between convex combinations also hold at common poles. Thus $h$ is a competitor for $p=P_\theta (\min _ i u_ i)$, so $p$ is not identically $-\infty $, and $h\leq p\leq u_1\preceq \varphi $. Stability under increase gives $p\in \mathcal E_\varphi $, and undoing the translation preserves this conclusion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+The finiteness of the family is essential: every $\varphi -j$ belongs to $\mathcal E_\varphi $, whereas $P_\theta (\inf _{j\geq 1}(\varphi -j))\equiv -\infty $. The constructions of common envelopes for sequences in chapter <a data-tag="B9A0FB37" href="../../tag/31A655BFE398/">31</a> require additional estimates. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-36CBE3D6">
+<p><a class="environment-identifier" href="../../tag/47066B2F8269/">Proposition <span data-tag="36CBE3D6">13.4.5</span>.</a><span data-gerby-tag="36CBE3D6"></span> If $u\in \mathcal E_\varphi $, then for every smooth real function $F$, </p>
+<div class="equation">
+  \[  P_{\theta ,F}[u]=P_{\theta ,F}[\varphi ].  \]
+</div>
+<p> In particular, $P_\theta [u]=P_\theta [\varphi ]$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The relation $u\preceq \varphi $ gives $P_{\theta ,F}[u]\leq P_{\theta ,F}[\varphi ]$. For the reverse inequality, let $a\in (0,1)$ and choose $h_ a\in \mathcal A_{1/(1-a)}(u,\varphi )$, so that $a\varphi +(1-a)h_ a\leq u$. Combining competitors below $F$ gives 
+    
+<div class="equation">
+  \[  aP_{\theta ,F}[\varphi ]+(1-a)P_{\theta ,F}[h_ a] \leq P_{\theta ,F}[u].  \]
+</div>
+<p>
+       Indeed, if $g_1$ and $g_2$ are competitors for $P_{\theta ,F}[\varphi ]$ and $P_{\theta ,F}[h_ a]$, then $ag_1+(1-a)g_2$ lies below $F$ and is at least as singular as $a\varphi +(1-a)h_ a\leq u$; taking the two upper envelopes preserves the inequality, by local regularization. Write $m=\min _ XF$ and $M=\max _ XF$. Translating competitors gives 
+    
+<div class="equation">
+  \[  P_\theta [h_ a]+m\leq P_{\theta ,F}[h_ a]\leq P_\theta [h_ a]+M.  \]
+</div>
+<p>
+       Every $P_\theta [h_ a]$ has supremum zero, since it lies above $h_ a-\sup _ Xh_ a$ and below zero. The uniform $L^1$ bound for normalized potentials in theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a> therefore bounds the $L^1$ norms of the $P_{\theta ,F}[h_ a]$ uniformly in $a$. Letting $a\uparrow 1$ in the first inequality gives $P_{\theta ,F}[\varphi ]\leq P_{\theta ,F}[u]$ almost everywhere, and by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a> the inequality holds everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

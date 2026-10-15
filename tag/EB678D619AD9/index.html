@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lelong numbers and multiplier ideal sheaves · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>EB678D619AD9</code></p><h1>Lelong numbers and multiplier ideal sheaves</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 1.4 Lelong numbers and multiplier ideal sheaves <span data-gerby-tag="5C3C8D87"></span></div>
+<p>
+ In this section, we briefly recall the notions of Lelong numbers and multiplier ideal sheaves. Our presentation is by no means intended to be complete. Readers are encouraged to read the textbooks <span class="cite">[<span class="postnote">Section 2.3</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> and <span class="cite">[<a href="../../references/#R9CCDADAD3527">Dem12</a>]</span>. 
+</p>
+<p>
+Let $X$ be a complex manifold. 
+</p>
+
+<article class="env-definition" id="sgpt-9A1E79EB">
+<p><a class="environment-identifier" href="../../tag/A8F9CC5C117D/">Definition <span data-tag="9A1E79EB">1.4.1</span>.</a><span data-gerby-tag="9A1E79EB"></span> Let $\varphi \in \mathrm{PSH}(X)$ and $x\in X$. The <em>Lelong number</em> $\nu (\varphi ,x)$ of $\varphi $ at $x$ is defined as follows: If $x$ is a point on a $0$-dimensional connected component of $X$, we set </p>
+<div class="equation">
+  \[  \nu (\varphi ,x)=0.  \]
+</div>
+<p> Otherwise, take an open neighborhood $U$ of $x$ in $X$ and a biholomorphic map $F\colon U\rightarrow \Omega $, where $\Omega $ is a domain in $\mathbb {C}^ n$. Then we define </p>
+<div class="equation" id="sgpt-7504CD4F"><span data-gerby-tag="7504CD4F"></span>
+<span class="equation-label"><a data-tag="7504CD4F" href="../../tag/D4BCC2E76B62/">1.24</a></span>
+<div>\begin{equation} \label{eq:nuvarphix} \nu (\varphi ,x)\coloneqq \sup \left\{  \gamma \in \mathbb {R}_{\geq 0}: \varphi (F^{-1}(y))\leq \gamma \log |y-F(x)|^2+\mathcal{O}(1)\textup{ as }y\to F(x) \right\} . \end{equation}</div>
+</div>
+</article> Observe that $\nu (\varphi ,x)$ does not depend on the choices of $U$ and $F$, see <span class="cite">[<span class="postnote">Page 167, Corollary 7.2</span>, <a href="../../references/#R67A7837FBEE7">DemBook</a>]</span>. Furthermore, it follows from proposition <a data-tag="D1F02E55" href="../../tag/61D6716B27F1/">1.4.3</a> below that the supremum in (<a data-tag="7504CD4F" href="../../tag/D4BCC2E76B62/">1.24</a>) is a maximum. 
+
+
+<article class="env-remark" id="sgpt-7890744B">
+<p><a class="environment-identifier" href="../../tag/9ADE309D4F8B/">Remark <span data-tag="7890744B">1.4.2</span>.</a><span data-gerby-tag="7890744B"></span> Our definition of the Lelong number is not standard. It differs from the standard definition by a factor of $2$. As a mnemonic, just remember </p>
+<div class="equation">
+  \[  \nu \left(\log |z|^2,0\right)=1 \quad (\text{instead of } 2).  \]
+</div>
+<p> Our convention of the Lelong numbers together with the convention of the multiplier ideal sheaves below make sure that (<a data-tag="A3467871" href="../../tag/DAEF62372440/">1.30</a>) has no extra factors. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-D1F02E55">
+<p><a class="environment-identifier" href="../../tag/61D6716B27F1/">Proposition <span data-tag="D1F02E55">1.4.3</span>.</a><span data-gerby-tag="D1F02E55"></span> Let $\varphi \in \mathrm{PSH}(B_ n(0,1))$. Then </p>
+<div class="equation" id="sgpt-069A84B0"><span data-gerby-tag="069A84B0"></span>
+<span class="equation-label"><a data-tag="069A84B0" href="../../tag/F9F65BFBF525/">1.25</a></span>
+<div>\begin{equation} \label{eq:Lelongnewdef} \nu (\varphi ,0)=\lim _{r \to 0+} \frac{\sup _{B_ n(0,r)}\varphi }{\log r^2}\in [0,\infty ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Note that (<a data-tag="069A84B0" href="../../tag/F9F65BFBF525/">1.25</a>) is trivial when $n=0$, so we may assume that $n&gt;0$ in the proof. 
+    <p>
+      It follows from proposition <a data-tag="83046109" href="../../tag/2FF7CC0E8132/">1.1.8</a> that the limit in (<a data-tag="069A84B0" href="../../tag/F9F65BFBF525/">1.25</a>) exists and is finite. We shall denote the limit by $\nu '(\varphi ,0)$ for the time being. 
+    <p>
+      We first observe that by proposition <a data-tag="83046109" href="../../tag/2FF7CC0E8132/">1.1.8</a>, for any fixed $r_1\in (0,1)$ there is a constant $C_{r_1}$ such that 
+    
+<div class="equation" id="sgpt-8D8CFC5D"><span data-gerby-tag="8D8CFC5D"></span>
+<span class="equation-label"><a data-tag="8D8CFC5D" href="../../tag/C55AC8943767/">1.26</a></span>
+<div>\begin{equation} \label{eq:varphixlocalupperbd} \varphi (x)\leq \nu '(\varphi ,0)\log |x|^2+C_{r_1} \end{equation}</div>
+</div>
+<p>
+       when $x\in B_ n(0,r_1)\setminus \{ 0\} $. In particular, $\nu (\varphi ,0)\geq \nu '(\varphi ,0)$. 
+    <p>
+      In order to argue the reverse inequality, we may assume that $\nu (\varphi ,0)&gt;0$. 
+    <p>
+      Next observe that by (<a data-tag="7504CD4F" href="../../tag/D4BCC2E76B62/">1.24</a>), for each small enough $\epsilon &gt;0$, we can find $r_0\in (0,1)$ and $C&gt;0$ so that for all $x\in B_ n(0,r_0)\setminus \{ 0\} $, we have 
+    
+<div class="equation">
+  \[  \varphi (x)\leq (\nu (\varphi ,0)-\epsilon )\log |x|^2+C.  \]
+</div>
+<p>
+       It follows that $\nu '(\varphi ,0)\geq \nu (\varphi ,0)-\epsilon $. Letting $\epsilon \to 0+$, we conclude that $\nu '(\varphi ,0)\geq \nu (\varphi ,0)$, which combined with the previous inequality gives (<a data-tag="069A84B0" href="../../tag/F9F65BFBF525/">1.25</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+We recall Siu's semicontinuity theorem. <article class="env-theorem" id="sgpt-C7387DB3">
+<p><a class="environment-identifier" href="../../tag/6BAB6143467A/">Theorem <span data-tag="C7387DB3">1.4.4</span> <span class="named">(Siu)</span>.</a><span data-gerby-tag="C7387DB3"></span> Let $\varphi \in \mathrm{PSH}(X)$. Then the map $X\ni x\mapsto \nu (\varphi ,x)$ is upper semicontinuous with respect to the Zariski topology. </p>
+</article> For an elegant proof we refer to <span class="cite">[<span class="postnote">Theorem 2.10</span>, <a href="../../references/#R9CCDADAD3527">Dem12</a>]</span>. 
+
+
+<article class="env-proposition" id="sgpt-BEBA77BB">
+<p><a class="environment-identifier" href="../../tag/B9C4FE156D00/">Proposition <span data-tag="BEBA77BB">1.4.5</span>.</a><span data-gerby-tag="BEBA77BB"></span> Let $\varphi ,\psi \in \mathrm{PSH}(X)$, $\lambda \in \mathbb {R}_{\geq 0}$ and $x\in X$. Then </p>
+<div class="equation">
+  \[  \begin{aligned}  \nu (\varphi \lor \psi ,x)=&amp; \min \{ \nu (\varphi ,x),\nu (\psi ,x)\} ,\\  \nu (\varphi +\psi ,x)=&amp; \nu (\varphi ,x)+\nu (\psi ,x),\\  \nu (\lambda \varphi ,x)=&amp; \lambda \nu (\varphi ,x). \end{aligned}  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      All properties are local, so we may assume that $X=B_ n(0,1)$ for some $n\in \mathbb {N}$. All properties follow directly from proposition <a data-tag="D1F02E55" href="../../tag/61D6716B27F1/">1.4.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-corollary" id="sgpt-D8C9CDFB">
+<p><a class="environment-identifier" href="../../tag/F3F797E97E9D/">Corollary <span data-tag="D8C9CDFB">1.4.6</span>.</a><span data-gerby-tag="D8C9CDFB"></span> Let $(\varphi _ i)_{i\in I}$ be a non-empty family in $\mathrm{PSH}(X)$ locally uniformly bounded from above and $x\in X$. Then </p>
+<div class="equation">
+  \[  \nu \left(\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ i,x\right)=\inf _{i\in I}\nu (\varphi _ i,x).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $X$ is connected. Write $\varphi =\operatorname *{sup}_{i\in I}{}\! {}^{*} \varphi _ i$. Then $\varphi \in \mathrm{PSH}(X)$ by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a>. 
+    <p>
+      We observe that the $\leq $ inequality is trivial. It remains to argue the reverse inequality. 
+    <p>
+      It follows from proposition <a data-tag="BAE53833" href="../../tag/1D624ECF05E9/">1.2.3</a> that we may assume that $I$ is countable. When $I$ is finite, this is already proved in proposition <a data-tag="BEBA77BB" href="../../tag/B9C4FE156D00/">1.4.5</a>. Otherwise, we may further assume that $I=\mathbb {Z}_{&gt;0}$. Thanks to proposition <a data-tag="BEBA77BB" href="../../tag/B9C4FE156D00/">1.4.5</a>, we may further assume that $(\varphi _ i)_{i\in \mathbb {Z}_{&gt;0}}$ is an increasing sequence. Furthermore, since the problem is local, we may assume that $x=0$, that $X=B_ n(0,1)$ for some $n\in \mathbb {N}$, and that $(\varphi _ i)_ i$ is uniformly bounded from above on some ball $B_ n(0,r_1)$ with $0&lt;r_1&lt;1$. Since the sequence $(\varphi _ i)_ i$ is increasing, the sequence $\nu (\varphi _ i,0)$ is decreasing. Thus the constants in (<a data-tag="8D8CFC5D" href="../../tag/C55AC8943767/">1.26</a>) can be chosen independently of $i$, and we have 
+    
+<div class="equation">
+  \[  \varphi _ i(x)\leq \nu (\varphi _ i,0)\log |x|^2+C  \]
+</div>
+<p>
+       for all $x\in B_ n(0,r_1)\setminus \{ 0\} $ and all $i\geq 1$, where $C$ is a constant independent of $i$. In particular, thanks to proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a>, for almost all $x\in B_ n(0,r_1)$, we have 
+    
+<div class="equation">
+  \[  \varphi (x)\leq \lim _{i\to \infty }\nu (\varphi _ i,0)\log |x|^2+C.  \]
+</div>
+<p>
+       Thanks to proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>, the same holds for all $x\neq 0$ near $0$, and hence 
+    
+<div class="equation">
+  \[  \nu (\varphi ,0)\geq \lim _{i\to \infty } \nu (\varphi _ i,0).  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-B763CA0C">
+<p><a class="environment-identifier" href="../../tag/6777DFC31EF1/">Definition <span data-tag="B763CA0C">1.4.7</span>.</a><span data-gerby-tag="B763CA0C"></span> Let $F\subseteq X$ be a non-empty irreducible analytic subset. Then we define the <em>generic Lelong number</em> of $\varphi $ along $F$ as </p>
+<div class="equation">
+  \[  \nu (\varphi ,F)\coloneqq \min _{x\in F}\nu (\varphi ,x).  \]
+</div>
+<p> Note that the minimum is attained by Siu's semicontinuity theorem theorem <a data-tag="C7387DB3" href="../../tag/6BAB6143467A/">1.4.4</a>. </p>
+</article>
+
+
+<article class="env-definition" id="sgpt-AF4A6BE6">
+<p><a class="environment-identifier" href="../../tag/E9EA7799080C/">Definition <span data-tag="AF4A6BE6">1.4.8</span>.</a><span data-gerby-tag="AF4A6BE6"></span> Let $\varphi \in \mathrm{PSH}(X)$. Let $E$ be a prime divisor over $X$ (see definition <a data-tag="80AB137F" href="../../tag/F30317C89D08/">B.1.1</a>). Take a proper bimeromorphic morphism $\pi \colon Y\rightarrow X$ from a complex manifold $Y$ such that $E$ is a prime divisor on $Y$, then we define the <em>generic Lelong number</em> of $\varphi $ along $E$ as </p>
+<div class="equation">
+  \[  \nu (\varphi ,E)\coloneqq \nu (\pi ^*\varphi ,E).  \]
+</div>
+</article> It follows from theorem <a data-tag="C7387DB3" href="../../tag/6BAB6143467A/">1.4.4</a> that $\nu (\varphi ,E)$ does not depend on the choice of $\pi $. 
+
+
+<article class="env-definition" id="sgpt-EEA5FA9D">
+<p><a class="environment-identifier" href="../../tag/990C506B7D25/">Definition <span data-tag="EEA5FA9D">1.4.9</span>.</a><span data-gerby-tag="EEA5FA9D"></span> Let $\varphi \in \mathrm{PSH}(X)$, the <em>multiplier ideal sheaf</em>  $\mathcal{I}(\varphi )$  of $\varphi $ is by definition the ideal sheaf given by </p>
+<div class="equation">
+  \[  \Gamma \left(U,\mathcal{I}(\varphi )\right)=\left\{  f\in \mathcal{O}_ X(U) : |f|^2\exp (-\varphi )\in L^1_{\mathrm{loc}}(U) \right\}   \]
+</div>
+<p> for any open subset $U\subseteq X$. </p>
+</article>
+
+
+<article class="env-remark" id="sgpt-277B8867">
+<p><a class="environment-identifier" href="../../tag/4E2D4F8663A3/">Remark <span data-tag="277B8867">1.4.10</span>.</a><span data-gerby-tag="277B8867"></span> This definition is different from a few references, where instead of $\exp (-\varphi )$, they use $\exp (-2\varphi )$. The conventions adopted in the current book are the most convenient ones as far as I know. They simplify a number of formulae. As a mnemonic, for any real $\lambda &gt;0$, we have </p>
+<div class="equation">
+  \[  \mathcal{I}(\lambda \log |z|^2)=\mathcal{O}_{\mathbb {C}}\left(-\lfloor \lambda \rfloor \{ 0\} \right)\quad \Bigl (\textup{instead of }\mathcal{O}_{\mathbb {C}}\left(-\lfloor 2\lambda \rfloor \{ 0\} \right)\Bigr ),  \]
+</div>
+<p> where $z$ is a variable in $\mathbb {C}$ and $\{ 0\} $ is the divisor defined by $0\in \mathbb {C}$. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-83196634">
+<p><a class="environment-identifier" href="../../tag/926B8027EE55/">Proposition <span data-tag="83196634">1.4.11</span> <span class="named">(Nadel)</span>.</a><span data-gerby-tag="83196634"></span> Let $\varphi \in \mathrm{PSH}(X)$. Then $\mathcal{I}(\varphi )$ is coherent. </p>
+</article> See <span class="cite">[<span class="postnote">Proposition 5.7</span>, <a href="../../references/#R9CCDADAD3527">Dem12</a>]</span>. 
+
+
+<article class="env-theorem" id="sgpt-F1CF0568">
+<p><a class="environment-identifier" href="../../tag/48A7E9240D09/">Theorem <span data-tag="F1CF0568">1.4.12</span>.</a><span data-gerby-tag="F1CF0568"></span> Let $\varphi ,\psi \in \mathrm{PSH}(X)$. Then </p>
+<div class="equation">
+  \[  \mathcal{I}(\varphi +\psi )\subseteq \mathcal{I}(\varphi )\cdot \mathcal{I}(\psi ).  \]
+</div>
+</article> See <span class="cite">[<a href="../../references/#RE45633AA8F67">DEL00</a>]</span>, <span class="cite">[<span class="postnote">Theorem 14.2</span>, <a href="../../references/#R9CCDADAD3527">Dem12</a>]</span>. 
+
+
+The two invariants are related by the following simple result: <article class="env-proposition" id="sgpt-597608EC">
+<p><a class="environment-identifier" href="../../tag/8EFDC4A2C19E/">Proposition <span data-tag="597608EC">1.4.13</span>.</a><span data-gerby-tag="597608EC"></span> Let $\varphi \in \mathrm{PSH}(X)$ and $E$ be a prime divisor over $X$. Then </p>
+<div class="equation" id="sgpt-A3467871"><span data-gerby-tag="A3467871"></span>
+<span class="equation-label"><a data-tag="A3467871" href="../../tag/DAEF62372440/">1.30</a></span>
+<div>\begin{equation} \label{eq:LelongMIS} \nu (\varphi ,E)=\lim _{k\to \infty }\frac{1}{k}\operatorname{ord}_ E\mathcal{I}(k\varphi ). \end{equation}</div>
+</div>
+</article> See <span class="cite">[<span class="postnote">Proposition 2.14</span>, <a href="../../references/#RC3894181BE04">DX21</a>]</span>. 
+
+<p>
+Recall that this particular form of the formula is compatible with our conventions of $\nu $ and $\mathcal{I}$. As a consistency check, consider $\varphi =\log |z|^2$ with $z\in \mathbb {C}$ and let $E$ be the divisor $\{ 0\} $. Then both sides of (<a data-tag="A3467871" href="../../tag/DAEF62372440/">1.30</a>) are equal to $1$. See <a data-tag="7890744B" href="../../tag/9ADE309D4F8B/">1.4.2</a> and <a data-tag="277B8867" href="../../tag/4E2D4F8663A3/">1.4.10</a>. 
+</p>
+
+Also observe the following simple lemma: <article class="env-lemma" id="sgpt-B8094988">
+<p><a class="environment-identifier" href="../../tag/C85C2748AE0B/">Lemma <span data-tag="B8094988">1.4.14</span>.</a><span data-gerby-tag="B8094988"></span> Let $x \in X$ and $\varphi \in \mathrm{PSH}(X)$. Let $\pi \colon Y\rightarrow X$ be the blow-up of $X$ at $x$ with exceptional divisor $E$. Then </p>
+<div class="equation">
+  \[  \nu (\varphi ,x)=\nu (\varphi ,E),  \]
+</div>
+</article> See <span class="cite">[<span class="postnote">Corollaire 1.1.8</span>, <a href="../../references/#R90D620A94407">Bou02</a>]</span>. 
+
+
+Conversely, the information of the generic Lelong numbers determines the multiplier ideal sheaves: <article class="env-theorem" id="sgpt-AE375337">
+<p><a class="environment-identifier" href="../../tag/B2A67FDA22D2/">Theorem <span data-tag="AE375337">1.4.15</span>.</a><span data-gerby-tag="AE375337"></span> Let $\varphi \in \mathrm{PSH}(X)$. Let $x\in X$ and $f\in \mathcal{O}_{X,x}$, $f\neq 0$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-D305008E"><span data-gerby-tag="D305008E"></span><p>
+ $f\in \mathcal{I}(\varphi )_ x$; 
+</p>
+</li><li class="custom-item" id="sgpt-3EDA512A"><span data-gerby-tag="3EDA512A"></span><p>
+ there exists $\epsilon &gt;0$ such that for any prime divisor $E$ over $X$ such that $x$ is contained in the center of $E$ on $X$, we have 
+</p>
+<div class="equation" id="sgpt-AC584139"><span data-gerby-tag="AC584139"></span>
+<span class="equation-label"><a data-tag="AC584139" href="../../tag/C474A65CB982/">1.31</a></span>
+<div>\begin{equation} \label{eq:ordfLelonglogdis} \operatorname{ord}_ E(f)\geq (1+\epsilon ) \nu (\varphi ,E)-A_ X(E). \end{equation}</div>
+</div>
+</li>
+</ol>
+<p> In case $\varphi $ has analytic singularities and $\pi \colon Y\rightarrow X$ is a log resolution of $\varphi $ (see definition <a data-tag="DA5544EB" href="../../tag/239591DA9F90/">1.6.6</a> for the definition) with finitely many exceptional divisors $\{ E_ i\} $ whose centers on $X$ contain $x$, one may replace (<a data-tag="AC584139" href="../../tag/C474A65CB982/">1.31</a>) by </p>
+<div class="equation" id="sgpt-6D9FEE13"><span data-gerby-tag="6D9FEE13"></span>
+<span class="equation-label"><a data-tag="6D9FEE13" href="../../tag/43490E287BDA/">1.32</a></span>
+<div>\begin{equation} \label{eq:ordfLelonglogdis2} \operatorname{ord}_{E_ i}(f)&gt; \nu (\varphi ,E_ i)-A_ X(E_ i)\quad \forall i. \end{equation}</div>
+</div>
+</article> Here $A_ X(\bullet )$ denotes the log discrepancy of prime divisors. Note that in (2), it suffices to consider the prime divisors contained in $\{ \pi ^*\varphi =-\infty \} $. We refer to <span class="cite">[<span class="postnote">Corollary 10.18, Proposition 10.12</span>, <a href="../../references/#R9B582170D10B">Bou17</a>]</span> for the proof and the precise definition of $A_ X$. 
+
+<p>
+The notion of analytic singularities is recalled in section <a data-tag="0BCFDC0B" href="../../tag/26AEEBDF865B/">1.6</a>. 
+</p>
+
+Recall the strong openness theorem: <article class="env-theorem" id="sgpt-B37FCFC9">
+<p><a class="environment-identifier" href="../../tag/917763AE5E35/">Theorem <span data-tag="B37FCFC9">1.4.16</span> <span class="named">(Guan–Zhou)</span>.</a><span data-gerby-tag="B37FCFC9"></span> Let $\varphi ,\psi _ j\in \mathrm{PSH}(X)$ ($j\in \mathbb {Z}_{&gt;0}$) such that $\psi _ j$ is an increasing sequence converging to $\varphi $ almost everywhere. Then for any $x\in X$, the germs satisfy </p>
+<div class="equation">
+  \[  \mathcal{I}\left(\psi _ j\right)_ x=\mathcal{I}(\varphi )_ x  \]
+</div>
+<p> when $j$ is large enough. </p>
+</article> See <span class="cite">[<a href="../../references/#R181D0CC3371A">GZ15</a>, <a href="../../references/#RC15A51F378C5">Hiep14</a>]</span> for the proof. 
+
+
+<article class="env-proposition" id="sgpt-589D7C6B">
+<p><a class="environment-identifier" href="../../tag/DE693424352F/">Proposition <span data-tag="589D7C6B">1.4.17</span>.</a><span data-gerby-tag="589D7C6B"></span> Let $\pi \colon Y\rightarrow X$ be a smooth morphism between complex manifolds. Assume that $\varphi \in \mathrm{PSH}(X)$. Then </p>
+<div class="equation">
+  \[  \mathcal{I}(\pi ^*\varphi )=\pi ^*\mathcal{I}(\varphi ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It follows from <span class="cite">[<span class="postnote">Théorème 3.10</span>, <a href="../../references/#R9E76287B2F56">SHC6</a>]</span> that locally $\pi $ can be written as the composition of an étale morphism and a projection. It suffices to handle the two cases separately. 
+    <p>
+      Recall that in the complex analytic setting, an étale morphism is locally biholomorphic, so there is nothing to prove in this case. 
+    <p>
+      Next, assume that $Y=X\times U$, where $U\subseteq \mathbb {C}^ n$ is a domain and $\pi $ is the natural projection. It follows from Fubini's theorem that 
+    
+<div class="equation">
+  \[  \mathcal{I}(\pi ^*\varphi )\supseteq \pi ^*\mathcal{I}(\varphi ).  \]
+</div>
+
+       The reverse inequality is proved in <span class="cite">[<span class="postnote">Proposition 14.3</span>, <a href="../../references/#R9CCDADAD3527">Dem12</a>]</span><aside class="source-footnote" id="sgpt-a0000006178"><span class="footnote-label">Note.</span> In <span class="cite">[<span class="postnote">Proposition 14.3</span>, <a href="../../references/#R9CCDADAD3527">Dem12</a>]</span>, Demailly used the highly non-standard notation $f^*\mathcal{I}(\varphi )$ to denote the image of $f^*\mathcal{I}(\varphi )\rightarrow \mathcal{O}_ X$, even when $f$ is not flat.</aside>. 
+      <span class="qed">$\square$</span>
+
+</p></p></p></article>
+
+<article class="env-definition" id="sgpt-92E7A73F">
+<p><a class="environment-identifier" href="../../tag/AA412055CB86/">Definition <span data-tag="92E7A73F">1.4.18</span>.</a><span data-gerby-tag="92E7A73F"></span> Given a coherent ideal sheaf $\mathcal{I}$ on $X$ and a closed complex subspace $Y\subseteq X$, the <em>restriction</em>  $\operatorname{Res}_ Y\mathcal{I}$  is the coherent ideal sheaf given by </p>
+<div class="equation" id="sgpt-3DF26F8C"><span data-gerby-tag="3DF26F8C"></span>
+<span class="equation-label"><a data-tag="3DF26F8C" href="../../tag/514E110B23C0/">1.33</a></span>
+<div>\begin{equation} \label{eq:RestI} \operatorname{Res}_ Y\mathcal{I}\coloneqq \mathcal{I}/(\mathcal{I}\cap \mathcal{I}_ Y), \end{equation}</div>
+</div>
+<p> where $\mathcal{I}_ Y$ is the ideal sheaf defining $Y$. </p>
+</article> In the literature, it is common to denote this sheaf by the misleading notation $\mathcal{I}|_ Y$. 
+
+<p>
+There is a natural morphism 
+</p>
+<div class="equation" id="sgpt-5581E360"><span data-gerby-tag="5581E360"></span>
+<span class="equation-label"><a data-tag="5581E360" href="../../tag/229919B31C3E/">1.34</a></span>
+<div>\begin{equation} \label{eq:pullbacktoinverimage} i_ Y^*\mathcal{I}= \mathcal{I}/(\mathcal{I}\cdot \mathcal{I}_ Y)\rightarrow \operatorname{Res}_ Y \mathcal{I}, \end{equation}</div>
+</div>
+<p>
+ where $i_ Y\colon Y\rightarrow X$ is the inclusion. 
+</p>
+
+<article class="env-theorem" id="sgpt-A72584DC">
+<p><a class="environment-identifier" href="../../tag/151D57BCA31B/">Theorem <span data-tag="A72584DC">1.4.19</span> <span class="named">(Ohsawa–Takegoshi)</span>.</a><span data-gerby-tag="A72584DC"></span> Let $Y$ be a connected submanifold of $X$ and $\varphi \in \mathrm{PSH}(X)$. Assume that $\varphi |_ Y\not\equiv -\infty $. Then </p>
+<div class="equation">
+  \[  \mathcal{I}\left(\varphi |_ Y\right)\subseteq \operatorname{Res}_ Y\mathcal{I}(\varphi ).  \]
+</div>
+</article> See <span class="cite">[<span class="postnote">Theorem 14.1</span>, <a href="../../references/#R9CCDADAD3527">Dem12</a>]</span>. 
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

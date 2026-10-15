@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Capacity estimates and uniform compactness · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>EF206AD1915F</code></p><h1>Capacity estimates and uniform compactness</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 10.3 Capacity estimates and uniform compactness <span data-gerby-tag="7E212431"></span></div>
+<p>
+Let $\operatorname {Cap}=\operatorname {Cap}_\omega $ denote the capacity of section <a data-tag="0231BF16" href="../../tag/DD310AD8B258/">1.8</a>. Modified comparison bounds the capacity of a thin sublevel set by the Monge–Ampère mass of a slightly larger one. A bound by a power $1+\alpha $ of capacity, $\alpha &gt;0$, makes the resulting iteration converge. For an $L^ p$ density, corollary <a data-tag="398B0F5F" href="../../tag/EACB00126847/">1.8.2</a> supplies the case $\alpha =1$. Iterating the two inequalities gives a lower bound for the capacity of every sublevel set of fixed height above the minimum. Since the capacity of deep sublevel sets of normalized potentials is small by the tail estimate (<a data-tag="B2A1C46F" href="../../tag/3EF8F920CDD3/">1.26</a>), this bounds the depth of a normalized solution. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-38A63EDA">
+<p><a class="environment-identifier" href="../../tag/370AD0860DAD/">Lemma <span data-tag="38A63EDA">10.3.1</span>.</a><span data-gerby-tag="38A63EDA"></span> Let $u,v\in \mathrm{PSH}(X,\omega )\cap L^\infty (X)$, with $-H\leq v\leq 0$ and $H\geq 1$. Fix $0&lt;\varepsilon &lt;1$, and put </p>
+<div class="equation">
+  \[  m=\inf _ X(u-(1-\varepsilon )v),\qquad U_ s=\{ u&lt;(1-\varepsilon )v+m+s\} .  \]
+</div>
+<p> There are $\delta _\varepsilon &gt;0$, depending only on $(X,\omega ,\varepsilon )$, and $C_ H&gt;0$, depending only on $(n,H)$, such that </p>
+<div class="equation" id="non-kahler-pluripotential-theory-2C76AE00"><span data-gerby-tag="2C76AE00"></span>
+<span class="equation-label"><a data-tag="2C76AE00" href="../../tag/F937FDFBF165/">10.9</a></span>
+<div>\begin{equation} \label{eq:thin-capacity} t^ n\operatorname {Cap}(U_ s)\leq C_ H\int _{U_{s+t}}\omega _ u^ n \qquad (0&lt;s,t,\  s+t&lt;\delta _\varepsilon ). \end{equation}</div>
+</div>
+<p> Every $U_ s$, $s&gt;0$, has positive capacity. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $B_0$ be the constant of theorem <a data-tag="FBBA14CA" href="../../tag/492E047184B3/">10.2.1</a>, and set 
+    
+<div class="equation">
+  \[  \delta _\varepsilon =\min \{ 1-\varepsilon ,\varepsilon ^3/(128B_0n^2)\} .  \]
+</div>
+<p>
+       For a capacity test $0\leq \rho \leq 1$, put 
+    
+<div class="equation">
+  \[  \tau =\frac{t}{2(1-\varepsilon )(H+1)},\quad w=(1-\tau )v+\tau \rho ,\quad m'=\inf _ X(u-(1-\varepsilon )w).  \]
+</div>
+<p>
+       Then $0&lt;\tau &lt;1$ and $0\leq (1-\varepsilon )(w-v)\leq t/2$, so $m-t/2\leq m'\leq m$. Consequently 
+    
+<div class="equation">
+  \[  U_ s\subset V:=\{ u&lt;(1-\varepsilon )w+m'+s+t/2\}  \subset U_{s+t}.  \]
+</div>
+<p>
+       We apply modified comparison to $u,w$ at height $s+t/2&lt;\delta _\varepsilon $; by the choice of $\delta _\varepsilon $, its inverse factor is at most $(8/7)^ n$. Moreover, 
+    
+<div class="equation">
+  \[  \omega _{(1-\varepsilon )w} \geq (1-\varepsilon )\tau \omega _\rho =\frac{t}{2(H+1)}\omega _\rho .  \]
+</div>
+<p>
+       Integrating over $U_ s\subset V$, applying modified comparison on $V$, and taking the supremum over $\rho $, we obtain (<a data-tag="2C76AE00" href="../../tag/F937FDFBF165/">10.9</a>) with $C_ H=[2(H+1)]^ n(8/7)^ n$. Finally, each $U_ s$ is nonempty by the definition of the infimum, so it has positive smooth volume by lemma <a data-tag="D292D808" href="../../tag/05BCBF7FAC9C/">1.3.4</a>, and hence positive capacity, as the constant test function shows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-15EC6B6A">
+<p><a class="environment-identifier" href="../../tag/9C1A40570E78/">Lemma <span data-tag="15EC6B6A">10.3.2</span>.</a><span data-gerby-tag="15EC6B6A"></span> In the setting of lemma <a data-tag="38A63EDA" href="../../tag/370AD0860DAD/">10.3.1</a>, suppose that $A,\alpha &gt;0$ and </p>
+<div class="equation">
+  \[  \omega _ u^ n(E)\leq A\operatorname {Cap}_\omega (E)^{1+\alpha } \qquad (E\subset X\text{ Borel}).  \]
+</div>
+<p> For every $0&lt;D&lt;\delta _\varepsilon $, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-70F2BD87"><span data-gerby-tag="70F2BD87"></span>
+<span class="equation-label"><a data-tag="70F2BD87" href="../../tag/3CFE977F80E0/">10.10</a></span>
+<div>\begin{equation} \label{eq:power-sublevel-lower} D\leq C_\alpha (C_ HA)^{1/n} \operatorname {Cap}_\omega (U_ D)^{\alpha /n}, \qquad C_\alpha =\frac{2}{1-2^{-\alpha }}. \end{equation}</div>
+</div>
+<p> In particular, when $\alpha =1$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-D414DFCF"><span data-gerby-tag="D414DFCF"></span>
+<span class="equation-label"><a data-tag="D414DFCF" href="../../tag/623E09972ED8/">10.11</a></span>
+<div>\begin{equation} \label{eq:sublevel-capacity-lower} \operatorname {Cap}(U_ D)\geq \frac{D^ n}{4^ nC_ HA}. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $a(s)=\operatorname {Cap}_\omega (U_ s)^{1/n}&gt;0$ and $K=(C_ HA)^{1/n}$. The thin-sublevel estimate gives 
+    
+<div class="equation">
+  \[  t\, a(s)\leq K a(s+t)^{1+\alpha } \qquad (0&lt;s,t,\  s+t&lt;\delta _\varepsilon ).  \]
+</div>
+<p>
+       Suppose $C_\alpha K a(D)^\alpha &lt;D$. Starting with $s_0=D$, set 
+    
+<div class="equation">
+  \[  t_ j=2K a(s_ j)^\alpha ,\qquad s_{j+1}=s_ j-t_ j.  \]
+</div>
+<p>
+       If $a(s_ i)\leq 2^{-i}a(D)$ for $0\leq i\leq j$, then 
+    
+<div class="equation">
+  \[  \sum _{i=0}^ jt_ i \leq 2K a(D)^\alpha \sum _{i=0}^ j2^{-i\alpha } &lt;C_\alpha K a(D)^\alpha &lt;D.  \]
+</div>
+<p>
+       Thus $s_{j+1}&gt;0$, and the sublevel estimate, applied with $s=s_{j+1}$ and $t=t_ j$, gives $a(s_{j+1})\leq a(s_ j)/2$. Induction justifies every step. The decreasing sequence $s_ j$ has a limit 
+    
+<div class="equation">
+  \[  s_\infty \geq D-C_\alpha K a(D)^\alpha &gt;0.  \]
+</div>
+<p>
+       Monotonicity now gives $0&lt;a(s_\infty )\leq 2^{-j}a(D)$ for every $j$, a contradiction. This proves (<a data-tag="70F2BD87" href="../../tag/3CFE977F80E0/">10.10</a>), including the case in which $U_ D=X$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-FD57C562">
+<p><a class="environment-identifier" href="../../tag/EA32B8891E2B/">Theorem <span data-tag="FD57C562">10.3.3</span>.</a><span data-gerby-tag="FD57C562"></span> There are constants $C_ p,c_ p&gt;0$, depending only on $(X,\omega ,\mathrm{d}V,p)$, such that, whenever $u\in \mathrm{PSH}(X,\omega )\cap L^\infty (X)$, $\sup _ Xu=0$, and </p>
+<div class="equation">
+  \[  \omega _ u^ n=F\, \mathrm{d}V,\qquad F\in L^ p(X,\mathrm{d}V),\quad F\geq 0,  \]
+</div>
+<p> we have </p>
+<div class="equation" id="non-kahler-pluripotential-theory-C9F9CA6C"><span data-gerby-tag="C9F9CA6C"></span>
+<span class="equation-label"><a data-tag="C9F9CA6C" href="../../tag/F7083E3F1991/">10.12</a></span>
+<div>\begin{equation} \label{eq:lp-potential-bound} \| u\| _\infty \leq C_ p(1+\| F\| _ p), \qquad \| F\| _ p\geq c_ p. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By corollary <a data-tag="18274A01" href="../../tag/7C5FAB3BA5DA/">10.2.3</a>, $F$ is not almost everywhere zero. Apply lemma <a data-tag="15EC6B6A" href="../../tag/9C1A40570E78/">10.3.2</a> with $v=0$, $H=1$, $\varepsilon =1/2$, and $A=C\| F\| _ p&gt;0$, where $C$ is the constant of corollary <a data-tag="398B0F5F" href="../../tag/EACB00126847/">1.8.2</a>. Fix $D=\delta _{1/2}/2$, and put $M=-\inf _ Xu$. Since $U_ D=\{ u&lt;-M+D\} $, the resulting inequality reads 
+    
+<div class="equation">
+  \[  \operatorname {Cap}(\{ u&lt;-M+D\} )\geq c/\| F\| _ p.  \]
+</div>
+<p>
+       If $M&gt;D+1$, (<a data-tag="B2A1C46F" href="../../tag/3EF8F920CDD3/">1.26</a>) bounds this capacity above by $C/(M-D)$, and the first assertion follows; the case $M\leq D+1$ is immediate. Bounding the same capacity above by $\operatorname {Cap}(X)$ gives the second assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Suppose that two uniformly bounded solutions are far apart at some point. The preceding estimates give a fixed positive lower bound for the capacity of a sublevel set of their difference. If their $L^1$ distance is small, this set has small volume, and the uniform $L^ p$ bound for the densities then makes its Monge–Ampère mass small. This contradicts the sublevel estimate (<a data-tag="2C76AE00" href="../../tag/F937FDFBF165/">10.9</a>), and so upgrades $L^1$ compactness to uniform compactness. Put $p'=p/(p-1)$. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-A3F07E0A">
+<p><a class="environment-identifier" href="../../tag/BF849D15DF41/">Theorem <span data-tag="A3F07E0A">10.3.4</span>.</a><span data-gerby-tag="A3F07E0A"></span> Suppose $u_ j\in \mathrm{PSH}(X,\omega )\cap C(X)$, $\sup _ Xu_ j=0$, and </p>
+<div class="equation">
+  \[  \omega _{u_ j}^ n=F_ j\, \mathrm{d}V,\qquad F_ j\geq 0,\qquad \sup _ j\| F_ j\| _ p&lt;\infty  \]
+</div>
+<p> for the fixed $p&gt;1$. If $(u_ j)$ is Cauchy in $L^1(X,\mathrm{d}V)$, then it is Cauchy uniformly. In particular, every such family has a subsequence converging uniformly to a continuous $\omega $-plurisubharmonic function. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="FD57C562" href="../../tag/EA32B8891E2B/">10.3.3</a>, there is a common $H\geq 1$ with $-H\leq u_ j\leq 0$. Suppose that the sequence is not uniformly Cauchy. After exchanging indices if necessary, we find $a&gt;0$ and arbitrarily large $j,k$ with 
+    
+<div class="equation">
+  \[  S:=\inf _ X(u_ k-u_ j)\leq -a.  \]
+</div>
+<p>
+        Choose $0&lt;\varepsilon &lt;1$ such that $\varepsilon H&lt;a/4$, and choose a fixed $D&gt;0$ with $2D&lt;\delta _\varepsilon $ and $2D&lt;a/4$. Apply the preceding sublevel lemmas with $u=u_ k$ and $v=u_ j$. Since $v\leq 0$, $m=\inf (u-(1-\varepsilon )v)\leq S$. Thus 
+    
+<div class="equation">
+  \[  U_{2D}\subset \{ u-v&lt;S+2D+\varepsilon H\}  \subset \{ |u-v|&gt;a/2\} .  \]
+</div>
+<p>
+       The capacity lower bound (<a data-tag="D414DFCF" href="../../tag/623E09972ED8/">10.11</a>), with a constant $A$ independent of $j,k$ given by corollary <a data-tag="398B0F5F" href="../../tag/EACB00126847/">1.8.2</a>, yields $\operatorname {Cap}(U_ D)\geq c&gt;0$. On the other hand, (<a data-tag="2C76AE00" href="../../tag/F937FDFBF165/">10.9</a>) and the inequalities of Hölder and Chebyshev give 
+    
+<div class="equation">
+  \[  \begin{split}  D^ n\operatorname {Cap}(U_ D) &amp; \leq C_ H\int _{U_{2D}}F_ k\, \mathrm{d}V\\ &amp; \leq C_ H\| F_ k\| _ p \left(\frac{2\| u_ k-u_ j\| _1}{a}\right)^{1/p'} \longrightarrow 0. \end{split}  \]
+</div>
+<p>
+       This contradiction proves that the sequence is uniformly Cauchy. For the last assertion, the normalized compactness theorem, theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>, gives an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega $-plurisubharmonicity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Algebraic Okounkov bodies · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/sections-okounkov/">Chapter 16 · Sections, graded series, and Okounkov bodies</a> · Tag <code>A81BAAF5B45F</code></p><h1>Algebraic Okounkov bodies</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 10.3.2 Algebraic Okounkov bodies <span data-gerby-tag="49AEFA8D"></span></div>
+
+<article class="env-proposition" id="sgpt-32BC1D4A">
+<p><a class="environment-identifier" href="../../tag/632B1323B741/">Proposition <span data-tag="32BC1D4A">10.3.4</span>.</a><span data-gerby-tag="32BC1D4A"></span> There is a convex body $\Delta \in \mathcal{K}_ n$ such that $\Gamma (L)\in \mathcal{S}'(\Delta )$. </p>
+</article> Here and in the sequel, the notation $\mathcal{S}'(\Delta )$ means $\mathcal{S}'(C(\Delta ))$, where $C(\Delta )$ is the cone over $\Delta $. Recall that the notations $\mathcal{K}_ n$ and $\mathcal{S}'(\Delta )$ are introduced in chapter <a data-tag="AD6A1F3F" href="../../tag/00B44728CC57/">C</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first show that there is $\Delta \in \mathcal{K}_ n$ such that $\Delta _ k(L)\subseteq \Delta $. For this purpose, using <a data-tag="00F064E7" href="../../tag/5AA6A085DBB0/">10.2.2</a>, we may assume that $\nu $ is induced by an admissible flag $Y_{\bullet }$ on $X$. We may further assume that each $Y_ i$ is smooth. 
+    <p>
+      Fix $s\in \mathrm{H}^0(X,L^ k)^{\times }$ for some $k\in \mathbb {Z}_{&gt;0}$. Assume that $s\neq 0$. We need to show that for each $i=1,\ldots ,n$, $\nu (s)_ i\leq Ck$ for some constant $C&gt;0$, independent of the choices of $k$ and $s$. 
+    <p>
+      Fix an ample divisor $H$ on $X$. Take a large enough integer $b_1&gt;0$ such that 
+    
+<div class="equation">
+  \[  (L-b_1 Y_1)\cdot H^{n-1}&lt;0.  \]
+</div>
+<p>
+       Then $\nu (s)_1\leq b_1 k$. Next take a large enough integer $b_2$ such that, for every $a\in [0,b_1]$, 
+    
+<div class="equation">
+  \[  \left((L-aY_1)|_{Y_1}-b_2Y_2\right) \cdot H^{n-2}&lt;0.  \]
+</div>
+<p>
+       After removing the first vanishing order of $s$ along $Y_1$, the resulting section on $Y_1$ is a section of $k((L-aY_1)|_{Y_1})$ for some $a\in [0,b_1]$. Hence $\nu (s)_2\leq b_2k$. Continuing in this manner and choosing the constants uniformly over the compact ranges of the preceding normalized vanishing orders, we conclude that $\nu (s)_ i/k$ is bounded for each $i$. 
+    <p>
+      Here the expressions involving $L-aY_1$ are understood numerically. At the $i$-th step the previous normalized vanishing orders lie in a compact polytope, and the intersection number is continuous in these parameters; hence the constants $b_ i$ can be chosen uniformly. 
+    <p>
+<strong>Step 2</strong>. Observe that $\Gamma (L)$ is clearly a semigroup. It remains to show that $\Gamma (L)$ generates $\mathbb {Z}^{n+1}$ as an Abelian group. 
+    <p>
+      For this purpose, take two very ample divisors $A$ and $B$ so that $L=\mathcal{O}_ X(A-B)$. After choosing $A$ and $B$ ample enough, we may guarantee that there exist sections $s_0\in \mathrm{H}^0(X,A)$, $t_ i\in \mathrm{H}^0(X,B)$ for $i=0,\dots ,n$ such that 
+    
+<div class="equation">
+  \[  \nu (s_0)=\nu (t_0)=0  \]
+</div>
+<p>
+       and $\nu (t_ i)$ is the $i$-th unit vector $e_ i\in \mathbb {R}^ n$ for $i=1,\ldots ,n$. 
+    <p>
+      Since $L$ is big, we can find $m_0&gt;0$ such that for any $m\geq m_0$, we can find an effective divisor $F_ m$ on $X$ linearly equivalent to $mL-B$. Let $f_ m=\nu ([F_ m])$. Then 
+    
+<div class="equation">
+  \[  (f_ m,m),(f_ m+e_1,m),\dots ,(f_ m+e_ n,m)\in \Gamma (L).  \]
+</div>
+<p>
+       Since $(m+1)L$ is linearly equivalent to $A+F_ m$, we have 
+    
+<div class="equation">
+  \[  (f_ m,m+1)\in \Gamma (L).  \]
+</div>
+<p>
+       It follows that $\Gamma (L)$ generates $\mathbb {Z}^{n+1}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+
+Thanks to proposition <a data-tag="32BC1D4A" href="../../tag/632B1323B741/">10.3.4</a>, we can introduce the next definition. <article class="env-definition" id="sgpt-32C6E06F">
+<p><a class="environment-identifier" href="../../tag/0114DCC2E021/">Definition <span data-tag="32C6E06F">10.3.5</span>.</a><span data-gerby-tag="32C6E06F"></span> We define the <em>Okounkov body</em> of $L$ with respect to the valuation $\nu $ as </p>
+<div class="equation">
+  \[  \Delta _{\nu }(L)\coloneqq \Delta (\Gamma (L)).  \]
+</div>
+</article> When $\nu $ is induced by a smooth flag $Y_{\bullet }$ on $X$, we also write $\Delta _{Y_{\bullet }}(L)$ instead. The same convention applies to the partial Okounkov bodies studied below as well. 
+
+
+<article class="env-proposition" id="sgpt-54A6D63A">
+<p><a class="environment-identifier" href="../../tag/572B003B2680/">Proposition <span data-tag="54A6D63A">10.3.6</span>.</a><span data-gerby-tag="54A6D63A"></span> The Okounkov body $\Delta _{\nu }(L)$ depends only on the numerical class of $L$. </p>
+</article> See <span class="cite">[<span class="postnote">Proposition 4.1</span>, <a href="../../references/#RC83266BECAF4">LM09</a>]</span> for the elegant proof. 
+
+
+<article class="env-corollary" id="sgpt-3C04F53C">
+<p><a class="environment-identifier" href="../../tag/8494DFD8DF4D/">Corollary <span data-tag="3C04F53C">10.3.7</span>.</a><span data-gerby-tag="3C04F53C"></span> We have </p>
+<div class="equation">
+<span class="equation-label">10.38</span>
+<div>\begin{equation}  \operatorname{vol}\Delta _{\nu }(L)=\frac{1}{n!}\operatorname{vol}L. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows immediately from proposition <a data-tag="32BC1D4A" href="../../tag/632B1323B741/">10.3.4</a> and theorem <a data-tag="289292E3" href="../../tag/37D86D761E81/">10.1.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-DBBE11BD">
+<p><a class="environment-identifier" href="../../tag/AE88967EEE84/">Proposition <span data-tag="DBBE11BD">10.3.8</span>.</a><span data-gerby-tag="DBBE11BD"></span> Assume that $\varphi $ has analytic singularities and $\theta _{\varphi }$ is a Kähler current. Then we have </p>
+<div class="equation">
+  \[  \Gamma ^{\infty }(\theta ,\varphi )\in \mathcal{S}'(\Delta _\nu (L))  \]
+</div>
+<p> and </p>
+<div class="equation">
+  \[  \operatorname{vol}\Gamma ^{\infty }(\theta ,\varphi )=\frac{1}{n!}\int _ X \theta _{\varphi }^ n.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="9A6A24C1" href="../../tag/D6BDA051B7C1/">1.6.7</a>, we can choose a modification $\pi \colon Y\to X$ such that $\pi ^*\varphi $ has log singularities along an effective simple normal crossing $\mathbb Q$-divisor $D$. We regard $\nu $ as a valuation of $\mathbb C(Y)=\mathbb C(X)$. By the definition of $\mathcal I_\infty $, the section spaces defining $\Gamma ^\infty (\theta ,\varphi )$ are naturally identified with 
+    
+<div class="equation">
+  \[  \mathrm{H}^0\left(Y,\pi ^*L^ k\otimes \mathcal O_ Y(-\lceil kD\rceil )\right).  \]
+</div>
+<p>
+       Thus we may compute $\Gamma ^\infty (\theta ,\varphi )$ on $Y$. 
+    <p>
+      In this case, 
+    
+<div class="equation">
+  \[  \Gamma ^{\infty }(\theta ,\varphi )= \Biggl \{  (\nu (s),k):k\in \mathbb {N}, s\in \mathrm{H}^0\left(Y,\pi ^*L^ k\otimes \mathcal{O}_ Y(-\lceil k D \rceil )\right)^{\times } \Biggr \}   \]
+</div>
+<p>
+       Since $\pi ^*L-D$ is nef and big by <a data-tag="8BA30C25" href="../../tag/3B54149D4222/">1.6.4</a>, our assertion follows from the same argument as proposition <a data-tag="32BC1D4A" href="../../tag/632B1323B741/">10.3.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+We first extend theorem <a data-tag="289292E3" href="../../tag/37D86D761E81/">10.1.3</a> to the twisted case. <article class="env-proposition" id="sgpt-ADB3B184">
+<p><a class="environment-identifier" href="../../tag/1ED4AF0D9A23/">Proposition <span data-tag="ADB3B184">10.3.9</span>.</a><span data-gerby-tag="ADB3B184"></span> For any holomorphic line bundle $T$ on $X$, as $k\to \infty $ </p>
+<div class="equation">
+  \[  \Delta _{k,T}(L)\xrightarrow {d_{\mathrm{Haus}}} \Delta _{\nu }(L).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      As $L$ is big, we can take $k_0\in \mathbb {Z}_{&gt;0}$ so that 
+    
+<ol>
+<li class="custom-item" id="sgpt-382F5B39"><span data-gerby-tag="382F5B39"></span><p>
+ $T^{-1}\otimes L^{k_0}$ admits a non-zero global holomorphic section $s_0$, and 
+</p>
+</li><li class="custom-item" id="sgpt-1F5B980B"><span data-gerby-tag="1F5B980B"></span><p>
+ $T\otimes L^{k_0}$ admits a non-zero global holomorphic section $s_1$. 
+</p>
+</li>
+</ol>
+<p>
+       Then for $k\in \mathbb {Z}_{&gt;k_0}$, we have injective linear maps 
+    
+<div class="equation">
+  \[  \mathrm{H}^0(X,L^{k-k_0})\xrightarrow {\times s_1}\mathrm{H}^0(X,T\otimes L^{k})\xrightarrow {\times s_0}\mathrm{H}^0(X, L^{k+k_0}).  \]
+</div>
+<p>
+       It follows that 
+    
+<div class="equation">
+  \[  (k-k_0)\Delta _{k-k_0}(L)+\nu (s_1)\subseteq k\Delta _{k,T}(L)\subseteq (k+k_0)\Delta _{k+k_0}(L)-\nu (s_0).  \]
+</div>
+<p>
+       Using theorem <a data-tag="289292E3" href="../../tag/37D86D761E81/">10.1.3</a>, we conclude. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="sgpt-49478B40">
+<p><a class="environment-identifier" href="../../tag/AE9EBC9C5252/">Proposition <span data-tag="49478B40">10.3.10</span>.</a><span data-gerby-tag="49478B40"></span> Let $L'$ be another big line bundle on $X$. Then </p>
+<div class="equation">
+  \[  \Delta _{\nu }(L)+\Delta _{\nu }(L')\subseteq \Delta _{\nu }(L\otimes L').  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Observe that for each $k\in \mathbb {N}$, we have 
+    
+<div class="equation">
+  \[  \Delta _ k(L)+\Delta _ k(L')\subseteq \Delta _ k(L\otimes L').  \]
+</div>
+<p>
+       So our assertion follows immediately from theorem <a data-tag="289292E3" href="../../tag/37D86D761E81/">10.1.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="sgpt-159DA1BA">
+<p><a class="environment-identifier" href="../../tag/2B94C07754DD/">Proposition <span data-tag="159DA1BA">10.3.11</span>.</a><span data-gerby-tag="159DA1BA"></span> For any $a\in \mathbb {Z}_{&gt;0}$, we have </p>
+<div class="equation">
+  \[  \Delta _{\nu }(L^ a)=a\Delta _{\nu }(L).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is an immediate consequence of theorem <a data-tag="289292E3" href="../../tag/37D86D761E81/">10.1.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

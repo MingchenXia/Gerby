@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Operations on non-Archimedean metrics · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-archimedean/">Chapter 19 · Non-Archimedean pluripotential theory</a> · Tag <code>C20FEECB51B7</code></p><h1>Operations on non-Archimedean metrics</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 13.2 Operations on non-Archimedean metrics <span data-gerby-tag="CA244B2C"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$ and $\theta ,\theta ',\theta ''$ be closed real smooth $(1,1)$-forms on $X$ representing big cohomology classes. 
+</p>
+<p>
+This section relies heavily on section <a data-tag="DA2022EA" href="../../tag/9D751AA26579/">9.4</a>. We shall use the notions introduced in that section without further explanations. 
+</p>
+
+<article class="env-definition" id="sgpt-6220FB96">
+<p><a class="environment-identifier" href="../../tag/DA2917901B54/">Definition <span data-tag="6220FB96">13.2.1</span>.</a><span data-gerby-tag="6220FB96"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$, $\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta ')$. We say $\Gamma \leq \Gamma '$ if for some $\omega \in \textup{Käh}(X)$, we have  </p>
+<div class="equation">
+  \[  \Gamma ^{\theta +\omega } \leq \Gamma '{}^{\theta '+\omega }.  \]
+</div>
+</article> This notion is independent of the choice of $\omega $ thanks to <a data-tag="0060DABE" href="../../tag/CA55D62C74E0/">9.4.2</a>. 
+
+
+Moreover, we have the following: <article class="env-proposition" id="sgpt-B6A6FADE">
+<p><a class="environment-identifier" href="../../tag/8C5A487B9CCC/">Proposition <span data-tag="B6A6FADE">13.2.2</span>.</a><span data-gerby-tag="B6A6FADE"></span> Let $\Gamma ,\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $\omega $ be a closed smooth positive $(1,1)$-form on $X$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-574FFB76"><span data-gerby-tag="574FFB76"></span><p>
+ $\Gamma \leq \Gamma '$; 
+</p>
+</li><li class="custom-item" id="sgpt-2B4EAC06"><span data-gerby-tag="2B4EAC06"></span><p>
+ $P_{\theta +\omega }[\Gamma ]_{\mathcal{I}}\leq P_{\theta +\omega }[\Gamma ']_{\mathcal{I}}$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows immediately from <a data-tag="0060DABE" href="../../tag/CA55D62C74E0/">9.4.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+Observe that this definition coincides with the corresponding definition in definition <a data-tag="6060DDFA" href="../../tag/DF47E4B2060A/">9.4.1</a> when $\Gamma ,\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )_{&gt;0}$. 
+</p>
+
+<article class="env-proposition" id="sgpt-4A519264">
+<p><a class="environment-identifier" href="../../tag/F7D709A21AE1/">Proposition <span data-tag="4A519264">13.2.3</span>.</a><span data-gerby-tag="4A519264"></span> Let $\Gamma ,\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$. Assume that $\Gamma \leq \Gamma '$. Then </p>
+<div class="equation">
+  \[  \operatorname{vol}\Gamma \leq \operatorname{vol}\Gamma '.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to show that for any Kähler form $\omega $ on $X$, we have 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Gamma ^{\theta +\omega }_{-\infty }\leq \operatorname{vol}\Gamma '{}^{\theta +\omega }_{-\infty },  \]
+</div>
+<p>
+       which is an immediate consequence of theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-definition" id="sgpt-9E2A21FD">
+<p><a class="environment-identifier" href="../../tag/93939D1E527C/">Definition <span data-tag="9E2A21FD">13.2.4</span>.</a><span data-gerby-tag="9E2A21FD"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta ')$. Then we define $\Gamma +\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta +\theta ')$ as the unique element such that for any $\omega \in \textup{Käh}(X)$, we have  </p>
+<div class="equation">
+  \[  \left( \Gamma +\Gamma ' \right)^{\theta +\theta '+2\omega }=\Gamma ^{\theta +\omega }+\Gamma '^{\theta '+\omega }.  \]
+</div>
+</article> This definition yields an element in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta +\theta ')$ by <a data-tag="E64EB227" href="../../tag/8571F1340B16/">9.4.6</a> and it extends the definition in definition <a data-tag="9F50AA05" href="../../tag/DAA4083947C1/">9.4.3</a> by <a data-tag="E64EB227" href="../../tag/8571F1340B16/">9.4.6</a> as well. 
+
+
+<article class="env-proposition" id="sgpt-28B8E543">
+<p><a class="environment-identifier" href="../../tag/06DFF1DE1519/">Proposition <span data-tag="28B8E543">13.2.5</span>.</a><span data-gerby-tag="28B8E543"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta ')$. Suppose that $\omega ,\omega '$ are two smooth closed positive $(1,1)$-forms on $X$. Then </p>
+<div class="equation">
+  \[  P_{\theta +\omega +\theta '+\omega '}[\Gamma +\Gamma ']_{\mathcal{I}}=P_{\theta +\omega }[\Gamma ]_{\mathcal{I}}+P_{\theta '+\omega '}[\Gamma ']_{\mathcal{I}}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is a direct consequence of <a data-tag="E64EB227" href="../../tag/8571F1340B16/">9.4.6</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-5615A11B">
+<p><a class="environment-identifier" href="../../tag/E9E94041F68D/">Proposition <span data-tag="5615A11B">13.2.6</span>.</a><span data-gerby-tag="5615A11B"></span> The operation $+$ is commutative and associative: For any $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$, $\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta ')$ and $\Gamma ''\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta '')$, we have </p>
+<div class="equation">
+  \[  \Gamma +\Gamma '=\Gamma '+\Gamma ,\quad (\Gamma +\Gamma ')+\Gamma ''=\Gamma +(\Gamma '+\Gamma '').  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is a direct consequence of proposition <a data-tag="DA9E2A37" href="../../tag/FBC25DBE6122/">9.4.5</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-definition" id="sgpt-0C423798">
+<p><a class="environment-identifier" href="../../tag/D1E32864F8F0/">Definition <span data-tag="0C423798">13.2.7</span>.</a><span data-gerby-tag="0C423798"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $C\in \mathbb {R}$. We define $\Gamma +C\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ as the unique element such that for any $\omega \in \textup{Käh}(X)$, we have  </p>
+<div class="equation">
+  \[  \left( \Gamma +C \right)^{\theta +\omega }=\Gamma ^{\theta +\omega }+C.  \]
+</div>
+</article> It is obvious from definition <a data-tag="93F85CB1" href="../../tag/7610A81B88AA/">9.4.7</a> that $\Gamma +C\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$. It is also obvious that this definition extends definition <a data-tag="93F85CB1" href="../../tag/7610A81B88AA/">9.4.7</a>. 
+
+
+<article class="env-proposition" id="sgpt-C3C22B96">
+<p><a class="environment-identifier" href="../../tag/ECFDC5EDD4F2/">Proposition <span data-tag="C3C22B96">13.2.8</span>.</a><span data-gerby-tag="C3C22B96"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $C\in \mathbb {R}$. Suppose that $\omega $ is a smooth closed positive $(1,1)$-form on $X$. Then </p>
+<div class="equation">
+  \[  P_{\theta +\omega }[\Gamma ]_{\mathcal{I}}+C=P_{\theta +\omega }[\Gamma +C]_{\mathcal{I}}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is clear by definition. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-22ED2235">
+<p><a class="environment-identifier" href="../../tag/87CB041BFCA3/">Proposition <span data-tag="22ED2235">13.2.9</span>.</a><span data-gerby-tag="22ED2235"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$, $\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta ')$ and $C,C'\in \mathbb {R}$. Then </p>
+<ol>
+<li class="custom-item" id="sgpt-D15A3892"><span data-gerby-tag="D15A3892"></span><p>
+ $(\Gamma +\Gamma ')+C=\Gamma +(\Gamma '+C)=(\Gamma +C)+\Gamma '$; 
+</p>
+</li><li class="custom-item" id="sgpt-86524DC8"><span data-gerby-tag="86524DC8"></span><p>
+ $\Gamma +(C+C')=(\Gamma +C)+C'$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is a direct consequence of proposition <a data-tag="384921AA" href="../../tag/6DDF81D7BEFF/">9.4.8</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-6EF8C5A2">
+<p><a class="environment-identifier" href="../../tag/11099644479B/">Proposition <span data-tag="6EF8C5A2">13.2.10</span>.</a><span data-gerby-tag="6EF8C5A2"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $C\in \mathbb {R}$. Then </p>
+<div class="equation">
+  \[  \operatorname{vol}\Gamma =\operatorname{vol}(\Gamma +C).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to show that for each Kähler form $\omega $ on $X$, 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Gamma ^{\theta +\omega }_{-\infty }=\operatorname{vol}(\Gamma +C)^{\theta +\omega }_{-\infty },  \]
+</div>
+<p>
+       which is obvious. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-definition" id="sgpt-B001235C">
+<p><a class="environment-identifier" href="../../tag/B819F1A85E09/">Definition <span data-tag="B001235C">13.2.11</span>.</a><span data-gerby-tag="B001235C"></span> Let $\Gamma ,\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$, we define $\Gamma \lor \Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ as the unique element such that for any $\omega \in \textup{Käh}(X)$, we have  </p>
+<div class="equation">
+  \[  \left( \Gamma \lor \Gamma ' \right)^{\theta +\omega }=\Gamma ^{\theta +\omega }\lor \Gamma '^{\theta +\omega }.  \]
+</div>
+</article> It follows from <a data-tag="741AE9D1" href="../../tag/5DB0F974F922/">9.4.12</a> that $\Gamma \lor \Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and this definition extends the corresponding definition in definition <a data-tag="97FF7606" href="../../tag/D347D46F3537/">9.4.9</a>. 
+
+
+<article class="env-proposition" id="sgpt-D0C557A8">
+<p><a class="environment-identifier" href="../../tag/9CACCE9D7690/">Proposition <span data-tag="D0C557A8">13.2.12</span>.</a><span data-gerby-tag="D0C557A8"></span> Let $\Gamma ,\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $\omega $ be a closed smooth positive $(1,1)$-form on $X$. Then </p>
+<div class="equation">
+  \[  P_{\theta +\omega }[\Gamma \lor \Gamma ']_{\mathcal{I}}=P_{\theta +\omega }[\Gamma ]_{\mathcal{I}}\lor P_{\theta +\omega }[\Gamma ']_{\mathcal{I}}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is a direct consequence of <a data-tag="741AE9D1" href="../../tag/5DB0F974F922/">9.4.12</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-6558EB9C">
+<p><a class="environment-identifier" href="../../tag/04004F65B932/">Proposition <span data-tag="6558EB9C">13.2.13</span>.</a><span data-gerby-tag="6558EB9C"></span> The operation $\lor $ is commutative and associative. </p>
+</article> In particular, given a finite non-empty family $(\Gamma ^ i)_{i\in I}$ in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$, we then define $\bigvee _{i\in I}\Gamma ^ i$ in the obvious way. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is a direct consequence of corollary <a data-tag="8B734B07" href="../../tag/C8D1BA787705/">9.4.11</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-definition" id="sgpt-36C1B44C">
+<p><a class="environment-identifier" href="../../tag/C172DAF1B3E6/">Definition <span data-tag="36C1B44C">13.2.14</span>.</a><span data-gerby-tag="36C1B44C"></span> Let $(\Gamma ^ i)_{i\in I}$ be a non-empty family in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$. Assume that  </p>
+<div class="equation" id="sgpt-B092DB90"><span data-gerby-tag="B092DB90"></span>
+<span class="equation-label"><a data-tag="B092DB90" href="../../tag/AB5F1151338C/">13.10</a></span>
+<div>\begin{equation} \label{eq:supPSHNAmaxfinite} \sup _{i\in I}\Gamma ^ i_{\max }&lt;\infty . \end{equation}</div>
+</div>
+<p> Then we define $\operatorname *{sup}_{i\in I}{}\! {}^{*}\Gamma ^ i\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ as the unique element such that for any $\omega \in \textup{Käh}(X)$, we have </p>
+<div class="equation">
+  \[  \left( \operatorname *{sup}_{i\in I}{}\! {}^{*}\Gamma ^ i \right)^{\theta +\omega }=\operatorname *{sup}_{i\in I}{}\! {}^{*}\Gamma ^{i,\theta +\omega }.  \]
+</div>
+</article> It follows immediately from <a data-tag="06940F66" href="../../tag/B6D60981A394/">9.4.18</a> that $\operatorname *{sup}_{i\in I}{}\! {}^{*}\Gamma ^ i\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and this definition extends definition <a data-tag="BD3ECA71" href="../../tag/FA768FFB9E17/">9.4.16</a>. Moreover, this definition clearly extends definition <a data-tag="B001235C" href="../../tag/B819F1A85E09/">13.2.11</a> as well. 
+
+
+<article class="env-proposition" id="sgpt-2653483B">
+<p><a class="environment-identifier" href="../../tag/74CC0BF97B41/">Proposition <span data-tag="2653483B">13.2.15</span>.</a><span data-gerby-tag="2653483B"></span> Let $(\Gamma ^ i)_{i\in I}$ be a non-empty family in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ satisfying (<a data-tag="B092DB90" href="../../tag/AB5F1151338C/">13.10</a>). Assume that $\omega $ is a closed smooth positive $(1,1)$-form on $X$. Then </p>
+<div class="equation">
+  \[  P_{\theta +\omega }\left[ \operatorname *{sup}_{i\in I}{}\! {}^{*} \Gamma ^{i} \right]_{\mathcal{I}}= \operatorname *{sup}_{i\in I}{}\! {}^{*} P_{\theta +\omega }\left[ \Gamma ^{i} \right]_{\mathcal{I}}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is a direct consequence of <a data-tag="06940F66" href="../../tag/B6D60981A394/">9.4.18</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+We also have a non-Archimedean version of Choquet's lemma. <article class="env-proposition" id="sgpt-284D07DA">
+<p><a class="environment-identifier" href="../../tag/21737B0303A5/">Proposition <span data-tag="284D07DA">13.2.16</span>.</a><span data-gerby-tag="284D07DA"></span> Let $(\Gamma ^ i)_{i\in I}$ be a non-empty family in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ satisfying (<a data-tag="B092DB90" href="../../tag/AB5F1151338C/">13.10</a>). Then there exists a countable subfamily $I'\subseteq I$ such that </p>
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*}\Gamma ^ i=\operatorname *{sup}_{i\in I'}{}\! {}^{*}\Gamma ^ i.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a Kähler form $\omega _0$ on $X$. For each $m\geq 1$, proposition <a data-tag="6B576942" href="../../tag/4B67ABC0083D/">9.4.19</a> gives a countable subfamily $I_ m\subseteq I$ such that 
+    
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*}P_{\theta +m^{-1}\omega _0}[\Gamma ^ i]_{\mathcal{I}}=\operatorname *{sup}_{i\in I_ m}{}\! {}^{*}P_{\theta +m^{-1}\omega _0}[\Gamma ^ i]_{\mathcal{I}}.  \]
+</div>
+<p>
+       Set $I'=\bigcup _{m\geq 1}I_ m$. This is countable. We claim that it works. 
+    <p>
+      Let $\omega '\in \textup{Käh}(X)$. Choose $m$ so large that $\omega '\geq m^{-1}\omega _0$. By proposition <a data-tag="2653483B" href="../../tag/74CC0BF97B41/">13.2.15</a> and the compatibility of the transition maps, 
+    
+<div class="equation">
+  \[  \begin{aligned}  \operatorname *{sup}_{i\in I}{}\! {}^{*}P_{\theta +\omega '}[\Gamma ^ i]_{\mathcal{I}} =&amp; P_{\theta +\omega '}\left[\operatorname *{sup}_{i\in I}{}\! {}^{*}P_{\theta +m^{-1}\omega _0}[\Gamma ^ i]_{\mathcal{I}}\right]_{\mathcal{I}}\\  =&amp; P_{\theta +\omega '}\left[\operatorname *{sup}_{i\in I'}{}\! {}^{*}P_{\theta +m^{-1}\omega _0}[\Gamma ^ i]_{\mathcal{I}}\right]_{\mathcal{I}}\\  =&amp; \operatorname *{sup}_{i\in I'}{}\! {}^{*}P_{\theta +\omega '}[\Gamma ^ i]_{\mathcal{I}}. \end{aligned}  \]
+</div>
+<p>
+       Thus the two non-Archimedean metrics have the same component in every class $\theta +\omega '$, and the assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="sgpt-90023533">
+<p><a class="environment-identifier" href="../../tag/938848E420F9/">Proposition <span data-tag="90023533">13.2.17</span>.</a><span data-gerby-tag="90023533"></span> Let $(\Gamma ^ i)_{i\in I}$ be a non-empty family in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ satisfying (<a data-tag="B092DB90" href="../../tag/AB5F1151338C/">13.10</a>). Let $C\in \mathbb {R}$. Then </p>
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*} (\Gamma ^ i+C)=\operatorname *{sup}_{i\in I}{}\! {}^{*} \Gamma ^ i+C.  \]
+</div>
+<p> Suppose that $(\Gamma '^ i)_{i\in I}$ is another family in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta ')$ satisfying (<a data-tag="B092DB90" href="../../tag/AB5F1151338C/">13.10</a>). Suppose that $\Gamma ^ i\leq \Gamma '^ i$ for all $i\in I$. Then </p>
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*}\Gamma ^ i\leq \operatorname *{sup}_{i\in I}{}\! {}^{*}\Gamma '^ i.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is an immediate consequence of proposition <a data-tag="4CE20F47" href="../../tag/4D160D08BDC8/">9.4.20</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-20714EEA">
+<p><a class="environment-identifier" href="../../tag/15E20104530B/">Proposition <span data-tag="20714EEA">13.2.18</span>.</a><span data-gerby-tag="20714EEA"></span> Let $(\Gamma ^ i)_{i\in I}$ be an increasing net in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ satisfying (<a data-tag="B092DB90" href="../../tag/AB5F1151338C/">13.10</a>). Then </p>
+<div class="equation" id="sgpt-0912AC73"><span data-gerby-tag="0912AC73"></span>
+<span class="equation-label"><a data-tag="0912AC73" href="../../tag/AA5696D80091/">13.14</a></span>
+<div>\begin{equation} \label{eq:prop:vol_NA_incnet_cont} \operatorname{vol}\left( \operatorname *{sup}_{i\in I}{}\! {}^{*} \Gamma ^ i \right)=\lim _{i\in I} \operatorname{vol}\Gamma ^ i. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The $\geq $ direction in (<a data-tag="0912AC73" href="../../tag/AA5696D80091/">13.14</a>) is a direct consequence of proposition <a data-tag="4A519264" href="../../tag/F7D709A21AE1/">13.2.3</a>. It remains to prove the reverse inequality. 
+    <p>
+      Note that (<a data-tag="0912AC73" href="../../tag/AA5696D80091/">13.14</a>) holds when $\operatorname{vol}\Gamma ^ i&gt;0$ for each $i\in I$, as a consequence of proposition <a data-tag="7C36CCDA" href="../../tag/88665EBBD399/">9.4.14</a>, corollary <a data-tag="B875A97B" href="../../tag/77738CEC8071/">6.2.9</a> and theorem <a data-tag="91496AFE" href="../../tag/CAB6F4E23080/">6.2.30</a>. 
+    <p>
+      In particular, for each Kähler form $\omega $ on $X$, we have 
+    
+<div class="equation">
+  \[  \operatorname{vol}\left( \operatorname *{sup}_{i\in I}{}\! {}^{*} \Gamma ^{i,\theta +\omega } \right)=\lim _{i\in I} \operatorname{vol}\Gamma ^{i,\theta +\omega }.  \]
+</div>
+<p>
+       For our purpose, we need to show that for any $\epsilon &gt;0$, we can find $\omega $ so that 
+    
+<div class="equation">
+  \[  \sup _{i\in I} \operatorname{vol}\Gamma ^{i,\theta +\omega }&lt;\sup _{i\in I} \operatorname{vol}\Gamma ^{i}+\epsilon .  \]
+</div>
+<p>
+       We shall show that it is possible to choose $\omega $ so that the stronger statement holds: 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Gamma ^{i,\theta +\omega }&lt;\operatorname{vol}\Gamma ^{i}+\epsilon ,\quad \forall i\in I.  \]
+</div>
+<p>
+       Equivalently, we need to choose $\omega $ so that for any Kähler form $\omega '$ on $X$ dominated by $\omega $, we have 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Gamma ^{i,\theta +\omega }_{-\infty }&lt;\operatorname{vol}\Gamma ^{i,\theta +\omega '}_{-\infty }+\epsilon /2,\quad \forall i\in I.  \]
+</div>
+<p>
+       Fix a Kähler form $\omega _0$ on $X$ and a Kähler form $\Omega $ such that $\Omega \geq \theta +\omega _0$. It is enough to take $\omega =\delta \omega _0$ for some $\delta \in (0,1)$. If $\omega '$ is dominated by $\omega $, then $\theta +\omega '\leq \Omega $. Set 
+    
+<div class="equation">
+  \[  T_ i\coloneqq \theta +\omega '+\mathrm{dd}^{\mathrm{c}}\Gamma ^{i,\theta +\omega '}_{-\infty }.  \]
+</div>
+<p>
+       By the transition compatibility and proposition <a data-tag="129B6722" href="../../tag/724BF0CAE002/">9.1.11</a>, the potential $\Gamma ^{i,\theta +\omega }_{-\infty }$ has the same $P$-singularity type in the class $\theta +\omega $ as $\Gamma ^{i,\theta +\omega '}_{-\infty }$. Hence its mass can be computed as 
+    
+<div class="equation">
+  \[  \int _ X\left(\theta +\omega +\mathrm{dd}^{\mathrm{c}}\Gamma ^{i,\theta +\omega '}_{-\infty }\right)^ n=\int _ X \left(T_ i+\omega -\omega '\right)^ n.  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  \begin{aligned}  \operatorname{vol}\Gamma ^{i,\theta +\omega }_{-\infty }-\operatorname{vol}\Gamma ^{i,\theta +\omega '}_{-\infty } =&amp; \int _ X \left(T_ i+\omega -\omega '\right)^ n-\int _ X T_ i^ n\\  =&amp;  \sum _{a=0}^{n-1} \binom {n}{a} \int _ X T_ i^ a\wedge \left( \omega -\omega '\right)^{n-a}\\  \leq &amp; \sum _{a=0}^{n-1} \binom {n}{a} \int _ X \Omega ^ a\wedge \omega ^{n-a}. \end{aligned}  \]
+</div>
+<p>
+       In the last inequality we used the facts that $0\leq \omega -\omega '\leq \omega $ and $\theta +\omega '\leq \Omega $, and the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>. We can choose $\omega $ so that the right-hand side is less than $\epsilon /2$. Our assertion then follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-0A4E21E4">
+<p><a class="environment-identifier" href="../../tag/65E2E07550F1/">Definition <span data-tag="0A4E21E4">13.2.19</span>.</a><span data-gerby-tag="0A4E21E4"></span> Let $(\Gamma ^ i)_{i\in I}$ be a decreasing net in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$. Assume that  </p>
+<div class="equation" id="sgpt-CF7B00D2"><span data-gerby-tag="CF7B00D2"></span>
+<span class="equation-label"><a data-tag="CF7B00D2" href="../../tag/827FE14EA1A0/">13.18</a></span>
+<div>\begin{equation} \label{eq:decnetcontition} \inf _{i\in I}\Gamma ^ i_{\max }&gt;-\infty , \end{equation}</div>
+</div>
+<p> then we define $\inf _{i\in I}\Gamma ^ i\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ as the unique element such that for each $\omega \in \textup{Käh}(X)$, we have </p>
+<div class="equation" id="sgpt-449B05AA"><span data-gerby-tag="449B05AA"></span>
+<span class="equation-label"><a data-tag="449B05AA" href="../../tag/341067287939/">13.19</a></span>
+<div>\begin{equation} \label{eq:decnettestcurdef} \left( \inf _{i\in I}\Gamma ^ i \right)^{\theta +\omega }=\inf _{i\in I} \Gamma ^{i,\theta +\omega }. \end{equation}</div>
+</div>
+</article> We observe that 
+
+<div class="equation">
+  \[  \left( \inf _{i\in I}\Gamma ^ i \right)^{\theta +\omega }\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta +\omega )_{&gt;0}.  \]
+</div>
+<p>
+ This follows from proposition <a data-tag="06038274" href="../../tag/82DA4D86CC78/">9.4.26</a>. Moreover, by <a data-tag="C9AAF985" href="../../tag/E141137C118E/">9.4.27</a>, we have $\inf _{i\in I}\Gamma ^ i\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$, and this definition extends definition <a data-tag="2102B018" href="../../tag/BDCF69FED30F/">9.4.25</a>. 
+</p>
+<p>
+In general, 
+</p>
+<div class="equation">
+  \[  \operatorname{vol}\left( \inf _{i\in I}\Gamma ^ i \right)\leq \lim _{i\in I} \operatorname{vol}\Gamma ^ i  \]
+</div>
+<p>
+ as a consequence of proposition <a data-tag="4A519264" href="../../tag/F7D709A21AE1/">13.2.3</a>. But the reverse inequality fails in general. 
+</p>
+
+<article class="env-proposition" id="sgpt-81B095EC">
+<p><a class="environment-identifier" href="../../tag/07B251D899EF/">Proposition <span data-tag="81B095EC">13.2.20</span>.</a><span data-gerby-tag="81B095EC"></span> Let $(\Gamma ^ i)_{i\in I}$ be a decreasing net in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ satisfying (<a data-tag="CF7B00D2" href="../../tag/827FE14EA1A0/">13.18</a>). Assume that $\omega $ is a closed smooth positive $(1,1)$-form on $X$. Then </p>
+<div class="equation">
+  \[  P_{\theta +\omega }\left[ \inf _{i\in I} \Gamma ^{i} \right]_{\mathcal{I}}= \inf _{i\in I} P_{\theta +\omega }\left[ \Gamma ^{i} \right]_{\mathcal{I}}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows from <a data-tag="C9AAF985" href="../../tag/E141137C118E/">9.4.27</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-DB148881">
+<p><a class="environment-identifier" href="../../tag/C8734FD15163/">Proposition <span data-tag="DB148881">13.2.21</span>.</a><span data-gerby-tag="DB148881"></span> Let $(\Gamma ^ i)_{i\in I}$ be a decreasing net in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ satisfying (<a data-tag="CF7B00D2" href="../../tag/827FE14EA1A0/">13.18</a>). Let $C\in \mathbb {R}$. Then </p>
+<div class="equation">
+  \[  \inf _{i\in I} (\Gamma ^ i+C)=\inf _{i\in I} \Gamma ^ i+C.  \]
+</div>
+<p> Suppose that $(\Gamma '^ i)_{i\in I}$ is another decreasing net in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta ')$ satisfying (<a data-tag="CF7B00D2" href="../../tag/827FE14EA1A0/">13.18</a>). Suppose that $\Gamma ^ i\leq \Gamma '^ i$ for all $i\in I$. Then </p>
+<div class="equation">
+  \[  \inf _{i\in I}\Gamma ^ i\leq \inf _{i\in I}\Gamma '^ i.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is clear by definition. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-definition" id="sgpt-B5365600">
+<p><a class="environment-identifier" href="../../tag/EB1311598A32/">Definition <span data-tag="B5365600">13.2.22</span>.</a><span data-gerby-tag="B5365600"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $\lambda \in \mathbb {R}_{&gt;0}$. Then we define $\lambda \Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\lambda \theta )$ as the unique element such that for any $\omega \in \textup{Käh}(X)$, we have  </p>
+<div class="equation">
+  \[  \left( \lambda \Gamma \right)^{\lambda \theta +\omega }=\lambda \Gamma ^{\theta +\lambda ^{-1}\omega }.  \]
+</div>
+</article> It follows immediately from <a data-tag="267F76AB" href="../../tag/9469C1C052AA/">9.4.24</a> that $\lambda \Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\lambda \theta )$ and this definition extends definition <a data-tag="631C9A14" href="../../tag/F6690BE17BAF/">9.4.21</a>. 
+
+
+<article class="env-proposition" id="sgpt-BEFDE880">
+<p><a class="environment-identifier" href="../../tag/68FB6124EEB2/">Proposition <span data-tag="BEFDE880">13.2.23</span>.</a><span data-gerby-tag="BEFDE880"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $\lambda \in \mathbb {R}_{&gt;0}$. Then for any closed smooth positive $(1,1)$-form $\omega $ on $X$, we have </p>
+<div class="equation">
+  \[  P_{\lambda \theta +\omega }[\lambda \Gamma ]_{\mathcal{I}}=\lambda P_{\theta +\lambda ^{-1}\omega }[\Gamma ]_{\mathcal{I}}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows immediately from <a data-tag="267F76AB" href="../../tag/9469C1C052AA/">9.4.24</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-B1CD3335">
+<p><a class="environment-identifier" href="../../tag/EDFB2682E78E/">Proposition <span data-tag="B1CD3335">13.2.24</span>.</a><span data-gerby-tag="B1CD3335"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$, $\Gamma '\in \mathrm{PSH}^{\mathrm{NA}}(X,\theta ')$, $C\in \mathbb {R}$ and $\lambda ,\lambda '&gt;0$, we have </p>
+<div class="equation">
+  \[  \begin{aligned}  \lambda (\Gamma +\Gamma ')=&amp; \lambda \Gamma +\lambda \Gamma ',\\  (\lambda \lambda ')\Gamma =&amp; \lambda (\lambda '\Gamma ),\\  \lambda (\Gamma +C)=&amp; \lambda \Gamma +\lambda C. \end{aligned}  \]
+</div>
+<p> Suppose that $(\Gamma ^ i)_{i\in I}$ is a non-empty family in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ satisfying (<a data-tag="B092DB90" href="../../tag/AB5F1151338C/">13.10</a>). Then </p>
+<div class="equation">
+  \[  \lambda \left( \operatorname *{sup}_{i\in I}{}\! {}^{*}\Gamma ^ i \right)=\operatorname *{sup}_{i\in I}{}\! {}^{*}(\lambda \Gamma ^ i).  \]
+</div>
+<p> If $(\Gamma ^ i)_{i\in I}$ is a decreasing net in $\mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ satisfying (<a data-tag="CF7B00D2" href="../../tag/827FE14EA1A0/">13.18</a>), then </p>
+<div class="equation">
+  \[  \lambda \left( \inf _{i\in I}\Gamma ^ i \right)=\inf _{i\in I}(\lambda \Gamma ^ i).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Everything except the last assertion follows from proposition <a data-tag="DC570F5F" href="../../tag/A44C0F3CE359/">9.4.23</a>. The last assertion follows directly from the definition. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-A988A112">
+<p><a class="environment-identifier" href="../../tag/1743F9AEA475/">Proposition <span data-tag="A988A112">13.2.25</span>.</a><span data-gerby-tag="A988A112"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ and $\lambda \in \mathbb {R}_{&gt;0}$. Then </p>
+<div class="equation">
+  \[  \operatorname{vol}\left( \lambda \Gamma \right)=\lambda ^ n \operatorname{vol}\Gamma .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is clear by definition. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-definition" id="sgpt-E15F44BE">
+<p><a class="environment-identifier" href="../../tag/C0E37055D126/">Definition <span data-tag="E15F44BE">13.2.26</span>.</a><span data-gerby-tag="E15F44BE"></span> Let $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$. Let $Y\subseteq X$ be an irreducible analytic subset. We say that the trace operator of $\Gamma $ along $Y$ is <em>well-defined</em> if  </p>
+<div class="equation">
+  \[  \nu \left(\Gamma _{\tau }^{\theta +\omega },Y\right)=0  \]
+</div>
+<p> for all sufficiently negative $\tau $ and every $\omega \in \textup{Käh}(X)$. We define </p>
+<div class="equation">
+  \[  \left(\operatorname{Tr}_ Y(\Gamma )\right)_{\max }\coloneqq \sup \left\{  \tau &lt;\Gamma _{\max }: \nu \left(\Gamma _{\tau }^{\theta +\omega },Y\right)=0\right\} .  \]
+</div>
+<p> Here $\omega $ is any Kähler form on $X$; this number is independent of the choice of $\omega $ by the compatibility of the transition maps. </p>
+In this case, we define $\operatorname{Tr}_ Y(\Gamma )\in \mathrm{PSH}^{\mathrm{NA}}(\widetilde{Y},\theta |_{\widetilde{Y}})$<aside class="source-footnote" id="sgpt-a0000109904"><span class="footnote-label">Note.</span> Here $\widetilde{Y}\rightarrow Y$ is the normalization of $Y$.</aside> as the unique element such that for any $\omega \in \textup{Käh}(\widetilde{Y})$, the component 
+<div class="equation" id="sgpt-582B3C46"><span data-gerby-tag="582B3C46"></span>
+<span class="equation-label"><a data-tag="582B3C46" href="../../tag/6697E3349082/">13.23</a></span>
+<div>\begin{equation} \label{eq:TrYinPSHNAg0} \operatorname{Tr}_ Y(\Gamma )^{\theta |_{\widetilde{Y}}+\omega }\in \mathrm{PSH}^{\mathrm{NA}}(\widetilde{Y},\theta |_{\widetilde{Y}}+\omega )_{&gt;0} \end{equation}</div>
+</div>
+<p> is defined as follows: </p>
+<ol>
+<li class="custom-item" id="sgpt-7D403D3E"><span data-gerby-tag="7D403D3E"></span><p>
+ We let 
+</p>
+<div class="equation" id="sgpt-591C336E"><span data-gerby-tag="591C336E"></span>
+<span class="equation-label"><a data-tag="591C336E" href="../../tag/284D786E2B4E/">13.24</a></span>
+<div>\begin{equation} \label{eq:tracemax} \left( \operatorname{Tr}_ Y(\Gamma )^{\theta |_{\widetilde{Y}}+\omega } \right)_{\max }=\left(\operatorname{Tr}_ Y(\Gamma )\right)_{\max }; \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-7F6EB5C5"><span data-gerby-tag="7F6EB5C5"></span><p>
+ for each $\tau \in \mathbb {R}$ less than $\left(\operatorname{Tr}_ Y(\Gamma )\right)_{\max }$, we define 
+</p>
+<div class="equation">
+  \[  \operatorname{Tr}_ Y(\Gamma )^{\theta |_{\widetilde{Y}}+\omega }_{\tau }\coloneqq P_{\theta |_{\widetilde{Y}}+\omega }\left[ \operatorname{Tr}_ Y^{\theta +\tilde{\omega }}\left(\Gamma ^{\theta +\tilde{\omega }}_{\tau }\right) \right]_{\mathcal{I}},  \]
+</div>
+<p>
+ where $\tilde{\omega }$ is an arbitrary Kähler form on $X$ such that $\omega \geq \tilde{\omega }|_{\widetilde{Y}}$. 
+</p>
+</li>
+</ol>
+</article> It follows from <span class="cite">[<span class="postnote">Proposition 3.6</span>, <a href="../../references/#RD185478816D7">GK20</a>]</span> that $\widetilde{Y}$ is a normal Kähler space and hence $\tilde{\omega }$ exists. We observe that the choice of the trace operator $\operatorname{Tr}_ Y^{\theta +\tilde{\omega }}\left(\Gamma ^{\theta +\tilde{\omega }}_{\tau }\right)$ is irrelevant since two different choices are $\mathcal{I}$-equivalent. Moreover, (<a data-tag="582B3C46" href="../../tag/6697E3349082/">13.23</a>) holds as a consequence of proposition <a data-tag="5B8EBC49" href="../../tag/45EA06425921/">8.1.5</a> and proposition <a data-tag="F53735CE" href="../../tag/F2C3DD7D449E/">8.2.1</a>. It is therefore clear that $\operatorname{Tr}_ Y(\Gamma )\in \mathrm{PSH}^{\mathrm{NA}}(\widetilde{Y},\theta |_{\widetilde{Y}})$. Here when $\widetilde{Y}$ is not smooth, we understand $\mathrm{PSH}^{\mathrm{NA}}(\widetilde{Y},\theta |_{\widetilde{Y}})$ as the set of non-Archimedean metrics on a resolution of $\widetilde{Y}$, which is independent of the choice of the resolution by proposition <a data-tag="F53735CE" href="../../tag/F2C3DD7D449E/">8.2.1</a>. See chapter <a data-tag="2291986D" href="../../tag/5131A8B4E30A/">B</a> for more details. 
+
+
+<article class="env-proposition" id="sgpt-CEDDFA43">
+<p><a class="environment-identifier" href="../../tag/E7009D90BCC6/">Proposition <span data-tag="CEDDFA43">13.2.27</span>.</a><span data-gerby-tag="CEDDFA43"></span> Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism from a compact Kähler manifold $Y$. Then all definitions in this section are invariant under pullback to $Y$. </p>
+</article> The meaning is clear in most cases. In the case of the trace operator, this means the following: Suppose that $Z\subseteq X$ is an analytic subset and $\Gamma \in \mathrm{PSH}^{\mathrm{NA}}(X,\theta )$ has non-trivial restriction to $Z$. Suppose that $Z$ is not contained in the non-isomorphism locus of $\pi $ so that the strict transform $W$ of $Z$ is defined. If we write $\Pi \colon W\rightarrow Z$ for the restriction of $\pi $ and $\widetilde{\Pi }\colon \widetilde{W}\rightarrow \widetilde{Z}$ the strict transform of $\Pi $, then we have 
+
+<div class="equation">
+  \[  \widetilde{\Pi }^* \operatorname{Tr}_ Z(\Gamma )=\operatorname{Tr}_ W(\pi ^*\Gamma ).  \]
+</div>
+<p>
+ The relevant notations are summarized in the following diagram: 
+</p>
+<div class="equation">
+<img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/8370eb499968da6bf2d9.svg"/>
+</div>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We only prove the assertion for the trace operator, as the other proofs are similar. 
+    <p>
+      We shall use the notations above. Observe that for any closed positive smooth $(1,1)$-form $\omega $ on $X$ with positive mass, we have 
+    
+<div class="equation">
+  \[  \left(\widetilde{\Pi }^* \operatorname{Tr}_ Z(\Gamma )\right)_{\max }=\left( \operatorname{Tr}_ Z(\Gamma )\right)_{\max }=\sup \left\{  \tau &lt;\Gamma _{\max }: \nu \left(\Gamma ^{\theta +\omega }_{\tau },Z\right)=0 \right\} ,  \]
+</div>
+<p>
+       and 
+    
+<div class="equation">
+  \[  \begin{aligned}  \left(\operatorname{Tr}_ W(\pi ^*\Gamma )\right)_{\max }=&amp; \sup \left\{  \tau &lt;\Gamma _{\max }: \nu \left((\pi ^*\Gamma )^{\pi ^*\theta +\pi ^*\omega }_{\tau },W\right)=0 \right\} \\  =&amp; \sup \left\{  \tau &lt;\Gamma _{\max }: \nu \left(\pi ^*\Gamma ^{\theta +\omega }_{\tau },W\right)=0 \right\} \\  =&amp;  \sup \left\{  \tau &lt;\Gamma _{\max }: \nu \left(\Gamma ^{\theta +\omega }_{\tau },Z\right)=0 \right\} . \end{aligned}  \]
+</div>
+<p>
+       Here we implicitly used proposition <a data-tag="D30D14E9" href="../../tag/817C1BB3E570/">13.1.12</a>. Therefore, 
+    
+<div class="equation">
+  \[  \left(\widetilde{\Pi }^* \operatorname{Tr}_ Z(\Gamma )\right)_{\max }=\left(\operatorname{Tr}_ W(\pi ^*\Gamma )\right)_{\max }.  \]
+</div>
+<p>
+       Let $\tau \in \mathbb {R}$ be less than this common value. Take a Kähler form $\omega _{\widetilde{Z}}$ (resp. $\omega _{\widetilde{W}}$) on $\widetilde{Z}$ (resp. $\widetilde{W}$). Take a Kähler form $\omega _ Y$ on $Y$ (resp. $\omega _ X$ on $X$) such that 
+    
+<div class="equation">
+  \[  \omega _{\widetilde{Z}}\geq \omega _ X|_{\widetilde{Z}},\quad \omega _{\widetilde{W}} \geq \omega _ Y|_{\widetilde{W}},\quad \omega _ Y \geq \pi ^*\omega _ X.  \]
+</div>
+<p>
+       We want to show that, after projection to the common background $(\pi ^*\theta )|_{\widetilde{W}}+\omega _{\widetilde{W}}$, 
+    
+<div class="equation">
+  \[  P_{(\pi ^*\theta )|_{\widetilde{W}}+\omega _{\widetilde{W}}}\left[\widetilde{\Pi }^*\left(\operatorname{Tr}_ Z(\Gamma )^{\theta |_{\widetilde{Z}}+\omega _{\widetilde{Z}}}_\tau \right)\right]_{\mathcal I} \sim _ P \left(\operatorname{Tr}_ W(\pi ^*\Gamma )\right)^{(\pi ^*\theta )|_{\widetilde{W}}+\omega _{\widetilde{W}}}_\tau .  \]
+</div>
+<p>
+      Unfolding the definitions, we reduce to 
+    
+<div class="equation">
+  \[  \widetilde{\Pi }^* \operatorname{Tr}_ Z^{\theta +\omega _ X}\left( \Gamma ^{\theta +\omega _ X}_{\tau } \right)\sim _ P \operatorname{Tr}_{W}^{\pi ^*\theta +\omega _ Y}\left( \left( \pi ^*\Gamma \right)^{\pi ^*\theta +\omega _ Y}_{\tau }\right).  \]
+</div>
+<p>
+       Using proposition <a data-tag="F53735CE" href="../../tag/F2C3DD7D449E/">8.2.1</a>, this is equivalent to 
+    
+<div class="equation">
+  \[  \widetilde{\Pi }^* \operatorname{Tr}_ Z\left( \Gamma ^{\theta +\omega _ X}_{\tau } \right)\sim _ P \operatorname{Tr}_{W}\left( \left( \pi ^*\Gamma \right)^{\pi ^*\theta +\pi ^*\omega _ X}_{\tau }\right).  \]
+</div>
+<p>
+       This is a consequence of <a data-tag="FCC832C0" href="../../tag/DDEF49346283/">8.2.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

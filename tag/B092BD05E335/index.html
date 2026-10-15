@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vanishing area on curves · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>B092BD05E335</code></p><h1>Vanishing area on curves</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 1.8.5 Vanishing area on curves <span data-gerby-tag="D786B9E1"></span></div>
+<p>
+On a compact curve, the integral of the background is the total mass of every curvature current. When this integral vanishes, positivity forces the current to vanish. Normalized compactness and the local estimate of capacity by total variation make this uniqueness stable as the area tends to zero. 
+</p>
+<p>
+Throughout this subsection, $Y$ is a compact connected Riemann surface and $\eta $ is a smooth positive $(1,1)$-form on $Y$ with $\int _ Y\eta =1$, which we use for $L^1$ norms and for the capacity $\operatorname {Cap}_\eta $ on $Y$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-093FF33F">
+<p><a class="environment-identifier" href="../../tag/E8D07C38BC7C/">Lemma <span data-tag="093FF33F">1.8.14</span>.</a><span data-gerby-tag="093FF33F"></span> For a smooth real $(1,1)$-form $\sigma $ on $Y$, put $A=\int _ Y\sigma $. There is a smooth real function $h$ with $\sigma =A\eta +\mathrm{dd}^{\mathrm{c}}h$. The class $\mathrm{PSH}(Y,\sigma )$ is nonempty if and only if $A\geq 0$. If $A=0$, it consists of the functions $-h+c$, $c\in \mathbb R$, and its unique member with supremum zero is $u_\sigma =-h+\min _ Yh$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The smooth form $\sigma -A\eta $ has integral zero, so the Poisson equation on the compact connected surface $Y$ has a smooth solution $h$, unique up to an additive constant. If $u\in \mathrm{PSH}(Y,\sigma )$, positivity and Stokes' theorem give 
+    
+<div class="equation">
+  \[  0\leq (\sigma +\mathrm{dd}^{\mathrm{c}}u)(Y)=A.  \]
+</div>
+<p>
+       Conversely, $\sigma +\mathrm{dd}^{\mathrm{c}}(-h)=A\eta $, so $-h\in \mathrm{PSH}(Y,\sigma )$ when $A\geq 0$. If $A=0$, every positive curvature measure has total mass zero and therefore vanishes. Thus $\mathrm{dd}^{\mathrm{c}}(u+h)=0$ for every $u\in \mathrm{PSH}(Y,\sigma )$, and elliptic regularity and the uniqueness of harmonic functions on $Y$ show that $u+h$ is constant. Normalizing the supremum gives the stated formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-8B2C106E">
+<p><a class="environment-identifier" href="../../tag/FD7A4AE0DAC6/">Theorem <span data-tag="8B2C106E">1.8.15</span>.</a><span data-gerby-tag="8B2C106E"></span> Let $\sigma _ j$ be smooth real $(1,1)$-forms on $Y$ that converge uniformly to a smooth form $\sigma _0$, and suppose that </p>
+<div class="equation">
+  \[  A_ j=\int _ Y\sigma _ j\geq 0,\qquad \int _ Y\sigma _0=0.  \]
+</div>
+<p> Let $u_0$ be the normalized $\sigma _0$-plurisubharmonic potential of lemma <a data-tag="093FF33F" href="../../tag/E8D07C38BC7C/">1.8.14</a>. Then, for every $t&gt;0$, </p>
+<div class="equation">
+  \[  \begin{aligned}  \sup _{u\in \mathrm{PSH}(Y,\sigma _ j),\  \sup _ Yu=0}\| u-u_0\| _{L^1(Y)}&amp; \longrightarrow 0,\\  \sup _{u\in \mathrm{PSH}(Y,\sigma _ j),\  \sup _ Yu=0} \operatorname {Cap}_\eta (\{ |u-u_0|&gt;t\} )&amp; \longrightarrow 0. \end{aligned}  \]
+</div>
+<p> Moreover, the curvature measures $\sigma _ j+\mathrm{dd}^{\mathrm{c}}u$ of these potentials tend to zero in total variation, uniformly in $u$, since each has total variation $A_ j$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose $C&gt;0$ with $\sigma _ j\leq C\eta $ for every $j$. Every sequence of normalized $\sigma _ j$-plurisubharmonic functions then lies in the compact family of normalized $C\eta $-plurisubharmonic functions of theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>. Every $L^1$ limit $u$ of a subsequence is normalized and, by passing to the limit in the sense of distributions, satisfies $\sigma _0+\mathrm{dd}^{\mathrm{c}}u\geq 0$. The preceding lemma gives $u=u_0$. If the first uniform limit failed, a sequence violating it would have a subsequence converging to this same limit, a contradiction. 
+    <p>
+      For a potential $u$ in the $j$-th normalized family, put $T=\sigma _ j+\mathrm{dd}^{\mathrm{c}}u$. Positivity and Stokes' theorem give $\| T\| _{\mathrm{TV}}=A_ j$, and $A_ j\to \int _ Y\sigma _0=0$. Since $\sigma _0+\mathrm{dd}^{\mathrm{c}}u_0=0$, 
+    
+<div class="equation">
+  \[  \| \mathrm{dd}^{\mathrm{c}}(u-u_0)\| _{\mathrm{TV}} \leq A_ j+\| \sigma _ j-\sigma _0\| _{\mathrm{TV}}\longrightarrow 0  \]
+</div>
+<p>
+       uniformly over that family. Apply lemma <a data-tag="11545C04" href="../../tag/C56C5CBA0E0D/">1.6.6</a> on a fixed finite cover of $Y$ by concentric coordinate disks. The first limit and the bound above make each local capacity tend to zero uniformly, and the comparison between local and global capacity at the beginning of this section proves the second limit. The identity $\| T\| _{\mathrm{TV}}=A_ j$ proves the final assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

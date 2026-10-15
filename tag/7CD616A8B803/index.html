@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bedford–Taylor theory · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-pluripolar-mass/">Chapter 11 · Non-pluripolar measures and mass</a> · Tag <code>7CD616A8B803</code></p><h1>Bedford–Taylor theory</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 2.1 Bedford–Taylor theory <span data-gerby-tag="0B0C79A4"></span></div>
+
+ Let $X$ be a complex manifold and $\varphi _1,\ldots ,\varphi _ p\in \mathrm{PSH}(X)$ ($p\in \mathbb {N}$) be locally bounded plurisubharmonic functions on $X$<aside class="source-footnote" id="sgpt-a0000009849"><span class="footnote-label">Note.</span> In the literature, some people use $\mathrm{PSH}(X)\cap L^{\infty }_{\mathrm{loc}}(X)$ to denote the set of such functions, which is an abuse of notation. However, this is legitimate thanks to the rigidity theorem <a data-tag="A3F3EE67" href="../../tag/FEFFC91695E0/">1.1.14</a>.</aside>. In this case, there is a canonical definition of the Monge–Ampère type product (<a data-tag="693DA592" href="../../tag/82D27D8CAD36/">2.1</a>). <article class="env-definition" id="sgpt-117F33A5">
+<p><a class="environment-identifier" href="../../tag/F6CEAE1224B7/">Definition <span data-tag="117F33A5">2.1.1</span>.</a><span data-gerby-tag="117F33A5"></span> We define the closed positive $(p,p)$-current (<a data-tag="693DA592" href="../../tag/82D27D8CAD36/">2.1</a>) on $X$ as follows: We proceed by induction on $p\geq 0$. When $p=0$, we define (<a data-tag="693DA592" href="../../tag/82D27D8CAD36/">2.1</a>) as the $(0,0)$-current $[X]$. When $p&gt;0$, we let </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p\coloneqq \mathrm{dd}^{\mathrm{c}}\left( \varphi _1\, \mathrm{dd}^{\mathrm{c}}\varphi _2 \wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p \right).  \]
+</div>
+<p>  We call this product the <em>Bedford–Taylor product</em> . </p>
+</article>
+
+
+<article class="env-remark" id="sgpt-58D3B6B9">
+<p><a class="environment-identifier" href="../../tag/918938F52375/">Remark <span data-tag="58D3B6B9">2.1.2</span>.</a><span data-gerby-tag="58D3B6B9"></span> There is also a slightly more general version of this construction. Given a closed positive current $T$, one can also define the product </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p \wedge T  \]
+</div>
+<p> in a very similar way. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-0F40C0A2">
+<p><a class="environment-identifier" href="../../tag/E1938BA48A2F/">Proposition <span data-tag="0F40C0A2">2.1.3</span>.</a><span data-gerby-tag="0F40C0A2"></span> The product $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is a closed positive $(p,p)$-current on $X$. Moreover, the product is symmetric in the $\varphi _ i$'s. </p>
+</article> See <span class="cite">[<span class="postnote">Proposition 3.3, Corollary 3.12</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>.<aside class="source-footnote" id="sgpt-a0000009957"><span class="footnote-label">Note.</span> In <span class="cite">[<span class="postnote">Proposition 3.3</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, the authors claim that $\mathrm{d}u\wedge \mathrm{d}^{\mathrm{c}}u\wedge T$ is closed, which is wrong already in the smooth case.</aside> The proof relies crucially on an important estimate, known as the <em>Chern–Levine–Nirenberg inequality</em>. See <span class="cite">[<a href="../../references/#R990F6855D81C">CLN69</a>]</span> or <span class="cite">[<span class="postnote">Theorem 3.9</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>. 
+
+<p>
+The Bedford–Taylor theory has many satisfactory properties. 
+</p>
+
+<article class="env-theorem" id="sgpt-D55DFFA9">
+<p><a class="environment-identifier" href="../../tag/032A3F745585/">Theorem <span data-tag="D55DFFA9">2.1.4</span>.</a><span data-gerby-tag="D55DFFA9"></span> Let $(\varphi _ i^ j)_{j\in \mathbb {Z}_{&gt;0}}$ be decreasing sequences (resp. increasing sequences) of locally bounded psh functions on $X$ converging (resp. converging a.e.) to locally bounded psh functions $\varphi _ i$'s, where $i=0,\ldots ,p$. Then </p>
+<div class="equation">
+  \[  \varphi _0^ j\,  \mathrm{dd}^{\mathrm{c}}\varphi _1^ j\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p^ j\rightharpoonup \varphi _0\,  \mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p  \]
+</div>
+<p> as $j\to \infty $. In particular, if $(\varphi _0^ j)_ j$ is the constant sequence $1$, we have </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\varphi _1^ j\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p^ j\rightharpoonup \mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p.  \]
+</div>
+</article> Here the notation $\rightharpoonup $ denotes the weak-* convergence of currents. 
+
+<p>
+We refer to <span class="cite">[<span class="postnote">Theorem 3.18, Theorem 3.23</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> for the proofs. 
+</p>
+<p>
+By contrast, we emphasize that the Bedford–Taylor product is not continuous with respect to the $L^1_{\mathrm{loc}}$-convergence in general. A simple example can be found in <span class="cite">[<span class="postnote">Example 3.25</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>. 
+</p>
+
+<article class="env-lemma" id="sgpt-453BE736">
+<p><a class="environment-identifier" href="../../tag/10BB181E99E0/">Lemma <span data-tag="453BE736">2.1.5</span>.</a><span data-gerby-tag="453BE736"></span> Let $Q\subseteq \mathbb {C}^ n$ and $D\subseteq \mathbb {C}^ m$ be domains, let $p_2\colon Q\times D\to D$ be the second projection, and let $\eta $ be a smooth real $(m,m)$-form on $D$. Let $u_1,\ldots ,u_ n$ be locally bounded psh functions on $Q\times D$, and put </p>
+<div class="equation">
+  \[  M=\mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ n,\qquad M_ z=\mathrm{dd}^{\mathrm{c}}_ x(u_1)_ z\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}_ x(u_ n)_ z.  \]
+</div>
+<p> Here $(u_ r)_ z(x)=u_ r(x,z)$. For every bounded Borel function $h$ with compact support in $Q\times D$, </p>
+<div class="equation" id="sgpt-E385AD71"><span data-gerby-tag="E385AD71"></span>
+<span class="equation-label"><a data-tag="E385AD71" href="../../tag/E7F106829576/">2.2</a></span>
+<div>\begin{equation} \label{eq:boundedfibrefubini} \int _{Q\times D}h\, p_2^*\eta \wedge M =\int _ D\left(\int _ Q h_ z\, M_ z\right)\eta (z), \qquad h_ z(x)=h(x,z). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By linearity, it suffices to consider $\eta \geq 0$. We first prove (<a data-tag="E385AD71" href="../../tag/E7F106829576/">2.2</a>) when $h$ is continuous. On a product neighborhood of $\operatorname{Supp}h$, choose smooth psh functions $u_ r^{(l)}\searrow u_ r$, $1\leq r\leq n$. For the smooth approximants, decompose each $\mathrm{dd}^{\mathrm{c}}u_ r^{(l)}$ according to the $x$- and $z$-directions. After wedging with $p_2^*\eta $, every term containing a factor $\mathrm{d}z_\alpha $ or $\mathrm{d}\bar z_\beta $ vanishes; hence only the factors $\mathrm{dd}^{\mathrm{c}}_ x(u_ r^{(l)})_ z$ remain, and (<a data-tag="E385AD71" href="../../tag/E7F106829576/">2.2</a>) follows from the usual Fubini theorem. As $l\to \infty $, the Bedford–Taylor monotone continuity theorem theorem <a data-tag="D55DFFA9" href="../../tag/032A3F745585/">2.1.4</a> gives convergence on $Q\times D$ and on every fibre. Fix $K\Subset Q$ and $L\Subset D$ containing the projections of $\operatorname{Supp}h$. The Chern–Levine–Nirenberg estimate <span class="cite">[<span class="postnote">Theorem 3.9</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, together with the local uniform bounds for $u_ r^{(l)}$, bounds the masses of the fibre products on $K$ uniformly for $z\in L$ and $l$. Since $h_ z=0$ for $z\notin L$, dominated convergence proves (<a data-tag="E385AD71" href="../../tag/E7F106829576/">2.2</a>). 
+    <p>
+      It remains to pass from continuous to bounded Borel functions. Fix relatively compact open sets $U\Subset Q$ and $V\Subset D$. If $\chi \in C_ c(U)$, then 
+    
+<div class="equation">
+  \[  F_\chi (z)\coloneqq \int _ U\chi \, M_ z, \qquad z\in V,  \]
+</div>
+<p>
+       is Borel measurable. Indeed, choose the smooth decreasing approximations on a neighborhood of $\overline U\times \overline V$ and set 
+    
+<div class="equation">
+  \[  M_ z^{(l)}\coloneqq \mathrm{dd}^{\mathrm{c}}_ x(u_1^{(l)})_ z\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}_ x(u_ n^{(l)})_ z.  \]
+</div>
+<p>
+       The functions $z\mapsto \int _ U\chi \, M_ z^{(l)}$ are continuous on $V$ and converge pointwise to $F_\chi $ by theorem <a data-tag="D55DFFA9" href="../../tag/032A3F745585/">2.1.4</a>. 
+    <p>
+      Let $\mathcal{A}_{U,V}$ be the vector space of bounded Borel functions $\chi $ on $U$ for which $F_\chi $ is Borel measurable on $V$. It is closed under bounded increasing pointwise limits of non-negative functions by the monotone convergence theorem. Taking compactly supported continuous cut-off functions increasing to $1$ on $U$ shows that $1\in \mathcal{A}_{U,V}$. Thus $\mathcal{A}_{U,V}$ contains the algebra $\mathbb {R}+C_ c(U)$, which generates the Borel $\sigma $-algebra of $U$. The functional monotone class theorem therefore shows that $\mathcal{A}_{U,V}$ contains every bounded Borel function on $U$. 
+    <p>
+      Next, let $\mathcal{B}_{U,V}$ be the vector space of bounded Borel functions $g$ on $U\times V$ such that 
+    
+<div class="equation">
+  \[  z\longmapsto \int _ U g_ z\, M_ z, \qquad g_ z(x)=g(x,z),  \]
+</div>
+<p>
+       is Borel measurable on $V$. This space is again closed under bounded increasing pointwise limits of non-negative functions. It contains every product $g(x,z)=\chi (x)\psi (z)$ of bounded Borel functions, by the preceding paragraph. Finite sums of such products form an algebra containing the indicators of all Borel rectangles $A\times B\subseteq U\times V$; hence this algebra generates the Borel $\sigma $-algebra of $U\times V$. A second application of the functional monotone class theorem shows that $\mathcal{B}_{U,V}$ contains every bounded Borel function on $U\times V$. 
+    <p>
+      To pass from $U\times V$ to $Q\times D$, choose exhaustions $U_ j\Subset Q$ and $V_ j\Subset D$ by relatively compact open sets. For a Borel set $E\subseteq Q\times D$, the preceding paragraph, applied to the restriction of $\mathds {1}_ E$ to $U_ j\times V_ j$, shows that 
+    
+<div class="equation">
+  \[  G_ j(z)\coloneqq \mathds {1}_{V_ j}(z)\int _{U_ j}\mathds {1}_ E(x,z)\, M_ z  \]
+</div>
+<p>
+       is Borel measurable on $D$. We may take both exhaustions increasing, so $G_ j\nearrow M_ z(E_ z)$ pointwise, where 
+    
+<div class="equation">
+  \[  E_ z\coloneqq \{ x\in Q:(x,z)\in E\} .  \]
+</div>
+<p>
+       Thus $z\mapsto M_ z(E_ z)$ is Borel measurable on $D$. We may therefore define 
+    
+<div class="equation">
+  \[  \lambda (E)\coloneqq \int _ D M_ z(E_ z)\, \eta (z).  \]
+</div>
+<p>
+       The monotone convergence theorem, first on each fibre and then on $D$, shows that $\lambda $ is a Borel measure on $Q\times D$. The local uniform mass bound above shows that $\lambda $ is locally finite and hence Radon. Approximation by non-negative simple functions gives 
+    
+<div class="equation">
+  \[  \int _{Q\times D}h\, \mathrm{d}\lambda =\int _ D\left(\int _ Qh_ z\, M_ z\right)\eta (z)  \]
+</div>
+<p>
+       for every non-negative Borel function $h$. For continuous compactly supported $h$, the first part of the proof shows that $\lambda $ agrees with $p_2^*\eta \wedge M$. The uniqueness of Radon measures then gives the same equality for every bounded Borel function $h$ with compact support. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

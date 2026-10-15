@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Partial envelopes · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/ideal-goodness/">Chapter 15 · Multiplier-ideal models and partial equilibrium</a> · Tag <code>9E595DC6361B</code></p><h1>Partial envelopes</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 14.1 Partial envelopes <span data-gerby-tag="9B7DE3ED"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$ and $K \subseteq X$ be a closed non-pluripolar set. Let $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a pseudo-effective cohomology class. 
+</p>
+
+<article class="env-definition" id="sgpt-F1197B05">
+<p><a class="environment-identifier" href="../../tag/28F090ED5EFA/">Definition <span data-tag="F1197B05">14.1.1</span>.</a><span data-gerby-tag="F1197B05"></span> Given a function $f\colon K\rightarrow [-\infty ,\infty ]$ and $\varphi \in \mathrm{PSH}(X,\theta )$, we introduce the <em>relative $P$-envelope</em> of $\varphi $ (with respect to $K,f,\theta $) as </p>
+<div class="equation" id="sgpt-972C80CA"><span data-gerby-tag="972C80CA"></span>
+<span class="equation-label"><a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a></span>
+<div>\begin{equation} \label{eq:PthetaKvarphiv} P_{\theta ,K}[\varphi ](f)\coloneqq \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq \varphi \Bigr \} . \end{equation}</div>
+</div>
+<p>Similarly, we define the <em>relative $\mathcal{I}$-envelope</em> of $\varphi $ (with respect to $K,f,\theta $) as </p>
+<div class="equation" id="sgpt-C267D870"><span data-gerby-tag="C267D870"></span>
+<span class="equation-label"><a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a></span>
+<div>\begin{equation} \label{eq:PthetaKvarphivI} P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\coloneqq \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _{\mathcal{I}} \varphi \Bigr \} . \end{equation}</div>
+</div>
+</article> By $\eta |_ K\leq f$ quasi-everywhere, we mean that there is a pluripolar set $S\subseteq X$ so that $\eta |_{K\setminus S}\leq f|_{K\setminus S}$. In general the upper envelope in (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>) or (<a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a>) may be identically $\infty $. 
+
+<p>
+Observe that when $f$ is bounded from below, neither envelope is identically $-\infty $. 
+</p>
+
+The envelopes contain essentially all envelope operators that we have studied in this book: <article class="env-example" id="sgpt-88A58356">
+<p><a class="environment-identifier" href="../../tag/D0D0EA7C293D/">Example <span data-tag="88A58356">14.1.2</span>.</a><span data-gerby-tag="88A58356"></span> When $K=X$ and $f=0$, we have </p>
+<div class="equation">
+  \[  P_{\theta ,X}[\varphi ](0)=P_{\theta }[\varphi ],\quad P_{\theta ,X}[\varphi ]_{\mathcal{I}}(0)=P_{\theta }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p> When $K=X$, we have </p>
+<div class="equation">
+  \[  P_{\theta ,X}[\varphi ](f)=P_{\theta }[\varphi ](f).  \]
+</div>
+<p> These definitions reduce to the envelopes studied in chapter <a data-tag="D8A4D4BA" href="../../tag/2AC9E2799656/">3</a>. On the other hand, when $\varphi =V_{\theta }$, we have </p>
+<div class="equation">
+  \[  \begin{aligned}  P_{\theta ,K}[V_{\theta }](f) &amp; =P_{\theta ,K}[V_{\theta }]_{\mathcal{I}}(f)\\ &amp; =\operatorname *{sup}_{}{}\! {}^{*}\left\{  \eta \in \mathrm{PSH}(X,\theta ): \begin{array}{l} \eta |_ K \leq f \textup{ quasi-everywhere} \end{array} \right\} . \end{aligned}  \]
+</div>
+<p> In an even more special case where $\varphi =V_{\theta }$ and $K=X$, we find that </p>
+<div class="equation">
+  \[  P_{\theta ,X}[V_{\theta }](f)=\operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta \leq f \textup{ quasi-everywhere}\Bigr \} .  \]
+</div>
+<p> This is nothing but $P_{\theta }(f)$ as we studied in definition <a data-tag="BCD148F8" href="../../tag/434FC63292E2/">2.4.12</a>. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-4AD38E25">
+<p><a class="environment-identifier" href="../../tag/C9561913A3E8/">Proposition <span data-tag="4AD38E25">14.1.3</span>.</a><span data-gerby-tag="4AD38E25"></span> Let $f,g\colon K\rightarrow [-\infty ,\infty ]$ be functions and $\varphi ,\psi \in \mathrm{PSH}(X,\theta )$. Then we have the following: </p>
+<ol>
+<li class="custom-item" id="sgpt-F3BFA151"><span data-gerby-tag="F3BFA151"></span><p>
+ We have 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f);  \]
+</div>
+</li><li class="custom-item" id="sgpt-066E47B9"><span data-gerby-tag="066E47B9"></span><p>
+ assume that $f$ is bounded from above, then 
+</p>
+<div class="equation">
+  \[  \begin{aligned}  \left.P_{\theta ,K}[\varphi ](f)\right|_ K\leq &amp;  f\textup{ quasi-everywhere},\\  \left. P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\right|_ K\leq &amp;  f\textup{ quasi-everywhere}; \end{aligned}  \]
+</div>
+</li><li class="custom-item" id="sgpt-A674290C"><span data-gerby-tag="A674290C"></span><p>
+ suppose that $\varphi \preceq _{\mathcal{I}}\psi $, then 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\leq P_{\theta ,K}[\psi ]_{\mathcal{I}}(f);  \]
+</div>
+</li><li class="custom-item" id="sgpt-05C13635"><span data-gerby-tag="05C13635"></span><p>
+ if $f\leq g$, then 
+</p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq P_{\theta ,K}[\varphi ](g),\quad P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(g);  \]
+</div>
+</li><li class="custom-item" id="sgpt-BD077222"><span data-gerby-tag="BD077222"></span><p>
+ for any $t \in (0,1)$, we have 
+</p>
+<div class="equation">
+  \[  \begin{aligned}  P_{\theta ,K}\left[t\varphi +(1-t)\psi \right](f)\geq &amp;  tP_{\theta ,K}[\varphi ](f)+(1-t)P_{\theta ,K}[\psi ](f),\\  P_{\theta ,K}\left[t\varphi +(1-t)\psi \right]_{\mathcal{I}}(f)\geq &amp;  tP_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)+(1-t)P_{\theta ,K}[\psi ]_{\mathcal{I}}(f). \end{aligned}  \]
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="F3BFA151" href="../../tag/C9561913A3E8/#sgpt-F3BFA151">1</a> This follows from $\eta \preceq \varphi \Rightarrow \eta \preceq _{\mathcal I}\varphi $. 
+    <p>
+<a data-tag="066E47B9" href="../../tag/C9561913A3E8/#sgpt-066E47B9">2</a> This follows from proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a> and <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a>. 
+    <p>
+<a data-tag="A674290C" href="../../tag/C9561913A3E8/#sgpt-A674290C">3</a> This follows by inclusion of the defining candidate sets. 
+    <p>
+<a data-tag="05C13635" href="../../tag/C9561913A3E8/#sgpt-05C13635">4</a> This follows by inclusion of the defining candidate sets. 
+    <p>
+<a data-tag="BD077222" href="../../tag/C9561913A3E8/#sgpt-BD077222">5</a> If $\eta ,\eta '\in \mathrm{PSH}(X,\theta )$ are such that 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \eta |_ K\leq f\textup{ quasi-everywhere},\quad \eta '|_ K\leq f\textup{ quasi-everywhere},\\ &amp; \eta \preceq \varphi ,\quad \eta '\preceq \psi , \end{split}  \]
+</div>
+<p>
+       then for $t\in (0,1)$, 
+    
+<div class="equation">
+  \[  \left.\left(t\eta +(1-t)\eta '\right)\right|_ K\leq f\textup{ quasi-everywhere},\quad t\eta +(1-t)\eta ' \preceq t\varphi +(1-t)\psi .  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  t\eta +(1-t)\eta '\leq P_{\theta ,K}\left[t\varphi +(1-t)\psi \right](f).  \]
+</div>
+<p>
+       Since $\eta $ and $\eta '$ are arbitrary, the first inequality follows. The second follows from the same argument. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+Similar to the usual envelopes studied in chapter <a data-tag="D8A4D4BA" href="../../tag/2AC9E2799656/">3</a>, the $P$-partial envelopes are well-behaved only when $\varphi $ has positive mass. 
+</p>
+
+<article class="env-lemma" id="sgpt-D923A122">
+<p><a class="environment-identifier" href="../../tag/0F9B18404274/">Lemma <span data-tag="D923A122">14.1.4</span>.</a><span data-gerby-tag="D923A122"></span> Suppose that $f\colon K\rightarrow (-\infty ,\infty ]$ is bounded from below, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-CBC7F5DB"><span data-gerby-tag="CBC7F5DB"></span>
+<span class="equation-label"><a data-tag="CBC7F5DB" href="../../tag/96B9EFFFBDA7/">14.11</a></span>
+<div>\begin{equation} \label{eq:Ptheta_partial_pos_mass} P_{\theta ,K}[\varphi ](f)= \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq \varphi \Bigr \} . \end{equation}</div>
+</div>
+</article> In other words, in this situation, in the definition (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>), we may restrict to only those $\eta $ with positive mass. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By our assumption, we can find $C&gt;0$ so that $\varphi |_ K-C\leq f$. Then if $\eta $ is a candidate in (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>), $\eta \lor (\varphi -C)$ is also a candidate, and $\eta \lor (\varphi -C)\in \mathrm{PSH}(X,\theta )_{&gt;0}$. Therefore, $\eta \lor (\varphi -C)$ is also a candidate for the right-hand side of (<a data-tag="CBC7F5DB" href="../../tag/96B9EFFFBDA7/">14.11</a>). The equality (<a data-tag="CBC7F5DB" href="../../tag/96B9EFFFBDA7/">14.11</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+Note that in the most important cases, we can actually replace the condition $\eta \leq f$ quasi-everywhere in (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>) by everywhere. <article class="env-lemma" id="sgpt-72D04C56">
+<p><a class="environment-identifier" href="../../tag/A86A369D4CBF/">Lemma <span data-tag="72D04C56">14.1.5</span>.</a><span data-gerby-tag="72D04C56"></span> Let $f\colon K\rightarrow (-\infty ,\infty ]$ be bounded from below, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-7214BA9C"><span data-gerby-tag="7214BA9C"></span>
+<span class="equation-label"><a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a></span>
+<div>\begin{equation} \label{eq:PthetaK_new_def} \begin{split}  P_{\theta ,K}[\varphi ](f)=&amp; \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ and } \eta \preceq \varphi \Bigr \} \\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ and } \eta \preceq \varphi \Bigr \} . \end{split} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Both $\geq $ directions in (<a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a>) are trivial. 
+    <p>
+      Conversely, let $\eta $ be a candidate in (<a data-tag="CBC7F5DB" href="../../tag/96B9EFFFBDA7/">14.11</a>). Let $S\subseteq X$ be a pluripolar set so that $\eta |_{K\setminus S}\leq f|_{K\setminus S}$. 
+    <p>
+      We now claim that we can choose $\chi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ with $\chi |_ S\equiv -\infty $ and $\chi \leq \eta $. 
+    <p>
+      Assume this for the moment. For any $\delta \in (0,1)$, we have 
+    
+<div class="equation">
+  \[  (1-\delta )\eta |_ K+\delta \chi |_ K\leq f,\quad (1-\delta )\eta +\delta \chi \preceq \varphi .  \]
+</div>
+<p>
+       Hence, $(1-\delta )\eta +\delta \chi $ is dominated by the right-hand side of (<a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a>). Letting $\delta \to 0+$, we conclude that $\eta $ is dominated by the right-hand side of (<a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a>) and hence, (<a data-tag="7214BA9C" href="../../tag/226F49B219B2/">14.12</a>) follows. 
+    <p>
+      It remains to construct $\chi $. Since $\varphi $ has positive mass, the class $\{ \theta \} $ is big. Fix a Kähler form $\omega _0$ on $X$ and choose $\rho \in \mathrm{PSH}(X,\theta )$ with $\theta _{\rho }\geq 2\epsilon _0\omega _0$ for some $\epsilon _0&gt;0$. By theorem <a data-tag="976A8174" href="../../tag/0ED3DB1BD7C2/">1.1.17</a>, there is a quasi-psh function $q$ such that $q|_ S\equiv -\infty $. Choose $A&gt;0$ so that $A\omega _0+\mathrm{dd}^{\mathrm{c}}q\geq 0$. For $a&gt;0$ small enough, $\rho +aq\in \mathrm{PSH}(X,\theta )$ and still has pole $-\infty $ on $S$. Replacing $\rho $ by $\rho +aq$, we may therefore assume that $\rho |_ S\equiv -\infty $. Since $\int _ X \theta _{\eta }^ n&gt;0$, fixing such a $\rho $ and taking $\epsilon \in (0,1)$ small enough, we have 
+    
+<div class="equation">
+  \[  \int _ X \theta ^ n_{\epsilon \rho +(1-\epsilon )V_{\theta }}+\int _ X \theta _{\eta }^ n&gt;\int _ X \theta _{V_{\theta }}^ n.  \]
+</div>
+<p>
+       Thus, by proposition <a data-tag="504A148C" href="../../tag/F7C0BACE770D/">3.1.15</a> and theorem <a data-tag="195FDE1F" href="../../tag/5B751E9DFBC1/">3.1.18</a>, we have 
+    
+<div class="equation">
+  \[  \Bigl (\epsilon \rho +(1-\epsilon )V_{\theta }\Bigr ) \land \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}.  \]
+</div>
+<p>
+       It suffices to define this function as $\chi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-854E031E">
+<p><a class="environment-identifier" href="../../tag/712499DFC37F/">Corollary <span data-tag="854E031E">14.1.6</span>.</a><span data-gerby-tag="854E031E"></span> Suppose that $f\colon K\rightarrow \mathbb {R}$ is bounded, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then there is a constant $C=C(\sup _ K f,K,X)&gt;0$ such that </p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq C,\quad P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\leq C.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $K$ is non-pluripolar, <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a> then gives a constant $C&gt;0$, depending only on $\sup _ K f$, $K$ and $X$, such that every $\eta \in \mathrm{PSH}(X,\theta )$ satisfying $\eta |_ K\leq f$ quasi-everywhere satisfies $\eta \leq C$ on $X$. 
+    <p>
+      This applies to the candidates defining both envelopes. Hence both candidate families are locally uniformly bounded above, so their upper semicontinuous suprema are genuine $\theta $-psh functions. By proposition <a data-tag="4AD38E25" href="../../tag/C9561913A3E8/">14.1.3</a> <a data-tag="066E47B9" href="../../tag/C9561913A3E8/#sgpt-066E47B9">2</a>, both envelopes are dominated by $f$ quasi-everywhere on $K$. Applying <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a> once more gives 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq C,\quad P_{\theta ,K}[\varphi ]_{\mathcal I}(f)\leq C.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></article>
+
+<article class="env-proposition" id="sgpt-D6D912F2">
+<p><a class="environment-identifier" href="../../tag/A1C36A6249C7/">Proposition <span data-tag="D6D912F2">14.1.7</span>.</a><span data-gerby-tag="D6D912F2"></span> Let $f\colon K\rightarrow (-\infty ,\infty ]$ be a function bounded from below and $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Suppose that $\varphi \preceq _{P} \psi $. Then </p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f)\leq P_{\theta ,K}[\psi ](f).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\eta \in \mathrm{PSH}(X,\theta )_{&gt;0}$ be such that $\eta |_ K\leq f$ quasi-everywhere and $\eta \preceq \varphi $. Then $\eta \preceq _ P \psi $, and thanks to corollary <a data-tag="A6227B93" href="../../tag/21CC5153F56F/">6.1.22</a> for any $C&gt;0$, we have $\eta \land (\psi +C)\in \mathrm{PSH}(X,\theta )_{&gt;0}$. But then $\eta \land (\psi +C)$ is a candidate in the definition of $P_{\theta ,K}[\psi ](f)$, and we find 
+    
+<div class="equation">
+  \[  \eta \land (\psi +C)\leq P_{\theta ,K}[\psi ](f).  \]
+</div>
+<p>
+       By corollary <a data-tag="A6227B93" href="../../tag/21CC5153F56F/">6.1.22</a> again, we get 
+    
+<div class="equation">
+  \[  \eta =P_{\theta }[\psi ](\eta )\leq P_{\theta ,K}[\psi ](f).  \]
+</div>
+<p>
+       Our assertion follows now from <a data-tag="D923A122" href="../../tag/0F9B18404274/">14.1.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-DE13EB2D">
+<p><a class="environment-identifier" href="../../tag/72097BEFEC59/">Corollary <span data-tag="DE13EB2D">14.1.8</span>.</a><span data-gerby-tag="DE13EB2D"></span> Let $f\colon K\rightarrow (-\infty ,\infty ]$ be a function bounded from below and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation">
+  \[  \begin{aligned}  P_{\theta ,K}[\varphi ](f)= &amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _ P \varphi \Bigr \} \\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _ P \varphi \Bigr \} \\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ and } \eta \preceq _ P \varphi \Bigr \} \\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ and } \eta \preceq _ P \varphi \Bigr \} . \end{aligned}  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first apply proposition <a data-tag="D6D912F2" href="../../tag/A1C36A6249C7/">14.1.7</a>, 
+    
+<div class="equation">
+  \[  \begin{split}  P_{\theta ,K}[\varphi ](f)= &amp;  P_{\theta ,K}\left[P_{\theta }[\varphi ]\right](f)\\  =&amp;  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta ): \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _ P \varphi \Bigr \} . \end{split}  \]
+</div>
+<p>
+       Next observe that by <a data-tag="D923A122" href="../../tag/0F9B18404274/">14.1.4</a>, the latter can also be written as 
+    
+<div class="equation">
+  \[  \operatorname *{sup}_{}{}\! {}^{*}\Bigl \{  \eta \in \mathrm{PSH}(X,\theta )_{&gt;0}: \eta |_ K \leq f \textup{ quasi-everywhere and } \eta \preceq _ P \varphi \Bigr \} .  \]
+</div>
+<p>
+       Next we apply <a data-tag="72D04C56" href="../../tag/A86A369D4CBF/">14.1.5</a>; the remaining statements follow. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-3796A6E4">
+<p><a class="environment-identifier" href="../../tag/96B842B9BF11/">Corollary <span data-tag="3796A6E4">14.1.9</span>.</a><span data-gerby-tag="3796A6E4"></span> Let $f\colon K\rightarrow (-\infty ,\infty ]$ be a function bounded from below and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ be $\mathcal{I}$-good. Then </p>
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)=P_{\theta ,K}[\varphi ](f).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In fact, since $\varphi $ is $\mathcal{I}$-good, a potential $\eta \in \mathrm{PSH}(X,\theta )$ satisfies $\eta \preceq _ P \varphi $ if and only if $\eta \preceq _{\mathcal{I}} \varphi $. Therefore, our assertion follows from corollary <a data-tag="DE13EB2D" href="../../tag/72097BEFEC59/">14.1.8</a> and (<a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+Next, we make the following observations about the singularity types of our envelopes: <article class="env-lemma" id="sgpt-121EADE7">
+<p><a class="environment-identifier" href="../../tag/18E5130ACB80/">Lemma <span data-tag="121EADE7">14.1.10</span>.</a><span data-gerby-tag="121EADE7"></span> Let $f \colon K\rightarrow \mathbb {R}$ be a bounded function, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. We have </p>
+<div class="equation" id="sgpt-0D56B7C6"><span data-gerby-tag="0D56B7C6"></span>
+<span class="equation-label"><a data-tag="0D56B7C6" href="../../tag/EC4A564BADAB/">14.21</a></span>
+<div>\begin{equation} \label{eq:PthetaKvarphiv_singtype} P_{\theta ,K}[\varphi ](f)\sim P_{\theta }[\varphi ],\quad P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\sim P_{\theta }[\varphi ]_{\mathcal{I}}. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first prove the $P$-part of (<a data-tag="0D56B7C6" href="../../tag/EC4A564BADAB/">14.21</a>). 
+    <p>
+      If $\eta \in \mathrm{PSH}(X,\theta )$ with $\eta \preceq \varphi $ and $\eta \leq 0$, then $\eta +\inf _ K f$ is a candidate in the definition (<a data-tag="972C80CA" href="../../tag/19BBFEFEB969/">14.1</a>), and hence, 
+    
+<div class="equation">
+  \[  \eta +\inf _ K f \leq P_{\theta ,K}[\varphi ](f).  \]
+</div>
+<p>
+       It follows that 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]+\inf _ K f \leq P_{\theta ,K}[\varphi ](f).  \]
+</div>
+<p>
+      Conversely, let $\eta \in \mathrm{PSH}(X,\theta )$ be such that 
+    
+<div class="equation">
+  \[  \eta |_ K\leq f,\quad \eta \preceq \varphi .  \]
+</div>
+<p>
+       Since $K$ is non-pluripolar, by <a data-tag="26574542" href="../../tag/0CEC6D75820C/">1.5.5</a> we can find $C=C(\sup _ K f,K, X)&gt;0$ so that $\eta \leq C$. Hence $\eta -C$ is a candidate in the definition of $P_{\theta }[\varphi ]$, and hence 
+    
+<div class="equation">
+  \[  \eta -C\leq P_{\theta }[\varphi ].  \]
+</div>
+<p>
+       By <a data-tag="72D04C56" href="../../tag/A86A369D4CBF/">14.1.5</a>, this implies that 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ](f) \leq P_{\theta }[\varphi ] + C.  \]
+</div>
+<p>
+      The proof of the $\mathcal{I}$-part is similar, but we spell it out since this comparison will be used below. If $\eta \in \mathrm{PSH}(X,\theta )$ satisfies $\eta \leq 0$ and $\eta \preceq _{\mathcal{I}}\varphi $, then $\eta +\inf _ K f$ is a candidate in (<a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a>). Hence 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]_{\mathcal{I}}+\inf _ K f\leq P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f).  \]
+</div>
+<p>
+       Conversely, let $\eta \in \mathrm{PSH}(X,\theta )$ be a candidate in (<a data-tag="C267D870" href="../../tag/1F7034C27B5A/">14.2</a>). Since $K$ is non-pluripolar and $f$ is bounded, the same compactness estimate gives a constant $C&gt;0$, independent of $\eta $, such that $\eta \leq C$. Then $\eta -C\leq 0$ and $\eta -C\preceq _{\mathcal{I}}\varphi $. By corollary <a data-tag="148EF361" href="../../tag/69E7C4B20FAE/">6.1.11</a>, 
+    
+<div class="equation">
+  \[  \eta -C\leq P_{\theta }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       Taking the upper envelope over all such $\eta $ gives 
+    
+<div class="equation">
+  \[  P_{\theta ,K}[\varphi ]_{\mathcal{I}}(f)\leq P_{\theta }[\varphi ]_{\mathcal{I}}+C.  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-71A3EC87">
+<p><a class="environment-identifier" href="../../tag/CE1417F951E3/">Corollary <span data-tag="71A3EC87">14.1.11</span>.</a><span data-gerby-tag="71A3EC87"></span> Let $f\colon K\rightarrow \mathbb {R}$ be a bounded function, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then </p>
+<div class="equation" id="sgpt-927777D3"><span data-gerby-tag="927777D3"></span>
+<span class="equation-label"><a data-tag="927777D3" href="../../tag/A99869D43853/">14.22</a></span>
+<div>\begin{equation} \label{eq:PthetaKvarphiveq} P_{\theta ,K}[\varphi ](f)=P_{\theta ,X}[\varphi ]\left( P_{\theta ,K}[V_{\theta }](f) \right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take any $\eta \in \mathrm{PSH}(X,\theta )$ with $\eta \preceq \varphi $ and $\eta |_ K\leq f$ quasi-everywhere, then 
+    
+<div class="equation">
+  \[  \eta \leq P_{\theta ,K}[\varphi ](f)\leq P_{\theta ,K}[V_{\theta }](f).  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  \eta \leq P_{\theta ,X}[\varphi ]\left( P_{\theta ,K}[V_{\theta }](f) \right).  \]
+</div>
+<p>
+       So we conclude the $\leq $ direction in (<a data-tag="927777D3" href="../../tag/A99869D43853/">14.22</a>). 
+    <p>
+      For the reverse direction, take $\eta \in \mathrm{PSH}(X,\theta )_{&gt;0}$ such that 
+    
+<div class="equation">
+  \[  \eta \preceq \varphi ,\quad \eta \leq P_{\theta ,K}[V_{\theta }](f) \quad \textup{quasi-everywhere}.  \]
+</div>
+<p>
+       Then $\eta |_ K\leq f$ quasi-everywhere by proposition <a data-tag="4AD38E25" href="../../tag/C9561913A3E8/">14.1.3</a>. Hence 
+    
+<div class="equation">
+  \[  \eta \leq P_{\theta ,K}[\varphi ](f).  \]
+</div>
+<p>
+       By corollary <a data-tag="DE13EB2D" href="../../tag/72097BEFEC59/">14.1.8</a>, the $\geq $ direction in (<a data-tag="927777D3" href="../../tag/A99869D43853/">14.22</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Stability of normalized kernels · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/ideal-goodness/">Chapter 15 · Multiplier-ideal models and partial equilibrium</a> · Tag <code>2BFA87C25210</code></p><h1>Stability of normalized kernels</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 27.5.2 Stability of normalized kernels <span data-gerby-tag="C583FDB6"></span></div>
+<p>
+The total mass of $B_ v\nu $ is the dimension of the selected space, so dividing by this dimension gives probability measures whose dependence on the weight can be controlled independently of the dimension. The squared reproducing kernel defines a symmetric coupling of such a probability measure with itself, and the positivity of the associated Markov operator sharpens the resulting variation bound to an optimal one. 
+</p>
+<p>
+Keep the fixed data of section <a data-tag="4F20A8A6" href="../../tag/6D1351EF2D7C/">27.5.1</a>, and assume $N_ m&gt;0$. For each real $v\in C(X)$, the <em>normalized kernel probability</em> is 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-4DAD1C65"><span data-gerby-tag="4DAD1C65"></span>
+<span class="equation-label"><a data-tag="4DAD1C65" href="../../tag/8B5886BCBD7B/">27.17</a></span>
+<div>\begin{equation} \label{eq:normalized-kernel-probability} \mu _ v=\frac{B_ v}{N_ m}\nu . \end{equation}</div>
+</div>
+<p>
+ Choose an orthonormal basis $s_1,\ldots ,s_{N_ m}$ of $V_ m$ for the weight $v$, and use the unit evaluations $\ell _ x$ of section <a data-tag="4F20A8A6" href="../../tag/6D1351EF2D7C/">27.5.1</a> to set 
+</p>
+<div class="equation">
+  \[  F_ i(x)=\mathrm{e}^{-mv(x)/2}\ell _ x(s_ i),\qquad C_ v(x,y)=\sum _ i F_ i(x)\overline{F_ i(y)}.  \]
+</div>
+<p>
+ The function $C_ v$ depends on the phases of the evaluations, but $|C_ v|$ does not. For $x\notin Z_ m$ let $\sigma _{v,x}$ be the probability measure (<a data-tag="14639F15" href="../../tag/F73FC2DA9CA6/">27.12</a>) at the weight $v$, and define 
+</p>
+<div class="equation">
+  \[  \mathcal Q_ v f(x)=\int _ X f(y)\, \mathrm{d}\sigma _{v,x}(y);  \]
+</div>
+<p>
+ on $Z_ m$, which is a $\mu _ v$-null set, put $\mathcal Q_ vf=0$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C7EB694C">
+<p><a class="environment-identifier" href="../../tag/66CB6C16A6B7/">Lemma <span data-tag="C7EB694C">27.5.7</span>.</a><span data-gerby-tag="C7EB694C"></span> The measure </p>
+<div class="equation" id="non-kahler-pluripotential-theory-B0B37D20"><span data-gerby-tag="B0B37D20"></span>
+<span class="equation-label"><a data-tag="B0B37D20" href="../../tag/A9FF4DD46DA7/">27.18</a></span>
+<div>\begin{equation} \label{eq:coherent-kernel-coupling} \mathrm{d}J_ v(x,y)=\frac{|C_ v(x,y)|^2}{N_ m} \, \mathrm{d}\nu (x)\, \mathrm{d}\nu (y) \end{equation}</div>
+</div>
+<p> on $X\times X$ is a symmetric probability measure whose two marginals are equal to $\mu _ v$. The operator $\mathcal Q_ v$ is a selfadjoint, positive semidefinite contraction of $L^2(\mu _ v)$; it fixes the constant functions $\mu _ v$-almost everywhere and preserves integrals against $\mu _ v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Orthonormality gives $\int _ X|C_ v(x,y)|^2\, \mathrm{d}\nu (y)=B_ v(x)$, so the first marginal of $J_ v$ is $\mu _ v$. By symmetry so is the second, and the total mass identity shows that $J_ v$ has mass one. Off $Z_ m$, dividing $|C_ v(x,\cdot )|^2\, \mathrm{d}\nu $ by $B_ v(x)$ gives the squared Riesz-vector density in (<a data-tag="14639F15" href="../../tag/F73FC2DA9CA6/">27.12</a>). Thus the probabilities $\sigma _{v,x}$ are the conditional probabilities of $J_ v$ given the first coordinate, and $\mathcal Q_ v$ is the associated Markov operator. Since these conditional probabilities have mass one and the marginal of $J_ v$ is $\mu _ v$, the operator $\mathcal Q_ v$ fixes constants and preserves integrals; Jensen's inequality shows that it is a contraction of $L^2(\mu _ v)$, and the symmetry of $J_ v$ shows that it is selfadjoint. For $f\in L^2(\mu _ v)$, expanding the finite sum gives 
+    
+<div class="equation">
+  \[  \langle \mathcal Q_ v f,f\rangle _{L^2(\mu _ v)} =\frac1{N_ m}\sum _{i,j} \left|\int _ X fF_ i\overline{F_ j}\, \mathrm{d}\nu \right|^2\geq 0.  \]
+</div>
+<p>
+       Each of these integrals is independent of the phases, and it exists because $|F_ i\overline{F_ j}|\leq B_ v$ and $f\in L^1(\mu _ v)$. This proves positivity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+For $v,q\in C(X,\mathbb R)$ we write $D\mu _ v[q]$ for the derivative of $t\mapsto \mu _{v+tq}$ at $t=0$ in total variation, which exists by proposition <a data-tag="60CA1787" href="../../tag/81FC6A666EC9/">27.5.3</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-0C4BDB09">
+<p><a class="environment-identifier" href="../../tag/4920A08E02F1/">Proposition <span data-tag="0C4BDB09">27.5.8</span>.</a><span data-gerby-tag="0C4BDB09"></span> For $q,v,w\in C(X,\mathbb R)$, write $\operatorname {osc}_ Xq=\sup _ Xq-\inf _ Xq$. Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-392AA976"><span data-gerby-tag="392AA976"></span>
+<span class="equation-label"><a data-tag="392AA976" href="../../tag/5CBC01E88DA5/">27.19</a></span>
+<div>\begin{equation} \label{eq:normalized-kernel-response-bound} D\mu _ v[q]=m(\mathcal Q_ vq-q)\mu _ v, \qquad \| D\mu _ v[q]\| _{\mathrm{TV}} \leq \frac m2\operatorname {osc}_ Xq. \end{equation}</div>
+</div>
+<p> Consequently </p>
+<div class="equation" id="non-kahler-pluripotential-theory-05F07C9B"><span data-gerby-tag="05F07C9B"></span>
+<span class="equation-label"><a data-tag="05F07C9B" href="../../tag/E8E6AD8629D0/">27.20</a></span>
+<div>\begin{equation} \label{eq:normalized-kernel-weight-stability} \| \mu _ w-\mu _ v\| _{\mathrm{TV}} \leq 2\tanh \left(\frac m4\operatorname {osc}_ X(w-v)\right). \end{equation}</div>
+</div>
+<p> These bounds do not depend on $N_ m$. In particular, let $v_ m,w_ m\in C(X,\mathbb R)$ along a sequence of degrees with nonzero selected spaces. If $m\operatorname {osc}_ X(w_ m-v_ m)\to 0$, then the two sequences of normalized kernel probabilities have the same weak, or total variation, limit whenever one of them converges in that topology. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The formula for $D\mu _ v[q]$ follows from corollary <a data-tag="75901E73" href="../../tag/7733E1B20E7B/">27.5.5</a>, since $N_ m$ does not depend on the weight. For the bound, put $g=q-\mathcal Q_ vq$, $A=\{ g&gt;0\} $ and $p=\mu _ v(A)$. Since $\mathcal Q_ v$ preserves integrals, $g$ has mean zero, and selfadjointness gives 
+    
+<div class="equation">
+  \[  \int _ Ag\, \mathrm{d}\mu _ v =\langle q,(I-\mathcal Q_ v)\mathbf1_ A\rangle _{L^2(\mu _ v)}.  \]
+</div>
+<p>
+       The function $(I-\mathcal Q_ v)\mathbf1_ A$ is nonnegative on $A$ and nonpositive on its complement, almost everywhere, and its integral is zero. Subtracting $\inf _ Xq$ from $q$ does not change the pairing, which is therefore at most 
+    
+<div class="equation">
+  \[  \operatorname {osc}_ Xq \bigl (p-\langle \mathbf1_ A,\mathcal Q_ v\mathbf1_ A\rangle \bigr ).  \]
+</div>
+<p>
+       Positivity of $\mathcal Q_ v$, applied to $\mathbf1_ A-p$, gives $\langle \mathbf1_ A,\mathcal Q_ v\mathbf1_ A\rangle \geq p^2$: since $\mathcal Q_ v$ fixes constants and preserves integrals, $\langle \mathbf1_ A-p,\mathcal Q_ v(\mathbf1_ A-p)\rangle =\langle \mathbf1_ A,\mathcal Q_ v\mathbf1_ A\rangle -p^2$. As $g$ has mean zero, it follows that 
+    
+<div class="equation">
+  \[  \| g\| _{L^1(\mu _ v)} =2\int _ Ag\, \mathrm{d}\mu _ v \leq 2\operatorname {osc}_ Xq\, p(1-p) \leq \tfrac 12\operatorname {osc}_ Xq.  \]
+</div>
+<p>
+       The total variation norm of a signed measure is the integral of the absolute value of its density, so $\| D\mu _ v[q]\| _{\mathrm{TV}}=m\| g\| _{L^1(\mu _ v)}$, and (<a data-tag="392AA976" href="../../tag/5CBC01E88DA5/">27.19</a>) follows. 
+    <p>
+      For the global estimate, take $q=w-v$, $v_ t=v+tq$, $\mu _ t=\mu _{v_ t}$ and $\mathcal Q_ t=\mathcal Q_{v_ t}$ for $0\leq t\leq 1$, and put $a=m\operatorname {osc}_ Xq$. For a Borel set $E$, the function $p_ t=\mu _ t(E)$ is differentiable, because integration against $\mathbf1_ E$ is a bounded linear functional for the total variation norm, and selfadjointness gives 
+    
+<div class="equation">
+  \[  p'_ t=-m\langle q,(I-\mathcal Q_ t)\mathbf1_ E\rangle _{L^2(\mu _ t)}.  \]
+</div>
+<p>
+       The function $(I-\mathcal Q_ t)\mathbf1_ E$ has positive and negative parts whose integrals both equal $p_ t-\langle \mathbf1_ E,\mathcal Q_ t\mathbf1_ E\rangle $. Bounding $q$ above and below on the supports of these parts, and applying positivity to $\mathbf1_ E-p_ t$ as before, we obtain 
+    
+<div class="equation">
+  \[  |p'_ t|\leq a\bigl (p_ t-\langle \mathbf1_ E,\mathcal Q_ t\mathbf1_ E\rangle \bigr ) \leq ap_ t(1-p_ t).  \]
+</div>
+<p>
+       All the kernels $B_{v_ t}$ are positive exactly off the common zero set $Z_ m$, so the probabilities $\mu _ t$ are mutually absolutely continuous. Hence, if $p_0$ is zero or one, then $p_ t=p_0$ for all $t$. Otherwise $0&lt;p_ t&lt;1$ for all $t$, and integration gives 
+    
+<div class="equation">
+  \[  \left|\log \frac{p_1}{1-p_1}-\log \frac{p_0}{1-p_0}\right|\leq a.  \]
+</div>
+<p>
+       Let $\sigma (z)=\mathrm{e}^ z/(1+\mathrm{e}^ z)$ be the logistic function. If $p_1\geq p_0$ and $z=\log (p_0/(1-p_0))$, then 
+    
+<div class="equation">
+  \[  p_1-p_0\leq \sigma (z+a)-\sigma (z) =\frac{\sinh (a/2)}{\cosh (z+a/2)+\cosh (a/2)} \leq \tanh (a/4).  \]
+</div>
+<p>
+       The case $p_1\leq p_0$ is symmetric. Since $\mu _ w-\mu _ v$ has total mass zero, its total variation norm is $2\sup _ E|\mu _ w(E)-\mu _ v(E)|$, which proves (<a data-tag="05F07C9B" href="../../tag/E8E6AD8629D0/">27.20</a>). Under the hypothesis of the last assertion the right-hand side tends to zero, which gives the final statement. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-C3F897EE">
+<p><a class="environment-identifier" href="../../tag/A118D36549FE/">Example <span data-tag="C3F897EE">27.5.9</span>.</a><span data-gerby-tag="C3F897EE"></span> For each $a&gt;0$ and $m\geq 1$, the bound (<a data-tag="05F07C9B" href="../../tag/E8E6AD8629D0/">27.20</a>) is optimal as a supremum over smooth weights, already for a selected space of dimension one. Indeed, let $X=\mathbb P^1$ with the trivial line bundle and its trivial metric, take the selecting potential zero, and let $\nu $ be the Fubini–Study area normalized to mass one. Then there are smooth real weights $w_ j$ with $m\operatorname {osc}_ Xw_ j=a$ such that </p>
+<div class="equation">
+  \[  \| \mu _{w_ j}-\mu _0\| _{\mathrm{TV}}\longrightarrow 2\tanh (a/4).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The selected space consists of the constant functions, so the normalized kernel probability at a weight $u$ is $\mathrm{e}^{-mu}\nu /\int _ X\mathrm{e}^{-mu}\, \mathrm{d}\nu $. Choose a spherical cap $E$ with $\nu (E)=p=(1+\mathrm{e}^{a/2})^{-1}$; its boundary circle has zero area. Choose smooth functions $0\leq \chi _ j\leq 1$, equal to one on an inner cap and zero outside an outer cap, converging almost everywhere to $\mathbf1_ E$; each has oscillation one. Put $w_ j=-a\chi _ j/m$. The densities $\mathrm{e}^{a\chi _ j}$ converge boundedly almost everywhere, and their normalizing constants converge to a positive limit, so $\mu _{w_ j}$ converges in total variation to 
+    
+<div class="equation">
+  \[  \frac{\mathrm{e}^{a\mathbf1_ E}}{Z}\nu , \qquad Z=1-p+\mathrm{e}^ ap=\mathrm{e}^{a/2}.  \]
+</div>
+<p>
+       This limit gives $E$ the mass $1-p$, and its density with respect to $\nu $ is greater than one on $E$ and less than one outside $E$. Its total variation distance from $\nu =\mu _0$ is therefore $2(1-2p)=2\tanh (a/4)$. The triangle inequality transfers this limit to the measures $\mu _{w_ j}$. This shows that the bound is optimal as a supremum; we do not claim that it is attained by a smooth weight. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+At the scale of perturbations of size $1/m$, the analytic dependence on the weight is also controlled independently of the dimension of the selected space. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-824CFD61">
+<p><a class="environment-identifier" href="../../tag/4F99D774A693/">Proposition <span data-tag="824CFD61">27.5.10</span>.</a><span data-gerby-tag="824CFD61"></span> Put $\rho =\log (3/2)$. The map $f\mapsto \mu _{v+f/m}$ extends holomorphically to the ball $\{ f\in C(X,\mathbb C):\| f\| _\infty &lt;\rho \} $, with values in complex measures of total variation at most three. For real $q\in C(X)$ and $k\geq 1$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-E1D21560"><span data-gerby-tag="E1D21560"></span>
+<span class="equation-label"><a data-tag="E1D21560" href="../../tag/961FF4CC03F6/">27.21</a></span>
+<div>\begin{equation} \label{eq:normalized-kernel-cauchy-bounds} \left\| \left.\frac{\mathrm{d}^ k}{\mathrm{d}t^ k}\right|_{t=0} \mu _{v+tq}\right\| _{\mathrm{TV}} \leq 3k!\left(\frac{m\operatorname {osc}_ Xq}{2\rho }\right)^ k. \end{equation}</div>
+</div>
+<p> The radius $\rho $ and the bound three do not depend on $m$, $N_ m$ or the real base weight $v$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On $V_ m$ use $T(f)=P_ v(\mathrm{e}^{-f}\, \cdot \, )$, the operator in the proof of proposition <a data-tag="60CA1787" href="../../tag/81FC6A666EC9/">27.5.3</a> for the perturbation $f/m$ of the weight $v$. That proof gives $\| T(f)^{-1}\| \leq 2$ on the ball. The extended measure has the density 
+    
+<div class="equation">
+  \[  \frac{\mathrm{e}^{-mv(x)-f(x)}}{N_ m} \ell _ x\bigl (T(f)^{-1}k_{v,x}\bigr )  \]
+</div>
+<p>
+       with respect to $\nu $. By the Riesz identity at the weight $v$, its absolute value is at most $2\mathrm{e}^{\| f\| _\infty }B_ v(x)/N_ m\leq 3B_ v(x)/N_ m$, so its total variation is at most three. Holomorphy follows from the same finite-dimensional construction and the bounded linear passage from densities to measures. For a complex constant $c$ we have $T(f+c)=\mathrm{e}^{-c}T(f)$, and the resulting factor $\mathrm{e}^{c}$ cancels the factor $\mathrm{e}^{-c}$ in the density; thus adding constants to $f$ does not change the extension. For nonconstant real $q$, replace $q$ by $q-c$ with $c=(\sup _ Xq+\inf _ Xq)/2$, so that $\| q-c\| _\infty =\operatorname {osc}_ Xq/2$. Then $t\mapsto \mu _{v+tq}$ extends holomorphically to the disk $|t|&lt;\rho /(m\| q-c\| _\infty )$, with total variation at most three. The Cauchy estimates for Banach-valued holomorphic functions, applied on circles of radius less than $\rho /(m\| q-c\| _\infty )$, followed by letting the radius increase to that value, prove (<a data-tag="E1D21560" href="../../tag/961FF4CC03F6/">27.21</a>). If $q$ is constant, the measure does not depend on $t$, and all derivatives vanish. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+The hypothesis $m\operatorname {osc}_ X(w_ m-v_ m)\to 0$ in proposition <a data-tag="0C4BDB09" href="../../tag/4920A08E02F1/">27.5.8</a> cannot in general be replaced by uniform convergence $w_ m-v_ m\to 0$: a perturbation of order $1/m$ along the fibers of a product survives in a nonzero measure limit. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-680DCFE1">
+<p><a class="environment-identifier" href="../../tag/00C65C3DCEEB/">Example <span data-tag="680DCFE1">27.5.11</span>.</a><span data-gerby-tag="680DCFE1"></span> Let $Y$ be a connected compact complex manifold of positive dimension with a smooth positive probability volume $\nu _ Y$. On $X=\mathbb P^1\times Y$, use the pullback of $\mathcal O(1)$ with its Fubini–Study metric, the selecting potential zero, and the volume $\nu =\nu _{\mathrm{FS}}\otimes \nu _ Y$, where $\nu _{\mathrm{FS}}$ is the Fubini–Study area of mass one. Choose a nonconstant $q\in C(Y,\mathbb R)$ and put </p>
+<div class="equation">
+  \[  v_ m(b,y)=q(y)/m,\qquad Z_ q=\int _ Y\mathrm{e}^{-q}\, \mathrm{d}\nu _ Y,\qquad \nu _ q=Z_ q^{-1}\mathrm{e}^{-q}\nu _ Y.  \]
+</div>
+<p> Then $N_ m=m+1$ and, for every $m$, the kernel and the normalized kernel probability at the weight $v_ m$ are </p>
+<div class="equation" id="non-kahler-pluripotential-theory-F9C738D2"><span data-gerby-tag="F9C738D2"></span>
+<span class="equation-label"><a data-tag="F9C738D2" href="../../tag/53B83B2F665D/">27.22</a></span>
+<div>\begin{equation} \label{eq:inverse-degree-fiber-kernels} B_{m,v_ m}(b,y)=(m+1)\frac{\mathrm{e}^{-q(y)}}{Z_ q}, \qquad \mu _{m,v_ m}=\nu _{\mathrm{FS}}\otimes \nu _ q. \end{equation}</div>
+</div>
+<p> Thus $v_ m\to 0$ uniformly, but the kernel measures with $r=1$ converge in total variation to $\nu _{\mathrm{FS}}\otimes \nu _ q$, whereas at the weight zero the limit is $\nu _{\mathrm{FS}}\otimes \nu _ Y$. In both cases the potentials $m^{-1}\log B_{m,v}$ tend uniformly to zero. With the normalization by the dimension of $X$, both sequences of kernel measures tend to zero in total variation. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Every section descends to $\mathbb P^1$, because the fibers $\{ b\} \times Y$ are compact and connected, as in proposition <a data-tag="DF971029" href="../../tag/7E88736EF73B/">27.7.1</a>. Hence the selected space is $H^0(\mathbb P^1,\mathcal O(m))$, of dimension $m+1$. Its unweighted Bergman kernel for $\nu _{\mathrm{FS}}$ is constant, since the unitary group acts transitively on $\mathbb P^1$ and preserves the metric and the volume; its integral $m+1$ determines the constant. For a section pulled back from $\mathbb P^1$, the norm on $X$ at the weight $v_ m$ is $Z_ q$ times the norm on $\mathbb P^1$, which proves (<a data-tag="F9C738D2" href="../../tag/53B83B2F665D/">27.22</a>). At the weight zero the normalized kernel probability is $\nu _{\mathrm{FS}}\otimes \nu _ Y$. These probabilities differ: equality would force $\mathrm{e}^{-q}/Z_ q=1$ almost everywhere, and then everywhere, because $q$ is continuous and every nonempty open set has positive volume; this contradicts the choice of $q$. The kernel measures with $r=1$ are $(m+1)/m$ times these probabilities, and the normalization in dimension $1+\dim Y\geq 2$ gives measures tending to zero in total variation. Finally, $m^{-1}\log B_{m,v_ m}=m^{-1}\bigl (\log (m+1)-q-\log Z_ q\bigr )$ and $m^{-1}\log B_{m,0}=m^{-1}\log (m+1)$ both tend uniformly to zero. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The same phenomenon, in which a fiber probability survives in the limit, reappears in section <a data-tag="AFA7C009" href="../../tag/6109F3CDB146/">27.11</a>, where the limit measure on the total space carries the conditional fiber probabilities of the integration volume. So far the norm varied within a fixed selected space. Under a modification the integrability condition changes as well, and the next section compares both the selected spaces and their norms. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The admissible cone · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/local-monge-ampere/">Chapter 7 · Local Monge–Ampère theory and Hessian equations</a> · Tag <code>F677D35E0BD7</code></p><h1>The admissible cone</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 12.1 The admissible cone <span data-gerby-tag="97706797"></span></div>
+<p>
+For $\lambda \in \mathbb R^ n$, let $S_ j(\lambda )$ be the elementary symmetric polynomial of degree $j$, put $\sigma _ j=S_ j/\binom nj$ and $\sigma _0=1$, and set 
+</p>
+<div class="equation">
+  \[  \Gamma _ m=\{ \lambda :S_ j(\lambda )&gt;0,\  1\leq j\leq m\} .  \]
+</div>
+<p>
+ A real $(1,1)$-form belongs to $\Gamma _ m(\omega )$ if its eigenvalues relative to $\omega $ belong to $\Gamma _ m$. Write $C_{n,m}$ for the corresponding closed cone of Hermitian matrices. The algebraic assertions below also apply when $m=n$. 
+</p>
+<p>
+We use the classical Gårding facts: the closed spectral cone is convex, contains the nonnegative matrices, and is preserved by adding them; adding a positive matrix puts a closed-cone matrix in its interior. The normalized root $F=\sigma _ m^{1/m}$ is concave and increasing there. Polarized products of $k$ forms in $\Gamma _ k(\omega )$ with $\omega ^{n-k}$ are positive, and Maclaurin's inequalities give $\sigma _ j^{1/j}\geq \sigma _ k^{1/k}$ for $j\leq k$. These algebraic facts will serve as inputs to the analytic arguments. 
+</p>
+<p>
+A continuous real function $v$ on $X$ is <em>admissible</em> if 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-E3011B0D"><span data-gerby-tag="E3011B0D"></span>
+<span class="equation-label"><a data-tag="E3011B0D" href="../../tag/C5A4D9AE83ED/">12.1</a></span>
+<div>\begin{equation} \label{eq:hessian-continuous-admissibility} (\omega +\mathrm{dd}^{\mathrm{c}}v)\wedge \gamma _1\wedge \cdots \wedge \gamma _{m-1} \wedge \omega ^{n-m}\geq 0 \end{equation}</div>
+</div>
+<p>
+ in distributions for every smooth collection $\gamma _1,\ldots ,\gamma _{m-1}\in \Gamma _ m(\omega )$. For smooth $v$ this is equivalent to the pointwise closed-cone condition; strict admissibility means membership in the open cone. Maxima and convex combinations preserve continuous admissibility. To check the maximum property, fix one smooth positive linear test in (<a data-tag="E3011B0D" href="../../tag/C5A4D9AE83ED/">12.1</a>). Locally a smooth solution of its inhomogeneous linear equation reduces the assertion to the maximum property for subsolutions of a smooth elliptic operator. 
+</p>
+<p>
+For a bounded upper semicontinuous function $v$, admissibility means that every local $C^2$ upper test $q$ at $x$ satisfies 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-99D246B6"><span data-gerby-tag="99D246B6"></span>
+<span class="equation-label"><a data-tag="99D246B6" href="../../tag/B372916B922F/">12.2</a></span>
+<div>\begin{equation} \label{eq:hessian-bounded-upper-tests} \omega (x)+\mathrm{dd}^{\mathrm{c}}q(x)\in \overline{\Gamma _ m(\omega (x))}. \end{equation}</div>
+</div>
+<p>
+ For continuous $v$, this agrees with (<a data-tag="E3011B0D" href="../../tag/C5A4D9AE83ED/">12.1</a>): Gårding duality reduces both conditions to subsolution inequalities for smooth strictly elliptic linear operators. We use their classical viscosity–distributional equivalence, with the usual subharmonic representative in the bounded class.  
+</p>
+<p>
+The first estimate controls a scalar shift of the cone. It will give lower bounds for every coefficient of the linearized Hessian operator. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-42B9BB86">
+<p><a class="environment-identifier" href="../../tag/F86594126C69/">Lemma <span data-tag="42B9BB86">12.1.1</span>.</a><span data-gerby-tag="42B9BB86"></span> For $\lambda \in \Gamma _ m$, put </p>
+<div class="equation">
+  \[  e_ m=\frac{\sigma _ m(\lambda )}{m\sigma _{m-1}(\lambda )}.  \]
+</div>
+<p> Then $\lambda -t\mathbf1\in \Gamma _ m$ for $0\leq t&lt;e_ m$. If $m\geq 2$, the conclusion also holds for $t=e_ m$. For $m=1$, the endpoint lies on the boundary. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The polynomial 
+    
+<div class="equation">
+  \[  P(x)=\sigma _ m(\lambda +x\mathbf1) =\sum _{j=0}^ m\binom mj\sigma _ j(\lambda )x^{m-j}  \]
+</div>
+<p>
+       is a positive multiple of the $(n-m)$th derivative of $\prod _ i(x+\lambda _ i)$. Hence all its roots are real, by Rolle's theorem. Its coefficients are positive, so all its roots are strictly negative. Write $P(x)=\prod _{i=1}^ m(x+r_ i)$ with $r_ i&gt;0$. Logarithmic differentiation at zero gives 
+    
+<div class="equation">
+  \[  \sum _{i=1}^ m r_ i^{-1} =\frac{m\sigma _{m-1}(\lambda )}{\sigma _ m(\lambda )} =e_ m^{-1}.  \]
+</div>
+<p>
+       Thus $\min _ i r_ i\geq e_ m$, with strict inequality if $m\geq 2$. For $x&gt; -\min _ i r_ i$, every derivative of $P$ is positive: differentiating its product expansion produces sums of products of positive factors. Since 
+    
+<div class="equation">
+  \[  P^{(m-j)}(x)=\frac{m!}{j!}\sigma _ j(\lambda +x\mathbf1), \qquad 1\leq j\leq m,  \]
+</div>
+<p>
+       all the required symmetric polynomials are positive at $x=-t$. When $m=1$, the sole root is $-e_1$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-3E489B35">
+<p><a class="environment-identifier" href="../../tag/94C4E018DD25/">Lemma <span data-tag="3E489B35">12.1.2</span>.</a><span data-gerby-tag="3E489B35"></span> If $\alpha ,\gamma \in \Gamma _ m(\omega )$, then </p>
+<div class="equation">
+  \[  \frac{\alpha ^{m-1}\wedge \gamma \wedge \omega ^{n-m}}{\omega ^ n} \frac{\alpha \wedge \omega ^{n-1}}{\omega ^ n} \geq \frac1{m!} \frac{\alpha ^ m\wedge \omega ^{n-m}}{\omega ^ n} \frac{\gamma \wedge \omega ^{n-1}}{\omega ^ n}.  \]
+</div>
+<p> The assertion extends to $\gamma \in \overline{\Gamma _ m(\omega )}$ by continuity. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $\sigma _ k=\alpha ^ k\wedge \omega ^{n-k}/\omega ^ n$, and $M_ k=\alpha ^{k-1}\wedge \gamma \wedge \omega ^{n-k}/\omega ^ n$. For $1\leq k&lt;m$, the cone shift with index $k+1$ and Gårding positivity give 
+    
+<div class="equation">
+  \[  M_{k+1}\geq tM_ k \quad \left(0\leq t&lt;\frac{\sigma _{k+1}}{(k+1)\sigma _ k}\right).  \]
+</div>
+<p>
+       Let $t$ increase to the displayed endpoint. Iterating, starting with $M_1=\gamma \wedge \omega ^{n-1}/\omega ^ n$, yields 
+    
+<div class="equation">
+  \[  M_ m\geq \frac{\sigma _ m}{m!\sigma _1}M_1.  \]
+</div>
+<p>
+       All denominators are positive. Approximating a form in the closed cone by $\gamma +\delta \omega $, $\delta \downarrow 0$, gives the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+At a diagonal Hermitian matrix $\Lambda $ in the open cone, order its eigenvalues as $\lambda _1\geq \cdots \geq \lambda _ n$ and write 
+</p>
+<div class="equation">
+  \[  f=F(\Lambda ),\quad F_ i=\partial _{\lambda _ i}F,\quad S=\operatorname {tr}\Lambda ,\quad \mathcal F=\sum _ iF_ i, \quad Q=\sum _ iF_ i\lambda _ i^2.  \]
+</div>
+<p>
+ The next inequalities use these derivatives of the normalized root, rather than derivatives of the polynomial $S_ m$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-53FFB5F3">
+<p><a class="environment-identifier" href="../../tag/7710D01DF6F5/">Lemma <span data-tag="53FFB5F3">12.1.3</span>.</a><span data-gerby-tag="53FFB5F3"></span> If $M$ belongs to the closed Hermitian $m$-cone, then </p>
+<div class="equation">
+  \[  W:=\sum _ iF_ iM_{i\bar i}\geq \frac{f}{m!S}\operatorname {tr}M, \qquad F_ i\geq \frac{f}{m!S},\qquad |M_{1\bar1}|\leq \operatorname {tr}M.  \]
+</div>
+<p> No simultaneous diagonalization of $M$ and $\Lambda $ is required. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In the wedge notation of the mixed-trace estimate, differentiation gives $DF_\Lambda (M)=fM_ m/\sigma _ m$. The estimate $M_ m\geq \sigma _ m M_1/(m!\sigma _1)$, with $M_1=\operatorname {tr}M/n$ and $\sigma _1=S/n$, proves the first inequality. The positive semidefinite rank-one coordinate projections belong to the closed $m$-cone; taking $M$ to be each projection proves the second inequality. The closed $m$-cone is contained in the closed $2$-cone. Its eigenvalues $\mu $ satisfy 
+    
+<div class="equation">
+  \[  \operatorname {tr}M\geq 0,\qquad \sum _ i\mu _ i^2=(\operatorname {tr}M)^2-2S_2(\mu ) \leq (\operatorname {tr}M)^2.  \]
+</div>
+<p>
+       Thus the operator norm of $M$ is at most its trace, which proves the last inequality. The wedge pairing computes the derivative in the diagonal frame of $\Lambda $, regardless of the eigenvectors of $M$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C6051641">
+<p><a class="environment-identifier" href="../../tag/473C52E484B0/">Lemma <span data-tag="C6051641">12.1.4</span>.</a><span data-gerby-tag="C6051641"></span> If $0&lt;f_0\leq f\leq f_1$, then </p>
+<div class="equation">
+  \[  Q:=\sum _ iF_ i\lambda _ i^2 \geq \frac{f_0}{m}S-\frac{n-m}{m}f_1^2, \qquad \mathcal F\geq 1.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The derivative of the normalized root is $F_ i=fS_{m-1}(\lambda |i)/(mS_ m)$. The splitting identity gives 
+    
+<div class="equation">
+  \[  Q=\frac fm S-\frac{(m+1)f}{mS_ m}S_{m+1}.  \]
+</div>
+<p>
+       For $m=n$, set $S_{n+1}=0$. If $S_{m+1}\leq 0$, the second term is nonnegative. Otherwise $\lambda \in \Gamma _{m+1}$ and Maclaurin gives $S_{m+1}\leq \binom n{m+1}f^{m+1}$. Since $S_ m=\binom nm f^ m$, the subtracted term is at most $(n-m)f^2/m$. This proves the first assertion. Summing the derivatives gives $\mathcal F=f\sigma _{m-1}/\sigma _ m\geq 1$, again by Maclaurin. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+When $m&lt;n$, admissible forms need not be semipositive. Positivity of a mixed Hessian measure therefore does not directly bound every coefficient of its factors. For degrees below $m$, deleted-coordinate positivity supplies the required absolute bound: if $S_{j;I}$ means $S_ j$ with the coordinates indexed by $I$ omitted, then $S_{j;I}(\lambda )&gt;0$ for $j+|I|\leq m$, by polarized Gårding positivity. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-25ADAEE1">
+<p><a class="environment-identifier" href="../../tag/B0643A9A1173/">Lemma <span data-tag="25ADAEE1">12.1.5</span>.</a><span data-gerby-tag="25ADAEE1"></span> If $0\leq r&lt;m$, $\alpha _1,\ldots ,\alpha _ r\in \Gamma _ m(\omega )$, and $\Xi $ is a smooth complementary form, then </p>
+<div class="equation">
+  \[  |\alpha _1\wedge \cdots \wedge \alpha _ r\wedge \Xi | \leq C_{n,m,\Xi }(\alpha _1+\cdots +\alpha _ r)^ r\wedge \omega ^{n-r}.  \]
+</div>
+<p> For $r=0$ the right-hand side means $C_{n,m,\Xi }\omega ^ n$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First take a single form $\alpha $, diagonal in an $\omega $-unitary frame, with ordered eigenvalues $\lambda \in \Gamma _ m$. For $1\leq r&lt;m$, repeated splitting and deleted-coordinate positivity give $S_ r(\lambda )\geq \lambda _1\cdots \lambda _ r$. The sum of the last $n-r$ eigenvalues is positive, so each negative eigenvalue has modulus at most $(n-r)\lambda _{r+1}$. Thus every product of $r$ distinct eigenvalues has modulus at most 
+    
+<div class="equation">
+  \[  (n-r)^ r\lambda _1\cdots \lambda _ r\leq (n-r)^ r S_ r(\lambda ).  \]
+</div>
+<p>
+       Indeed, replace its negative factors by this bound and its positive factors by the corresponding largest eigenvalues. In the diagonal frame only complementary diagonal coefficients of $\Xi $ contribute to $\alpha ^ r\wedge \Xi $. This proves $|\alpha ^ r\wedge \Xi |\leq C_{n,m,\Xi }\alpha ^ r\wedge \omega ^{n-r}$. 
+    <p>
+      Apply this bound to the polynomial $(\alpha _1+t_2\alpha _2+\cdots +t_ r\alpha _ r)^ r\wedge \Xi $, with $0\leq t_ i\leq 1$. Its absolute value is bounded by the stated right-hand side, by polarized positivity and monotonicity on the cone. A fixed invertible interpolation matrix on this finite-dimensional polynomial space bounds each coefficient by its supremum on the cube. The coefficient of $t_2\cdots t_ r$ is a fixed positive multiple of $\alpha _1\wedge \cdots \wedge \alpha _ r\wedge \Xi $. This proves the mixed bound. The closed-cone case follows by adding $\varepsilon \omega $ to each form and taking the limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+The next coefficient bound also controls a torsion form whose diagonal coefficients can have either sign. It compares each two-coordinate coefficient with the positive coefficients of the associated gradient pairing. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-E5B04592">
+<p><a class="environment-identifier" href="../../tag/8673FC834527/">Lemma <span data-tag="E5B04592">12.1.6</span>.</a><span data-gerby-tag="E5B04592"></span> If $\lambda \in \overline{\Gamma _ m}$, $1\leq q\leq \min \{ m-1,n-2\} $, and $i\ne j$, then, with $N=n-2$ and </p>
+<div class="equation">
+  \[  c_{N,q}=\frac{q(N-q)}{(q+1)(N-q+1)}&lt;1,  \]
+</div>
+<p> one has </p>
+<div class="equation">
+  \[  |S_{q;ij}(\lambda )|^2 \leq \frac{S_{q;i}(\lambda )S_{q;j}(\lambda )}{1-c_{N,q}}.  \]
+</div>
+<p> This includes $q=N$, when $c_{N,N}=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First prove the unnormalized Newton inequality for an arbitrary real list $\mu $ of length $N$. For $1\leq q&lt;N$, put $R(x)=\prod _{a=1}^ N(x+\mu _ a)$ and $G=R^{(N-q-1)}$. Repeated Rolle's theorem makes $G$ a real-rooted polynomial of degree $d=q+1$. Away from its roots $r_ a$, logarithmic differentiation and Cauchy–Schwarz give 
+    
+<div class="equation">
+  \[  G'^2-GG''=G^2\sum _{a=1}^ d\frac1{(x-r_ a)^2} \geq \frac1dG^2\left(\sum _{a=1}^ d\frac1{x-r_ a}\right)^2 =\frac1dG'^2.  \]
+</div>
+<p>
+       Continuity extends this polynomial inequality to every real $x$. At zero, 
+    
+<div class="equation">
+  \[  G=(N-q-1)!S_{q+1}(\mu ),\quad G'=(N-q)!S_ q(\mu ),\quad G''=(N-q+1)!S_{q-1}(\mu ).  \]
+</div>
+<p>
+       Consequently $S_{q-1}(\mu )S_{q+1}(\mu )\leq c_{N,q}S_ q(\mu )^2$. No sign restriction on $\mu $ or on these coefficients was used. For $q=N$, its left side is zero and the same assertion holds with $c_{N,N}=0$. 
+    <p>
+      Apply this to the list with $i,j$ deleted. Put $A=S_{q-1;ij}$, $B=S_{q;ij}$, $C=S_{q+1;ij}$ and $D_ i=S_{q;i}$, $D_ j=S_{q;j}$. Deleted-coordinate positivity gives $A,D_ i,D_ j\geq 0$: the required degrees are $q+1\leq m$. Splitting in the two omitted coordinates gives the exact identity 
+    
+<div class="equation">
+  \[  D_ iD_ j=A S_{q+1}(\lambda )+B^2-AC.  \]
+</div>
+<p>
+       Since $S_{q+1}(\lambda )\geq 0$ and $AC\leq c_{N,q}B^2$, this is at least $(1-c_{N,q})B^2$. There is no division by $A$ or $D_ i$; all degenerate endpoints are therefore included. Equivalently one may first add $\epsilon \mathbf1$ and pass to the closed cone. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+A smooth maximum preserves the cone condition and can be chosen monotone in its smoothing scale as well as in its two arguments. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-F7121835">
+<p><a class="environment-identifier" href="../../tag/365519F85C5A/">Lemma <span data-tag="F7121835">12.1.7</span>.</a><span data-gerby-tag="F7121835"></span> If smooth uniformly bounded admissible $u_ j\downarrow u$ and $v_ j\downarrow v$ are given, there are smooth uniformly bounded admissible $w_ j\downarrow \max \{ u,v\} $. For any chosen $\epsilon _ j&gt;0$ decreasing to zero, they can be chosen to satisfy $w_ j=u_ j$ on $\{ u_ j-v_ j&gt;\epsilon _ j\} $ and $w_ j=v_ j$ on $\{ v_ j-u_ j&gt;\epsilon _ j\} $. For smooth functions $f,g$ on an open subset of $X$ with $\mathrm{dd}^{\mathrm{c}}f,\mathrm{dd}^{\mathrm{c}}g\in \overline{\Gamma _ m(\omega )}$, the regularized maximum $M_\epsilon (f,g)$ constructed below satisfies the same unshifted cone condition. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a nonnegative even smooth probability density $\zeta $ supported in $[-1,1]$, and set 
+    
+<div class="equation">
+  \[  r_\epsilon (t)=\int |t-\epsilon s|\zeta (s)\, \mathrm ds, \qquad M_\epsilon (x,y)=\tfrac 12(x+y+r_\epsilon (x-y)).  \]
+</div>
+<p>
+       The function $r_\epsilon $ is smooth and convex, $|r_\epsilon '|\leq 1$, and $r_\epsilon (t)=|t|$ for $|t|\geq \epsilon $. Jensen's inequality and the triangle inequality give 
+    
+<div class="equation">
+  \[  \max \{ x,y\} \leq M_\epsilon (x,y) \leq \max \{ x,y\} +\epsilon /2.  \]
+</div>
+<p>
+       Its partial derivatives in $x,y$ are nonnegative. For fixed $t$, $r_\epsilon (t)$ is an even convex function of $\epsilon $, since $\zeta $ is even. It is therefore nondecreasing for $\epsilon \geq 0$. Consequently $w_ j=M_{\epsilon _ j}(u_ j,v_ j)$ decreases pointwise to $\max \{ u,v\} $ and has the asserted equalities and bounds. 
+    <p>
+      Put $h_ j=u_ j-v_ j$ and $a_ j=(1+r_{\epsilon _ j}'(h_ j))/2$. The chain rule gives 
+    
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}w_ j =a_ j(\omega +\mathrm{dd}^{\mathrm{c}}u_ j)+(1-a_ j)(\omega +\mathrm{dd}^{\mathrm{c}}v_ j) +\tfrac 12r_{\epsilon _ j}''(h_ j) \mathrm dh_ j\wedge \mathrm d^{\mathrm c}h_ j.  \]
+</div>
+<p>
+       Here $0\leq a_ j\leq 1$, and the last form is semipositive. Convexity of the cone and its stability under semipositive addition prove admissibility. For smooth local functions satisfying the unshifted cone condition, omit $\omega $ from this chain rule; the same argument proves preservation of that condition. The pointwise maximum is itself admissible: an upper test for it at a point is an upper test for a potential attaining the maximum there. Its canonical representative is thus the indicated pointwise maximum. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-6FFAAFB0">
+<p><a class="environment-identifier" href="../../tag/A1FFEE061CF5/">Lemma <span data-tag="6FFAAFB0">12.1.8</span>.</a><span data-gerby-tag="6FFAAFB0"></span> If bounded admissible $u,v$ satisfy $u\leq v$ almost everywhere with respect to $\omega ^ n$, then $u\leq v$ everywhere. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By <a data-tag="F7121835" href="../../tag/365519F85C5A/">12.1.7</a>, $w=\max \{ u,v\} $ is bounded admissible with its indicated canonical representative. Since $w=v$ almost everywhere, they represent the same distribution. The canonical subharmonic representative used in (<a data-tag="99D246B6" href="../../tag/B372916B922F/">12.2</a>) is determined by that distribution. Thus $w=v$ pointwise, which is the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

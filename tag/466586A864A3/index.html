@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The notion of -good singularities · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/ideal-goodness/">Chapter 15 · Multiplier-ideal models and partial equilibrium</a> · Tag <code>466586A864A3</code></p><h1>The notion of -good singularities</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 7.1 The notion of -good singularities <span data-gerby-tag="9C10E439"></span></div>
+<p>
+Let $X$ be a connected compact Kähler manifold of dimension $n$. 
+</p>
+
+<article class="env-theorem" id="sgpt-78C13CE2">
+<p><a class="environment-identifier" href="../../tag/F9085BB700B0/">Theorem <span data-tag="78C13CE2">7.1.1</span>.</a><span data-gerby-tag="78C13CE2"></span> Let $\theta $ be a closed real smooth $(1,1)$-form on $X$ representing a big cohomology class, and $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-737EBF92"><span data-gerby-tag="737EBF92"></span><p>
+ There exists a sequence $(\varphi _ j)_{j&gt;0}$ in $\mathrm{PSH}(X,\theta )$ with analytic singularities such that $\varphi _ j\xrightarrow {d_ S}\varphi $; 
+</p>
+</li><li class="custom-item" id="sgpt-FAA17343"><span data-gerby-tag="FAA17343"></span><p>
+ we have 
+</p>
+<div class="equation" id="sgpt-21CAB359"><span data-gerby-tag="21CAB359"></span>
+<span class="equation-label"><a data-tag="21CAB359" href="../../tag/6F6AB284E081/">7.1</a></span>
+<div>\begin{equation} \label{eq:nppmassequalvolume} \int _ X \theta _{\varphi }^ n=\operatorname{vol}\theta _{\varphi }; \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-1D250386"><span data-gerby-tag="1D250386"></span><p>
+ we have 
+</p>
+<div class="equation" id="sgpt-4B702875"><span data-gerby-tag="4B702875"></span>
+<span class="equation-label"><a data-tag="4B702875" href="../../tag/4730AA1B3287/">7.2</a></span>
+<div>\begin{equation} \label{eq:PequpI} P_{\theta }[\varphi ]=P_{\theta }[\varphi ]_{\mathcal{I}}. \end{equation}</div>
+</div>
+</li>
+</ol>
+<p> In <a data-tag="737EBF92" href="../../tag/F9085BB700B0/#sgpt-737EBF92">1</a>, we can in addition require that each $\theta _{\varphi _ j}$ is a Kähler current. </p>
+<p>Moreover, if $\theta _{\varphi }$ is a Kähler current, one may take the sequence in <a data-tag="737EBF92" href="../../tag/F9085BB700B0/#sgpt-737EBF92">1</a> to be any quasi-equisingular approximation of $\varphi $ in $\mathrm{PSH}(X,\theta )$. </p>
+</article> Since $(\mathrm{PSH}(X,\theta ),d_ S)$ is a pseudometric space, in <a data-tag="737EBF92" href="../../tag/F9085BB700B0/#sgpt-737EBF92">1</a> we can also replace the word <em>sequence</em> by <em>net</em>. 
+
+<p>
+Recall that according to corollary <a data-tag="F478DE66" href="../../tag/FB21F0385323/">3.2.14</a> and proposition <a data-tag="0437CA76" href="../../tag/8AE79B76D6D2/">3.2.13</a>, one direction of (<a data-tag="21CAB359" href="../../tag/6F6AB284E081/">7.1</a>) and (<a data-tag="4B702875" href="../../tag/4730AA1B3287/">7.2</a>) always holds: 
+</p>
+<div class="equation">
+  \[  \int _ X \theta _{\varphi }^ n\leq \operatorname{vol}\theta _{\varphi },\quad P_{\theta }[\varphi ]\leq P_{\theta }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="737EBF92" href="../../tag/F9085BB700B0/#sgpt-737EBF92">1</a> $\implies $ <a data-tag="FAA17343" href="../../tag/F9085BB700B0/#sgpt-FAA17343">2</a>. By theorem <a data-tag="45C76D02" href="../../tag/713B9E26113B/">6.2.17</a>, we have 
+    
+<div class="equation">
+  \[  \lim _{j\to \infty } \int _ X \theta _{\varphi _ j}^ n=\int _ X \theta _{\varphi }^ n&gt;0.  \]
+</div>
+<p>
+       We may therefore assume that $\int _ X \theta _{\varphi _ j}^ n&gt;0$ for all $j \geq 1$. It follows from proposition <a data-tag="685DEAD4" href="../../tag/10F9DDE25703/">3.2.15</a> that 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\varphi _ j}^ n=\operatorname{vol}\theta _{\varphi _ j}  \]
+</div>
+<p>
+       for any $j\geq 1$. Using theorem <a data-tag="91496AFE" href="../../tag/CAB6F4E23080/">6.2.30</a>, we conclude (<a data-tag="21CAB359" href="../../tag/6F6AB284E081/">7.1</a>). 
+    <p>
+<a data-tag="FAA17343" href="../../tag/F9085BB700B0/#sgpt-FAA17343">2</a> $\iff $ <a data-tag="1D250386" href="../../tag/F9085BB700B0/#sgpt-1D250386">3</a>. By definition, 
+    
+<div class="equation">
+  \[  \operatorname{vol}\theta _{\varphi }= \int _ X\theta _{P_{\theta }[\varphi ]_{\mathcal I}}^ n.  \]
+</div>
+<p>
+       Moreover, $\varphi -\sup _ X\varphi \leq P_{\theta }[\varphi ]_{\mathcal I}$. Thus, if <a data-tag="FAA17343" href="../../tag/F9085BB700B0/#sgpt-FAA17343">2</a> holds, theorem <a data-tag="36606B5B" href="../../tag/7ADF30509E4E/">3.1.9</a> gives $P_{\theta }[\varphi ]_{\mathcal I}\leq P_{\theta }[\varphi ]$; the reverse inequality follows from proposition <a data-tag="0437CA76" href="../../tag/8AE79B76D6D2/">3.2.13</a>. Conversely, if <a data-tag="1D250386" href="../../tag/F9085BB700B0/#sgpt-1D250386">3</a> holds, then <a data-tag="FAA17343" href="../../tag/F9085BB700B0/#sgpt-FAA17343">2</a> follows from proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">3.1.6</a>. 
+    <p>
+<a data-tag="1D250386" href="../../tag/F9085BB700B0/#sgpt-1D250386">3</a> $\implies $ <a data-tag="737EBF92" href="../../tag/F9085BB700B0/#sgpt-737EBF92">1</a>. Note that the condition in <a data-tag="737EBF92" href="../../tag/F9085BB700B0/#sgpt-737EBF92">1</a> characterizes the closure of analytic singularities in $\mathrm{PSH}(X,\theta )$. 
+    <p>
+<strong>Step 1</strong>. We first assume that $\theta _{\varphi }$ is a Kähler current. We will prove the following more general result in this case: Without assuming <a data-tag="1D250386" href="../../tag/F9085BB700B0/#sgpt-1D250386">3</a>, $P_{\theta }[\varphi ]_{\mathcal{I}}$ always lies in the closure of analytic singularities. 
+    <p>
+      Let $(\varphi _ j)_ j$ be a quasi-equisingular approximation of $\varphi $ in $\mathrm{PSH}(X,\theta )$. We will show that $\varphi _ j\xrightarrow {d_ S}P_{\theta }[\varphi ]_{\mathcal{I}}$. Let 
+    
+<div class="equation">
+  \[  \psi =\inf _{j\in \mathbb {Z}_{&gt;0}} P_{\theta }[\varphi _ j].  \]
+</div>
+<p>
+       Since $\varphi \leq \varphi _ j$ for all $j&gt;0$, we have 
+    
+<div class="equation">
+  \[  \varphi -\sup _ X\varphi \leq P_{\theta }[\varphi _ j]  \]
+</div>
+<p>
+       for all $j$, and hence 
+    
+<div class="equation">
+  \[  \varphi -\sup _ X\varphi \leq \psi .  \]
+</div>
+<p>
+       In particular, $\int _ X\theta _\psi ^ n&gt;0$. 
+    <p>
+      Now proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a>, proposition <a data-tag="DE839E2D" href="../../tag/048490BEAC8C/">3.1.26</a> and corollary <a data-tag="D2436235" href="../../tag/F84D53FDA599/">6.2.11</a> give 
+    
+<div class="equation">
+  \[  \varphi _ j\xrightarrow {d_ S}\psi .  \]
+</div>
+<p>
+       Moreover, observe that $\psi $ is $\mathcal{I}$-model by proposition <a data-tag="66C7014F" href="../../tag/2D7AF550FFF7/">3.2.18</a> and proposition <a data-tag="685DEAD4" href="../../tag/10F9DDE25703/">3.2.15</a>. Hence, if $\varphi \sim _{\mathcal I}\psi $, then 
+    
+<div class="equation">
+  \[  P_\theta [\varphi ]_{\mathcal I}=P_\theta [\psi ]_{\mathcal I}=\psi .  \]
+</div>
+<p>
+       So it suffices to show that $\varphi \sim _{\mathcal I}\psi $. It only remains to argue that $\psi \preceq _{\mathcal{I}} \varphi $. For this purpose, take $\lambda &gt;0$. We need to show that 
+    
+<div class="equation">
+  \[  \mathcal{I}(\lambda \psi )\subseteq \mathcal{I}(\lambda \varphi ).  \]
+</div>
+<p>
+       By the strong openness theorem <a data-tag="B37FCFC9" href="../../tag/917763AE5E35/">1.4.16</a>, we may take $\lambda '&gt;\lambda $ such that $\mathcal{I}(\lambda \psi )=\mathcal{I}(\lambda ' \psi )$. It follows from the definition of the quasi-equisingular approximation that 
+    
+<div class="equation">
+  \[  \mathcal{I}(\lambda '\psi )\subseteq \mathcal{I}(\lambda '\varphi _ j)\subseteq \mathcal{I}(\lambda \varphi )  \]
+</div>
+<p>
+       for large enough $j$, where the first inclusion uses $\psi \leq P_\theta [\varphi _ j]$ and $P_\theta [\varphi _ j]\sim _{\mathcal{I}}\varphi _ j$. Our assertion follows. 
+    <p>
+      It follows from the proof that we may take $\varphi _ j$ so that $\theta _{\varphi _ j}$ is a Kähler current for all $j\geq 1$. 
+    <p>
+<strong>Step 2</strong>. We handle the general case. 
+    <p>
+      Assume <a data-tag="1D250386" href="../../tag/F9085BB700B0/#sgpt-1D250386">3</a> holds. By <a data-tag="44EC382B" href="../../tag/3AA4A74713F0/">2.4.19</a>, we can find $\psi \in \mathrm{PSH}(X,\theta )$ so that $\theta _{\psi }$ is a Kähler current and $\psi \leq \varphi $. We let 
+    
+<div class="equation">
+  \[  \psi _ j=(1-j^{-1})\varphi +j^{-1}\psi  \]
+</div>
+<p>
+       for each $j\in \mathbb {Z}_{&gt;1}$. Then $(\psi _ j)_ j$ is an increasing sequence converging almost everywhere to $\varphi $. Then 
+    
+<div class="equation">
+  \[  P_{\theta }[\psi _ j]_{\mathcal{I}}\xrightarrow {d_ S}P_{\theta }[\varphi ]_{\mathcal{I}}=P_{\theta }[\varphi ]  \]
+</div>
+<p>
+       by proposition <a data-tag="234A6979" href="../../tag/0C703BE43035/">3.2.19</a>, corollary <a data-tag="B875A97B" href="../../tag/77738CEC8071/">6.2.9</a>. From Step 1, we know that each $P_{\theta }[\psi _ j]_{\mathcal{I}}$ lies in the closure of analytic singularities, hence so is $P_{\theta }[\varphi ]\sim _ P \varphi $. Therefore, <a data-tag="737EBF92" href="../../tag/F9085BB700B0/#sgpt-737EBF92">1</a> follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-34F59919">
+<p><a class="environment-identifier" href="../../tag/AE67290569F6/">Definition <span data-tag="34F59919">7.1.2</span>.</a><span data-gerby-tag="34F59919"></span> We say a potential $\varphi \in \mathrm{QPSH}(X)$ is <em>$\mathcal{I}$-good</em> if for some smooth closed real $(1,1)$-form $\theta $ on $X$ such that $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$, we have </p>
+<div class="equation" id="sgpt-6A178C7A"><span data-gerby-tag="6A178C7A"></span>
+<span class="equation-label"><a data-tag="6A178C7A" href="../../tag/A9EABC721827/">7.3</a></span>
+<div>\begin{equation} \label{eq:envelopeeq} P_{\theta }[\varphi ]=P_{\theta }[\varphi ]_{\mathcal{I}}. \end{equation}</div>
+</div>
+</article>
+
+
+<article class="env-remark" id="sgpt-116635CD">
+<p><a class="environment-identifier" href="../../tag/11FBD440944D/">Remark <span data-tag="116635CD">7.1.3</span>.</a><span data-gerby-tag="116635CD"></span> In view of theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a> and corollary <a data-tag="F478DE66" href="../../tag/FB21F0385323/">3.2.14</a>, the failure of $\mathcal{I}$-goodness of a given $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ can be characterized using the difference between the volume and the mass. We therefore introduce </p>
+<div class="equation">
+  \[  \mathrm{Defect}(\theta _{\varphi })\coloneqq \operatorname{vol}\theta _{\varphi }-\int _ X \theta _{\varphi }^ n.  \]
+</div>
+</article>
+
+
+An immediate question is to verify that definition <a data-tag="34F59919" href="../../tag/AE67290569F6/">7.1.2</a> is independent of the choice of $\theta $. <article class="env-lemma" id="sgpt-C0A78EE5">
+<p><a class="environment-identifier" href="../../tag/22BB587E13F8/">Lemma <span data-tag="C0A78EE5">7.1.4</span>.</a><span data-gerby-tag="C0A78EE5"></span> Let $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ for some smooth closed real $(1,1)$-form $\theta $ on $X$. Take a Kähler form $\omega $ on $X$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-43F81645"><span data-gerby-tag="43F81645"></span><p>
+ $P_{\theta }[\varphi ]=P_{\theta }[\varphi ]_{\mathcal{I}}$; 
+</p>
+</li><li class="custom-item" id="sgpt-48683BE0"><span data-gerby-tag="48683BE0"></span><p>
+ $P_{\theta +\omega }[\varphi ]=P_{\theta +\omega }[\varphi ]_{\mathcal{I}}$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="43F81645" href="../../tag/22BB587E13F8/#sgpt-43F81645">1</a> $\implies $ <a data-tag="48683BE0" href="../../tag/22BB587E13F8/#sgpt-48683BE0">2</a>. By theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a>, we can find a sequence $(\varphi _ j)_ j$ in $\mathrm{PSH}(X,\theta )$ with analytic singularities such that $\varphi _ j\xrightarrow {d_{S,\theta }}\varphi $. By corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>, we have $\varphi _ j\xrightarrow {d_{S,\theta +\omega }}\varphi $. Therefore, by theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a> again, <a data-tag="48683BE0" href="../../tag/22BB587E13F8/#sgpt-48683BE0">2</a> holds. 
+    <p>
+<a data-tag="48683BE0" href="../../tag/22BB587E13F8/#sgpt-48683BE0">2</a> $\implies $ <a data-tag="43F81645" href="../../tag/22BB587E13F8/#sgpt-43F81645">1</a>. Suppose that <a data-tag="43F81645" href="../../tag/22BB587E13F8/#sgpt-43F81645">1</a> fails, so that 
+    
+<div class="equation">
+  \[  \int _ X (\theta +\mathrm{dd}^{\mathrm{c}}\varphi )^ n&lt; \int _ X (\theta +\mathrm{dd}^{\mathrm{c}}P_{\theta }[\varphi ]_{\mathcal{I}})^ n.  \]
+</div>
+<p>
+       Since $\varphi \preceq P_{\theta }[\varphi ]_{\mathcal I}$, the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> gives 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\varphi }^ i\wedge \omega ^{n-i}\leq \int _ X \theta _{P_{\theta }[\varphi ]_{\mathcal I}}^ i\wedge \omega ^{n-i}  \]
+</div>
+<p>
+       for all $i=0,\ldots ,n$, and the inequality is strict for $i=n$. It follows that 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _ X (\theta +\omega +\mathrm{dd}^{\mathrm{c}}\varphi )^ n =&amp;  \sum _{i=0}^ n\binom {n}{i}\int _ X \theta _{\varphi }^ i\wedge \omega ^{n-i}\\  &lt;&amp;  \sum _{i=0}^ n\binom {n}{i}\int _ X \theta _{P_{\theta }[\varphi ]_{\mathcal{I}}}^ i\wedge \omega ^{n-i}\\  =&amp;  \int _ X (\theta +\omega +\mathrm{dd}^{\mathrm{c}}P_{\theta }[\varphi ]_{\mathcal{I}})^ n \\  \leq &amp; \int _ X (\theta +\omega +\mathrm{dd}^{\mathrm{c}}P_{\theta +\omega }[\varphi ]_{\mathcal{I}})^ n. \end{aligned}  \]
+</div>
+<p>
+       So <a data-tag="48683BE0" href="../../tag/22BB587E13F8/#sgpt-48683BE0">2</a> fails as well. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-A59B5FBB">
+<p><a class="environment-identifier" href="../../tag/4662D2032EC0/">Corollary <span data-tag="A59B5FBB">7.1.5</span>.</a><span data-gerby-tag="A59B5FBB"></span> Let $\theta $ be a closed real smooth $(1,1)$-form on $X$ representing a big cohomology class. Let $(\varphi _ j)_{j\in I}$ be a net of $\mathcal{I}$-good potentials in $\mathrm{PSH}(X,\theta )$ such that $\varphi _ j\xrightarrow {d_ S}\varphi $. Then $\varphi $ is $\mathcal{I}$-good. </p>
+</article> Note that we do not need to assume that $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By adding a Kähler form to $\theta $, and using <a data-tag="C0A78EE5" href="../../tag/22BB587E13F8/">7.1.4</a>, corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>, we may assume that $\varphi _ j,\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ for all $j\in I$. It follows from theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a> that 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\varphi _ j}^ n=\operatorname{vol}\theta _{\varphi _ j}  \]
+</div>
+<p>
+       for all $j\in I$. Taking limit with respect to $j$ with the help of theorem <a data-tag="91496AFE" href="../../tag/CAB6F4E23080/">6.2.30</a>, we conclude that 
+    
+<div class="equation">
+  \[  \int _ X \theta _{\varphi }^ n=\operatorname{vol}\theta _{\varphi }.  \]
+</div>
+<p>
+       Therefore, by theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a> again, we find that $\varphi $ is $\mathcal{I}$-good. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-example" id="sgpt-F35307AB">
+<p><a class="environment-identifier" href="../../tag/12795171A873/">Example <span data-tag="F35307AB">7.1.6</span>.</a><span data-gerby-tag="F35307AB"></span> Assume that $\varphi \in \mathrm{QPSH}(X)$ has analytic singularities. Then $\varphi $ is $\mathcal{I}$-good. This is proved in proposition <a data-tag="685DEAD4" href="../../tag/10F9DDE25703/">3.2.15</a>. </p>
+<p>In particular, the potential in example <a data-tag="866F3C9A" href="../../tag/CC1C409253F3/">1.8.9</a> is $\mathcal{I}$-good. </p>
+</article>
+
+
+<article class="env-example" id="sgpt-48380077">
+<a class="environment-identifier" href="../../tag/E3DE8BCA0BA1/">Example <span data-tag="48380077">7.1.7</span>.</a><span data-gerby-tag="48380077"></span> Let $\theta $ be a closed real smooth $(1,1)$-form on $X$ representing a big cohomology class, and let $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$<aside class="source-footnote" id="sgpt-a0000059503"><span class="footnote-label">Note.</span> It is not known to us whether the same holds when $\varphi $ has vanishing mass.</aside> be an $\mathcal{I}$-model potential. Then $\varphi $ is $\mathcal{I}$-good. 
+<p>In particular, $V_{\theta }$ is $\mathcal{I}$-good. </p>
+</article>
+
+
+<article class="env-example" id="sgpt-5B97D40C">
+<p><a class="environment-identifier" href="../../tag/4C522F2A65F0/">Example <span data-tag="5B97D40C">7.1.8</span>.</a><span data-gerby-tag="5B97D40C"></span> Let $\theta $ be a closed real smooth $(1,1)$-form on $X$ representing a big cohomology class, and let $\varphi \in \mathcal{E}(X,\theta )$. Then $\varphi $ is $\mathcal{I}$-good. In fact, since $P_{\theta }[\varphi ]=V_{\theta }$, we deduce that $P_{\theta }[\varphi ]_{\mathcal{I}}=V_{\theta }$ as well. </p>
+<p>In particular, the potential in example <a data-tag="BAA6FABC" href="../../tag/E548BFB3BF04/">3.1.14</a> is $\mathcal{I}$-good. </p>
+</article>
+
+<p>
+A further class of examples of $\mathcal{I}$-good singularities will be given in example <a data-tag="1D496DC8" href="../../tag/35A211AC3973/">7.4.5</a> below. 
+</p>
+
+There do exist, however, non-$\mathcal{I}$-good potentials. <article class="env-example" id="sgpt-C16040E7">
+<p><a class="environment-identifier" href="../../tag/6212EEC14B63/">Example <span data-tag="C16040E7">7.1.9</span>.</a><span data-gerby-tag="C16040E7"></span> The potential in example <a data-tag="65A23FEC" href="../../tag/325A49CBCF74/">6.1.14</a> is not $\mathcal{I}$-good. In fact, since all Lelong numbers of $\varphi $ vanish, we know that $\varphi \sim _{\mathcal{I}}0$, hence </p>
+<div class="equation">
+  \[  P_{2\omega }[\varphi ]_{\mathcal{I}}=0.  \]
+</div>
+<p> On the other hand, </p>
+<div class="equation">
+  \[  \int _ X (2\omega +\mathrm{dd}^{\mathrm{c}}\varphi )^1=\int _ X \omega &lt;\int _ X (2\omega ),  \]
+</div>
+<p> where $(2\omega +\mathrm{dd}^{\mathrm{c}}\varphi )^1$ is understood in the non-pluripolar sense. </p>
+</article>
+
+
+Quasi-equisingular approximations and $d_ S$-convergent sequences are related in the following manner: <article class="env-corollary" id="sgpt-7C2724AC">
+<p><a class="environment-identifier" href="../../tag/F1CD22EF1353/">Corollary <span data-tag="7C2724AC">7.1.10</span>.</a><span data-gerby-tag="7C2724AC"></span> Let $\varphi \in \mathrm{PSH}(X,\theta )_{&gt;0}$ and $(\epsilon _ j)_ j$ be a decreasing sequence in $\mathbb {R}_{\geq 0}$ with limit $0$. Fix a Kähler form $\omega $ on $X$. Consider a decreasing sequence $(\varphi _ j)_{j&gt;0}$, where each $\varphi _ j\in \mathrm{PSH}(X,\theta +\epsilon _ j\omega )$ is a potential with analytic singularities. Assume that $\varphi =\inf _ j \varphi _ j$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-6F86B513"><span data-gerby-tag="6F86B513"></span>
+ $\varphi _ j\xrightarrow {d_ S}P_{\theta }[\varphi ]_{\mathcal{I}}$<aside class="source-footnote" id="sgpt-a0000059661"><span class="footnote-label">Note.</span> Just to be sure, this means $\varphi _ j\xrightarrow {d_{S,\theta +\epsilon \omega }}P_{\theta }[\varphi ]_{\mathcal{I}}$ for any $\epsilon &gt;0$. The choice of $\epsilon $ is irrelevant due to corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>.</aside>, and 
+
+</li><li class="custom-item" id="sgpt-3723F8DE"><span data-gerby-tag="3723F8DE"></span><p>
+ $(\varphi _ j)_ j$ is a quasi-equisingular approximation of $\varphi $. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a> and example <a data-tag="48380077" href="../../tag/E3DE8BCA0BA1/">7.1.7</a>, we may replace $\theta $ by $\theta +C\omega $ for some large constant $C&gt;0$ and assume that $\varphi ,\varphi _ j\in \mathrm{PSH}(X,\theta -\omega )$ for all $j\geq 1$. 
+    <p>
+      Here the limit in <a data-tag="6F86B513" href="../../tag/F1CD22EF1353/#sgpt-6F86B513">1</a> is unchanged by this replacement. Indeed, $P_{\theta }[\varphi ]_{\mathcal I}$ is $\mathcal I$-model, hence $\mathcal I$-good by example <a data-tag="48380077" href="../../tag/E3DE8BCA0BA1/">7.1.7</a>. This implies 
+    
+<div class="equation">
+  \[  P_{\theta +C\omega }\bigl [P_{\theta }[\varphi ]_{\mathcal I}\bigr ]=P_{\theta +C\omega }\bigl [P_{\theta }[\varphi ]_{\mathcal I}\bigr ]_{\mathcal I}=P_{\theta +C\omega }[\varphi ]_{\mathcal I}.  \]
+</div>
+<p>
+       Thus the old and new targets are $P$-equivalent in the enlarged class, and proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a>, corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a> shows that condition <a data-tag="6F86B513" href="../../tag/F1CD22EF1353/#sgpt-6F86B513">1</a> is unchanged. 
+    <p>
+<a data-tag="3723F8DE" href="../../tag/F1CD22EF1353/#sgpt-3723F8DE">2</a> $\implies $ <a data-tag="6F86B513" href="../../tag/F1CD22EF1353/#sgpt-6F86B513">1</a>. This is already proved in the proof of theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a>. 
+    <p>
+<a data-tag="6F86B513" href="../../tag/F1CD22EF1353/#sgpt-6F86B513">1</a> $\implies $ <a data-tag="3723F8DE" href="../../tag/F1CD22EF1353/#sgpt-3723F8DE">2</a>. This follows from theorem <a data-tag="9B1B1327" href="../../tag/E1576893E02B/">6.2.31</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-5BFC7056">
+<p><a class="environment-identifier" href="../../tag/36E768E33AFB/">Corollary <span data-tag="5BFC7056">7.1.11</span>.</a><span data-gerby-tag="5BFC7056"></span> Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism from a compact Kähler manifold $Y$. Let $\varphi \in \mathrm{PSH}(X,\theta )$ and let $(\varphi _ j)_ j$ be a quasi-equisingular approximation of $\varphi $. Then $(\pi ^*\varphi _ j)_ j$ is a quasi-equisingular approximation of the $\pi ^*\theta $-psh function $\pi ^*\varphi $. </p>
+</article> This result is by no means obvious from the definition of quasi-equisingular approximations. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $(\epsilon _ j)_ j$ and $\omega $ be as in definition <a data-tag="4C7BF32B" href="../../tag/165F88FAE668/">1.6.8</a>, so that $\epsilon _ j\searrow 0$ and $\varphi _ j\in \mathrm{PSH}(X,\theta +\epsilon _ j\omega )$ for all $j$. Choose a Kähler form $\tilde\omega $ on $Y$ and a constant $C&gt;0$ such that $\pi ^*\omega \leq C\tilde\omega $. Then 
+    
+<div class="equation">
+  \[  \pi ^*\varphi _ j\in \mathrm{PSH}(Y,\pi ^*\theta +C\epsilon _ j\tilde\omega ).  \]
+</div>
+<p>
+       Moreover, the sequence $(\pi ^*\varphi _ j)_ j$ is decreasing, has analytic singularities, and decreases to $\pi ^*\varphi $. 
+    <p>
+      It remains to verify the quasi-equisingular condition definition <a data-tag="4C7BF32B" href="../../tag/165F88FAE668/">1.6.8</a> <a data-tag="93345BE8" href="../../tag/165F88FAE668/#sgpt-93345BE8">4</a>. Fix a constant $A&gt;0$. Then $(\varphi _ j)_ j$ is also a quasi-equisingular approximation of $\varphi $ with respect to $\theta +A\omega $. Since $\theta _{\varphi }+A\omega $ is a Kähler current, corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a> gives 
+    
+<div class="equation">
+  \[  \varphi _ j\xrightarrow {d_ S}P_{\theta +A\omega }[\varphi ]_{\mathcal I}.  \]
+</div>
+<p>
+       Viewing the convergence in a fixed enlarged background class, pulling back and using corollary <a data-tag="B184098F" href="../../tag/94B2CC4C30BB/">6.2.8</a>, proposition <a data-tag="D63378B8" href="../../tag/E535E4DC5384/">3.2.7</a>, we get 
+    
+<div class="equation">
+  \[  \pi ^*\varphi _ j\xrightarrow {d_ S}\pi ^*P_{\theta +A\omega }[\varphi ]_{\mathcal I} =P_{\pi ^*(\theta +A\omega )}[\pi ^*\varphi ]_{\mathcal I}.  \]
+</div>
+<p>
+       The domination $\pi ^*\omega \leq C\tilde\omega $ also gives 
+    
+<div class="equation">
+  \[  \pi ^*\varphi _ j\in \mathrm{PSH}\bigl (Y,\pi ^*(\theta +A\omega )+C\epsilon _ j\tilde\omega \bigr ),  \]
+</div>
+<p>
+       so the preceding convergence is in the setting of corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a> on $Y$. The potential $\pi ^*\varphi $ has positive mass with respect to $\pi ^*(\theta +A\omega )$ by the bimeromorphic invariance of non-pluripolar products proposition <a data-tag="2EC7ADC4" href="../../tag/365687A6A087/">2.4.3</a>. Applying corollary <a data-tag="7C2724AC" href="../../tag/F1CD22EF1353/">7.1.10</a> again on $Y$ shows that $(\pi ^*\varphi _ j)_ j$ satisfies the quasi-equisingular condition definition <a data-tag="4C7BF32B" href="../../tag/165F88FAE668/">1.6.8</a> <a data-tag="93345BE8" href="../../tag/165F88FAE668/#sgpt-93345BE8">4</a> for $\pi ^*\varphi $. Combining this with the first paragraph proves the assertion with respect to $\pi ^*\theta $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

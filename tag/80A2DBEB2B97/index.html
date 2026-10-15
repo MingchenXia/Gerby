@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mixed volumes · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/ideal-goodness/">Chapter 15 · Multiplier-ideal models and partial equilibrium</a> · Tag <code>80A2DBEB2B97</code></p><h1>Mixed volumes</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 7.3 Mixed volumes <span data-gerby-tag="F55E1050"></span></div>
+<p>
+We first extend the notion of volume in definition <a data-tag="49B24403" href="../../tag/1D9577F4ECC2/">3.2.9</a> to the mixed case. Let $\theta _1,\ldots ,\theta _ n$ be smooth closed real $(1,1)$-forms on $X$ representing pseudo-effective classes. 
+</p>
+
+<article class="env-definition" id="sgpt-993C1591">
+<p><a class="environment-identifier" href="../../tag/EDCDF35668C4/">Definition <span data-tag="993C1591">7.3.1</span>.</a><span data-gerby-tag="993C1591"></span> Let $\varphi _ i\in \mathrm{PSH}(X,\theta _ i)$ for $i=1,\ldots ,n$. Write $T_ i=\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i$ for each $i=1,\ldots ,n$. Assume that $\operatorname{vol}T_ i&gt;0$ for all $i=1,\ldots ,n$. We define the <em>mixed volume</em> $\operatorname{vol}(T_1,\ldots ,T_ n)$ as follows: </p>
+<div class="equation" id="sgpt-BB179F91"><span data-gerby-tag="BB179F91"></span>
+<span class="equation-label"><a data-tag="BB179F91" href="../../tag/65AD0F03CD20/">7.8</a></span>
+<div>\begin{equation} \label{eq:volmixed} \operatorname{vol}(T_1,\ldots ,T_ n)=\int _ X \left(\theta _1+\mathrm{dd}^{\mathrm{c}}P_{\theta _1}[\varphi _1]_{\mathcal{I}}\right)\wedge \dots \wedge \left(\theta _ n+\mathrm{dd}^{\mathrm{c}}P_{\theta _ n}[\varphi _ n]_{\mathcal{I}}\right). \end{equation}</div>
+</div>
+</article> When $\operatorname{vol}T_ i&gt;0$ for each $i=1,\ldots ,n$, the definition (<a data-tag="BB179F91" href="../../tag/65AD0F03CD20/">7.8</a>) does not depend on how we represent $T_ i$ as $T_ i=\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i$, this is a consequence of theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> and proposition <a data-tag="1B230673" href="../../tag/708B2E9B2EF0/">3.2.6</a>. 
+
+
+<article class="env-lemma" id="sgpt-733543AC">
+<p><a class="environment-identifier" href="../../tag/20316D4886CF/">Lemma <span data-tag="733543AC">7.3.2</span>.</a><span data-gerby-tag="733543AC"></span></p>
+<ol>
+<li class="custom-item" id="sgpt-CEA78ED9"><span data-gerby-tag="CEA78ED9"></span><p>
+ The mixed volume is symmetric in its $n$-variables. 
+</p>
+</li><li class="custom-item" id="sgpt-D408BC21"><span data-gerby-tag="D408BC21"></span><p>
+ For any Kähler form $\omega $ on $X$, we have 
+</p>
+<div class="equation" id="sgpt-DF5B71D5"><span data-gerby-tag="DF5B71D5"></span>
+<span class="equation-label"><a data-tag="DF5B71D5" href="../../tag/7F052390F186/">7.9</a></span>
+<div>\begin{equation} \label{eq:mix_vol_comp1} \operatorname{vol}\left(T_1,\ldots ,T_ n\right)=\lim _{\epsilon \to 0+} \operatorname{vol}\left(T_1+\epsilon \omega ,\ldots ,T_ n+\epsilon \omega \right). \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-AC8573E3"><span data-gerby-tag="AC8573E3"></span><p>
+ Consider closed positive $(1,1)$-currents $T_1,\ldots ,T_ n,T_1'$ on $X$ with positive volumes, then 
+</p>
+<div class="equation">
+<span class="equation-label">7.10</span>
+<div>\begin{equation}  \operatorname{vol}(T_1+T_1',T_2,\ldots ,T_ n)=\operatorname{vol}(T_1,T_2,\ldots ,T_ n)+\operatorname{vol}(T_1',T_2,\ldots ,T_ n). \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-530F475A"><span data-gerby-tag="530F475A"></span><p>
+ Consider closed positive $(1,1)$-currents $T_1,\ldots ,T_ n$ on $X$ with positive volumes and $\lambda &gt; 0$, then 
+</p>
+<div class="equation">
+  \[  \operatorname{vol}(\lambda T_1,T_2,\ldots ,T_ n)=\lambda \operatorname{vol}(T_1,T_2,\ldots ,T_ n).  \]
+</div>
+</li><li class="custom-item" id="sgpt-046946BD"><span data-gerby-tag="046946BD"></span><p>
+ Suppose that $T_1,\ldots ,T_ n,S_1,\ldots ,S_ n$ are closed positive $(1,1)$-currents on $X$ with positive volumes such that $T_ i\preceq _{\mathcal{I}} S_ i$ and $\{ T_ i\} =\{ S_ i\} $ for each $i=1,\ldots ,n$. Then 
+</p>
+<div class="equation">
+<span class="equation-label">7.11</span>
+<div>\begin{equation}  \operatorname{vol}(T_1,\ldots ,T_ n)\leq \operatorname{vol}(S_1,\ldots ,S_ n). \end{equation}</div>
+</div>
+</li>
+</ol>
+</article> The notation $\operatorname{Reg}$ is defined in (<a data-tag="9F9D327E" href="../../tag/6720366F8D5B/">1.44</a>). 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="CEA78ED9" href="../../tag/20316D4886CF/#sgpt-CEA78ED9">1</a> This follows from the symmetry of the mixed non-pluripolar product in (<a data-tag="BB179F91" href="../../tag/65AD0F03CD20/">7.8</a>), cf. proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="773F814D" href="../../tag/9E81D36B1290/#sgpt-773F814D">2</a>. 
+    <p>
+<a data-tag="D408BC21" href="../../tag/20316D4886CF/#sgpt-D408BC21">2</a> For each $i$ and each $\epsilon &gt;0$, we have 
+    
+<div class="equation">
+  \[  P_{\theta _ i}[\varphi _ i]_{\mathcal{I}}\sim _ P P_{\theta _ i+\epsilon \omega }\left[P_{\theta _ i}[\varphi _ i]_{\mathcal{I}}\right]_{\mathcal{I}}=P_{\theta _ i+\epsilon \omega }[\varphi _ i]_{\mathcal{I}}  \]
+</div>
+<p>
+       as a consequence of example <a data-tag="48380077" href="../../tag/E3DE8BCA0BA1/">7.1.7</a>. Hence using proposition <a data-tag="9C02A916" href="../../tag/82DCD8E3B1BA/">6.1.16</a> and the multi-linearity of the non-pluripolar product proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>, 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \lim _{\epsilon \to 0+}\operatorname{vol}(T_1+\epsilon \omega ,\ldots ,T_ n+\epsilon \omega )\\  =&amp; \lim _{\epsilon \to 0+}\int _ X \left(\theta _1+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta _1}[\varphi _1]_{\mathcal{I}}\right)\wedge \cdots \wedge \left(\theta _ n+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta _ n}[\varphi _ n]_{\mathcal{I}}\right)\\  =&amp;  \operatorname{vol}(T_1,\ldots ,T_ n). \end{aligned}  \]
+</div>
+<p>
+<a data-tag="AC8573E3" href="../../tag/20316D4886CF/#sgpt-AC8573E3">3</a> We write $T_ i=\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i$ as before for each $i$ and $T_1'=\theta _1'+\mathrm{dd}^{\mathrm{c}}\varphi _1'$. The potentials $P_{\theta _1}[\varphi _1]_{\mathcal I}$ and $P_{\theta _1'}[\varphi _1']_{\mathcal I}$ are $\mathcal I$-model with positive masses, hence $\mathcal I$-good. By proposition <a data-tag="9A8CECCD" href="../../tag/AC437613D2C1/">7.2.1</a>, their sum is $\mathcal I$-good. Moreover, it is $\mathcal I$-equivalent to $\varphi _1+\varphi _1'$. Then thanks to proposition <a data-tag="9A8CECCD" href="../../tag/AC437613D2C1/">7.2.1</a>, 
+    
+<div class="equation">
+  \[  P_{\theta _1}[\varphi _1]_{\mathcal{I}}+P_{\theta _1'}[\varphi _1']_{\mathcal{I}}\sim _ P P_{\theta _1+\theta _1'}\left[P_{\theta _1}[\varphi _1]_{\mathcal{I}}+P_{\theta _1'}[\varphi _1']_{\mathcal{I}} \right]_{\mathcal{I}} = P_{\theta _1+\theta _1'}\left[\varphi _1+\varphi _1'\right]_{\mathcal{I}}  \]
+</div>
+<p>
+       Thus by proposition <a data-tag="9C02A916" href="../../tag/82DCD8E3B1BA/">6.1.16</a>, we have 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \operatorname{vol}(T_1+T_1',T_2,\ldots ,T_ n)\\  =&amp; \int _ X \left( \theta _1+\theta _1'+\mathrm{dd}^{\mathrm{c}}P_{\theta _1+\theta _1'}[\varphi _1+\varphi _1']_{\mathcal{I}} \right)\wedge \left( \theta _2+\mathrm{dd}^{\mathrm{c}}P_{\theta _2}[\varphi _2]_{\mathcal{I}}\right)\wedge \cdots \\ &amp; \wedge \left( \theta _ n+\mathrm{dd}^{\mathrm{c}}P_{\theta _ n}[\varphi _ n]_{\mathcal{I}}\right)\\  =&amp; \int _ X \left( \theta _1+\theta _1'+\mathrm{dd}^{\mathrm{c}}P_{\theta _1}[\varphi _1]_{\mathcal{I}}+\mathrm{dd}^{\mathrm{c}}P_{\theta _1'}[\varphi _1']_{\mathcal{I}} \right)\wedge \left( \theta _2+\mathrm{dd}^{\mathrm{c}}P_{\theta _2}[\varphi _2]_{\mathcal{I}}\right)\wedge \cdots \\ &amp; \wedge \left( \theta _ n+\mathrm{dd}^{\mathrm{c}}P_{\theta _ n}[\varphi _ n]_{\mathcal{I}}\right)\\  =&amp;  \operatorname{vol}(T_1,T_2,\ldots ,T_ n)+\operatorname{vol}(T_1',T_2,\ldots ,T_ n). \end{aligned}  \]
+</div>
+<p>
+<a data-tag="530F475A" href="../../tag/20316D4886CF/#sgpt-530F475A">4</a> This follows from (<a data-tag="BB179F91" href="../../tag/65AD0F03CD20/">7.8</a>), proposition <a data-tag="DD837F85" href="../../tag/F7C47263CB3C/">3.2.16</a> <a data-tag="6DBD359C" href="../../tag/F7C47263CB3C/#sgpt-6DBD359C">1</a> and proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>. 
+    <p>
+<a data-tag="046946BD" href="../../tag/20316D4886CF/#sgpt-046946BD">5</a> Our assertion follows from the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+In view of <a data-tag="733543AC" href="../../tag/20316D4886CF/">7.3.2</a> <a data-tag="D408BC21" href="../../tag/20316D4886CF/#sgpt-D408BC21">2</a>, we may extend the definition of mixed volumes to the more general setting as follows: <article class="env-definition" id="sgpt-606A173E">
+<p><a class="environment-identifier" href="../../tag/7731FA7D8BFD/">Definition <span data-tag="606A173E">7.3.3</span>.</a><span data-gerby-tag="606A173E"></span> Let $\varphi _ i\in \mathrm{PSH}(X,\theta _ i)$ for $i=1,\ldots ,n$. Write $T_ i=\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i$ for each $i=1,\ldots ,n$. Take a Kähler form $\omega $ on $X$. We define the <em>mixed volume</em> $\operatorname{vol}(T_1,\ldots ,T_ n)$ as </p>
+<div class="equation" id="sgpt-6D89D7CD"><span data-gerby-tag="6D89D7CD"></span>
+<span class="equation-label"><a data-tag="6D89D7CD" href="../../tag/0141EC0ADB1E/">7.21</a></span>
+<div>\begin{equation} \label{eq:volmixedgeneral} \operatorname{vol}\left(T_1,\ldots ,T_ n\right)=\lim _{\epsilon \to 0+}\operatorname{vol}\left(T_1+\epsilon \omega ,\ldots ,T_ n+\epsilon \omega \right). \end{equation}</div>
+</div>
+<p> Note that $\operatorname{vol}(T_1+\epsilon \omega ,\ldots ,T_ n+\epsilon \omega )$ is decreasing as $\epsilon \to 0+$ due to <a data-tag="733543AC" href="../../tag/20316D4886CF/">7.3.2</a> <a data-tag="AC8573E3" href="../../tag/20316D4886CF/#sgpt-AC8573E3">3</a>, so the limit exists. </p>
+<p>Furthermore, $\operatorname{vol}(T_1,\ldots ,T_ n)$ does not depend on the choice of $\omega $, as a consequence of <a data-tag="733543AC" href="../../tag/20316D4886CF/">7.3.2</a> <a data-tag="AC8573E3" href="../../tag/20316D4886CF/#sgpt-AC8573E3">3</a>. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-9C667FBF">
+<p><a class="environment-identifier" href="../../tag/DF8A923E8F3E/">Proposition <span data-tag="9C667FBF">7.3.4</span>.</a><span data-gerby-tag="9C667FBF"></span></p>
+<ol>
+<li class="custom-item" id="sgpt-34CD131B"><span data-gerby-tag="34CD131B"></span><p>
+ The mixed volume is symmetric in its $n$-variables. 
+</p>
+</li><li class="custom-item" id="sgpt-E5CCEA2F"><span data-gerby-tag="E5CCEA2F"></span><p>
+ Consider closed positive $(1,1)$-currents $T_1,\ldots ,T_ n,T_1'$ on $X$, then 
+</p>
+<div class="equation">
+<span class="equation-label">7.22</span>
+<div>\begin{equation}  \operatorname{vol}(T_1+T_1',T_2,\ldots ,T_ n)=\operatorname{vol}(T_1,T_2,\ldots ,T_ n)+\operatorname{vol}(T_1',T_2,\ldots ,T_ n). \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-2C987AD9"><span data-gerby-tag="2C987AD9"></span><p>
+ Consider closed positive $(1,1)$-currents $T_1,\ldots ,T_ n$ on $X$ and $\lambda \geq 0$, then 
+</p>
+<div class="equation">
+  \[  \operatorname{vol}(\lambda T_1,T_2,\ldots ,T_ n)=\lambda \operatorname{vol}(T_1,T_2,\ldots ,T_ n).  \]
+</div>
+</li><li class="custom-item" id="sgpt-F24AC73A"><span data-gerby-tag="F24AC73A"></span><p>
+ Suppose that $T_1,\ldots ,T_ n,S_1,\ldots ,S_ n$ are closed positive $(1,1)$-currents on $X$ such that $T_ i\preceq _{\mathcal{I}} S_ i$ and $\{ T_ i\} =\{ S_ i\} $ for each $i=1,\ldots ,n$. Then 
+</p>
+<div class="equation">
+<span class="equation-label">7.23</span>
+<div>\begin{equation}  \operatorname{vol}(T_1,\ldots ,T_ n)\leq \operatorname{vol}(S_1,\ldots ,S_ n). \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-AEEB7447"><span data-gerby-tag="AEEB7447"></span><p>
+ Suppose that $T_1,\ldots ,T_ n$ are closed positive $(1,1)$-currents on $X$. Then 
+</p>
+<div class="equation">
+<span class="equation-label">7.24</span>
+<div>\begin{equation}  \operatorname{vol}\left(T_1,\ldots ,T_ n \right)=\operatorname{vol}\left(\operatorname{Reg}T_1,\ldots ,\operatorname{Reg}T_ n \right). \end{equation}</div>
+</div>
+</li><li class="custom-item" id="sgpt-93486F9F"><span data-gerby-tag="93486F9F"></span><p>
+ For any closed positive $(1,1)$-current $T$ on $X$, we have 
+</p>
+<div class="equation" id="sgpt-1FD90C76"><span data-gerby-tag="1FD90C76"></span>
+<span class="equation-label"><a data-tag="1FD90C76" href="../../tag/1BAF68507D97/">7.25</a></span>
+<div>\begin{equation} \label{eq:mix_vol_ext_pure} \operatorname{vol}(T,\ldots ,T)=\operatorname{vol}T. \end{equation}</div>
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="34CD131B" href="../../tag/DF8A923E8F3E/#sgpt-34CD131B">1</a>, <a data-tag="E5CCEA2F" href="../../tag/DF8A923E8F3E/#sgpt-E5CCEA2F">2</a>, <a data-tag="2C987AD9" href="../../tag/DF8A923E8F3E/#sgpt-2C987AD9">3</a>, <a data-tag="F24AC73A" href="../../tag/DF8A923E8F3E/#sgpt-F24AC73A">4</a> are immediate consequences of the corresponding properties proved in <a data-tag="733543AC" href="../../tag/20316D4886CF/">7.3.2</a>. 
+    <p>
+<a data-tag="AEEB7447" href="../../tag/DF8A923E8F3E/#sgpt-AEEB7447">5</a> Using <a data-tag="2C987AD9" href="../../tag/DF8A923E8F3E/#sgpt-2C987AD9">3</a> and <a data-tag="F24AC73A" href="../../tag/DF8A923E8F3E/#sgpt-F24AC73A">4</a>, it suffices to establish the following: Suppose that 
+    
+<div class="equation" id="sgpt-87FA2965"><span data-gerby-tag="87FA2965"></span>
+<span class="equation-label"><a data-tag="87FA2965" href="../../tag/5EAAF326E66A/">7.26</a></span>
+<div>\begin{equation} \label{eq:T_count_sum_temp1} T=\sum _ i c_ i[E_ i] \end{equation}</div>
+</div>
+<p>
+       is a closed positive $(1,1)$-current on $X$, where $\{ E_ i\} $ is a countable collection of prime divisors on $X$ and $c_ i&gt;0$. Then 
+    
+<div class="equation" id="sgpt-B18C8D04"><span data-gerby-tag="B18C8D04"></span>
+<span class="equation-label"><a data-tag="B18C8D04" href="../../tag/A35A4555844E/">7.27</a></span>
+<div>\begin{equation} \label{eq:volTT2Tn_temp1} \operatorname{vol}\left(T,T_2,\ldots ,T_ n \right)=0 \end{equation}</div>
+</div>
+<p>
+       for any closed positive $(1,1)$-currents $T_2,\ldots ,T_ n$ on $X$. 
+    <p>
+<strong>Step 1</strong>. We first assume that (<a data-tag="87FA2965" href="../../tag/5EAAF326E66A/">7.26</a>) is a finite sum. Fix a Kähler form $\omega $ on $X$. 
+    <p>
+      In this case, thanks to <a data-tag="AC8573E3" href="../../tag/20316D4886CF/#sgpt-AC8573E3">3</a> and <a data-tag="530F475A" href="../../tag/20316D4886CF/#sgpt-530F475A">4</a> again, we may assume that $T=[E]$ for some prime divisor $E$ on $X$. Write $[E]=\theta _{\varphi }$. Then $\varphi $ has analytic singularities thanks to proposition <a data-tag="C3111E63" href="../../tag/0C02CD3B5D59/">1.8.4</a>. Therefore, $P_{\theta +\epsilon \omega }[\varphi ]_{\mathcal{I}}\sim \varphi $ for any $\epsilon &gt;0$ due to proposition <a data-tag="685DEAD4" href="../../tag/10F9DDE25703/">3.2.15</a>. Write $T_ i=\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i$ for $i=2,\ldots ,n$, and choose $C&gt;0$ so that $C\omega +\theta _ i$ are Kähler forms for each $i=2,\ldots ,n$. Then 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \operatorname{vol}(T,T_2,\ldots ,T_ n)\\  =&amp;  \lim _{\epsilon \to 0+} \int _ X \left([E]+\epsilon \omega \right)\wedge \left( \theta _2+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta _2+\epsilon \omega }[\varphi _2]_{\mathcal{I}}\right)\wedge \cdots \\ &amp; \wedge \left( \theta _ n+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta _ n+\epsilon \omega }[\varphi _ n]_{\mathcal{I}}\right)\\  =&amp; \lim _{\epsilon \to 0+} \epsilon \int _ X \omega \wedge \left( \theta _2+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta _2+\epsilon \omega }[\varphi _2]_{\mathcal{I}}\right)\wedge \cdots \\ &amp; \wedge \left( \theta _ n+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta _ n+\epsilon \omega }[\varphi _ n]_{\mathcal{I}}\right)\\  \leq &amp; \lim _{\epsilon \to 0+} \epsilon \int _ X \omega \wedge \left( \theta _2+C\omega \right)\wedge \cdots \wedge \left( \theta _ n+C\omega \right)\\  =&amp; 0, \end{aligned}  \]
+</div>
+<p>
+       where the inequality step follows from the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> and the fact that $P_{\theta _ i+\epsilon \omega }[\varphi _ i]_{\mathcal{I}}\leq 0$ for all $i=2,\ldots ,n$. 
+    <p>
+<strong>Step 2</strong>. We prove the case where $\{ E_ i\} $ is infinite. We may assume that $i$ runs over $\mathbb {Z}_{&gt;0}$. 
+    <p>
+      Write $T_ i=\theta _{i}+\mathrm{dd}^{\mathrm{c}}\varphi _ i$ for $i=2,\ldots ,n$ as before. Fix a Kähler form $\omega $ on $X$ so that $\theta _ i+\omega $ is a Kähler form for each $i=2,\ldots ,n$. Fix $\epsilon &gt;0$. 
+    <p>
+      We can find $N_0&gt;0$ so that for any $N\geq N_0$, the class of 
+    
+<div class="equation">
+  \[  \epsilon \omega + \sum _{i=N+1}^{\infty }c_ i[E_ i]  \]
+</div>
+<p>
+       is Kähler. Take a Kähler form $\omega _ N$ in this class. Then the currents 
+    
+<div class="equation">
+  \[  \sum _{i=1}^ N c_ i [E_ i]+\omega _ N,\quad \sum _{i=1}^{\infty } c_ i [E_ i]+\epsilon \omega  \]
+</div>
+<p>
+       all lie in the same cohomology class. Moreover, 
+    
+<div class="equation">
+  \[  \sum _{i=1}^{\infty } c_ i [E_ i]+\epsilon \omega \preceq _{\mathcal{I}}\sum _{i=1}^ N c_ i [E_ i]+\omega _ N.  \]
+</div>
+<p>
+       Therefore, by the monotonicity in <a data-tag="046946BD" href="../../tag/20316D4886CF/#sgpt-046946BD">5</a>, followed by the finite divisorial case of Step 1, 
+    
+<div class="equation">
+  \[  \begin{aligned}  \operatorname{vol}\left(T,T_2,\ldots ,T_ n\right)\leq &amp;  \operatorname{vol}\left(T+\epsilon \omega ,T_2,\ldots ,T_ n\right)\\  \leq &amp;  \operatorname{vol}\left(\sum _{i=1}^ N c_ i [E_ i]+\omega _ N,T_2,\ldots ,T_ n\right)\\  =&amp;  \operatorname{vol}\left(\omega _ N,T_2,\ldots ,T_ n\right)\\  \leq &amp;  \int _ X \omega _ N\wedge (\theta _2+\omega )\wedge \cdots \wedge (\theta _ n+\omega ). \end{aligned}  \]
+</div>
+<p>
+       Letting $N\to \infty $, and using $\{ \omega _ N\} \to \{ \epsilon \omega \} $, we get 
+    
+<div class="equation">
+  \[  \operatorname{vol}\left(T,T_2,\ldots ,T_ n\right)\leq \epsilon \int _ X \omega \wedge (\theta _2+\omega )\wedge \cdots \wedge (\theta _ n+\omega ).  \]
+</div>
+<p>
+       Since $\epsilon &gt;0$ is arbitrary, we conclude (<a data-tag="B18C8D04" href="../../tag/A35A4555844E/">7.27</a>). 
+    <p>
+<a data-tag="93486F9F" href="../../tag/DF8A923E8F3E/#sgpt-93486F9F">6</a> Write $T=\theta _{\varphi }$. In more concrete terms, we need to show that 
+    
+<div class="equation">
+  \[  \lim _{\epsilon \to 0+}\int _ X (\theta +\epsilon \omega +\mathrm{dd}^{\mathrm{c}}P_{\theta +\epsilon \omega }[\varphi ]_{\mathcal{I}})^ n=\int _ X (\theta +\mathrm{dd}^{\mathrm{c}}P_{\theta }[\varphi ]_{\mathcal{I}})^ n.  \]
+</div>
+<p>
+      We may replace $\varphi $ by $P_{\theta }[\varphi ]_{\mathcal{I}}$ and assume that $\varphi $ is $\mathcal{I}$-model in $\mathrm{PSH}(X,\theta )$. Then we claim that 
+    
+<div class="equation">
+  \[  \varphi =\inf _{\epsilon &gt;0}P_{\theta +\epsilon \omega }[\varphi ]_{\mathcal{I}}.  \]
+</div>
+<p>
+       From this, our assertion follows from proposition <a data-tag="DE839E2D" href="../../tag/048490BEAC8C/">3.1.26</a>. 
+    <p>
+      The $\leq $ direction is clear. For the converse, since $\varphi $ is $\mathcal{I}$-model, it suffices to show that for each prime divisor $E$ over $X$, we have 
+    
+<div class="equation">
+  \[  \nu (\varphi ,E)\leq \nu \left(\inf _{\epsilon &gt;0}P_{\theta +\epsilon \omega }[\varphi ]_{\mathcal{I}},E\right).  \]
+</div>
+<p>
+       We simply compute 
+    
+<div class="equation">
+  \[  \nu \left(\inf _{\epsilon &gt;0}P_{\theta +\epsilon \omega }[\varphi ]_{\mathcal{I}},E\right)\geq \sup _{\epsilon &gt;0}\nu \left(P_{\theta +\epsilon \omega }[\varphi ]_{\mathcal{I}},E\right)=\nu (\varphi ,E).  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-94093E4E">
+<p><a class="environment-identifier" href="../../tag/1AEDF3A60767/">Lemma <span data-tag="94093E4E">7.3.5</span>.</a><span data-gerby-tag="94093E4E"></span> Let $\omega $ be a Kähler form on $X$. Then there is a constant $C&gt;0$ depending only on $X,\omega ,\{ T_1\} ,\ldots ,\{ T_ n\} $ such that </p>
+<div class="equation">
+  \[  0\leq \operatorname{vol}(T_1+\epsilon \omega ,\ldots , T_ n+\epsilon \omega )-\operatorname{vol}(T_1,\ldots ,T_ n)\leq C\epsilon  \]
+</div>
+<p> for any $\epsilon \in [0,1]$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the multi-linearity established in proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">7.3.4</a>, we can write 
+    
+<div class="equation">
+  \[  \operatorname{vol}\left(T_1+\epsilon \omega ,\ldots , T_ n+\epsilon \omega \right)-\operatorname{vol}(T_1,\ldots ,T_ n)  \]
+</div>
+<p>
+       as a linear combination of the $2^ n-1$-terms: 
+    
+<div class="equation">
+  \[  \epsilon ^ m\operatorname{vol}\left(\omega ^ m, T_{i_1},\ldots ,T_{i_{n-m}} \right)  \]
+</div>
+<p>
+       where $J\subseteq \{ 1,\ldots ,n\} $ is a non-empty subset of cardinality $m$, and $\{ i_1,\ldots ,i_{n-m}\} $ is the complement of $J$. It suffices to show that the coefficients are bounded by a constant as above. Take $D\geq 0$ as the minimal non-negative number so that $D\{ \omega \} +\{ T_ i\} $ is nef for each $i=1,\ldots ,n$. Then by the monotonicity theorem theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, 
+    
+<div class="equation">
+  \[  \operatorname{vol}\left(\omega ^ m, T_{i_1},\ldots ,T_{i_{n-m}} \right)\leq \{ \omega \} ^ m\cap \left( \{ T_{i_1}\} +D\{ \omega \}  \right) \cap \cdots \cap \left( \{ T_{i_{n-m}}\} +D\{ \omega \}  \right).  \]
+</div>
+<p>
+       Our assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+Next we show that theorem <a data-tag="91496AFE" href="../../tag/CAB6F4E23080/">6.2.30</a> continues to hold even when $\varphi $ has vanishing mass. We prove a slightly more general result: <article class="env-theorem" id="sgpt-34802047">
+<p><a class="environment-identifier" href="../../tag/A320A575BBEB/">Theorem <span data-tag="34802047">7.3.6</span>.</a><span data-gerby-tag="34802047"></span> Let $\theta _1,\ldots ,\theta _ n$ be smooth closed real $(1,1)$-forms representing big cohomology classes. Suppose that $(\varphi _ j^ k)_{k\in I}$ are nets in $\mathrm{PSH}(X,\theta _ j)$ and $\varphi _ j\in \mathrm{PSH}(X,\theta _ j)$ for $j=1,\ldots ,n$. We assume that $\varphi _ j^ k\xrightarrow {d_ S}\varphi _ j$ for each $j=1,\ldots ,n$. Then </p>
+<div class="equation" id="sgpt-0AA03E79"><span data-gerby-tag="0AA03E79"></span>
+<span class="equation-label"><a data-tag="0AA03E79" href="../../tag/BCAEFDCBCBE3/">7.39</a></span>
+<div>\begin{equation} \label{eq:convmixedvolds} \lim _{k\in I}\operatorname{vol}\left( \theta _{1,\varphi _1^ k},\ldots , \theta _{n,\varphi _ n^ k}\right)=\operatorname{vol}\left( \theta _{1,\varphi _1},\ldots , \theta _{n,\varphi _ n}\right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a Kähler form $\omega $. Then for any $\epsilon &gt;0$, we have 
+    
+<div class="equation">
+  \[  \lim _{k\in I}\operatorname{vol}\left( (\theta _1+\epsilon \omega )_{\varphi _1^ k},\ldots , (\theta _ n+\epsilon \omega )_{\varphi _ n^ k}\right)=\operatorname{vol}\left( (\theta _1+\epsilon \omega )_{\varphi _1},\ldots , (\theta _ n+\epsilon \omega )_{\varphi _ n}\right)  \]
+</div>
+<p>
+       as a consequence of corollary <a data-tag="F2885569" href="../../tag/3EB846B21817/">6.2.19</a>, theorem <a data-tag="45C76D02" href="../../tag/713B9E26113B/">6.2.17</a> and theorem <a data-tag="720E23D2" href="../../tag/88D575A3C46A/">6.2.27</a>. 
+    <p>
+      Now thanks to <a data-tag="94093E4E" href="../../tag/1AEDF3A60767/">7.3.5</a>, there is $C&gt;0$ so that for each $k\in I$, 
+    
+<div class="equation">
+  \[  \begin{aligned}  0\leq &amp;  \operatorname{vol}\left( (\theta _1+\epsilon \omega )_{\varphi _1^ k},\ldots , (\theta _ n+\epsilon \omega )_{\varphi _ n^ k}\right)-\operatorname{vol}\left( \theta _{1,\varphi _1^ k},\ldots , \theta _{n,\varphi _ n^ k}\right)\leq C\epsilon ,\\  0\leq &amp;  \operatorname{vol}\left( (\theta _1+\epsilon \omega )_{\varphi _1},\ldots , (\theta _ n+\epsilon \omega )_{\varphi _ n}\right)-\operatorname{vol}\left( \theta _{1,\varphi _1},\ldots , \theta _{n,\varphi _ n}\right)\leq C\epsilon . \end{aligned}  \]
+</div>
+<p>
+       Therefore, (<a data-tag="0AA03E79" href="../../tag/BCAEFDCBCBE3/">7.39</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-corollary" id="sgpt-B966C65D">
+<p><a class="environment-identifier" href="../../tag/3305393E4400/">Corollary <span data-tag="B966C65D">7.3.7</span>.</a><span data-gerby-tag="B966C65D"></span> Let $\theta $ be a smooth closed real $(1,1)$-form representing a big cohomology class. Let $(\varphi _ j)_{j\in I}$ be a net in $\mathrm{PSH}(X,\theta )$ and $\varphi \in \mathrm{PSH}(X,\theta )$. Assume that $\varphi _ j\xrightarrow {d_ S}\varphi $. Then </p>
+<div class="equation" id="sgpt-A30C3D29"><span data-gerby-tag="A30C3D29"></span>
+<span class="equation-label"><a data-tag="A30C3D29" href="../../tag/55BF10D53948/">7.42</a></span>
+<div>\begin{equation} \label{eq:Ivolcont2} \operatorname{vol}\theta _{\varphi _ j}\to \operatorname{vol}\theta _{\varphi },\quad \int _ X \theta _{\varphi _ j}^ n\to \int _ X \theta _{\varphi }^ n. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first part of (<a data-tag="A30C3D29" href="../../tag/55BF10D53948/">7.42</a>) is a special case of theorem <a data-tag="34802047" href="../../tag/A320A575BBEB/">7.3.6</a>, while the second part of (<a data-tag="A30C3D29" href="../../tag/55BF10D53948/">7.42</a>) is a special case of theorem <a data-tag="45C76D02" href="../../tag/713B9E26113B/">6.2.17</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+The mixed volume has a log-concavity property: <article class="env-proposition" id="sgpt-BD249FC4">
+<p><a class="environment-identifier" href="../../tag/BB7441317AAF/">Proposition <span data-tag="BD249FC4">7.3.8</span>.</a><span data-gerby-tag="BD249FC4"></span> Let $T_1,\ldots ,T_ n$ be closed positive $(1,1)$-currents on $X$. Then </p>
+<div class="equation">
+  \[  \operatorname{vol}(T_1,\ldots ,T_ n)\geq \prod _{i=1}^ n(\operatorname{vol}T_ i)^{1/n}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $\operatorname{vol}T_ i&gt;0$ for each $i=1,\ldots ,n$ since there is nothing to prove otherwise. In this case, we need to show that 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \int _ X \left(\theta _1+\mathrm{dd}^{\mathrm{c}}P_{\theta _1}[\varphi _1]_{\mathcal{I}}\right)\wedge \cdots \wedge \left(\theta _ n+\mathrm{dd}^{\mathrm{c}}P_{\theta _ n}[\varphi _ n]_{\mathcal{I}}\right)\\  \geq &amp;  \prod _{i=1}^ n\left(\int _ X \left(\theta _ i+\mathrm{dd}^{\mathrm{c}}P_{\theta _ i}[\varphi _ i]_{\mathcal{I}} \right)^ n \right)^{1/n}. \end{split}  \]
+</div>
+<p>
+       This is a special case of theorem <a data-tag="5DEDC013" href="../../tag/7F7BE8292E76/">2.4.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+Next, we also study how the mixed volume behaves under bimeromorphic transforms. <article class="env-proposition" id="sgpt-FE73BC9C">
+<p><a class="environment-identifier" href="../../tag/24049C5AD956/">Proposition <span data-tag="FE73BC9C">7.3.9</span>.</a><span data-gerby-tag="FE73BC9C"></span> Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism from a Kähler manifold $Y$ to $X$. Then </p>
+<div class="equation">
+  \[  \operatorname{vol}\left(\pi ^*T_1,\ldots ,\pi ^*T_ n\right)=\operatorname{vol}\left(T_1,\ldots ,T_ n\right).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Using the definition of the mixed volume, we may easily reduce to the case where $\operatorname{vol}T_ i&gt;0$ for each $i=1,\ldots ,n$. By proposition <a data-tag="D63378B8" href="../../tag/E535E4DC5384/">3.2.7</a>, we know that if we write $T_ i=\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i$, then 
+    
+<div class="equation">
+  \[  \pi ^*P_{\theta _ i}[\varphi _ i]_{\mathcal{I}}=P_{\pi ^*\theta _ i}[\pi ^*\varphi _ i]_{\mathcal{I}}  \]
+</div>
+<p>
+       for each $i=1,\ldots ,n$. In particular, 
+    
+<div class="equation">
+  \[  \operatorname{vol}\pi ^*T_ i=\operatorname{vol}T_ i&gt;0.  \]
+</div>
+<p>
+       Our assertion follows from the bimeromorphic invariance of the non-pluripolar product proposition <a data-tag="2EC7ADC4" href="../../tag/365687A6A087/">2.4.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+As for pushforward, we also have a similar result. We need a preliminary result: 
+</p>
+
+<article class="env-lemma" id="sgpt-4F5A3BB4">
+<p><a class="environment-identifier" href="../../tag/30F0E1037DAE/">Lemma <span data-tag="4F5A3BB4">7.3.10</span>.</a><span data-gerby-tag="4F5A3BB4"></span> Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism from a Kähler manifold $Y$. Then for any non-divisorial closed positive $(1,1)$-current $T$ on $Y$, we have </p>
+<div class="equation">
+  \[  \pi ^* \pi _* T=T+\sum _{i=1}^ N c_ i [E_ i]  \]
+</div>
+<p> for finitely many $\pi $-exceptional divisors $E_ i$ and $c_ i&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $E$ be the exceptional locus of $\pi $. Then 
+    
+<div class="equation">
+  \[  T=\mathds {1}_{Y\setminus E}\pi ^* \pi _* T.  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  \pi ^* \pi _* T-T=\mathds {1}_ E\pi ^* \pi _* T,  \]
+</div>
+<p>
+       which has the stated form, due to the support theorems, see <span class="cite">[<span class="postnote">Section 8</span>, <a href="../../references/#R67A7837FBEE7">DemBook</a>]</span>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-4A3FD1E6">
+<p><a class="environment-identifier" href="../../tag/F7A7811A159E/">Corollary <span data-tag="4A3FD1E6">7.3.11</span>.</a><span data-gerby-tag="4A3FD1E6"></span> Let $\pi \colon X\rightarrow Z$ be a proper bimeromorphic morphism from $X$ to a Kähler manifold $Z$. Then </p>
+<div class="equation" id="sgpt-806BA3C2"><span data-gerby-tag="806BA3C2"></span>
+<span class="equation-label"><a data-tag="806BA3C2" href="../../tag/4A8B3C0B6CE6/">7.45</a></span>
+<div>\begin{equation} \label{eq:volpushinc} \operatorname{vol}(T_1,\ldots ,T_ n)=\operatorname{vol}(\pi _*T_1,\ldots ,\pi _*T_ n). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Observe that we may assume that $T_ i=\operatorname{Reg}T_ i$ for all $i=1,\ldots ,n$. In fact, since the pushforward of the divisorial part of $T_ i$ is divisorial as well, hence by proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">7.3.4</a> <a data-tag="AEEB7447" href="../../tag/DF8A923E8F3E/#sgpt-AEEB7447">5</a>, they do not contribute to the volumes. 
+    <p>
+      Now by proposition <a data-tag="FE73BC9C" href="../../tag/24049C5AD956/">7.3.9</a>, it remains to show that 
+    
+<div class="equation">
+  \[  \operatorname{vol}(T_1,\ldots ,T_ n)=\operatorname{vol}(\pi ^*\pi _*T_1,\ldots ,\pi ^*\pi _*T_ n).  \]
+</div>
+<p>
+       By <a data-tag="4F5A3BB4" href="../../tag/30F0E1037DAE/">7.3.10</a>, the difference $\pi ^*\pi _*T_ i-T_ i$ is divisorial, hence our desired equality follows from proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">7.3.4</a> <a data-tag="AEEB7447" href="../../tag/DF8A923E8F3E/#sgpt-AEEB7447">5</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+A particular corollary of corollary <a data-tag="4A3FD1E6" href="../../tag/F7A7811A159E/">7.3.11</a> will be useful later. <article class="env-corollary" id="sgpt-2D481231">
+<p><a class="environment-identifier" href="../../tag/1F0FA3B61EBC/">Corollary <span data-tag="2D481231">7.3.12</span>.</a><span data-gerby-tag="2D481231"></span> Let $\pi \colon X\rightarrow Z$ be a proper bimeromorphic morphism from $X$ to a Kähler manifold $Z$. Assume that $T$ is an $\mathcal{I}$-good closed positive $(1,1)$-current on $X$. Then so is $\pi _*T$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $\int _ X T^ n&gt;0$. Then by corollary <a data-tag="4A3FD1E6" href="../../tag/F7A7811A159E/">7.3.11</a>, 
+    
+<div class="equation">
+  \[  \operatorname{vol}\pi _*T=\operatorname{vol}T&gt;0  \]
+</div>
+<p>
+       as well. Since $T$ is $\mathcal{I}$-good, we have 
+    
+<div class="equation">
+  \[  \operatorname{vol}T=\int _ X T^ n.  \]
+</div>
+<p>
+       But $\int _ X T^ n=\int _ Z (\pi _*T)^ n$, so 
+    
+<div class="equation">
+  \[  \operatorname{vol}\pi _*T=\int _ Z (\pi _*T)^ n&gt;0.  \]
+</div>
+<p>
+       It follows that $\pi _*T$ is $\mathcal{I}$-good. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+Finally we establish a semicontinuity property of the mixed volumes. <article class="env-theorem" id="sgpt-0E677E3F">
+<p><a class="environment-identifier" href="../../tag/763BE634A054/">Theorem <span data-tag="0E677E3F">7.3.13</span>.</a><span data-gerby-tag="0E677E3F"></span> Let $(\varphi _ i^ j)_{j\in J}$ ($i=1,\ldots ,n$) be nets in $\mathrm{PSH}(X,\theta _ i)$, and $\varphi _ i\in \mathrm{PSH}(X,\theta _ i)$ ($i=1,\ldots ,n$). Assume that for each prime divisor $E$ over $X$, we have </p>
+<div class="equation">
+  \[  \lim _{j\in J} \nu \left(\varphi _ i^ j,E\right)=\nu \left(\varphi _ i,E\right),\quad i=1,\ldots ,n.  \]
+</div>
+<p> Then </p>
+<div class="equation">
+  \[  \varlimsup _{j\in J} \operatorname{vol}\left(\theta _1+\mathrm{dd}^{\mathrm{c}}\varphi _1^ j, \dots ,\theta _ n+\mathrm{dd}^{\mathrm{c}}\varphi _ n^ j \right) \leq \operatorname{vol}\left(\theta _1+\mathrm{dd}^{\mathrm{c}}\varphi _1, \dots ,\theta _ n+\mathrm{dd}^{\mathrm{c}}\varphi _ n\right).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first assume that $\operatorname{vol}(\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i^ j)&gt;0$ and $\operatorname{vol}(\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i)&gt;0$ for all $i=1,\ldots ,n$ and $j\in J$. 
+    <p>
+      Without loss of generality, we may assume that the $\varphi _ i^ j$'s and the $\varphi _ i$'s are $\mathcal{I}$-model for all $i=1,\ldots ,n$ and $j\in J$. Our assertion becomes 
+    
+<div class="equation" id="sgpt-7C72736B"><span data-gerby-tag="7C72736B"></span>
+<span class="equation-label"><a data-tag="7C72736B" href="../../tag/055370851A43/">7.46</a></span>
+<div>\begin{equation} \label{eq:volineq_1} \varlimsup _{j\in J} \int _ X \left(\theta _1+\mathrm{dd}^{\mathrm{c}}\varphi _1^ j\right)\wedge \dots \wedge \left(\theta _ n+\mathrm{dd}^{\mathrm{c}}\varphi _ n^ j \right) \leq \int _ X \left(\theta _1+\mathrm{dd}^{\mathrm{c}}\varphi _1\right) \wedge \dots \wedge \left(\theta _ n+\mathrm{dd}^{\mathrm{c}}\varphi _ n\right). \end{equation}</div>
+</div>
+<p>
+       For each $j\in J$, define 
+    
+<div class="equation">
+  \[  \psi _ i^ j\coloneqq \operatorname *{sup}_{k\geq j}{}\! {}^{*} \varphi _ i^ k,\quad i=1,\ldots ,n.  \]
+</div>
+<p>
+       Observe that $\psi _ i^ j$ is $\mathcal{I}$-good thanks to proposition <a data-tag="CCE5B1B6" href="../../tag/FD679E0ECD3D/">7.2.3</a>, since after the preceding reduction the tail family is bounded above by $0$. It follows from corollary <a data-tag="D8C9CDFB" href="../../tag/F3F797E97E9D/">1.4.6</a> and our assumption that 
+    
+<div class="equation">
+  \[  \lim _{j\in J}\nu \left(\psi _ i^ j,E\right)=\nu \left(\varphi _ i,E\right),\quad i=1,\ldots ,n.  \]
+</div>
+<p>
+       Moreover, for each $j\in J$, the same formula gives $\varphi _ i\preceq _{\mathcal{I}}\psi _ i^ j$. Since $\varphi _ i$ is $\mathcal{I}$-model and $\psi _ i^ j$ is $\mathcal{I}$-good, proposition <a data-tag="B0226FF8" href="../../tag/2E8F613E7CBE/">6.1.12</a> gives 
+    
+<div class="equation">
+  \[  \varphi _ i\leq P_{\theta _ i}\left[\psi _ i^ j\right].  \]
+</div>
+<p>
+       For each $i=1,\ldots ,n$, we define 
+    
+<div class="equation">
+  \[  \psi _ i=\inf _{j\in J}P_{\theta _ i}\left[\psi _ i^ j\right].  \]
+</div>
+<p>
+       In particular, $\psi _ i\geq \varphi _ i$, so $\int _ X\theta _{i,\psi _ i}^ n&gt;0$. Since $\psi _ i^ j$ is $\mathcal{I}$-good, $P_{\theta _ i}[\psi _ i^ j]$ is both model and $\mathcal{I}$-model. Due to proposition <a data-tag="66C7014F" href="../../tag/2D7AF550FFF7/">3.2.18</a>, $\psi _ i$ is $\mathcal{I}$-model. Thanks to proposition <a data-tag="DE839E2D" href="../../tag/048490BEAC8C/">3.1.26</a>, we know 
+    
+<div class="equation">
+  \[  \nu (\psi _ i,E)=\nu (\varphi _ i,E)  \]
+</div>
+<p>
+       for any $i=1,\ldots ,n$ and any prime divisor $E$ over $X$. In other words, $\psi _ i\sim _{\mathcal{I}} \varphi _ i$ for $i=1,\ldots ,n$. But both $\varphi _ i$ and $\psi _ i$ are $\mathcal{I}$-good, therefore, 
+    
+<div class="equation">
+  \[  \psi _ i\sim _{P} \varphi _ i,\quad i=1,\ldots ,n.  \]
+</div>
+<p>
+       By proposition <a data-tag="9C02A916" href="../../tag/82DCD8E3B1BA/">6.1.16</a>, we have 
+    
+<div class="equation">
+  \[  \int _ X (\theta _1+\mathrm{dd}^{\mathrm{c}}\psi _1)\wedge \cdots \wedge (\theta _ n+\mathrm{dd}^{\mathrm{c}}\psi _ n)=\int _ X (\theta _1+\mathrm{dd}^{\mathrm{c}}\varphi _1)\wedge \cdots \wedge (\theta _ n+\mathrm{dd}^{\mathrm{c}}\varphi _ n).  \]
+</div>
+<p>
+       Next by proposition <a data-tag="9C02A916" href="../../tag/82DCD8E3B1BA/">6.1.16</a> again, 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \varlimsup _{j\in J} \int _ X \left(\theta _1+\mathrm{dd}^{\mathrm{c}}\varphi _1^ j\right)\wedge \dots \wedge \left(\theta _ n+\mathrm{dd}^{\mathrm{c}}\varphi _ n^ j \right)\\  \leq &amp;  \varlimsup _{j\in J} \int _ X \left(\theta _1+\mathrm{dd}^{\mathrm{c}}\psi _1^ j\right)\wedge \dots \wedge \left(\theta _ n+\mathrm{dd}^{\mathrm{c}}\psi _ n^ j \right). \end{split}  \]
+</div>
+<p>
+       On the other hand, due to proposition <a data-tag="DE839E2D" href="../../tag/048490BEAC8C/">3.1.26</a> and corollary <a data-tag="D2436235" href="../../tag/F84D53FDA599/">6.2.11</a>, for each $i=1,\ldots ,n$, we have 
+    
+<div class="equation">
+  \[  \psi _ i^ j\xrightarrow {d_ S}\psi _ i.  \]
+</div>
+<p>
+       We conclude from theorem <a data-tag="45C76D02" href="../../tag/713B9E26113B/">6.2.17</a> that 
+    
+<div class="equation">
+  \[  \varlimsup _{j\in J} \int _ X \left(\theta _1+\mathrm{dd}^{\mathrm{c}}\psi _1^ j\right)\wedge \dots \wedge \left(\theta _ n+\mathrm{dd}^{\mathrm{c}}\psi _ n^ j \right)=\int _ X (\theta _1+\mathrm{dd}^{\mathrm{c}}\psi _1)\wedge \cdots \wedge (\theta _ n+\mathrm{dd}^{\mathrm{c}}\psi _ n).  \]
+</div>
+<p>
+       Putting these equations together, (<a data-tag="7C72736B" href="../../tag/055370851A43/">7.46</a>) follows. 
+    <p>
+<strong>Step 2</strong>. Next we handle the general case. 
+    <p>
+      Fix a Kähler form $\omega $ on $X$. For any $\epsilon \in (0,1]$, from Step 1, we know that 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \varlimsup _{j\in J} \operatorname{vol}\left(\theta _1+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi _1^ j, \dots ,\theta _ n+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi _ n^ j \right) \\  \leq &amp;  \operatorname{vol}\left(\theta _1+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi _1, \dots ,\theta _ n+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi _ n\right). \end{split}  \]
+</div>
+<p>
+       Using <a data-tag="94093E4E" href="../../tag/1AEDF3A60767/">7.3.5</a>, we have 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \varlimsup _{j\in J} \operatorname{vol}\left(\theta _1+\mathrm{dd}^{\mathrm{c}}\varphi _1^ j, \dots ,\theta _ n+\mathrm{dd}^{\mathrm{c}}\varphi _ n^ j \right)\\  \leq &amp;  \varlimsup _{j\in J} \operatorname{vol}\left(\theta _1+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi _1^ j, \dots ,\theta _ n+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi _ n^ j \right)\\  \leq &amp; \operatorname{vol}\left(\theta _1+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi _1, \dots ,\theta _ n+\epsilon \omega +\mathrm{dd}^{\mathrm{c}}\varphi _ n\right)\\  \leq &amp; \operatorname{vol}\left(\theta _1+\mathrm{dd}^{\mathrm{c}}\varphi _1, \dots ,\theta _ n+\mathrm{dd}^{\mathrm{c}}\varphi _ n\right)+C\epsilon . \end{aligned}  \]
+</div>
+<p>
+       But since $\epsilon $ is arbitrary, our assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

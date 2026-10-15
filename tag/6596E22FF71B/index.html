@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Failure of recovery in a positive background · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/envelopes-models/">Chapter 13 · Singularity types, envelopes, and models</a> · Tag <code>6596E22FF71B</code></p><h1>Failure of recovery in a positive background</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 25.5 Failure of recovery in a positive background <span data-gerby-tag="D6E88D4B"></span></div>
+<p>
+We construct a Kähler background on a ruled surface over an elliptic curve and an envelope system that is not realized in this background. The obstruction is a section $D$ of the ruling whose class is nef but contains only one closed positive current, namely $[D]$. Prescribing a logarithmic pole along one fiber in the Kähler background leaves the class of $D$ as the residual class. In every positive perturbation of the background, this class has smooth positive representatives, so the perturbed envelopes have only the fiber pole. In the limit, however, the only positive representative left is $[D]$, so the limiting envelope acquires $D$ as an additional pole, and the residual volume tends to zero. 
+</p>
+<p>
+In this section, $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$, and $X$ is the compact ruled surface 
+</p>
+<div class="equation">
+  \[  X=(\mathbb C_ z\times \mathbb P^1_ w)/\sim , \qquad (z,w)\sim (z+1,w),\qquad (z,w)\sim (z+\mathrm i,w+1).  \]
+</div>
+<p>
+ These commuting transformations define a holomorphic $\mathbb P^1$-bundle $\pi :X\to E$. Let $D$ be its section $w=\infty $. The function $v=w-\operatorname {Im}z$ is invariant under both transformations and descends to a smooth function on $X\setminus D$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4D5EE4B0">
+<p><a class="environment-identifier" href="../../tag/F6C7CDB99C6E/">Lemma <span data-tag="4D5EE4B0">25.5.1</span>.</a><span data-gerby-tag="4D5EE4B0"></span> Let $\sigma _0=(\mathrm i/2)\, \mathrm{d}z\wedge \mathrm{d}\bar z$ be the flat probability form on $E$. There is a smooth closed real $(1,1)$-form $\theta \in c_1(\mathcal O_ X(D))$ whose class is nef and for which </p>
+<div class="equation">
+  \[  \kappa =\theta +\pi ^*\sigma _0  \]
+</div>
+<p> is a Kähler form. The only closed positive current of the form $\theta +\mathrm{dd}^{\mathrm{c}}u$ is $[D]$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $s_ D$ be the canonical section of $\mathcal O_ X(D)$, with zero divisor $D$. For a real parameter $t&gt;0$, define a smooth Hermitian metric on this line bundle by prescribing the norm of $s_ D$: 
+    
+<div class="equation">
+  \[  |s_ D|_ t^2=(1+t|v|^2)^{-1}\quad \hbox{on }X\setminus D.  \]
+</div>
+<p>
+       To check that it extends smoothly, use the coordinate $\xi =1/w$ near $D$. The squared norm of a local nonvanishing frame is 
+    
+<div class="equation">
+  \[  \bigl (|\xi |^2+t|1-(\operatorname {Im}z)\xi |^2\bigr )^{-1},  \]
+</div>
+<p>
+       which is smooth and positive. The prescribed norm is invariant under the transformations on the complement of $D$, so these local extensions define a global metric. Its curvature form is 
+    
+<div class="equation">
+  \[  \theta _ t=\mathrm{dd}^{\mathrm{c}}\log (1+t|v|^2) \quad \hbox{on }X\setminus D.  \]
+</div>
+<p>
+       Set $\theta =\theta _1$, and let $\sigma =\sigma _0/\pi $ on $E$, where the denominator is the number $\pi $. 
+    <p>
+      We now estimate the curvature from below. Put $r=|v|^2$ and let $H$ be the complex Hessian of $\log (1+tr)$ in the coordinates $(z,w)$. Direct differentiation gives 
+    
+<div class="equation">
+  \[  \begin{split}  H_{w\bar w}&amp; =\frac{t}{(1+tr)^2},\\  H_{z\bar w}&amp; =\frac{\mathrm i t(1-tv^2)}{2(1+tr)^2},\\  H_{z\bar z}&amp; =\frac{t}{2(1+tr)} -\frac{t^2(\operatorname {Re}v)^2}{(1+tr)^2}. \end{split}  \]
+</div>
+<p>
+        Consequently 
+    
+<div class="equation">
+  \[  H_{z\bar z}-\frac{|H_{z\bar w}|^2}{H_{w\bar w}} =\frac{t(1-tr)}{4(1+tr)}\geq -\frac t4.  \]
+</div>
+<p>
+       Completing the square gives $\theta _ t\geq -(t/4)\pi ^*\sigma $ on $X\setminus D$, and by continuity this inequality extends across $D$. The restriction of $\theta _ t$ to every fiber is a positive Fubini–Study form, including at infinity. Thus $\theta _ t+A\pi ^*\sigma $ is strictly positive off $D$ whenever $A&gt;t/4$. At $\xi =0$, its coefficient matrix, with the common factor $\mathrm i/(2\pi )$ omitted, is 
+    
+<div class="equation">
+  \[  \begin{pmatrix}  A
+
+&amp; \mathrm i/2
+
+\\ -\mathrm i/2
+
+&amp; 1/t
+
+\end{pmatrix}.  \]
+</div>
+<p>
+       Its vertical coefficient is positive and its Schur complement is $A-t/4&gt;0$, so the form is strictly positive along $D$ as well. In particular, $\kappa =\theta +\pi ^*\sigma _0$ is Kähler. 
+    <p>
+       The function 
+    
+<div class="equation">
+  \[  f_ t=\log \frac{1+t|v|^2}{1+|v|^2}  \]
+</div>
+<p>
+       extends smoothly across $D$ and satisfies $\theta _ t=\theta +\mathrm{dd}^{\mathrm{c}}f_ t$. Letting $t\downarrow 0$ in the curvature lower bound shows that the class of $\theta $ is nef in the sense of section <a data-tag="5E3E6D66" href="../../tag/EB6B5025AAF9/">23.6</a>. 
+    <p>
+      Write $\psi _ D=\log |s_ D|_1^2$. By the Poincaré–Lelong formula, $\theta +\mathrm{dd}^{\mathrm{c}}\psi _ D=[D]$. Let $u\in \mathrm{PSH}(X,\theta )$. Then $u-\psi _ D$ is plurisubharmonic on $X\setminus D$. Its lift $\Phi (z,w)$ to $\mathbb C^2$ is invariant under the two deck transformations and, since $u$ is bounded above on the compact surface $X$, satisfies 
+    
+<div class="equation">
+  \[  \Phi (z,w)\leq C+\log \bigl (1+|w-\operatorname {Im}z|^2\bigr )  \]
+</div>
+<p>
+       for some real constant $C$. For each fixed $w$, the function $z\mapsto \Phi (z,w)$ is either identically $-\infty $ or subharmonic. It is $1$-periodic and has logarithmic upper growth, so lemma <a data-tag="2B409D6D" href="../../tag/16E53426F2DB/">1.3.6</a> makes it constant. Thus $\Phi (z,w)=\phi (w)$, where $\phi $ is a subharmonic function of $w$, not identically $-\infty $. The second deck transformation gives $\phi (w+1)=\phi (w)$, and the bound at $z=0$ gives logarithmic growth, so the same lemma makes $\phi $ constant. Therefore $u=\psi _ D+C$ off $D$, and lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a> extends this equality across $D$. Hence $\theta +\mathrm{dd}^{\mathrm{c}}u=[D]$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+ Fix a point $p\in E$ and let $F=\pi ^{-1}(p)$. The Green-kernel construction in the proof of theorem <a data-tag="C5D10418" href="../../tag/879739B42EBB/">19.3.1</a> gives a quasi-plurisubharmonic function $g$ on $E$ with $\sigma _0+\mathrm{dd}^{\mathrm{c}}g=\delta _ p$. Its pullback $\psi _ F=g\circ \pi $ has a logarithmic pole of coefficient one along $F$, and 
+</p>
+<div class="equation">
+  \[  \pi ^*\sigma _0+\mathrm{dd}^{\mathrm{c}}\psi _ F=[F].  \]
+</div>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-8B6F5DC9">
+<p><a class="environment-identifier" href="../../tag/761E4875D2B4/">Theorem <span data-tag="8B6F5DC9">25.5.2</span>.</a><span data-gerby-tag="8B6F5DC9"></span> For the Kähler background $\kappa $ of lemma <a data-tag="4D5EE4B0" href="../../tag/F6C7CDB99C6E/">25.5.1</a> and every $a&lt;c$, there is a system $\boldsymbol \Gamma \in \mathscr S_{a,c}(\kappa )$ for which </p>
+<div class="equation">
+  \[  \mathsf E\mathsf R(\boldsymbol \Gamma ) \neq \boldsymbol \Gamma .  \]
+</div>
+<p> Every slice $\Gamma ^\eta _\tau $, $\tau &lt;c$, of every component has multiplier ideals </p>
+<div class="equation">
+  \[  \mathcal I(t\Gamma ^\eta _\tau ) =\mathcal O_ X(-\lfloor t\rfloor F)\qquad (t&gt;0),  \]
+</div>
+<p> whereas its limiting slices have multiplier ideals </p>
+<div class="equation">
+  \[  \mathcal I\bigl (t(\mathsf R\boldsymbol \Gamma )_\tau \bigr ) =\mathcal O_ X(-\lfloor t\rfloor (F+D)).  \]
+</div>
+<p> In particular, on the system space $\mathscr S_{a,c}(\kappa )$, which carries no mass condition, $\mathsf E$ is not surjective and $\mathsf R$ is not injective. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For each Hermitian form $\eta $, the nef approximation of lemma <a data-tag="4D5EE4B0" href="../../tag/F6C7CDB99C6E/">25.5.1</a> gives a smooth function $f_\eta $ such that $\theta +\eta +\mathrm{dd}^{\mathrm{c}}f_\eta \geq 0$. Then 
+    
+<div class="equation">
+  \[  u_\eta =\psi _ F+f_\eta \in \mathrm{PSH}(X,\kappa +\eta ).  \]
+</div>
+<p>
+       Let every slice $\Gamma ^\eta _\tau $, $\tau &lt;c$, of the component $\Gamma ^\eta $ be $q_\eta =P_{\kappa +\eta }[u_\eta ]_{\mathcal I}$, with cutoff $c$. The multiplier ideals of $q_\eta $ are those of $\psi _ F$ and do not depend on the smooth function $f_\eta $. Hence the compatibility condition follows by comparing these ideals in the larger background, and the constant curves form a system with the required parameters. 
+    <p>
+      Let $q$ be its limiting slice under $\mathsf R$, and let $\nu (q,F)$ be its generic Lelong number along $F$. Each $q_\eta $ has generic Lelong number one along $F$, so lemma <a data-tag="D9AC87CF" href="../../tag/E04E4D6C502E/">1.17.6</a>, applied to a decreasing cofinal sequence, gives $\nu (q,F)\geq 1$. By lemma <a data-tag="71AD1E73" href="../../tag/3AA98220C897/">1.17.1</a>, 
+    
+<div class="equation">
+  \[  \kappa +\mathrm{dd}^{\mathrm{c}}q-[F]\geq 0.  \]
+</div>
+<p>
+       By the Poincaré–Lelong identity for $\psi _ F$, this current equals $\theta +\mathrm{dd}^{\mathrm{c}}(q-\psi _ F)$, where the difference $q-\psi _ F$ is first taken as a locally integrable function. Since the current is positive, this difference has a canonical $\theta $-plurisubharmonic representative, and by lemma <a data-tag="4D5EE4B0" href="../../tag/F6C7CDB99C6E/">25.5.1</a> it differs from $\psi _ D$ by a constant. Hence 
+    
+<div class="equation">
+  \[  q=\psi _ F+\psi _ D+C.  \]
+</div>
+<p>
+       The divisors $F$ and $D$ are smooth and meet transversely, since one is a fiber and the other a section. A direct integrability calculation in local product coordinates therefore gives the stated ideals for every real $t&gt;0$. In particular, the Lelong number at a generic point of $D$ has increased from zero to one, and proposition <a data-tag="1152FB03" href="../../tag/93A1136C4F72/">25.3.2</a> shows that recovery fails. 
+    <p>
+      Finally, since $\mathsf R\mathsf E=\mathrm{id}$, the system $\boldsymbol \Gamma $ and the realized system $\mathsf E\mathsf R\boldsymbol \Gamma \neq \boldsymbol \Gamma $ have the same image under $\mathsf R$. Thus $\mathsf R$ is not injective, and $\boldsymbol \Gamma $ is not in the image of $\mathsf E$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-D0AABEC0">
+<p><a class="environment-identifier" href="../../tag/7F133849FE58/">Proposition <span data-tag="D0AABEC0">25.5.3</span>.</a><span data-gerby-tag="D0AABEC0"></span> Let $q_\eta $ be the common slice of the component $\Gamma ^\eta $ constructed in the preceding proof. Along the closed perturbations $\eta =\epsilon \kappa $, with real $\epsilon &gt;0$, </p>
+<div class="equation">
+  \[  \int _ X\mathrm{MA}^{\mathrm{ext}}_{\kappa +\epsilon \kappa }(q_{\epsilon \kappa }) =2\epsilon \int _ X\theta \wedge \kappa +\epsilon ^2\int _ X\kappa ^2\longrightarrow 0.  \]
+</div>
+<p> The limiting slice has zero non-pluripolar Monge–Ampère measure. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The potential $u_\eta =\psi _ F+f_\eta $ has analytic singularities, so proposition <a data-tag="849B1EFF" href="../../tag/EB95710FF4D7/">16.2.7</a> gives $q_\eta \sim u_\eta \sim \psi _ F$. Removing the divisorial component $[F]$ gives a positive current in the background $\theta +\eta $, whose global potential $w_\eta =q_\eta -\psi _ F$ is bounded by this ordinary equivalence. 
+    <p>
+      Off $F$, plurifine locality identifies the Monge–Ampère measure of $q_\eta $ with $(\theta +\eta +\mathrm{dd}^{\mathrm{c}}w_\eta )^2$. This bounded product gives no mass to $F$ by proposition <a data-tag="890BD62D" href="../../tag/3EDAB69A7289/">1.7.1</a>. For closed $\eta =\epsilon \kappa $, Stokes' theorem gives its total mass as $\int _ X(\theta +\epsilon \kappa )^2$. 
+    <p>
+      The normal bundle of $D$ is trivial. Indeed, the transformation $w\mapsto w+1$ becomes $\xi \mapsto \xi /(1+\xi )$, whose derivative at $\xi =0$ is one, and the other transformation fixes $w$. Hence $\int _ X\theta ^2=D^2=0$, and expanding the square gives the formula. The limiting potential has curvature current $[F]+[D]$, which vanishes away from the pluripolar set $F\cup D$; its non-pluripolar measure is therefore zero. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

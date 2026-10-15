@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Convex entropies along a Monge–Ampère flow · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hermitian-torsion/">Chapter 10 · Hermitian geometry, torsion, and Gauduchon duality</a> · Tag <code>5C3C01BC6D13</code></p><h1>Convex entropies along a Monge–Ampère flow</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 4.8.1 Convex entropies along a Monge–Ampère flow <span data-gerby-tag="38C5F467"></span></div>
+<p>
+The logarithmic Monge–Ampère operator generates a parabolic flow whose linearization is the operator $L_ u$ of (<a data-tag="82DEDD31" href="../../tag/BEA90D7B5428/">4.15</a>). Along this flow, the ratio of the Monge–Ampère measure to a fixed target measure satisfies a heat-type equation. Integrating a convex function of this ratio by parts produces, besides the usual nonpositive gradient term, a term involving $\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})$. If the forms along the flow are Gauduchon, this additional term vanishes and all convex entropies decrease. Requiring decrease for every smooth positive target at the initial time characterizes the Gauduchon condition. 
+</p>
+<p>
+Recall that $M=\int _ X\omega ^ n$, and fix a smooth strictly positive probability volume form $\nu $ on $X$. Consider a smooth solution on an interval $[0,T)$ of the <em>logarithmic Monge–Ampère flow</em>
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-B41D5CB0"><span data-gerby-tag="B41D5CB0"></span>
+<span class="equation-label"><a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">4.17</a></span>
+<div>\begin{equation} \label{eq:hermitian-parabolic-entropy-flow} \dot u_ t=\log \rho _ t,\qquad \rho _ t=\frac{\omega _{u_ t}^ n}{M\nu },\qquad u_0=0,\qquad \omega _{u_ t}&gt;0. \end{equation}</div>
+</div>
+<p>
+ We keep the initial normalizing constant $M$ fixed; the evolving mass $\int _ X\omega _{u_ t}^ n$ need not equal $M$. Define the linearized operator $\Delta _ t$ by 
+</p>
+<div class="equation">
+  \[  \Delta _ t v\, \omega _{u_ t}^ n =n\mathrm{dd}^{\mathrm{c}}v\wedge \omega _{u_ t}^{n-1};  \]
+</div>
+<p>
+ it is the operator $L_{u_ t}$ of (<a data-tag="82DEDD31" href="../../tag/BEA90D7B5428/">4.15</a>). Logarithmic differentiation gives $\partial _ t\log \rho _ t=\Delta _ t\dot u_ t=\Delta _ t\log \rho _ t$. Integration by parts against $\omega _{u_ t}^{n-1}$ then produces the same derivative of the background power that appears in the mass variation of proposition <a data-tag="940AB63B" href="../../tag/5C29873687ED/">2.2.3</a>. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-0A929870">
+<p><a class="environment-identifier" href="../../tag/AE4D0608184F/">Proposition <span data-tag="0A929870">4.8.4</span>.</a><span data-gerby-tag="0A929870"></span> Let $\Phi \in C^2((0,+\infty ),\mathbb R)$, and choose a function $G$ with $G'(r)=\Phi '(r)/r$. Along (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">4.17</a>), </p>
+<div class="equation" id="non-kahler-pluripotential-theory-705E04B0"><span data-gerby-tag="705E04B0"></span>
+<span class="equation-label"><a data-tag="705E04B0" href="../../tag/313276789DFD/">4.18</a></span>
+<div>\begin{equation} \label{eq:hermitian-parabolic-entropy-identity} \begin{split}  \frac{\mathrm{d}}{\mathrm{d}t}\int _ X\Phi (\rho _ t)\nu ={}&amp; \frac nM\int _ XG(\rho _ t)\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})\\ &amp; -\frac nM\int _ X\frac{\Phi ''(\rho _ t)}{\rho _ t} \mathrm{d}\rho _ t\wedge \mathrm d^{\mathrm c}\rho _ t\wedge \omega _{u_ t}^{n-1}. \end{split} \end{equation}</div>
+</div>
+<p> In particular, for $p&gt;1$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-3BCBC72A"><span data-gerby-tag="3BCBC72A"></span>
+<span class="equation-label"><a data-tag="3BCBC72A" href="../../tag/0BC0A4E1D2A4/">4.21</a></span>
+<div>\begin{equation} \label{eq:hermitian-parabolic-power-entropy} \begin{split}  \frac{\mathrm{d}}{\mathrm{d}t}\int _ X\rho _ t^ p\nu ={}&amp; \frac{np}{(p-1)M}\int _ X\rho _ t^{p-1}\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})\\ &amp; -\frac{np(p-1)}M\int _ X\rho _ t^{p-3} \mathrm{d}\rho _ t\wedge \mathrm d^{\mathrm c}\rho _ t\wedge \omega _{u_ t}^{n-1}. \end{split} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Using $\partial _ t\rho _ t=\rho _ t\Delta _ t\log \rho _ t$ and $\rho _ t\nu =M^{-1}\omega _{u_ t}^ n$, we find that the derivative of the entropy is 
+    
+<div class="equation">
+  \[  \frac nM\int _ X\Phi '(\rho _ t)\mathrm{dd}^{\mathrm{c}}\log \rho _ t \wedge \omega _{u_ t}^{n-1}.  \]
+</div>
+<p>
+       The chain rule and the definition of $G$ give 
+    
+<div class="equation">
+  \[  \Phi '(r)\mathrm{dd}^{\mathrm{c}}\log r =\mathrm{dd}^{\mathrm{c}}G(r)-\frac{\Phi ''(r)}r\mathrm{d}r\wedge \mathrm d^{\mathrm c}r,  \]
+</div>
+<p>
+       and lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">2.1.1</a> applies to the first term. Adding a constant to $G$ does not change the result, since $\int _ X\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})=0$. Taking $\Phi (r)=r^ p$ and $G(r)=p r^{p-1}/(p-1)$ proves the second formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-F5266200">
+<p><a class="environment-identifier" href="../../tag/1C7A6B39E520/">Corollary <span data-tag="F5266200">4.8.5</span>.</a><span data-gerby-tag="F5266200"></span> Suppose that every form $\omega _{u_ t}$ in (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">4.17</a>) is Gauduchon. Then $\int _ X\rho _ t\nu =1$, and $t\mapsto \int _ X\Phi (\rho _ t)\nu $ is nonincreasing for every convex function $\Phi \in C^2((0,+\infty ),\mathbb R)$. In particular, </p>
+<div class="equation">
+  \[  \| \rho _ t\| _{L^ p(\nu )}\leq \| \rho _ s\| _{L^ p(\nu )} \quad (0\leq s\leq t&lt;T,\  p&gt;1).  \]
+</div>
+<p> If $\Phi ''&gt;0$, the derivative of the entropy vanishes at a time $t$ precisely when $\rho _ t=1$, in which case $\dot u_ t=0$. </p>
+<p>The hypothesis holds on a Gauduchon surface, and in any dimension it holds if $\mathrm{dd}^{\mathrm{c}}(\omega ^ j)=0$ for $1\leq j\leq n-1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The derivative of the mass is 
+    
+<div class="equation">
+  \[  \frac{\mathrm{d}}{\mathrm{d}t}\int _ X\rho _ t\nu =\frac nM\int _ X\dot u_ t\mathrm{dd}^{\mathrm{c}}(\omega _{u_ t}^{n-1})=0,  \]
+</div>
+<p>
+       and its initial value is one. In (<a data-tag="705E04B0" href="../../tag/313276789DFD/">4.18</a>) the first term vanishes, while the second is nonpositive, because $\mathrm{d}\rho _ t\wedge \mathrm d^{\mathrm c}\rho _ t$ is a semipositive $(1,1)$-form and $\Phi ''\geq 0$. If $\Phi ''&gt;0$, the vanishing of this term forces $\mathrm{d}\rho _ t=0$, and connectedness together with the mass normalization gives $\rho _ t=1$. The converse and the assertion about $\dot u_ t$ follow from the equation. 
+    <p>
+      On a surface, $\mathrm{dd}^{\mathrm{c}}\omega _{u_ t}=\mathrm{dd}^{\mathrm{c}}\omega =0$. Under the power identities, expand $\omega _{u_ t}^{n-1}$ by the binomial theorem; since the factors $\mathrm{dd}^{\mathrm{c}}u_ t$ are annihilated by $\mathrm d$ and $\mathrm d^{\mathrm c}$, each term has vanishing complex Hessian. These are also the persistence conditions of proposition <a data-tag="B9B9F692" href="../../tag/A914D4D9C6CB/">4.8.2</a>, theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">2.2.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For $\Phi (r)=r\log r$, the same formula gives the dissipation of the relative entropy. In higher dimension, the Gauduchon condition on the initial form alone need not persist along potential perturbations, as example <a data-tag="324594DA" href="../../tag/28F39F2B7C2C/">4.8.3</a> shows. The next criterion determines the role of this condition at the initial time, without assuming that the flow exists. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-13AE2096">
+<p><a class="environment-identifier" href="../../tag/F45FF03B558B/">Proposition <span data-tag="13AE2096">4.8.6</span>.</a><span data-gerby-tag="13AE2096"></span> Fix $p&gt;1$. For each smooth strictly positive probability volume form $\nu $, put $\rho _\nu =\omega ^ n/(M\nu )$ and define </p>
+<div class="equation">
+  \[  \mathcal D_ p(\omega ,\nu ) :=\left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0} \int _ X\left(\frac{(\omega +t\mathrm{dd}^{\mathrm{c}}\log \rho _\nu )^ n}{M\nu }\right)^ p\nu .  \]
+</div>
+<p> Then $\mathcal D_ p(\omega ,\nu )\leq 0$ for every such $\nu $ if and only if $\omega $ is Gauduchon. If $\omega $ is not Gauduchon, there is such a $\nu $ with $\mathcal D_ p(\omega ,\nu )&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The form in the definition is positive for sufficiently small $|t|$. The path $u_ t=t\log \rho _\nu $ starts at $u_0=0$ with the velocity $\log \rho _\nu $ prescribed by (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">4.17</a>) at time zero. The proof of proposition <a data-tag="0A929870" href="../../tag/AE4D0608184F/">4.8.4</a> at a given time uses only the potential and its velocity at that time, so (<a data-tag="3BCBC72A" href="../../tag/0BC0A4E1D2A4/">4.21</a>) holds for the derivative at $t=0$. If $\omega $ is Gauduchon, its first term vanishes and the derivative is nonpositive. 
+    <p>
+      Conversely, suppose that $\lambda :=\mathrm{dd}^{\mathrm{c}}(\omega ^{n-1})\ne 0$. Write $\lambda =f\omega ^ n/M$, where $f$ is smooth and real. Stokes' theorem gives $\int _ Xf\omega ^ n=0$, whereas 
+    
+<div class="equation">
+  \[  \int _ Xf\lambda =\frac1M\int _ Xf^2\omega ^ n&gt;0.  \]
+</div>
+<p>
+       For small $\varepsilon &gt;0$, set 
+    
+<div class="equation">
+  \[  c_\varepsilon =\frac1M\int _ X\mathrm{e}^{-\varepsilon f}\omega ^ n, \qquad r_\varepsilon =c_\varepsilon \mathrm{e}^{\varepsilon f}, \qquad \nu _\varepsilon =\frac{\omega ^ n}{M r_\varepsilon }.  \]
+</div>
+<p>
+       Then $\nu _\varepsilon $ is a smooth strictly positive probability volume form, and $\rho _{\nu _\varepsilon }=r_\varepsilon $. Since $c_\varepsilon =1+O(\varepsilon ^2)$, $\int _ X\lambda =0$ and $\mathrm{d}r_\varepsilon =\varepsilon r_\varepsilon \mathrm{d}f$, the two terms in (<a data-tag="3BCBC72A" href="../../tag/0BC0A4E1D2A4/">4.21</a>) give 
+    
+<div class="equation">
+  \[  \mathcal D_ p(\omega ,\nu _\varepsilon ) =\frac{np}M\varepsilon \int _ Xf\lambda +O(\varepsilon ^2)&gt;0  \]
+</div>
+<p>
+       for sufficiently small $\varepsilon &gt;0$. This proves necessity and the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The criterion involves only the initial velocity: every smooth solution of (<a data-tag="B41D5CB0" href="../../tag/DD9886FF9427/">4.17</a>) with target $\nu $ has the same initial entropy derivative, independently of its existence for later times or its convergence. Quantification over all targets is essential. For the target $\nu =\omega ^ n/M$, the flow $u_ t=0$ is stationary for every Hermitian $\omega $, and all entropy derivatives vanish. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

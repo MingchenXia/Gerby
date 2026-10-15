@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Subgeodesics · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/energy-geodesics/">Chapter 14 · Energy, geodesics, rays, and test curves</a> · Tag <code>F069E255307E</code></p><h1>Subgeodesics</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 4.1 Subgeodesics <span data-gerby-tag="7F989FD5"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$ and $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a big cohomology class. 
+</p>
+
+<article class="env-definition" id="sgpt-9287531D">
+<p><a class="environment-identifier" href="../../tag/8699FCF63094/">Definition <span data-tag="9287531D">4.1.1</span>.</a><span data-gerby-tag="9287531D"></span> Let us fix $\varphi _0,\varphi _1\in \mathrm{PSH}(X,\theta )$. A <em>subgeodesic</em> from $\varphi _0$ to $\varphi _1$ is a family $(\varphi _ t)_{t\in (0,1)}$ in $\mathrm{PSH}(X,\theta )$ such that </p>
+<ol>
+<li class="custom-item" id="sgpt-779C6D25"><span data-gerby-tag="779C6D25"></span><p>
+ if we define 
+</p>
+<div class="equation">
+  \[  \Phi \colon X\times \Bigl \{ z\in \mathbb {C}:\operatorname{Re}z\in (0,1) \Bigr \} \rightarrow [-\infty ,\infty ),\quad (x,z)\mapsto \varphi _{\operatorname{Re}z}(x),  \]
+</div>
+<p>
+ then $\Phi $ is $p_1^*\theta $-psh, where $p_1\colon X\times \{ z\in \mathbb {C}:\operatorname{Re}z\in (0,1)\} \rightarrow X$ is the natural projection; 
+</p>
+</li><li class="custom-item" id="sgpt-88F57406"><span data-gerby-tag="88F57406"></span><p>
+ when $t\to 0+$ (resp. $t\to 1-$), $\varphi _ t$ converges to $\varphi _0$ (resp. $\varphi _1$) with respect to the $L^1$-topology. 
+</p>
+</li>
+</ol>
+<p> We also say $(\varphi _ t)_{t\in [0,1]}$ is a subgeodesic. </p>
+<p>We call $\Phi $ the <em>complexification</em> of the subgeodesic $(\varphi _ t)_ t$. </p>
+</article> When we do not want to specify $\varphi _0$ and $\varphi _1$, we shall say $(\varphi _ t)_{t\in (0,1)}$ is a subgeodesic<aside class="source-footnote" id="sgpt-a0000033865"><span class="footnote-label">Note.</span> Note that it is implicit in the definition that $\varphi _ t$ as $t\to 0+$ or $t\to 1-$ admits an $L^1$-limit.</aside>. 
+
+<p>
+More generally, a family $(\psi _ t)_{t\in [a,b]}$ (resp. $(\psi _ t)_{t\in (a,b)}$) in $\mathrm{PSH}(X,\theta )$ for some $a\leq b$ is called a <em>subgeodesic</em> if $(\psi _{tb+(1-t)a})_{t\in [0,1]}$ (resp. $(\psi _{tb+(1-t)a})_{t\in (0,1)}$) is a subgeodesic. 
+</p>
+
+<article class="env-remark" id="sgpt-F7F7E733">
+<p><a class="environment-identifier" href="../../tag/8F5460F49D02/">Remark <span data-tag="F7F7E733">4.1.2</span>.</a><span data-gerby-tag="F7F7E733"></span>Note that given a subgeodesic $(\psi _ t)_{t\in (a,b)}$, the endpoints $\psi _ a$ and $\psi _ b$ are uniquely determined, in view of proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. </p>
+</article>
+
+
+<article class="env-remark" id="sgpt-C51F14B0">
+<p><a class="environment-identifier" href="../../tag/8353EDEFC366/">Remark <span data-tag="C51F14B0">4.1.3</span>.</a><span data-gerby-tag="C51F14B0"></span> In the literature, people sometimes regard $\Phi $ as a function defined on $X\times \{ z\in \mathbb {C}: \mathrm{e}^{-1}&lt;|z|&lt;1\} $, with $\Phi (x,z)=\varphi _{-\log |z|}(x)$. We sometimes also use this convention; the ambient strip or annulus will make the convention clear. </p>
+</article>
+
+<p>
+In general, there are no subgeodesics from $\varphi _0$ to $\varphi _1$. In fact, by proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a> below, the existence of a subgeodesic from $\varphi _0$ to $\varphi _1$ forces $\varphi _0\land \varphi _1\not\equiv -\infty $, a condition that may fail (see example <a data-tag="0AF82F81" href="../../tag/2B1E84EAAE13/">5.2.8</a>). 
+</p>
+
+We first note that the subgeodesics are well-behaved under the change of $\theta $: <article class="env-proposition" id="sgpt-16F9F1DE">
+<p><a class="environment-identifier" href="../../tag/2042C299A40E/">Proposition <span data-tag="16F9F1DE">4.1.4</span>.</a><span data-gerby-tag="16F9F1DE"></span> Let $g$ be a smooth real function on $X$. Let $\theta '=\theta +\mathrm{dd}^{\mathrm{c}}g$. Suppose that $(\varphi _ t)_{t\in [0,1]}$ is a subgeodesic in $\mathrm{PSH}(X,\theta )$. Then $(\varphi _ t-g)_{t\in [0,1]}$ is a subgeodesic in $\mathrm{PSH}(X,\theta ')$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows directly from the definition of the complexification. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="sgpt-D92709AE">
+<p><a class="environment-identifier" href="../../tag/2F494BEED8F5/">Example <span data-tag="D92709AE">4.1.5</span>.</a><span data-gerby-tag="D92709AE"></span> Let $\varphi _0\in \mathrm{PSH}(X,\theta )$, $C\in \mathbb {R}$. Let </p>
+<div class="equation">
+  \[  \varphi _ t=\varphi _0+tC,\quad t\in [0,1].  \]
+</div>
+<p> Then $(\varphi _ t)_{t\in [0,1]}$ is a subgeodesic. Indeed, since $\operatorname{Re}z$ is harmonic in $z$, the complexification $\Phi (x,z)=\varphi _0(x)+C\, \operatorname{Re}z$ is $p_1^*\theta $-psh. </p>
+<p>As a consequence, the constant $(\varphi _0)_{t\in [0,1]}$ is a subgeodesic, called the <em>constant subgeodesic</em> at $\varphi _0$. </p>
+<p>A more general version is as follows: Suppose that $(\varphi _ t)_{t\in [0,1]}$ is a subgeodesic in $\mathrm{PSH}(X,\theta )$, $C_1,C_2\in \mathbb {R}$. Then $(\varphi _ t+C_1t+C_2)_{t\in [0,1]}$ is also a subgeodesic. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-DBC4F9ED">
+<p><a class="environment-identifier" href="../../tag/1880C1FBD88F/">Proposition <span data-tag="DBC4F9ED">4.1.6</span>.</a><span data-gerby-tag="DBC4F9ED"></span> Let $\varphi _0,\varphi _1\in \mathrm{PSH}(X,\theta )$ and $(\varphi _ t)_{t\in (0,1)}$ be a subgeodesic from $\varphi _0$ to $\varphi _1$. Then for each $x\in X$, $[0,1] \ni t\mapsto \varphi _ t(x)$ is a convex function. Furthermore, </p>
+<div class="equation">
+  \[  \inf _{t\in (0,1)}\varphi _ t\in \mathrm{PSH}(X,\theta ),\quad \inf _{t\in (0,1)}\varphi _ t\leq \varphi _0\land \varphi _1.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\Phi $ be the complexification of $(\varphi _ t)_{t\in (0,1)}$. 
+    <p>
+      For each $x\in X$, the map 
+    
+<div class="equation">
+  \[  \Bigl \{ z\in \mathbb {C}: \operatorname{Re}z\in (0,1) \Bigr \} \rightarrow [-\infty ,\infty ),\quad z\mapsto \Phi (x,z)  \]
+</div>
+<p>
+       is either subharmonic or constantly $-\infty $, as follows from definition <a data-tag="9287531D" href="../../tag/8699FCF63094/">4.1.1</a> <a data-tag="779C6D25" href="../../tag/8699FCF63094/#sgpt-779C6D25">1</a> and proposition <a data-tag="A6E84762" href="../../tag/726DDFDDA8F2/">1.1.13</a>. In the latter case, the convexity of $[0,1] \ni t\mapsto \varphi _ t(x)$ is trivial. In the former case, the convexity on the interval $(0,1)$ follows from proposition <a data-tag="45646ED3" href="../../tag/D8BC10548372/">1.1.9</a>. 
+    <p>
+      In order to verify the convexity at the boundary, let us fix $s\in (0,1)$. We need to show that 
+    
+<div class="equation" id="sgpt-0CCCD1D5"><span data-gerby-tag="0CCCD1D5"></span>
+<span class="equation-label"><a data-tag="0CCCD1D5" href="../../tag/214F303DA2CC/">4.1</a></span>
+<div>\begin{equation} \label{eq:varphisconvextemp1} \varphi _ s(x)\leq s\varphi _1(x)+(1-s)\varphi _0(x) \end{equation}</div>
+</div>
+<p>
+       for all $x\in X$. Thanks to proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>, it suffices to prove this for almost all $x$. 
+    <p>
+      Choose sequences $a_ j\searrow 0$ and $b_ j\nearrow 1$ such that $\varphi _{a_ j}\to \varphi _0$ and $\varphi _{b_ j}\to \varphi _1$ almost everywhere. Outside a set $Z\subseteq X$ of zero Lebesgue measure, all these convergences hold and all the values involved are finite. For $x\in X\setminus Z$ and $j$ large enough that $a_ j&lt;s&lt;b_ j$, the convexity on $(0,1)$ gives 
+    
+<div class="equation">
+  \[  \varphi _ s(x)\leq \frac{b_ j-s}{b_ j-a_ j}\varphi _{a_ j}(x)+\frac{s-a_ j}{b_ j-a_ j}\varphi _{b_ j}(x).  \]
+</div>
+<p>
+       Letting $j\to \infty $ gives (<a data-tag="0CCCD1D5" href="../../tag/214F303DA2CC/">4.1</a>) almost everywhere. 
+    <p>
+      Let us prove the last assertion. Let 
+    
+<div class="equation">
+  \[  \varphi \coloneqq \inf _{t\in (0,1)}\varphi _ t.  \]
+</div>
+<p>
+       By Kiselman's principle proposition <a data-tag="E0DBA4DC" href="../../tag/BB26476C13FA/">1.2.11</a>, we know that $\varphi \in \mathrm{PSH}(X,\theta )\cup \{ -\infty \} $. Since the complexification $\Phi $ is not identically $-\infty $, Fubini's theorem shows that for almost every $x\in X$, the function $t\mapsto \varphi _ t(x)$ is finite for almost every $t\in (0,1)$. For such an $x$, the convexity just proved implies that $t\mapsto \varphi _ t(x)$ is a finite convex function on $(0,1)$, hence it is bounded from below on $(0,1)$. Thus $\varphi \not\equiv -\infty $, and so $\varphi \in \mathrm{PSH}(X,\theta )$. 
+    <p>
+      For any $t\in (0,1)$, using the convexity established above, we have 
+    
+<div class="equation">
+  \[  \varphi \leq (1-t)\varphi _0+t\varphi _1.  \]
+</div>
+<p>
+       It follows that $\varphi \leq \varphi _0$ and $\varphi \leq \varphi _1$ almost everywhere and hence everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. Our assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-B35F3B4F">
+<p><a class="environment-identifier" href="../../tag/C645EE3517E1/">Corollary <span data-tag="B35F3B4F">4.1.7</span>.</a><span data-gerby-tag="B35F3B4F"></span> Let $\varphi _0,\varphi _1\in \mathrm{PSH}(X,\theta )$ and $(\varphi _ t)_{t\in (0,1)}$ be a subgeodesic from $\varphi _0$ to $\varphi _1$. Then </p>
+<div class="equation" id="sgpt-58E9BE3F"><span data-gerby-tag="58E9BE3F"></span>
+<span class="equation-label"><a data-tag="58E9BE3F" href="../../tag/3DF2DEE2C546/">4.2</a></span>
+<div>\begin{equation} \label{eq:varphitconvexbdry} \lim _{t\to 0+}\varphi _ t\leq \varphi _0,\quad \lim _{t\to 1-}\varphi _ t\leq \varphi _1. \end{equation}</div>
+</div>
+<p> Moreover, </p>
+<div class="equation">
+  \[  \lim _{t\to 0+}\varphi _ t=\varphi _0,\quad \lim _{t\to 1-}\varphi _ t=\varphi _1\quad \textup{quasi-everywhere}.  \]
+</div>
+</article> The inequalities in (<a data-tag="58E9BE3F" href="../../tag/3DF2DEE2C546/">4.2</a>) are not equalities everywhere in general. For example, consider an arbitrary subgeodesic from an unbounded $\varphi _0\in \mathcal{E}(X,\omega )$ to a bounded $\varphi _1\in \mathrm{PSH}(X,\omega )$ for some Kähler form $\omega $ on $X$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The inequalities in (<a data-tag="58E9BE3F" href="../../tag/3DF2DEE2C546/">4.2</a>) and the existence of the limits follow from the convexity in proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>. Let us prove the quasi-everywhere equality at $t=0$. Take a decreasing sequence $t_ j\searrow 0$ with $t_ j&gt;0$. Then $\varphi _{t_ j}\to \varphi _0$ in $L^1(X)$ as $j\to \infty $. So by corollary <a data-tag="6A1C7D0B" href="../../tag/E23F3D6154AB/">1.2.8</a>, we have 
+    
+<div class="equation">
+  \[  \varlimsup _{j\to \infty }\varphi _{t_ j}= \varphi _0\quad \textup{quasi-everywhere}.  \]
+</div>
+<p>
+       Therefore, we have 
+    
+<div class="equation">
+  \[  \varphi _0=\varlimsup _{j\to \infty }\varphi _{t_ j}=\lim _{t\to 0+}\varphi _ t\leq \varphi _0\quad \textup{quasi-everywhere}.  \]
+</div>
+<p>
+       The assertion at $t=1$ is similar. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="sgpt-9B844C56">
+<p><a class="environment-identifier" href="../../tag/E31D1E7DDF87/">Corollary <span data-tag="9B844C56">4.1.8</span>.</a><span data-gerby-tag="9B844C56"></span> Let $(\varphi _ t)_{t\in [0,1]}$ be a subgeodesic in $\mathrm{PSH}(X,\theta )$. Then </p>
+<div class="equation" id="sgpt-03A224E7"><span data-gerby-tag="03A224E7"></span>
+<span class="equation-label"><a data-tag="03A224E7" href="../../tag/F238807D334F/">4.3</a></span>
+<div>\begin{equation} \label{eq:supconvexsubgeod} \adjustlimits \sup _ X \inf _{s\in (0,1)}\varphi _ s \leq \sup _ X \varphi _ t\leq \sup _ X \varphi _0\lor \sup _ X \varphi _1 \end{equation}</div>
+</div>
+<p> for all $t\in (0,1)$. </p>
+<p>Furthermore, $[0,1] \ni t\mapsto \varphi _ t$ is continuous with respect to the $L^1$-topology. </p>
+</article> In particular, in view of proposition <a data-tag="050755D1" href="../../tag/EC4B3805B84D/">1.5.4</a>, the family $\{ \varphi _ t\} _{t\in [0,1]}$ is relatively compact with respect to the $L^1$-topology on $\mathrm{PSH}(X,\theta )$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (<a data-tag="03A224E7" href="../../tag/F238807D334F/">4.3</a>) follows immediately from proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>. Let us verify the continuity of $t\mapsto \varphi _ t$. The continuity at $t=0$ or $t=1$ follows from the definition of subgeodesic. While the continuity on $(0,1)$ follows from the convexity of $t\mapsto \varphi _ t$, and the fact that $\varphi _ t\in L^1(X)$ for each $t\in (0,1)$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-BBFDD373">
+<p><a class="environment-identifier" href="../../tag/5ECD747A7B0B/">Proposition <span data-tag="BBFDD373">4.1.9</span>.</a><span data-gerby-tag="BBFDD373"></span> Let $(\varphi ^ i_0)_{i\in I}$, $(\varphi ^ i_1)_{i\in I}$ be two non-empty uniformly bounded from above families in $\mathrm{PSH}(X,\theta )$. Let $(\varphi ^ i_ t)_{t\in (0,1)}$ be subgeodesics from $\varphi _0^ i$ to $\varphi _1^ i$ for each $i\in I$. Then </p>
+<div class="equation">
+  \[  \left(\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi ^ i_ t\right)_{t\in (0,1)}  \]
+</div>
+<p> is a subgeodesic from $\operatorname *{sup}_{i}{}\! {}^{*} \varphi ^ i_0$ to $\operatorname *{sup}_{i}{}\! {}^{*} \varphi ^ i_1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $\varphi _0^ i,\varphi _1^ i\leq 0$ for all $i\in I$. Then it follows that $\varphi _ t^ i\leq 0$ for all $t\in (0,1)$ and all $i\in I$ by proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>. 
+    <p>
+      We define 
+    
+<div class="equation">
+  \[  \varphi _ t\coloneqq \operatorname *{sup}_{i\in I}{}\! {}^{*} \varphi ^ i_ t\in \mathrm{PSH}(X,\theta )  \]
+</div>
+<p>
+       for all $t\in [0,1]$. Observe that $[0,1] \ni t\mapsto \varphi _ t$ is convex by the same argument leading to (<a data-tag="0CCCD1D5" href="../../tag/214F303DA2CC/">4.1</a>). 
+    <p>
+      Let $(\psi _ t)_{t\in (0,1)}$ be the subgeodesic whose complexification $\Phi _{\psi }$ corresponds to $\operatorname *{sup}_{i}{}\! {}^{*} \Phi _{\varphi ^ i}$, where $\Phi _{\varphi ^ i}$ is the complexification of $(\varphi ^ i_ t)_{t\in (0,1)}$. Then clearly, $\varphi _ t\leq \psi _ t$ for each $t\in (0,1)$. On the other hand, by proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a>, 
+    
+<div class="equation">
+  \[  \psi _ t=\sup _{i\in I}\varphi ^ i_ t=\varphi _ t\quad \textup{almost everywhere}  \]
+</div>
+<p>
+       for almost all $t\in (0,1)$. Therefore, using proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>, we find $\psi _ t=\varphi _ t$ for almost all $t\in (0,1)$. Since both functions are convex in $t$, we conclude that $\psi _ t=\varphi _ t$ for all $t\in (0,1)$. 
+    <p>
+      It remains to argue that $\varphi _ t\xrightarrow {L^1}\varphi _0$ as $t\to 0+$ and $\varphi _ t\xrightarrow {L^1}\varphi _1$ as $t\to 1-$. By symmetry, it suffices to argue the former. 
+    <p>
+      By Choquet's lemma proposition <a data-tag="BAE53833" href="../../tag/1D624ECF05E9/">1.2.3</a>, applied to the uniformly bounded above family of complexifications $(\Phi _{\varphi ^ i})_{i\in I}$ on the strip, there is a countable subset $I'\subset I$ such that 
+    
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*}\Phi _{\varphi ^ i}=\operatorname *{sup}_{i\in I'}{}\! {}^{*}\Phi _{\varphi ^ i}.  \]
+</div>
+<p>
+       Applying Choquet's lemma proposition <a data-tag="BAE53833" href="../../tag/1D624ECF05E9/">1.2.3</a> once more to the endpoint families if necessary, and enlarging $I'$, we may also assume 
+    
+<div class="equation">
+  \[  \operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _0^ i=\operatorname *{sup}_{i\in I'}{}\! {}^{*}\varphi _0^ i,\quad \operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _1^ i=\operatorname *{sup}_{i\in I'}{}\! {}^{*}\varphi _1^ i.  \]
+</div>
+<p>
+       Thus, after replacing $I$ by $I'$, we may assume that $I$ is countable. 
+    <p>
+      We know that for any $t\in (0,1)$ and any $j\in I$, 
+    
+<div class="equation">
+  \[  \varphi ^ j_ t\leq \varphi _ t\leq t\varphi _1+(1-t)\varphi _0.  \]
+</div>
+<p>
+       Letting $t\to 0+$, we find that 
+    
+<div class="equation">
+  \[  \varphi _0^ j\leq \varlimsup _{t\to 0+}\varphi _ t\leq \varphi _0  \]
+</div>
+<p>
+       almost everywhere. Since $I$ is countable, we conclude that 
+    
+<div class="equation" id="sgpt-5593AC43"><span data-gerby-tag="5593AC43"></span>
+<span class="equation-label"><a data-tag="5593AC43" href="../../tag/BA313A9B1A1F/">4.4</a></span>
+<div>\begin{equation} \label{eq:varphi0limsuptemp1} \varphi _0=\varlimsup _{t\to 0+}\varphi _ t \end{equation}</div>
+</div>
+<p>
+       almost everywhere. 
+    <p>
+      Fix $i_0\in I$. Recall that by proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>, for each $t\in (0,1)$, we have 
+    
+<div class="equation">
+  \[  \adjustlimits \inf _{t\in (0,1)}\sup _ X \varphi _ t\geq \adjustlimits \inf _{t\in (0,1)}\sup _ X \varphi ^{i_0}_ t\geq \adjustlimits \sup _ X \inf _{t\in (0,1)}\varphi ^{i_0}_ t&gt;-\infty ,  \]
+</div>
+<p>
+       so the set $\{ \varphi _ t\} _{t\in (0,1)}$ is relatively compact with respect to the $L^1$-topology by proposition <a data-tag="050755D1" href="../../tag/EC4B3805B84D/">1.5.4</a>. Let $\psi $ be a cluster point as $t\to 0+$. It suffices to show that $\psi =\varphi _0$. By corollary <a data-tag="6A1C7D0B" href="../../tag/E23F3D6154AB/">1.2.8</a> and (<a data-tag="5593AC43" href="../../tag/BA313A9B1A1F/">4.4</a>), this holds almost everywhere. Therefore, it holds everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-9B4FABF4">
+<p><a class="environment-identifier" href="../../tag/E5064A497AB8/">Proposition <span data-tag="9B4FABF4">4.1.10</span>.</a><span data-gerby-tag="9B4FABF4"></span> Let $(\varphi _ t)_{t\in [0,1]}$ be a subgeodesic in $\mathrm{PSH}(X,\theta )$. Then for any $0\leq a\leq b\leq 1$, the segment $(\varphi _{t})_{t\in [a,b]}$ is a subgeodesic. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to show that 
+    
+<div class="equation">
+  \[  \varphi _{tb+(1-t)a}\xrightarrow {L^1}\varphi _ a,\quad \varphi _{tb+(1-t)a}\xrightarrow {L^1}\varphi _ b  \]
+</div>
+<p>
+       as $t\to 0+$ and $t\to 1-$ respectively. In other words, we need to show that for any $c\in (0,1)$, we have 
+    
+<div class="equation">
+  \[  \varphi _ t\xrightarrow {L^1}\varphi _ c  \]
+</div>
+<p>
+       as $t\to c$. For this purpose, observe that by proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>, 
+    
+<div class="equation">
+  \[  \adjustlimits \sup _ X \inf _{s\in (0,1)}\varphi _ s\leq \sup _{X}\varphi _ t\leq \left( \sup _ X \varphi _0 \right) \lor \left( \sup _ X\varphi _1 \right)  \]
+</div>
+<p>
+       for any $t\in (0,1)$. Therefore, $\{ \varphi _ t\} _{t\in (0,1)}$ is a relatively compact family with respect to the $L^1$-topology on $\mathrm{PSH}(X,\theta )$ by proposition <a data-tag="050755D1" href="../../tag/EC4B3805B84D/">1.5.4</a>. It suffices to show that any cluster point $\psi $ of $\varphi _ t$ as $t\to c$ is equal to $\varphi _ c$. By corollary <a data-tag="6A1C7D0B" href="../../tag/E23F3D6154AB/">1.2.8</a> and the convexity proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>, we have $\varphi _ c=\psi $ almost everywhere and hence everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+For the purpose of this chapter, it is useful to reformulate the gluing lemma corollary <a data-tag="A3A928E4" href="../../tag/79C564A098F9/">1.2.13</a> in the following way, which allows us to glue subgeodesics directly: <article class="env-lemma" id="sgpt-F358A89F">
+<p><a class="environment-identifier" href="../../tag/3BEBB86C7F79/">Lemma <span data-tag="F358A89F">4.1.11</span>.</a><span data-gerby-tag="F358A89F"></span> Let $(\varphi _ t)_{t\in [0,1]}$ be a subgeodesic in $\mathrm{PSH}(X,\theta )$. Let $0\leq a&lt;b\leq 1$ and let $(\psi _ t)_{t\in [a,b]}$ be a subgeodesic such that $\psi _ a=\varphi _ a$, $\psi _ b=\varphi _ b$, and </p>
+<div class="equation">
+  \[  \psi _ t\geq \varphi _ t,\quad t\in (a,b).  \]
+</div>
+<p> Define </p>
+<div class="equation">
+  \[  \gamma _ t= \begin{cases}  \psi _ t,&amp; \textup{if }t\in (a,b),\\  \varphi _ t,&amp; \textup{if }t\in [0,1]\setminus (a,b). \end{cases}  \]
+</div>
+<p> Then $(\gamma _ t)_{t\in [0,1]}$ is a subgeodesic. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The $L^1$-convergence of $\gamma _ t$ to $\varphi _0$ at $0$ and $\varphi _1$ at $1$ follows immediately from the corresponding property for $(\varphi _ t)_ t$ and $(\psi _ t)_ t$. It remains to prove that the complexification of $(\gamma _ t)_ t$ is $p_1^*\theta $-psh. 
+    <p>
+      Let 
+    
+<div class="equation">
+  \[  S=\{ z\in \mathbb {C}:0&lt;\operatorname{Re}z&lt;1\} ,\quad S'=\{ z\in \mathbb {C}:a&lt;\operatorname{Re}z&lt;b\} .  \]
+</div>
+<p>
+       Let $\Phi $ and $\Psi $ be the complexifications of $(\varphi _ t)_ t$ and $(\psi _ t)_ t$ on the corresponding strips. Since $\Psi \geq \Phi $ on $X\times S'$, the complexification of $(\gamma _ t)_ t$ is equal to $\Phi \lor \Psi $ on $X\times S'$ and to $\Phi $ on $X\times (S\setminus S')$. By the gluing lemma corollary <a data-tag="A3A928E4" href="../../tag/79C564A098F9/">1.2.13</a>, it is enough to verify that 
+    
+<div class="equation">
+  \[  \varlimsup _{\substack {S'\ni z'\to z\\ x'\to x}}\Psi (x',z')\leq \Phi (x,z)  \]
+</div>
+<p>
+       at every point $(x,z)\in X\times S$ with $\operatorname{Re}z=a$ or $\operatorname{Re}z=b$. 
+    <p>
+      Suppose for instance that $a&gt;0$, and let $(x_ j,z_ j)$ tend to $(x,z)$ with $\operatorname{Re}z=a$ and $a&lt;\operatorname{Re}z_ j&lt;b$. Set $t_ j=\operatorname{Re}z_ j$. Since $(\psi _ t)_ t$ is a subgeodesic from $\varphi _ a$ to $\varphi _ b$, the sequence $\psi _{t_ j}$ converges to $\varphi _ a$ in $L^1$. Applying corollary <a data-tag="6A1C7D0B" href="../../tag/E23F3D6154AB/">1.2.8</a> to this sequence gives 
+    
+<div class="equation">
+  \[  \varphi _ a=\inf _{m&gt;0}\left(\operatorname *{sup}_{j\geq m}{}\! {}^{*}\psi _{t_ j}\right).  \]
+</div>
+<p>
+       For fixed $m$, the upper semicontinuity of $\operatorname *{sup}_{j\geq m}{}\! {}^{*}\psi _{t_ j}$ gives 
+    
+<div class="equation">
+  \[  \varlimsup _{j\to \infty }\psi _{t_ j}(x_ j)\leq \left(\operatorname *{sup}_{j\geq m}{}\! {}^{*}\psi _{t_ j}\right)(x).  \]
+</div>
+<p>
+       Letting $m\to \infty $, we get 
+    
+<div class="equation">
+  \[  \varlimsup _{j\to \infty }\psi _{t_ j}(x_ j)\leq \varphi _ a(x).  \]
+</div>
+<p>
+       Since $\Phi (x,z)=\varphi _ a(x)$ when $\operatorname{Re}z=a$, this is the desired boundary inequality along $\{ \operatorname{Re}z=a\} $. The same argument applies along $\{ \operatorname{Re}z=b\} $ when $b&lt;1$. Hence corollary <a data-tag="A3A928E4" href="../../tag/79C564A098F9/">1.2.13</a> shows that the pasted complexification is $p_1^*\theta $-psh. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-05D342E8">
+<p><a class="environment-identifier" href="../../tag/872270015CE7/">Definition <span data-tag="05D342E8">4.1.12</span>.</a><span data-gerby-tag="05D342E8"></span> A ray $\ell =(\ell _ t)_{t\geq 0}$ is a <em>subgeodesic ray</em> in $\mathrm{PSH}(X,\theta )$ if for any $0\leq a\leq b$, the segment $(\ell _{t})_{t\in [a,b]}$ is a subgeodesic in $\mathrm{PSH}(X,\theta )$. We say $\ell $ <em>emanates</em> from $\ell _0$. </p>
+<p>The <em>complexification</em> of a subgeodesic ray $\ell $ is defined as the potential </p>
+<div class="equation">
+  \[  \Phi \colon X\times \{ z\in \mathbb {C}:\operatorname{Re}z&gt;0\} \rightarrow [-\infty ,\infty ),\quad (x,z)\mapsto \ell _{\operatorname{Re}z}(x).  \]
+</div>
+<p> Note that $\Phi $ is $p_1^*\theta $-psh, where $p_1\colon X\times \{ z\in \mathbb {C}:\operatorname{Re}z&gt;0\} \rightarrow X$ is the natural projection. </p>
+</article> <article class="env-remark" id="sgpt-596F49D5">
+<p><a class="environment-identifier" href="../../tag/E63B316F0AB8/">Remark <span data-tag="596F49D5">4.1.13</span>.</a><span data-gerby-tag="596F49D5"></span>As in <a data-tag="C51F14B0" href="../../tag/8353EDEFC366/">4.1.3</a>, one may also define the complexification as a function $X\times \{ z\in \mathbb {C}: 0&lt;|z|&lt;1\} \rightarrow [-\infty ,\infty )$. </p>
+</article>
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

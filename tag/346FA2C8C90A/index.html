@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Continuous potential curve exponential · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>346FA2C8C90A</code></p><h1>Continuous potential curve exponential</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · Theorem 14.30.3 <span data-gerby-tag="964D213D"></span></div><article class="env-theorem" id="non-kahler-pluripotential-theory-964D213D">
+<p><a class="environment-identifier" href="../../tag/346FA2C8C90A/">Theorem <span data-tag="964D213D">14.30.3</span>.</a><span data-gerby-tag="964D213D"></span> Suppose $Q=Q_\mu $ is finite and continuous. For every $\lambda &gt;0$ there is a unique bounded $w_\lambda \in \mathrm{PSH}(Y,\kappa )$ satisfying </p>
+<div class="equation" id="non-kahler-pluripotential-theory-68804D72"><span data-gerby-tag="68804D72"></span>
+<span class="equation-label"><a data-tag="68804D72" href="../../tag/C82032A970D1/">14.109</a></span>
+<div>\begin{equation} \label{eq:continuous-potential-curve-exponential} \kappa +\mathrm{dd}^{\mathrm{c}}w_\lambda =\mathrm e^{\lambda w_\lambda }\mu , \qquad \int _ Y\mathrm e^{\lambda w_\lambda }\, \mathrm d\mu =1. \end{equation}</div>
+</div>
+<p> It is continuous and obeys </p>
+<div class="equation" id="non-kahler-pluripotential-theory-21F31C5E"><span data-gerby-tag="21F31C5E"></span>
+<span class="equation-label"><a data-tag="21F31C5E" href="../../tag/C8BB18387ED9/">14.110</a></span>
+<div>\begin{equation} \label{eq:continuous-potential-curve-barriers} Q-\sup _ YQ\leq w_\lambda \leq Q-\inf _ YQ. \end{equation}</div>
+</div>
+<p> The entire family satisfies, as $\lambda \downarrow 0$, </p>
+<div class="equation">
+  \[  \left\| w_\lambda -Q+\int _ YQ\, \mathrm d\mu \right\| _\infty =O(\lambda ).  \]
+</div>
+<p> The limit is the greatest $p\in \mathrm{PSH}(Y,\kappa )$ with $\mathrm{MA}^{\mathrm{ext}}_\kappa (p)\geq \mu $ and $\int _ Yp\, \mathrm d\mu \leq 0$. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Variational existence.</em> On the real Hilbert space 
+    
+<div class="equation">
+  \[  \mathcal H=\{ q\in H^1(Y):\int _ Yq\kappa =0\}   \]
+</div>
+<p>
+       consider the extended functional 
+    
+<div class="equation">
+  \[  J_\lambda (q)=\tfrac 12E(q,q) +\lambda ^{-1}\log \int _ Y\mathrm e^{\lambda \operatorname {Tr}_\mu q}\, \mathrm d\mu .  \]
+</div>
+<p>
+       It is finite at zero. Jensen's inequality and (<a data-tag="ED7EAF2F" href="../../tag/DB0D4C618F78/">14.107</a>) give 
+    
+<div class="equation">
+  \[  J_\lambda (q)\geq \tfrac 12E(q,q)-E(q,Q),  \]
+</div>
+<p>
+       so it is coercive and bounded below. Strong $H^1$ convergence gives $L^1(\mu )$ convergence of traces. A subsequence realizing the lower limit converges almost everywhere for $\mu $, and Fatou's lemma proves strong lower semicontinuity of the exponential term. Jensen excludes a zero integral or a logarithm tending to $-\infty $. Hölder's inequality makes the logarithmic term convex, while the Dirichlet term is strictly convex on $\mathcal H$. Separation of a closed convex epigraph makes $J_\lambda $ weakly lower semicontinuous. Weak compactness therefore gives a unique minimizer $q_\lambda $, with 
+    
+<div class="equation">
+  \[  0&lt;Z_\lambda :=\int _ Y\mathrm e^{\lambda \operatorname {Tr}_\mu q_\lambda }\, \mathrm d\mu &lt;\infty .  \]
+</div>
+<p>
+       Variation in a smooth mean-zero direction $h$ is justified by its boundedness, which dominates the differentiated integrand by a constant times the integrable exponential. Put $\rho _\lambda =\mathrm e^{\lambda \operatorname {Tr}_\mu q_\lambda }/Z_\lambda $. The Euler equation is 
+    
+<div class="equation">
+  \[  E(q_\lambda ,h)+\int _ Yh\rho _\lambda \, \mathrm d\mu =0, \qquad \mathrm{dd}^{\mathrm{c}}q_\lambda =\rho _\lambda \mu -\kappa .  \]
+</div>
+<p>
+       The second identity follows for arbitrary smooth tests by subtracting their $\kappa $-mean; $\int \rho _\lambda \, \mathrm d\mu =1$ fixes the constant term. The minimizer has a canonical $\kappa $-plurisubharmonic representative. Its mean-zero Green representation and lemma <a data-tag="CF08BC57" href="../../tag/F5E3175FA178/">14.30.2</a> give 
+    
+<div class="equation">
+  \[  q_\lambda (x)=\int _ YG(x,y)\rho _\lambda (y)\, \mathrm d\mu (y)\leq 1, \qquad \rho _\lambda \leq \mathrm e^\lambda /Z_\lambda \quad \mu \text{-a.e.}  \]
+</div>
+<p>
+       The kernel bound then gives $q_\lambda \geq 1-(\mathrm e^\lambda /Z_\lambda )A_\mu $. 
+    <p>
+      To obtain continuity, the continuous functions $\int \min (K(x,y),L)\, \mathrm d\mu (y)$ increase to the continuous function $1-Q(x)$. Dini's theorem gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-65C39F54"><span data-gerby-tag="65C39F54"></span>
+<span class="equation-label"><a data-tag="65C39F54" href="../../tag/91D68636194F/">14.111</a></span>
+<div>\begin{equation} \label{eq:continuous-potential-uniform-tail} \sup _ x\int _ Y(K(x,y)-L)_+\, \mathrm d\mu (y)\longrightarrow 0. \end{equation}</div>
+</div>
+<p>
+       Multiplication by the bounded density $\rho _\lambda $ preserves this estimate. Its truncated Green potentials converge uniformly, so $q_\lambda $ is continuous. Now 
+    
+<div class="equation">
+  \[  w_\lambda =q_\lambda -\lambda ^{-1}\log Z_\lambda  \]
+</div>
+<p>
+       solves (<a data-tag="68804D72" href="../../tag/C82032A970D1/">14.109</a>) with precisely the displayed constant. 
+    <p>
+<em>Uniqueness and the barriers.</em> Every bounded $\kappa $-plurisubharmonic function is in $H^1$, by the same smoothing and energy bound used above after subtracting its $\kappa $-mean. For two bounded solutions $w_1,w_2$, their right-hand sides have bounded densities relative to $\mu $. The trace inequality extends distributional Stokes to their difference, giving 
+    
+<div class="equation">
+  \[  E(w_1-w_2,w_1-w_2) =-\int _ Y(w_1-w_2)(\mathrm e^{\lambda w_1}-\mathrm e^{\lambda w_2})\, \mathrm d\mu \leq 0.  \]
+</div>
+<p>
+       The difference is constant; the unit exponential integrals force that constant to be zero. 
+    <p>
+      Set $L_0=Q-\sup Q\leq 0$, $R_0=Q-\inf Q\geq 0$, and $z=(L_0-w_\lambda )_+$. The $H^1$ chain rule, canonical trace and extended Stokes give 
+    
+<div class="equation">
+  \[  E(z,z)=-\int _ Yz(1-\mathrm e^{\lambda w_\lambda })\, \mathrm d\mu \leq 0.  \]
+</div>
+<p>
+       Indeed $z&gt;0$ implies $w_\lambda &lt;L_0\leq 0$. Thus $z$ is constant. If it were a positive constant, continuity would give $w_\lambda =L_0-z\leq -z$ everywhere, contradicting its unit exponential integral. This proves the lower barrier. Testing $(w_\lambda -R_0)_+$ gives the upper barrier with the same argument and the reversed exponential difference. In particular $\| w_\lambda \| _\infty \leq \operatorname {osc}Q$. 
+    <p>
+<em>Selection.</em> Write $q_\lambda =w_\lambda -\int _ Yw_\lambda \kappa $, consistent with the variational normalization. The barriers give $\mathrm e^{\lambda w_\lambda }=1+O(\lambda )$ uniformly, and the Green identity gives 
+    
+<div class="equation">
+  \[  \| q_\lambda -Q\| _\infty \leq \| \mathrm e^{\lambda w_\lambda }-1\| _\infty \sup _ x\int _ Y|G(x,y)|\, \mathrm d\mu (y)=O(\lambda ).  \]
+</div>
+<p>
+       The last kernel integral is bounded by $1+A_\mu $. The $q_\lambda $ are uniformly bounded, so Taylor's formula gives 
+    
+<div class="equation">
+  \[  \lambda ^{-1}\log Z_\lambda =\int _ Yq_\lambda \, \mathrm d\mu +O(\lambda ) =\int _ YQ\, \mathrm d\mu +O(\lambda ).  \]
+</div>
+<p>
+       This proves the whole-family estimate. Finally, lemma <a data-tag="E5EE483B" href="../../tag/2CA6CA22B712/">14.30.1</a> identifies every critical subsolution as $Q+C$. Its $\mu $-mean is at most zero exactly when $C\leq -\int Q\, \mathrm d\mu $, proving the order characterization. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Increasing envelope volume continuity · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-pluripolar-mass/">Chapter 11 · Non-pluripolar measures and mass</a> · Tag <code>453D4DA50352</code></p><h1>Increasing envelope volume continuity</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · Theorem 30.5.1 <span data-gerby-tag="3DA9EA38"></span></div><article class="env-theorem" id="non-kahler-pluripotential-theory-3DA9EA38">
+<p><a class="environment-identifier" href="../../tag/453D4DA50352/">Theorem <span data-tag="3DA9EA38">30.5.1</span>.</a><span data-gerby-tag="3DA9EA38"></span> Let $u_ j\in \mathrm{PSH}(X,\theta )$ be an increasing sequence such that $u=(\lim _ j u_ j)^*$ belongs to $\mathrm{PSH}(X,\theta )$ and has positive lower volume. Then </p>
+<div class="equation">
+  \[  \left(\lim _ jP_\theta [u_ j]\right)^*=P_\theta [u], \qquad P_\theta [u_ j]\longrightarrow P_\theta [u] \quad \text{in capacity},  \]
+</div>
+<p> and </p>
+<div class="equation">
+  \[  \underline{\operatorname {vol}}_\theta (u_ j)\nearrow \underline{\operatorname {vol}}_\theta (u),\qquad \overline{\operatorname {vol}}_\theta (u_ j)\nearrow \overline{\operatorname {vol}}_\theta (u).  \]
+</div>
+<p> For every fixed smooth compact modification $\pi :Z\to X$, </p>
+<div class="equation">
+  \[  \sup _{z\in Z}\bigl |\nu (u_ j\circ \pi ,z)-\nu (u\circ \pi ,z)\bigr | \longrightarrow 0.  \]
+</div>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: the envelopes.</em> Translate so that $u\leq 0$, and set $p_ j=P_\theta [u_ j]$, $p=P_\theta [u]$ and $s=(\lim _ jp_ j)^*$. The $p_ j$ increase, and $u\leq s\leq p\leq V_\theta $. By theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a>, the lower volume of $p$ is positive and $u\in \mathcal E_{\mathrm{env}}(X,\theta ,p)$. Upward stability (proposition <a data-tag="823A46CF" href="../../tag/49C69232C604/">13.4.2</a>) puts $s$ in the same class. 
+    <p>
+      The ordinary envelope can use $V_\theta $ in place of zero as obstacle (see the remark after definition <a data-tag="B32B7383" href="../../tag/65C9C3635D58/">1.19.4</a>); that is, $p_ j=P_\theta [u_ j](V_\theta )$. Hence lemma <a data-tag="2A0EEDDB" href="../../tag/50A87754E163/">30.3.3</a> gives 
+    
+<div class="equation">
+  \[  \mu _{p_ j}\leq \mathbf1_{\{ p_ j=V_\theta \} }\mu _{V_\theta }.  \]
+</div>
+<p>
+       The fixed bounded quasi-continuous weight $\chi =\min (1,(p-s)_+)$, defined arbitrarily on the pluripolar set where $p-s$ is undefined, vanishes on $\{ p_ j=V_\theta \} $, because $p_ j\leq s\leq p\leq V_\theta $. Since $p_ j\to s$ in capacity by lemma <a data-tag="39D08A06" href="../../tag/505602F4CB54/">1.8.12</a>, lemma <a data-tag="F1DA4E83" href="../../tag/64174941A7D1/">6.3.1</a> gives $\int _ X\chi \, \mu _ s=0$. Thus $\mu _ s$ vanishes on $\{ s&lt;p\} $, and theorem <a data-tag="214ED53E" href="../../tag/B390F0847B3A/">30.3.1</a>, with reference $p$ and coefficient $c=0$, yields $s=p$. This proves the assertions about the envelopes. 
+    <p>
+<em>Step 2: the upper volumes of the envelopes.</em> Choose any $w\in \mathrm{PSH}(X,\theta )$ with $w\sim p$, and $K\geq 0$ with $p-K\leq w\leq p+K$. Define $r_ j=P_\theta [u_ j](w)$; this is meaningful because $u_ j-K\leq p-K\leq w$, so that $P_\theta (u_ j,w)\not\equiv -\infty $. For $C\geq 0$ the competitors compare as follows: 
+    
+<div class="equation">
+  \[  P_\theta (u_ j+C+K,0)-K \leq P_\theta (u_ j+C,w)\leq p_ j+K.  \]
+</div>
+<p>
+       The leftmost potential lies below $u_ j+C$ and below $p_ j-K\leq p-K\leq w$. For the upper bound, note that the middle term minus $K$ lies below $w-K\leq p\leq 0$ and is more singular than $u_ j$, so it is at most $p_ j$. Taking the increasing limit in $C$ gives 
+    
+<div class="equation">
+  \[  p_ j-K\leq r_ j\leq p_ j+K,\qquad r_ j\leq w.  \]
+</div>
+<p>
+       The $r_ j$ increase with $j$ and converge in capacity to $r=(\lim _ jr_ j)^*$, and $p-K\leq r\leq w\leq p+K$. Thus $r\sim p$, so $r\in \mathcal E_{\mathrm{env}}(X,\theta ,p)$. Lemma <a data-tag="2A0EEDDB" href="../../tag/50A87754E163/">30.3.3</a> gives $\mu _{r_ j}\leq \mathbf1_{\{ r_ j=w\} }\mu _ w$, and weighted lower semicontinuity with the weight $\min (1,(w-r)_+)$ shows that $\mu _ r$ vanishes on $\{ r&lt;w\} $. Domination with reference $p$ gives $r=w$. Therefore 
+    
+<div class="equation">
+  \[  \int _ X\mu _ w\leq \liminf _ j\int _ X\mu _{r_ j} \leq \lim _ j\overline{\operatorname {vol}}_\theta (p_ j),  \]
+</div>
+<p>
+       where $r_ j\sim p_ j$ justifies the last inequality. Taking the supremum over $w\sim p$ and using volume monotonicity proves 
+    
+<div class="equation">
+  \[  \overline{\operatorname {vol}}_\theta (p_ j)\nearrow \overline{\operatorname {vol}}_\theta (p).  \]
+</div>
+<p>
+<em>Step 3: the volumes of $u_ j$.</em> Put $\delta =\underline{\operatorname {vol}}_\theta (p)&gt;0$ and $D_ j=\overline{\operatorname {vol}}_\theta (p)-\overline{\operatorname {vol}}_\theta (p_ j)$. Since $D_ j\to 0$, we can choose $b_ j&gt;1$ with $b_ j\to \infty $ and $b_ j^ nD_ j&lt;\delta $ for all large $j$. With $a_ j=1-b_ j^{-1}$, lemma <a data-tag="ED39D93A" href="../../tag/92ABF533A916/">30.2.1</a> gives $h_ j\in \mathrm{PSH}(X,\theta )$ such that 
+    
+<div class="equation">
+  \[  a_ jp+(1-a_ j)h_ j\leq p_ j  \]
+</div>
+<p>
+       for all sufficiently large $j$. Addition, homogeneity and monotonicity of the lower volume, together with theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a>, give 
+    
+<div class="equation">
+  \[  a_ j^ n\delta \leq \underline{\operatorname {vol}}_\theta (p_ j) =\underline{\operatorname {vol}}_\theta (u_ j)\leq \delta .  \]
+</div>
+<p>
+       Since $a_ j\to 1$, this proves the convergence of the lower volumes, and shows that $\underline{\operatorname {vol}}_\theta (u_ j)&gt;0$ for all large $j$. For such $j$, theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a> identifies the upper volumes of $u_ j$ and $p_ j$, and also those of $u$ and $p$; Step 2 therefore gives the asserted upper-volume limit. Finally, proposition <a data-tag="0442EA52" href="../../tag/169DBA6BAF3B/">30.2.2</a>, applied to $u_ j\preceq u$, gives the uniform convergence of Lelong numbers on each fixed modification. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

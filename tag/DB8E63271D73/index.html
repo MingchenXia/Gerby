@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Comparing local regularizations · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>DB8E63271D73</code></p><h1>Comparing local regularizations</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 1.9 Comparing local regularizations <span data-gerby-tag="A72A2D7B"></span></div>
+<p>
+To glue local convolutions, we need them to agree on overlaps up to an error tending uniformly to zero. A bounded plurisubharmonic function need not be continuous, so this comparison cannot come from uniform convergence to the original function. Instead, the logarithmic convexity of its suprema over balls controls both the change of scale and the change of coordinates. 
+</p>
+<p>
+ Let $U\subset \mathbb C^ n$ be a domain and $u$ a bounded plurisubharmonic function on $U$. For $z$ in a fixed relatively compact subset of $U$ and small $\delta &gt;0$, put 
+</p>
+<div class="equation">
+  \[  S_\delta u(z)=\sup _{|\zeta -z|\leq \delta }u(\zeta ),\qquad A_\delta u(z)=\fint _{|\zeta -z|=\delta }u(\zeta )\, \mathrm{d}\sigma (\zeta ), \qquad u_\delta =u*\rho _\delta ,  \]
+</div>
+<p>
+ where $\mathrm{d}\sigma $ is the Euclidean surface measure and $\rho $ is a smooth nonnegative radial mollifier of integral one, supported in the unit ball, with $\rho _\delta (\zeta )=\delta ^{-2n}\rho (\zeta /\delta )$. All balls below lie in a fixed larger relatively compact subset of $U$, and $B$ denotes a bound for the oscillation of $u$ on that subset. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C9DE5099">
+<p><a class="environment-identifier" href="../../tag/2319B6057130/">Lemma <span data-tag="C9DE5099">1.9.1</span>.</a><span data-gerby-tag="C9DE5099"></span> For each fixed $A&gt;1$, </p>
+<div class="equation">
+  \[  S_{A\delta }u-S_\delta u\longrightarrow 0, \qquad S_\delta u-u_\delta \longrightarrow 0  \]
+</div>
+<p> uniformly on compact subsets as $\delta \downarrow 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The maximum of a plurisubharmonic function over concentric balls is a convex function of the logarithm of the radius. This follows by restricting to each complex line through the center and comparing, on an annulus, with the harmonic function that is affine in $\log |\zeta |$. Fix a radius $r&gt;A\delta $ for which all the balls of radius $r$ about points of the given compact set lie in the larger subset. Comparing secant slopes of this convex function between $\log \delta $, $\log (A\delta )$ and $\log r$ gives 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-AE29DBE9"><span data-gerby-tag="AE29DBE9"></span>
+<span class="equation-label"><a data-tag="AE29DBE9" href="../../tag/4BCD629A10F1/">1.33</a></span>
+<div>\begin{equation} \label{eq:bounded-log-radius} 0\leq S_{A\delta }u-S_\delta u \leq \frac{B\log A}{\log (r/\delta )}, \end{equation}</div>
+</div>
+<p>
+       which proves the first assertion. 
+    <p>
+      To compare the maximum with the spherical mean, we use the Poisson kernel in real dimension $2n$. For a point at distance at most $\delta /2$ from the center, the normalized Poisson kernel of the ball of radius $\delta $ is bounded below by a positive dimensional constant $c_ n$. Since $u$ is bounded above by $S_\delta u$ and by its harmonic extension from the sphere of radius $\delta $, we obtain 
+    
+<div class="equation">
+  \[  S_\delta u-S_{\delta /2}u \geq c_ n(S_\delta u-A_\delta u).  \]
+</div>
+<p>
+       These inequalities hold for bounded plurisubharmonic functions by local smoothing followed by a decreasing limit. By (<a data-tag="AE29DBE9" href="../../tag/4BCD629A10F1/">1.33</a>), $S_\delta u-A_\delta u$ therefore tends uniformly to zero. 
+    <p>
+      For $0&lt;t\leq 1$, the spherical mean is increasing in the radius, and 
+    
+<div class="equation">
+  \[  0\leq A_\delta u-A_{t\delta }u \leq (S_\delta u-S_{t\delta }u) +(S_{t\delta }u-A_{t\delta }u).  \]
+</div>
+<p>
+       By logarithmic convexity, the first term is at most $B\log (1/t)/\log (r/(t\delta ))$, and by the preceding estimate the second is at most $C_ nB/\log (r/(t\delta ))$. Write the radial convolution as an average of the spherical means $A_{t\delta }u$ with respect to the probability density $\widehat\rho (t)=|\mathbb S^{2n-1}|t^{2n-1}\rho (t)$ on $[0,1]$, where $\rho (t)$ denotes the value of $\rho $ at radius $t$. Since $\int _0^1(1+\log (1/t))\widehat\rho (t)\, \mathrm{d}t&lt;\infty $, integration gives 
+    
+<div class="equation">
+  \[  0\leq A_\delta u-u_\delta \leq \frac{C_{n,\rho }B}{\log (r/\delta )}.  \]
+</div>
+<p>
+       Combining the two comparisons proves the second assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-28A8D92B">
+<p><a class="environment-identifier" href="../../tag/ACA94F989A1E/">Corollary <span data-tag="28A8D92B">1.9.2</span>.</a><span data-gerby-tag="28A8D92B"></span> Let $U,V\subset \mathbb C^ n$ be domains, let $F:U\to V$ be biholomorphic, and let $u$ be bounded and plurisubharmonic on $U$. Then </p>
+<div class="equation">
+  \[  u_\delta -\bigl ((u\circ F^{-1})*\rho _\delta \bigr )\circ F  \]
+</div>
+<p> tends locally uniformly to zero as $\delta \downarrow 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On a compact subset, $F$ and its inverse have uniformly bounded first derivatives. Thus, for a fixed $A&gt;1$, the inverse image under $F$ of the ball of radius $\delta $ about $F(z)$ lies between the balls about $z$ of radii $\delta /A$ and $A\delta $. Consequently, $S_\delta (u\circ F^{-1})(F(z))$ and $S_\delta u(z)$ both lie between $S_{\delta /A}u(z)$ and $S_{A\delta }u(z)$, and the first assertion of lemma <a data-tag="C9DE5099" href="../../tag/2319B6057130/">1.9.1</a> shows that their difference tends to zero uniformly. The second assertion of the lemma, applied to $u$ and to $u\circ F^{-1}$, compares each of the two convolutions with the corresponding supremum regularization. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

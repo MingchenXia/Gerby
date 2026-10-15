@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The matrix structure of the Gauduchon equation · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>53E844FE515C</code></p><h1>The matrix structure of the Gauduchon equation</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 9.12 The matrix structure of the Gauduchon equation <span data-gerby-tag="568821A3"></span></div>
+<p>
+The Hodge star converts the positive $(n-1,n-1)$-form $\Gamma _ u$ into a Hermitian matrix whose logarithmic determinant is a concave function of the complex Hessian. Two features will control the largest eigenvalue in the second-order estimate: the positive background gives coercivity, and the torsion coefficients omit exactly those gradient indices that would otherwise carry the largest inverse weight. We derive both properties before differentiating the equation. 
+</p>
+<p>
+For the matrix and derivative calculations, set $v=u/(2\pi )$, so that $\mathrm{dd}^{\mathrm{c}}u=\mathrm i\partial \bar\partial v$. All covariant derivatives are taken with respect to the Chern connection $\nabla $ of $\gamma $. In holomorphic coordinates $z^1,\ldots ,z^ n$, write $v_ i=\partial _ i v$ and $v_{\bar j}=\partial _{\bar j}v$; indices range from $1$ to $n$, and $\delta _{ij}$ is the Kronecker symbol. Write $\gamma =\mathrm i\gamma _{a\bar b}\, \mathrm{d}z^ a\wedge \mathrm{d}\bar z^ b$, with repeated indices summed. We denote by $\star _\gamma $ the Hodge star of $\gamma $, and by $\det _\gamma $ the determinant of the Hermitian matrix of a real $(1,1)$-form relative to $\gamma $. Write the torsion of $\nabla $ as $T_{ab}^{c}$ and lower the last index with $\gamma $. Thus 
+</p>
+<div class="equation">
+  \[  T_{ab\bar c}=\partial _ a\gamma _{b\bar c}-\partial _ b\gamma _{a\bar c}, \qquad T_{ab\bar c}=-T_{ba\bar c}.  \]
+</div>
+<p>
+ Let $Q_0=\star _\gamma \gamma _0^{n-1}/(n-1)!$ and 
+</p>
+<div class="equation">
+  \[  Z=\frac1{(n-1)!}\star _\gamma \operatorname {Re}\bigl (\mathrm i\partial v\wedge \bar\partial \gamma ^{n-2}\bigr ).  \]
+</div>
+<p>
+ Here the real $(1,1)$-forms on the right are identified with their Hermitian coefficient matrices relative to $\gamma $. Set 
+</p>
+<div class="equation">
+  \[  \chi =(\operatorname {tr}_\gamma Q_0)\gamma -(n-1)Q_0, \quad W=(\operatorname {tr}_\gamma Z)\gamma -(n-1)Z, \quad g=\chi +\mathrm i\partial \bar\partial v+W.  \]
+</div>
+<p>
+ The linear map $P_\gamma (A)=((\operatorname {tr}_\gamma A)\gamma -A)/(n-1)$ on real $(1,1)$-forms, or Hermitian matrices, is invertible, and the equation of theorem <a data-tag="3E8336C1" href="../../tag/76AF759A4024/">9.9.1</a> becomes 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-7EFE4E6E"><span data-gerby-tag="7EFE4E6E"></span>
+<span class="equation-label"><a data-tag="7EFE4E6E" href="../../tag/D281466AD7B7/">9.26</a></span>
+<div>\begin{equation} \label{eq:stw-cofactor-matrix-scaling} \begin{aligned}  Q_ u&amp; :=P_\gamma (g)=Q_0+P_\gamma (\mathrm i\partial \bar\partial v)+Z&gt;0,\\  \log \det _\gamma Q_ u&amp; =h=(n-1)(F+b). \end{aligned} \end{equation}</div>
+</div>
+<p>
+ Here $Q_ u=\star _\gamma \Gamma _ u/(n-1)!$ is the coefficient matrix of $\Gamma _ u$. The tensor $g$ need not be positive. To check the Hessian term, diagonalize $\mathrm i\partial \bar\partial v$ in a unitary frame: the coefficient of $\star _\gamma (\mathrm i\partial \bar\partial v\wedge \gamma ^{n-2})/(n-1)!$ in each diagonal position is the sum of the other diagonal entries divided by $n-1$. If $\eta _ u$ has eigenvalues $a_ i$ relative to $\gamma $, then $Q_ u$ has eigenvalues $\prod _{j\ne i}a_ j$, whose product is $(\prod _ i a_ i)^{n-1}$. This proves the determinant identity. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-57B6169B">
+<p><a class="environment-identifier" href="../../tag/6168D5D4EF96/">Lemma <span data-tag="57B6169B">9.12.1</span>.</a><span data-gerby-tag="57B6169B"></span> At a point in a unitary frame, </p>
+<div class="equation">
+<span class="equation-label">9.29</span>
+<div>\begin{align}  2(n-1)Z_{i\bar j} ={}&amp; \delta _{ij}\sum _{p,k}v_ p\overline{T_{pk\bar k}} -v_ i\sum _ k\overline{T_{jk\bar k}} -\sum _ kv_ k\overline{T_{kj\bar i}}\notag \\ &amp; +\delta _{ij}\sum _{p,k}v_{\bar p}T_{pk\bar k} -v_{\bar j}\sum _ kT_{ik\bar k} -\sum _ kv_{\bar k}T_{ki\bar j}. \label{eq:stw-torsion-six-terms} \end{align}</div>
+</div>
+<p>  In particular $Z_{i\bar j}$ contains no $v_ j$ or $v_{\bar i}$. Moreover </p>
+<div class="equation" id="non-kahler-pluripotential-theory-E3CADF96"><span data-gerby-tag="E3CADF96"></span>
+<span class="equation-label"><a data-tag="E3CADF96" href="../../tag/1525F23C956C/">9.30</a></span>
+<div>\begin{equation} \label{eq:stw-diagonal-torsion} 2(n-1)Z_{i\bar i} =\sum _{p\ne i,\  k\ne i} \bigl (v_ p\overline{T_{pk\bar k}}+v_{\bar p}T_{pk\bar k}\bigr ). \end{equation}</div>
+</div>
+<p> Covariant differentiation preserves these coefficient identities. For example $\nabla _1 Z_{1\bar1}$ contains no pure Hessian $v_{11}$ or its conjugate, and $\nabla _{\bar1}\nabla _1 Z_{1\bar1}$ contains no $v_{11\bar1}$ or its conjugate, nor a pure $v_{11}$ or its conjugate. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $n=2$, the defining expression of $Z$ is zero, and so are the formulas below, because the generalized Kronecker symbol with three indices vanishes in two dimensions. Suppose $n\geq 3$ and use coordinates that are unitary at the point. Direct antisymmetrization gives 
+    
+<div class="equation">
+  \[  \bar\partial \gamma =-\frac{\mathrm i}{2}\sum _{a,b,c} \overline{T_{bc\bar a}}\, \mathrm{d}z^ a\wedge \mathrm{d}\bar z^ b\wedge \mathrm{d}\bar z^ c.  \]
+</div>
+<p>
+       We use $\bar\partial \gamma ^{n-2}=(n-2)\bar\partial \gamma \wedge \gamma ^{n-3}$. To write the contraction explicitly, put 
+    
+<div class="equation">
+  \[  \delta ^{paj}_{bci} =\det \begin{pmatrix}  \delta _{pb}
+
+&amp; \delta _{pc}
+
+&amp; \delta _{pi}
+
+\\  \delta _{ab}
+
+&amp; \delta _{ac}
+
+&amp; \delta _{ai}
+
+\\  \delta _{jb}
+
+&amp; \delta _{jc}
+
+&amp; \delta _{ji} 
+
+\end{pmatrix}.  \]
+</div>
+<p>
+       Let $A=\star _\gamma (\mathrm i\partial v\wedge \bar\partial \gamma ^{n-2})/(n-1)!$. Expanding the $n-3$ remaining copies of $\gamma $ leaves the three complementary indices and gives 
+    
+<div class="equation">
+  \[  A_{i\bar j}=\frac1{2(n-1)} \sum _{p,a,b,c}v_ p\overline{T_{bc\bar a}}\,  \delta ^{paj}_{bci}.  \]
+</div>
+<p>
+       Indeed, the factor is $(n-2)(n-3)!/[2(n-1)!]$, and the determinant records the signs of the remaining holomorphic and antiholomorphic indices. Expanding its six terms and using $T_{bc\bar a}=-T_{cb\bar a}$, we obtain 
+    
+<div class="equation">
+  \[  A_{i\bar j}=\frac1{n-1}\left( \delta _{ij}\sum _{p,k}v_ p\overline{T_{pk\bar k}} -v_ i\sum _ k\overline{T_{jk\bar k}} -\sum _ kv_ k\overline{T_{kj\bar i}}\right).  \]
+</div>
+<p>
+       Since $Z=(A+A^*)/2$, where $A^*$ denotes the Hermitian adjoint matrix, this gives (<a data-tag="8A591D0B" href="../../tag/A6EC7DDEACFB/">9.29</a>). 
+    <p>
+      For $i\ne j$, the coefficient of $v_ j$ in this expression vanishes because $T_{jj\bar i}=0$, and the coefficient of $v_{\bar i}$ vanishes in the conjugate expression. For $i=j$, canceling the terms with $p=i$ and $k=i$ gives (<a data-tag="E3CADF96" href="../../tag/1525F23C956C/">9.30</a>). These are tensor identities valid in every unitary frame. Since the Chern connection preserves the metric, they can be differentiated in a unitary frame that is parallel at the point. For instance, the first derivative of a summand in (<a data-tag="E3CADF96" href="../../tag/1525F23C956C/">9.30</a>) is 
+    
+<div class="equation">
+  \[  (\nabla _1v_ p)\overline{T_{pk\bar k}} +v_ p\nabla _1\overline{T_{pk\bar k}},\qquad p,k\ne 1,  \]
+</div>
+<p>
+       together with its conjugate counterpart. A further derivative in the direction $\bar1$ still has $p\ne 1$. This gives the stated exclusions, including the terms in which a derivative falls on a coefficient. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+The second-order estimate uses these exclusions; an arbitrary first-order perturbation could not be substituted for $Z$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-DDF2A98C">
+<p><a class="environment-identifier" href="../../tag/DBC2334A4FC0/">Lemma <span data-tag="DDF2A98C">9.12.2</span>.</a><span data-gerby-tag="DDF2A98C"></span> Diagonalize $g$ at a point and order its eigenvalues as $\lambda _1\geq \cdots \geq \lambda _ n$. Put </p>
+<div class="equation">
+  \[  \mu _ i=\frac{\sum _{j\ne i}\lambda _ j}{n-1}&gt;0, \quad t_ i=\mu _ i^{-1},\quad f_ i=\frac1{n-1}\sum _{j\ne i}t_ j, \quad \mathcal F=\sum _ i f_ i=\sum _ i t_ i.  \]
+</div>
+<p> Then $\mu _1\leq \cdots \leq \mu _ n$, $f_1\leq \cdots \leq f_ n$, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-1A10A952"><span data-gerby-tag="1A10A952"></span>
+<span class="equation-label"><a data-tag="1A10A952" href="../../tag/051408386360/">9.31</a></span>
+<div>\begin{gather}  \sum _ i f_ i\lambda _ i=n,\qquad \frac{\mathcal F}{n(n-1)}\leq f_ k\leq \frac{\mathcal F}{n-1} \quad (k&gt;1),\qquad t_ i\leq (n-1)f_1\quad (i&gt;1), \label{eq:stw-weight-comparability}\\  f_ n\geq \mathcal F/n. \notag \end{gather}</div>
+</div>
+<p> Fix $\tau ,D&gt;0$ and assume $Q_0\geq \tau \gamma $ and $\det P_\gamma (g)\leq D$. For $\lambda _1$ larger than a constant depending only on $n,\tau ,D$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-D0720A1A"><span data-gerby-tag="D0720A1A"></span>
+<span class="equation-label"><a data-tag="D0720A1A" href="../../tag/2B456F0E5D2B/">9.32</a></span>
+<div>\begin{equation} \label{eq:stw-direct-coercivity} \sum _ i f_ i(\chi _{i\bar i}-\lambda _ i) \geq \frac\tau 2\mathcal F. \end{equation}</div>
+</div>
+<p> There is also a uniform positive lower bound for $\mathcal F$ depending only on $n,D$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The ordering follows from the formula for $\mu _ i$, and then from that for $f_ i$. The identity $\sum _ if_ i\lambda _ i=n$, which reflects the relation $\log \det P_\gamma (sg)=\log \det P_\gamma (g)+n\log s$, can be checked directly: 
+    
+<div class="equation">
+  \[  \sum _ i f_ i\lambda _ i =\sum _ j\frac{t_ j}{n-1}\sum _{i\ne j}\lambda _ i =\sum _ jt_ j\mu _ j=n.  \]
+</div>
+<p>
+       For $k&gt;1$, the sum defining $f_ k$ contains the largest weight $t_1\geq \mathcal F/n$. The upper bound for $f_ k$ and the estimate for $t_ i$ are immediate, and the largest weight $f_ n$ is at least the average $\mathcal F/n$. 
+    <p>
+      The map $P_\gamma $ is self-adjoint for the matrix trace pairing. Consequently 
+    
+<div class="equation">
+  \[  \sum _ i f_ i\chi _{i\bar i} =\sum _ i t_ i(Q_0)_{i\bar i}\geq \tau \mathcal F.  \]
+</div>
+<p>
+       Moreover $\sum _ i\lambda _ i=\sum _ i\mu _ i&gt;\lambda _1&gt;0$, where the strict inequality follows from $\mu _1&gt;0$. Hence $\mu _ n&gt;\lambda _1/n$. Since the other $n-1$ numbers $\mu _ i$ are at least $\mu _1$, 
+    
+<div class="equation">
+  \[  \mu _1^{n-1}\mu _ n\leq \prod _ i\mu _ i\leq D, \qquad \mathcal F\geq \mu _1^{-1} \geq \left(\frac{\lambda _1}{nD}\right)^{1/(n-1)}.  \]
+</div>
+<p>
+       For $\lambda _1$ sufficiently large this is at least $2n/\tau $, so $n\leq \tau \mathcal F/2$. Subtracting $\sum _ i f_ i\lambda _ i=n$ therefore proves (<a data-tag="D0720A1A" href="../../tag/2B456F0E5D2B/">9.32</a>). Finally, the arithmetic–geometric mean inequality applied to the $t_ i$ gives $\mathcal F\geq nD^{-1/n}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+ The concavity of the logarithmic determinant will supply a positive term with an explicit formula. For the matrix function $\Phi (g)=\log \det P_\gamma (g)$, the negative second differential in a complex matrix direction $B$ and its adjoint is 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-A4B47DA7"><span data-gerby-tag="A4B47DA7"></span>
+<span class="equation-label"><a data-tag="A4B47DA7" href="../../tag/677E6AB0568A/">9.33</a></span>
+<div>\begin{equation} \label{eq:stw-concavity-square} -D^2\Phi _ g(B,B^*) =\operatorname {tr}\bigl (P_\gamma (g)^{-1}P_\gamma (B) P_\gamma (g)^{-1}P_\gamma (B)^*\bigr )\geq 0. \end{equation}</div>
+</div>
+<p>
+ This follows by differentiating the inverse matrix. In a unitary frame diagonalizing $g$, the off-diagonal terms of this expression include 
+</p>
+<div class="equation">
+  \[  \frac{|B_{k\bar1}|^2}{(n-1)^2\mu _ k\mu _1}.  \]
+</div>
+<p>
+ When $\lambda _ k&lt;\lambda _1$, that coefficient is exactly 
+</p>
+<div class="equation">
+  \[  \frac{f_ k-f_1}{\lambda _1-\lambda _ k} =\frac1{(n-1)^2\mu _ k\mu _1}.  \]
+</div>
+<p>
+ The expression on the right also makes sense when the two eigenvalues coincide. This positive square and the weights $f_ i$ enter the largest-eigenvalue estimate in the next section. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

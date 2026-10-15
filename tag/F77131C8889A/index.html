@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gradient bounds for concave equations · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>F77131C8889A</code></p><h1>Gradient bounds for concave equations</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 10.9 Gradient bounds for concave equations <span data-gerby-tag="2179F661"></span></div>
+<p>
+We keep the fixed data, the family of right-hand sides and the normalization of section <a data-tag="684EBF0C" href="../../tag/A73917A5BC62/">10.8</a>, and assume in addition that $\| \partial h\| _{L^\infty (\omega )}\leq H_1$; throughout the section, $u$ denotes a solution with such a right-hand side $h$. The gradient bound is obtained by comparison with a nearby smooth admissible function $V$. A maximum principle for a weighted gradient quantity bounds the gradient of $u$ in terms of that of $V$, provided $\| u-V\| _\infty $ is below a threshold that does not depend on the derivatives of $V$. The $C^0$ compactness of corollary <a data-tag="08818D38" href="../../tag/E9194EDCB1FF/">10.8.4</a> then shows that finitely many such comparison functions suffice for all solutions. 
+</p>
+<p>
+For the derivative calculation, write $U=u/(2\pi )$ and $\underline U=\underline u/(2\pi )$. Thus $\mathrm{dd}^{\mathrm{c}}u=\mathrm i\partial \bar\partial U$. For any smooth real $V$, put $\mathcal A_ V=\omega ^{-1}(\chi +\mathrm i\partial \bar\partial V)$ and call $V$ admissible if $\lambda (\mathcal A_ V)\in \Gamma $. We use the Chern connection of $\omega $, and define the endomorphism $B=DF(\mathcal A_ U)$ by $\frac{\mathrm d}{\mathrm dt}F(\mathcal A_ U+tM)|_{t=0}=\operatorname {tr}(BM)$. Write $\lambda =(\lambda _1,\ldots ,\lambda _ n)=\lambda (\mathcal A_ U)$. At a point where $\mathcal A_ U$ is diagonal in a unitary frame, set 
+</p>
+<div class="equation">
+  \[  B_ i=f_ i(\lambda ),\qquad \mathcal Lq=\sum _ iB_ iq_{i\bar i},\qquad T=\sum _ iB_ i, \qquad |\partial q|_ B^2=\sum _ iB_ i|q_ i|^2.  \]
+</div>
+<p>
+ Here subscripts denote frame derivatives, $U_{ki}=\nabla _ iU_ k$ and $U_{i\bar j}=\partial _ i\partial _{\bar j}U$; the second derivatives $U_{ki}$ need not be symmetric. The trace expressions below do not depend on the unitary frame. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4169B8B5">
+<p><a class="environment-identifier" href="../../tag/D049243EB2FA/">Lemma <span data-tag="4169B8B5">10.9.1</span>.</a><span data-gerby-tag="4169B8B5"></span> There are fixed $\tau ,\kappa &gt;0$ such that </p>
+<div class="equation">
+  \begin{gather*}  T\geq \tau ,\qquad 0\leq \operatorname {tr}(B\mathcal A_ U)\leq h,\\  \mathcal L(U-V)\leq h\quad (V\text{ admissible}),\qquad \mathcal L(\underline U-U)\geq -h. \end{gather*}
+</div>
+<p> Moreover, at every point at least one of the alternatives </p>
+<div class="equation">
+  \[  \mathcal L(\underline U-U)\geq \kappa T, \qquad B\geq \kappa T\operatorname {Id}  \]
+</div>
+<p> holds. The constants depend only on the fixed data; in particular they are uniform for all right-hand sides in the family. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\lambda (P)\in \Gamma $, then $\mathcal A_ U+tP$ is admissible for $t\geq 0$. The function $t\mapsto F(\mathcal A_ U+tP)$ is positive and concave on $[0,\infty )$, so its derivative at $t=0$ cannot be negative; thus $\operatorname {tr}(BP)\geq 0$. Since $F$ is concave and $F(0)=0$, the tangent inequality at $\mathcal A_ U$, evaluated at the origin, gives $\operatorname {tr}(B\mathcal A_ U)\leq h$. Choose $a_*&gt;0$ with $F(a_*\operatorname {Id})&gt;H_0+1$. Concavity gives 
+    
+<div class="equation">
+  \[  H_0+1&lt;F(a_*\operatorname {Id}) \leq h+a_*T-\operatorname {tr}(B\mathcal A_ U)\leq H_0+a_*T.  \]
+</div>
+<p>
+       Thus $T\geq a_*^{-1}$. Since $\mathcal L(U-V)=\operatorname {tr}(B\mathcal A_ U)-\operatorname {tr}(B\mathcal A_ V)$ and $\mathcal L(\underline U-U)=\operatorname {tr}(B\mathcal A_{\underline U})-\operatorname {tr}(B\mathcal A_ U)$, the remaining two bounds follow from the nonnegativity of $\operatorname {tr}(B\mathcal A_ V)$ and $\operatorname {tr}(B\mathcal A_{\underline U})$. 
+    <p>
+      We derive the alternative from the strict gap. Fix $r,H,\delta $ from lemma <a data-tag="50965839" href="../../tag/C3049F567279/">10.8.1</a>, and put $\mu =\lambda (\mathcal A_{\underline U})$. Compactness and the gap give one $S&gt;r$ such that 
+    
+<div class="equation">
+  \[  f(\mu -2r\mathbf1+Se_ i)&gt;H+2\delta \qquad (1\leq i\leq n)  \]
+</div>
+<p>
+       everywhere. We first prove a scalar alternative. At a point of $X$, let $\lambda \in \Gamma $ satisfy $f(\lambda )=\sigma $, where $\sigma =h$ at that point, and consider the set 
+    
+<div class="equation">
+  \[  K=\{ v\geq \mu -r\mathbf1:f(v)\leq \sigma \} .  \]
+</div>
+<p>
+       It is contained in $\Gamma $ because $\mu -r\mathbf1\in \Gamma $, it is closed, and the matrix bound of lemma <a data-tag="50965839" href="../../tag/C3049F567279/">10.8.1</a>, applied to diagonal matrices, makes it bounded; thus $K$ is compact. When nonempty, it contains $\mu -r\mathbf1$ and is star-shaped about that point: moving along a segment toward it decreases each coordinate, hence decreases $f$. Thus $K$ is connected. Let $N=\nabla f(\lambda )$, whose entries are positive, and let $\Pi $ be the tangent hyperplane $N\cdot (v-\lambda )=0$. 
+    <p>
+      If $f(\mu -r\mathbf1)&gt;\sigma $, concavity gives $N\cdot (\mu -\lambda )&gt;r\sum _ iN_ i$. Otherwise $\mu -r\mathbf1\in K$. The diagonal ray $\mu -r\mathbf1+t\mathbf1$, $t\geq 0$, meets $\{ f=\sigma \} $, since $f$ diverges along it; at the meeting point $v$, the tangent inequality gives $N\cdot (v-\lambda )\geq 0$. If $\Pi $ misses $K$, connectedness makes $N\cdot (v-\lambda )$ strictly positive throughout $K$, and in particular at $\mu -r\mathbf1$; this again gives $N\cdot (\mu -\lambda )&gt;r\sum _ iN_ i$. 
+    <p>
+      If $v\in \Pi \cap K$, put $z_ i=v-r\mathbf1+Se_ i$. Then $z_ i\geq \mu -2r\mathbf1+Se_ i$, so $f(z_ i)&gt;\sigma $. The tangent inequality at $\lambda $ gives 
+    
+<div class="equation">
+  \[  0&lt;N\cdot (z_ i-v)=SN_ i-r\sum _ jN_ j.  \]
+</div>
+<p>
+       Thus $N_ i&gt;(r/S)\sum _ jN_ j$ for every $i$. We have proved that $N\cdot (\mu -\lambda )&gt;r\sum _ iN_ i$ or $N_ i&gt;(r/S)\sum _ jN_ j$ for all $i$, at every positive level $\sigma $, with constants independent of $\sigma $. 
+    <p>
+      To pass to matrices, take $\lambda =\lambda (\mathcal A_ U)$, and order $\lambda $ and $\mu $ decreasingly. By concavity and symmetry, the numbers $f_ i(\lambda )$ are then ordered increasingly. In the eigenframe of $\mathcal A_ U$, the diagonal of $\mathcal A_{\underline U}$ is a doubly stochastic average of permutations of $\mu $, so the rearrangement inequality gives 
+    
+<div class="equation">
+  \[  \operatorname {tr}\bigl (B(\mathcal A_{\underline U}-\mathcal A_ U)\bigr ) \geq \sum _ if_ i(\lambda )(\mu _ i-\lambda _ i).  \]
+</div>
+<p>
+       Since $N=(f_ i(\lambda ))_ i=(B_ i)_ i$, taking $\kappa $ smaller than $\min \{ r,r/S\} $ proves the matrix alternative. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-6EF6099C">
+<p><a class="environment-identifier" href="../../tag/BD78CDB91D24/">Lemma <span data-tag="6EF6099C">10.9.2</span>.</a><span data-gerby-tag="6EF6099C"></span> Put $Q=1+|\partial U|_\omega ^2$. For any smooth real $\xi $, one has </p>
+<div class="equation">
+  \begin{align*}  \mathrm e^{-\xi }\mathcal L(\mathrm e^\xi Q) &amp; \geq \sum _{i,k}B_ i|U_{ki}+U_ k\xi _ i|^2 +\frac14\sum _ iB_ i\lambda _ i^2+Q\mathcal L\xi +|\partial \xi |_ B^2\\ &amp; \quad +2\operatorname{Re}\sum _ iB_ i\lambda _ iU_ i\xi _{\bar i} -2\operatorname{Re}\sum _{i,k}B_ i\chi _{i\bar k}U_ k\xi _{\bar i} -C_ gTQ-2H_1|\partial U|_\omega , \end{align*}
+</div>
+<p> where $C_ g$ depends only on $\omega $ and $\chi $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $\mathscr T^ p_{ik}$ and $R^ p_{i\bar jk}$ for the torsion and curvature of the Chern connection. The commutation formula and the differentiated equation read 
+    
+<div class="equation">
+  \begin{gather*}  \nabla _{\bar j}\nabla _ iU_ k =\nabla _ kU_{i\bar j}+\sum _ p\bigl (R^ p_{i\bar jk}U_ p-\mathscr T^ p_{ik}U_{p\bar j}\bigr ),\\  \sum _ iB_ i\nabla _ kU_{i\bar i}=h_ k-\sum _ iB_ i\nabla _ k\chi _{i\bar i}. \end{gather*}
+</div>
+<p>
+       The product rule for $|\partial U|^2$ gives both squares $\sum B_ i|U_{ki}|^2$ and $\sum B_ i|U_{k\bar i}|^2$, the term $2\operatorname{Re}\sum _ kh_ kU_{\bar k}$, a curvature error bounded by $CT|\partial U|^2$, and the errors from $\nabla \chi $ and torsion. The latter are bounded by 
+    
+<div class="equation">
+  \[  CT|\partial U|+CT|\partial U|^2 +C|\partial U|T^{1/2}\Bigl (\sum _{i,k}B_ i|U_{k\bar i}|^2\Bigr )^{1/2}.  \]
+</div>
+<p>
+       Absorb the last term into half of the mixed square. Since $U_{i\bar j}=\lambda _ i\delta _{ij}-\chi _{i\bar j}$, the remaining half is at least $\frac14\sum _ iB_ i\lambda _ i^2-CT$. Hence 
+    
+<div class="equation">
+  \[  \mathcal L|\partial U|^2\geq \sum _{i,k}B_ i|U_{ki}|^2 +\frac14\sum _ iB_ i\lambda _ i^2-C_ gTQ-2H_1|\partial U|.  \]
+</div>
+<p>
+       Finally, 
+    
+<div class="equation">
+  \[  \partial _ i|\partial U|^2 =\sum _ kU_{ki}U_{\bar k}+\lambda _ iU_ i-\sum _ k\chi _{i\bar k}U_ k.  \]
+</div>
+<p>
+       In the product rule for $\mathrm e^\xi Q$, combine the cross term coming from the first sum with $|\partial U|^2|\partial \xi |_ B^2$ and with the square $\sum B_ i|U_{ki}|^2$. This gives $\sum B_ i|U_{ki}+U_ k\xi _ i|^2$, while the remaining weight term is $|\partial \xi |_ B^2$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-102DCE65">
+<p><a class="environment-identifier" href="../../tag/F13386AF12E0/">Proposition <span data-tag="102DCE65">10.9.3</span>.</a><span data-gerby-tag="102DCE65"></span> There are constants $\eta ,C&gt;0$, depending only on the fixed data and $H_1$, such that every smooth admissible $V$ with $\| U-V\| _\infty \leq \eta $ satisfies </p>
+<div class="equation">
+  \[  \| \partial U\| _\infty \leq C\bigl (1+\| \partial V\| _\infty ^2\bigr ).  \]
+</div>
+<p> The comparison radius $\eta $ is independent of the derivatives of $V$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $a\geq 1$ and $\beta &gt;1$ be constants, to be chosen below. Assuming $\| U-V\| _\infty \leq \beta ^{-1}$, put 
+    
+<div class="equation">
+  \[  w=U-V-\beta ^{-1},\qquad \xi =a(\underline U-U)+\beta w^2,\qquad K_ V=1+\| \partial \underline U\| _\infty +\| \partial V\| _\infty .  \]
+</div>
+<p>
+       Then $-2\beta ^{-1}\leq w\leq 0$ and 
+    
+<div class="equation">
+  \[  \xi _ i=a(\underline U_ i-V_ i)+(-a+2\beta w)(U_ i-V_ i), \qquad |-a+2\beta w|\leq a+4.  \]
+</div>
+<p>
+       Writing $D=|\partial (U-V)|_ B^2$, the Cauchy–Schwarz inequality gives 
+    
+<div class="equation">
+  \begin{align*}  \left|2\operatorname{Re}\sum _ iB_ i\lambda _ iU_ i\xi _{\bar i}\right| &amp; \leq \frac18\sum _ iB_ i\lambda _ i^2+C_ aK_ V^4T+C_ a(Q+K_ V^2)D,\\  \left|2\operatorname{Re}\sum _{i,k}B_ i\chi _{i\bar k}U_ k\xi _{\bar i}\right| &amp; \leq \tfrac 12QD+C_ aT+C_ aK_ VQ^{1/2}T. \end{align*}
+</div>
+<p>
+       For the first line, split $\xi _ i$ as above and use $\sum B_ i|U_ i|^2\leq 2D+2K_ V^2T$; then apply Young's inequality to the resulting three products, each absorbing at most $\frac1{24}\sum B_ i\lambda _ i^2$. For the second line, use $|\partial \xi |_ B\leq aK_ VT^{1/2}+(a+4)D^{1/2}$ and the bound for $\chi $. In both lines, $C_ a$ depends on $a$ but not on $\beta $ or on the derivatives of $V$. 
+    <p>
+      By lemma <a data-tag="4169B8B5" href="../../tag/D049243EB2FA/">10.9.1</a> and $w\leq 0$, 
+    
+<div class="equation">
+  \[  \mathcal L\xi \geq a\mathcal L(\underline U-U)-4H_0+2\beta D.  \]
+</div>
+<p>
+       Choose $a$ so large that $(a\kappa -C_ g-2)\tau &gt;4H_0+2H_1+1$, and then $\beta \geq 2C_ a+2$. Combining the preceding bounds with lemma <a data-tag="6EF6099C" href="../../tag/BD78CDB91D24/">10.9.2</a>, we obtain, at every point where $Q\geq C'(1+K_ V^4)$ for a suitable constant $C'$, 
+    
+<div class="equation">
+  \begin{align*}  \mathrm e^{-\xi }\mathcal L(\mathrm e^\xi Q) &amp; \geq \frac18\sum _ iB_ i\lambda _ i^2\\ &amp; \quad +Q\bigl [a\mathcal L(\underline U-U)-(C_ g+2)T +\beta D-(4H_0+2H_1)\bigr ]. \end{align*}
+</div>
+<p>
+       Indeed, the coefficient of $D$ before absorption is $(2\beta -C_ a-1/2)Q-C_ aK_ V^2$, which is at least $\beta Q$ once $C'$ is large enough. The other errors satisfy $C_ aK_ V^4\leq Q$ and $C_ a+C_ aK_ VQ^{1/2}\leq Q$, and they account for the additional term $-2T$ in the bracket. 
+    <p>
+      Consider a maximum point of $\mathrm e^\xi Q$ at which $Q\geq C'(1+K_ V^4)$. In the first alternative of lemma <a data-tag="4169B8B5" href="../../tag/D049243EB2FA/">10.9.1</a>, the bracket is positive by the choice of $a$, since $T\geq \tau $. In the second, $D\geq \kappa T|\partial (U-V)|^2$. For $Q\geq 4(1+K_ V^2)$, the triangle inequality gives $|\partial (U-V)|^2\geq c_*Q$, where $c_*=(\sqrt3-1)^2/4$. Since $\mathcal L(\underline U-U)\geq -H_0$, the bracket is then at least 
+    
+<div class="equation">
+  \[  (\beta \kappa c_*Q-C_ g-2)T-(a+4)H_0-2H_1.  \]
+</div>
+<p>
+       This is positive once $C'$ is large enough, because $T\geq \tau $. In both cases $\mathcal L(\mathrm e^\xi Q)&gt;0$ at a maximum point, which contradicts the second derivative test. Thus $Q\leq C(1+K_ V^4)$ at the maximum point. The weight has uniformly bounded oscillation: 
+    
+<div class="equation">
+  \[  \operatorname {osc}_ X\xi \leq a(\operatorname {osc}_ X\underline U+\operatorname {osc}_ XU)+4/\beta .  \]
+</div>
+<p>
+       By the potential bound in proposition <a data-tag="2DCE6D3A" href="../../tag/877A402699F6/">10.8.2</a>, this oscillation is bounded independently of $V$, so the estimate at the maximum point gives $Q\leq C(1+K_ V^4)$ everywhere. Taking square roots and setting $\eta =\beta ^{-1}$ proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-C924D577">
+<p><a class="environment-identifier" href="../../tag/979B56319AA1/">Theorem <span data-tag="C924D577">10.9.4</span>.</a><span data-gerby-tag="C924D577"></span> There is a constant $C$, depending only on the fixed data and $H_1$, such that $\| \mathrm du\| _{L^\infty (\omega )}\leq C$ for every normalized solution $u$ whose right-hand side $h$ lies in the family and satisfies $\| \partial h\| _\infty \leq H_1$. In particular, the bound is uniform as the positive right-hand sides tend to zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The right-hand sides in the family with $\| \partial h\| _\infty \leq H_1$ form an equicontinuous set. By corollary <a data-tag="08818D38" href="../../tag/E9194EDCB1FF/">10.8.4</a>, the corresponding functions $U$ form a precompact subset of $C^0(X)$. Choose a finite $\eta $-net in this set, consisting of smooth admissible functions $V_1,\ldots ,V_ N$. Each solution is within $\eta $ of some $V_ j$, so proposition <a data-tag="102DCE65" href="../../tag/F13386AF12E0/">10.9.3</a> bounds its gradient by $C(1+\max _ j\| \partial V_ j\| _\infty ^2)$. The set of solutions, and hence the chosen finite net, depends only on the fixed data and $H_1$. Finally, $u=2\pi U$, so the same conclusion holds for $\mathrm du$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+In chapter <a data-tag="0EE72605" href="../../tag/6B1310DDF7B5/">11</a> we return to the Monge–Ampère equation for $\omega +\mathrm{dd}^{\mathrm{c}}u$ and ask when two potentials with the same density agree up to a constant. The uniqueness of the normalization scalar does not determine the potential: where the density vanishes, the polarized linear equation for the difference can be degenerate. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

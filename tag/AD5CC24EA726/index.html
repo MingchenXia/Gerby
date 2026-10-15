@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quasi-continuous functions · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-pluripolar-mass/">Chapter 11 · Non-pluripolar measures and mass</a> · Tag <code>AD5CC24EA726</code></p><h1>Quasi-continuous functions</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 2.3 Quasi-continuous functions <span data-gerby-tag="67BFC769"></span></div>
+<p>
+Let $X$ be a compact Kähler manifold of dimension $n$ and $\theta $ be a closed real smooth $(1,1)$-form on $X$ representing a big cohomology class. 
+</p>
+
+<article class="env-definition" id="sgpt-9B23E7DB">
+<p><a class="environment-identifier" href="../../tag/C96BE5099B6A/">Definition <span data-tag="9B23E7DB">2.3.1</span>.</a><span data-gerby-tag="9B23E7DB"></span> Let $A\subseteq X$ be a Borel subset. The <em>$\theta $-capacity</em> $\operatorname{Cap}_{\theta }(A)$ of $A$ is defined as </p>
+<div class="equation">
+  \[  \operatorname{Cap}_{\theta }(A)\coloneqq \sup \left\{  \int _ A\theta _{\varphi }^ n : \varphi \in \mathrm{PSH}(X,\theta ),V_{\theta }-1\leq \varphi \leq V_{\theta } \right\} .  \]
+</div>
+</article> Here $V_{\theta }$ is defined in (<a data-tag="5E51046F" href="../../tag/6F52E700CD98/">2.20</a>) below. As we will recall below, the non-pluripolar product $\theta _{\varphi }^ n$ is well-defined. 
+
+
+The capacity is not very sensitive to the choice of $\theta $: <article class="env-theorem" id="sgpt-731F5229">
+<p><a class="environment-identifier" href="../../tag/C5C10F2AB708/">Theorem <span data-tag="731F5229">2.3.2</span>.</a><span data-gerby-tag="731F5229"></span> Let $\theta '$ be another closed real smooth $(1,1)$-form on $X$ representing a big cohomology class. Then there are continuous functions $f,g\colon [0,\infty )\rightarrow [0,\infty )$, with $f(0)=g(0)=0$, such that for any Borel subset $E\subseteq X$, we have </p>
+<div class="equation">
+  \[  \operatorname{Cap}_{\theta }(E)\leq f\left( \operatorname{Cap}_{\theta '}(E)\right),\quad \operatorname{Cap}_{\theta '}(E)\leq g\left( \operatorname{Cap}_{\theta }(E)\right).  \]
+</div>
+</article> A more general result is proved in <span class="cite">[<a href="../../references/#RD425103F6F49">Lu21</a>]</span>. Similar comparison results hold between $\theta $-capacity and the classical Bedford–Taylor capacity, see <span class="cite">[<span class="postnote">Section 9.2</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> for the proof. As a consequence, we can freely apply the results in <span class="cite">[<span class="postnote">Section 4.2</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, even though capacity has a different meaning there. 
+
+
+<article class="env-definition" id="sgpt-A6D559E2">
+<p><a class="environment-identifier" href="../../tag/BA13EE505D9B/">Definition <span data-tag="A6D559E2">2.3.3</span>.</a><span data-gerby-tag="A6D559E2"></span> Let $U$ be an open subset of $X$. A function $f\colon U\rightarrow [-\infty ,\infty ]$ is <em>quasi-continuous</em> if it is Borel measurable and for any $\epsilon &gt;0$, there is an open subset $G\subseteq U$ such that </p>
+<ol>
+<li class="custom-item" id="sgpt-C9C4B971"><span data-gerby-tag="C9C4B971"></span><p>
+ $\operatorname{Cap}_{\theta }(G)\leq \epsilon $; 
+</p>
+</li><li class="custom-item" id="sgpt-671469BE"><span data-gerby-tag="671469BE"></span><p>
+ $f|_{U\setminus G}$ is real-valued and continuous. 
+</p>
+</li>
+</ol>
+</article> Thanks to theorem <a data-tag="731F5229" href="../../tag/C5C10F2AB708/">2.3.2</a>, the notion of quasi-continuous functions is independent of the choice of $\theta $. Note that if $f,g\colon U\rightarrow [-\infty ,\infty ]$ are two Borel measurable functions equal quasi-everywhere (see definition <a data-tag="D913BC74" href="../../tag/5458CA6608A5/">1.1.15</a>), then $f$ is quasi-continuous if and only if $g$ is. 
+
+
+<article class="env-theorem" id="sgpt-BE8E66B3">
+<p><a class="environment-identifier" href="../../tag/9F9E57CC1422/">Theorem <span data-tag="BE8E66B3">2.3.4</span>.</a><span data-gerby-tag="BE8E66B3"></span> Let $A\subseteq X$ be a Borel set. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-E78758EE"><span data-gerby-tag="E78758EE"></span><p>
+ $A$ is pluripolar; 
+</p>
+</li><li class="custom-item" id="sgpt-EEBDAC19"><span data-gerby-tag="EEBDAC19"></span><p>
+ $\operatorname{Cap}_{\theta }(A)=0$. 
+</p>
+</li>
+</ol>
+</article> See <span class="cite">[<span class="postnote">Theorem 4.40</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> for the proof. 
+
+
+<article class="env-example" id="sgpt-22E9858D">
+<p><a class="environment-identifier" href="../../tag/472C675FCEA8/">Example <span data-tag="22E9858D">2.3.5</span>.</a><span data-gerby-tag="22E9858D"></span> A quasi-plurisubharmonic function on an open subset $U\subseteq X$ is always quasi-continuous. See <span class="cite">[<span class="postnote">Theorem 4.20</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> for the proof. </p>
+<p>More generally, if $\varphi ,\psi $ are two quasi-plurisubharmonic functions on $U$, then the following function </p>
+<div class="equation">
+  \[  f(x)\coloneqq \begin{cases}  \varphi (x)-\psi (x),&amp; \textup{if }(\varphi \lor \psi )(x)\neq -\infty ;\\  \infty ,&amp; \textup{otherwise} \end{cases}  \]
+</div>
+ is quasi-continuous.<aside class="source-footnote" id="sgpt-a0000011872"><span class="footnote-label">Note.</span> In the literature, people usually say carelessly that $\varphi -\psi $ is quasi-continuous.</aside> 
+</article>
+
+
+<article class="env-definition" id="sgpt-ECF23FD9">
+<p><a class="environment-identifier" href="../../tag/F7490AE48EAC/">Definition <span data-tag="ECF23FD9">2.3.6</span>.</a><span data-gerby-tag="ECF23FD9"></span> Let $U$ be an open subset of $X$. Let $(f_ i)_{i\in I}$ be a net of Borel measurable functions $f_ i\colon U\rightarrow [-\infty ,\infty ]$, and $f\colon U\rightarrow [-\infty ,\infty ]$ be a Borel measurable function. We say $(f_ i)_{i\in I}$ converges to $f$ <em>in capacity</em> if for any $\delta &gt;0$, we have </p>
+<div class="equation">
+  \[  \lim _{i\in I} \operatorname{Cap}_{\theta }\Bigl ( \{ f_ i&gt;f+\delta \}  \Bigr )=0,\quad \lim _{i\in I} \operatorname{Cap}_{\theta }\Bigl ( \{ f_ i&lt;f-\delta \}  \Bigr )=0\footnotemark .  \]
+</div>
+ <aside class="source-footnote" id="sgpt-a0000011932"><span class="footnote-label">Note.</span> It is very tempting to write $\lim _{i\in I} \operatorname{Cap}_{\theta }\left( \{ |f_ i-f|&gt;\delta \}  \right)=0$, as in <span class="cite">[<span class="postnote">Definition 4.23</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> for example. But the set where $f_ i-f$ is not defined is not a pluripolar set in general. Hence this abuse of notation is not acceptable.</aside> We sometimes write $f_ i\xrightarrow {\mathrm{C}} f$. 
+</article> Note that $f$ is not uniquely determined by the net $(f_ i)_{i\in I}$. Thanks to theorem <a data-tag="731F5229" href="../../tag/C5C10F2AB708/">2.3.2</a>, the notion of convergence in capacity is independent of the choice of $\theta $. 
+
+
+<article class="env-proposition" id="sgpt-606EEC85">
+<p><a class="environment-identifier" href="../../tag/D56D6D4A5E94/">Proposition <span data-tag="606EEC85">2.3.7</span>.</a><span data-gerby-tag="606EEC85"></span> Let $U$ be an open subset of $X$. Let $(\varphi _ i)_{i\in I}$ be a net in $\mathrm{PSH}(U,\theta )$ and $\varphi \in \mathrm{PSH}(U,\theta )$. Assume one of the following conditions holds: </p>
+<ol>
+<li class="custom-item" id="sgpt-AB30C8B6"><span data-gerby-tag="AB30C8B6"></span><p>
+ $(\varphi _ i)_{i\in I}$ is decreasing and $\varphi $ is the limit of the net; 
+</p>
+</li><li class="custom-item" id="sgpt-F66D05D4"><span data-gerby-tag="F66D05D4"></span><p>
+ $(\varphi _ i)_{i\in I}$ is increasing and converges almost everywhere to $\varphi $. 
+</p>
+</li>
+</ol>
+<p> Then $(\varphi _ i)_{i\in I}$ converges to $\varphi $ in capacity. </p>
+</article> See <span class="cite">[<span class="postnote">Proposition 4.25</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span> for the proof. The reference concerns only the sequence case, but the proof works for nets as well. 
+
+
+<article class="env-theorem" id="sgpt-B4CE255F">
+<p><a class="environment-identifier" href="../../tag/272876B00528/">Theorem <span data-tag="B4CE255F">2.3.8</span>.</a><span data-gerby-tag="B4CE255F"></span> Let $U$ be an open subset of $X$. Let $(\chi _ i\colon U\rightarrow [0,\infty ))_ i$ be a sequence of quasi-continuous functions. Assume that the sequence is uniformly bounded and converges in capacity to $\chi \colon U\rightarrow [0,\infty )$. For each $j=1,\ldots ,p$, let $(\varphi _ j^ i)_ i$ be uniformly bounded sequences in $\mathrm{PSH}(U,\theta _ j)$ converging in capacity to bounded $\varphi _ j\in \mathrm{PSH}(U,\theta _ j)$. Then </p>
+<div class="equation">
+  \[  \chi _ i\, \bigwedge _{j=1}^ p \theta _{j,\varphi _ j^ i}\rightharpoonup \chi \, \bigwedge _{j=1}^ p \theta _{j,\varphi _ j}  \]
+</div>
+<p> weakly as currents on $U$. </p>
+</article> See <span class="cite">[<span class="postnote">Theorem 4.26</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span><aside class="source-footnote" id="sgpt-a0000012070"><span class="footnote-label">Note.</span> In the displayed formula in the statement of <span class="cite">[<span class="postnote">Theorem 4.26</span>, <a href="../../references/#RA2F733890274">GZ17</a>]</span>, $1\leq j\leq p$ should be $1\leq i\leq p$ on both sides.</aside>. 
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

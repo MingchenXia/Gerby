@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The pluripotential theory · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/toric-convex/">Chapter 18 · Toric and convex geometry</a> · Tag <code>E0A57B09F819</code></p><h1>The pluripotential theory</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 12.3 The pluripotential theory <span data-gerby-tag="9E2DD426"></span></div>
+<p>
+ We continue to use the notations in section <a data-tag="BBB50B1C" href="../../tag/E05D6993D0C8/">12.1</a>. 
+</p>
+
+<article class="env-theorem" id="sgpt-6CB21714">
+<a class="environment-identifier" href="../../tag/46AFD20390FF/">Theorem <span data-tag="6CB21714">12.3.1</span>.</a><span data-gerby-tag="6CB21714"></span> There are canonical bijections<aside class="source-footnote" id="sgpt-a0000102305"><span class="footnote-label">Note.</span> In the earlier version of this book, I required additional conditions in <a data-tag="C564417E" href="../../tag/46AFD20390FF/#sgpt-C564417E">2</a> and <a data-tag="2B16692C" href="../../tag/46AFD20390FF/#sgpt-2B16692C">3</a>, namely $F\preceq F_{V_{\theta }}$ and $G\succeq G_{V_{\theta }}$ respectively. These conditions can be removed, since $G_{V_{\theta }}$ is always bounded, as suggested by Robert Berman. See theorem <a data-tag="7CCE1B26" href="../../tag/1293B87EF09F/">12.2.12</a>.</aside> between the following sets: 
+<ol>
+<li class="custom-item" id="sgpt-0A4396C3"><span data-gerby-tag="0A4396C3"></span><p>
+ The set of $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$; 
+</p>
+</li><li class="custom-item" id="sgpt-C564417E"><span data-gerby-tag="C564417E"></span><p>
+ the set of $F\in \mathcal{P}(N_{\mathbb {R}},P_ D)$, and 
+</p>
+</li><li class="custom-item" id="sgpt-2B16692C"><span data-gerby-tag="2B16692C"></span><p>
+ the set of closed proper convex functions $G\in \mathrm{Conv}(M_{\mathbb {R}})$ satisfying 
+</p>
+<div class="equation">
+  \[  G|_{M_{\mathbb {R}}\setminus P_ D}\equiv \infty .  \]
+</div>
+</li>
+</ol>
+</article> The set $\mathcal{P}(N_{\mathbb {R}},P_ D)$ is defined in definition <a data-tag="23A0B6A4" href="../../tag/2AEBD4E3830A/">A.3.1</a>. As before, we write $F_{\varphi }$, $G_{\varphi }$ for the functions determined by this construction. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The proof is similar to that of theorem <a data-tag="E09727EF" href="../../tag/8B5B73657BF7/">5.2.3</a>, but due to its importance, we give the details. Again, the correspondence between <a data-tag="C564417E" href="../../tag/46AFD20390FF/#sgpt-C564417E">2</a> and <a data-tag="2B16692C" href="../../tag/46AFD20390FF/#sgpt-2B16692C">3</a> follows easily from proposition <a data-tag="B696EB2E" href="../../tag/6FCC352452C3/">A.2.12</a>. 
+    <p>
+      Given $\varphi $, we can construct $F_{\varphi }$ in <a data-tag="C564417E" href="../../tag/46AFD20390FF/#sgpt-C564417E">2</a> as explained earlier in (<a data-tag="30FEA65B" href="../../tag/E09FCEF2675C/">12.23</a>). Conversely, suppose that $F\in \mathcal{P}(N_{\mathbb {R}},P_ D)$, then $F\preceq F_{V_{\theta }}$ by theorem <a data-tag="7CCE1B26" href="../../tag/1293B87EF09F/">12.2.12</a>. Then 
+    
+<div class="equation">
+  \[  \operatorname{Trop}^*\left(F-F_{\theta }\right)\in \mathrm{PSH}\left(T(\mathbb {C}),\theta |_{T(\mathbb {C})}\right)  \]
+</div>
+<p>
+       by <a data-tag="E83EC1C9" href="../../tag/1F4ACCC03A78/">5.2.1</a>. Since $F\preceq F_{V_{\theta }}$, we see that $\operatorname{Trop}^*(F-F_{\theta })$ is bounded from above. It follows that Grauert–Remmert's extension theorem theorem <a data-tag="1E88697D" href="../../tag/DAE812E1A818/">1.2.9</a> is applicable, and this function extends to a unique $\theta $-psh function $\varphi $. The uniqueness of the extension guarantees that $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$. 
+    <p>
+      The two maps are inverse to each other by construction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+ We fix a model potential $\phi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )_{&gt;0}$ with Newton body $\Delta (\theta ,\phi )$. 
+</p>
+
+A similar argument guarantees the following: <article class="env-corollary" id="sgpt-9BA8BCBA">
+<p><a class="environment-identifier" href="../../tag/1D4A688AAB93/">Corollary <span data-tag="9BA8BCBA">12.3.2</span>.</a><span data-gerby-tag="9BA8BCBA"></span> There is a canonical bijection between the following sets: </p>
+<ol>
+<li class="custom-item" id="sgpt-F4F5EC17"><span data-gerby-tag="F4F5EC17"></span><p>
+ The set of $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta ;\phi )$, 
+</p>
+</li><li class="custom-item" id="sgpt-C80156AC"><span data-gerby-tag="C80156AC"></span><p>
+ the set of $F\in \mathcal{P}(N_{\mathbb {R}},\Delta (\theta ,\phi ))$, and 
+</p>
+</li><li class="custom-item" id="sgpt-A4019FDE"><span data-gerby-tag="A4019FDE"></span><p>
+ the set of closed proper convex functions $G\in \mathrm{Conv}(M_{\mathbb {R}})$ satisfying 
+</p>
+<div class="equation">
+  \[  G|_{M_{\mathbb {R}}\setminus \Delta (\theta ,\phi )}=\infty .  \]
+</div>
+</li>
+</ol>
+<p> Moreover, under these correspondences, we have the following bijections: </p>
+<ol>
+<li class="custom-item" id="sgpt-AE5E363F"><span data-gerby-tag="AE5E363F"></span><p>
+ The set $\mathcal{E}_{\mathrm{tor}}(X,\theta ;\phi )$, 
+</p>
+</li><li class="custom-item" id="sgpt-762CDDF3"><span data-gerby-tag="762CDDF3"></span><p>
+ the set of $F\in \mathcal{E}(N_{\mathbb {R}},\Delta (\theta ,\phi ))$, and 
+</p>
+</li><li class="custom-item" id="sgpt-AF66298E"><span data-gerby-tag="AF66298E"></span><p>
+ the set of closed proper convex functions $G\in \mathrm{Conv}(M_{\mathbb {R}})$ satisfying 
+</p>
+<div class="equation">
+  \[  \overline{\operatorname{Int}\{ G&lt;\infty \} }=\Delta (\theta ,\phi ).  \]
+</div>
+</li>
+</ol>
+</article> Here the notations are defined as follows: 
+
+<div class="equation">
+  \[  \begin{aligned}  \mathrm{PSH}_{\mathrm{tor}}(X,\theta ;\phi )\coloneqq &amp;  \{  \varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta ):\varphi \preceq \phi \} ,\\  \mathcal{E}_{\mathrm{tor}}(X,\theta ;\phi )\coloneqq &amp;  \mathcal{E}(X,\theta ;\phi )\cap \mathrm{PSH}_{\mathrm{tor}}(X,\theta ). \end{aligned}  \]
+</div>
+<p>
+The proofs of the following results are similar to the ample case studied in chapter <a data-tag="15D92879" href="../../tag/6F5A4A494129/">5</a>. We omit the details. 
+</p>
+
+<article class="env-proposition" id="sgpt-53CD2D0D">
+<p><a class="environment-identifier" href="../../tag/4E754992D548/">Proposition <span data-tag="53CD2D0D">12.3.3</span>.</a><span data-gerby-tag="53CD2D0D"></span> Given $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ and $C\in \mathbb {R}$. We have </p>
+<div class="equation">
+  \[  F_{\varphi +C}=F_{\varphi }+C,\quad G_{\varphi +C}=G_{\varphi }-C.  \]
+</div>
+</article>
+
+
+<article class="env-proposition" id="sgpt-D30A8A55">
+<p><a class="environment-identifier" href="../../tag/A0B71330F2E6/">Proposition <span data-tag="D30A8A55">12.3.4</span>.</a><span data-gerby-tag="D30A8A55"></span> Given $\varphi ,\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$, assume that $\varphi \land \psi \not\equiv -\infty $, then $\varphi \land \psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ and </p>
+<div class="equation">
+  \[  F_{\varphi \land \psi }=F_{\varphi }\land F_{\psi },\quad G_{\varphi \land \psi }=G_{\varphi }\lor G_{\psi }.  \]
+</div>
+</article> <article class="env-proposition" id="sgpt-165E70B8">
+<p><a class="environment-identifier" href="../../tag/BC781EB76285/">Proposition <span data-tag="165E70B8">12.3.5</span>.</a><span data-gerby-tag="165E70B8"></span> Let $(\varphi _ i)_{i\in I}$ be a family in $\mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ uniformly bounded from above. Then $\operatorname *{sup}_{i\in I}{}\! {}^{*} \varphi _ i\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ and </p>
+<div class="equation">
+  \[  F_{\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ i}=\bigvee _{i\in I}F_{\varphi _ i},\quad G_{\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ i}=\operatorname{cl}\bigwedge _{i\in I} G_{\varphi _ i}.  \]
+</div>
+<p> Moreover, if $I$ is finite, then </p>
+<div class="equation">
+  \[  G_{\bigvee _{i\in I}\varphi _ i}=\bigwedge _{i\in I} G_{\varphi _ i}.  \]
+</div>
+<p>Similarly, if $\{ \varphi _ i\} _{i\in I}$ is a decreasing net in $\mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ such that $\inf _{i\in I}\varphi _ i\not\equiv -\infty $, then $\inf _{i\in I}\varphi _ i\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ and </p>
+<div class="equation">
+  \[  F_{\inf _{i\in I}\varphi _ i}=\bigwedge _{i\in I}F_{\varphi _ i},\quad G_{\inf _{i\in I}\varphi _ i}=\bigvee _{i\in I}G_{\varphi _ i}.  \]
+</div>
+</article>
+
+
+<article class="env-proposition" id="sgpt-4DC00A10">
+<p><a class="environment-identifier" href="../../tag/0728D8B152D3/">Proposition <span data-tag="4DC00A10">12.3.6</span>.</a><span data-gerby-tag="4DC00A10"></span> Let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$. Then $P_{\theta }[\varphi ]\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ and </p>
+<div class="equation" id="sgpt-31D73D86"><span data-gerby-tag="31D73D86"></span>
+<span class="equation-label"><a data-tag="31D73D86" href="../../tag/D5353E18A697/">12.44</a></span>
+<div>\begin{equation} \label{eq:toricPenvbig} G_{P_{\theta }[\varphi ]}(x)= \begin{cases}  G_{V_{\theta }}(x),&amp; \textup{if } x\in \Delta (\theta ,\varphi );\\  \infty ,&amp; \textup{otherwise}. \end{cases} \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By (<a data-tag="AD69C4D8" href="../../tag/FA68BB354359/">3.4</a>), 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]=\operatorname *{sup}_{C\in \mathbb {R}}{}\! {}^{*}\bigl ((\varphi +C)\land V_{\theta }\bigr ).  \]
+</div>
+<p>
+       Hence $P_{\theta }[\varphi ]\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ by proposition <a data-tag="53CD2D0D" href="../../tag/4E754992D548/">12.3.3</a>, proposition <a data-tag="D30A8A55" href="../../tag/A0B71330F2E6/">12.3.4</a>, proposition <a data-tag="165E70B8" href="../../tag/BC781EB76285/">12.3.5</a>. The same results give 
+    
+<div class="equation">
+  \[  G_{P_{\theta }[\varphi ]}=\operatorname{cl}\inf _{C\in \mathbb {R}}\left(G_{V_{\theta }}\lor (G_{\varphi }-C)\right).  \]
+</div>
+<p>
+       Put 
+    
+<div class="equation">
+  \[  K=\inf _{C\in \mathbb {R}}\left(G_{V_{\theta }}\lor (G_{\varphi }-C)\right).  \]
+</div>
+<p>
+       If $x\in \operatorname{Dom}G_{\varphi }$, then $G_{\varphi }(x)-C\leq G_{V_{\theta }}(x)$ for all large enough $C$, so $K(x)=G_{V_{\theta }}(x)$. If $x\notin \operatorname{Dom}G_{\varphi }$, then $K(x)=\infty $. By proposition <a data-tag="DAE71CEF" href="../../tag/8B18F2B2DE3B/">A.2.9</a>, we have $\Delta (\theta ,\varphi )=\overline{\operatorname{Dom}G_{\varphi }}$. Moreover, theorem <a data-tag="7CCE1B26" href="../../tag/1293B87EF09F/">12.2.12</a> gives $F_{V_{\theta }}\sim \operatorname{Supp}_{P_ D}$, hence $G_{V_{\theta }}\sim \chi _{P_ D}$ by Legendre duality. In particular, $G_{V_{\theta }}$ is finite and continuous on $P_ D$. Thus the lower semicontinuous regularization of $K$ is equal to $G_{V_{\theta }}$ on $\Delta (\theta ,\varphi )$ and equal to $\infty $ outside $\Delta (\theta ,\varphi )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+ As a consequence, we have <article class="env-corollary" id="sgpt-74197723">
+<p><a class="environment-identifier" href="../../tag/396E3B9D09BD/">Corollary <span data-tag="74197723">12.3.7</span>.</a><span data-gerby-tag="74197723"></span> Let $\varphi ,\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-4B931489"><span data-gerby-tag="4B931489"></span><p>
+ $\varphi \preceq _ P \psi $; 
+</p>
+</li><li class="custom-item" id="sgpt-1DEFBBDA"><span data-gerby-tag="1DEFBBDA"></span><p>
+ $\varphi \preceq _{\mathcal{I}} \psi $; 
+</p>
+</li><li class="custom-item" id="sgpt-3578BED9"><span data-gerby-tag="3578BED9"></span><p>
+ $\Delta (\theta ,\varphi )\subseteq \Delta (\theta ,\psi )$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<a data-tag="4B931489" href="../../tag/396E3B9D09BD/#sgpt-4B931489">1</a> $\iff $ <a data-tag="1DEFBBDA" href="../../tag/396E3B9D09BD/#sgpt-1DEFBBDA">2</a>. This follows from the $\mathcal{I}$-goodness of $\varphi $ and $\psi $, see example <a data-tag="1D496DC8" href="../../tag/35A211AC3973/">7.4.5</a>. 
+    <p>
+<a data-tag="4B931489" href="../../tag/396E3B9D09BD/#sgpt-4B931489">1</a> $\iff $ <a data-tag="3578BED9" href="../../tag/396E3B9D09BD/#sgpt-3578BED9">3</a>. When $\varphi ,\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )_{&gt;0}$, this follows from proposition <a data-tag="4DC00A10" href="../../tag/0728D8B152D3/">12.3.6</a>. 
+    <p>
+      In general, fix an ample toric-invariant divisor $H$ on $X$ and a toric-invariant Hermitian metric $h_ H$ on $\mathcal{O}_ X(H)$ such that $\omega _ H\coloneqq \mathrm{dd}^{\mathrm{c}}h_ H$ is a Kähler form. We perturb $L$ to $L+m^{-1}H$ for $m\in \mathbb {Z}_{&gt;0}$, then thanks to <a data-tag="1BEE3F37" href="../../tag/53E69530968E/">A.3.7</a>, we find that 
+    
+<div class="equation">
+  \[  \Delta (\theta +m^{-1}\omega _ H,\varphi )\coloneqq m^{-1}\Delta (m\theta +\omega _ H,m\varphi )=\Delta (\theta ,\varphi )+m^{-1}\Delta \left(\mathcal{O}_ X(H)\right).  \]
+</div>
+<p>
+       Then since $\varphi ,\psi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta +m^{-1}\omega _ H)_{&gt;0}$, we know that $\varphi \preceq _ P \psi $ if and only if 
+    
+<div class="equation">
+  \[  \Delta (\theta ,\varphi )+m^{-1}\Delta \left(\mathcal{O}_ X(H)\right)\subseteq \Delta (\theta ,\psi )+m^{-1}\Delta \left(\mathcal{O}_ X(H)\right)  \]
+</div>
+<p>
+       for any $m\in \mathbb {Z}_{&gt;0}$. The latter condition is equivalent to $\Delta (\theta ,\varphi )\subseteq \Delta (\theta ,\psi )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-A24807DB">
+<p><a class="environment-identifier" href="../../tag/E1B465B480AB/">Corollary <span data-tag="A24807DB">12.3.8</span>.</a><span data-gerby-tag="A24807DB"></span> There is a canonical bijection </p>
+<div class="equation">
+  \[  \mathrm{PSH}_{\mathrm{tor}}(X,\theta )/\sim _{P}=\mathrm{PSH}_{\mathrm{tor}}(X,\theta )/\sim _{\mathcal{I}}\rightarrow \left\{ K\in \mathcal{K}_ n: K \subseteq P_ D \right\} .  \]
+</div>
+<p> Here $\mathcal{K}_ n$ denotes the set of convex bodies in $\mathbb {R}^ n$, as in section <a data-tag="D6211C89" href="../../tag/A0D1AD337F41/">C.1</a>. </p>
+</article> More precisely, given $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$, the corresponding convex body is $\Delta (\theta ,\varphi )$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Thanks to corollary <a data-tag="74197723" href="../../tag/396E3B9D09BD/">12.3.7</a>, we have the equality 
+    
+<div class="equation">
+  \[  \mathrm{PSH}_{\mathrm{tor}}(X,\theta )/\sim _{P}=\mathrm{PSH}_{\mathrm{tor}}(X,\theta )/\sim _{\mathcal{I}},  \]
+</div>
+<p>
+       and the map 
+    
+<div class="equation">
+  \[  \mathrm{PSH}_{\mathrm{tor}}(X,\theta )/\sim _{\mathcal{I}}\rightarrow \left\{ K\in \mathcal{K}_ n: K \subseteq P_ D \right\}   \]
+</div>
+<p>
+       is well-defined and injective. 
+    <p>
+      In order to see the surjectivity, take $K\in \mathcal{K}_ n$, $K\subseteq P_ D$. Let $\chi _ K$ be the characteristic function of $K$ as defined in example <a data-tag="D85BD88C" href="../../tag/1532A37DD27F/">A.1.4</a>. Since $\chi _ K$ satisfies Condition <a data-tag="2B16692C" href="../../tag/46AFD20390FF/#sgpt-2B16692C">3</a> of theorem <a data-tag="6CB21714" href="../../tag/46AFD20390FF/">12.3.1</a>, we can find $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ so that $\chi _ K=G_{\varphi }$. Then $\Delta (\theta ,\varphi )=K$ due to proposition <a data-tag="DAE71CEF" href="../../tag/8B18F2B2DE3B/">A.2.9</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+Next we handle subgeodesics. <article class="env-proposition" id="sgpt-C9824A08">
+<p><a class="environment-identifier" href="../../tag/D5C47A3AE82D/">Proposition <span data-tag="C9824A08">12.3.9</span>.</a><span data-gerby-tag="C9824A08"></span> Let $\varphi _0,\varphi _1\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$. There is a canonical bijection between the following sets: </p>
+<ol>
+<li class="custom-item" id="sgpt-A135F99D"><span data-gerby-tag="A135F99D"></span><p>
+ The set of $T_ c$-invariant subgeodesics from $\varphi _0$ to $\varphi _1$; 
+</p>
+</li><li class="custom-item" id="sgpt-A558B746"><span data-gerby-tag="A558B746"></span><p>
+ the set of convex functions $F\colon N_{\mathbb {R}}\times (0,1)\rightarrow \mathbb {R}$ such that for each $r\in (0,1)$, the function 
+</p>
+<div class="equation" id="sgpt-230BDDEE"><span data-gerby-tag="230BDDEE"></span>
+<span class="equation-label"><a data-tag="230BDDEE" href="../../tag/F494EF2554FB/">12.47</a></span>
+<div>\begin{equation} \label{eq:Ftdefsubgeo} F_ r\colon N_{\mathbb {R}}\rightarrow \mathbb {R},\quad n\mapsto F(n,r) \end{equation}</div>
+</div>
+<p>
+ satisfies $F_ r\to F_{\varphi _1}$ (resp. $F_ r\to F_{\varphi _0}$) everywhere as $r\to 1-$ (resp. $r\to 0+$). 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We begin with a subgeodesic $(\varphi _ t)_{t\in (0,1)}$ from $\varphi _0$ to $\varphi _1$. Then we define $F\colon N_{\mathbb {R}}\times (0,1)\rightarrow \mathbb {R}$ as follows: 
+    
+<div class="equation">
+  \[  F(n,t)=F_{\varphi _ t}(n).  \]
+</div>
+<p>
+       Define $F_ t$ as in (<a data-tag="230BDDEE" href="../../tag/F494EF2554FB/">12.47</a>), we have 
+    
+<div class="equation">
+  \[  \operatorname{Trop}^* F_ t-\operatorname{Trop}^* F_{\theta }=\varphi _ t,\quad t\in (0,1).  \]
+</div>
+<p>
+       Let $t_ j\to 0+$. Since $\varphi _{t_ j}\to \varphi _0$ in $L^1$, after passing to a subsequence we have almost-everywhere convergence on $X$. Restricted to the open torus and using the tropical coordinates, this gives $F_{t_ j}\to F_{\varphi _0}$ almost everywhere on $N_{\mathbb R}$. Since the $F_{t_ j}$'s are convex and locally uniformly bounded above, theorem <a data-tag="6187F82A" href="../../tag/A7E9B5A114CA/">A.1.18</a> upgrades this to pointwise convergence everywhere. As the limit is independent of the subsequence, $F_ t\to F_{\varphi _0}$ everywhere as $t\to 0+$. Similarly, $F_ t\to F_{\varphi _1}$ everywhere as $t\to 1-$. 
+    <p>
+      Next we show that $F$ is convex. Let $p_1\colon X\times S\rightarrow X$ be the projection, where 
+    
+<div class="equation">
+  \[  S\coloneqq \{ z\in \mathbb {C}: \mathrm{e}^{-1}&lt;|z|^2&lt;1\} .  \]
+</div>
+<p>
+       Since $(\varphi _ t)_{t\in (0,1)}$ is a subgeodesic, its complexification $\Phi $ is $p_1^*\theta $-psh. Recall that $\Phi $ is defined as 
+    
+<div class="equation" id="sgpt-57F75CD8"><span data-gerby-tag="57F75CD8"></span>
+<span class="equation-label"><a data-tag="57F75CD8" href="../../tag/71DDC2004810/">12.48</a></span>
+<div>\begin{equation} \label{eq:Phixz} \Phi (x,z)=\operatorname{Trop}^*\left( F_{-\log |z|^2}-F_{\theta } \right)(x). \end{equation}</div>
+</div>
+<p>
+       In particular, $\Psi \colon T(\mathbb {C})\times S\rightarrow \mathbb {R}$ defined by 
+    
+<div class="equation">
+  \[  \Psi (x,z)\coloneqq \Phi (x,z)+\operatorname{Trop}^*F_{\theta }(x)=\operatorname{Trop}^*F_{-\log |z|^2}(x)  \]
+</div>
+<p>
+       is plurisubharmonic and $T_ c\times S^1$-invariant. Fix a small enough $\epsilon &gt;0$. We can find a decreasing sequence of $T_ c\times S^1$-invariant plurisubharmonic functions $\Psi _ i$ on $T(\mathbb {C})\times S_{\epsilon }$ converging to $\Psi $ everywhere, where 
+    
+<div class="equation">
+  \[  S_{\epsilon }\coloneqq \{ z\in \mathbb {C}: \mathrm{e}^{-1+\epsilon }&lt;|z|^2&lt;\mathrm{e}^{-\epsilon }\} .  \]
+</div>
+<p>
+       Let us write 
+    
+<div class="equation">
+  \[  \Psi _ i(x,z)=\operatorname{Trop}^*F_{i,-\log |z|^2}(x)  \]
+</div>
+<p>
+       for some $F_ i\colon N_{\mathbb {R}}\times (\epsilon ,1-\epsilon )\rightarrow \mathbb {R}$. 
+    <p>
+      The same computation as in <a data-tag="E83EC1C9" href="../../tag/1F4ACCC03A78/">5.2.1</a> shows that $F_ i$ is convex. It follows that $F$, as the decreasing limit of $F_ i$, is also convex on $N_{\mathbb {R}}\times (\epsilon ,1-\epsilon )$. Since $\epsilon &gt;0$ is arbitrary, we conclude that $F$ is convex on $N_{\mathbb {R}}\times (0,1)$. 
+    <p>
+      Conversely, suppose that we are given $F$ in <a data-tag="A558B746" href="../../tag/D5C47A3AE82D/#sgpt-A558B746">2</a>. We define $\Phi \colon T(\mathbb {C})\times S\rightarrow \mathbb {R}$ using (<a data-tag="57F75CD8" href="../../tag/71DDC2004810/">12.48</a>). The arguments in the previous part can be reversed to show that $\Phi $ is $p_1^*\theta |_{T(\mathbb {C})\times S}$-psh. 
+    <p>
+      By our assumption, for each $t\in (0,1)$, we have 
+    
+<div class="equation" id="sgpt-38C63237"><span data-gerby-tag="38C63237"></span>
+<span class="equation-label"><a data-tag="38C63237" href="../../tag/204454C17F1D/">12.49</a></span>
+<div>\begin{equation} \label{eq:Ftupptemp1} F_ t\leq tF_{\varphi _1}+(1-t)F_{\varphi _0}\leq F_{V_{\theta }}+C \end{equation}</div>
+</div>
+<p>
+       for some constant $C\in \mathbb {R}$ independent of the choice of $t$. Therefore, $\Phi $ is bounded from above and hence, by theorem <a data-tag="1E88697D" href="../../tag/DAE812E1A818/">1.2.9</a>, admits a unique $p_1^*\theta $-psh extension to $X\times S$, which we still denote by $\Phi $. We let 
+    
+<div class="equation">
+  \[  \varphi _ t(x)=\Phi (x,\mathrm{e}^{-t/2})  \]
+</div>
+<p>
+       for all $t\in (0,1)$ and $x\in X$. We claim that $(\varphi _ t)$ is a subgeodesic from $\varphi _0$ to $\varphi _1$. 
+    <p>
+      For this purpose, we only need to show that $(\varphi _ t)_{t\in (0,1)}$ has the correct boundary value. But from our assumption in <a data-tag="A558B746" href="../../tag/D5C47A3AE82D/#sgpt-A558B746">2</a>, we know that as $t\to 0+$ (resp. $t\to 1-$), $\varphi _ t\to \varphi _0$ (resp. $\varphi _ t\to \varphi _1$) almost everywhere. In particular, $\sup _ X \varphi _ t\geq -C'$ for some large constant $C'&gt;0$ independent of $t\in (0,1)$. Therefore, together with (<a data-tag="38C63237" href="../../tag/204454C17F1D/">12.49</a>), we deduce from proposition <a data-tag="050755D1" href="../../tag/EC4B3805B84D/">1.5.4</a> that $\{ \varphi _ t\} _{t\in (0,1)}$ is a relatively compact family with respect to the $L^1$-topology. We need to show that each cluster point $\psi $ as $t\to 0+$ is equal to $\varphi _0$. But we already know that $\psi =\varphi _0$ almost everywhere. Hence we deduce $\psi =\varphi _0$ from proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. As $t\to 0+$, we have $\varphi _ t\xrightarrow {L^1}\varphi _0$. Similarly, as $t\to 1-$, we have $\varphi _ t\xrightarrow {L^1}\varphi _1$. 
+    <p>
+      The two constructions are inverse to each other by construction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-7412780A">
+<p><a class="environment-identifier" href="../../tag/03A225BFC03C/">Corollary <span data-tag="7412780A">12.3.10</span>.</a><span data-gerby-tag="7412780A"></span> Let $\varphi _0,\varphi _1\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$. Then there is a canonical bijection between the following sets: </p>
+<ol>
+<li class="custom-item" id="sgpt-C8F7D352"><span data-gerby-tag="C8F7D352"></span><p>
+ The set of $T_ c$-invariant subgeodesics from $\psi _0$ to $\psi _1$, where $\psi _0,\psi _1\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ and $\psi _0\leq \varphi _0$, $\psi _1\leq \varphi _1$; 
+</p>
+</li><li class="custom-item" id="sgpt-8DCD367C"><span data-gerby-tag="8DCD367C"></span><p>
+ the set of closed proper convex functions $\Psi $ on $M_{\mathbb {R}}\times \mathbb {R}$ such that there is a closed proper convex function $G\in \mathrm{Conv}(M_{\mathbb {R}})$ satisfying 
+</p>
+<div class="equation" id="sgpt-590DF8B5"><span data-gerby-tag="590DF8B5"></span>
+<span class="equation-label"><a data-tag="590DF8B5" href="../../tag/D3A1BA3F5322/">12.50</a></span>
+<div>\begin{equation} \label{eq:Psilower} G(m)+(s\lor 0)\geq \Psi (m,s)\geq G_{\varphi _0}(m)\lor \left( G_{\varphi _1}(m)+s \right) \end{equation}</div>
+</div>
+<p>
+ for all $m\in M_{\mathbb {R}}$ and $s\in \mathbb {R}$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let us begin with a subgeodesic $(\psi _ t)_{t\in (0,1)}$ as in <a data-tag="C8F7D352" href="../../tag/03A225BFC03C/#sgpt-C8F7D352">1</a>. Let $F$ be the convex function as in proposition <a data-tag="C9824A08" href="../../tag/D5C47A3AE82D/">12.3.9</a>. We extend $F$ to a function $F\colon N_{\mathbb {R}}\times \mathbb {R}\rightarrow \mathbb {R}$ as follows: For any $n\in N_{\mathbb {R}}$, we define 
+    
+<div class="equation">
+  \[  F(n,t)=\begin{cases}  F_{\psi _ t}(n),&amp; \textup{if }0&lt;t&lt;1,\\  F_{\psi _0}(n),&amp;  \textup{if }t=0,\\  F_{\psi _1}(n),&amp; \textup{if }t=1,\\  \infty ,&amp; \textup{if } t&gt;1 \textup{ or }t&lt;0. \end{cases}  \]
+</div>
+<p>
+       Then $F$ is a proper closed convex function on $N_{\mathbb {R}}\times \mathbb {R}$. Let $\Psi $ be the Legendre transform of $F$. Then $\Psi $ is a proper closed convex function on $M_{\mathbb {R}}\times \mathbb {R}$ by theorem <a data-tag="1A7E065D" href="../../tag/258227E5D497/">A.2.2</a>. By (<a data-tag="E288ED21" href="../../tag/E1AD8A1437E2/">A.6</a>), for any $m\in M_{\mathbb {R}}$ and $s\in \mathbb {R}$, we have 
+    
+<div class="equation">
+  \[  \begin{aligned}  \Psi (m,s)=&amp; \sup _{n\in N_{\mathbb {R}},t\in [0,1]} \left( \langle m,n\rangle + ts-F(n,t)\right)\\  =&amp;  \sup _{t\in [0,1]} \left( ts+F_ t^*(m) \right). \end{aligned}  \]
+</div>
+<p>
+       Therefore, the latter half of (<a data-tag="590DF8B5" href="../../tag/D3A1BA3F5322/">12.50</a>) follows. Next recall that 
+    
+<div class="equation">
+  \[  \eta \coloneqq \inf _{t\in (0,1)}\psi _ t\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta ),  \]
+</div>
+<p>
+       as follows from proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>. Therefore, 
+    
+<div class="equation">
+  \[  \begin{aligned}  \Psi (m,s)=&amp; \sup _{n\in N_{\mathbb {R}},t\in [0,1]} \left( \langle m,n\rangle + ts-F(n,t)\right)\\  \leq &amp;  \sup _{n\in N_{\mathbb {R}},t\in [0,1]} \left( \langle m,n\rangle + ts-F_{\eta }(n)\right)\\  =&amp;  \sup _{t\in [0,1]}ts+G_{\eta }(m)\\  =&amp;  (s\lor 0)+G_{\eta }(m). \end{aligned}  \]
+</div>
+<p>
+      Conversely, let us begin with a function $\Psi $ as in <a data-tag="8DCD367C" href="../../tag/03A225BFC03C/#sgpt-8DCD367C">2</a>. Let $F$ be the Legendre transform of $\Psi $. We first observe that $F(n,t)=\infty $ for all $n\in N_{\mathbb {R}}$ and $t\not\in [0,1]$. Indeed, the upper bound $\Psi \leq G+(s\lor 0)$ gives 
+    
+<div class="equation">
+  \[  F(n,t)\geq G^*(n)+\sup _{s\in \mathbb {R}}\left(ts-(s\lor 0)\right),  \]
+</div>
+<p>
+       and the last supremum is infinite exactly when $t\notin [0,1]$. 
+    <p>
+      For $t\in [0,1]$, the lower bound $\Psi \geq G_{\varphi _0}\lor (G_{\varphi _1}+s)$ implies 
+    
+<div class="equation">
+  \[  \Psi (m,s)\geq (1-t)G_{\varphi _0}(m)+tG_{\varphi _1}(m)+ts.  \]
+</div>
+<p>
+       Consequently, 
+    
+<div class="equation">
+  \[  F(n,t)\leq \left((1-t)G_{\varphi _0}+tG_{\varphi _1}\right)^*(n) \leq (1-t)F_{\varphi _0}(n)+tF_{\varphi _1}(n)  \]
+</div>
+<p>
+       for all $t\in [0,1]$ and $n\in N_{\mathbb {R}}$. On the other hand, the upper bound $\Psi \leq G+(s\lor 0)$ gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  F(n,t)=&amp; \sup _{m\in M_{\mathbb {R}},s\in \mathbb {R}} \left(\langle m,n\rangle +ts-\Psi (m,s)\right)\\  \geq &amp;  \sup _{m\in M_{\mathbb {R}},s\in \mathbb {R}} \left(\langle m,n\rangle +ts-G(m)-(s\lor 0)\right)\\  =&amp;  G^*(n)+\sup _{s\in \mathbb {R}} \left( ts-(s\lor 0)\right)\\  =&amp; \begin{cases}  G^*(n),&amp; \text{if }t\in [0,1],\\  \infty ,&amp; \text{otherwise}. \end{cases}\end{aligned}  \]
+</div>
+<p>
+       The convexity of $F$ gives one-sided boundary limits 
+    
+<div class="equation">
+  \[  F_0(n)\coloneqq \lim _{t\to 0+}F(n,t),\quad F_1(n)\coloneqq \lim _{t\to 1-}F(n,t).  \]
+</div>
+<p>
+       The estimates above give $F_0\leq F_{\varphi _0}$ and $F_1\leq F_{\varphi _1}$, and also show that $F_0,F_1\in \mathcal{P}(N_{\mathbb {R}},P_ D)$. Let $\psi _0,\psi _1\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ be the corresponding potentials given by theorem <a data-tag="6CB21714" href="../../tag/46AFD20390FF/">12.3.1</a>. Then $\psi _0\leq \varphi _0$ and $\psi _1\leq \varphi _1$. Applying proposition <a data-tag="C9824A08" href="../../tag/D5C47A3AE82D/">12.3.9</a> to the restriction of $F$ to $N_{\mathbb {R}}\times (0,1)$, we get a subgeodesic $(\psi _ t)_{t\in (0,1)}$ from $\psi _0$ to $\psi _1$. Thus $(\psi _ t)_{t\in (0,1)}$ satisfies <a data-tag="C8F7D352" href="../../tag/03A225BFC03C/#sgpt-C8F7D352">1</a>. The two operations are inverse to each other by construction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+As an immediate corollary, <article class="env-corollary" id="sgpt-AAD391B4">
+<p><a class="environment-identifier" href="../../tag/551D529C92A2/">Corollary <span data-tag="AAD391B4">12.3.11</span>.</a><span data-gerby-tag="AAD391B4"></span> Let $\varphi _0,\varphi _1\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )\cap \mathrm{PSH}(X,\theta )_{&gt;0}$. Then the following are equivalent: </p>
+<ol>
+<li class="custom-item" id="sgpt-2C703810"><span data-gerby-tag="2C703810"></span><p>
+ $\varphi _0\sim _ P \varphi _1$; 
+</p>
+</li><li class="custom-item" id="sgpt-A2D8030C"><span data-gerby-tag="A2D8030C"></span><p>
+ there is a subgeodesic from $\varphi _0$ to $\varphi _1$. 
+</p>
+</li>
+</ol>
+<p> If these conditions are satisfied, let $(\varphi _ t)_{t\in (0,1)}$ be the geodesic from $\varphi _0$ to $\varphi _1$. Then $\varphi _ t\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ for all $t\in (0,1)$ and </p>
+<div class="equation" id="sgpt-576062A6"><span data-gerby-tag="576062A6"></span>
+<span class="equation-label"><a data-tag="576062A6" href="../../tag/8A0A9FDE2DF5/">12.67</a></span>
+<div>\begin{equation} \label{eq:Glinear} G_{\varphi _ t}=(1-t)G_{\varphi _0}+tG_{\varphi _1}. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The equivalence between <a data-tag="2C703810" href="../../tag/551D529C92A2/#sgpt-2C703810">1</a> and <a data-tag="A2D8030C" href="../../tag/551D529C92A2/#sgpt-A2D8030C">2</a> follows from a general fact theorem <a data-tag="D01C6A5E" href="../../tag/1CA975F04423/">6.1.23</a>. In the toric case, <a data-tag="A2D8030C" href="../../tag/551D529C92A2/#sgpt-A2D8030C">2</a> $\implies $ <a data-tag="2C703810" href="../../tag/551D529C92A2/#sgpt-2C703810">1</a> can also be argued more directly. 
+    <p>
+      Assume that these conditions are satisfied. Let $(\varphi _ t)_{t\in (0,1)}$ be the geodesic from $\varphi _0$ to $\varphi _1$. Since the geodesic is the upper envelope of toric subgeodesics, $\varphi _ t\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$ for all $t\in (0,1)$. Let $\Psi '$ be the proper convex function on $M_{\mathbb {R}}\times \mathbb {R}$ defined by corollary <a data-tag="7412780A" href="../../tag/03A225BFC03C/">12.3.10</a>. Then $\Psi '$ is the minimum of all $\Psi $ satisfying (<a data-tag="590DF8B5" href="../../tag/D3A1BA3F5322/">12.50</a>). We claim that 
+    
+<div class="equation" id="sgpt-54C52A85"><span data-gerby-tag="54C52A85"></span>
+<span class="equation-label"><a data-tag="54C52A85" href="../../tag/C4D285074403/">12.68</a></span>
+<div>\begin{equation} \label{eq:Psiptemp1} \Psi '(m,s)=G_{\varphi _0}(m)\lor \left(G_{\varphi _1}(m)+s\right). \end{equation}</div>
+</div>
+<p>
+       It suffices to show that the right-hand side is proper, namely, $G_{\varphi _0}\lor G_{\varphi _1}$ is not identically $\infty $. But recall that by proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>, we have $\varphi _0\land \varphi _1\in \mathrm{PSH}(X,\theta )$. Therefore, by proposition <a data-tag="D30A8A55" href="../../tag/A0B71330F2E6/">12.3.4</a>, 
+    
+<div class="equation">
+  \[  G_{\varphi _0}\lor G_{\varphi _1}=G_{\varphi _0\land \varphi _1}\not\equiv \infty .  \]
+</div>
+<p>
+       In particular, (<a data-tag="54C52A85" href="../../tag/C4D285074403/">12.68</a>) follows. 
+    <p>
+      Now by construction, 
+    
+<div class="equation">
+  \[  G_{\varphi _ t}(m)=\inf _{s\in \mathbb {R}} \left( \Psi '(m,s)-st\right)=(1-t)G_{\varphi _0}(m)+tG_{\varphi _1}(m)  \]
+</div>
+<p>
+       for all $t\in (0,1)$. So (<a data-tag="576062A6" href="../../tag/8A0A9FDE2DF5/">12.67</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+Let $\phi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )\cap \mathrm{PSH}(X,\theta )_{&gt;0}$ be a model potential. We write 
+</p>
+<div class="equation">
+  \[  \mathcal{R}_{\mathrm{tor}}(X,\theta ;\phi )\coloneqq \left\{  \ell \in \mathcal{R}(X,\theta ;\phi ): \ell _ t\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )\quad \forall t\geq 0\right\} .  \]
+</div>
+
+  Recall that $\mathcal{R}(X,\theta ;\phi )$ is defined in definition <a data-tag="33CB8825" href="../../tag/2E335019C3A7/">4.2.8</a>. <article class="env-corollary" id="sgpt-7D4617A8">
+<p><a class="environment-identifier" href="../../tag/23F2FB292586/">Corollary <span data-tag="7D4617A8">12.3.12</span>.</a><span data-gerby-tag="7D4617A8"></span> There is a canonical bijection between the following sets: </p>
+<ol>
+<li class="custom-item" id="sgpt-CCCC8CA5"><span data-gerby-tag="CCCC8CA5"></span><p>
+ The set of $\ell \in \mathcal{R}_{\mathrm{tor}}(X,\theta ;\phi )$; 
+</p>
+</li><li class="custom-item" id="sgpt-D0B83D01"><span data-gerby-tag="D0B83D01"></span><p>
+ The set of proper closed convex functions $g$ on $M_{\mathbb {R}}$ with $\overline{\operatorname{Dom}g}=\Delta (\theta ,\phi )$. 
+</p>
+</li>
+</ol>
+<p> Moreover, given $\ell \in \mathcal{R}_{\mathrm{tor}}(X,\theta ;\phi )$, then </p>
+<div class="equation" id="sgpt-0B517398"><span data-gerby-tag="0B517398"></span>
+<span class="equation-label"><a data-tag="0B517398" href="../../tag/F5DBB23C8310/">12.69</a></span>
+<div>\begin{equation} \label{eq:geod_ray_G} G_{\ell _ t}=G_{\phi }+tg,\quad \forall t&gt;0. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First observe that given $g$ as in <a data-tag="D0B83D01" href="../../tag/23F2FB292586/#sgpt-D0B83D01">2</a>, (<a data-tag="0B517398" href="../../tag/F5DBB23C8310/">12.69</a>) indeed induces a geodesic ray in $\mathcal{R}_{\mathrm{tor}}(X,\theta ;\phi )$ thanks to corollary <a data-tag="AAD391B4" href="../../tag/551D529C92A2/">12.3.11</a>. Therefore, we have a map from <a data-tag="D0B83D01" href="../../tag/23F2FB292586/#sgpt-D0B83D01">2</a> to <a data-tag="CCCC8CA5" href="../../tag/23F2FB292586/#sgpt-CCCC8CA5">1</a>. 
+    <p>
+      Conversely, given $\ell \in \mathcal{R}_{\mathrm{tor}}(X,\theta ;\phi )$, it follows from corollary <a data-tag="AAD391B4" href="../../tag/551D529C92A2/">12.3.11</a> that $G_{\ell _ t}$ is linear in $t\geq 0$ after restriction to $\operatorname{Int}\{ G_{\phi }&lt;\infty \} $. Let 
+    
+<div class="equation">
+  \[  g'(m)= \begin{cases}  G_{\ell _1}(m)-G_{\phi }(m),&amp;  m\in \operatorname{Int}\{ G_{\phi }&lt;\infty \} ;\\  \infty ,&amp;  m\in M_{\mathbb {R}}\setminus \operatorname{Int}\{ G_{\phi }&lt;\infty \} . \end{cases}  \]
+</div>
+<p>
+       Note that for $m\in \operatorname{Int}\{ G_{\phi }&lt;\infty \} $, we actually have 
+    
+<div class="equation">
+  \[  g'(m)=\lim _{t\to \infty }t^{-1}G_{\ell _ t}(m).  \]
+</div>
+<p>
+       Hence, $g'$ is a proper convex function on $M_{\mathbb {R}}$. Define $g=\operatorname{cl}g'$. Then $g$ is a proper closed convex function on $M_{\mathbb {R}}$, and $\overline{\operatorname{Dom}g}=\Delta (\theta ,\phi )$. We have therefore a map from <a data-tag="CCCC8CA5" href="../../tag/23F2FB292586/#sgpt-CCCC8CA5">1</a> to <a data-tag="D0B83D01" href="../../tag/23F2FB292586/#sgpt-D0B83D01">2</a>. 
+    <p>
+      It remains to argue that this map is the converse of the preceding map from <a data-tag="D0B83D01" href="../../tag/23F2FB292586/#sgpt-D0B83D01">2</a> to <a data-tag="CCCC8CA5" href="../../tag/23F2FB292586/#sgpt-CCCC8CA5">1</a>. The non-trivial point is to verify (<a data-tag="0B517398" href="../../tag/F5DBB23C8310/">12.69</a>) holds for the $g$ we just constructed. Fix $t&gt;0$. We need to show that 
+    
+<div class="equation">
+  \[  G_{\ell _ t}=G_{\phi }+tg.  \]
+</div>
+<p>
+       This holds on $\operatorname{Int}\{ G_{\phi }&lt;\infty \} $ by corollary <a data-tag="AAD391B4" href="../../tag/551D529C92A2/">12.3.11</a> and the definition of $g$, but then it holds everywhere thanks to proposition <a data-tag="4B187A3A" href="../../tag/B6B15657CD64/">A.1.16</a>. Our assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+In particular, we can make the corresponding test curve more explicit. <article class="env-corollary" id="sgpt-6DD4A24F">
+<p><a class="environment-identifier" href="../../tag/AFC1919DC91A/">Corollary <span data-tag="6DD4A24F">12.3.13</span>.</a><span data-gerby-tag="6DD4A24F"></span> Let $\ell \in \mathcal{R}_{\mathrm{tor}}(X,\theta ;\phi )$ and $g$ be the function as in corollary <a data-tag="7D4617A8" href="../../tag/23F2FB292586/">12.3.12</a>. Then </p>
+<div class="equation" id="sgpt-2A3074DB"><span data-gerby-tag="2A3074DB"></span>
+<span class="equation-label"><a data-tag="2A3074DB" href="../../tag/FE80C413846E/">12.72</a></span>
+<div>\begin{equation} \label{eq:ellmax_temp1} \ell ^*_{\max }=-\inf _{M_{\mathbb {R}}} g, \end{equation}</div>
+</div>
+<p> and for each $\tau &lt;-\inf _{M_{\mathbb {R}}} g$, the function $\ell ^*_{\tau }$ is toric-invariant, and </p>
+<div class="equation">
+  \[  G_{\ell ^*_{\tau }}(m)=\begin{cases}  G_{\phi }(m),&amp; \textup{if }g(m)\leq -\tau ;\\  \infty ,&amp; \textup{otherwise}. \end{cases}  \]
+</div>
+<p> In particular, for such $\tau $, </p>
+<div class="equation">
+  \[  \Delta \left(\theta , \ell ^*_{\tau }\right)=\left\{ g\leq -\tau \right\} .  \]
+</div>
+</article> In other words, 
+
+<div class="equation">
+  \[  \left(\Delta \left(\theta , \ell ^*_{\tau }\right)\right)_{\tau &lt;-\inf _{M_{\mathbb {R}}} g}  \]
+</div>
+<p>
+ is the inverse Legendre transform of $-g$ using the terminology of definition <a data-tag="2E276BD3" href="../../tag/7B20D9977149/">10.5.4</a>. 
+</p>
+<p>
+As a consequence, in the toric setting, the Ross–Witt Nyström correspondence theorem <a data-tag="CA4237EF" href="../../tag/B28F0A28CB3E/">9.2.9</a> reduces essentially to theorem <a data-tag="FE1D6EDE" href="../../tag/2584C29ED70F/">10.5.6</a>. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $\tau \in \mathbb {R}$. Then 
+    
+<div class="equation">
+  \[  \ell ^*_{\tau }=\inf _{t&gt;0} \left(\ell _ t-t\tau \right)  \]
+</div>
+<p>
+       is clearly toric-invariant. Therefore, 
+    
+<div class="equation">
+  \[  F_{\ell ^*_{\tau }}=\inf _{t&gt;0} \left(F_{\ell _ t}-t\tau \right).  \]
+</div>
+<p>
+       Fix $m\in M_{\mathbb {R}}$. We compute 
+    
+<div class="equation">
+  \[  \begin{aligned}  G_{\ell ^*_{\tau }}(m)=&amp;  \sup _{n\in N_{\mathbb {R}}}\left( \langle m, n\rangle -F_{\ell ^*_{\tau }}(n) \right)\\  =&amp;  \sup _{t&gt;0}\sup _{n\in N_{\mathbb {R}}}\left( \langle m, n\rangle - F_{\ell _ t}(n) +t\tau \right)\\  =&amp; \sup _{t&gt;0} \left(G_{\ell _ t}(m)+t\tau \right)\\  =&amp;  G_{\phi }(m)+\sup _{t&gt;0} t\left(g(m)+\tau \right)\\  =&amp; \begin{cases}  G_{\phi }(m),&amp; \textup{if }g(m)+\tau \leq 0;\\  \infty ,&amp; \textup{otherwise}. \end{cases}\end{aligned}  \]
+</div>
+<p>
+       Our assertions follow. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Next we consider the trace operator studied in chapter <a data-tag="66D70026" href="../../tag/007D02149D2D/">8</a>. We wish to understand the trace operator in the toric situation. For this purpose, we will need to fix a $T$-invariant subvariety $Y\subseteq X$. Let $\sigma $ be the corresponding cone in $\Sigma $, and let $Q_{\sigma }\subseteq P_ D$ be the subset defined in (<a data-tag="38C140E1" href="../../tag/498E343E626C/">12.6</a>). The cocharacter lattice of $Y$ is given by 
+</p>
+<div class="equation">
+  \[  N(\sigma )\coloneqq N/N\cap \langle \sigma \rangle ,  \]
+</div>
+<p>
+ where $\langle \sigma \rangle $ is the linear span of $\sigma $. See <span class="cite">[<span class="postnote">(3.2.6)</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span>. In particular, we have a canonical identification of the character lattice $M(\sigma )$ of $Y$: 
+</p>
+<div class="equation">
+  \[  M(\sigma )=\sigma ^{\perp }\cap M,  \]
+</div>
+<p>
+ which is compatible with our previous notation (<a data-tag="914E5618" href="../../tag/077C9BE27980/">12.2</a>). Let $i_{\sigma }\colon M(\sigma )\rightarrow M$ be the inclusion map. Let $T_ Y$ be the torus of $Y$. Then we have a natural surjection $q_ T\colon T\rightarrow T_ Y$. In particular, the tropicalization map 
+</p>
+<div class="equation">
+  \[  \operatorname{Trop}\colon T(\mathbb {C})\rightarrow N_{\mathbb {R}}  \]
+</div>
+<p>
+ descends to the tropicalization map of $Y$: 
+</p>
+<div class="equation">
+  \[  \operatorname{Trop}_ Y\colon T_ Y(\mathbb {C})\rightarrow N(\sigma )_{\mathbb {R}}.  \]
+</div>
+<p>
+ Choose a representative $m_{\sigma }\in M$ of the Cartier datum along $\sigma $. Then $m-m_{\sigma }\in M(\sigma )_{\mathbb {R}}$ for every $m\in Q_{\sigma }$. We let 
+</p>
+<div class="equation">
+  \[  D_ Y=\sum _{\substack {\rho \in \Sigma (1)\\ \rho \not\preceq \sigma }} \left(a_{\rho }+\langle m_{\sigma },u_{\rho }\rangle \right)D_{\rho }|_ Y,  \]
+</div>
+<p>
+ where $\rho \not\preceq \sigma $ means that $\rho $ is not a face of $\sigma $. Then $\mathcal{O}_ Y(D_ Y)=L|_ Y$. Equivalently, $D_ Y$ is the divisor associated to the rational section 
+</p>
+<div class="equation">
+  \[  s_{D_ Y}\coloneqq (\chi ^{m_{\sigma }}s_ D)|_ Y  \]
+</div>
+<p>
+ of $L|_ Y$. Write $P_{D_ Y}$ for the polytope of $D_ Y$. With this choice, $Q_{\sigma }-m_{\sigma }$ is naturally contained in $P_{D_ Y}$. 
+</p>
+
+<article class="env-theorem" id="sgpt-6967BB91">
+<a class="environment-identifier" href="../../tag/0BA5B8CFD15F/">Theorem <span data-tag="6967BB91">12.3.14</span>.</a><span data-gerby-tag="6967BB91"></span> With the above choice of representative $m_{\sigma }$, let $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )_{&gt;0}$ satisfy $\nu (\varphi ,Y)=0$. If $\operatorname{Tr}_ Y^{\theta }(\varphi )$ is defined and $\operatorname{vol}(\theta |_ Y,\operatorname{Tr}_ Y^{\theta }(\varphi ))&gt;0$<aside class="source-footnote" id="sgpt-a0000105105"><span class="footnote-label">Note.</span> Note that $\operatorname{Tr}_ Y^{\theta }(\varphi )\in \mathrm{PSH}_{\mathrm{tor}}(Y,\theta |_ Y)$.</aside>, then 
+<div class="equation">
+  \[  \Delta \left(\theta |_ Y,\operatorname{Tr}_ Y^{\theta }(\varphi )\right)= \left(\Delta (\theta ,\varphi )\cap Q_{\sigma }\right)-m_{\sigma }  \]
+</div>
+<p> as subsets of $M(\sigma )_{\mathbb {R}}$. </p>
+</article> Observe that the condition $\nu (\varphi ,Y)=0$ means exactly that $\Delta (\theta ,\varphi )\cap Q_{\sigma }\neq \varnothing $ by corollary <a data-tag="DC23E84D" href="../../tag/C521E79AA7F6/">12.2.11</a>. 
+
+<p>
+Since $Y$ itself is a smooth toric variety, the preceding constructions of $X$ all apply to $Y$. We briefly summarize the situation in <a data-tag="93F030A0" href="../../tag/9C7AF9D665D8/">12.1</a>. 
+</p>
+<figure class="source-float"> <div class="centered"> <table class="source-table"><tr><td><p>
+ Notions for $X$ 
+</p>
+</td><td><p>
+ Notions for $Y$ 
+</p>
+</td></tr><tr><td><p>
+ $N$ 
+</p>
+</td><td><p>
+ $N(\sigma )$ 
+</p>
+</td></tr><tr><td><p>
+ $M$ 
+</p>
+</td><td><p>
+ $M(\sigma )$ 
+</p>
+</td></tr><tr><td><p>
+ $\Sigma $ 
+</p>
+</td><td><p>
+ $\mathrm{Star}(\sigma )$ 
+</p>
+</td></tr><tr><td><p>
+ $D$ 
+</p>
+</td><td><p>
+ $D_ Y$ 
+</p>
+</td></tr><tr><td><p>
+ $L$ 
+</p>
+</td><td><p>
+ $L|_ Y$ 
+</p>
+</td></tr><tr><td><p>
+ $h$ 
+</p>
+</td><td><p>
+ $h|_ Y$ 
+</p>
+</td></tr><tr><td><p>
+ $\theta $ 
+</p>
+</td><td><p>
+ $\theta |_ Y$ 
+</p>
+</td></tr><tr><td><p>
+ $\operatorname{Trop}$ 
+</p>
+</td><td><p>
+ $\operatorname{Trop}_ Y$ 
+</p>
+</td></tr><tr><td><p>
+ $P_ D$ 
+</p>
+</td><td><p>
+ $P_{D_ Y}$ 
+</p>
+</td></tr><tr><td><p>
+ $s_ D$ 
+</p>
+</td><td><p>
+ $s_{D_ Y}$ 
+</p>
+</td></tr></table> <figcaption id="sgpt-93F030A0"><span data-gerby-tag="93F030A0"></span><a data-tag="93F030A0" href="../../tag/9C7AF9D665D8/">12.1</a> The correspondence between $X$ and $Y$</figcaption> </div> </figure>
+<p>
+Recall that $\mathrm{Star}(\sigma )$ is the fan in $N(\sigma )_{\mathbb {R}}$ consisting of $\bar{\tau }$ for all faces $\tau \in \Sigma $ containing $\sigma $, where $\bar{\tau }$ is the image of $\tau $ in $N(\sigma )_{\mathbb {R}}$. See <span class="cite">[<span class="postnote">Proposition 3.2.7</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span>. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The idea of the proof is that since <a data-tag="15033714" href="../../tag/627CFC8D8850/">10.4.16</a>, <a data-tag="CD17D6AC" href="../../tag/49B696578E15/">10.4.17</a> describe how partial Okounkov bodies behave under restriction, and theorem <a data-tag="7EDFC570" href="../../tag/8F3CCCDB83EC/">12.2.9</a> compares partial Okounkov bodies with Newton bodies, we can deduce the behavior of Newton bodies under restriction as well. 
+    <p>
+      First we note that by our assumption, $L|_ Y$ is a big line bundle. In particular, if we set $r=\dim \sigma $, then $\dim Y=n-r$. 
+    <p>
+      We also note that $\operatorname{Tr}_ Y^\theta (\varphi )$ is $T_{Y,c}$-invariant. Indeed, for any $g\in T_ c$, let $g_ Y$ be the induced automorphism of $Y$. Then $g_ Y^*\operatorname{Tr}_ Y(\varphi )$ is again a trace of $g^*\varphi =\varphi $ along $Y$. Hence $g_ Y^*\operatorname{Tr}_ Y(\varphi )\sim _ P\operatorname{Tr}_ Y(\varphi )$ by proposition <a data-tag="5B8EBC49" href="../../tag/45EA06425921/">8.1.5</a>. Since $\theta |_ Y$ is $T_{Y,c}$-invariant and the $P$-envelope depends only on the $P$-equivalence class, we get $g_ Y^*\operatorname{Tr}_ Y^\theta (\varphi )=\operatorname{Tr}_ Y^\theta (\varphi )$. As the image of $T_ c$ in $\operatorname{Aut}(Y)$ is $T_{Y,c}$, the assertion follows. 
+    <p>
+      For this purpose, let $\sigma ^0$ be an $n$-dimensional cone of $\Sigma $ containing $\sigma $. The image $\overline{\sigma ^0}$ in $N(\sigma )$ is then an $(n-r)$-dimensional cone of $\mathrm{Star}(\sigma )$. We shall use these cones as the reference cones while defining the partial Okounkov bodies. 
+    <p>
+      We list the rays in $\sigma ^0(1)$ as follows: 
+    
+<div class="equation" id="sgpt-A2D09F82"><span data-gerby-tag="A2D09F82"></span>
+<span class="equation-label"><a data-tag="A2D09F82" href="../../tag/50B6C6350780/">12.82</a></span>
+<div>\begin{equation} \label{eq:rayssigma0} \rho _1,\ldots ,\rho _ n, \end{equation}</div>
+</div>
+<p>
+       where $\rho _1,\ldots ,\rho _ r\in \sigma (1)$ and hence $\rho _{r+1},\ldots ,\rho _ n\not\in \sigma (1)$. In particular, the images 
+    
+<div class="equation" id="sgpt-8FBE7E0A"><span data-gerby-tag="8FBE7E0A"></span>
+<span class="equation-label"><a data-tag="8FBE7E0A" href="../../tag/08543024F67D/">12.83</a></span>
+<div>\begin{equation} \label{eq:rayssigma0bar} \overline{\rho _{r+1}},\ldots ,\overline{\rho _{n}} \end{equation}</div>
+</div>
+<p>
+       of the latter give a list of $\overline{\sigma ^0}(1)$. 
+    <p>
+      We construct the flag $Y_{\bullet }$ on $X$ using the rays (<a data-tag="A2D09F82" href="../../tag/50B6C6350780/">12.82</a>) and the flag $Z_{\bullet }$ on $Y$ using the rays (<a data-tag="8FBE7E0A" href="../../tag/08543024F67D/">12.83</a>). Note that 
+    
+<div class="equation">
+  \[  Z_ i=Y_{r+i},  \]
+</div>
+<p>
+       where $i=1,\ldots ,n-r$. 
+    <p>
+      Next we compute the Cartier data associated with $\overline{\sigma ^0}$ for the divisor $D_ Y$. By definition, $m_{\overline{\sigma ^0}}\in M(\sigma )$ is the unique element satisfying 
+    
+<div class="equation">
+  \[  \langle m_{\overline{\sigma ^0}},u_{\overline{\rho _ j}}\rangle =-a_{\rho _ j}-\langle m_{\sigma },u_{\rho _ j}\rangle  \]
+</div>
+<p>
+       for all $j=r+1,\ldots ,n$. Since $m_{\sigma ^0}-m_{\sigma }$ vanishes on $\sigma $, it lies in $M(\sigma )$, and the preceding formula gives 
+    
+<div class="equation">
+  \[  m_{\overline{\sigma ^0}}=m_{\sigma ^0}-m_{\sigma }.  \]
+</div>
+<p>
+      Let $\Phi \colon M\rightarrow \mathbb {Z}^ n$ and $\Psi \colon M(\sigma )\rightarrow \mathbb {Z}^{n-r}$ be defined as 
+    
+<div class="equation">
+  \[  \begin{aligned}  \Phi (m)=&amp; \left( \langle m-m_{\sigma ^0},u_{\rho _1} \rangle ,\dots ,\langle m-m_{\sigma ^0},u_{\rho _ n} \rangle \right)\\  =&amp;  \left( \langle m,u_{\rho _1}\rangle ,\dots ,\langle m,u_{\rho _ n}\rangle \right) + (a_{\rho _1},\ldots ,a_{\rho _ n}),\\  \Psi (m)=&amp; \left( \langle m-m_{\overline{\sigma ^0}},u_{\overline{\rho _{r+1}}} \rangle ,\dots ,\langle m-m_{\overline{\sigma ^0}},u_{\overline{\rho _ n}} \rangle \right) \end{aligned}  \]
+</div>
+<p>
+       Observe that for $i=r+1,\ldots ,n$, we have 
+    
+<div class="equation">
+  \[  u_{\overline{\rho _ i}}=u_{\rho _ i}\mod N\cap \langle \sigma \rangle ,  \]
+</div>
+<p>
+       so 
+    
+<div class="equation">
+  \[  \begin{aligned}  \Psi (m)=&amp; \left( \langle m,u_{\rho _{r+1}} \rangle ,\ldots , \langle m,u_{\rho _{n}} \rangle \right)\\ &amp; +\left(a_{\rho _{r+1}}+\langle m_{\sigma },u_{\rho _{r+1}}\rangle ,\ldots ,a_{\rho _ n}+\langle m_{\sigma },u_{\rho _ n}\rangle \right) \end{aligned}  \]
+</div>
+<p>
+       for $m\in M(\sigma )$. Therefore, we have a commutative diagram 
+    
+<div class="equation">
+<img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/bbb0b0e2707a83b2eff8.svg"/>
+</div>
+<p>
+       where $L\colon \mathbb {R}^ n\rightarrow \mathbb {R}^{n-r}$ is the map 
+    
+<div class="equation">
+  \[  (b_1,\ldots ,b_ n)\mapsto (b_{r+1},\ldots ,b_{n}).  \]
+</div>
+<p>
+      By theorem <a data-tag="7EDFC570" href="../../tag/8F3CCCDB83EC/">12.2.9</a>, we have 
+    
+<div class="equation">
+  \[  \Phi _{\mathbb {R}} \Bigl ( \Delta (\theta ,\varphi ) \Bigr )= \Delta _{Y_{\bullet }}(\theta ,\varphi ),\quad \Psi _{\mathbb {R}} \Bigl ( \Delta (\theta |_ Y,\operatorname{Tr}_{Y}^{\theta }(\varphi )) \Bigr )= \Delta _{Z_{\bullet }}(\theta |_ Y,\operatorname{Tr}_{Y}^{\theta }(\varphi )).  \]
+</div>
+<p>
+       By corollary <a data-tag="DC23E84D" href="../../tag/C521E79AA7F6/">12.2.11</a>, the condition $\nu (\varphi ,Y)=0$ is equivalent to 
+    
+<div class="equation">
+  \[  \Delta (\theta ,\varphi )\cap Q_\sigma \neq \varnothing .  \]
+</div>
+<p>
+       In particular, the first $r$ valuation coordinates of $\theta +\mathrm{dd}^{\mathrm{c}}\varphi $ along the flag $Y_\bullet $ vanish. By <a data-tag="15033714" href="../../tag/627CFC8D8850/">10.4.16</a> and <a data-tag="CD17D6AC" href="../../tag/49B696578E15/">10.4.17</a>, 
+    
+<div class="equation">
+  \[  \begin{aligned}  \Delta _{Z_{\bullet }}\Bigl (\theta |_ Y,\operatorname{Tr}_{Y}^{\theta }(\varphi )\Bigr )=&amp;  L \Bigl ( \Delta _{Y_{\bullet }}(\theta ,\varphi ) \cap (\{ 0\} ^ r \times \mathbb {R}^{n-r})\Bigr )\\  =&amp;  L\Bigl ( \Phi _{\mathbb {R}}(\Delta (\theta ,\varphi )) \cap (\{ 0\} ^ r \times \mathbb {R}^{n-r}) \Bigr )\\  =&amp;  L\circ \Phi _{\mathbb {R}} \Bigl (\Delta (\theta ,\varphi )\cap Q_{\sigma } \Bigr )\\  =&amp;  \Psi _{\mathbb {R}}\Bigl ((\Delta (\theta ,\varphi )\cap Q_{\sigma })-m_{\sigma }\Bigr ). \end{aligned}  \]
+</div>
+<p>
+       In the third line, we used $\Delta (\theta ,\varphi )\subseteq P_ D$ from theorem <a data-tag="7CCE1B26" href="../../tag/1293B87EF09F/">12.2.12</a>, the identity (<a data-tag="38C140E1" href="../../tag/498E343E626C/">12.6</a>), and the fact that $m_{\sigma ^0}-m_\sigma $ vanishes on $\sigma $. Since $\Psi _{\mathbb {R}}$ is an affine isomorphism, our assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-82946A29">
+<p><a class="environment-identifier" href="../../tag/86EC82D6C082/">Corollary <span data-tag="82946A29">12.3.15</span>.</a><span data-gerby-tag="82946A29"></span> For any $\varphi \in \mathrm{PSH}_{\mathrm{tor}}(X,\theta )$, we have </p>
+<div class="equation" id="sgpt-DB1BCEED"><span data-gerby-tag="DB1BCEED"></span>
+<span class="equation-label"><a data-tag="DB1BCEED" href="../../tag/E330AEFE18FD/">12.93</a></span>
+<div>\begin{equation} \label{eq:volTr_tor} \operatorname{vol}\left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta }(\varphi )\right)=(\dim Y)!\operatorname{vol}_{\dim Y} \Bigl (\Delta (\theta ,\varphi )\cap Q_{\sigma }\Bigr ). \end{equation}</div>
+</div>
+</article> The left-hand side of (<a data-tag="DB1BCEED" href="../../tag/E330AEFE18FD/">12.93</a>) is understood as $0$ if $\operatorname{Tr}_ Y^{\theta }(\varphi )$ is not defined. On the right-hand side, we translate $\Delta (\theta ,\varphi )\cap Q_{\sigma }$ by $-m_{\sigma }$ and compute the $\dim Y$-dimensional Lebesgue measure on $M(\sigma )_{\mathbb {R}}$, normalized so that a fundamental parallelepiped for $M(\sigma )$ has volume $1$. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\nu (\varphi ,Y)&gt;0$, then by corollary <a data-tag="DC23E84D" href="../../tag/C521E79AA7F6/">12.2.11</a>, $\Delta (\theta ,\varphi )\cap Q_\sigma =\varnothing $. By convention the right-hand side of (<a data-tag="DB1BCEED" href="../../tag/E330AEFE18FD/">12.93</a>) is $0$, and the trace is not defined, so the left-hand side is $0$. 
+    <p>
+      Assume now that $\nu (\varphi ,Y)=0$. Take a toric-invariant ample line bundle $H$ on $X$ and a toric-invariant Kähler metric $\omega \in c_1(H)$. For $\epsilon \in \mathbb {Q}_{&gt;0}$, write $Q_{\sigma ,\epsilon }$ for the face corresponding to $\sigma $ for the divisor $D+\epsilon H$, with the same convention on the Cartier datum along $\sigma $. Since $\theta _{\varphi }+\epsilon \omega $ is a toric Kähler current and $\nu (\varphi ,Y)=0$, its trace along $Y$ is defined and has positive volume. Hence theorem <a data-tag="6967BB91" href="../../tag/0BA5B8CFD15F/">12.3.14</a> gives 
+    
+<div class="equation">
+  \[  \operatorname{vol}\left(\theta |_ Y+\epsilon \omega |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^{\theta +\epsilon \omega }(\varphi )\right)= (\dim Y)!\operatorname{vol}_{\dim Y} \Bigl (\Delta (\theta +\epsilon \omega ,\varphi )\cap Q_{\sigma ,\epsilon }\Bigr ).  \]
+</div>
+<p>
+       By <a data-tag="1BEE3F37" href="../../tag/53E69530968E/">A.3.7</a>, 
+    
+<div class="equation">
+  \[  \Delta (\theta +\epsilon \omega ,\varphi )=\Delta (\theta ,\varphi )+\epsilon P_ H.  \]
+</div>
+<p>
+       We choose the Cartier datum of $D+\epsilon H$ along $\sigma $ to be the sum of the chosen datum of $D$ and $\epsilon $ times the chosen datum of $H$. With this convention, the face of $P_ D+\epsilon P_ H$ corresponding to $\sigma $ is $Q_\sigma +\epsilon Q_\sigma ^ H$. In particular, 
+    
+<div class="equation">
+  \[  \Delta (\theta +\epsilon \omega ,\varphi )\cap Q_{\sigma ,\epsilon }=(\Delta (\theta ,\varphi )\cap Q_{\sigma })+\epsilon Q^ H_{\sigma },  \]
+</div>
+<p>
+       where $Q^ H_{\sigma }$ denotes the corresponding face of the polytope of $H$. Indeed, the defining inequalities along the rays of $\sigma $ are non-negative on both summands, so equality for their sum forces equality on each summand. By example <a data-tag="628E430C" href="../../tag/2272C87A04CE/">8.1.12</a>, the left-hand side converges to 
+    
+<div class="equation">
+  \[  \operatorname{vol}\left(\theta |_ Y+\mathrm{dd}^{\mathrm{c}}\operatorname{Tr}_ Y^\theta (\varphi )\right),  \]
+</div>
+<p>
+       with the convention that this limit is $0$ when the trace in the limiting class is not defined. The right-hand side converges to 
+    
+<div class="equation">
+  \[  (\dim Y)!\operatorname{vol}_{\dim Y}\Bigl (\Delta (\theta ,\varphi )\cap Q_\sigma \Bigr ).  \]
+</div>
+<p>
+       Hence (<a data-tag="DB1BCEED" href="../../tag/E330AEFE18FD/">12.93</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+As a corollary, we obtain an elegant characterization of the augmented base locus in the toric setting. <article class="env-corollary" id="sgpt-4FD4BA2F">
+<p><a class="environment-identifier" href="../../tag/9B7387A93262/">Corollary <span data-tag="4FD4BA2F">12.3.16</span>.</a><span data-gerby-tag="4FD4BA2F"></span> The augmented base locus (with the reduced complex structure) of $D$ is a toric-invariant (possibly reducible) subvariety given by the union of the $V(\tau )$'s, where $\tau $ runs over the elements in $\Sigma $ such that </p>
+<div class="equation">
+  \[  \dim Q_{\tau }&lt;n-\dim \tau \footnotemark .  \]
+</div>
+ <aside class="source-footnote" id="sgpt-a0000106136"><span class="footnote-label">Note.</span> Here we understand that $\dim \varnothing =-\infty $.</aside> 
+</article> Intuitively, we should think of $n-\dim \tau $ as the <em>expected</em> dimension of $Q_{\tau }$. This corollary says that $Q_{\tau }$ fails to attain the expected dimension if and only if it corresponds to a subvariety in the augmented base locus. 
+
+<p>
+With the help of some knowledge of convex geometry, we can also deduce this corollary from corollary <a data-tag="2D4B45AE" href="../../tag/0D3DB05576E8/">12.1.2</a>. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Apply corollary <a data-tag="82946A29" href="../../tag/86EC82D6C082/">12.3.15</a> to $\varphi =V_{\theta }$. Together with Nakamaye's theorem <span class="cite">[<span class="postnote">Theorem 5.7</span>, <a href="../../references/#R61B6FBA2AC0A">ELMNP09</a>]</span> and theorem <a data-tag="30FD148B" href="../../tag/7EFDFA26519B/">8.3.2</a>, this says that $V(\tau )$ lies in the augmented base locus exactly when the $\dim V(\tau )$-dimensional volume of $Q_{\tau }$ is zero, which is equivalent to $\dim Q_{\tau }&lt;n-\dim \tau $. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="sgpt-D97F7225">
+<p><a class="environment-identifier" href="../../tag/A14927C0973A/">Example <span data-tag="D97F7225">12.3.17</span>.</a><span data-gerby-tag="D97F7225"></span> Let us consider the example example <a data-tag="30A5BC9F" href="../../tag/B328D39711DF/">12.1.4</a> again, we consider the subvariety corresponding to $\sigma _7$. We have </p>
+<div class="equation">
+  \[  Q_{\sigma _7}=\Bigl \{ m\in P_ D: \langle m,(1,1) \rangle =0 \Bigr \} .  \]
+</div>
+<p> The situation is explained in <a data-tag="13BEB28D" href="../../tag/F8805F2A5BD0/">12.7</a>. </p>
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/b85d509c9adf5be95785.svg"/> <figcaption id="sgpt-13BEB28D"><span data-gerby-tag="13BEB28D"></span><a data-tag="13BEB28D" href="../../tag/F8805F2A5BD0/">12.7</a> The face $Q_{\sigma _7}=\{ m\in P_ D:\langle m,(1,1)\rangle =0\} $ is the single point $\{ (0,0)\} $, of dimension $0$ rather than the expected $1$.</figcaption> </div>
+</figure>
+<p> We find that $\dim Q_{\sigma _7}=0$, but the expected dimension is $2-1=1$. So the corresponding divisor, namely the exceptional divisor on $\mathrm{Bl}_0\mathbb {P}^2$ is in the non-Kähler locus. Similarly, we can verify that the non-Kähler locus consists only of this divisor. </p>
+</article>
+
+
+Finally, we compute the mixed volumes of Newton bodies. <article class="env-theorem" id="sgpt-DA74D233">
+<p><a class="environment-identifier" href="../../tag/38F3E4DFCD04/">Theorem <span data-tag="DA74D233">12.3.18</span>.</a><span data-gerby-tag="DA74D233"></span> Take $T$-invariant big divisors $D_1,\ldots ,D_ n$ on $X$. Consider $T_ c$-invariant closed positive $(1,1)$-currents $T_ i$ in $c_1(\mathcal{O}_ X(D_ i))$ for $i=1,\ldots ,n$. Then </p>
+<div class="equation" id="sgpt-31DF1490"><span data-gerby-tag="31DF1490"></span>
+<span class="equation-label"><a data-tag="31DF1490" href="../../tag/862A2BCBD614/">12.94</a></span>
+<div>\begin{equation} \label{eq:mixvol_pob} n! \operatorname{vol}\Bigl ( \Delta (T_1),\ldots ,\Delta (T_ n) \Bigr )=\operatorname{vol}\left(T_1,\ldots ,T_ n \right). \end{equation}</div>
+</div>
+</article> The mixed volume of currents is studied in section <a data-tag="F55E1050" href="../../tag/80A2DBEB2B97/">7.3</a>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to prove the following assertion: 
+    
+<div class="equation" id="sgpt-A0F68D69"><span data-gerby-tag="A0F68D69"></span>
+<span class="equation-label"><a data-tag="A0F68D69" href="../../tag/8E6671867292/">12.95</a></span>
+<div>\begin{equation} \label{eq:Delta_add} \Delta (T_1+T_2)=\Delta (T_1)+\Delta (T_2).\footnotemark \end{equation}</div>
+</div>
+
+<aside class="source-footnote" id="sgpt-a0000106283"><span class="footnote-label">Note.</span> This is slightly problematic when $n=1$, since $T_2$ is not defined <em>stricto sensu</em>. We take $D_2,T_2$ satisfying the same assumptions as $D_1,T_1$ in this case.</aside> In fact, assuming this, by induction, for each tuple of non-negative integers $C_1,\ldots ,C_ n$, we have 
+    
+<div class="equation">
+  \[  \Delta \left( \sum _{i=1}^ n C_ i T_ i \right)=\sum _{i=1}^ n C_ i \Delta (T_ i).  \]
+</div>
+<p>
+       Comparing the volumes, we have 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Delta \left( \sum _{i=1}^ n C_ i T_ i \right)=\sum _{i_1,\ldots ,i_ n=1}^ n C_{i_1}\cdots C_{i_ n} \operatorname{vol}\left(\Delta \left(T_{i_1}\right),\ldots ,\Delta \left(T_{i_ n}\right)\right).  \]
+</div>
+<p>
+       On the other hand, by proposition <a data-tag="5ECB9D82" href="../../tag/49A9A66B3A4D/">12.2.4</a>, the $\mathcal{I}$-goodness of toric singularities example <a data-tag="1D496DC8" href="../../tag/35A211AC3973/">7.4.5</a>, and proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">7.3.4</a>, we have 
+    
+<div class="equation">
+  \[  n! \operatorname{vol}\Delta \left( \sum _{i=1}^ n C_ i T_ i \right)=\operatorname{vol}\left( \sum _{i=1}^ n C_ i T_ i \right)=\sum _{i_1,\ldots ,i_ n=1}^ n C_{i_1}\cdots C_{i_ n} \operatorname{vol}\left(T_{i_1},\ldots ,T_{i_ n}\right).  \]
+</div>
+<p>
+       Comparing the coefficients of the above two expressions, we conclude (<a data-tag="31DF1490" href="../../tag/862A2BCBD614/">12.94</a>). 
+    <p>
+      It only remains to establish (<a data-tag="A0F68D69" href="../../tag/8E6671867292/">12.95</a>). For this purpose, we fix smooth $T_ c$-invariant Hermitian metrics $h_1$ and $h_2$ on $\mathcal{O}_ X(D_1)$ and $\mathcal{O}_ X(D_2)$ respectively. Correspondingly, take $h_1\otimes h_2$ as the reference Hermitian metric on $\mathcal{O}_ X(D_1+D_2)$. Write 
+    
+<div class="equation">
+  \[  \theta _1=\mathrm{dd}^{\mathrm{c}}h_1,\quad \theta _2=\mathrm{dd}^{\mathrm{c}}h_2.  \]
+</div>
+<p>
+       We choose the rational section of $\mathcal O_ X(D_1+D_2)$ to be $s_{D_1}\otimes s_{D_2}$. With this choice and with the reference metric $h_1\otimes h_2$, the normalization (<a data-tag="A6329D12" href="../../tag/CDCD55296D94/">12.22</a>) gives 
+    
+<div class="equation">
+  \[  F_{\theta _1+\theta _2}=F_{\theta _1}+F_{\theta _2}.  \]
+</div>
+<p>
+       Thus 
+    
+<div class="equation">
+  \[  F_{\varphi _1+\varphi _2}=F_{\varphi _1}+F_{\varphi _2}.  \]
+</div>
+<p>
+       Take $\varphi _ i\in \mathrm{PSH}_{\mathrm{tor}}(X,\theta _ i)$ with $T_ i=\theta _ i+\mathrm{dd}^{\mathrm{c}}\varphi _ i$ for $i=1,2$. Then $F_{\varphi _1}+F_{\varphi _2}$ is a candidate for $F_{\varphi _1+\varphi _2}$; see (<a data-tag="30FEA65B" href="../../tag/E09FCEF2675C/">12.23</a>). Therefore, (<a data-tag="A0F68D69" href="../../tag/8E6671867292/">12.95</a>) follows from the equality of closed gradient images proved in <a data-tag="1BEE3F37" href="../../tag/53E69530968E/">A.3.7</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+<blockquote class="motto">A good theorem lasts forever. Once proved, it will always stay proved, and other mathematicians are free to use it and build on it as they please, sometimes to great effect. 
+— John Tate<aside class="source-footnote" id="sgpt-a0000106515"><span class="footnote-label">Note.</span> John Torrence Tate Jr. (1925–2019), the grandfather of Dustin Clausen, was one of the greatest minds in the whole history of America. However, his aversion to publishing papers arguably impeded the progress of the development of mathematics to some extent. For example, his foundational work on rigid non-Archimedean geometry was written in 1962, but was not available to the public until 1971.</aside></blockquote>
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

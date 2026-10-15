@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Adding weighted Monge–Ampère measures · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>7BAAE1AD9F47</code></p><h1>Adding weighted Monge–Ampère measures</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 14.10 Adding weighted Monge–Ampère measures <span data-gerby-tag="2916A486"></span></div>
+<p>
+Let $u$ and $v$ be potentials of the same ordinary singularity type. We show that the sum of their weighted measures $\mathrm{e}^{-\lambda u}\mathrm{MA}_\theta (u)+\mathrm{e}^{-\lambda v}\mathrm{MA}_\theta (v)$ is again of the form $\mathrm{e}^{-\lambda a}\mathrm{MA}_\theta (a)$ for a potential $a$ of that type. Truncating $u$ and $v$ gives bounded equations, solved by the bounded subsolution theorem, whose solutions have a common lower barrier. Their exponential error tends to zero even though the approximating masses may grow, so the lower-barrier criterion identifies the limit. This addition step will remove a deficit of mass in the existence proof of section <a data-tag="4D393AEF" href="../../tag/C6737BA51F0E/">14.11</a>. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-382EF8B0">
+<p><a class="environment-identifier" href="../../tag/7A54D08FEB18/">Theorem <span data-tag="382EF8B0">14.10.1</span>.</a><span data-gerby-tag="382EF8B0"></span> Let $\theta \geq 0$ be big, and suppose $\varphi \in \mathrm{PSH}(X,\theta )$ satisfies $P_{\delta \theta }(\varphi )\not\equiv -\infty $ for some $0&lt;\delta &lt;1$. Let $u,v\in \mathrm{PSH}(X,\theta )$ satisfy $u,v\sim \varphi $, and let $\lambda &gt;0$. If </p>
+<div class="equation">
+  \[  \mu =\mathrm{e}^{-\lambda u}\mathrm{MA}^{\mathrm{ext}}_\theta (u) +\mathrm{e}^{-\lambda v}\mathrm{MA}^{\mathrm{ext}}_\theta (v)  \]
+</div>
+<p> is a finite measure, then there exists $a\in \mathrm{PSH}(X,\theta )$, with $a\sim \varphi $, such that </p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\theta (a)=\mathrm{e}^{\lambda a}\mu .  \]
+</div>
+<p> Here the weights are evaluated off the pole sets. The solution $a$ is unique in the ordinary singularity type of $\varphi $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: truncated equations and barriers.</em> Choose $S\geq \max (\sup _ Xu,\sup _ Xv)$. A common translation reduces the theorem to the case $u,v\leq 0$: translating $u$ and $v$ by $-S$ multiplies $\mu $ by $\mathrm{e}^{\lambda S}$, and the resulting solution is then translated back by $S$. 
+    <p>
+      For integers $j\geq 1$, set $u_ j=\max (u,-j)$, $v_ j=\max (v,-j)$ and 
+    
+<div class="equation">
+  \[  \mu _ j=\mathrm{e}^{-\lambda u_ j}\mathrm{MA}_\theta (u_ j) +\mathrm{e}^{-\lambda v_ j}\mathrm{MA}_\theta (v_ j).  \]
+</div>
+<p>
+       For $s_ j=(u_ j+v_ j)/2$, positivity of mixed products gives 
+    
+<div class="equation">
+  \[  \mu _ j\leq 2^ n \mathrm{e}^{\lambda j}\mathrm{MA}_\theta (s_ j).  \]
+</div>
+<p>
+       Thus $\mu _ j$ has a bounded density with respect to the Monge–Ampère measure of the bounded potential $s_ j$, and $\mu _ j\neq 0$ by proposition <a data-tag="EB19DA85" href="../../tag/9BBE1DE257CB/">13.2.1</a>. The bounded subsolution theorem theorem <a data-tag="E589A1BA" href="../../tag/BA5CB37AAAC1/">14.9.1</a> therefore gives bounded $a_ j\in \mathrm{PSH}(X,\theta )$ with $\mathrm{MA}_\theta (a_ j)=\mathrm{e}^{\lambda a_ j}\mu _ j$, and bounded exponential comparison yields 
+    
+<div class="equation">
+  \[  a_ j\leq \min (u_ j,v_ j)\leq 0.  \]
+</div>
+<p>
+       Choose $C$ with $|u-v|\leq C$ off the common pole set; then $|u_ j-v_ j|\leq C$. Put 
+    
+<div class="equation">
+  \[  D=C/2+n\lambda ^{-1}\log 2,\qquad b_ j=s_ j-D.  \]
+</div>
+<p>
+       Because $|u_ j-v_ j|\leq C$, positivity of mixed products gives 
+    
+<div class="equation">
+  \[  \mathrm{e}^{-\lambda b_ j}\mathrm{MA}_\theta (b_ j) \geq 2^{-n}\mathrm{e}^{\lambda D-\lambda s_ j} \bigl (\mathrm{MA}_\theta (u_ j)+\mathrm{MA}_\theta (v_ j)\bigr ) \geq \mu _ j.  \]
+</div>
+<p>
+       Hence $a_ j\geq b_ j\geq w$, where 
+    
+<div class="equation">
+  \[  w=(u+v)/2-D\sim \varphi  \]
+</div>
+<p>
+       is a fixed $\theta $-plurisubharmonic function. Extract a subsequence with $a_ j\to a$ in $L^1(X)$. The upper barriers decrease to $\min (u,v)$, so $w\leq a\leq \min (u,v)$ and $a\sim \varphi $. 
+    <p>
+<em>Step 2: convergence in capacity.</em> Write $E_ j=\{ \min (u,v)&gt;-j\} $. By locality, $\mu _ j=\mu $ on $E_ j$; since $a_ j\leq 0$, it follows that 
+    
+<div class="equation">
+  \[  \int _{E_ j}|\mathrm{e}^{a_ j}-\mathrm{e}^ a|\, \mathrm{MA}_\theta (a_ j) \leq \int _ X|\mathrm{e}^{a_ j}-\mathrm{e}^ a|\, \mathrm{d}\mu \longrightarrow 0  \]
+</div>
+<p>
+       by lemma <a data-tag="266C64AB" href="../../tag/983B3E6349BB/">1.23.1</a>. On $X\setminus E_ j$ we have $a_ j\leq -j$ and $a\leq -j$, whence $|\mathrm{e}^{a_ j}-\mathrm{e}^ a|\leq \mathrm{e}^{-j}$. Moreover 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\theta (a_ j) =\mathrm{e}^{\lambda (a_ j-u_ j)}\mathrm{MA}_\theta (u_ j) +\mathrm{e}^{\lambda (a_ j-v_ j)}\mathrm{MA}_\theta (v_ j) \leq \mathrm{MA}_\theta (u_ j)+\mathrm{MA}_\theta (v_ j).  \]
+</div>
+<p>
+       Choose a Hermitian form $\Omega \geq \theta $. Since $\mathrm{MA}_\theta (u_ j)\leq \mathrm{MA}_\Omega (u_ j)$ and $-j\leq u_ j\leq 0$, and similarly for $v_ j$, the range estimate of proposition <a data-tag="079A7287" href="../../tag/57A94BD59310/">7.1.1</a>, with $r_ n=\max (n-2,0)$, gives 
+    
+<div class="equation">
+  \[  \int _{X\setminus E_ j}|\mathrm{e}^{a_ j}-\mathrm{e}^ a|\, \mathrm{MA}_\theta (a_ j) \leq C'\mathrm{e}^{-j}(1+j)^{r_ n}\longrightarrow 0.  \]
+</div>
+<p>
+       The lower-barrier criterion proposition <a data-tag="786C08E2" href="../../tag/EFAF50966FDF/">14.8.2</a> now gives $a_ j\to a$ in capacity. Note that only a polynomial bound for the masses of the approximating measures was needed. 
+    <p>
+<em>Step 3: the limiting equation.</em> We identify the equation on sets where $w$ is bounded below, without first proving weak convergence of the measures $\mathrm{MA}_\theta (a_ j)$. For $T&gt;0$, let $g_ T$ be the continuous cutoff from the proof of lemma <a data-tag="F1DA4E83" href="../../tag/64174941A7D1/">6.3.1</a>, and put $\zeta _ T=g_ T(w)$. Where $\zeta _ T&gt;0$, we have $w&gt;-2T$, hence every $a_ j$ and $a$ is above $-2T$. If $j&gt;2T$ and $x\notin E_ j$, the inequalities $w(x)\leq a_ j(x)\leq -j$ force $\zeta _ T(x)=0$. Consequently, for all $j&gt;2T$, 
+    
+<div class="equation">
+  \[  \zeta _ T\mathrm{MA}_\theta (a_ j) =\zeta _ T \mathrm{e}^{\lambda a_ j}\mu .  \]
+</div>
+<p>
+       We test this identity against a continuous function. On the left we may replace $a_ j$ by $\max (a_ j,-2T)$ and use continuity of bounded products under convergence in capacity, with the fixed bounded quasi-continuous weight $\zeta _ T$. On the right, the exponentials converge against the fixed measure $\mu $, which gives convergence in total variation. Therefore 
+    
+<div class="equation">
+  \[  \zeta _ T\mathrm{MA}^{\mathrm{ext}}_\theta (a) =\zeta _ T\mathrm{e}^{\lambda a}\mu .  \]
+</div>
+<p>
+       As $T\to \infty $, the cutoffs increase to one off the pole set of $w$, which no measure involved charges. This proves the equation and, in particular, shows that $\mathrm{MA}^{\mathrm{ext}}_\theta (a)$ has finite mass. Uniqueness follows from corollary <a data-tag="8F6F638A" href="../../tag/AF890AD49AC5/">14.1.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

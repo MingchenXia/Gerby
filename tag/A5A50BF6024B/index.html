@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The optimal constant in dimension one · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>A5A50BF6024B</code></p><h1>The optimal constant in dimension one</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 1.16.2 The optimal constant in dimension one <span data-gerby-tag="CEE25829"></span></div>
+<p>
+In this subsection, $\Omega \subset \mathbb C$ is a pseudoconvex domain with Euclidean area $\mathrm{d}V$, and we use the weighted norms and spaces of global sections of <a data-tag="13629286" href="../../tag/1B01826812A9/">1.16.1</a>. In one variable, every multiplier ideal is determined by vanishing orders at points. This allows us to combine the weights into a single one before applying the one-weight estimate, and leads to a better constant than the product bound. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4AC3DFA1">
+<p><a class="environment-identifier" href="../../tag/750629715507/">Lemma <span data-tag="4AC3DFA1">1.16.11</span>.</a><span data-gerby-tag="4AC3DFA1"></span> For a subharmonic function $u$ on $\Omega $ and $x\in \Omega $, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-C8A7320D"><span data-gerby-tag="C8A7320D"></span>
+<span class="equation-label"><a data-tag="C8A7320D" href="../../tag/B6502E786DEE/">1.54</a></span>
+<div>\begin{equation} \label{eq:planar-multiplier-ideal} \mathcal I(u)_ x=(z-x)^{\lfloor \nu (u,x)\rfloor }\mathcal O_{\Omega ,x}. \end{equation}</div>
+</div>
+<p> These ideals form a locally principal ideal sheaf. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      With the normalization of $\mathrm{dd}^{\mathrm{c}}$ fixed in the conventions, $\mu =\mathrm{dd}^{\mathrm{c}}u$ is a positive Radon measure and $a=\mu (\{ x\} )=\nu (u,x)$. After removal of this atom, the distribution $u-a\log |z-x|^2$ has positive complex Hessian, so it has a subharmonic representative $v$, and $\mathrm{dd}^{\mathrm{c}}v$ has no atom at $x$. Since subharmonic functions that agree almost everywhere agree everywhere, 
+    
+<div class="equation">
+  \[  u=a\log |z-x|^2+v.  \]
+</div>
+<p>
+      We claim that, for each $t&gt;0$, the function $\mathrm e^{-tv}$ is integrable on some neighborhood of $x$. Indeed, since $\mathrm{dd}^{\mathrm{c}}v$ has no atom at $x$, there is a disk $D=D(x,R)\Subset \Omega $ with $M=(\mathrm{dd}^{\mathrm{c}}v)(D)&lt;1/t$. On $D$ write 
+    
+<div class="equation">
+  \[  v(z)=\int _ D\log |z-y|^2\, \mathrm{d}(\mathrm{dd}^{\mathrm{c}}v)(y)+h(z),  \]
+</div>
+<p>
+       where $h$ is harmonic: the integral is locally integrable by Fubini's theorem and has complex Hessian $\mathrm{dd}^{\mathrm{c}}v$ on $D$, so it differs from $v$ by a harmonic distribution. If $M=0$, the claim follows from harmonicity. For $M&gt;0$, Jensen's inequality for the probability measure $(\mathrm{dd}^{\mathrm{c}}v)/M$ gives 
+    
+<div class="equation">
+  \[  \exp \left(-t\int _ D\log |z-y|^2\, \mathrm{d}(\mathrm{dd}^{\mathrm{c}}v)(y)\right) \leq \frac1M\int _ D |z-y|^{-2tM}\, \mathrm{d}(\mathrm{dd}^{\mathrm{c}}v)(y).  \]
+</div>
+<p>
+       Since $tM&lt;1$, the integral of $|z-y|^{-2tM}$ over $z\in D(x,R/2)$ is bounded uniformly in $y\in D$. The harmonic function $h$ is bounded below on this smaller disk, so Tonelli's theorem proves the claim. (Truncating the logarithmic kernel justifies Jensen's inequality at its poles.) 
+    <p>
+      A nonzero holomorphic germ of order $k$ at $x$ is a unit times $(z-x)^ k$. Since $v$ is locally bounded above, weighted integrability requires $k+1&gt;a$; equality is excluded by the logarithmic divergence of the radial integral. Conversely, if $k+1&gt;a$, choose $b&gt;1$ such that $b(a-k)&lt;1$. Then $|z-x|^{2k-2a}$ belongs locally to $L^ b$, and $\mathrm e^{-v}$ belongs locally to $L^{b/(b-1)}$ by the claim, so Hölder's inequality proves integrability. Thus the germ belongs to $\mathcal I(u)_ x$ exactly when $k\geq \lfloor a\rfloor $. 
+    <p>
+      The points $y$ with $\nu (u,y)\geq 1$ form a locally finite set, since each of them carries an atom of mass at least one of the locally finite measure $\mathrm{dd}^{\mathrm{c}}u$. Near any point, therefore, the ideal sheaf is generated by a single power of a coordinate, which proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The distance condition below involves a sum of spaces of global sections. In one variable, this sum coincides with the space of global sections of the sum of the ideal sheaves. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4336863E">
+<p><a class="environment-identifier" href="../../tag/9AA5F4F533CD/">Lemma <span data-tag="4336863E">1.16.12</span>.</a><span data-gerby-tag="4336863E"></span> If $u_1,\ldots ,u_ r$ are subharmonic functions on $\Omega $, then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-93113C0E"><span data-gerby-tag="93113C0E"></span>
+<span class="equation-label"><a data-tag="93113C0E" href="../../tag/594319E5AC8F/">1.55</a></span>
+<div>\begin{equation} \label{eq:planar-global-ideal-sum} \Gamma \left(\Omega ,\sum _{i=1}^ r\mathcal I(u_ i)\right) =\sum _{i=1}^ r\Gamma (\Omega ,\mathcal I(u_ i)). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $r=1$ there is nothing to prove, so let $r\geq 2$. Put $J_ i=\mathcal I(u_ i)$ and $J=\sum _ iJ_ i$. By lemma <a data-tag="4AC3DFA1" href="../../tag/750629715507/">1.16.11</a>, these sheaves are locally free of rank one. At each point, the order of $J$ is the smallest of the orders of the $J_ i$, and a local generator of an ideal $J_ i$ attaining this order also generates $J$. Consequently the sum map $\bigoplus _ iJ_ i\to J$ is locally split, and its kernel $E$ is a holomorphic vector bundle of rank $r-1$. 
+    <p>
+      Fix $f\in \Gamma (\Omega ,J)$. Gluing local holomorphic lifts of $f$ with a smooth partition of unity gives a smooth section $s$ of $\bigoplus _ iJ_ i$ whose image is $f$. Since $f$ is holomorphic, $\beta =\bar\partial s$ is an $E$-valued $(0,1)$-form. It suffices to solve $\bar\partial v=\beta $ for a section $v$ of $E$, for then $s-v$ is a holomorphic lift of $f$. 
+    <p>
+      We solve this equation using a bundle metric of positive curvature. Choose a smooth strictly subharmonic exhaustion function $\rho \geq 1$ of $\Omega $. The Kähler metric 
+    
+<div class="equation">
+  \[  \omega _*=\mathrm i\, \mathrm{d}z\wedge \mathrm{d}\bar z +\mathrm i\partial \bar\partial \rho ^2  \]
+</div>
+<p>
+       is complete: it dominates $2\mathrm i\partial \rho \wedge \bar\partial \rho $, so $\rho $ has bounded gradient with respect to it, and therefore every curve leaving all compact subsets has infinite length. 
+    <p>
+       Equip $E$ with a smooth Hermitian metric $h$. Choose a smooth increasing convex function $\chi $ on $[1,+\infty )$ so that the metric $h_\chi =h\mathrm e^{-\chi (\rho )}$ has 
+    
+<div class="equation">
+  \[  \mathrm i\Theta _{E,h_\chi }\geq \omega _*\operatorname {Id}_ E, \qquad \int _\Omega |\beta |_{h_\chi ,\omega _*}^2\, \mathrm{d}V_{\omega _*}&lt;+\infty .  \]
+</div>
+<p>
+       These two requirements can be imposed successively on the compact sublevel sets of $\rho $: increase $\chi '$ so that $\chi '(\rho )$ times the positive Hessian of $\rho $ dominates the negative part of the curvature, and increase $\chi $ so that the integral over each shell $\{ m\leq \rho &lt;m+1\} $ is at most $2^{-m}$. Increasing the slopes preserves the inequalities already achieved. 
+    <p>
+      Use the global frame $\mathrm{d}z$ of the canonical bundle $K_\Omega $ to identify $E$-valued $(0,q)$-forms with $(E\otimes K_\Omega ^{-1})$-valued $(1,q)$-forms, and give $K_\Omega ^{-1}$ its flat coordinate metric. Its curvature is zero, and $\omega _*$ dominates the Euclidean metric, so the identified form $\beta $ remains $L^2$. The Bochner–Kodaira inequality for compactly supported forms $w$ of type $(1,1)$ gives 
+    
+<div class="equation">
+  \[  \| \bar\partial ^*w\| ^2\geq \langle [\mathrm i\Theta _{E,h_\chi },\Lambda _{\omega _*}]w,w\rangle \geq \| w\| ^2.  \]
+</div>
+<p>
+       Here we used that there are no $(1,2)$-forms. By completeness, cutoffs and smoothing extend this inequality to the domain of the adjoint. Since $\beta $ is $L^2$, the Cauchy–Schwarz inequality bounds the functional $w\mapsto \langle w,\beta \rangle $ by $\| \beta \| \| \bar\partial ^*w\| $, and the Riesz representation theorem gives a distributional solution $v$ of $\bar\partial v=\beta $. Thus $s-v$ is distributionally holomorphic, hence holomorphic in every bundle chart, and it is the required global lift. No global weighted norm condition is imposed on its components. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-DE949C71">
+<p><a class="environment-identifier" href="../../tag/E767909834AD/">Theorem <span data-tag="DE949C71">1.16.13</span>.</a><span data-gerby-tag="DE949C71"></span> Let $\psi $ and $\phi _1,\ldots ,\phi _ r$ be subharmonic functions on $\Omega $, with $r\geq 1$ and $\phi _ i&lt;0$, and choose $p_ i&gt;1$. For holomorphic $f$ with $I=\| f\| _{\psi +\sum _ i\phi _ i}^2&lt;+\infty $, define </p>
+<div class="equation">
+  \[  c=\inf \left\{ \| g\| _\psi ^2:g\in \mathcal O(\Omega ),\quad f-g\in \sum _{i=1}^ r\Gamma (\Omega ,\mathcal I(p_ i\phi _ i+\psi ))\right\} , \qquad s=\sum _{i=1}^ r\frac1{p_ i}.  \]
+</div>
+<p> Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-091BEFF6"><span data-gerby-tag="091BEFF6"></span>
+<span class="equation-label"><a data-tag="091BEFF6" href="../../tag/17133E696650/">1.56</a></span>
+<div>\begin{equation} \label{eq:planar-optimal-ideal-distance} c\leq \max \{ 1-s,0\} \, I. \end{equation}</div>
+</div>
+<p> For every fixed choice of the exponents, this constant is optimal over the stated class of data. If $s\geq 1$, the function $g=0$ is admissible. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $J_ i=\mathcal I(p_ i\phi _ i+\psi )$ and $J=\sum _ iJ_ i$. At a point $x$, write $A=\nu (\psi ,x)$ and $B_ i=\nu (\phi _ i,x)$. By lemma <a data-tag="4AC3DFA1" href="../../tag/750629715507/">1.16.11</a>, the order of $J_ x$ is $\min _ i\lfloor A+p_ iB_ i\rfloor $. 
+    <p>
+      Suppose first that $s&lt;1$, and put $P=1/s&gt;1$. The numbers $P/p_ i$ sum to one, so 
+    
+<div class="equation">
+  \[  \min _ i p_ iB_ i\leq \sum _ i\frac{P}{p_ i}p_ iB_ i=P\sum _ iB_ i.  \]
+</div>
+<p>
+       Taking integer parts and using lemma <a data-tag="4AC3DFA1" href="../../tag/750629715507/">1.16.11</a> gives $\mathcal I(P\sum _ i\phi _ i+\psi )\subseteq J$. By lemma <a data-tag="4336863E" href="../../tag/9AA5F4F533CD/">1.16.12</a>, every global section of this smaller ideal sheaf lies in $\sum _ i\Gamma (\Omega ,J_ i)$, so every remainder admissible for the one-weight problem is admissible for $c$. Proposition <a data-tag="27FE8F6B" href="../../tag/B929E98153F2/">1.16.9</a> with $\phi =\sum _ i\phi _ i$ and $p=P$ therefore gives $c\leq (1-1/P)I=(1-s)I$. 
+    <p>
+      Now let $s\geq 1$. Since $I&lt;+\infty $, we have $f\in \Gamma (\Omega ,\mathcal I(\psi +\sum _ i\phi _ i))$. If $f\equiv 0$ there is nothing to prove; otherwise let $k$ be its order at $x$. Then $k+1&gt;A+\sum _ iB_ i$. If its germ did not belong to $J_ x$, we would have $k+1\leq A+p_ iB_ i$ for every $i$. With $L=k+1-A&gt;0$, this would give $\sum _ iB_ i\geq sL\geq L$, a contradiction. Hence $f\in \Gamma (\Omega ,J)$, and lemma <a data-tag="4336863E" href="../../tag/9AA5F4F533CD/">1.16.12</a> shows that $g=0$ is admissible. 
+    <p>
+      For sharpness when $s&lt;1$, take the unit disk, $\psi =0$, $f=1$, and $\phi _ i=p_ i^{-1}\log |z|^2$. Then $J_ i=(z)$ for all $i$, so an admissible $g$ has $g(0)=1$. Orthogonality of the monomials on the disk gives $c=\pi $, attained by $g=1$, whereas $I=\pi /(1-s)$. If $s\geq 1$, keep these weights and take $f=z^ q$ with an integer $q\geq 0$ satisfying $q+1&gt;s$. Then $I=\pi /(q+1-s)&gt;0$ and $c=0$, so the constant $0$ cannot be replaced by a negative number. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Consequently, for $r\geq 2$ the product constant of theorem <a data-tag="8E39AE89" href="../../tag/5433D9F2E00C/">1.16.10</a> is not optimal on plane domains. The argument above relies on all local ideals being principal; it does not determine the optimal constant when $n\geq 2$ and $r&gt;n$. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

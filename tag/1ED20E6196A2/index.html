@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Almost semigroups · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/sections-okounkov/">Chapter 16 · Sections, graded series, and Okounkov bodies</a> · Tag <code>1ED20E6196A2</code></p><h1>Almost semigroups</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 10.1 Almost semigroups <span data-gerby-tag="F5BC336E"></span></div>
+<p>
+ We give a brief presentation of the theory of almost semigroups. The arguments are provided in chapter <a data-tag="AD6A1F3F" href="../../tag/00B44728CC57/">C</a>. 
+</p>
+<p>
+Fix an integer $n\geq 0$. Fix a closed convex cone $C\subseteq \mathbb {R}^{n}\times \mathbb {R}_{\geq 0}$ such that $C\cap \{ x_{n+1}=0\} =\{ 0\} $. Here $x_{n+1}$ is the last coordinate of $\mathbb {R}^{n+1}$. 
+</p>
+<p>
+Write $\hat{\mathcal{S}}(C)$ for the set of subsets of $C\cap \mathbb {Z}^{n+1}$ and $\mathcal{S}(C)$ for the set of subsemigroups $S\subseteq C\cap \mathbb {Z}^{n+1}$. For $S\in \hat{\mathcal{S}}(C)$ and each $k\in \mathbb {N}$ such that $S_ k\neq \varnothing $, we write 
+</p>
+<div class="equation">
+  \[  S_ k\coloneqq \left\{ x\in \mathbb {Z}^ n: (x,k)\in S \right\} .  \]
+</div>
+<p>
+ Note that $S_ k$ is a finite set by our assumption on $C$. 
+</p>
+<p>
+We introduce a pseudometric on $\hat{\mathcal{S}}(C)$ as follows: 
+</p>
+<div class="equation" id="sgpt-2379D50B"><span data-gerby-tag="2379D50B"></span>
+<span class="equation-label"><a data-tag="2379D50B" href="../../tag/A3A5C96E566B/">10.1</a></span>
+<div>\begin{equation} \label{eq:dsgdef} d_{\mathrm{sg}}(S,S')\coloneqq \varlimsup _{k\to \infty } k^{-n} \left(|S_ k|+|S'_ k|-2|(S\cap S')_ k|\right). \end{equation}</div>
+</div>
+<p>
+ Here $|\bullet |$ denotes the cardinality of a finite set. The quantity $d_{\mathrm{sg}}$ defined above is a pseudometric on $\hat{\mathcal{S}}(C)$. Given $S,S'\in \hat{\mathcal{S}}(C)$, we say $S$ is equivalent to $S'$ and write $S\sim S'$ if $d_{\mathrm{sg}}(S,S')=0$. This is an equivalence relation. 
+</p>
+<p>
+The volume of $S\in \mathcal{S}(C)$ is defined as 
+</p>
+<div class="equation">
+  \[  \operatorname{vol}S\coloneqq \lim _{k\to \infty } (ka)^{-n}|S_{ka}|=\varlimsup _{k\to \infty } k^{-n}|S_ k|,  \]
+</div>
+<p>
+ where $a$ is a sufficiently divisible positive integer. The existence of the limit and its independence from $a$ both follow from theorem <a data-tag="282DA4DD" href="../../tag/85641516C8CA/">C.2.3</a>. 
+</p>
+<p>
+We define $\overline{\mathcal{S}}(C)$ as the closure of $\mathcal{S}(C)$ in $\hat{\mathcal{S}}(C)$ with respect to the topology defined by the pseudometric $d_{\mathrm{sg}}$. The function $\operatorname{vol}\colon \mathcal{S}(C)\rightarrow \mathbb {R}$ admits a unique $1$-Lipschitz extension to 
+</p>
+<div class="equation" id="sgpt-9374A1CC"><span data-gerby-tag="9374A1CC"></span>
+<span class="equation-label"><a data-tag="9374A1CC" href="../../tag/41423E2E726F/">10.2</a></span>
+<div>\begin{equation} \label{eq:volex} \operatorname{vol}\colon \overline{\mathcal{S}}(C)\rightarrow \mathbb {R}. \end{equation}</div>
+</div>
+<p>
+Given $S\in \hat{\mathcal{S}}(C)$, we will write $C(S)\subseteq C$ for the closed convex cone generated by $S\cup \{ 0\} $. Moreover, for each $k\in \mathbb {Z}_{&gt;0}$ such that $S_ k\neq \varnothing $, we define 
+</p>
+<div class="equation">
+  \[  \Delta _ k(S)\coloneqq \mathrm{Conv}\left\{ k^{-1}x\in \mathbb {R}^ n:x\in S_ k \right\} \subseteq \mathbb {R}^ n.  \]
+</div>
+
+ Here $\mathrm{Conv}$ denotes the convex hull. <article class="env-definition" id="sgpt-33283DB1">
+<p><a class="environment-identifier" href="../../tag/923345ACA44A/">Definition <span data-tag="33283DB1">10.1.1</span>.</a><span data-gerby-tag="33283DB1"></span> Let $\mathcal{S}'(C)$ be the subset of $\mathcal{S}(C)$ consisting of semigroups $S$ such that $S$ generates $\mathbb {Z}^{n+1}$ (as an Abelian group).   </p>
+</article> Note that for any $S\in \mathcal{S}'(C)$, the cone $C(S)$ has full dimension (i.e., the topological interior is non-empty). Given a full-dimensional subcone $C'\subseteq C$, we have $C'\cap \mathbb {Z}^{n+1}\in \mathcal{S}'(C)$. 
+
+
+We recall the following definition from <span class="cite">[<a href="../../references/#RE66A40F6537E">KK12</a>]</span>. <article class="env-definition" id="sgpt-09011B25">
+<p><a class="environment-identifier" href="../../tag/B62535F66376/">Definition <span data-tag="09011B25">10.1.2</span>.</a><span data-gerby-tag="09011B25"></span> Given $S\in \mathcal{S}'(C)$, its <em>Okounkov body</em> is defined by  </p>
+<div class="equation">
+  \[  \Delta (S)\coloneqq \left\{ x\in \mathbb {R}^ n:(x,1)\in C(S) \right\} .  \]
+</div>
+</article>
+
+
+<article class="env-theorem" id="sgpt-289292E3">
+<p><a class="environment-identifier" href="../../tag/37D86D761E81/">Theorem <span data-tag="289292E3">10.1.3</span>.</a><span data-gerby-tag="289292E3"></span> For each $S\in \mathcal{S}'(C)$, we have </p>
+<div class="equation" id="sgpt-2715D784"><span data-gerby-tag="2715D784"></span>
+<span class="equation-label"><a data-tag="2715D784" href="../../tag/4E701FB8EA13/">10.3</a></span>
+<div>\begin{equation} \label{eq:volWvolDelta} \operatorname{vol}S=\lim _{k\to \infty } k^{-n}|S_ k|=\operatorname{vol}\Delta (S)&gt;0. \end{equation}</div>
+</div>
+<p> Moreover, as $k\to \infty $, </p>
+<div class="equation" id="sgpt-8877D026"><span data-gerby-tag="8877D026"></span>
+<span class="equation-label"><a data-tag="8877D026" href="../../tag/A57FF2EE0305/">10.4</a></span>
+<div>\begin{equation} \label{eq:HausconvDeltaGLS} \Delta _{k}(S)\xrightarrow {d_{\mathrm{Haus}}}\Delta (S). \end{equation}</div>
+</div>
+</article> <article class="env-corollary" id="sgpt-CFA8D66F">
+<p><a class="environment-identifier" href="../../tag/9FB3E8CE18F7/">Corollary <span data-tag="CFA8D66F">10.1.4</span>.</a><span data-gerby-tag="CFA8D66F"></span> Let $S,S'\in \mathcal{S}'(C)$. Assume that $\operatorname{vol}(S\cap S')&gt;0$. Then we have </p>
+<div class="equation">
+  \[  d_{\mathrm{sg}}(S,S')=\operatorname{vol}(S)+\operatorname{vol}(S')-2\operatorname{vol}(S\cap S').  \]
+</div>
+</article>
+
+
+<article class="env-definition" id="sgpt-E4CCE4D8">
+<p><a class="environment-identifier" href="../../tag/78B565EC56CF/">Definition <span data-tag="E4CCE4D8">10.1.5</span>.</a><span data-gerby-tag="E4CCE4D8"></span> We define $\overline{\mathcal{S}'(C)}_{&gt;0}$ as the set of elements in the closure of $\mathcal{S}'(C)$ in $\hat{\mathcal{S}}(C)$ with positive volume. An element in $\overline{\mathcal{S}'(C)}_{&gt;0}$ is called an <em>almost semigroup</em> in $C$.  </p>
+</article> Recall that the volume here is defined in (<a data-tag="9374A1CC" href="../../tag/41423E2E726F/">10.2</a>). 
+
+
+<article class="env-theorem" id="sgpt-870F54F8">
+<p><a class="environment-identifier" href="../../tag/2534E787147E/">Theorem <span data-tag="870F54F8">10.1.6</span>.</a><span data-gerby-tag="870F54F8"></span> The Okounkov body map $\Delta \colon \mathcal{S}'(C) \rightarrow \mathcal{K}_ n$ as defined in definition <a data-tag="09011B25" href="../../tag/B62535F66376/">10.1.2</a> admits a unique continuous extension </p>
+<div class="equation" id="sgpt-513C2C27"><span data-gerby-tag="513C2C27"></span>
+<span class="equation-label"><a data-tag="513C2C27" href="../../tag/64FC27991307/">10.5</a></span>
+<div>\begin{equation} \label{eq:Deltagensg} \Delta \colon \overline{\mathcal{S}'(C)}_{&gt;0}\rightarrow \mathcal{K}_ n. \end{equation}</div>
+</div>
+<p> Moreover, for any $S\in \overline{\mathcal{S}'(C)}_{&gt;0}$, we have </p>
+<div class="equation" id="sgpt-B3D5340A"><span data-gerby-tag="B3D5340A"></span>
+<span class="equation-label"><a data-tag="B3D5340A" href="../../tag/882FE1F63B29/">10.6</a></span>
+<div>\begin{equation} \label{eq:volWfinal} \operatorname{vol}S=\operatorname{vol}\Delta (S). \end{equation}</div>
+</div>
+</article>
+
+
+<article class="env-corollary" id="sgpt-EF7FDE10">
+<p><a class="environment-identifier" href="../../tag/511230BE9AE5/">Corollary <span data-tag="EF7FDE10">10.1.7</span>.</a><span data-gerby-tag="EF7FDE10"></span> Suppose that $S,S'\in \overline{\mathcal{S}'(C)}_{&gt;0}$ with $S\subseteq S'$. Then </p>
+<div class="equation" id="sgpt-58D6F61D"><span data-gerby-tag="58D6F61D"></span>
+<span class="equation-label"><a data-tag="58D6F61D" href="../../tag/4552E8E96799/">10.7</a></span>
+<div>\begin{equation} \label{eq:Deltacontain} \Delta (S)\subseteq \Delta (S'). \end{equation}</div>
+</div>
+</article>
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

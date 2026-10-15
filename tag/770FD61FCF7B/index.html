@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The metrics on the spaces of potentials and rays · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/energy-geodesics/">Chapter 14 · Energy, geodesics, rays, and test curves</a> · Tag <code>770FD61FCF7B</code></p><h1>The metrics on the spaces of potentials and rays</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 4.3 The metrics on the spaces of potentials and rays <span data-gerby-tag="71005137"></span></div>
+<p>
+Let $X$ be a connected compact Kähler manifold of dimension $n$ and $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a big cohomology class. Fix a model potential $\phi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. 
+</p>
+<p>
+We first study a natural metric on $\mathcal{E}^1(X,\theta ;\phi )$. 
+</p>
+
+<article class="env-definition" id="sgpt-7B786AE5">
+<p><a class="environment-identifier" href="../../tag/08EFAEA550B1/">Definition <span data-tag="7B786AE5">4.3.1</span>.</a><span data-gerby-tag="7B786AE5"></span> Let $\varphi ,\psi \in \mathcal{E}^1(X,\theta ;\phi )$, we define the <em>Darvas metric</em> $d_1$ as follows: </p>
+<div class="equation">
+  \[  d_1(\varphi ,\psi )=E_{\theta }^{\phi }(\varphi )+E_{\theta }^{\phi }(\psi )-2E_{\theta }^{\phi }(\varphi \land \psi ).  \]
+</div>
+<p> Note that by proposition <a data-tag="279EC696" href="../../tag/AAD590A053BB/">3.1.51</a>, $\varphi \land \psi \in \mathcal{E}^1(X,\theta ;\phi )$. </p>
+</article> Recall that $E_{\theta }^{\phi }$ is defined in definition <a data-tag="40DF40B7" href="../../tag/8A07570966F8/">3.1.35</a>. 
+
+<p>
+In particular, if $\varphi \leq \psi $, we have 
+</p>
+<div class="equation" id="sgpt-BF10DF27"><span data-gerby-tag="BF10DF27"></span>
+<span class="equation-label"><a data-tag="BF10DF27" href="../../tag/D8C8C0BB6585/">4.21</a></span>
+<div>\begin{equation} \label{eq:d1asEdiff} d_1(\varphi ,\psi )=E_{\theta }^{\phi }(\psi )-E_{\theta }^{\phi }(\varphi ). \end{equation}</div>
+</div>
+
+We wish to show that $d_1$ is a complete metric. We first prove a contraction property: <article class="env-proposition" id="sgpt-BB01FE5E">
+<p><a class="environment-identifier" href="../../tag/61DD221912DE/">Proposition <span data-tag="BB01FE5E">4.3.2</span>.</a><span data-gerby-tag="BB01FE5E"></span> Let $\varphi ,\psi ,\gamma \in \mathcal{E}^1(X,\theta ;\phi )$. Then </p>
+<div class="equation" id="sgpt-1D986A66"><span data-gerby-tag="1D986A66"></span>
+<span class="equation-label"><a data-tag="1D986A66" href="../../tag/DCF5BF05B577/">4.22</a></span>
+<div>\begin{equation} \label{eq:d1contract} d_1(\varphi ,\psi )\geq d_1(\varphi \land \gamma ,\psi \land \gamma ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first assume that $\varphi \geq \psi $. Then 
+    
+<div class="equation">
+  \[  \begin{aligned}  d_1(\varphi ,\psi )=&amp;  E_{\theta }^{\phi }(\varphi )-E_{\theta }^{\phi }(\psi )\\  \geq &amp;  E_{\theta }^{\phi }\Bigl ((\varphi \land \gamma )\lor \psi \Bigr )-E_{\theta }^{\phi }(\psi ) &amp;  \textup{by \href{../../tag/93210731F7FD/}{3.1.36}}\\  \geq &amp;  E_{\theta }^{\phi }(\varphi \land \gamma )-E_{\theta }^{\phi }(\psi \land \gamma )&amp; \textup{by corollary \href{../../tag/4A849C02F386/}{3.1.57}}. \end{aligned}  \]
+</div>
+<p>
+<strong>Step 2</strong>. We prove the general case. 
+    <p>
+      By Step 1, we have 
+    
+<div class="equation">
+  \[  d_1(\varphi ,\varphi \land \psi )\geq d_1(\varphi \land \gamma ,\varphi \land \psi \land \gamma ),\quad d_1(\psi ,\varphi \land \psi )\geq d_1(\psi \land \gamma ,\varphi \land \psi \land \gamma ).  \]
+</div>
+<p>
+       Adding the two inequalities together, we conclude (<a data-tag="1D986A66" href="../../tag/DCF5BF05B577/">4.22</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="sgpt-A3C94844">
+<p><a class="environment-identifier" href="../../tag/488B7E9EA42C/">Lemma <span data-tag="A3C94844">4.3.3</span>.</a><span data-gerby-tag="A3C94844"></span> The function $d_1$ is a metric on $\mathcal{E}^1(X,\theta ;\phi )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      There are two facts to prove, as in the two steps below. 
+    <p>
+<strong>Step 1</strong>. Let $\varphi ,\psi \in \mathcal{E}^1(X,\theta ;\phi )$. Assume that $d_1(\varphi ,\psi )=0$. Then we will show that $\varphi =\psi $. 
+    <p>
+      We first treat the case $\psi \leq \varphi $. Then $d_1(\varphi ,\psi )=E_\theta ^\phi (\varphi )-E_\theta ^\phi (\psi )=0$, and proposition <a data-tag="ABE17BA7" href="../../tag/4280CB108A7E/">3.1.45</a> gives 
+    
+<div class="equation">
+  \[  \int _ X (\varphi -\psi )\, \theta _{\psi }^ n=0.  \]
+</div>
+<p>
+       We conclude that $\psi =\varphi $ using the domination principle theorem <a data-tag="08DC0304" href="../../tag/B798B54E6F2E/">2.4.17</a>. 
+    <p>
+      In general, put $\gamma =\varphi \land \psi $. Since 
+    
+<div class="equation">
+  \[  d_1(\varphi ,\psi )=d_1(\varphi ,\gamma )+d_1(\psi ,\gamma ),  \]
+</div>
+<p>
+       both terms on the right vanish. Applying the comparable case to the pairs $(\varphi ,\gamma )$ and $(\psi ,\gamma )$ gives $\varphi =\gamma =\psi $. 
+    <p>
+<strong>Step 2</strong>. Let $\varphi ,\psi ,\gamma \in \mathcal{E}^1(X,\theta ;\phi )$. We prove the triangle inequality: 
+    
+<div class="equation">
+  \[  d_1(\varphi ,\psi )\leq d_1(\varphi ,\gamma )+d_1(\psi ,\gamma ).  \]
+</div>
+<p>
+       This can be translated to 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }(\varphi \land \gamma )-E_{\theta }^{\phi }(\varphi \land \psi )\leq E_{\theta }^{\phi }(\gamma )-E_{\theta }^{\phi }(\psi \land \gamma ).  \]
+</div>
+<p>
+       We just have to compute using proposition <a data-tag="BB01FE5E" href="../../tag/61DD221912DE/">4.3.2</a>: 
+    
+<div class="equation">
+  \[  \begin{aligned}  E_{\theta }^{\phi }(\gamma )-E_{\theta }^{\phi }(\psi \land \gamma )\geq &amp;  E_{\theta }^{\phi }(\varphi \land \gamma )-E_{\theta }^{\phi }(\varphi \land \psi \land \gamma )\\  \geq &amp; E_{\theta }^{\phi }(\varphi \land \gamma )-E_{\theta }^{\phi }(\varphi \land \psi ), \end{aligned}  \]
+</div>
+<p>
+       where the second line follows from <a data-tag="BACDFA8A" href="../../tag/93210731F7FD/">3.1.36</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+We introduce an auxiliary functional. <article class="env-definition" id="sgpt-10253260">
+<p><a class="environment-identifier" href="../../tag/D926E3A0E83A/">Definition <span data-tag="10253260">4.3.4</span>.</a><span data-gerby-tag="10253260"></span> Define $I_{\theta }\colon \mathcal{E}^1(X,\theta ;\phi )\times \mathcal{E}^1(X,\theta ;\phi )\rightarrow \mathbb {R}\cup \{ \infty \} $ as follows: </p>
+<div class="equation">
+<span class="equation-label">4.28</span>
+<div>\begin{equation}  I_{\theta }(\varphi ,\psi )\coloneqq \int _ X |\varphi -\psi |\left( \theta _{\varphi }^ n+\theta _{\psi }^ n \right). \end{equation}</div>
+</div>
+</article> We will soon see that $I_{\theta }$ is always finite, see theorem <a data-tag="E638E7AB" href="../../tag/1178F95447B1/">4.3.6</a>. 
+
+
+We observe the following elementary equality. <article class="env-lemma" id="sgpt-46E60D9B">
+<p><a class="environment-identifier" href="../../tag/CB87AA08E67C/">Lemma <span data-tag="46E60D9B">4.3.5</span>.</a><span data-gerby-tag="46E60D9B"></span> Let $\varphi ,\psi \in \mathcal{E}^1(X,\theta ;\phi )$. Then </p>
+<div class="equation">
+  \[  I_{\theta }(\varphi ,\psi )=I_{\theta }(\varphi \lor \psi ,\varphi )+I_{\theta }(\varphi \lor \psi ,\psi ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the plurifine locality of non-pluripolar products proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="1C036AD6" href="../../tag/9E81D36B1290/#sgpt-1C036AD6">1</a>, we can write 
+    
+<div class="equation">
+  \[  \begin{aligned}  I_{\theta }(\varphi ,\psi )=&amp; \int _{ \{ \varphi &lt;\psi \} } (\psi -\varphi ) \left( \theta _{\varphi }^ n+\theta _{\psi }^ n \right)+\int _{ \{ \varphi &gt;\psi \} } (\varphi -\psi ) \left( \theta _{\varphi }^ n+\theta _{\psi }^ n \right),\\  I_{\theta }(\varphi \lor \psi ,\varphi )=&amp;  \int _{\{ \psi &gt;\varphi \} } (\psi -\varphi )\left(\theta _{\psi }^ n+\theta _{\varphi }^ n \right),\\  I_{\theta }(\varphi \lor \psi ,\psi )=&amp;  \int _{\{ \psi &lt;\varphi \} } (\varphi -\psi )\left(\theta _{\psi }^ n+\theta _{\varphi }^ n \right). \end{aligned}  \]
+</div>
+<p>
+       The desired equality follows by comparing these terms. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+We have an interesting relation between $d_1$ and $I_{\theta }$ defined in definition <a data-tag="10253260" href="../../tag/D926E3A0E83A/">4.3.4</a>. <article class="env-theorem" id="sgpt-E638E7AB">
+<p><a class="environment-identifier" href="../../tag/1178F95447B1/">Theorem <span data-tag="E638E7AB">4.3.6</span>.</a><span data-gerby-tag="E638E7AB"></span> Let $\varphi ,\psi \in \mathcal{E}^1(X,\theta ;\phi )$. Then </p>
+<div class="equation" id="sgpt-BE312033"><span data-gerby-tag="BE312033"></span>
+<span class="equation-label"><a data-tag="BE312033" href="../../tag/59E3B0356FFD/">4.32</a></span>
+<div>\begin{equation} \label{eq:I_d1_comp} \frac{1}{C_ n} I_{\theta }(\varphi ,\psi )\leq d_1(\varphi ,\psi )\leq I_{\theta }(\varphi ,\psi ), \end{equation}</div>
+</div>
+<p> where $C_ n=3\cdot 2^{n+2}(n+1)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<strong>Step 1</strong>. We first prove the right-hand part of (<a data-tag="BE312033" href="../../tag/59E3B0356FFD/">4.32</a>). 
+    <p>
+      Thanks to proposition <a data-tag="EFA21885" href="../../tag/51CFFEE97C34/">3.1.46</a> and <a data-tag="FEE0E763" href="../../tag/4CF7246E6E5A/">3.1.3</a>, we have 
+    
+<div class="equation">
+  \[  \begin{aligned}  E_{\theta }^{\phi }(\varphi )-E_{\theta }^{\phi }(\varphi \land \psi )\leq &amp;  \int _ X (\varphi -\varphi \land \psi )\, \theta _{\varphi \land \psi }^ n \\  \leq &amp;  \int _{\{ \psi =\varphi \land \psi \} } (\varphi -\psi )\, \theta _{\psi }^ n\\  \leq &amp;  \int _ X |\varphi -\psi |\, \theta _{\psi }^ n. \end{aligned}  \]
+</div>
+<p>
+       Similarly, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }(\psi )-E_{\theta }^{\phi }(\varphi \land \psi )\leq \int _ X |\varphi -\psi |\, \theta _{\varphi }^ n.  \]
+</div>
+<p>
+       Adding these inequalities up, we find 
+    
+<div class="equation">
+  \[  d_1(\varphi ,\psi )\leq I_{\theta }(\varphi ,\psi ).  \]
+</div>
+<p>
+<strong>Step 2</strong>. We prove the left-hand part of (<a data-tag="BE312033" href="../../tag/59E3B0356FFD/">4.32</a>). 
+    <p>
+      We claim that 
+    
+<div class="equation" id="sgpt-460A5B49"><span data-gerby-tag="460A5B49"></span>
+<span class="equation-label"><a data-tag="460A5B49" href="../../tag/C3DBA22EBCCD/">4.36</a></span>
+<div>\begin{equation} \label{eq:d_1varphivarphipsimean_temp1} d_1\left(\varphi ,\frac{\varphi +\psi }{2}\right)\leq \frac{3(n+1)}{2} d_1(\varphi ,\psi ). \end{equation}</div>
+</div>
+<p>
+       For this purpose, we compute directly 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; d_1\left(\varphi ,\frac{\varphi +\psi }{2}\right)\\  =&amp; d_1\left(\varphi ,\varphi \land \frac{\varphi +\psi }{2}\right)+d_1\left(\frac{\varphi +\psi }{2},\varphi \land \frac{\varphi +\psi }{2}\right)\\  \leq &amp;  d_1\left(\varphi ,\varphi \land \psi \right)+d_1\left(\frac{\varphi +\psi }{2},\varphi \land \psi \right)&amp; \textup{by \href{../../tag/93210731F7FD/}{3.1.36}}\\  \leq &amp;  \int _ X \left( \varphi -\varphi \land \psi \right)\, \theta _{\varphi \land \psi }^ n+ \int _ X \left( \frac{\varphi +\psi }{2}-\varphi \land \psi \right)\, \theta _{\varphi \land \psi }^ n &amp; \textup{by proposition \href{../../tag/51CFFEE97C34/}{3.1.46}}\\  =&amp;  \frac{3}{2}\int _ X \left( \varphi -\varphi \land \psi \right)\, \theta _{\varphi \land \psi }^ n+\frac{1}{2}\int _ X \left( \psi -\varphi \land \psi \right)\, \theta _{\varphi \land \psi }^ n \\  \leq &amp;  \frac{3(n+1)}{2}d_1\left(\varphi ,\varphi \land \psi \right) + \frac{n+1}{2}d_1(\psi ,\varphi \land \psi )&amp;  \textup{by (\href{../../tag/F8225060CBAC/}{3.110})}\\  \leq &amp;  \frac{3(n+1)}{2}d_1(\varphi ,\psi ), \end{aligned}  \]
+</div>
+<p>
+       and (<a data-tag="460A5B49" href="../../tag/C3DBA22EBCCD/">4.36</a>) follows. 
+    <p>
+      We now estimate the left-hand side of (<a data-tag="460A5B49" href="../../tag/C3DBA22EBCCD/">4.36</a>): 
+    
+<div class="equation">
+  \[  \begin{aligned}  d_1\left(\varphi ,\frac{\varphi +\psi }{2}\right)\geq &amp;  d_1\left(\varphi ,\varphi \land \frac{\varphi +\psi }{2}\right)\\  \geq &amp;  \int _ X \left(\varphi -\varphi \land \frac{\varphi +\psi }{2}\right)\, \theta _{\varphi }^ n\\  \geq &amp;  \int _{\{ \varphi &gt;\psi \} }\left(\varphi -\varphi \land \frac{\varphi +\psi }{2}\right)\, \theta _{\varphi }^ n \\  \geq &amp;  \int _{\{ \varphi &gt;\psi \} }\left(\varphi -\frac{\varphi +\psi }{2}\right)\, \theta _{\varphi }^ n\\  =&amp;  \frac{1}{2}\int _{\{ \varphi &gt;\psi \} }\left(\varphi -\psi \right)\, \theta _{\varphi }^ n, \end{aligned}  \]
+</div>
+<p>
+       where the second inequality follows from proposition <a data-tag="EFA21885" href="../../tag/51CFFEE97C34/">3.1.46</a>. 
+    <p>
+      Similarly, 
+    
+<div class="equation">
+  \[  \begin{aligned}  d_1\left(\varphi ,\frac{\varphi +\psi }{2}\right)\geq &amp;  d_1\left(\frac{\varphi +\psi }{2},\varphi \land \frac{\varphi +\psi }{2}\right)\\  \geq &amp;  \int _ X \left(\frac{\varphi +\psi }{2}-\varphi \land \frac{\varphi +\psi }{2}\right)\, \theta _{(\varphi +\psi )/2}^ n\\  \geq &amp;  2^{-n} \int _ X \left(\frac{\varphi +\psi }{2}-\varphi \land \frac{\varphi +\psi }{2}\right)\, \theta _{\varphi }^ n\\  \geq &amp;  2^{-n} \int _{\{ \varphi &lt;\psi \} } \left(\frac{\varphi +\psi }{2}-\varphi \land \frac{\varphi +\psi }{2}\right)\, \theta _{\varphi }^ n\\  \geq &amp;  2^{-n} \int _{\{ \varphi &lt;\psi \} } \left(\frac{\varphi +\psi }{2}-\varphi \right)\, \theta _{\varphi }^ n\\  =&amp;  2^{-n-1} \int _{\{ \varphi &lt;\psi \} } \left(\psi -\varphi \right)\, \theta _{\varphi }^ n, \end{aligned}  \]
+</div>
+<p>
+       where the third inequality follows from the multi-linearity of the non-pluripolar product proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>. 
+    <p>
+      Adding these estimates up, we find 
+    
+<div class="equation">
+  \[  2^{n+2} d_1\left(\varphi ,\frac{\varphi +\psi }{2}\right)\geq \left(2^{n+1}+2\right) d_1\left(\varphi ,\frac{\varphi +\psi }{2}\right)\geq \int _ X |\varphi -\psi |\, \theta _{\varphi }^ n.  \]
+</div>
+<p>
+       Therefore, combined with (<a data-tag="460A5B49" href="../../tag/C3DBA22EBCCD/">4.36</a>) we conclude 
+    
+<div class="equation">
+  \[  3\cdot 2^{n+1}(n+1)d_1(\varphi ,\psi )\geq \int _ X |\varphi -\psi |\, \theta _{\varphi }^ n.  \]
+</div>
+<p>
+       By symmetry, we also get a similar expression after exchanging $\varphi $ and $\psi $. Adding these inequalities together, we find 
+    
+<div class="equation">
+  \[  3\cdot 2^{n+2}(n+1)d_1(\varphi ,\psi )\geq I_{\theta }(\varphi ,\psi ).  \]
+</div>
+<p>
+       The left-hand part of (<a data-tag="BE312033" href="../../tag/59E3B0356FFD/">4.32</a>) then follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="sgpt-0A73673A">
+<p><a class="environment-identifier" href="../../tag/93BC4D45D9EF/">Corollary <span data-tag="0A73673A">4.3.7</span>.</a><span data-gerby-tag="0A73673A"></span> Let $\varphi ,\psi \in \mathcal{E}^1(X,\theta ;\phi )$. Then </p>
+<div class="equation" id="sgpt-D619330C"><span data-gerby-tag="D619330C"></span>
+<span class="equation-label"><a data-tag="D619330C" href="../../tag/9D4858FD76E4/">4.55</a></span>
+<div>\begin{equation} \label{eq:d1maxonearg} d_1(\varphi \lor \psi ,\varphi )\leq C_ n d_1(\varphi ,\psi ), \end{equation}</div>
+</div>
+<p> where $C_ n$ is the constant in theorem <a data-tag="E638E7AB" href="../../tag/1178F95447B1/">4.3.6</a>. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="E638E7AB" href="../../tag/1178F95447B1/">4.3.6</a> and <a data-tag="46E60D9B" href="../../tag/CB87AA08E67C/">4.3.5</a>, we have 
+    
+<div class="equation">
+  \[  d_1(\varphi \lor \psi ,\varphi )\leq I_{\theta }(\varphi \lor \psi ,\varphi )\leq I_{\theta }(\varphi ,\psi )\leq C_ n d_1(\varphi ,\psi ).  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="sgpt-42A0155F">
+<p><a class="environment-identifier" href="../../tag/B3BB9434F2D9/">Lemma <span data-tag="42A0155F">4.3.8</span>.</a><span data-gerby-tag="42A0155F"></span> There is $A,B&gt;0$ so that for any $\varphi \in \mathcal{E}^1(X,\theta ;\phi )$, we have </p>
+<div class="equation" id="sgpt-82F3FF4E"><span data-gerby-tag="82F3FF4E"></span>
+<span class="equation-label"><a data-tag="82F3FF4E" href="../../tag/FC79763AA6F5/">4.56</a></span>
+<div>\begin{equation} \label{eq:d1bdsupX} d_1(\varphi ,\phi )\geq -\int _ X \theta _{\phi }^ n\cdot \sup _ X \varphi \geq -Ad_1(\varphi ,\phi )-B. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      When $\sup _ X \varphi \leq 0$, the right-hand part of (<a data-tag="82F3FF4E" href="../../tag/FC79763AA6F5/">4.56</a>) is trivial. Since $\varphi \leq \phi $, we find 
+    
+<div class="equation">
+  \[  d_1(\phi ,\varphi )=-E_{\theta }^{\phi }(\varphi )\geq -\int _ X \theta _{\phi }^ n\cdot \sup _{\{ \phi \neq -\infty \} } (\varphi -\phi )=-\int _ X \theta _{\phi }^ n\cdot \sup _ X \varphi ,  \]
+</div>
+<p>
+       where the last equality follows from proposition <a data-tag="53EF3AC9" href="../../tag/4C5C62135747/">3.1.13</a>. 
+    <p>
+      We can therefore assume that $\sup _ X \varphi &gt; 0$. In this case, the left-hand part of (<a data-tag="82F3FF4E" href="../../tag/FC79763AA6F5/">4.56</a>) is trivial. Take a Kähler form $\omega \geq \theta $ on $X$. Then thanks to theorem <a data-tag="D18E0263" href="../../tag/553335F185CE/">3.1.7</a>, we can find a constant $C&gt;0$ so that 
+    
+<div class="equation">
+  \[  \theta _{\phi }^ n\leq C\omega ^ n.  \]
+</div>
+<p>
+       Thanks to proposition <a data-tag="050755D1" href="../../tag/EC4B3805B84D/">1.5.4</a>, there is a constant $C'&gt;0$, independent of the choice of $\varphi $, so that 
+    
+<div class="equation">
+  \[  \int _ X \left( \phi -\varphi +\sup _ X \varphi \right)\, \theta _{\phi }^ n\leq C'.  \]
+</div>
+<p>
+       We estimate 
+    
+<div class="equation">
+  \[  \begin{aligned}  I_{\theta }(\phi ,\varphi )\geq &amp;  \int _ X |\varphi -\phi |\, \theta _{\phi }^ n\\  \geq &amp;  \left(\sup _ X \varphi \right)\int _ X \theta _{\phi }^ n-\int _ X \left( \phi -\varphi +\sup _ X \varphi \right)\, \theta _{\phi }^ n \\  \geq &amp;  \left(\sup _ X \varphi \right)\int _ X \theta _{\phi }^ n-C'. \end{aligned}  \]
+</div>
+<p>
+       The right-hand part of (<a data-tag="82F3FF4E" href="../../tag/FC79763AA6F5/">4.56</a>) then follows from theorem <a data-tag="E638E7AB" href="../../tag/1178F95447B1/">4.3.6</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+Next we handle the completeness of $d_1$. The completeness can be proved in a more general framework. <article class="env-definition" id="sgpt-B84B5C1A">
+<p><a class="environment-identifier" href="../../tag/3FB52FA474A3/">Definition <span data-tag="B84B5C1A">4.3.9</span>.</a><span data-gerby-tag="B84B5C1A"></span> Let $E$ be a set. A <em>pre-rooftop structure</em> on $E$ is a binary operator $\land :E\times E\rightarrow E$, satisfying the following axioms: For $x,y,z\in E$, </p>
+<ol>
+<li class="custom-item" id="sgpt-78A26576"><span data-gerby-tag="78A26576"></span><p>
+ $x\land y=y\land x$. 
+</p>
+</li><li class="custom-item" id="sgpt-00D1B2E9"><span data-gerby-tag="00D1B2E9"></span><p>
+ $(x\land y)\land z=x\land (y\land z)$. 
+</p>
+</li><li class="custom-item" id="sgpt-8008BD80"><span data-gerby-tag="8008BD80"></span><p>
+ $x\land x=x$. 
+</p>
+</li>
+</ol>
+<p> We call $(E,\land )$ a <em>pre-rooftop space</em>. </p>
+</article>
+
+<p>
+A pre-rooftop structure $\land $ defines a partial order $\leq $ on $E$ as follows: 
+</p>
+<div class="equation">
+  \[  x\leq y\quad \text{if and only if } \quad x\land y=x.  \]
+</div>
+<p>
+ Here by abuse of notation, we use $\leq $ to denote the partial order. 
+</p>
+<p>
+In particular, it makes sense to talk about increasing and decreasing sequences in $E$. 
+</p>
+
+<article class="env-definition" id="sgpt-5D3E3518">
+<p><a class="environment-identifier" href="../../tag/602E107F6064/">Definition <span data-tag="5D3E3518">4.3.10</span>.</a><span data-gerby-tag="5D3E3518"></span> Let $(E,d)$ be a metric space. A <em>pre-rooftop structure</em> on $(E,d)$ is a pre-rooftop structure $\land $ on $E$. We say $(E,d,\land )$ is a <em>pre-rooftop metric space</em>. </p>
+<p>A <em>rooftop structure</em> on $(E,d)$ is a pre-rooftop structure $\land $ on $E$ such that </p>
+<div class="equation" id="sgpt-671EA28B"><span data-gerby-tag="671EA28B"></span>
+<span class="equation-label"><a data-tag="671EA28B" href="../../tag/8F3EC66A0258/">4.60</a></span>
+<div>\begin{equation} \label{eq:rtdef} d(x\land z,y\land z)\leq d(x,y),\quad \forall x,y,z\in E. \end{equation}</div>
+</div>
+<p> We call $(E,d,\land )$ a <em>rooftop metric space</em>. </p>
+</article>
+
+
+<article class="env-lemma" id="sgpt-3D07C59A">
+<p><a class="environment-identifier" href="../../tag/DB740351ED65/">Lemma <span data-tag="3D07C59A">4.3.11</span>.</a><span data-gerby-tag="3D07C59A"></span> Let $(E,d,\land )$ be a rooftop metric space. Let $x,y,x',y'\in E$. Then </p>
+<div class="equation">
+<span class="equation-label">4.61</span>
+<div>\begin{equation}  d(x\land y,x'\land y')\leq d(x,x')+d(y,y'). \end{equation}</div>
+</div>
+</article> In particular, $\land \colon E\times E\rightarrow E$ is continuous. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We compute 
+    
+<div class="equation">
+  \[  d(x\land y,x'\land y')\leq d(x\land y,x\land y')+d(x\land y',x'\land y')\leq d(x,x')+d(y,y').  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="sgpt-61292BA6">
+<p><a class="environment-identifier" href="../../tag/8F175566EB00/">Proposition <span data-tag="61292BA6">4.3.12</span>.</a><span data-gerby-tag="61292BA6"></span> Let $(E,d,\land )$ be a rooftop metric space. Then $(E,d)$ is complete if and only if both of the following hold: </p>
+<ol>
+<li class="custom-item" id="sgpt-85802296"><span data-gerby-tag="85802296"></span><p>
+ Each increasing Cauchy sequence converges. 
+</p>
+</li><li class="custom-item" id="sgpt-97B203E0"><span data-gerby-tag="97B203E0"></span><p>
+ Each decreasing Cauchy sequence converges. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The direct implication is trivial. 
+    <p>
+      Conversely, assume that both conditions are true. Let $(x_ j)_{j&gt;0}$ be a Cauchy sequence in $E$. We want to prove that $(x_ j)_ j$ converges. By passing to a subsequence, we may assume that 
+    
+<div class="equation">
+  \[  d\left(x_ j,x_{j+1}\right)\leq 2^{-j}.  \]
+</div>
+<p>
+       For $k,j\geq 1$, let 
+    
+<div class="equation">
+  \[  y_ j^ k\coloneqq x_ k\land \cdots \land x_{k+j}.  \]
+</div>
+<p>
+       Then $(y_ j^ k)_ j$ is decreasing, and 
+    
+<div class="equation">
+  \[  d\left(y_ j^ k,y_{j+1}^ k\right)\leq d\left(x_{k+j},x_{k+j+1}\right)\leq 2^{-k-j}.  \]
+</div>
+<p>
+       So $(y_ j^ k)_ j$ is a decreasing Cauchy sequence. Define 
+    
+<div class="equation">
+  \[  y^ k\coloneqq \lim _{j\to \infty }y_ j^ k.  \]
+</div>
+<p>
+       Then 
+    
+<div class="equation">
+  \[  d\left(y^ k,y^{k+1}\right)=\lim _{j\to \infty }d\left(y_{j+1}^ k,y_ j^{k+1}\right)\leq d\left(x_ k,x_{k+1}\right)\leq 2^{-k}.  \]
+</div>
+<p>
+       We also need to check that the sequence $(y^ k)_ k$ is increasing. For each $j\geq 1$, we have 
+    
+<div class="equation">
+  \[  y_ j^ k=x_ k\land y_{j-1}^{k+1}\leq y_{j-1}^{k+1}.  \]
+</div>
+<p>
+       Equivalently, 
+    
+<div class="equation">
+  \[  y_ j^ k\land y_{j-1}^{k+1}=y_ j^ k.  \]
+</div>
+<p>
+       Letting $j\to \infty $ and using the continuity of $\land $ from <a data-tag="3D07C59A" href="../../tag/DB740351ED65/">4.3.11</a>, we obtain 
+    
+<div class="equation">
+  \[  y^ k\land y^{k+1}=y^ k.  \]
+</div>
+<p>
+       Thus $y^ k\leq y^{k+1}$. So $(y^ k)_ k$ is an increasing Cauchy sequence. Let 
+    
+<div class="equation">
+  \[  y\coloneqq \lim _{k\to \infty }y^ k.  \]
+</div>
+<p>
+       For every $j\geq 0$, we have 
+    
+<div class="equation">
+  \[  d\left(y_ j^ k,x_ k\right)\leq \sum _{r=k}^{k+j-1}d\left(x_ r,x_{r+1}\right),  \]
+</div>
+<p>
+       with the empty sum understood as $0$. Indeed, this is trivial for $j=0$, and the induction step follows from 
+    
+<div class="equation">
+  \[  y_ j^ k=x_ k\land y_{j-1}^{k+1}  \]
+</div>
+<p>
+       and 
+    
+<div class="equation">
+  \[  d\left(y_ j^ k,x_ k\right)\leq d\left(y_{j-1}^{k+1},x_ k\right)\leq d\left(y_{j-1}^{k+1},x_{k+1}\right)+d\left(x_{k+1},x_ k\right).  \]
+</div>
+<p>
+       Letting $j\to \infty $, we get 
+    
+<div class="equation">
+  \[  d\left(y^ k,x_ k\right)\leq \sum _{r=k}^{\infty }d\left(x_ r,x_{r+1}\right)\leq 2^{1-k}.  \]
+</div>
+<p>
+       So $(x_ k)_ k$ converges to $y$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="sgpt-097B6926">
+<p><a class="environment-identifier" href="../../tag/C89C58354E49/">Theorem <span data-tag="097B6926">4.3.13</span>.</a><span data-gerby-tag="097B6926"></span> The metric space $(\mathcal{E}^1(X,\theta ;\phi ),d_1)$ is complete. </p>
+</article> It follows from the proof below that if $(\varphi _ j)_{j&gt;0}$ is a monotone sequence in $\mathcal{E}^1(X,\theta ;\phi )$ with $d_1$-limit $\varphi $, then $\varphi $ is the almost everywhere limit of $(\varphi _ j)_{j&gt;0}$. We will use this result without further explanation in the sequel. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      As we have seen in <a data-tag="A3C94844" href="../../tag/488B7E9EA42C/">4.3.3</a> and proposition <a data-tag="BB01FE5E" href="../../tag/61DD221912DE/">4.3.2</a>, the triple 
+    
+<div class="equation">
+  \[  \left(\mathcal{E}^1(X,\theta ;\phi ),d_1,\land \right)  \]
+</div>
+<p>
+       is a rooftop metric space. Hence thanks to proposition <a data-tag="61292BA6" href="../../tag/8F175566EB00/">4.3.12</a>, it remains to show that each increasing or decreasing Cauchy sequence in $\mathcal{E}^1(X,\theta ;\phi )$ converges. 
+    <p>
+      We first consider an increasing sequence $(\varphi _ i)_{i&gt;0}$ in $\mathcal{E}^1(X,\theta ;\phi )$. The Cauchy property simply means that 
+    
+<div class="equation">
+  \[  \sup _{i&gt;0} E_{\theta }^{\phi }(\varphi _ i)&lt;\infty .  \]
+</div>
+<p>
+       We claim that 
+    
+<div class="equation">
+  \[  \varphi \coloneqq \operatorname *{sup}_{i&gt;0}{}\! {}^{*}\varphi _ i  \]
+</div>
+<p>
+       is the $d_1$-limit of the sequence. We first observe that $(\sup _ X \varphi _ i)_{i&gt;0}$ is bounded, as a consequence of <a data-tag="42A0155F" href="../../tag/B3BB9434F2D9/">4.3.8</a>. Therefore, proposition <a data-tag="FF0D50F0" href="../../tag/322796EE46DE/">3.1.53</a> guarantees that $\varphi \in \mathcal{E}^1(X,\theta ;\phi )$, and hence our assertion follows from proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a>. 
+    <p>
+      Next we consider a decreasing sequence $(\varphi _ i)_{i&gt;0}$ in $\mathcal{E}^1(X,\theta ;\phi )$. The Cauchy property simply means that 
+    
+<div class="equation">
+  \[  \inf _{i&gt;0} E_{\theta }^{\phi }(\varphi _ i)&gt;-\infty .  \]
+</div>
+<p>
+       We claim that 
+    
+<div class="equation">
+  \[  \varphi \coloneqq \inf _{i&gt;0}\varphi _ i  \]
+</div>
+<p>
+       is the $d_1$-limit of the sequence. Equivalently, we need to show that $\varphi \in \mathcal{E}^1(X,\theta ;\phi )$ and 
+    
+<div class="equation" id="sgpt-D74E95D9"><span data-gerby-tag="D74E95D9"></span>
+<span class="equation-label"><a data-tag="D74E95D9" href="../../tag/25452B178A81/">4.62</a></span>
+<div>\begin{equation} \label{eq:E_cont_decnet_temp1} E_{\theta }^{\phi }(\varphi )=\lim _{i\to \infty } E_{\theta }^{\phi }(\varphi _ i). \end{equation}</div>
+</div>
+<p>
+      We first observe that $(\sup _ X \varphi _ i)_{i&gt;0}$ is bounded, as a consequence of <a data-tag="42A0155F" href="../../tag/B3BB9434F2D9/">4.3.8</a>. Therefore, $\varphi \in \mathrm{PSH}(X,\theta ;\phi )$ and $\varphi _ i\xlongrightarrow {L^1} \varphi $, see corollary <a data-tag="DE6F6670" href="../../tag/B5E91AB35965/">1.5.6</a>. We claim that $\varphi \in \mathcal{E}^1(X,\theta ;\phi )$. For this purpose, we may assume that $\varphi _1\leq 0$. Since $(\varphi _ i)_ i$ is decreasing, $\varphi _ i\leq \varphi _1\leq 0$ for all $i&gt;0$. As $\varphi _ i\preceq \phi $ and $\phi $ is model, each $\varphi _ i$ is a candidate for $P_\theta [\phi ]=\phi $, so $\varphi _ i\leq \phi $. Thus, using the energy formula (<a data-tag="874A048F" href="../../tag/AB28CEAE8B4A/">3.69</a>) and the fact that all mixed terms are non-positive, we get for each $i&gt;0$, 
+    
+<div class="equation">
+  \[  \frac{1}{n+1}\int _ X \left(\varphi _ i-\phi \right)\, \theta _{\varphi _ i}^ n\geq E_{\theta }^{\phi }(\varphi _ i)\geq \inf _{j&gt;0} E_{\theta }^{\phi }(\varphi _ j)&gt;-\infty .  \]
+</div>
+<p>
+       We can then apply <a data-tag="1A62797D" href="../../tag/7BA1823201EA/">3.1.50</a>, with $\gamma =\phi $, to conclude that $\varphi \in \mathcal{E}^1(X,\theta ;\phi )$. Our assertion (<a data-tag="D74E95D9" href="../../tag/25452B178A81/">4.62</a>) then follows from proposition <a data-tag="CAA3508A" href="../../tag/37860FDCEAB5/">3.1.39</a>. We conclude the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-BE442E57">
+<p><a class="environment-identifier" href="../../tag/ACEE2B318CA0/">Lemma <span data-tag="BE442E57">4.3.14</span>.</a><span data-gerby-tag="BE442E57"></span> Let $(\varphi _ i)_{i&gt;0}$ be a sequence in $\mathcal{E}^1(X,\theta ;\phi )$ with $d_1$-limit $\varphi \in \mathcal{E}^1(X,\theta ;\phi )$. Then after replacing $(\varphi _ i)_{i&gt;0}$ by a subsequence, we can find two sequences $(\psi _ i)_{i&gt;0}$ and $(\eta _ i)_{i&gt;0}$ in $\mathcal{E}^1(X,\theta ;\phi )$ such that </p>
+<ol>
+<li class="custom-item" id="sgpt-1BC0BBEB"><span data-gerby-tag="1BC0BBEB"></span><p>
+ $(\psi _ i)_{i&gt;0}$ is decreasing with $d_1$ and pointwise limit $\varphi $; 
+</p>
+</li><li class="custom-item" id="sgpt-386B0A27"><span data-gerby-tag="386B0A27"></span><p>
+ $(\eta _ i)_{i&gt;0}$ is increasing with $d_1$ and almost everywhere limit $\varphi $. 
+</p>
+</li><li class="custom-item" id="sgpt-87589982"><span data-gerby-tag="87589982"></span><p>
+ $\eta _ i\leq \varphi _ i\leq \psi _ i$ for all $i&gt;0$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first note that as a consequence of <a data-tag="42A0155F" href="../../tag/B3BB9434F2D9/">4.3.8</a>, $(\sup _ X \varphi _ i)_{i&gt;0}$ is bounded. Let $C_ n$ be the constant in theorem <a data-tag="E638E7AB" href="../../tag/1178F95447B1/">4.3.6</a>. After replacing $(\varphi _ i)_{i&gt;0}$ by a subsequence, we may assume that 
+    
+<div class="equation">
+  \[  d_1(\varphi _ i,\varphi _{i+1})\leq \min \{ C_ n^{-2i},2^{-i}\} .  \]
+</div>
+<p>
+      We first construct $(\psi _ i)_{i&gt;0}$. For this purpose, it suffices to define 
+    
+<div class="equation">
+  \[  \psi _ i\coloneqq \operatorname *{sup}_{j\geq i}{}\! {}^{*} \varphi _ j  \]
+</div>
+<p>
+       for each $i&gt;0$. It follows from proposition <a data-tag="FF0D50F0" href="../../tag/322796EE46DE/">3.1.53</a> that $\psi _ i\in \mathcal{E}^1(X,\theta ;\phi )$ for each $i&gt;0$. For $k\geq 0$, set 
+    
+<div class="equation">
+  \[  \psi _ i^ k\coloneqq \varphi _ i\lor \varphi _{i+1}\lor \cdots \lor \varphi _{i+k}.  \]
+</div>
+<p>
+       Iterating corollary <a data-tag="0A73673A" href="../../tag/93BC4D45D9EF/">4.3.7</a> gives 
+    
+<div class="equation">
+  \[  d_1(\varphi _ i,\psi _ i^ k)\leq \sum _{a=i}^{i+k-1}C_ n^{a+1-i}d_1(\varphi _ a,\varphi _{a+1})\leq \sum _{a=i}^{i+k-1}C_ n^{a+1-i}C_ n^{-2a}.  \]
+</div>
+<p>
+       Since $\psi _ i^ k$ increases almost everywhere to $\psi _ i$, letting $k\to \infty $ and using proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a>, we get 
+    
+<div class="equation">
+  \[  d_1(\varphi _ i,\psi _ i)\leq \frac{C_ n^{1-2i}}{1-C_ n^{-1}}.  \]
+</div>
+<p>
+       Thus $\psi _ i\to \varphi $ in $d_1$. Since $(\psi _ i)_ i$ is decreasing, the monotone case in the proof of theorem <a data-tag="097B6926" href="../../tag/C89C58354E49/">4.3.13</a> shows that $\psi _ i$ converges almost everywhere to $\varphi $, hence pointwise by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. 
+    <p>
+      Next we construct $(\eta _ i)_{i&gt;0}$. For each $i&gt;0$ and $k\geq 0$, we let 
+    
+<div class="equation">
+  \[  \eta _ i^ k\coloneqq \varphi _ i\land \varphi _{i+1}\land \cdots \land \varphi _{i+k}.  \]
+</div>
+<p>
+       Then 
+    
+<div class="equation">
+  \[  \begin{aligned}  d_1(\varphi _ i,\eta _ i^ k)\leq &amp;  \sum _{j=0}^{k-1} d_1\left(\eta _ i^ j,\eta _ i^{j+1}\right)\\  \leq &amp; \sum _{j=0}^{k-1} d_1\left(\varphi _{i+j},\varphi _{i+j+1}\right) &amp; \textup{by proposition \href{../../tag/61DD221912DE/}{4.3.2}}\\  \leq &amp;  \sum _{j=0}^{k-1} 2^{-i-j}\\  \leq &amp;  2^{1-i}. \end{aligned}  \]
+</div>
+<p>
+       Since $\eta _ i^ k\leq \varphi _ i$, the preceding estimate gives 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }(\eta _ i^ k)\geq E_{\theta }^{\phi }(\varphi _ i)-2^{1-i},\quad k\geq 0.  \]
+</div>
+<p>
+       The sequence $(\eta _ i^ k)_{k\geq 0}$ is decreasing, and the monotonicity of $E_{\theta }^{\phi }$ shows that the sequence $\left(E_{\theta }^{\phi }(\eta _ i^ k)\right)_{k\geq 0}$ is decreasing and bounded from below, hence convergent. Thus, for $k\leq l$, 
+    
+<div class="equation">
+  \[  d_1(\eta _ i^ k,\eta _ i^ l)=E_{\theta }^{\phi }(\eta _ i^ k)-E_{\theta }^{\phi }(\eta _ i^ l),  \]
+</div>
+<p>
+       and $(\eta _ i^ k)_{k\geq 0}$ is a decreasing Cauchy sequence. Therefore, the monotone case in the proof of theorem <a data-tag="097B6926" href="../../tag/C89C58354E49/">4.3.13</a> shows that 
+    
+<div class="equation">
+  \[  \eta _ i\coloneqq \lim _{k\to \infty }\eta _ i^ k=\inf _{k\geq 0} \eta _ i^ k  \]
+</div>
+<p>
+       is the $d_1$-limit of $(\eta _ i^ k)_{k\geq 0}$ and proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a> shows that 
+    
+<div class="equation">
+  \[  d_1(\varphi _ i,\eta _ i)\leq 2^{1-i}.  \]
+</div>
+<p>
+       By construction, $\eta _ i\leq \varphi _ i$ and $(\eta _ i)_ i$ is increasing. Therefore, $\varphi $ is the $d_1$-limit of the increasing sequence $(\eta _ i)_{i&gt;0}$. As we have seen in the proof of theorem <a data-tag="097B6926" href="../../tag/C89C58354E49/">4.3.13</a>, this implies that $\varphi $ is also the almost everywhere limit of $(\eta _ i)_{i&gt;0}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="sgpt-C6AC67A2">
+<p><a class="environment-identifier" href="../../tag/D84A6072F1A6/">Theorem <span data-tag="C6AC67A2">4.3.15</span>.</a><span data-gerby-tag="C6AC67A2"></span> The functional $E_{\theta }^{\phi }\colon \mathcal{E}^1(X,\theta ;\phi ) \rightarrow \mathbb {R}$ is continuous. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $(\varphi _ j)_{j&gt;0}$ be a sequence in $\mathcal{E}^1(X,\theta ;\phi )$ with $d_1$-limit $\varphi \in \mathcal{E}^1(X,\theta ;\phi )$. We wish to show that 
+    
+<div class="equation" id="sgpt-A64BD74A"><span data-gerby-tag="A64BD74A"></span>
+<span class="equation-label"><a data-tag="A64BD74A" href="../../tag/1C0180D1496E/">4.67</a></span>
+<div>\begin{equation} \label{eq:limjE_temp1} \lim _{j\to \infty } E_{\theta }^{\phi }(\varphi _ j)=E_{\theta }^{\phi }(\varphi ). \end{equation}</div>
+</div>
+<p>
+       It suffices to prove that every subsequence has a further subsequence along which (<a data-tag="A64BD74A" href="../../tag/1C0180D1496E/">4.67</a>) holds. Thus, after replacing $(\varphi _ j)_{j&gt;0}$ by a subsequence, let $(\eta _ j)_ j$ and $(\psi _ j)_ j$ be the monotone sequences supplied by <a data-tag="BE442E57" href="../../tag/ACEE2B318CA0/">4.3.14</a>. From the construction, $\eta _ j\leq \varphi _ j\leq \psi _ j$. By proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a>, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }(\eta _ j)\to E_{\theta }^{\phi }(\varphi ),\quad E_{\theta }^{\phi }(\psi _ j)\to E_{\theta }^{\phi }(\varphi ).  \]
+</div>
+<p>
+       The monotonicity of $E_{\theta }^{\phi }$ then squeezes $E_{\theta }^{\phi }(\varphi _ j)$, proving (<a data-tag="A64BD74A" href="../../tag/1C0180D1496E/">4.67</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="sgpt-8F8682C7">
+<p><a class="environment-identifier" href="../../tag/0C8741A27906/">Proposition <span data-tag="8F8682C7">4.3.16</span>.</a><span data-gerby-tag="8F8682C7"></span> Let $(\varphi _ t)_{t\in [a,b]}$ be a geodesic in $\mathcal{E}^1(X,\theta ;\phi )$. Then $t\mapsto E_{\theta }^{\phi }(\varphi _ t)$ is a linear function on $[a,b]$. </p>
+</article> We recall the terminology used in the proof. Let $\Omega \subset \mathbb {C}^ m$ be Euclidean open. A function $u\in \mathrm{PSH}(\Omega )$ is <em>maximal</em> if, for every open $G\Subset \Omega $ and every upper semicontinuous function $v$ on $\overline G$ such that $v\in \mathrm{PSH}(G)$ and $v\leq u$ on $\partial G$, one has $v\leq u$ on $G$. Let $\mathcal F$ denote the plurifine topology. If $U$ is $\mathcal F$-open and $u$ is $\mathcal F$-psh on $U$, then $u$ is <em>$\mathcal F$-maximal</em> if, for every bounded $\mathcal F$-open set $G$ with $G\subset \overline G^{\mathcal F}\subset U$ and every bounded-above $\mathcal F$-upper semicontinuous function $v$ on $\overline G^{\mathcal F}$ that is $\mathcal F$-psh on $G$, one has 
+
+<div class="equation">
+  \[  v\leq u\textup{ on }\partial _{\mathcal F}G \quad \Longrightarrow \quad v\leq u\textup{ on }G.  \]
+</div>
+<p>
+ See <span class="cite">[<span class="postnote">Definition 5.9.1</span>, <a href="../../references/#REA88B4511EB9">EKF</a>]</span>. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By an affine change of parameter, we may assume that $[a,b]=[0,1]$. 
+    <p>
+<strong>Step 1</strong>. Assume first that $\varphi _0,\varphi _1\in \mathcal{E}^{\infty }(X,\theta ;\phi )$. Let $Y=X\times \mathbb {P}^1$, and let $p_1,p_2$ be the two projections. On 
+    
+<div class="equation">
+  \[  A\coloneqq \{ z\in \mathbb {C}:\mathrm{e}^{-1}&lt;|z|&lt;1\} , \qquad U(x,z)\coloneqq \varphi _{-\log |z|}(x),  \]
+</div>
+<p>
+       the function $U$ is $p_1^*\theta $-psh. Choose $C&gt;0$ such that 
+    
+<div class="equation">
+  \[  \phi -C\leq \varphi _0,\varphi _1\leq \phi +C.  \]
+</div>
+<p>
+       The constant subgeodesic at $\phi -C$ and proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a> give 
+    
+<div class="equation" id="sgpt-BBB865E9"><span data-gerby-tag="BBB865E9"></span>
+<span class="equation-label"><a data-tag="BBB865E9" href="../../tag/ECB123C0AED3/">4.68</a></span>
+<div>\begin{equation} \label{eq:relgeoduniformbound} \phi -C\leq \varphi _ t\leq (1-t)\varphi _0+t\varphi _1\leq \phi +C, \qquad 0&lt;t&lt;1. \end{equation}</div>
+</div>
+<p>
+      Fix concentric annuli $A_0\Subset A_1\Subset A$ and a unit-mass Fubini–Study form $\omega _{\mathrm{FS}}$ on $\mathbb {P}^1$. Put 
+    
+<div class="equation">
+  \[  \beta =p_2^*\omega _{\mathrm{FS}},\qquad \Theta _ B=p_1^*\theta +B\beta ,\qquad \Phi =p_1^*\phi .  \]
+</div>
+<p>
+       The class represented by $\Theta _ B$ is big. Since $\phi =P_\theta [\phi ]$, we have $\phi \leq 0$. For every $B&gt;0$, $\Phi =P_{\Theta _ B}[\Phi ]$. Indeed, if $\Psi \in \mathrm{PSH}(Y,\Theta _ B)$ satisfies $\Psi \leq 0$ and $\Psi \preceq \Phi $, then on each fibre $X\times \{ z\} $, either $\Psi _ z\equiv -\infty $, or $\Psi _ z\in \mathrm{PSH}(X,\theta )$ is a candidate in the definition of $P_\theta [\phi ]=\phi $. Thus $\Psi _ z\leq \phi $ in both cases. Conversely, $\Phi $ itself is a candidate. Moreover, proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a> gives 
+    
+<div class="equation" id="sgpt-E84EA0EB"><span data-gerby-tag="E84EA0EB"></span>
+<span class="equation-label"><a data-tag="E84EA0EB" href="../../tag/4470A045802C/">4.69</a></span>
+<div>\begin{equation} \label{eq:productmodelmass} \int _ Y(\Theta _ B+\mathrm{dd}^{\mathrm{c}}\Phi )^{n+1} =(n+1)B\int _ X\theta _\phi ^ n&gt;0. \end{equation}</div>
+</div>
+<p>
+      Choose an $S^1$-invariant smooth function $q$ on $\mathbb {P}^1$ such that 
+    
+<div class="equation">
+  \[  q&lt;-C-1\  \textup{ on }A_0, \qquad q&gt;C+1\  \textup{ near }\partial A_1.  \]
+</div>
+<p>
+       After increasing $B$, we may assume that $B\omega _{\mathrm{FS}}+\mathrm{dd}^{\mathrm{c}}q\geq 0$. Identifying $q$ with $p_2^*q$, define 
+    
+<div class="equation">
+  \[  W= \begin{cases}  U\lor (\Phi +q),&amp; \textup{on }X\times A_1,\\  \Phi +q,&amp; \textup{on }Y\setminus (X\times A_1). \end{cases}  \]
+</div>
+<p>
+       The gluing lemma corollary <a data-tag="A3A928E4" href="../../tag/79C564A098F9/">1.2.13</a> shows that $W\in \mathrm{PSH}(Y,\Theta _ B)$. By construction, 
+    
+<div class="equation" id="sgpt-F63AFF44"><span data-gerby-tag="F63AFF44"></span>
+<span class="equation-label"><a data-tag="F63AFF44" href="../../tag/09167137EDA8/">4.72</a></span>
+<div>\begin{equation} \label{eq:compactgluedpotential} W=U\  \textup{ on }X\times A_0, \qquad \Phi -C'\leq W\leq \Phi +C' \end{equation}</div>
+</div>
+<p>
+       for some $C'&gt;0$. Hence $W\in \mathcal{E}^{\infty }(Y,\Theta _ B;\Phi )$ by (<a data-tag="E84EA0EB" href="../../tag/4470A045802C/">4.69</a>). 
+    <p>
+      Set 
+    
+<div class="equation">
+  \[  T=\Theta _ B+\mathrm{dd}^{\mathrm{c}}W,\qquad S=\Theta _ B+\mathrm{dd}^{\mathrm{c}}\Phi .  \]
+</div>
+<p>
+       Define the order-zero current on $\mathbb {P}^1$ 
+    
+<div class="equation" id="sgpt-34F10F37"><span data-gerby-tag="34F10F37"></span>
+<span class="equation-label"><a data-tag="34F10F37" href="../../tag/EC42C56857FF/">4.73</a></span>
+<div>\begin{equation} \label{eq:compactrelativeenergycurrent} \mathcal{H}_ W\coloneqq \frac{1}{n+1}(p_2)_*\left((W-\Phi )\sum _{j=0}^ n T^ j\wedge S^{n-j}\right). \end{equation}</div>
+</div>
+<p>
+       The integration-by-parts formula <span class="cite">[<a href="../../references/#R995F9FDB2A8E">Xia19b</a>]</span>, applied against a smooth test function on $\mathbb {P}^1$, gives 
+    
+<div class="equation" id="sgpt-0EEF9024"><span data-gerby-tag="0EEF9024"></span>
+<span class="equation-label"><a data-tag="0EEF9024" href="../../tag/73AB644A26B4/">4.74</a></span>
+<div>\begin{equation} \label{eq:compactrelativeenergyddc} \mathrm{dd}^{\mathrm{c}}\mathcal{H}_ W =\frac{1}{n+1}(p_2)_*\left(T^{n+1}-S^{n+1}\right). \end{equation}</div>
+</div>
+<p>
+      By (<a data-tag="874A048F" href="../../tag/AB28CEAE8B4A/">3.69</a>), (<a data-tag="F63AFF44" href="../../tag/09167137EDA8/">4.72</a>), and corollary <a data-tag="05CA3670" href="../../tag/AE7DB6D35BE9/">2.2.8</a>, on $A_0$ the current $\mathcal{H}_ W$ is represented almost everywhere by 
+    
+<div class="equation">
+  \[  z\longmapsto E_\theta ^\phi (\varphi _{-\log |z|}).  \]
+</div>
+<p>
+       This representative is continuous. Indeed, on every smaller annulus, the convex functions $t\mapsto \varphi _ t(x)-\phi (x)$, considered on the common locus where both values are finite, are uniformly bounded by (<a data-tag="BBB865E9" href="../../tag/ECB123C0AED3/">4.68</a>), hence uniformly Lipschitz. The resulting inequalities between the potentials hold almost everywhere and therefore everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. The monotonicity in <a data-tag="BACDFA8A" href="../../tag/93210731F7FD/">3.1.36</a> and (<a data-tag="3F192A6A" href="../../tag/BC7744A40FEC/">3.71</a>) then give the local Lipschitz continuity of $t\mapsto E_\theta ^\phi (\varphi _ t)$. 
+    <p>
+      On $X\times A_0$, define the signed Radon measure 
+    
+<div class="equation" id="sgpt-275CD041"><span data-gerby-tag="275CD041"></span>
+<span class="equation-label"><a data-tag="275CD041" href="../../tag/223A0DF1B850/">4.75</a></span>
+<div>\begin{equation} \label{eq:horizontaldefectrelative} \mu _ U\coloneqq \left(T^{n+1}-(n+1)B\beta \wedge T^ n\right)|_{X\times A_0}. \end{equation}</div>
+</div>
+<p>
+       This measure is positive. To see this, take a relatively compact product coordinate ball $Q\subset X\times A_0$. Let $a$ be a smooth local potential of $p_1^*\theta $, put $h=U+a\leq 0$ and $h_ k=h\lor (-k)$, and choose a smooth local potential $b$ of $B\beta $ with $|b|\leq C_ Q$. For $p=n,n+1$, set 
+    
+<div class="equation">
+  \[  \begin{aligned}  \nu _ k^{b,p}&amp; =\mathds {1}_{\{ h+b&gt;-k\} } \bigl (\mathrm{dd}^{\mathrm{c}}((h+b)\lor (-k))\bigr )^ p,\\  \nu _ k^{h,p}&amp; =\mathds {1}_{\{ h&gt;-k\} } \bigl (\mathrm{dd}^{\mathrm{c}}h_ k+B\beta \bigr )^ p. \end{aligned}  \]
+</div>
+<p>
+       Plurifine locality and $|b|\leq C_ Q$ give, for $k&gt;C_ Q$, 
+    
+<div class="equation">
+  \[  \nu _{k-C_ Q}^{h,p}\leq \nu _ k^{b,p}\leq \nu _{k+C_ Q}^{h,p}.  \]
+</div>
+<p>
+       Thus the two cofinal truncation families have the same limit. By proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a> and $\beta ^2=0$, 
+    
+<div class="equation" id="sgpt-FFCC1E13"><span data-gerby-tag="FFCC1E13"></span>
+<span class="equation-label"><a data-tag="FFCC1E13" href="../../tag/ABBD36F9E5C6/">4.78</a></span>
+<div>\begin{equation} \label{eq:horizontalfinitelevelrelative} \begin{aligned} &amp; \mathds {1}_{\{ h&gt;-k\} }\left[ (\mathrm{dd}^{\mathrm{c}}h_ k+B\beta )^{n+1} -(n+1)B\beta \wedge (\mathrm{dd}^{\mathrm{c}}h_ k+B\beta )^ n\right]\\ &amp; \qquad =\mathds {1}_{\{ h&gt;-k\} }(\mathrm{dd}^{\mathrm{c}}h_ k)^{n+1}\geq 0. \end{aligned} \end{equation}</div>
+</div>
+<p>
+       Passing to the increasing truncation limit yields 
+    
+<div class="equation" id="sgpt-7CFF137B"><span data-gerby-tag="7CFF137B"></span>
+<span class="equation-label"><a data-tag="7CFF137B" href="../../tag/2DD90D6C83CE/">4.81</a></span>
+<div>\begin{equation} \label{eq:horizontaltruncationrelative} \mu _ U|_ Q=\lim _{k\to \infty } \mathds {1}_{\{ h&gt;-k\} }(\mathrm{dd}^{\mathrm{c}}h_ k)^{n+1}\geq 0. \end{equation}</div>
+</div>
+<p>
+      By (<a data-tag="C4F6AB54" href="../../tag/8D9958903619/">2.13</a>), 
+    
+<div class="equation">
+  \[  (p_2)_*(\beta \wedge T^ n) =\left(\int _ X\theta _\phi ^ n\right)\omega _{\mathrm{FS}},  \]
+</div>
+<p>
+       since $W_ z\sim \phi $ on every fibre and proposition <a data-tag="9640EC28" href="../../tag/E58386609911/">3.1.6</a> applies. On the other hand, 
+    
+<div class="equation">
+  \[  (p_2)_*S^{n+1} =(n+1)B\left(\int _ X\theta _\phi ^ n\right)\omega _{\mathrm{FS}}  \]
+</div>
+<p>
+       by proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="841A6065" href="../../tag/9E81D36B1290/#sgpt-841A6065">6</a>. Together with (<a data-tag="0EEF9024" href="../../tag/73AB644A26B4/">4.74</a>) and (<a data-tag="275CD041" href="../../tag/223A0DF1B850/">4.75</a>), these identities give on $A_0$ 
+    
+<div class="equation" id="sgpt-D122ABAF"><span data-gerby-tag="D122ABAF"></span>
+<span class="equation-label"><a data-tag="D122ABAF" href="../../tag/0F481A9AC521/">4.82</a></span>
+<div>\begin{equation} \label{eq:relativeenergycurvature} \mathrm{dd}^{\mathrm{c}}_ z E_\theta ^\phi (\varphi _{-\log |z|}) =\frac{1}{n+1}(p_2)_*\mu _ U. \end{equation}</div>
+</div>
+<p>
+<strong>Step 2</strong>. We prove that $\mu _ U=0$. Let $D\Subset X\times A$ be a coordinate domain, let $a$ be a smooth local potential of $p_1^*\theta $ near $\overline D$, and set $h=U+a$. If $v$ is a psh function on $D$ with the boundary inequality required in the definition of maximality, max-pasting gives 
+    
+<div class="equation">
+  \[  \widetilde U=U\lor (v-a)\  \textup{ on }D, \qquad \widetilde U=U\  \textup{ outside }D.  \]
+</div>
+<p>
+       The function $\widetilde U$ need not be radial. Its $S^1$-symmetrization 
+    
+<div class="equation">
+  \[  V(x,z)=\operatorname *{sup}_{|\lambda |=1}{}\! {}^{*}\widetilde U(x,\lambda z)  \]
+</div>
+<p>
+       is radial and $p_1^*\theta $-psh. The $S^1$-saturation of $D$ is relatively compact in $X\times A$, so $V=U$ near $X\times \partial A$. Hence the family $V_ t(x)=V(x,\mathrm{e}^{-t})$ is a subgeodesic from $\varphi _0$ to $\varphi _1$ by definition <a data-tag="9287531D" href="../../tag/8699FCF63094/">4.1.1</a>. The definition (<a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a>) therefore gives 
+    
+<div class="equation">
+  \[  \widetilde U\leq V\leq U.  \]
+</div>
+<p>
+       It follows that $v\leq h$ on $D$, so $h$ is a maximal psh function. 
+    <p>
+      On a product coordinate ball $Q\Subset X\times A_0$, put $O_ k=Q\cap \{ h&gt;-k\} $. By <span class="cite">[<span class="postnote">Proposition 5.9.3</span>, <a href="../../references/#REA88B4511EB9">EKF</a>]</span>, $h$ is $\mathcal F$-maximal. The function $h_ k=h\lor (-k)$ is locally bounded and agrees with $h$ on the $\mathcal F$-open set $O_ k$, hence is $\mathcal F$-maximal there. Therefore <span class="cite">[<span class="postnote">Theorem 5.10.1</span>, <a href="../../references/#REA88B4511EB9">EKF</a>]</span> gives 
+    
+<div class="equation">
+  \[  \mathds {1}_{O_ k}(\mathrm{dd}^{\mathrm{c}}h_ k)^{n+1}=0.  \]
+</div>
+<p>
+       By (<a data-tag="7CFF137B" href="../../tag/2DD90D6C83CE/">4.81</a>), $\mu _ U=0$. Since $A_0\Subset A$ was arbitrary, (<a data-tag="D122ABAF" href="../../tag/0F481A9AC521/">4.82</a>) shows that $z\mapsto E_\theta ^\phi (\varphi _{-\log |z|})$ is radial and harmonic on $A$. Thus $t\mapsto E_\theta ^\phi (\varphi _ t)$ is affine on $(0,1)$. 
+    <p>
+      Choose $C_0&gt;0$ such that $|\varphi _1-\varphi _0|\leq C_0$ on their common finite locus; equivalently, the two resulting inequalities between the potentials hold everywhere. Affine barriers and proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a> give 
+    
+<div class="equation">
+  \[  \begin{aligned}  \varphi _0-C_0t&amp; \leq \varphi _ t\leq \varphi _0+C_0t,\\  \varphi _1-C_0(1-t)&amp; \leq \varphi _ t\leq \varphi _1+C_0(1-t). \end{aligned}  \]
+</div>
+<p>
+       By <a data-tag="BACDFA8A" href="../../tag/93210731F7FD/">3.1.36</a> and (<a data-tag="3F192A6A" href="../../tag/BC7744A40FEC/">3.71</a>), the energy converges to the corresponding endpoint energy as $t\to 0+$ and $t\to 1-$. Hence 
+    
+<div class="equation" id="sgpt-B9AE84EE"><span data-gerby-tag="B9AE84EE"></span>
+<span class="equation-label"><a data-tag="B9AE84EE" href="../../tag/563CCD9BFEFF/">4.85</a></span>
+<div>\begin{equation} \label{eq:relativeenergylinearbounded} E_\theta ^\phi (\varphi _ t) =(1-t)E_\theta ^\phi (\varphi _0)+tE_\theta ^\phi (\varphi _1) \end{equation}</div>
+</div>
+<p>
+       when the endpoints belong to $\mathcal E^\infty (X,\theta ;\phi )$. 
+    <p>
+<strong>Step 3</strong>. Let now $\varphi _0,\varphi _1\in \mathcal E^1(X,\theta ;\phi )$. By example <a data-tag="97029165" href="../../tag/C16140E8B047/">4.2.3</a> and (<a data-tag="3F192A6A" href="../../tag/BC7744A40FEC/">3.71</a>), we may add different constants to the endpoints and assume that $\varphi _0,\varphi _1\leq \phi $. Put 
+    
+<div class="equation">
+  \[  \varphi _ j^{(k)}=\varphi _ j\lor (\phi -k),\qquad j=0,1,  \]
+</div>
+<p>
+       and let $(\varphi _ t^{(k)})_{t\in [0,1]}$ be the corresponding geodesic. The endpoint truncations decrease to $\varphi _ j$, and Perron monotonicity gives 
+    
+<div class="equation">
+  \[  \varphi _ t\leq \varphi _ t^{(k+1)}\leq \varphi _ t^{(k)}.  \]
+</div>
+<p>
+       Let $h_ t=\lim _{k\to \infty }\varphi _ t^{(k)}$. The decreasing limit of the complexifications is $p_1^*\theta $-psh and is not identically $-\infty $. Taking the limit in the convex upper bound gives, first almost everywhere and then everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>, 
+    
+<div class="equation" id="sgpt-534BB621"><span data-gerby-tag="534BB621"></span>
+<span class="equation-label"><a data-tag="534BB621" href="../../tag/64A3E8566CC1/">4.86</a></span>
+<div>\begin{equation} \label{eq:finiteenergygeodesicsandwich} \varphi _ t\leq h_ t\leq (1-t)\varphi _0+t\varphi _1. \end{equation}</div>
+</div>
+<p>
+      Note that 
+    
+<div class="equation">
+  \[  |h_ t-\varphi _0| \leq |\varphi _ t-\varphi _0|+t|\varphi _1-\varphi _0|\quad \textup{a.e.}.  \]
+</div>
+<p>
+       Since $\varphi _ t\to \varphi _0$ in $L^1$ as $t\to 0+$ and $\varphi _0,\varphi _1\in L^1(X)$, it follows that $h_ t\to \varphi _0$ in $L^1$. The same argument at $t=1$ gives $h_ t\to \varphi _1$ in $L^1$. Together with the $p_1^*\theta $-psh complexification constructed above, these endpoint limits show by definition <a data-tag="9287531D" href="../../tag/8699FCF63094/">4.1.1</a> that $(h_ t)$ is a subgeodesic from $\varphi _0$ to $\varphi _1$. Hence (<a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a>) gives $h_ t\leq \varphi _ t$. Together with (<a data-tag="534BB621" href="../../tag/64A3E8566CC1/">4.86</a>), this proves 
+    
+<div class="equation">
+  \[  \varphi _ t^{(k)}\searrow \varphi _ t,\qquad 0&lt;t&lt;1.  \]
+</div>
+<p>
+       Applying proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a> at the endpoints and at each interior slice, and then using (<a data-tag="B9AE84EE" href="../../tag/563CCD9BFEFF/">4.85</a>), gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  E_\theta ^\phi (\varphi _ t) &amp; =\lim _{k\to \infty }E_\theta ^\phi (\varphi _ t^{(k)})\\ &amp; =\lim _{k\to \infty }\left((1-t)E_\theta ^\phi (\varphi _0^{(k)}) +tE_\theta ^\phi (\varphi _1^{(k)})\right)\\ &amp; =(1-t)E_\theta ^\phi (\varphi _0)+tE_\theta ^\phi (\varphi _1). \end{aligned}  \]
+</div>
+<p>
+       This concludes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-8066E44C">
+<p><a class="environment-identifier" href="../../tag/7ADCF3A953E5/">Proposition <span data-tag="8066E44C">4.3.17</span>.</a><span data-gerby-tag="8066E44C"></span> Let $(\varphi ^ i_0)_{i\in I}$, $(\varphi ^ i_1)_{i\in I}$ be two uniformly bounded from above increasing nets in $\mathcal{E}^{1}(X,\theta ;\phi )$. Let $(\varphi ^ i_ t)_{t\in (0,1)}$ be the geodesic from $\varphi _0^ i$ to $\varphi _1^ i$ for each $i\in I$. Then </p>
+<div class="equation">
+  \[  \left(\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi ^ i_ t\right)_{t\in (0,1)}  \]
+</div>
+<p> is the geodesic from $\operatorname *{sup}_{i}{}\! {}^{*} \varphi ^ i_0$ to $\operatorname *{sup}_{i}{}\! {}^{*} \varphi ^ i_1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put 
+    
+<div class="equation">
+  \[  \varphi _ j=\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ j^ i\quad (j=0,1), \qquad h_ t=\operatorname *{sup}_{i\in I}{}\! {}^{*}\varphi _ t^ i,  \]
+</div>
+<p>
+       and let $(g_ t)_{t\in (0,1)}$ be the geodesic from $\varphi _0$ to $\varphi _1$. By proposition <a data-tag="FF0D50F0" href="../../tag/322796EE46DE/">3.1.53</a>, $\varphi _0,\varphi _1\in \mathcal E^1(X,\theta ;\phi )$. The slice families are uniformly bounded from above by proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>; hence $h_ t\in \mathcal E^1(X,\theta ;\phi )$ by proposition <a data-tag="FF0D50F0" href="../../tag/322796EE46DE/">3.1.53</a>. Moreover, proposition <a data-tag="BBFDD373" href="../../tag/5ECD747A7B0B/">4.1.9</a> shows that $(h_ t)$ is a subgeodesic from $\varphi _0$ to $\varphi _1$. Thus 
+    
+<div class="equation" id="sgpt-9E0997CE"><span data-gerby-tag="9E0997CE"></span>
+<span class="equation-label"><a data-tag="9E0997CE" href="../../tag/D9CCCF0D8552/">4.90</a></span>
+<div>\begin{equation} \label{eq:suprelativegeodesicorder} h_ t\leq g_ t. \end{equation}</div>
+</div>
+<p>
+      For each $t$, the net $(\varphi _ t^ i)_{i\in I}$ is increasing. By proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a>, its pointwise supremum agrees with $h_ t$ almost everywhere, and the analogous assertion holds at the endpoints. Therefore proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a>, proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">4.3.16</a> gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  E_\theta ^\phi (h_ t) &amp; =\lim _{i\in I}E_\theta ^\phi (\varphi _ t^ i)\\ &amp; =\lim _{i\in I}\left((1-t)E_\theta ^\phi (\varphi _0^ i) +tE_\theta ^\phi (\varphi _1^ i)\right)\\ &amp; =(1-t)E_\theta ^\phi (\varphi _0)+tE_\theta ^\phi (\varphi _1) =E_\theta ^\phi (g_ t). \end{aligned}  \]
+</div>
+<p>
+       By (<a data-tag="BF10DF27" href="../../tag/D8C8C0BB6585/">4.21</a>), (<a data-tag="9E0997CE" href="../../tag/D9CCCF0D8552/">4.90</a>), and <a data-tag="A3C94844" href="../../tag/488B7E9EA42C/">4.3.3</a>, 
+    
+<div class="equation">
+  \[  d_1(h_ t,g_ t)=E_\theta ^\phi (g_ t)-E_\theta ^\phi (h_ t)=0,  \]
+</div>
+<p>
+       so $h_ t=g_ t$ for all $t\in (0,1)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-E4164981">
+<p><a class="environment-identifier" href="../../tag/5408F4A1486E/">Proposition <span data-tag="E4164981">4.3.18</span>.</a><span data-gerby-tag="E4164981"></span> Let $(\varphi _ t)_{t\in [0,1]}$, $(\psi _ t)_{t\in [0,1]}$ be geodesics in $\mathcal{E}^1(X,\theta ;\phi )$. Then the distance $d_1(\varphi _ t,\psi _ t)$ is a convex function of $t\in [0,1]$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By definition of $d_1$ and proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">4.3.16</a>, it suffices to show the concavity of 
+    
+<div class="equation">
+  \[  [0,1]\ni t\mapsto E_{\theta }^{\phi }(\varphi _ t\land \psi _ t).  \]
+</div>
+<p>
+       Let $(\eta _ t)_{t\in [0,1]}$ be the geodesic from $\varphi _0\land \psi _0$ to $\varphi _1\land \psi _1$. Then for each $t\in [0,1]$, we have $\eta _ t\leq \varphi _ t\land \psi _ t$. Hence, by the monotonicity of $E_\theta ^\phi $ and proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">4.3.16</a>, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }( \varphi _ t\land \psi _ t)\geq E_{\theta }^{\phi }(\eta _ t)=(1-t)E_{\theta }^{\phi }(\varphi _0\land \psi _0)+tE_{\theta }^{\phi }(\varphi _1\land \psi _1)  \]
+</div>
+<p>
+       for each $t\in [0,1]$. Applying the same argument to the restrictions of $(\varphi _ t)_ t$ and $(\psi _ t)_ t$ to any subinterval of $[0,1]$, which are again geodesics by proposition <a data-tag="74EB2527" href="../../tag/8AB36536E36D/">4.2.4</a>, gives a similar inequality on every subinterval. Hence $t\mapsto E_\theta ^\phi (\varphi _ t\land \psi _ t)$ is concave, and our assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+In particular, we can introduce: <article class="env-definition" id="sgpt-2EA6682D">
+<p><a class="environment-identifier" href="../../tag/6945CDF5DE8A/">Definition <span data-tag="2EA6682D">4.3.19</span>.</a><span data-gerby-tag="2EA6682D"></span> Let $\ell ,\ell '\in \mathcal{R}^1(X,\theta ;\phi )$. We define   </p>
+<div class="equation">
+  \[  d_1(\ell ,\ell ')\coloneqq \lim _{t\to \infty }\frac{1}{t}d_1(\ell _ t,\ell '_ t).  \]
+</div>
+<p> The limit exists in $[0,\infty ]$ by proposition <a data-tag="E4164981" href="../../tag/5408F4A1486E/">4.3.18</a>. </p>
+</article>
+
+
+<article class="env-theorem" id="sgpt-C9691BFD">
+<p><a class="environment-identifier" href="../../tag/B30037E401C6/">Theorem <span data-tag="C9691BFD">4.3.20</span>.</a><span data-gerby-tag="C9691BFD"></span> The function $d_1$ defined in definition <a data-tag="2EA6682D" href="../../tag/6945CDF5DE8A/">4.3.19</a> is a metric on $\mathcal{R}^1(X,\theta ;\phi )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Symmetry and the triangle inequality follow from the corresponding pointwise properties of $d_1$ on $\mathcal{E}^1(X,\theta ;\phi )$. 
+    <p>
+      We next show that $d_1(\ell ,\ell ')&lt;\infty $ for any $\ell ,\ell '\in \mathcal{R}^1(X,\theta ;\phi )$. Let $C_\ell $ be the constant in proposition <a data-tag="3F6C536C" href="../../tag/FD1B5378AA06/">4.2.9</a>, and set $\tilde{\ell }_ t=\ell _ t-C_\ell t$. Then $\tilde{\ell }$ is again a geodesic ray, $\sup _ X\tilde{\ell }_ t=0$, and hence $\tilde{\ell }_ t\leq \phi $ by proposition <a data-tag="53EF3AC9" href="../../tag/4C5C62135747/">3.1.13</a>. Thus, by proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">4.3.16</a>, 
+    
+<div class="equation">
+  \[  d_1(\tilde{\ell }_ t,\phi )=-E_\theta ^\phi (\tilde{\ell }_ t)=-tE_\theta ^\phi (\tilde{\ell }_1).  \]
+</div>
+<p>
+       Moreover, by (<a data-tag="3F192A6A" href="../../tag/BC7744A40FEC/">3.71</a>), $d_1(\ell _ t,\tilde{\ell }_ t)=|C_\ell |t\int _ X\theta _{\phi }^ n$. Hence $d_1(\ell _ t,\phi )$ grows at most linearly in $t$. The same argument applies to $\ell '$, and the triangle inequality gives $d_1(\ell ,\ell ')&lt;\infty $. 
+    <p>
+      It remains to prove separation: suppose that $\ell ,\ell '\in \mathcal{R}^1(X,\theta ;\phi )$ and $d_1(\ell ,\ell ')=0$. 
+    <p>
+      Fix $s&gt;0$. Then it follows from proposition <a data-tag="E4164981" href="../../tag/5408F4A1486E/">4.3.18</a> that 
+    
+<div class="equation">
+  \[  \frac{d_1(\ell _ s,\ell '_ s)}{s}\leq \lim _{t\to \infty }\frac{d_1(\ell _ t,\ell '_ t)}{t}=d_1(\ell ,\ell ')=0.  \]
+</div>
+<p>
+       Therefore, $\ell _ s=\ell '_ s$ and hence $\ell =\ell '$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-D3519A70">
+<p><a class="environment-identifier" href="../../tag/89AFFBB3978E/">Definition <span data-tag="D3519A70">4.3.21</span>.</a><span data-gerby-tag="D3519A70"></span> We define the <em>radial Monge–Ampère energy</em> $\mathbf{E}^{\phi }\colon \mathcal{R}(X,\theta ;\phi )\rightarrow \mathbb {R}\cup \{ \pm \infty \} $ as follows: </p>
+<div class="equation">
+  \[  \mathbf{E}^{\phi }(\ell )\coloneqq \varlimsup _{t\to \infty }\frac{E_{\theta }^{\phi }(\ell _ t)}{t}.  \]
+</div>
+<p> When $\phi =V_{\theta }$, we write $\mathbf{E}$ instead of $\mathbf{E}^{V_{\theta }}$. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-BEF0ABBC">
+<p><a class="environment-identifier" href="../../tag/3A33DCAAE061/">Proposition <span data-tag="BEF0ABBC">4.3.22</span>.</a><span data-gerby-tag="BEF0ABBC"></span> Let $\ell ,\ell '\in \mathcal{R}^1(X,\theta ;\phi )$ and $\ell \leq \ell '$. Then </p>
+<div class="equation" id="sgpt-B824D8A8"><span data-gerby-tag="B824D8A8"></span>
+<span class="equation-label"><a data-tag="B824D8A8" href="../../tag/67CD28C301F2/">4.94</a></span>
+<div>\begin{equation} \label{eq:d1rayscompa} d_1(\ell ,\ell ')=\mathbf{E}^{\phi }(\ell ')-\mathbf{E}^{\phi }(\ell ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">4.3.16</a>, the energy is linear along finite energy rays. Hence 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }(\ell _ t)=tE_{\theta }^{\phi }(\ell _1),\quad E_{\theta }^{\phi }(\ell '_ t)=tE_{\theta }^{\phi }(\ell '_1).  \]
+</div>
+<p>
+       Since $\ell _ t\leq \ell '_ t$ for all $t\geq 0$, (<a data-tag="BF10DF27" href="../../tag/D8C8C0BB6585/">4.21</a>) gives 
+    
+<div class="equation">
+  \[  \frac{1}{t}d_1(\ell _ t,\ell '_ t)=\frac{1}{t}\left(E_{\theta }^{\phi }(\ell '_ t)-E_{\theta }^{\phi }(\ell _ t)\right).  \]
+</div>
+<p>
+       Letting $t\to \infty $ proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+Next we recall the $\lor $ operator at the level of geodesic rays. <article class="env-definition" id="sgpt-8D6024B6">
+<p><a class="environment-identifier" href="../../tag/F06EA26AA808/">Definition <span data-tag="8D6024B6">4.3.23</span>.</a><span data-gerby-tag="8D6024B6"></span> Let $\ell ,\ell '\in \mathcal{R}^{\infty }(X,\theta ;\phi )$. We define $\ell \lor \ell '$ as the minimal ray in $\mathcal{R}^{\infty }(X,\theta ;\phi )$ lying above both $\ell $ and $\ell '$. </p>
+</article> <article class="env-proposition" id="sgpt-392A645A">
+<p><a class="environment-identifier" href="../../tag/B40B93A4363D/">Proposition <span data-tag="392A645A">4.3.24</span>.</a><span data-gerby-tag="392A645A"></span> Given $\ell ,\ell '\in \mathcal{R}^{\infty }(X,\theta ;\phi )$. Then $\ell \lor \ell '\in \mathcal{R}^{\infty }(X,\theta ;\phi )$ exists, and </p>
+<div class="equation" id="sgpt-2BE4A6D4"><span data-gerby-tag="2BE4A6D4"></span>
+<span class="equation-label"><a data-tag="2BE4A6D4" href="../../tag/CA6EEFF029A5/">4.95</a></span>
+<div>\begin{equation} \label{eq:Elor} \mathbf{E}^{\phi }(\ell \lor \ell ')=\lim _{t\to \infty }\frac{1}{t}E_{\theta }^{\phi }\left(\ell _ t\lor \ell '_ t\right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For each $t&gt;0$, let $(\ell ''^ t_{s})_{s\in [0,t]}$ be the geodesic from $\phi $ to $\ell _ t\lor \ell '_ t$. 
+    <p>
+<strong>Step 1</strong>. We first show that for each fixed $s\geq 0$, $\ell ''^ t_{s}$ is increasing in $t\in [s,\infty )$. 
+    <p>
+      To see this, fix $s\geq 0$ and choose $t'&gt;t\geq s$. We need to show that 
+    
+<div class="equation" id="sgpt-831939C7"><span data-gerby-tag="831939C7"></span>
+<span class="equation-label"><a data-tag="831939C7" href="../../tag/947F65850DBC/">4.96</a></span>
+<div>\begin{equation} \label{eq:ellppdombyellpptemp1} \ell ''^{t'}_ s\geq \ell ''^{t}_ s. \end{equation}</div>
+</div>
+<p>
+       Since $(\ell ''^{t'}_ a)_{a\in [0,t]}$ is a geodesic, it suffices to show that $(\ell ''^ t_ a)_{a\in [0,t]}$ is a candidate in the Perron envelope defining the former geodesic. In other words, in verifying (<a data-tag="831939C7" href="../../tag/947F65850DBC/">4.96</a>), we may assume that either $s=0$ or $s=t$. The case $s=0$ is of course trivial. So it remains to prove the following: 
+    
+<div class="equation">
+  \[  \ell ''^{t'}_ t\geq \ell _ t\lor \ell '_ t.  \]
+</div>
+<p>
+       By symmetry, it suffices to prove 
+    
+<div class="equation">
+  \[  \ell ''^{t'}_ t\geq \ell _ t.  \]
+</div>
+<p>
+       But since $(\ell _ a)_{a\in [0,t']}$ is a candidate in the Perron envelope defining $\ell ''^{t'}$, this inequality follows. 
+    <p>
+<strong>Step 2</strong>. Next, observe that for a fixed $s\geq 0$, we have 
+    
+<div class="equation">
+  \[  \sup _ X \ell ''^ t_ s\leq \frac{s}{t}\sup _ X\ell ''^ t_ t+ \frac{t-s}{t}\sup _ X \ell ''^ t_0=\frac{s}{t}\left( \sup _ X\ell _ t \right)\lor \left( \sup _ X\ell '_ t \right)  \]
+</div>
+<p>
+       for all $t&gt;s$. The right-hand side is bounded from above by a constant independent of $t\geq s$ by proposition <a data-tag="3F6C536C" href="../../tag/FD1B5378AA06/">4.2.9</a>. Let 
+    
+<div class="equation" id="sgpt-C5DE1BBB"><span data-gerby-tag="C5DE1BBB"></span>
+<span class="equation-label"><a data-tag="C5DE1BBB" href="../../tag/EF4F3DA38F04/">4.97</a></span>
+<div>\begin{equation} \label{eq:llorlp} (\ell \lor \ell ')_ s\coloneqq \operatorname *{sup}_{t&gt;s}{}\! {}^{*} \ell ''^ t_{s}. \end{equation}</div>
+</div>
+<p>
+       Then proposition <a data-tag="8066E44C" href="../../tag/7ADCF3A953E5/">4.3.17</a> guarantees that $\ell \lor \ell '\in \mathcal{R}^{\infty }(X,\theta ;\phi )$. 
+    <p>
+<strong>Step 3</strong>. We need to show that $\ell \lor \ell '$ defined in this way is indeed the minimal ray lying above $\ell $ and $\ell '$. 
+    <p>
+      First, by Step 1, we have 
+    
+<div class="equation">
+  \[  \ell ''^ t_ s\geq \ell ''^ s_ s\geq \ell _ s  \]
+</div>
+<p>
+       for any $t\geq s\geq 0$. Therefore, 
+    
+<div class="equation">
+  \[  (\ell \lor \ell ')_ s\geq \ell _ s  \]
+</div>
+<p>
+       for all $s\geq 0$. In other words, $\ell \lor \ell '\geq \ell $. Similarly, $\ell \lor \ell '\geq \ell '$. 
+    <p>
+      Next, let $L\in \mathcal{R}^{\infty }(X,\theta ;\phi )$ be a ray lying above both $\ell $ and $\ell '$. Then we have 
+    
+<div class="equation">
+  \[  L_ t\geq \ell _ t\lor \ell '_ t  \]
+</div>
+<p>
+       for all $t\geq 0$. In particular, 
+    
+<div class="equation">
+  \[  L_ s\geq \ell ''^ t_ s  \]
+</div>
+<p>
+       for all $t\geq s\geq 0$. It follows that 
+    
+<div class="equation">
+  \[  L_ s\geq (\ell \lor \ell ')_ s  \]
+</div>
+<p>
+       for all $s\geq 0$. 
+    <p>
+<strong>Step 4</strong>. It remains to argue (<a data-tag="2BE4A6D4" href="../../tag/CA6EEFF029A5/">4.95</a>). Since the energy is linear along bounded rays, 
+    
+<div class="equation">
+  \[  \mathbf{E}^{\phi }(\ell \lor \ell ')=E_{\theta }^{\phi }\left((\ell \lor \ell ')_1\right).  \]
+</div>
+<p>
+       Moreover, $\ell ''^ t_1$ increases to $(\ell \lor \ell ')_1$ as $t\to \infty $. By proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a>, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }\left((\ell \lor \ell ')_1\right)=\lim _{t\to \infty } E_{\theta }^{\phi }\left(\ell ''^ t_1\right).  \]
+</div>
+<p>
+       Finally, by proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">4.3.16</a> applied to $(\ell ''^ t_ s)_{s\in [0,t]}$, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }\left(\ell ''^ t_1\right)=\frac{1}{t}E_{\theta }^{\phi }\left(\ell _ t\lor \ell '_ t\right).  \]
+</div>
+<p>
+       Combining these identities gives (<a data-tag="2BE4A6D4" href="../../tag/CA6EEFF029A5/">4.95</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-0EE8CA48">
+<p><a class="environment-identifier" href="../../tag/6C6200F67BD7/">Lemma <span data-tag="0EE8CA48">4.3.25</span>.</a><span data-gerby-tag="0EE8CA48"></span> For any $\ell ,\ell '\in \mathcal{R}^{\infty }(X,\theta ;\phi )$, we have </p>
+<div class="equation" id="sgpt-B3451784"><span data-gerby-tag="B3451784"></span>
+<span class="equation-label"><a data-tag="B3451784" href="../../tag/FE9D22CC2BA6/">4.98</a></span>
+<div>\begin{equation} \label{eq:d1maxineq} d_1(\ell ,\ell ')\leq d_1(\ell ,\ell \lor \ell ')+d_1(\ell ',\ell \lor \ell ')\leq C_ nd_1(\ell ,\ell '), \end{equation}</div>
+</div>
+<p> where $C_ n=3(n+1)2^{n+2}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The first inequality is trivial. As for the second, we estimate 
+    
+<div class="equation">
+  \[  \begin{aligned}  d_1(\ell ,\ell \lor \ell ')=&amp;  \mathbf{E}^{\phi }(\ell \lor \ell ')-\mathbf{E}^{\phi }(\ell )&amp; \textup{by proposition \href{../../tag/3A33DCAAE061/}{4.3.22}}\\  =&amp; \lim _{t\to \infty } \frac{1}{t}E_{\theta }^{\phi }\left(\ell _ t\lor \ell '_ t\right)-\mathbf{E}^{\phi }(\ell )&amp; \textup{by (\href{../../tag/CA6EEFF029A5/}{4.95})}\\  =&amp;  \lim _{t\to \infty } \frac{1}{t} d_1\left(\ell _ t\lor \ell '_ t,\ell _ t\right)&amp; \textup{by (\href{../../tag/D8C8C0BB6585/}{4.21})}. \end{aligned}  \]
+</div>
+<p>
+       By symmetry, we find 
+    
+<div class="equation">
+  \[  d_1(\ell ,\ell \lor \ell ')+d_1(\ell ',\ell \lor \ell ')\leq \lim _{t\to \infty } \frac{1}{t} \Bigl (d_1\left(\ell _ t\lor \ell '_ t,\ell _ t\right)+d_1\left(\ell _ t\lor \ell '_ t,\ell '_ t\right)\Bigr ).  \]
+</div>
+<p>
+       By theorem <a data-tag="E638E7AB" href="../../tag/1178F95447B1/">4.3.6</a> and <a data-tag="46E60D9B" href="../../tag/CB87AA08E67C/">4.3.5</a>, for each $t&gt;0$, 
+    
+<div class="equation">
+  \[  d_1\left(\ell _ t\lor \ell '_ t,\ell _ t\right)+d_1\left(\ell _ t\lor \ell '_ t,\ell '_ t\right)\leq 3(n+1)2^{n+2} d_1(\ell _ t,\ell '_ t).  \]
+</div>
+<p>
+       Now (<a data-tag="B3451784" href="../../tag/FE9D22CC2BA6/">4.98</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-example" id="sgpt-EE621D7C">
+<p><a class="environment-identifier" href="../../tag/02BD88048323/">Example <span data-tag="EE621D7C">4.3.26</span>.</a><span data-gerby-tag="EE621D7C"></span> Let $\varphi \in \mathrm{PSH}(X,\theta )$. Assume that $\varphi \leq 0$. For each $C&gt;0$, let $(\ell ^{\varphi ,C}_ t)_{t\in [0,C]}$ be the geodesic from $V_{\theta }$ to $(V_{\theta }-C)\lor \varphi $. For each $t\geq 0$, there is $\ell ^{\varphi }_ t\in \mathcal{E}^{\infty }(X,\theta )$ such that </p>
+<div class="equation" id="sgpt-982053CF"><span data-gerby-tag="982053CF"></span>
+<span class="equation-label"><a data-tag="982053CF" href="../../tag/BF8F51ADD4CB/">4.102</a></span>
+<div>\begin{equation} \label{eq:ellvarphiraydef} \ell ^{\varphi ,C}_ t\xrightarrow {d_1}\ell ^{\varphi }_ t \end{equation}</div>
+</div>
+<p> as $C\to \infty $. Then $\ell ^{\varphi }\in \mathcal{R}^{\infty }(X,\theta )$ and </p>
+<div class="equation" id="sgpt-0A1CE6E1"><span data-gerby-tag="0A1CE6E1"></span>
+<span class="equation-label"><a data-tag="0A1CE6E1" href="../../tag/795CA33E2D29/">4.103</a></span>
+<div>\begin{equation} \label{eq:Elphi} \mathbf{E}(\ell ^{\varphi })=\frac{1}{n+1} \sum _{j=0}^ n \left(\int _ X \theta _{\varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}-\int _ X \theta _{V_{\theta }}^ n\right). \end{equation}</div>
+</div>
+</article> Comparing the above approximants with cutoff parameters shifted by a bounded amount shows that $\ell ^{\varphi +C}=\ell ^{\varphi }$ for any $C\in \mathbb {R}$. Therefore, for a general $\varphi \in \mathrm{PSH}(X,\theta )$, we may simply define 
+
+<div class="equation">
+  \[  \ell ^{\varphi }\coloneqq \ell ^{\varphi -\sup _ X\varphi }.  \]
+</div>
+<p>
+ Then the conclusions of this example continue to hold. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first show that for each fixed $t\geq 0$, $\ell _ t^{\varphi ,C}$ is increasing in $C\geq t$. 
+    <p>
+      To see this, choose $t\leq C_1&lt;C_2$. We need to show that 
+    
+<div class="equation">
+  \[  \ell ^{\varphi ,C_1}_ t\leq \ell ^{\varphi ,C_2}_ t.  \]
+</div>
+<p>
+       Since both sides are geodesics for $t\in [0,C_1]$, it suffices to show that 
+    
+<div class="equation" id="sgpt-6D948660"><span data-gerby-tag="6D948660"></span>
+<span class="equation-label"><a data-tag="6D948660" href="../../tag/277396283395/">4.104</a></span>
+<div>\begin{equation} \label{eq:VthetaminusC1temp1} (V_{\theta }-C_1)\lor \varphi \leq \ell _{C_1}^{\varphi ,C_2}. \end{equation}</div>
+</div>
+
+       Now $((V_{\theta }-t)\lor \varphi )_{t\in [0,C_2]}$ is a subgeodesic from $V_{\theta }$ to $(V_{\theta }-C_2)\lor \varphi $ by proposition <a data-tag="BBFDD373" href="../../tag/5ECD747A7B0B/">4.1.9</a>.<aside class="source-footnote" id="sgpt-a0000042566"><span class="footnote-label">Note.</span> Here we need $\varphi \leq 0$.</aside> It is therefore a candidate in the Perron envelope defining $\ell ^{\varphi ,C_2}$, and evaluating at $t=C_1$ gives exactly (<a data-tag="6D948660" href="../../tag/277396283395/">4.104</a>). 
+    <p>
+      From proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>, we know that for any $C&gt;t&gt;0$, we have 
+    
+<div class="equation">
+  \[  \ell ^{\varphi ,C}_ t\leq \frac{t}{C}\Bigl ((V_{\theta }-C)\lor \varphi \Bigr )+\frac{C-t}{C}\cdot V_{\theta }\leq 0,  \]
+</div>
+<p>
+       while the linear subgeodesic $V_\theta -t$ is a candidate in the same Perron envelope, so $V_\theta -t\leq \ell ^{\varphi ,C}_ t$. Therefore, by proposition <a data-tag="17642020" href="../../tag/01C3654494E2/">1.2.2</a>, 
+    
+<div class="equation" id="sgpt-D0C92E48"><span data-gerby-tag="D0C92E48"></span>
+<span class="equation-label"><a data-tag="D0C92E48" href="../../tag/AAACF2ED8350/">4.105</a></span>
+<div>\begin{equation} \label{eq:ellphitexp} \ell _ t^{\varphi }\coloneqq \operatorname *{sup}_{C&gt;t}{}\! {}^{*}\ell ^{\varphi ,C}_ t\in \mathcal{E}^{\infty }(X,\theta ) \end{equation}</div>
+</div>
+<p>
+       for all $t\geq 0$. Thanks to proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a>, we have 
+    
+<div class="equation">
+  \[  \ell ^{\varphi ,C}_ t\xrightarrow {d_1} \ell _ t^{\varphi }  \]
+</div>
+<p>
+       as $C\to \infty $ for all $t\geq 0$. Applying proposition <a data-tag="8066E44C" href="../../tag/7ADCF3A953E5/">4.3.17</a> on each interval $[0,T]$ to the increasing family $(\ell ^{\varphi ,C}_ t)_{t\in [0,T]}$, $C\geq T$, shows that $\ell ^{\varphi }\in \mathcal{R}^{\infty }(X,\theta )$. 
+    <p>
+      It remains to compute the energy of $\ell ^{\varphi }$. We first fix $C\geq t&gt;0$ and compute using proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">4.3.16</a>: 
+    
+<div class="equation">
+  \[  E_{\theta }\left(\ell ^{\varphi ,C}_ t\right)=\frac{t}{C}E_{\theta }\Bigl ((V_{\theta }-C)\lor \varphi \Bigr ).  \]
+</div>
+<p>
+       Letting $C\to \infty $ and applying proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a>, we find that 
+    
+<div class="equation">
+  \[  E_{\theta }(\ell ^{\varphi }_ t)=\lim _{C\to \infty }\frac{t}{C}E_{\theta }\Bigl ((V_{\theta }-C)\lor \varphi \Bigr )  \]
+</div>
+<p>
+       for any $t\geq 0$. It follows that 
+    
+<div class="equation">
+  \[  \mathbf{E}(\ell ^{\varphi })=\lim _{C\to \infty }\frac{1}{C}E_{\theta }\Bigl ((V_{\theta }-C)\lor \varphi \Bigr ).  \]
+</div>
+<p>
+       Using the definition of $E_{\theta }$, in order to obtain (<a data-tag="0A1CE6E1" href="../../tag/795CA33E2D29/">4.103</a>), it suffices to show that for each $j=0,\ldots ,n$, we have 
+    
+<div class="equation" id="sgpt-3AD0B2D5"><span data-gerby-tag="3AD0B2D5"></span>
+<span class="equation-label"><a data-tag="3AD0B2D5" href="../../tag/287169AF175C/">4.106</a></span>
+<div>\begin{equation} \label{eq:limCintXtemp1} \lim _{C\to \infty }\int _ X \frac{(V_{\theta }-C)\lor \varphi -V_{\theta }}{C} \, \theta _{(V_{\theta }-C)\lor \varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}=\int _ X \theta _{\varphi }^{j}\wedge \theta _{V_{\theta }}^{n-j}-\int _ X \theta _{V_{\theta }}^ n. \end{equation}</div>
+</div>
+<p>
+      For this purpose, for each $C&gt;0$, we decompose $X$ as $\{ \varphi &gt; V_{\theta }-C\} $ and $\{ \varphi \leq V_{\theta }-C\} $. We have 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \int _{\{ \varphi &gt; V_{\theta }-C\} } \frac{(V_{\theta }-C)\lor \varphi -V_{\theta }}{C} \, \theta _{(V_{\theta }-C)\lor \varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}\\  =&amp;  \int _{\{ \varphi &gt; V_{\theta }-C\} } \frac{\varphi -V_{\theta }}{C} \, \theta _{\varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}. \end{aligned}  \]
+</div>
+<p>
+       On the other hand, 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \int _{\{ \varphi \leq V_{\theta }-C\} } \frac{(V_{\theta }-C)\lor \varphi -V_{\theta }}{C} \, \theta _{(V_{\theta }-C)\lor \varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}\\  =&amp;  -\int _{\{ \varphi \leq V_{\theta }-C\} } \theta _{(V_{\theta }-C)\lor \varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}\\  =&amp;  -\int _ X \theta _{V_{\theta }}^ n+\int _{\{ \varphi &gt; V_{\theta }-C\} } \theta _{\varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}. \end{aligned}  \]
+</div>
+<p>
+       Observe that for $C&gt;0$, the function $\mathds {1}_{\{ \varphi &gt;V_{\theta }-C\} }C^{-1}(\varphi -V_{\theta })$ is defined quasi-everywhere. Since $\varphi \leq V_\theta $, it takes values in $[-1,0]$ outside a pluripolar set. When $C\to \infty $, these functions converge to $0$ quasi-everywhere, so the first integral above converges to $0$ by dominated convergence. Similarly, the indicators $\mathds {1}_{\{ \varphi &gt;V_\theta -C\} }$ increase to $1$ outside a pluripolar set, hence 
+    
+<div class="equation">
+  \[  \lim _{C\to \infty }\int _{\{ \varphi &gt;V_{\theta }-C\} } \theta _{\varphi }^ j\wedge \theta _{V_{\theta }}^{n-j} = \int _ X \theta _{\varphi }^ j\wedge \theta _{V_{\theta }}^{n-j}.  \]
+</div>
+<p>
+       Therefore, (<a data-tag="3AD0B2D5" href="../../tag/287169AF175C/">4.106</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+<blockquote class="motto">There are two principal ways to formulate mathematical assertions (problems, conjectures, theorems, …): Russian and French. The Russian way is to choose the most simple and specific case (so that nobody could simplify the formulation preserving the main point). The French way is to generalize the statement as far as nobody could generalize it further. 
+— Vladimir Arnold<aside class="source-footnote" id="sgpt-a0000043030"><span class="footnote-label">Note.</span> Vladimir Igorevich Arnold (1937–2010), who became a professor at l'Université Paris IX after the dissolution of USSR, was always sick of France (so am I!). In the public lecture entitled “Sur l'éducation mathématique” in 1997, he invented the famous joke “Combien font $2+3$?” to question the French education system.</aside></blockquote>
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

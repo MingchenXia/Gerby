@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Generalities on semigroups · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/sections-okounkov/">Chapter 16 · Sections, graded series, and Okounkov bodies</a> · Tag <code>3A76517E84BF</code></p><h1>Generalities on semigroups</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · C.2.1 Generalities on semigroups <span data-gerby-tag="728BF1F4"></span></div>
+<p>
+  Write $\hat{\mathcal{S}}(C)$ for the set of subsets of $C\cap \mathbb {Z}^{n+1}$ and $\mathcal{S}(C)$ for the set of subsemigroups $S\subseteq C\cap \mathbb {Z}^{n+1}$. For each $k\in \mathbb {N}$ and $S\in \hat{\mathcal{S}}(C)$, we write 
+</p>
+<div class="equation">
+  \[  S_ k\coloneqq \left\{ x\in \mathbb {Z}^ n: (x,k)\in S \right\} .  \]
+</div>
+<p>
+ Note that $S_ k$ is a finite set by our assumption on $C$. 
+</p>
+<p>
+We introduce a pseudometric on $\hat{\mathcal{S}}(C)$ as follows: 
+</p>
+<div class="equation" id="sgpt-A996EEF7"><span data-gerby-tag="A996EEF7"></span>
+<span class="equation-label"><a data-tag="A996EEF7" href="../../tag/642E2D6850DF/">C.2</a></span>
+<div>\begin{equation} \label{eq:dsgdefapp} d_{\mathrm{sg}}(S,S')\coloneqq \varlimsup _{k\to \infty } k^{-n} \left(|S_ k|+|S'_ k|-2|(S\cap S')_ k|\right). \end{equation}</div>
+</div>
+
+ Here $|\bullet |$ denotes the cardinality of a finite set. <article class="env-lemma" id="sgpt-A07DB3BE">
+<p><a class="environment-identifier" href="../../tag/7887065F3C7C/">Lemma <span data-tag="A07DB3BE">C.2.1</span>.</a><span data-gerby-tag="A07DB3BE"></span> The above defined $d_{\mathrm{sg}}$ is a pseudometric on $\hat{\mathcal{S}}(C)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Only the triangle inequality needs to be argued. Take $S,S',S''\in \hat{\mathcal{S}}(C)$. We claim that for any $k\in \mathbb {N}$, 
+    
+<div class="equation">
+  \[  |S_ k|+|S'_ k|-2|S_ k\cap S'_ k|+|S''_ k|+|S'_ k|-2|S''_ k\cap S'_ k|\geq |S_ k|+|S''_ k|-2|S_ k\cap S''_ k|.  \]
+</div>
+<p>
+       From this the triangle inequality follows. To argue the claim, we rearrange it to the following form: 
+    
+<div class="equation">
+  \[  |S'_ k|-|S_ k\cap S'_ k| \geq |S'_ k\cap S''_ k|-|S_ k\cap S''_ k|,  \]
+</div>
+<p>
+       which is obvious. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+ Given $S,S'\in \hat{\mathcal{S}}(C)$, we say $S$ is equivalent to $S'$ and write $S\sim S'$ if $d_{\mathrm{sg}}(S,S')=0$. This is an equivalence relation by <a data-tag="A07DB3BE" href="../../tag/7887065F3C7C/">C.2.1</a>. 
+</p>
+
+<article class="env-lemma" id="sgpt-58F9B6C0">
+<p><a class="environment-identifier" href="../../tag/680A0890C1EE/">Lemma <span data-tag="58F9B6C0">C.2.2</span>.</a><span data-gerby-tag="58F9B6C0"></span> Given $S,S',S''\in \hat{\mathcal{S}}(C)$, we have </p>
+<div class="equation">
+  \[  d_{\mathrm{sg}}(S\cap S'',S'\cap S'')\leq d_{\mathrm{sg}}(S,S').  \]
+</div>
+<p> In particular, if $S^ i,S'^ i\in \hat{\mathcal{S}}(C)$ ($i\in \mathbb {N}$) and $S^ i\to S$, $S'^ i\to S'$, then </p>
+<div class="equation">
+  \[  S^ i\cap S'^ i\to S\cap S'.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Observe that for any $k\in \mathbb {N}$, 
+    
+<div class="equation">
+  \[  |S_ k\cap S_ k''|-|S_ k\cap S_ k'\cap S_ k''|\leq |S_ k|-|S_ k\cap S_ k'|.  \]
+</div>
+<p>
+       The same holds if we interchange $S$ with $S'$. It follows that 
+    
+<div class="equation">
+  \[  |S_ k\cap S_ k''|+|S_ k'\cap S_ k''|-2|S_ k\cap S_ k'\cap S_ k''|\leq |S_ k|+|S'_ k|-2|S_ k\cap S_ k'|.  \]
+</div>
+<p>
+       The first assertion follows. 
+    <p>
+      Next we compute 
+    
+<div class="equation">
+  \[  \begin{split}  d_{\mathrm{sg}}(S^ i\cap S'^ i,S\cap S')\leq &amp;  d_{\mathrm{sg}}(S^ i\cap S'^ i,S^ i\cap S')+d_{\mathrm{sg}}(S^ i\cap S',S\cap S')\\  \leq &amp;  d_{\mathrm{sg}}(S'^ i,S')+d_{\mathrm{sg}}(S^ i,S) \end{split}  \]
+</div>
+<p>
+       and the second assertion follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The volume of $S\in \mathcal{S}(C)$ is defined as 
+</p>
+<div class="equation">
+  \[  \operatorname{vol}S\coloneqq \lim _{k\to \infty } (ka)^{-n}|S_{ka}|=\varlimsup _{k\to \infty } k^{-n}|S_ k|,  \]
+</div>
+
+ where $a$ is a sufficiently divisible positive integer. The existence of the limit and its independence from $a$ both follow from the more precise result <span class="cite">[<span class="postnote">Theorem 2</span>, <a href="../../references/#RE66A40F6537E">KK12</a>]</span>, a special case of which can be stated as follows: <article class="env-theorem" id="sgpt-282DA4DD">
+<p><a class="environment-identifier" href="../../tag/85641516C8CA/">Theorem <span data-tag="282DA4DD">C.2.3</span> <span class="named">(Kaveh–Khovanskii)</span>.</a><span data-gerby-tag="282DA4DD"></span> Let $S\in \mathcal{S}(C)$. Then, for every sufficiently divisible positive integer $a$, the limit </p>
+<div class="equation">
+  \[  \lim _{k\to \infty }(ka)^{-n}|S_{ka}|  \]
+</div>
+<p> exists, is independent of $a$, and is equal to $\varlimsup _{k\to \infty } k^{-n}|S_ k|$. If moreover $S$ generates $\mathbb {Z}^{n+1}$ as an Abelian group, and if $C(S)$ denotes the closed convex cone generated by $S\cup \{ 0\} $, then </p>
+<div class="equation">
+  \[  \lim _{k\to \infty } k^{-n}|S_ k| = \operatorname{vol}\{ x\in \mathbb {R}^ n:(x,1)\in C(S)\} .  \]
+</div>
+<p> In particular, for every convex body $K\subseteq \mathbb {R}^ n$, </p>
+<div class="equation">
+  \[  \lim _{k\to \infty } k^{-n}\# \left(kK\cap \mathbb {Z}^ n\right)=\operatorname{vol}K.  \]
+</div>
+<p> The same assertion holds with $\mathbb {Z}^ n$ replaced by any lattice, provided the Lebesgue measure is normalized by that lattice. </p>
+</article> This is the part of <span class="cite">[<span class="postnote">Theorem 2</span>, <a href="../../references/#RE66A40F6537E">KK12</a>]</span> used in this book. <article class="env-lemma" id="sgpt-DB644801">
+<p><a class="environment-identifier" href="../../tag/DCB8E8464FB6/">Lemma <span data-tag="DB644801">C.2.4</span>.</a><span data-gerby-tag="DB644801"></span> Let $S,S'\in \mathcal{S}(C)$. Then </p>
+<div class="equation">
+  \[  |\operatorname{vol}S-\operatorname{vol}S'|\leq d_{\mathrm{sg}}(S,S').  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a sufficiently divisible positive integer $a$. Taking the limsup in the definition of $d_{\mathrm{sg}}$ along $k=ma$ gives 
+    
+<div class="equation">
+  \[  d_{\mathrm{sg}}(S,S')\geq \operatorname{vol}S+\operatorname{vol}S'-2\operatorname{vol}(S\cap S').  \]
+</div>
+<p>
+       It follows that $\operatorname{vol}S-\operatorname{vol}S'\leq d_{\mathrm{sg}}(S,S')$ and $\operatorname{vol}S'-\operatorname{vol}S\leq d_{\mathrm{sg}}(S,S')$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+ We define $\overline{\mathcal{S}}(C)$ as the closure of $\mathcal{S}(C)$ in $\hat{\mathcal{S}}(C)$ with respect to the topology defined by the pseudometric $d_{\mathrm{sg}}$. By <a data-tag="DB644801" href="../../tag/DCB8E8464FB6/">C.2.4</a>, $\operatorname{vol}\colon \mathcal{S}(C)\rightarrow \mathbb {R}$ admits a unique $1$-Lipschitz extension to 
+</p>
+<div class="equation" id="sgpt-4DE859E3"><span data-gerby-tag="4DE859E3"></span>
+<span class="equation-label"><a data-tag="4DE859E3" href="../../tag/1009A092673C/">C.5</a></span>
+<div>\begin{equation} \label{eq:volexapp} \operatorname{vol}\colon \overline{\mathcal{S}}(C)\rightarrow \mathbb {R}. \end{equation}</div>
+</div>
+
+<article class="env-lemma" id="sgpt-8FC36080">
+<p><a class="environment-identifier" href="../../tag/EC9CD63CAB3A/">Lemma <span data-tag="8FC36080">C.2.5</span>.</a><span data-gerby-tag="8FC36080"></span> Suppose that $S,S'\in \overline{\mathcal{S}}(C)$ and $S\subseteq S'$. Then </p>
+<div class="equation">
+  \[  \operatorname{vol}S\leq \operatorname{vol}S'.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take sequences $S^ j,S'^ j$ in $\mathcal{S}(C)$ such that $S^ j\to S$, $S'^ j\to S'$. By <a data-tag="58F9B6C0" href="../../tag/680A0890C1EE/">C.2.2</a>, after replacing $S^ j$ by $S^ j\cap S'^ j$, we may assume that $S^ j\subseteq S'^ j$ for each $j$. Then our assertion follows easily. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

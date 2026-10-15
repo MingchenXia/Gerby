@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Measures with bounded potentials · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>80117515F812</code></p><h1>Measures with bounded potentials</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 1.23.3 Measures with bounded potentials <span data-gerby-tag="53D830FC"></span></div>
+<p>
+The fixed measure can be replaced by moving mixed Monge–Ampère measures of uniformly bounded potentials, provided these potentials converge in capacity. Since $\omega $ need not be closed, the proof has to control the torsion terms that appear in integration by parts. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-35EBF005">
+<p><a class="environment-identifier" href="../../tag/27CEBF2AA643/">Lemma <span data-tag="35EBF005">1.23.4</span>.</a><span data-gerby-tag="35EBF005"></span> Let $a_ j,a,w_ j,w\in \mathrm{PSH}(X,\omega )$ be uniformly bounded, and write $\omega _ v=\omega +\mathrm{dd}^{\mathrm{c}}v$. If $a_ j\to a$ in $L^1(X)$ and $w_ j\to w$ in capacity, then, for $0\leq k\leq n$, </p>
+<div class="equation">
+  \[  \int _ X|a_ j-a|\, \omega _{w_ j}^{k}\wedge \omega ^{n-k} \longrightarrow 0.  \]
+</div>
+<p> The same conclusion holds if, instead of $a_ j,a\in \mathrm{PSH}(X,\omega )$, the uniformly bounded functions $a_ j,a$ have any fixed smooth lower curvature bound. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="AA1A6D7B" href="../../tag/45B3FA75B7BD/">1.4.1</a>, the tail envelopes $A_ j=(\sup _{\ell \geq j}a_\ell )^*$ decrease to $a$. Since $a\leq \max (a_ j,a)\leq A_ j$, monotone convergence in capacity of bounded potentials (lemma <a data-tag="39D08A06" href="../../tag/505602F4CB54/">1.8.12</a>) implies 
+    
+<div class="equation">
+  \[  \alpha _ j:=\max (a_ j,a)\longrightarrow a\quad \text{in capacity}.  \]
+</div>
+<p>
+       We split $|a_ j-a|=(\alpha _ j-a)+(\alpha _ j-a_ j)$. The integral of the first part against the moving products tends to zero by lemma <a data-tag="3894071E" href="../../tag/F56E1BEB2997/">1.8.9</a>. 
+    <p>
+      For the second part, put $h_ j=\alpha _ j-a_ j\geq 0$. We compare its integrals against the measures with indices $j$ and $\ell $. The case $k=0$ follows from the assumed $L^1$ convergence. For $k\geq 1$, put $z=w_ j-w_\ell $ and 
+    
+<div class="equation">
+  \[  T=\sum _{s=0}^{k-1}\omega _{w_ j}^{s}\wedge \omega _{w_\ell }^{k-1-s}\wedge \omega ^{n-k}.  \]
+</div>
+<p>
+       Factorization and Stokes' theorem on the compact manifold $X$ give 
+    
+<div class="equation">
+  \begin{align*} &amp; \int _ Xh_ j\bigl (\omega _{w_ j}^{k}-\omega _{w_\ell }^{k}\bigr ) \wedge \omega ^{n-k}\\ &amp; \hspace{20mm}=\int _ Xh_ j\mathrm{dd}^{\mathrm{c}}z\wedge T =\int _ Xz\, \mathrm{dd}^{\mathrm{c}}(h_ jT). \end{align*}
+</div>
+<p>
+       Since $\omega $ is not assumed to be closed, $T$ need not be closed, and the product rule reads 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-83B3772A"><span data-gerby-tag="83B3772A"></span>
+<span class="equation-label"><a data-tag="83B3772A" href="../../tag/CDF5AC2B6D12/">1.75</a></span>
+<div>\begin{equation} \label{eq:moving-measure-torsion} \mathrm{dd}^{\mathrm{c}}(h_ jT)=\mathrm{dd}^{\mathrm{c}}h_ j\wedge T+\mathrm{d}h_ j\wedge \mathrm d^{\mathrm c}T -\mathrm d^{\mathrm c}h_ j\wedge \mathrm{d}T+h_ j\mathrm{dd}^{\mathrm{c}}T. \end{equation}</div>
+</div>
+<p>
+       None of the terms involving derivatives of $T$ need vanish. 
+    <p>
+      We estimate the four terms. Since $\mathrm{dd}^{\mathrm{c}}h_ j=\omega _{\alpha _ j}-\omega _{a_ j}$, the absolute contribution of the first is at most 
+    
+<div class="equation">
+  \[  \int _ X|z|(\omega _{\alpha _ j}+\omega _{a_ j})\wedge T.  \]
+</div>
+<p>
+       It tends to zero as $j,\ell \to \infty $ by lemma <a data-tag="3894071E" href="../../tag/F56E1BEB2997/">1.8.9</a>, since $w_ j-w_\ell \to 0$ in capacity. Differentiating each factor shows that $\mathrm{d}T=\mathrm{d}\omega \wedge R$ and $\mathrm d^{\mathrm c}T=\mathrm d^{\mathrm c}\omega \wedge R$, where $R$ is a positive linear combination of mixed products of bidegree $(n-2,n-2)$. Moreover, $\mathrm{dd}^{\mathrm{c}}T$ is a sum of terms consisting of $\mathrm{dd}^{\mathrm{c}}\omega $ times mixed products of degree $n-2$, or of $\mathrm{d}\omega \wedge \mathrm d^{\mathrm c}\omega $ times mixed products of degree $n-3$; terms of negative degree are absent. These smooth torsion factors are bounded in absolute value by fixed multiples of $\omega ^2$ and $\omega ^3$, respectively. As $h_ j$ is uniformly bounded, the contribution of $h_ j\mathrm{dd}^{\mathrm{c}}T$ also tends to zero, by the same capacity estimate. 
+    <p>
+      For the two gradient terms, the pointwise Cauchy–Schwarz inequality for a positive mixed product gives, for example, 
+    
+<div class="equation">
+  \[  \left|\int _ Xz\, \mathrm{d}h_ j\wedge \mathrm d^{\mathrm c}\omega \wedge R\right|^2 \leq C\left(\int _ X|z|\, \mathrm{d}h_ j\wedge \mathrm d^{\mathrm c}h_ j\wedge \omega \wedge R\right) \left(\int _ X|z|\, \omega ^2\wedge R\right).  \]
+</div>
+<p>
+       The second factor tends to zero, and the first is uniformly bounded. Indeed, if $p$ is any of the uniformly bounded potentials and $S$ any positive mixed product of degree $n-1$ occurring here, then 
+    
+<div class="equation">
+  \[  \int _ X\mathrm{d}p\wedge \mathrm d^{\mathrm c}p\wedge S =\frac12\int _ Xp^2\mathrm{dd}^{\mathrm{c}}S-\int _ Xp\, \mathrm{dd}^{\mathrm{c}}p\wedge S.  \]
+</div>
+<p>
+       Expand $\mathrm{dd}^{\mathrm{c}}S$ with all its torsion terms as above, and write $\mathrm{dd}^{\mathrm{c}}p=\omega _ p-\omega $. Boundedness of $p$ and lemma <a data-tag="3894071E" href="../../tag/F56E1BEB2997/">1.8.9</a> bound both integrals uniformly. Finally, $\mathrm{d}h_ j\wedge \mathrm d^{\mathrm c}h_ j\leq 2\mathrm{d}\alpha _ j\wedge \mathrm d^{\mathrm c}\alpha _ j+2\mathrm{d}a_ j\wedge \mathrm d^{\mathrm c}a_ j$ as positive quadratic forms, which proves the asserted bound. The other gradient term is estimated in the same way. In dimension one, $T=1$ and all torsion terms in (<a data-tag="83B3772A" href="../../tag/CDF5AC2B6D12/">1.75</a>) vanish. 
+    <p>
+      These integration-by-parts and energy identities hold for smooth potentials. They extend to bounded potentials through smooth decreasing approximations in the Hermitian background, using the local Bedford–Taylor chain rule, its gradient products and quasi-continuity; equivalently, they follow from the bounded current calculus of section <a data-tag="EBD0702C" href="../../tag/5E2B332B89B4/">1.7</a>. Only the common bound on the potentials enters the estimates. 
+    <p>
+      We have shown that the difference between the integrals of $h_ j$ against the measures with indices $j$ and $\ell $ tends to zero as $j,\ell \to \infty $. For a fixed index $\ell $, the measure $\omega _{w_\ell }^ k\wedge \omega ^{n-k}$ is a fixed finite non-pluripolar measure, and lemma <a data-tag="266C64AB" href="../../tag/983B3E6349BB/">1.23.1</a>, applied separately to $\alpha _ j\to a$ and $a_ j\to a$ in $L^1(X)$, gives 
+    
+<div class="equation">
+  \[  \int _ Xh_ j\, \omega _{w_\ell }^{k}\wedge \omega ^{n-k}\longrightarrow 0 \qquad \text{as }j\to \infty .  \]
+</div>
+<p>
+       Choosing first $\ell $ large and then letting $j\to \infty $, we conclude that the integrals of $h_ j$ against $\omega _{w_ j}^ k\wedge \omega ^{n-k}$ tend to zero. Together with the estimate for $\alpha _ j-a$, this proves the result. If the $a_ j$ only have some other fixed lower curvature bound, choose a Hermitian form $\Omega \geq \omega $ such that they are $\Omega $-plurisubharmonic. By section <a data-tag="0231BF16" href="../../tag/DD310AD8B258/">1.8</a>, convergence in capacity is unchanged by this replacement. Apply the result just proved with $\Omega $ in place of $\omega $; by positivity, the original mixed measures are bounded by their counterparts for $\Omega $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>
