@@ -1,11 +1,11 @@
 # Page comments
 
-Gerby uses GitHub Discussions for public comments. The site does not store a GitHub token or collect readers' email addresses. Readers sign into GitHub to post; existing discussions can be read publicly. The inline form is supplied by the hosted, open source [giscus service](https://giscus.app/).
+Pome uses GitHub Discussions for public comments. The site does not store a GitHub token or collect readers' email addresses. Readers sign into GitHub to post; existing discussions can be read publicly. The inline form is supplied by the hosted, open source [giscus service](https://giscus.app/).
 
 ## Repository setup
 
-1. Enable Discussions on `MingchenXia/Gerby`.
-2. Install the [giscus app](https://github.com/apps/giscus) with **Only select repositories**, selecting **Gerby**. Its discussion access is used to create and update comment threads.
+1. Enable Discussions on `MingchenXia/Pome`.
+2. Install the [giscus app](https://github.com/apps/giscus) with **Only select repositories**, selecting **Pome**. Its discussion access is used to create and update comment threads.
 3. Keep the public repository ID and General category ID in `comments.json` in sync with GitHub. These IDs are not credentials.
 4. Keep `giscus.json` at the repository root. It permits the deployed homepage origin and local preview origins.
 5. Open a reading page's Comments section and confirm that the embedded sign-in/comment form appears. Merely enabling GitHub Discussions is not enough to activate the inline form.
@@ -14,7 +14,7 @@ The page always offers direct GitHub discussion links. A service failure shows a
 
 ## Stable threads
 
-Each thread is identified by `Gerby /<route>/`, using a canonical entry tag, chapter slug, or section slug. It is independent of page title and source revision. Old source URLs redirect to the canonical entry and therefore share that entry's comments.
+The repository rename preserves its repository and discussion-category IDs. Existing thread keys also remain unchanged: `comments.json` retains the original `Gerby` prefix to keep comments attached to their pages. Each thread is identified by `Gerby /<route>/`, using a canonical entry tag, chapter slug, or section slug. It is independent of page title and source revision. Old source URLs redirect to the canonical entry and therefore share that entry's comments.
 
 giscus uses strict matching with the SHA-1 marker of the thread identifier. The direct GitHub composition link includes the same marker and a link to the reading page, so a thread created through the fallback can later appear inline. Keep this hidden marker when editing a thread's original post.
 

@@ -1,12 +1,12 @@
 # Integration layout and numbering
 
-Reader numbering belongs to Gerby's current organization, independently of the original manuscripts. This rule applies to every contributing source and future integration.
+Reader numbering belongs to Pome's current organization, independently of the original manuscripts. This rule applies to every contributing source and future integration.
 
 ## Sections and subordinate material
 
 `collection.json` assigns subjects to shared chapters. Its reviewed `section_promotions` identify stable canonical heading tags at which a long or mixed subject splits into smaller sections. Boundaries are checked in source order; a missing, repeated, or reordered boundary fails the build. The existing broad subject URL remains an overview with its introductory prose and links. It is not a second full copy of its child sections.
 
-A retained source heading below a Gerby section is a subsection. A heading that repeats its containing section's title is absorbed into that section. Its old tag URL redirects to the introduction inside the section, and its source metadata and content remain available. Chapter pages list sections and their retained subsections.
+A retained source heading below a Pome section is a subsection. A heading that repeats its containing section's title is absorbed into that section. Its old tag URL redirects to the introduction inside the section, and its source metadata and content remain available. Chapter pages list sections and their retained subsections.
 
 Section titles are followed directly by reading content. Do not display topic metadata descriptions as small explanatory subtitles beneath them.
 
@@ -14,7 +14,7 @@ The 15 October 2026 layout review subdivides 36 section groups at 413 reviewed h
 
 ## Generated locators
 
-Chapters and sections have locators `C` and `C.S`. Addressable subordinate blocks share one counter within their containing section: a subsection may be `3.2.1`, a theorem `3.2.2`, and its labelled equation `(3.2.3)`. Theorems, lemmas, definitions, propositions, examples, remarks, equations, figures, and retained headings all use this sequence. This makes each locator unique within a section; counters continue across sources and reset at the next Gerby section. Absorbed introductory headings use `C.S` and do not consume a block number. Deduplicated source variants share the canonical entry's number.
+Chapters and sections have locators `C` and `C.S`. Addressable subordinate blocks share one counter within their containing section: a subsection may be `3.2.1`, a theorem `3.2.2`, and its labelled equation `(3.2.3)`. Theorems, lemmas, definitions, propositions, examples, remarks, equations, figures, and retained headings all use this sequence. This makes each locator unique within a section; counters continue across sources and reset at the next Pome section. Absorbed introductory headings use `C.S` and do not consume a block number. Deduplicated source variants share the canonical entry's number.
 
 `adapters/common.py` exports the original `number` and an explicit `caption` separately from source titles and semantic search terms. `scripts/structure.py` applies reviewed section boundaries. `scripts/numbering.py` assigns reader numbers after placement and deduplication. `scripts/collection.py` uses that map for headings, environment identifiers, equation labels, HTML references, references inside mathematics, navigation, search, and public inventories. Never extract a mathematical name from an internal LaTeX label.
 
@@ -28,11 +28,11 @@ Show tags reveals tags for all addressable reading structures, including chapter
 
 Cite this page opens the citation panel immediately, including when clicked again with an existing `#cite` fragment. Direct citation links also expand the panel. Copy citation copies the displayed BibTeX entry; the permalink and title must identify the current reading page.
 
-Footnotes use numbered links at their original positions in text or formulas. Note bodies follow the containing definition, theorem, proof, or prose block, with a return link to the reference. Number notes within each current Gerby section and reuse those numbers on standalone entries. Logical list conditions keep their existing tags and anchors; only the complete statement has a formalization badge.
+Footnotes use numbered links at their original positions in text or formulas. Note bodies follow the containing definition, theorem, proof, or prose block, with a return link to the reference. Number notes within each current Pome section and reuse those numbers on standalone entries. Logical list conditions keep their existing tags and anchors; only the complete statement has a formalization badge.
 
-The mathematical body should read as Gerby, independently of its source books. Rewrite source-specific introductions and preserve assumptions and conventions. Outside historical sections, use internal statements instead of external references whenever the required result is available. Keep necessary external inputs explicit; moving a citation must not disguise an unproved dependency. Bibliographical attribution, source commentary, and further-reading recommendations belong under Sources.
+The mathematical body should read as Pome, independently of its source books. Rewrite source-specific introductions and preserve assumptions and conventions. Outside historical sections, use internal statements instead of external references whenever the required result is available. Keep necessary external inputs explicit; moving a citation must not disguise an unproved dependency. Bibliographical attribution, source commentary, and further-reading recommendations belong under Sources.
 
-`reading/registry.json` records reviewed prose replacements with fingerprints of the original paragraphs. Check these against the raw exports before applying proof expansions; changed source prose requires another review. Reading edits change HTML and displayed captions, preserving source TeX, permanent tags, and proof guards. Exact SGPT locators resolve to current Gerby entries; do not infer an internal reference merely from a similar theorem name, or replace a proof dependency by a link to the same statement. Sources pages retain the original attribution and commentary. Historical sections retain their original exposition.
+`reading/registry.json` records reviewed prose replacements with fingerprints of the original paragraphs. Check these against the raw exports before applying proof expansions; changed source prose requires another review. Reading edits change HTML and displayed captions, preserving source TeX, permanent tags, and proof guards. Exact SGPT locators resolve to current Pome entries; do not infer an internal reference merely from a similar theorem name, or replace a proof dependency by a link to the same statement. Sources pages retain the original attribution and commentary. Historical sections retain their original exposition.
 
 Before publication, run:
 

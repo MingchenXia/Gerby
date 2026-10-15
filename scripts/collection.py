@@ -1,4 +1,4 @@
-"""Combine Gerby exports into shared chapters with reviewed canonical entries."""
+"""Combine Pome exports into shared chapters with reviewed canonical entries."""
 from __future__ import annotations
 
 from hashlib import sha256
@@ -197,7 +197,7 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
     image = r"\\gerbyimage\{([^}]+)\}\{([^}]+)\}"
     def illustration(match):
         return '<img class="source-figure" src="/asset/' + escape(match[1], quote=True) + '" alt="' + escape(match[2], quote=True) + '" loading="lazy">'
-    # Gerby serializes math bodies as TeX. A diagram inside display math must
+    # Pome serializes math bodies as TeX. A diagram inside display math must
     # become an image outside the math delimiters, retaining its equation tag.
     fragment = re.sub(r"\\\[\s*" + image + r"\s*\\\]", illustration, fragment)
     fragment = re.sub(r"\\begin\{equation\*?\}\s*(?:\\label\{[^}]+\}\s*)?" + image + r"\s*\\end\{equation\*?\}", illustration, fragment)
@@ -286,7 +286,7 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
 @cache
 def asset_revision():
     folder = Path(__file__).resolve().parents[1] / "site" / "assets"
-    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs", "favicon.svg", "comments.mjs", "search.mjs")
+    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs", "pome-mascot.png", "comments.mjs", "search.mjs")
     return sha256(b"".join((folder / name).read_bytes() for name in names)).hexdigest()[:12]
 
 
@@ -383,7 +383,7 @@ def redirect(path, target, destination, fragments=None, anchor=""):
     relative += anchor
     assets = Path(os.path.relpath(destination / "assets", path.parent)).as_posix() + "/"
     fragment_anchors = "".join(f'<span hidden id="{escape(identifier, quote=True)}"></span>' for identifier in (fragments or {}))
-    path.write_text(f'''<!doctype html><html lang="en" data-redirect="{escape(relative, quote=True)}" data-fragments='{escape(json.dumps(fragments or {}), quote=True)}'><head><meta charset="utf-8"><title>Continue to Gerby</title><link rel="canonical" href="{escape(relative, quote=True)}"><script defer src="{assets}redirect.js"></script></head><body>{fragment_anchors}<p>This content is part of the shared Gerby reference. <a href="{escape(relative, quote=True)}">Continue to the shared entry</a>.</p></body></html>''')
+    path.write_text(f'''<!doctype html><html lang="en" data-redirect="{escape(relative, quote=True)}" data-fragments='{escape(json.dumps(fragments or {}), quote=True)}'><head><meta charset="utf-8"><title>Continue to Pome</title><link rel="canonical" href="{escape(relative, quote=True)}"><script defer src="{assets}redirect.js"></script></head><body>{fragment_anchors}<p>This content is part of the shared Pome reference. <a href="{escape(relative, quote=True)}">Continue to the shared entry</a>.</p></body></html>''')
 
 
 def build_collection(books, destination, configuration):
@@ -425,8 +425,8 @@ def build_collection(books, destination, configuration):
         page.parent.mkdir(parents=True, exist_ok=True)
         page.write_text(reader.shell(content, route, root, asset_revision()))
 
-    introduction = f'<section class="collection-intro"><h1>Gerby</h1><p>A mathematical reference combining definitions, results, and proofs from contributing texts.</p><p class="collection-count">{len(entries):,} entries · {len(chapters)} chapters · {len(topics)} sections · {len(sources)} sources</p></section>'
-    write("", introduction + '<nav class="home-links" aria-label="Explore Gerby"><a href="chapters/">Table of contents</a><a href="search/">Search</a><a href="references/">Bibliography</a><a href="comments/">Comments</a><a href="sources/">Sources</a><a href="https://github.com/MingchenXia/Gerby">GitHub</a></nav><h2>Table of contents</h2>' + reader.contents(""), "Gerby", "")
+    introduction = f'<section class="collection-intro"><div><h1>Pome</h1><p>A mathematical reference combining definitions, results, and proofs from contributing texts.</p><p class="collection-count">{len(entries):,} entries · {len(chapters)} chapters · {len(topics)} sections · {len(sources)} sources</p></div><img class="home-mascot" src="assets/pome-mascot.png" alt="Pome pomegranate mascot" width="128" height="128"></section>'
+    write("", introduction + '<nav class="home-links" aria-label="Explore Pome"><a href="chapters/">Table of contents</a><a href="search/">Search</a><a href="references/">Bibliography</a><a href="comments/">Comments</a><a href="sources/">Sources</a><a href="https://github.com/MingchenXia/Pome">GitHub</a></nav><h2>Table of contents</h2>' + reader.contents(""), "Pome", "")
     write("chapters", '<h1>Table of contents</h1>' + reader.contents("../"), "Table of contents", "../")
     for key, chapter in chapters.items():
         content = f'<p class="eyebrow">Chapter {chapter["number"]}</p><h1>{escape(chapter["title"])}{tag_code(chapter["tag"])}</h1><p>{escape(chapter.get("description", ""))}</p>'
@@ -515,7 +515,7 @@ def build_collection(books, destination, configuration):
         source_content += f'<p><a href="{escape(book["repository"])}/commit/{editions[source]["commit"]}">Source revision {editions[source]["commit"][:12]} ↗</a></p>'
         source_notes = [note for note in reading_notes if note['source'] == source]
         if source_notes:
-            source_content += '<h2>Attribution and further reading</h2><p>Original source commentary and bibliographical references accompany the corresponding Gerby entries here.</p>'
+            source_content += '<h2>Attribution and further reading</h2><p>Original source commentary and bibliographical references accompany the corresponding Pome entries here.</p>'
             for note in source_notes:
                 entry = entries[note['tag']]
                 variant = {'source': source, 'label': note['label'], 'tag': entry['variants'][0]['tag'], 'html': note['html']}
@@ -546,7 +546,7 @@ def build_collection(books, destination, configuration):
         reference_content += f'<div class="bibliography-entry" id="{identifier}">{record["html"]}</div>'
     write("references", reference_content, "References", "../")
     write("search", '<h1>Search</h1><form class="page-search" role="search"><label for="page-search">Keywords, a statement number, or a permanent tag</label><input id="page-search" type="search" name="q" autocomplete="off" aria-controls="page-search-results"><button type="submit">Search</button></form><div id="page-search-results" aria-live="polite"></div>', "Search", "../")
-    write("comments", '<h1>Comments and corrections</h1><p>Each chapter, section, and entry has its own comment thread. Use the Comments link on a reading page for a question or correction about that page.</p><p><a href="https://github.com/MingchenXia/Gerby/discussions">Browse all discussions on GitHub</a></p><p>The comment thread below is for general feedback about the reference. Markdown and mathematical notation are supported by GitHub Discussions. Please identify the statement and give enough detail for others to check a proposed correction.</p>', "Comments", "../")
+    write("comments", '<h1>Comments and corrections</h1><p>Each chapter, section, and entry has its own comment thread. Use the Comments link on a reading page for a question or correction about that page.</p><p><a href="https://github.com/MingchenXia/Pome/discussions">Browse all discussions on GitHub</a></p><p>The comment thread below is for general feedback about the reference. Markdown and mathematical notation are supported by GitHub Discussions. Please identify the statement and give enough detail for others to check a proposed correction.</p>', "Comments", "../")
     (destination / "search.json").write_text(json.dumps(search, ensure_ascii=False) + "\n")
     public_topics = [{**topic, "number": reader.sections[key]["number"], "tag": reader.sections[key]["tag"]} for key, topic in topics.items()]
     (destination / "collection.json").write_text(json.dumps({"version": 1, "chapters": list(chapters.values()), "topics": public_topics, "entries": public_entries}, ensure_ascii=False, indent=2) + "\n")

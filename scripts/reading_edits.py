@@ -1,4 +1,4 @@
-"""Reviewed prose edits and internal references for the Gerby reading edition.
+"""Reviewed prose edits and internal references for the Pome reading edition.
 
 Mathematical source strings and proof guards are left intact. Original attribution
 is retained on Sources pages; historical sections retain the original exposition.
@@ -136,7 +136,7 @@ def apply_reading_edits(entries, topic_chapters, registry_path):
                 retain(source, node, entry, variant)
                 node.decompose()
             for node in list(soup.find_all(['p', 'aside'])):
-                if node.parent is None or node.find('p'):
+                if node.parent is None or not any(parent is soup for parent in node.parents) or node.find('p'):
                     continue
                 edit = edits.get(context_key(source, node))
                 if edit is None or 'replacement_html' not in edit:

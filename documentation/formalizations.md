@@ -15,7 +15,7 @@ Logical conditions in a statement's list are covered by the complete statement's
 
 ## Registry
 
-`formalizations.json` contains entries keyed by `(book, tag)`. Book namespaces prevent collisions when different books use the same Gerby tag.
+`formalizations.json` contains entries keyed by `(book, tag)`. Book namespaces prevent collisions when different books use the same Pome tag.
 
 A pending record has `book`, `tag`, `state: "pending"`, and `repository`. Optional `ref` selects the tracked branch; otherwise the default branch is tracked.
 
@@ -45,6 +45,6 @@ Every source contribution sets `data-gerby-book` on its containing element. A sh
 </section>
 ```
 
-Adjust the relative asset paths to the actual page depth. The module locates the registry relative to its own URL, so it works under `/Gerby/` and nested tag routes. It adds a badge beside every marked heading, defaults missing mappings to **Not recorded**, and never treats a fetch failure as successful verification. Book conversion adapters are responsible for emitting a marker for every tag and testing this against the source tag inventory.
+Adjust the relative asset paths to the actual page depth. The module locates the registry relative to its own URL, so it works under `/Pome/` and nested tag routes. It adds a badge beside every marked heading, defaults missing mappings to **Not recorded**, and never treats a fetch failure as successful verification. Book conversion adapters are responsible for emitting a marker for every tag and testing this against the source tag inventory.
 
 The linked verified repository revision is also available in `formalizations.json` together with the declaration, file, audit command, and evidence URL. When upstream changes, the public build downgrades stale verification records until the new revision is checked.
