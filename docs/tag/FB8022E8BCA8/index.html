@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The notion of convex functions · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/toric-convex/">Chapter 18 · Toric and convex geometry</a> · Tag <code>FB8022E8BCA8</code></p><h1>The notion of convex functions</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · A.1 The notion of convex functions <span data-gerby-tag="AE58526A"></span></div>
+<p>
+  Let $N$ be a real vector space of finite dimension. 
+</p>
+
+<article class="env-definition" id="sgpt-CB59B8CE">
+<p><a class="environment-identifier" href="../../tag/3B5FF6A6C162/">Definition <span data-tag="CB59B8CE">A.1.1</span>.</a><span data-gerby-tag="CB59B8CE"></span>Let $F\colon N\rightarrow [-\infty ,\infty ]$ be a function. The <em>epigraph</em> of $F$ is defined as the following set </p>
+<div class="equation">
+  \[  \operatorname{epi}F\coloneqq \left\{  (n,r)\in N\times \mathbb {R}: r\geq F(n) \right\} .  \]
+</div>
+</article> <article class="env-definition" id="sgpt-8139C078">
+<p><a class="environment-identifier" href="../../tag/4FA12A948A00/">Definition <span data-tag="8139C078">A.1.2</span>.</a><span data-gerby-tag="8139C078"></span> A <em>convex function</em> on $N$ is a function $F\colon N\rightarrow [-\infty ,\infty ]$ such that the epigraph $\operatorname{epi}F$ is a convex subset of $N\times \mathbb {R}$. </p>
+<p>The <em>effective domain</em> of $F$ is the set </p>
+<div class="equation">
+  \[  \operatorname{Dom}F\coloneqq \left\{  n\in N : F(n)&lt;\infty \right\} .  \]
+</div>
+<p> A convex function $F$ on $N$ such that $\operatorname{Dom}F\neq \varnothing $ and $F(n)\neq -\infty $ for all $n\in N$ is said to be <em>proper</em>. </p>
+<p>The set of convex functions on $N$ is denoted by $\mathrm{Conv}(N)$. The subset of proper convex functions is denoted by $\mathrm{Conv}^{\mathrm{prop}}(N)$. </p>
+</article>
+
+
+The following characterization of convex functions is well-known. <article class="env-lemma" id="sgpt-F62C88E4">
+<p><a class="environment-identifier" href="../../tag/47309C75E6C1/">Lemma <span data-tag="F62C88E4">A.1.3</span>.</a><span data-gerby-tag="F62C88E4"></span> Let $F\colon N\rightarrow [-\infty ,\infty ]$. Then $F$ is convex if and only if the following condition holds: suppose that $n,r\in N$ and $a,b\in \mathbb {R}$ such that $a&gt;F(n)$, $b&gt;F(r)$, then for any $t\in (0,1)$, we have </p>
+<div class="equation">
+  \[  F(tn+(1-t)r)&lt;ta+(1-t)b.  \]
+</div>
+</article> See <span class="cite">[<span class="postnote">Theorem 4.2</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span> for the proof. 
+
+
+<article class="env-example" id="sgpt-D85BD88C">
+<p><a class="environment-identifier" href="../../tag/1532A37DD27F/">Example <span data-tag="D85BD88C">A.1.4</span>.</a><span data-gerby-tag="D85BD88C"></span> Let $A\subseteq N$ be a convex subset. Then the <em>characteristic function</em> $\chi _ A\colon N\rightarrow \{ 0,\infty \} $ of $A$ is defined by </p>
+<div class="equation">
+  \[  \chi _ A(n)\coloneqq \left\{  \begin{aligned}  0,&amp; \quad n\in A;\\  \infty ,&amp; \quad n\not\in A. \end{aligned} \right.  \]
+</div>
+<p> The function $\chi _ A$ lies in $\mathrm{Conv}(N)$. </p>
+</article>
+
+
+<article class="env-example" id="sgpt-70D7DE57">
+<p><a class="environment-identifier" href="../../tag/8CBDC69B6C55/">Example <span data-tag="70D7DE57">A.1.5</span>.</a><span data-gerby-tag="70D7DE57"></span> Let $M$ be the dual vector space of $N$ and $P\subseteq M$ be a convex subset. The <em>support function</em> $\operatorname{Supp}_ P\in \mathrm{Conv}(N)$ of $P$ is defined as follows: </p>
+<div class="equation">
+  \[  \operatorname{Supp}_ P(n)\coloneqq \sup \{  \langle m,n \rangle : m\in P \} .  \]
+</div>
+</article>
+
+<p>
+It is well-known that convexity is preserved by a number of natural operations. We recall a few to fix the notation. 
+</p>
+
+<article class="env-definition" id="sgpt-B8088BE8">
+<p><a class="environment-identifier" href="../../tag/0ECB6CF7B06D/">Definition <span data-tag="B8088BE8">A.1.6</span>.</a><span data-gerby-tag="B8088BE8"></span> Let $F_1,\ldots ,F_ m\in \mathrm{Conv}^{\mathrm{prop}}(N)$ ($m\in \mathbb {Z}_{&gt;0}$). We define their <em>infimal convolution</em> $F_1 \square \cdots \square F_ m\in \mathrm{Conv}(N)$ as follows: </p>
+<div class="equation">
+  \[  F_1 \square \cdots \square F_ m(n)\coloneqq \inf \left\{  \sum _{i=1}^ m F_ i(n_ i):n_ i\in N, \sum _{i=1}^ m n_ i=n \right\} .  \]
+</div>
+</article> The fact $F_1 \square \cdots \square F_ m\in \mathrm{Conv}(N)$ is proved in <span class="cite">[<span class="postnote">Theorem 5.4</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. One should note that $F_1 \square \cdots \square F_ m$ is not always proper. 
+
+
+<article class="env-proposition" id="sgpt-11AD2691">
+<p><a class="environment-identifier" href="../../tag/68114EF2F29C/">Proposition <span data-tag="11AD2691">A.1.7</span>.</a><span data-gerby-tag="11AD2691"></span> Let $\{ F_ i\} _{i\in I}$ be a non-empty family in $\mathrm{Conv}(N)$. Then $\sup _{i\in I} F_ i\in \mathrm{Conv}(N)$. </p>
+</article> This follows from <span class="cite">[<span class="postnote">Theorem 5.5</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. In particular, this allows us to introduce <article class="env-definition" id="sgpt-E4E82523">
+<p><a class="environment-identifier" href="../../tag/8F179BE28950/">Definition <span data-tag="E4E82523">A.1.8</span>.</a><span data-gerby-tag="E4E82523"></span> Let $f\colon N\rightarrow [-\infty ,\infty ]$. The <em>lower convex envelope</em> of $f$ is defined as </p>
+<div class="equation">
+  \[  \operatorname{CE}f\coloneqq \sup \{ F\in \mathrm{Conv}(N): F\leq f \} .  \]
+</div>
+<p> It follows from proposition <a data-tag="11AD2691" href="../../tag/68114EF2F29C/">A.1.7</a> that $\operatorname{CE}f\in \mathrm{Conv}(N)$. </p>
+</article>
+
+
+<article class="env-definition" id="sgpt-05FE0DDE">
+<p><a class="environment-identifier" href="../../tag/6561D15F1216/">Definition <span data-tag="05FE0DDE">A.1.9</span>.</a><span data-gerby-tag="05FE0DDE"></span> Given a non-empty family $\{ F_ i\} _{i\in I}$ in $\mathrm{Conv}(N)$, we define   </p>
+<div class="equation">
+  \[  \bigwedge _{i\in I}F_ i\coloneqq \operatorname{CE}\left(\inf _{i\in I} F_ i\right).  \]
+</div>
+<p> When the family $I$ is finite, say $I=\{ 1,\ldots ,m\} $, we also write </p>
+<div class="equation">
+  \[  F_1\land \cdots \land F_ m=\bigwedge _{i\in I}F_ i.  \]
+</div>
+</article> <article class="env-definition" id="sgpt-59330ADD">
+<p><a class="environment-identifier" href="../../tag/4D25259F16EC/">Definition <span data-tag="59330ADD">A.1.10</span>.</a><span data-gerby-tag="59330ADD"></span> Given a non-empty family $\{ F_ i\} _{i\in I}$ in $\mathrm{Conv}(N)$, we define   </p>
+<div class="equation">
+  \[  \bigvee _{i\in I}F_ i\coloneqq \sup _{i\in I} F_ i.  \]
+</div>
+<p> When the family $I$ is finite, say $I=\{ 1,\ldots ,m\} $, we also write </p>
+<div class="equation">
+  \[  F_1\lor \cdots \lor F_ m=\bigvee _{i\in I}F_ i.  \]
+</div>
+</article> Recall that $\bigvee _{i\in I}F_ i\in \mathrm{Conv}(N)$ by proposition <a data-tag="11AD2691" href="../../tag/68114EF2F29C/">A.1.7</a>. 
+
+
+<article class="env-proposition" id="sgpt-D29AF8F8">
+<p><a class="environment-identifier" href="../../tag/B99B20CD6166/">Proposition <span data-tag="D29AF8F8">A.1.11</span>.</a><span data-gerby-tag="D29AF8F8"></span> Let $F_1,\ldots ,F_ m\in \mathrm{Conv}^{\mathrm{prop}}(N)$. Then </p>
+<div class="equation">
+  \[  \begin{split}  F_1\land \cdots \land F_ m(x)=\inf \left\{ \sum _{i=1}^ m \lambda _ i F_ i(x_ i):x_ i\in \operatorname{Dom}(F_ i),\right.\\  \left.\lambda _ i\in [0,1],\sum _{i=1}^ m\lambda _ i=1, \sum _{i=1}^ m\lambda _ i x_ i=x \right\} . \end{split}  \]
+</div>
+</article> See <span class="cite">[<span class="postnote">Theorem 5.6</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span> for the more general result. 
+
+
+<article class="env-lemma" id="sgpt-E17DE993">
+<p><a class="environment-identifier" href="../../tag/2F4F518BD56D/">Lemma <span data-tag="E17DE993">A.1.12</span>.</a><span data-gerby-tag="E17DE993"></span> Let $\{ F_ i\} _{i\in I}$ be a decreasing net in $\mathrm{Conv}(N)$. Then $\inf _{i\in I} F_ i\in \mathrm{Conv}(N)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $F=\inf _{i\in I} F_ i$. We shall apply the characterization in <a data-tag="F62C88E4" href="../../tag/47309C75E6C1/">A.1.3</a>. Take $n,r\in N$, $a,b\in \mathbb {R}$ such that $a&gt;F(n)$, $b&gt;F(r)$ and $t\in (0,1)$. We need to show that 
+    
+<div class="equation" id="sgpt-B92587F8"><span data-gerby-tag="B92587F8"></span>
+<span class="equation-label"><a data-tag="B92587F8" href="../../tag/752978EE01F6/">A.5</a></span>
+<div>\begin{equation} \label{eq:convtemp1} F(tn+(1-t)r)&lt;ta+(1-t)b. \end{equation}</div>
+</div>
+<p>
+       By definition, there are $j_ n,j_ r\in I$ such that $a&gt;F_ i(n)$ for $i\geq j_ n$ and $b&gt;F_ i(r)$ for $i\geq j_ r$. Since $I$ is directed, we can find $j\in I$ dominating both $j_ n$ and $j_ r$, and then for any $i\geq j$, we have 
+    
+<div class="equation">
+  \[  a&gt;F_ i(n),\quad b&gt;F_ i(r).  \]
+</div>
+<p>
+       It follows from <a data-tag="F62C88E4" href="../../tag/47309C75E6C1/">A.1.3</a> that 
+    
+<div class="equation">
+  \[  F_ i(tn+(1-t)r)&lt;ta+(1-t)b  \]
+</div>
+<p>
+       for any $i\geq j$. Since $F_ i$ is decreasing in $i$, we conclude (<a data-tag="B92587F8" href="../../tag/752978EE01F6/">A.5</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-definition" id="sgpt-BBDFED14">
+<p><a class="environment-identifier" href="../../tag/61B746F5E884/">Definition <span data-tag="BBDFED14">A.1.13</span>.</a><span data-gerby-tag="BBDFED14"></span> Let $F\in \mathrm{Conv}(N)$. The <em>closure</em> $\operatorname{cl}F\in \mathrm{Conv}(N)$ of $F$ is defined as follows: If $F(n)=-\infty $ for some $n\in N$, then $\operatorname{cl}F\coloneqq -\infty $. Otherwise, we define $\operatorname{cl}F$ as the lower semicontinuity regularization of $F$. </p>
+<p>A convex function $F\in \mathrm{Conv}(N)$ is <em>closed</em> if $F=\operatorname{cl}F$. In other words, $F\in \mathrm{Conv}(N)$ is closed if one of the following conditions holds: </p>
+<ol>
+<li class="custom-item" id="sgpt-D9CD59D0"><span data-gerby-tag="D9CD59D0"></span><p>
+ $F\equiv -\infty $; 
+</p>
+</li><li class="custom-item" id="sgpt-D6F00D75"><span data-gerby-tag="D6F00D75"></span><p>
+ $F\equiv \infty $; 
+</p>
+</li><li class="custom-item" id="sgpt-1BDA614D"><span data-gerby-tag="1BDA614D"></span><p>
+ $F$ is proper and lower semicontinuous. 
+</p>
+</li>
+</ol>
+</article> <article class="env-proposition" id="sgpt-B29EAAF0">
+<p><a class="environment-identifier" href="../../tag/E013E1966E44/">Proposition <span data-tag="B29EAAF0">A.1.14</span>.</a><span data-gerby-tag="B29EAAF0"></span>Let $F\in \mathrm{Conv}(N)$ be a closed convex function. Then $F$ is the supremum of all affine functions lying below $F$. </p>
+</article> See <span class="cite">[<span class="postnote">Theorem 12.1</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. 
+
+
+<article class="env-theorem" id="sgpt-E08C711A">
+<p><a class="environment-identifier" href="../../tag/7E0B71CF3B0E/">Theorem <span data-tag="E08C711A">A.1.15</span>.</a><span data-gerby-tag="E08C711A"></span> Let $F\in \mathrm{Conv}^{\mathrm{prop}}(N)$. Then $\operatorname{cl}F$ is a closed proper convex function. Moreover, $\operatorname{cl}F$ agrees with $F$ except possibly on the relative boundary of $\operatorname{Dom}F$. </p>
+</article> See <span class="cite">[<span class="postnote">Theorem 7.4</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. 
+
+
+<article class="env-proposition" id="sgpt-4B187A3A">
+<p><a class="environment-identifier" href="../../tag/B6B15657CD64/">Proposition <span data-tag="4B187A3A">A.1.16</span>.</a><span data-gerby-tag="4B187A3A"></span> Let $F,F'\in \mathrm{Conv}(N)$ be closed convex functions. Assume that </p>
+<ol>
+<li class="custom-item" id="sgpt-482BDFB6"><span data-gerby-tag="482BDFB6"></span><p>
+ $\operatorname{RelInt}\operatorname{Dom}F=\operatorname{RelInt}\operatorname{Dom}F'$, and 
+</p>
+</li><li class="custom-item" id="sgpt-D28C5E52"><span data-gerby-tag="D28C5E52"></span><p>
+ $F=F'$ on $\operatorname{RelInt}\operatorname{Dom}F$. 
+</p>
+</li>
+</ol>
+<p> Then $F=F'$. </p>
+</article> This is a special case of <span class="cite">[<span class="postnote">Corollary 7.3.4</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. 
+
+
+<article class="env-definition" id="sgpt-6BFB1D0E">
+<p><a class="environment-identifier" href="../../tag/CC63E6A637E8/">Definition <span data-tag="6BFB1D0E">A.1.17</span>.</a><span data-gerby-tag="6BFB1D0E"></span> Given $F,F'\in \mathrm{Conv}(N)$, we write $F\preceq F'$ if there is $C\in \mathbb {R}$ such that   </p>
+<div class="equation">
+  \[  F\leq F'+C.  \]
+</div>
+<p> We say $F\sim F'$ if $F\preceq F'$ and $F'\preceq F$ both hold. </p>
+</article>
+
+
+<article class="env-theorem" id="sgpt-6187F82A">
+<p><a class="environment-identifier" href="../../tag/A7E9B5A114CA/">Theorem <span data-tag="6187F82A">A.1.18</span>.</a><span data-gerby-tag="6187F82A"></span> Let $C\subseteq N$ be an open subset. Let $(f_ i)_{i&gt;0}$ be a sequence of real-valued convex functions on $C$. Suppose that the sequence converges on a dense subset of $C$ and the limit is finite. Then the limit </p>
+<div class="equation">
+  \[  f(x)\coloneqq \lim _{i\to \infty } f_ i(x)  \]
+</div>
+<p> exists for all $x\in C$ and is convex on $C$. Moreover, the sequence $(f_ i)_ i$ converges uniformly to $f$ on each compact subset of $C$. </p>
+</article> This is a special case of <span class="cite">[<span class="postnote">Theorem 10.8</span>, <a href="../../references/#RD00755CDA97D">Roc70</a>]</span>. 
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

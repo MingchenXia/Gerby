@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hessian multiplier kernel · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/measures-distributions/">Chapter 2 · Measures, distributions, and convergence</a> · Tag <code>0821A7B52A3B</code></p><h1>Hessian multiplier kernel</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · Lemma 6.2.1 <span data-gerby-tag="C0DD6F42"></span></div><article class="env-lemma" id="foundations-of-pluripotential-theory-C0DD6F42">
+<p><a class="environment-identifier" href="../../tag/0821A7B52A3B/">Lemma <span data-tag="C0DD6F42">6.2.1</span>.</a><span data-gerby-tag="C0DD6F42"></span> Let $1\leq a,b\leq d$, and define an operator $T_{ab}$ on $L^2(\mathbb R^ d)$ by </p>
+<div class="equation">
+  \[  \widehat{T_{ab}f}(\xi )=-\frac{\xi _ a\xi _ b}{|\xi |^2}\widehat f(\xi ), \qquad \xi \neq 0,  \]
+</div>
+<p> the multiplier being zero at the origin. Then $T_{ab}$ is self-adjoint and has norm at most one. Moreover: </p>
+<ol>
+<li><p>
+There is a smooth real function $K_{ab}$ on $\mathbb R^ d\setminus \{ 0\} $ such that 
+</p>
+<div class="equation">
+  \[  |K_{ab}(z)|\leq C_ d|z|^{-d},\qquad |\nabla K_{ab}(z)|\leq C_ d|z|^{-d-1}.  \]
+</div>
+</li><li><p>
+If $f\in L^2(\mathbb R^ d)$ vanishes almost everywhere outside a compact set $F$, then $f$ is integrable, and for almost every $x\in \mathbb R^ d\setminus F$, 
+</p>
+<div class="equation">
+  \[  T_{ab}f(x)=\int K_{ab}(x-y)f(y)\, \mathrm d y.  \]
+</div>
+</li><li><p>
+For $v\in C_ c^\infty (\mathbb R^ d)$ we have $\partial _ a\partial _ bv=T_{ab}(-\Delta v)$. 
+</p>
+</li>
+</ol>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The multiplier is real and bounded by one in absolute value, so Plancherel's theorem shows that $T_{ab}$ is self-adjoint with norm at most one. For $v\in C_ c^\infty $, the first rule in (<a data-tag="DF8429B6" href="../../tag/407772967810/">6.1</a>) (lemma <a data-tag="3A412CED" href="../../tag/A976F203FD66/">6.1.1</a>), applied twice, gives $\widehat{-\Delta v}(\xi )=4\pi ^2|\xi |^2\widehat v(\xi )$ and $\widehat{\partial _ a\partial _ bv}(\xi )=-4\pi ^2\xi _ a\xi _ b\widehat v(\xi )$. Multiplying the first identity by the multiplier of $T_{ab}$ gives the second, which proves (3). 
+    <p>
+      To construct the kernel we use the heat kernel $H_ t(z)=(4\pi t)^{-d/2}\mathrm e^{-|z|^2/(4t)}$, $t&gt;0$. By lemma <a data-tag="3A412CED" href="../../tag/A976F203FD66/">6.1.1</a>, $\widehat H_ t(\xi )=\mathrm e^{-4\pi ^2t|\xi |^2}$, and hence $\widehat{\partial _ a\partial _ bH_ t}(\xi )=-4\pi ^2\xi _ a\xi _ b\mathrm e^{-4\pi ^2t|\xi |^2}$. For $0&lt;\varepsilon &lt;R&lt;\infty $ put 
+    
+<div class="equation">
+  \[  k_{\varepsilon ,R}=\int _\varepsilon ^ R\partial _ a\partial _ bH_ t\, \mathrm d t.  \]
+</div>
+<p>
+       Since $\partial _ a\partial _ bH_ t(z)=\bigl (z_ az_ b/(4t^2)-\delta _{ab}/(2t)\bigr )H_ t(z)$, where $\delta _{ab}$ is the Kronecker symbol, we have 
+    
+<div class="equation">
+  \[  |\partial _ a\partial _ bH_ t(z)|\leq C_ dt^{-d/2-1}(1+|z|^2/t)\mathrm e^{-|z|^2/(4t)}.  \]
+</div>
+<p>
+       Hence $\sup _ z|\partial _ a\partial _ bH_ t(z)|\leq C_ dt^{-d/2-1}$, and the substitution $z=\sqrt t\, w$ gives $\int |\partial _ a\partial _ bH_ t(z)|\, \mathrm d z\leq C_ dt^{-1}$. Therefore the kernel $k_{\varepsilon ,R}$ is bounded and integrable, and Fubini's theorem, applied with the integrable majorant $|\partial _ a\partial _ bH_ t(z)|$ on $\mathbb R^ d\times [\varepsilon ,R]$, gives its Fourier transform: 
+    
+<div class="equation">
+  \[  \widehat{k_{\varepsilon ,R}}(\xi )=-\frac{\xi _ a\xi _ b}{|\xi |^2} \bigl (\mathrm e^{-4\pi ^2\varepsilon |\xi |^2} -\mathrm e^{-4\pi ^2R|\xi |^2}\bigr ),\qquad \xi \neq 0.  \]
+</div>
+<p>
+      Let $f\in L^1\cap L^2$. Then $k_{\varepsilon ,R}*f$ is bounded and integrable, hence in $L^2$, and by Fubini's theorem and the last assertion of theorem <a data-tag="D1D3D10B" href="../../tag/4C82DCD17551/">6.1.2</a> its Fourier transform is $\widehat{k_{\varepsilon ,R}}\widehat f$. As $\varepsilon \downarrow 0$ and $R\uparrow \infty $, these multipliers are bounded by one and converge to $-\xi _ a\xi _ b/|\xi |^2$ for $\xi \neq 0$. By dominated convergence on the Fourier side and Plancherel's theorem, $k_{\varepsilon ,R}*f\to T_{ab}f$ in $L^2$. 
+    <p>
+      For $z\neq 0$ define 
+    
+<div class="equation">
+  \[  K_{ab}(z)=\int _0^\infty \partial _ a\partial _ bH_ t(z)\, \mathrm d t.  \]
+</div>
+<p>
+       Since $H_ t(z)=t^{-d/2}H_1(z/\sqrt t)$, every derivative satisfies 
+    
+<div class="equation">
+  \[  \partial ^\gamma H_ t(z)=t^{-(d+|\gamma |)/2}(\partial ^\gamma H_1)(z/\sqrt t),  \]
+</div>
+<p>
+       and induction on $|\gamma |$ shows that $\partial ^\gamma H_1(w)=P_\gamma (w)\mathrm e^{-|w|^2/4}$ for a polynomial $P_\gamma $, of degree $m_\gamma $ say. Fix $0&lt;c\leq c'$, and let $c\leq |z|\leq c'$ and $|\gamma |\geq 2$. Since $|P_\gamma (w)|\leq C_\gamma (1+|w|)^{m_\gamma }$ and $\mathrm e^{-|z|^2/(4t)}\leq \mathrm e^{-c^2/(4t)}$, we obtain $|\partial ^\gamma H_ t(z)|\leq g_\gamma (t)$, where 
+    
+<div class="equation">
+  \[  g_\gamma (t)=\begin{cases}  C_\gamma t^{-(d+|\gamma |)/2}(1+c't^{-1/2})^{m_\gamma }\mathrm e^{-c^2/(4t)}, &amp;  0&lt;t\leq 1,\\  C_\gamma (1+c')^{m_\gamma }t^{-(d+|\gamma |)/2}, &amp;  t\geq 1. \end{cases}  \]
+</div>
+<p>
+       This function is integrable on $(0,\infty )$ and does not depend on $z$: near $t=0$ the factor $\mathrm e^{-c^2/(4t)}$ dominates every power of $t^{-1}$, and for $t\geq 1$ the exponent satisfies $(d+|\gamma |)/2\geq 3/2&gt;1$. By the mean value theorem and dominated convergence, we may therefore differentiate under the integral sign any number of times. Hence $K_{ab}$ is smooth on $\mathbb R^ d\setminus \{ 0\} $, and its derivatives are the integrals of the corresponding derivatives of $\partial _ a\partial _ bH_ t$. Moreover, the integrals $\int _0^\varepsilon $ and $\int _ R^\infty $ of $|\partial _ a\partial _ bH_ t(z)|$ tend to zero as $\varepsilon \downarrow 0$ and $R\uparrow \infty $, uniformly for $c\leq |z|\leq c'$. 
+    <p>
+      Differentiating the identity $H_{r^2s}(rz)=r^{-d}H_ s(z)$ twice in $z$ and substituting $t=r^2s$, we find that $K_{ab}(rz)=r^{-d}K_{ab}(z)$ for $r&gt;0$. Thus $K_{ab}$ is homogeneous of degree $-d$ and $\nabla K_{ab}$ is homogeneous of degree $-d-1$, and the bounds in (1) follow from the boundedness of the continuous functions $K_{ab}$ and $\nabla K_{ab}$ on the unit sphere. The same scaling shows that the function $z\mapsto \int _0^\infty |\partial _ a\partial _ bH_ t(z)|\, \mathrm d t$ is homogeneous of degree $-d$; it is bounded on the unit sphere by $\int _0^\infty g_\gamma (t)\, \mathrm d t$, where $\partial ^\gamma =\partial _ a\partial _ b$ and $c=c'=1$, so it is at most $C_ d|z|^{-d}$. 
+    <p>
+      To prove (2), let $f$ and $F$ be as there. By the Cauchy–Schwarz inequality on $F$, the function $f$ is integrable, so $f\in L^1\cap L^2$. Let $L$ be a compact set disjoint from $F$. For $x\in L$, 
+    
+<div class="equation">
+  \[  k_{\varepsilon ,R}*f(x)=\int f(y)\int _\varepsilon ^ R\partial _ a\partial _ bH_ t(x-y)\, \mathrm d t\, \mathrm d y,  \]
+</div>
+<p>
+       where the outer integral may be taken over $F$. The differences $x-y$, with $x\in L$ and $y\in F$, form a compact set not containing the origin, on which $c\leq |x-y|\leq c'$ for some $0&lt;c\leq c'$. By the uniform estimates just proved, the inner integral converges to $K_{ab}(x-y)$ uniformly on this set, and it is bounded by $\int _0^\infty |\partial _ a\partial _ bH_ t(x-y)|\, \mathrm d t\leq C_ dc^{-d}$. Hence, since $f$ is integrable, $k_{\varepsilon ,R}*f$ converges uniformly on $L$ to $\int K_{ab}(x-y)f(y)\, \mathrm d y$. Since it also converges to $T_{ab}f$ in $L^2$, a subsequence converges almost everywhere to $T_{ab}f$, and the two limits agree almost everywhere on $L$. Covering the open set $\mathbb R^ d\setminus F$ by countably many such compact sets proves (2). For $d=1$ the kernel vanishes, in accordance with $T_{11}=-1$: a direct differentiation gives $\partial _ z^2H_ t=\bigl (z^2/(4t^2)-1/(2t)\bigr )H_ t=\partial _ tH_ t$, so $K_{11}(z)=\lim _{t\uparrow \infty }H_ t(z)-\lim _{t\downarrow 0}H_ t(z)=0$ for $z\neq 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

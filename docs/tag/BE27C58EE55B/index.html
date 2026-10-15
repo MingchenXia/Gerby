@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Decreasing model volume continuity · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-pluripolar-mass/">Chapter 11 · Non-pluripolar measures and mass</a> · Tag <code>BE27C58EE55B</code></p><h1>Decreasing model volume continuity</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · Theorem 30.5.2 <span data-gerby-tag="1220EC31"></span></div><article class="env-theorem" id="non-kahler-pluripotential-theory-1220EC31">
+<p><a class="environment-identifier" href="../../tag/BE27C58EE55B/">Theorem <span data-tag="1220EC31">30.5.2</span>.</a><span data-gerby-tag="1220EC31"></span> Suppose that $q_ j\in \mathrm{PSH}(X,\theta _ j)$ are ordinary models, $q_ j=P_{\theta _ j}[q_ j]$, decreasing to $q\in \mathrm{PSH}(X,\theta )$. Then $P_\theta [q]=q$ and </p>
+<div class="equation">
+  \[  \underline{\operatorname {vol}}_{\theta _ j}(q_ j)\searrow \underline{\operatorname {vol}}_\theta (q).  \]
+</div>
+<p> If $\underline{\operatorname {vol}}_\theta (q)&gt;0$, then also </p>
+<div class="equation">
+  \[  \overline{\operatorname {vol}}_{\theta _ j}(q_ j)\searrow \overline{\operatorname {vol}}_\theta (q),  \]
+</div>
+<p> and, for every fixed smooth compact modification $\pi :Z\to X$, </p>
+<div class="equation">
+  \[  \sup _{z\in Z}\bigl |\nu (q_ j\circ \pi ,z)-\nu (q\circ \pi ,z)\bigr | \longrightarrow 0.  \]
+</div>
+<p> In this case all generic divisorial Lelong numbers converge. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: the fixed point and positivity of the limit volume.</em> Since $q\leq q_ j\leq 0$, monotonicity of the envelope in the background and in the potential gives $q\leq P_\theta [q]\leq P_{\theta _ j}[q]\leq P_{\theta _ j}[q_ j]=q_ j$. Letting $j\to \infty $ proves $P_\theta [q]=q$. By theorem <a data-tag="6412693D" href="../../tag/D7019DA65027/">30.1.1</a>, the lower volumes $\underline{\operatorname {vol}}_{\theta _ j}(q_ j)$ decrease; let $\ell $ be their limit. Monotonicity also gives $\underline{\operatorname {vol}}_\theta (q)\leq \ell $, so the lower-volume assertion holds if $\ell =0$. 
+    <p>
+      Suppose $\ell &gt;0$. We show that then $\underline{\operatorname {vol}}_\theta (q)&gt;0$; the lower-volume assertion will then follow from the volume limits proved below for limits of positive lower volume. Choose a Hermitian form $\Omega \geq \theta _1$, put $K=v_+(\Omega )$, and choose 
+    
+<div class="equation">
+  \[  b=1+\frac{\ell }{2^{n+1}nK},\qquad a=1-b^{-1}.  \]
+</div>
+<p>
+       Since $\Omega \geq \theta _ j$ and $\underline{\operatorname {vol}}_{\theta _ j}(q_ j)\geq \ell $, lemma <a data-tag="1DBB631B" href="../../tag/EDD01F5B65E5/">30.4.1</a>, applied in background $\theta _ j$ with $r=V_{\theta _ j}$, shows that $Q_ b(q_ j,V_{\theta _ j})$ is defined for every $j$, with the same $b$. Put $h_ j=P_{\theta _ j}[Q_ b(q_ j,V_{\theta _ j})]$. For each competitor $s$ for this envelope ($s\leq 0$ and $s\preceq Q_ b(q_ j,V_{\theta _ j})$), the potential $aV_{\theta _ j}+(1-a)s$ lies below zero and is more singular than $aV_{\theta _ j}+(1-a)Q_ b(q_ j,V_{\theta _ j})\leq q_ j$. Since $q_ j=P_{\theta _ j}[q_ j]$, it lies below $q_ j$, and taking the envelope gives 
+    
+<div class="equation">
+  \[  aV_{\theta _ j}+(1-a)h_ j\leq q_ j.  \]
+</div>
+<p>
+       The functions $h_ j$ have supremum zero and are $\Omega $-plurisubharmonic. Normalized compactness and the uniform convergence of the backgrounds give a subsequential $L^1$ limit $h\in \mathrm{PSH}(X,\theta )$. Also $V_{\theta _ j}\searrow V_\theta $, since the decreasing limit is $\theta $-plurisubharmonic and lies between $V_\theta $ and zero. Passing to the limit in the convex inequality and using lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a> gives 
+    
+<div class="equation">
+  \[  aV_\theta +(1-a)h\leq q.  \]
+</div>
+<p>
+       Moreover, $v_-(\Omega )=\underline{\operatorname {vol}}_\Omega (0)\geq \underline{\operatorname {vol}}_{\theta _1}(q_1)\geq \ell &gt;0$ by volume monotonicity. By bigness, choose $\rho \leq V_\theta $ with $\theta +\mathrm{dd}^{\mathrm{c}}\rho \geq \kappa \Omega $ for some $\kappa &gt;0$. Proposition <a data-tag="A9C88774" href="../../tag/1C00C4C5A656/">30.1.2</a>, applied to $0\in \mathrm{PSH}(X,\kappa \Omega )$ and $\rho \in \mathrm{PSH}(X,\theta -\kappa \Omega )$, gives $\underline{\operatorname {vol}}_\theta (\rho )\geq \kappa ^ n v_-(\Omega )$. Monotonicity and addition applied to the convex combination above now yield 
+    
+<div class="equation">
+  \[  \underline{\operatorname {vol}}_\theta (q) \geq a^ n\underline{\operatorname {vol}}_\theta (V_\theta ) \geq (a\kappa )^ n v_-(\Omega )&gt;0.  \]
+</div>
+<p>
+       It remains to prove the volume limits when $\underline{\operatorname {vol}}_\theta (q)&gt;0$. 
+    <p>
+<em>Step 2: a fixed background.</em> Suppose first that $\theta _ j=\theta $ for every $j$. Put 
+    
+<div class="equation">
+  \[  \delta =\underline{\operatorname {vol}}_\theta (q)&gt;0, \qquad L=\lim _ j\overline{\operatorname {vol}}_\theta (q_ j), \qquad e_ k=\overline{\operatorname {vol}}_\theta (q_ k)-L.  \]
+</div>
+<p>
+       The limit exists because the upper volumes decrease, by theorem <a data-tag="6412693D" href="../../tag/D7019DA65027/">30.1.1</a>, and are finite, by bounded mass; thus $e_ k\searrow 0$. After discarding finitely many indices, choose $b_ k&gt;1$ tending to infinity with $b_ k^ n e_ k&lt;\delta $, and set $a_ k=1-b_ k^{-1}$. 
+    <p>
+       For every $j\geq k$, the upper-volume deficit $\overline{\operatorname {vol}}_\theta (q_ k)-\overline{\operatorname {vol}}_\theta (q_ j)$ is at most $e_ k$, whereas the lower volume of $q_ k$ is at least $\delta $. Thus lemma <a data-tag="ED39D93A" href="../../tag/92ABF533A916/">30.2.1</a> gives $h_{k,j}\in \mathrm{PSH}(X,\theta )$ with 
+    
+<div class="equation">
+  \[  a_ kq_ k+(1-a_ k)h_{k,j}\leq q_ j.  \]
+</div>
+<p>
+       Since $q_ k\leq 0$ and $q_ j=P_\theta [q_ j]$, combining $q_ k$ with the competitors for $P_\theta [h_{k,j}]$, as in the proof of proposition <a data-tag="36CBE3D6" href="../../tag/47066B2F8269/">13.4.5</a>, gives 
+    
+<div class="equation">
+  \[  a_ kq_ k+(1-a_ k)P_\theta [h_{k,j}]\leq q_ j.  \]
+</div>
+<p>
+       The potentials $P_\theta [h_{k,j}]$ have supremum zero. For fixed $k$, normalized compactness gives a subsequential $L^1$ limit $h_ k$ as $j\to \infty $. Passing to the limit and applying lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a> gives 
+    
+<div class="equation">
+  \[  a_ kq_ k+(1-a_ k)h_ k\leq q.  \]
+</div>
+<p>
+       For either volume, homogeneity, addition and monotonicity now yield 
+    
+<div class="equation">
+  \[  a_ k^ n\operatorname {vol}_\theta (q_ k) \leq \operatorname {vol}_\theta \bigl (a_ kq_ k+(1-a_ k)h_ k\bigr ) \leq \operatorname {vol}_\theta (q) \leq \operatorname {vol}_\theta (q_ k).  \]
+</div>
+<p>
+       Letting $k\to \infty $ proves both volume limits in the fixed background. 
+    <p>
+<em>Step 3: varying backgrounds.</em> Fix a Hermitian form $\omega $. By corollary <a data-tag="40A9BCB2" href="../../tag/D51B82B18D30/">30.4.2</a>, choose $w\leq q$ and $d&gt;0$ with $\theta +\mathrm{dd}^{\mathrm{c}}w\geq d\omega $. Choose $\varepsilon _ j&gt;0$ decreasing to zero with $\theta _ j\leq \theta +\varepsilon _ j\omega $, and put 
+    
+<div class="equation">
+  \[  c_ j=\frac d{d+\varepsilon _ j},\qquad f_ j=c_ jq_ j+(1-c_ j)w,  \]
+</div>
+
+<div class="equation">
+  \[  F_ j=\left(\sup _{k\geq j}f_ k\right)^*,\qquad r_ j=P_\theta [F_ j].  \]
+</div>
+<p>
+       The convex combination $f_ j$ is $\theta $-plurisubharmonic, because its background is bounded above by $\theta $: 
+    
+<div class="equation">
+  \[  c_ j\theta _ j+(1-c_ j)(\theta -d\omega )\leq \theta .  \]
+</div>
+<p>
+       Since $w\leq q\leq q_ k$, we have $f_ k\leq q_ k\leq q_ j$ for $k\geq j$, and upper regularization gives $F_ j\leq q_ j$. Also $f_ k\to q$ in $L^1$, so a subsequence converges almost everywhere, and $q\leq F_ j$ by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>. 
+    <p>
+       Background monotonicity now gives 
+    
+<div class="equation">
+  \[  q\leq r_ j=P_\theta [F_ j]\leq P_{\theta _ j}[F_ j] \leq P_{\theta _ j}[q_ j]=q_ j.  \]
+</div>
+<p>
+       The $r_ j$ decrease to $q$. Their lower volumes are at least $\underline{\operatorname {vol}}_\theta (q)&gt;0$, so theorem <a data-tag="66EB0216" href="../../tag/CB29AE1DFDA3/">30.3.4</a> makes them ordinary models, and Step 2 applies to the sequence $r_ j$ in the fixed background $\theta $. On the other hand, addition (with $\eta =(1-c_ j)(\theta -d\omega )$) and background monotonicity give, for either volume, 
+    
+<div class="equation">
+  \[  \operatorname {vol}_\theta (q) \leq \operatorname {vol}_{\theta _ j}(q_ j) \leq c_ j^{-n}\operatorname {vol}_\theta (f_ j) \leq c_ j^{-n}\operatorname {vol}_\theta (r_ j).  \]
+</div>
+<p>
+       Since $c_ j\to 1$, Step 2 shows that the outer terms tend to the same limit. The volumes $\operatorname {vol}_{\theta _ j}(q_ j)$ decrease by monotonicity in both background and potential, which proves the asserted decreasing convergence. 
+    <p>
+<em>Step 4: Lelong numbers.</em> By proposition <a data-tag="95AB9149" href="../../tag/F4C607C7C503/">30.4.4</a>, the volumes of the fixed potential $q$ in background $\theta _ j$ tend to its volumes in background $\theta $. Hence the upper-volume deficit between $q$ and $q_ j$, measured in $\theta _ j$, tends to zero, while the lower volume of $q_ j$ is at least $\underline{\operatorname {vol}}_\theta (q)&gt;0$. Apply proposition <a data-tag="0442EA52" href="../../tag/169DBA6BAF3B/">30.2.2</a> in each background $\theta _ j$. Since $\theta _ j\leq \theta _1$, its proof works with one Lelong bound $C_\pi $ for $\pi ^*\theta _1$, independent of $j$. This proves the uniform convergence on each fixed modification, and taking generic values gives the divisorial assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

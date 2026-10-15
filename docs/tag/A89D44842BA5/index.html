@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Smooth comparison tests · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>A89D44842BA5</code></p><h1>Smooth comparison tests</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 14.27.2 Smooth comparison tests <span data-gerby-tag="E25EB397"></span></div>
+<p>
+The infimum (<a data-tag="FAF6B30B" href="../../tag/4A9175A29709/">14.102</a>) runs over bounded measurable densities below $f$. One may ask whether smooth densities suffice to compute the threshold. A smooth test $g$ is in general not below $f$, so we compare it with $f$ through the ratio $\| g/f\| _{L^\infty }$. Thus let $f$ be a probability density bounded below by a positive constant, and define 
+</p>
+<div class="equation">
+  \[  C_ h^{\mathrm{sm}}(f)=\inf _ g c_ h(g)\| g/f\| _{L^\infty },  \]
+</div>
+<p>
+ where $g$ ranges over smooth strictly positive probability densities. For each such $g$, with $R=\| g/f\| _{L^\infty }$, a subsolution with coefficient $a$ for $f\, \mathrm{d}V$ is a subsolution with coefficient $a/R$ for $g\, \mathrm{d}V$, so $a\leq Rc_ h(g)$ by lemma <a data-tag="F84443FE" href="../../tag/CE5CA1071A3C/">14.26.1</a>. Hence $b_ h(f)\leq C_ h^{\mathrm{sm}}(f)$, with equality if $f$ is smooth (take $g=f$). When the lower mass vanishes, the two quantities can differ even in their positivity. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-6B50E67D">
+<p><a class="environment-identifier" href="../../tag/4AC87EC7D266/">Theorem <span data-tag="6B50E67D">14.27.5</span>.</a><span data-gerby-tag="6B50E67D"></span> If $v_-(h)=0$, there is a probability density $f\in L^1(\mathrm{d}V)$ bounded below by a positive constant such that </p>
+<div class="equation">
+  \[  b_ h(f)=0&lt;C_ h^{\mathrm{sm}}(f).  \]
+</div>
+<p> Thus $f\, \mathrm{d}V$ admits no positive scaled subsolution, although $c_ h(g)\| g/f\| _{L^\infty }$ is bounded below by a positive constant for all smooth strictly positive probability densities $g$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We construct $f=(1+Q)/M$, where $Q\geq 0$ concentrates on closed nowhere dense sets in such a way that it has essential infimum zero on every nonempty open set. 
+    <p>
+<em>Step 1: the pieces.</em> Let $(U_ i)_{i\geq 1}$ be a countable basis of nonempty open subsets of $X$. We construct inductively numbers $\alpha _ j&gt;0$, nonzero bounded densities $q_ j$, and closed nowhere dense sets $K_ j\subset X$ such that 
+    
+<div class="equation">
+  \[  \int _ Xq_ j\, \mathrm{d}V\leq 1,\qquad q_ j=0\text{ outside }K_ j,\qquad c_ h(q_ j)\leq \alpha _ j2^{-j}.  \]
+</div>
+<p>
+       Start with $\alpha _1=1/4$. Once $\alpha _ j$ has been chosen, theorem <a data-tag="89544950" href="../../tag/B6CA5669E402/">26.14.3</a>, theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">26.1.3</a> and $v_-(h)=0$ give a smooth strictly positive probability density $g_ j$ with $c_ h(g_ j)&lt;\alpha _ j2^{-j}$. Removing from $X$ an open dense set of small volume, we obtain a closed nowhere dense set $K_ j$ for which $q_ j=g_ j\mathbf1_{K_ j}$ is nonzero and, since $g_ j$ is bounded, arbitrarily close to $g_ j$ in $L^2$. By lemma <a data-tag="23A16D9F" href="../../tag/366F6832AB46/">14.26.2</a> with $p=2$, we can therefore choose $K_ j$ so that $c_ h(q_ j)\leq \alpha _ j2^{-j}$. 
+    <p>
+      After $K_1,\ldots ,K_ N$ have been chosen, put 
+    
+<div class="equation">
+  \[  m_ N=\min _{1\leq i\leq N} \mathrm{d}V\left(U_ i\setminus \bigcup _{j=1}^ NK_ j\right)&gt;0;  \]
+</div>
+<p>
+       each set inside the minimum is open and nonempty, since a finite union of closed nowhere dense sets is closed and nowhere dense. Choose 
+    
+<div class="equation">
+  \[  0&lt;\alpha _{N+1}\leq \min \{ \alpha _ N/2,\  2^{-N-2}m_ N\} ,  \]
+</div>
+<p>
+       and continue. In particular, 
+    
+<div class="equation">
+  \[  \sum _{j&gt;N}\alpha _ j\leq 2\alpha _{N+1} \leq 2^{-N-1}m_ N.  \]
+</div>
+<p>
+<em>Step 2: the concentrating part.</em> The function $Q=\sum _ j\alpha _ jq_ j$ is nonnegative and integrable. We claim that its essential infimum on every nonempty open set is zero. Since every nonempty open set contains some $U_ i$, it suffices to consider $U_ i$. Take $N\geq i$ and remove $K_1,\ldots ,K_ N$ from $U_ i$. On the remaining set, whose volume is at least $m_ N$, the first $N$ summands of $Q$ vanish. By Markov's inequality, the set where the tail $\sum _{j&gt;N}\alpha _ jq_ j$ exceeds $2^{-N}$ has volume at most 
+    
+<div class="equation">
+  \[  2^ N\sum _{j&gt;N}\alpha _ j\int _ Xq_ j\, \mathrm{d}V \leq m_ N/2.  \]
+</div>
+<p>
+       Hence $Q\leq 2^{-N}$ on a subset of $U_ i$ of positive volume. Letting $N\to \infty $ proves the claim. 
+    <p>
+<em>Step 3: $b_ h(f)=0$.</em> Set $M=\int _ X(1+Q)\, \mathrm{d}V$ and $f=(1+Q)/M$, a probability density with $f\geq 1/M$. If $\mathrm{MA}^{\mathrm{ext}}_ h(u)\geq af\, \mathrm{d}V$ with $a&gt;0$, then $\mathrm{MA}^{\mathrm{ext}}_ h(u)\geq (a\alpha _ j/M)q_ j\, \mathrm{d}V$, and lemma <a data-tag="F84443FE" href="../../tag/CE5CA1071A3C/">14.26.1</a> gives 
+    
+<div class="equation">
+  \[  \frac{a\alpha _ j}{M}\leq c_ h(q_ j)\leq \alpha _ j2^{-j} \quad \text{for every }j.  \]
+</div>
+<p>
+       This is impossible. Hence $b_ h(f)=0$ by theorem <a data-tag="76378BFC" href="../../tag/CC13A9B1D927/">14.27.2</a>. 
+    <p>
+<em>Step 4: $C_ h^{\mathrm{sm}}(f)&gt;0$.</em> Let $g$ be a smooth strictly positive probability density and put $R=\| g/f\| _{L^\infty }$. Then $g\leq R(1+Q)/M$ almost everywhere, and this forces $g\leq R/M$ everywhere. Otherwise, by continuity, $g&gt;R(1+\varepsilon )/M$ on a nonempty open set for some $\varepsilon &gt;0$, while $Q&lt;\varepsilon $ on a subset of positive volume of this set by Step 2, a contradiction. The order and homogeneity of the scalar in lemma <a data-tag="F84443FE" href="../../tag/CE5CA1071A3C/">14.26.1</a> now give $c_ h(g)\geq c_ h(R/M)=(M/R)c_ h(1)$, that is, 
+    
+<div class="equation">
+  \[  R c_ h(g)\geq M c_ h(1).  \]
+</div>
+<p>
+       The constant density $g=1$ attains this value, since $\operatorname *{ess\, inf}_ XQ=0$ gives $\| 1/f\| _{L^\infty }=M$. Thus $C_ h^{\mathrm{sm}}(f)=M c_ h(1)&gt;0$, as required. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+The point is that a smooth test $g$ with $\| g/f\| _{L^\infty }\leq R$ is controlled by the essential infimum of $f$ on open sets. It therefore cannot detect an increase of $f$ that leaves this essential infimum unchanged on every open set, whereas bounded measurable tests below $f$ do detect it. The theorem concerns only the existence of subsolutions. Exact solutions of $\mathrm{MA}^{\mathrm{ext}}_ h(u)=b_ h(f)f\, \mathrm{d}V$, the singularity class in which they should be sought, and compactness of their normalized solutions are further problems; see <a data-tag="E3CD8C18" href="../../tag/FBE8C5BA5CA4/">33.1.1</a>. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Complex spaces · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/complex-spaces/">Chapter 8 · Complex spaces and modifications</a> · Tag <code>089901B2844A</code></p><h1>Complex spaces</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · B.1 Complex spaces <span data-gerby-tag="51AD8870"></span></div>
+<p>
+A complex space is assumed to be reduced, Hausdorff and paracompact in the whole book. 
+</p>
+
+<article class="env-definition" id="sgpt-80AB137F">
+<p><a class="environment-identifier" href="../../tag/F30317C89D08/">Definition <span data-tag="80AB137F">B.1.1</span>.</a><span data-gerby-tag="80AB137F"></span> A <em>prime divisor</em> over an irreducible complex space $Z$ is a connected smooth hypersurface $E\subseteq X'$, where $X'\rightarrow Z$ is a proper bimeromorphic morphism with $X'$ smooth. Such a morphism $X'\rightarrow Z$ is also called a <em>resolution</em> of $Z$. The <em>center</em> of the prime divisor is defined as the image of $E$ in $Z$. </p>
+<p>Two prime divisors $E_1\subseteq X'_1$ and $E_2\subseteq X'_2$ over $Z$ are <em>equivalent</em> if there is a common resolution $X''\rightarrow Z$ dominating both $X_1'$ and $X_2'$ such that the strict transforms of $E_1$ and $E_2$ coincide. </p>
+<p>The set $Z^{\operatorname{div}}$ is the set of pairs $(c,E)$, where $c\in \mathbb {Q}_{&gt;0}$ and $E$ is an equivalence class of a prime divisor over $Z$. For simplicity, we will denote the pair $(c,E)$ by $c\operatorname{ord}_ E$, although one should not really think of this object as a valuation unless $Z$ is projective and irreducible. </p>
+</article> Note that a prime divisor on $Z$ does not always define a prime divisor over $Z$ if $Z$ is singular. 
+
+
+<article class="env-definition" id="sgpt-ADEEEF0A">
+<p><a class="environment-identifier" href="../../tag/4BA9DE7FEF24/">Definition <span data-tag="ADEEEF0A">B.1.2</span>.</a><span data-gerby-tag="ADEEEF0A"></span> A complex space $X$ is <em>unibranch</em> if for all $x\in X$, the local ring $\mathcal{O}_{X,x}$ is unibranch. </p>
+</article> See <span class="cite">[<span class="postnote"><a href="https://stacks.math.columbia.edu/tag/0BPZ">Tag 0BPZ</a></span>, <a href="../../references/#R6828B622DB09">stacks-project</a>]</span> for the notion of unibranch local rings. In <span class="cite">[<a href="../../references/#RC709DBCFB633">CAS</a>]</span>, the same notion is known as <em>local irreducibility</em>. We prefer the name <em>unibranchness</em>, because the corresponding terminology in algebraic geometry is standard and goes back to Grothendieck <span class="cite">[<span class="postnote">(0.23.2.1)</span>, <a href="../../references/#RAA4D95CD5843">EGAIV1</a>]</span>. 
+
+
+The notion of unibranchness coincides with the usual one when $\mathcal{X}$ is an algebraic variety: <article class="env-proposition" id="sgpt-159EA381">
+<p><a class="environment-identifier" href="../../tag/1A7FEC3124D0/">Proposition <span data-tag="159EA381">B.1.3</span>.</a><span data-gerby-tag="159EA381"></span> Let $\mathcal{X}$ be a reduced scheme of finite type over $\mathbb {C}$, and let $\mathcal{X}^{\mathrm{An}}$ be the associated complex space. Then $\mathcal{X}^{\mathrm{An}}$ is unibranch in the sense above if and only if $\mathcal{X}$ is unibranch in the algebraic sense (see <span class="cite">[<span class="postnote"><a href="https://stacks.math.columbia.edu/tag/0BQ2">Tag 0BQ2</a></span>, <a href="../../references/#R6828B622DB09">stacks-project</a>]</span>). </p>
+</article> This is <span class="cite">[<span class="postnote">Remark 2.7</span>, <a href="../../references/#R825BB286052B">Xia23Mabuchi</a>]</span> in the arXiv version. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $x\in \mathcal{X}(\mathbb {C})$. Then we claim that $\mathcal{X}$ is unibranch at $x$ if and only if $\mathcal{X}^{\mathrm{An}}$ is unibranch at $x$. By GAGA, there is a natural morphism of ringed spaces $(\mathcal{X}^{\mathrm{An}},\mathcal{O}_{\mathcal{X}^{\mathrm{An}}})\rightarrow (\mathcal{X},\mathcal{O}_{\mathcal{X}})$. Then since $\mathcal{O}_{\mathcal{X},x}$ is excellent, $\mathcal{X}$ is unibranch at $x$ if and only if $\widehat{\mathcal{O}_{\mathcal{X},x}}=\widehat{\mathcal{O}_{\mathcal{X}^{\mathrm{An}},x}}$ is integral (<span class="cite">[<span class="postnote">Théorème 18.9.1</span>, <a href="../../references/#RA0105FCF5A40">EGAIV4</a>]</span>). The latter implies that $\mathcal{O}_{\mathcal{X}^{\mathrm{An}},x}$ is unibranch by <span class="cite">[<span class="postnote">Chapitre 5, Exercise 2.8</span>, <a href="../../references/#R9130D4811535">AC</a>]</span>. Running the same argument the other way round, we conclude that $\mathcal{O}_{\mathcal{X},x}$ is unibranch if and only if $\mathcal{O}_{\mathcal{X}^{\mathrm{An}},x}$ is. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-theorem" id="sgpt-AFDCC00F">
+<p><a class="environment-identifier" href="../../tag/E707851D5DBA/">Theorem <span data-tag="AFDCC00F">B.1.4</span> <span class="named">(Zariski's main theorem)</span>.</a><span data-gerby-tag="AFDCC00F"></span> Let $\pi \colon Y\rightarrow X$ be a proper bimeromorphic morphism between complex spaces. Assume that $X$ is unibranch. Then $\pi $ has connected fibers. </p>
+</article> We follow <span class="cite">[<span class="postnote">Proof of Théorème 1.7</span>, <a href="../../references/#R465E2BDAD3B6">Dem85</a>]</span>. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $Z\subseteq X$ be the smallest nowhere dense analytic subset such that $\pi $ is an isomorphism over $X\setminus Z$. Assume that the fiber $F=\pi ^{-1}(x)$ over some $x\in X$ is disconnected. Since $\pi $ is proper, $F$ is compact. Choose a decomposition $F=F_1\sqcup F_2$ into two non-empty disjoint compact open subsets of $F$, and choose disjoint open neighborhoods $W_1,W_2$ of $F_1,F_2$ in $Y$. Since proper maps are closed, after shrinking an open neighborhood $U$ of $x$, we may assume that 
+    
+<div class="equation">
+  \[  \pi ^{-1}(U)\subseteq W_1\cup W_2.  \]
+</div>
+<p>
+       Thus $\pi ^{-1}(U)$ is disconnected. 
+    <p>
+      Since $X$ is unibranch, we may shrink $U$ further so that $U$ is irreducible. Then $U\setminus Z$ is connected (cf. <span class="cite">[<span class="postnote">Chapter 9, §1.2</span>, <a href="../../references/#RC709DBCFB633">CAS</a>]</span>). Since $\pi $ is bimeromorphic, every irreducible component of $Y$ maps onto an irreducible component of $X$. Hence $\pi ^{-1}(Z)$ contains no irreducible component of $Y$ and is nowhere dense. On the other hand, write 
+    
+<div class="equation">
+  \[  \pi ^{-1}(U)=V_1\sqcup V_2  \]
+</div>
+<p>
+       as a union of two non-empty disjoint open subsets. Each $V_ i$ meets $\pi ^{-1}(U\setminus Z)$: otherwise $V_ i$ would be a non-empty open subset of $Y$ contained in the nowhere dense analytic subset $\pi ^{-1}(Z)$, which is impossible. Hence 
+    
+<div class="equation">
+  \[  \pi ^{-1}(U\setminus Z) = \bigl (V_1\cap \pi ^{-1}(U\setminus Z)\bigr ) \sqcup \bigl (V_2\cap \pi ^{-1}(U\setminus Z)\bigr )  \]
+</div>
+<p>
+       is disconnected. This contradicts the fact that $\pi \colon \pi ^{-1}(U\setminus Z)\rightarrow U\setminus Z$ is an isomorphism and $U\setminus Z$ is connected. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-3C40D2CC">
+<p><a class="environment-identifier" href="../../tag/C9A9F3CE78E7/">Definition <span data-tag="3C40D2CC">B.1.5</span>.</a><span data-gerby-tag="3C40D2CC"></span> A <em>modification</em> of a compact complex space $X$ is a finite composition of blow-ups with smooth centers. </p>
+<p>We say a modification $\pi '\colon Z\rightarrow X$ <em>dominates</em> another $\pi \colon Y\rightarrow X$ if there is a morphism $g\colon Z\rightarrow Y$ of complex spaces making the following diagram commutative: </p>
+<div class="equation" id="sgpt-A60C77B6"><span data-gerby-tag="A60C77B6"></span>
+<span class="equation-label"><a data-tag="A60C77B6" href="../../tag/8D4BB1A6524D/">B.1</a></span>
+<div><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/e990208a4c04572f2ffe.svg"/></div>
+</div>
+</article>
+
+<p>
+The modifications of $X$ together with the domination relation form a directed set. 
+</p>
+
+<article class="env-theorem" id="sgpt-233E831C">
+<p><a class="environment-identifier" href="../../tag/3CD8BF9158DD/">Theorem <span data-tag="233E831C">B.1.6</span> <span class="named">(Hironaka's Chow lemma)</span>.</a><span data-gerby-tag="233E831C"></span> Suppose that $X$ is a compact complex space. Then every proper bimeromorphic morphism to $X$ can be dominated by a modification. </p>
+</article> This follows from the proof of <span class="cite">[<span class="postnote">Corollary 2</span>, <a href="../../references/#R524BF591A02A">Hir75</a>]</span>. 
+
+
+<article class="env-theorem" id="sgpt-B7B727AD">
+<p><a class="environment-identifier" href="../../tag/8F66FA207B82/">Theorem <span data-tag="B7B727AD">B.1.7</span>.</a><span data-gerby-tag="B7B727AD"></span> Let $X$ be a compact complex space. Then there is a modification $\pi \colon Y\rightarrow X$ such that $Y$ is smooth. </p>
+</article> See <span class="cite">[<a href="../../references/#R38E8B844973E">BM97</a>, <a href="../../references/#R46504574CA5B">Wlo09</a>]</span>. 
+
+
+<article class="env-corollary" id="sgpt-BDB64C24">
+<p><a class="environment-identifier" href="../../tag/178E0605C99D/">Corollary <span data-tag="BDB64C24">B.1.8</span>.</a><span data-gerby-tag="BDB64C24"></span> Let $X$ be an irreducible compact complex space and $E$ be a prime divisor over $X$. Then there is a modification $\pi \colon Y\rightarrow X$ such that $Y$ is smooth and $E$ can be realized as a prime divisor on $Y$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a smooth model $X'\rightarrow X$ on which $E$ is realized. By theorem <a data-tag="233E831C" href="../../tag/3CD8BF9158DD/">B.1.6</a>, this proper bimeromorphic morphism is dominated by a modification $Y\rightarrow X$. After further resolving the pair if necessary, we may assume that $Y$ is smooth and that the strict transform of $E$ on $Y$ is smooth. This strict transform realizes the same prime divisor over $X$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

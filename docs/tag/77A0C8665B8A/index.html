@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The non-pluripolar products · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-pluripolar-mass/">Chapter 11 · Non-pluripolar measures and mass</a> · Tag <code>77A0C8665B8A</code></p><h1>The non-pluripolar products</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 2.2 The non-pluripolar products <span data-gerby-tag="F400116D"></span></div>
+<p>
+ The proofs of the standard results recalled in this section can be found in <span class="cite">[<a href="../../references/#REC350BD99EFB">BEGZ10</a>]</span>. 
+</p>
+<p>
+Let $X$ be a complex manifold. 
+</p>
+
+<article class="env-definition" id="sgpt-FCFE372A">
+<p><a class="environment-identifier" href="../../tag/1A52175C3D64/">Definition <span data-tag="FCFE372A">2.2.1</span>.</a><span data-gerby-tag="FCFE372A"></span> Let $\varphi _1,\ldots ,\varphi _ p\in \mathrm{PSH}(X)$. We set </p>
+<div class="equation">
+  \[  O_ k \coloneqq \bigcap _{j=1}^ p \{ \varphi _ j&gt;-k\} ,\quad k\in \mathbb {N}.  \]
+</div>
+<p> We say that $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is <em>well-defined</em> if for each connected open subset $U\subseteq X$, any smooth positive $(1,1)$-form $\omega $ on $U$, and each compact subset $K\subseteq U$, we have </p>
+<div class="equation" id="sgpt-16A419D5"><span data-gerby-tag="16A419D5"></span>
+<span class="equation-label"><a data-tag="16A419D5" href="../../tag/826BE13A141D/">2.3</a></span>
+<div>\begin{equation} \label{eq:welldefinepluri} \sup _{k\geq 0} \int _{K\cap O_ k}\left.\left(\bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}(\varphi _ j\lor (-k))\right)\right|_ U\wedge \omega ^{\dim U-p}&lt;\infty . \end{equation}</div>
+</div>
+<p>In this case, we define the <em>non-pluripolar product</em>  $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ by </p>
+<div class="equation" id="sgpt-66C5D653"><span data-gerby-tag="66C5D653"></span>
+<span class="equation-label"><a data-tag="66C5D653" href="../../tag/63B22DDAC51C/">2.4</a></span>
+<div>\begin{equation} \label{eq:npp} \mathds {1}_{O_ k}\, \mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p=\mathds {1}_{O_ k}\bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\left( \varphi _ j\lor (-k)\right) \end{equation}</div>
+</div>
+<p> on $\bigcup _{k\geq 0} O_ k$ and extend it by zero to $X$. </p>
+</article>
+
+
+As recalled in section <a data-tag="F497856E" href="../../tag/DFFF533F1AE8/">1.3</a>, an $\mathcal{F}$-open subset means an open subset with respect to the plurifine topology. <article class="env-proposition" id="sgpt-B86D7001">
+<p><a class="environment-identifier" href="../../tag/9E81D36B1290/">Proposition <span data-tag="B86D7001">2.2.2</span>.</a><span data-gerby-tag="B86D7001"></span> Let $\varphi _1,\ldots ,\varphi _ p\in \mathrm{PSH}(X)$. </p>
+<ol>
+<li class="custom-item" id="sgpt-1C036AD6"><span data-gerby-tag="1C036AD6"></span><p>
+ The product $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is local with respect to the plurifine topology in the following sense: Let $O\subseteq X$ be an $\mathcal{F}$-open subset and $\psi _1,\ldots ,\psi _ p\in \mathrm{PSH}(X)$. Assume that 
+</p>
+<div class="equation">
+  \[  \varphi _ j|_{O}=\psi _ j|_{O},\quad j=1,\ldots ,p,  \]
+</div>
+<p>
+ and that 
+</p>
+<div class="equation">
+  \[  \bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j\textup{ and } \bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\psi _ j  \]
+</div>
+<p>
+ are both well-defined, then 
+</p>
+<div class="equation" id="sgpt-68D2C078"><span data-gerby-tag="68D2C078"></span>
+<span class="equation-label"><a data-tag="68D2C078" href="../../tag/C3F3FF3F504B/">2.5</a></span>
+<div>\begin{equation} \label{eq:ppp1} \left.\left(\bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j\right)\right|_{O}=\left.\left(\bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\psi _ j\right)\right|_{O}. \end{equation}</div>
+</div>
+<p>
+ If furthermore $O$ is open in the usual topology, then the product 
+</p>
+<div class="equation">
+  \[  \bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j|_{O}  \]
+</div>
+<p>
+ on $O$ is well-defined and 
+</p>
+<div class="equation" id="sgpt-A149119C"><span data-gerby-tag="A149119C"></span>
+<span class="equation-label"><a data-tag="A149119C" href="../../tag/7E91D53462AC/">2.6</a></span>
+<div>\begin{equation} \label{eq:ppp2} \left. \left(\bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j\right)\right|_{O}=\bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j|_{O}. \end{equation}</div>
+</div>
+<p>
+ Let $\mathcal{U}$ be an open covering of $X$. Then $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is well-defined if and only if each product 
+</p>
+<div class="equation">
+  \[  \bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j|_{U},\quad U\in \mathcal{U}.  \]
+</div>
+</li><li class="custom-item" id="sgpt-773F814D"><span data-gerby-tag="773F814D"></span><p>
+ The current $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ and the fact that it is well-defined depend only on the currents $\mathrm{dd}^{\mathrm{c}}\varphi _ j$, not on the choice of the $\varphi _ j$'s nor on the ordering of the $\varphi _ j$'s. 
+</p>
+</li><li class="custom-item" id="sgpt-870D5F8C"><span data-gerby-tag="870D5F8C"></span><p>
+ When $\varphi _1,\ldots ,\varphi _ p\in L^{\infty }_{\mathrm{loc}}(X)$, the non-pluripolar product $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is well-defined and is equal to the Bedford–Taylor product. More generally, if $q\leq p$, and we only assume that $\varphi _1,\ldots ,\varphi _ q\in L^{\infty }_{\mathrm{loc}}(X)$, and that the non-pluripolar product $T\coloneqq \mathrm{dd}^{\mathrm{c}}\varphi _{q+1}\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is well-defined, then the non-pluripolar product $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is also well-defined, and is equal to the Bedford–Taylor product $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ q\wedge T$ as in <a data-tag="58D3B6B9" href="../../tag/918938F52375/">2.1.2</a>. 
+</p>
+</li><li class="custom-item" id="sgpt-A7B5A81A"><span data-gerby-tag="A7B5A81A"></span><p>
+ Assume that $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is well-defined. Then $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ puts no mass on pluripolar sets. 
+</p>
+</li><li class="custom-item" id="sgpt-0A8E1902"><span data-gerby-tag="0A8E1902"></span>
+ Assume that $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is well-defined. Then $\bigwedge _{j=1}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j$ is a closed positive $(p,p)$-current on $X$.<aside class="source-footnote" id="sgpt-a0000010958"><span class="footnote-label">Note.</span> This current is in fact strongly positive, as shown in <span class="cite">[<a href="../../references/#R25D818D3DC28">Xiabdiv2</a>]</span>.</aside>
+
+</li><li class="custom-item" id="sgpt-841A6065"><span data-gerby-tag="841A6065"></span><p>
+ The product is multilinear: Let $\psi _1\in \mathrm{PSH}(X)$, $a,b&gt;0$ then 
+</p>
+<div class="equation" id="sgpt-B45DEEC6"><span data-gerby-tag="B45DEEC6"></span>
+<span class="equation-label"><a data-tag="B45DEEC6" href="../../tag/A1F77BA03A26/">2.7</a></span>
+<div>\begin{equation} \label{eq:ppp6} \mathrm{dd}^{\mathrm{c}}(a\varphi _1+b\psi _1)\wedge \bigwedge _{j=2}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j =a\, \mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \bigwedge _{j=2}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j + b\, \mathrm{dd}^{\mathrm{c}}\psi _1\wedge \bigwedge _{j=2}^ p \mathrm{dd}^{\mathrm{c}}\varphi _ j \end{equation}</div>
+</div>
+<p>
+ in the sense that the left-hand side is well-defined if and only if both terms on the right-hand side are well-defined, and the equality holds in that case. 
+</p>
+</li>
+</ol>
+</article> In view of <a data-tag="870D5F8C" href="../../tag/9E81D36B1290/#sgpt-870D5F8C">3</a>, we do not need to specify whether our product $\mathrm{dd}^{\mathrm{c}}\varphi _1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p$ is the Bedford–Taylor product or the non-pluripolar product when the $\varphi _ i$'s are all locally bounded. 
+
+
+<article class="env-example" id="sgpt-B002DC9E">
+<p><a class="environment-identifier" href="../../tag/00950EDCBA2C/">Example <span data-tag="B002DC9E">2.2.3</span>.</a><span data-gerby-tag="B002DC9E"></span> Let $\varphi \in \mathrm{PSH}(X)$, then </p>
+<div class="equation" id="sgpt-C3998D44"><span data-gerby-tag="C3998D44"></span>
+<span class="equation-label"><a data-tag="C3998D44" href="../../tag/9F35F663186D/">2.8</a></span>
+<div>\begin{equation} \label{eq:1dimnpp} (\mathrm{dd}^{\mathrm{c}}\varphi )^1=\mathds {1}_{\{ \varphi &gt;-\infty \} }\, \mathrm{dd}^{\mathrm{c}}\varphi . \end{equation}</div>
+</div>
+<p> Here $(\mathrm{dd}^{\mathrm{c}}\varphi )^1$ on the left-hand side denotes the non-pluripolar product, while $\mathrm{dd}^{\mathrm{c}}\varphi $ on the right-hand side denotes the usual derivative in the sense of current. </p>
+<p>The problem is local, so we may assume that $X=\Delta ^ n$, the unit polydisk in $\mathbb {C}^ n$. Take $f\in C^{\infty }_ c(\Delta ^ n)$ with $f\geq 0$. We need to show that </p>
+<div class="equation">
+  \[  \lim _{k\to \infty } \int _{\Delta ^ n} \mathds {1}_{\{ \varphi &gt;-k\} }f\,  \mathrm{dd}^{\mathrm{c}}\bigl (\varphi \lor (-k)\bigr )\wedge \omega ^{n-1}=\int _{\Delta ^ n} \mathds {1}_{\{ \varphi &gt;-\infty \} }f\, \mathrm{dd}^{\mathrm{c}}\varphi \wedge \omega ^{n-1},  \]
+</div>
+<p> where $\omega $ is the standard Kähler form on $\mathbb {C}^ n$. By the dominated convergence theorem, this reduces immediately to the $1$-dimensional case: </p>
+<div class="equation">
+  \[  \lim _{k\to \infty } \int _{\Delta ^1} \mathds {1}_{\{ \varphi &gt;-k\} }f\,  \Delta \bigl (\varphi \lor (-k)\bigr )=\int _{\Delta ^1} \mathds {1}_{\{ \varphi &gt;-\infty \} }f\, \Delta \varphi ,  \]
+</div>
+<p> for any subharmonic function $\varphi $ on the unit disk $\Delta ^1$, which is a special case of <span class="cite">[<span class="postnote">Proposition 3.3</span>, <a href="../../references/#RA6DC7B0E91CB">EK24</a>]</span>. </p>
+</article>
+
+
+<article class="env-definition" id="sgpt-8B2C28F1">
+<p><a class="environment-identifier" href="../../tag/05C17B17762F/">Definition <span data-tag="8B2C28F1">2.2.4</span>.</a><span data-gerby-tag="8B2C28F1"></span> Let $T_1,\ldots ,T_ p$ be closed positive $(1,1)$-currents on $X$. We say that $T_1\wedge \cdots \wedge T_ p$ is <em>well-defined</em> if there exists an open covering $\mathcal{U}$ of $X$ such that on each $U\in \mathcal{U}$, we can find $\varphi _ j^ U\in \mathrm{PSH}(U)$ ($j=1,\ldots ,p$) such that </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\varphi _ j^ U=T_ j,\quad j=1,\ldots ,p  \]
+</div>
+<p> and $\mathrm{dd}^{\mathrm{c}}\varphi _1^ U\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p^ U$ is well-defined. In this case, we define the <em>non-pluripolar product</em>  $T_1\wedge \cdots \wedge T_ p$ as the closed positive $(p,p)$-current on $X$ defined by </p>
+<div class="equation" id="sgpt-A1A7A29F"><span data-gerby-tag="A1A7A29F"></span>
+<span class="equation-label"><a data-tag="A1A7A29F" href="../../tag/3FE189D717D7/">2.9</a></span>
+<div>\begin{equation} \label{eq:ppp5} \left(T_1\wedge \cdots \wedge T_ p\right)|_ U=\mathrm{dd}^{\mathrm{c}}\varphi _1^ U\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}\varphi _ p^ U,\quad U\in \mathcal{U}. \end{equation}</div>
+</div>
+</article> The product $T_1\wedge \cdots \wedge T_ p$ is independent of the choices we made thanks to proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="1C036AD6" href="../../tag/9E81D36B1290/#sgpt-1C036AD6">1</a> and <a data-tag="773F814D" href="../../tag/9E81D36B1290/#sgpt-773F814D">2</a>. 
+
+<p>
+proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> can be formulated in terms of currents without any difficulty. 
+</p>
+
+<article class="env-remark" id="sgpt-DDFC5135">
+<p><a class="environment-identifier" href="../../tag/76807540FC41/">Remark <span data-tag="DDFC5135">2.2.5</span>.</a><span data-gerby-tag="DDFC5135"></span> Similar to <a data-tag="58D3B6B9" href="../../tag/918938F52375/">2.1.2</a>, there is also an extension of the non-pluripolar theory allowing us to define </p>
+<div class="equation">
+  \[  T_1\wedge \cdots \wedge T_ p\cap T  \]
+</div>
+<p> for any closed positive current $T$. This is the <em>relative non-pluripolar product</em> introduced by Vu <span class="cite">[<a href="../../references/#RBE30C77681B9">Vu20</a>]</span>. Unlike the relative Bedford–Taylor products, the relative non-pluripolar products present some pathological behaviors. For example, they are not linear in general. </p>
+</article>
+
+
+<article class="env-remark" id="sgpt-6EAE6B79">
+<p><a class="environment-identifier" href="../../tag/873B08B81AC9/">Remark <span data-tag="6EAE6B79">2.2.6</span>.</a><span data-gerby-tag="6EAE6B79"></span> Another possible generalization of the non-pluripolar products is motivated by proposition <a data-tag="B86D7001" href="../../tag/9E81D36B1290/">2.2.2</a> <a data-tag="1C036AD6" href="../../tag/9E81D36B1290/#sgpt-1C036AD6">1</a>. One could begin by defining a generalized notion of plurisubharmonic functions on $\mathcal{F}$-open sets, called <em>$\mathcal{F}$-plurisubharmonic functions</em> and define their non-pluripolar products. See <span class="cite">[<a href="../../references/#RD3824BF877FA">EKFW11</a>, <a href="../../references/#REB3228448721">EKW14</a>]</span>. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-6BD3D22E">
+<p><a class="environment-identifier" href="../../tag/FB457F67F566/">Proposition <span data-tag="6BD3D22E">2.2.7</span>.</a><span data-gerby-tag="6BD3D22E"></span> Let $X$ be a compact Kähler manifold and let $T_1,\ldots ,T_ p$ be closed positive $(1,1)$-currents on $X$. Then $T_1\wedge \cdots \wedge T_ p$ is well-defined. </p>
+</article> This proposition explains why we usually work in the setting of compact Kähler manifolds. 
+
+
+<article class="env-corollary" id="sgpt-05CA3670">
+<p><a class="environment-identifier" href="../../tag/AE7DB6D35BE9/">Corollary <span data-tag="05CA3670">2.2.8</span>.</a><span data-gerby-tag="05CA3670"></span> Let $X$ and $Z$ be connected compact Kähler manifolds of dimensions $n$ and $m$, respectively, and let $p_1\colon X\times Z\to X$ and $p_2\colon X\times Z\to Z$ be the projections. Let $\theta $ be a closed real smooth $(1,1)$-form on $X$, let $\phi \in \mathrm{PSH}(X,\theta )$, and let $\gamma $ be a closed smooth positive $(1,1)$-form on $Z$. Put </p>
+<div class="equation">
+  \[  Y=X\times Z,\qquad \Theta =p_1^*\theta +p_2^*\gamma ,\qquad \Phi =p_1^*\phi .  \]
+</div>
+<p> Suppose that $W\in \mathrm{PSH}(Y,\Theta )$ and $\Phi -C\leq W\leq \Phi +C$ for some $C&gt;0$. Set </p>
+<div class="equation">
+  \[  T=\Theta +\mathrm{dd}^{\mathrm{c}}W,\qquad S=\Theta +\mathrm{dd}^{\mathrm{c}}\Phi ,  \]
+</div>
+<p> and write $W_ z(x)=W(x,z)$. Then $W_ z\in \mathrm{PSH}(X,\theta )$ for every $z\in Z$. For $0\leq j\leq n$ and every smooth real $(m,m)$-form $\eta $ on $Z$, </p>
+<div class="equation" id="sgpt-31AB06D8"><span data-gerby-tag="31AB06D8"></span>
+<span class="equation-label"><a data-tag="31AB06D8" href="../../tag/091EC34E5A75/">2.10</a></span>
+<div>\begin{equation} \label{eq:compactrelativeenergyslicing} \begin{aligned} &amp; \int _ Y(W-\Phi )p_2^*\eta \wedge T^ j\wedge S^{n-j}\\ &amp; \qquad =\int _ Z\left(\int _ X(W_ z-\phi )\,  \theta _{W_ z}^ j\wedge \theta _\phi ^{n-j}\right)\eta (z), \end{aligned} \end{equation}</div>
+</div>
+<p> and </p>
+<div class="equation" id="sgpt-C4F6AB54"><span data-gerby-tag="C4F6AB54"></span>
+<span class="equation-label"><a data-tag="C4F6AB54" href="../../tag/8D9958903619/">2.13</a></span>
+<div>\begin{equation} \label{eq:compactfibreslicingconstant} \int _ Y p_2^*\eta \wedge T^ n =\int _ Z\left(\int _ X\theta _{W_ z}^ n\right)\eta (z). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By linearity, it suffices to consider $\eta \geq 0$. All the non-pluripolar products that occur below are well-defined by proposition <a data-tag="6BD3D22E" href="../../tag/FB457F67F566/">2.2.7</a>. We work on a relatively compact product chart $Q\times D\subseteq X\times Z$ and let $a$ and $b$ be smooth local potentials of $p_1^*\theta $ and $p_2^*\gamma $. After subtracting constants, put $w=W+a+b\leq 0$ and $f=\Phi +a+b\leq 0$. For $k\geq 1$, set 
+    
+<div class="equation">
+  \[  \begin{aligned}  w_ k&amp; =w\lor (-k),&amp;  f_ k&amp; =f\lor (-k),\\  O_ k&amp; =\{ w&gt;-k\} \cap \{ f&gt;-k\} ,&amp;  \mu _{j,k}&amp; =\mathds {1}_{O_ k}(\mathrm{dd}^{\mathrm{c}}w_ k)^ j\wedge (\mathrm{dd}^{\mathrm{c}}f_ k)^{n-j}. \end{aligned}  \]
+</div>
+<p>
+       For $z\in D$, write $w_ z(x)=w(x,z)$ and $f_ z(x)=f(x,z)$, and set 
+    
+<div class="equation">
+  \[  \mu _{j,k,z} =\mathds {1}_{\{ w_ z&gt;-k\} \cap \{ f_ z&gt;-k\} } \bigl (\mathrm{dd}^{\mathrm{c}}_ x(w_ z\lor (-k))\bigr )^ j\wedge \bigl (\mathrm{dd}^{\mathrm{c}}_ x(f_ z\lor (-k))\bigr )^{n-j}.  \]
+</div>
+<p>
+       Apply <a data-tag="453BE736" href="../../tag/10BB181E99E0/">2.1.5</a> with $u_1=\cdots =u_ j=w_ k$, $u_{j+1}=\cdots =u_ n=f_ k$, and 
+    
+<div class="equation">
+  \[  h=\rho G\mathds {1}_{O_ k},\qquad \rho \in \mathcal{C}^{\infty }_ c(Q\times D),\quad \rho \geq 0,  \]
+</div>
+<p>
+       where $G$ is any bounded non-negative Borel function. This gives 
+    
+<div class="equation" id="sgpt-F6BB0DAA"><span data-gerby-tag="F6BB0DAA"></span>
+<span class="equation-label"><a data-tag="F6BB0DAA" href="../../tag/32D177AC1071/">2.16</a></span>
+<div>\begin{equation} \label{eq:finitelevelfubini} \int _{Q\times D}\rho G\, p_2^*\eta \wedge \mu _{j,k} =\int _ D\left(\int _ Q\rho _ zG_ z\, \mu _{j,k,z}\right)\eta (z). \end{equation}</div>
+</div>
+<p>
+       By plurifine locality, $\mu _{j,k}$ increases to the local expression of $T^ j\wedge S^{n-j}$, while, for every $z\in D$, $\mu _{j,k,z}$ increases to the local expression of $\theta _{W_ z}^ j\wedge \theta _\phi ^{n-j}$. Taking $G=\delta +C\geq 0$ in (<a data-tag="F6BB0DAA" href="../../tag/32D177AC1071/">2.16</a>), applying monotone convergence, subtracting the corresponding constant-weight identity, and summing over a non-negative partition of unity proves (<a data-tag="31AB06D8" href="../../tag/091EC34E5A75/">2.10</a>). The same argument with constant weight and degree $n$ proves (<a data-tag="C4F6AB54" href="../../tag/8D9958903619/">2.13</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

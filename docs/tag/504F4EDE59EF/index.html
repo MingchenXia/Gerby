@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bounded psh fixed measure continuity · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/local-monge-ampere/">Chapter 7 · Local Monge–Ampère theory and Hessian equations</a> · Tag <code>504F4EDE59EF</code></p><h1>Bounded psh fixed measure continuity</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · Lemma 9.10.4 <span data-gerby-tag="AC0105B3"></span></div><article class="env-lemma" id="foundations-of-pluripotential-theory-AC0105B3">
+<p><a class="environment-identifier" href="../../tag/504F4EDE59EF/">Lemma <span data-tag="AC0105B3">9.10.4</span>.</a><span data-gerby-tag="AC0105B3"></span> Let $D\subset \mathbb C^ n$ be a bounded open set, and let $\nu $ be a finite positive Borel measure on $D$ such that $\nu (E)=0$ for every Borel set $E\subset D$ satisfying </p>
+<div class="equation">
+  \[  \operatorname {Cap}_ D^*(E\cap K)=0\qquad \text{for every compact }K\subset D.  \]
+</div>
+<p> Let $L\geq 0$, let $v_ j$ be plurisubharmonic functions on $D$ with $|v_ j|\leq L$, and suppose that $v_ j\to v$ in $L^1_{\mathrm{loc}}(D)$, where $v$ is the plurisubharmonic representative of the limit (theorem <a data-tag="3C807BFA" href="../../tag/C2DB8DFE9E2C/">8.3.4</a>, applied on each connected component of $D$). Then </p>
+<div class="equation">
+  \[  \int _ D|v_ j-v|\, \mathrm d\nu \longrightarrow 0.  \]
+</div>
+<p> The hypothesis on $\nu $ holds if $\nu \leq (\mathrm{dd}^{\mathrm{c}}w)^ n$ for a bounded plurisubharmonic function $w$ on $D$. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We show that $\varlimsup _ jv_ j=v$ $\nu $-almost everywhere (Step 1) and that $\int v_ j\, \mathrm d\nu \to \int v\, \mathrm d\nu $ (Step 2), and combine the two facts (Step 3). First, the bounds $-L\le v\le L$ hold almost everywhere: for every compact set $K\subset D$ we have $(|v|-L)_+\le |v-v_ j|$, so $\int _ K(|v|-L)_+\, \mathrm dV\le \| v_ j-v\| _{L^1(K)}\to 0$. They hold everywhere by the uniqueness assertion of theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>, applied on each connected component of $D$ to the plurisubharmonic functions $\max \{ v,-L\} $ and $v$, and to $\max \{ v,L\} $ and the constant $L$. 
+    <p>
+<em>Step 1. The upper limit of $v_ j$.</em> We show that 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-762C2663"><span data-gerby-tag="762C2663"></span>
+<span class="equation-label"><a data-tag="762C2663" href="../../tag/0B2BC6EDF748/">9.48</a></span>
+<div>\begin{equation} \label{eq:fixed-measure-psh-limsup} \varlimsup _{j\to \infty }v_ j=v\qquad \nu \text{-almost everywhere}. \end{equation}</div>
+</div>
+<p>
+       For $\ell \ge 1$ let $b_\ell =(\sup _{j\geq \ell }v_ j)^*$ be the upper semicontinuous regularization of the supremum. By theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">8.3.2</a>, these are plurisubharmonic functions with values in $[-L,L]$, and they decrease as $\ell $ increases. We claim that $b_\ell \downarrow v$ everywhere. Let $z\in D$ and $\varepsilon &gt;0$. By upper semicontinuity, $v&lt;v(z)+\varepsilon $ on a neighborhood of a closed ball $\overline{B'}\subset D$ centered at $z$, and Hartogs' lemma (theorem <a data-tag="3C807BFA" href="../../tag/C2DB8DFE9E2C/">8.3.4</a>), applied on the connected component of $D$ containing $z$ with the constant majorant $v(z)+\varepsilon $, gives $v_ j&lt;v(z)+\varepsilon $ on $\overline{B'}$ for all large $j$. Hence $\sup _{j\ge \ell }v_ j\le v(z)+\varepsilon $ on $B'$ for all large $\ell $, so $b_\ell (z)\le v(z)+\varepsilon $, and the decreasing limit of $b_\ell $ is at most $v$. 
+    <p>
+      Conversely, $b_\ell \ge v_ j$ for all $j\ge \ell $, so $(v-b_\ell )_+\le |v-v_ j|$ for $j\ge \ell $; integrating over a compact set $K\subset D$ and letting $j\to \infty $, we find that $b_\ell \ge v$ almost everywhere on $K$, hence almost everywhere on $D$. The decreasing limit of the $b_\ell $ is bounded below by $-L$, so it is plurisubharmonic by theorem <a data-tag="1174FCEA" href="../../tag/FE144A69076E/">8.3.1</a>; it is at most $v$ and equals $v$ almost everywhere, hence everywhere by the uniqueness of plurisubharmonic representatives, applied on each connected component of $D$. 
+    <p>
+      The sets $N_\ell =\{ \sup _{j\ge \ell }v_ j&lt;b_\ell \} $ are Borel, and by corollary <a data-tag="2ACED3F4" href="../../tag/D865A8538D7D/">9.5.2</a> they satisfy $\operatorname {Cap}_ D^*(N_\ell \cap K)=0$ for every compact $K\subset D$. By countable subadditivity of outer capacity (proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>), the union $N=\bigcup _\ell N_\ell $ has the same property, so $\nu (N)=0$ by hypothesis. For $z\notin N$ we have $\sup _{j\ge \ell }v_ j(z)=b_\ell (z)$ for every $\ell $, and therefore $\varlimsup _ jv_ j(z)=\lim _\ell b_\ell (z)=v(z)$. This proves (<a data-tag="762C2663" href="../../tag/0B2BC6EDF748/">9.48</a>). The argument applies to every sequence of plurisubharmonic functions with values in $[-L,L]$ that converges to $v$ in $L^1_{\mathrm{loc}}(D)$. 
+    <p>
+<em>Step 2. Convergence of $\int v_ j\, \mathrm d\nu $.</em> We first construct convex combinations of the $v_ j$ whose integrals converge to $\int v\, \mathrm d\nu $. Let $\mathcal C_\ell $ be the set of finite convex combinations of $v_\ell ,v_{\ell +1},\ldots $; its elements are plurisubharmonic functions with values in $[-L,L]$ (proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>). Let 
+    
+<div class="equation">
+  \[  d_\ell =\inf _{r\in \mathcal C_\ell }\| r\| _{L^2(\nu )}.  \]
+</div>
+<p>
+       Since $\mathcal C_{\ell +1}\subset \mathcal C_\ell $, the numbers $d_\ell $ increase, and they are bounded by $L\, \nu (D)^{1/2}$; let $d$ be their limit. Choose $r_\ell \in \mathcal C_\ell $ with 
+    
+<div class="equation">
+  \[  \| r_\ell \| _{L^2(\nu )}^2\leq d_\ell ^2+\ell ^{-1}.  \]
+</div>
+<p>
+       For $k\geq \ell $ the midpoint $(r_ k+r_\ell )/2$ belongs to the convex set $\mathcal C_\ell $, so its norm is at least $d_\ell $, and the parallelogram identity gives 
+    
+<div class="equation">
+  \[  \| r_ k-r_\ell \| _{L^2(\nu )}^2 =2\| r_ k\| _{L^2(\nu )}^2+2\| r_\ell \| _{L^2(\nu )}^2-4\Bigl \| \frac{r_ k+r_\ell }2\Bigr \| _{L^2(\nu )}^2 \leq 2(d^2-d_\ell ^2)+4\ell ^{-1}.  \]
+</div>
+<p>
+       The right-hand side tends to zero as $\ell \to \infty $, so we can choose $\ell _1&lt;\ell _2&lt;\cdots $ with $\| r_{\ell _{i+1}}-r_{\ell _ i}\| _{L^2(\nu )}\le 2^{-i}$. By the triangle inequality in $L^2(\nu )$ and the monotone convergence theorem, the function $g=\sum _ i|r_{\ell _{i+1}}-r_{\ell _ i}|$ satisfies $\| g\| _{L^2(\nu )}\le 1$. Hence $g&lt;\infty $ $\nu $-almost everywhere, and at every point where $g$ is finite the sequence $(r_{\ell _ i})$ converges. 
+    <p>
+      On the other hand, the $r_{\ell _ i}$ are plurisubharmonic with values in $[-L,L]$, and $r_\ell \to v$ in $L^1_{\mathrm{loc}}(D)$, since $\| r_\ell -v\| _{L^1(K)}\le \sup _{j\ge \ell }\| v_ j-v\| _{L^1(K)}$ for every compact $K\subset D$. By Step 1, applied to the sequence $(r_{\ell _ i})$, we have $\varlimsup _ ir_{\ell _ i}=v$ $\nu $-almost everywhere. Therefore $r_{\ell _ i}\to v$ $\nu $-almost everywhere, and dominated convergence, with the constant bound $L$ and the finite measure $\nu $, gives $\int r_{\ell _ i}\, \mathrm d\nu \to \int v\, \mathrm d\nu $. 
+    <p>
+      We now show that $\int v_ j\, \mathrm d\nu \to \int v\, \mathrm d\nu $. Otherwise there are $c&gt;0$ and a subsequence $(v_{j_ k})$ such that either $\int v_{j_ k}\, \mathrm d\nu \ge \int v\, \mathrm d\nu +c$ for all $k$, or $\int v_{j_ k}\, \mathrm d\nu \le \int v\, \mathrm d\nu -c$ for all $k$. The subsequence satisfies the hypotheses of the lemma, so the construction above, applied to it, provides convex combinations of its terms whose integrals converge to $\int v\, \mathrm d\nu $. This is impossible, since every convex combination of the $v_{j_ k}$ satisfies the same inequality as the $v_{j_ k}$ themselves. 
+    <p>
+<em>Step 3. Conclusion.</em> By Step 1, $\varlimsup _ jv_ j\le v$ everywhere, so $(v_ j-v)_+\to 0$ pointwise. These functions are bounded by $2L$, so $\int (v_ j-v)_+\, \mathrm d\nu \to 0$ by dominated convergence. Since 
+    
+<div class="equation">
+  \[  |v_ j-v|=2(v_ j-v)_+-(v_ j-v),  \]
+</div>
+<p>
+       Step 2 proves the assertion. 
+    <p>
+      Finally, suppose that $\nu \le (\mathrm{dd}^{\mathrm{c}}w)^ n$ with $w$ bounded and plurisubharmonic on $D$, and put $M=\sup _ Dw-\inf _ Dw$. If $M=0$, then $w$ is constant and $\nu =0$. Otherwise $(w-\inf _ Dw)/M$ is a competitor for $\operatorname {Cap}_ D$ (definition <a data-tag="AF32B1A0" href="../../tag/E9E7C75396D2/">9.3.2</a>), whose Monge–Ampère measure is $M^{-n}(\mathrm{dd}^{\mathrm{c}}w)^ n$. Hence $\nu (A)\leq M^ n\operatorname {Cap}_ D(A)$ for every Borel set $A\subset D$, and $\operatorname {Cap}_ D(A)\le \operatorname {Cap}_ D^*(A)$ because $\operatorname {Cap}_ D$ is increasing. If $E$ is as in the hypothesis, then $\nu (E\cap K)=0$ for every compact $K\subset D$, and exhausting $D$ by countably many compact sets gives $\nu (E)=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

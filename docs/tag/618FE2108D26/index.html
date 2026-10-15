@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Local potentials for closed (1,1)-currents · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>618FE2108D26</code></p><h1>Local potentials for closed (1,1)-currents</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 7.3 Local potentials for closed (1,1)-currents <span data-gerby-tag="C7F41591"></span></div>
+<p>
+Coordinate computations in this section take place on an open set $\Omega \subset \mathbb C^ n$ with $n\geq 1$, for instance a coordinate domain. By theorem <a data-tag="2BB3620D" href="../../tag/1C212E45A497/">7.2.5</a>, a positive $(1,1)$-current on $\Omega $ is real and has measure coefficients. We normalize them as 
+</p>
+<div class="equation">
+  \[  T=\frac{\mathrm{i}}{2\pi }\sum _{j,k}t_{j\bar k}\, \mathrm{d}z_ j\wedge \mathrm{d}\bar z_ k,  \]
+</div>
+<p>
+ so that $T=\mathrm{dd}^{\mathrm{c}}u$ means $t_{j\bar k}=u_{j\bar k}$, by (<a data-tag="FB0DE6B6" href="../../tag/EFB1A41694DE/">7.5</a>). 
+</p>
+<p>
+Positivity of $T$ is expressed by the following matrix criterion. The coefficient matrix $(t_{j\bar k})$ is Hermitian, that is, $t_{k\bar j}=\overline{t_{j\bar k}}$, because $T$ is real, and it is positive semidefinite in the distributional sense: $\sum _{j,k}t_{j\bar k}\xi _ j\bar\xi _ k$ is a positive measure for every $\xi \in \mathbb C^ n$. To see this, we may assume that $|\xi |=1$ and choose a unitary matrix $U$ whose first row is $\bar\xi $. In the coordinates $w=Uz$ the coefficient of $\mathrm dw_1\wedge \mathrm d\bar w_1$ in $T$ is $(\mathrm i/2\pi )\sum _{j,k}t_{j\bar k}\xi _ j\bar\xi _ k$, and evaluating $T$ on the strongly positive test forms $\chi \bigwedge _{j\geq 2}(\mathrm i\mathrm dw_ j\wedge \mathrm d\bar w_ j)$ with $\chi \geq 0$ gives a positive constant times $\langle \sum _{j,k}t_{j\bar k}\xi _ j\bar\xi _ k,\chi \rangle $, which is therefore nonnegative. Conversely, a real $(1,1)$-current whose coefficient matrix is positive semidefinite in this sense is positive. For smooth coefficients this is the $(1,1)$-case discussed after proposition <a data-tag="10A00ACF" href="../../tag/E58104E974B0/">7.2.1</a>. In general the mollified currents $T_\varepsilon $ have pointwise positive semidefinite coefficient matrices, because mollifications of positive measures are nonnegative (proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>); hence they are positive, and so is their weak limit $T$. 
+</p>
+<p>
+Taking for $\xi $ the coordinate vectors, we see that every diagonal coefficient $t_{j\bar j}$, and hence the trace $\mu =\sum _ jt_{j\bar j}$, is a positive measure; expanding $\beta ^{n-1}$ shows that the trace measure of $T$ is $T\wedge \beta ^{n-1}=((n-1)!/\pi )\, \mu $. Since $\partial T$ and $\bar\partial T$ are computed by differentiating the coefficients, $T$ is closed if and only if 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-3814550B"><span data-gerby-tag="3814550B"></span>
+<span class="equation-label"><a data-tag="3814550B" href="../../tag/E64CA5AFE6C4/">7.9</a></span>
+<div>\begin{equation} \label{eq:closed-hessian-coefficients} \partial _{z_ l}t_{j\bar k}=\partial _{z_ j}t_{l\bar k},\qquad \partial _{\bar z_ l}t_{j\bar k}=\partial _{\bar z_ k}t_{j\bar l} \qquad \text{for all }j,k,l. \end{equation}</div>
+</div>
+
+The construction of local potentials uses the following smooth local exactness results, which we prove by explicit integral formulas. <article class="env-lemma" id="foundations-of-pluripotential-theory-622D1218">
+<p><a class="environment-identifier" href="../../tag/7815541A95AD/">Lemma <span data-tag="622D1218">7.3.1</span>.</a><span data-gerby-tag="622D1218"></span> Let $\Delta \subset \mathbb C^ n$, $n\geq 1$, be a polydisc, and let $g$ be a smooth $(0,1)$-form on $\Delta $ with $\bar\partial g=0$. Then for every polydisc $\Delta '\Subset \Delta $ there is a smooth function $f$ on $\Delta '$ with $\bar\partial f=g$. Moreover, every smooth real closed $(1,1)$-form $R$ on an open subset of $\mathbb C^ n$ is locally of the form $\mathrm{dd}^{\mathrm{c}}v$: each point has a neighborhood on which $R=\mathrm{dd}^{\mathrm{c}}v$ for a smooth real function $v$. Finally, every smooth closed $k$-form $\gamma $ with $k\geq 1$, with real or complex coefficients, on a ball $B\subset \mathbb C^ n=\mathbb R^{2n}$ is exact on $B$: $\gamma =\mathrm d\alpha $ for a smooth $(k-1)$-form $\alpha $ on $B$, which is real if $\gamma $ is real. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We solve the $\bar\partial $-equation in one variable by a Cauchy integral, then on a polydisc one variable at a time, and combine it with the Poincaré lemma. 
+    <p>
+<em>Step 1: one variable.</em> The function $K(z)=1/(\pi z)$ on $\mathbb C$ is locally integrable, and $\partial _{\bar z}K=\delta _0$ in the sense of distributions. Indeed, for a test function $\varphi $, dominated convergence gives $\langle \partial _{\bar z}K,\varphi \rangle =-\pi ^{-1}\lim _{\varepsilon \to 0}\int _{|z|&gt;\varepsilon }(\partial _{\bar z}\varphi /z)\, \mathrm dV_2$. In polar coordinates $z=r\mathrm e^{\mathrm i\vartheta }$ we have $\partial _{\bar z}=\frac12\mathrm e^{\mathrm i\vartheta }(\partial _ r+\frac{\mathrm i}r\partial _\vartheta )$ and $\mathrm dV_2=r\, \mathrm dr\, \mathrm d\vartheta $. Hence, by Fubini's theorem, 
+    
+<div class="equation">
+  \[  \int _{|z|&gt;\varepsilon }\frac{\partial _{\bar z}\varphi }{z}\, \mathrm dV_2=\frac12\int _\varepsilon ^\infty \! \! \int _0^{2\pi }\Big(\partial _ r\varphi +\frac{\mathrm i}r\partial _\vartheta \varphi \Big)\, \mathrm d\vartheta \, \mathrm dr=-\frac12\int _0^{2\pi }\varphi (\varepsilon \mathrm e^{\mathrm i\vartheta })\, \mathrm d\vartheta ,  \]
+</div>
+<p>
+       because $\int _0^{2\pi }\partial _\vartheta \varphi \, \mathrm d\vartheta =0$ by periodicity and $\int _\varepsilon ^\infty \partial _ r\varphi \, \mathrm dr=-\varphi (\varepsilon \mathrm e^{\mathrm i\vartheta })$, $\varphi $ having compact support. As $\varepsilon \to 0$, the right-hand side tends to $-\pi \varphi (0)$, since $\varphi $ is continuous at $0$; so $\langle \partial _{\bar z}K,\varphi \rangle =\varphi (0)$. Consequently, for a smooth function $a$ with compact support in $\mathbb C$, the function 
+    
+<div class="equation">
+  \[  f(z)=\frac1\pi \int _{\mathbb C}\frac{a(\zeta )}{z-\zeta }\, \mathrm dV_2(\zeta )=\frac1\pi \int _{\mathbb C}\frac{a(z-w)}{w}\, \mathrm dV_2(w)  \]
+</div>
+<p>
+       is smooth, since in the second expression all derivatives may be taken under the integral sign by dominated convergence, and $\partial _{\bar z}f(z)=\int K(w)(\partial _{\bar z}a)(z-w)\, \mathrm dV_2(w)=\langle \partial _{\bar w}K,a(z-\cdot )\rangle =a(z)$, because $\partial _{\bar w}[a(z-w)]=-(\partial _{\bar z}a)(z-w)$. More generally, let $a(\zeta ,s)$ be smooth on $\mathbb C\times S$, where $S$ is an open subset of some $\mathbb R^ N$, and suppose that $a$ vanishes for $\zeta $ outside a fixed compact set. Then $f(z,s)=\pi ^{-1}\int a(z-w,s)w^{-1}\, \mathrm dV_2(w)$ is smooth on $\mathbb C\times S$, and it is holomorphic in those complex parameters in which $a$ is holomorphic, again by differentiation under the integral sign: for $(z,s)$ in a compact set, the integrand vanishes for $w$ outside a fixed bounded set, and its derivatives are bounded by constants times the integrable function $|w|^{-1}$. 
+    <p>
+<em>Step 2: the $\bar\partial $-equation on a polydisc.</em> Write $\Delta =\Delta _1\times \cdots \times \Delta _ n$ and $\Delta '=\Delta '_1\times \cdots \times \Delta '_ n$, and write $g=\sum _ ja_ j\, \mathrm d\bar z_ j$. For each $j$ choose a smooth function $\chi _ j$ with compact support in $\Delta _ j$ that equals one on an open neighborhood $D_ j$ of $\overline{\Delta '_ j}$ (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>), and put $P_ k=D_1\times \cdots \times D_ k\times \Delta _{k+1}\times \cdots \times \Delta _ n$. We construct smooth functions $f_1,\ldots ,f_ n$ such that, for $k=0,\ldots ,n$, the $\bar\partial $-closed form $g^{(k)}=g-\bar\partial (f_1+\cdots +f_ k)=\sum _ ja^{(k)}_ j\mathrm d\bar z_ j$ satisfies $a^{(k)}_ j=0$ on $P_ k$ for $j\leq k$. For $k=0$ there is nothing to prove. Let $k\geq 1$. Since $g^{(k-1)}$ is $\bar\partial $-closed, $\partial _{\bar z_ i}a^{(k-1)}_ j=\partial _{\bar z_ j}a^{(k-1)}_ i=0$ on $P_{k-1}$ for $i&lt;k$; thus the coefficients of $g^{(k-1)}$ are holomorphic in $z_1,\ldots ,z_{k-1}$ there. Define 
+    
+<div class="equation">
+  \[  f_ k(z)=\frac1\pi \int _{\mathbb C}\frac{\chi _ k(\zeta )\, a^{(k-1)}_ k(z_1,\ldots ,z_{k-1},\zeta ,z_{k+1},\ldots ,z_ n)}{z_ k-\zeta }\, \mathrm dV_2(\zeta ).  \]
+</div>
+<p>
+       By Step 1, applied with the parameters $z_ i$, $i\neq k$, the function $f_ k$ is smooth on $\Delta $ and holomorphic in $z_1,\ldots ,z_{k-1}$ on $P_{k-1}$, and $\partial _{\bar z_ k}f_ k=\chi _ ka^{(k-1)}_ k=a^{(k-1)}_ k$ on $P_ k$. Hence $g^{(k)}=g^{(k-1)}-\bar\partial f_ k$ has the required property. For $k=n$ we obtain $g=\bar\partial (f_1+\cdots +f_ n)$ on $P_ n\supset \Delta '$. 
+    <p>
+<em>Step 3: the Poincaré lemma and real closed $(1,1)$-forms.</em> In this step we write points of $\mathbb C^ n=\mathbb R^{2n}$ as $x=(x_1,\ldots ,x_{2n})$, and we may assume that $R$ is defined on a ball $B$ centered at $0$. For a smooth $k$-form $\gamma $ on $B$, $k\geq 1$, define the $(k-1)$-form $H\gamma $ by 
+    
+<div class="equation">
+  \[  (H\gamma )_ x(v_1,\ldots ,v_{k-1}) =\int _0^1t^{k-1}\gamma _{tx}(x,v_1,\ldots ,v_{k-1})\, \mathrm{d}t,  \]
+</div>
+<p>
+       where $x$ is regarded as a tangent vector at $tx\in B$; the form $H\gamma $ is smooth, by differentiation under the integral sign. We claim that $\mathrm{d}H\gamma +H\mathrm{d}\gamma =\gamma $. Since both sides are linear in $\gamma $, it suffices to verify this for $\gamma =c\, \mathrm dx_ I$ with $|I|=k$. Let $\iota _ x$ denote contraction with $x$, and write $\partial _ l=\partial /\partial x_ l$. Then $H\gamma =F\, \iota _ x\mathrm dx_ I$ with $F(x)=\int _0^1t^{k-1}c(tx)\, \mathrm dt$, and $H\mathrm d\gamma =\sum _ l\partial _ lF\, \iota _ x(\mathrm dx_ l\wedge \mathrm dx_ I)$, because $\partial _ lF(x)=\int _0^1t^ k(\partial _ lc)(tx)\, \mathrm dt$. Using $\mathrm d(\iota _ x\mathrm dx_ I)=k\, \mathrm dx_ I$ and $\iota _ x(\mathrm dx_ l\wedge \mathrm dx_ I)=x_ l\, \mathrm dx_ I-\mathrm dx_ l\wedge \iota _ x\mathrm dx_ I$, we find 
+    
+<div class="equation">
+  \[  \mathrm dH\gamma +H\mathrm d\gamma =\Big(kF+\sum _ lx_ l\partial _ lF\Big)\mathrm dx_ I=\int _0^1\frac{\mathrm d}{\mathrm dt}\big (t^ kc(tx)\big )\, \mathrm dt\, \mathrm dx_ I=\gamma ,  \]
+</div>
+<p>
+       where we used that $t^ kc(tx)$ vanishes at $t=0$, since $k\geq 1$. In particular, a closed $k$-form $\gamma $ on $B$ satisfies $\gamma =\mathrm d(H\gamma )$, and $H\gamma $ is real if $\gamma $ is real; after a translation this proves the last assertion of the lemma for every ball. Applied to the closed real $2$-form $R$, this gives $R=\mathrm d\alpha $ with the real $1$-form $\alpha =HR$. Since $\alpha $ is real, $\alpha ^{1,0}=\overline{\alpha ^{0,1}}$. The $(0,2)$-component of $\mathrm d\alpha =R$ is $\bar\partial \alpha ^{0,1}=0$, so by Step 2, applied to a polydisc in $B$ centered at $0$, there is a smooth function $f$ with $\alpha ^{0,1}=\bar\partial f$ on a smaller polydisc; then $\alpha ^{1,0}=\partial \bar f$. Hence 
+    
+<div class="equation">
+  \[  R=\mathrm d\alpha =\bar\partial \partial \bar f+\partial \bar\partial f=\partial \bar\partial (f-\bar f)=2\mathrm{i}\partial \bar\partial \operatorname{Im}f =\mathrm{dd}^{\mathrm{c}}(4\pi \operatorname{Im}f),  \]
+</div>
+<p>
+       and $v=4\pi \operatorname{Im}f$ has the required properties. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-AB54067D">
+<p><a class="environment-identifier" href="../../tag/2408CCC1B5A0/">Theorem <span data-tag="AB54067D">7.3.2</span>.</a><span data-gerby-tag="AB54067D"></span> Let $T$ be a closed positive $(1,1)$-current on a complex manifold of positive dimension. Every point has a coordinate neighborhood $U$ on which $T=\mathrm{dd}^{\mathrm{c}}u$ for a real function $u\in L^1_{\mathrm{loc}}(U)$. Since $\Delta u=4\sum _ ju_{j\bar j}\geq 0$ by the matrix criterion, the class of $u$ has a canonical subharmonic representative in the coordinates of $U$ (theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>), which we call a canonical local potential of $T$. Two canonical local potentials $u$ and $\widetilde u$ of $T$ on the same coordinate neighborhood differ by a smooth pluriharmonic function $h$, that is, a real smooth function with $\mathrm{dd}^{\mathrm{c}}h=0$: we have $\widetilde u=u+h$ at every point. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a point and a coordinate chart around it, identified with an open set $\Omega \subset \mathbb C^ n$, and write $T$ as above with trace $\mu =\sum _ jt_{j\bar j}$, a positive Radon measure on $\Omega $. Choose a test function $\chi $ on $\Omega $ with $0\leq \chi \leq 1$ that equals one on a neighborhood $W$ of the point (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>), and let $E_{2n}$ be the fundamental solution of proposition <a data-tag="571B3697" href="../../tag/F8A69601BB8C/">2.2.1</a>. By proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a>, the function $u_0=4E_{2n}*(\chi \mu )$ is locally integrable and subharmonic, and $\Delta u_0=4\chi \mu $; in particular $\Delta u_0=4\mu $ on $W$. The current $R=T-\mathrm{dd}^{\mathrm{c}}u_0$ on $W$ is real and closed, and its coefficients $r_{j\bar k}=t_{j\bar k}-(u_0)_{j\bar k}$ have trace $\sum _ lr_{l\bar l}=\mu -\Delta u_0/4=0$, by (<a data-tag="FB0DE6B6" href="../../tag/EFB1A41694DE/">7.5</a>). Using both relations (<a data-tag="3814550B" href="../../tag/E64CA5AFE6C4/">7.9</a>) for $R$, we find 
+    
+<div class="equation">
+  \[  \tfrac 14\Delta r_{j\bar k} =\sum _ l\partial _{z_ l}\partial _{\bar z_ l}r_{j\bar k} =\sum _ l\partial _{\bar z_ k}\partial _{z_ l}r_{j\bar l} =\partial _{z_ j}\partial _{\bar z_ k}\sum _ l r_{l\bar l}=0.  \]
+</div>
+<p>
+       By Weyl's lemma (theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a>) every coefficient $r_{j\bar k}$ is smooth, so $R$ is a smooth real closed $(1,1)$-form on $W$. By lemma <a data-tag="622D1218" href="../../tag/7815541A95AD/">7.3.1</a>, $R=\mathrm{dd}^{\mathrm{c}}v$ on a coordinate neighborhood $U\subset W$ of the point, with $v$ smooth and real. Then $u=u_0+v$ satisfies $\mathrm{dd}^{\mathrm{c}}u=T$ on $U$. Moreover $\Delta v=4\sum _ lr_{l\bar l}=0$, so $v$ is harmonic. Since the sum of a subharmonic function and a real harmonic function is subharmonic (see the discussion following theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>), $u$ is a locally integrable subharmonic function. By the uniqueness in theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>, it is the canonical subharmonic representative of its class. 
+    <p>
+      Now let $u$ and $\widetilde u$ be canonical local potentials of $T$ on the same coordinate neighborhood $U$. Their classes in $L^1_{\mathrm{loc}}(U)$ differ by a real distribution with vanishing complex Hessian, hence with vanishing Laplacian. By Weyl's lemma, this difference is a smooth real harmonic function $h$, and $\mathrm{dd}^{\mathrm{c}}h=0$. Hence, as above, $u+h$ is a locally integrable subharmonic function, and it agrees almost everywhere with $\widetilde u$. By the uniqueness in theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>, $\widetilde u=u+h$ at every point of $U$, including the points where $u=-\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+A smooth real function $h$ is pluriharmonic if and only if it is locally the real part of a holomorphic function. If $h=\operatorname{Re}g$ with $g$ holomorphic, then $\bar\partial g=0$ and $\partial \bar g=\overline{\bar\partial g}=0$, so $\partial \bar\partial h=\frac12(\partial \bar\partial g-\bar\partial \partial \bar g)=0$. Conversely, suppose that $\mathrm{dd}^{\mathrm{c}}h=0$ on a ball $B$, which after a translation is centered at $0$. The $(1,0)$-form $\partial h=\sum _ jh_{z_ j}\mathrm dz_ j$ has holomorphic coefficients, since $\partial _{\bar z_ k}h_{z_ j}=h_{j\bar k}=0$, and it is closed, since $\partial _{z_ k}h_{z_ j}$ is symmetric in $j$ and $k$. The function 
+</p>
+<div class="equation">
+  \[  g(z)=2\int _0^1\sum _ j z_ jh_{z_ j}(tz)\, \mathrm{d}t  \]
+</div>
+<p>
+ is holomorphic on $B$, by differentiation under the integral sign. Since the functions $h_{z_ k}$ are holomorphic, the chain rule and the symmetry give 
+</p>
+<div class="equation">
+  \begin{align*}  \partial _{z_ k}g(z)&amp; =2\int _0^1\Big(h_{z_ k}(tz)+t\sum _ jz_ j(\partial _{z_ j}h_{z_ k})(tz)\Big)\mathrm dt\\ &amp; =2\int _0^1\frac{\mathrm d}{\mathrm dt}\big (th_{z_ k}(tz)\big )\, \mathrm dt=2h_{z_ k}(z). \end{align*}
+</div>
+<p>
+ Hence $\partial (\operatorname{Re}g-h)=\frac12\partial g-\partial h=0$. Since $\operatorname{Re}g-h$ is real, also $\bar\partial (\operatorname{Re}g-h)=0$. Thus its gradient vanishes, so $\operatorname{Re}g-h$ is constant on the ball $B$ (corollary <a data-tag="EF4A6184" href="../../tag/DF54B49EC7D4/">1.4.4</a>); subtracting this constant from $g$ gives $h=\operatorname{Re}g$ on $B$. In particular, if $f$ is holomorphic and nowhere zero, then $\log |f|^2$ is pluriharmonic: near each point $z_0$, a branch of the logarithm on a disc around $f(z_0)$ not containing $0$ gives a holomorphic function $L$ with $\mathrm e^ L=f$, and $\log |f|^2=2\operatorname{Re}L$. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-C3D2611A">
+<p><a class="environment-identifier" href="../../tag/AA6533F0128A/">Proposition <span data-tag="C3D2611A">7.3.3</span>.</a><span data-gerby-tag="C3D2611A"></span> Let $\Omega \subset \mathbb {C}^ n$, $n\geq 1$, be open, and let $u$ be the canonical subharmonic representative of a real function in $L^1_{\mathrm{loc}}(\Omega )$ with $\mathrm{dd}^{\mathrm{c}}u\ge 0$. Let $D\subset \mathbb {C}^ m$, $m\ge 1$, be open and let $F\colon D\to \Omega $ be holomorphic. Then on each connected component of $D$ the composition $u\circ F$ is either identically $-\infty $, or locally integrable and subharmonic with $\mathrm{dd}^{\mathrm{c}}(u\circ F)\geq 0$. In particular, the restriction of $u$ to each connected component of the intersection of $\Omega $ with an affine complex line has this alternative. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first work near a point. Fix $w_0\in D$, a ball $B\Subset \Omega $ centered at $F(w_0)$, and a connected open neighborhood $W$ of $w_0$ with $F(W)\subset B$. The mollifications $u_\varepsilon =u*\rho _\varepsilon $, with the radial mollifier $\rho _\varepsilon $ of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>, are defined on $B$ for small $\varepsilon $, and by (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>) they decrease pointwise to $u$ as $\varepsilon \downarrow 0$. Their complex Hessians are positive semidefinite at every point: for $\xi \in \mathbb C^ n$, the function $\sum _{j,k}(u_\varepsilon )_{j\bar k}\xi _ j\bar\xi _ k$ is the mollification of the positive measure $\sum _{j,k}u_{j\bar k}\xi _ j\bar\xi _ k$ (matrix criterion), hence nonnegative by proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>. Since $F$ is holomorphic, the chain rule gives 
+    
+<div class="equation">
+  \[  (u_\varepsilon \circ F)_{a\bar b} =\sum _{j,k}(u_\varepsilon )_{j\bar k}(F)\,  \frac{\partial F_ j}{\partial w_ a}\,  \overline{\frac{\partial F_ k}{\partial w_ b}},  \]
+</div>
+<p>
+       so the complex Hessian of $u_\varepsilon \circ F$ is positive semidefinite, and in particular its Laplacian is nonnegative. A smooth function with nonnegative Laplacian is subharmonic, because by proposition <a data-tag="51885F96" href="../../tag/620D5E4DD6EC/">2.1.1</a> its spherical means increase with the radius and tend to its value at the center. Thus, along a sequence $\varepsilon _ k\downarrow 0$, the smooth subharmonic functions $u_{\varepsilon _ k}\circ F$ decrease to $u\circ F$ on $W$. By theorem <a data-tag="1B5BFA16" href="../../tag/62E4A7EF2B4F/">3.1.6</a>, $u\circ F$ is subharmonic on $W$, and it is either identically $-\infty $ there or locally integrable, in which case $u_{\varepsilon _ k}\circ F\to u\circ F$ in $L^1_{\mathrm{loc}}(W)$. In the second case the currents $\mathrm{dd}^{\mathrm{c}}(u_{\varepsilon _ k}\circ F)$, which are positive by the matrix criterion, converge weakly to $\mathrm{dd}^{\mathrm{c}}(u\circ F)$, and positivity passes to the limit; so $\mathrm{dd}^{\mathrm{c}}(u\circ F)\geq 0$ on $W$. 
+    <p>
+      It remains to pass from these neighborhoods to the connected components of $D$. Let $D_0$ be a component and let $A$ be the set of points of $D_0$ having a neighborhood on which $u\circ F\equiv -\infty $. The set $A$ is open. It is also closed in $D_0$: if $w_0\in D_0$ lies in the closure of $A$, the connected neighborhood $W$ of $w_0$ constructed above meets $A$, so $u\circ F=-\infty $ on a nonempty open subset of $W$; since a locally integrable function is finite almost everywhere, the alternative on $W$ forces $u\circ F\equiv -\infty $ on $W$, and $w_0\in A$. Hence either $A=D_0$, or $A=\varnothing $; in the latter case $u\circ F$ is locally integrable and subharmonic with positive complex Hessian near every point of $D_0$, hence on $D_0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+Applied to holomorphic changes of coordinates, proposition <a data-tag="C3D2611A" href="../../tag/AA6533F0128A/">7.3.3</a> shows that the canonical subharmonic representative of a class with positive complex Hessian does not depend on the chart. Here we use that the current $\mathrm{dd}^{\mathrm{c}}u$ of a locally integrable function $u$, given by $(\mathrm{dd}^{\mathrm{c}}u)(\varphi )=\int u\, \mathrm{dd}^{\mathrm{c}}\varphi $, is defined without reference to coordinates, and that in every chart its coefficients are $(\mathrm i/2\pi )u_{j\bar k}$, as computed in section <a data-tag="28C8F083" href="../../tag/ACB622806098/">7.2</a>. Now let $F$ be a biholomorphic map between open subsets of $\mathbb C^ n$. Since $u$ is finite almost everywhere and biholomorphic maps preserve Lebesgue null sets, $u\circ F$ is not identically $-\infty $ on any component; hence it is locally integrable and subharmonic, and it represents the composition of the class of $u$ with $F$. By the uniqueness in theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>, it is the canonical representative in the new coordinates. In particular, canonical local potentials of a closed positive $(1,1)$-current are well defined on open subsets of the manifold, and by theorem <a data-tag="AB54067D" href="../../tag/2408CCC1B5A0/">7.3.2</a> any two of them differ by a smooth pluriharmonic function on the intersection of their domains. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The adjoint measure of the linearization · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hermitian-torsion/">Chapter 10 · Hermitian geometry, torsion, and Gauduchon duality</a> · Tag <code>C01896004229</code></p><h1>The adjoint measure of the linearization</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 4.8 The adjoint measure of the linearization <span data-gerby-tag="7D23394A"></span></div>
+<p>
+The derivative of the logarithmic Monge–Ampère operator $u\mapsto \log (\omega _ u^ n/\mathrm dV)$ annihilates the constants, so its linearized equation can be solved only under a compatibility condition. The Gauduchon multiplier of theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a> identifies this condition. Fix $u\in \mathcal H_\omega $ and write $\eta =\omega _ u$. For a smooth real direction $v$, logarithmic differentiation gives the linearized operator 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-82DEDD31"><span data-gerby-tag="82DEDD31"></span>
+<span class="equation-label"><a data-tag="82DEDD31" href="../../tag/BEA90D7B5428/">4.15</a></span>
+<div>\begin{equation} \label{eq:linearized-ma} L_ u v=n\, \frac{\mathrm{dd}^{\mathrm{c}}v\wedge \eta ^{n-1}}{\eta ^ n}. \end{equation}</div>
+</div>
+<p>
+ Choose the Gauduchon multiplier $\rho _ u$ of $\eta $ given by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>, normalized by 
+</p>
+<div class="equation">
+  \[  \int _ X\rho _ u\eta ^ n=1, \qquad \text{and put}\qquad \mathrm{d}\mu _ u:=\rho _ u\eta ^ n.  \]
+</div>
+<p>
+ The <em>adjoint measure</em> $\mu _ u$ is a smooth positive probability measure. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-C9919263">
+<p><a class="environment-identifier" href="../../tag/0B0003A3A873/">Proposition <span data-tag="C9919263">4.8.1</span>.</a><span data-gerby-tag="C9919263"></span> For every smooth real $v$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-64A39B45"><span data-gerby-tag="64A39B45"></span>
+<span class="equation-label"><a data-tag="64A39B45" href="../../tag/9140CF590948/">4.16</a></span>
+<div>\begin{equation} \label{eq:adjoint-identity} \int _ X L_ uv\, \mathrm{d}\mu _ u=0. \end{equation}</div>
+</div>
+<p> Moreover, for smooth real $h$, the equation $L_ uv=h$ has a smooth solution if and only if $\int _ Xh\, \mathrm{d}\mu _ u=0$. When it exists, the solution is unique modulo constants. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The integral in (<a data-tag="64A39B45" href="../../tag/9140CF590948/">4.16</a>) is 
+    
+<div class="equation">
+  \[  n\int _ X\mathrm{dd}^{\mathrm{c}}v\wedge \rho _ u\eta ^{n-1} =n\int _ Xv\, \mathrm{dd}^{\mathrm{c}}(\rho _ u\eta ^{n-1})=0.  \]
+</div>
+<p>
+       This proves that the compatibility condition is necessary. 
+    <p>
+      By the Fredholm argument in the proof of theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>, the range of $L_ u:C^{k+2,\alpha }(X)\to C^{k,\alpha }(X)$ has codimension one for every integer $k\geq 0$ and $0&lt;\alpha &lt;1$. The nonzero functional $h\mapsto \int _ Xh\, \mathrm{d}\mu _ u$ annihilates that range, so its kernel is the range. Elliptic regularity gives a smooth solution, and since the kernel of $L_ u$ consists of the constants, the solution is unique modulo constants. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+ By its defining equation and the uniqueness in theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>, the multiplier $\rho _ u$ is constant precisely when $\eta $ is Gauduchon. Thus 
+</p>
+<div class="equation">
+  \[  \mu _ u=\frac{\eta ^ n}{\int _ X\eta ^ n} \quad \text{if }\mathrm{dd}^{\mathrm{c}}(\eta ^{n-1})=0.  \]
+</div>
+<p>
+ On a surface, $\mathrm{dd}^{\mathrm{c}}\omega _ u=\mathrm{dd}^{\mathrm{c}}\omega $, so every positive potential perturbation of a Gauduchon form is still Gauduchon. In higher dimension this persistence requires more than the Gauduchon condition at $u=0$. Write $M=\int _ X\omega ^ n$. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-B9B9F692">
+<p><a class="environment-identifier" href="../../tag/A914D4D9C6CB/">Proposition <span data-tag="B9B9F692">4.8.2</span>.</a><span data-gerby-tag="B9B9F692"></span> Every form $\omega _ u$ with $u\in \mathcal H_\omega $ is Gauduchon if and only if </p>
+<div class="equation">
+  \[  \int _ X\omega _ u^ n=M \quad \text{for every }u\in \mathcal H_\omega .  \]
+</div>
+<p> In that case the normalized multiplier is $\rho _ u=M^{-1}$ and $\mu _ u=M^{-1}\omega _ u^ n$ for every $u\in \mathcal H_\omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If all the forms $\omega _ u$ are Gauduchon, the mass derivative (<a data-tag="658A588E" href="../../tag/0B024E0A2A47/">2.2</a>) vanishes at every point of $\mathcal H_\omega $ and in every direction. Since $\mathcal H_\omega $ is convex, integration along the segment from $0$ to $u$ gives the mass identity. Conversely, proposition <a data-tag="940AB63B" href="../../tag/5C29873687ED/">2.2.3</a> shows that constant mass forces $\mathrm{dd}^{\mathrm{c}}(\omega _ u^{n-1})=0$ for every $u\in \mathcal H_\omega $. In that case the normalized multiplier is the constant $M^{-1}$, by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+By theorem <a data-tag="5CD99CBA" href="../../tag/FB90FC741F25/">2.2.2</a>, this persistence is equivalent to $\mathrm{dd}^{\mathrm{c}}(\omega ^ j)=0$ for all integers $1\leq j\leq n-1$. The following example distinguishes it from the single Gauduchon identity in dimension three. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-324594DA">
+<p><a class="environment-identifier" href="../../tag/28F39F2B7C2C/">Example <span data-tag="324594DA">4.8.3</span>.</a><span data-gerby-tag="324594DA"></span> Let $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$ and $X=E^3$. For $1\leq j\leq 3$, write $z_ j=x_ j+\mathrm i y_ j$ for the coordinates on the covering space, and let $\eta _ j$ be the form on $X$ induced by $(\mathrm i/2)\mathrm dz_ j\wedge \mathrm d\bar z_ j$. The periodic functions </p>
+<div class="equation">
+  \[  b=\exp (\cos (2\pi x_1)),\qquad c=b^{-1}  \]
+</div>
+<p> define a Hermitian form </p>
+<div class="equation">
+  \[  \omega =\eta _1+b\eta _2+c\eta _3.  \]
+</div>
+<p> Since $bc=1$, </p>
+<div class="equation">
+  \[  \omega ^2=2b\eta _1\wedge \eta _2 +2c\eta _1\wedge \eta _3+2\eta _2\wedge \eta _3.  \]
+</div>
+<p> The functions $b$ and $c$ depend only on $x_1$, so $\mathrm{dd}^{\mathrm{c}}b$ and $\mathrm{dd}^{\mathrm{c}}c$ are multiples of $\eta _1$, and $\mathrm{dd}^{\mathrm{c}}(\omega ^2)=0$. Thus $\omega $ is Gauduchon. </p>
+<p>Put $v=\cos (2\pi x_2)$ and $h=-\pi \cos (2\pi x_2)$, so that $\mathrm{dd}^{\mathrm{c}}v=h\eta _2$. For a real $s$ with $0&lt;|s|&lt;1/(\pi \mathrm e)$, the form </p>
+<div class="equation">
+  \[  \omega _{sv}=\eta _1+(b+sh)\eta _2+c\eta _3  \]
+</div>
+<p> is positive, since $b\geq \mathrm e^{-1}$ and $|h|\leq \pi $. However, </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(\omega _{sv}^2) =2s\mathrm{dd}^{\mathrm{c}}\omega \wedge \mathrm{dd}^{\mathrm{c}}v =2sh\mathrm{dd}^{\mathrm{c}}c\wedge \eta _2\wedge \eta _3\ne 0.  \]
+</div>
+<p> Indeed, $\mathrm{dd}^{\mathrm{c}}c=(c''/(4\pi ))\eta _1$, where the prime denotes differentiation in $x_1$, and $c''(0)=4\pi ^2\mathrm e^{-1}$, while $h=-\pi $ at $x_2=0$. Thus a Gauduchon form can have arbitrarily small positive potential perturbations that are not Gauduchon. </p>
+</article>
+
+<p>
+When persistence holds, the one-form $v\mapsto \int _ Xv\, \mathrm d\mu _ u$ on $\mathcal H_\omega $ is the Monge–Ampère one-form of chapter <a data-tag="40704AA7" href="../../tag/1FC29EAFAA97/">3</a> divided by $M$. By theorem <a data-tag="788EACD6" href="../../tag/7D069B347672/">3.1.3</a>, it therefore has a primitive exactly when $\omega $ is closed. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Green energy and compact reduction · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/capacity-fine-topology/">Chapter 4 · Energy, capacity, and fine topology</a> · Tag <code>27012C9B879C</code></p><h1>Green energy and compact reduction</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 5.2 Green energy and compact reduction <span data-gerby-tag="8AF458FA"></span></div>
+<p>
+  This section prepares balayage: the Green energy is a positive definite quadratic form on signed measures of finite energy (proposition <a data-tag="0EBEB570" href="../../tag/2BC493B5F349/">5.2.2</a>), and a regularized reduction on a compact set is the Green potential of a measure carried by that set (theorem <a data-tag="5E4CCD8D" href="../../tag/97A5DA659CA1/">5.2.5</a>). 
+</p>
+<p>
+Fix an open ball $B\subset \mathbb R^ d$ and let $G_ B$ be its Green function (theorem <a data-tag="497FD574" href="../../tag/476CFD04AAC6/">2.5.2</a>); it is nonnegative and symmetric (lemma <a data-tag="9D12CA19" href="../../tag/D17D3298467B/">4.3.1</a>). The results of chapter <a data-tag="DB1B7F59" href="../../tag/765E6C8792CB/">4</a> about balls are stated for balls centered at the origin; we apply them to $B$ after a translation. In this section and the next, unless signed measures are explicitly mentioned, a <em>measure</em> means a finite positive Borel measure with compact support in $B$. Recall from section <a data-tag="131E2304" href="../../tag/2B6F9623A939/">4.3</a> that the Green potential of a measure $\mu $ is $G_ B\mu (x)=\int G_ B(x,y)\, \mathrm d\mu (y)$. We denote the mutual Green energy of measures $\mu $ and $\nu $ and the Green energy of $\mu $ (section <a data-tag="5A480021" href="../../tag/EB60B98F8F53/">4.5</a>) by 
+</p>
+<div class="equation">
+  \[  I_ B(\mu ,\nu )=\iint G_ B(x,y)\, \mathrm d\mu (x)\, \mathrm d\nu (y),\qquad I_ B(\mu )=I_ B(\mu ,\mu ).  \]
+</div>
+<p>
+ By lemma <a data-tag="9D12CA19" href="../../tag/D17D3298467B/">4.3.1</a>, $G_ B(x,y)-\Gamma _ d(x-y)$ is continuous on $B\times B$, so $G_ B$ is a continuous function on $B\times B$ with values in $[0,\infty ]$, and these integrals are defined in $[0,\infty ]$ by Tonelli's theorem. For finite signed measures we use the same formulas whenever $G_ B$ is integrable for the product of the total variations. 
+</p>
+<p>
+Let $\mu $ be supported in a compact set $K\subset B$. By the definition of $G_ B$ in theorem <a data-tag="497FD574" href="../../tag/476CFD04AAC6/">2.5.2</a> and by theorem <a data-tag="330E7C21" href="../../tag/08ED9D7CF1CF/">2.3.1</a>, the harmonic correction $G_ B(x,y)-\Gamma _ d(x-y)=-H_ B(\Gamma _ d(\cdot -x)|_{\partial B})(y)$ has absolute value at most $\max _{\zeta \in \partial B}|\Gamma _ d(\zeta -x)|$, which is bounded for $x\in K$ because $K$ has positive distance from $\partial B$. Hence, on $K\times K$, the Green function differs by a bounded function from the kernel $k$ of section <a data-tag="042247C9" href="../../tag/FF9D3CA4D463/">4.1</a> if $d\geq 3$, and from the kernel $k_ D$ with $D&gt;\operatorname {diam}K$ if $d=2$, because $k(x,y)=\Gamma _ d(x-y)$ and $k_ D(x,y)-\Gamma _2(x-y)$ is constant. Consequently $\mu $ has finite Green energy if and only if it has finite energy in the sense of section <a data-tag="042247C9" href="../../tag/FF9D3CA4D463/">4.1</a>. In particular, by theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a>, a measure $\mu $ of finite Green energy does not charge polar sets: every polar set is contained in a Borel set of $\mu $-measure zero. 
+</p>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-31AA4ADA">
+<p><a class="environment-identifier" href="../../tag/CD643C4C40FF/">Definition <span data-tag="31AA4ADA">5.2.1</span>.</a><span data-gerby-tag="31AA4ADA"></span> A property holds <em>quasi-everywhere</em> on a set $E\subset \mathbb R^ d$ if it holds at every point of $E$ outside a polar set. </p>
+</article> Thus a property that holds quasi-everywhere on a compact set $K\subset B$ holds $\mu $-almost everywhere for every measure $\mu $ on $K$ with finite Green energy. In <a data-tag="54E48964" href="../../tag/3B0FDB51BF2B/">2</a> the exceptional sets are pluripolar, and <em>quasi-everywhere</em> will mean outside a pluripolar set (definition <a data-tag="F36A6386" href="../../tag/5458CA6608A5/">10.1.1</a>). 
+
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-0EBEB570">
+<p><a class="environment-identifier" href="../../tag/2BC493B5F349/">Proposition <span data-tag="0EBEB570">5.2.2</span>.</a><span data-gerby-tag="0EBEB570"></span> Let $\mu $ and $\nu $ be measures with finite Green energy. Then the distributional gradients $\nabla G_ B\mu $ and $\nabla G_ B\nu $ belong to $L^2(B)$, the mutual energy $I_ B(\mu ,\nu )$ is finite, and </p>
+<div class="equation">
+  \[  I_ B(\mu ,\nu )=\int _ B\nabla G_ B\mu \mathbin {\cdot }\nabla G_ B\nu \, \mathrm d x.  \]
+</div>
+<p> The same identity holds for finite signed measures whose positive and negative parts have finite Green energy. On such signed measures, $I_ B$ is a positive definite quadratic form, that is, $I_ B(\sigma )\geq 0$ with equality only for $\sigma =0$, and it satisfies the Cauchy–Schwarz inequality $I_ B(\sigma ,\tau )^2\leq I_ B(\sigma )I_ B(\tau )$. Moreover, every measure $\mu $ with finite Green energy is the sum of its restrictions $\mu ^{(1)},\mu ^{(2)},\ldots $ to countably many pairwise disjoint compact sets, and for every $n$ the Green potential of $\mu ^{(1)}+\cdots +\mu ^{(n)}$ is finite, continuous and bounded on $B$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first prove the gradient identity for the partial sums of a decomposition of $\mu $ and $\nu $ into pieces with bounded Green potentials, to which proposition <a data-tag="18537AE7" href="../../tag/5E7FF77DE321/">4.5.1</a> applies, and then pass to the limit. Translating, we may assume that $B=B(0,R)$ for some $R&gt;0$, and we choose $r&lt;R$ such that the supports of $\mu $ and $\nu $ lie in $B(0,r)$. By lemma <a data-tag="9D12CA19" href="../../tag/D17D3298467B/">4.3.1</a>, the function $\kappa (x,y)=G_ B(x,y)-\Gamma _ d(x-y)$ extends to a continuous function on the compact set $\overline B\times \overline{B(0,r)}$; let $C$ be a bound for $|\kappa |$ there. Since $\Gamma _ d=-E_ d$, every finite positive measure $\lambda $ supported in $B(0,r)$ satisfies 
+    
+<div class="equation">
+  \[  G_ B\lambda (x)=-E_ d*\lambda (x)+\int \kappa (x,y)\, \mathrm d\lambda (y),\qquad x\in B,  \]
+</div>
+<p>
+       and the last integral is a continuous function of $x\in \overline B$ bounded by $C\lambda (B)$. 
+    <p>
+<em>Step 1: decomposition.</em> Since $\int G_ B\mu \, \mathrm d\mu =I_ B(\mu )&lt;\infty $, the Green potential $G_ B\mu $ is finite $\mu $-almost everywhere, and by the display so is $E_ d*\mu $. By part (2) of theorem <a data-tag="878C027A" href="../../tag/872A6887585B/">4.2.2</a>, $\mu $ is therefore the sum of its restrictions to countably many disjoint compact sets, each of which has a finite and continuous fundamental potential. Let $\mu _ n$ be the sum of the first $n$ of these restrictions. Since $E_ d*\mu _ n$ is finite and continuous, the display shows that $G_ B\mu _ n$ is finite, continuous and bounded on $B$; this proves the last assertion of the proposition. By part (2) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>, $-G_ B\mu _ n$ is a subharmonic function on $B$ with Riesz measure $\mu _ n$, which extends harmonically across $\partial B$ and vanishes on $\partial B$; in particular, it tends to zero at $\partial B$. Thus proposition <a data-tag="18537AE7" href="../../tag/5E7FF77DE321/">4.5.1</a> applies to the functions $-G_ B\mu _ n$, $n\geq 1$. Hence $\nabla G_ B\mu _ n\in L^2(B)$ and 
+    
+<div class="equation">
+  \[  \int _ B\nabla G_ B\mu _ n\mathbin {\cdot }\nabla G_ B\mu _ m\, \mathrm d x=I_ B(\mu _ n,\mu _ m).  \]
+</div>
+<p>
+<em>Step 2: the gradient of $G_ B\mu $.</em> For $m&gt;n$, expanding the square with the last display gives 
+    
+<div class="equation">
+  \[  \| \nabla G_ B\mu _ m-\nabla G_ B\mu _ n\| _{L^2(B)}^2=I_ B(\mu _ m-\mu _ n)\leq I_ B(\mu -\mu _ n),  \]
+</div>
+<p>
+       where the inequality holds because $0\leq \mu _ m-\mu _ n\leq \mu -\mu _ n$ and $G_ B\geq 0$. The measure $\mu -\mu _ n$ is the restriction of $\mu $ to a decreasing sequence of sets whose intersection is $\mu $-null. Since $G_ B$ is nonnegative and integrable for $\mu \otimes \mu $, dominated convergence gives $I_ B(\mu -\mu _ n)\to 0$. Thus $(\nabla G_ B\mu _ n)$ is a Cauchy sequence in $L^2(B)$; let $g$ be its limit. 
+    <p>
+      On the other hand, $G_ B\mu _ n\uparrow G_ B\mu $ pointwise by monotone convergence, and $G_ B\mu \in L^1(B)$. Indeed, for $y\in \operatorname{Supp}\mu $, the bound $|\kappa |\leq C$ and the local integrability of $\Gamma _ d$ (proposition <a data-tag="571B3697" href="../../tag/F8A69601BB8C/">2.2.1</a>) give 
+    
+<div class="equation">
+  \[  \int _ BG_ B(x,y)\, \mathrm d x\leq \int _ B\bigl (|\Gamma _ d(x-y)|+C\bigr )\, \mathrm d x\leq \int _{B(0,2R)}|\Gamma _ d(z)|\, \mathrm d z+C|B|&lt;\infty ,  \]
+</div>
+<p>
+       and integrating against $\mu $, by Tonelli's theorem, shows that $\int _ BG_ B\mu \, \mathrm d x$ is at most $\mu (B)$ times the right side. Hence $G_ B\mu _ n\to G_ B\mu $ in $L^1(B)$ by monotone convergence. For a smooth compactly supported vector field $\varphi $ on $B$ we obtain 
+    
+<div class="equation">
+  \[  \int _ Bg\mathbin {\cdot }\varphi \, \mathrm d x=\lim _ n\int _ B\nabla G_ B\mu _ n\mathbin {\cdot }\varphi \, \mathrm d x=-\lim _ n\int _ BG_ B\mu _ n\operatorname {div}\varphi \, \mathrm d x=-\int _ BG_ B\mu \operatorname {div}\varphi \, \mathrm d x,  \]
+</div>
+<p>
+       so $g=\nabla G_ B\mu $. Since $\| \nabla G_ B\mu _ n\| _2^2=I_ B(\mu _ n)\uparrow I_ B(\mu )$ by monotone convergence, we get $\| \nabla G_ B\mu \| _2^2=I_ B(\mu )$. 
+    <p>
+<em>Step 3: the mutual energy.</em> Construct the partial sums $\nu _ n$ of $\nu $ in the same way. By proposition <a data-tag="18537AE7" href="../../tag/5E7FF77DE321/">4.5.1</a> and the Cauchy–Schwarz inequality in $L^2(B)$, 
+    
+<div class="equation">
+  \[  I_ B(\mu _ n,\nu _ n)=\int _ B\nabla G_ B\mu _ n\mathbin {\cdot }\nabla G_ B\nu _ n\, \mathrm d x\leq I_ B(\mu _ n)^{1/2}I_ B(\nu _ n)^{1/2}\leq I_ B(\mu )^{1/2}I_ B(\nu )^{1/2}.  \]
+</div>
+<p>
+       As $n\to \infty $, the left side increases to $I_ B(\mu ,\nu )$ by monotone convergence, so the mutual energy is finite, while the integral converges to $\int _ B\nabla G_ B\mu \mathbin {\cdot }\nabla G_ B\nu \, \mathrm d x$ by convergence in $L^2(B)$. This proves the identity for positive measures. For signed measures, we expand both sides bilinearly in the positive and negative parts. 
+    <p>
+<em>Step 4: positive definiteness.</em> Let $\sigma $ be a signed measure as in the statement, and put $G_ B\sigma =G_ B\sigma ^+-G_ B\sigma ^-$, a function in $L^1(B)$ by Step 2. Then $I_ B(\sigma )=\| \nabla G_ B\sigma \| _2^2\geq 0$. Suppose that $I_ B(\sigma )=0$, so that $\nabla G_ B\sigma =0$ as a distribution on $B$. Since $B$ is connected, corollary <a data-tag="EF4A6184" href="../../tag/DF54B49EC7D4/">1.4.4</a> shows that the distribution defined by $G_ B\sigma $ is a constant. On the other hand, $-\Delta G_ B\sigma =\sigma $ in the sense of distributions, by part (2) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>. Hence $\sigma ^+$ and $\sigma ^-$, which are Radon measures by proposition <a data-tag="B0C4661C" href="../../tag/D0882F84DCFC/">1.1.2</a>, define the same distribution, so $\sigma ^+=\sigma ^-$ by part (4) of proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>, that is, $\sigma =0$. Finally, the Cauchy–Schwarz inequality for $I_ B$ follows from the gradient identity and the Cauchy–Schwarz inequality in $L^2(B)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Recall from section <a data-tag="131E2304" href="../../tag/2B6F9623A939/">4.3</a> the relative extremal function $u_ K$ of a compact set $K\subset B$, its Riesz measure $\lambda _ K=\Delta u_ K$, the relative capacity $C_ B(K)=\lambda _ K(K)$, and the outer capacity $C_ B^*$. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-F837B7D4">
+<p><a class="environment-identifier" href="../../tag/AF6AC1F168D7/">Proposition <span data-tag="F837B7D4">5.2.3</span>.</a><span data-gerby-tag="F837B7D4"></span> Let $K\subset B$ be compact. Then </p>
+<div class="equation">
+  \[  C_ B(K)=\left(\inf _{\substack {\tau \geq 0,\  \operatorname{Supp}\tau \subset K\\ \tau (K)=1}} I_ B(\tau )\right)^{-1},  \]
+</div>
+<p> with the conventions that the infimum of an empty family is $+\infty $ and that $1/(+\infty )=0$. If $C_ B(K)&gt;0$, then $\lambda _ K/C_ B(K)$ is the unique probability measure on $K$ minimizing $I_ B$. Moreover, if $D\subset B$ are open balls and $A\Subset D$, then $C_ B^*(A)\leq C_ D^*(A)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By part (3) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>, the function $w_ K=-u_ K$ is the Green potential $G_ B\lambda _ K$, and $0\leq w_ K\leq 1$ because $-1\leq u_ K\leq 0$. Since $u_ K$ is the upper semicontinuous regularization of the envelope $f_ K$, which equals $-1$ on $K$, part (2) of theorem <a data-tag="B7DF3499" href="../../tag/E54414B74C32/">4.4.4</a> shows that $w_ K=1$ quasi-everywhere on $K$. In particular $I_ B(\lambda _ K)=\int w_ K\, \mathrm d\lambda _ K\leq \lambda _ K(K)$, so $\lambda _ K$ has finite Green energy. As measures of finite Green energy do not charge polar sets, we obtain, with $m=C_ B(K)$, 
+    
+<div class="equation">
+  \[  I_ B(\lambda _ K)=\int _ Kw_ K\, \mathrm d\lambda _ K=m,\qquad I_ B(\lambda _ K,\tau )=\int _ Kw_ K\, \mathrm d\tau =1  \]
+</div>
+<p>
+       for every probability measure $\tau $ on $K$ with finite Green energy; in the second identity we used the symmetry of $G_ B$. 
+    <p>
+      Suppose that $m&gt;0$, and let $\tau $ be a probability measure on $K$. If $I_ B(\tau )&lt;\infty $, the Cauchy–Schwarz inequality of proposition <a data-tag="0EBEB570" href="../../tag/2BC493B5F349/">5.2.2</a> gives $1=I_ B(\lambda _ K,\tau )^2\leq mI_ B(\tau )$; thus $I_ B(\tau )\geq 1/m$ in all cases. Equality holds for $\tau =\lambda _ K/m$, whose energy is $m/m^2=1/m$. Hence the infimum equals $1/m$, which proves the formula. If $\tau _1\neq \tau _2$ were two minimizers, their midpoint would again be a probability measure on $K$, and by positive definiteness 
+    
+<div class="equation">
+  \[  I_ B\Bigl (\frac{\tau _1+\tau _2}{2}\Bigr )=\frac{I_ B(\tau _1)+I_ B(\tau _2)}{2}-\frac{I_ B(\tau _1-\tau _2)}{4}&lt;\frac1m,  \]
+</div>
+<p>
+       a contradiction. Suppose next that $m=0$. Then $K$ is polar by theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a>, so it carries no probability measure of finite energy, and the infimum is $+\infty $ (if $K=\varnothing $, the family is empty). 
+    <p>
+      For the last assertion, recall that balls are regular domains (theorem <a data-tag="3442F8BF" href="../../tag/C1B72E118338/">2.4.6</a>). The monotonicity of Green functions in the domain (theorem <a data-tag="497FD574" href="../../tag/476CFD04AAC6/">2.5.2</a>) gives $G_ D\leq G_ B$ on $D\times D$. Hence $I_ B(\tau )\geq I_ D(\tau )$ for every measure $\tau $ supported on a compact set $K\subset D$, and the variational formula, applied in $B$ and in $D$, gives $C_ B(K)\leq C_ D(K)$. Taking suprema over compact subsets, we obtain $C_ B(O)\leq C_ D(O)$ for every open $O\Subset D$. Every such $O$ containing $A$ is also allowed in the infimum defining $C_ B^*(A)$, so $C_ B^*(A)\leq C_ D^*(A)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+We now turn to reduction. Let $U$ be an open set, $s$ a nonnegative superharmonic function on $U$, and $A\subset U$ an arbitrary subset. The <em>reduction</em> of $s$ on $A$, also called the réduite, and the <em>regularized reduction</em> are 
+</p>
+<div class="equation">
+  \[  R_ s^ A=\inf \{ h:h\geq 0\text{ is superharmonic on }U,\  h\geq s\text{ on }A\} , \qquad \widehat R_ s^ A=(R_ s^ A)_*.  \]
+</div>
+<p>
+ Here $F_*=-(-F)^*$, with $(-F)^*$ the upper semicontinuous regularization of section <a data-tag="FCDD36ED" href="../../tag/F1C0C53624DF/">3.4</a>, is the lower semicontinuous regularization of a function $F$ that is locally bounded below; explicitly, $F_*(x)=\sup _{r&gt;0}\inf _{B(x,r)\cap U}F$. We call the functions $h$ in this infimum <em>admissible</em> for $R_ s^ A$; the inequality $h\geq s$ is required at every point of $A$. If $U=B$, $s=1$ and $A\Subset B$, the admissible functions are exactly the negatives of the functions admissible for $A$ in the sense of section <a data-tag="131E2304" href="../../tag/2B6F9623A939/">4.3</a>, so that $R_1^ A=-f_ A$ and $\widehat R_1^ A=-u_ A$. 
+</p>
+<p>
+Since $s$ itself is admissible, $0\leq R_ s^ A\leq s$, and $R_ s^ A=s$ on all of $A$. The negatives of the admissible functions form a family of subharmonic functions bounded above by zero, whose supremum is $-R_ s^ A$. Since $(-R_ s^ A)^*=-\widehat R_ s^ A$, theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.2</a> shows that $\widehat R_ s^ A$ is superharmonic, and part (2) of theorem <a data-tag="B7DF3499" href="../../tag/E54414B74C32/">4.4.4</a> shows that $R_ s^ A=\widehat R_ s^ A$ outside a polar set. Thus $\widehat R_ s^ A=s$ quasi-everywhere on $A$, though in general not everywhere on $A$: if $U$ is bounded, $s=1$ and $A\subset U$ is a nonempty polar set, then $\widehat R_ s^ A=0$ by proposition <a data-tag="3F5FA85C" href="../../tag/A13D01405A7F/">5.2.4</a> below. 
+</p>
+<p>
+The ball-average formula (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>) holds for every subharmonic function, integrable or not. Applied to $-w$, it shows that every superharmonic function $w$ on an open set satisfies 
+</p>
+<div class="equation">
+  \[  w(x)=\lim _{r\downarrow 0}\frac{1}{|B(x,r)|}\int _{B(x,r)}w(y)\, \mathrm d y  \]
+</div>
+<p>
+ at every point $x$ of that set. Consequently, two superharmonic functions satisfying an inequality almost everywhere satisfy it everywhere. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-3F5FA85C">
+<p><a class="environment-identifier" href="../../tag/A13D01405A7F/">Proposition <span data-tag="3F5FA85C">5.2.4</span>.</a><span data-gerby-tag="3F5FA85C"></span> Let $s$ and $t$ be nonnegative superharmonic functions on an open set $U$, let $A\subset A'\subset U$, and let $c\geq 0$. Then </p>
+<div class="equation">
+  \[  R_ s^ A\leq R_ s^{A'},\qquad R_{cs}^ A=cR_ s^ A,\qquad R_{s+t}^ A\leq R_ s^ A+R_ t^ A,  \]
+</div>
+<p> and $R_ s^ A\leq R_ t^ A$ if $s\leq t$. The same relations hold for the regularized reductions; in particular, </p>
+<div class="equation">
+  \[  \widehat R_{s+t}^ A\leq \widehat R_ s^ A+\widehat R_ t^ A.  \]
+</div>
+<p> If $U$ is bounded and $A$ is polar, then there is a locally integrable nonnegative superharmonic function $p$ on $U$ with $p=+\infty $ on $A$, and $\widehat R_ s^ A=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Enlarging $A$ or $s$ shrinks the class of admissible functions, which proves the two monotonicity assertions. For $c&gt;0$, multiplication by $c$ is a bijection between the admissible functions for $s$ and those for $cs$; for $c=0$, both sides vanish (with $0\cdot \infty =0$), since the zero function is admissible. If $h_1$ and $h_2$ are admissible for $s$ and $t$ respectively, then $h_1+h_2$ is admissible for $s+t$, so $R_{s+t}^ A\leq R_ s^ A+R_ t^ A$. Monotonicity and homogeneity are preserved by lower semicontinuous regularization. For subadditivity, recall that each reduction agrees with its regularization outside a polar set, hence almost everywhere. Therefore $\widehat R_{s+t}^ A\leq \widehat R_ s^ A+\widehat R_ t^ A$ almost everywhere. Both sides are superharmonic, so the inequality holds everywhere by the ball-average formula above. 
+    <p>
+      Now let $U$ be bounded and $A$ polar. Then $A$ has compact closure, so proposition <a data-tag="7F3FDDFF" href="../../tag/64A94A9EE9E3/">4.2.3</a> provides a finite positive measure $\nu $ of compact support with $E_ d*\nu =-\infty $ on $A$. The kernel $E_ d$ is bounded above on the bounded set of differences $x-y$ with $x\in U$ and $y\in \operatorname{Supp}\nu $, so adding a constant to $-E_ d*\nu $ gives a nonnegative superharmonic function $p$ on $U$ with $p=+\infty $ on $A$; by proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a>, $p$ is locally integrable. For every $\varepsilon &gt;0$, the function $\varepsilon p$ is admissible, even at points of $A$ where $s=+\infty $. Hence $R_ s^ A\leq \varepsilon p$ for every $\varepsilon &gt;0$, and so $R_ s^ A=0$ on the set $\{ p&lt;\infty \} $. This set has full Lebesgue measure, because $p$ is locally integrable, and is therefore dense in $U$. Consequently $\widehat R_ s^ A=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-5E4CCD8D">
+<p><a class="environment-identifier" href="../../tag/97A5DA659CA1/">Theorem <span data-tag="5E4CCD8D">5.2.5</span>.</a><span data-gerby-tag="5E4CCD8D"></span> Let $A\subset B$ be compact, and let $s$ be a nonnegative superharmonic function on $B$ which is bounded on $A$. Then $r=\widehat R_ s^ A$ is bounded, harmonic on $B\setminus A$, and tends to zero at $\partial B$. Moreover, there is a finite positive measure $\nu $ supported on $A$, with finite Green energy, such that </p>
+<div class="equation">
+  \[  r=G_ B\nu \quad \text{on }B,\qquad r=s\quad \text{quasi-everywhere on }A.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We show that $r$ is harmonic off $A$ by replacing admissible functions with their Poisson integrals on balls in $B\setminus A$ (Steps 1–3), and then identify $r$ with the Green potential of its Riesz measure (Step 4). 
+    <p>
+<em>Step 1: capped admissible functions.</em> Choose a closed ball $L\subset B$ whose interior contains $A$, and a constant $M\geq 0$ with $s\leq M$ on $A$. The relative extremal function $u_ L$ takes values in $[-1,0]$ and tends to zero at $\partial B$ by part (1) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>; it equals $-1$ on $\operatorname{Int}L$, because it is the upper semicontinuous regularization of the envelope $f_ L$, which equals $-1$ on $L$. Hence $h_0=-Mu_ L$ is a nonnegative superharmonic function on $B$, bounded by $M$, which majorizes $s$ on $A$ and tends to zero at $\partial B$. If $h$ is admissible, so is $\min \{ h,h_0\} $. Therefore $R_ s^ A$ is also the infimum of the admissible functions $h$ with $h\leq h_0$; we call these <em>capped</em>. In particular $0\leq r\leq R_ s^ A\leq h_0\leq M$, so $r$ is bounded and tends to zero at $\partial B$. 
+    <p>
+<em>Step 2: Poisson modification.</em> Let $D$ be an open ball with $\overline D\subset B\setminus A$, and let $h$ be a capped admissible function. Its restriction to $\partial D$ is bounded and lower semicontinuous, so by lemma <a data-tag="A2C10798" href="../../tag/36C9571A59E0/">3.1.2</a>, applied to $-h$, it is the increasing limit of continuous functions $g_ k$ on $\partial D$. By monotone convergence, the Poisson integrals $H_ Dg_ k$ of theorem <a data-tag="330E7C21" href="../../tag/08ED9D7CF1CF/">2.3.1</a> increase to 
+    
+<div class="equation">
+  \[  H(y)=\int _{\partial D}P_ D(y,\zeta )h(\zeta )\, \mathrm d S(\zeta ),\qquad y\in D.  \]
+</div>
+<p>
+       Since $0\leq h\leq M$ and the Poisson kernel has integral one, $0\leq H\leq M$, and $H$ is harmonic by part (2) of corollary <a data-tag="C3267DE5" href="../../tag/D0BED761B9E7/">2.3.3</a>. For $\zeta \in \partial D$, lower semicontinuity gives $\varliminf _{y\to \zeta }h(y)\geq h(\zeta )\geq g_ k(\zeta )$, so the comparison principle for the superharmonic function $h$ (theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>) gives $H_ Dg_ k\leq h$ on $D$; hence $H\leq h$ on $D$. On the other hand, $H\geq H_ Dg_ k$, and $H_ Dg_ k$ extends continuously to $\overline D$ with boundary values $g_ k$; letting $k\to \infty $, we get 
+    
+<div class="equation">
+  \[  \varliminf _{D\ni y\to \zeta }H(y)\geq h(\zeta ),\qquad \zeta \in \partial D.  \]
+</div>
+<p>
+       Define $h^ D=H$ on $D$ and $h^ D=h$ on $B\setminus D$. The last inequality and the lower semicontinuity of $h$ show that $h^ D$ is lower semicontinuous, and $0\leq h^ D\leq h$. 
+    <p>
+      We check that $h^ D$ is superharmonic, using the converse part of theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>. Let $E$ be a ball with $\overline E\subset B$, and let $q$ be harmonic on $E$ and continuous on $\overline E$ with $\varliminf _{E\ni y\to \zeta }h^ D(y)\geq q(\zeta )$ for $\zeta \in \partial E$. Since $h\geq h^ D$, the function $h$ satisfies the same boundary inequality, so $h\geq q$ on $E$. In particular $h^ D=h\geq q$ on $E\setminus D$. On the open set $E\cap D$ consider the harmonic function $H-q$. At boundary points of $E\cap D$ lying on $\partial E$, its lower limits are nonnegative by the hypothesis on $q$. At boundary points $\zeta \in E\cap \partial D$, they are at least $h(\zeta )-q(\zeta )\geq 0$ by the inequality displayed above. The minimum principle (proposition <a data-tag="CD09FBEF" href="../../tag/B304785CC98D/">2.1.3</a>) gives $H\geq q$ on $E\cap D$. Hence $h^ D\geq q$ on $E$, and $h^ D$ is superharmonic. Since $D\cap A=\varnothing $, the function $h^ D$ is again a capped admissible function. Finally, $h^ D$ depends monotonically on $h$, by the integral formula for $H$. 
+    <p>
+<em>Step 3: harmonicity off $A$.</em> By Choquet's lemma (lemma <a data-tag="B87643F0" href="../../tag/B37EED9280E3/">3.4.1</a>), applied to the negatives of the capped admissible functions, there is a sequence of capped admissible functions whose infimum has the same lower semicontinuous regularization $r$ as $R_ s^ A$. By theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.2</a>, applied to the negatives of this sequence, the infimum equals $r$ almost everywhere. Replacing the functions of the sequence by their successive minima, we obtain a decreasing sequence $(h_ j)$ of capped admissible functions whose limit equals $r$ almost everywhere. 
+    <p>
+      Now fix a ball $D$ as in Step 2. On $D$, the modified functions $h_ j^ D$ are harmonic, decrease, and lie between $0$ and $M$; by part (3) of corollary <a data-tag="C3267DE5" href="../../tag/D0BED761B9E7/">2.3.3</a>, they converge on $D$ to a harmonic function $\Phi $. Each $h_ j^ D$ is admissible, so $h_ j^ D\geq R_ s^ A\geq r$; moreover $h_ j^ D\leq h_ j$. Thus $r\leq \Phi \leq \lim _ jh_ j=r$ almost everywhere on $D$. The bounded superharmonic functions $r$ and $\Phi $ therefore agree almost everywhere, hence everywhere on $D$ by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>. Since such balls cover $B\setminus A$, the function $r$ is harmonic on $B\setminus A$. 
+    <p>
+<em>Step 4: Green representation.</em> The function $-r$ is bounded and subharmonic on $B$, so $\nu =-\Delta r$ is a positive measure by part (1) of theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>. As $r$ is harmonic on $B\setminus A$, the measure $\nu $ is supported on the compact set $A$ and is therefore finite. The function $-r$ is bounded, hence locally integrable, its Riesz measure $\nu $ has compact support in $B$, and it tends to zero at $\partial B$; so the converse in part (2) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a> gives $-r=-G_ B\nu $, that is, $r=G_ B\nu $ on $B$. The reduction $R_ s^ A$ equals $s$ on $A$, and $r=R_ s^ A$ outside a polar set, so $r=s$ quasi-everywhere on $A$. Finally $I_ B(\nu )=\int r\, \mathrm d\nu \leq M\nu (A)&lt;\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

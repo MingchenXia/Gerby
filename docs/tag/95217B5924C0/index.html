@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Two weight l2 division · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>95217B5924C0</code></p><h1>Two weight l2 division</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · Lemma 1.16.8 <span data-gerby-tag="69E2FE21"></span></div><article class="env-lemma" id="non-kahler-pluripotential-theory-69E2FE21">
+<p><a class="environment-identifier" href="../../tag/95217B5924C0/">Lemma <span data-tag="69E2FE21">1.16.8</span>.</a><span data-gerby-tag="69E2FE21"></span> Let $\psi ,\phi _1,\phi _2$ be plurisubharmonic functions on $\Omega $, and suppose that $S=\mathrm e^{\phi _1}+\mathrm e^{\phi _2}&lt;1$. If $f$ is holomorphic and </p>
+<div class="equation">
+  \[  J=\int _\Omega \frac{|f|^2\mathrm e^{-\psi }}{S^2}\, \mathrm{d}V&lt;+\infty ,  \]
+</div>
+<p> then there are holomorphic $F_1,F_2$ with $F_1+F_2=f$ and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-CF7D2B70"><span data-gerby-tag="CF7D2B70"></span>
+<span class="equation-label"><a data-tag="CF7D2B70" href="../../tag/363923246C67/">1.42</a></span>
+<div>\begin{equation} \label{eq:two-weight-l2-division} \int _\Omega \bigl (|F_1|^2\mathrm e^{-\phi _1} +|F_2|^2\mathrm e^{-\phi _2}\bigr ) \mathrm e^{-\psi }\, \mathrm{d}V\leq J. \end{equation}</div>
+</div>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: a twisted $\bar\partial $-estimate.</em> Suppose first that $\Omega $ is bounded, that the weights are smooth on a neighborhood of $\overline\Omega $ with $S&lt;1$ there, and that $\Phi =\log S$ is strictly plurisubharmonic. Set $\chi =\phi _1+\phi _2+\psi $ and $A=(\Phi _{j\bar k})$. For a $(0,1)$-form $b$, write $|b|_ A^2$ for its squared norm with respect to the dual of this positive Hermitian matrix. We claim that every $\bar\partial $-closed $(0,1)$-form $b$ for which the right-hand side below is finite admits a solution $u$ of 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-1C7014FF"><span data-gerby-tag="1C7014FF"></span>
+<span class="equation-label"><a data-tag="1C7014FF" href="../../tag/35D5D6699C73/">1.43</a></span>
+<div>\begin{equation} \label{eq:negative-weight-dbar} \bar\partial u=b,\qquad \int |u|^2\mathrm e^{\Phi -\chi }\, \mathrm{d}V \leq \int (1-\mathrm e^\Phi )|b|_ A^2 \mathrm e^{-\chi }\, \mathrm{d}V. \end{equation}</div>
+</div>
+<p>
+       To prove this, define for $x&lt;0$ 
+    
+<div class="equation">
+  \[  T(x)=-\log (1-\mathrm e^ x),\qquad \eta (x)=\frac{-x}{1-\mathrm e^ x}-1,\qquad \lambda (x)=-\frac{\eta '(x)}{T'(x)}.  \]
+</div>
+<p>
+       The inequality $-x&gt;1-\mathrm e^ x$ gives $\eta &gt;0$. Also $\eta '= -[1-(1-x)\mathrm e^ x]/(1-\mathrm e^ x)^2&lt;0$, whereas $T'&gt;0$, so $\lambda &gt;0$. Direct differentiation gives 
+    
+<div class="equation">
+  \[  \eta T'-\eta '=1,\qquad \eta T''-\eta ''-\frac{(\eta ')^2}{\lambda }=0,\qquad \frac{\mathrm e^{-T}}{\eta +\lambda }=\mathrm e^ x.  \]
+</div>
+<p>
+       Use the weight $h=\mathrm e^{-\chi -T(\Phi )}$ on the trivial line bundle and evaluate the twisting functions at $\Phi $. The twisted curvature is 
+    
+<div class="equation">
+  \[  \begin{aligned}  B_0&amp; =\eta \, \mathrm i\partial \bar\partial (\chi +T(\Phi )) -\mathrm i\partial \bar\partial \eta -\mathrm i\lambda ^{-1}\partial \eta \wedge \bar\partial \eta \\ &amp; =\eta \, \mathrm i\partial \bar\partial \chi +\mathrm i\partial \bar\partial \Phi \geq \mathrm i\partial \bar\partial \Phi . \end{aligned}  \]
+</div>
+<p>
+       Let $\Lambda $ denote contraction by the Euclidean Kähler form and $\bar\partial _ h^*$ the weighted adjoint. For a compactly supported $(n,1)$-form $v$, the twisted Bochner identity and the weighted Cauchy–Schwarz inequality give 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-50B10184"><span data-gerby-tag="50B10184"></span>
+<span class="equation-label"><a data-tag="50B10184" href="../../tag/04CF8B360946/">1.46</a></span>
+<div>\begin{equation} \label{eq:sharp-twisted-apriori} \langle [B_0,\Lambda ]v,v\rangle _ h \leq \| \sqrt{\eta +\lambda }\, \bar\partial _ h^*v\| _ h^2 +\| \sqrt\eta \, \bar\partial v\| _ h^2. \end{equation}</div>
+</div>
+<p>
+       More explicitly, the cross term is bounded by $\lambda |\bar\partial _ h^*v|^2+\lambda ^{-1}|(\bar\partial \eta )^*v|^2$; the latter term is exactly the commutator contribution of $\mathrm i\lambda ^{-1}\partial \eta \wedge \bar\partial \eta $. The terms of type $(n+1,1)$ vanish, and the remaining connection norm has a favorable sign. 
+    <p>
+       The Hilbert space existence argument applied to (<a data-tag="50B10184" href="../../tag/04CF8B360946/">1.46</a>) therefore gives 
+    
+<div class="equation">
+  \[  \int \frac{|u|^2h}{\eta +\lambda }\, \mathrm{d}V \leq \int |b|_ A^2h\, \mathrm{d}V.  \]
+</div>
+<p>
+       To see the coefficient, project a test form to $\ker \bar\partial $. On this kernel the second term of (<a data-tag="50B10184" href="../../tag/04CF8B360946/">1.46</a>) vanishes, and the Cauchy–Schwarz inequality in the curvature norm bounds the functional $v\mapsto \langle b,v\rangle _ h$ by $(\int |b|_ A^2h)^{1/2}\| \sqrt{\eta +\lambda }\, \bar\partial _ h^*v\| _ h$. The Riesz representation theorem gives a solution with the asserted norm. The twisting functions are bounded on $\Omega $, since $\Phi $ is smooth and bounded away from both $-\infty $ and $0$. The argument first uses a complete Kähler metric; approximating the Euclidean metric by the Euclidean metric plus small positive multiples of a complete metric gives the Euclidean statement. Under the identification with canonical-bundle-valued forms, the $(n,0)$ norm integral and the curvature-dual $(n,1)$ integral have the same coordinate expressions as above. Since $h=\mathrm e^{-\chi }(1-\mathrm e^\Phi )$, the identities for $T,\eta ,\lambda $ now give (<a data-tag="1C7014FF" href="../../tag/35D5D6699C73/">1.43</a>). 
+    <p>
+<em>Step 2: division for smooth weights.</em> Put $v_ i=\mathrm e^{\phi _ i}/S$ and $\ell =(v_1f,v_2f)$. Equip $\mathbb C^2$ with the diagonal metric $(\mathrm e^{-\phi _1},\mathrm e^{-\phi _2})$. Then $\ell $ is orthogonal to the kernel line of the sum map, generated by $(1,-1)$, and $|\ell |^2=|f|^2/S$. Write $\delta =\phi _1-\phi _2$. The Hessian formula gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  A&amp; =v_1(\phi _{1,j\bar k})+v_2(\phi _{2,j\bar k}) +v_1v_2(\delta _ j\overline{\delta _ k}),\\  \bar\partial (v_1f)&amp; =fv_1v_2\bar\partial \delta . \end{aligned}  \]
+</div>
+<p>
+       Thus $v_1v_2|\bar\partial \delta |_ A^2\leq 1$ and, for $b=\bar\partial (v_1f)$, 
+    
+<div class="equation">
+  \[  |b|_ A^2\mathrm e^{-\chi } \leq \frac{|f|^2\mathrm e^{-\psi }}{S^2}.  \]
+</div>
+<p>
+       Solve (<a data-tag="1C7014FF" href="../../tag/35D5D6699C73/">1.43</a>) for this $b$ and set $F=\ell -u(1,-1)$. Since $v_1+v_2=1$, the vector $F=(F_1,F_2)$ is holomorphic and its components sum to $f$. The squared norm of $(1,-1)$ is $\mathrm e^{-\phi _1}+\mathrm e^{-\phi _2}=S\mathrm e^{-\phi _1-\phi _2}$. Orthogonality and (<a data-tag="1C7014FF" href="../../tag/35D5D6699C73/">1.43</a>) consequently give 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int |F|^2\mathrm e^{-\psi } &amp; =\int \frac{|f|^2\mathrm e^{-\psi }}{S} +\int |u|^2\mathrm e^{\Phi -\chi }\\ &amp; \leq \int \frac{|f|^2\mathrm e^{-\psi }}{S^2}. \end{aligned}  \]
+</div>
+<p>
+       This proves (<a data-tag="CF7D2B70" href="../../tag/363923246C67/">1.42</a>) for smooth weights. 
+    <p>
+<em>Step 3: general weights.</em> Exhaust $\Omega $ by bounded pseudoconvex domains with compact closures in $\Omega $. On each of them, convolve the weights on a slightly larger neighborhood and add a sufficiently small positive multiple of $|z|^2$. These smooth plurisubharmonic weights dominate the original weights, converge to them almost everywhere, preserve $S&lt;1$ on the chosen closure, and make $\Phi $ strictly plurisubharmonic. The corresponding integrals $J$ are bounded by the original one. On every compact subset the weights have common upper bounds, so (<a data-tag="CF7D2B70" href="../../tag/363923246C67/">1.42</a>) gives uniform unweighted local $L^2$ bounds for both components. The holomorphic mean-value inequality and a diagonal extraction give holomorphic limits. Almost-everywhere convergence of the weights and Fatou's lemma yield (<a data-tag="CF7D2B70" href="../../tag/363923246C67/">1.42</a>) on $\Omega $, and $F_1+F_2=f$ passes to the limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

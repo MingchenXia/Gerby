@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Maxima and the maximum principle · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/psh-positive-currents/">Chapter 5 · Plurisubharmonic functions and positive currents</a> · Tag <code>AA6F3BC0AD9F</code></p><h1>Maxima and the maximum principle</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 1.3 Maxima and the maximum principle <span data-gerby-tag="17DA6F47"></span></div>
+<p>
+Maxima allow us to truncate potentials and to modify them on an open set without losing the lower curvature bound. For a smooth background, the local maximum and gluing principles for plurisubharmonic functions keep this bound: one freezes the coefficients of the background on small balls and then lets the resulting curvature error tend to zero. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-8EAEF1E9">
+<p><a class="environment-identifier" href="../../tag/729BA86BCC7C/">Lemma <span data-tag="8EAEF1E9">1.3.1</span>.</a><span data-gerby-tag="8EAEF1E9"></span> If $u,v\in \mathrm{PSH}(X,\theta )$, then $\max (u,v)\in \mathrm{PSH}(X,\theta )$. Consequently, if $\theta \geq 0$ and $u\in \mathrm{PSH}(X,\theta )$, then $\max (u,-t)$ is $\theta $-plurisubharmonic for every real $t$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Adding a common local smooth correction to $u$ and $v$ shows that $\max (u,v)$ is quasi-plurisubharmonic. To obtain the sharp lower bound for its Hessian, fix a positive constant $(1,1)$-form $\kappa $ on a coordinate ball. For each $\varepsilon &gt;0$, every point of the ball has a neighborhood on which $\theta $ is close to a constant form $\theta '$, in the sense that $-\varepsilon \kappa \leq \theta -\theta '\leq \varepsilon \kappa $. Write $\theta '+\varepsilon \kappa =\mathrm{dd}^{\mathrm{c}}r$ with a quadratic polynomial $r$. Then $\mathrm{dd}^{\mathrm{c}}(u+r)\geq \theta +\mathrm{dd}^{\mathrm{c}}u\geq 0$, so $u+r$ and, likewise, $v+r$ are plurisubharmonic; hence so is their maximum. It follows that 
+    
+<div class="equation">
+  \[  \theta +2\varepsilon \kappa +\mathrm{dd}^{\mathrm{c}}\max (u,v)\geq 0  \]
+</div>
+<p>
+       on each such neighborhood, and letting $\varepsilon \to 0$ gives $\theta +\mathrm{dd}^{\mathrm{c}}\max (u,v)\geq 0$. The last assertion follows because constants belong to $\mathrm{PSH}(X,\theta )$ when $\theta \geq 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-CCB07C8A">
+<p><a class="environment-identifier" href="../../tag/0CFD6850F9F8/">Lemma <span data-tag="CCB07C8A">1.3.2</span>.</a><span data-gerby-tag="CCB07C8A"></span> Let $Y$ be a complex manifold, let $\beta $ be a smooth real $(1,1)$-form on $Y$, and let $D\subset Y$ be open. Suppose that $u$ is $\beta $-plurisubharmonic on $Y$, that $v$ is $\beta $-plurisubharmonic on $D$, and that </p>
+<div class="equation">
+  \[  \limsup _{D\ni y\to x}v(y)\leq u(x)\qquad (x\in \partial D).  \]
+</div>
+<p> Then the function equal to $\max (u,v)$ on $D$ and to $u$ on $Y\setminus D$ is $\beta $-plurisubharmonic. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Denote the glued function by $w$; it is upper semicontinuous by the boundary inequality. Freeze $\beta $ on a small coordinate ball as in the proof of lemma <a data-tag="8EAEF1E9" href="../../tag/729BA86BCC7C/">1.3.1</a>, and choose a quadratic correction $r$ such that $u+r$ and $v+r$ are plurisubharmonic on their respective domains. Off $\partial D$, the function $w+r$ is plurisubharmonic, being locally either $u+r$ or the maximum of two plurisubharmonic functions. At a point of $\partial D$, it equals $u+r$ and dominates $u+r$ on the ball, so it satisfies the submean inequality on every complex line through that point. Thus $w+r$ is plurisubharmonic on the whole ball. Letting the error of the frozen coefficients tend to zero gives $\beta +\mathrm{dd}^{\mathrm{c}}w\geq 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+For quasi-plurisubharmonic functions, an inequality that holds almost everywhere holds everywhere. This allows comparisons proved for Sobolev or Lebesgue classes to be applied to the potentials themselves. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-184DC935">
+<p><a class="environment-identifier" href="../../tag/D1DAB1D38637/">Lemma <span data-tag="184DC935">1.3.3</span>.</a><span data-gerby-tag="184DC935"></span> Let $a,b$ be quasi-plurisubharmonic functions on a complex manifold. If $a\leq b$ almost everywhere, then $a\leq b$ everywhere. In particular, equality almost everywhere implies equality everywhere. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On a coordinate ball, add the same smooth function $q$ to both functions so that $a+q$ and $b+q$ are plurisubharmonic. By the submean inequality and upper semicontinuity, a plurisubharmonic function is, at each point, the limit of its averages over balls centered there as the radius tends to zero. The almost-everywhere inequality orders these averages, so passing to the limit gives $a+q\leq b+q$. Subtracting $q$ proves the claim. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-D292D808">
+<p><a class="environment-identifier" href="../../tag/05BCBF7FAC9C/">Lemma <span data-tag="D292D808">1.3.4</span>.</a><span data-gerby-tag="D292D808"></span> Let $a,b$ be quasi-plurisubharmonic functions on a complex manifold. If $a(x)&lt;b(x)$ at a point $x$ where both values are finite, then $\{ a&lt;b\} $ has positive volume with respect to any smooth positive volume form. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a number $c$ with $a(x)&lt;c&lt;b(x)$. By upper semicontinuity, $a&lt;c$ on a neighborhood $V$ of $x$. If $\{ b&gt;c\} \cap V$ had zero volume, then $b\leq c$ almost everywhere on $V$, and lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a> would give $b(x)\leq c$, a contradiction. Thus $\{ b&gt;c\} \cap V$, which is contained in $\{ a&lt;b\} $, has positive volume. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-20F3C641">
+<p><a class="environment-identifier" href="../../tag/E6AC64216A47/">Lemma <span data-tag="20F3C641">1.3.5</span>.</a><span data-gerby-tag="20F3C641"></span> A plurisubharmonic function on $\mathbb C^ m$, $m\geq 1$, that is bounded above is constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First let $f$ be a smooth subharmonic function on $\mathbb C$ with $f\leq M$. Write $\sigma =(\Delta f)\, \mathrm{d}A$ for its nonnegative Laplacian measure, where $\Delta $ and $\mathrm{d}A$ are Euclidean. Green's formula for circular means gives, for $R&gt;0$, 
+    
+<div class="equation">
+  \[  \frac1{2\pi }\int _0^{2\pi }f(R\mathrm{e}^{\mathrm{i}t})\, \mathrm{d}t-f(0) =\frac1{2\pi }\int _0^ R\frac{\sigma (B(0,r))}{r}\, \mathrm{d}r.  \]
+</div>
+<p>
+       For fixed $r_0&gt;0$ and $R&gt;r_0$, the right-hand side is at least $\sigma (B(0,r_0))\log (R/r_0)/(2\pi )$, while the left-hand side is at most $M-f(0)$. Letting $R\to \infty $ gives $\sigma (B(0,r_0))=0$. Thus $f$ is harmonic, and the Liouville theorem for the positive harmonic function $M+1-f$ shows that $f$ is constant. 
+    <p>
+      Now let $p$ be plurisubharmonic on $\mathbb C^ m$ and bounded above. Its convolutions with a smooth nonnegative radial probability kernel are smooth plurisubharmonic functions with the same upper bound. By the planar case, their restrictions to every affine complex line are constant, so each convolution is constant on $\mathbb C^ m$. Since the convolutions converge to $p$ in $L^1_{\mathrm{loc}}$, the function $p$ is almost everywhere equal to a constant, and hence constant by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For a function $f$, we write $f^*(x)=\limsup _{y\to x}f(y)$ for its upper semicontinuous regularization. A subset of a complex manifold is <em>pluripolar</em> if each of its points has a neighborhood $U$ such that the part of the subset in $U$ is contained in $\{ p=-\infty \} $ for some $p\in \mathrm{PSH}(U)$. The local upper-envelope theorem recalled in <span class="cite">[<a href="../../references/#RF4F5F15EE4C6">SGPT</a>]</span> states that if a nonempty family of plurisubharmonic functions is locally uniformly bounded above, then the regularization of its supremum is plurisubharmonic and differs from the supremum only on a pluripolar set. 
+</p>
+<p>
+Periodicity also forces rigidity when an entire subharmonic function has only logarithmic upper growth. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-2B409D6D">
+<p><a class="environment-identifier" href="../../tag/16E53426F2DB/">Lemma <span data-tag="2B409D6D">1.3.6</span>.</a><span data-gerby-tag="2B409D6D"></span> Let $h$ be subharmonic on $\mathbb C$, with $h(\zeta +1)=h(\zeta )$. If there are real constants $A\geq 0$ and $B$ such that </p>
+<div class="equation">
+  \[  h(\zeta )\leq A\log (1+|\zeta |)+B\qquad (\zeta \in \mathbb C),  \]
+</div>
+<p> then $h$ is constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the growth bound, the real translates $h(\cdot +s)$, $s\in [0,1]$, form a family of subharmonic functions that is locally uniformly bounded above. The local upper-envelope theorem therefore shows that 
+    
+<div class="equation">
+  \[  H(\zeta )=\bigl (\sup _{s\in [0,1]}h(\zeta +s)\bigr )^*  \]
+</div>
+<p>
+       is subharmonic. By periodicity, $H$ is invariant under every real translation, so it depends only on $\operatorname {Im}\zeta $, and its subharmonicity means that it is a convex function of $\operatorname {Im}\zeta $. On the imaginary axis it satisfies $H(\mathrm i y)\leq A\log (2+|y|)+B$. Since a nonconstant convex function on $\mathbb R$ grows at least linearly at one end, this bound shows that $H$ is constant. Thus $h\leq H$ is bounded above, and lemma <a data-tag="20F3C641" href="../../tag/E6AC64216A47/">1.3.5</a> shows that $h$ is constant. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-E113365A">
+<p><a class="environment-identifier" href="../../tag/F3A890BB2575/">Lemma <span data-tag="E113365A">1.3.7</span>.</a><span data-gerby-tag="E113365A"></span> Let $U$ be a complex manifold, let $\theta $ be a smooth real $(1,1)$-form on $U$, and let $Z\subset U$ be closed and locally pluripolar. Let $u$ be $\theta $-plurisubharmonic on $U\setminus Z$ and locally bounded above near $Z$. Then its upper-limit extension, defined at $x\in Z$ by $u(x)=\limsup _{U\setminus Z\ni y\to x}u(y)$, is $\theta $-plurisubharmonic on $U$. In particular, this applies when $Z$ is a proper analytic subset of $U$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First suppose that $u$ is plurisubharmonic. Near a point of $Z$, choose a plurisubharmonic function $\psi \leq 0$ with $\psi =-\infty $ on $Z$. For $t&gt;0$, extend $u+t\psi $ by $-\infty $ on $Z$. The local upper bound for $u$ makes this extension upper semicontinuous. It is plurisubharmonic off $Z$, and its submean inequality on complex lines is automatic at points of $Z$, where its value is $-\infty $. It is therefore plurisubharmonic on the whole neighborhood. As $t\downarrow 0$, these functions increase, with a common local upper bound. By the local upper-envelope theorem, the regularization of their limit is a plurisubharmonic function that agrees with $u$ almost everywhere off $Z$, hence everywhere off $Z$ by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>. By upper semicontinuity and the submean inequality, its value at a point of $Z$ is the upper limit of $u$ off $Z$, so it is the upper-limit extension of $u$. 
+    <p>
+      For a smooth background, fix a positive constant form $\kappa $ on a coordinate chart and let $\epsilon &gt;0$. On a sufficiently small ball, freeze $\theta $ to a constant form $\theta '$ with $-\epsilon \kappa \leq \theta -\theta '\leq \epsilon \kappa $, and choose a quadratic potential $q$ for $\theta '+\epsilon \kappa $. Applying the preceding argument to the plurisubharmonic function $u+q$ shows that the upper-limit extension satisfies $\theta +\mathrm{dd}^{\mathrm{c}}u\geq -2\epsilon \kappa $ on the ball. Since the extension is defined by upper limits, it does not depend on the ball, and letting $\epsilon \downarrow 0$ gives $\theta +\mathrm{dd}^{\mathrm{c}}u\geq 0$. Finally, analytic subsets are locally pluripolar: locally, a proper analytic subset is contained in the $-\infty $ locus of the logarithm of the sum of the squared moduli of local defining functions. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-6365A3CC">
+<p><a class="environment-identifier" href="../../tag/64CFA1B8522B/">Lemma <span data-tag="6365A3CC">1.3.8</span>.</a><span data-gerby-tag="6365A3CC"></span> Let $X$ be a complex manifold of dimension $n\geq 2$, let $\theta $ be a smooth real $(1,1)$-form on $X$, and let $p\in X$. Every $\theta $-plurisubharmonic function on $X\setminus \{ p\} $ is locally bounded above near $p$ and extends uniquely to a member of $\mathrm{PSH}(X,\theta )$. If $X$ is compact, it is bounded above on $X\setminus \{ p\} $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose coordinates centered at $p$ and write $\Delta _ R=\{ z\in \mathbb C:|z|&lt;R\} $. On the coordinate polydisk $\Delta _ R^ n$, add a smooth quadratic function to the given function to obtain a plurisubharmonic function $h$ on $\Delta _ R^ n\setminus \{ 0\} $. Write the coordinates as $(z_1,z_2,z')$, with $z'$ absent when $n=2$, and choose $0&lt;r&lt;R$. The compact set 
+    
+<div class="equation">
+  \[  K=\{ |z_1|\leq r,\  |z_2|=r,\  |z'_ j|\leq r\}   \]
+</div>
+<p>
+       avoids the puncture, so $h\leq M$ on $K$ for some finite $M$. Consider a point of the punctured closed polydisk of radius $r$. If $z_1\ne 0$, the disk in the $z_2$-direction through the point avoids the puncture and has its boundary in $K$, so the maximum principle gives $h\leq M$ at the point. If $z_1=0$ and $(z_2,z')\ne 0$, the disk in the $z_1$-direction through the point avoids the puncture, and its boundary consists of points with $z_1\neq 0$, where the bound has already been proved; the maximum principle again gives $h\leq M$. Subtracting the smooth correction proves the local upper bound. 
+    <p>
+      By lemma <a data-tag="E113365A" href="../../tag/F3A890BB2575/">1.3.7</a>, applied with $Z=\{ p\} $, the upper-limit extension belongs to $\mathrm{PSH}(X,\theta )$. It is unique by lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a>. If $X$ is compact, the extension is an upper semicontinuous function on a compact space and is therefore bounded above. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-BFBA399A">
+<p><a class="environment-identifier" href="../../tag/98E72E23E884/">Lemma <span data-tag="BFBA399A">1.3.9</span>.</a><span data-gerby-tag="BFBA399A"></span> Let $u$ be $\theta $-plurisubharmonic near a point $x$. If a $C^2$ function $a$ touches $u$ from above at $x$, that is, $a\geq u$ near $x$ and $a(x)=u(x)$, then $\theta (x)+\mathrm{dd}^{\mathrm{c}}a(x)\geq 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In coordinates centered at $x$, let $q$ be a quadratic polynomial with $\mathrm{dd}^{\mathrm{c}}q=\theta (x)$, and let $\varepsilon &gt;0$. On a sufficiently small ball about $x$, we have $\theta \leq \theta (x)+\varepsilon \mathrm{dd}^{\mathrm{c}}|z|^2$, so $u+q+\varepsilon |z|^2$ is plurisubharmonic, and $a+q+\varepsilon |z|^2$ touches it from above at $x$. By the submean inequality on complex lines through $x$, a $C^2$ function touching a plurisubharmonic function from above at $x$ has nonnegative complex Hessian at $x$. Hence $\theta (x)+\mathrm{dd}^{\mathrm{c}}a(x)+\varepsilon \mathrm{dd}^{\mathrm{c}}|z|^2\geq 0$, and letting $\varepsilon \to 0$ proves the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

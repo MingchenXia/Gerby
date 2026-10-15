@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Adapted monomial tests on affine toric spaces · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/complex-spaces/">Chapter 8 · Complex spaces and modifications</a> · Tag <code>73BE0E663644</code></p><h1>Adapted monomial tests on affine toric spaces</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · A.4.2 Adapted monomial tests on affine toric spaces <span data-gerby-tag="50EF613B"></span></div>
+<p>
+The quotient calculation expresses integrability as a strict inequality on exponents. On an affine toric space the same inequality comes from the recession of a convex function, while the canonical bundle and boundary supply the translation of the exponent. This also applies to cones with more rays than their dimension. 
+</p>
+<p>
+In this subsection let $N$ be a lattice of rank $n\geq 1$, let $M=\operatorname {Hom}(N,\mathbb Z)$, and let $\sigma \subset N_{\mathbb R}$ be a full-dimensional strongly convex rational polyhedral cone. Its dual cone is $\sigma ^\vee =\{ m:\langle m,v\rangle \geq 0\text{ for all }v\in \sigma \} $. The normal affine toric space 
+</p>
+<div class="equation">
+  \[  X_\sigma =\operatorname {Spec}\mathbb C[\sigma ^\vee \cap M]  \]
+</div>
+<p>
+ is understood with its analytic structure. Its dense torus $T=\operatorname {Hom}(M,\mathbb C^*)$ has characters $\chi ^ m$, and its unique closed orbit is a vertex $o$. Choose nonzero generators $b_1,\ldots ,b_ s$ of the semigroup $\sigma ^\vee \cap M$; their characters embed $X_\sigma $ as a closed affine subset of $\mathbb C^ s$ and all vanish at $o$. 
+</p>
+<p>
+For each ray $\rho $ of $\sigma $, write $v_\rho $ for its primitive lattice generator and $D_\rho $ for the corresponding prime divisor. Fix an effective rational boundary $D=\sum _\rho a_\rho D_\rho $ such that $K_{X_\sigma }+D$ is $\mathbb Q$-Cartier. With $K_{X_\sigma }=-\sum _\rho D_\rho $, this means that there is $w_ D\in M_{\mathbb Q}$ with 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-63A38690"><span data-gerby-tag="63A38690"></span>
+<span class="equation-label"><a data-tag="63A38690" href="../../tag/A72FB1B5D26F/">A.4</a></span>
+<div>\begin{equation} \label{eq:toric-boundary-shift} \langle w_ D,v_\rho \rangle =1-a_\rho \quad \text{for every }\rho . \end{equation}</div>
+</div>
+<p>
+ Take an integer $q&gt;0$ with $qw_ D\in M$. For torus coordinates $t_1,\ldots ,t_ n$ determined by a basis of $M$, the meromorphic tensor 
+</p>
+<div class="equation">
+  \[  B_ D=\chi ^{qw_ D} \left(\frac{\mathrm dt_1}{t_1}\wedge \cdots \wedge \frac{\mathrm dt_ n}{t_ n}\right)^{\! \otimes q}  \]
+</div>
+<p>
+ generates $\omega _{X_\sigma }^{[q]}(qD)$. Indeed, its order along $D_\rho $ is $-qa_\rho $. The adapted volume $\mathrm dV_ D=|B_ D|^{2/q}$ is independent of this choice for local integrability, as in (<a data-tag="2CE28CF7" href="../../tag/0C6FD486D0E4/">A.1</a>). We use the ideal $\mathcal I_ D^{\mathrm{ad}}(u)$ defined by the holomorphic-germ integral in (<a data-tag="B74CA9EA" href="../../tag/727AAF0F7AFF/">A.2</a>) on this $X_\sigma $. 
+</p>
+<p>
+Let $u$ be a plurisubharmonic function invariant under the compact torus of coordinate rotations. The logarithmic map $\operatorname {Log}:T\to N_{\mathbb R}$ satisfies $\langle m,\operatorname {Log}t\rangle =\log |\chi ^ m(t)|$. There is a finite convex function $g$ on $N_{\mathbb R}$ with 
+</p>
+<div class="equation">
+  \[  u(t)=2g(\operatorname {Log}t).  \]
+</div>
+<p>
+ To see convexity, pull $u/2$ back by the exponential covering of $T$. It is independent of the imaginary coordinates, so its distributional complex Hessian is the real Hessian of $g$ up to a positive constant. A nontrivial plurisubharmonic function of this form gives a finite convex function. The factor two matches the weight $\mathrm e^{-u}$. 
+</p>
+<p>
+For a finite convex function $g$ write 
+</p>
+<div class="equation">
+  \[  (\operatorname {rec}g)(v)= \lim _{t\to \infty }\frac{g(x+tv)-g(x)}t.  \]
+</div>
+<p>
+ The convex difference quotients increase to this limit in $\mathbb R\cup \{ +\infty \} $; the limit does not depend on the base point $x$. The latter fact follows by comparing $g(x+tv)$ with convex combinations of $g(t v/(1-\delta ))$ and $g(x/\delta )$, for $0&lt;\delta &lt;1$, and then reversing the translation. Define the Newton set 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-B0D43B47"><span data-gerby-tag="B0D43B47"></span>
+<span class="equation-label"><a data-tag="B0D43B47" href="../../tag/4B4F6518339A/">A.5</a></span>
+<div>\begin{equation} \label{eq:toric-newton-set} P(u)=\left\{ \ell \in M_{\mathbb R}: \sup _{x\in -\sigma }\bigl (\langle \ell ,x\rangle -g(x)\bigr )&lt;\infty \right\} . \end{equation}</div>
+</div>
+<p>
+ Only its interior will enter the integrability test; the set itself need not be closed. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-6E4D0737">
+<p><a class="environment-identifier" href="../../tag/5D5A847F99AC/">Lemma <span data-tag="6E4D0737">A.4.4</span>.</a><span data-gerby-tag="6E4D0737"></span> Let $C$ be a closed full-dimensional convex cone in a Euclidean space, let $g$ be finite and convex, and let $\ell $ be a linear form. Then </p>
+<div class="equation">
+  \[  \int _ C\exp \bigl (2\langle \ell ,x\rangle -2g(x)\bigr )\, \mathrm dx&lt;\infty \quad \Longleftrightarrow \quad \langle \ell ,v\rangle &lt;(\operatorname {rec}g)(v) \quad (v\in C\setminus \{ 0\} ).  \]
+</div>
+<p> This condition is also equivalent to $\ell $ being an interior point of $\{ a:\sup _ C(\langle a,x\rangle -g(x))&lt;\infty \} $. The integral has the same finiteness on every translate of $C$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Set $F=g-\ell $. Suppose its recession is positive on $C\setminus \{ 0\} $. Then $F(x)\geq \gamma |x|-A$ on $C$ for some $\gamma &gt;0$ and $A$. Otherwise there are $x_ j\in C$ with $|x_ j|\to \infty $ and $F(x_ j)/|x_ j|\leq 1/j$. After taking a subsequence, $x_ j/|x_ j|\to v\in C$ with $|v|=1$. For fixed $t&gt;0$, convexity gives 
+    
+<div class="equation">
+  \[  F\left(t\frac{x_ j}{|x_ j|}\right) \leq \left(1-\frac t{|x_ j|}\right)F(0) +\frac t{|x_ j|}F(x_ j).  \]
+</div>
+<p>
+       Continuity gives $F(tv)\leq F(0)$ for every $t$, contradicting positive recession. A bound on the remaining compact set gives the asserted $A$. Exponential decay proves integrability. The same bound persists when $\ell $ is changed by a sufficiently small linear form, so $\ell $ lies in the stated interior. 
+    <p>
+      Conversely, if $(\operatorname {rec}F)(v)\leq 0$ for some nonzero $v\in C$, then $F(tv)\leq F(0)$ for $t\geq 0$. Choose a compact ball $K$ in the interior of $C$. On the half-tube $\{ tv+x/2:t\geq 1,\  x\in K\} $, convexity gives 
+    
+<div class="equation">
+  \[  F(tv+x/2)\leq \tfrac 12F(2tv)+\tfrac 12F(x).  \]
+</div>
+<p>
+       Thus $\mathrm e^{-2F}$ has a positive lower bound on a set of infinite volume. If instead $\ell $ is in the stated interior, for each nonzero $v\in C$ one may perturb $\ell $ within that interior by a linear form positive on $v$. Dividing its defining upper bound along $tv$ by $t$ gives the strict recession inequality for $\ell $. Finally, translating $C$ replaces $g(x)$ by $g(x+b)$ and multiplies the exponential by a constant; recession is unchanged. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-FC0F28E7">
+<p><a class="environment-identifier" href="../../tag/CD69C52538E4/">Theorem <span data-tag="FC0F28E7">A.4.5</span>.</a><span data-gerby-tag="FC0F28E7"></span> For $m\in \sigma ^\vee \cap M$, the following are equivalent: </p>
+<div class="equation">
+  \[  \chi ^ m\in \mathcal I_ D^{\mathrm{ad}}(u)_ o, \qquad \chi ^ m\in \Gamma (X_\sigma ,\mathcal I_ D^{\mathrm{ad}}(u)), \qquad m+w_ D\in \operatorname {int}P(u).  \]
+</div>
+<p> Equivalently, $\langle m+w_ D,v\rangle &lt;(\operatorname {rec}g)(v)$ for every nonzero $v\in -\sigma $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On the torus, polar coordinates turn the weighted monomial integral into a positive constant times 
+    
+<div class="equation">
+  \[  \int _ Q\exp \bigl (2\langle m+w_ D,x\rangle -2g(x)\bigr )\, \mathrm dx,  \]
+</div>
+<p>
+       where $Q$ is the logarithmic image of the domain. The omitted toric divisors have measure zero on the regular locus. A basis of neighborhoods of $o$ is given by $|\chi ^{b_ j}|&lt;\epsilon $ for every $j$, with $0&lt;\epsilon &lt;1$. Their logarithmic domains satisfy 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-AE8BE2AD"><span data-gerby-tag="AE8BE2AD"></span>
+<span class="equation-label"><a data-tag="AE8BE2AD" href="../../tag/4CC45280AE88/">A.6</a></span>
+<div>\begin{equation} \label{eq:toric-logarithmic-neighborhood-sandwich} -\sigma -b\  \subset  Q_\epsilon =\{ x:\langle b_ j,x\rangle &lt;\log \epsilon \text{ for all }j\}  \  \subset \  -\sigma , \end{equation}</div>
+</div>
+<p>
+       for $b\in \operatorname {int}\sigma $ sufficiently far along an interior ray. Indeed, every $\langle b_ j,b\rangle $ is strictly positive, and the $b_ j$ generate the dual cone. The convex-cone lemma gives necessity and sufficiency at $o$, including divergence when a recession inequality is an equality. 
+    <p>
+      For a compact subset of $X_\sigma $, the embedding coordinates have absolute value at most some $R&gt;1$. Its logarithmic image is contained in $\{ x:\langle b_ j,x\rangle \leq \log R\} $, which is contained in $b_ R-\sigma $ for a sufficiently large $b_ R\in \operatorname {int}\sigma $. Under the same strict condition the integral over this translated cone is finite. This proves local integrability everywhere. The converse follows by testing at $o$, and the interior formulation follows from the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-62258A64">
+<p><a class="environment-identifier" href="../../tag/E77092231FA9/">Corollary <span data-tag="62258A64">A.4.6</span>.</a><span data-gerby-tag="62258A64"></span> Let $\mathfrak a=(\chi ^{a_1},\ldots ,\chi ^{a_ r})$ be a nonzero monomial ideal on $X_\sigma $, with $a_ j\in \sigma ^\vee \cap M$, and let $c&gt;0$ be real. For the measurable weight </p>
+<div class="equation">
+  \[  v=u-c\log \left(\sum _ j|\chi ^{a_ j}|^2\right),  \]
+</div>
+<p> a holomorphic character $\chi ^ m$ is locally integrable with weight $\mathrm e^{-v}\mathrm dV_ D$ at $o$, or everywhere on $X_\sigma $, exactly when </p>
+<div class="equation">
+  \[  m+w_ D+ca_ j\in \operatorname {int}P(u) \quad \text{for every }j.  \]
+</div>
+<p> Values on the common zero set do not affect these integrals. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a finite sum and $c&gt;0$, its $c$-th power is comparable to the sum of the $c$-th powers of its terms. Thus the integrand is comparable to 
+    
+<div class="equation">
+  \[  \sum _ j |\chi ^ m|^2|\chi ^{a_ j}|^{2c}\mathrm e^{-u}\, \mathrm dV_ D.  \]
+</div>
+<p>
+       Each term gives the preceding logarithmic integral with exponent $m+w_ D+ca_ j$. The cone criterion applies to real exponents, so no rationality of $c$ is needed for this integrability assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-3D1494D7">
+<p><a class="environment-identifier" href="../../tag/511E6797B7CD/">Proposition <span data-tag="3D1494D7">A.4.7</span>.</a><span data-gerby-tag="3D1494D7"></span> Let $X=\{ xw=yz\} \subset \mathbb C^4$, with vertex $o$, let $\mathfrak m_ o=(x,y,z,w)$, and take zero boundary. For $\lambda &gt;0$ put </p>
+<div class="equation">
+  \[  u_\lambda =\lambda \log (|x|^2+|y|^2+|z|^2+|w|^2).  \]
+</div>
+<p> The adapted-volume ideal at the vertex is </p>
+<div class="equation">
+  \[  \mathcal I_0^{\mathrm{ad}}(u_\lambda )_ o =\mathfrak m_ o^{\, \max \{ 0,\lfloor \lambda \rfloor -1\} } \mathcal O_{X,o}.  \]
+</div>
+<p> In particular, the constant germ is integrable exactly when $\lambda &lt;2$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      On the torus use $x,y,z$ as characters, so $w=yz/x$. The character lattice is $\mathbb Z^3$, with semigroup generators 
+    
+<div class="equation">
+  \[  (1,0,0),\quad (0,1,0),\quad (0,0,1),\quad (-1,1,1).  \]
+</div>
+<p>
+       The dual cone has primitive rays $(0,1,0)$, $(0,0,1)$, $(1,1,0)$ and $(1,0,1)$. It is full-dimensional with four rays. The residue form $\Omega =\mathrm dx\wedge \mathrm dy\wedge \mathrm dz/x$ generates the canonical sheaf of this hypersurface; it equals $yz$ times the logarithmic torus form. Hence $w_0=(0,1,1)$, which pairs to one with each primitive ray. 
+    <p>
+      Write $d(m)=m_1+m_2+m_3$. Each semigroup generator has degree one. The logarithmic function $g$ differs by a bounded term from $\lambda $ times the maximum of the four linear forms given by those generators. Their convex hull is the section of $\sigma ^\vee $ by $d=1$, so 
+    
+<div class="equation">
+  \[  P(u_\lambda )=\{ \ell \in \sigma ^\vee :d(\ell )\geq \lambda \} .  \]
+</div>
+<p>
+       Since $w_0\in \operatorname {int}\sigma ^\vee $ and $d(w_0)=2$, the character condition is $d(m)+2&gt;\lambda $. The smallest allowed integer degree is $k=\max \{ 0,\lfloor \lambda \rfloor -1\} $. 
+    <p>
+      This also gives the ideal for whole holomorphic germs. Lift a germ to a convergent power series in $x,y,z,w$. On a smaller invariant neighborhood, angular Parseval and Tonelli force every nonzero character coefficient to satisfy the same test. All homogeneous terms of degree less than $k$ therefore vanish in the coordinate ring. They are multiples of the homogeneous relation $xw-yz$, and subtracting those finitely many terms leaves a lift of order at least $k$. Thus the germ belongs to $\mathfrak m_ o^ k$. Conversely, every degree-$k$ monomial is integrable by the character test, and bounded holomorphic coefficient germs preserve integrability. This proves the identity and its strict endpoint. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+These ideals use the adapted canonical volume, whereas the resolution-ideal equivalence above uses smooth volumes on the models. Return now to the compact unibranch space and background fixed at the beginning of the appendix. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

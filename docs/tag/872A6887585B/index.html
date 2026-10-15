@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Potential continuity principle · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/capacity-fine-topology/">Chapter 4 · Energy, capacity, and fine topology</a> · Tag <code>872A6887585B</code></p><h1>Potential continuity principle</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · Theorem 4.2.2 <span data-gerby-tag="878C027A"></span></div><article class="env-theorem" id="foundations-of-pluripotential-theory-878C027A">
+<p><a class="environment-identifier" href="../../tag/872A6887585B/">Theorem <span data-tag="878C027A">4.2.2</span>.</a><span data-gerby-tag="878C027A"></span> Let $K\subset \mathbb R^ d$ be compact, let $\mu $ be a finite positive measure on $\mathbb R^ d$ with $\operatorname{Supp}\mu \subset K$, and put $p=E_ d*\mu $. </p>
+<ol>
+<li><p>
+If $x\in K$ and the restriction $p|_ K$ is continuous at $x$, then $p$ is continuous at $x$ as a function on $\mathbb R^ d$ with values in $[-\infty ,\infty )$. 
+</p>
+</li><li><p>
+If $p$ is finite $\mu $-almost everywhere, then $\mu =\sum _ j\mu _ j$, where the $\mu _ j$ are the restrictions of $\mu $ to pairwise disjoint compact sets and every $E_ d*\mu _ j$ is finite and continuous on $\mathbb R^ d$. 
+</p>
+</li>
+</ol>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Since $p$ is upper semicontinuous (proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a>), $\varlimsup _{z\to x}p(z)\leq p(x)$; in particular $p$ is continuous at $x$ if $p(x)=-\infty $. Assume that $p(x)$ is finite; we must show that $\varliminf _{z\to x}p(z)\geq p(x)$. For $z\in \mathbb R^ d$ choose a point $z'\in K$ closest to $z$. Then $|z'-x|\leq |z'-z|+|z-x|\leq 2|z-x|$, so $z'\to x$ as $z\to x$, and $|z'-y|\leq |z'-z|+|z-y|\leq 2|z-y|$ for every $y\in K$. Consequently, for $y\in K$, 
+    
+<div class="equation">
+  \[  E_ d(z-y)\geq 2^{d-2}E_ d(z'-y)\quad (d\geq 3),\qquad E_2(z-y)\geq E_2(z'-y)-\frac{\log 2}{2\pi }\quad (d=2).  \]
+</div>
+<p>
+      Fix $\delta &gt;0$ and split $p=p'_\delta +p''_\delta $, where $p'_\delta (w)=\int _{B(x,\delta )}E_ d(w-y)\, \mathrm d\mu (y)$ is the near part and $p''_\delta $ the far part. The far part is continuous at $x$, since $E_ d(w-y)\to E_ d(x-y)$ uniformly for $y\in K$ with $|y-x|\geq \delta $ as $w\to x$, by the uniform continuity of $E_ d$ on compact subsets of $\mathbb R^ d\setminus \{ 0\} $. The near part, restricted to $K$, is continuous at $x$, being the difference of $p|_ K$ and $p''_\delta |_ K$. Since $\mu $ is carried by $K$, we may integrate the inequalities above with respect to $\mu $ over $B(x,\delta )$; letting $z\to x$, we obtain for $d\geq 3$ 
+    
+<div class="equation">
+  \[  \varliminf _{z\to x}p(z)\geq p''_\delta (x)+2^{d-2}\lim _{z\to x}p'_\delta (z')=p(x)+(2^{d-2}-1)p'_\delta (x),  \]
+</div>
+<p>
+       and for $d=2$ the bound $\varliminf _{z\to x}p(z)\geq p(x)-(2\pi )^{-1}\mu (B(x,\delta ))\log 2$. Since $p(x)$ is finite, the function $E_ d(x-\cdot )$ is $\mu $-integrable and $\mu (\{ x\} )=0$. By dominated convergence and continuity of $\mu $ from above, $p'_\delta (x)\to 0$ and $\mu (B(x,\delta ))\to 0$ as $\delta \downarrow 0$, which proves $\varliminf _{z\to x}p(z)\geq p(x)$. 
+    <p>
+      (2) Let $M\geq 0$ be an upper bound of $E_ d$ on the compact set $K-K$. If $\nu $ is the restriction of $\mu $ to a Borel set, then $p=E_ d*\nu +E_ d*(\mu -\nu )$ and $E_ d*(\mu -\nu )\leq M\mu (K)$ on $K$, so $E_ d*\nu \geq p-M\mu (K)$ on $K$; hence $E_ d*\nu $ is finite $\nu $-almost everywhere. 
+    <p>
+      We construct inductively pairwise disjoint compact sets $K_1,K_2,\ldots \subset K$ such that the residual measures $\nu _ j=\mu |_{K\setminus (K_1\cup \cdots \cup K_ j)}$ satisfy $\nu _ j(\mathbb R^ d)&lt;2^{-j}$, and such that each $E_ d*(\mu |_{K_ j})$ is finite and continuous on $\mathbb R^ d$. Put $\nu _0=\mu $, and suppose $K_1,\ldots ,K_{j-1}$ have been chosen. Apply lemma <a data-tag="618DA269" href="../../tag/468BD94D4D83/">4.2.1</a> to $\nu =\nu _{j-1}$ and $E_ d*\nu $: there is a compact set $L$ with $\nu (\mathbb R^ d\setminus L)&lt;2^{-j-1}$ on which $E_ d*\nu $ is finite and continuous. Since $\nu $ is carried by $K$ and does not charge $K_1\cup \cdots \cup K_{j-1}$, inner regularity gives a compact set $K_ j\subset (L\cap K)\setminus (K_1\cup \cdots \cup K_{j-1})$ with $\nu (\mathbb R^ d\setminus K_ j)&lt;2^{-j}$. Put $\mu _ j=\nu |_{K_ j}=\mu |_{K_ j}$; then $\nu _ j=\nu -\mu _ j$ has mass less than $2^{-j}$. 
+    <p>
+      It remains to show that $E_ d*\mu _ j$ is finite and continuous. On $K_ j$ the two functions $E_ d*\mu _ j$ and $E_ d*(\nu -\mu _ j)$ are upper semicontinuous and less than $+\infty $, and their sum $E_ d*\nu $ is finite and continuous; hence both are finite on $K_ j$. Moreover, for $x\in K_ j$ and $K_ j\ni w\to x$, 
+    
+<div class="equation">
+  \[  \varliminf _{w\to x}E_ d*\mu _ j(w)\geq \lim _{w\to x}E_ d*\nu (w)-\varlimsup _{w\to x}E_ d*(\nu -\mu _ j)(w)\geq E_ d*\mu _ j(x),  \]
+</div>
+<p>
+       so the restriction of $E_ d*\mu _ j$ to $K_ j$ is continuous. The support of $\mu _ j$ is contained in $K_ j$, so part (1), applied to $\mu _ j$ and the compact set $K_ j$, shows that $E_ d*\mu _ j$ is continuous at every point of $K_ j$. At a point $x\notin K_ j$, the function $E_ d*\mu _ j$ is finite and continuous, because $E_ d(w-y)\to E_ d(x-y)$ uniformly in $y\in K_ j$ as $w\to x$, as for the far part in (1). Thus $E_ d*\mu _ j$ is finite and continuous on $\mathbb R^ d$. Finally, $\mu -\sum _{i\leq j}\mu _ i=\nu _ j$ has mass less than $2^{-j}$, so $\mu =\sum _ j\mu _ j$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Finite collapse distance · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>65049DB7855E</code></p><h1>Finite collapse distance</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · Proposition 14.18.11 <span data-gerby-tag="738853ED"></span></div><article class="env-proposition" id="non-kahler-pluripotential-theory-738853ED">
+<p><a class="environment-identifier" href="../../tag/65049DB7855E/">Proposition <span data-tag="738853ED">14.18.11</span>.</a><span data-gerby-tag="738853ED"></span> Let $g_ j$ be smooth Riemannian metrics on $X$ such that $g_ j\to \pi ^*g_0$ uniformly on every compact subset of $X\setminus E$. Suppose each $s_ a$ has a nested neighborhood basis $V_{a,r}$, with $U_{a,r}=\pi ^{-1}(V_{a,r})$, satisfying </p>
+<div class="equation">
+  \[  \lim _{r\downarrow 0}\operatorname {diam}_{\widehat d_0}(\iota (V_{a,r}))=0, \qquad \lim _{r\downarrow 0}\limsup _{j\to \infty } \operatorname {diam}^{\mathrm{int}}(U_{a,r},g_ j)=0.  \]
+</div>
+<p> Then, for the global length distances $d_ j$ of $g_ j$, </p>
+<div class="equation">
+  \[  \lim _{j\to \infty }\sup _{x,x'\in X} |d_ j(x,x')-\widehat d_0(G(x),G(x'))|=0.  \]
+</div>
+<p> Consequently $(X,d_ j)$ converges to $(\widehat Y,\widehat d_0)$ in Gromov–Hausdorff distance. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $S$ is empty, uniform metric comparison on compact $X$ proves the distance convergence. Assume $N\geq 1$. Fix $\tau &gt;0$. Choose pairwise disjoint neighborhoods $V_ a$ from the specified bases with 
+    
+<div class="equation">
+  \[  \operatorname {diam}_{\widehat d_0}(\iota (V_ a))&lt;\tau , \qquad \operatorname {diam}^{\mathrm{int}}(U_ a,g_ j)&lt;\tau  \]
+</div>
+<p>
+       for all sufficiently large $j$, where $U_ a=\pi ^{-1}(V_ a)$. Pick $q_ a\in V_ a\setminus S$, and then choose open neighborhoods $W_ a$ of $s_ a$ with $\overline W_ a\subset V_ a$ and $q_ a\notin \overline W_ a$. The regular cores 
+    
+<div class="equation">
+  \[  K_ Y=Y\setminus \bigcup _ a W_ a, \qquad K_ X=\pi ^{-1}(K_ Y)  \]
+</div>
+<p>
+       are compact and identified by $\pi $. Uniform convergence and positivity of $g_0$ on this core give numbers $A_ j\geq 1$, with $A_ j\to 1$, such that lengths of curves contained in the cores compare in both directions by the factor $A_ j$. 
+    <p>
+      Consider a piecewise smooth path in $Y^\circ $ joining two points of $K_ Y$. The preimages of the closed sets $\overline W_ a$ are compact subsets of its parameter interval. At its first visit to any such set, delete the portion from that visit through its last visit to the same set. Resume with the remaining tail. That set is never visited again; thus there are at most $N$ deleted portions. Each retained segment lies in $K_ Y$, and each deleted portion has endpoints in a single $\overline W_ a\subset V_ a$. The lifts of those endpoints can be joined in $U_ a$ with $g_ j$-length less than $\tau $, up to an arbitrarily small error. Applying this procedure to almost minimizing paths, comparing retained lengths, and letting the errors tend to zero gives, for $x,x'\in K_ X$, 
+    
+<div class="equation">
+  \[  d_ j(x,x')\leq A_ j\widehat d_0(G(x),G(x'))+N\tau .  \]
+</div>
+<p>
+      Conversely start with an almost minimizing $g_ j$-path in $X$ and apply the same deletion procedure to the closed sets $\pi ^{-1}(\overline W_ a)$. Project its retained segments, which avoid $E$, to $K_ Y$. The two images of each deleted portion have completion distance less than $\tau $. The triangle inequality in $\widehat Y$ therefore gives 
+    
+<div class="equation">
+  \[  \widehat d_0(G(x),G(x'))\leq A_ j d_ j(x,x')+N\tau , \qquad x,x'\in K_ X.  \]
+</div>
+<p>
+      For any $x\notin K_ X$ with $\pi (x)\in W_ a$, replace $x$ by $p=\pi ^{-1}(q_ a)\in U_ a\cap K_ X$. Then $d_ j(x,p)&lt;\tau $ and $\widehat d_0(G(x),G(p))&lt;\tau $. Leave points of $K_ X$ fixed. Replacing both endpoints extends the two inequalities to all $x,x'\in X$, with the same error 
+    
+<div class="equation">
+  \[  C_ j=(N+2+2A_ j)\tau .  \]
+</div>
+<p>
+       If $D=\operatorname {diam}(\widehat Y,\widehat d_0)$, the first inequality gives $\operatorname {diam}(X,d_ j)\leq A_ jD+C_ j$. The positive and negative distance errors are consequently bounded by 
+    
+<div class="equation">
+  \[  (A_ j-1)D+C_ j, \qquad (A_ j-1)(A_ jD+C_ j)+C_ j,  \]
+</div>
+<p>
+       respectively. Their upper limits are at most $(N+4)\tau $. Letting $\tau \downarrow 0$ proves uniform convergence. 
+    <p>
+      The graph of $G$ is a correspondence between $X$ and $\widehat Y$, and its distortion $b_ j$ for the distances $d_ j$ and $\widehat d_0$ is the supremum in the statement. By lemma <a data-tag="969D4BE0" href="../../tag/022849340F28/">14.18.9</a>, 
+    
+<div class="equation">
+  \[  d_{\mathrm{GH}}((X,d_ j),(\widehat Y,\widehat d_0))\leq b_ j/2\longrightarrow 0.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

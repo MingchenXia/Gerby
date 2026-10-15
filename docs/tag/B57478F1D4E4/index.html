@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pluriharmonic currents · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hermitian-torsion/">Chapter 10 · Hermitian geometry, torsion, and Gauduchon duality</a> · Tag <code>B57478F1D4E4</code></p><h1>Pluriharmonic currents</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 4.7 Pluriharmonic currents <span data-gerby-tag="BD56892E"></span></div>
+<p>
+A current is <em>pluriharmonic</em> if its $\mathrm{dd}^{\mathrm{c}}$ vanishes. The normalized Gauduchon currents of section <a data-tag="941A1AE6" href="../../tag/A532E9A2E94A/">4.4</a> are positive pluriharmonic currents of bidegree $(n-1,n-1)$. This section proves four basic properties of positive pluriharmonic currents of arbitrary bidegree. Positivity and the second-order equation control their concentration on a smooth hypersurface. On compact Kähler manifolds, a closed test form bounds the mass of their pullbacks, and the heat equation smooths those with continuous coefficients. Finally, a positive pluriharmonic $(1,1)$-current with vanishing vertical trace descends along a fiber bundle whose fibers are entire lines or compact curves; this is used for elliptic fibrations in chapter <a data-tag="92D98FDE" href="../../tag/26958A01D807/">28</a>. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-9611A9E5">
+<p><a class="environment-identifier" href="../../tag/D9A37BB4C36B/">Lemma <span data-tag="9611A9E5">4.7.1</span>.</a><span data-gerby-tag="9611A9E5"></span> Let $Z$ be a complex manifold of dimension $m\geq 2$, and let $j:D\hookrightarrow Z$ be a smooth closed hypersurface. If a positive $(q,q)$-current $R$, $1\leq q\leq m$, is supported on $D$ and $\mathrm{dd}^{\mathrm{c}}R$ has order zero, then there is a unique positive $(q-1,q-1)$-current $S$ on $D$ such that $R=j_*S$. If $\mathrm{dd}^{\mathrm{c}}R=0$, then $\mathrm{dd}^{\mathrm{c}}S=0$. In particular, if $q=1$, $D$ is compact and connected, and $\mathrm{dd}^{\mathrm{c}}R=0$, then $R=c[D]$ for some $c\geq 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use local coordinates $(z,w_1,\ldots ,w_{m-1})$ with $D=\{ z=0\} $. Both $R$ and $\mathrm{dd}^{\mathrm{c}}R$ have measure coefficients supported on $D$. Suppose first that $q&lt;m$. For every compactly supported smooth form $\eta $ of bidegree $(m-q-1,m-q-1)$, 
+    
+<div class="equation">
+  \[  0=\langle \mathrm{dd}^{\mathrm{c}}R,|z|^2\eta \rangle =\langle R,\mathrm{dd}^{\mathrm{c}}(|z|^2\eta )\rangle =\langle R,\mathrm{dd}^{\mathrm{c}}|z|^2\wedge \eta \rangle ,  \]
+</div>
+<p>
+       where the first equality holds because $\mathrm{dd}^{\mathrm{c}}R$ is a measure supported on $D$, on which $|z|^2$ vanishes, and the last one because the terms containing $|z|^2$ or its first derivatives vanish on $D$. Thus $R\wedge \mathrm{i}\, \mathrm{d}z\wedge \mathrm{d}\bar z=0$, which removes the coefficients of $R$ containing neither normal differential. 
+    <p>
+      Fix a constant positive Hermitian form $\tau $ in the $w$ variables. The current $M_\tau =R\wedge \tau ^{m-q-1}$ is positive of bidegree $(m-1,m-1)$, and $M_\tau \wedge \mathrm{i}\, \mathrm{d}z\wedge \mathrm{d}\bar z=0$. Its Hermitian matrix of measure densities therefore has zero diagonal entry in the normal direction, and positivity removes the corresponding row and column, so 
+    
+<div class="equation">
+  \[  M_\tau \wedge \mathrm{d}z=0, \qquad M_\tau \wedge \mathrm{d}\bar z=0.  \]
+</div>
+<p>
+       Put $s=m-q-1$. The powers $\tau ^ s$, as $\tau $ varies over the positive Hermitian forms, span the real horizontal $(s,s)$-forms. Indeed, a linear functional vanishing on these powers vanishes on a polynomial over an open cone; polarization makes it vanish on products of arbitrary real $(1,1)$-forms, and these products span the forms of that bidegree. Their products with a horizontal one-form span the complementary test forms for the mixed coefficients of $R$. The identities above therefore remove every coefficient containing exactly one normal differential. For $q=m$, every top-degree coefficient already contains both normal differentials, and this reduction is unnecessary. 
+    <p>
+      The remaining coefficients are measures on $\{ z=0\} $ multiplying both normal differentials. They therefore define a unique current $S$ on $D$ with $R=j_*S$. Testing against extensions of strongly positive forms on $D$ proves positivity of $S$, and uniqueness makes these local currents agree on overlaps. Pushforward commutes with $\mathrm{dd}^{\mathrm{c}}$ and is injective for a closed embedding, so $\mathrm{dd}^{\mathrm{c}}R=0$ implies $\mathrm{dd}^{\mathrm{c}}S=0$. 
+    <p>
+      When $q=1$, the current $S$ is a nonnegative distribution on $D$. The equation $\mathrm{dd}^{\mathrm{c}}S=0$ and Weyl's lemma make it a smooth nonnegative pluriharmonic function. If $D$ is compact and connected, the maximum principle makes it a constant $c\geq 0$, proving the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For smooth pluriharmonic forms on compact Kähler manifolds, the mass of the pullback under a fixed holomorphic map is controlled by pairing with a fixed closed form. The test object is the pushforward of a power of the Kähler form on the source, which is closed; the form being pulled back need only be $\mathrm{dd}^{\mathrm{c}}$-closed. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-33E1F4AD">
+<p><a class="environment-identifier" href="../../tag/25BD2AAB112A/">Lemma <span data-tag="33E1F4AD">4.7.2</span>.</a><span data-gerby-tag="33E1F4AD"></span> Let $F:Y\to X$ be a holomorphic map between compact Kähler manifolds of dimensions $N\geq n$, with Kähler forms $\Omega $ and $\omega $. For $1\leq p\leq n$, there is a constant $C$ such that every smooth positive $(p,p)$-form $S$ on $X$ with $\mathrm{dd}^{\mathrm{c}}S=0$ satisfies </p>
+<div class="equation">
+  \[  \int _ Y F^*S\wedge \Omega ^{N-p} \leq C\int _ X S\wedge \omega ^{n-p}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The positive closed current $\Gamma =F_*(\Omega ^{N-p})$ has bidegree $(n-p,n-p)$ on $X$. The classical $\mathrm{dd}^{\mathrm{c}}$-lemma for currents on compact Kähler manifolds gives a smooth real closed form $\gamma $ of this bidegree and a current $U$ with $\Gamma =\gamma +\mathrm{dd}^{\mathrm{c}}U$. For $p=n$, a closed current of degree zero is already a smooth locally constant function, and one may take $U=0$. Since $S$ is smooth, pairing it with $U$ is legitimate, and 
+    
+<div class="equation">
+  \[  \int _ Y F^*S\wedge \Omega ^{N-p} =\langle \Gamma ,S\rangle =\int _ X\gamma \wedge S+\langle U,\mathrm{dd}^{\mathrm{c}}S\rangle =\int _ X\gamma \wedge S.  \]
+</div>
+<p>
+       The pairing with the fixed smooth form $\gamma $ is bounded in absolute value by a constant times the trace mass $\int _ XS\wedge \omega ^{n-p}$ of the positive form $S$. This proves the estimate. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+For continuous coefficients on a compact Kähler manifold, the Hodge heat flow smooths a positive form while preserving the pluriharmonic equation, and a small multiple of a power of the Kähler form restores positivity. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-004EE9C6">
+<p><a class="environment-identifier" href="../../tag/40BA141971D9/">Lemma <span data-tag="004EE9C6">4.7.3</span>.</a><span data-gerby-tag="004EE9C6"></span> Let $(X,\omega )$ be a compact Kähler manifold of dimension $n$, and let $1\leq p\leq n$. Every continuous positive real $(p,p)$-form $R$ satisfying $\mathrm{dd}^{\mathrm{c}}R=0$ in the sense of currents is a uniform limit of smooth positive real $(p,p)$-forms $R_ j$ with $\mathrm{dd}^{\mathrm{c}}R_ j=0$. If $R$ is closed, the approximants can also be chosen closed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\Delta $ be the real Hodge Laplacian of the Kähler metric. Its heat operators $H_ t=\mathrm e^{-t\Delta }$ are smoothing for $t&gt;0$. The Kähler identities give $\Delta =2\Delta _\partial =2\Delta _{\bar\partial }$, so $H_ t$ preserves bidegree, reality and the equation $\mathrm{dd}^{\mathrm{c}}R=0$. 
+    <p>
+      We recall why $H_ tR\to R$ uniformly for a continuous form $R$. The Weitzenböck formula writes $\Delta =\nabla ^*\nabla +A$, with a bounded curvature term $A$ of order zero. For smooth initial data $\beta $, the heat equation and the maximum principle give 
+    
+<div class="equation">
+  \[  \| H_ t\beta \| _{C^0}\leq \mathrm e^{Ct}\| \beta \| _{C^0} \qquad (0&lt;t\leq 1),  \]
+</div>
+<p>
+       where $C$ depends only on the fixed metric and the degree. Indeed, the scalar equation for $|H_ t\beta |^2$ has a nonpositive gradient term and a curvature term bounded above by $2C|H_ t\beta |^2$. The classical smooth heat solution converges uniformly to its smooth initial data. Approximating a continuous form by smooth forms and using this bound proves uniform convergence for continuous initial data. The resulting heat solution is smooth for $t&gt;0$, and since the commutation with $\mathrm{dd}^{\mathrm{c}}$ extends to currents, $\mathrm{dd}^{\mathrm{c}}H_ tR=0$. 
+    <p>
+      Set $\epsilon _ t=\| H_ tR-R\| _{C^0}$, which tends to zero. A fixed constant $c&gt;0$ satisfies 
+    
+<div class="equation">
+  \[  E+c\| E\| _{C^0}\omega ^ p\geq 0  \]
+</div>
+<p>
+       for every continuous real $(p,p)$-form $E$; to see this, evaluate on decomposable unit $p$-vectors, on which $\omega ^ p$ has a uniformly positive value. Consequently 
+    
+<div class="equation">
+  \[  R_ t=H_ tR+c\epsilon _ t\omega ^ p  \]
+</div>
+<p>
+       is smooth and positive. Since $\omega $ is Kähler, $\mathrm{dd}^{\mathrm{c}}\omega ^ p=0$, and hence $\mathrm{dd}^{\mathrm{c}}R_ t=0$. Moreover, $R_ t\to R$ uniformly. The Hodge heat flow also commutes with $\mathrm{d}$, and $\omega ^ p$ is closed, so $\mathrm{d}R=0$ implies $\mathrm{d}R_ t=0$. Choosing any sequence $t_ j\downarrow 0$ proves the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+We next consider a positive $(1,1)$-current with vanishing vertical trace on the total space of a fiber bundle. Positivity removes its vertical and mixed coefficients. For a closed current the remaining coefficients are constant along the fibers. For a pluriharmonic current they are only harmonic along the fibers, but positivity gives the same conclusion when the fiber is the whole complex line or a compact connected curve. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-03684AFE">
+<p><a class="environment-identifier" href="../../tag/3CD7629C6061/">Lemma <span data-tag="03684AFE">4.7.4</span>.</a><span data-gerby-tag="03684AFE"></span> Let $Y$ be a complex manifold of dimension $\ell \geq 1$, let $\eta $ be a Hermitian form on $Y$, and let $\pi :Z\to Y$ be a holomorphic fiber bundle whose fiber is either $\mathbb C$ or a compact connected Riemann surface. If $S$ is a positive real $(1,1)$-current on $Z$ with $\mathrm{dd}^{\mathrm{c}}S=0$ and $S\wedge \pi ^*\eta ^\ell =0$, then there is a unique positive $\mathrm{dd}^{\mathrm{c}}$-closed $(1,1)$-current $R$ on $Y$ such that $S=\pi ^*R$. If $S$ is closed, then $R$ is closed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a local trivialization $\pi ^{-1}(U)=U\times F$ of the bundle, with base coordinates $w=(w_1,\ldots ,w_\ell )$ and a local fiber coordinate $z$. The coefficient measures of $S$ have a positive Hermitian matrix of densities relative to their trace measure. The identity $S\wedge \pi ^*\eta ^\ell =0$ makes the vertical diagonal entry zero, and the inequality $|s_{\alpha \bar z}|^2\leq s_{\alpha \bar\alpha }s_{z\bar z}$ then removes all mixed entries. Thus 
+    
+<div class="equation">
+  \[  S=\frac{\mathrm{i}}{2\pi }\sum _{\alpha ,\beta =1}^\ell s_{\alpha \bar\beta }(w,z)\, \mathrm{d}w_\alpha \wedge \mathrm{d}\bar w_\beta ,  \]
+</div>
+<p>
+       with distribution coefficients. In the equation $\partial \bar\partial S=0$, the coefficient containing both vertical differentials and the horizontal pair $(\alpha ,\beta )$ gives $\partial _ z\partial _{\bar z}s_{\alpha \bar\beta }=0$. 
+    <p>
+      Fix $v\in \mathbb C^\ell $ and a nonnegative smooth function $\xi $ with compact support in $U$. Pairing the positive coefficient distribution $\sum _{\alpha ,\beta }s_{\alpha \bar\beta }v_\alpha \bar v_\beta $, in the base variables, with $\xi $ times the Euclidean volume form defines a nonnegative harmonic distribution on the whole fiber $F$. Its definition does not depend on the fiber coordinate, since the remaining differentials are horizontal. Weyl's lemma makes it a nonnegative harmonic function. Such a function is constant on $\mathbb C$ by the Liouville theorem for harmonic functions, and on a compact connected curve by the maximum principle. 
+    <p>
+      Polarization in $v$ and linearity in the base test function show that every coefficient $s_{\alpha \bar\beta }$ is the pullback of a distribution $r_{\alpha \bar\beta }$ on $U$. To identify this distribution, pair against any nonnegative smooth fiber density of total integral one; this also proves positivity of the resulting current $R_ U$ on $U$ and injectivity of the pullback. Consequently $\mathrm{dd}^{\mathrm{c}}S=\pi ^*(\mathrm{dd}^{\mathrm{c}}R_ U)=0$ implies $\mathrm{dd}^{\mathrm{c}}R_ U=0$. On overlaps, injectivity makes the currents $R_ U$ agree, so they glue to a current $R$, and injectivity also proves uniqueness. If $\mathrm{d}S=0$, the same argument gives $\mathrm{d}R=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The assumption that the fibers are entire lines or compact curves is essential. On the bidisk $\Delta _ z\times \Delta _ w$, the current 
+</p>
+<div class="equation">
+  \[  S=(2+\operatorname {Re}z)\frac{\mathrm{i}}{2\pi }\, \mathrm{d}w\wedge \mathrm{d}\bar w  \]
+</div>
+<p>
+ is positive and $\mathrm{dd}^{\mathrm{c}}$-closed, and its vertical trace vanishes. Its horizontal coefficient depends on $z$, so it does not descend under the projection to $\Delta _ w$. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

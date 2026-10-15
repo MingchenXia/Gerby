@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A bounded subsolution theorem · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>898B7B54B3D0</code></p><h1>A bounded subsolution theorem</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 14.9 A bounded subsolution theorem <span data-gerby-tag="89CC5EBF"></span></div>
+<p>
+The bounded exponential equation remains solvable for right-hand sides that are singular with respect to smooth volume, provided they have a bounded density with respect to the Monge–Ampère measure of a bounded potential. We regularize this potential to obtain equations with bounded densities with respect to smooth volume; their solutions are controlled by a moving dominating measure. When the density is allowed to vanish, the normalizations are bounded by the mixed density inequality of lemma <a data-tag="9BDC0351" href="../../tag/6C81352D9EE7/">1.7.6</a> and the trace estimate for a fixed reference in lemma <a data-tag="9642EBFE" href="../../tag/31C5645526CA/">1.8.13</a>. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-E589A1BA">
+<p><a class="environment-identifier" href="../../tag/BA5CB37AAAC1/">Theorem <span data-tag="E589A1BA">14.9.1</span>.</a><span data-gerby-tag="E589A1BA"></span> Let $\theta $ be semipositive and big. Suppose </p>
+<div class="equation">
+  \[  \mu =f\, \mathrm{MA}_\theta (\psi ),\qquad \psi \in \mathrm{PSH}(X,\theta )\cap L^\infty (X),\qquad 0\leq f\in L^\infty (\mathrm{MA}_\theta (\psi )),  \]
+</div>
+<p> and $\mu (X)&gt;0$. For every $\lambda &gt;0$ there is a unique bounded $u\in \mathrm{PSH}(X,\theta )$ satisfying </p>
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u)=\mathrm{e}^{\lambda u}\mu .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $\nu =\mathrm{MA}_\theta (\psi )$, a finite non-pluripolar measure. 
+    <p>
+<em>Step 1: smooth strictly positive density.</em> First suppose $f$ is smooth and strictly positive. Choose a Hermitian form $\Omega \geq \theta $ and, by theorem <a data-tag="177A90D1" href="../../tag/240BA0465940/">1.11.1</a>, smooth $\Omega $-plurisubharmonic functions $\psi _ j\downarrow \psi $. The envelopes 
+    
+<div class="equation">
+  \[  q_ j=P_\theta (\psi _ j)  \]
+</div>
+<p>
+       lie between $\psi $ and $\psi _ j$, so they are uniformly bounded and decrease to $\psi $. Contact support and ordered contact in the background $\Omega $ give 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\theta (q_ j) \leq \mathbf1_{\{ q_ j=\psi _ j\} }\Omega _{\psi _ j}^ n.  \]
+</div>
+<p>
+       In particular, each $\mathrm{MA}_\theta (q_ j)$ has a bounded density with respect to smooth volume. Moreover $\mathrm{MA}_\theta (q_ j)(X)&gt;0$ by proposition <a data-tag="EB19DA85" href="../../tag/9BBE1DE257CB/">13.2.1</a>. Theorem <a data-tag="E540849F" href="../../tag/96A341EAF1D4/">14.2.2</a> therefore gives bounded $u_ j\in \mathrm{PSH}(X,\theta )$ with 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u_ j)=\mathrm{e}^{\lambda u_ j}f\,  \mathrm{MA}_\theta (q_ j).  \]
+</div>
+<p>
+       Since $f$ is bounded above and away from zero, we can choose $C$ such that $\mathrm{e}^{\lambda (q_ j-C)}f\leq 1\leq \mathrm{e}^{\lambda (q_ j+C)}f$ for all $j$. Then $q_ j-C$ and $q_ j+C$ are a subsolution and a supersolution, and bounded exponential comparison gives $q_ j-C\leq u_ j\leq q_ j+C$. 
+    <p>
+      Extract an $L^1$ limit $u$, which is again bounded. The moving domination 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u_ j)\leq C'\Omega _{\psi _ j}^ n  \]
+</div>
+<p>
+       and corollary <a data-tag="C466047F" href="../../tag/F856D22ADF4C/">14.8.3</a>, applied with the reference zero, give convergence in capacity. Continuity of bounded products under convergence in capacity, with the quasi-continuous weights $\mathrm{e}^{\lambda u_ j}f$, then gives 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u)=\mathrm{e}^{\lambda u}f\nu .  \]
+</div>
+<p>
+<em>Step 2: bounded measurable density.</em> Choose smooth positive functions $f_ j$ with a common upper bound $L&gt;0$ such that $f_ j\to f$ in $L^1(\nu )$. Such an approximation exists: by regularity of the finite measure $\nu $, $f$ can be approximated by continuous functions on large compact sets, and continuous functions by smooth ones uniformly; truncating to a fixed bounded interval and adding a positive constant tending to zero preserves the bounds and the convergence. Step 1 gives bounded $u_ j$ with 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u_ j)=\mathrm{e}^{\lambda u_ j}f_ j\nu .  \]
+</div>
+<p>
+       For a fixed $C$ we have $\mathrm{e}^{\lambda (\psi -C)}f_ j\leq 1$ for all $j$, so $\psi -C$ is a subsolution and $u_ j\geq \psi -C$. The upper bound requires a separate argument, because $\inf _ Xf_ j$ may tend to zero. 
+    <p>
+      The construction in Step 1 also gives the mixed inequality 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-D412E56A"><span data-gerby-tag="D412E56A"></span>
+<span class="equation-label"><a data-tag="D412E56A" href="../../tag/25E63CEC282C/">14.11</a></span>
+<div>\begin{equation} \label{eq:bounded-subsolution-mixed} \theta _{u_ j}\wedge \theta _\psi ^{n-1} \geq \mathrm{e}^{\lambda u_ j/n}f_ j^{1/n}\nu . \end{equation}</div>
+</div>
+<p>
+       To prove it without a mixed inequality for arbitrary singular measures, we use the approximants $u_{j,k}$ and $q_ k$ of Step 1, for which 
+    
+<div class="equation">
+  \[  \mathrm{MA}_\theta (u_{j,k}) =\mathrm{e}^{\lambda u_{j,k}}f_ j\mathrm{MA}_\theta (q_ k),  \]
+</div>
+<p>
+       and both Monge–Ampère measures have densities with respect to smooth volume. Lemma <a data-tag="9BDC0351" href="../../tag/6C81352D9EE7/">1.7.6</a> applies to the pair $(u_{j,k},q_ k)$. For fixed $j$, both sequences are uniformly bounded and converge in capacity to $(u_ j,\psi )$, so continuity of bounded products against quasi-continuous weights passes the mixed inequality to the limit and yields (<a data-tag="D412E56A" href="../../tag/25E63CEC282C/">14.11</a>). 
+    <p>
+      Put $M_ j=\sup _ Xu_ j$, $v_ j=u_ j-M_ j$ and $c_ j=\mathrm{e}^{\lambda M_ j}$. Suppose the $M_ j$ were unbounded above. After extraction, $M_ j\to +\infty $ and $v_ j\to v$ in $L^1(X)$, where $v\in \mathrm{PSH}(X,\theta )$ is normalized. By lemma <a data-tag="266C64AB" href="../../tag/983B3E6349BB/">1.23.1</a>, $\mathrm{e}^{\lambda v_ j/n}\to \mathrm{e}^{\lambda v/n}$ in $L^1(\nu )$. Together with the inequalities 
+    
+<div class="equation">
+  \[  |f_ j^{1/n}-f^{1/n}|^ n\leq |f_ j-f|, \qquad 0\leq f_ j\leq L,  \]
+</div>
+<p>
+       this gives 
+    
+<div class="equation">
+  \[  \int _ X \mathrm{e}^{\lambda v_ j/n}f_ j^{1/n}\, \mathrm{d}\nu \longrightarrow \int _ X\mathrm{e}^{\lambda v/n}f^{1/n}\, \mathrm{d}\nu &gt;0;  \]
+</div>
+<p>
+       the last integral is positive because $\mu (X)&gt;0$ and $\nu $ does not charge the pole set of $v$. Integrating (<a data-tag="D412E56A" href="../../tag/25E63CEC282C/">14.11</a>) and applying lemma <a data-tag="9642EBFE" href="../../tag/31C5645526CA/">1.8.13</a>, we find some $a&gt;0$ such that, along the extraction, 
+    
+<div class="equation">
+  \[  a c_ j^{1/n}\leq \int _ X\theta _{v_ j}\wedge \theta _\psi ^{n-1}\leq C_\psi ,  \]
+</div>
+<p>
+       contradicting $M_ j\to +\infty $. Thus the $u_ j$ are uniformly bounded above as well as below. 
+    <p>
+      Extract an $L^1$ limit $u$. Now $\mathrm{MA}_\theta (u_ j)\leq C''\nu $, so corollary <a data-tag="C466047F" href="../../tag/F856D22ADF4C/">14.8.3</a> gives convergence in capacity and weak convergence of the Monge–Ampère measures. The right-hand sides converge in total variation, by the convergence of exponentials against the fixed measure $\nu $ and the estimate 
+    
+<div class="equation">
+  \[  \int _ X|\mathrm{e}^{\lambda u_ j}f_ j-\mathrm{e}^{\lambda u}f|\, \mathrm{d}\nu \leq C\| f_ j-f\| _{L^1(\nu )} +\| f\| _\infty \int _ X|\mathrm{e}^{\lambda u_ j}-\mathrm{e}^{\lambda u}|\, \mathrm{d}\nu .  \]
+</div>
+<p>
+       Consequently $\mathrm{MA}_\theta (u)=\mathrm{e}^{\lambda u}\mu $. Uniqueness follows from bounded exponential comparison. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

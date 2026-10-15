@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quasi-continuity and convergence in capacity · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/local-monge-ampere/">Chapter 7 · Local Monge–Ampère theory and Hessian equations</a> · Tag <code>887374BF3465</code></p><h1>Quasi-continuity and convergence in capacity</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 9.4 Quasi-continuity and convergence in capacity <span data-gerby-tag="18CD0AA2"></span></div>
+<p>
+Throughout this section and the next, $D\subset \mathbb {C}^ n$, $n\ge 1$, is a bounded open set. By theorem <a data-tag="05AA986C" href="../../tag/6B0925DDDD3A/">4.5.2</a>, locally integrable subharmonic functions are quasi-continuous in the sense of <a data-tag="83351735" href="../../tag/AD345FBB/">1</a>: they are continuous outside open sets of arbitrarily small relative capacity. We now define quasi-continuity with respect to the Monge–Ampère capacity instead, which is the meaning of the term in the rest of the book, prove that plurisubharmonic functions are quasi-continuous in this sense, and then show that the products are continuous under convergence in capacity. 
+</p>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-CB3CE5F3">
+<p><a class="environment-identifier" href="../../tag/A2CACA24130B/">Definition <span data-tag="CB3CE5F3">9.4.1</span>.</a><span data-gerby-tag="CB3CE5F3"></span> A Borel function $f\colon D\to [-\infty ,\infty ]$ is <em>quasi-continuous</em> (for $\operatorname {Cap}_ D$) if for every compact set $K\subset D$ and every $\varepsilon &gt;0$ there is an open set $G\subset D$ with $\operatorname {Cap}_ D(G)&lt;\varepsilon $ such that the restriction of $f$ to $K\setminus G$ is continuous. Here $[-\infty ,\infty ]$ carries its order topology. </p>
+</article>  The same definition applies to a function defined on an open subset $W\subset D$, with compact sets $K\subset W$ and still with $\operatorname {Cap}_ D$. The sum $f_1+f_2$ and the difference $f_1-f_2$ of two real-valued quasi-continuous functions $f_1,f_2$ are quasi-continuous, and so is $\Phi \circ f_1$ for every continuous function $\Phi \colon \mathbb R\to \mathbb R$. Indeed, these functions are Borel. Given $K$ and $\varepsilon $, choose open sets $G_ i\subset D$ with $\operatorname {Cap}_ D(G_ i)&lt;\varepsilon /2$ such that $f_ i$ is continuous on $K\setminus G_ i$, $i=1,2$. Then $G=G_1\cup G_2$ satisfies $\operatorname {Cap}_ D(G)&lt;\varepsilon $ by subadditivity (proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>), and $f_1+f_2$ and $f_1-f_2$ are continuous on $K\setminus G$, as sums and differences of continuous real functions there; similarly, $\Phi \circ f_1$ is continuous on $K\setminus G_1$. 
+
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-CAA09EE2">
+<p><a class="environment-identifier" href="../../tag/C39FEC1AB985/">Theorem <span data-tag="CAA09EE2">9.4.2</span>.</a><span data-gerby-tag="CAA09EE2"></span> Let $u\in \mathrm{PSH}(D)$. For every $\varepsilon &gt;0$ there is an open set $G\subset D$ with $\operatorname {Cap}_ D(G)&lt;\varepsilon $ which contains the pole set $\{ u=-\infty \} $ and such that the restriction of $u$ to $D\setminus G$ is finite and continuous. In particular $u$ is quasi-continuous. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: locally bounded $u$.</em> Let $u$ be locally bounded, $K\subset D$ compact and $\varepsilon &gt;0$; we find an open set $G\subset D$ with $\operatorname {Cap}_ D(G)&lt;\varepsilon $ such that $u$ is continuous on $K\setminus G$. For each $x\in K$ choose $r_ x&gt;0$ with $\overline{B(x,3r_ x)}\subset D$; finitely many balls $B(x_ i,r_{x_ i})$, $1\le i\le m$, cover $K$. Suppose that for each $i$ we find an open set $G_ i$ with $\operatorname {Cap}_ D(G_ i)&lt;\varepsilon /m$ such that $u$ is continuous on $\overline{B(x_ i,r_{x_ i})}\setminus G_ i$. Then $G=\bigcup _ iG_ i$ satisfies $\operatorname {Cap}_ D(G)&lt;\varepsilon $, and $u$ is continuous on $K\setminus G$, because the finitely many sets $(K\setminus G)\cap \overline{B(x_ i,r_{x_ i})}$ are closed in $K\setminus G$ and cover it, and $u$ is continuous on each of them. We may therefore assume that $K=\overline{B'}$, where $B'=B(x,r)$, $B=B(x,2r)$ and $B_1=B(x,3r)$ satisfy $\overline{B_1}\subset D$. 
+    <p>
+      Subtracting a constant, we may assume that $-N\le u\le -1$ on $B_1$. Let $j&gt;2/r$. Since $U=B(x,5r/2)$, a neighborhood of $\overline B$, lies at distance $r/2&gt;1/j$ from $\mathbb C^ n\setminus B_1$, the regularization $u*\rho _{1/j}$ is smooth and plurisubharmonic on $U$ and takes values in $[-N,-1]$ there; moreover, $u*\rho _{1/j}$ decreases to $u$ as $j\to \infty $ (proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>). Put $\psi =|z-x|^2-4r^2$, choose $\delta &gt;0$ with $\overline{B'}\subset \{ \psi &lt;-\delta \} $, and let $g=\max \{ u,A\psi \} $ and $g_ j=\max \{ u*\rho _{1/j},A\psi \} $, with $A=N/\delta $, be the functions (<a data-tag="D980942E" href="../../tag/9789F9473996/">9.8</a>) on $U$. The $g_ j$ are continuous and plurisubharmonic on $U$ and decrease to $g$; moreover, $g=u$ on $\{ \psi &lt;-\delta \} \supset \overline{B'}$, and $g_ j=g=A\psi $ on a collar of $\partial B$. 
+    <p>
+      For $\delta '&gt;0$ put $G_{j,\delta '}=\{ z\in B:g_ j(z)-g(z)&gt;\delta '\} $; it is open, because $g_ j$ is continuous and $g$ is upper semicontinuous. By (<a data-tag="7B9DD319" href="../../tag/28751508F174/">9.20</a>), applied with $h=g_ j$, $u=g$ and $\delta '$ in place of $\delta $, 
+    
+<div class="equation">
+  \[  \operatorname {Cap}_ D(G_{j,\delta '})\le \frac{(n+1)!}{\delta '^{n+1}}\int _ B(g_ j-g)(\mathrm{dd}^{\mathrm{c}}g)^ n.  \]
+</div>
+<p>
+       The right-hand side tends to zero as $j\to \infty $ by dominated convergence: $(\mathrm{dd}^{\mathrm{c}}g)^ n$ has finite mass on $B$, since $g$ is bounded and plurisubharmonic near $\overline B$, and the functions $g_ j-g\ge 0$ are bounded on $B$ uniformly in $j$ and decrease to zero. Choose $j_1&lt;j_2&lt;\cdots $ such that $G_ l=G_{j_ l,2^{-l}}$ satisfies $\operatorname {Cap}_ D(G_ l)&lt;\varepsilon 2^{-l}$, and let $G=\bigcup _ lG_ l$. Then $\operatorname {Cap}_ D(G)&lt;\varepsilon $, and on $B\setminus G$ we have $0\le g_{j_ l}-g\le 2^{-l}$ for every $l$. Thus $g$ is a uniform limit of continuous functions on $B\setminus G$, hence continuous there; in particular $u=g$ is continuous on $\overline{B'}\setminus G$. 
+    <p>
+<em>Step 2: arbitrary $u$.</em> Let $K\subset D$ be compact and $\varepsilon &gt;0$. By proposition <a data-tag="554B46C3" href="../../tag/815E5BBFC34A/">9.3.4</a>, applied to $K$ and a compact neighborhood $L$ of $K$ in $D$, there is $s&gt;0$ with $\operatorname {Cap}^*_ D(K\cap \{ u&lt;-s\} )&lt;\varepsilon /2$, and hence an open set $G_1\supset K\cap \{ u&lt;-s\} $ with $\operatorname {Cap}_ D(G_1)&lt;\varepsilon /2$. By Step 1, applied to the locally bounded plurisubharmonic function $\max \{ u,-s\} $, there is an open set $G_2$ with $\operatorname {Cap}_ D(G_2)&lt;\varepsilon /2$ such that $\max \{ u,-s\} $ is continuous on $K\setminus G_2$. On $K\setminus (G_1\cup G_2)$ we have $u\ge -s$, hence $u=\max \{ u,-s\} $. Thus $G=G_1\cup G_2$ contains $K\cap \{ u=-\infty \} $, $\operatorname {Cap}_ D(G)&lt;\varepsilon $, and $u$ is finite and continuous on $K\setminus G$. 
+    <p>
+<em>Step 3: a single exceptional set.</em> Choose compact sets $K_ l$ with $K_ l\subset \operatorname{Int}K_{l+1}$ and $\bigcup _ lK_ l=D$. By Step 2 there are open sets $G^{(l)}\supset K_ l\cap \{ u=-\infty \} $ with $\operatorname {Cap}_ D(G^{(l)})&lt;\varepsilon 2^{-l}$ such that $u$ is finite and continuous on $K_ l\setminus G^{(l)}$. Put $G=\bigcup _ lG^{(l)}$. Then $\operatorname {Cap}_ D(G)&lt;\varepsilon $, and $G$ contains the pole set of $u$. Every $x\in D\setminus G$ lies in some $\operatorname{Int}K_ l$, and on the neighborhood $\operatorname{Int}K_ l\setminus G$ of $x$ in $D\setminus G$ the function $u$ is a restriction of the continuous function $u|_{K_ l\setminus G^{(l)}}$. Hence $u|_{D\setminus G}$ is finite and continuous. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+In the proofs below we extend continuous functions from compact sets, using the following elementary case of Tietze's extension theorem. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-5878B026">
+<p><a class="environment-identifier" href="../../tag/D127F8356D96/">Lemma <span data-tag="5878B026">9.4.3</span>.</a><span data-gerby-tag="5878B026"></span> Let $(X,d)$ be a metric space, let $F\subset X$ be compact, and let $f\colon F\to \mathbb R$ be continuous with $|f|\le a$. Then $f$ has a continuous extension $g\colon X\to \mathbb R$ with $|g|\le a$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $F=\varnothing $ or $a=0$, take $g=0$. Otherwise, for $L&gt;0$ put 
+    
+<div class="equation">
+  \[  f_ L(x)=\max \Bigl \{ -a,\min \bigl \{ a,\inf _{y\in F}(f(y)+L\, d(x,y))\bigr \} \Bigr \} ,\qquad x\in X.  \]
+</div>
+<p>
+       The infimum is finite, since $f\ge -a$, and as an infimum of functions that are Lipschitz with constant $L$ it is Lipschitz with constant $L$; hence $f_ L$ is continuous and $|f_ L|\le a$. We claim that $f_ L\to f$ uniformly on $F$ as $L\to \infty $. Taking $y=x$ shows $f_ L\le f$ on $F$. Given $\eta &gt;0$, uniform continuity of $f$ on the compact set $F$ gives $r&gt;0$ with $|f(y)-f(x)|&lt;\eta $ for $x,y\in F$ with $d(x,y)&lt;r$. Let $Lr&gt;2a$ and $x\in F$. Points $y\in F$ with $d(x,y)\ge r$ give $f(y)+L\, d(x,y)\ge -a+Lr&gt;a\ge f(x)$, and the other points give $f(y)+L\, d(x,y)&gt;f(x)-\eta $. Hence the infimum is at least $f(x)-\eta $, and so is $f_ L(x)$, because $a\ge f(x)&gt;f(x)-\eta $ and $-a\le f(x)$. This proves the claim. Consequently there is a continuous $g_1$ on $X$ with $|g_1|\le a$ and $|f-g_1|\le a/2$ on $F$. Applying the same construction to $f-g_1$ on $F$, we find a continuous $g_2$ with $|g_2|\le a/2$ and $|f-g_1-g_2|\le a/4$ on $F$, and inductively continuous $g_ k$ with $|g_ k|\le 2^{1-k}a$ and $|f-g_1-\cdots -g_ k|\le 2^{-k}a$ on $F$. The series $\sum _ kg_ k$ converges uniformly on $X$; its sum is continuous and equals $f$ on $F$, and clamping it to $[-a,a]$, that is, replacing it by $\max \{ -a,\min \{ a,\sum _ kg_ k\} \} $, does not change its values on $F$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-34043611">
+<p><a class="environment-identifier" href="../../tag/56B45ADBA326/">Lemma <span data-tag="34043611">9.4.4</span>.</a><span data-gerby-tag="34043611"></span> Let $K,L\subset D$ be compact sets with $K\subset \operatorname{Int}L$, and let $f$ be a real Borel function which is defined and quasi-continuous on a neighborhood of $L$. Then, for every $\delta &gt;0$, </p>
+<div class="equation">
+  \[  \operatorname {Cap}_ D^*(K\cap \{ |f|&gt;\delta \} ) \le \operatorname {Cap}_ D(L\cap \{ |f|&gt;\delta /2\} ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\eta &gt;0$. By quasi-continuity, applied to the compact set $L$, there is an open set $G\subset D$ with $\operatorname {Cap}_ D(G)&lt;\eta $ such that $f$ is continuous on $L\setminus G$; let $g$ be a continuous extension of $f|_{L\setminus G}$ to $\mathbb {C}^ n$ (lemma <a data-tag="5878B026" href="../../tag/D127F8356D96/">9.4.3</a>); here $f|_{L\setminus G}$ is bounded, being continuous on a compact set. The open set $G\cup (\operatorname{Int}L\cap \{ |g|&gt;\delta /2\} )$ contains $K\cap \{ |f|&gt;\delta \} $, since $K\subset \operatorname{Int}L$ and $g=f$ on $K\setminus G$. Its part outside $G$ is a Borel set contained in $L\cap \{ |f|&gt;\delta /2\} $, because $g=f$ on $L\setminus G$. By monotonicity and subadditivity, 
+    
+<div class="equation">
+  \[  \operatorname {Cap}_ D^*(K\cap \{ |f|&gt;\delta \} )\le \eta +\operatorname {Cap}_ D(L\cap \{ |f|&gt;\delta /2\} ).  \]
+</div>
+<p>
+       Let $\eta \downarrow 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-F3E0CD1A">
+<p><a class="environment-identifier" href="../../tag/DAD5D0809372/">Definition <span data-tag="F3E0CD1A">9.4.5</span>.</a><span data-gerby-tag="F3E0CD1A"></span> A net $(f_ a)$ of Borel functions $f_ a\colon D\to [-\infty ,+\infty ]$ <em>converges locally in capacity</em> to a Borel function $f\colon D\to [-\infty ,+\infty ]$ if, for every compact set $K\subset D$ and every $\delta &gt;0$, </p>
+<div class="equation">
+  \[  \operatorname {Cap}_ D^*(K\cap \{ f_ a&gt;f+\delta \} )\longrightarrow 0, \qquad \operatorname {Cap}_ D^*(K\cap \{ f_ a&lt;f-\delta \} )\longrightarrow 0.  \]
+</div>
+<p> Here $\pm \infty +\delta =\pm \infty $ and $\pm \infty -\delta =\pm \infty $. </p>
+</article>  For finite functions, $K\cap \{ |f_ a-f|&gt;\delta \} $ is the union of the two sets in the definition, so by monotonicity and subadditivity of outer capacity the two conditions together are equivalent to $\operatorname {Cap}_ D^*(K\cap \{ |f_ a-f|&gt;\delta \} )\to 0$. Convergence locally in capacity is a local property: it holds on $D$ if and only if, for every ball $B\Subset D$, it holds on $B$ with $\operatorname {Cap}_ B$ in place of $\operatorname {Cap}_ D$. Indeed, if it holds on $D$ and $K\subset B$ is compact, then proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>(4) gives $\operatorname {Cap}^*_ B(A)\le C\operatorname {Cap}^*_ D(A)$ for all $A\subset K$. Conversely, if it holds on every ball $B\Subset D$, cover a compact set $K\subset D$ by finitely many balls $B(x_ i,r_ i)$ with $\overline{B(x_ i,2r_ i)}\subset D$; for $A\subset K_ i=K\cap \overline{B(x_ i,r_ i)}$, proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>(4) gives $\operatorname {Cap}^*_ D(A)\le \operatorname {Cap}^*_{B(x_ i,2r_ i)}(A)$, and subadditivity over $i$ gives the condition on $D$. In particular, for functions on an open set $W\subset D$, convergence locally in capacity with $\operatorname {Cap}_ W$ is equivalent to the same condition, for compact subsets of $W$, with $\operatorname {Cap}_ D$, since both are equivalent to the condition on balls $B\Subset W$. 
+
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-29AC3820">
+<p><a class="environment-identifier" href="../../tag/9542ED69E1C1/">Proposition <span data-tag="29AC3820">9.4.6</span>.</a><span data-gerby-tag="29AC3820"></span> Let $u_ j$ be locally bounded plurisubharmonic functions on $D$ decreasing to a locally bounded function $u$. Then $u_ j\to u$ locally in capacity. Moreover, a net of real Borel functions on $D$ which is uniformly bounded on each compact subset of $D$ and converges locally in capacity to a locally bounded real Borel function also converges in $L^1_{\mathrm{loc}}(D)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $K\subset D$ be compact and $\delta &gt;0$. Since $u_ j\ge u$, the sets $\{ u_ j&lt;u-\delta \} $ are empty, and we must show that $\operatorname {Cap}^*_ D(K\cap \{ u_ j-u&gt;\delta \} )\to 0$. By theorem <a data-tag="1174FCEA" href="../../tag/FE144A69076E/">8.3.1</a>, $u$ is plurisubharmonic. Covering $K$ by finitely many balls $B(x,r)$ with $\overline{B(x,4r)}\subset D$ and using subadditivity of outer capacity, we may assume that $K\subset \overline{B(x,r)}$ for such a ball; put $L=\overline{B(x,3r/2)}$, $B=B(x,3r)$ and $B_1=B(x,4r)$. 
+    <p>
+      We first make the functions coincide near $\partial B$. Since $u\le u_ j\le u_1$, all these functions are bounded on $B_1$ uniformly in $j$, so there are constants $c$ and $N\ge 1$ with $-N\le u_ j-c,\, u-c\le -1$ on $B_1$. Put $\psi =|z-x|^2-9r^2$, choose $\delta _0&gt;0$ with $L\subset \{ \psi &lt;-\delta _0\} $, and let $\hat u_ j=\max \{ u_ j-c,A\psi \} $ and $\hat u=\max \{ u-c,A\psi \} $, with $A=N/\delta _0$, be the functions (<a data-tag="D980942E" href="../../tag/9789F9473996/">9.8</a>) on $B_1$, with $\delta _0$ in place of $\delta $. They are bounded and plurisubharmonic on $B_1$, $\hat u_ j\downarrow \hat u$, $\hat u_ j-\hat u=u_ j-u$ on $L$, and $\hat u_ j=\hat u$ on a collar of $\partial B$. By (<a data-tag="7B9DD319" href="../../tag/28751508F174/">9.20</a>), applied with $u=\hat u$ and $h=\hat u_ j$, 
+    
+<div class="equation">
+  \[  \operatorname {Cap}_ D\bigl (B\cap \{ \hat u_ j-\hat u&gt;\delta /2\} \bigr ) \le (n+1)!\, (2/\delta )^{n+1}\int _ B(\hat u_ j-\hat u)(\mathrm{dd}^{\mathrm{c}}\hat u)^ n,  \]
+</div>
+<p>
+       and the right-hand side tends to zero by dominated convergence, since $(\mathrm{dd}^{\mathrm{c}}\hat u)^ n$ has finite mass on $B$ and $0\le \hat u_ j-\hat u\le \hat u_1-\hat u$ decreases to zero. The real function $w_ j=u_ j-u$ is quasi-continuous on $D$, as a difference of two real quasi-continuous functions (theorem <a data-tag="CAA09EE2" href="../../tag/C39FEC1AB985/">9.4.2</a> and the remark following definition <a data-tag="CB3CE5F3" href="../../tag/A2CACA24130B/">9.4.1</a>), and $w_ j=\hat u_ j-\hat u$ on $L$. Hence lemma <a data-tag="34043611" href="../../tag/56B45ADBA326/">9.4.4</a> gives 
+    
+<div class="equation">
+  \[  \operatorname {Cap}^*_ D(K\cap \{ w_ j&gt;\delta \} )\le \operatorname {Cap}_ D(L\cap \{ w_ j&gt;\delta /2\} )\le \operatorname {Cap}_ D\bigl (B\cap \{ \hat u_ j-\hat u&gt;\delta /2\} \bigr )\longrightarrow 0.  \]
+</div>
+<p>
+      For the second assertion, let $f_ a\to f$ be as in the statement, let $K\subset D$ be compact, and let $M$ bound $|f_ a|$ and $|f|$ on $K$. Splitting $K$ into the Borel set where $|f_ a-f|&gt;\delta $ and its complement, and using proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>(3) together with $\operatorname {Cap}_ D\le \operatorname {Cap}^*_ D$ on Borel sets, we get 
+    
+<div class="equation">
+  \[  \int _ K|f_ a-f|\, \mathrm{d}V_{2n} \le 2MC_ D\operatorname {Cap}_ D^*(K\cap \{ |f_ a-f|&gt;\delta \} ) +\delta |K|.  \]
+</div>
+<p>
+       Taking the limit along the net and then letting $\delta \downarrow 0$ proves $L^1$ convergence on $K$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-39398ED2">
+<p><a class="environment-identifier" href="../../tag/880C30054932/">Lemma <span data-tag="39398ED2">9.4.7</span>.</a><span data-gerby-tag="39398ED2"></span> Let $B\subset \mathbb C^ n$ be a ball, and let $\mathcal U$ be a family of plurisubharmonic functions on $B$ which is uniformly bounded on each compact subset of $B$. </p>
+<ol>
+<li><p>
+For every compact set $K\subset B$ there is a constant $C$ such that, for all integers $0\le q\le n$, all $u_1,\ldots ,u_ q\in \mathcal U$ and all Borel sets $E\subset K$, the trace measure $\mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ q\wedge \beta ^{n-q}$, and the total variation of every coefficient measure of $\mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ q$, give $E$ mass at most $C\operatorname {Cap}_ B(E)$. 
+</p>
+</li><li><p>
+Let $S_ j=\mathrm{dd}^{\mathrm{c}}u_{1,j}\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_{q,j}$ with $u_{l,j}\in \mathcal U$, and suppose that $S_ j\to S$ weakly. Let $f_ j$ be real Borel functions on $B$, uniformly bounded on each compact subset of $B$, which converge locally in capacity (for $\operatorname {Cap}_ B$) to a real Borel function $f$ that is locally bounded and quasi-continuous. Then $f_ jS_ j\to fS$ weakly, and the same holds for the trace measures of $S_ j$ and $S$. This applies in particular to a fixed weight $f_ j=f$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Let $B=B(a,R)$, fix $K$, and choose $R'&lt;R$ with $K\subset B'=B(a,R')$. Let $M\ge 1$ be a common bound for $|u|$ on $B'$, $u\in \mathcal U$. For $u_1,\ldots ,u_ q\in \mathcal U$ put $v_ l=(u_ l+M)/(2M)$ and $\phi =|z-a|^2/R'^2$; these functions take values in $[0,1]$ on $B'$, and so does 
+    
+<div class="equation">
+  \[  F=\frac1n\bigl (v_1+\cdots +v_ q+(n-q)\phi \bigr ),  \]
+</div>
+<p>
+       which is therefore a competitor for $\operatorname {Cap}_{B'}$. Expand $(\mathrm{dd}^{\mathrm{c}}F)^ n$ by additivity, positive homogeneity and symmetry (proposition <a data-tag="D16BD033" href="../../tag/D9911E035563/">9.1.2</a>, theorem <a data-tag="8B1F9B78" href="../../tag/D87C13B3250A/">9.2.5</a>). All terms are positive measures, and those in which each $\mathrm{dd}^{\mathrm{c}}v_ l$ occurs once and $\mathrm{dd}^{\mathrm{c}}\phi $ occurs $n-q$ times add up to $c_{n,q}\, \mathrm{dd}^{\mathrm{c}}v_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}v_ q\wedge (\mathrm{dd}^{\mathrm{c}}\phi )^{n-q}$, where $c_{n,q}=n^{-n}\, n!\, (n-q)^{n-q}/(n-q)!&gt;0$ (with $0^0=1$) is the corresponding multinomial coefficient. Hence $\mathrm{dd}^{\mathrm{c}}v_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}v_ q\wedge (\mathrm{dd}^{\mathrm{c}}\phi )^{n-q}\le c_{n,q}^{-1}(\mathrm{dd}^{\mathrm{c}}F)^ n$. Since $\mathrm{dd}^{\mathrm{c}}\phi =\beta /(\pi R'^2)$ and $\mathrm{dd}^{\mathrm{c}}u_ l=2M\mathrm{dd}^{\mathrm{c}}v_ l$, it follows that $\int _ E\mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ q\wedge \beta ^{n-q}\le C\operatorname {Cap}_{B'}(E)$ for Borel $E\subset B'$. The bound for the coefficient measures follows from theorem <a data-tag="2BB3620D" href="../../tag/1C212E45A497/">7.2.5</a>, and proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>(4), applied to $B'\Subset B$ and $K$, replaces $\operatorname {Cap}_{B'}$ by $\operatorname {Cap}_ B$ on subsets of $K$. 
+    <p>
+      (2) The weak limit $S$ is a positive current (theorem <a data-tag="2BB3620D" href="../../tag/1C212E45A497/">7.2.5</a>). Let $\sigma _ j$ be either the trace measure or a coefficient measure of $S_ j$, and $\sigma $ the corresponding measure of $S$; then $\int \psi \, \mathrm d\sigma _ j\to \int \psi \, \mathrm d\sigma $ for every test function $\psi $, since this integral is the value of $S_ j$ on a test form. Fix a continuous function $\chi $ with compact support in $B$ and a compact set $K\subset B$ with $\operatorname{Supp}\chi \subset \operatorname{Int}K$, and let $C$ be the constant of (1) for $K$; in particular $|\sigma _ j|(K)\le C\operatorname {Cap}_ B(K)$, which is finite by proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>(1). A similar bound holds for $\sigma $ on open subsets $U\subset \operatorname{Int}K$: for the trace measure, which is the vague limit of the trace measures of $S_ j$ (section <a data-tag="28C8F083" href="../../tag/ACB622806098/">7.2</a>), proposition <a data-tag="6031A2A1" href="../../tag/132090FCDF4A/">1.5.2</a> gives $\sigma (U)\le \varliminf _ j\sigma _ j(U)\le C\operatorname {Cap}_ B(U)$, and the total variations of the coefficient measures of the positive current $S$ are bounded by a constant multiple of its trace measure. 
+    <p>
+      Since the total variations $|\sigma _ j|(K)$ are bounded, the convergence $\int \psi \, \mathrm d\sigma _ j\to \int \psi \, \mathrm d\sigma $ extends to continuous functions $\psi $ with support in $\operatorname{Int}K$: approximating $\psi $ uniformly by test functions supported in a fixed compact subset of $\operatorname{Int}K$ (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(5)) changes the integrals by at most $\sup |\psi -\psi _\varepsilon |$ times a bound for $|\sigma _ j|(K)$ and $|\sigma |(K)$. 
+    <p>
+      Consider first the fixed weight $f$, and let $\eta &gt;0$. Since $f$ is quasi-continuous, there is an open set $G\subset B$ with $\operatorname {Cap}_ B(G)&lt;\eta $ such that $f$ is continuous on $K\setminus G$; let $g$ be a continuous extension of $f|_{K\setminus G}$ to $\mathbb C^ n$ with $\sup |g|\le \sup _ K|f|$ (lemma <a data-tag="5878B026" href="../../tag/D127F8356D96/">9.4.3</a>). Then 
+    
+<div class="equation">
+  \[  \Bigl |\int \chi f\, \mathrm{d}\sigma _ j-\int \chi g\, \mathrm{d}\sigma _ j\Bigr |\le 2\sup _ K|f|\sup |\chi |\, |\sigma _ j|(G\cap \operatorname{Supp}\chi )\le C'\eta ,  \]
+</div>
+<p>
+       and similarly for $\sigma $, using the open set $G\cap \operatorname{Int}K$. Since $\chi g$ is continuous with support in $\operatorname{Int}K$, we have $\int \chi g\, \mathrm{d}\sigma _ j\to \int \chi g\, \mathrm{d}\sigma $. Hence $\varlimsup _ j|\int \chi f\, \mathrm{d}\sigma _ j-\int \chi f\, \mathrm{d}\sigma |\le 2C'\eta $ for every $\eta &gt;0$, which proves $f\sigma _ j\to f\sigma $. 
+    <p>
+      For varying weights, let $M_ K$ bound $|f_ j|$ and $|f|$ on $K$, and let $\delta &gt;0$. By (1), 
+    
+<div class="equation">
+  \[  \Bigl |\int \chi (f_ j-f)\, \mathrm{d}\sigma _ j\Bigr | \le \sup |\chi |\Bigl (\delta \, C\operatorname {Cap}_ B(K)+2M_ KC\operatorname {Cap}^*_ B\bigl (K\cap \{ |f_ j-f|&gt;\delta \} \bigr )\Bigr ).  \]
+</div>
+<p>
+       As $j\to \infty $, the second term tends to zero by convergence in capacity; then we let $\delta \downarrow 0$. Together with the fixed-weight case, this proves $f_ j\sigma _ j\to f\sigma $, and hence $f_ jS_ j\to fS$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-2B1AA42A">
+<p><a class="environment-identifier" href="../../tag/42828E3BDDFA/">Theorem <span data-tag="2B1AA42A">9.4.8</span>.</a><span data-gerby-tag="2B1AA42A"></span> Let $0\le q\le n$ be an integer. For $1\le l\le q$, let $(u_{l,j})_{j\ge 1}$ be a sequence of plurisubharmonic functions on $D$, uniformly bounded on each compact subset of $D$, which converges locally in capacity to a locally bounded plurisubharmonic function $u_ l$. Then </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}u_{1,j}\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_{q,j} \longrightarrow \mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ q  \]
+</div>
+<p> weakly. More generally, if $f_ j$ are real Borel functions on $D$, uniformly bounded on each compact subset of $D$, which converge locally in capacity to a locally bounded, quasi-continuous real Borel function $f$, then $f_ j\mathrm{dd}^{\mathrm{c}}u_{1,j}\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_{q,j}\to f\mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ q$ weakly. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Weak convergence is local (lemma <a data-tag="1F8D2E1B" href="../../tag/4286535DCE99/">9.2.4</a>), so it suffices to prove the convergence on every ball $B\Subset D$. By the remark following definition <a data-tag="F3E0CD1A" href="../../tag/DAD5D0809372/">9.4.5</a>, the convergence in capacity holds with $\operatorname {Cap}_ B$ in place of $\operatorname {Cap}_ D$ on every ball $B\Subset D$. The limit $f$ is quasi-continuous for $\operatorname {Cap}_ B$ as well: if $K\subset B$ is compact, $K'$ is a compact neighborhood of $K$ in $B$, and $G\subset D$ is open with $f$ continuous on $K'\setminus G$, then $G\cap \operatorname{Int}K'$ is open in $B$, $f$ is continuous on $K\setminus (G\cap \operatorname{Int}K')=K\setminus G$, and $\operatorname {Cap}_ B(G\cap \operatorname{Int}K')\le C\operatorname {Cap}_ D(G)$ by proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>(4) applied to $K'$. Finally, the functions $u_{l,j}$ and $u_ l$, restricted to $B$, form a family which is uniformly bounded on compact subsets of $B$. We may therefore work on such a ball and use lemma <a data-tag="39398ED2" href="../../tag/880C30054932/">9.4.7</a>. 
+    <p>
+      We argue by induction on $q$. For $q=0$ the product is $1$, and the weighted assertion is the second part of the lemma with $S_ j=1$. Let $q\ge 1$, and assume that $S_ j=\mathrm{dd}^{\mathrm{c}}u_{2,j}\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_{q,j}$ converges weakly to $S=\mathrm{dd}^{\mathrm{c}}u_2\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ q$. The functions $u_{1,j}$ converge in capacity to $u_1$, which is quasi-continuous by theorem <a data-tag="CAA09EE2" href="../../tag/C39FEC1AB985/">9.4.2</a>; hence the second part of the lemma gives $u_{1,j}S_ j\to u_1S$, and applying $\mathrm{dd}^{\mathrm{c}}$ proves the unweighted assertion for $q$ factors. The weighted assertion then follows from the second part of the lemma once more. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Unlike theorem <a data-tag="8B1F9B78" href="../../tag/D87C13B3250A/">9.2.5</a>, theorem <a data-tag="2B1AA42A" href="../../tag/42828E3BDDFA/">9.4.8</a> concerns only products with the base current $T=1$. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

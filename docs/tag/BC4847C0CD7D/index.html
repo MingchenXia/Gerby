@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hermitian trace inequality · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>BC4847C0CD7D</code></p><h1>Hermitian trace inequality</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · Lemma 9.4.1 <span data-gerby-tag="FE968158"></span></div><article class="env-lemma" id="non-kahler-pluripotential-theory-FE968158">
+<p><a class="environment-identifier" href="../../tag/BC4847C0CD7D/">Lemma <span data-tag="FE968158">9.4.1</span>.</a><span data-gerby-tag="FE968158"></span> Suppose $h=g+(u_{i\bar j})&gt;0$, and put </p>
+<div class="equation">
+  \[  S=\operatorname {tr}_ gh,\qquad B=\operatorname {tr}_ hg, \qquad G=\log \frac{\det h}{\det g}.  \]
+</div>
+<p> There is $C_ g$ such that, at every point where $S\geq 1$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-9337ECFA"><span data-gerby-tag="9337ECFA"></span>
+<span class="equation-label"><a data-tag="9337ECFA" href="../../tag/CAD281B47B5A/">9.10</a></span>
+<div>\begin{equation} \label{eq:hermitian-trace-inequality} \Delta _ h\log S\geq \frac2{S^2}\operatorname {Re}\bigl (h^{k\bar q}\tau _ k S_{\bar q}\bigr ) +\frac{\Delta _ gG}{S}-C_ gB. \end{equation}</div>
+</div>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The identity $\mathrm{d}\omega _ u=\mathrm{d}\omega $ is equivalent to 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-D0224E0D"><span data-gerby-tag="D0224E0D"></span>
+<span class="equation-label"><a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a></span>
+<div>\begin{equation} \label{eq:trace-torsion-switch} \nabla _ i h_{k\bar j}-\nabla _ k h_{i\bar j} =T_{ik}^ p(g_{p\bar j}-h_{p\bar j}), \end{equation}</div>
+</div>
+<p>
+       together with its complex conjugate; this can also be checked directly, since the third derivatives of $u$ cancel. 
+    <p>
+      For tensors with two holomorphic and one antiholomorphic lower index, we use the norm 
+    
+<div class="equation">
+  \[  \| A\| ^2=g^{i\bar\ell }h^{k\bar q}h^{p\bar j} A_{ik\bar j}\overline{A_{\ell q\bar p}}.  \]
+</div>
+<p>
+       Set $A_{ik\bar j}=\nabla _ i h_{k\bar j}$ and $D_{ik\bar j}=T_{ik}^ p h_{p\bar j}$. We first claim 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-CEB21F4A"><span data-gerby-tag="CEB21F4A"></span>
+<span class="equation-label"><a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a></span>
+<div>\begin{equation} \label{eq:trace-before-square} \Delta _ hS=\| A+D\| ^2+\Delta _ gG+E, \qquad |E|\leq C_ g(1+S)B. \end{equation}</div>
+</div>
+<p>
+       To prove this, start with $\Delta _ hS=h^{i\bar j}g^{k\bar\ell }\nabla _ i\nabla _{\bar j}h_{k\bar\ell }$. Switch $\bar j,\bar\ell $ by the conjugate of (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>), commute $\nabla _ i,\nabla _{\bar\ell }$, and then switch $i,k$ by (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>). The terms with a derivative of $h$ are 
+    
+<div class="equation">
+  \[  h^{i\bar j}g^{k\bar\ell }\nabla _{\bar\ell }\nabla _ kh_{i\bar j} -2\operatorname {Re}\bigl (h^{i\bar j}g^{k\bar\ell } T_{ik}^ p\nabla _{\bar\ell }h_{p\bar j}\bigr ).  \]
+</div>
+<p>
+       The first switch also produces the term $-h^{i\bar j}g^{k\bar\ell }\overline{T_{j\ell }^ q}\nabla _ i h_{k\bar q}$. Applying (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>) to it gives one of the two conjugate derivative terms displayed above, together with 
+    
+<div class="equation">
+  \[  h^{i\bar j}g^{k\bar\ell }T_{ik}^ p\overline{T_{j\ell }^ q} (h_{p\bar q}-g_{p\bar q}).  \]
+</div>
+<p>
+       The part of this expression containing $h_{p\bar q}$ is $\| D\| ^2$. Differentiating the logarithmic determinant twice gives 
+    
+<div class="equation">
+  \[  \Delta _ gG=h^{i\bar j}g^{k\bar\ell } \nabla _{\bar\ell }\nabla _ kh_{i\bar j}-\| A\| ^2.  \]
+</div>
+<p>
+       By the antisymmetry of $T$, the two remaining derivative terms combine to $2\operatorname {Re}\langle A,D\rangle $, where $\langle \cdot ,\cdot \rangle $ is the inner product of the norm above. These identities give (<a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a>). 
+    <p>
+      To bound the remainder $E$ explicitly, let 
+    
+<div class="equation">
+  \[  \mathcal C_{i\bar\ell k\bar j} =(\nabla _ i\nabla _{\bar\ell }-\nabla _{\bar\ell }\nabla _ i)h_{k\bar j}.  \]
+</div>
+<p>
+        The remainder is the contraction by $h^{i\bar j}g^{k\bar\ell }$ of 
+    
+<div class="equation">
+  \[  \begin{split} &amp; (\nabla _ i\overline{T_{j\ell }^ q})(g_{k\bar q}-h_{k\bar q}) +(\nabla _{\bar\ell }T_{ik}^ p)(g_{p\bar j}-h_{p\bar j})\\ &amp; \hspace{15mm}+\mathcal C_{i\bar\ell k\bar j} -T_{ik}^ p\overline{T_{j\ell }^ q}g_{p\bar q}. \end{split}  \]
+</div>
+<p>
+       The commutator $\mathcal C$ is the curvature of $\nabla $ acting linearly on $h$, as one sees by inserting $\nabla =\partial +\Gamma $ and canceling the derivatives of $h$. In a $g$-unitary frame diagonalizing $h$, every coefficient in this remainder is bounded by $C_ g(1+S)$, so the contraction is bounded by $C_ g(1+S)\sum _ i h^{i\bar i}=C_ g(1+S)B$, as asserted. In particular, no derivative of $h$ remains in $E$. 
+    <p>
+      It remains to control the gradient term introduced by the logarithm. Define 
+    
+<div class="equation">
+  \[  H_{ik\bar j}=h_{i\bar j}\frac{S_ k}{S},\qquad K=\| A+D-H\| ^2\geq 0.  \]
+</div>
+<p>
+       By (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>), 
+    
+<div class="equation">
+  \[  g^{i\bar\ell }(A+D)_{ik\bar\ell }=S_ k+\tau _ k.  \]
+</div>
+<p>
+       Moreover $\| H\| ^2=|\partial S|_ h^2/S$. Expanding the square therefore gives 
+    
+<div class="equation">
+  \[  K=\| A+D\| ^2-\frac{|\partial S|_ h^2}{S} -\frac2S\operatorname {Re}(h^{k\bar q}\tau _ kS_{\bar q}).  \]
+</div>
+<p>
+       Combining this with (<a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a>) and with $\Delta _ h\log S=\Delta _ hS/S-|\partial S|_ h^2/S^2$, we obtain the exact identity 
+    
+<div class="equation">
+  \[  \Delta _ h\log S=\frac KS+ \frac2{S^2}\operatorname {Re}(h^{k\bar q}\tau _ kS_{\bar q}) +\frac{\Delta _ gG}{S}+\frac ES.  \]
+</div>
+<p>
+       Since $K\geq 0$ and $S\geq 1$, and since $E/S\geq -2C_ gB$, enlarging the constant proves the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Concave neighborhoods and dual norms · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hermitian-torsion/">Chapter 10 · Hermitian geometry, torsion, and Gauduchon duality</a> · Tag <code>4276F3B6339D</code></p><h1>Concave neighborhoods and dual norms</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 4.6.8 Concave neighborhoods and dual norms <span data-gerby-tag="CA25F14F"></span></div>
+<p>
+A relatively compact neighborhood $\Omega $ of the zero section of a vector bundle $E$ determines a norm on $E^*$, the support function $\xi \mapsto \max _{v\in \overline\Omega \cap E_ x}|\xi (v)|$ of its fibers. If the boundary of $\Omega $ is sufficiently concave in the horizontal directions, holomorphic sections touching the boundary from inside show that this support norm has plurisubharmonic square, and supporting balls give it uniform convexity in the fibers. Consequently, when the dual norms are obstructed as in theorem <a data-tag="5A4D8636" href="../../tag/C222D1BB3C65/">4.6.4</a>, such neighborhoods cannot exist. In terms of exhaustion functions, this bounds the convexity of the complement of the zero section in the projective completion of $E$. 
+</p>
+<p>
+In this subsection, $E\to X$ is a holomorphic vector bundle of rank $r\geq 1$, and $n\geq 1$. Fix a smooth Hermitian metric $k$ on $E$, with real inner product $k_{\mathbb R}=\operatorname {Re}k$ and dual norm $|\cdot |_{k^*}$. For a smooth real function $f$, write $\mathcal L_ f$ for its complex Hessian. Let $\Omega $ be an open set with smooth boundary, defined near $\partial \Omega $ by $f&lt;0$ with $\mathrm df\ne 0$ on $\partial \Omega $. We say that $\partial \Omega $ has <em>at least $n$ negative Levi directions</em> if, at every boundary point, $\mathcal L_ f$ has at least $n$ negative eigenvalues on $\ker \partial f$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-31A10535">
+<p><a class="environment-identifier" href="../../tag/7A772B0D8822/">Lemma <span data-tag="31A10535">4.6.36</span>.</a><span data-gerby-tag="31A10535"></span>  Fix $\delta ,B&gt;0$. On a finite-dimensional Hermitian vector space, put </p>
+<div class="equation">
+  \[  s_ c(\xi )=|\xi (c)|+\delta |\xi |  \]
+</div>
+<p> for covectors $\xi $ and vectors $c$ with $|c|\leq B$. There is $\gamma &gt;0$, depending only on $\delta $ and $B$, such that $s_ c^2-\gamma |\xi |^2$ is real convex for every such $c$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $0&lt;\tau \leq 1$, replace $s_ c$ by the norm 
+    
+<div class="equation">
+  \[  s_{c,\tau }(\xi )=\sqrt{|\xi (c)|^2+\tau |\xi |^2}+\delta |\xi |,  \]
+</div>
+<p>
+       which is smooth off zero. Its Lipschitz constant is at most $L=\sqrt{B^2+1}+\delta $, uniformly in $c$ and $\tau $. All derivatives below are real derivatives on the dual space. At $\xi \ne 0$, set $u=\xi /|\xi |$ and decompose a vector as $w=\alpha u+b$ with $b$ orthogonal to $u$ for the real inner product. Write $s=s_{c,\tau }$ and $A=\mathrm ds_\xi (w)$. Since the first summand of $s$ is convex and $s\geq \delta |\xi |$, 
+    
+<div class="equation">
+  \[  D^2s(w,w)\geq \delta \frac{|b|^2}{|\xi |},\qquad D^2(s^2)(w,w)\geq 2A^2+2\delta ^2|b|^2.  \]
+</div>
+<p>
+       Homogeneity gives $\mathrm ds_\xi (u)=s(\xi )/|\xi |\geq \delta $. Since $|\mathrm ds_\xi (b)|\leq L|b|$, we have 
+    
+<div class="equation">
+  \[  |w|^2\leq \frac{2A^2}{\delta ^2} +\left(1+\frac{2L^2}{\delta ^2}\right)|b|^2.  \]
+</div>
+<p>
+       Take $\gamma =\delta ^4/(\delta ^2+2L^2)$. Then $\gamma \leq \delta ^2/2$ and $\gamma (1+2L^2/\delta ^2)=\delta ^2$, so $D^2(s^2)(w,w)\geq 2\gamma |w|^2$. 
+    <p>
+      The homogeneous function $s^2-\gamma |\xi |^2$ of degree two extends as a $C^1$ function at zero with differential zero. Its restriction to every real line is convex, including at zero, because its second derivative is nonnegative away from zero and its first derivatives match there. Thus it is convex on the whole space. Finally, 
+    
+<div class="equation">
+  \[  0\leq s_{c,\tau }(\xi )-s_ c(\xi )\leq \sqrt\tau \, |\xi |,  \]
+</div>
+<p>
+       and the locally uniform limit as $\tau \downarrow 0$ proves the assertion with the same $\gamma $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-007613F4">
+<p><a class="environment-identifier" href="../../tag/854B49CB03B9/">Theorem <span data-tag="007613F4">4.6.37</span>.</a><span data-gerby-tag="007613F4"></span>  Suppose that a relatively compact neighborhood $\Omega \Subset E$ of the zero section has smooth boundary with at least $n$ negative Levi directions. Then </p>
+<div class="equation">
+  \[  p(x,\xi )=\max _{v\in \overline\Omega \cap E_ x}|\xi (v)|  \]
+</div>
+<p> is a continuous complex norm on $E^*$ whose square $Q=p^2$ is plurisubharmonic on the total space of $E^*$. For some $\gamma &gt;0$, each function $Q(x,\cdot )-\gamma |\cdot |_{k^*}^2$ is real convex. If $E$ is ample, $E^*$ also admits a smooth complex norm with strictly plurisubharmonic square off the zero section. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: basic bounds.</em> Put $A_ x=\overline\Omega \cap E_ x$. By compactness of $X$ there are $0&lt;a_0&lt;b_0$ such that, in every fiber, the closed $k$-ball of radius $a_0$ is contained in $\Omega $ and $\overline\Omega $ lies in the open ball of radius $b_0$. The maximum defining $p$ is attained, and 
+    
+<div class="equation">
+  \[  a_0|\xi |_{k^*}\leq p(x,\xi )\leq b_0|\xi |_{k^*}.  \]
+</div>
+<p>
+       As a supremum of absolute values of linear functionals, $p$ is complex homogeneous and satisfies the triangle inequality. 
+    <p>
+<em>Step 2: support points.</em> Fix $\xi _0\ne 0$ and a maximizing point $v_0\in A_{x_0}$. It lies on $\partial \Omega $, since at an interior point a small vertical displacement would increase $|\xi _0(v)|$. Multiply $\xi _0$ by a complex number of modulus one to obtain $\eta $ with $\eta (v_0)=p(x_0,\xi _0)=a&gt;0$. Then $\ell =\operatorname {Re}\eta $ satisfies $\ell \leq a$ on $A_{x_0}$. Choose a smooth defining function $f$ near the boundary, with $\Omega =\{ f&lt;0\} $ and $\mathrm df\ne 0$ there. 
+    <p>
+      Let $V=T^{1,0}_{v_0}E_{x_0}$ be the vertical tangent space and $T=\ker \partial f(v_0)$. Choose an $n$-dimensional complex subspace $W\subset T$ on which $\mathcal L_ f$ is negative definite. We first show that the vertical differential $\mathrm d_ vf(v_0)$ is nonzero. Otherwise $V\subset T$, and counting dimensions gives $W\cap V\ne \{ 0\} $. A vector in this intersection has negative vertical Levi form, and the two corresponding real directions show that the real vertical Hessian of $f$ has a negative direction. Its negative cone is open, hence contains a direction $w$ with $\ell (w)&gt;0$. Since the vertical first derivative vanishes, Taylor expansion gives $f(v_0+tw)&lt;0$ for small $t&gt;0$, contradicting $\ell \leq a$ on $A_{x_0}$. 
+    <p>
+      The boundary of $A_{x_0}$ is therefore smooth at $v_0$. Since the supporting functional $\ell $ attains its maximum on $A_{x_0}$ there, 
+    
+<div class="equation">
+  \[  \mathrm d_ vf(v_0)=c\, \mathrm d\ell ,\qquad c&gt;0;  \]
+</div>
+<p>
+       the sign follows because an inward direction along which $\ell $ increases would contradict the maximality. On the affine hyperplane $\{ \ell =a\} $ of the fiber, the restriction of $f$ has a local minimum zero at $v_0$: a point there with $f&lt;0$ would allow an additional displacement increasing $\ell $ within $\Omega $. The real vertical Hessian of $f$ is thus nonnegative on $\ker \mathrm d\ell $. Consequently $\mathcal L_ f$ is nonnegative on the complex space $V\cap T$, of dimension $r-1$. Hence $W\cap V=\{ 0\} $, and the projection $W\to T^{1,0}_{x_0}X$ is an isomorphism. 
+    <p>
+<em>Step 3: plurisubharmonicity.</em> In local coordinates $z$ centered at $x_0$, choose a holomorphic section $\sigma _0$ through $v_0$ with tangent space $W$. The function $f\circ \sigma _0$ has zero first derivative and negative definite mixed Hessian. Its quadratic expansion is 
+    
+<div class="equation">
+  \[  f(\sigma _0(z))=\sum H_{\alpha \bar\beta }z_\alpha \bar z_\beta +2\operatorname {Re}P(z)+O(|z|^3),  \]
+</div>
+<p>
+       where $P$ is a holomorphic quadratic polynomial. Choose a vertical vector $b$ with $\partial _ vf(b)=1$, and replace $\sigma _0$ by $\sigma =\sigma _0-bP$. This preserves the first jet and cancels the pure quadratic part. Thus, after shrinking the chart, 
+    
+<div class="equation">
+  \[  f(\sigma (z))\leq -\epsilon |z|^2, \qquad \sigma (0)=v_0,  \]
+</div>
+<p>
+       for some $\epsilon &gt;0$. In particular $\sigma (z)\in A_ z$ throughout the chart. 
+    <p>
+      Compactness of $\overline\Omega $ makes $p$ upper semicontinuous: for convergent covectors, the corresponding maximizing vectors have a subsequence whose limit lies in the limiting fiber of $\overline\Omega $. The supporting section gives the opposite inequality $p(z,\xi )\geq |\xi (\sigma (z))|$, with equality at $(x_0,\xi _0)$. Therefore $p$ is continuous off the zero section, and its upper bound gives continuity at zero. The holomorphic pairing $\xi (\sigma (z))$ is nonzero near the contact point, and its logarithmic absolute value is a pluriharmonic function lying below $\log p$ and equal to it at $(x_0,\xi _0)$. The mean-value property on small holomorphic disks therefore gives the submean inequality for $\log p$ at every point off the zero section. Thus $\log p$, and then $Q=\exp (2\log p)$ by Jensen's inequality, are plurisubharmonic there. At the zero section the continuous nonnegative function $Q$ vanishes, so its submean inequality on disks also holds there. 
+    <p>
+<em>Step 4: uniform convexity in the fibers.</em> Consider all maximizing triples $(x,\xi ,v)$ with $|\xi |_{k^*}=1$. They form a compact set, since $p$ is continuous, and by Step 2 the vertical differential $\mathrm d_ vf$ does not vanish at these support points. Thus there are uniform constants $m&gt;0$, $\rho &gt;0$ and $C\geq 1$ such that, for vertical vectors $w$, 
+    
+<div class="equation">
+  \[  |\mathrm d_ vf|\geq m,\qquad f(v+w)\leq \mathrm d_ vf(w)+C|w|_ k^2\quad (|w|_ k\leq \rho ).  \]
+</div>
+<p>
+       Choose $0&lt;\delta &lt;\min \{ a_0/2,\rho /2,m/(2C)\} $. At a support point, write $N$ for the outward real vertical unit normal and set $c=v-\delta N$. If $|w+\delta N|_ k\leq \delta $, then 
+    
+<div class="equation">
+  \[  k_{\mathbb R}(w,N)\leq -\frac{|w|_ k^2}{2\delta },\qquad f(v+w)\leq -\left(\frac{m}{2\delta }-C\right)|w|_ k^2\leq 0.  \]
+</div>
+<p>
+       All these points lie in the neighborhood where $f$ is defined, so the closed ball $\overline B_ k(c,\delta )$ is contained in $A_ x$. 
+    <p>
+      The support function of this ball is $s_ c(\xi )=|\xi (c)|+\delta |\xi |_{k^*}\leq p(x,\xi )$. For a maximizing covector of unit norm, with its phase normalized as in Step 2, the real part $\operatorname {Re}\eta $ has real dual norm one and its metric dual vector is $N$. Hence $\operatorname {Re}\eta (N)=1$, and since $|\eta (N)|\leq 1$, also $\eta (N)=1$. We obtain $\eta (c)=a-\delta &gt;0$, and therefore $s_ c(\xi )=a$. Homogeneity now gives 
+    
+<div class="equation">
+  \[  Q(x,\xi )=\sup _ c s_ c(\xi )^2,  \]
+</div>
+<p>
+       where $c$ ranges over the centers of the supporting balls in the fiber. Every such center satisfies $|c|_ k\leq b_0+\delta $, so by lemma <a data-tag="31A10535" href="../../tag/7A772B0D8822/">4.6.36</a> all the functions $s_ c^2-\gamma |\xi |_{k^*}^2$ are convex for the same $\gamma &gt;0$. Their supremum is finite, and it proves the asserted strong convexity of $Q$. 
+    <p>
+<em>Step 5: smoothing.</em> Finally, if $E$ is ample, proposition <a data-tag="8D8FE5CC" href="../../tag/68260DAF47D2/">4.6.12</a> gives the smooth strictly plurisubharmonic homogeneous function on $E^*$ required in proposition <a data-tag="36FE7528" href="../../tag/1263BBAE3998/">4.6.9</a>, and applying that proposition to $Q$ gives the smooth norm. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+For a complex manifold of dimension $N$ and an integer $1\leq q\leq N$, we say that the manifold is <em>$q$-convex</em> if it has a smooth real exhaustion function with at least $N-q+1$ positive Levi eigenvalues outside a compact set; here an exhaustion function is one whose sublevel sets are compact. A $q$-convex manifold is also $q'$-convex for $q\leq q'\leq N$. We call such integers $q$ the <em>smooth convexity indices</em> of the manifold, and the smallest of them, when one exists, its <em>least smooth convexity index</em>. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-03487D68">
+<p><a class="environment-identifier" href="../../tag/9020E77B2318/">Lemma <span data-tag="03487D68">4.6.38</span>.</a><span data-gerby-tag="03487D68"></span>  Let $Y$ be a complex manifold of dimension $N$, and let $Z\subset Y$ be a closed complex submanifold of dimension $D\geq 1$. If the least smooth convexity index of $Z$ is $\kappa \leq D$, then every smooth convexity index of $Y$ is at least $\kappa $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose that $Y$ is $p$-convex for an integer $1\leq p&lt;\kappa $. Then a smooth exhaustion function $\psi $ has at least $N-p+1$ positive Levi eigenvalues outside a compact set $K\subset Y$. Its restriction to the closed submanifold $Z$ is an exhaustion function, since its sublevel sets are closed subsets of the compact sublevel sets of $\psi $, and $K\cap Z$ is compact. 
+    <p>
+      At a point of $Z\setminus K$, choose a complex subspace $P\subset T^{1,0}Y$ of dimension $N-p+1$ on which the Levi form of $\psi $ is positive definite. Then 
+    
+<div class="equation">
+  \[  \dim _{\mathbb C}(P\cap T^{1,0}Z)\geq (N-p+1)+D-N=D-p+1.  \]
+</div>
+<p>
+       The Levi form of $\psi |_ Z$ is the restriction of the Levi form of $\psi $, since the inclusion is holomorphic, so it has at least $D-p+1$ positive eigenvalues. Since $p&lt;\kappa \leq D$, this shows that $Z$ is $p$-convex, which contradicts the definition of $\kappa $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+In the following results, projectivizations parametrize complex lines. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-C86DCFF0">
+<p><a class="environment-identifier" href="../../tag/B53EB4EFC135/">Corollary <span data-tag="C86DCFF0">4.6.39</span>.</a><span data-gerby-tag="C86DCFF0"></span>  Suppose that $E$ is ample and that $E^*$ admits no smooth complex norm with plurisubharmonic square off the zero section. Then the complement </p>
+<div class="equation">
+  \[  Z\setminus Y,\qquad Z=\mathbb P(\mathcal O_ X\oplus E), \quad Y=\mathbb P(\mathcal O_ X),  \]
+</div>
+<p> is not $r$-convex. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The chart of $Z$ where the $\mathcal O_ X$-coordinate is nonzero is identified with the total space of $E$, and $Y$ is its zero section. Suppose that $Z\setminus Y$ is $r$-convex. Since $\dim Z=n+r$, a smooth exhaustion function $\psi $ then has at least $n+1$ positive Levi eigenvalues outside a compact set $K$. Choose a relatively compact disk-bundle neighborhood $D\Subset E$ of $Y$. The set $Z\setminus D$ is compact and disjoint from $Y$. Choose a regular value $c$ of $\psi $ greater than its maximum on $Z\setminus D$ and on $K$. 
+    <p>
+      Since $\{ \psi \leq c\} $ is compact in $Z\setminus Y$, the set $\Omega =\{ \psi &gt;c\} \cup Y$ is an open neighborhood of $Y$. Its closure is a compact subset of $D$, and its boundary is the regular level set $\{ \psi =c\} $. The defining function $f=c-\psi $ has at least $n+1$ negative Levi eigenvalues there. Restriction to the complex tangent hyperplane removes at most one negative direction, leaving at least $n$. Since $E$ is ample, theorem <a data-tag="007613F4" href="../../tag/854B49CB03B9/">4.6.37</a> produces a smooth complex norm on $E^*$ with plurisubharmonic square, a contradiction. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-916297FA">
+<p><a class="environment-identifier" href="../../tag/E29138267596/">Corollary <span data-tag="916297FA">4.6.40</span>.</a><span data-gerby-tag="916297FA"></span>  For every $e\geq 0$, there is an ample rank-two bundle $E$ on the Hirzebruch surface $X=\mathbb F_ e$ such that $\mathbb P(\mathcal O_ X\oplus E)\setminus \mathbb P(\mathcal O_ X)$ is not $2$-convex. The bundle may be chosen with the slope-stability and Chern classes of theorem <a data-tag="88F5B6CB" href="../../tag/E769519C862E/">4.6.30</a>. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use theorem <a data-tag="88F5B6CB" href="../../tag/E769519C862E/">4.6.30</a> to choose $E$ whose dual Dolbeault operator lies in the $C^4$ neighborhood of theorem <a data-tag="5A4D8636" href="../../tag/C222D1BB3C65/">4.6.4</a>; the split dual bundle satisfies the hypotheses of that theorem by proposition <a data-tag="32431F4A" href="../../tag/B6B9C2094631/">4.6.22</a>. Thus $E^*$ admits no smooth complex norm with plurisubharmonic square, and corollary <a data-tag="C86DCFF0" href="../../tag/B53EB4EFC135/">4.6.39</a> with $r=2$ gives the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

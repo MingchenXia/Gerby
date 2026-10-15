@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sobolev · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>AF9D036E600F</code></p><h1>Sobolev</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · Theorem 11.3.1 <span data-gerby-tag="29282980"></span></div><article class="env-theorem" id="non-kahler-pluripotential-theory-29282980">
+<p><a class="environment-identifier" href="../../tag/AF9D036E600F/">Theorem <span data-tag="29282980">11.3.1</span>.</a><span data-gerby-tag="29282980"></span> Let $u,v\in W^{2,n}(X,\mathbb R)$, and assume that $A,B\geq 0$ almost everywhere and </p>
+<div class="equation">
+  \[  A^ n=B^ n=f\, \mathrm{d}V,\qquad f&gt;0\quad \hbox{almost everywhere}.  \]
+</div>
+<p> If $n=3$, assume in addition that </p>
+<div class="equation" id="non-kahler-pluripotential-theory-58D63FEF"><span data-gerby-tag="58D63FEF"></span>
+<span class="equation-label"><a data-tag="58D63FEF" href="../../tag/6127DB916FC9/">11.21</a></span>
+<div>\begin{equation}  \mathrm{dd}^{\mathrm{c}}\omega \wedge \mathrm{i}\eta \wedge \bar\eta \leq 0 \label{uni-eq:threefold-sign} \end{equation}</div>
+</div>
+<p> for every $(1,0)$-covector $\eta $; for $n=2$ no condition on $\omega $ is needed. Then $\mathrm{dd}^{\mathrm{c}}(u-v)=0$ in the sense of distributions, and $u-v$ is almost everywhere constant. For the $\omega $-plurisubharmonic representatives of $u$ and $v$, the difference is constant everywhere. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put 
+    
+<div class="equation">
+  \[  \begin{gathered} s=(u+v)/2,\qquad D=\mathrm{dd}^{\mathrm{c}}w=A-B,\\ C=(A+B)/2=\omega +\mathrm{dd}^{\mathrm{c}}s. \end{gathered}  \]
+</div>
+<p>
+       The coefficients of $C$ and $D$ lie in $L^ n$, so their products of top degree are integrable by Hölder's inequality. At almost every point the common determinant is positive, so $A$ and $B$ are positive definite there, and we may diagonalize them simultaneously by congruence: for a suitable coframe of $(1,0)$-covectors $\theta _1,\ldots ,\theta _ n$, write $A=\sum e_ j$, $B=\sum \lambda _ j e_ j$, where $e_ j=\mathrm{i}\theta _ j\wedge \bar\theta _ j$, $\lambda _ j&gt;0$, and $\prod \lambda _ j=1$. 
+    <p>
+      In dimension two, 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-9A5C396A"><span data-gerby-tag="9A5C396A"></span>
+<span class="equation-label"><a data-tag="9A5C396A" href="../../tag/CB4E143A2628/">11.22</a></span>
+<div>\begin{equation} \label{uni-eq:surface-sign} D^2=A^2+B^2-2A\wedge B =2(2-\lambda _1-\lambda _2)e_1\wedge e_2\leq 0, \end{equation}</div>
+</div>
+<p>
+       with equality if and only if $A=B$. In dimension three, 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-0D22D64A"><span data-gerby-tag="0D22D64A"></span>
+<span class="equation-label"><a data-tag="0D22D64A" href="../../tag/899D523AFD3C/">11.23</a></span>
+<div>\begin{equation} \label{uni-eq:threefold-algebra} 2C\wedge D^2=A^3+B^3-A^2\wedge B-A\wedge B^2\leq 0. \end{equation}</div>
+</div>
+<p>
+       Indeed, with $E=e_1\wedge e_2\wedge e_3$, the four terms on the right are 
+    
+<div class="equation">
+  \[  6E,\qquad 6E,\qquad 2\Bigl (\sum _ j\lambda _ j\Bigr )E, \qquad 2\Bigl (\sum _{i&lt;j}\lambda _ i\lambda _ j\Bigr )E.  \]
+</div>
+<p>
+       By the arithmetic–geometric mean inequality and $\prod _ j\lambda _ j=1$, each sum is at least three, and equality forces all $\lambda _ j=1$, that is, $A=B$. 
+    <p>
+      Choose smooth real functions $w_ k\to w$ in $W^{2,n}$ and set $D_ k=\mathrm{dd}^{\mathrm{c}}w_ k$; such approximations are obtained by a partition of unity and convolution, and they need not preserve semipositivity. For $n=2$, Stokes' theorem gives $\int _ XD_ k^2=0$, since $D_ k^2=\mathrm{d}(\mathrm d^{\mathrm c}w_ k\wedge D_ k)$. For a fixed norm-comparison constant $C_0&gt;0$, 
+    
+<div class="equation">
+  \[  \| D_ k^2-D^2\| _{L^1} \leq C_0\| D_ k-D\| _{L^2}(\| D_ k\| _{L^2}+\| D\| _{L^2})\longrightarrow 0.  \]
+</div>
+<p>
+       Thus $\int _ XD^2=0$, and the nonpositive integrand in (<a data-tag="9A5C396A" href="../../tag/CB4E143A2628/">11.22</a>) vanishes almost everywhere. By the equality case, $D=0$ almost everywhere. 
+    <p>
+       For $n=3$, also choose smooth functions $s_ k\to s$ in $W^{2,3}$, and put $C_ k=\omega +\mathrm{dd}^{\mathrm{c}}s_ k$. We need the identity 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-061F8D72"><span data-gerby-tag="061F8D72"></span>
+<span class="equation-label"><a data-tag="061F8D72" href="../../tag/CFA2A8BCECDA/">11.24</a></span>
+<div>\begin{equation} \label{uni-eq:torsion-integral} \int _ X C_ k\wedge D_ k^2 =\int _ X\omega \wedge D_ k^2 =-\int _ X\mathrm{d}w_ k\wedge \mathrm d^{\mathrm c}w_ k\wedge \mathrm{dd}^{\mathrm{c}}\omega . \end{equation}</div>
+</div>
+<p>
+       The first equality holds because $\mathrm{dd}^{\mathrm{c}}s_ k\wedge D_ k^2=\mathrm{d}(\mathrm d^{\mathrm c}s_ k\wedge D_ k^2)$. For the second equality, including its sign, put $J_ k=\mathrm{d}w_ k\wedge \mathrm d^{\mathrm c}w_ k$. Using $\mathrm d^{\mathrm c}\mathrm{d}=-\mathrm{dd}^{\mathrm{c}}$ and $(\mathrm d^{\mathrm c})^2=0$, 
+    
+<div class="equation">
+  \[  \mathrm d^{\mathrm c}J_ k=-D_ k\wedge \mathrm d^{\mathrm c}w_ k,\qquad \mathrm{dd}^{\mathrm{c}}J_ k=-D_ k^2.  \]
+</div>
+<p>
+       Stokes, first for $\mathrm{d}(\omega \wedge \mathrm d^{\mathrm c}J_ k)$ and then for $\mathrm d^{\mathrm c}(\mathrm{d}\omega \wedge J_ k)$, gives 
+    
+<div class="equation">
+  \begin{align*}  \int _ X\omega \wedge \mathrm{dd}^{\mathrm{c}}J_ k&amp; =-\int _ X\mathrm{d}\omega \wedge \mathrm d^{\mathrm c}J_ k,\\  0&amp; =-\int _ X\mathrm{dd}^{\mathrm{c}}\omega \wedge J_ k-\int _ X\mathrm{d}\omega \wedge \mathrm d^{\mathrm c}J_ k. \end{align*}
+</div>
+<p>
+       Combining them yields (<a data-tag="061F8D72" href="../../tag/CFA2A8BCECDA/">11.24</a>). 
+    <p>
+      With a fixed norm-comparison constant $C_0&gt;0$, strong $L^3$ convergence implies convergence in $L^1$ of all products of three factors. For example, 
+    
+<div class="equation">
+  \[  \| (C_ k-C)\wedge D_ k^2\| _1 \leq C_0\| C_ k-C\| _3\| D_ k\| _3^2\longrightarrow 0,  \]
+</div>
+<p>
+       and 
+    
+<div class="equation">
+  \[  \| C\wedge (D_ k^2-D^2)\| _1 \leq C_0\| C\| _3\| D_ k-D\| _3(\| D_ k\| _3+\| D\| _3)\longrightarrow 0.  \]
+</div>
+<p>
+       Also $\mathrm{d}w_ k\wedge \mathrm d^{\mathrm c}w_ k\to \mathrm{d}w\wedge \mathrm d^{\mathrm c}w$ in $L^{3/2}$, so the right side of (<a data-tag="061F8D72" href="../../tag/CFA2A8BCECDA/">11.24</a>) converges. Consequently 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-EFD2FD29"><span data-gerby-tag="EFD2FD29"></span>
+<span class="equation-label"><a data-tag="EFD2FD29" href="../../tag/81191FBC0D41/">11.25</a></span>
+<div>\begin{equation} \label{uni-eq:torsion-limit} \int _ XC\wedge D^2=-\int _ X\mathrm{d}w\wedge \mathrm d^{\mathrm c}w\wedge \mathrm{dd}^{\mathrm{c}}\omega \geq 0. \end{equation}</div>
+</div>
+<p>
+       The sign follows from $\mathrm{d}w\wedge \mathrm d^{\mathrm c}w=(\mathrm{i}/(2\pi ))\partial w\wedge \bar\partial w$ and (<a data-tag="58D63FEF" href="../../tag/6127DB916FC9/">11.21</a>). The integrand on the left is nonpositive by (<a data-tag="0D22D64A" href="../../tag/899D523AFD3C/">11.23</a>), so it vanishes almost everywhere, and the equality case, which applies where the common determinant is positive, gives $D=0$ almost everywhere. 
+    <p>
+      In both dimensions, therefore, $\mathrm{dd}^{\mathrm{c}}w=0$ in the sense of distributions. By proposition <a data-tag="64E09B99" href="../../tag/887F604607E9/">1.1.2</a> with background zero, $w$ has a plurisubharmonic representative on $X$. It attains its maximum on the compact manifold $X$, so the maximum principle and connectedness make it constant. 
+    <p>
+      For the $\omega $-plurisubharmonic representatives, lemma <a data-tag="184DC935" href="../../tag/D1DAB1D38637/">1.3.3</a> upgrades the almost-everywhere equality $u=v+\text{constant}$ to equality everywhere. In particular, normalizing the means gives equality in the Sobolev class, and normalizing the suprema gives equality of the plurisubharmonic representatives. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

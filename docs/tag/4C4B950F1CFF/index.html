@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Subgeodesics and Perron segments · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/energy-geodesics/">Chapter 14 · Energy, geodesics, rays, and test curves</a> · Tag <code>4C4B950F1CFF</code></p><h1>Subgeodesics and Perron segments</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 17.6 Subgeodesics and Perron segments <span data-gerby-tag="E622ECE7"></span></div>
+<p>
+  We return to a smooth closed real $(1,1)$-form $\theta $ with big class and a model potential $\phi $ of mass $m$. Let $S=\{ \zeta \in \mathbb C:0&lt;\operatorname{Re}\zeta &lt;1\} $, and let $p\colon X\times S\to X$ be the projection. A family $(u_ t)_{0&lt;t&lt;1}$ of functions on $X$ defines the function $(x,\zeta )\mapsto u_{\operatorname{Re}\zeta }(x)$ on $X\times S$, which is invariant under imaginary translations in the sense of section <a data-tag="12F6C9C4" href="../../tag/53A48113C242/">8.5</a>, and we ask that this function be $p^*\theta $-psh. This is a joint condition in $x$ and $\zeta $. It forces $t\mapsto u_ t(x)$ to be convex (lemma <a data-tag="0F15CB2C" href="../../tag/ADE91FED84D6/">17.6.3</a> below), but it is stronger than the convexity of these functions together with the $\theta $-plurisubharmonicity of the slices $u_ t$. 
+</p>
+<p>
+For instance, let $\theta $ be a Kähler form, and let $g$ be a nonconstant smooth function with $\theta +t\mathrm{dd}^{\mathrm{c}}g\geq 0$ for $0\leq t\leq 1$ (any nonconstant smooth function multiplied by a small positive constant). The family $u_ t=tg$ has $\theta $-psh slices and affine functions $t\mapsto u_ t(x)$, but $(x,\zeta )\mapsto \operatorname{Re}(\zeta )g(x)$ is not $p^*\theta $-psh near a point where $\mathrm dg\neq 0$. Indeed, in local coordinates $(z_1,\ldots ,z_ n,\zeta )$, the complex Hessian of $\operatorname{Re}(\zeta )g(z)+h(z)$, where $h$ is a smooth local potential of $\theta $, has vanishing $\zeta \bar\zeta $-entry and mixed entries $\partial ^2/\partial z_ j\partial \bar\zeta =\frac12\partial g/\partial z_ j$, which do not all vanish because $g$ is real and $\mathrm dg\neq 0$. A positive semidefinite Hermitian matrix with a vanishing diagonal entry has vanishing entries in the corresponding row and column, as its $2\times 2$ principal minors show; so this Hessian is not positive semidefinite, and the smooth function $\operatorname{Re}(\zeta )g(z)+h(z)$ is not plurisubharmonic on any neighborhood of the point, by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1). 
+</p>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-15664095">
+<p><a class="environment-identifier" href="../../tag/B0604A42ABDF/">Definition <span data-tag="15664095">17.6.1</span>.</a><span data-gerby-tag="15664095"></span> Let $u_0,u_1\in \mathrm{PSH}(X,\theta )$. A <em>subgeodesic</em> with endpoints $u_0,u_1$ is a family $(u_ t)_{0&lt;t&lt;1}$ of functions on $X$ whose <em>complexification</em> </p>
+<div class="equation">
+  \[  U(x,\zeta )=u_{\operatorname{Re}\zeta }(x)  \]
+</div>
+<p> is $p^*\theta $-psh on $X\times S$ and such that $u_ t\to u_0$ and $u_ t\to u_1$ in $L^1(X)$ as $t\to 0$ and $t\to 1$, respectively. </p>
+</article>  Subgeodesics on an interval $[a,b]$ with $a&lt;b$ are defined in the same way, after the affine change of parameter $t\mapsto a+(b-a)t$; a subgeodesic on a one-point interval consists of its given potential. The endpoints of a subgeodesic are uniquely determined, because a class in $L^1(X)$ has at most one $\theta $-psh representative. The holomorphic covering $z=\mathrm e^{-\zeta }$ maps $S$ onto the annulus $\{ \mathrm e^{-1}&lt;|z|&lt;1\} $, and $U$ descends to the function $(x,z)\mapsto u_{-\log |z|}(x)$ on $X\times \{ \mathrm e^{-1}&lt;|z|&lt;1\} $, because $U$ is invariant under imaginary translations. The map $(x,\zeta )\mapsto (x,\mathrm e^{-\zeta })$ is a local biholomorphism, and plurisubharmonicity is a local property invariant under biholomorphisms (proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a>). Hence $U$ is $p^*\theta $-psh if and only if this annulus complexification is psh relative to the pullback of $\theta $; we use both descriptions. 
+
+<p>
+We need some elementary facts about convex functions of one real variable, allowing the value $-\infty $. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-41E14445">
+<p><a class="environment-identifier" href="../../tag/0702EBBE9C4C/">Lemma <span data-tag="41E14445">17.6.2</span>.</a><span data-gerby-tag="41E14445"></span> Let $I\subset \mathbb R$ be an open interval, and let $g\colon I\to [-\infty ,\infty )$ be convex, that is, $g((1-\lambda )a+\lambda b)\leq (1-\lambda )g(a)+\lambda g(b)$ for $a,b\in I$ and $0&lt;\lambda &lt;1$. </p>
+<ol>
+<li><p>
+Either $g\equiv -\infty $, or $g$ is finite and continuous on $I$. 
+</p>
+</li><li><p>
+Suppose that $g$ is finite, and for $a&lt;b$ in $I$ put $\sigma (a,b)=(g(b)-g(a))/(b-a)$. Then $\sigma (a,b)$ is nondecreasing in $a$ and in $b$. For every $t\in I$ there is $c\in \mathbb R$ with $g(s)\geq g(t)+c(s-t)$ for all $s\in I$. Consequently, $g$ is the pointwise maximum of the affine functions that it dominates, and it is bounded below on every bounded subinterval of $I$. 
+</p>
+</li><li><p>
+Let $I=(0,1)$, and suppose that $g$ is finite and bounded above on $(0,\frac12)$. Then $\lim _{t\downarrow 0}g(t)$ exists and is finite. Moreover, for fixed $s\in (0,1)$, the value $g(s)-s\sigma (t,s)$ at $0$ of the affine function that agrees with $g$ at $t$ and $s$ increases as $t\in (0,s)$ decreases, and it tends to $\lim _{t\downarrow 0}g(t)$ as $t\downarrow 0$. 
+</p>
+</li><li><p>
+Let $I=(0,1)$, suppose that $|g|\leq C$ on $I$, and let $0&lt;\delta &lt;\frac12$. Then $|g(b)-g(a)|\leq (2C/\delta )|b-a|$ for all $a,b\in [\delta ,1-\delta ]$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Suppose that $g(t_0)=-\infty $ for some $t_0\in I$, and let $t\in I\setminus \{ t_0\} $. Choose $s\in I$ such that $t$ lies strictly between $t_0$ and $s$, and write $t=(1-\lambda )t_0+\lambda s$ with $0&lt;\lambda &lt;1$. Since $g(s)&lt;\infty $, convexity gives $g(t)\leq (1-\lambda )g(t_0)+\lambda g(s)=-\infty $. Hence either $g\equiv -\infty $ or $g$ is finite, and a finite convex function on $I$ is continuous by example <a data-tag="23626487" href="../../tag/8DF74A8828CF/">3.2.4</a>. 
+    <p>
+      (2) For $a&lt;b&lt;c$ in $I$ we have $\sigma (a,b)\leq \sigma (a,c)\leq \sigma (b,c)$, as shown in example <a data-tag="23626487" href="../../tag/8DF74A8828CF/">3.2.4</a>; this gives the monotonicity of $\sigma $. Now let $t\in I$. For $r&lt;t&lt;r'$ in $I$ we have $\sigma (r,t)\leq \sigma (t,r')$, so $c=\sup _{r&lt;t}\sigma (r,t)$ is finite and $c\leq \sigma (t,r')$ for every $r'&gt;t$. These two inequalities say that $g(s)\geq g(t)+c(s-t)$ for $s&lt;t$ and for $s&gt;t$. The affine function $s\mapsto g(t)+c(s-t)$ is therefore dominated by $g$ and agrees with $g$ at $t$, which proves the remaining assertions. 
+    <p>
+      (3) Fix $s\in (0,1)$. For $0&lt;t&lt;s$ we have $g(t)=g(s)-(s-t)\sigma (t,s)$. By (2), $\sigma (t,s)$ decreases as $t$ decreases, so it has a limit $\sigma _0\in [-\infty ,\infty )$ as $t\downarrow 0$. If $\sigma _0=-\infty $, then $g(t)\to +\infty $ as $t\downarrow 0$, which contradicts the upper bound. Hence $\sigma _0$ is finite and $g(t)\to g(s)-s\sigma _0$. The value at $0$ of the affine function that agrees with $g$ at $t$ and $s$ is $g(s)-s\sigma (t,s)$; it increases as $t$ decreases and tends to $g(s)-s\sigma _0$. 
+    <p>
+      (4) Let $\delta \leq a&lt;b\leq 1-\delta $. For $b&lt;r&lt;1$, (2) gives $\sigma (a,b)\leq \sigma (b,r)\leq 2C/(r-b)$, and letting $r\uparrow 1$ we get $\sigma (a,b)\leq 2C/(1-b)\leq 2C/\delta $. Similarly, for $0&lt;r&lt;a$ we have $\sigma (a,b)\geq \sigma (r,a)\geq -2C/(a-r)$, and letting $r\downarrow 0$ we get $\sigma (a,b)\geq -2C/a\geq -2C/\delta $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-0F15CB2C">
+<p><a class="environment-identifier" href="../../tag/ADE91FED84D6/">Lemma <span data-tag="0F15CB2C">17.6.3</span>.</a><span data-gerby-tag="0F15CB2C"></span> Let $(v_ t)_{0&lt;t&lt;1}$ be a family of functions on $X$ whose complexification $V(x,\zeta )=v_{\operatorname{Re}\zeta }(x)$ is $p^*\theta $-psh on $X\times S$. Then: </p>
+<ol>
+<li><p>
+for every $x\in X$, the function $t\mapsto v_ t(x)$ is convex on $(0,1)$, and it is either identically $-\infty $ or finite and continuous; 
+</p>
+</li><li><p>
+for almost every $x\in X$, this function is finite; 
+</p>
+</li><li><p>
+every slice $v_ t$ belongs to $\mathrm{PSH}(X,\theta )$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $D\subset X$ be a connected coordinate chart, identified with a domain in $\mathbb C^ n$, on which $\theta =\mathrm{dd}^{\mathrm{c}}h$ for a smooth function $h$; by lemma <a data-tag="8EBD338F" href="../../tag/87D4C2281D7C/">13.1.2</a>, such charts, for instance small coordinate balls, cover $X$. Then $V+h\circ p$ is plurisubharmonic on the domain $D\times S\subset \mathbb C^{n+1}$. 
+    <p>
+      (1) Fix $x\in D$. The complex line $\{ x\} \times \mathbb C$ meets $D\times S$ in $\{ x\} \times S$, so by definition <a data-tag="2C78F54E" href="../../tag/6070D2D83EC6/">8.1.1</a> the function $\zeta \mapsto V(x,\zeta )+h(x)$ is subharmonic on $S$, possibly identically $-\infty $; hence so is $w(\zeta )=g(\operatorname{Re}\zeta )$, where $g(t)=v_ t(x)$. If $w\equiv -\infty $, then $g\equiv -\infty $ is convex. Otherwise $w$ is locally integrable on $S$ by proposition <a data-tag="922C2A66" href="../../tag/5975EB5B5D7D/">3.1.5</a>, and $\Delta w\geq 0$ by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>. For $0&lt;\delta &lt;\frac12$, the mollification $w_\delta =w*\rho _\delta $ is smooth on $S_\delta =\{ \delta &lt;\operatorname{Re}\zeta &lt;1-\delta \} $, and $\Delta w_\delta =(\Delta w)_\delta \geq 0$ there, by proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>(1),(3). Since $w$ is invariant under imaginary translations, so is $w_\delta $; thus $w_\delta (\zeta )=g_\delta (\operatorname{Re}\zeta )$ for the smooth function $g_\delta (t)=w_\delta (t)$ on $(\delta ,1-\delta )$, and $g_\delta ''=\Delta w_\delta \geq 0$, so $g_\delta $ is convex by the mean value theorem. By (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>), $w_\delta $ decreases to $w$ as $\delta \downarrow 0$, so $g_\delta $ decreases to $g$ on $(0,1)$. For $a,b\in (0,1)$ and $0&lt;\lambda &lt;1$, letting $\delta \downarrow 0$ in 
+    
+<div class="equation">
+  \[  g((1-\lambda )a+\lambda b)\leq g_\delta ((1-\lambda )a+\lambda b)\leq (1-\lambda )g_\delta (a)+\lambda g_\delta (b)  \]
+</div>
+<p>
+       shows that $g$ is convex. The rest of (1) is lemma <a data-tag="41E14445" href="../../tag/0702EBBE9C4C/">17.6.2</a>(1). 
+    <p>
+      (2) The plurisubharmonic function $V+h\circ p$ is locally integrable on $D\times S$ (theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>). Let $K\subset D$ be compact and $[a,b]\subset (0,1)$. Since $V$ does not depend on $\operatorname{Im}\zeta $, Tonelli's theorem on $K\times \{ \zeta :a\leq \operatorname{Re}\zeta \leq b,\  0\leq \operatorname{Im}\zeta \leq 1\} $ gives 
+    
+<div class="equation">
+  \[  \int _ K\int _ a^ b|v_ t(x)+h(x)|\, \mathrm dt\, \mathrm dV_{2n}(x)&lt;\infty .  \]
+</div>
+<p>
+       Hence, for almost every $x\in K$, the value $v_ t(x)$ is finite for almost every $t\in [a,b]$, and by (1) the function $t\mapsto v_ t(x)$ is then finite on $(0,1)$. Since $X$ is covered by countably many such compact sets $K$, this proves (2). 
+    <p>
+      (3) Fix $t\in (0,1)$. The restriction of $V+h\circ p$ to $D\times \{ t\} $ is the function $v_ t+h$ on $D$. It is upper semicontinuous, and, by definition <a data-tag="2C78F54E" href="../../tag/6070D2D83EC6/">8.1.1</a> applied to the complex lines contained in $\mathbb C^ n\times \{ t\} $, its restriction to every connected component of the intersection of $D$ with a complex line is subharmonic or identically $-\infty $. By (2), $v_ t$ is finite almost everywhere on $D$, so $v_ t+h$ is not identically $-\infty $, and $v_ t+h\in \mathrm{PSH}(D)$. Since such charts cover $X$, $v_ t\in \mathrm{PSH}(X,\theta )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-424728F5">
+<p><a class="environment-identifier" href="../../tag/61A0C5DD7757/">Proposition <span data-tag="424728F5">17.6.4</span>.</a><span data-gerby-tag="424728F5"></span> Let $(u_ t)$ be a subgeodesic with endpoints $u_0,u_1$. Then for each $x\in X$ the function $t\mapsto u_ t(x)$ is convex on $(0,1)$, possibly identically $-\infty $, and </p>
+<div class="equation">
+  \[  u_ t\leq (1-t)u_0+tu_1,\qquad 0&lt;t&lt;1.  \]
+</div>
+<p> The infimum $w=\inf _{0&lt;t&lt;1}u_ t$ is a $\theta $-psh potential and satisfies $w\leq P_\theta (u_0,u_1)$. The map $t\mapsto u_ t$ is continuous from $[0,1]$ to $L^1(X)$, and its image is compact. For $j=0,1$, the limits $\lim _{t\to j}u_ t(x)$ exist at every $x$, are at most $u_ j(x)$, and equal $u_ j(x)$ quasi-everywhere. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="0F15CB2C" href="../../tag/ADE91FED84D6/">17.6.3</a>, for every $x\in X$ the function $t\mapsto u_ t(x)$ is convex on $(0,1)$, and either identically $-\infty $ or finite and continuous; it is finite for almost every $x$; and every slice $u_ t$ is $\theta $-psh. Since a sequence converging in $L^1(X)$ has a subsequence converging almost everywhere, we can choose sequences $t_ j\downarrow 0$ and $s_ j\uparrow 1$ with $u_{t_ j}\to u_0$ and $u_{s_ j}\to u_1$ almost everywhere. For fixed $t$ and large $j$, convexity on $[t_ j,s_ j]$ gives 
+    
+<div class="equation">
+  \[  u_ t\leq \frac{s_ j-t}{s_ j-t_ j}u_{t_ j}+\frac{t-t_ j}{s_ j-t_ j}u_{s_ j},  \]
+</div>
+<p>
+       and letting $j\to \infty $ gives $u_ t\leq (1-t)u_0+tu_1$ almost everywhere. Both sides are $\theta $-psh, so the inequality holds everywhere. 
+    <p>
+      Let $D$ be a connected coordinate chart of $X$ on which $\theta =\mathrm{dd}^{\mathrm{c}}h$ with $h$ smooth. The function $U+h\circ p$ is plurisubharmonic on $D\times S=D\times ((0,1)+\mathrm i\mathbb R)$ and invariant under imaginary translations, so corollary <a data-tag="B6D5E591" href="../../tag/2C1A82803889/">8.5.2</a>, with $V=(0,1)$, shows that $w+h=\inf _{0&lt;t&lt;1}(u_ t+h)$ is plurisubharmonic or identically $-\infty $ on $D$. For almost every $x$, the function $t\mapsto u_ t(x)$ is finite and convex, hence bounded below on $(0,1)$ by lemma <a data-tag="41E14445" href="../../tag/0702EBBE9C4C/">17.6.2</a>(2). Thus $w$ is finite almost everywhere, the alternative $-\infty $ is excluded on every chart, and $w$ is $\theta $-psh. Since $w\leq u_ t$ for all $t$ and $u_ t\to u_0$, $u_ t\to u_1$ in $L^1(X)$, we get $w\leq u_0$ and $w\leq u_1$ almost everywhere, hence everywhere. Thus $w$ is a competitor for the obstacle $\min \{ u_0,u_1\} $, and $w\leq P_\theta (u_0,u_1)$. 
+    <p>
+      The bounds $w\leq u_ t\leq \max \{ u_0,u_1\} $ hold for all $t$, with integrable outer functions. For almost every $x$ the function $t\mapsto u_ t(x)$ is finite and continuous on $(0,1)$, so dominated convergence gives continuity of $t\mapsto u_ t$ from $(0,1)$ to $L^1(X)$; continuity at the endpoints is part of the definition. The image of $[0,1]$ under a continuous map is compact. Now fix $x\in X$. If $t\mapsto u_ t(x)$ is identically $-\infty $, its limits at $0$ and $1$ are $-\infty $. Otherwise it is finite and convex and bounded above by $\max \{ u_0(x),u_1(x)\} &lt;\infty $, so by lemma <a data-tag="41E14445" href="../../tag/0702EBBE9C4C/">17.6.2</a>(3), applied to $t\mapsto u_ t(x)$ and to $t\mapsto u_{1-t}(x)$, it has finite limits at $0$ and $1$. By the displayed bound these limits are at most $u_0(x)$ and $u_1(x)$. Since the pointwise limits exist everywhere and $u_{t_ j}\to u_0$, $u_{s_ j}\to u_1$ almost everywhere, they equal $u_0$ and $u_1$ almost everywhere. 
+    <p>
+      It remains to prove equality quasi-everywhere; we treat the endpoint $0$, and the endpoint $1$ follows by reversing the parameter. Fix $s\in (0,1)$ and a sequence $t_ j\downarrow 0$ with $t_ j&lt;s/2$. Consider the value at $t=0$ of the chord of $t\mapsto u_ t$ through the parameters $t_ j$ and $s$: 
+    
+<div class="equation">
+  \[  a_ j=\frac{u_{t_ j}-(t_ j/s)u_ s}{1-t_ j/s}.  \]
+</div>
+<p>
+       Where $u_ s$ is finite, the function $t\mapsto u_ t(x)$ is finite and convex, so by lemma <a data-tag="41E14445" href="../../tag/0702EBBE9C4C/">17.6.2</a>(3) $a_ j$ increases with $j$ and tends to $\lim _{t\to 0}u_ t$; this limit equals $u_0$ almost everywhere and is at most $u_0$ everywhere. The functions 
+    
+<div class="equation">
+  \[  a_ j+u_ s=\frac{u_{t_ j}+(1-2t_ j/s)u_ s}{1-t_ j/s}  \]
+</div>
+<p>
+       are combinations of $u_{t_ j}$ and $u_ s$ with positive coefficients of sum two, hence $2\theta $-psh, since $2\theta +\mathrm{dd}^{\mathrm{c}}(\alpha u_{t_ j}+\beta u_ s)=\alpha \theta _{u_{t_ j}}+\beta \theta _{u_ s}$ for $\alpha ,\beta \geq 0$ with $\alpha +\beta =2$. They increase with $j$ and are bounded above by $u_0+u_ s$. Their pointwise limit is $\lim _{t\to 0}u_ t+u_ s$, which equals $u_0+u_ s$ almost everywhere; hence their regularized upper envelope, a $2\theta $-psh function by theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">8.3.2</a> which agrees almost everywhere with the pointwise limit, is $u_0+u_ s$ itself. By corollary <a data-tag="309904EA" href="../../tag/8EF0B17C7325/">10.2.2</a>(2), applied in charts after adding smooth local potentials of $2\theta $, the pointwise limit $\lim _{t\to 0}u_ t+u_ s$ equals $u_0+u_ s$ quasi-everywhere. Removing the pole set of $u_ s$ proves the assertion at $0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-A9FC390C">
+<p><a class="environment-identifier" href="../../tag/F4AAE999A6C4/">Lemma <span data-tag="A9FC390C">17.6.5</span>.</a><span data-gerby-tag="A9FC390C"></span> Subgeodesics are preserved by restriction to a subinterval, by addition of an affine function of $t$, and by a change of background $\theta '=\theta +\mathrm{dd}^{\mathrm{c}}g$, $u'_ t=u_ t-g$, with $g$ smooth. If a subgeodesic on $[a,b]\subset [0,1]$ dominates a given subgeodesic on $[0,1]$ there and has the same values at $a$ and $b$, then replacing the given subgeodesic on $[a,b]$ by it gives a subgeodesic on $[0,1]$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $0\leq a&lt;b\leq 1$. The restriction of $(u_ t)$ to $[a,b]$, reparametrized as $t\mapsto u_{a+(b-a)t}$, has the complexification $U\circ F$, where $F(x,\zeta )=(x,a+(b-a)\zeta )$ is a holomorphic map of $X\times S$ into itself with $p\circ F=p$. In a chart $D$ of $X$ on which $\theta =\mathrm{dd}^{\mathrm{c}}h$, we have $(U+h\circ p)\circ F=U\circ F+h\circ p$, which is plurisubharmonic on $D\times S$ by proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a>; it is not identically $-\infty $, because its slices are the functions $u_{a+(b-a)t}+h$, which are not identically $-\infty $ by lemma <a data-tag="0F15CB2C" href="../../tag/ADE91FED84D6/">17.6.3</a>. Hence $U\circ F$ is $p^*\theta $-psh, and the restriction is a subgeodesic with endpoint potentials $u_ a$ and $u_ b$, by the $L^1$ continuity of proposition <a data-tag="424728F5" href="../../tag/61A0C5DD7757/">17.6.4</a>. An affine function $c_0+c_1\operatorname{Re}\zeta =\operatorname{Re}(c_0+c_1\zeta )$ is pluriharmonic, so adding it preserves $p^*\theta $-plurisubharmonicity, and the change of background replaces $U$ by $U-g\circ p$ and $p^*\theta $ by $p^*\theta +\mathrm{dd}^{\mathrm{c}}(g\circ p)$; this proves the first assertion. 
+    <p>
+      For the replacement, let $U$ be the complexification of the given subgeodesic, and $V$ that of the new one on $W=X\times \{ a&lt;\operatorname{Re}\zeta &lt;b\} $. We verify the boundary condition of proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a> along each seam $\operatorname{Re}\zeta =a$ or $\operatorname{Re}\zeta =b$ lying in $S$; consider $a&gt;0$. Let $(x_ k,\zeta _ k)\in W$ converge to $(x,\zeta )$ with $\operatorname{Re}\zeta =a$, and put $t_ k=\operatorname{Re}\zeta _ k$. Denote the slices of the new subgeodesic by $v_ t$, $a&lt;t&lt;b$; they converge to $u_ a$ in $L^1(X)$ as $t\downarrow a$. 
+    <p>
+      We show that $\varlimsup _ kV(x_ k,\zeta _ k)\leq U(x,\zeta )=u_ a(x)$. Since $v_{t_ k}\to u_ a$ in $L^1(X)$, lemma <a data-tag="9EA40DD3" href="../../tag/369EDE8DEEC5/">17.3.2</a> shows that the tail envelopes $w_ l=(\sup _{k\geq l}v_{t_ k})^*$ are $\theta $-psh and decrease pointwise to $u_ a$. For $k\geq l$ we have $V(x_ k,\zeta _ k)=v_{t_ k}(x_ k)\leq w_ l(x_ k)$, and $w_ l$ is upper semicontinuous, so $\varlimsup _ kV(x_ k,\zeta _ k)\leq w_ l(x)$ for every $l$. Letting $l\to \infty $ proves the claim. A seam $\operatorname{Re}\zeta =b$ with $b&lt;1$ is treated in the same way, with $t_ k\uparrow b$. Hence, by proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a> applied in charts after adding smooth local potentials of $p^*\theta $, the function equal to $\max \{ U,V\} =V$ on $W$ and to $U$ elsewhere is $p^*\theta $-psh. Its endpoint limits at $t=0$ and $t=1$ are those of the given subgeodesic, or those of the new one if $a=0$ or $b=1$; in either case they are $u_0$ and $u_1$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-E4E82D7E">
+<p><a class="environment-identifier" href="../../tag/7B309BFF1A4D/">Lemma <span data-tag="E4E82D7E">17.6.6</span>.</a><span data-gerby-tag="E4E82D7E"></span> Let $\{ (u_ t^\alpha )\} _{\alpha \in A}$ be a nonempty family of subgeodesics whose endpoint potentials $u_0^\alpha $, $u_1^\alpha $ are uniformly bounded above. Then the regularized upper envelope $U$ of their complexifications has slices </p>
+<div class="equation">
+  \[  U_ t=\Bigl (\sup _\alpha u_ t^\alpha \Bigr )^*,\qquad 0&lt;t&lt;1,  \]
+</div>
+<p> where the regularization on the right is taken on $X$. Moreover $(U_ t)$ is a subgeodesic whose endpoint potentials are the regularized upper envelopes $v_0=(\sup _\alpha u_0^\alpha )^*$ and $v_1=(\sup _\alpha u_1^\alpha )^*$ of the endpoints. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Denote by $U^\alpha $ the complexification of $(u_ t^\alpha )$. By proposition <a data-tag="424728F5" href="../../tag/61A0C5DD7757/">17.6.4</a>, $u_ t^\alpha \leq (1-t)u_0^\alpha +tu_1^\alpha $, so the functions $U^\alpha $ are uniformly bounded above. Their regularized upper envelope $U$ is therefore $p^*\theta $-psh (theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">8.3.2</a>, applied in charts after adding smooth local potentials of $p^*\theta $), and it is invariant under imaginary translations, because the family is and these translations are homeomorphisms. Thus $U$ is the complexification of the family of its slices $U_ t$, which by lemma <a data-tag="0F15CB2C" href="../../tag/ADE91FED84D6/">17.6.3</a> are $\theta $-psh and have convex fibers $t\mapsto U_ t(x)$. 
+    <p>
+      We next reduce to a countable subfamily. Cover $X$ by finitely many coordinate balls $D_\beta $ on which $\theta $ has smooth potentials $h_\beta $ (lemma <a data-tag="8EBD338F" href="../../tag/87D4C2281D7C/">13.1.2</a>). By theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">8.3.2</a>, applied to the plurisubharmonic functions $U^\alpha +h_\beta \circ p$ on $D_\beta \times S$ and to the functions $u_0^\alpha +h_\beta $ and $u_1^\alpha +h_\beta $ on $D_\beta $, there are countable sets $J_\beta \subset A$ such that, on $D_\beta \times S$ and on $D_\beta $ respectively, the regularized suprema over $\alpha \in J_\beta $ of $U^\alpha $, of $u_0^\alpha $ and of $u_1^\alpha $ equal $U$, $v_0$ and $v_1$. The countable set $J=\bigcup _\beta J_\beta $ then satisfies $(\sup _{\alpha \in J}U^\alpha )^*=U$, $(\sup _{\alpha \in J}u_0^\alpha )^*=v_0$ and $(\sup _{\alpha \in J}u_1^\alpha )^*=v_1$, since on each $D_\beta \times S$, respectively $D_\beta $, these regularized suprema lie between the regularized suprema over $J_\beta $ and over $A$. 
+    <p>
+      Let $v_ t=(\sup _\alpha u_ t^\alpha )^*$; we show that $U_ t=v_ t$. Since $U_ t$ is upper semicontinuous on $X$ and dominates every $u_ t^\alpha $, we have $v_ t\leq U_ t$. For $a&lt;t&lt;b$, the inequality $u_ t^\alpha \leq \frac{b-t}{b-a}u_ a^\alpha +\frac{t-a}{b-a}u_ b^\alpha \leq \frac{b-t}{b-a}v_ a+\frac{t-a}{b-a}v_ b$ and upper semicontinuity of the right side give $v_ t\leq \frac{b-t}{b-a}v_ a+\frac{t-a}{b-a}v_ b$. Thus $t\mapsto v_ t(x)$ is convex for every $x$. In the same way, the bound $u_ t^\alpha \leq (1-t)u_0^\alpha +tu_1^\alpha $ gives $v_ t\leq (1-t)v_0+tv_1$. Fix one member $\alpha _0$ of the family and let $w_0=\inf _ tu_ t^{\alpha _0}$, a $\theta $-psh potential by proposition <a data-tag="424728F5" href="../../tag/61A0C5DD7757/">17.6.4</a>. Since $w_0\leq v_ t\leq U_ t$ and $U$ is bounded above, all $v_ t(x)$ and $U_ t(x)$ are finite on the set where $w_0$ is finite, which has full measure. 
+    <p>
+      The function $F_ J=\sup _{\alpha \in J}U^\alpha $ is Borel, being a countable supremum of upper semicontinuous functions, and by theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">8.3.2</a> it agrees with its regularization $U$ outside a Lebesgue null set. Both $F_ J$ and $U$ are invariant under imaginary translations, so this exceptional set is $\{ (x,\zeta ):(x,\operatorname{Re}\zeta )\in N\} $ for a Borel set $N\subset X\times (0,1)$, which is null by Fubini's theorem. Applying Fubini's theorem to $N$, we find that for almost every $x$ we have $U_ t(x)=\sup _{\alpha \in J}u_ t^\alpha (x)\leq v_ t(x)$, hence $U_ t(x)=v_ t(x)$, for almost every $t\in (0,1)$. If moreover $w_0(x)$ is finite, both sides are finite convex functions of $t$, hence continuous (lemma <a data-tag="41E14445" href="../../tag/0702EBBE9C4C/">17.6.2</a>(1)), so they agree for every $t\in (0,1)$. Thus, for each $t$, $U_ t=v_ t$ almost everywhere, and both are $\theta $-psh, so $U_ t=v_ t$ everywhere. 
+    <p>
+      For the endpoints, note first that, since $U_ t=v_ t\leq (1-t)v_0+tv_1\leq \max \{ v_0,v_1\} $, lemma <a data-tag="41E14445" href="../../tag/0702EBBE9C4C/">17.6.2</a>(1),(3) show that $\lim _{t\to 0}U_ t(x)$ exists at every $x$, as an element of $[-\infty ,\infty )$. For $\alpha \in J$ we have $U_ t\geq u_ t^\alpha $, so by proposition <a data-tag="424728F5" href="../../tag/61A0C5DD7757/">17.6.4</a> $\lim _{t\to 0}U_ t\geq \lim _{t\to 0}u_ t^\alpha =u_0^\alpha $ outside a pluripolar set. Outside a countable union of pluripolar sets this holds for all $\alpha \in J$, so $\lim _{t\to 0}U_ t\geq \sup _{\alpha \in J}u_0^\alpha =v_0$ quasi-everywhere, by corollary <a data-tag="309904EA" href="../../tag/8EF0B17C7325/">10.2.2</a>(1); countable unions of pluripolar sets are pluripolar by theorem <a data-tag="BCB00118" href="../../tag/9421BA4DC329/">10.1.4</a>. The bound $U_ t=v_ t\leq (1-t)v_0+tv_1$ gives the reverse inequality. Hence $U_ t\to v_0$ almost everywhere as $t\to 0$. Since $w_0\leq U_ t\leq \max \{ v_0,v_1\} $, dominated convergence gives $U_ t\to v_0$ in $L^1(X)$. The endpoint $t=1$ is treated in the same way, after reversing the parameter. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-041BC264">
+<p><a class="environment-identifier" href="../../tag/4A0AFDAD6156/">Definition <span data-tag="041BC264">17.6.7</span>.</a><span data-gerby-tag="041BC264"></span> Let $u_0,u_1\in \mathrm{PSH}(X,\theta )$. The subgeodesics whose endpoint potentials are at most $u_0$ and $u_1$, respectively, are called <em>competitors</em>. The <em>Perron segment</em> between $u_0$ and $u_1$ is the regularized upper envelope of the complexifications of all competitors; it is $-\infty $ if there are no competitors. When its endpoint potentials are $u_0$ and $u_1$, it is called the <em>weak geodesic</em> between $u_0$ and $u_1$. We write its slices as $G_ t(u_0,u_1)$, $0&lt;t&lt;1$, and, for a weak geodesic, put $G_0(u_0,u_1)=u_0$ and $G_1(u_0,u_1)=u_1$. </p>
+</article>  By lemma <a data-tag="E4E82D7E" href="../../tag/7B309BFF1A4D/">17.6.6</a>, a Perron segment which is not $-\infty $ is a subgeodesic, and its slices are the regularized upper envelopes of the slices of the competitors. 
+
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-108758A0">
+<p><a class="environment-identifier" href="../../tag/2FECBE87C487/">Theorem <span data-tag="108758A0">17.6.8</span>.</a><span data-gerby-tag="108758A0"></span> If $u_0,u_1\in \mathcal E(X,\theta ,\phi )$, then the Perron segment between them is the weak geodesic between $u_0$ and $u_1$, and </p>
+<div class="equation">
+  \[  P_\theta (u_0,u_1)\leq G_ t(u_0,u_1) \leq (1-t)u_0+tu_1,\qquad 0&lt;t&lt;1.  \]
+</div>
+<p> Every slice belongs to $\mathcal E(X,\theta ,\phi )$. If $u_0,u_1\in \mathcal E^1(X,\theta ,\phi )$, every slice belongs to $\mathcal E^1(X,\theta ,\phi )$, and if $u_0,u_1\in \mathcal E^\infty (X,\theta ,\phi )$, every slice belongs to $\mathcal E^\infty (X,\theta ,\phi )$. The restriction of the weak geodesic to a subinterval $[a,b]\subset [0,1]$ is the weak geodesic between $G_ a(u_0,u_1)$ and $G_ b(u_0,u_1)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The rooftop $w=P_\theta (u_0,u_1)$ belongs to $\mathcal E(X,\theta ,\phi )$, by proposition <a data-tag="2B2C3577" href="../../tag/1A67C7F5BE56/">17.3.6</a>. The constant curve equal to $w$ is a competitor. By lemma <a data-tag="E4E82D7E" href="../../tag/7B309BFF1A4D/">17.6.6</a>, the Perron segment is therefore a subgeodesic, with endpoint potentials $a_0\leq u_0$ and $a_1\leq u_1$, and $w\leq G_ t\leq (1-t)a_0+ta_1\leq (1-t)u_0+tu_1$. Each slice is at most $\phi +C$ for some constant $C$ and at least $w$, so mass monotonicity puts it in $\mathcal E(X,\theta ,\phi )$. 
+    <p>
+      We show that $a_0=u_0$. For $k\geq 1$ the rooftop $q_ k=P_\theta (u_0,u_1+k)$ is not identically $-\infty $, since it dominates $w$, and the affine curve $q_ k-kt$ is a competitor: its value at $t=0$ is at most $u_0$, and its value at $t=1$ is $q_ k-k\leq u_1$. Hence $G_ t\geq q_ k-kt$ for $0&lt;t&lt;1$, and letting $t\to 0$ in $L^1(X)$ gives $a_0\geq q_ k$ almost everywhere, hence everywhere, for every $k$. By the rooftop representation of proposition <a data-tag="6A60E53F" href="../../tag/467197AADC50/">16.7.2</a> and corollary <a data-tag="27E2486F" href="../../tag/838D06267D86/">17.3.7</a>, 
+    
+<div class="equation">
+  \[  \Bigl (\sup _ kq_ k\Bigr )^*=P_\theta [u_1](u_0)=u_0.  \]
+</div>
+<p>
+       Since $a_0$ is upper semicontinuous and dominates every $q_ k$, it dominates $(\sup _ kq_ k)^*=u_0$; hence $a_0=u_0$. Exchanging the roles of the endpoints, with the competitors $P_\theta (u_0+k,u_1)-k(1-t)$, gives $a_1=u_1$. 
+    <p>
+      Let $[a,b]\subset [0,1]$. The restriction of the weak geodesic to $[a,b]$ is a subgeodesic between the slices $G_ a,G_ b\in \mathcal E(X,\theta ,\phi )$. By the part already proved, the weak geodesic between $G_ a$ and $G_ b$ exists and dominates this restriction. By lemma <a data-tag="A9FC390C" href="../../tag/F4AAE999A6C4/">17.6.5</a>, replacing the restriction by this weak geodesic gives a subgeodesic on $[0,1]$ with endpoints $u_0,u_1$. It is a competitor for the original Perron segment, so its slices are at most $G_ t$; hence the two coincide on $[a,b]$. 
+    <p>
+      Finally, if $u_0,u_1\in \mathcal E^1(X,\theta ,\phi )$, then $w\in \mathcal E^1(X,\theta ,\phi )$ by proposition <a data-tag="2B2C3577" href="../../tag/1A67C7F5BE56/">17.3.6</a>, and $w\leq G_ t\preceq \phi $ gives $G_ t\in \mathcal E^1(X,\theta ,\phi )$ by corollary <a data-tag="4FBC4400" href="../../tag/4DCEFD8869DD/">17.2.10</a>. If $u_0,u_1\in \mathcal E^\infty (X,\theta ,\phi )$, then $\phi -C$ is a common minorant for some $C$, so $G_ t\geq w\geq \phi -C$, while the convex upper bound gives $G_ t\leq \phi +C$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-470B93BF">
+<p><a class="environment-identifier" href="../../tag/DD04D189A4D3/">Proposition <span data-tag="470B93BF">17.6.9</span>.</a><span data-gerby-tag="470B93BF"></span> Let $u_0,u_1\in \mathcal E(X,\theta ,\phi )$. The weak geodesics of theorem <a data-tag="108758A0" href="../../tag/2FECBE87C487/">17.6.8</a> have the following properties. </p>
+<ol>
+<li><p>
+They increase with either endpoint: if $u_0',u_1'\in \mathcal E(X,\theta ,\phi )$ satisfy $u_0\leq u_0'$ and $u_1\leq u_1'$, then $G_ t(u_0,u_1)\leq G_ t(u_0',u_1')$. 
+</p>
+</li><li><p>
+For constants $c_0,c_1$, $G_ t(u_0+c_0,u_1+c_1)=G_ t(u_0,u_1)+(1-t)c_0+tc_1$, and $G_ t(u_1,u_0)=G_{1-t}(u_0,u_1)$. 
+</p>
+</li><li><p>
+If $u_0^ k,u_1^ k\in \mathcal E(X,\theta ,\phi )$ decrease to $u_0,u_1$ as $k\to \infty $, then $G_ t(u_0^ k,u_1^ k)$ decreases to $G_ t(u_0,u_1)$ for every $t$. 
+</p>
+</li><li><p>
+If $u_1\leq u_0$, the slices $G_ t(u_0,u_1)$ decrease with $t\in [0,1]$. 
+</p>
+</li><li><p>
+If $|u_1-u_0|\leq C$ quasi-everywhere, then on the common finite locus 
+</p>
+<div class="equation">
+  \[  |G_ t(u_0,u_1)-u_0|\leq Ct,\qquad |G_ t(u_0,u_1)-u_1|\leq C(1-t).  \]
+</div>
+</li><li><p>
+For a constant $c$, $G_ t(u_0,u_0+c)=u_0+tc$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Assertion (1) holds because enlarging the endpoints enlarges the family of competitors, and (2) because adding the affine function $(1-t)c_0+tc_1$, respectively reversing the parameter, is a bijection between the families of competitors. 
+    <p>
+      For (3), the geodesics $G^ k=G(u_0^ k,u_1^ k)$ decrease with $k$ by (1) and dominate $G=G(u_0,u_1)$. Their complexifications decrease to a function which dominates the complexification of $G$ and so is not identically $-\infty $ on any chart; by theorem <a data-tag="1174FCEA" href="../../tag/FE144A69076E/">8.3.1</a>, applied in charts after adding smooth local potentials of $p^*\theta $, it is $p^*\theta $-psh. It is invariant under imaginary translations, and its slices $\widetilde G_ t$ are the pointwise limits of $G^ k_ t$. For every $k$ we have $G_ t\leq \widetilde G_ t\leq G^ k_ t\leq (1-t)u_0^ k+tu_1^ k$, so $G_ t\leq \widetilde G_ t\leq (1-t)u_0+tu_1$. As $t\to 0$, both outer functions converge to $u_0$ in $L^1(X)$, hence so does $\widetilde G_ t$; similarly at $t=1$. Thus $(\widetilde G_ t)$ is a competitor for the Perron segment between $u_0$ and $u_1$, so $\widetilde G\leq G$, and therefore $\widetilde G=G$. 
+    <p>
+      For (4), let $u_1\leq u_0$ and $0&lt;r&lt;s&lt;1$, and put $\delta =(s-r)/(1-r)$. The reparametrized curve $t\mapsto G_{\delta +(1-\delta )t}$ is a subgeodesic by lemma <a data-tag="A9FC390C" href="../../tag/F4AAE999A6C4/">17.6.5</a>. Its value at $t=0$ is $G_\delta \leq (1-\delta )u_0+\delta u_1\leq u_0$, and its value at $t=1$ is $u_1$. It is therefore a competitor for the segment between $u_0$ and $u_1$, and at $t=r$, where $\delta +(1-\delta )r=s$, it gives $G_ s\leq G_ r$. For the endpoints, $G_ t\leq (1-t)u_0+tu_1\leq u_0$, and the constant curve $u_1$ is a competitor, so $G_ t\geq u_1$. 
+    <p>
+      For (5), note that $u_1\leq u_0+C$ and $u_0\leq u_1+C$ everywhere, because inequalities between quasi-psh functions that hold quasi-everywhere hold everywhere (section <a data-tag="FD8D661F" href="../../tag/FBD81D436A6A/">16.1</a>). Hence the affine curves $u_0-Ct$ and $u_1-C(1-t)$ are competitors, so that $G_ t\geq \max \{ u_0-Ct,u_1-C(1-t)\} $. On the other hand $G_ t-u_0\leq t(u_1-u_0)\leq Ct$ and $G_ t-u_1\leq (1-t)(u_0-u_1)\leq C(1-t)$ by the upper bound of theorem <a data-tag="108758A0" href="../../tag/2FECBE87C487/">17.6.8</a>. For (6), the upper bound $u_0+tc$ is itself an affine competitor. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-40348539">
+<p><a class="environment-identifier" href="../../tag/6DDFC01E2315/">Proposition <span data-tag="40348539">17.6.10</span>.</a><span data-gerby-tag="40348539"></span> For $u_0,u_1\in \mathcal E(X,\theta ,\phi )$ and $0&lt;t&lt;1$, </p>
+<div class="equation">
+  \[  G_ t(u_0,u_1) =\left(\sup _{s\in \mathbb R} \{ P_\theta (u_0,u_1-s)+ts\} \right)^*.  \]
+</div>
+<p> The regularization may equally be taken on $X\times S$: the slices of the regularized supremum of the complexifications are the functions displayed here. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For each $s$ the potential $u_1-s$ belongs to $\mathcal E(X,\theta ,\phi )$, so the rooftop $P_\theta (u_0,u_1-s)$ is not identically $-\infty $, by proposition <a data-tag="2B2C3577" href="../../tag/1A67C7F5BE56/">17.3.6</a>, and the affine curve $P_\theta (u_0,u_1-s)+ts$ is a competitor: its value at $t=0$ is at most $u_0$ and its value at $t=1$ is at most $u_1$. Hence the right side is at most $G_ t$. 
+    <p>
+      Conversely, let $(v_ t)$ be a competitor and $s\in \mathbb R$. By corollary <a data-tag="B6D5E591" href="../../tag/2C1A82803889/">8.5.2</a>, applied with the affine function $\ell (t)=ts$ in charts after adding smooth local potentials of $p^*\theta $, the function $q_ s=\inf _{0&lt;t&lt;1}(v_ t-ts)$ is $\theta $-psh or identically $-\infty $ on each chart. By lemma <a data-tag="0F15CB2C" href="../../tag/ADE91FED84D6/">17.6.3</a>, for almost every $x$ the function $t\mapsto v_ t(x)$ is finite and convex, hence bounded below on $(0,1)$ by an affine function (lemma <a data-tag="41E14445" href="../../tag/0702EBBE9C4C/">17.6.2</a>(2)), so $q_ s$ is finite almost everywhere and therefore $\theta $-psh. Letting $t\to 0$ and $t\to 1$ in $q_ s\leq v_ t-ts$, and using the $L^1$ convergence of $v_ t$ to its endpoint potentials, which are at most $u_0$ and $u_1$, we get $q_ s\leq u_0$ and $q_ s\leq u_1-s$ almost everywhere, hence everywhere, and therefore $q_ s\leq P_\theta (u_0,u_1-s)$. 
+    <p>
+      Now fix $x$ and $t_0\in (0,1)$. By lemma <a data-tag="0F15CB2C" href="../../tag/ADE91FED84D6/">17.6.3</a>(1), the fiber $t\mapsto v_ t(x)$ is either identically $-\infty $, in which case $v_{t_0}(x)=-\infty $, or finite. In the second case lemma <a data-tag="41E14445" href="../../tag/0702EBBE9C4C/">17.6.2</a>(2) gives $c\in \mathbb R$ with $v_ t(x)\geq v_{t_0}(x)+c(t-t_0)$ for all $t$, so that $q_ c(x)=\inf _ t(v_ t(x)-ct)=v_{t_0}(x)-ct_0$, and hence $v_{t_0}(x)=q_ c(x)+ct_0\leq \sup _ s(q_ s(x)+t_0s)$. In either case $v_{t_0}(x)\leq \sup _ s\{ P_\theta (u_0,u_1-s)(x)+t_0s\} $, since $q_ s\leq P_\theta (u_0,u_1-s)$. Taking the regularized supremum over all competitors and using lemma <a data-tag="E4E82D7E" href="../../tag/7B309BFF1A4D/">17.6.6</a> proves the formula. The same lemma, applied to the affine competitors, gives the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kernel energies and equilibrium measures · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/capacity-fine-topology/">Chapter 4 · Energy, capacity, and fine topology</a> · Tag <code>FF9D3CA4D463</code></p><h1>Kernel energies and equilibrium measures</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 4.1 Kernel energies and equilibrium measures <span data-gerby-tag="042247C9"></span></div>
+<p>
+  Recall the fundamental solution $E_ d$ of (<a data-tag="BC51DE75" href="../../tag/49DB76D43578/">2.9</a>), the kernel $\Gamma _ d=-E_ d$ of $-\Delta $, and the area $s_{d-1}$ of the unit sphere. For energy estimates we need kernels that are nonnegative on the sets under consideration, so we fix a compact set $K\subset \mathbb R^ d$. For $d\geq 3$ we put 
+</p>
+<div class="equation">
+  \[  k(x,y)=\Gamma _ d(x-y)=\frac{|x-y|^{2-d}}{(d-2)s_{d-1}}.  \]
+</div>
+<p>
+ In dimension two we fix a scale $D&gt;\operatorname {diam}K$ and put 
+</p>
+<div class="equation">
+  \[  k_ D(x,y)=\frac{1}{2\pi }\log \frac{D}{|x-y|}=\Gamma _2(x-y)+\frac{\log D}{2\pi }.  \]
+</div>
+<p>
+ Both kernels equal $+\infty $ on the diagonal and are nonnegative on $K\times K$. 
+</p>
+<p>
+By a measure on $K$ we mean a finite positive Borel measure on $\mathbb R^ d$ supported on $K$; it is a Radon measure by proposition <a data-tag="B0C4661C" href="../../tag/D0882F84DCFC/">1.1.2</a>. The potential and the energy of such a measure $\mu $ are 
+</p>
+<div class="equation">
+  \[  U^\mu (x)=\int k(x,y)\, \mathrm d\mu (y),\qquad I(\mu )=\iint k(x,y)\, \mathrm d\mu (x)\, \mathrm d\mu (y),  \]
+</div>
+<p>
+ with $k_ D$ in place of $k$ when $d=2$; when the scale must be specified, we write $I_ D$. We call $U^\mu $ and $I(\mu )$ the Newtonian potential and the Newtonian energy of $\mu $ if $d\geq 3$, and its logarithmic potential and logarithmic energy if $d=2$. For two measures $\mu $ and $\nu $ on $K$, their mutual energy is $I(\mu ,\nu )=\iint k(x,y)\, \mathrm d\mu (x)\, \mathrm d\nu (y)$. The same integrals define the energy and the mutual energy of finite signed measures on $K$ whenever the kernel is integrable for the product of the total variations. 
+</p>
+<p>
+The potential $U^\mu $ is lower semicontinuous on $\mathbb R^ d$: the kernel is a lower semicontinuous function of $x$ with values in $(-\infty ,\infty ]$, and it is bounded below for $x$ in a compact set and $y\in K$, so Fatou's lemma applies after adding a constant. Moreover, $U^\mu $ is related to the fundamental potential $E_ d*\mu $ of proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a> by $U^\mu =-E_ d*\mu $ if $d\geq 3$ and $U^\mu =-E_2*\mu +(2\pi )^{-1}\mu (K)\log D$ if $d=2$. Replacing $D$ by another scale $D'&gt;\operatorname {diam}K$ adds $(2\pi )^{-1}\mu (K)^2\log (D'/D)$ to the energy; in particular, whether $\mu $ has finite energy does not depend on the scale. 
+</p>
+<p>
+Fundamental potentials satisfy a reciprocity law. Let $\mu $ and $\nu $ be finite positive measures with compact supports, and let $M$ be an upper bound of $E_ d$ on the compact set $\operatorname{Supp}\mu -\operatorname{Supp}\nu $. Applying Tonelli's theorem to the function $(x,y)\mapsto M-E_ d(x-y)$, which is nonnegative on $\operatorname{Supp}\mu \times \operatorname{Supp}\nu $, using $E_ d(-z)=E_ d(z)$ and subtracting the finite number $M\mu (\mathbb R^ d)\nu (\mathbb R^ d)$, we obtain 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-F1E9B4D8"><span data-gerby-tag="F1E9B4D8"></span>
+<span class="equation-label"><a data-tag="F1E9B4D8" href="../../tag/718E110735E0/">4.1</a></span>
+<div>\begin{equation} \label{eq:potential-reciprocity} \int (E_ d*\nu )\, \mathrm d\mu =\int (E_ d*\mu )\, \mathrm d\nu , \end{equation}</div>
+</div>
+<p>
+ where both sides lie in $[-\infty ,\infty )$. 
+</p>
+<p>
+The positivity of the energy rests on the Gaussian kernels $\mathrm e^{-t|x-y|^2}$, $t&gt;0$: each of them is an $L^2$ inner product of two Gaussians, and both $k$ and $k_ D$ are obtained from them by integration in $t$. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-37766360">
+<p><a class="environment-identifier" href="../../tag/21858171114B/">Lemma <span data-tag="37766360">4.1.1</span>.</a><span data-gerby-tag="37766360"></span> Let $\sigma $ and $\tau $ be finite real signed measures on $\mathbb R^ d$, and for $t&gt;0$ put </p>
+<div class="equation">
+  \[  Q_ t(\sigma ,\tau )=\iint \mathrm e^{-t|x-y|^2}\, \mathrm d\sigma (x)\, \mathrm d\tau (y),\qquad h_ t^\sigma (z)=\int \mathrm e^{-2t|z-x|^2}\, \mathrm d\sigma (x),  \]
+</div>
+<p> and $Q_ t(\sigma )=Q_ t(\sigma ,\sigma )$. Then $h_ t^\sigma $ is a bounded continuous function, and </p>
+<div class="equation" id="foundations-of-pluripotential-theory-AADCA49A"><span data-gerby-tag="AADCA49A"></span>
+<span class="equation-label"><a data-tag="AADCA49A" href="../../tag/FD55A94B512F/">4.2</a></span>
+<div>\begin{equation} \label{eq:gaussian-energy-identity} Q_ t(\sigma ,\tau )=\left(\frac{4t}{\pi }\right)^{d/2}\int _{\mathbb R^ d}h_ t^\sigma (z)\, h_ t^\tau (z)\, \mathrm d z. \end{equation}</div>
+</div>
+<p> In particular $Q_ t(\sigma )\geq 0$. If $Q_ t(\sigma )=0$ for arbitrarily large $t$, then $\sigma =0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The function $h_ t^\sigma $ is bounded by $|\sigma |(\mathbb R^ d)$, and it is continuous by dominated convergence. Completing the square gives $|z-x|^2+|z-y|^2=2|z-\tfrac 12(x+y)|^2+\tfrac 12|x-y|^2$. Since $\int _{\mathbb R^ d}\mathrm e^{-4t|w|^2}\, \mathrm dw=(\pi /4t)^{d/2}$, it follows that 
+    
+<div class="equation">
+  \[  \mathrm e^{-t|x-y|^2}=\left(\frac{4t}{\pi }\right)^{d/2}\int _{\mathbb R^ d}\mathrm e^{-2t|z-x|^2}\, \mathrm e^{-2t|z-y|^2}\, \mathrm d z.  \]
+</div>
+<p>
+       We integrate this identity against $\sigma \otimes \tau $. Fubini's theorem applies, because the integral of the absolute value of the integrand with respect to $\mathrm dz\otimes |\sigma |\otimes |\tau |$ is at most $(\pi /4t)^{d/2}|\sigma |(\mathbb R^ d)|\tau |(\mathbb R^ d)$, and integrating first in $x$ and in $y$ gives (<a data-tag="AADCA49A" href="../../tag/FD55A94B512F/">4.2</a>). For $\tau =\sigma $ it shows that $Q_ t(\sigma )$ is a positive multiple of $\int (h_ t^\sigma )^2\, \mathrm dz$. Hence $Q_ t(\sigma )\geq 0$, and if $Q_ t(\sigma )=0$, then $h_ t^\sigma =0$ almost everywhere, hence everywhere, because $h_ t^\sigma $ is continuous. 
+    <p>
+      Now suppose that $Q_{t_ j}(\sigma )=0$ for a sequence $t_ j\to \infty $. The functions $g_ t(z)=(2t/\pi )^{d/2}\mathrm e^{-2t|z|^2}$ are nonnegative and have integral one, and $\int _{|z|\geq \delta }g_ t\, \mathrm d z\to 0$ as $t\to \infty $ for every $\delta &gt;0$. Hence $g_ t*f\to f$ uniformly on $\mathbb R^ d$ for every $f\in C_ c(\mathbb R^ d)$: in the integral defining $g_ t*f-f$ we use the uniform continuity of $f$ on the region $|z|&lt;\delta $ and the smallness of the Gaussian tail on the region $|z|\geq \delta $. Since $g_{t_ j}*\sigma =(2t_ j/\pi )^{d/2}h_{t_ j}^\sigma =0$, Fubini's theorem and the symmetry of $g_ t$ give 
+    
+<div class="equation">
+  \[  \int (g_{t_ j}*f)\, \mathrm d\sigma =\int f\, (g_{t_ j}*\sigma )\, \mathrm d z=0.  \]
+</div>
+<p>
+       Letting $j\to \infty $, we get $\int f\, \mathrm d\sigma =0$ for every $f\in C_ c(\mathbb R^ d)$. Thus the positive and negative parts of $\sigma $ define the same positive linear functional on $C_ c(\mathbb R^ d)$, and the uniqueness assertion of theorem <a data-tag="DE073A6A" href="../../tag/0C614771FB98/">1.2.2</a> shows that they are equal, that is, $\sigma =0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-DF3A6DB5">
+<p><a class="environment-identifier" href="../../tag/09A0D05A868F/">Proposition <span data-tag="DF3A6DB5">4.1.2</span>.</a><span data-gerby-tag="DF3A6DB5"></span> Let $\mu $ and $\nu $ be measures on $K$ with finite energy. </p>
+<ol>
+<li><p>
+If $d\geq 3$, then $I(\mu ,\nu )$ is finite and $I(\mu ,\nu )^2\leq I(\mu )I(\nu )$. The energy is a positive definite quadratic form on the real linear span of the measures on $K$ with finite energy. 
+</p>
+</li><li><p>
+If $d=2$, then $I_ D(\mu ,\nu )$ is finite. The energy $I_ D$ is a positive definite quadratic form on the space of finite signed measures on $K$ of total mass zero whose positive and negative parts have finite energy, and it satisfies the Cauchy–Schwarz inequality on this space. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By (<a data-tag="AADCA49A" href="../../tag/FD55A94B512F/">4.2</a>), the expression $Q_ t(\sigma ,\tau )$ of lemma <a data-tag="37766360" href="../../tag/21858171114B/">4.1.1</a> is $(4t/\pi )^{d/2}$ times the $L^2$ inner product of $h_ t^\sigma $ and $h_ t^\tau $. Hence, by the Cauchy–Schwarz inequality in $z$, 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-5ED0A349"><span data-gerby-tag="5ED0A349"></span>
+<span class="equation-label"><a data-tag="5ED0A349" href="../../tag/F2F2EC96C26E/">4.3</a></span>
+<div>\begin{equation} \label{eq:gaussian-cauchy-schwarz} Q_ t(\mu ,\nu )\leq Q_ t(\mu )^{1/2}Q_ t(\nu )^{1/2} \end{equation}</div>
+</div>
+<p>
+       for positive measures $\mu $ and $\nu $. 
+    <p>
+<em>The case $d\geq 3$.</em> Put $a=(d-2)/2&gt;0$ and $c_ a=\int _0^\infty s^{a-1}\mathrm e^{-s}\, \mathrm d s\in (0,\infty )$. The substitution $s=tr^2$ gives 
+    
+<div class="equation">
+  \[  r^{2-d}=\frac{1}{c_ a}\int _0^\infty t^{a-1}\mathrm e^{-t r^2}\, \mathrm d t,\qquad r&gt;0,  \]
+</div>
+<p>
+       and both sides are $+\infty $ for $r=0$. By Tonelli's theorem, 
+    
+<div class="equation">
+  \[  I(\mu ,\nu )=\kappa \int _0^\infty t^{a-1}Q_ t(\mu ,\nu )\, \mathrm d t,\qquad \kappa =\frac{1}{(d-2)s_{d-1}c_ a}.  \]
+</div>
+<p>
+       Applying (<a data-tag="5ED0A349" href="../../tag/F2F2EC96C26E/">4.3</a>) and then the Cauchy–Schwarz inequality for the measure $t^{a-1}\, \mathrm dt$, we obtain $I(\mu ,\nu )\leq I(\mu )^{1/2}I(\nu )^{1/2}$. Now let $\sigma $ be a real linear combination of measures on $K$ with finite energy. Its total variation is dominated by a combination of the same measures with nonnegative coefficients, so the inequality just proved shows that $\iint k\, \mathrm d|\sigma |\, \mathrm d|\sigma |&lt;\infty $. Consequently Fubini's theorem applies to the integrand $t^{a-1}\mathrm e^{-t|x-y|^2}$, and 
+    
+<div class="equation">
+  \[  I(\sigma )=\kappa \int _0^\infty t^{a-1}Q_ t(\sigma )\, \mathrm d t\geq 0  \]
+</div>
+<p>
+       by lemma <a data-tag="37766360" href="../../tag/21858171114B/">4.1.1</a>. If $I(\sigma )=0$, then $Q_ t(\sigma )=0$ for almost every $t&gt;0$, in particular for arbitrarily large $t$, and lemma <a data-tag="37766360" href="../../tag/21858171114B/">4.1.1</a> gives $\sigma =0$. 
+    <p>
+<em>The case $d=2$.</em> For $0&lt;r\leq D$ we have 
+    
+<div class="equation">
+  \[  \log \frac Dr=\frac12\int _0^\infty \frac{\mathrm e^{-t r^2}-\mathrm e^{-tD^2}}{t}\, \mathrm d t.  \]
+</div>
+<p>
+       Indeed, the right side vanishes for $r=D$, and differentiation under the integral sign, which is legitimate for $r$ in a compact subinterval of $(0,\infty )$, shows that its derivative in $r$ is $-r\int _0^\infty \mathrm e^{-tr^2}\, \mathrm dt=-1/r$. The integrand is nonnegative, and since $|\mathrm e^{-t r^2}-\mathrm e^{-tD^2}|\leq tD^2$, its integral over $0&lt;t&lt;1$ is at most $D^2$. Since $|x-y|\leq \operatorname {diam}K&lt;D$ for $x,y\in K$, Tonelli's theorem gives 
+    
+<div class="equation">
+  \[  4\pi I_ D(\mu )=\int _0^\infty \bigl (Q_ t(\mu )-\mu (K)^2\mathrm e^{-tD^2}\bigr )\, \frac{\mathrm d t}{t},  \]
+</div>
+<p>
+       with a nonnegative integrand. As $\int _1^\infty \mathrm e^{-tD^2}\, \mathrm dt/t&lt;\infty $, it follows that $\int _1^\infty Q_ t(\mu )\, \mathrm dt/t&lt;\infty $, and likewise for $\nu $. By (<a data-tag="5ED0A349" href="../../tag/F2F2EC96C26E/">4.3</a>) and the Cauchy–Schwarz inequality for the measure $\mathrm dt/t$ on $(1,\infty )$, also $\int _1^\infty Q_ t(\mu ,\nu )\, \mathrm dt/t&lt;\infty $. Since the part of the integral over $0&lt;t&lt;1$ contributes at most $D^2\mu (K)\nu (K)$ to $4\pi I_ D(\mu ,\nu )$, the mutual energy $I_ D(\mu ,\nu )$ is finite. 
+    <p>
+      Now let $\sigma $ be a signed measure on $K$ of total mass zero whose positive and negative parts $\sigma ^\pm $ have finite energy. Then 
+    
+<div class="equation">
+  \[  \iint k_ D\, \mathrm d|\sigma |\, \mathrm d|\sigma |=I_ D(\sigma ^+)+2I_ D(\sigma ^+,\sigma ^-)+I_ D(\sigma ^-)&lt;\infty ,  \]
+</div>
+<p>
+       so Fubini's theorem applies to the integrand $(\mathrm e^{-t|x-y|^2}-\mathrm e^{-tD^2})/t$ with respect to $\mathrm dt\otimes \sigma \otimes \sigma $. Since $\sigma (K)=0$, the term $\mathrm e^{-tD^2}$ integrates to zero, and 
+    
+<div class="equation">
+  \[  I_ D(\sigma )=\frac1{4\pi }\int _0^\infty Q_ t(\sigma )\, \frac{\mathrm d t}{t}\geq 0.  \]
+</div>
+<p>
+       In particular $I_ D(\sigma )$ does not depend on $D$. As in the case $d\geq 3$, $I_ D(\sigma )=0$ forces $\sigma =0$ by lemma <a data-tag="37766360" href="../../tag/21858171114B/">4.1.1</a>. 
+    <p>
+      It remains to prove the Cauchy–Schwarz inequality. Let $\mathcal E$ be the real linear span of the measures on $K$ with finite energy if $d\geq 3$, and the set of signed measures on $K$ of total mass zero whose positive and negative parts have finite energy if $d=2$. In the second case $\mathcal E$ is also a vector space. Indeed, let $\sigma ,\tau \in \mathcal E$ and $c\in \mathbb R$. Since $|\sigma +\tau |\leq |\sigma |+|\tau |$, we have $(\sigma +\tau )^\pm =\frac12\bigl (|\sigma +\tau |\pm (\sigma +\tau )\bigr )\leq \sigma ^\pm +\tau ^\pm $, while $(c\sigma )^\pm =c\sigma ^\pm $ if $c\geq 0$ and $(c\sigma )^\pm =|c|\sigma ^\mp $ if $c&lt;0$. A positive measure on $K$ dominated by the sum of two measures with finite energy has finite energy, because the kernel is nonnegative on $K\times K$ and the mutual energy of two measures with finite energy is finite. Hence $\sigma +\tau $ and $c\sigma $ belong to $\mathcal E$. 
+    <p>
+      In both cases, the total variation of an element of $\mathcal E$ is dominated by a sum of measures on $K$ with finite energy, so for $\sigma ,\tau \in \mathcal E$ the kernel is integrable with respect to $|\sigma |\otimes |\tau |$. Consequently $I(\sigma ,\tau )=\iint k\, \mathrm d\sigma \, \mathrm d\tau $ (with $k_ D$ in place of $k$ when $d=2$) is a symmetric bilinear form on $\mathcal E$, and $I(\sigma )=I(\sigma ,\sigma )\geq 0$ by what we have proved. Hence, for $\sigma ,\tau \in \mathcal E$, the quadratic polynomial $s\mapsto I(\sigma +s\tau )=I(\sigma )+2sI(\sigma ,\tau )+s^2I(\tau )$ is nonnegative on $\mathbb R$. Its discriminant is therefore nonpositive, which is the Cauchy–Schwarz inequality $I(\sigma ,\tau )^2\leq I(\sigma )I(\tau )$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+In dimension two, the restriction to measures of total mass zero in part (2) is what makes the logarithmic energy independent of the scale. For a positive measure, the sign of $I_ D$ depends on how the scale compares with the support. Identify $\mathbb R^2$ with $\mathbb C$, and let $\sigma _ r$ be the normalized arc length measure on the circle $|x|=r$. For $|x|=r$, the rotation invariance of $\sigma _ r$ gives 
+</p>
+<div class="equation">
+  \[  \int \log |x-y|\, \mathrm d\sigma _ r(y)=\log r+\frac1{2\pi }\int _{-\pi }^{\pi }\log |1-\mathrm e^{\mathrm i\theta }|\, \mathrm d\theta ,  \]
+</div>
+<p>
+ and the last integral vanishes. Indeed, for $0&lt;a&lt;1$ the function $z\mapsto \log |1-az|$ is harmonic on a neighborhood of the closed unit disc, so its mean over the unit circle equals its value $0$ at the origin. We may let $a\uparrow 1$ by dominated convergence, since $|\theta |/\pi \leq |1-a\mathrm e^{\mathrm i\theta }|\leq 2$ for $1/2\leq a&lt;1$ and $|\theta |\leq \pi $. Hence, for every $D&gt;0$, the function $\int k_ D(\cdot ,y)\, \mathrm d\sigma _ r(y)$ equals $(2\pi )^{-1}\log (D/r)$ on the circle, and $\iint k_ D\, \mathrm d\sigma _ r\, \mathrm d\sigma _ r=(2\pi )^{-1}\log (D/r)$. For a fixed scale $D$, this energy is negative as soon as $r&gt;D$. Thus no single scale makes the logarithmic energy nonnegative on all positive measures with compact support. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-A35EEAC5">
+<p><a class="environment-identifier" href="../../tag/AA43DD93EFE4/">Theorem <span data-tag="A35EEAC5">4.1.3</span>.</a><span data-gerby-tag="A35EEAC5"></span> Let $K\subset \mathbb R^ d$ be a compact set that carries a probability measure of finite energy; when $d=2$, the scale $D&gt;\operatorname {diam}K$ is fixed. Then there is a unique probability measure $\mu _ K$ on $K$ of minimal energy, the equilibrium measure of $K$. Put $V(K)=I(\mu _ K)$, and $V_ D(K)=I_ D(\mu _ K)$ when $d=2$. Every probability measure $\nu $ on $K$ with finite energy satisfies </p>
+<div class="equation">
+  \[  I(\mu _ K,\nu )\geq V(K)  \]
+</div>
+<p> (with $I_ D$ and $V_ D(K)$ when $d=2$). If $d\geq 3$, then $V(K)&gt;0$, and the Newtonian capacity of $K$ is defined to be $1/V(K)$. If $d=2$, the logarithmic capacity of $K$ is defined to be $D\mathrm e^{-2\pi V_ D(K)}$; neither $\mu _ K$ nor this number depends on $D$. If $K$ carries no probability measure of finite energy, in particular if $K=\varnothing $, its Newtonian or logarithmic capacity is defined to be zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Existence.</em> Let $\mu _ j$ be probability measures on $K$ whose energies converge to the infimum $m$, which is finite by hypothesis. By theorem <a data-tag="C9B16608" href="../../tag/F9F4241C5BD2/">1.5.5</a>, after passing to a subsequence, $\mu _ j$ converges vaguely to a Radon measure $\mu $ on $\mathbb R^ d$. By proposition <a data-tag="6031A2A1" href="../../tag/132090FCDF4A/">1.5.2</a>, applied to the open set $\mathbb R^ d\setminus K$, we have $\mu (\mathbb R^ d\setminus K)\leq \varliminf _ j\mu _ j(\mathbb R^ d\setminus K)=0$, so $\mu $ is carried by $K$; testing against a function in $C_ c(\mathbb R^ d)$ equal to one on $K$ then shows that $\mu (K)=1$. To prove that $I(\mu )\leq m$, we first show that 
+    
+<div class="equation">
+  \[  \iint F\, \mathrm d\mu _ j\, \mathrm d\mu _ j\longrightarrow \iint F\, \mathrm d\mu \, \mathrm d\mu  \]
+</div>
+<p>
+       for every continuous function $F$ on $\mathbb R^ d\times \mathbb R^ d$. 
+    <p>
+      Given $\delta &gt;0$, cover $K$ by finitely many balls $B(x_ i,\delta )$ with $x_ i\in K$. By lemma <a data-tag="0682246E" href="../../tag/677586F8712C/">1.4.2</a>, there are functions $0\leq \varphi _ i\in C_ c^\infty (B(x_ i,\delta ))$ with $\sum _ i\varphi _ i=1$ on $K$. For $x,y\in K$, a term $\varphi _ i(x)\varphi _ l(y)$ is nonzero only if $|x-x_ i|&lt;\delta $ and $|y-x_ l|&lt;\delta $, so 
+    
+<div class="equation">
+  \[  \Bigl |F(x,y)-\sum _{i,l}F(x_ i,x_ l)\varphi _ i(x)\varphi _ l(y)\Bigr |\leq \omega (2\delta ),  \]
+</div>
+<p>
+       where $\omega $ is the modulus of continuity of $F$ on $K\times K$. The double integrals of the finite sums converge, since $\int \varphi _ i\, \mathrm d\mu _ j\to \int \varphi _ i\, \mathrm d\mu $. As all the measures are probability measures carried by $K$ and $\omega (2\delta )\to 0$ as $\delta \downarrow 0$, this proves the asserted convergence. 
+    <p>
+      For $n&gt;0$, the truncated kernel $\min \{ k,n\} $ is continuous on $\mathbb R^ d\times \mathbb R^ d$, including the diagonal, and it increases to $k$ as $n\to \infty $. Applying the convergence just proved to $F=\min \{ k,n\} $, we get 
+    
+<div class="equation">
+  \[  \iint \min \{ k,n\} \, \mathrm d\mu \, \mathrm d\mu =\lim _ j\iint \min \{ k,n\} \, \mathrm d\mu _ j\, \mathrm d\mu _ j\leq \varliminf _ j I(\mu _ j)=m.  \]
+</div>
+<p>
+       Since $k\geq 0$ on $K\times K$, monotone convergence in $n$ gives $I(\mu )\leq m$. Hence $\mu $ is a minimizer. 
+    <p>
+<em>Uniqueness.</em> Let $\mu $ and $\mu '$ be minimizers. The signed measure $\sigma =\mu -\mu '$ has total mass zero. Since $|\sigma |\leq \mu +\mu '$, its positive and negative parts satisfy $\sigma ^+=\frac12(|\sigma |+\sigma )\leq \mu $ and $\sigma ^-\leq \mu '$, so they have finite energy, the kernel being nonnegative on $K\times K$. All mutual energies are finite by proposition <a data-tag="DF3A6DB5" href="../../tag/09A0D05A868F/">4.1.2</a>, so we may expand and obtain 
+    
+<div class="equation">
+  \[  I\bigl (\tfrac 12(\mu +\mu ')\bigr )=\tfrac 12I(\mu )+\tfrac 12I(\mu ')-\tfrac 14I(\sigma )=m-\tfrac 14I(\sigma ).  \]
+</div>
+<p>
+       Since $\frac12(\mu +\mu ')$ is a probability measure on $K$, this energy is at least $m$, so $I(\sigma )\leq 0$. By proposition <a data-tag="DF3A6DB5" href="../../tag/09A0D05A868F/">4.1.2</a>, $\sigma =0$. 
+    <p>
+<em>The inequality.</em> Let $\nu $ be a probability measure on $K$ with finite energy. For $0&lt;t\leq 1$ the probability measure $(1-t)\mu _ K+t\nu $ competes in the minimization, so 
+    
+<div class="equation">
+  \[  V(K)\leq I\bigl ((1-t)\mu _ K+t\nu \bigr )=(1-t)^2V(K)+2t(1-t)I(\mu _ K,\nu )+t^2I(\nu ),  \]
+</div>
+<p>
+       all terms being finite. Subtracting $V(K)$, dividing by $t$ and letting $t\downarrow 0$ gives $0\leq -2V(K)+2I(\mu _ K,\nu )$. 
+    <p>
+<em>The capacities.</em> Let $d\geq 3$. A point mass has infinite energy, so $K$ is not a single point and $\operatorname {diam}K&gt;0$. The kernel is at least $((d-2)s_{d-1})^{-1}(\operatorname {diam}K)^{2-d}&gt;0$ on $K\times K$, hence $V(K)&gt;0$. Let $d=2$. Replacing $D$ by $D'&gt;\operatorname {diam}K$ changes the energy of every probability measure on $K$ by the same constant $(2\pi )^{-1}\log (D'/D)$. Hence $\mu _ K$ does not depend on the scale, $V_{D'}(K)=V_ D(K)+(2\pi )^{-1}\log (D'/D)$, and $D'\mathrm e^{-2\pi V_{D'}(K)}=D\mathrm e^{-2\pi V_ D(K)}$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

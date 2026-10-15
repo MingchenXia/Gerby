@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Toric setup · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/toric-convex/">Chapter 18 · Toric and convex geometry</a> · Tag <code>DD9C13434AA7</code></p><h1>Toric setup</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 5.1 Toric setup <span data-gerby-tag="2FF2CFF2"></span></div>
+
+ Let $T$ be a complex torus of dimension $n$<aside class="source-footnote" id="sgpt-a0000043088"><span class="footnote-label">Note.</span> Namely, an algebraic group defined over $\mathbb {C}$, which is isomorphic to $\mathbb {G}_{\mathrm{m}}^ n$.</aside> and let $T_ c\subseteq T(\mathbb {C})$ denote the corresponding compact torus. 
+
+<p>
+Write $M$ for the character lattice of $T$, which is a free Abelian group of rank $n$. Similarly, let $N$ be the cocharacter lattice of $T$, which is the dual lattice of $M$. Given $m\in M$, the corresponding character of $T$ is denoted by $\chi ^ m$. Write $M_{\mathbb {R}}=M\otimes _{\mathbb {Z}} \mathbb {R}$ and $N_{\mathbb {R}}=N\otimes _{\mathbb {Z}}\mathbb {R}$. The pairing between $M_{\mathbb {R}}$ and $N_{\mathbb {R}}$ is denoted by $\langle \bullet ,\bullet \rangle $. 
+</p>
+
+Let $P\subseteq M_{\mathbb {R}}$ be a full-dimensional <em>smooth</em><aside class="source-footnote" id="sgpt-a0000043156"><span class="footnote-label">Note.</span> Recall that <em>smooth</em> means that for every vertex $v\in P$, if $w_ E$ denotes the first lattice point after $v$ as one traverses each edge $E$ of $P$ containing $v$, then $\{ w_ E-v\} _ E$ forms a basis of $M$. See <span class="cite">[<span class="postnote">Definition 2.4.2</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span>. We also say $P$ is a <em>Delzant polytope</em> in this case.</aside> lattice polytope<aside class="source-footnote" id="sgpt-a0000043176"><span class="footnote-label">Note.</span> A <em>lattice polytope</em> in $M_{\mathbb {R}}$ is the convex hull of finitely many points in $M$.</aside>. 
+
+<p>
+Given any (closed) facet $F$ of $P$, let $u_ F\in N$ denote the unique ray generator (the first non-zero integral element) of the inward normal ray of $F$. Then $P$ can be represented as 
+</p>
+<div class="equation" id="sgpt-89FDD6C9"><span data-gerby-tag="89FDD6C9"></span>
+<span class="equation-label"><a data-tag="89FDD6C9" href="../../tag/338B3FB48871/">5.1</a></span>
+<div>\begin{equation} \label{eq:Pfacetrep} P=\left\{ m\in M_{\mathbb {R}}: \langle m,u_ F \rangle \geq -a_ F\textup{ for all facets }F\textup{ of } P\right\}  \end{equation}</div>
+</div>
+<p>
+ for some uniquely determined integers $a_ F$. The presentation is called the <em>facet presentation</em> of $P$. 
+</p>
+<p>
+Given any (closed) face $Q$ of $P$, we let $\sigma _ Q\subseteq N_{\mathbb {R}}$ be the closed convex cone generated by the $u_ F$'s, where $F$ runs over all facets of $P$ containing $Q$. When $Q=P$, $\sigma _ P$ is understood as $\{ 0\} $. 
+</p>
+<p>
+Let $\Sigma $ be the <em>(inner) normal fan</em> of $P$. Namely, 
+</p>
+<div class="equation">
+  \[  \Sigma =\left\{ \sigma _ Q:Q\textup{ is a face of }P\right\} .  \]
+</div>
+<p>
+ The notation $\Sigma (1)$ denotes the set of rays in $\Sigma $. Note that $\Sigma (1)$ is in bijective correspondence with the set of facets of $P$. In fact, given any facet $F$ of $P$, the cone $\sigma _ F$ is just the ray generated by $u_ F$, namely, the inward normal ray of $F$. 
+</p>
+<p>
+For any $\rho \in \Sigma (1)$, let $u_{\rho }\in N$ denote the ray generator of $\rho $, namely the first non-zero element in $N\cap \rho $. If $\rho =\sigma _ F$ for some facet $F$ of $P$, then $u_{\rho }=u_ F$. 
+</p>
+<p>
+Now the facet presentation (<a data-tag="89FDD6C9" href="../../tag/338B3FB48871/">5.1</a>) can be equivalently rewritten as 
+</p>
+<div class="equation">
+  \[  P=\left\{ m\in M_{\mathbb {R}} : \langle m,u_{\rho } \rangle \geq -a_{\rho }\textup{ for all }\rho \in \Sigma (1) \right\} .  \]
+</div>
+<p>
+ Let $\operatorname{Supp}_ P\colon N_{\mathbb {R}} \rightarrow \mathbb {R}$ denote the <em>support function</em> of $P$. Recall that the support function (example <a data-tag="70D7DE57" href="../../tag/8CBDC69B6C55/">A.1.5</a>) of $P$ is defined as 
+</p>
+<div class="equation">
+  \[  \operatorname{Supp}_ P(n)=\max \left\{  \langle m,n \rangle : m\in P \right\} .  \]
+</div>
+<p>
+ Note that our support function differs from <span class="cite">[<span class="postnote">Proposition 4.2.14</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span>, where instead of a maximum, they took the minimum. 
+</p>
+<p>
+Recall that the <em>characteristic function</em> $\chi _ P\colon M_{\mathbb {R}}\rightarrow \{ 0,\infty \} $ of $P$ is defined as in example <a data-tag="D85BD88C" href="../../tag/1532A37DD27F/">A.1.4</a>: 
+</p>
+<div class="equation">
+  \[  \chi _ P(m)\coloneqq \begin{cases}  0,&amp; \quad m\in P;\\  \infty ,&amp; \quad m\not\in P. \end{cases}  \]
+</div>
+<p>
+Let $X=X_{\Sigma }$ be the smooth projective toric variety corresponding to $\Sigma $. See <span class="cite">[<span class="postnote">Theorem 3.1.5</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span> for the construction of $X$ and <span class="cite">[<span class="postnote">Theorem 3.1.19</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span> for the smoothness of $X$. There is a canonical embedding $T\subseteq X$ as a dense Zariski open subset. 
+</p>
+<p>
+Let $D$ be the Cartier divisor on $X$ defined by $P$: 
+</p>
+<div class="equation">
+  \[  D=\sum _{\rho \in \Sigma (1)} a_{\rho }D_{\rho },  \]
+</div>
+<p>
+ where $D_{\rho }$ is the toric prime divisor defined by $\rho $ under the orbit-cone correspondence <span class="cite">[<span class="postnote">Theorem 3.2.6</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span>. 
+</p>
+<p>
+Let $L$ be the toric line bundle induced by $P$, namely $L=\mathcal{O}_ X(D)$. Since $P$ is a smooth (Delzant) lattice polytope, $L$ is very ample by <span class="cite">[<span class="postnote">Proposition 2.4.4, Proposition 6.1.10</span>, <a href="../../references/#REE392A46683C">CLS11</a>]</span>; in particular, $L$ is ample. 
+</p>
+<p>
+We will choose the base $\mathrm{e}$ for the logarithm map 
+</p>
+<div class="equation" id="sgpt-4AC25346"><span data-gerby-tag="4AC25346"></span>
+<span class="equation-label"><a data-tag="4AC25346" href="../../tag/EA1385DD984D/">5.4</a></span>
+<div>\begin{equation} \label{eq:log} \mathbb {C}^*\rightarrow \mathbb {R},\quad z\mapsto \log |z|^2.\footnotemark \end{equation}</div>
+</div>
+
+<aside class="source-footnote" id="sgpt-a0000043430"><span class="footnote-label">Note.</span> Be careful when you compare with other references, some people prefer $\log |z|$, $-\log |z|$ or $-\log |z|^2$ instead.</aside> This choice is fixed throughout the book. We have a canonical identification 
+
+<div class="equation">
+  \[  T(\mathbb {C})=\mathrm{Hom}(M,\mathbb {C}^*)\xlongrightarrow {\sim } N\otimes _{\mathbb {Z}}\mathbb {C}^*.  \]
+</div>
+<p>
+ The logarithm map then induces a tropicalization map after tensoring with $N$: 
+</p>
+<div class="equation">
+<span class="equation-label">5.5</span>
+<div>\begin{equation}  \operatorname{Trop}\colon T(\mathbb {C})\rightarrow N_{\mathbb {R}},\quad p\mapsto \left( M \ni m\mapsto \log \left|\chi ^ m(p)\right|^2 \right). \end{equation}</div>
+</div>
+
+Before proceeding, it is always helpful to understand everything in our favorite example. <article class="env-example" id="sgpt-14DFB401">
+<p><a class="environment-identifier" href="../../tag/4214559F0471/">Example <span data-tag="14DFB401">5.1.1</span>.</a><span data-gerby-tag="14DFB401"></span> We take $n=1$ and $P=[0,1]\subseteq M_{\mathbb {R}}=\mathbb {R}$. In this case, the facet representation (<a data-tag="89FDD6C9" href="../../tag/338B3FB48871/">5.1</a>) becomes </p>
+<div class="equation">
+  \[  P=\bigl \{ m\in \mathbb {R}: \langle m,1 \rangle \geq 0, \langle m,-1 \rangle \geq -1\bigr \} ,  \]
+</div>
+<p> with $u_{\{ 0\} }=1$, $u_{\{ 1\} }=-1$, $a_{\{ 0\} }=0$ and $a_{\{ 1\} }=1$. The normal fan $\Sigma $ is </p>
+<div class="equation">
+  \[  \Sigma =\bigl \{ (-\infty ,0], \{ 0\} , [0,\infty ) \bigr \} .  \]
+</div>
+<p> See <a data-tag="5A58E1C9" href="../../tag/987E79283076/">5.1</a>. </p>
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/80313b529feb300b5320.svg"/> <figcaption id="sgpt-5A58E1C9"><span data-gerby-tag="5A58E1C9"></span><a data-tag="5A58E1C9" href="../../tag/987E79283076/">5.1</a> The fan $\Sigma $ of $\mathbb {P}^1$ in $N_{\mathbb {R}}=\mathbb {R}$, consisting of the two rays $(-\infty ,0]$, $[0,\infty )$ and the cone $\{ 0\} $.</figcaption> </div>
+</figure>
+<p>The corresponding toric variety is just $X=\mathbb {P}^1$. Under the orbit-cone correspondence, we have </p>
+<div class="equation">
+  \[  D_{[0,\infty )}=[0],\quad D_{(-\infty ,0]}=[\infty ].  \]
+</div>
+<p> The associated divisor $D=[\infty ]$ and therefore, </p>
+<div class="equation">
+  \[  L=\mathcal{O}_ X(D)=\mathcal{O}_{\mathbb {P}^1}(1).  \]
+</div>
+</article>
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

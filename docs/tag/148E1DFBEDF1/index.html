@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Primitive elliptic bundles · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/problems-history/">Chapter 21 · Open problems and historical notes</a> · Tag <code>148E1DFBEDF1</code></p><h1>Primitive elliptic bundles</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 33.3.3 Primitive elliptic bundles <span data-gerby-tag="4CA57B81"></span></div>
+<p>
+On a primitive elliptic bundle, the variation of the top-degree mass is a vertical Dirichlet integral. This gives the exact upper mass and a positive lower bound for separated potentials. The lower mass over all potentials remains a geometric question, since the collapse construction over a product of curves does not transfer directly to a base without curves. 
+</p>
+<p>
+Let $(B,\eta )$ be a connected compact Kähler surface and let $L\to B$ be a holomorphic line bundle such that 
+</p>
+<div class="equation">
+  \[  \int _ Bc_1(L)\wedge \eta =0.  \]
+</div>
+<p>
+ Choose a smooth Hermitian metric on $L$ whose curvature is primitive with respect to $\eta $. Such a metric exists: for an arbitrary metric, the trace of the curvature with respect to $\eta $ has mean zero by the condition above, and the scalar Poisson equation gives a smooth change of metric that cancels this trace. Let $c$ be the resulting smooth closed curvature representative of $-c_1(L)$, so that $\eta \wedge c=0$. Write $\pi :L\to B$ for the bundle projection and $w$ for a nonzero vector in a fiber, with norm taken in the chosen metric. On the complement $L^\times $ of the zero section, put 
+</p>
+<div class="equation">
+  \[  t=\log |w|^2,\qquad \mathrm{dd}^{\mathrm{c}}t=\pi ^*c.  \]
+</div>
+<p>
+ For $q&gt;1$, form the quotient 
+</p>
+<div class="equation">
+  \[  X=L^\times /\langle w\mapsto qw\rangle , \qquad \pi :X\longrightarrow B, \qquad T=2\log q, \qquad A=\int _ B\eta ^2,  \]
+</div>
+<p>
+ where we use the same symbol $\pi $ for the induced projection. The action increases $t$ by $T$. It is free and properly discontinuous, and the compact annulus $1\leq |w|\leq q$ meets every orbit. Hence $X$ is a connected compact complex threefold; in this subsection it replaces the general manifold of the chapter. Over a trivializing open set $U\subset B$, a local holomorphic frame of $L$ identifies the fibration with $U\times (\mathbb C^*/q^{\mathbb Z})$.  Since $\mathrm{d}t$ and $\mathrm d^{\mathrm c}t$ are invariant under the action, they descend to $X$, and we set 
+</p>
+<div class="equation">
+  \[  D=\mathrm{d}t\wedge \mathrm d^{\mathrm c}t,\qquad \omega =\pi ^*\eta +D.  \]
+</div>
+<p>
+ The form $D$ has rank one; it is semipositive and positive on the vertical line, and its kernel projects isomorphically onto the tangent space of $B$. Hence $\omega $ is Hermitian. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-198A704F">
+<p><a class="environment-identifier" href="../../tag/8E5CAA6E5122/">Proposition <span data-tag="198A704F">33.3.3</span>.</a><span data-gerby-tag="198A704F"></span> The metric $\omega $ is balanced and satisfies </p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\omega =-\pi ^*(c^2)\geq 0,\qquad \int _ X\omega ^3=3TA.  \]
+</div>
+<p> For every smooth real $u$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-476413A8"><span data-gerby-tag="476413A8"></span>
+<span class="equation-label"><a data-tag="476413A8" href="../../tag/A13181302F35/">33.4</a></span>
+<div>\begin{equation} \label{eq:primitive-elliptic-mass} \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^3 =3TA-3\int _ X\mathrm{d}u\wedge \mathrm d^{\mathrm c}u\wedge \bigl (-\pi ^*(c^2)\bigr ). \end{equation}</div>
+</div>
+<p> In particular $v_+(\omega )=3TA$, and the canonical bundles satisfy $K_ X\simeq \pi ^*K_ B$. If $c_1(L)\ne 0$ in real cohomology, $X$ admits neither a pluriclosed metric nor a closed Kähler current. If $c_1(L)=0$ in real cohomology, the chosen $\omega $ is Kähler. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $a=\mathrm{d}t$ and $b=\mathrm d^{\mathrm c}t$. Then $\mathrm{d}a=0$, $\mathrm{d}b=\pi ^*c$, $\mathrm d^{\mathrm c}a=-\pi ^*c$ and $\mathrm d^{\mathrm c}b=0$. Consequently 
+    
+<div class="equation">
+  \[  D^2=0,\qquad \mathrm{d}D=-a\wedge \pi ^*c, \qquad \mathrm{dd}^{\mathrm{c}}D=-\pi ^*(c^2),  \]
+</div>
+
+<div class="equation">
+  \[  \mathrm{d}(\omega ^2)=-2\pi ^*(\eta \wedge c)\wedge a=0,  \]
+</div>
+<p>
+       so $\omega $ is balanced. Since $c$ is primitive, its eigenvalues relative to $\eta $ are $\lambda $ and $-\lambda $ for a function $\lambda \geq 0$, so $c^2=-\lambda ^2\eta ^2$. This proves the asserted sign of $\mathrm{dd}^{\mathrm{c}}\omega $. 
+    <p>
+      To compute the volume, fix an elliptic fiber $E=\pi ^{-1}(b_0)$, where $b_0\in B$. In a logarithmic fiber coordinate $x+\mathrm{i}y$, the real periods are $\log q$ and $2\pi $, while $t$ equals $2x$ up to an additive constant and $D|_ E=\pi ^{-1}\mathrm{d}x\wedge \mathrm{d}y$. Thus $\int _ ED=T$. Since $\omega ^3=3\pi ^*(\eta ^2)\wedge D$, the volume formula follows. 
+    <p>
+      For the mass identity, expand the cube in (<a data-tag="476413A8" href="../../tag/A13181302F35/">33.4</a>). The terms with one and with three factors $\mathrm{dd}^{\mathrm{c}}u$ integrate to zero, because $\omega ^2$ is closed and $\mathrm{dd}^{\mathrm{c}}u$ is exact. For the remaining term, put $S=\mathrm{dd}^{\mathrm{c}}\omega $. Integration by parts gives 
+    
+<div class="equation">
+  \[  \int _ X(\mathrm{dd}^{\mathrm{c}}u)^2\wedge \omega =\int _ Xu\, \mathrm{dd}^{\mathrm{c}}u\wedge S =-\int _ X\mathrm{d}u\wedge \mathrm d^{\mathrm c}u\wedge S,  \]
+</div>
+<p>
+       where the last equality uses $\mathrm{d}S=0$. This proves the identity. Its last integral is nonnegative, and $u=0$ attains the upper bound $3TA$. Since smooth and bounded potentials have the same mass extrema, by theorem <a data-tag="89544950" href="../../tag/B6CA5669E402/">26.14.3</a>, this proves $v_+(\omega )=3TA$. 
+    <p>
+      If $c_1(L)=0$ in real cohomology, then $c$ is exact and Stokes' theorem gives $\int _ Bc^2=0$. The pointwise identity $c^2=-\lambda ^2\eta ^2$ then forces $c=0$, and $\omega $ is closed. Otherwise $S=-\pi ^*(c^2)$ is nonzero, smooth and semipositive. For a pluriclosed metric $\gamma $, Stokes' theorem would give 
+    
+<div class="equation">
+  \[  0&lt;\int _ X\gamma \wedge S =\int _ X\omega \wedge \mathrm{dd}^{\mathrm{c}}\gamma =0,  \]
+</div>
+<p>
+       a contradiction. Likewise, a closed positive current $R\geq \varepsilon \omega $ with $\varepsilon &gt;0$ would give $0&lt;\int _ XR\wedge S=\int _ X\omega \wedge \mathrm{dd}^{\mathrm{c}}R=0$. All these pairings are pairings of currents with smooth forms. 
+    <p>
+      Finally, let $w$ be a local holomorphic fiber coordinate given by a frame of $L$, and let $\sigma $ be a local holomorphic two-form on $B$. The form $\pi ^*\sigma \wedge \mathrm{d}w/w$ is invariant under the quotient action. Changing the frame of $L$ adds to $\mathrm{d}w/w$ a horizontal one-form, whose wedge product with $\pi ^*\sigma $ vanishes. These local sections of $K_ X$ therefore have the transition functions of $\pi ^*K_ B$, which proves $K_ X\simeq \pi ^*K_ B$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+ For separated potentials, positivity bounds both the amplitude and the downward slope of the vertical derivative. The sharp variance bound under these two constraints determines how much mass such a potential can lose. For $M,T&gt;0$, set 
+</p>
+<div class="equation">
+  \[  F(M,T)= \begin{cases}  T^2/12,&amp; T\leq 2M,\\  M^2-4M^3/(3T),&amp; T\geq 2M. \end{cases}  \]
+</div>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-258BB78F">
+<p><a class="environment-identifier" href="../../tag/987A41833787/">Lemma <span data-tag="258BB78F">33.3.4</span>.</a><span data-gerby-tag="258BB78F"></span> If a smooth real $T$-periodic function $p$ has mean zero, $|p|&lt;M$ and $p'&gt;-1$, then </p>
+<div class="equation">
+  \[  \frac1T\int _0^ T p^2\, \mathrm{d}s&lt;F(M,T).  \]
+</div>
+<p> The supremum of the left side over this class is $F(M,T)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $p=0$ the inequality holds because $F(M,T)&gt;0$. Otherwise set $a=\max p&gt;0$, $-b=\min p&lt;0$ and $r=a+b$. Integrating $-p'&lt;1$ over a forward interval $I$ from a maximum to the next minimum gives $r&lt;|I|\leq T$; also $r&lt;2M$, since $|p|&lt;M$. The function $G(s)=(a-s)(s+b)$ is nonnegative on the range of $p$. Since $p$ has mean zero and $-p'&lt;1$, integration over $I$ gives 
+    
+<div class="equation">
+  \[  abT-\int _0^ T p^2\, \mathrm{d}s =\int _0^ T G(p)\, \mathrm{d}s \geq -\int _ I G(p)p'\, \mathrm{d}s =\frac{r^3}{6}.  \]
+</div>
+<p>
+       As $ab\leq r^2/4$, the average of $p^2$ is at most $r^2/4-r^3/(6T)$. This expression increases strictly for $0&lt;r&lt;T$, and its value at $r=\min \{ 2M,T\} $ is $F(M,T)$. Since $r&lt;\min \{ 2M,T\} $, the strict inequality follows. 
+    <p>
+      For sharpness, consider the following $T$-periodic profiles $p_0$. When $T\geq 2M$, let $p_0$ be constant equal to $M$ and to $-M$ on two intervals of length $(T-2M)/2$ each, joined by a descent of slope $-1$ and length $2M$, and close the period by an upward jump. When $T\leq 2M$, let $p_0(s)=T/2-s$ for $0\leq s&lt;T$, with its upward jump at the end of the period. In both cases $p_0$ has mean zero, $|p_0|\leq M$, $p_0'\geq -1$ in the sense of distributions, and the average of $p_0^2$ is $F(M,T)$; both constructions apply when $T=2M$. Convolution with a nonnegative periodic approximate identity preserves the mean and the bound on the distributional derivative, and multiplication by $1-\varepsilon $ makes both inequalities strict. As the convolution scale and $\varepsilon $ tend to zero, the resulting smooth functions converge to $p_0$ in $L^2$, which proves that the supremum is $F(M,T)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-1488C2D2">
+<p><a class="environment-identifier" href="../../tag/E63ACDB15696/">Proposition <span data-tag="1488C2D2">33.3.5</span>.</a><span data-gerby-tag="1488C2D2"></span> Suppose $c_1(L)\ne 0$ in real cohomology, and put </p>
+<div class="equation">
+  \[  \kappa =-\frac{\int _ Bc^2}{A}&gt;0.  \]
+</div>
+<p> Every smooth potential $u=f(t)+\pi ^*v$ with $f$ of period $T$, $v\in C^\infty (B,\mathbb R)$ and $\omega +\mathrm{dd}^{\mathrm{c}}u&gt;0$ satisfies </p>
+<div class="equation">
+  \[  \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^3 &gt;3TA\bigl (1-\kappa F(\kappa ^{-1/2},T)\bigr )&gt;0.  \]
+</div>
+<p> Let $\lambda \geq 0$ be the nonnegative eigenvalue function of $c$ relative to $\eta $, so $c^2=-\lambda ^2\eta ^2$, and put $M_0=1/\max _ B\lambda $. For the subclass $v=0$, the exact mass infimum is </p>
+<div class="equation">
+  \[  3TA\bigl (1-\kappa F(M_0,T)\bigr )&gt;0.  \]
+</div>
+<p> It is approached by smooth potentials $f(t)$ with $\omega +\mathrm{dd}^{\mathrm{c}}f(t)&gt;0$, and it is not attained by such potentials. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $p=f'$. The chain rule gives 
+    
+<div class="equation">
+  \[  \omega +\mathrm{dd}^{\mathrm{c}}u =\pi ^*(\eta +pc+\mathrm{dd}^{\mathrm{c}}v)+(1+p')D.  \]
+</div>
+<p>
+       Positivity on the vertical line implies $p'&gt;-1$. Over every point of $B$, the function $t$ takes every value modulo $T$, so restriction to $\ker \partial t$ shows that $\eta +pc+\mathrm{dd}^{\mathrm{c}}v$ is a Kähler form on $B$ for every value of $p$. Its square has integral 
+    
+<div class="equation">
+  \[  \int _ B(\eta +pc+\mathrm{dd}^{\mathrm{c}}v)^2=A(1-\kappa p^2)&gt;0,  \]
+</div>
+<p>
+       since primitivity removes the mixed term and Stokes' theorem removes the exact terms. Hence $|p|&lt;\kappa ^{-1/2}$. 
+    <p>
+      Only the vertical derivative enters (<a data-tag="476413A8" href="../../tag/A13181302F35/">33.4</a>), because $-\pi ^*(c^2)$ has top degree in the base directions. For a $T$-periodic function $F_0$, integration over a fiber gives $\int _ E F_0(t)D=\int _0^ T F_0(s)\, \mathrm{d}s$, and therefore 
+    
+<div class="equation">
+  \[  \int _ X(\omega +\mathrm{dd}^{\mathrm{c}}u)^3 =3TA\left(1-\frac\kappa T\int _0^ T p^2\, \mathrm{d}s\right).  \]
+</div>
+<p>
+       Now apply lemma <a data-tag="258BB78F" href="../../tag/987A41833787/">33.3.4</a> with $M=\kappa ^{-1/2}$. The formula for $F$ gives $F(M,T)&lt;M^2$, which proves positivity of the bound. 
+    <p>
+      For $v=0$, diagonalizing $c$ with respect to $\eta $ shows that the horizontal positivity condition is exactly $|p|&lt;M_0$; together with $p'&gt;-1$ it also suffices for positivity of the full form. Moreover $\kappa $ is the $\eta ^2$-average of $\lambda ^2$, so $\kappa \leq M_0^{-2}$. Lemma <a data-tag="258BB78F" href="../../tag/987A41833787/">33.3.4</a> with $M=M_0$ therefore proves the claimed positive lower bound and its nonattainment. The smooth approximating functions in its proof have mean zero and hence periodic primitives $f_\varepsilon $, and the potentials $f_\varepsilon (t)$ prove that the bound is sharp. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+The proof of the first bound does not show that it is sharp for separated potentials over an arbitrary base: positivity of the classes $[\eta ]+p[c]$ alone does not provide one function $v$ that makes all the representatives $\eta +pc+\mathrm{dd}^{\mathrm{c}}v$ positive. For the threefold over $\mathbb P^1\times \mathbb P^1$ of section <a data-tag="EC5DD50E" href="../../tag/108F40B2DFAA/">26.18</a>, where $A=2$, $\kappa =1$ and $T=4\pi $, the bound is $8$ and it is sharp. 
+</p>
+<p>
+A base without curves rules out the averages of horizontal curves used in the known collapse example. The following construction uses the period theorem for K3 surfaces and the description of their Kähler cone <span class="cite">[<span class="postnote">Theorems 7.4.1 and 8.5.2 of the online version</span>, <a href="../../references/#R943EEED202A9">HuyK3</a>]</span>. 
+</p>
+
+<article class="env-example" id="non-kahler-pluripotential-theory-DD56D735">
+<p><a class="environment-identifier" href="../../tag/8D6FF393E593/">Example <span data-tag="DD56D735">33.3.6</span>.</a><span data-gerby-tag="DD56D735"></span> There is a K3 surface $B$ with $\operatorname {Pic}(B)=\mathbb Z[L]$, $c_1(L)^2=-4$, and a Kähler form $\eta $ orthogonal to $c_1(L)$. It has no compact curves. The associated $X$ has trivial canonical bundle, a balanced metric of finite upper mass, and no pluriclosed metric or closed Kähler current. It has no divisors, and every compact irreducible curve is an elliptic fiber. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In a hyperbolic plane of the K3 lattice, choose a basis $e,f$ with $e^2=f^2=0$ and $e\cdot f=1$, and put $\ell =e-2f$. This vector is primitive and has square $-4$. Choose a period in $\ell ^\perp $ outside the hyperplanes perpendicular to integral vectors not in $\mathbb Z\ell $. Such a period exists by Baire's theorem: the period domain in $\ell ^\perp $, of signature $(3,18)$, is nonempty and each excluded hyperplane is proper. The period theorem and the description of integral $(1,1)$-classes give the asserted Picard group. An irreducible curve would have nonzero class, because its Kähler area is positive, and hence square $-4m^2&lt;-2$ for some integer $m\neq 0$, contradicting adjunction. Thus there are no curves. 
+    <p>
+      The orthogonal complement of $\ell $ in $H^{1,1}(B,\mathbb R)$ has signature $(1,18)$. Choose a class of positive square there, with sign chosen so that it lies in the component of the positive cone containing the Kähler classes. Since there are no rational curves, the Kähler-cone theorem shows that this class is Kähler; choose $\eta $ in it. Proposition <a data-tag="198A704F" href="../../tag/8E5CAA6E5122/">33.3.3</a> then gives the assertions about the metric and the canonical bundle. 
+    <p>
+      If a divisor $Z\subset X$ dominated $B$, the push-forward of its integration current would be $\pi _*[Z]=m$ for a positive generic degree $m$. Stokes' theorem and the projection formula would then give 
+    
+<div class="equation">
+  \[  0=\int _ X[Z]\wedge \mathrm{dd}^{\mathrm{c}}\omega =m\int _ B(-c^2)&gt;0.  \]
+</div>
+<p>
+       Thus no divisor dominates $B$. The image of any other irreducible divisor would be a curve or a point; the base has no curves, and a fiber has dimension one, so both alternatives are impossible. Likewise, the image of an irreducible compact curve is a point, and the curve is therefore an entire elliptic fiber. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Put $V=3TA$. The root volumes of complementary tests can be computed explicitly for one radial family. For smooth real $T$-periodic functions $a,g$, consider 
+</p>
+<div class="equation">
+  \[  \Gamma =a(t)\eta ^2+g(t)\eta \wedge D.  \]
+</div>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-47F8F6B3">
+<p><a class="environment-identifier" href="../../tag/3D0A0BF3A375/">Proposition <span data-tag="47F8F6B3">33.3.7</span>.</a><span data-gerby-tag="47F8F6B3"></span> The form $\Gamma $ is strictly positive and $\mathrm{dd}^{\mathrm{c}}$-closed exactly when $a$ is a positive constant and $g&gt;0$. For such a form put $\bar g=T^{-1}\int _0^ Tg(s)\, \mathrm ds$ and $d_\Gamma =\int _ X\omega \wedge \Gamma $. Its positive square root and volume are </p>
+<div class="equation">
+  \[  \gamma =\sqrt a\, \eta +\frac{g(t)}{2\sqrt a}D, \qquad \int _ X\gamma ^3=\frac32TA\sqrt a\, \bar g \leq \frac{d_\Gamma ^{3/2}}{\sqrt V}.  \]
+</div>
+<p> Equality holds exactly when $\bar g=2a$, without requiring $g$ to be constant. In particular every degree-one test in this family has root volume at most $V^{-1/2}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $\eta \wedge c=0$, the form $g\eta \wedge D$ is closed. The chain rule gives 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(a\eta ^2)=a''D\wedge \eta ^2,  \]
+</div>
+<p>
+       the $a'c\wedge \eta ^2$ term having excess base degree. Thus $\mathrm{dd}^{\mathrm{c}}\Gamma =0$ forces $a''=0$, and periodicity makes $a$ constant. In a positive coframe with $\eta =\sigma _1+\sigma _2$, $D=\sigma _3$, the complementary coefficient matrix of $\Gamma $ is $\operatorname {diag}(g,g,2a)$. Hence positivity is exactly $a,g&gt;0$. The displayed $\gamma $ is positive and squares to $\Gamma $. Multiplication and fiber integration give 
+    
+<div class="equation">
+  \[  d_\Gamma =TA(a+\bar g),\qquad \gamma ^3=\tfrac 32\sqrt a\, g\eta ^2\wedge D.  \]
+</div>
+<p>
+       For fixed $d_\Gamma &gt;0$ set $s=d_\Gamma /(TA)$. Then $0&lt;a&lt;s$, $\bar g=s-a$, and $\sqrt a(s-a)$ has its unique maximum at $a=s/3$. Substitution proves the bound and its equality condition. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For the divisor-free threefold of example <a data-tag="DD56D735" href="../../tag/8D6FF393E593/">33.3.6</a>, theorem <a data-tag="8F4DC027" href="../../tag/B0762464DCDC/">4.5.1</a> gives divergent transverse pairings against normalized Gauduchon tests. The radial family above has bounded root volume at fixed degree, even when $g$ concentrates arbitrarily strongly. Large transverse pairings do not by themselves give unbounded root volumes or a sequence of potentials with masses tending to zero. 
+</p>
+
+<article class="env-problem" id="non-kahler-pluripotential-theory-A226FB65">
+<p><a class="environment-identifier" href="../../tag/B341DA2B6EFE/">Problem <span data-tag="A226FB65">33.3.8</span>.</a><span data-gerby-tag="A226FB65"></span> Determine the lower Monge–Ampère mass (definition <a data-tag="254B47C8" href="../../tag/EB45638CBB2C/">6.5.1</a>) of the primitive elliptic bundles above, for instance of their balanced metrics $\omega $ from proposition <a data-tag="198A704F" href="../../tag/8E5CAA6E5122/">33.3.3</a>, in particular for the bundles of example <a data-tag="DD56D735" href="../../tag/8D6FF393E593/">33.3.6</a>. Does it vanish whenever $c_1(L)\neq 0$ in real cohomology? </p>
+</article>
+
+<p>
+The estimates for separated potentials do not answer this question; the known collapse over $\mathbb P^1\times \mathbb P^1$ uses potentials outside that class. On the K3 example every compact curve is vertical, so averaging over such curves cannot produce the horizontal directions used in lemma <a data-tag="DF3A79AE" href="../../tag/40DB573E7C1E/">26.18.3</a>. A proof of collapse would therefore need a different construction, while positive lower mass would require a bound for all admissible potentials or for all normalized Gauduchon tests. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Second derivatives and singular integrals · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/measures-distributions/">Chapter 2 · Measures, distributions, and convergence</a> · Tag <code>4D259A5A576A</code></p><h1>Second derivatives and singular integrals</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 6.2 Second derivatives and singular integrals <span data-gerby-tag="CD19F2DC"></span></div>
+<p>
+Let $d\geq 1$. For a function $v$ on $\mathbb R^ d$ we write $D^2v=(\partial _ a\partial _ bv)_{a,b=1}^ d$ for its real Hessian. In $L^ p$ norms of vector-valued and matrix-valued functions, vectors carry the Euclidean norm and matrices the Hilbert–Schmidt norm $|M|=(\sum _{a,b}|M_{ab}|^2)^{1/2}$. Constants denoted by $C_ d$ and $C_{d,p}$ depend only on the indicated parameters and may change from line to line. 
+</p>
+<p>
+The Laplacian $\Delta v$ is the trace of $D^2v$. If $d\geq 2$, a bound for $\Delta v$ does not bound $D^2v$ pointwise: a test function equal to $x_1^2-x_2^2$ near the origin has vanishing Laplacian and nonzero Hessian there. We show that $\Delta v$ does bound $D^2v$ in $L^ p$ for $1&lt;p&lt;\infty $ (theorem <a data-tag="BF1C73CD" href="../../tag/CAB0E7754072/">6.2.3</a>). On the Fourier side, $\partial _ a\partial _ bv$ is obtained from $-\Delta v$ by multiplication with the bounded function $-\xi _ a\xi _ b/|\xi |^2$, so the case $p=2$ follows from Plancherel's theorem. For the other exponents we represent the corresponding operator, away from the support of a function, by a kernel that is smooth off the diagonal. We then use the Calderón–Zygmund decomposition: on each of its cubes the function minus its average has mean zero, and this cancellation makes the image of that part integrable far from the cube. The section ends with Sobolev spaces, on open subsets of $\mathbb R^ d$ and on compact manifolds, and with Morrey's inequality, which turns $L^ p$ bounds for second derivatives into Hölder continuity of first derivatives. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-C0DD6F42">
+<p><a class="environment-identifier" href="../../tag/0821A7B52A3B/">Lemma <span data-tag="C0DD6F42">6.2.1</span>.</a><span data-gerby-tag="C0DD6F42"></span> Let $1\leq a,b\leq d$, and define an operator $T_{ab}$ on $L^2(\mathbb R^ d)$ by </p>
+<div class="equation">
+  \[  \widehat{T_{ab}f}(\xi )=-\frac{\xi _ a\xi _ b}{|\xi |^2}\widehat f(\xi ), \qquad \xi \neq 0,  \]
+</div>
+<p> the multiplier being zero at the origin. Then $T_{ab}$ is self-adjoint and has norm at most one. Moreover: </p>
+<ol>
+<li><p>
+There is a smooth real function $K_{ab}$ on $\mathbb R^ d\setminus \{ 0\} $ such that 
+</p>
+<div class="equation">
+  \[  |K_{ab}(z)|\leq C_ d|z|^{-d},\qquad |\nabla K_{ab}(z)|\leq C_ d|z|^{-d-1}.  \]
+</div>
+</li><li><p>
+If $f\in L^2(\mathbb R^ d)$ vanishes almost everywhere outside a compact set $F$, then $f$ is integrable, and for almost every $x\in \mathbb R^ d\setminus F$, 
+</p>
+<div class="equation">
+  \[  T_{ab}f(x)=\int K_{ab}(x-y)f(y)\, \mathrm d y.  \]
+</div>
+</li><li><p>
+For $v\in C_ c^\infty (\mathbb R^ d)$ we have $\partial _ a\partial _ bv=T_{ab}(-\Delta v)$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The multiplier is real and bounded by one in absolute value, so Plancherel's theorem shows that $T_{ab}$ is self-adjoint with norm at most one. For $v\in C_ c^\infty $, the first rule in (<a data-tag="DF8429B6" href="../../tag/407772967810/">6.1</a>) (lemma <a data-tag="3A412CED" href="../../tag/A976F203FD66/">6.1.1</a>), applied twice, gives $\widehat{-\Delta v}(\xi )=4\pi ^2|\xi |^2\widehat v(\xi )$ and $\widehat{\partial _ a\partial _ bv}(\xi )=-4\pi ^2\xi _ a\xi _ b\widehat v(\xi )$. Multiplying the first identity by the multiplier of $T_{ab}$ gives the second, which proves (3). 
+    <p>
+      To construct the kernel we use the heat kernel $H_ t(z)=(4\pi t)^{-d/2}\mathrm e^{-|z|^2/(4t)}$, $t&gt;0$. By lemma <a data-tag="3A412CED" href="../../tag/A976F203FD66/">6.1.1</a>, $\widehat H_ t(\xi )=\mathrm e^{-4\pi ^2t|\xi |^2}$, and hence $\widehat{\partial _ a\partial _ bH_ t}(\xi )=-4\pi ^2\xi _ a\xi _ b\mathrm e^{-4\pi ^2t|\xi |^2}$. For $0&lt;\varepsilon &lt;R&lt;\infty $ put 
+    
+<div class="equation">
+  \[  k_{\varepsilon ,R}=\int _\varepsilon ^ R\partial _ a\partial _ bH_ t\, \mathrm d t.  \]
+</div>
+<p>
+       Since $\partial _ a\partial _ bH_ t(z)=\bigl (z_ az_ b/(4t^2)-\delta _{ab}/(2t)\bigr )H_ t(z)$, where $\delta _{ab}$ is the Kronecker symbol, we have 
+    
+<div class="equation">
+  \[  |\partial _ a\partial _ bH_ t(z)|\leq C_ dt^{-d/2-1}(1+|z|^2/t)\mathrm e^{-|z|^2/(4t)}.  \]
+</div>
+<p>
+       Hence $\sup _ z|\partial _ a\partial _ bH_ t(z)|\leq C_ dt^{-d/2-1}$, and the substitution $z=\sqrt t\, w$ gives $\int |\partial _ a\partial _ bH_ t(z)|\, \mathrm d z\leq C_ dt^{-1}$. Therefore the kernel $k_{\varepsilon ,R}$ is bounded and integrable, and Fubini's theorem, applied with the integrable majorant $|\partial _ a\partial _ bH_ t(z)|$ on $\mathbb R^ d\times [\varepsilon ,R]$, gives its Fourier transform: 
+    
+<div class="equation">
+  \[  \widehat{k_{\varepsilon ,R}}(\xi )=-\frac{\xi _ a\xi _ b}{|\xi |^2} \bigl (\mathrm e^{-4\pi ^2\varepsilon |\xi |^2} -\mathrm e^{-4\pi ^2R|\xi |^2}\bigr ),\qquad \xi \neq 0.  \]
+</div>
+<p>
+      Let $f\in L^1\cap L^2$. Then $k_{\varepsilon ,R}*f$ is bounded and integrable, hence in $L^2$, and by Fubini's theorem and the last assertion of theorem <a data-tag="D1D3D10B" href="../../tag/4C82DCD17551/">6.1.2</a> its Fourier transform is $\widehat{k_{\varepsilon ,R}}\widehat f$. As $\varepsilon \downarrow 0$ and $R\uparrow \infty $, these multipliers are bounded by one and converge to $-\xi _ a\xi _ b/|\xi |^2$ for $\xi \neq 0$. By dominated convergence on the Fourier side and Plancherel's theorem, $k_{\varepsilon ,R}*f\to T_{ab}f$ in $L^2$. 
+    <p>
+      For $z\neq 0$ define 
+    
+<div class="equation">
+  \[  K_{ab}(z)=\int _0^\infty \partial _ a\partial _ bH_ t(z)\, \mathrm d t.  \]
+</div>
+<p>
+       Since $H_ t(z)=t^{-d/2}H_1(z/\sqrt t)$, every derivative satisfies 
+    
+<div class="equation">
+  \[  \partial ^\gamma H_ t(z)=t^{-(d+|\gamma |)/2}(\partial ^\gamma H_1)(z/\sqrt t),  \]
+</div>
+<p>
+       and induction on $|\gamma |$ shows that $\partial ^\gamma H_1(w)=P_\gamma (w)\mathrm e^{-|w|^2/4}$ for a polynomial $P_\gamma $, of degree $m_\gamma $ say. Fix $0&lt;c\leq c'$, and let $c\leq |z|\leq c'$ and $|\gamma |\geq 2$. Since $|P_\gamma (w)|\leq C_\gamma (1+|w|)^{m_\gamma }$ and $\mathrm e^{-|z|^2/(4t)}\leq \mathrm e^{-c^2/(4t)}$, we obtain $|\partial ^\gamma H_ t(z)|\leq g_\gamma (t)$, where 
+    
+<div class="equation">
+  \[  g_\gamma (t)=\begin{cases}  C_\gamma t^{-(d+|\gamma |)/2}(1+c't^{-1/2})^{m_\gamma }\mathrm e^{-c^2/(4t)}, &amp;  0&lt;t\leq 1,\\  C_\gamma (1+c')^{m_\gamma }t^{-(d+|\gamma |)/2}, &amp;  t\geq 1. \end{cases}  \]
+</div>
+<p>
+       This function is integrable on $(0,\infty )$ and does not depend on $z$: near $t=0$ the factor $\mathrm e^{-c^2/(4t)}$ dominates every power of $t^{-1}$, and for $t\geq 1$ the exponent satisfies $(d+|\gamma |)/2\geq 3/2&gt;1$. By the mean value theorem and dominated convergence, we may therefore differentiate under the integral sign any number of times. Hence $K_{ab}$ is smooth on $\mathbb R^ d\setminus \{ 0\} $, and its derivatives are the integrals of the corresponding derivatives of $\partial _ a\partial _ bH_ t$. Moreover, the integrals $\int _0^\varepsilon $ and $\int _ R^\infty $ of $|\partial _ a\partial _ bH_ t(z)|$ tend to zero as $\varepsilon \downarrow 0$ and $R\uparrow \infty $, uniformly for $c\leq |z|\leq c'$. 
+    <p>
+      Differentiating the identity $H_{r^2s}(rz)=r^{-d}H_ s(z)$ twice in $z$ and substituting $t=r^2s$, we find that $K_{ab}(rz)=r^{-d}K_{ab}(z)$ for $r&gt;0$. Thus $K_{ab}$ is homogeneous of degree $-d$ and $\nabla K_{ab}$ is homogeneous of degree $-d-1$, and the bounds in (1) follow from the boundedness of the continuous functions $K_{ab}$ and $\nabla K_{ab}$ on the unit sphere. The same scaling shows that the function $z\mapsto \int _0^\infty |\partial _ a\partial _ bH_ t(z)|\, \mathrm d t$ is homogeneous of degree $-d$; it is bounded on the unit sphere by $\int _0^\infty g_\gamma (t)\, \mathrm d t$, where $\partial ^\gamma =\partial _ a\partial _ b$ and $c=c'=1$, so it is at most $C_ d|z|^{-d}$. 
+    <p>
+      To prove (2), let $f$ and $F$ be as there. By the Cauchy–Schwarz inequality on $F$, the function $f$ is integrable, so $f\in L^1\cap L^2$. Let $L$ be a compact set disjoint from $F$. For $x\in L$, 
+    
+<div class="equation">
+  \[  k_{\varepsilon ,R}*f(x)=\int f(y)\int _\varepsilon ^ R\partial _ a\partial _ bH_ t(x-y)\, \mathrm d t\, \mathrm d y,  \]
+</div>
+<p>
+       where the outer integral may be taken over $F$. The differences $x-y$, with $x\in L$ and $y\in F$, form a compact set not containing the origin, on which $c\leq |x-y|\leq c'$ for some $0&lt;c\leq c'$. By the uniform estimates just proved, the inner integral converges to $K_{ab}(x-y)$ uniformly on this set, and it is bounded by $\int _0^\infty |\partial _ a\partial _ bH_ t(x-y)|\, \mathrm d t\leq C_ dc^{-d}$. Hence, since $f$ is integrable, $k_{\varepsilon ,R}*f$ converges uniformly on $L$ to $\int K_{ab}(x-y)f(y)\, \mathrm d y$. Since it also converges to $T_{ab}f$ in $L^2$, a subsequence converges almost everywhere to $T_{ab}f$, and the two limits agree almost everywhere on $L$. Covering the open set $\mathbb R^ d\setminus F$ by countably many such compact sets proves (2). For $d=1$ the kernel vanishes, in accordance with $T_{11}=-1$: a direct differentiation gives $\partial _ z^2H_ t=\bigl (z^2/(4t^2)-1/(2t)\bigr )H_ t=\partial _ tH_ t$, so $K_{11}(z)=\lim _{t\uparrow \infty }H_ t(z)-\lim _{t\downarrow 0}H_ t(z)=0$ for $z\neq 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-E1EFB208">
+<p><a class="environment-identifier" href="../../tag/780F1882B8A5/">Lemma <span data-tag="E1EFB208">6.2.2</span>.</a><span data-gerby-tag="E1EFB208"></span> Let $T_{ab}$ be the operator of lemma <a data-tag="C0DD6F42" href="../../tag/0821A7B52A3B/">6.2.1</a>, let $f\in L^1(\mathbb R^ d)\cap L^2(\mathbb R^ d)$ and let $\lambda &gt;0$. Then </p>
+<div class="equation">
+  \[  |\{ x:|T_{ab}f(x)|&gt;\lambda \} |\leq \frac{C_ d}{\lambda }\| f\| _1.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We use the Calderón–Zygmund decomposition of $f$ at height $\lambda $ into a bounded part $g$, handled by the $L^2$ bound for $T_{ab}$, and parts $b_ Q$ of mean zero on disjoint cubes $Q$, handled by lemma <a data-tag="C0DD6F42" href="../../tag/0821A7B52A3B/">6.2.1</a>. The dyadic cubes are the cubes $2^ k(m+[0,1)^ d)$ with $k\in \mathbb Z$ and $m\in \mathbb Z^ d$. Two dyadic cubes are either disjoint or nested, and each dyadic cube $Q$ lies in a unique dyadic cube of twice its side length, its parent, which has volume $2^ d|Q|$. Call a dyadic cube $Q$ selected if the average of $|f|$ over $Q$ exceeds $\lambda $, while the average over every strictly larger dyadic cube containing $Q$ does not. Every dyadic cube on which the average of $|f|$ exceeds $\lambda $ is contained in a selected cube, because the averages over its successive ancestors are at most $\| f\| _1$ divided by their volumes and therefore tend to zero. The selected cubes are pairwise disjoint. For each of them, the average over its parent is at most $\lambda $, and hence 
+    
+<div class="equation">
+  \[  \lambda &lt;\frac1{|Q|}\int _ Q|f|\leq 2^ d\lambda ,\qquad \sum _ Q|Q|\leq \frac1\lambda \sum _ Q\int _ Q|f|\leq \frac1\lambda \| f\| _1.  \]
+</div>
+<p>
+       Moreover, $|f|\leq \lambda $ almost everywhere outside the union of the selected cubes. Indeed, let $x$ be a point outside this union at which the conclusion of theorem <a data-tag="01CADB42" href="../../tag/CF98893DE93E/">1.7.3</a> holds. Every dyadic cube containing $x$ has average of $|f|$ at most $\lambda $, since otherwise it would lie in a selected cube. The dyadic cube of side $2^ k$ containing $x$ lies in the cube $x+(-2^ k,2^ k)^ d$, whose volume is $2^ d$ times larger. Hence the average of $|f-f(x)|$ over it tends to zero as $k\to -\infty $, so its average of $|f|$ tends to $|f(x)|$, and therefore $|f(x)|\leq \lambda $. 
+    <p>
+      For a selected cube $Q$, let $f_ Q=|Q|^{-1}\int _ Qf$ be the average of $f$. Define $g=f$ outside the selected cubes and $g=f_ Q$ on each selected cube $Q$, and put $b_ Q=(f-f_ Q)\mathbf1_ Q$. Each $b_ Q$ has integral zero, and 
+    
+<div class="equation">
+  \[  \| g\| _1\leq \| f\| _1,\quad \| g\| _\infty \leq 2^ d\lambda , \quad \| g\| _2^2\leq 2^ d\lambda \| f\| _1, \qquad \sum _ Q\| b_ Q\| _1\leq 2\| f\| _1.  \]
+</div>
+<p>
+       By the Cauchy–Schwarz inequality, $|Q||f_ Q|^2\leq \int _ Q|f|^2$, so $\| b_ Q\| _2\leq 2\| f\mathbf1_ Q\| _2$. Since the $b_ Q$ have disjoint supports, the series $\sum _ Qb_ Q$ converges to $f-g$ in $L^2$. 
+    <p>
+      Let $c_ Q$ be the center of $Q$, and let $Q^*$ be the cube with center $c_ Q$ and $4\sqrt d$ times the side length of $Q$. If $x\notin Q^*$ and $y\in Q$, then $|x-c_ Q|\geq 2\operatorname {diam}Q$ and $|y-c_ Q|\leq \operatorname {diam}Q/2$, so every point of the segment from $x-c_ Q$ to $x-y$ has norm at least $|x-c_ Q|/2$. The function $b_ Q\in L^2$ vanishes outside the compact set $\overline Q$, which does not meet $\mathbb R^ d\setminus Q^*$, and it has integral zero. Therefore parts (1) and (2) of lemma <a data-tag="C0DD6F42" href="../../tag/0821A7B52A3B/">6.2.1</a> and the mean value theorem give, for almost every $x\notin Q^*$, 
+    
+<div class="equation">
+  \[  \begin{aligned}  |T_{ab}b_ Q(x)| &amp; =\left|\int _ Q\bigl (K_{ab}(x-y)-K_{ab}(x-c_ Q)\bigr )b_ Q(y)\, \mathrm d y\right|\\ &amp; \leq C_ d\frac{\operatorname {diam}Q}{|x-c_ Q|^{d+1}}\| b_ Q\| _1. \end{aligned}  \]
+</div>
+<p>
+       Integrating in polar coordinates about $c_ Q$ over the region $|x-c_ Q|\geq 2\operatorname {diam}Q$, which contains $\mathbb R^ d\setminus Q^*$, we obtain 
+    
+<div class="equation">
+  \[  \int _{\mathbb R^ d\setminus Q^*}|T_{ab}b_ Q|\leq C_ d\| b_ Q\| _1.  \]
+</div>
+<p>
+      Put $B^*=\bigcup _ QQ^*$. Then $|B^*|\leq (4\sqrt d)^ d\sum _ Q|Q|\leq C_ d\lambda ^{-1}\| f\| _1$. Enumerate the selected cubes, and let $S_ N$ be the partial sums of $\sum _ Qb_ Q$. Since $S_ N\to f-g$ in $L^2$, also $T_{ab}S_ N\to T_{ab}(f-g)$ in $L^2$, and a subsequence converges almost everywhere. Moreover $\int _{\mathbb R^ d\setminus B^*}|T_{ab}S_ N|\leq \sum _ Q\int _{\mathbb R^ d\setminus Q^*}|T_{ab}b_ Q|\leq C_ d\| f\| _1$, so Fatou's lemma gives 
+    
+<div class="equation">
+  \[  \int _{\mathbb R^ d\setminus B^*}|T_{ab}(f-g)|\leq C_ d\| f\| _1.  \]
+</div>
+<p>
+       Finally, $T_{ab}f=T_{ab}g+T_{ab}(f-g)$, and the set where $|T_{ab}f|&gt;\lambda $ is contained in the union of $B^*$, the set where $|T_{ab}g|&gt;\lambda /2$, and the set of $x\notin B^*$ with $|T_{ab}(f-g)(x)|&gt;\lambda /2$. By Chebyshev's inequality and the $L^2$ bound for $T_{ab}$, the second set has measure at most $4\lambda ^{-2}\| g\| _2^2\leq 2^{d+2}\lambda ^{-1}\| f\| _1$, and the third has measure at most $2\lambda ^{-1}\int _{\mathbb R^ d\setminus B^*}|T_{ab}(f-g)|\leq C_ d\lambda ^{-1}\| f\| _1$. Together with the bound for $|B^*|$, this proves the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-BF1C73CD">
+<p><a class="environment-identifier" href="../../tag/CAB0E7754072/">Theorem <span data-tag="BF1C73CD">6.2.3</span>.</a><span data-gerby-tag="BF1C73CD"></span> Let $1&lt;p&lt;\infty $, and let $T_{ab}$ be the operators of lemma <a data-tag="C0DD6F42" href="../../tag/0821A7B52A3B/">6.2.1</a>. There is a constant $C_{d,p}$ such that $\| T_{ab}f\| _ p\leq C_{d,p}\| f\| _ p$ for all $a,b$ and all $f\in L^ p\cap L^2$; consequently each $T_{ab}$ extends uniquely to a bounded operator on $L^ p(\mathbb R^ d)$. In particular </p>
+<div class="equation" id="foundations-of-pluripotential-theory-DCA35BF0"><span data-gerby-tag="DCA35BF0"></span>
+<span class="equation-label"><a data-tag="DCA35BF0" href="../../tag/61BC1B5115B3/">6.7</a></span>
+<div>\begin{equation} \label{eq:euclidean-hessian-lp} \| D^2v\| _ p\leq C_{d,p}\| \Delta v\| _ p, \qquad v\in C_ c^\infty (\mathbb R^ d). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Assume first that $1&lt;p&lt;2$, and let $f\in L^ p\cap L^2$. Fix $\lambda &gt;0$ and split $f=f_1+f_2$ with $f_1=f\mathbf1_{\{ |f|&gt;\lambda \} }$ and $f_2=f\mathbf1_{\{ |f|\leq \lambda \} }$. Since $|f_1|\leq \lambda ^{1-p}|f|^ p$, we have $f_1\in L^1\cap L^2$, and $f_2\in L^2$. Apply lemma <a data-tag="E1EFB208" href="../../tag/780F1882B8A5/">6.2.2</a> to $f_1$, and Chebyshev's inequality with the $L^2$ bound to $f_2$, both with threshold $\lambda /2$. This gives 
+    
+<div class="equation">
+  \[  |\{ |T_{ab}f|&gt;\lambda \} | \leq \frac{C_ d}{\lambda }\int _{\{ |f|&gt;\lambda \} }|f| +\frac{C_ d}{\lambda ^2}\int _{\{ |f|\leq \lambda \} }|f|^2.  \]
+</div>
+<p>
+       For a measurable function $h$, Tonelli's theorem applied to $|h(x)|^ p=\int _0^{|h(x)|}p\lambda ^{p-1}\, \mathrm d\lambda $ expresses $\| h\| _ p^ p$ as the integral of $p\lambda ^{p-1}$ times the distribution function $\lambda \mapsto |\{ |h|&gt;\lambda \} |$, also when the norm is infinite. We apply this to $h=T_{ab}f$: multiply the last inequality by $p\lambda ^{p-1}$ and integrate in $\lambda $. By Tonelli's theorem again, the first term on the right contributes $C_ d\int |f|\int _0^{|f|}p\lambda ^{p-2}\, \mathrm d\lambda \, \mathrm d x=C_ dp\| f\| _ p^ p/(p-1)$, and the second contributes $C_ d\int |f|^2\int _{|f|}^\infty p\lambda ^{p-3}\, \mathrm d\lambda \, \mathrm d x=C_ dp\| f\| _ p^ p/(2-p)$; the inner integrals converge precisely because $p&gt;1$ and $p&lt;2$. Therefore 
+    
+<div class="equation">
+  \[  \| T_{ab}f\| _ p^ p \leq C_ dp\left(\frac1{p-1}+\frac1{2-p}\right)\| f\| _ p^ p.  \]
+</div>
+<p>
+       For $p=2$ the bound is Plancherel's theorem. 
+    <p>
+      Now let $2&lt;p&lt;\infty $, put $p'=p/(p-1)\in (1,2)$, let $f\in L^ p\cap L^2$, and write $h=T_{ab}f\in L^2$. For integers $N\geq 1$, put $E_ N=B(0,N)\cap \{ |h|\leq N\} $ and $g_ N=\mathbf1_{E_ N}h|h|^{p-2}$. Then $|g_ N|\leq N^{p-1}\mathbf1_{E_ N}$, so $g_ N\in L^2\cap L^{p'}$, and $|g_ N|^{p'}=\mathbf1_{E_ N}|h|^ p$. Since $T_{ab}$ is self-adjoint on $L^2$, the case $p'$ already proved and Hölder's inequality give 
+    
+<div class="equation">
+  \[  \int _{E_ N}|h|^ p=\int h\overline{g_ N} =\int f\overline{T_{ab}g_ N} \leq C_{d,p'}\| f\| _ p\left(\int _{E_ N}|h|^ p\right)^{1/p'}.  \]
+</div>
+<p>
+       The integral on the left is finite. If it is nonzero, dividing by its $(1/p')$th power gives $(\int _{E_ N}|h|^ p)^{1/p}\leq C_{d,p'}\| f\| _ p$; if it is zero, this bound is trivial. The sets $E_ N$ increase to $\{ |h|&lt;\infty \} $, which has full measure since $h\in L^2$, so monotone convergence gives $\| T_{ab}f\| _ p\leq C_{d,p'}\| f\| _ p$. 
+    <p>
+      By lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(5), $C_ c^\infty \subset L^ p\cap L^2$ is dense in $L^ p$, and $L^ p$ is complete, so $T_{ab}$ has a unique bounded extension from $L^ p\cap L^2$ to $L^ p$. Finally, for $v\in C_ c^\infty $, lemma <a data-tag="C0DD6F42" href="../../tag/0821A7B52A3B/">6.2.1</a>(3) gives $\| \partial _ a\partial _ bv\| _ p=\| T_{ab}\Delta v\| _ p\leq C_{d,p}\| \Delta v\| _ p$, and summing over $a$ and $b$ proves (<a data-tag="DCA35BF0" href="../../tag/61BC1B5115B3/">6.7</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+For an integer $k\geq 0$, $1\leq p&lt;\infty $ and an open set $U\subset \mathbb R^ d$, the Sobolev space $W^{k,p}(U)$ consists of the functions in $L^ p(U)$ whose distributional derivatives of order at most $k$ belong to $L^ p(U)$, with the norm $\| v\| _{W^{k,p}(U)}=\sum _{|\alpha |\leq k}\| \partial ^\alpha v\| _{L^ p(U)}$. We write $W^{k,p}_{\mathrm{loc}}(U)$ for the space of functions whose restrictions to every open set $V\Subset U$ belong to $W^{k,p}(V)$. If $v\in W^{k,p}_{\mathrm{loc}}(U)$, $V\Subset U$ is open and $|\alpha |\leq k$, then $\partial ^\alpha (v*\rho _\varepsilon )=(\partial ^\alpha v)*\rho _\varepsilon \to \partial ^\alpha v$ in $L^ p(V)$ as $\varepsilon \to 0$, by proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>(1) and lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(2). 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-6C06336D">
+<p><a class="environment-identifier" href="../../tag/534938A78D42/">Lemma <span data-tag="6C06336D">6.2.4</span>.</a><span data-gerby-tag="6C06336D"></span> Let $k\geq 0$ and $1\leq p&lt;\infty $, let $U,V\subset \mathbb R^ d$ be open, and let $v\in W^{k,p}_{\mathrm{loc}}(U)$. </p>
+<ol>
+<li><p>
+If $\chi \in C^\infty (U)$, then $\chi v\in W^{k,p}_{\mathrm{loc}}(U)$, and $\partial ^\alpha (\chi v)=\sum _{\beta \leq \alpha }\binom \alpha \beta \partial ^{\alpha -\beta }\chi \, \partial ^\beta v$ for $|\alpha |\leq k$. If moreover $\operatorname{Supp}\chi $ is a compact subset of $U$, then $\chi v$, extended by zero, belongs to $W^{k,p}(\mathbb R^ d)$, its derivatives are given by the same formula extended by zero, and $\| \chi v\| _{W^{k,p}(\mathbb R^ d)}\leq C\| v\| _{W^{k,p}(W)}$ for every open set $W$ with $\operatorname{Supp}\chi \subset W\subset U$, where $C$ depends only on $d$, $k$ and $\chi $. 
+</p>
+</li><li><p>
+If $\Phi \colon V\to U$ is a $C^\infty $ diffeomorphism, then $v\circ \Phi \in W^{k,p}_{\mathrm{loc}}(V)$. If moreover $v$ vanishes almost everywhere outside a compact set $K\subset U$, then $v\circ \Phi $ vanishes almost everywhere outside the compact set $\Phi ^{-1}(K)$, and $\| v\circ \Phi \| _{W^{k,p}(V)}\leq C\| v\| _{W^{k,p}(U)}$, where $C$ depends only on $k$, $p$, $\Phi $ and $K$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) For $k=0$ the first assertion holds because $\chi $ is bounded on compact sets. Let $k\geq 1$ and $1\leq j\leq d$. For a test function $\phi $ on $U$, the function $\chi \phi $ is a test function with $\partial _ j(\chi \phi )=\chi \partial _ j\phi +\phi \partial _ j\chi $, so 
+    
+<div class="equation">
+  \[  \int \chi v\, \partial _ j\phi \, \mathrm d x=\int v\, \partial _ j(\chi \phi )\, \mathrm d x-\int v\, \partial _ j\chi \, \phi \, \mathrm d x=-\int \bigl (\chi \partial _ jv+v\partial _ j\chi \bigr )\phi \, \mathrm d x.  \]
+</div>
+<p>
+       Thus $\partial _ j(\chi v)=\chi \partial _ jv+(\partial _ j\chi )v$. The functions $\partial _ jv$ and $v$ belong to $W^{k-1,p}_{\mathrm{loc}}(U)$, so by induction on $k$ both terms belong to $W^{k-1,p}_{\mathrm{loc}}(U)$; hence $\chi v\in W^{k,p}_{\mathrm{loc}}(U)$, and iterating the formula for first derivatives gives the Leibniz formula, exactly as for smooth functions. 
+    <p>
+      Now let $\operatorname{Supp}\chi $ be a compact subset of $U$, and let $W$ be as in the statement. By the Leibniz formula, $\chi v$ and its derivatives of order at most $k$ vanish almost everywhere outside $\operatorname{Supp}\chi $, and there they are bounded by $C\sum _{|\beta |\leq k}|\partial ^\beta v|$, where $C$ depends on $d$, $k$ and the derivatives of $\chi $ of order at most $k$. Hence their $L^ p$ norms are at most $C\| v\| _{W^{k,p}(W)}$, which is finite when $W\Subset U$. To identify the derivatives of the extension by zero, let $\phi $ be a test function on $\mathbb R^ d$, and choose a smooth cutoff function $\zeta $ for $\operatorname{Supp}\chi $ in $U$ which equals $1$ on a neighborhood $N$ of $\operatorname{Supp}\chi $ (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(4)). Then $\zeta \phi $ is a test function on $U$, and $\partial ^\alpha (\zeta \phi )=\partial ^\alpha \phi $ on $N$. Since $\chi v$ and $\partial ^\alpha (\chi v)$ vanish almost everywhere outside $\operatorname{Supp}\chi $, 
+    
+<div class="equation">
+  \[  \begin{split}  \int \chi v\, \partial ^\alpha \phi \, \mathrm d x&amp; =\int \chi v\, \partial ^\alpha (\zeta \phi )\, \mathrm d x\\ &amp; =(-1)^{|\alpha |}\int \partial ^\alpha (\chi v)\, \zeta \phi \, \mathrm d x=(-1)^{|\alpha |}\int \partial ^\alpha (\chi v)\, \phi \, \mathrm d x. \end{split}  \]
+</div>
+<p>
+       This proves (1). 
+    <p>
+      (2) The composite $v\circ \Phi $ is defined almost everywhere: if $Z\subset U$ is a Borel null set, the change of variables formula for the diffeomorphism $\Phi ^{-1}$ gives $|\Phi ^{-1}(Z)|=\int _ Z|\det D\Phi ^{-1}(x)|\, \mathrm d x=0$. For a smooth function $w$ on $U$ and $1\leq |\alpha |\leq k$, the classical chain rule gives 
+    
+<div class="equation">
+  \[  \partial ^\alpha (w\circ \Phi )=\sum _{1\leq |\beta |\leq |\alpha |}c_{\alpha \beta }\, (\partial ^\beta w)\circ \Phi \qquad \text{on }V,  \]
+</div>
+<p>
+       with smooth functions $c_{\alpha \beta }$ on $V$ that depend only on $\Phi $: for $|\alpha |=1$ this is $\partial _ j(w\circ \Phi )=\sum _ i\partial _ j\Phi _ i\, (\partial _ iw)\circ \Phi $, and differentiating the formula once more, with the product rule and the chain rule applied to each $(\partial ^\beta w)\circ \Phi $, gives the induction step. 
+    <p>
+      Assume first that $v$ vanishes almost everywhere outside the compact set $K$. By (1), applied with a smooth cutoff function equal to $1$ near $K$, the extension of $v$ by zero belongs to $W^{k,p}(\mathbb R^ d)$. Its derivatives of order at most $k$ vanish almost everywhere outside $K$, because $v$ vanishes almost everywhere on the open set $\mathbb R^ d\setminus K$ and hence so do its distributional derivatives. Choose $\delta &gt;0$ such that the compact set $K'=\{ x:\operatorname {dist}(x,K)\leq \delta \} $ lies in $U$. For $\varepsilon &lt;\delta $, the mollification $v_\varepsilon =v*\rho _\varepsilon $ is smooth and vanishes outside $K'$, and $\partial ^\beta v_\varepsilon =(\partial ^\beta v)*\rho _\varepsilon \to \partial ^\beta v$ in $L^ p(\mathbb R^ d)$ for $|\beta |\leq k$, by the remark preceding the lemma, applied on $\mathbb R^ d$ to a bounded open set containing $K'$, outside of which both sides vanish. 
+    <p>
+      Let $J$ be the maximum of $|\det D\Phi ^{-1}|$ on $K'$, and let $M\geq 1$ bound the functions $|c_{\alpha \beta }|$ on the compact set $\Phi ^{-1}(K')$. By the change of variables formula, 
+    
+<div class="equation">
+  \[  \int _ V|g\circ \Phi |^ p\, \mathrm d y=\int _ U|g(x)|^ p|\det D\Phi ^{-1}(x)|\, \mathrm d x\leq J\| g\| _ p^ p  \]
+</div>
+<p>
+       for every measurable function $g$ on $U$ that vanishes outside $K'$. The smooth functions $w_\varepsilon =v_\varepsilon \circ \Phi $ vanish outside $\Phi ^{-1}(K')$. Applying this inequality to $v_\varepsilon -v$ and its derivatives, we find that $w_\varepsilon \to v\circ \Phi $ and, for $1\leq |\alpha |\leq k$, 
+    
+<div class="equation">
+  \[  \partial ^\alpha w_\varepsilon \to G_\alpha =\sum _{1\leq |\beta |\leq |\alpha |}c_{\alpha \beta }\, (\partial ^\beta v)\circ \Phi \qquad \text{in }L^ p(V),  \]
+</div>
+<p>
+       with $\| G_\alpha \| _ p\leq MJ^{1/p}\sum _{1\leq |\beta |\leq |\alpha |}\| \partial ^\beta v\| _ p$. For a test function $\phi $ on $V$, we obtain 
+    
+<div class="equation">
+  \[  \begin{split}  \int (v\circ \Phi )\, \partial ^\alpha \phi \, \mathrm d y&amp; =\lim _{\varepsilon \to 0}\int w_\varepsilon \, \partial ^\alpha \phi \, \mathrm d y\\ &amp; =(-1)^{|\alpha |}\lim _{\varepsilon \to 0}\int \partial ^\alpha w_\varepsilon \, \phi \, \mathrm d y=(-1)^{|\alpha |}\int G_\alpha \phi \, \mathrm d y. \end{split}  \]
+</div>
+<p>
+       Hence $\partial ^\alpha (v\circ \Phi )=G_\alpha \in L^ p(V)$. These functions, and $v\circ \Phi $, vanish almost everywhere outside $\Phi ^{-1}(K)$, and summing the bounds over $|\alpha |\leq k$ gives $\| v\circ \Phi \| _{W^{k,p}(V)}\leq C\| v\| _{W^{k,p}(U)}$, with $C$ depending only on $k$, $p$, $J$ and $M$, that is, on $k$, $p$, $\Phi $ and $K$ once $\delta $ has been fixed in terms of $K$ and $U$. 
+    <p>
+      In general, let $V'\Subset V$ be open. Choose a smooth cutoff function $\chi $ for the compact set $\Phi (\overline{V'})$ in $U$ (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(4)). By (1), $\chi v\in W^{k,p}(U)$, and it vanishes outside $\operatorname{Supp}\chi $; by the case just treated, $(\chi v)\circ \Phi \in W^{k,p}(V)$. Since $(\chi v)\circ \Phi =v\circ \Phi $ on $V'$, we obtain $v\circ \Phi \in W^{k,p}(V')$. Hence $v\circ \Phi \in W^{k,p}_{\mathrm{loc}}(V)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+Let $X$ be a compact smooth manifold of dimension $d$. Fix finitely many coordinate charts $\varphi _ i\colon U_ i\to \varphi _ i(U_ i)\subset \mathbb R^ d$ covering $X$ and a smooth partition of unity subordinate to them, that is, smooth functions $\chi _ i\geq 0$ on $X$ with $\sum _ i\chi _ i=1$ such that $\operatorname{Supp}\chi _ i$ is a compact subset of $U_ i$. Such functions exist. By lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(4), applied in the charts, every point of $X$ has a smooth nonnegative function on $X$ that is positive at the point and has compact support in some $U_ i$. By compactness, finitely many of these functions have a positive sum $s$. Assigning each of them to one $U_ i$ that contains its support, we let $\chi _ i$ be the sum of those assigned to $U_ i$, divided by $s$. 
+</p>
+<p>
+Let $v$ be a function on $X$ defined outside a set whose images in the charts are Lebesgue null; by the change of variables formula, this condition does not depend on the charts. We say that $v$ belongs to $W^{k,p}(X)$ if $(\chi _ iv)\circ \varphi _ i^{-1}\in W^{k,p}(\varphi _ i(U_ i))$ for every $i$, and we let $\| v\| _{W^{k,p}(X)}$ be the sum of these chart norms. 
+</p>
+<p>
+Other choices of charts and partitions of unity give the same space with equivalent norms. Indeed, let $\psi _ j\colon V_ j\to \psi _ j(V_ j)$ and $\eta _ j$ be another choice. Since $\eta _ jv=\sum _ i\eta _ j\chi _ iv$, it suffices to show that each function $(\eta _ j\chi _ iv)\circ \psi _ j^{-1}$, extended by zero, belongs to $W^{k,p}(\psi _ j(V_ j))$, with norm at most $C\| (\chi _ iv)\circ \varphi _ i^{-1}\| _{W^{k,p}(\varphi _ i(U_ i))}$ for a constant $C$ independent of $v$. Summing over $i$ and $j$ then gives 
+</p>
+<div class="equation">
+  \[  \sum _ j\| (\eta _ jv)\circ \psi _ j^{-1}\| _{W^{k,p}(\psi _ j(V_ j))}\leq C\| v\| _{W^{k,p}(X)},  \]
+</div>
+<p>
+ and by symmetry the two norms are equivalent. 
+</p>
+<p>
+To prove the claim about $(\eta _ j\chi _ iv)\circ \psi _ j^{-1}$, fix $i$ and $j$. The compact set $\operatorname{Supp}\chi _ i\cap \operatorname{Supp}\eta _ j$ lies in $U_ i\cap V_ j$, so by lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(4) in the chart $\varphi _ i$ there is a smooth function $\vartheta $ on $X$, with compact support in $U_ i\cap V_ j$, that equals $1$ on a neighborhood of it. Then $\eta _ j\chi _ iv=(\vartheta \eta _ j)\chi _ iv$, and $(\vartheta \eta _ j)\circ \varphi _ i^{-1}$ is smooth with compact support in $\varphi _ i(U_ i\cap V_ j)$. By lemma <a data-tag="6C06336D" href="../../tag/534938A78D42/">6.2.4</a>(1), the function $w=(\eta _ j\chi _ iv)\circ \varphi _ i^{-1}$ belongs to $W^{k,p}(\varphi _ i(U_ i))$, vanishes outside the compact set $\varphi _ i(\operatorname{Supp}\vartheta )$, and satisfies $\| w\| _{W^{k,p}(\varphi _ i(U_ i))}\leq C\| (\chi _ iv)\circ \varphi _ i^{-1}\| _{W^{k,p}(\varphi _ i(U_ i))}$. 
+</p>
+<p>
+We now change charts. By lemma <a data-tag="6C06336D" href="../../tag/534938A78D42/">6.2.4</a>(2), applied to the restriction of $w$ to $\varphi _ i(U_ i\cap V_ j)$ and to the diffeomorphism $\Phi =\varphi _ i\circ \psi _ j^{-1}$ from $\psi _ j(U_ i\cap V_ j)$ onto $\varphi _ i(U_ i\cap V_ j)$, the function $(\eta _ j\chi _ iv)\circ \psi _ j^{-1}=w\circ \Phi $ belongs to $W^{k,p}(\psi _ j(U_ i\cap V_ j))$, with norm at most $C\| w\| _{W^{k,p}(\varphi _ i(U_ i))}$, and vanishes outside the compact set $\psi _ j(\operatorname{Supp}\vartheta )$. By lemma <a data-tag="6C06336D" href="../../tag/534938A78D42/">6.2.4</a>(1), applied with a smooth cutoff function equal to $1$ near this set, its extension by zero belongs to $W^{k,p}(\psi _ j(V_ j))$, with norm at most a constant multiple of the previous one. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-CDA3EF30">
+<p><a class="environment-identifier" href="../../tag/06216156055D/">Lemma <span data-tag="CDA3EF30">6.2.5</span>.</a><span data-gerby-tag="CDA3EF30"></span> Let $1\leq p&lt;\infty $ and $\varepsilon &gt;0$. There is a constant $C_{d,\varepsilon }$, depending only on $d$ and $\varepsilon $, such that </p>
+<div class="equation">
+  \[  \| \nabla v\| _ p\leq \varepsilon \| D^2v\| _ p+C_{d,\varepsilon }\| v\| _ p, \qquad v\in C_ c^\infty (\mathbb R^ d).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $e_ a$ be the $a$th coordinate vector and $h&gt;0$. Taylor's formula with integral remainder gives 
+    
+<div class="equation">
+  \[  h\partial _ av(x)=v(x+he_ a)-v(x) -\int _0^ h(h-t)\partial _ a^2v(x+te_ a)\, \mathrm d t.  \]
+</div>
+<p>
+       The $L^ p$ norm is invariant under translation. Moreover, $\omega (t)\, \mathrm d t=2h^{-2}(h-t)\, \mathrm d t$ is a probability measure on $[0,h]$, so Hölder's inequality gives $|\int _0^ hg\, \omega \, \mathrm d t|^ p\leq \int _0^ h|g|^ p\omega \, \mathrm d t$ for every measurable function $g$ on $[0,h]$. Applying this to $g(t)=\partial _ a^2v(x+te_ a)$, integrating in $x$ and using Tonelli's theorem, we obtain 
+    
+<div class="equation">
+  \[  \Bigl \| \int _0^ h(h-t)\partial _ a^2v(\cdot +te_ a)\, \mathrm d t\Bigr \| _ p\leq \frac{h^2}2\Bigl (\int _0^ h\| \partial _ a^2v(\cdot +te_ a)\| _ p^ p\, \omega (t)\, \mathrm d t\Bigr )^{1/p}=\frac{h^2}2\| \partial _ a^2v\| _ p.  \]
+</div>
+<p>
+       Hence $h\| \partial _ av\| _ p\leq 2\| v\| _ p+(h^2/2)\| \partial _ a^2v\| _ p$. Since $|\nabla v|\leq \sum _ a|\partial _ av|$ and $|\partial _ a^2v|\leq |D^2v|$, summing over $a$ yields $\| \nabla v\| _ p\leq 2dh^{-1}\| v\| _ p+(dh/2)\| D^2v\| _ p$. The choice $h=2\varepsilon /d$ proves the lemma with $C_{d,\varepsilon }=d^2/\varepsilon $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For a compact set $F\subset \mathbb R^ d$ and $0&lt;\alpha \leq 1$, the Hölder norm of a function $v$ on $F$ is 
+</p>
+<div class="equation">
+  \[  \| v\| _{C^{0,\alpha }(F)}=\sup _ F|v|+\sup _{x,y\in F,\  x\neq y}\frac{|v(x)-v(y)|}{|x-y|^\alpha }.  \]
+</div>
+<p>
+ A continuously differentiable function on an open set $U$ is of class $C^{1,\alpha }$ on a compact set $F\subset U$ if its first derivatives have finite $C^{0,\alpha }(F)$ norm, and it belongs to $C^{1,\alpha }_{\mathrm{loc}}(U)$ if it is of class $C^{1,\alpha }$ on every compact subset of $U$. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-5C91A70D">
+<p><a class="environment-identifier" href="../../tag/DE7722E667E2/">Lemma <span data-tag="5C91A70D">6.2.6</span> <span class="named">(Morrey's inequality)</span>.</a><span data-gerby-tag="5C91A70D"></span> Let $d&lt;p&lt;\infty $, put $\alpha =1-d/p$, and let $B'\Subset B$ be Euclidean balls in $\mathbb R^ d$. Every $v\in W^{1,p}(B)$ has a representative that is continuous on $B$ and satisfies </p>
+<div class="equation">
+  \[  \| v\| _{C^{0,\alpha }(\overline{B'})}\leq C\| v\| _{W^{1,p}(B)},  \]
+</div>
+<p> where $C$ depends only on $d,p,B',B$. Consequently, for an open set $U\subset \mathbb R^ d$, every function in $W^{2,p}_{\mathrm{loc}}(U)$ has a representative in $C^{1,\alpha }_{\mathrm{loc}}(U)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We prove the estimate for smooth $v$, pass to general $v$ by mollification, and then apply the result to first derivatives. Assume first that $v$ is smooth on $B$. Let $Q\subset B$ be a ball of radius $r$, let $v_ Q=|Q|^{-1}\int _ Qv$ be the average of $v$ over $Q$, and let $x\in Q$. We claim that 
+    
+<div class="equation">
+  \[  |v(x)-v_ Q|\leq C_ d\int _ Q|\nabla v(z)|\, |x-z|^{1-d}\, \mathrm d z.  \]
+</div>
+<p>
+       For $z\in Q$, write $z=x+s\theta $ with $s=|z-x|$ and $\theta \in S^{d-1}$; then $|v(z)-v(x)|\leq \int _0^ s|\nabla v(x+t\theta )|\, \mathrm d t$, and $|v(x)-v_ Q|$ is at most the average over $z\in Q$ of these segment integrals. Since $Q$ is convex and open and contains $x$, for each $\theta $ the radii $s&gt;0$ with $x+s\theta \in Q$ form an interval $0&lt;s&lt;R(\theta )$, and $R(\theta )\leq 2r$. In polar coordinates about $x$ ((<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>) on $B(x,2r)\supset Q$), the average of the segment integrals is 
+    
+<div class="equation">
+  \[  \frac1{|Q|}\int _{S^{d-1}}\int _0^{R(\theta )}s^{d-1}\int _0^ s|\nabla v(x+t\theta )|\, \mathrm d t\, \mathrm d s\, \mathrm d S(\theta ).  \]
+</div>
+<p>
+       Interchanging the integrals in $s$ and $t$ produces the factor $|Q|^{-1}\int _ t^{R(\theta )}s^{d-1}\, \mathrm d s$, which is at most $(2r)^ d/(d|Q|)$ and hence bounded by a constant depending only on $d$. The remaining integral $\int _{S^{d-1}}\int _0^{R(\theta )}|\nabla v(x+t\theta )|\, \mathrm d t\, \mathrm d S(\theta )$ is the integral on the right side of the claim, written in polar coordinates. This proves the claim. 
+    <p>
+      By Hölder's inequality with $p'=p/(p-1)$, the right side of the claim is at most $C_{d,p}r^{1-d/p}\| \nabla v\| _{L^ p(Q)}$, because 
+    
+<div class="equation">
+  \[  \int _ Q|x-z|^{(1-d)p'}\, \mathrm d z\leq \int _{B(x,2r)}|x-z|^{(1-d)p'}\, \mathrm d z=C_{d,p}r^{(1-d)p'+d},  \]
+</div>
+<p>
+       and this integral is finite exactly when $(1-d)p'&gt;-d$, that is, when $p&gt;d$. (For $d=1$ the exponent $(1-d)p'$ is zero.) 
+    <p>
+      Let $\delta &gt;0$ be the distance from $B'$ to $\mathbb R^ d\setminus B$. If $x,y\in B'$ and $0&lt;|x-y|&lt;\delta /2$, the ball $Q=B(x,2|x-y|)$ lies in $B$ and contains $x$ and $y$. Applying the preceding bound at both points gives 
+    
+<div class="equation">
+  \[  |v(x)-v(y)|\leq C_{d,p}|x-y|^{1-d/p}\| \nabla v\| _{L^ p(B)}.  \]
+</div>
+<p>
+       For $x\in B'$, the same bound on the ball $Q=B(x,\delta /2)\subset B$, together with the estimate $|v_ Q|\leq |Q|^{-1/p}\| v\| _{L^ p(B)}$ from Hölder's inequality, gives $\sup _{B'}|v|\leq C\| v\| _{W^{1,p}(B)}$ with $C$ depending on $d,p,\delta $. If $|x-y|\geq \delta /2$, then $|v(x)-v(y)|/|x-y|^\alpha \leq 2(\delta /2)^{-\alpha }\sup _{B'}|v|$. These bounds prove the estimate for smooth $v$ on $B'$, and hence on $\overline{B'}$, since $v$ is continuous on $B\supset \overline{B'}$. 
+    <p>
+      For general $v\in W^{1,p}(B)$, choose a ball $B''$, depending only on $B'$ and $B$, with $B'\Subset B''\Subset B$, and let $v_\varepsilon =v*\rho _\varepsilon $, which is smooth on $B''$ for small $\varepsilon $. By the remark preceding lemma <a data-tag="6C06336D" href="../../tag/534938A78D42/">6.2.4</a>, $\partial _ av_\varepsilon =(\partial _ av)_\varepsilon $, and $v_\varepsilon \to v$ and $\partial _ av_\varepsilon \to \partial _ av$ in $L^ p(B'')$. The estimate for smooth functions, applied on $B'\Subset B''$ to the differences of the $v_\varepsilon $, shows that they form a Cauchy family in the norm of $C^{0,\alpha }(\overline{B'})$. Their uniform limit is continuous on $\overline{B'}$, agrees almost everywhere with $v$, and satisfies the asserted estimate, because $\| v\| _{W^{1,p}(B'')}\leq \| v\| _{W^{1,p}(B)}$. Two continuous functions that agree almost everywhere on an open set agree everywhere on it. Hence the continuous representatives obtained from different balls $B'\Subset B$ agree on their overlaps and define a single continuous representative on $B$. 
+    <p>
+      Finally, let $v\in W^{2,p}_{\mathrm{loc}}(U)$. On every ball $B\Subset U$, both $v$ and its first derivatives $\partial _ av$ belong to $W^{1,p}(B)$. By the preceding paragraph, on each smaller ball $B'\Subset B$ the mollifications $v_\varepsilon $ and $\partial _ av_\varepsilon =(\partial _ av)_\varepsilon $ converge uniformly to the continuous representatives $\tilde v$ of $v$ and $\tilde w_ a$ of $\partial _ av$. Passing to the limit in 
+    
+<div class="equation">
+  \[  v_\varepsilon (x+he_ a)-v_\varepsilon (x)=\int _0^ h\partial _ av_\varepsilon (x+te_ a)\, \mathrm d t  \]
+</div>
+<p>
+       shows that $\tilde v$ has the continuous partial derivatives $\partial _ a\tilde v=\tilde w_ a$. Hence $\tilde v$ is continuously differentiable, and by the first part its first derivatives are Hölder continuous with exponent $\alpha $ on each $\overline{B'}$. Every compact subset of $U$ is covered by finitely many such balls $B'$; pairs of points closer than a Lebesgue number of this cover lie in a common ball, and for the remaining pairs the supremum bound suffices. Hence $\tilde v\in C^{1,\alpha }_{\mathrm{loc}}(U)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

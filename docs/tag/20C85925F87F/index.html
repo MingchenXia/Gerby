@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Real Hessian bounds for Kähler envelopes · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/envelopes-models/">Chapter 13 · Singularity types, envelopes, and models</a> · Tag <code>20C85925F87F</code></p><h1>Real Hessian bounds for Kähler envelopes</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 16.2.4 Real Hessian bounds for Kähler envelopes <span data-gerby-tag="08B88560"></span></div>
+<p>
+  A bounded metric Laplacian bounds the complex Hessian of a potential, by positivity, but the full real Hessian also contains the $(2,0)$ and $(0,2)$ parts, and bounding these requires a different argument. We now show that, for a Kähler background, the envelope of a finite minimum of $C^{1,1}$ obstacles is again $C^{1,1}$ (theorem <a data-tag="6355DEDC" href="../../tag/4B6432E0991B/">16.2.26</a>). The main step is an a priori bound for the full real Hessian of the solutions of the penalized equation (lemma <a data-tag="C7639230" href="../../tag/C8D21E3D949A/">16.2.25</a>), obtained from the maximum principle applied to the largest eigenvalue of the real Hessian. Differentiating this eigenvalue twice produces positive third-derivative terms, and we keep them: they absorb the negative term that comes from differentiating its logarithm. 
+</p>
+<p>
+We first recall the covariant Hessian of a Riemannian metric. Let $g$ be a smooth Riemannian metric on $X$. For smooth vector fields $Y,Z,W$ on an open set $U\subset X$ let $\mathcal K_{Y,Z}(W)$ be the right side of the Koszul formula 
+</p>
+<div class="equation">
+  \begin{align*}  2g(\nabla _ YZ,W)={}&amp; Y\, g(Z,W)+Z\, g(Y,W)-W\, g(Y,Z)\\ &amp; +g([Y,Z],W)-g([Y,W],Z)-g([Z,W],Y). \end{align*}
+</div>
+<p>
+ If $W$ is replaced by $\phi W$ for a smooth function $\phi $, the terms of $\mathcal K_{Y,Z}(\phi W)$ containing derivatives of $\phi $ cancel in pairs, so $\mathcal K_{Y,Z}(\phi W)=\phi \, \mathcal K_{Y,Z}(W)$. In a chart, therefore, $\mathcal K_{Y,Z}(W)=\sum _ sW^ s\mathcal K_{Y,Z}(\partial _ s)$, and since $g$ is nondegenerate there is a unique smooth vector field $\nabla _ YZ$ satisfying the Koszul formula for all $W$; by uniqueness, the vector fields obtained in different charts agree on overlaps. This is the <em>Levi-Civita connection</em> of $g$. Replacing $Y$ or $Z$ by $\phi Y$ or $\phi Z$ in the formula, the terms containing derivatives of $\phi $ cancel, respectively add up to $2(Y\phi )g(Z,W)$, so $\nabla _{\phi Y}Z=\phi \nabla _ YZ$ and $\nabla _ Y(\phi Z)=(Y\phi )Z+\phi \nabla _ YZ$; and interchanging $Y$ and $Z$ changes the right side by $-2g([Y,Z],W)$, so $\nabla _ YZ-\nabla _ ZY=[Y,Z]$. 
+</p>
+<p>
+In coordinates, with $g_{uv}=g(\partial _ u,\partial _ v)$, the Koszul formula for coordinate vector fields gives $\nabla _{\partial _ u}\partial _ v=\sum _ t\Gamma ^ t_{uv}\partial _ t$, where the Christoffel symbols are determined by $\sum _ tg_{st}\Gamma ^ t_{uv}=\frac12(\partial _ ug_{vs}+\partial _ vg_{us}-\partial _ sg_{uv})$; they are symmetric in $u$ and $v$ and vanish at a point where the first derivatives of the $g_{uv}$ vanish. For a smooth function $b$, the <em>covariant Hessian</em> $\nabla ^2b(Y,Z)=Y(Zb)-(\nabla _ YZ)b$ is, by these rules, given in coordinates by 
+</p>
+<div class="equation">
+  \[  \nabla ^2b(Y,Z)=\sum _{u,v}Y^ uZ^ v\Bigl (\partial _ u\partial _ vb-\sum _ t\Gamma ^ t_{uv}\partial _ tb\Bigr ).  \]
+</div>
+<p>
+ Hence $\nabla ^2b$ is a symmetric bilinear form on each tangent space, and at a point where the first derivatives of the metric vanish it is the matrix of second derivatives of $b$. If $g'$ is another smooth Riemannian metric, the difference $\nabla '_ YZ-\nabla _ YZ$ is linear over smooth functions in $Y$ and in $Z$, by the rules above, so the two covariant Hessians of $b$ differ by a smooth tensor applied to $\mathrm db$. For a $C^1$ function $b$ the same coordinate formula, with distributional second derivatives, defines the <em>weak covariant Hessian</em>. 
+</p>
+<p>
+Recall that a function is of class $C^{1,1}$ if it is $C^1$ and its first derivatives are locally Lipschitz in smooth real coordinates (proposition <a data-tag="B959E3ED" href="../../tag/B412D7DC28A3/">1.7.5</a>). On the compact manifold $X$ we measure such a function by the supremum norms of its value, its gradient and its weak covariant Hessian with respect to a fixed smooth Riemannian metric; the sum of these three norms is its <em>$C^{1,1}$ norm</em>. 
+</p>
+<p>
+The two descriptions agree: the first derivatives of a $C^1$ function are locally Lipschitz exactly when its weak second derivatives are locally bounded. Indeed, if a first derivative $\partial _ af$ is Lipschitz with constant $M$ on a coordinate ball, its difference quotients in a direction $e_ b$ are bounded by $M$; pairing them with a test function $\varphi $ and passing to the limit gives $|\langle \partial _ b\partial _ af,\varphi \rangle |\leq M\int |\varphi |\, \mathrm dx$. By corollary <a data-tag="DE4E0957" href="../../tag/D30ED2659FC7/">1.7.2</a>(1), $\partial _ b\partial _ af$ is therefore a bounded function, with $|\partial _ b\partial _ af|\leq M$. Conversely, by proposition <a data-tag="B959E3ED" href="../../tag/B412D7DC28A3/">1.7.5</a>, a continuous function whose weak second derivatives are bounded by $M$ on a ball has a gradient that is Lipschitz on this ball with constant $2nM$, the real dimension being $2n$. The Christoffel symbols of a metric and the derivatives of coordinate changes are bounded on compact subsets of the charts, and they multiply only first derivatives, so different smooth metrics give equivalent $C^{1,1}$ norms. In the applications below, the $C^1$ property of the envelope will be known in advance from proposition <a data-tag="71B5D060" href="../../tag/F9586D89B24F/">16.2.11</a>. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-C7639230">
+<p><a class="environment-identifier" href="../../tag/C8D21E3D949A/">Lemma <span data-tag="C7639230">16.2.25</span>.</a><span data-gerby-tag="C7639230"></span> Let $\kappa $ be a Kähler form on $X$, and let $g_0$ be a smooth Riemannian metric on $X$ with Levi-Civita connection $\nabla $. Let $B&gt;0$, and let $f$ be a smooth real function such that </p>
+<div class="equation">
+  \[  \| f\| _\infty +\| \nabla f\| _\infty \leq B, \qquad \nabla ^2f\leq Bg_0  \]
+</div>
+<p> as real quadratic forms, and for $\beta &gt;0$ let $a_\beta $ be the solution of (<a data-tag="14DE02B0" href="../../tag/45972FF63040/">16.14</a>) given by theorem <a data-tag="C32349E0" href="../../tag/AA7242F2CF85/">16.2.21</a>. Then there are constants $\beta _0$ and $C$, depending only on $B$ and on the fixed geometry ($X$, $\kappa $ and $g_0$), such that </p>
+<div class="equation">
+  \[  \| a_\beta \| _\infty +\| \nabla a_\beta \| _\infty +\| \nabla ^2a_\beta \| _\infty \leq C \qquad (\beta \geq \beta _0).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Step 1 reduces to a metric defined by $\kappa $ and collects the bounds for $a_\beta $ and its gradient. Steps 2 and 3 apply the maximum principle to the logarithm of the largest eigenvalue of $\nabla ^2a_\beta $, corrected by functions of the gradient and of $a_\beta $, and Step 4 absorbs the negative term with third derivatives. 
+    <p>
+<em>Step 1: reductions and first bounds.</em> Any two smooth Riemannian metrics on $X$ are uniformly equivalent, and, as observed before the lemma, the Hessians of a function for the two metrics differ by a bounded tensor applied to its gradient. Changing $g_0$ therefore changes $B$ and the constants only by factors depending on the two metrics, and we may assume that $g_0$ is the following Riemannian metric defined by $\kappa $. In local holomorphic coordinates write $\kappa =\frac{\mathrm i}{2\pi }k_{i\bar j}\, \mathrm dz_ i\wedge \mathrm d\bar z_ j$, so that $k$ is the coefficient matrix of $2\pi \kappa $ as in section <a data-tag="7D517295" href="../../tag/F9CE743055E9/">16.2.3</a>, and let $g_0=2\operatorname{Re}(k_{i\bar j}\, \mathrm dz_ i\otimes \mathrm d\bar z_ j)$; this is $2\pi $ times the Riemannian metric $\kappa (\cdot ,J\cdot )$, where $J$ is the complex structure. At the center of normal coordinates for $\kappa $, given by lemma <a data-tag="D46C217F" href="../../tag/23CF8D2A3054/">16.2.13</a>, we have $k_{i\bar j}=\delta _{ij}$ and $\mathrm dk=0$; hence the Christoffel symbols of $g_0$ vanish and $g_0=2\sum _ i(\mathrm dx_ i^2+\mathrm dy_ i^2)$. Comparing coordinate derivatives at such a point, we obtain for every smooth function $b$ 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-BA107374"><span data-gerby-tag="BA107374"></span>
+<span class="equation-label"><a data-tag="BA107374" href="../../tag/FA70E3BD3873/">16.26</a></span>
+<div>\begin{equation} \label{eq:real-hessian-trace-identity} \operatorname {tr}_{g_0}\nabla ^2b=2D_ kb, \qquad D_ kb=k^{i\bar j}b_{i\bar j}. \end{equation}</div>
+</div>
+<p>
+       In particular the upper bound for $\nabla ^2f$ gives $D_ kf\leq nB$. 
+    <p>
+      Write $a=a_\beta $, $G=(k_{i\bar j}+a_{i\bar j})$ and $D_ G=G^{i\bar j}\partial _ i\partial _{\bar j}$; thus $G$ is the matrix denoted $g$ in section <a data-tag="7D517295" href="../../tag/F9CE743055E9/">16.2.3</a>. We apply lemma <a data-tag="EB43873A" href="../../tag/EA811ACFD26E/">16.2.15</a> with $\kappa $ also as the measuring metric. It bounds $|a|$ by $\| f\| _\infty $ and, for all sufficiently large $\beta $, bounds $\operatorname {tr}_ kG$ in terms of $B$ and the fixed geometry. Since $G&gt;0$ and $\operatorname {tr}_ kG$ is bounded, all coefficients of $G$, and hence of the complex Hessian of $a$, are bounded; in particular the metric Laplacian $La$ for the fixed Kähler form $\omega $, which is a constant multiple of the trace of $\mathrm{dd}^{\mathrm{c}}a$ with respect to $\omega $ (lemma <a data-tag="7949A408" href="../../tag/C7E6E1462EE1/">14.1.6</a>), is uniformly bounded. Fix $p&gt;2n$. By proposition <a data-tag="71B5D060" href="../../tag/F9586D89B24F/">16.2.11</a>, $\| a\| _{W^{2,p}(X)}\leq C(\| La\| _{L^ p}+\| a\| _{L^ p})$ is uniformly bounded, and Morrey's inequality (lemma <a data-tag="5C91A70D" href="../../tag/DE7722E667E2/">6.2.6</a>), applied in the charts defining the norm to the first derivatives of the products of $a$ with the cutoff functions, bounds $\nabla a$ uniformly. From now on $C$ denotes a constant depending only on these bounds, on $B$ and on the fixed geometry; it may increase from line to line, but it never depends on $\beta $. 
+    <p>
+<em>Step 2: the auxiliary function.</em> Let $\ell $ be the largest eigenvalue of the real covariant Hessian $\nabla ^2a$ with respect to $g_0$. By (<a data-tag="BA107374" href="../../tag/FA70E3BD3873/">16.26</a>), the sum of all eigenvalues is $2D_ ka=2\operatorname {tr}_ kG-2n\geq -2n$. Since each eigenvalue is at most $\ell $, it is at least $-2n-(2n-1)\ell $; hence every eigenvalue of $\nabla ^2a$ has absolute value at most $2n(\max \{ \ell ,0\} +1)$. It therefore suffices to bound $\ell $ from above, and we do so by the maximum principle. Put 
+    
+<div class="equation">
+  \[  s=|\partial a|_ k^2,\quad S=\sup _ Xs,\quad \tau =(1+2\sup _ X|\partial f|_ k^2)^{-1},\quad \eta (s)=-\frac\tau 2\log (1+S-s).  \]
+</div>
+<p>
+       Then $S\leq C$, the number $\tau \in (0,1]$ has a uniform positive lower bound, and since $0\leq s\leq S$, 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-4AAA15CB"><span data-gerby-tag="4AAA15CB"></span>
+<span class="equation-label"><a data-tag="4AAA15CB" href="../../tag/D5B65BED5E46/">16.27</a></span>
+<div>\begin{equation} \label{eq:real-hessian-gradient-weight} \frac{\tau }{2(1+S)}\leq \eta '\leq \frac\tau 2, \qquad \eta ''=\frac{2(\eta ')^2}{\tau }\geq 2(\eta ')^2. \end{equation}</div>
+</div>
+<p>
+       For a constant $A&gt;0$ to be chosen later, consider the function $Q=\log \ell +\eta (s)-Aa$ on the open set $\{ \ell &gt;0\} $. If this set is empty, then $\ell \leq 0$ and there is nothing to prove. Otherwise, since $a$ and $\eta (s)$ are bounded, $Q$ tends to $-\infty $ where $\ell $ tends to zero, so by compactness of $X$ it attains its maximum at some point $x_0$ with $\ell (x_0)&gt;0$. For the same reason a uniform bound for $\ell (x_0)$ bounds $\ell $ on all of $X$. We may therefore assume that $\ell (x_0)\geq 1$, and that $\ell (x_0)$ exceeds any uniform threshold used below. 
+    <p>
+      Choose normal coordinates for $\kappa $ at $x_0$ in which $G(x_0)$ is diagonal, with diagonal entries $r_ i&gt;0$: by lemma <a data-tag="D46C217F" href="../../tag/23CF8D2A3054/">16.2.13</a>, applied to $k$ in one of finitely many fixed charts that contains $x_0$ in a fixed compact subset, and followed by a unitary change of coordinates that diagonalizes $G(x_0)$, there are such coordinates in which the derivatives of $k$ of every fixed order at $x_0$ are bounded independently of $x_0$. Since $\sum _ ir_ i=\operatorname {tr}_ kG\leq C$, we have $r_ i\leq C$, hence $r_ i^{-1}\geq c$ for a uniform $c&gt;0$. Write $T=\sum _ ir_ i^{-1}$; thus $T\geq c$. Take a $g_0$-orthonormal basis $V_1,\ldots ,V_{2n}$ of the real tangent space at $x_0$ consisting of eigenvectors of $\nabla ^2a(x_0)$, with $V_1$ belonging to the eigenvalue $\ell (x_0)$, and extend these vectors to the chart as vector fields with constant real coordinate coefficients. 
+    <p>
+      The largest eigenvalue $\ell $ may be multiple and need not be smooth, so we perturb the Hessian. Let $B_0$ be the symmetric bilinear form with constant coefficients in this chart which at $x_0$ is the $g_0$-orthogonal projection onto $V_1^\perp $, that is, $B_0(Y,Z)=g_0(PY,PZ)$ at $x_0$ for this projection $P$, and set 
+    
+<div class="equation">
+  \[  \Phi =g_0^{-1}(\nabla ^2a-B_0).  \]
+</div>
+<p>
+       The form $B_0$ is positive semidefinite everywhere in the chart. Hence the largest eigenvalue $\lambda _1(\Phi )$ of $\Phi $ is at most $\ell $, and it equals $\ell $ at $x_0$. Denote the eigenvalues of $\Phi $ at $x_0$ by $\lambda =\ell (x_0),\lambda _2,\ldots ,\lambda _{2n}$, with eigenvectors $V_1,\ldots ,V_{2n}$. For $\alpha &gt;1$, $\lambda _\alpha $ is the Hessian eigenvalue belonging to $V_\alpha $ minus one, so $\lambda -\lambda _\alpha \geq 1$. In particular $\lambda _1(\Phi )$ is a smooth function near $x_0$. Indeed, $\lambda $ is a simple root of the characteristic polynomial of $\Phi (x_0)$, so by the implicit function theorem the characteristic polynomial of $\Phi $ has, near $x_0$, exactly one root close to $\lambda $, and this root depends smoothly on the point; it equals $\lambda _1(\Phi )$, which is continuous as the maximum of $(\nabla ^2a-B_0)(Y,Y)$ over $g_0$-unit vectors $Y$, and it is a simple eigenvalue. The smooth function $\widehat Q=\log \lambda _1(\Phi )+\eta (s)-Aa$ satisfies $\widehat Q\leq Q\leq Q(x_0)=\widehat Q(x_0)$, so it has a local maximum at $x_0$. 
+    <p>
+<em>Step 3: the inequality at the maximum point.</em> From now on all quantities are evaluated at $x_0$. Write $a_{V_\alpha V_\gamma }=\nabla ^2a(V_\alpha ,V_\gamma )$, a smooth function near $x_0$, and define the nonnegative quantities 
+    
+<div class="equation">
+  \begin{align*}  U&amp; =2\sum _{i,\alpha &gt;1} \frac{|\partial _ i a_{V_\alpha V_1}|^2}{r_ i\lambda (\lambda -\lambda _\alpha )},&amp;  R&amp; =\sum _{p,q}\frac{|V_1G_{p\bar q}|^2}{r_ pr_ q\lambda },\\  N&amp; =\sum _ i\frac{|\partial _ i a_{V_1V_1}|^2}{r_ i\lambda ^2},&amp;  K&amp; =\sum _{i,p}\frac{|a_{ip}|^2+|a_{i\bar p}|^2}{r_ i}. \end{align*}
+</div>
+<p>
+       We first compute $D_ G\log \lambda _1(\Phi )$, keeping the third-derivative terms. Let $M(t)$ be a smooth family of real symmetric matrices, and let $\lambda (t)$ be a simple eigenvalue with unit eigenvector $V_1$ at $t=0$, the other eigenvalues being $\lambda _\alpha $ with orthonormal eigenvectors $V_\alpha $. Then 
+    
+<div class="equation">
+  \[  \lambda '=\langle M'V_1,V_1\rangle ,\qquad \lambda ''=\langle M''V_1,V_1\rangle +2\sum _{\alpha &gt;1} \frac{|\langle M'V_1,V_\alpha \rangle |^2}{\lambda -\lambda _\alpha }.  \]
+</div>
+<p>
+       Indeed, near $t=0$ the simple eigenvalue $\lambda (t)$ is a smooth function of $t$, by the implicit function theorem applied to the characteristic polynomial, and the columns of the adjugate matrix of $\lambda (t)I-M(t)$, which has rank one, span the eigenspace; normalizing a column that does not vanish at $t=0$ gives a smooth unit eigenvector $y(t)$ with $y(0)=\pm V_1$, and we may take the sign $+$. Differentiate the eigenvector equation $M(t)y(t)=\lambda (t)y(t)$. Pairing with $V_1$ gives the first formula, and pairing with $V_\alpha $ shows that the derivative of the eigenvector has component $\langle M'V_1,V_\alpha \rangle /(\lambda -\lambda _\alpha )$ along $V_\alpha $, and it has no component along $V_1$, because $|y(t)|=1$. Differentiating the identity $\lambda '(t)=\langle M'(t)y(t),y(t)\rangle $, where $y(t)$ is the normalized eigenvector with $y(0)=V_1$, and substituting these components gives the second formula. 
+    <p>
+      We apply these formulas to the symmetric matrix $M$ with entries $(\nabla ^2a-B_0)(e_\alpha ,e_\gamma )$, where $e_1,\ldots ,e_{2n}$ is the $g_0$-orthonormal frame obtained from the constant vector fields $V_1,\ldots ,V_{2n}$ by the Gram–Schmidt process; $M$ has the same eigenvalues as $\Phi $. The frame depends smoothly on the point, equals $V_1,\ldots ,V_{2n}$ at $x_0$, and its first derivatives vanish at $x_0$, because those of $g_0$ do. We differentiate along the real coordinate directions and use $\partial _ i\partial _{\bar i}=\frac14(\partial _{x_ i}^2+\partial _{y_ i}^2)$. Since $B_0$ is constant, the first derivatives of $M$ at $x_0$ are those of the functions $\nabla ^2a(V_\alpha ,V_\gamma )$. In the second derivatives, the second derivatives of the frame multiply $\nabla ^2a-B_0$, which is bounded by $C(\lambda +1)$; after weighting with $r_ i^{-1}$ and summing they contribute at most $C\lambda T$. Since $|\partial _ ib|^2=\frac14(|\partial _{x_ i}b|^2+|\partial _{y_ i}b|^2)$ for a real function $b$, we obtain 
+    
+<div class="equation">
+  \[  D_ G\lambda _1(\Phi )\geq 2\sum _{i,\alpha &gt;1} \frac{|\partial _ i a_{V_\alpha V_1}|^2}{r_ i(\lambda -\lambda _\alpha )} +\sum _ i r_ i^{-1}V_1V_1G_{i\bar i}-C\lambda T.  \]
+</div>
+<p>
+       Here the middle term comes from $\sum _ ir_ i^{-1}\partial _ i\partial _{\bar i}a_{V_1V_1}$ after commuting derivatives, and we check that this commutation costs at most $C\lambda T$. In real coordinates $a_{V_1V_1}=V_1V_1a-\Gamma ^ t_{uv}V_1^ uV_1^ v\partial _ ta$, where the Christoffel symbols $\Gamma $ of $g_0$ vanish at $x_0$. When we apply $\partial _ i\partial _{\bar i}$, the term containing third derivatives of $a$ is multiplied by $\Gamma (x_0)=0$; the remaining terms are a first derivative of $\Gamma $ times a second derivative of $a$, or a second derivative of $\Gamma $ times a first derivative of $a$. By the Hessian and gradient bounds above they are at most $C(\lambda +1)$. Moreover $\partial _ i\partial _{\bar i}V_1V_1a=V_1V_1a_{i\bar i}=V_1V_1G_{i\bar i}-V_1V_1k_{i\bar i}$, and the derivatives of the fixed matrix $k$ are bounded. Summing with the weights $r_ i^{-1}$ gives an error at most $C\lambda T$, and no third derivative of $a$ enters it. 
+    <p>
+      Next we use the equation. Taking logarithms in (<a data-tag="14DE02B0" href="../../tag/45972FF63040/">16.14</a>) gives $\log \det G=\log \det k+\beta (a-f)$. Differentiating twice along $V_1$ and using $\partial (G^{-1})=-G^{-1}(\partial G)G^{-1}$, we obtain at $x_0$ 
+    
+<div class="equation">
+  \[  \sum _ i r_ i^{-1}V_1V_1G_{i\bar i} =\sum _{p,q}\frac{|V_1G_{p\bar q}|^2}{r_ pr_ q} +V_1V_1\log \det k+\beta (\lambda -f_{V_1V_1}).  \]
+</div>
+<p>
+       Here we used that at the center of normal coordinates directional and covariant second derivatives agree, so that $V_1V_1a=\lambda $ and $V_1V_1f=f_{V_1V_1}$. If $\lambda \geq 2\max \{ 1,\sup _{X,|Y|_{g_0}=1}f_{YY}\} $, which is a uniform threshold because $\nabla ^2f\leq Bg_0$, the last term is at least $\beta \lambda /2$. The term $V_1V_1\log \det k$ is bounded, hence at least $-CT$ because $T\geq c$. By the first variation formula, $\partial _ i\lambda _1(\Phi )=\partial _ i a_{V_1V_1}$ at $x_0$. Since $D_ G\log \lambda _1=\lambda ^{-1}D_ G\lambda _1-\sum _ ir_ i^{-1}|\partial _ i\lambda _1|^2/\lambda ^2$, we conclude that 
+    
+<div class="equation">
+  \[  D_ G\log \lambda _1(\Phi )\geq U+R-N-CT+\beta /2.  \]
+</div>
+<p>
+       Next we differentiate the logarithmic equation once and apply the product rule to $s=k^{p\bar q}a_ pa_{\bar q}$. At $x_0$, 
+    
+<div class="equation">
+  \[  \partial _ i\partial _{\bar i}s=\sum _ p\bigl (|a_{pi}|^2+|a_{p\bar i}|^2\bigr ) +2\operatorname{Re}\sum _ pa_{\bar p}\, \partial _ pa_{i\bar i} +(\partial _ i\partial _{\bar i}k^{p\bar q})a_ pa_{\bar q}.  \]
+</div>
+<p>
+       The last term involves only the bounded gradient. In the middle term the third derivatives occur only in the contraction $\sum _ ir_ i^{-1}\partial _ pa_{i\bar i}=\partial _ p\log \det G=\beta (a_ p-f_ p)$, because $\mathrm dk(x_0)=0$; so we need no estimate for third derivatives. Weighting with $r_ i^{-1}$ and summing, we get 
+    
+<div class="equation">
+  \[  D_ Gs\geq K-CT +2\beta \operatorname{Re}\sum _ p a_{\bar p}(a_ p-f_ p) \geq K-CT+\beta s-\beta |\partial f|_ k^2.  \]
+</div>
+<p>
+       Also $D_ Ga=\sum _ ir_ i^{-1}(r_ i-1)=n-T$. At the local maximum $x_0$ we have $D_ G\widehat Q\leq 0$, where 
+    
+<div class="equation">
+  \[  D_ G\widehat Q=D_ G\log \lambda _1(\Phi )+\eta 'D_ Gs +\eta ''\sum _ i\frac{|s_ i|^2}{r_ i}-AD_ Ga.  \]
+</div>
+<p>
+       Since $0&lt;\eta '\leq \frac12$ and $\eta '|\partial f|_ k^2\leq \frac\tau 2\sup _ X|\partial f|_ k^2\leq \frac14$, the three preceding estimates yield 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-84653981"><span data-gerby-tag="84653981"></span>
+<span class="equation-label"><a data-tag="84653981" href="../../tag/E052CD3153AF/">16.28</a></span>
+<div>\begin{equation} \label{eq:real-hessian-maximum} 0\geq U+R-N+\eta 'K +\eta ''\sum _ i\frac{|s_ i|^2}{r_ i} +(A-C_0)T-An+\beta \eta 's+\beta /4, \end{equation}</div>
+</div>
+<p>
+       where $C_0$ is a uniform constant that does not depend on $A$. 
+    <p>
+<em>Step 4: absorption of the third-order term.</em> It remains to absorb the negative term $-N$ completely. Fix $0&lt;\varepsilon &lt;1/2$, to be chosen below, and assume that $\lambda \geq C/\varepsilon ^2$. Let $J$ be the complex structure of $X$, and define a $(1,0)$-vector $W$ and real numbers $\mu _\alpha $ by 
+    
+<div class="equation">
+  \[  W=(V_1-\mathrm iJV_1)/\sqrt2 =\sum _ q\nu _ q\partial _ q,\qquad JV_1=\sum _{\alpha &gt;1}\mu _\alpha V_\alpha .  \]
+</div>
+<p>
+       Since $k(x_0)$ is the identity, $\sum _ q|\nu _ q|^2=g_0(V_1,V_1)=1$; since $JV_1$ is a $g_0$-unit vector orthogonal to $V_1$, also $\sum _{\alpha &gt;1}\mu _\alpha ^2=1$. The coefficients $\nu _ q,\mu _\alpha $, and $J$ itself, are constant in our coordinate system. 
+    <p>
+      Writing $V_1=\sqrt2\, \overline W-\mathrm iJV_1$ in the outer derivative of $\partial _ ia_{V_1V_1}$, we obtain 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-5C767DCA"><span data-gerby-tag="5C767DCA"></span>
+<span class="equation-label"><a data-tag="5C767DCA" href="../../tag/AADD4CDBAE91/">16.29</a></span>
+<div>\begin{equation} \label{eq:real-hessian-third-splitting} \partial _ i a_{V_1V_1} =\sqrt2\sum _ q\overline\nu _ q V_1G_{i\bar q} -\mathrm i\sum _{\alpha &gt;1}\mu _\alpha \partial _ i a_{V_1V_\alpha }+E_ i, \qquad |E_ i|\leq C. \end{equation}</div>
+</div>
+<p>
+       Indeed, the third coordinate derivatives of the scalar function $a$ commute, and $\partial _ i\overline W=\sum _ q\overline\nu _ q\partial _ i\partial _{\bar q}$. Replacing coordinate second derivatives by covariant ones before the last differentiation introduces only first derivatives of $\Gamma $ times the bounded gradient of $a$, since $\Gamma (x_0)=0$; and the derivatives of the fixed matrix $k$ are bounded. Thus the error $E_ i$ involves only the gradient bound. 
+    <p>
+      We use twice the inequality $|b+c|^2\leq (1+t)|b|^2+(1+t^{-1})|c|^2$, $t&gt;0$. First take $t=\varepsilon /(1-2\varepsilon )$ to separate $E_ i$; then $(1-2\varepsilon )(1+t)=1-\varepsilon $ and $(1-2\varepsilon )(1+t^{-1})\leq \varepsilon ^{-1}$, so the contribution of $E_ i$ to $(1-2\varepsilon )N$ is at most $CT/(\varepsilon \lambda ^2)\leq T$. Then take $t=\varepsilon $ for the two principal terms (with the factor $1+\varepsilon $ on the second one). This gives 
+    
+<div class="equation">
+  \begin{align*}  (1-2\varepsilon )N\leq {}&amp;  (1-\varepsilon )(1+\varepsilon ^{-1}) \sum _ i\frac{2|\sum _ q\overline\nu _ q V_1G_{i\bar q}|^2}{r_ i\lambda ^2}\\ &amp; +(1-\varepsilon ^2) \sum _ i\frac{|\sum _{\alpha &gt;1}\mu _\alpha \partial _ i a_{V_1V_\alpha }|^2}{r_ i\lambda ^2}+T. \end{align*}
+</div>
+<p>
+       By the weighted Cauchy–Schwarz inequality and $\sum _ qr_ q|\nu _ q|^2\leq C$, the first line is at most $CR/(\varepsilon \lambda )\leq R$. For the second line the Cauchy–Schwarz inequality and $\sum _{\alpha &gt;1}\mu _\alpha ^2=1$ give 
+    
+<div class="equation">
+  \[  \left|\sum _{\alpha &gt;1}\mu _\alpha \partial _ i a_{V_1V_\alpha }\right|^2 \leq \left(\lambda -\sum _{\alpha &gt;1}\lambda _\alpha \mu _\alpha ^2\right) \sum _{\alpha &gt;1} \frac{|\partial _ i a_{V_1V_\alpha }|^2}{\lambda -\lambda _\alpha }.  \]
+</div>
+<p>
+       To bound the first factor we use the positivity of $G$. Since the Hessian eigenvalue of $V_\alpha $ is $\lambda _\alpha +1$ (this is where the perturbation by $B_0$ enters) and $\partial \bar\partial a(W,\overline W)=\frac12\bigl (a_{V_1V_1}+a_{JV_1JV_1}\bigr )$ at $x_0$, we have 
+    
+<div class="equation">
+  \[  0&lt;G(W,\overline W) =1+\tfrac 12\left(\lambda + \sum _{\alpha &gt;1}(\lambda _\alpha +1)\mu _\alpha ^2\right).  \]
+</div>
+<p>
+       Thus $\lambda -\sum _{\alpha &gt;1}\lambda _\alpha \mu _\alpha ^2\leq 2\lambda +3$. If $\lambda \geq 3/(2\varepsilon ^2)$, then $(1-\varepsilon ^2)(2\lambda +3)\leq 2\lambda $, so the second line is at most $U$. Finally, the critical point equation for $\widehat Q$ at $x_0$ reads 
+    
+<div class="equation">
+  \[  \frac{\partial _ i a_{V_1V_1}}\lambda =Aa_ i-\eta 's_ i.  \]
+</div>
+<p>
+       Together with $|b+c|^2\leq 2|b|^2+2|c|^2$ and $4\varepsilon &lt;2$, it bounds the remaining part of $N$: 
+    
+<div class="equation">
+  \[  2\varepsilon N\leq 4\varepsilon A^2\sum _ i\frac{|a_ i|^2}{r_ i}+2(\eta ')^2\sum _ i\frac{|s_ i|^2}{r_ i}.  \]
+</div>
+<p>
+       Combining the three bounds, we obtain 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-839BBD85"><span data-gerby-tag="839BBD85"></span>
+<span class="equation-label"><a data-tag="839BBD85" href="../../tag/25C8519515AD/">16.30</a></span>
+<div>\begin{equation} \label{eq:real-hessian-third-absorption} N\leq U+R+T+4\varepsilon A^2\sum _ i\frac{|a_ i|^2}{r_ i} +2(\eta ')^2\sum _ i\frac{|s_ i|^2}{r_ i}. \end{equation}</div>
+</div>
+<p>
+       Now choose $A=C_0+3$, after enlarging $C_0$ so that it is positive, and $\varepsilon =[4A^2(S+1)]^{-1}&lt;1/2$. Both choices are uniform, and so are the thresholds for $\lambda $ used above. By (<a data-tag="4AAA15CB" href="../../tag/D5B65BED5E46/">16.27</a>), the $\eta ''$ term of (<a data-tag="84653981" href="../../tag/E052CD3153AF/">16.28</a>) absorbs the last term of (<a data-tag="839BBD85" href="../../tag/25C8519515AD/">16.30</a>), and $4\varepsilon A^2\sum _ i|a_ i|^2/r_ i\leq sT/(S+1)\leq T$. Substituting (<a data-tag="839BBD85" href="../../tag/25C8519515AD/">16.30</a>) into (<a data-tag="84653981" href="../../tag/E052CD3153AF/">16.28</a>) and dropping its nonnegative $\beta $ terms, we get 
+    
+<div class="equation">
+  \[  0\geq \eta 'K+T-An.  \]
+</div>
+<p>
+       By the lower bound for $\eta '$ in (<a data-tag="4AAA15CB" href="../../tag/D5B65BED5E46/">16.27</a>) and $r_ i^{-1}\geq c$, this bounds every $a_{ip}$ and $a_{i\bar p}$ at $x_0$, and hence every real second derivative of $a$ there; at $x_0$ these coincide with the covariant ones. Thus $\lambda =\ell (x_0)$ is uniformly bounded, either by the thresholds assumed above or by this estimate. As observed at the beginning, the maximum property of $Q$ then bounds $\ell $ everywhere, and the lower bound for the trace bounds the remaining eigenvalues of $\nabla ^2a$. This proves the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-6355DEDC">
+<p><a class="environment-identifier" href="../../tag/4B6432E0991B/">Theorem <span data-tag="6355DEDC">16.2.26</span>.</a><span data-gerby-tag="6355DEDC"></span> Let $\kappa $ be a Kähler form on $X$, let $r\geq 1$ be an integer, and let $f_1,\ldots ,f_ r$ be real $C^{1,1}$ functions on $X$. Then the envelope </p>
+<div class="equation">
+  \[  P_\kappa \bigl (\min _{1\leq j\leq r}f_ j\bigr )  \]
+</div>
+<p> is $C^{1,1}$. Its $C^{1,1}$ norm is bounded by a constant depending only on the fixed geometry and on a common bound for the $C^{1,1}$ norms of the obstacles. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First let $r=1$, and suppose that $f=f_1$ is smooth. By lemma <a data-tag="C7639230" href="../../tag/C8D21E3D949A/">16.2.25</a>, the solutions $a_\beta $ have uniformly bounded values, gradients and full real Hessians for $\beta \geq \beta _0$, and by proposition <a data-tag="553E06DE" href="../../tag/E43C0935B545/">16.2.22</a> they converge uniformly to $P_\kappa (f)$. The limit $P_\kappa (f)$ is therefore continuous, and by the same proposition it has bounded metric Laplacian; hence it belongs to $C^{1,\alpha }(X)$ by proposition <a data-tag="71B5D060" href="../../tag/F9586D89B24F/">16.2.11</a>, and in particular it is $C^1$. 
+    <p>
+      We now pass to the limit in the Hessian bounds. For a smooth vector field $Y$, the function $\nabla ^2a_\beta (Y,Y)=YYa_\beta -(\nabla _ YY)a_\beta $ is obtained from $a_\beta $ by a second-order differential operator. Since $a_\beta \to P_\kappa (f)$ uniformly, $\nabla ^2a_\beta (Y,Y)\to \nabla ^2P_\kappa (f)(Y,Y)$ in the sense of distributions, where the right side is the weak covariant Hessian, and for every nonnegative test function $\varphi $ we obtain $|\langle \nabla ^2P_\kappa (f)(Y,Y),\varphi \rangle |\leq C\int |Y|_{g_0}^2\varphi $. By corollary <a data-tag="DE4E0957" href="../../tag/D30ED2659FC7/">1.7.2</a>(1), the weak quadratic components $\nabla ^2P_\kappa (f)(Y,Y)$ are bounded functions, with $|\nabla ^2P_\kappa (f)(Y,Y)|\leq C|Y|_{g_0}^2$ almost everywhere; by polarization, so are all components of the weak covariant Hessian. 
+    <p>
+      The gradient is treated in the same way: $Ya_\beta \to YP_\kappa (f)$ in the sense of distributions, and $|Ya_\beta |\leq C|Y|_{g_0}$; since $YP_\kappa (f)$ is continuous, pairing with nonnegative test functions of integral one supported in small balls about a point shows that $|YP_\kappa (f)|\leq C|Y|_{g_0}$ everywhere, so $|\nabla P_\kappa (f)|_{g_0}\leq C$. In a chart, the weak second derivatives of $P_\kappa (f)$ differ from the components of its weak covariant Hessian by the Christoffel symbols times its first derivatives, so they are bounded on compact subsets of the chart. Hence $P_\kappa (f)$ is $C^{1,1}$, by proposition <a data-tag="B959E3ED" href="../../tag/B412D7DC28A3/">1.7.5</a>, and the bounds just proved show that its $C^{1,1}$ norm is bounded by a constant depending only on the fixed geometry and on the constant $B$ of lemma <a data-tag="C7639230" href="../../tag/C8D21E3D949A/">16.2.25</a> for $f$. 
+    <p>
+      Now let the $f_ j$ be arbitrary $C^{1,1}$ functions. Using convolution in finitely many charts and a smooth partition of unity, we obtain smooth functions $f_{j,\rho }$ that converge to $f_ j$ in $C^1$ as $\rho \to 0$ and have uniformly bounded covariant Hessians. Indeed, the second derivatives of such a partitioned convolution are the cutoffs times the convolutions of the bounded weak second derivatives of $f_ j$, plus terms that involve only the values and first derivatives of the local convolutions; all of these are uniformly bounded. For $\delta &gt;0$ put 
+    
+<div class="equation">
+  \[  F_{\rho ,\delta }=-\delta \log \sum _ j \mathrm e^{-f_{j,\rho }/\delta }, \qquad p_ j=\frac{\mathrm e^{-f_{j,\rho }/\delta }}{\sum _ k\mathrm e^{-f_{k,\rho }/\delta }}.  \]
+</div>
+<p>
+       The weights $p_ j$ are positive with sum one, $\min _ jf_{j,\rho }-\delta \log r\leq F_{\rho ,\delta }\leq \min _ jf_{j,\rho }$, and the gradient of $F_{\rho ,\delta }$ is the convex combination $\sum _ jp_ j\nabla f_{j,\rho }$. For every real tangent vector $Y$ the chain rule gives 
+    
+<div class="equation">
+  \begin{align*}  \nabla ^2F_{\rho ,\delta }(Y,Y) &amp;  =\sum _ jp_ j\nabla ^2f_{j,\rho }(Y,Y)\\ &amp; \quad -\frac1\delta \left(\sum _ jp_ j(\mathrm df_{j,\rho }(Y))^2 -\left(\sum _ jp_ j\mathrm df_{j,\rho }(Y)\right)^2\right)\\ &amp; \leq C|Y|_{g_0}^2, \end{align*}
+</div>
+<p>
+       because the term in parentheses is a variance and hence nonnegative. Let $\rho ,\delta \to 0$ with $\delta \log r\leq 1$. Then the smooth obstacles $F_{\rho ,\delta }$ have uniformly bounded values and gradients and a uniform upper bound for their Hessians, although their Hessians have no uniform lower bound as $\delta \to 0$; this is why lemma <a data-tag="C7639230" href="../../tag/C8D21E3D949A/">16.2.25</a> uses only an upper bound. Since the smooth case bounds the $C^{1,1}$ norm of the envelope in terms of the fixed geometry and the constant $B$ of that lemma, the envelopes $P_\kappa (F_{\rho ,\delta })$ have uniformly bounded $C^{1,1}$ norms. The obstacles converge uniformly to $\min _ jf_ j$, so the envelopes converge uniformly to $P_\kappa (\min _ jf_ j)$ by the stability estimate of proposition <a data-tag="3796C01B" href="../../tag/641F3FEC623D/">16.1.4</a>(4). The limit is $C^1$ by theorem <a data-tag="C4B4DE5D" href="../../tag/A9F89B404AD6/">16.2.24</a>, since $C^{1,1}$ functions have bounded metric Laplacian. The same passage to the limit as in the smooth case, with the smooth functions $a_\beta $ replaced by the $C^{1,1}$ functions $P_\kappa (F_{\rho ,\delta })$, whose gradients and weak covariant Hessians are bounded by a uniform constant, now proves the theorem, together with the bound for the norm. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Second derivatives and ellipticity · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>CBFCDA7183ED</code></p><h1>Second derivatives and ellipticity</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 9.4 Second derivatives and ellipticity <span data-gerby-tag="CA0C5FF3"></span></div>
+<p>
+The equation controls the product of the eigenvalues of $\omega _ u$ relative to $\omega $, so an upper bound for their sum gives uniform ellipticity. We obtain this trace bound by completing a square in the differentiated equation. The remaining torsion term is of first order in the trace, and it can be absorbed at the maximum of a suitable function of the trace and the potential. 
+</p>
+<p>
+ In holomorphic coordinates $(z^1,\ldots ,z^ n)$, subscripts denote coordinate derivatives, inverse matrices carry upper indices, and repeated indices run from $1$ to $n$. Write 
+</p>
+<div class="equation">
+  \[  \omega =\frac{\mathrm i}{2\pi }g_{i\bar j}\, \mathrm{d}z^ i\wedge \mathrm{d}\bar z^ j, \qquad \omega _ u=\frac{\mathrm i}{2\pi }h_{i\bar j}\, \mathrm{d}z^ i\wedge \mathrm{d}\bar z^ j, \qquad h_{i\bar j}=g_{i\bar j}+u_{i\bar j}.  \]
+</div>
+<p>
+ For a smooth real function $v$, set $\Delta _ gv=g^{i\bar j}v_{i\bar j}$ and $\Delta _ hv=h^{i\bar j}v_{i\bar j}$. Thus $\Delta _ h=L_ u$ and $\Delta _ hu=n-\operatorname {tr}_ hg$. Write also $|\partial v|_ h^2=h^{i\bar j}v_ i v_{\bar j}$. Let $\nabla $ be the Chern connection of the fixed metric $g$, with 
+</p>
+<div class="equation">
+  \[  \Gamma _{ik}^ p=g^{p\bar q}\partial _ i g_{k\bar q},\qquad T_{ik}^ p=\Gamma _{ik}^ p-\Gamma _{ki}^ p,\qquad \tau _ k=\sum _ iT_{ik}^ i.  \]
+</div>
+<p>
+ Here $T$ is the torsion of $\nabla $ and $\tau $ its trace; all bounds for this connection, its torsion and its curvature depend only on $g$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-FE968158">
+<p><a class="environment-identifier" href="../../tag/BC4847C0CD7D/">Lemma <span data-tag="FE968158">9.4.1</span>.</a><span data-gerby-tag="FE968158"></span> Suppose $h=g+(u_{i\bar j})&gt;0$, and put </p>
+<div class="equation">
+  \[  S=\operatorname {tr}_ gh,\qquad B=\operatorname {tr}_ hg, \qquad G=\log \frac{\det h}{\det g}.  \]
+</div>
+<p> There is $C_ g$ such that, at every point where $S\geq 1$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-9337ECFA"><span data-gerby-tag="9337ECFA"></span>
+<span class="equation-label"><a data-tag="9337ECFA" href="../../tag/CAD281B47B5A/">9.10</a></span>
+<div>\begin{equation} \label{eq:hermitian-trace-inequality} \Delta _ h\log S\geq \frac2{S^2}\operatorname {Re}\bigl (h^{k\bar q}\tau _ k S_{\bar q}\bigr ) +\frac{\Delta _ gG}{S}-C_ gB. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The identity $\mathrm{d}\omega _ u=\mathrm{d}\omega $ is equivalent to 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-D0224E0D"><span data-gerby-tag="D0224E0D"></span>
+<span class="equation-label"><a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a></span>
+<div>\begin{equation} \label{eq:trace-torsion-switch} \nabla _ i h_{k\bar j}-\nabla _ k h_{i\bar j} =T_{ik}^ p(g_{p\bar j}-h_{p\bar j}), \end{equation}</div>
+</div>
+<p>
+       together with its complex conjugate; this can also be checked directly, since the third derivatives of $u$ cancel. 
+    <p>
+      For tensors with two holomorphic and one antiholomorphic lower index, we use the norm 
+    
+<div class="equation">
+  \[  \| A\| ^2=g^{i\bar\ell }h^{k\bar q}h^{p\bar j} A_{ik\bar j}\overline{A_{\ell q\bar p}}.  \]
+</div>
+<p>
+       Set $A_{ik\bar j}=\nabla _ i h_{k\bar j}$ and $D_{ik\bar j}=T_{ik}^ p h_{p\bar j}$. We first claim 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-CEB21F4A"><span data-gerby-tag="CEB21F4A"></span>
+<span class="equation-label"><a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a></span>
+<div>\begin{equation} \label{eq:trace-before-square} \Delta _ hS=\| A+D\| ^2+\Delta _ gG+E, \qquad |E|\leq C_ g(1+S)B. \end{equation}</div>
+</div>
+<p>
+       To prove this, start with $\Delta _ hS=h^{i\bar j}g^{k\bar\ell }\nabla _ i\nabla _{\bar j}h_{k\bar\ell }$. Switch $\bar j,\bar\ell $ by the conjugate of (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>), commute $\nabla _ i,\nabla _{\bar\ell }$, and then switch $i,k$ by (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>). The terms with a derivative of $h$ are 
+    
+<div class="equation">
+  \[  h^{i\bar j}g^{k\bar\ell }\nabla _{\bar\ell }\nabla _ kh_{i\bar j} -2\operatorname {Re}\bigl (h^{i\bar j}g^{k\bar\ell } T_{ik}^ p\nabla _{\bar\ell }h_{p\bar j}\bigr ).  \]
+</div>
+<p>
+       The first switch also produces the term $-h^{i\bar j}g^{k\bar\ell }\overline{T_{j\ell }^ q}\nabla _ i h_{k\bar q}$. Applying (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>) to it gives one of the two conjugate derivative terms displayed above, together with 
+    
+<div class="equation">
+  \[  h^{i\bar j}g^{k\bar\ell }T_{ik}^ p\overline{T_{j\ell }^ q} (h_{p\bar q}-g_{p\bar q}).  \]
+</div>
+<p>
+       The part of this expression containing $h_{p\bar q}$ is $\| D\| ^2$. Differentiating the logarithmic determinant twice gives 
+    
+<div class="equation">
+  \[  \Delta _ gG=h^{i\bar j}g^{k\bar\ell } \nabla _{\bar\ell }\nabla _ kh_{i\bar j}-\| A\| ^2.  \]
+</div>
+<p>
+       By the antisymmetry of $T$, the two remaining derivative terms combine to $2\operatorname {Re}\langle A,D\rangle $, where $\langle \cdot ,\cdot \rangle $ is the inner product of the norm above. These identities give (<a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a>). 
+    <p>
+      To bound the remainder $E$ explicitly, let 
+    
+<div class="equation">
+  \[  \mathcal C_{i\bar\ell k\bar j} =(\nabla _ i\nabla _{\bar\ell }-\nabla _{\bar\ell }\nabla _ i)h_{k\bar j}.  \]
+</div>
+<p>
+        The remainder is the contraction by $h^{i\bar j}g^{k\bar\ell }$ of 
+    
+<div class="equation">
+  \[  \begin{split} &amp; (\nabla _ i\overline{T_{j\ell }^ q})(g_{k\bar q}-h_{k\bar q}) +(\nabla _{\bar\ell }T_{ik}^ p)(g_{p\bar j}-h_{p\bar j})\\ &amp; \hspace{15mm}+\mathcal C_{i\bar\ell k\bar j} -T_{ik}^ p\overline{T_{j\ell }^ q}g_{p\bar q}. \end{split}  \]
+</div>
+<p>
+       The commutator $\mathcal C$ is the curvature of $\nabla $ acting linearly on $h$, as one sees by inserting $\nabla =\partial +\Gamma $ and canceling the derivatives of $h$. In a $g$-unitary frame diagonalizing $h$, every coefficient in this remainder is bounded by $C_ g(1+S)$, so the contraction is bounded by $C_ g(1+S)\sum _ i h^{i\bar i}=C_ g(1+S)B$, as asserted. In particular, no derivative of $h$ remains in $E$. 
+    <p>
+      It remains to control the gradient term introduced by the logarithm. Define 
+    
+<div class="equation">
+  \[  H_{ik\bar j}=h_{i\bar j}\frac{S_ k}{S},\qquad K=\| A+D-H\| ^2\geq 0.  \]
+</div>
+<p>
+       By (<a data-tag="D0224E0D" href="../../tag/96DF02AD3F7C/">9.11</a>), 
+    
+<div class="equation">
+  \[  g^{i\bar\ell }(A+D)_{ik\bar\ell }=S_ k+\tau _ k.  \]
+</div>
+<p>
+       Moreover $\| H\| ^2=|\partial S|_ h^2/S$. Expanding the square therefore gives 
+    
+<div class="equation">
+  \[  K=\| A+D\| ^2-\frac{|\partial S|_ h^2}{S} -\frac2S\operatorname {Re}(h^{k\bar q}\tau _ kS_{\bar q}).  \]
+</div>
+<p>
+       Combining this with (<a data-tag="CEB21F4A" href="../../tag/827F0F57BBAC/">9.12</a>) and with $\Delta _ h\log S=\Delta _ hS/S-|\partial S|_ h^2/S^2$, we obtain the exact identity 
+    
+<div class="equation">
+  \[  \Delta _ h\log S=\frac KS+ \frac2{S^2}\operatorname {Re}(h^{k\bar q}\tau _ kS_{\bar q}) +\frac{\Delta _ gG}{S}+\frac ES.  \]
+</div>
+<p>
+       Since $K\geq 0$ and $S\geq 1$, and since $E/S\geq -2C_ gB$, enlarging the constant proves the lemma. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-49C333BE">
+<p><a class="environment-identifier" href="../../tag/A61645907A4D/">Theorem <span data-tag="49C333BE">9.4.2</span>.</a><span data-gerby-tag="49C333BE"></span> Fix $D,K&gt;0$ and a smooth real function $G$ on $X$. Suppose $u$ is smooth, $\omega _ u&gt;0$, and </p>
+<div class="equation">
+  \[  \operatorname {osc}_ Xu\leq D,\qquad \omega _ u^ n=\mathrm{e}^ G\omega ^ n,\qquad |G|\leq K,\qquad \Delta _ gG\geq -K.  \]
+</div>
+<p> There is a constant $C=C(\omega ,D,K)$ such that </p>
+<div class="equation">
+  \[  C^{-1}\omega \leq \omega _ u\leq C\omega .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use $h=g+(u_{i\bar j})$, $S=\operatorname {tr}_ g h$, and $B=\operatorname {tr}_ h g$ as in lemma <a data-tag="FE968158" href="../../tag/BC4847C0CD7D/">9.4.1</a>. Write $s=u-\inf _ Xu+1$, so that $1\leq s\leq D+1$, and consider the maximum of 
+    
+<div class="equation">
+  \[  Q=\log S-Au+s^{-1}  \]
+</div>
+<p>
+       on $X$, where $A\geq 1$ will be fixed below. Let $x$ be a maximum point. If $S(x)&lt;1$, an upper bound for $S$ on $X$ already follows from the oscillation bound and the definition of $Q$, as at the end of the proof. We may therefore assume $S(x)\geq 1$ and use lemma <a data-tag="FE968158" href="../../tag/BC4847C0CD7D/">9.4.1</a>. 
+    <p>
+       Since the eigenvalues of $h$ relative to $g$ are positive, $SB\geq n^2$, and hence $\Delta _ gG/S\geq -KB/n^2$. Moreover, $\partial Q=0$ at $x$ gives 
+    
+<div class="equation">
+  \[  \frac{S_ k}{S}=(A+s^{-2})u_ k.  \]
+</div>
+<p>
+        Because $|\tau |_ h^2\leq C_ gB$, the absolute value of the torsion term is bounded by 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-28B481A7"><span data-gerby-tag="28B481A7"></span>
+<span class="equation-label"><a data-tag="28B481A7" href="../../tag/8A4325B57E04/">9.15</a></span>
+<div>\begin{equation} \label{eq:trace-torsion-absorption} \begin{split}  \left|\frac2{S^2}\operatorname {Re}(h^{k\bar q}\tau _ kS_{\bar q})\right| &amp; \leq \frac{C_ g(A+1)}S\sqrt B\, |\partial u|_ h\\ &amp; \leq \frac{|\partial u|_ h^2}{s^3} +\frac{C_ g(A+1)^2s^3}{S^2}B. \end{split} \end{equation}</div>
+</div>
+<p>
+       If $S(x)^2\leq (A+1)^2(D+1)^3$, then $S(x)$ is bounded once $A$ is fixed, and again so is $S$ on $X$. In the remaining case the coefficient of $B$ in the last term is at most $C_ g$. 
+    <p>
+      On the other hand, direct computation gives 
+    
+<div class="equation">
+  \[  \Delta _ hQ=\Delta _ h\log S+(A+s^{-2})(B-n) +2s^{-3}|\partial u|_ h^2.  \]
+</div>
+<p>
+       The trace inequality and (<a data-tag="28B481A7" href="../../tag/8A4325B57E04/">9.15</a>) imply at $x$ 
+    
+<div class="equation">
+  \[  0\geq \Delta _ hQ\geq (A-C_ g-K/n^2)B-n(A+1),  \]
+</div>
+<p>
+       after a fixed enlargement of $C_ g$. Choosing $A&gt;C_ g+K/n^2+1$, we conclude that $B(x)$ is bounded. If $\lambda _1,\ldots ,\lambda _ n$ are the eigenvalues of $h$ relative to $g$, then $\prod _ i\lambda _ i=\mathrm{e}^ G$, and for $n\geq 2$ 
+    
+<div class="equation">
+  \[  S=\sum _ i\lambda _ i =\mathrm{e}^ G\sum _ i\prod _{j\ne i}\lambda _ j^{-1} \leq n \mathrm{e}^ K B^{n-1}.  \]
+</div>
+<p>
+       For $n=1$, directly $S=\mathrm{e}^ G$. Thus $S(x)$ is bounded in all cases. For every $y\in X$, the maximality of $Q$ at $x$ gives 
+    
+<div class="equation">
+  \[  \log S(y)\leq \log S(x)+A(u(y)-u(x))+s(x)^{-1}-s(y)^{-1} \leq \log S(x)+AD+1.  \]
+</div>
+<p>
+       This proves $S\leq C$ on $X$. The lower bound for the determinant then gives $\lambda _ i\geq \mathrm{e}^{-K}C^{-(n-1)}$, which proves the uniform equivalence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+Some equations give a trace estimate that still depends on the gradient. A linear dependence suffices to close the estimate, because elliptic regularity for the fixed operator $\Delta _ g$ bounds a Hölder norm of the gradient, and interpolation makes its contribution to the supremum norm arbitrarily small. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-09F214FC">
+<p><a class="environment-identifier" href="../../tag/E5E1B9237922/">Lemma <span data-tag="09F214FC">9.4.3</span>.</a><span data-gerby-tag="09F214FC"></span> Let $A,M\geq 0$. There is $C=C(g,A,M)$ such that every smooth real function $v$ on $X$ satisfying </p>
+<div class="equation">
+  \[  \operatorname {osc}_ Xv\leq M,\qquad \| \Delta _ gv\| _{L^\infty } \leq A\bigl (1+\| \mathrm{d}v\| _{L^\infty (g)}\bigr )  \]
+</div>
+<p> also satisfies </p>
+<div class="equation">
+  \[  \| \mathrm{d}v\| _{L^\infty (g)}+\| \Delta _ gv\| _{L^\infty }\leq C.  \]
+</div>
+<p> Here all volume and function-space norms use the fixed smooth metric $g$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Subtract $\inf _ Xv$, so that $0\leq v\leq M$, and put $K=\| \mathrm{d}v\| _{L^\infty (g)}$. Fix $p&gt;2n$ and $0&lt;\alpha &lt;1-2n/p$. The fixed operator $\Delta _ g$ is uniformly elliptic on the underlying real manifold. The local $W^{2,p}$ estimates, patched by a finite atlas, and Morrey's inequality give 
+    
+<div class="equation">
+  \[  \| v\| _{C^{1,\alpha }} \leq C_ g\| v\| _{W^{2,p}} \leq C_ g\bigl (\| v\| _{L^ p}+\| \Delta _ gv\| _{L^ p}\bigr ) \leq C_ g\bigl (M+A(1+K)\bigr ).  \]
+</div>
+<p>
+       These are the standard linear elliptic estimates of <span class="cite">[<span class="postnote">Chapter 9</span>, <a href="../../references/#R8F926DA7BC71">GT01</a>]</span>; the constants depend on the fixed metric and on the chosen $p,\alpha $. 
+    <p>
+      For $0&lt;t\leq t_0$, with $t_0$ fixed by the atlas, integration along a coordinate segment of length $t$ gives 
+    
+<div class="equation">
+  \[  K\leq C_ g t^{-1}M+C_ g t^\alpha \| v\| _{C^{1,\alpha }}.  \]
+</div>
+<p>
+       Indeed, the difference quotient is bounded by $2M/t$, and its difference from the derivative at the initial point is bounded by $C_ gt^\alpha \| v\| _{C^{1,\alpha }}$. A finite atlas with smaller charts controls every point and coordinate direction; equivalence with the $g$-norm gives the displayed estimate. Consequently, 
+    
+<div class="equation">
+  \[  K\leq C_ gt^{-1}M+C_ g^2t^\alpha (M+A) +C_ g^2At^\alpha K.  \]
+</div>
+<p>
+       Choose $t\leq t_0$ so small that $C_ g^2At^\alpha \leq 1/2$. This choice depends only on $g,A$, including when $A=0$. Absorbing the last term bounds $K$ in terms of $g,A,M$, and the assumed trace estimate then bounds $\| \Delta _ gv\| _\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-AC24B5B7">
+<p><a class="environment-identifier" href="../../tag/36B42C74EE0B/">Corollary <span data-tag="AC24B5B7">9.4.4</span>.</a><span data-gerby-tag="AC24B5B7"></span> Fix $\omega $. For smooth solutions of </p>
+<div class="equation">
+  \[  (\omega +\mathrm{dd}^{\mathrm{c}}u)^ n=\mathrm{e}^ G\omega ^ n,\qquad \omega +\mathrm{dd}^{\mathrm{c}}u&gt;0,  \]
+</div>
+<p> a uniform $C^0$ bound for $u$ and uniform bounds for the smooth real logarithmic density $G$ in every $C^ k$ norm imply uniform bounds for $u$ in every $C^ k$ norm. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Theorem <a data-tag="49C333BE" href="../../tag/A61645907A4D/">9.4.2</a> gives uniform ellipticity and a bound for $\Delta _ gu=S-n$. The linear elliptic $W^{2,p}$ estimates for the fixed operator $\Delta _ g$ first bound $u$ in $C^{1,\alpha }$ for every $0&lt;\alpha &lt;1$. The local Evans–Krylov estimate for the concave logarithmic determinant then gives a uniform $C^{2,\beta }$ bound for some $0&lt;\beta &lt;1$. To apply it in its real form, project real symmetric Hessians to their complex Hermitian part and extend the logarithmic determinant concavely from the compact set of positive matrices given by the preceding theorem. The extension is uniformly elliptic on real symmetric matrices because the projection preserves positivity and the trace, so the usual Evans–Krylov theorem applies. Finally, differentiating the equation gives linear uniformly elliptic equations with Hölder coefficients, and Schauder estimates and induction give all higher bounds. No regularity results beyond these standard local elliptic estimates are needed. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The same conclusion holds for equations $\omega _ u^ n=\mathrm{e}^{a u+F}\omega ^ n$ with $a$ in a fixed bounded interval of nonnegative numbers, $u$ uniformly bounded, and $F$ uniformly bounded in every $C^ k$ norm. Indeed, with $G=au+F$, 
+</p>
+<div class="equation">
+  \[  \Delta _ g(a u+F)=a(S-n)+\Delta _ gF\geq -an+\Delta _ gF,  \]
+</div>
+<p>
+ so theorem <a data-tag="49C333BE" href="../../tag/A61645907A4D/">9.4.2</a> applies without any prior bound for derivatives of $u$. The estimate for the fixed operator $\Delta _ g$ then gives a $C^{1,\alpha }$ bound, after which the same local regularity and bootstrapping apply. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

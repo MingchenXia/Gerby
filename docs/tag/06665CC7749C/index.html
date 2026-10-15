@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Existence by maximization · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/energy-geodesics/">Chapter 14 · Energy, geodesics, rays, and test curves</a> · Tag <code>06665CC7749C</code></p><h1>Existence by maximization</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 17.4.1 Existence by maximization <span data-gerby-tag="1A178841"></span></div>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-62048093">
+<p><a class="environment-identifier" href="../../tag/37BEFE25B673/">Definition <span data-tag="62048093">17.4.1</span>.</a><span data-gerby-tag="62048093"></span> A finite positive Radon measure $\nu $ on $X$ is <em>non-pluripolar</em> if $\nu (A)=0$ for every pluripolar Borel set $A\subset X$. Integrals against $\nu $ use its completion, so subsets of pluripolar sets are also $\nu $-null. </p>
+</article>  For example, every measure of the form $g\, \omega ^ n$ with $0\leq g\in L^1(X,\omega ^ n)$ is non-pluripolar, since pluripolar sets have volume zero (see the remarks after definition <a data-tag="F36A6386" href="../../tag/5458CA6608A5/">10.1.1</a>). Every $\theta $-psh function is finite $\nu $-almost everywhere, because its pole set is a pluripolar Borel set. 
+
+<p>
+Finite positive Borel measures on $X$ are compared through their integrals of continuous functions. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-7AF67C9F">
+<p><a class="environment-identifier" href="../../tag/B408410BD203/">Lemma <span data-tag="7AF67C9F">17.4.2</span>.</a><span data-gerby-tag="7AF67C9F"></span> Let $\lambda $ and $\sigma $ be finite positive Borel measures on $X$. </p>
+<ol>
+<li><p>
+If $\int _ Xg\, \mathrm d\lambda \geq \int _ Xg\, \mathrm d\sigma $ for every continuous function $g\geq 0$ on $X$, then $\lambda (E)\geq \sigma (E)$ for every Borel set $E\subset X$. In particular, two finite positive Borel measures on $X$ with the same integrals of all continuous functions coincide. 
+</p>
+</li><li><p>
+If finite positive Borel measures $\lambda _ j$ converge weakly to $\lambda $ and satisfy $\lambda _ j\geq \sigma $ for every $j$, then $\lambda \geq \sigma $. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) This is lemma <a data-tag="94C0023B" href="../../tag/EC77D6F30D3D/">16.2.1</a>(2) with $W=X$; the second assertion follows by applying the first in both directions. 
+    <p>
+      (2) Since $X$ is compact, weak convergence of measures on $X$ is convergence of the integrals of all continuous functions (see the discussion following definition <a data-tag="0133D240" href="../../tag/A86EC2473CB6/">7.2.4</a>). Hence $\int _ Xg\, \mathrm d\lambda =\lim _ j\int _ Xg\, \mathrm d\lambda _ j\geq \int _ Xg\, \mathrm d\sigma $ for every continuous function $g\geq 0$ on $X$, and (1) gives $\lambda \geq \sigma $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-C5EA9EBD">
+<p><a class="environment-identifier" href="../../tag/2099099BAE21/">Proposition <span data-tag="C5EA9EBD">17.4.3</span>.</a><span data-gerby-tag="C5EA9EBD"></span> Let $u\in \mathcal E^1(X,\theta ,\phi )$ and $f\in C(X,\mathbb R)$, and put $u_ t=P_\theta (u+tf)$ for $t\in \mathbb R$, the envelope of definition <a data-tag="7FB6072B" href="../../tag/A4F165851008/">16.1.3</a>. Then $u_0=u$, and for every $t$ we have $u_ t\sim u$ and $u_ t\leq u+tf$ on $X$. Each $u_ t$ has finite energy, and </p>
+<div class="equation">
+  \[  \frac{\mathrm d}{\mathrm dt}E(u_ t)=\int _ Xf\, \mu _{u_ t}.  \]
+</div>
+<p> The derivative is continuous on $\mathbb R$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $B=\sup _ X|f|$. The potential $u-|t|B$ is a competitor for the obstacle $u+tf$, and every competitor lies below $u+|t|B$, so $u-|t|B\leq u_ t\leq u+|t|B$. Hence $u_ t\sim u$, and $E(u_ t)\geq E(u)-|t|Bm&gt;-\infty $, so $u_ t\in \mathcal E^1(X,\theta ,\phi )$ by theorem <a data-tag="CF717230" href="../../tag/69E7D1FEF207/">17.2.8</a>. The obstacle $u+tf$ is upper semicontinuous, so $u_ t\leq u+tf$ everywhere, by proposition <a data-tag="3796C01B" href="../../tag/641F3FEC623D/">16.1.4</a>(1),(2). In particular $u_0\leq u$; since $u$ is itself a competitor for the obstacle $u$, also $u\leq u_0$, so $u_0=u$. 
+    <p>
+      Next we show that $\mu _{u_{t+s}}\to \mu _{u_ t}$ weakly as $s\to 0$. The obstacles $u+tf$ and $u+(t+s)f$ differ by at most $|s|B$, so proposition <a data-tag="3796C01B" href="../../tag/641F3FEC623D/">16.1.4</a>(4) gives $u_ t-|s|B\leq u_{t+s}\leq u_ t+|s|B$. In particular all $u_ t$ have the pole set of $u$, and $|u_{t+s}-u_ t|\leq |s|B$ outside it. Since $|\arctan a-\arctan b|\leq |a-b|$ for real $a,b$, and adding the same smooth local potential of $\theta $ to $u_{t+s}$ and $u_ t$ does not change their difference, the distance $d_*$ of definition <a data-tag="9AC5981A" href="../../tag/019A8D37A03F/">15.6.2</a> between the local potentials of $u_{t+s}$ and $u_ t$ is at most $|s|B$ everywhere. Hence, for every $\delta &gt;0$, the sets where it exceeds $\delta $ are empty once $|s|B&lt;\delta $, and $u_{t+s}\to u_ t$ in extended capacity as $s\to 0$. These potentials have full mass relative to $\phi $, so corollary <a data-tag="01A73CB7" href="../../tag/45601E7EC1EE/">15.8.4</a>, applied along every sequence $s_ k\to 0$, gives the asserted weak convergence; in particular $\int _ Xf\, \mu _{u_{t+s}}\to \int _ Xf\, \mu _{u_ t}$. 
+    <p>
+      The obstacle $u+tf$ is bounded above, and it is quasi-continuous, because $u$ is (section <a data-tag="FD8D661F" href="../../tag/FBD81D436A6A/">16.1</a>) and $f$ is continuous. Hence theorem <a data-tag="DDE3B556" href="../../tag/38E18A798D6B/">16.2.5</a> shows that $\mu _{u_ t}$ is carried by the contact set $\{ u_ t=u+tf\} $. On the contact set of $u_{t+s}$ we have $u_{t+s}=u+(t+s)f$ and $u_ t\leq u+tf$, so $u_{t+s}-u_ t\geq sf$ there. On the contact set of $u_ t$ we have $u_ t=u+tf$ and $u_{t+s}\leq u+(t+s)f$, so $u_{t+s}-u_ t\leq sf$ there. The differences are bounded and the pole sets carry no mass, so the tangent bounds of lemma <a data-tag="0662DC3E" href="../../tag/F62E3A64C1EE/">17.3.9</a> give, for every real $s$, 
+    
+<div class="equation">
+  \[  s\int _ Xf\, \mu _{u_{t+s}} \leq E(u_{t+s})-E(u_ t) \leq s\int _ Xf\, \mu _{u_ t}.  \]
+</div>
+<p>
+       Dividing by $s&gt;0$, respectively $s&lt;0$, and letting $s\to 0$, we obtain the right and left derivatives from the weak convergence just proved. Both equal $\int _ Xf\, \mu _{u_ t}$, which depends continuously on $t$ by the same weak convergence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-26EFB917">
+<p><a class="environment-identifier" href="../../tag/011162B56B40/">Theorem <span data-tag="26EFB917">17.4.4</span>.</a><span data-gerby-tag="26EFB917"></span> Let $\nu $ be a non-pluripolar measure on $X$, and suppose that $\mathcal D_\nu =\mathcal E^1(X,\theta ,\phi )\cap L^1(\nu )$ is nonempty. Then $\phi \in L^1(\nu )$, and for the functional </p>
+<div class="equation">
+  \[  F_\nu (v)=E(v)-\int _ X(v-\phi )\, \mathrm d\nu , \qquad v\in \mathcal D_\nu ,  \]
+</div>
+<p> a potential $u\in \mathcal D_\nu $ maximizes $F_\nu $ if and only if $\mu _ u=\nu $. In particular, $F_\nu $ has no maximizer unless $\nu (X)=m$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $v\in \mathcal D_\nu $. Then $v\leq \phi +C$ for a constant $C$, and $\phi \leq 0$. Thus the negative part of $\phi $ is at most that of $v$ plus $C$, and the positive part of $\phi $ vanishes; hence $\phi \in L^1(\nu )$. If $\mu _ u=\nu $, the tangent bound of lemma <a data-tag="0662DC3E" href="../../tag/F62E3A64C1EE/">17.3.9</a> gives 
+    
+<div class="equation">
+  \[  E(v)-E(u)\leq \int _ X(v-u)\, \mathrm d\nu ,  \]
+</div>
+<p>
+       that is, $F_\nu (v)\leq F_\nu (u)$. 
+    <p>
+      Conversely, let $u$ be a maximizer and $f\in C(X,\mathbb R)$. By proposition <a data-tag="C5EA9EBD" href="../../tag/2099099BAE21/">17.4.3</a>, the potentials $u_ t=P_\theta (u+tf)$ have bounded difference from $u$ and finite energy, so they belong to $\mathcal D_\nu $; moreover $u_0=u$ and $u_ t\leq u+tf$ everywhere, hence $\nu $-almost everywhere. Therefore 
+    
+<div class="equation">
+  \[  E(u_ t)-E(u)-t\int _ Xf\, \mathrm d\nu \leq F_\nu (u_ t)-F_\nu (u)\leq 0.  \]
+</div>
+<p>
+       The left side vanishes at $t=0$ and is differentiable there by proposition <a data-tag="C5EA9EBD" href="../../tag/2099099BAE21/">17.4.3</a>; since it attains its maximum at $t=0$, its derivative vanishes there. Thus $\int _ Xf\, \mu _ u=\int _ Xf\, \mathrm d\nu $ for every $f\in C(X,\mathbb R)$, and lemma <a data-tag="7AF67C9F" href="../../tag/B408410BD203/">17.4.2</a>(1) gives $\mu _ u=\nu $. Since $\mu _ u(X)=m$, a maximizer can exist only if $\nu (X)=m$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-702076DF">
+<p><a class="environment-identifier" href="../../tag/8972585EBF32/">Theorem <span data-tag="702076DF">17.4.5</span>.</a><span data-gerby-tag="702076DF"></span> Let $\mathrm dV$ be a smooth positive volume form on $X$, and let $g\in L^\infty (\mathrm dV)$ satisfy $g\geq 0$ and $\int _ Xg\, \mathrm dV=m$. Then there is $u\in \mathcal E^1(X,\theta ,\phi )$ with </p>
+<div class="equation">
+  \[  \mu _ u=g\, \mathrm dV,\qquad \sup _ Xu=0.  \]
+</div>
+<p> It maximizes $F_{g\, \mathrm dV}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $\nu =g\, \mathrm dV$, a non-pluripolar measure of mass $m$. Every $\theta $-psh potential is integrable for $\mathrm dV$, hence for $\nu $, so $\mathcal D_\nu =\mathcal E^1(X,\theta ,\phi )$; we write $F=F_\nu $. By the shift formula for the energy and $\nu (X)=m$, the functional $F$ is invariant under adding constants, so we may restrict it to potentials $v$ with $\sup _ Xv=0$. For such $v$, lemma <a data-tag="D3939F9F" href="../../tag/4D5FAF80D021/">16.4.2</a> gives $v\leq \phi $, hence $E(v)\leq 0$. Since $\mathrm dV\leq c_ V\, \omega ^ n$ for a constant $c_ V$, proposition <a data-tag="BDC823C6" href="../../tag/2984F6438B4B/">14.2.1</a> shows that $\int _ X|v|\, \mathrm dV$ is bounded independently of $v$, and $\phi \in L^1(\mathrm dV)$, so 
+    
+<div class="equation">
+  \[  0\leq -\int _ X(v-\phi )g\, \mathrm dV\leq C  \]
+</div>
+<p>
+       with $C$ independent of $v$. Consequently $\sup F\in [0,C]$, since $F(\phi )=0$ and $F(v)\leq 0+C$. 
+    <p>
+      Let $(v_ j)$ be a normalized maximizing sequence with $F(v_ j)\geq -1$. Then $E(v_ j)=F(v_ j)+\int _ X(v_ j-\phi )g\, \mathrm dV\geq -C-1$. By corollary <a data-tag="8123FC46" href="../../tag/85CFF04E2CEC/">17.3.4</a> a subsequence converges in $L^1(X)$ to some $u\in \mathcal E^1(X,\theta ,\phi )$, and $\sup _ Xu=0$, because the supremum is continuous for $L^1$ convergence of potentials (proposition <a data-tag="BDC823C6" href="../../tag/2984F6438B4B/">14.2.1</a>). The linear term $v\mapsto \int _ X(v-\phi )g\, \mathrm dV$ is continuous for $L^1$ convergence because $g$ is bounded, and the energy is upper semicontinuous by proposition <a data-tag="C70978FB" href="../../tag/2FF0E77E9188/">17.3.3</a>. Hence $F(u)\geq \varlimsup _ jF(v_ j)=\sup F$, so $u$ is a maximizer, and theorem <a data-tag="26EFB917" href="../../tag/011162B56B40/">17.4.4</a> gives $\mu _ u=\nu $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-B027C133">
+<p><a class="environment-identifier" href="../../tag/5BDA01022188/">Proposition <span data-tag="B027C133">17.4.6</span>.</a><span data-gerby-tag="B027C133"></span> Let $\lambda &gt;0$ and let $\nu $ be a finite positive non-pluripolar measure on $X$. If $u,v\in \mathcal E(X,\theta ,\phi )$ satisfy </p>
+<div class="equation">
+  \[  \mu _ u=\mathrm e^{\lambda u}\nu , \qquad \mu _ v\geq \mathrm e^{\lambda v}\nu ,  \]
+</div>
+<p> then $u\geq v$. In particular, the equation $\mu _ u=\mathrm e^{\lambda u}\nu $ has at most one solution in $\mathcal E(X,\theta ,\phi )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $A=\{ u&lt;v\} $. The comparison principle of proposition <a data-tag="944C88B6" href="../../tag/C32431185924/">16.7.4</a> gives 
+    
+<div class="equation">
+  \[  \int _ A\mathrm e^{\lambda v}\, \mathrm d\nu \leq \mu _ v(A)\leq \mu _ u(A) =\int _ A\mathrm e^{\lambda u}\, \mathrm d\nu \leq m.  \]
+</div>
+<p>
+       Both potentials are finite $\nu $-almost everywhere, and on $A$ we have $\mathrm e^{\lambda v}&gt;\mathrm e^{\lambda u}$. The difference $\mathrm e^{\lambda v}-\mathrm e^{\lambda u}$ is therefore positive on $A$ and has nonpositive integral over $A$, so $\nu (A)=0$. Hence $\mu _ u(A)=0$, and the domination principle (theorem <a data-tag="FE2D5C9D" href="../../tag/0F4D01059518/">16.4.6</a>) gives $u\geq v$ everywhere. If $u$ and $v$ are two solutions, applying this in both directions gives $u=v$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Solutions of the exponential equations are obtained as maximizers of the functionals 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-B3DEFA9A"><span data-gerby-tag="B3DEFA9A"></span>
+<span class="equation-label"><a data-tag="B3DEFA9A" href="../../tag/20471D0DB1A7/">17.28</a></span>
+<div>\begin{equation} \label{eq:relative-exponential-functional} F_\lambda (v)=E(v)-\lambda ^{-1}\int _ X\mathrm e^{\lambda v}\, \mathrm d\nu ,\qquad v\in \mathcal E^1(X,\theta ,\phi ), \end{equation}</div>
+</div>
+<p>
+ where $\lambda &gt;0$ and $\nu $ is a finite positive Borel measure on $X$. These functionals are finite: the energy is finite on $\mathcal E^1(X,\theta ,\phi )$, and the Borel function $\mathrm e^{\lambda v}$ satisfies $0\leq \mathrm e^{\lambda v}\leq \mathrm e^{\lambda \sup _ Xv}$, where $\mathrm e^{\lambda v}=0$ on the pole set of $v$. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-E147C2D9">
+<p><a class="environment-identifier" href="../../tag/B4AA6C4C1C94/">Lemma <span data-tag="E147C2D9">17.4.7</span>.</a><span data-gerby-tag="E147C2D9"></span> Let $\nu $ be a finite positive Borel measure on $X$ and $\lambda &gt;0$. If $u\in \mathcal E^1(X,\theta ,\phi )$ maximizes the functional $F_\lambda $ of (<a data-tag="B3DEFA9A" href="../../tag/20471D0DB1A7/">17.28</a>) on $\mathcal E^1(X,\theta ,\phi )$, then $\mu _ u=\mathrm e^{\lambda u}\nu $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $f\in C(X,\mathbb R)$ and $u_ t=P_\theta (u+tf)$ for $t\in \mathbb R$. By proposition <a data-tag="C5EA9EBD" href="../../tag/2099099BAE21/">17.4.3</a>, $u_ t\in \mathcal E^1(X,\theta ,\phi )$, $u_0=u$ and $u_ t\leq u+tf$ everywhere. Hence $\mathrm e^{\lambda u_ t}\leq \mathrm e^{\lambda (u+tf)}$, and $F_\lambda (u_ t)\leq F_\lambda (u)$ gives 
+    
+<div class="equation">
+  \[  E(u_ t)-E(u)-\lambda ^{-1} \int _ X\left(\mathrm e^{\lambda (u+tf)}-\mathrm e^{\lambda u}\right) \, \mathrm d\nu \leq 0.  \]
+</div>
+<p>
+       The left side vanishes at $t=0$. Its energy term is differentiable, with derivative $\int _ Xf\, \mu _{u_ t}$, by proposition <a data-tag="C5EA9EBD" href="../../tag/2099099BAE21/">17.4.3</a>. For $|t|\leq 1$ the $t$-derivative $\lambda f\mathrm e^{\lambda (u+tf)}$ of the integrand is bounded by $\lambda \sup _ X|f|\, \mathrm e^{\lambda \sup _ Xu+\lambda \sup _ X|f|}$, which is integrable for the finite measure $\nu $; by the mean value theorem and dominated convergence, the integral is differentiable as well, with derivative $\lambda \int _ Xf\mathrm e^{\lambda (u+tf)}\, \mathrm d\nu $. Since the left side is maximal at $t=0$, its derivative vanishes there: $\int _ Xf\, \mu _ u=\int _ Xf\mathrm e^{\lambda u}\, \mathrm d\nu $. Since $f$ is arbitrary and $\mathrm e^{\lambda u}\nu $ is a finite measure, lemma <a data-tag="7AF67C9F" href="../../tag/B408410BD203/">17.4.2</a>(1) gives $\mu _ u=\mathrm e^{\lambda u}\nu $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+To find maximizers for an arbitrary non-pluripolar measure $\nu $, we need the continuity of $v\mapsto \int _ X\mathrm e^{\lambda v}\, \mathrm d\nu $ for $L^1$ convergence of potentials. This rests on the following two lemmas, in which $\theta $ is an arbitrary smooth closed real $(1,1)$-form. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-1FF80998">
+<p><a class="environment-identifier" href="../../tag/DD59ECAA0656/">Lemma <span data-tag="1FF80998">17.4.8</span>.</a><span data-gerby-tag="1FF80998"></span> Let $\theta $ be a smooth closed real $(1,1)$-form on $X$. If $q_ j,q\in \mathrm{PSH}(X,\theta )$ and $q_ j\to q$ in $L^1(X)$, then $\varlimsup _ jq_ j=q$ quasi-everywhere. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="9EA40DD3" href="../../tag/369EDE8DEEC5/">17.3.2</a>, the tail envelopes $a_ j=(\sup _{k\geq j}q_ k)^*$ are $\theta $-psh and decrease pointwise to $q$. For each $j$, corollary <a data-tag="309904EA" href="../../tag/8EF0B17C7325/">10.2.2</a>, applied after adding smooth local potentials of $\theta $, gives $a_ j=\sup _{k\geq j}q_ k$ outside a pluripolar set. The countable union of these sets is pluripolar (theorem <a data-tag="BCB00118" href="../../tag/9421BA4DC329/">10.1.4</a>), and outside it $q=\lim _ ja_ j=\varlimsup _ jq_ j$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-77A086A9">
+<p><a class="environment-identifier" href="../../tag/B5DC04E7729F/">Lemma <span data-tag="77A086A9">17.4.9</span>.</a><span data-gerby-tag="77A086A9"></span> Let $\nu $ be a finite non-pluripolar measure on $X$, let $\theta $ be a smooth closed real $(1,1)$-form on $X$, and let $B\geq 0$. Suppose that $q_ j,q\in \mathrm{PSH}(X,\theta )$ satisfy $|q_ j|,|q|\leq B$ and $q_ j\to q$ in $L^1(X)$. Then $q_ j\to q$ in $L^1(\nu )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="1FF80998" href="../../tag/DD59ECAA0656/">17.4.8</a>, $\varlimsup _ jq_ j=q$ outside a pluripolar set, hence $\nu $-almost everywhere. Thus $(q_ j-q)_+\to 0$ $\nu $-almost everywhere, and $\int _ X(q_ j-q)_+\, \mathrm d\nu \to 0$ by bounded convergence, since $0\leq (q_ j-q)_+\leq 2B$ and $\nu $ is finite. Since $|q_ j-q|=2(q_ j-q)_+-(q_ j-q)$, it remains to show that $\int _ Xq_ j\, \mathrm d\nu \to \int _ Xq\, \mathrm d\nu $. We have just seen that $\varlimsup _ j\int _ X(q_ j-q)\, \mathrm d\nu \leq 0$, so it suffices to prove that $L=\varliminf _ j\int _ Xq_ j\, \mathrm d\nu $ is at least $\int _ Xq\, \mathrm d\nu $. 
+    <p>
+      Choose a subsequence $(q_{j_ k})$ with $\int _ Xq_{j_ k}\, \mathrm d\nu \to L$. For bounded Borel functions $y$ on $X$ put $\| y\| =(\int _ Xy^2\, \mathrm d\nu )^{1/2}$. For $l\geq 1$ let $C_ l$ be the set of finite convex combinations of the functions $q_{j_ k}$ with $k\geq l$, and let $d_ l=\inf \{ \| y\| :y\in C_ l\} $. Since $C_{l+1}\subset C_ l$ and $\| y\| \leq B\nu (X)^{1/2}$ for $y\in C_ l$, the numbers $d_ l$ increase to a finite limit. Choose $y_ l\in C_ l$ with $\| y_ l\| ^2\leq d_ l^2+1/l$. For $l\leq l'$ the function $\frac12(y_ l+y_{l'})$ belongs to the convex set $C_ l$, so its norm is at least $d_ l$. The parallelogram identity, obtained by integrating the pointwise identity $(a-b)^2+(a+b)^2=2a^2+2b^2$, therefore gives 
+    
+<div class="equation">
+  \[  \| y_ l-y_{l'}\| ^2=2\| y_ l\| ^2+2\| y_{l'}\| ^2-4\bigl \| \tfrac 12(y_ l+y_{l'})\bigr \| ^2 \leq 2(d_{l'}^2-d_ l^2)+\frac2l+\frac2{l'},  \]
+</div>
+<p>
+       and the right side tends to zero as $l\to \infty $, uniformly in $l'\geq l$. 
+    <p>
+      By the Cauchy–Schwarz inequality, $\int _ X|y_ l-y_{l'}|\, \mathrm d\nu \leq \nu (X)^{1/2}\| y_ l-y_{l'}\| $, so we can choose $l_1&lt;l_2&lt;\cdots $ with $\int _ X|y_{l_{i+1}}-y_{l_ i}|\, \mathrm d\nu \leq 2^{-i}$. By monotone convergence the series $\sum _ i|y_{l_{i+1}}-y_{l_ i}|$ has finite integral, hence converges $\nu $-almost everywhere, and therefore $y_{l_ i}$ converges $\nu $-almost everywhere; let $h=\varlimsup _ iy_{l_ i}$, a Borel function with $|h|\leq B$. By bounded convergence, $\int _ Xy_{l_ i}\, \mathrm d\nu \to \int _ Xh\, \mathrm d\nu $. On the other hand, $\int _ Xy_ l\, \mathrm d\nu $ is a convex combination of the numbers $\int _ Xq_{j_ k}\, \mathrm d\nu $ with $k\geq l$, which tend to $L$, so $\int _ Xy_ l\, \mathrm d\nu \to L$. Hence $L=\int _ Xh\, \mathrm d\nu $. 
+    <p>
+      It remains to show that $h=q$ $\nu $-almost everywhere. Each $y_{l_ i}$ is a convex combination of $\theta $-psh functions, hence $\theta $-psh, and $\| y_{l_ i}-q\| _{L^1(X)}\leq \sup _{k\geq l_ i}\| q_{j_ k}-q\| _{L^1(X)}$, which tends to zero. By lemma <a data-tag="1FF80998" href="../../tag/DD59ECAA0656/">17.4.8</a>, applied to the sequence $(y_{l_ i})_ i$, the function $h=\varlimsup _ iy_{l_ i}$ equals $q$ outside a pluripolar set, hence $\nu $-almost everywhere. Thus $L=\int _ Xq\, \mathrm d\nu $, as required. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-93FE81D3">
+<p><a class="environment-identifier" href="../../tag/F89C0E4EBAC2/">Corollary <span data-tag="93FE81D3">17.4.10</span>.</a><span data-gerby-tag="93FE81D3"></span> Let $\theta $ be a smooth closed real $(1,1)$-form on $X$, let $q_ j,q\in \mathrm{PSH}(X,\theta )$ satisfy $q_ j\to q$ in $L^1(X)$, and let $\nu $ be a finite non-pluripolar measure on $X$. Then for every $\lambda &gt;0$, </p>
+<div class="equation">
+  \[  \mathrm e^{\lambda q_ j}\longrightarrow \mathrm e^{\lambda q} \quad \text{in }L^1(\nu ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="BDC823C6" href="../../tag/2984F6438B4B/">14.2.1</a> there is a constant $C$ with $q_ j,q\leq C$. We show that the functions $\mathrm e^{\lambda q_ j}$ and $\mathrm e^{\lambda q}$, with value zero on the pole sets, are $C_1\omega $-psh for a constant $C_1$ independent of $j$; the preceding lemma then applies to them. 
+    <p>
+      Choose $C_0\geq 0$ with $\theta \leq C_0\omega $, and a finite cover of $X$ by coordinate balls $W'\Subset W$ such that the smaller balls $W'$ still cover $X$, together with smooth functions $h_ W$ near $\overline W$ with $\mathrm{dd}^{\mathrm{c}}h_ W=\theta $. The function $q_ j+h_ W$ is plurisubharmonic on $W$, so for every $\delta &gt;0$ smaller than the distance from $W'$ to the boundary of $W$, its regularization $g_\delta =(q_ j+h_ W)*\rho _\delta $ by the radial mollifier is a smooth plurisubharmonic function on the ball $W'$, and $g_\delta $ decreases to $q_ j+h_ W$ as $\delta \downarrow 0$, by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(2). Put $q_{j,\delta }=g_\delta -h_ W$. Then $\mathrm{dd}^{\mathrm{c}}q_{j,\delta }\geq -\theta \geq -C_0\omega $. Moreover $g_\delta (x)$ is an average of values of $q_ j+h_ W\leq C+h_ W$ at points within distance $\delta $ of $x$, so by uniform continuity of $h_ W$ on a compact neighborhood of $\overline{W'}$ in $W$ we have $q_{j,\delta }\leq C+1$ on $W'$ for all small $\delta $, independently of $j$. 
+    <p>
+      For a smooth real function $s$, the chain rule $\partial \bar\partial \, \mathrm e^{\lambda s}=\lambda \mathrm e^{\lambda s}\partial \bar\partial s+\lambda ^2\mathrm e^{\lambda s}\partial s\wedge \bar\partial s$ and the identity $\frac{\mathrm i}{2\pi }\partial s\wedge \bar\partial s=\mathrm ds\wedge \mathrm d^{\mathrm c}s$, which follows from (<a data-tag="B5542B77" href="../../tag/C44E7362B437/">7.6</a>), give 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\mathrm e^{\lambda q_{j,\delta }} =\lambda \mathrm e^{\lambda q_{j,\delta }}\mathrm{dd}^{\mathrm{c}}q_{j,\delta } +\lambda ^2\mathrm e^{\lambda q_{j,\delta }} \mathrm dq_{j,\delta }\wedge \mathrm d^{\mathrm c}q_{j,\delta } \geq -\lambda C_0\mathrm e^{\lambda (C+1)}\omega ,  \]
+</div>
+<p>
+       because $\mathrm dq_{j,\delta }\wedge \mathrm d^{\mathrm c}q_{j,\delta }$ is a semipositive $(1,1)$-form. Thus $\mathrm e^{\lambda q_{j,\delta }}$ is $C_1\omega $-psh on $W'$ with $C_1=\lambda C_0\mathrm e^{\lambda (C+1)}$, and so is its decreasing limit $\mathrm e^{\lambda q_ j}$ as $\delta \downarrow 0$, by theorem <a data-tag="1174FCEA" href="../../tag/FE144A69076E/">8.3.1</a> applied after adding a smooth local potential of $C_1\omega $; the limit is not identically $-\infty $, since it is nonnegative. Since the balls $W'$ cover $X$, the function $\mathrm e^{\lambda q_ j}$ belongs to $\mathrm{PSH}(X,C_1\omega )$, and the same argument applies to $\mathrm e^{\lambda q}$. 
+    <p>
+      The exponential is Lipschitz with constant $\lambda \mathrm e^{\lambda C}$ on $(-\infty ,C]$, so $\mathrm e^{\lambda q_ j}\to \mathrm e^{\lambda q}$ in $L^1(X)$. These functions take values in $[0,\mathrm e^{\lambda C}]$, and lemma <a data-tag="77A086A9" href="../../tag/B5DC04E7729F/">17.4.9</a>, with the background $C_1\omega $, gives the assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-0B32BA83">
+<p><a class="environment-identifier" href="../../tag/109ED281DA22/">Theorem <span data-tag="0B32BA83">17.4.11</span>.</a><span data-gerby-tag="0B32BA83"></span> Let $\nu $ be a finite positive non-pluripolar measure on $X$ with $\nu (X)&gt;0$, and let $\lambda &gt;0$. There is a unique $u\in \mathcal E(X,\theta ,\phi )$ satisfying </p>
+<div class="equation">
+  \[  \mu _ u=\mathrm e^{\lambda u}\nu .  \]
+</div>
+<p> This solution belongs to $\mathcal E^1(X,\theta ,\phi )$ and maximizes $F_\lambda (v)=E(v)-\lambda ^{-1}\int _ X\mathrm e^{\lambda v}\, \mathrm d\nu $ on $\mathcal E^1(X,\theta ,\phi )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By corollary <a data-tag="8123FC46" href="../../tag/85CFF04E2CEC/">17.3.4</a>, the set $K_\phi $ of potentials $w\in \mathrm{PSH}(X,\theta )$ with $w\leq \phi $ and $\sup _ Xw=0$ is compact in $L^1(X)$; it contains $\phi $. By corollary <a data-tag="93FE81D3" href="../../tag/F89C0E4EBAC2/">17.4.10</a>, the function $w\mapsto \int _ X\mathrm e^{\lambda w}\, \mathrm d\nu $ is continuous on $K_\phi $. Its values are positive, since the pole set of $w$ is $\nu $-null and $\nu (X)&gt;0$. Hence it has a positive minimum $a$ on $K_\phi $. 
+    <p>
+      Any $v\in \mathcal E^1(X,\theta ,\phi )$ can be written $v=w+c$ with $c=\sup _ Xv$ and $w\in K_\phi $, by lemma <a data-tag="D3939F9F" href="../../tag/4D5FAF80D021/">16.4.2</a>. Since $E(w)\leq 0$, the shift formula for the energy gives 
+    
+<div class="equation">
+  \[  F_\lambda (v)=E(w)+mc-\lambda ^{-1}\mathrm e^{\lambda c}\int _ X\mathrm e^{\lambda w}\, \mathrm d\nu \leq mc-\lambda ^{-1}a\mathrm e^{\lambda c}.  \]
+</div>
+<p>
+       The right side tends to $-\infty $ as $c\to \pm \infty $. Since $F_\lambda (\phi )$ is finite, a maximizing sequence $v_ j=w_ j+c_ j$ with $F_\lambda (v_ j)\geq F_\lambda (\phi )-1$ therefore has bounded constants $c_ j$. Moreover $E(v_ j)\geq F_\lambda (v_ j)$, because the exponential term is nonnegative, so $E(w_ j)=E(v_ j)-mc_ j$ is bounded below. By corollary <a data-tag="8123FC46" href="../../tag/85CFF04E2CEC/">17.3.4</a>, after passing to a subsequence, $c_ j$ converges and $w_ j$ converges in $L^1(X)$; hence $v_ j\to u$ in $L^1(X)$ for some $u\in \mathcal E^1(X,\theta ,\phi )$. The energy is upper semicontinuous (proposition <a data-tag="C70978FB" href="../../tag/2FF0E77E9188/">17.3.3</a>), and $\int _ X\mathrm e^{\lambda v_ j}\, \mathrm d\nu \to \int _ X\mathrm e^{\lambda u}\, \mathrm d\nu $ by corollary <a data-tag="93FE81D3" href="../../tag/F89C0E4EBAC2/">17.4.10</a>, so $F_\lambda (u)\geq \varlimsup _ jF_\lambda (v_ j)=\sup F_\lambda $, and $u$ is a maximizer. By lemma <a data-tag="E147C2D9" href="../../tag/B4AA6C4C1C94/">17.4.7</a>, $\mu _ u=\mathrm e^{\lambda u}\nu $. Uniqueness in $\mathcal E(X,\theta ,\phi )$ is proposition <a data-tag="B027C133" href="../../tag/5BDA01022188/">17.4.6</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+For instance, the theorem applies to $\nu =g\, \mathrm dV$, where $\mathrm dV$ is a smooth positive volume form and $g\in L^\infty (\mathrm dV)$ satisfies $g\geq 0$ and $\int _ Xg\, \mathrm dV&gt;0$: this measure is finite, and it is non-pluripolar because pluripolar sets have volume zero. 
+</p>
+<p>
+To let $\lambda \to 0$, we need a lower bound for the measures of $L^1$ limits. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-1EC4CC1E">
+<p><a class="environment-identifier" href="../../tag/4D025B7103EA/">Lemma <span data-tag="1EC4CC1E">17.4.12</span>.</a><span data-gerby-tag="1EC4CC1E"></span> Let $\theta $ be a smooth closed real $(1,1)$-form on $X$, and suppose that $q_ j,q\in \mathrm{PSH}(X,\theta )$ and $q_ j\to q$ in $L^1(X)$. Let $\nu $ be a finite non-pluripolar measure on $X$, and suppose that $\mu _{q_ j}\geq f_ j\nu $, where $f_ j\geq 0$ are measurable and $f_ j\to f$ $\nu $-almost everywhere. Then $\mu _ q\geq f\nu $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $g_ j=\inf _{k\geq j}f_ k$, so that $g_ j\uparrow f$ $\nu $-almost everywhere. We first prove that $\mu _{a_ j}\geq g_ j\nu $ for the tail envelopes $a_ j=(\sup _{k\geq j}q_ k)^*$, and then let $j\to \infty $. For $l\geq j$, the finite maximum $\max \{ q_ j,\ldots ,q_ l\} $ has measure at least $g_ j\nu $. Indeed, let $r_1,r_2\in \mathrm{PSH}(X,\theta )$ satisfy $\mu _{r_1},\mu _{r_2}\geq g_ j\nu $, and put $r=\max \{ r_1,r_2\} $. The set $\{ r_1\geq r_2\} $ is the contact set $\{ r_1=r\} $, so lemma <a data-tag="86AF9332" href="../../tag/15A418789279/">16.2.2</a>, applied to $r_1\leq r$, gives $\mu _ r\geq \mu _{r_1}\geq g_ j\nu $ on $\{ r_1\geq r_2\} $; in the same way $\mu _ r\geq g_ j\nu $ on $\{ r_2&gt;r_1\} $. Hence $\mu _ r\geq g_ j\nu $. Since $\mu _{q_ k}\geq f_ k\nu \geq g_ j\nu $ for $k\geq j$, induction on $l$ proves the claim. 
+    <p>
+      The suprema $\sup _ Xq_ k$ are bounded, by proposition <a data-tag="BDC823C6" href="../../tag/2984F6438B4B/">14.2.1</a>, so the regularized upper envelope $a_ j$ is $\theta $-psh, and it equals $\sup _{k\geq j}q_ k$ almost everywhere (theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">8.3.2</a>, applied in charts after adding smooth local potentials of $\theta $). The finite maxima $\max \{ q_ j,\ldots ,q_ l\} $ therefore increase almost everywhere to $a_ j$ as $l\to \infty $, and their measures converge weakly to $\mu _{a_ j}$ by corollary <a data-tag="DC306F8A" href="../../tag/56037F3B58D7/">15.7.6</a>. The fixed measure $g_ j\nu \leq \mu _{q_ j}$ is finite, so the inequality passes to the weak limit, by lemma <a data-tag="7AF67C9F" href="../../tag/B408410BD203/">17.4.2</a>(2): 
+    
+<div class="equation">
+  \[  \mu _{a_ j}\geq g_ j\nu .  \]
+</div>
+<p>
+       By lemma <a data-tag="9EA40DD3" href="../../tag/369EDE8DEEC5/">17.3.2</a>, $a_ j$ decreases pointwise to $q$. 
+    <p>
+      To let $j\to \infty $ we truncate. Fix $C&gt;0$ and an index $j_0$. The truncations $a_ j^ C=\max \{ a_ j,V_\theta -C\} $ have uniformly bounded difference from $V_\theta $: they are at least $V_\theta -C$, and since the suprema of the $a_ j$ are bounded, minimality of $V_\theta $ bounds them above by $V_\theta +C'$. They decrease to $q^ C=\max \{ q,V_\theta -C\} $, so they converge to $q^ C$ in extended capacity, by lemma <a data-tag="4720F1AB" href="../../tag/274B700496A8/">15.6.3</a> applied in charts after adding smooth local potentials of $\theta $. Since $q^ C$ has bounded difference from $V_\theta $, it has the mass of $V_\theta $ (corollary <a data-tag="EDC7A6A4" href="../../tag/A8BA63307F6C/">15.7.5</a>), that is, $q^ C\in \mathcal E(X,\theta ,V_\theta )$. Corollary <a data-tag="01A73CB7" href="../../tag/45601E7EC1EE/">15.8.4</a>, with $V_\theta $ in place of $\phi $, therefore gives $\mu _{a_ j^ C}\to \mu _{q^ C}$ weakly. 
+    <p>
+      On the set $A_ C=\{ q&gt;V_\theta -C\} $ we have $a_ j\geq q&gt;V_\theta -C$, so $a_ j^ C=a_ j$ on the plurifine open set $\{ a_ j&gt;V_\theta -C\} \supset A_ C$, and locality gives $\mu _{a_ j^ C}\geq \mathbf1_{A_ C}g_{j_0}\nu $ for $j\geq j_0$. Since $\mathbf1_{A_ C}g_{j_0}\nu $ is a fixed finite measure, the inequality passes to the weak limit, by lemma <a data-tag="7AF67C9F" href="../../tag/B408410BD203/">17.4.2</a>(2), and gives $\mu _{q^ C}\geq \mathbf1_{A_ C}g_{j_0}\nu $. On the plurifine open set $A_ C$ we have $q^ C=q$, so locality gives $\mu _ q\geq \mathbf1_{A_ C}g_{j_0}\nu $. Thus $\mu _ q(E)\geq \int _{E\cap A_ C}g_{j_0}\, \mathrm d\nu $ for every Borel set $E$. Let $j_0\to \infty $ and then $C\to \infty $. The sets $A_ C$ increase to the set where $q$ and $V_\theta $ are finite, whose complement is pluripolar and hence $\nu $-null, so monotone convergence gives $\mu _ q(E)\geq \int _ Ef\, \mathrm d\nu $, that is, $\mu _ q\geq f\nu $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-C769DCE4">
+<p><a class="environment-identifier" href="../../tag/373141BD8F91/">Theorem <span data-tag="C769DCE4">17.4.13</span>.</a><span data-gerby-tag="C769DCE4"></span> Let $\nu $ be a finite positive non-pluripolar measure on $X$ with $\nu (X)=m$. Then there is </p>
+<div class="equation">
+  \[  u\in \mathcal E(X,\theta ,\phi )\quad \text{with}\quad \mu _ u=\nu \quad \text{and}\quad \sup _ Xu=0.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\lambda _ j\downarrow 0$, let $u_ j$ be the solution of $\mu _{u_ j}=\mathrm e^{\lambda _ ju_ j}\nu $ given by theorem <a data-tag="0B32BA83" href="../../tag/109ED281DA22/">17.4.11</a>, and write $u_ j=w_ j+c_ j$ with $c_ j=\sup _ Xu_ j$. Since $u_ j\preceq \phi $ and $\sup _ Xw_ j=0$, lemma <a data-tag="D3939F9F" href="../../tag/4D5FAF80D021/">16.4.2</a> gives $w_ j\leq \phi $, so $w_ j$ belongs to the set $K_\phi $ of corollary <a data-tag="8123FC46" href="../../tag/85CFF04E2CEC/">17.3.4</a>, which is compact in $L^1(X)$. On $K_\phi $ the functions 
+    
+<div class="equation">
+  \[  H_ j(w)=\int _ X\mathrm e^{\lambda _ jw}\, \mathrm d\nu  \]
+</div>
+<p>
+       are continuous, by corollary <a data-tag="93FE81D3" href="../../tag/F89C0E4EBAC2/">17.4.10</a>, and they increase pointwise to the constant $m$, by monotone convergence, since $w\leq 0$ and the pole set of $w$ is $\nu $-null. The convergence is uniform on $K_\phi $ (Dini's theorem): for $\varepsilon &gt;0$ the compact sets $\{ w\in K_\phi :m-H_ j(w)\geq \varepsilon \} $ decrease and have empty intersection, so they are empty for large $j$. 
+    <p>
+      Comparing total masses in the equation gives $m=\mathrm e^{\lambda _ jc_ j}H_ j(w_ j)$, so 
+    
+<div class="equation">
+  \[  \mathrm e^{\lambda _ jc_ j}=\frac m{H_ j(w_ j)}\longrightarrow 1.  \]
+</div>
+<p>
+       Also $\int _ X|1-\mathrm e^{\lambda _ jw_ j}|\, \mathrm d\nu =m-H_ j(w_ j)\to 0$. Hence $r_ j=\mathrm e^{\lambda _ ju_ j}=\mathrm e^{\lambda _ jc_ j}\mathrm e^{\lambda _ jw_ j}\to 1$ in $L^1(\nu )$, and $\mu _{w_ j}=\mu _{u_ j}=r_ j\nu $. Pass to a subsequence along which $r_ j\to 1$ $\nu $-almost everywhere and, by compactness of $K_\phi $, $w_ j\to u$ in $L^1(X)$ for some $u\in K_\phi $. Lemma <a data-tag="1EC4CC1E" href="../../tag/4D025B7103EA/">17.4.12</a> gives $\mu _ u\geq \nu $. Since $u\leq \phi $, mass monotonicity gives $\mu _ u(X)\leq m=\nu (X)$. Hence $\mu _ u=\nu $, $u$ has full mass relative to $\phi $, and $\sup _ Xu=0$ because $u\in K_\phi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bounded monge ampere linear density · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/local-monge-ampere/">Chapter 7 · Local Monge–Ampère theory and Hessian equations</a> · Tag <code>EB2AFC8FB17C</code></p><h1>Bounded monge ampere linear density</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · Proposition 9.7.3 <span data-gerby-tag="183E5B3C"></span></div><article class="env-proposition" id="foundations-of-pluripotential-theory-183E5B3C">
+<p><a class="environment-identifier" href="../../tag/EB2AFC8FB17C/">Proposition <span data-tag="183E5B3C">9.7.3</span>.</a><span data-gerby-tag="183E5B3C"></span> Let $u$ be a locally bounded plurisubharmonic function on $\Omega $, and let $f\ge 0$ be a continuous function on $\Omega $. The following conditions are equivalent: </p>
+<ol>
+<li><p>
+$(\mathrm{dd}^{\mathrm{c}}u)^ n\ge f\eta ^ n$ as measures on $\Omega $; 
+</p>
+</li><li><p>
+$\det \mathcal H(q)(x)\ge f(x)$ for every $x\in \Omega $ and every upper test function $q$ for $u$ at $x$; 
+</p>
+</li><li><p>
+$L_ Bu\ge nf^{1/n}$ in the sense of distributions on $\Omega $, for every positive definite Hermitian matrix $B$ with $\det B=1$. 
+</p>
+</li>
+</ol>
+<p> If these conditions hold, then for every $\varepsilon &gt;0$ the mollification $u_\varepsilon =u*\rho _\varepsilon $ satisfies $\det \mathcal H(u_\varepsilon )\ge (f^{1/n}*\rho _\varepsilon )^ n$ on $\Omega _\varepsilon $. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first observe that the complex Hessian $\mathcal H(q)(x)$ of an upper test function $q$ for $u$ at $x$ is positive semidefinite. Indeed, let $\xi \in \mathbb C^ n\setminus \{ 0\} $, and let $r&gt;0$ be so small that the closed disc $\{ x+\zeta \xi :|\zeta |\le r\} $ lies in the neighborhood of $x$ on which $q\ge u$. The function $\zeta \mapsto u(x+\zeta \xi )$ is subharmonic near this disc and finite at $\zeta =0$, so theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>(2) gives 
+    
+<div class="equation">
+  \[  q(x)=u(x)\le \frac1{2\pi }\int _0^{2\pi }u(x+r\mathrm e^{\mathrm i\theta }\xi )\, \mathrm d\theta \le \frac1{2\pi }\int _0^{2\pi }q(x+r\mathrm e^{\mathrm i\theta }\xi )\, \mathrm d\theta .  \]
+</div>
+<p>
+       Write $q_ j=\partial _{z_ j}q$ and $q_{jk}=\partial _{z_ j}\partial _{z_ k}q$. Since $q$ is real and of class $C^2$, Taylor's formula gives 
+    
+<div class="equation">
+  \[  q(x+h)=q(x)+2\operatorname{Re}\sum _ jq_ j(x)h_ j+\operatorname{Re}\sum _{j,k}q_{jk}(x)h_ jh_ k+\sum _{j,k}q_{j\bar k}(x)h_ j\bar h_ k+o(|h|^2).  \]
+</div>
+<p>
+       For $h=r\mathrm e^{\mathrm i\theta }\xi $ the terms containing $\mathrm e^{\mathrm i\theta }$ and $\mathrm e^{2\mathrm i\theta }$ have mean zero over $\theta \in [0,2\pi ]$, so the right-hand side of the preceding display equals $q(x)+r^2\sum _{j,k}q_{j\bar k}(x)\xi _ j\bar\xi _ k+o(r^2)$. Dividing by $r^2$ and letting $r\downarrow 0$, we obtain $\sum _{j,k}q_{j\bar k}(x)\xi _ j\bar\xi _ k\ge 0$. 
+    <p>
+<em>(1) implies (2).</em> Assume (1), let $q$ be an upper test function for $u$ at $x$, and suppose that $\det \mathcal H(q)(x)&lt;f(x)$. Since $\mathcal H(q)(x)$ is positive semidefinite, we can choose $\delta &gt;0$ so small that $q_\delta =q+\delta |z-x|^2$ satisfies $\mathcal H(q_\delta )(x)=\mathcal H(q)(x)+\delta I&gt;0$ and still $\det \mathcal H(q_\delta )(x)&lt;f(x)$. Since $q$ is of class $C^2$ and $f$ is continuous, there is $r&gt;0$ such that $\overline{B(x,r)}\subset \Omega $, $q\ge u$ on $\overline{B(x,r)}$, the complex Hessian $\mathcal H(q_\delta )$ is positive definite on $\overline{B(x,r)}$, and $\det \mathcal H(q_\delta )&lt;f$ on $\overline{B(x,r)}$; in particular, $q_\delta $ is plurisubharmonic on $B(x,r)$ by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>. Put $b=q_\delta -\delta r^2/2$. Then $b=q+\delta r^2/2&gt;u$ on the sphere $\partial B(x,r)$, while $b(x)=u(x)-\delta r^2/2&lt;u(x)$. 
+    <p>
+      The Borel set $S=\{ z\in B(x,r):b(z)&lt;u(z)\} $ has positive Lebesgue measure. Otherwise $\max \{ u,b\} =b$ almost everywhere on $B(x,r)$; since both functions are plurisubharmonic, the uniqueness assertion of theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a> gives $\max \{ u,b\} =b$ everywhere, contradicting $b(x)&lt;u(x)$. The function $b-u$ is lower semicontinuous and positive on $\partial B(x,r)$, so $\varliminf _{z\to \zeta }(b(z)-u(z))&gt;0$ for every $\zeta \in \partial B(x,r)$. The comparison principle theorem <a data-tag="A7DD3972" href="../../tag/D0AF90DDC7A5/">9.2.8</a>, applied on $B(x,r)$ with the bounded plurisubharmonic functions $b$ and $u$ in place of $u$ and $v$, therefore gives 
+    
+<div class="equation">
+  \[  \int _ S f\eta ^ n\le \int _ S(\mathrm{dd}^{\mathrm{c}}u)^ n\le \int _ S(\mathrm{dd}^{\mathrm{c}}b)^ n=\int _ S\det \mathcal H(q_\delta )\, \eta ^ n.  \]
+</div>
+<p>
+       Here $(\mathrm{dd}^{\mathrm{c}}b)^ n=\det \mathcal H(q_\delta )\, \eta ^ n$ on $B(x,r)$ because $b$ is a plurisubharmonic $C^2$ function there (see the beginning of this section), and the integrals are finite because $(\mathrm{dd}^{\mathrm{c}}u)^ n$ is a Radon measure on $\Omega $ and $\overline{B(x,r)}$ is a compact subset of $\Omega $. Since $\det \mathcal H(q_\delta )&lt;f$ on $S$ and $S$ has positive measure, the right side is strictly smaller than the left side, a contradiction. Thus (2) holds. 
+    <p>
+<em>(2) implies (3).</em> Let $q$ be an upper test function for $u$ at $x$, and let $B$ be positive definite with $\det B=1$. Since $\mathcal H(q)(x)$ is positive semidefinite, the infimum formula of lemma <a data-tag="2844C025" href="../../tag/BB19C89586B1/">9.7.1</a> and (2) give 
+    
+<div class="equation">
+  \[  L_ Bq(x)=\operatorname {tr}\bigl (B\mathcal H(q)(x)\bigr )\ge n\bigl (\det \mathcal H(q)(x)\bigr )^{1/n}\ge nf(x)^{1/n}.  \]
+</div>
+<p>
+       Since $u$ is real-valued and upper semicontinuous, lemma <a data-tag="2D6E0212" href="../../tag/1BE242B641AA/">9.7.2</a>, applied to $L_ B$ and the continuous function $nf^{1/n}$, gives (3). 
+    <p>
+<em>(3) implies (1).</em> The mollifications $u_\varepsilon =u*\rho _\varepsilon $ of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a> are smooth plurisubharmonic functions on $\Omega _\varepsilon $ which decrease to $u$ as $\varepsilon \downarrow 0$ (proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>). Fix $B$ as in (3). The distribution $L_ Bu-nf^{1/n}$ is positive, so its mollification is a nonnegative function on $\Omega _\varepsilon $ (proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>(3)). Since $L_ B$ has constant coefficients, proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>(1) identifies the mollification of $L_ Bu$ with $L_ Bu_\varepsilon $, and we obtain the pointwise inequality 
+    
+<div class="equation">
+  \[  \operatorname {tr}\bigl (B\mathcal H(u_\varepsilon )\bigr )\ge n\, (f^{1/n}*\rho _\varepsilon )\quad \text{on }\Omega _\varepsilon \qquad (B&gt;0,\  \det B=1).  \]
+</div>
+<p>
+       Since $\mathcal H(u_\varepsilon )$ is positive semidefinite (proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>), taking the infimum over $B$ and using lemma <a data-tag="2844C025" href="../../tag/BB19C89586B1/">9.7.1</a>, we obtain $\det \mathcal H(u_\varepsilon )\ge (f^{1/n}*\rho _\varepsilon )^ n$, which is the last assertion of the proposition. By the formula recalled at the beginning of this section, it reads 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}u_\varepsilon )^ n\ge (f^{1/n}*\rho _\varepsilon )^ n\eta ^ n\quad \text{on }\Omega _\varepsilon .  \]
+</div>
+<p>
+       As $\varepsilon \downarrow 0$, the density on the right converges locally uniformly to $f$ by lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(1), and $(\mathrm{dd}^{\mathrm{c}}u_\varepsilon )^ n\to (\mathrm{dd}^{\mathrm{c}}u)^ n$ weakly by theorem <a data-tag="8B1F9B78" href="../../tag/D87C13B3250A/">9.2.5</a>, applied along any sequence $\varepsilon _ j\downarrow 0$. Testing against nonnegative functions in $C_ c(\Omega )$ gives (1). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Extension from a compact submanifold · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/positivity-cohomology/">Chapter 9 · Cohomology, positivity, and geometric loci</a> · Tag <code>9264FE392E91</code></p><h1>Extension from a compact submanifold</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 14.7 Extension from a compact submanifold <span data-gerby-tag="11D27416"></span></div>
+<p>
+  In theorem <a data-tag="B0A910AD" href="../../tag/846B917F28CD/">14.6.7</a> the error $\bar\partial (\chi f)$ of the cutoff is supported away from the interpolation point. To extend a section from a submanifold $Y$ of positive dimension, we must glue local extensions, and the gluing error then meets $Y$ itself. We control it in two steps. First, local extensions with a logarithmic gain (lemma <a data-tag="6AA41C09" href="../../tag/833820F8A53D/">14.7.3</a>) make the gluing error integrable against the critical weight $R_ Y^{-q}$, where $q$ is the codimension of $Y$ and $R_ Y$ is a smooth function vanishing to second order exactly along $Y$. Second, for weights with gentle analytic singularities, a computation on a resolution identifies the limit of the cutoff error with the norm of the prescribed section on $Y$ (lemma <a data-tag="6F636631" href="../../tag/7EB0767C032B/">14.7.7</a>). This yields an estimate whose constant depends only on the geometry, and decreasing approximation then gives the result for arbitrary singular metrics (theorem <a data-tag="5BC89762" href="../../tag/C34A54E553C3/">14.7.8</a>). In section <a data-tag="2338CC05" href="../../tag/963CD0DB428C/">14.7.1</a> a related gluing construction, by maxima instead of sums, extends potentials of Kähler currents from $Y$ to $X$. 
+</p>
+<p>
+We solve the $\bar\partial $-equations of this section with the following twisted form of lemma <a data-tag="727269B9" href="../../tag/D51F6B990A39/">14.6.5</a>. The auxiliary function $a$ contributes the term $-\mathrm i\partial \bar\partial a$ to the curvature, at the price of the weight $1/(a+b)$ in the estimate for the solution. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-C9560BC8">
+<p><a class="environment-identifier" href="../../tag/D973E523027E/">Lemma <span data-tag="C9560BC8">14.7.1</span>.</a><span data-gerby-tag="C9560BC8"></span> Let $M$ be a complex manifold of dimension $n\geq 1$ with a Hermitian form $\omega $ and the volume form $\mathrm dV=\omega ^ n/n!$, carrying a Kähler form $\sigma \geq \omega /2$ and functions $\chi _ R$ with the properties stated in lemma <a data-tag="693C216A" href="../../tag/C789A06C06B4/">14.6.4</a>. Let $F\to M$ be a holomorphic line bundle with a smooth quadratic metric $h$, and let $a,b$ be smooth functions on $M$ that are bounded above and below by positive constants. Suppose that the real $(1,1)$-form </p>
+<div class="equation">
+  \[  H=a\, 2\pi c_1(F,h)-\mathrm i\partial \bar\partial a -\frac{\mathrm i}{b}\partial a\wedge \bar\partial a  \]
+</div>
+<p> is positive definite, and put $B_\omega =[H,\Lambda _\omega ]$ on $(n,1)$-forms. Let $g$ be an $F$-valued $(n,1)$-form with $\bar\partial g=0$ in the sense of distributions, $g\in L^2_{(n,1)}(\omega ,h)$, and </p>
+<div class="equation">
+  \[  M_ g=\int _ M\langle B_\omega ^{-1}g,g\rangle _{\omega ,h}\, \mathrm dV&lt;\infty .  \]
+</div>
+<p> Then there is an $F$-valued $(n,0)$-form $u$ with $\bar\partial u=g$ and </p>
+<div class="equation" id="foundations-of-pluripotential-theory-39FB60CA"><span data-gerby-tag="39FB60CA"></span>
+<span class="equation-label"><a data-tag="39FB60CA" href="../../tag/C5A4CDD14D8E/">14.31</a></span>
+<div>\begin{equation} \label{eq:twisted-kahler-correction} \int _ M\frac{|u|_{\omega ,h}^2}{a+b}\, \mathrm dV\leq M_ g. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The Bochner–Kodaira identity (<a data-tag="4AFC5B89" href="../../tag/EA3E7FCDD007/">14.25</a>) of lemma <a data-tag="80A70782" href="../../tag/95269D214AF0/">14.6.2</a> holds for every smooth metric on $F$; we apply it to the metric $ah$. Let $\delta _ h=D''{}^*$ be the formal adjoint for the metric $h$ and the Kähler form $\sigma $, and $C_ a=(\bar\partial a\wedge )^*$ the contraction with the dual of $\bar\partial a$. In a frame, the weight of $ah$ is $p-\log a$, so 
+    
+<div class="equation">
+  \[  \delta _{ah}=\delta _ h-a^{-1}C_ a,\qquad a\, 2\pi c_1(F,ah)=a\, 2\pi c_1(F,h) -\mathrm i\partial \bar\partial a +\frac{\mathrm i}{a}\partial a\wedge \bar\partial a.  \]
+</div>
+<p>
+       On $(n,1)$-forms, the commutator with the last term is $[\frac{\mathrm i}{a}\partial a\wedge \bar\partial a,\Lambda _\sigma ]=a^{-1}C_ a^*C_ a$. Indeed, where $\partial a\neq 0$, choose a $\sigma $-unitary coframe with $\partial a=|\partial a|\theta _1$, so that $\bar\partial a=|\partial a|\bar\theta _1$, and put $e=\theta _1\wedge \cdots \wedge \theta _ n$. By lemma <a data-tag="A2D1311F" href="../../tag/A0C109B78052/">14.6.1</a>(1), the left side multiplies the coefficient $v_1$ of $e\wedge \bar\theta _1$ by $|\partial a|^2/a$ and annihilates the other coefficients; so does the right side, because $\bar\partial a\wedge fe=(-1)^ n|\partial a|f\, e\wedge \bar\theta _1$, whence $C_ av=(-1)^ n|\partial a|v_1e$. Where $\partial a=0$, both sides vanish. Writing (<a data-tag="4AFC5B89" href="../../tag/EA3E7FCDD007/">14.25</a>) for $ah$ in terms of $h$, expanding $a|\delta _ hv-a^{-1}C_ av|^2$, cancelling the term $a^{-1}|C_ av|^2$ that appears on both sides, and dropping the nonnegative term $\| D'{}^*v\| ^2$, we obtain for compactly supported smooth $v$, with all integrals taken with respect to $h$, $\sigma $ and $\mathrm dV_\sigma $, 
+    
+<div class="equation">
+  \[  \int _ M a\bigl (|\delta _ hv|^2+|D''v|^2\bigr ) \geq \int _ M\langle [a\, 2\pi c_1(F,h) -\mathrm i\partial \bar\partial a,\Lambda _\sigma ]v,v\rangle +2\operatorname{Re}\int _ M\langle \delta _ hv,C_ av\rangle .  \]
+</div>
+<p>
+       The inequality $2\operatorname{Re}\langle A,B\rangle \geq -b|A|^2-b^{-1}|B|^2$ and the identity $b^{-1}|C_ av|^2=\langle [\frac{\mathrm i}{b}\partial a\wedge \bar\partial a,\Lambda _\sigma ]v,v\rangle $ consequently give 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-0BB2999B"><span data-gerby-tag="0BB2999B"></span>
+<span class="equation-label"><a data-tag="0BB2999B" href="../../tag/82B8AA567C14/">14.32</a></span>
+<div>\begin{equation} \label{eq:twisted-kahler-bochner} \int _ M\langle [H,\Lambda _\sigma ]v,v\rangle \leq \int _ M(a+b)|\delta _ hv|^2+a|D''v|^2. \end{equation}</div>
+</div>
+<p>
+      Consider the Hilbert spaces of $(n,0)$-, $(n,1)$- and $(n,2)$-forms with the respective weights $h/(a+b)$, $h$ and $ah$, and the operators $T=D''$ and $S=D''$ with maximal domains between them. Testing against compactly supported forms shows that $T^*=(a+b)\delta _ h$, so $\| T^*v\| ^2$ is the first term on the right of (<a data-tag="0BB2999B" href="../../tag/82B8AA567C14/">14.32</a>), and $\| Sv\| ^2$ is the second. Compactly supported smooth forms are dense in $\operatorname{Dom}T^*\cap \operatorname{Dom}S$ for the graph norm, by lemma <a data-tag="048D7577" href="../../tag/6217A93C596F/">14.6.3</a>, applied with the metrics $h/(a+b)$, $h$ and $ah$, whose ratios $a+b$ and $a$ are bounded. 
+    <p>
+      The form $g$ lies in $\ker S$, and in the second space by lemma <a data-tag="A2D1311F" href="../../tag/A0C109B78052/">14.6.1</a>(3), because $\sigma \geq \omega /2$. The operator $[H,\Lambda _\sigma ]$ is positive definite on $(n,1)$-forms by lemma <a data-tag="A2D1311F" href="../../tag/A0C109B78052/">14.6.1</a>(1). As in the proof of lemma <a data-tag="727269B9" href="../../tag/D51F6B990A39/">14.6.5</a>, the pointwise Cauchy–Schwarz inequality for this operator, (<a data-tag="0BB2999B" href="../../tag/82B8AA567C14/">14.32</a>) and the density of compactly supported smooth forms give the hypothesis of theorem <a data-tag="B9E2EF05" href="../../tag/FDE87BE964C7/">11.1.4</a>, which yields a solution of $\bar\partial u=g$ whose squared norm in the first space is at most $\int \langle [H,\Lambda _\sigma ]^{-1}g,g\rangle \, \mathrm dV_\sigma $. This integral, and the squared norm of $(n,0)$-forms times the volume form, do not depend on the Hermitian form used, by lemma <a data-tag="A2D1311F" href="../../tag/A0C109B78052/">14.6.1</a>(3); hence the bound is $M_ g$, and we obtain (<a data-tag="39FB60CA" href="../../tag/C5A4CDD14D8E/">14.31</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+In the applications of lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a>, the functions $a$ and $b$ are the following functions of $\log (\varepsilon +R)$, where $R$ is a smooth function vanishing to second order along a submanifold, considered on the complement of the submanifold. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-47AD0EAA">
+<p><a class="environment-identifier" href="../../tag/ABE17C01E6F9/">Lemma <span data-tag="47AD0EAA">14.7.2</span>.</a><span data-gerby-tag="47AD0EAA"></span> Let $R$ be a smooth function on a complex manifold $M$ with $0&lt;R&lt;\mathrm e^{-4}$, let $0&lt;\varepsilon &lt;\mathrm e^{-4}$, and put </p>
+<div class="equation">
+  \[  \begin{gathered} \psi =\log R,\qquad \psi _\varepsilon =\log (\varepsilon +R),\qquad \mu (t)=\varepsilon -t+\log (1-t)\quad (t&lt;1),\\ a_\varepsilon =\mu (\psi _\varepsilon ),\qquad b_\varepsilon =(2-\psi _\varepsilon )^2. \end{gathered}  \]
+</div>
+<ol>
+<li><p>
+We have $\psi &lt;\psi _\varepsilon &lt;-3$, $a_\varepsilon \geq -\psi _\varepsilon &gt;3$, $1\leq -\mu '(\psi _\varepsilon )\leq 2$ and $a_\varepsilon +b_\varepsilon \leq 5\psi _\varepsilon ^2\leq 5\psi ^2$, and $a_\varepsilon $ and $b_\varepsilon $ are bounded above and below by positive constants depending only on $\varepsilon $. 
+</p>
+</li><li><p>
+For every real $(1,1)$-form $\Theta $ on $M$, 
+</p>
+<div class="equation">
+  \[  a_\varepsilon \Theta -\mathrm i\partial \bar\partial a_\varepsilon -\frac{\mathrm i}{b_\varepsilon }\partial a_\varepsilon \wedge \bar\partial a_\varepsilon =a_\varepsilon \Theta -\mu '(\psi _\varepsilon )\, \mathrm i\partial \bar\partial \psi _\varepsilon .  \]
+</div>
+</li><li><p>
+The logarithmic Hessians satisfy 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-E9C58421"><span data-gerby-tag="E9C58421"></span>
+<span class="equation-label"><a data-tag="E9C58421" href="../../tag/4762DC697088/">14.33</a></span>
+<div>\begin{equation} \label{eq:logarithmic-normal-hessian} \mathrm i\partial \bar\partial \psi _\varepsilon =\frac{R}{\varepsilon +R}\mathrm i\partial \bar\partial \psi +\frac{\varepsilon }{R}\,  \mathrm i\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon . \end{equation}</div>
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Since $\varepsilon +R&lt;2\mathrm e^{-4}&lt;\mathrm e^{-3}$, we have $\log \varepsilon &lt;\psi _\varepsilon &lt;-3$, and $\psi &lt;\psi _\varepsilon $ because $\varepsilon &gt;0$. Next, $a_\varepsilon =\varepsilon -\psi _\varepsilon +\log (1-\psi _\varepsilon )\geq -\psi _\varepsilon $, and $\mu '(t)=-1-(1-t)^{-1}$ lies in $[-2,-1]$ for $t&lt;0$. With $s=-\psi _\varepsilon &gt;3$ we have $a_\varepsilon \leq 1+s+\log (1+s)\leq 1+2s$ and $b_\varepsilon =(2+s)^2\leq 4s^2$, so $a_\varepsilon +b_\varepsilon \leq 1+2s+4s^2\leq 5s^2$, since $s^2-2s-1&gt;0$ for $s\geq 3$; and $s^2\leq \psi ^2$ because $\psi &lt;\psi _\varepsilon &lt;0$. Finally, $\log \varepsilon &lt;\psi _\varepsilon &lt;-3$ gives $3&lt;a_\varepsilon \leq \varepsilon -\log \varepsilon +\log (1-\log \varepsilon )$ and $25&lt;b_\varepsilon \leq (2-\log \varepsilon )^2$. 
+    <p>
+      (2) We have $\mu ''(t)=-(1-t)^{-2}$, hence $-\mu '(t)^2/\mu ''(t)=\bigl ((1-t)+1\bigr )^2=(2-t)^2$, so $b_\varepsilon =-\mu '(\psi _\varepsilon )^2/\mu ''(\psi _\varepsilon )$. By the chain rule, $\mathrm i\partial \bar\partial a_\varepsilon =\mu '(\psi _\varepsilon )\mathrm i\partial \bar\partial \psi _\varepsilon +\mu ''(\psi _\varepsilon )\mathrm i\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon $ and $b_\varepsilon ^{-1}\mathrm i\partial a_\varepsilon \wedge \bar\partial a_\varepsilon =b_\varepsilon ^{-1}\mu '(\psi _\varepsilon )^2\mathrm i\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon =-\mu ''(\psi _\varepsilon )\mathrm i\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon $. The gradient terms cancel, which proves (2). 
+    <p>
+      (3) For $c=\varepsilon $ and for $c=0$ we have $\partial \bar\partial \log (c+R)=(c+R)^{-1}\partial \bar\partial R-(c+R)^{-2}\partial R\wedge \bar\partial R$. Hence $\partial \bar\partial \psi _\varepsilon -\frac{R}{\varepsilon +R}\partial \bar\partial \psi =\bigl (R^{-1}(\varepsilon +R)^{-1}-(\varepsilon +R)^{-2}\bigr )\partial R\wedge \bar\partial R=\frac{\varepsilon }{R}(\varepsilon +R)^{-2}\partial R\wedge \bar\partial R$, and $(\varepsilon +R)^{-2}\partial R\wedge \bar\partial R=\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-6AA41C09">
+<p><a class="environment-identifier" href="../../tag/833820F8A53D/">Lemma <span data-tag="6AA41C09">14.7.3</span>.</a><span data-gerby-tag="6AA41C09"></span> Let $m\geq 0$ and $q\geq 1$ be integers, and let $D=B'\times B''\Subset \mathbb C^{m}\times \mathbb C^ q$ be a product of balls centered at the origin, of radii $r'$ and $r''$, with $r''&lt;\mathrm e^{-2}$; when $m=0$, $B'=\{ 0\} $. We write points of $D$ as $(z',w)$. Let $p$ be plurisubharmonic on a neighborhood of $\overline D$, and let $f$ be holomorphic near $\overline{B'}$ with $\int _{B'}|f|^2\mathrm e^{-p(z',0)}\, \mathrm dV_{B'}&lt;\infty $, where $|f|^2\mathrm e^{-p(z',0)}$ is taken to be $0$ where $f=0$. Then there is a holomorphic function $F$ on $D$ with $F(z',0)=f(z')$ and </p>
+<div class="equation" id="foundations-of-pluripotential-theory-B3B7F453"><span data-gerby-tag="B3B7F453"></span>
+<span class="equation-label"><a data-tag="B3B7F453" href="../../tag/27D0BD8514EB/">14.34</a></span>
+<div>\begin{equation} \label{eq:local-critical-gain-extension} \int _ D\frac{|F|^2\mathrm e^{-p}}{|w|^{2q}(-\log |w|^2)^2}\, \mathrm dV \leq C\int _{B'}|f|^2\mathrm e^{-p(z',0)}\, \mathrm dV_{B'}, \end{equation}</div>
+</div>
+<p> where both volumes are Euclidean and $C$ depends only on $m$, $q$, $r'$ and $r''$. When $m=0$, the right side is $C|f|^2\mathrm e^{-p(0)}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $f=0$, take $F=0$. Put $n=m+q$, and let $\beta $ be the Euclidean Kähler form on $\mathbb C^ n$. We first treat smooth weights: we cut off the trivial extension of $f$ near $\{ w=0\} $, correct it with lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a> on $D\setminus \{ w=0\} $, and let the width $\varepsilon $ of the cutoff tend to zero. So assume that $p$ is smooth near $\overline D$, and set $R=|w|^2$, $\psi =\log R$ and $\psi _\varepsilon =\log (\varepsilon +R)$ for small $\varepsilon &gt;0$. The function $P=p+\pi |z|^2$, where $z=(z',w)$, satisfies $\mathrm{dd}^{\mathrm{c}}P\geq \beta $, and replacing $p$ by $P$ changes both sides of (<a data-tag="B3B7F453" href="../../tag/27D0BD8514EB/">14.34</a>) by factors bounded in terms of $r'$ and $r''$ only; we prove the estimate for $P$. 
+    <p>
+<em>The twisted form.</em> On $D\setminus \{ w=0\} $ consider the trivial line bundle with the metric $\mathrm e^{-P-q\psi }$, and let $\mu $, $a_\varepsilon $ and $b_\varepsilon $ be the functions of lemma <a data-tag="47AD0EAA" href="../../tag/ABE17C01E6F9/">14.7.2</a>, for $0&lt;\varepsilon &lt;\mathrm e^{-4}$; that lemma applies because $0&lt;R&lt;\mathrm e^{-4}$ on $D\setminus \{ w=0\} $, since $r''&lt;\mathrm e^{-2}$. By its part (1), $a_\varepsilon \geq 1$ and $-\mu '(\psi _\varepsilon )\geq 1$, and for fixed $\varepsilon $ the functions $a_\varepsilon $ and $b_\varepsilon $ are bounded above and below by positive constants. By its part (2), applied with $\Theta =\mathrm i\partial \bar\partial (P+q\psi )$, the curvature form of this metric times $2\pi $, the gradient terms cancel in the form $H$ of lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a>, and 
+    
+<div class="equation">
+  \[  H_\varepsilon =a_\varepsilon \bigl (\mathrm i\partial \bar\partial P +q\, \mathrm i\partial \bar\partial \psi \bigr ) -\mu '(\psi _\varepsilon )\,  \mathrm i\partial \bar\partial \psi _\varepsilon .  \]
+</div>
+<p>
+       Both logarithmic Hessians $\mathrm i\partial \bar\partial \psi $ and $\mathrm i\partial \bar\partial \psi _\varepsilon $ are semipositive, so (<a data-tag="E9C58421" href="../../tag/4762DC697088/">14.33</a>) gives $\mathrm i\partial \bar\partial \psi _\varepsilon \geq (\varepsilon /R)\, \mathrm i\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon $. Since also $\mathrm i\partial \bar\partial P=2\pi \mathrm{dd}^{\mathrm{c}}P\geq 2\pi \beta $, the bounds $a_\varepsilon \geq 1$ and $-\mu '(\psi _\varepsilon )\geq 1$ give $H_\varepsilon \geq 2\pi \beta +(\varepsilon /R)\, \mathrm i\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon $. 
+    <p>
+<em>Complete cutoffs.</em> The manifold $D\setminus \{ w=0\} $ carries a Kähler form and cutoffs as required in lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a>. Indeed, put $\tau _0=-\log (r'^2-|z'|^2)-\log (r''^2-|w|^2)$, omitting the first term if $m=0$, and $\tau _1=-\log (-\psi )$. Each of the three functions $\tau $ formed by the two terms of $\tau _0$ and by $\tau _1$ is of the form $\tau =-\log g$ with $g&gt;0$ smooth and $-\mathrm{dd}^{\mathrm{c}}g\geq 0$, namely $g=r'^2-|z'|^2$, $g=r''^2-|w|^2$ and $g=-\psi $; hence 
+    
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\tau =-\frac{\mathrm{dd}^{\mathrm{c}}g}{g}+\frac{\mathrm i}{2\pi g^2}\partial g\wedge \bar\partial g\geq \frac{\mathrm i}{2\pi }\partial \tau \wedge \bar\partial \tau \geq 0.  \]
+</div>
+<p>
+       Thus $\tau _0$ and $\tau _1$ are plurisubharmonic, and $\sigma =\beta +\mathrm{dd}^{\mathrm{c}}\tau _0+\mathrm{dd}^{\mathrm{c}}\tau _1\geq \beta $ is a Kähler form. Moreover $\sigma \geq \mathrm{dd}^{\mathrm{c}}\tau \geq \frac{\mathrm i}{2\pi }\partial \tau \wedge \bar\partial \tau $ for each of the three functions; the eigenvalue of the rank-one form $\frac{\mathrm i}{2\pi }\partial \tau \wedge \bar\partial \tau $ with respect to $\sigma $ is $|\partial \tau |_\sigma ^2/(2\pi )$, so $|\partial \tau |_\sigma ^2\leq 2\pi $, and these functions have bounded gradients for $\sigma $. The function $\tau _0-\tau _1$ tends to $+\infty $ at the boundary of $D$ and along $\{ w=0\} $, and its sublevel sets are compact in $D\setminus \{ w=0\} $. If $\lambda \in C^\infty (\mathbb R)$ equals one on $(-\infty ,1]$ and zero on $[2,\infty )$, the functions $\chi _ j=\lambda ((\tau _0-\tau _1)/j)$ are compactly supported, tend to one, and have gradients $O(1/j)$. The canonical bundle of $\mathbb C^ n$ is trivialized by $\mathrm dz_1\wedge \cdots \wedge \mathrm dz_ n$, whose norm for $\beta $ is constant, so we identify functions with $(n,0)$-forms, as in the proof of theorem <a data-tag="B0A910AD" href="../../tag/846B917F28CD/">14.6.7</a>; this multiplies all the pointwise norms below by the same constant factor. 
+    <p>
+<em>The correction.</em> Let $G(z',w)=f(z')$. Choose $\rho \in C^\infty (\mathbb R)$ with $0\leq \rho \leq 1$, equal to one on $(-\infty ,1/2]$ and to zero on $[1,\infty )$, and put $G_\varepsilon =\rho (R/\varepsilon )G$. Since $\bar\partial R/\varepsilon =(1+R/\varepsilon )\bar\partial \psi _\varepsilon $, 
+    
+<div class="equation">
+  \[  g_\varepsilon =\bar\partial G_\varepsilon =\rho '(R/\varepsilon )(1+R/\varepsilon ) \bar\partial \psi _\varepsilon \, G,  \]
+</div>
+<p>
+       which is supported in $\{ \varepsilon /2\leq R\leq \varepsilon \} $. For an $(n,1)$-form $v$, the rank-one part of the lower bound for $H_\varepsilon $ and lemma <a data-tag="A2D1311F" href="../../tag/A0C109B78052/">14.6.1</a>(1),(2), applied with $\alpha =\partial \psi _\varepsilon $, give 
+    
+<div class="equation">
+  \[  |\langle \bar\partial \psi _\varepsilon \wedge G,v\rangle |^2 \leq \frac R\varepsilon \, |G|^2\mathrm e^{-P}R^{-q}\langle [H_\varepsilon ,\Lambda _\beta ]v,v\rangle ,  \]
+</div>
+<p>
+       where $|G|$ is the modulus of the function $G$ and the inner products are those of $\beta $ and the metric $\mathrm e^{-P-q\psi }=\mathrm e^{-P}R^{-q}$. Hence, on the support of $g_\varepsilon $, where $R/\varepsilon \leq 1$, we have $\langle [H_\varepsilon ,\Lambda _\beta ]^{-1}g_\varepsilon ,g_\varepsilon \rangle \leq C|G|^2\mathrm e^{-P}R^{-q}$, and the integral $M_{g_\varepsilon }$ of lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a> is at most 
+    
+<div class="equation">
+  \[  C\int _{\{ \varepsilon /2\leq R\leq \varepsilon \} } |G|^2\mathrm e^{-P}R^{-q}\, \mathrm dV.  \]
+</div>
+<p>
+       In polar coordinates in $w$, the integral of $R^{-q}$ over the shell $\varepsilon /2\leq |w|^2\leq \varepsilon $ is a fixed multiple of $\int _{\sqrt{\varepsilon /2}}^{\sqrt\varepsilon }\mathrm dt/t=\frac12\log 2$. Since $P$ is uniformly continuous on $\overline D$ and $G$ does not depend on $w$, the last integral tends to a fixed multiple of $\int _{B'}|f|^2\mathrm e^{-P(z',0)}\, \mathrm dV_{B'}$ as $\varepsilon \to 0$. Lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a> gives $u_\varepsilon $ on $D\setminus \{ w=0\} $ with $\bar\partial u_\varepsilon =g_\varepsilon $ and 
+    
+<div class="equation">
+  \[  \int _{D}\frac{|u_\varepsilon |^2\mathrm e^{-P}R^{-q}}{a_\varepsilon +b_\varepsilon }\, \mathrm dV\leq C\int _{\{ \varepsilon /2\leq R\leq \varepsilon \} } |G|^2\mathrm e^{-P}R^{-q}\, \mathrm dV.  \]
+</div>
+<p>
+      For fixed $\varepsilon $ the denominator is bounded and $\mathrm e^{-P}R^{-q}$ is bounded below, so $u_\varepsilon $ is square integrable, and $F_\varepsilon =G_\varepsilon -u_\varepsilon $, which is holomorphic off $\{ w=0\} $, extends holomorphically to $D$ by lemma <a data-tag="C5C65B2A" href="../../tag/189AC91F2DE3/">14.6.6</a>. The difference $u_\varepsilon =G_\varepsilon -F_\varepsilon $ is then smooth near $\{ w=0\} $, and it vanishes there: a nonzero value at a point $(z'_0,0)$ would make $\int |u_\varepsilon |^2|w|^{-2q}$ diverge near that point, since $\int |w|^{-2q}\, \mathrm dV(w)$ diverges logarithmically at $w=0$ in $\mathbb C^ q$. Hence $F_\varepsilon (z',0)=G_\varepsilon (z',0)=f(z')$. 
+    <p>
+<em>The limit $\varepsilon \to 0$.</em> By lemma <a data-tag="47AD0EAA" href="../../tag/ABE17C01E6F9/">14.7.2</a>(1), $a_\varepsilon +b_\varepsilon \leq 5(-\log (\varepsilon +R))^2$, so the correction estimate bounds $u_\varepsilon $ in the weaker weight $(\varepsilon +R)^{-q}(-\log (\varepsilon +R))^{-2}\mathrm e^{-P}$. In this weight the squared norm of $G_\varepsilon $ is at most $C_ P(-\log \varepsilon )^{-2}$, because its support has normal volume $O(\varepsilon ^ q)$ and $(\varepsilon +R)^{-q}\leq \varepsilon ^{-q}$ there; the constant $C_ P$ is finite for the fixed smooth weight $P$. Consequently the squared norms of $F_\varepsilon $ in this weight have upper limit, as $\varepsilon \to 0$, at most a constant, depending only on $m,q,r',r''$, times $\int _{B'}|f|^2\mathrm e^{-P(z',0)}$. Since $t^{-q}(-\log t)^{-2}$ is bounded below on $(0,\mathrm e^{-3}]$, the $F_\varepsilon $ are bounded in $L^2(D)$, and by lemma <a data-tag="4C4B439C" href="../../tag/94EC30DAF1A3/">14.5.2</a>(1) a sequence $\varepsilon _ k\to 0$ gives functions converging locally uniformly to a holomorphic $F$ with $F(z',0)=f(z')$. By Fatou's lemma, $F$ satisfies (<a data-tag="B3B7F453" href="../../tag/27D0BD8514EB/">14.34</a>) with $P$ in place of $p$, and removing the bounded factor $\mathrm e^{-\pi |z|^2}$ gives (<a data-tag="B3B7F453" href="../../tag/27D0BD8514EB/">14.34</a>) for smooth $p$. 
+    <p>
+<em>General $p$.</em> Take smooth plurisubharmonic functions $p_ l\downarrow p$ on a neighborhood of $\overline D$, obtained by convolution: by (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>) the convolutions $p*\rho _{1/l}$ decrease to $p$, they are smooth, and they are plurisubharmonic because $\mathrm{dd}^{\mathrm{c}}(p*\rho _{1/l})=(\mathrm{dd}^{\mathrm{c}}p)*\rho _{1/l}\geq 0$ (theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>). Their restrictions $p_ l(z',0)$ decrease to $p(z',0)$, so the right sides of (<a data-tag="B3B7F453" href="../../tag/27D0BD8514EB/">14.34</a>) for $p_ l$ are at most the right side for $p$, and the smooth case gives extensions $F_ l$ satisfying (<a data-tag="B3B7F453" href="../../tag/27D0BD8514EB/">14.34</a>) for $p_ l$ with the same constant. Since $p_ l\leq p_1$, the weights have a common positive lower bound, so the $F_ l$ are bounded in $L^2(D)$ and, by lemma <a data-tag="4C4B439C" href="../../tag/94EC30DAF1A3/">14.5.2</a>(1), a subsequence converges locally uniformly on $D$, including on $\{ w=0\} $. The limit $F$ satisfies $F(z',0)=f(z')$, and Fatou's lemma gives (<a data-tag="B3B7F453" href="../../tag/27D0BD8514EB/">14.34</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-FB4F0B00">
+<p><a class="environment-identifier" href="../../tag/B903D314198B/">Lemma <span data-tag="FB4F0B00">14.7.4</span>.</a><span data-gerby-tag="FB4F0B00"></span> Let $Y\subset X$ be a nonempty connected closed complex submanifold of codimension $q\geq 1$. There is a smooth function $R_ Y\geq 0$ on $X$, vanishing exactly on $Y$, with the following properties. </p>
+<ol>
+<li><p>
+Let $y\in Y$. Since $R_ Y$ attains its minimum at $y$, its differential vanishes there, so $H_ y(v,v)=(R_ Y\circ \gamma )''(0)$, for smooth curves $\gamma $ with $\gamma (0)=y$ and $\gamma '(0)=v$, is a well-defined quadratic form on the real tangent space $T_ yX$, the real Hessian of $R_ Y$ at $y$. It satisfies $H_ y(v,v)&gt;0$ for every $v\in T_ yX\setminus T_ yY$. 
+</p>
+</li><li><p>
+There is a constant $b\geq 0$, depending only on $X$, $\omega $ and $R_ Y$, such that 
+</p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}\log R_ Y\geq -b\omega ,\qquad \mathrm{dd}^{\mathrm{c}}\log (R_ Y+\varepsilon )\geq -b\omega \quad (\varepsilon &gt;0).  \]
+</div>
+</li><li><p>
+Let $(z',w)$ be holomorphic coordinates on an open set $U\subset X$ with $Y\cap U=\{ w=0\} $, and write $(0,w)$ for the tangent vector with components $0$ in the $z'$-directions and $w$ in the $w$-directions. Then $Q_{z'}(w)=\frac12H_{(z',0)}\bigl ((0,w),(0,w)\bigr )$ is a positive definite Hermitian form on $\mathbb C^ q$ depending continuously on $z'$, and every point of $Y\cap U$ has a neighborhood on which 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-DD0395FB"><span data-gerby-tag="DD0395FB"></span>
+<span class="equation-label"><a data-tag="DD0395FB" href="../../tag/6DDE982B7F19/">14.35</a></span>
+<div>\begin{equation} \label{eq:normal-pole-taylor} \bigl |R_ Y(z',w)-Q_{z'}(w)\bigr |\leq C|w|^3,\qquad c|w|^2\leq R_ Y(z',w)\leq C|w|^2, \end{equation}</div>
+</div>
+<p>
+ for constants $c,C&gt;0$. 
+</p>
+</li><li><p>
+The function $\log R_ Y$ has gentle analytic singularities of type $(1,\mathcal I_ Y)$, where $\mathcal I_ Y$ is the ideal sheaf of $Y$. 
+</p>
+</li>
+</ol>
+<p> Multiplying $R_ Y$ by a small positive constant, we may assume that $\max _ XR_ Y&lt;\mathrm e^{-4}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Cover a neighborhood of $Y$ by finitely many coordinate charts with coordinates $(z',w)$, $w\in \mathbb C^ q$, in which $Y=\{ w=0\} $, and add one open set whose closure does not meet $Y$. Choose smooth functions $\chi _ i\geq 0$ with compact supports in these sets and $\sum _ i\chi _ i^2=1$ on $X$; for instance, divide a finite family of bump functions by the square root of the sum of their squares. On a normal chart put $K_ i=\sum _{l=1}^ q|w_ l|^2$, on the additional set put $K_0=1$, and define $R_ Y=\sum _ i\chi _ i^2K_ i$, each term being extended by zero outside its chart. 
+    <p>
+      The functions $K_ i$ are uniformly comparable on the overlaps where they occur. Indeed, let $(z',w)$ and $(\tilde z',\tilde w)$ be the coordinates of two normal charts, and let $y\in Y$ lie in both. In the coordinates $(z',w)$ choose a polydisc $P'\times P''$ centered at $y$ and contained in both charts. Each $\tilde w_ l$ vanishes on $Y\cap (P'\times P'')=\{ w=0\} $, and since $P''$ is a polydisc centered at $0$, 
+    
+<div class="equation">
+  \[  \tilde w_ l(z',w)=\int _0^1\frac{\mathrm d}{\mathrm dt}\tilde w_ l(z',tw)\, \mathrm dt=\sum _{k=1}^ qw_ k\, a_{lk}(z',w),  \]
+</div>
+<p>
+       where the functions $a_{lk}(z',w)=\int _0^1(\partial \tilde w_ l/\partial w_ k)(z',tw)\, \mathrm dt$ are holomorphic, by differentiation under the integral sign, and bounded on smaller polydiscs. Hence $\sum _ l|\tilde w_ l|^2\leq C\sum _ k|w_ k|^2$ near $y$, and by symmetry the reverse inequality holds. The compact set $\operatorname{Supp}\chi _ i\cap \operatorname{Supp}\chi _ j\cap Y$ is covered by finitely many such smaller polydiscs, and on the remaining part of $\operatorname{Supp}\chi _ i\cap \operatorname{Supp}\chi _ j$, a compact set disjoint from $Y$, the functions $K_ i$ and $K_ j$ are continuous and positive, hence bounded above and below; the same holds on $\operatorname{Supp}\chi _0\cap \operatorname{Supp}\chi _ i$, which does not meet $Y$. Hence there is one constant $C\geq 1$ with $K_ j\leq CK_ i$ on $\operatorname{Supp}\chi _ i\cap \operatorname{Supp}\chi _ j$ for all $i,j$. At every point some $\chi _ i^2\geq 1/J$, where $J$ is the number of sets in the cover, so $K_ j/R_ Y\leq JC$ wherever $K_ j$ contributes and $R_ Y&gt;0$, and likewise $(K_ j+\varepsilon )/(R_ Y+\varepsilon )\leq JC$. 
+    <p>
+      To prove (2), let $x\in X$. The terms with $x\notin \operatorname{Supp}\chi _ j$ vanish near $x$, and for the remaining indices $j$ the point $x$ lies in the chart of $K_ j$. On a small neighborhood of $x$ we may therefore apply the identity (<a data-tag="586B8832" href="../../tag/9F558292FE56/">13.5</a>) of lemma <a data-tag="B56FC59A" href="../../tag/EFA6E7FF99E6/">13.4.1</a>(2) to these indices, with $K_ j+\varepsilon $ in place of the functions denoted there by $\mathrm e^{w_ j}$, so that $S=R_ Y+\varepsilon $. The term with pairwise differences is semipositive, and so is the term with the Hessians $\mathrm{dd}^{\mathrm{c}}\log (K_ j+\varepsilon )$, since $\log (\sum _ l|w_ l|^2+\varepsilon )$ is plurisubharmonic. The remaining term is 
+    
+<div class="equation">
+  \[  2\sum _ j\frac{K_ j+\varepsilon }{R_ Y+\varepsilon } \left(\chi _ j\mathrm{dd}^{\mathrm{c}}\chi _ j- \frac{\mathrm i}{2\pi }\partial \chi _ j\wedge \bar\partial \chi _ j\right),  \]
+</div>
+<p>
+       which is bounded below by $-b\omega $ because the cutoffs have bounded first and second derivatives and the ratios are bounded by $JC$. This proves the second inequality in (2), and the first follows as $\varepsilon \downarrow 0$, since $\log (R_ Y+\varepsilon )$ decreases to $\log R_ Y$. 
+    <p>
+      To prove (1), let $y\in Y$, and let $\gamma $ be a smooth curve with $\gamma (0)=y$ and $\gamma '(0)=v$. In coordinates the chain rule gives $(R_ Y\circ \gamma )''(0)=D^2R_ Y(y)(v,v)$, because $DR_ Y(y)=0$, so $H_ y$ is well defined. The term $\chi _0^2K_0$ vanishes near $Y$, and a term $\chi _ i^2K_ i$ with $y\notin \operatorname{Supp}\chi _ i$ vanishes near $y$. For a normal chart with $y\in \operatorname{Supp}\chi _ i$ and normal coordinates $w$, we have $w(\gamma (t))=t\, \mathrm dw_ y(v)+O(t^2)$, hence $(\chi _ i^2K_ i)(\gamma (t))=t^2\chi _ i(y)^2|\mathrm dw_ y(v)|^2+O(t^3)$. Therefore 
+    
+<div class="equation">
+  \[  H_ y(v,v)=2\sum _ i\chi _ i(y)^2|\mathrm dw^{(i)}_ y(v)|^2,  \]
+</div>
+<p>
+       the sum running over the normal charts, with normal coordinates $w^{(i)}$. Since the kernel of $\mathrm dw^{(i)}_ y$ on $T_ yX$ is $T_ yY$ and $\sum _ i\chi _ i(y)^2=1$, we get $H_ y(v,v)&gt;0$ for $v\notin T_ yY$. 
+    <p>
+      To prove (3), let $(z',w)$ be coordinates on $U$ as in the statement, and let $y=(z',0)\in Y\cap U$. Since $\mathrm dw^{(i)}_ y$ is complex linear, the formula for $H_ y$ shows that $Q_{z'}(w)=\sum _ i\chi _ i(y)^2|\mathrm dw^{(i)}_ y(0,w)|^2$ is a Hermitian form in $w$, and it is positive definite because $(0,w)\notin T_ yY$ for $w\neq 0$. In the coordinates, $Q_{z'}(w)$ is half the second derivative of $R_ Y$ at $(z',0)$ in the direction $(0,w)$, so it depends continuously on $z'$. Let $V'\times V''$ be a product of closed balls in the coordinates, centered at a point of $Y\cap U$ and contained in $U$. Taylor's formula in the variable $w$ at $(z',0)$, where $R_ Y$ and its first derivatives vanish, gives $|R_ Y(z',w)-Q_{z'}(w)|\leq C|w|^3$ on $V'\times V''$, with $C$ depending on a bound for the third derivatives of $R_ Y$ there. If $c_0&gt;0$ and $C_0$ are the minimum and the maximum of $Q_{z'}(w)$ for $z'\in V'$ and $|w|=1$, then $c_0|w|^2-C|w|^3\leq R_ Y\leq C_0|w|^2+C|w|^3$ on $V'\times V''$, and (<a data-tag="DD0395FB" href="../../tag/6DDE982B7F19/">14.35</a>) follows on the set where $|w|\leq c_0/(2C)$. 
+    <p>
+      Finally, for (4), note that on the blowup of $Y$, or on any log resolution of $\mathcal I_ Y$, every normal tuple is a local equation of the exceptional divisor times a tuple without common zeros, because the tuples generate $\mathcal I_ Y$; so $\log R_ Y$ is the logarithm of the squared modulus of that equation plus a smooth function. Since moreover $\exp (\log R_ Y)=R_ Y$ is smooth on $X$, $\log R_ Y$ has gentle analytic singularities of type $(1,\mathcal I_ Y)$. Multiplying $R_ Y$ by a constant $\lambda &gt;0$ adds $\log \lambda $ to $\log R_ Y$ and replaces $\log (R_ Y+\varepsilon )$ by $\log \lambda +\log (R_ Y+\varepsilon /\lambda )$, so the inequalities persist. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+The proof of lemma <a data-tag="6F636631" href="../../tag/7EB0767C032B/">14.7.7</a> below uses the following computation with log discrepancies (definition <a data-tag="91527C9C" href="../../tag/B5514FFD42D1/">12.6.3</a>). Let $Z$ be a complex manifold and $E\subset Z$ a smooth divisor. We consider finite sequences of blowups $Z_ k\to Z_{k-1}\to \cdots \to Z_0=Z$ with smooth centers in which the <em>boundary</em> of $Z_0$ is $E$, the boundary of $Z_ i$ is the union of the inverse image of the boundary of $Z_{i-1}$ and the exceptional divisor of $Z_ i\to Z_{i-1}$, and each center has normal crossings with the boundary of the model on which it lies. For a prime divisor $D$ on the final model, put $b_ D=\operatorname {ord}_ D(E)$, the vanishing order along $D$ of the pullback of a local equation of $E$, and $A_ D=A_ Z(D)$. We call $A_ D-b_ D$ the <em>margin</em> of $D$. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-98BE9907">
+<p><a class="environment-identifier" href="../../tag/EB08BA5202E3/">Lemma <span data-tag="98BE9907">14.7.5</span>.</a><span data-gerby-tag="98BE9907"></span> In this situation, $A_ D-b_ D=0$ if $D$ is the strict transform of $E$, and $A_ D-b_ D&gt;0$ for every other prime divisor $D$ in the boundary. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We argue by induction on the number of blowups. On $Z$ itself, $A_ E=b_ E=1$, and every other prime divisor $D$ of $Z$ has $A_ D=1$ and $b_ D=0$. Strict transforms keep their log discrepancies and orders, hence their margins. Since every exceptional divisor lies in the boundary, a prime divisor of a model outside the boundary is the strict transform of a prime divisor of $Z$ other than $E$, so it has $A_ D=1$ and $b_ D=0$. Suppose that the statement holds on a model. Blowing up a center of codimension one is an isomorphism and creates no new divisor; it only adds the center to the boundary, and the center then has margin one if it was not a boundary component. It therefore suffices to show that the exceptional divisor $E_{\mathrm{new}}$ of the blowup of a center $C$ of codimension $c\geq 2$ has a positive margin. 
+    <p>
+      Suppose that $C$ is contained in exactly $r$ boundary components, near its generic point. Since $C$ has normal crossings with the boundary, $r\leq c$. Near such a point choose coordinates $(z,w)$, $w=(w_1,\ldots ,w_ c)$, in which $C=\{ w=0\} $ and the boundary components through the point are coordinate hyperplanes; those containing $C$ are then hyperplanes $\{ w_ j=0\} $. By proposition <a data-tag="2959F02B" href="../../tag/865FE5EC97E6/">A.5.3</a>, in the coordinates $(z,t,v)$ of (<a data-tag="5649DBB5" href="../../tag/E62F169B3F9F/">A.8</a>) we have $E_{\mathrm{new}}=\{ t=0\} $, and the Jacobian determinant of the blowup is $\pm t^{c-1}$, so it vanishes to order $c-1$ along $E_{\mathrm{new}}$. A local equation of a component $\{ w_ j=0\} $ containing $C$ is a unit times $w_ j$ (lemma <a data-tag="D47652CA" href="../../tag/BCE8B698A66D/">12.6.1</a>(1)), and $w_ j$ pulls back to $t$ or to $tv_ j$, which vanishes to order one along $E_{\mathrm{new}}$, because $v_ j$ does not vanish identically on $\{ t=0\} $ (lemma <a data-tag="D47652CA" href="../../tag/BCE8B698A66D/">12.6.1</a>(2),(4)). Thus the pullback of a local equation of each component containing $C$ vanishes to order one along $E_{\mathrm{new}}$. Hence $A_{\mathrm{new}}=c+\sum _{D\supset C}(A_ D-1)$ and $b_{\mathrm{new}}=\sum _{D\supset C}b_ D$, the sums running over the boundary components containing $C$ (other divisors through $C$ have $A_ D=1$ and $b_ D=0$ and contribute nothing). Therefore 
+    
+<div class="equation">
+  \[  A_{\mathrm{new}}-b_{\mathrm{new}} =c-r+\sum _{D\supset C}(A_ D-b_ D).  \]
+</div>
+<p>
+       All terms on the right are nonnegative by the induction hypothesis. If one of the components containing $C$ has a positive margin, so does $E_{\mathrm{new}}$. Otherwise only the strict transform of $E$ can contain $C$, so $r\leq 1$ and $c-r\geq 1$, and again the margin of $E_{\mathrm{new}}$ is positive. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-7AE71E08">
+<p><a class="environment-identifier" href="../../tag/F36B5947D011/">Lemma <span data-tag="7AE71E08">14.7.6</span>.</a><span data-gerby-tag="7AE71E08"></span> Let $L\to X$ be a holomorphic line bundle with a smooth quadratic metric $h_0$ and a plurisubharmonic metric $h=h_0\mathrm e^{-\Phi }$. Let $Y$ be a nonempty connected closed complex submanifold of codimension $q\geq 1$ such that the restriction of $h$ to $Y$ is defined, and let $R_ Y$ be as in lemma <a data-tag="FB4F0B00" href="../../tag/B903D314198B/">14.7.4</a>, with $\max _ XR_ Y&lt;\mathrm e^{-4}$. If $f$ is a holomorphic section of $L|_ Y$ with $\int _ Y|f|_ h^2\, \mathrm dV_ Y&lt;\infty $, there are $\kappa &gt;0$, finitely many open sets $U_ i\subset X$, holomorphic sections $F_ i$ of $L$ over $U_ i$ with $F_ i=f$ on $Y\cap U_ i$, and smooth functions $\eta _ i$ with compact support in $U_ i$ and $\sum _ i\eta _ i=1$ on a neighborhood of $Y$, such that </p>
+<div class="equation" id="foundations-of-pluripotential-theory-1BE90BFA"><span data-gerby-tag="1BE90BFA"></span>
+<span class="equation-label"><a data-tag="1BE90BFA" href="../../tag/A6BC4A01A284/">14.36</a></span>
+<div>\begin{equation} \label{eq:critical-local-extension-gain} \int _{U_ i}\frac{|F_ i|_{h_0}^2\mathrm e^{-(1+\kappa )\Phi }}{R_ Y^ q(-\log R_ Y)^2}\, \mathrm dV&lt;\infty \quad \text{for every }i, \end{equation}</div>
+</div>
+<p> and such that $G=\sum _ i\eta _ iF_ i$, each term extended by zero, is a smooth global section of $L$ with $G|_ Y=f$, $\bar\partial G|_ Y=0$, and </p>
+<div class="equation" id="foundations-of-pluripotential-theory-CB9FD962"><span data-gerby-tag="CB9FD962"></span>
+<span class="equation-label"><a data-tag="CB9FD962" href="../../tag/9A43DC5AB656/">14.37</a></span>
+<div>\begin{equation} \label{eq:strengthened-critical-initial-norm} \int _ X\frac{(|G|_{h_0}^2+|\bar\partial G|_{\omega ,h_0}^2) \mathrm e^{-(1+\kappa )\Phi }}{R_ Y^ q(-\log R_ Y)^2}\, \mathrm dV&lt;\infty . \end{equation}</div>
+</div>
+<p> In particular </p>
+<div class="equation" id="foundations-of-pluripotential-theory-E43F748D"><span data-gerby-tag="E43F748D"></span>
+<span class="equation-label"><a data-tag="E43F748D" href="../../tag/1B0F446E871A/">14.38</a></span>
+<div>\begin{equation} \label{eq:critical-gluing-error-decay} \int _{\{ R_ Y&lt;\varepsilon \} }|\bar\partial G|_{\omega ,h}^2R_ Y^{-q}\, \mathrm dV \longrightarrow 0\qquad (\varepsilon \downarrow 0). \end{equation}</div>
+</div>
+<p> Here $\mathrm dV_ Y=\omega |_ Y^{n-q}/(n-q)!$; if $Y$ is a point, $\mathrm dV_ Y$ is the unit mass at that point. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In a holomorphic frame of $L$ the local weight $p$ of $h$ is plurisubharmonic, and its restriction to $Y$ is plurisubharmonic, because the restriction is defined and $Y$ is connected. If $Y$ is a point, the value of $p$ there is finite and we take any $\kappa &gt;0$. Otherwise, by the strong openness theorem (corollary <a data-tag="4013F756" href="../../tag/EA6067858516/">12.5.4</a>), every point of $Y$ has a neighborhood in $Y$ on which $f$ is square integrable with the weight $\mathrm e^{-(1+\kappa )p|_ Y}$ for some $\kappa &gt;0$; since $Y$ is compact, finitely many coordinate products $B'_ i\times B''_ i$ of the form of lemma <a data-tag="6AA41C09" href="../../tag/833820F8A53D/">14.7.3</a>, with tangential balls slightly larger than needed and each contained in a neighborhood on which (<a data-tag="DD0395FB" href="../../tag/6DDE982B7F19/">14.35</a>) holds, cover $Y$, and one $\kappa &gt;0$ works for all of them. 
+    <p>
+      Lemma <a data-tag="6AA41C09" href="../../tag/833820F8A53D/">14.7.3</a>, applied in a frame with the plurisubharmonic weight $(1+\kappa )p$, gives holomorphic extensions $F_ i$ of $f$ on these products whose critical integrals with the logarithmic gain are finite. Let $U_ i$ be smaller concentric products that still cover $Y$. On $U_ i$, the smooth factors coming from the frames and the comparison $c|w|^2\leq R_ Y\leq C|w|^2$ of (<a data-tag="DD0395FB" href="../../tag/6DDE982B7F19/">14.35</a>) preserve this finiteness, which gives (<a data-tag="1BE90BFA" href="../../tag/A6BC4A01A284/">14.36</a>); for the logarithmic factor we use that $-\log R_ Y\geq c'(-\log |w|^2)$ for a constant $c'&gt;0$, since $R_ Y\leq C|w|^2$ and both $R_ Y$ and $|w|^2$ are less than $\mathrm e^{-4}$. 
+    <p>
+      We now glue the local extensions. Choose smooth functions $\eta _ i$ with compact support in $U_ i$ whose sum is one on a neighborhood of $Y$; they are obtained by grouping the members of a partition of unity with compact supports subordinate to the cover of $X$ by the sets $U_ i$ and $X\setminus Y$ (proposition <a data-tag="2A0D66D9" href="../../tag/DAE61F3D77A3/">7.1.3</a>). Put $G=\sum _ i\eta _ iF_ i$, each term extended by zero. Then $G|_ Y=f$. Since all $F_ i$ are holomorphic with the same restriction $f$, we have $\bar\partial G=\sum _ i(\bar\partial \eta _ i)F_ i$, and on $Y$ this equals $f\, \bar\partial \sum _ i\eta _ i=0$. The bounds on the cutoffs and their derivatives and (<a data-tag="1BE90BFA" href="../../tag/A6BC4A01A284/">14.36</a>) give (<a data-tag="CB9FD962" href="../../tag/9A43DC5AB656/">14.37</a>). 
+    <p>
+      Put $\gamma =|\bar\partial G|_{\omega ,h_0}^2$. Since $\bar\partial G$ is smooth and vanishes on $Y$, we have $\gamma \leq C|w|^2$ in normal coordinates near each point of $Y$, hence $\gamma \leq CR_ Y$ near $Y$, by (<a data-tag="DD0395FB" href="../../tag/6DDE982B7F19/">14.35</a>) and the compactness of $Y$. Let $A=\{ R_ Y&lt;\varepsilon \} $; all integrals below are taken with $\mathrm dV$. Hölder's inequality with the exponents $1+\kappa $ and $(1+\kappa )/\kappa $ gives 
+    
+<div class="equation">
+  \[  \int _ A\gamma \, \mathrm e^{-\Phi }R_ Y^{-q} \leq \left(\int _ A\frac{\gamma \mathrm e^{-(1+\kappa )\Phi }}{R_ Y^ q(-\log R_ Y)^2}\right)^{1/(1+\kappa )} \left(\int _ A\gamma R_ Y^{-q}(-\log R_ Y)^{2/\kappa }\right)^{\kappa /(1+\kappa )}.  \]
+</div>
+<p>
+       The first factor is bounded by (<a data-tag="CB9FD962" href="../../tag/9A43DC5AB656/">14.37</a>). In normal polar coordinates, using (<a data-tag="DD0395FB" href="../../tag/6DDE982B7F19/">14.35</a>) and $\gamma =O(R_ Y)$, the integrability of $\gamma R_ Y^{-q}(-\log R_ Y)^{2/\kappa }$ near $Y$ reduces to $\int _0^ r(-\log t)^{2/\kappa }\, \mathrm dt&lt;\infty $. Hence the second factor tends to zero as $\varepsilon \downarrow 0$, by the absolute continuity of the integral, which proves (<a data-tag="E43F748D" href="../../tag/1B0F446E871A/">14.38</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-6F636631">
+<p><a class="environment-identifier" href="../../tag/7EB0767C032B/">Lemma <span data-tag="6F636631">14.7.7</span>.</a><span data-gerby-tag="6F636631"></span> Let $L\to X$ be a holomorphic line bundle with a smooth quadratic metric $h_0$ and a plurisubharmonic metric $h=h_0\mathrm e^{-\Phi }$, where $\Phi $ has gentle analytic singularities. Let $Y$ be a nonempty connected closed complex submanifold of codimension $q\geq 1$ to which $h$ restricts, let $f$ be a holomorphic section of $L|_ Y$ with $\int _ Y|f|_ h^2\, \mathrm dV_ Y&lt;\infty $, and let $G$ be constructed from $f$ as in lemma <a data-tag="7AE71E08" href="../../tag/F36B5947D011/">14.7.6</a>. Then </p>
+<div class="equation" id="foundations-of-pluripotential-theory-6AD814FF"><span data-gerby-tag="6AD814FF"></span>
+<span class="equation-label"><a data-tag="6AD814FF" href="../../tag/98030817F4D9/">14.39</a></span>
+<div>\begin{equation} \label{eq:gentle-weighted-normal-residue} \varlimsup _{\varepsilon \downarrow 0} \int _{\{ \varepsilon /2\leq R_ Y\leq \varepsilon \} } |G|_ h^2R_ Y^{-q}\, \mathrm dV \leq C_ Y\int _ Y|f|_ h^2\, \mathrm dV_ Y, \qquad \mathrm dV_ Y=\omega |_ Y^{n-q}/(n-q)!, \end{equation}</div>
+</div>
+<p> where $C_ Y$ depends only on $Y$, $R_ Y$ and $\omega $, and not on $\Phi $ or $f$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We compute on a log resolution adapted to $\Phi $ and $Y$; by lemma <a data-tag="98BE9907" href="../../tag/EB08BA5202E3/">14.7.5</a>, only the strict transform of the exceptional divisor of the blowup of $Y$ contributes to the limit. 
+    <p>
+<em>A resolution adapted to $\Phi $ and $Y$.</em> Let $\operatorname {Bl}_ YX\to X$ be the blowup of $Y$, with exceptional divisor $E$; for $q=1$ this is the identity and $E=Y$. By proposition <a data-tag="2959F02B" href="../../tag/865FE5EC97E6/">A.5.3</a>, its Jacobian determinant is $\pm t^{q-1}$ in the charts of (<a data-tag="5649DBB5" href="../../tag/E62F169B3F9F/">A.8</a>), where $E=\{ t=0\} $, so its relative canonical divisor is $(q-1)E$. Let $\mathfrak a$ be the ideal in the type of $\Phi $. We apply theorem <a data-tag="B74A86AD" href="../../tag/24330D25741D/">A.5.5</a> on the compact manifold $\operatorname {Bl}_ YX$ to the pullback of $\mathfrak a$, which is nonzero, and to the divisor $E$. This gives a finite sequence of blowups with smooth centers, each having normal crossings with the accumulated divisor of theorem <a data-tag="B74A86AD" href="../../tag/24330D25741D/">A.5.5</a>, which starts with $E$; this accumulated divisor is the boundary in the sense of lemma <a data-tag="98BE9907" href="../../tag/EB08BA5202E3/">14.7.5</a>. On the final model the boundary has simple normal crossings, and the pullback of $\mathfrak a$ is the ideal of an effective divisor supported in the boundary. Denote the composite map to $X$ by $\pi $. It is a composite of blowups along closed submanifolds that principalizes $\mathfrak a$, that is, a log resolution of $\mathfrak a$ in the sense of section <a data-tag="52C3069D" href="../../tag/A4223F8F8B02/">13.1</a>. Since definition <a data-tag="54CD2043" href="../../tag/4E814A4EB7D1/">13.1.11</a> requires a smooth remainder on every log resolution, $\Phi \circ \pi $ has a smooth remainder. 
+    <p>
+<em>Divisor orders.</em> In a normal-crossing chart on the final model write 
+    
+<div class="equation">
+  \[  \Phi \circ \pi =\sum _ D a_ D\log |s_ D|^2+v,\qquad R_ Y\circ \pi =\prod _ D|s_ D|^{2b_ D}r,  \]
+</div>
+<p>
+       with $v$ smooth, $r$ smooth and strictly positive, and $a_ D,b_ D\geq 0$. The Jacobian factor of the pulled-back volume is $\prod _ D|s_ D|^{2(A_ D-1)}$ times a smooth positive function, where $A_ D=A_ X(D)$ is the log discrepancy. Let $F_ i$ be one of the holomorphic extensions used in $G$, and suppose that the chart lies over the open set $U_ i$ of lemma <a data-tag="7AE71E08" href="../../tag/F36B5947D011/">14.7.6</a>. Then $F_ i\circ \pi $ vanishes to some integral order $e_{i,D}\geq 0$ along each coordinate divisor $D$ of the chart. By (<a data-tag="1BE90BFA" href="../../tag/A6BC4A01A284/">14.36</a>), the integral of $|F_ i|_{h_0}^2\mathrm e^{-(1+\kappa )\Phi }R_ Y^{-q}(-\log R_ Y)^{-2}$ over $U_ i$ is finite, and this forces 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-369EB168"><span data-gerby-tag="369EB168"></span>
+<span class="equation-label"><a data-tag="369EB168" href="../../tag/77D11D5D142D/">14.40</a></span>
+<div>\begin{equation} \label{eq:critical-gain-divisor-orders} e_{i,D}+A_ D\geq (1+\kappa )a_ D+qb_ D\quad (b_ D&gt;0), \qquad e_{i,D}+A_ D&gt;(1+\kappa )a_ D\quad (b_ D=0). \end{equation}</div>
+</div>
+<p>
+       Indeed, fix the other coordinates away from their divisors and integrate radially in $s_ D$: the integrand behaves like $|s_ D|^{2(e_{i,D}+A_ D-(1+\kappa )a_ D-qb_ D)-2}(-\log |s_ D|^2)^{-2}$ when $b_ D&gt;0$, and the squared logarithm in the denominator makes the exponent $-1$ of the radial variable integrable but cannot compensate a smaller exponent. If $b_ D=0$, the logarithmic factor is bounded above and below near generic points of $D$, and the inequality must be strict. This is the computation of theorem <a data-tag="17D7A591" href="../../tag/5BA222439952/">12.6.5</a> with one additional logarithmic factor. 
+    <p>
+      Shrinking the chart, we may assume that for each $i$ either the chart lies over $U_ i$ or $\eta _ i\circ \pi $ vanishes on it, because $\operatorname{Supp}\eta _ i$ is a compact subset of the open set $U_ i$. Then, on a smaller chart, the pullback of $G=\sum _ i\eta _ iF_ i$ is the monomial $\prod _ Ds_ D^{e_ D}$, with $e_ D=\min _ ie_{i,D}$ over the indices $i$ of the first kind, times a smooth bounded function. The density of $|G|_ h^2R_ Y^{-q}\, \mathrm dV$ is therefore bounded by a constant times $\prod _ D|s_ D|^{2(\gamma _ D-1)}$, where 
+    
+<div class="equation">
+  \[  \gamma _ D=e_ D-a_ D-qb_ D+A_ D.  \]
+</div>
+<p>
+       If $a_ D&gt;0$, (<a data-tag="369EB168" href="../../tag/77D11D5D142D/">14.40</a>) gives $\gamma _ D\geq \kappa a_ D&gt;0$, and if $a_ D=b_ D=0$, it gives $\gamma _ D&gt;0$. If $a_ D=0$ and $b_ D&gt;0$, the formula for the relative canonical divisor of the first blowup gives $A_ D=A_{\operatorname {Bl}_ YX}(D)+(q-1)\operatorname {ord}_ D(E)$, and $b_ D=\operatorname {ord}_ D(E)$ because $\mathcal I_ Y$ pulls back to the ideal of $E$; hence 
+    
+<div class="equation">
+  \[  A_ D-qb_ D=A_{\operatorname {Bl}_ YX}(D)-\operatorname {ord}_ D(E).  \]
+</div>
+<p>
+       By lemma <a data-tag="98BE9907" href="../../tag/EB08BA5202E3/">14.7.5</a>, applied with $Z=\operatorname {Bl}_ YX$, this is positive unless $D$ is the strict transform of $E$. For that divisor $b_ E=1$ and $A_ E=q$, and $a_ E=0$: since the restriction of $h$ to $Y$ is defined, generic points of $Y$ lie outside the pole set of $\Phi $. Hence $\gamma _ E=e_ E\geq 0$, and the strict transform of $E$ is the only divisor along which $\gamma _ D$ can vanish. 
+    <p>
+<em>The annular limit.</em> By a finite partition of unity on the compact inverse image of $Y$, it suffices to consider the integral over a small chart. If no coordinate divisor of the chart is the strict transform of $E$ with $\gamma _ E=0$, the density is integrable, the shells $\{ \varepsilon /2\leq R_ Y\leq \varepsilon \} $ shrink to the null set $\pi ^{-1}(Y)$, and dominated convergence shows that the integral over the shell tends to zero. Otherwise let $t$ be the coordinate defining the strict transform of $E$. The density is $|t|^{-2}$ times a smooth bounded coefficient and the factors $|s_ D|^{2(\gamma _ D-1)}$, $D\ne E$, which are integrable since $\gamma _ D&gt;0$. For fixed values of the remaining coordinates $s$, the shell is $\varepsilon /2\leq |t|^2m(s)r(t,s)\leq \varepsilon $, with $m(s)=\prod _{D\ne E}|s_ D|^{2b_ D}$. Since $r$ is bounded above and below, the shell lies in a range of $\log |t|$ of bounded length, so the integral of $|t|^{-2}$ over it is bounded independently of $\varepsilon $ and $s$; this gives an integrable dominating function. As $\varepsilon \to 0$, the shell shrinks to $t=0$, the smooth coefficient tends to its value at $t=0$, and the integral of $|t|^{-2}$ over the shell tends to $\pi \log 2$. By dominated convergence, only the restriction to $t=0$ of the coefficient of $|t|^{-2}$ in the density contributes to the limit. 
+    <p>
+<em>Identification of the limit.</em> The argument just given, applied after multiplying the density by a continuous function with compact support, shows that the integrals over the shells converge to $\pi \log 2$ times the total mass of a measure $\mu $ on the strict transform of $E$; in a chart as above, $\mu $ has the density obtained by restricting to $t=0$ the smooth coefficient of $|t|^{-2}$, multiplied by the factors $|s_ D|^{2(\gamma _ D-1)}$, $D\ne E$. Since $\mu $ is determined by the limits of integrals over the shells $\{ \varepsilon /2\leq R_ Y\leq \varepsilon \} $, it does not depend on the coordinates in which it is computed, and since its density in every chart is integrable, it gives no mass to proper analytic subsets. We may therefore compute $\mu $ on the dense open subset of the strict transform of $E$ lying over the complement of the pole set of $\Phi $ in $Y$ and over which the further blowups are isomorphisms, using coordinates of the first blowup $\operatorname {Bl}_ YX$. 
+    <p>
+      Let $(z',w)$ be coordinates on $X$ in which $Y=\{ w=0\} $, and write $\mathrm dV=J(z',w)\, \mathrm dV(z')\, \mathrm dV(w)$ with $J$ smooth and positive. By lemma <a data-tag="FB4F0B00" href="../../tag/B903D314198B/">14.7.4</a>, $R_ Y=Q_{z'}(w)+O(|w|^3)$ locally uniformly, where $Q_{z'}$ is a positive definite Hermitian form on $\mathbb C^ q$ depending continuously on $z'$. Over this chart, $\operatorname {Bl}_ YX$ is covered by charts with coordinates $(z',t,\xi )$, $\xi \in \mathbb C^{q-1}$, in which, after renumbering the coordinates $w$, we have $w=t(1,\xi )$ and $E=\{ t=0\} $ (for $q=1$ there is no $\xi $, and $t=w$). There $\mathrm dV(w)=|t|^{2(q-1)}\, \mathrm dV(t)\, \mathrm dV(\xi )$ and $R_ Y=|t|^2\bigl (Q_{z'}(1,\xi )+O(|t|)\bigr )$, so away from the poles of $\Phi $ the density of $|G|_ h^2R_ Y^{-q}\, \mathrm dV$ is $|t|^{-2}$ times the smooth function 
+    
+<div class="equation">
+  \[  |G|_{h_0}^2\mathrm e^{-\Phi }\bigl (Q_{z'}(1,\xi )+O(|t|)\bigr )^{-q}J,  \]
+</div>
+<p>
+       whose restriction to $t=0$ equals $|f(z')|_ h^2Q_{z'}(1,\xi )^{-q}J(z',0)$, because $G|_ Y=f$. The points of the projective normal fibers not covered by such a chart form a hyperplane in each fiber and are negligible. Integrating over $\xi $, we find that the image of $\mu $ under the projection to $Y$ has the density $c(z')|f(z')|_ h^2$ with respect to $\mathrm dV(z')$, where 
+    
+<div class="equation">
+  \[  c(z')=J(z',0)\int _{\mathbb C^{q-1}}Q_{z'}(1,\xi )^{-q}\, \mathrm dV(\xi ).  \]
+</div>
+<p>
+       Since $Q_{z'}(1,\xi )\geq c_0(1+|\xi |^2)$ with $c_0&gt;0$ locally uniformly in $z'$, and $(1+|\xi |^2)^{-q}$ is integrable on $\mathbb C^{q-1}$, the function $c$ is locally bounded. It depends only on $\omega $, $R_ Y$ and the chart. Covering the compact manifold $Y$ by finitely many such charts and comparing $\mathrm dV(z')$ with $\mathrm dV_ Y$, we obtain (<a data-tag="6AD814FF" href="../../tag/98030817F4D9/">14.39</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-5BC89762">
+<p><a class="environment-identifier" href="../../tag/C34A54E553C3/">Theorem <span data-tag="5BC89762">14.7.8</span>.</a><span data-gerby-tag="5BC89762"></span> Let $Y\subset X$ be a nonempty closed connected complex submanifold, and put $\mathrm dV_ Y=\omega |_ Y^{\dim Y}/(\dim Y)!$, the unit mass if $Y$ is a point. There are constants $N,C&gt;0$, depending only on $X$, $\omega $ and $Y$, with the following property. Let $L$ be a holomorphic line bundle with a smooth quadratic metric $h_0$ and a plurisubharmonic metric $h=h_0\mathrm e^{-\varphi }$ such that $c_1(L,h)\geq N\omega $, and suppose that the restriction of $h$ to $Y$ is defined, that is, the local weights of $h$ are not identically $-\infty $ on $Y$. Then every $f\in H^0(Y,L|_ Y)$ with $\int _ Y|f|_ h^2\, \mathrm dV_ Y&lt;\infty $ has an extension $s\in H^0(X,L)$ such that </p>
+<div class="equation" id="foundations-of-pluripotential-theory-20919E2D"><span data-gerby-tag="20919E2D"></span>
+<span class="equation-label"><a data-tag="20919E2D" href="../../tag/D04560F8F2BB/">14.41</a></span>
+<div>\begin{equation} \label{eq:compact-submanifold-extension} s|_ Y=f,\qquad \int _ X|s|_ h^2\, \mathrm dV\leq C\int _ Y|f|_ h^2\, \mathrm dV_ Y. \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $Y=X$, take $s=f$, any $N$ and $C=1$. Suppose that $Y$ has codimension $q\geq 1$; if $f=0$, take $s=0$. As in the proof of theorem <a data-tag="B0A910AD" href="../../tag/846B917F28CD/">14.6.7</a>, we cut off a smooth extension of $f$ and correct the error, now with lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a>; a pole of order $q$ along $Y$ in the weight makes the correction vanish on $Y$. Fix $R=R_ Y$ and the constant $b$ of lemma <a data-tag="FB4F0B00" href="../../tag/B903D314198B/">14.7.4</a>, with $\max _ XR&lt;\mathrm e^{-4}$, and choose $b_ K\geq 0$ with $c_1(K_ X^{-1},h_{K^{-1},\omega })\geq -b_ K\omega $ (lemma <a data-tag="4690D380" href="../../tag/6B84DAE83456/">13.1.1</a>). In Steps 1–4 we prove the theorem for a weight $\Phi $ with gentle analytic singularities, as for the approximations of theorem <a data-tag="456E2056" href="../../tag/080EF8C715CF/">13.4.5</a>, under the curvature bound 
+    
+<div class="equation">
+  \[  c_1(L,h_0\mathrm e^{-\Phi })\geq N_0\omega , \qquad N_0=b_ K+(q+2)b+2.  \]
+</div>
+<p>
+       In these steps $h$ denotes the metric $h_0\mathrm e^{-\Phi }$, and $A$ the pole set of $\Phi $. Step 5 treats arbitrary weights. 
+    <p>
+<em>Step 1: the twisted curvature form.</em> For the given $f$ choose $G$ and $\kappa $ by lemma <a data-tag="7AE71E08" href="../../tag/F36B5947D011/">14.7.6</a>. On $M=X\setminus (A\cup Y)$ consider $F=L\otimes K_ X^{-1}$ with the metric $h\otimes h_{K^{-1},\omega }\mathrm e^{-q\psi }$, where $\psi =\log R$; the canonical identification of $L$-valued functions with $F$-valued $(n,0)$-forms preserves the squared norms times the volume. The manifold $M$ carries a Kähler form and cutoffs as required in lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a>, by lemma <a data-tag="693C216A" href="../../tag/C789A06C06B4/">14.6.4</a> applied to $\Phi +\psi $, which is quasi-plurisubharmonic, has pole set $A\cup Y$ and is smooth on $M$. The resulting Kähler form depends on $\Phi $, but the estimate of lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a> does not involve it. 
+    <p>
+      Let $\psi _\varepsilon =\log (\varepsilon +R)$, $\mu $, $a_\varepsilon $ and $b_\varepsilon $ be the functions of lemma <a data-tag="47AD0EAA" href="../../tag/ABE17C01E6F9/">14.7.2</a>, applied on $M$ to the smooth function $R$, which satisfies $0&lt;R&lt;\mathrm e^{-4}$ there, for $0&lt;\varepsilon &lt;\mathrm e^{-4}$. For fixed $\varepsilon $, $a_\varepsilon $ and $b_\varepsilon $ are bounded above and below by positive constants, $a_\varepsilon \geq 1$ and $1\leq -\mu '(\psi _\varepsilon )\leq 2$. By part (2) of that lemma, applied with $2\pi $ times the curvature form of the metric of $F$, 
+    
+<div class="equation">
+  \[  H_\varepsilon =a_\varepsilon \bigl (2\pi c_1(L,h) +2\pi c_1(K_ X^{-1},h_{K^{-1},\omega }) +q\, \mathrm i\partial \bar\partial \psi \bigr ) -\mu '(\psi _\varepsilon )\,  \mathrm i\partial \bar\partial \psi _\varepsilon .  \]
+</div>
+<p>
+       Since $\mathrm i\partial \bar\partial \psi =2\pi \mathrm{dd}^{\mathrm{c}}\psi \geq -2\pi b\omega $, $0\leq R/(\varepsilon +R)\leq 1$ and $-\mu '\leq 2$, the identity (<a data-tag="E9C58421" href="../../tag/4762DC697088/">14.33</a>) gives 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-E36949AE"><span data-gerby-tag="E36949AE"></span>
+<span class="equation-label"><a data-tag="E36949AE" href="../../tag/87C2E41D6EF2/">14.42</a></span>
+<div>\begin{equation} \label{eq:global-normal-twisted-curvature} H_\varepsilon \geq 2\pi \bigl (a_\varepsilon (N_0-b_ K-qb)-2b\bigr )\omega +\frac{\varepsilon }{R}\,  \mathrm i\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon \geq 2\pi \omega +\frac{\varepsilon }{R}\,  \mathrm i\partial \psi _\varepsilon \wedge \bar\partial \psi _\varepsilon , \end{equation}</div>
+</div>
+<p>
+       where in the last step we used $a_\varepsilon \geq 1$ and $N_0-b_ K-qb=2b+2$. All constants in this display depend only on the geometry. 
+    <p>
+<em>Step 2: the correction.</em> Let $\rho \in C^\infty (\mathbb R)$ satisfy $0\leq \rho \leq 1$, $\rho =1$ on $(-\infty ,1/2]$ and $\rho =0$ on $[1,\infty )$, and put $G_\varepsilon =\rho (R/\varepsilon )G$. Since $\bar\partial R/\varepsilon =(1+R/\varepsilon )\bar\partial \psi _\varepsilon $, the $\bar\partial $-closed form $g_\varepsilon =\bar\partial G_\varepsilon $ splits as 
+    
+<div class="equation">
+  \[  g_\varepsilon =g_\varepsilon ^{(1)}+g_\varepsilon ^{(2)},\qquad g_\varepsilon ^{(1)}=\rho '(R/\varepsilon )(1+R/\varepsilon ) \bar\partial \psi _\varepsilon \, G, \qquad g_\varepsilon ^{(2)}=\rho (R/\varepsilon )\bar\partial G,  \]
+</div>
+<p>
+       regarded as $F$-valued $(n,1)$-forms. As in the proof of lemma <a data-tag="6AA41C09" href="../../tag/833820F8A53D/">14.7.3</a>, the rank-one part of (<a data-tag="E36949AE" href="../../tag/87C2E41D6EF2/">14.42</a>) and lemma <a data-tag="A2D1311F" href="../../tag/A0C109B78052/">14.6.1</a>(1),(2) give 
+    
+<div class="equation">
+  \[  |\langle g_\varepsilon ^{(1)},v\rangle |^2\leq 4\sup |\rho '|^2\, |G|^2\langle [H_\varepsilon ,\Lambda _\omega ]v,v\rangle  \]
+</div>
+<p>
+       pointwise on the shell $\{ \varepsilon /2\leq R\leq \varepsilon \} $, where $R/\varepsilon \leq 1$, the norms being those of the metric of $F$. Hence the integral $M_{g_\varepsilon ^{(1)}}$ of lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a>, formed with $H_\varepsilon $, is at most $C_1\int _{\{ \varepsilon /2\leq R\leq \varepsilon \} }|G|_ h^2R^{-q}\, \mathrm dV$, whose upper limit as $\varepsilon \to 0$ is at most $C_2\int _ Y|f|_ h^2\, \mathrm dV_ Y$ by lemma <a data-tag="6F636631" href="../../tag/7EB0767C032B/">14.7.7</a>. Since $H_\varepsilon \geq 2\pi \omega $, lemma <a data-tag="A2D1311F" href="../../tag/A0C109B78052/">14.6.1</a>(3) bounds $M_{g_\varepsilon ^{(2)}}$ by 
+    
+<div class="equation">
+  \[  C_3\int _{\{ R&lt;\varepsilon \} }|\bar\partial G|_{\omega ,h}^2R^{-q}\, \mathrm dV,  \]
+</div>
+<p>
+       which tends to zero by (<a data-tag="E43F748D" href="../../tag/1B0F446E871A/">14.38</a>). 
+    <p>
+      Both forms are square integrable for the metric of $F$. For $g_\varepsilon ^{(1)}$, the derivative of the cutoff is bounded for fixed $\varepsilon $, and (<a data-tag="CB9FD962" href="../../tag/9A43DC5AB656/">14.37</a>) bounds the integral of $|G|_ h^2R^{-q}$ over the shell, where the logarithm is bounded and $\mathrm e^{-\Phi }\leq \mathrm e^{\kappa \sup _ X\Phi }\mathrm e^{-(1+\kappa )\Phi }$; for $g_\varepsilon ^{(2)}$ this follows from (<a data-tag="E43F748D" href="../../tag/1B0F446E871A/">14.38</a>). Since $M_{g'+g''}\leq 2(M_{g'}+M_{g''})$, by the Cauchy–Schwarz inequality for the positive form $\langle [H_\varepsilon ,\Lambda _\omega ]^{-1}\cdot ,\cdot \rangle $, lemma <a data-tag="C9560BC8" href="../../tag/D973E523027E/">14.7.1</a> gives $u_\varepsilon $ on $M$ with 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-EA6A4C74"><span data-gerby-tag="EA6A4C74"></span>
+<span class="equation-label"><a data-tag="EA6A4C74" href="../../tag/8412620C5C8F/">14.43</a></span>
+<div>\begin{equation} \label{eq:global-normal-correction-bound} \bar\partial u_\varepsilon =g_\varepsilon ,\qquad \varlimsup _{\varepsilon \downarrow 0} \int _ M\frac{|u_\varepsilon |_ h^2R^{-q}}{a_\varepsilon +b_\varepsilon }\, \mathrm dV \leq C_4\int _ Y|f|_ h^2\, \mathrm dV_ Y. \end{equation}</div>
+</div>
+<p>
+       The constants $C_1,\ldots ,C_4$ depend only on the geometry and the fixed cutoff $\rho $; neither the exponent $\kappa $ nor the derivatives of the local extensions $F_ i$ enter them. 
+    <p>
+<em>Step 3: holomorphic sections with the trace $f$.</em> For fixed $\varepsilon $ the denominator $a_\varepsilon +b_\varepsilon $ is bounded, and $h\geq \mathrm e^{-\sup _ X\Phi }h_0$ because $\Phi $ is bounded above on the compact manifold $X$. Hence $s_\varepsilon =G_\varepsilon -u_\varepsilon $, which is holomorphic on $M$, is square integrable for $h_0$, and it extends to a global holomorphic section by lemma <a data-tag="C5C65B2A" href="../../tag/189AC91F2DE3/">14.6.6</a>. Then $u_\varepsilon =G_\varepsilon -s_\varepsilon $ is smooth on $X$. 
+    <p>
+      It remains to show that $s_\varepsilon |_ Y=f$. Let $y\in Y\setminus A$, and choose holomorphic coordinates $(z',w)$ near $y$ with $Y=\{ w=0\} $. Near $y$ the weight $\Phi $ is smooth and $a_\varepsilon +b_\varepsilon $ is bounded, so $\int |u_\varepsilon |_{h_0}^2R^{-q}\, \mathrm dV$ is finite over a neighborhood of $y$. Since $R\leq C|w|^2$ near $y$ by lemma <a data-tag="FB4F0B00" href="../../tag/B903D314198B/">14.7.4</a>, and $\int _{|w|&lt;r}|w|^{-2q}\, \mathrm dV(w)=\infty $ in $\mathbb C^ q$ for every $r&gt;0$, by polar coordinates, the continuous function $u_\varepsilon $ vanishes at $y$. Hence $u_\varepsilon =0$ on $Y\setminus A$, and $s_\varepsilon =G=f$ there. Since the restriction of $h$ to $Y$ is defined, $A\cap Y$ is a proper analytic subset of the connected manifold $Y$, and the identity theorem gives $s_\varepsilon |_ Y=f$. 
+    <p>
+<em>Step 4: the norm bound.</em> For all sufficiently small $\varepsilon $, 
+    
+<div class="equation">
+  \[  (a_\varepsilon +b_\varepsilon )R^ q \leq C_5 R^ q(-\log R)^2\leq C_6,  \]
+</div>
+<p>
+       because $a_\varepsilon +b_\varepsilon \leq 5\psi ^2$ by lemma <a data-tag="47AD0EAA" href="../../tag/ABE17C01E6F9/">14.7.2</a>(1), and because $R^ q(-\log R)^2$ is bounded on $X$. Consequently (<a data-tag="EA6A4C74" href="../../tag/8412620C5C8F/">14.43</a>) bounds $\int _ X|u_\varepsilon |_ h^2\, \mathrm dV$ by $C_6$ times the integral there. The section $G$ has finite $h$-norm, since (<a data-tag="CB9FD962" href="../../tag/9A43DC5AB656/">14.37</a>) controls it, $\Phi $ being bounded above and $R^ q(-\log R)^2$ bounded; therefore $\| G_\varepsilon \| _ h\to 0$ as $\varepsilon \to 0$, by absolute continuity of the integral on the shrinking supports. The triangle inequality gives 
+    
+<div class="equation">
+  \[  \varlimsup _{\varepsilon \downarrow 0}\| s_\varepsilon \| _ h^2 \leq C_7\int _ Y|f|_ h^2\, \mathrm dV_ Y,  \]
+</div>
+<p>
+       with $C_7=C_6C_4$. The sections $s_\varepsilon $ are bounded in $L^2$ for $h_0$, so, by lemma <a data-tag="4C4B439C" href="../../tag/94EC30DAF1A3/">14.5.2</a>(2), a sequence $\varepsilon _ k\to 0$ gives sections converging uniformly to a holomorphic section $s$. Its restriction to $Y$ is $f$, and Fatou's lemma gives $\| s\| _ h^2\leq C_7\int _ Y|f|_ h^2\, \mathrm dV_ Y$. This proves the theorem for gentle weights with the constant $C_7$, which depends only on the geometry. 
+    <p>
+<em>Step 5: arbitrary weights.</em> Put $N=N_0+1$. By theorem <a data-tag="456E2056" href="../../tag/080EF8C715CF/">13.4.5</a>, applied to $\varphi $ with the background $c_1(L,h_0)-N\omega $, there are $\Phi _ j\downarrow \varphi $ with gentle analytic singularities of the kind required in the gentle case and $c_1(L,h_0\mathrm e^{-\Phi _ j})\geq (N-\delta _ j)\omega $, where $\delta _ j\to 0$; for large $j$ the curvature is at least $N_0\omega $. Since $\Phi _ j\geq \varphi $, the restrictions of the metrics $h_0\mathrm e^{-\Phi _ j}$ to $Y$ are defined, and the norms of $f$ for them are at most its norm for $h$. The gentle case gives $s_ j\in H^0(X,L)$ with $s_ j|_ Y=f$ and $\int _ X|s_ j|_{h_0}^2\mathrm e^{-\Phi _ j}\, \mathrm dV\leq C_7\int _ Y|f|_ h^2\, \mathrm dV_ Y$. Since $\Phi _ j\leq \Phi _1$, the $s_ j$ are bounded in $L^2$ for $h_0$, and by lemma <a data-tag="4C4B439C" href="../../tag/94EC30DAF1A3/">14.5.2</a>(2) a subsequence converges uniformly to a holomorphic section $s$ with $s|_ Y=f$. The weights $\mathrm e^{-\Phi _ j}$ converge to $\mathrm e^{-\varphi }$ wherever $\varphi $ is finite, hence almost everywhere, and Fatou's lemma gives (<a data-tag="20919E2D" href="../../tag/D04560F8F2BB/">14.41</a>) with $C=C_7$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-32E53281">
+<p><a class="environment-identifier" href="../../tag/63196D2455BE/">Corollary <span data-tag="32E53281">14.7.9</span>.</a><span data-gerby-tag="32E53281"></span> Let $L$ and $T$ be holomorphic line bundles on $X$ with smooth quadratic metrics $h_0$ and $h_ T$, put $\theta =c_1(L,h_0)$, and choose $b_ T\geq 0$ with $c_1(T,h_ T)\geq -b_ T\omega $. Let $\varphi $ be quasi-plurisubharmonic with $\theta +\mathrm{dd}^{\mathrm{c}}\varphi \geq \delta \omega $ for some $\delta &gt;0$, and let $Y\subset X$ be a nonempty closed connected complex submanifold such that $\varphi |_ Y$ is not identically $-\infty $. Let $N$ and $C$ be the constants of theorem <a data-tag="5BC89762" href="../../tag/C34A54E553C3/">14.7.8</a>. Then for every integer $k\geq 1$ with $k\delta -b_ T\geq N$, every holomorphic section $f$ of $(T\otimes L^ k)|_ Y$ with finite norm for $h_ T\otimes h_0^ k\mathrm e^{-k\varphi |_ Y}$ extends to a holomorphic section $s$ of $T\otimes L^ k$ on $X$ with </p>
+<div class="equation">
+  \[  \int _ X|s|_{h_ T\otimes h_0^ k}^2\mathrm e^{-k\varphi }\, \mathrm dV \leq C\int _ Y|f|_{h_ T\otimes h_0^ k}^2 \mathrm e^{-k\varphi |_ Y}\, \mathrm dV_ Y.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The metric $h_ T\otimes h_0^ k\mathrm e^{-k\varphi }$ on $T\otimes L^ k$ is plurisubharmonic, its curvature current is $c_1(T,h_ T)+k(\theta +\mathrm{dd}^{\mathrm{c}}\varphi )\geq (k\delta -b_ T)\omega \geq N\omega $, and its restriction to $Y$ is defined. Hence theorem <a data-tag="5BC89762" href="../../tag/C34A54E553C3/">14.7.8</a> applies. Note that the finiteness of the norm on $Y$ means that $f$ lies locally in the multiplier ideal of $k\varphi |_ Y$, and that the constant $C$ is multiplied by $n!/(\dim Y)!$ if the volumes $\omega ^ n$ and $\omega |_ Y^{\dim Y}$ are used instead of $\mathrm dV$ and $\mathrm dV_ Y$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

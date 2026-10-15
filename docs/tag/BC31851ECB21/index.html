@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Okounkov test curves · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/sections-okounkov/">Chapter 16 · Sections, graded series, and Okounkov bodies</a> · Tag <code>BC31851ECB21</code></p><h1>Okounkov test curves</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 10.5 Okounkov test curves <span data-gerby-tag="A0514592"></span></div>
+<p>
+ Fix $n\in \mathbb {N}$. Let $\Delta ,\Delta '\subseteq \mathbb {R}^ n$ be convex bodies with positive volumes. The standard Lebesgue measure on $\mathbb {R}^ n$ is denoted by $\operatorname{vol}$. 
+</p>
+<p>
+Recall that $\mathcal{K}_ n$ denotes the set of convex bodies in $\mathbb {R}^ n$ and $d_{\mathrm{Haus}}$ denotes the Hausdorff metric. We refer to chapter <a data-tag="AD6A1F3F" href="../../tag/00B44728CC57/">C</a> for the basic properties of these objects. 
+</p>
+<p>
+We study the notion of Okounkov test curves in this section; this leads to the definition of the Duistermaat–Heckman measure of a non-Archimedean metric in section <a data-tag="FA165D48" href="../../tag/3C0D12E80020/">13.3</a> below. This section can be skipped on a first reading. 
+</p>
+
+<article class="env-definition" id="sgpt-26A94CBB">
+<p><a class="environment-identifier" href="../../tag/ACD722F45231/">Definition <span data-tag="26A94CBB">10.5.1</span>.</a><span data-gerby-tag="26A94CBB"></span> An <em>Okounkov test curve</em> relative to $\Delta $ consists of </p>
+<ol>
+<li class="custom-item" id="sgpt-605B39AD"><span data-gerby-tag="605B39AD"></span><p>
+ a number $\Delta _{\max }\in \mathbb {R}$ and 
+</p>
+</li><li class="custom-item" id="sgpt-D5A1368C"><span data-gerby-tag="D5A1368C"></span><p>
+ an assignment $(-\infty ,\Delta _{\max })\ni \tau \mapsto \Delta _{\tau }\in \mathcal{K}_ n$ satisfying 
+</p>
+<ol>
+<li class="custom-item" id="sgpt-8C1B12F8"><span data-gerby-tag="8C1B12F8"></span>
+ the assignment $\tau \mapsto \Delta _{\tau }$ is decreasing and concave<aside class="source-footnote" id="sgpt-a0000092720"><span class="footnote-label">Note.</span> Here concavity refers to the concavity with respect to the Minkowski sum.</aside>; 
+
+</li><li class="custom-item" id="sgpt-F582F326"><span data-gerby-tag="F582F326"></span><p>
+ we have $\Delta _{\tau }\xrightarrow {d_{\mathrm{Haus}}}\Delta $ as $\tau \to -\infty $. 
+</p>
+</li>
+</ol>
+</li>
+</ol>
+<p> The set of Okounkov test curves relative to $\Delta $ is denoted by $\mathrm{TC}(\Delta )$. </p>
+<p>An Okounkov test curve $\Delta _{\bullet }$ relative to $\Delta $ is <em>bounded</em> if $\Delta _{\tau }=\Delta $ when $\tau $ is small enough. The subset of bounded Okounkov test curves is denoted by $\mathrm{TC}^{\infty }(\Delta )$. </p>
+<p>An Okounkov test curve $\Delta _{\bullet }$ relative to $\Delta $ is said to have <em>finite energy</em> if </p>
+<div class="equation" id="sgpt-A69630EE"><span data-gerby-tag="A69630EE"></span>
+<span class="equation-label"><a data-tag="A69630EE" href="../../tag/1DD8B9478031/">10.109</a></span>
+<div>\begin{equation} \label{eq:Otestcurvenergy} \mathbf{E}(\Delta _{\bullet })\coloneqq n!\Delta _{\max } \operatorname{vol}\Delta +n!\int _{-\infty }^{\Delta _{\max }} \left(\operatorname{vol}\Delta _{\tau }-\operatorname{vol}\Delta \right)\, \mathrm{d}\tau &gt;-\infty . \end{equation}</div>
+</div>
+<p>  The subset of Okounkov test curves with finite energy is denoted by $\mathrm{TC}^{1}(\Delta )$. </p>
+<p>Given $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$ and $\Delta '_{\bullet }\in \mathrm{TC}(\Delta ')$, we say $\Delta _{\bullet }\leq \Delta '_{\bullet }$ if $\Delta _{\max }\leq \Delta '_{\max }$ and for any $\tau &lt;\Delta _{\max }$, we have $\Delta _{\tau }\subseteq \Delta '_{\tau }$. </p>
+</article> Sometimes it is convenient to introduce 
+
+<div class="equation" id="sgpt-5939A693"><span data-gerby-tag="5939A693"></span>
+<span class="equation-label"><a data-tag="5939A693" href="../../tag/DE0B0A1BC57C/">10.110</a></span>
+<div>\begin{equation} \label{eq:DeltaDeltamax} \Delta _{\Delta _{\max }}=\bigcap _{\tau &lt;\Delta _{\max }}\Delta _{\tau }\in \mathcal{K}_ n. \end{equation}</div>
+</div>
+<p>
+ We shall always make this extension in the sequel when we talk about $\Delta _{\Delta _{\max }}$. Observe that $(-\infty ,\Delta _{\max }]\ni \tau \mapsto \Delta _{\tau }$ is still concave. 
+</p>
+
+<article class="env-proposition" id="sgpt-5FBEF833">
+<p><a class="environment-identifier" href="../../tag/29A7DDA38CA2/">Proposition <span data-tag="5FBEF833">10.5.2</span>.</a><span data-gerby-tag="5FBEF833"></span> Any Okounkov test curve $(\Delta _{\tau })_{\tau &lt; \Delta _{\max }}$ relative to $\Delta $ is continuous in $\tau $. Moreover, $\operatorname{vol}\Delta _{\tau }&gt;0$ for all $\tau &lt;\Delta _{\max }$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first claim that $\operatorname{vol}\Delta _{\tau '}&gt;0$ for all $\tau '&lt;\Delta _{\max }$. By Condition (2b) in definition <a data-tag="26A94CBB" href="../../tag/ACD722F45231/">10.5.1</a> and theorem <a data-tag="D4B8C3D6" href="../../tag/66339C0E3C21/">C.1.4</a>, we know that $\operatorname{vol}\Delta _{\tau ''}&gt;0$ when $\tau ''$ is small enough. Fix one such $\tau ''$. We may assume that $\tau ''\leq \tau '$ since otherwise there is nothing to prove. Next take $\tau '''\in (\tau ',\Delta _{\max })$. Take $t\in (0,1)$ such that $\tau '=t\tau '''+(1-t)\tau ''$. It follows that 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Delta _{\tau '}\geq \operatorname{vol}\left( t\Delta _{\tau '''}+(1-t)\Delta _{\tau ''}\right)\geq (1-t)^ n\operatorname{vol}\Delta _{\tau ''}&gt;0.  \]
+</div>
+<p>
+      Next we claim that $\operatorname{vol}\Delta _{\tau }$ is continuous for $\tau &lt; \Delta _{\max }$. In fact, it follows from theorem <a data-tag="7B965039" href="../../tag/72547EEEBFE4/">C.1.12</a> that $(-\infty ,\Delta _{\max }) \ni \tau \mapsto \log \operatorname{vol}\Delta _{\tau }$ is concave, but we already know that it is finite, hence the continuity follows. 
+    <p>
+      Next we show that 
+    
+<div class="equation">
+  \[  \Delta _{\tau }=\bigcap _{\tau '&lt;\tau }\Delta _{\tau '}.  \]
+</div>
+<p>
+       The $\subseteq $ direction is obvious. By the continuity of the volume, both sides have the same volume and the volume is positive, we therefore obtain the equality. 
+    <p>
+      Similarly, we have 
+    
+<div class="equation">
+  \[  \Delta _{\tau }=\overline{\bigcup _{\tau '&gt;\tau }\Delta _{\tau '}}.  \]
+</div>
+<p>
+       The continuity of $\Delta _{\tau }$ at $\tau &lt;\Delta _{\max }$ is proved. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-9E9C0297">
+<p><a class="environment-identifier" href="../../tag/F0D4BAA63D8A/">Definition <span data-tag="9E9C0297">10.5.3</span>.</a><span data-gerby-tag="9E9C0297"></span> A <em>test function</em> on $\Delta $ is a function $G\colon \Delta \rightarrow [-\infty ,\infty )$ such that </p>
+<ol>
+<li class="custom-item" id="sgpt-04E76806"><span data-gerby-tag="04E76806"></span><p>
+ $G$ is concave, 
+</p>
+</li><li class="custom-item" id="sgpt-3EFFE974"><span data-gerby-tag="3EFFE974"></span><p>
+ $G$ is finite on $\operatorname{Int}\Delta $, and 
+</p>
+</li><li class="custom-item" id="sgpt-C8AAD362"><span data-gerby-tag="C8AAD362"></span><p>
+ $G$ is upper semicontinuous. 
+</p>
+</li>
+</ol>
+<p>A test function $G$ is <em>bounded</em> if $G$ is bounded from below. </p>
+<p>A test function $G$ has <em>finite energy</em> if </p>
+<div class="equation" id="sgpt-BF4CC904"><span data-gerby-tag="BF4CC904"></span>
+<span class="equation-label"><a data-tag="BF4CC904" href="../../tag/6B100556700A/">10.111</a></span>
+<div>\begin{equation} \label{eq:EF} \mathbf{E}(G)\coloneqq n!\int _{\Delta } G\, \mathrm{d}\lambda &gt;-\infty . \end{equation}</div>
+</div>
+</article>
+
+
+<article class="env-definition" id="sgpt-2E276BD3">
+<p><a class="environment-identifier" href="../../tag/7B20D9977149/">Definition <span data-tag="2E276BD3">10.5.4</span>.</a><span data-gerby-tag="2E276BD3"></span> Let $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$. We define its <em>Legendre transform</em> as </p>
+<div class="equation">
+  \[  G[\Delta _{\bullet }] \colon \Delta \rightarrow [-\infty ,\infty ),\quad a\mapsto \sup \left\{ \tau &lt;\Delta _{\max }:a\in \Delta _{\tau }\right\} .  \]
+</div>
+<p> Given a test function $G\colon \Delta \rightarrow [-\infty ,\infty )$, we define its <em>inverse Legendre transform</em> $\Delta [G]_{\bullet }$ as the Okounkov test curve relative to $\Delta $ defined as follows: </p>
+<ol>
+<li class="custom-item" id="sgpt-1300EC66"><span data-gerby-tag="1300EC66"></span><p>
+ $\Delta [G]_{\max }=\sup _{\Delta } G$, and 
+</p>
+</li><li class="custom-item" id="sgpt-6D50F79F"><span data-gerby-tag="6D50F79F"></span><p>
+ for each $\tau &lt;\sup _{\Delta } G$, we set 
+</p>
+<div class="equation">
+  \[  \Delta [G]_{\tau }=\{ x\in \Delta :G\geq \tau \} .  \]
+</div>
+</li>
+</ol>
+</article> We observe that 
+
+<div class="equation" id="sgpt-FF8FF93A"><span data-gerby-tag="FF8FF93A"></span>
+<span class="equation-label"><a data-tag="FF8FF93A" href="../../tag/CEDFEF97CB74/">10.112</a></span>
+<div>\begin{equation} \label{eq:GDeltamax} G[\Delta _{\bullet }](a)=\max \left\{ \tau \leq \Delta _{\max }: a\in \Delta _{\tau }\right\} ,\textup{ if } G[\Delta _{\bullet }](a)&gt;-\infty . \end{equation}</div>
+</div>
+
+<article class="env-lemma" id="sgpt-02AA676E">
+<p><a class="environment-identifier" href="../../tag/21BC38898B4A/">Lemma <span data-tag="02AA676E">10.5.5</span>.</a><span data-gerby-tag="02AA676E"></span> Let $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$. Then $G[\Delta _{\bullet }]$ defined in definition <a data-tag="2E276BD3" href="../../tag/7B20D9977149/">10.5.4</a> is a test function. </p>
+<p>Similarly, if $G\colon \Delta \rightarrow [-\infty ,\infty )$ is a test function, then $\Delta [G]_{\bullet }$ is an Okounkov test curve. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      First suppose that $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$. We want to verify that $G[\Delta _{\bullet }]$ satisfies the conditions in definition <a data-tag="9E9C0297" href="../../tag/F0D4BAA63D8A/">10.5.3</a>. 
+    <p>
+      We first verify the concavity. Take $a,b\in \Delta $. We want to prove that for any $t\in (0,1)$, 
+    
+<div class="equation" id="sgpt-7EDD16AB"><span data-gerby-tag="7EDD16AB"></span>
+<span class="equation-label"><a data-tag="7EDD16AB" href="../../tag/B1CF3E81D382/">10.113</a></span>
+<div>\begin{equation} \label{eq:GDeltaconc} G[\Delta _{\bullet }](ta+(1-t)b)\geq tG[\Delta _{\bullet }](a)+(1-t)G[\Delta _{\bullet }](b). \end{equation}</div>
+</div>
+<p>
+       There is nothing to prove if $G[\Delta _{\bullet }](a)$ or $G[\Delta _{\bullet }](b)$ is $-\infty $. So we assume that both are finite. In this case, by (<a data-tag="FF8FF93A" href="../../tag/CEDFEF97CB74/">10.112</a>), 
+    
+<div class="equation">
+  \[  a\in \Delta _{G[\Delta _{\bullet }](a)},\quad b\in \Delta _{G[\Delta _{\bullet }](b)}.  \]
+</div>
+<p>
+       Thus, 
+    
+<div class="equation">
+  \[  ta+(1-t)b\in t \Delta _{G[\Delta _{\bullet }](a)}+(1-t)\Delta _{G[\Delta _{\bullet }](b)}\subseteq \Delta _{tG[\Delta _{\bullet }](a)+(1-t)G[\Delta _{\bullet }](b)}.  \]
+</div>
+<p>
+       We deduce that 
+    
+<div class="equation">
+  \[  G[\Delta _{\bullet }](ta+(1-t)b)\geq tG[\Delta _{\bullet }](a)+(1-t)G[\Delta _{\bullet }](b).  \]
+</div>
+<p>
+       Therefore, (<a data-tag="7EDD16AB" href="../../tag/B1CF3E81D382/">10.113</a>) follows. 
+    <p>
+      It is clear that $G[\Delta _{\bullet }]$ is finite on the interior of $\Delta $. It remains to argue that $G[\Delta _{\bullet }]$ is upper semicontinuous. 
+    <p>
+      Let $(a_ i)_{i\geq 1}$ be a sequence in $\Delta $ with limit $a\in \Delta $. Define $\tau _ i=G[\Delta _{\bullet }](a_ i)$. Let $\tau =\varlimsup _ i \tau _ i$. We need to show that 
+    
+<div class="equation" id="sgpt-93752A9C"><span data-gerby-tag="93752A9C"></span>
+<span class="equation-label"><a data-tag="93752A9C" href="../../tag/910A774B0CAE/">10.114</a></span>
+<div>\begin{equation} \label{eq:ainDelta1} G[\Delta _{\bullet }](a)\geq \tau . \end{equation}</div>
+</div>
+<p>
+       There is nothing to prove if $\tau =-\infty $. We assume that this is not the case. Passing to a subsequence, we may assume that $\tau _ i\to \tau $. In particular, we can assume that $\tau _ i\neq -\infty $ for all $i\geq 1$. It follows from (<a data-tag="FF8FF93A" href="../../tag/CEDFEF97CB74/">10.112</a>) that $a_ i\in \Delta _{\tau _ i}$ for all $i\geq 1$. If $\tau &lt;\Delta _{\max }$, then $\Delta _{\tau _ i}\xrightarrow {d_{\mathrm{Haus}}}\Delta _{\tau }$, so theorem <a data-tag="3312EB21" href="../../tag/AFBD46E7C0A4/">C.1.5</a> implies that $a\in \Delta _{\tau }$. If $\tau =\Delta _{\max }$, then the same conclusion follows from the definition $\Delta _{\Delta _{\max }}=\bigcap _{\tau '&lt;\Delta _{\max }}\Delta _{\tau '}$. Thus, (<a data-tag="93752A9C" href="../../tag/910A774B0CAE/">10.114</a>) follows. 
+    <p>
+      Conversely, suppose that $G\colon \Delta \rightarrow [-\infty ,\infty )$ is a test function. We argue that $\Delta [G]_{\bullet }$ is an Okounkov test curve. We verify the conditions in definition <a data-tag="26A94CBB" href="../../tag/ACD722F45231/">10.5.1</a>. 
+    <p>
+      Firstly, for each $\tau &lt; \sup _{\Delta }G$, the set $\Delta [G]_{\tau }$ is a convex body as $G$ is concave and usc. Moreover, $\Delta [G]_{\tau }$ is clearly decreasing in $\tau $. 
+    <p>
+      Secondly, for each $a\in \Delta $, we can write $a=\lim _{i}a_ i$ with $a_ i\in \operatorname{Int}\Delta $. By assumption, $G$ is finite at $a_ i$. Thus, 
+    
+<div class="equation">
+  \[  a\in \overline{\{ G&gt;-\infty \} }=\overline{\bigcup _{\tau &lt;\sup _{\Delta }G}\Delta [G]_{\tau }}.  \]
+</div>
+<p>
+       By theorem <a data-tag="3312EB21" href="../../tag/AFBD46E7C0A4/">C.1.5</a>, $\Delta [G]_{\tau }\xrightarrow {d_{\mathrm{Haus}}}\Delta $ as $\tau \to -\infty $. 
+    <p>
+      Thirdly, $\Delta [G]$ is concave. To see this, take $\tau ,\tau '&lt; \Delta _{\max }$. We need to prove that for any $t\in (0,1)$, 
+    
+<div class="equation" id="sgpt-A5E44677"><span data-gerby-tag="A5E44677"></span>
+<span class="equation-label"><a data-tag="A5E44677" href="../../tag/8B16FED9C73C/">10.115</a></span>
+<div>\begin{equation} \label{eq:Deconc} \Delta [G]_{t\tau +(1-t)\tau '}\supseteq t\Delta [G]_{\tau }+(1-t)\Delta [G]_{\tau '}. \end{equation}</div>
+</div>
+<p>
+       Let $a\in \Delta [G]_{\tau }$ and $b\in \Delta [G]_{\tau '}$. We have $G(a)\geq \tau $ and $G(b)\geq \tau '$. As $G$ is concave, we have $G(ta+(1-t)b)\geq t\tau +(1-t)\tau '$. Thus, 
+    
+<div class="equation">
+  \[  ta+(1-t)b\in \Delta [G]_{t\tau +(1-t)\tau '}  \]
+</div>
+<p>
+       and (<a data-tag="A5E44677" href="../../tag/8B16FED9C73C/">10.115</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="sgpt-FE1D6EDE">
+<p><a class="environment-identifier" href="../../tag/2584C29ED70F/">Theorem <span data-tag="FE1D6EDE">10.5.6</span>.</a><span data-gerby-tag="FE1D6EDE"></span> The Legendre transform and inverse Legendre transform are inverse to each other, defining a bijection between $\mathrm{TC}(\Delta )$ and the set of test functions on $\Delta $. </p>
+<p>Under this bijection, $\mathrm{TC}^1(\Delta )$ corresponds to test functions on $\Delta $ with finite energy and $\mathrm{TC}^{\infty }(\Delta )$ corresponds to bounded test functions on $\Delta $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Thanks to <a data-tag="02AA676E" href="../../tag/21BC38898B4A/">10.5.5</a>, in order to prove the first assertion, it only remains to see that the Legendre transform and the inverse Legendre transform are inverse to each other, which is immediate by definition. 
+    <p>
+      It is obvious that $\mathrm{TC}^{\infty }(\Delta )$ corresponds to bounded test functions. Moreover, a direct computation shows that if $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$, then 
+    
+<div class="equation">
+  \[  \mathbf{E}(\Delta _{\bullet })=\mathbf{E}(G[\Delta _{\bullet }]),  \]
+</div>
+<p>
+       concluding the $\mathrm{TC}^{1}(\Delta )$ case. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="sgpt-BC456E2F">
+<p><a class="environment-identifier" href="../../tag/7B4552909292/">Proposition <span data-tag="BC456E2F">10.5.7</span>.</a><span data-gerby-tag="BC456E2F"></span> Let $(\Delta ^ i)_{i\in I}$ be a decreasing net in $\mathcal{K}_ n$ such that $\Delta \subseteq \bigcap _{i\in I}\Delta ^ i$. Consider a decreasing net $(\Delta ^ i_{\bullet })_{i\in I}$ with $\Delta ^ i_{\bullet }\in \mathrm{TC}(\Delta ^ i)$ for all $i\in I$ such that there is $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$ satisfying the following properties: </p>
+<ol>
+<li class="custom-item" id="sgpt-77F8ABDA"><span data-gerby-tag="77F8ABDA"></span><p>
+ $\Delta _{\max }= \lim _{i\in I}\Delta ^ i_{\max }$; 
+</p>
+</li><li class="custom-item" id="sgpt-E435C8B8"><span data-gerby-tag="E435C8B8"></span><p>
+ for any $\tau &lt;\Delta _{\max }$, we have $\Delta ^ i_{\tau }\xrightarrow {d_{\mathrm{Haus}}}\Delta _{\tau }$. 
+</p>
+</li>
+</ol>
+<p> Then for any $a\in \Delta $, we have </p>
+<div class="equation" id="sgpt-2FB6A456"><span data-gerby-tag="2FB6A456"></span>
+<span class="equation-label"><a data-tag="2FB6A456" href="../../tag/E0766167D753/">10.116</a></span>
+<div>\begin{equation} \label{eq:pwconvLegendre} \lim _{i\in I} G[\Delta ^ i_{\bullet }](a)=G[\Delta _{\bullet }](a). \end{equation}</div>
+</div>
+</article> Note that in general, 
+
+<div class="equation">
+  \[  \Delta \subsetneq \bigcap _{i\in I}\Delta ^ i.  \]
+</div>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $a\in \Delta $. It follows immediately from the definition of $G$ that the net $(G[\Delta ^ i_{\bullet }](a))_{i\in I}$ is decreasing and the $\geq $ direction in (<a data-tag="2FB6A456" href="../../tag/E0766167D753/">10.116</a>) holds. Let us prove the reverse inequality. Let $\tau $ denote the left-hand side of (<a data-tag="2FB6A456" href="../../tag/E0766167D753/">10.116</a>) for the moment. By definition, for any $\epsilon &gt;0$ and any $i\in I$, we have $a\in \Delta ^ i_{\tau -\epsilon }$. It follows that 
+    
+<div class="equation">
+  \[  a\in \Delta _{\tau -\epsilon }.  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  \tau \leq G[\Delta _{\bullet }](a).  \]
+</div>
+<p>
+       This completes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+Similarly, for increasing nets, we have: <article class="env-proposition" id="sgpt-5E98C990">
+<p><a class="environment-identifier" href="../../tag/D70EFA3100C9/">Proposition <span data-tag="5E98C990">10.5.8</span>.</a><span data-gerby-tag="5E98C990"></span> Let $(\Delta ^ i)_{i\in I}$ be an increasing net in $\mathcal{K}_ n$ with Hausdorff limit $\Delta $ such that $\operatorname{vol}\Delta ^ i&gt;0$ for all $i\in I$. Consider an increasing net $(\Delta ^ i_{\bullet })_{i\in I}$ with $\Delta ^ i_{\bullet }\in \mathrm{TC}(\Delta ^ i)$ for all $i\in I$. Let $\Delta _{\max }=\lim _{i\in I}\Delta ^ i_{\max }$. For any $\tau &lt;\Delta _{\max }$, let $\Delta _{\tau }$ be the Hausdorff limit of $\Delta ^ i_{\tau }$. Then $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$ and </p>
+<div class="equation" id="sgpt-0CE327E4"><span data-gerby-tag="0CE327E4"></span>
+<span class="equation-label"><a data-tag="0CE327E4" href="../../tag/FDE24E7623A9/">10.117</a></span>
+<div>\begin{equation} \label{eq:apwconvLegendre} \lim _{i\in I}G[\Delta ^ i_{\bullet }](a)=G[\Delta _{\bullet }](a) \end{equation}</div>
+</div>
+<p> for any $a\in \operatorname{Int}\Delta $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It is obvious that $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$. 
+    <p>
+      Fix $a\in \operatorname{Int}\Delta $. Since $\Delta ^ i\xrightarrow {d_{\mathrm{Haus}}}\Delta $, we have $a\in \Delta ^ i$ for all large enough $i$. By definition, the net $(G[\Delta ^ i_{\bullet }](a))_{i\in I}$ is increasing and the $\leq $ direction in (<a data-tag="0CE327E4" href="../../tag/FDE24E7623A9/">10.117</a>) holds. Let us write $\tau =G[\Delta _{\bullet }](a)$ for the time being. By definition of $G$, for any $\epsilon &gt;0$, we have 
+    
+<div class="equation">
+  \[  a\in \Delta _{\tau -\epsilon /2}.  \]
+</div>
+<p>
+       The concavity of $\Delta _{\bullet }$ guarantees that 
+    
+<div class="equation">
+  \[  a\in \operatorname{Int}\Delta _{\tau -\epsilon }.  \]
+</div>
+<p>
+       Indeed, choose $\sigma \ll 0$ so that a small ball around $a$ is contained in $\Delta _\sigma $. Since $a\in \Delta _{\tau -\epsilon /2}$ and 
+    
+<div class="equation">
+  \[  \tau -\epsilon =t\sigma +(1-t)(\tau -\epsilon /2)  \]
+</div>
+<p>
+       for a suitable $t\in (0,1)$, concavity gives a small ball around $a$ contained in $\Delta _{\tau -\epsilon }$. 
+    <p>
+      Since $\Delta ^ i_{\tau -\epsilon }\xrightarrow {d_{\mathrm{Haus}}}\Delta _{\tau -\epsilon }$ and $a\in \operatorname{Int}\Delta _{\tau -\epsilon }$, it follows that for all large enough $i\in I$, 
+    
+<div class="equation">
+  \[  a\in \Delta ^ i_{\tau -\epsilon }.  \]
+</div>
+<p>
+       Therefore, 
+    
+<div class="equation">
+  \[  \tau -\epsilon \leq G[\Delta ^ i_{\bullet }](a)  \]
+</div>
+<p>
+       for all large enough $i$. Taking the limit with respect to $i$ and then with respect to $\epsilon $, we conclude the desired inequality. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-definition" id="sgpt-09132002">
+<p><a class="environment-identifier" href="../../tag/51940EF88F4F/">Definition <span data-tag="09132002">10.5.9</span>.</a><span data-gerby-tag="09132002"></span> Let $\Delta _{\bullet }$ be an Okounkov test curve relative to $\Delta $. We define the <em>Duistermaat–Heckman measure</em> $\operatorname{DH}(\Delta _{\bullet })$ as </p>
+<div class="equation">
+  \[  \operatorname{DH}(\Delta _{\bullet })\coloneqq G[\Delta _{\bullet }]_*(\operatorname{vol}).  \]
+</div>
+<p> It is a Radon measure on $\mathbb {R}$, since $G[\Delta _{\bullet }]$ is finite on $\operatorname{Int}\Delta $. </p>
+</article> In other words, $\operatorname{DH}(\Delta _{\bullet })$ is the distribution of the random variable $G[\Delta _{\bullet }]$. 
+
+
+<article class="env-proposition" id="sgpt-DE3D564A">
+<p><a class="environment-identifier" href="../../tag/F397AFA38927/">Proposition <span data-tag="DE3D564A">10.5.10</span>.</a><span data-gerby-tag="DE3D564A"></span> Let $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$. Let $m\in \mathbb {Z}_{&gt;0}$. Then the following extended moment identity holds: </p>
+<div class="equation" id="sgpt-DF789B0A"><span data-gerby-tag="DF789B0A"></span>
+<span class="equation-label"><a data-tag="DF789B0A" href="../../tag/FCEE1C9E921F/">10.118</a></span>
+<div>\begin{equation} \label{eq:momentcalc} \int _{\mathbb {R}}x^ m \operatorname{DH}(\Delta _{\bullet })(x)=\Delta _{\max }^ m\operatorname{vol}\Delta +m\int _{-\infty }^{\Delta _{\max }} \tau ^{m-1}(\operatorname{vol}\Delta _{\tau }-\operatorname{vol}\Delta )\, \mathrm{d}\tau \end{equation}</div>
+</div>
+<p> and </p>
+<div class="equation" id="sgpt-158BD4AC"><span data-gerby-tag="158BD4AC"></span>
+<span class="equation-label"><a data-tag="158BD4AC" href="../../tag/842F6248A5C4/">10.119</a></span>
+<div>\begin{equation} \label{eq:massDHm1} \int _{\mathbb {R}}\operatorname{DH}(\Delta _{\bullet })=\operatorname{vol}\Delta . \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In fact, (<a data-tag="158BD4AC" href="../../tag/842F6248A5C4/">10.119</a>) follows immediately from the definition. Let $G=G[\Delta _{\bullet }]$. We first assume that $G$ is bounded from below. Then (<a data-tag="DF789B0A" href="../../tag/FCEE1C9E921F/">10.118</a>) follows from a straightforward computation: 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \int _{\mathbb {R}}x^ m \operatorname{DH}(\Delta _{\bullet })(x)\\  =&amp;  \int _{\Delta } G[\Delta _{\bullet }](a)^ m\, \mathrm{d}\operatorname{vol}(a)\\  =&amp;  \int _{\Delta } \left( \Delta _{\max }^ m-\int _{G[\Delta _{\bullet }](a)}^{\Delta _{\max }} m\tau ^{m-1}\, \mathrm{d}\tau \right)\, \mathrm{d}\operatorname{vol}(a)\\  =&amp;  \Delta _{\max }^ m\operatorname{vol}\Delta -m\int _{\mathbb {R}}\int _{\Delta } \mathds {1}_{[G[\Delta _{\bullet }](a),\Delta _{\max }]}(\tau )\tau ^{m-1}\, \mathrm{d}\operatorname{vol}(a)\, \mathrm{d}\tau \\  =&amp;  \Delta _{\max }^ m\operatorname{vol}\Delta -m\int _{-\infty }^{\Delta _{\max }}\int _{\Delta \setminus \Delta _{\tau }} \tau ^{m-1}\, \mathrm{d}\operatorname{vol}(a)\, \mathrm{d}\tau \\  =&amp;  \Delta _{\max }^ m\operatorname{vol}\Delta -m\int _{-\infty }^{\Delta _{\max }} \tau ^{m-1}\left(\operatorname{vol}\Delta -\operatorname{vol}\Delta _{\tau }\right)\, \mathrm{d}\tau . \end{aligned}  \]
+</div>
+<p>
+       In general, set $G_ A=G\lor (-A)$. The same pointwise identity applied to $G_ A$ gives 
+    
+<div class="equation">
+  \[  \int _{\Delta }G_ A^ m\, \mathrm{d}\operatorname{vol}=\Delta _{\max }^ m\operatorname{vol}\Delta +m\int _{-A}^{\Delta _{\max }}\tau ^{m-1}(\operatorname{vol}\Delta _{\tau }-\operatorname{vol}\Delta )\, \mathrm{d}\tau .  \]
+</div>
+<p>
+       Letting $A\to \infty $ gives (<a data-tag="DF789B0A" href="../../tag/FCEE1C9E921F/">10.118</a>): if $m$ is even, this follows from monotone convergence applied to $G_ A^ m\nearrow G^ m$; if $m$ is odd, apply monotone convergence to $\Delta _{\max }^ m-G_ A^ m\nearrow \Delta _{\max }^ m-G^ m$. Thus both sides of (<a data-tag="DF789B0A" href="../../tag/FCEE1C9E921F/">10.118</a>) are interpreted in the corresponding extended sense. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-lemma" id="sgpt-B9C8ADE8">
+<p><a class="environment-identifier" href="../../tag/9C05354365F4/">Lemma <span data-tag="B9C8ADE8">10.5.11</span>.</a><span data-gerby-tag="B9C8ADE8"></span> Let $(\Delta ^ i)_{i\geq 1}$ be a decreasing sequence in $\mathcal{K}_ n$ with limit $\Delta $. Suppose that $(\Delta _{\bullet }^ i)_{i\geq 1}$ is a decreasing sequence with $\Delta _{\bullet }^ i\in \mathrm{TC}(\Delta ^ i)$. Suppose that there is $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$ such that </p>
+<ol>
+<li class="custom-item" id="sgpt-67C0104F"><span data-gerby-tag="67C0104F"></span><p>
+ $\Delta _{\max }=\lim _{i\to \infty }\Delta ^ i_{\max }$; 
+</p>
+</li><li class="custom-item" id="sgpt-B1B10659"><span data-gerby-tag="B1B10659"></span><p>
+ for any $\tau &lt;\Delta _{\max }$, we have $\Delta ^ i_{\tau }\xrightarrow {d_{\mathrm{Haus}}}\Delta _{\tau }$. 
+</p>
+</li>
+</ol>
+<p> Then $\operatorname{DH}(\Delta _{\bullet }^ i)\rightharpoonup \operatorname{DH}(\Delta _{\bullet })$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $f\in C_ c(\mathbb {R})$. It follows from proposition <a data-tag="BC456E2F" href="../../tag/7B4552909292/">10.5.7</a> that 
+    
+<div class="equation">
+  \[  G[\Delta _{\bullet }^ i]\to G[\Delta _{\bullet }]  \]
+</div>
+<p>
+       pointwise on $\Delta $. Hence the dominated convergence theorem gives 
+    
+<div class="equation">
+  \[  \int _{\Delta } f(G[\Delta _{\bullet }^ i])\, \mathrm{d}\lambda \to \int _{\Delta } f(G[\Delta _{\bullet }])\, \mathrm{d}\lambda .  \]
+</div>
+<p>
+       Since $\Delta ^ i\xrightarrow {d_{\mathrm{Haus}}}\Delta $, theorem <a data-tag="D4B8C3D6" href="../../tag/66339C0E3C21/">C.1.4</a> gives $\operatorname{vol}(\Delta ^ i\setminus \Delta )\to 0$. The contribution of $\Delta ^ i\setminus \Delta $ is bounded by $\| f\| _{\infty }\operatorname{vol}(\Delta ^ i\setminus \Delta )$, so 
+    
+<div class="equation">
+  \[  \int _{\Delta ^ i} f(G[\Delta _{\bullet }^ i])\, \mathrm{d}\lambda \to \int _{\Delta } f(G[\Delta _{\bullet }])\, \mathrm{d}\lambda .  \]
+</div>
+<p>
+       This is the weak convergence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+ Similarly, we have <article class="env-lemma" id="sgpt-19978809">
+<p><a class="environment-identifier" href="../../tag/22B2EF8281A7/">Lemma <span data-tag="19978809">10.5.12</span>.</a><span data-gerby-tag="19978809"></span> Let $(\Delta ^ i)_{i\geq 1}$ be an increasing sequence in $\mathcal{K}_ n$ with Hausdorff limit $\Delta $ such that $\operatorname{vol}\Delta ^ i&gt;0$ for all $i\geq 1$. Consider an increasing sequence $(\Delta ^ i_{\bullet })_{i\geq 1}$ with $\Delta ^ i_{\bullet }\in \mathrm{TC}(\Delta ^ i)$ for all $i\geq 1$. Let $\Delta _{\bullet }\in \mathrm{TC}(\Delta )$ be defined as </p>
+<ol>
+<li class="custom-item" id="sgpt-D59EC1E9"><span data-gerby-tag="D59EC1E9"></span><p>
+ $\Delta _{\max }=\lim _{i\to \infty }\Delta ^ i_{\max }$; 
+</p>
+</li><li class="custom-item" id="sgpt-46ABBF87"><span data-gerby-tag="46ABBF87"></span><p>
+ for any $\tau &lt;\Delta _{\max }$, $\Delta _{\tau }$ is the Hausdorff limit of $\Delta ^ i_{\tau }$. 
+</p>
+</li>
+</ol>
+<p> Then we have </p>
+<div class="equation">
+  \[  \operatorname{DH}(\Delta _{\bullet }^ i)\rightharpoonup \operatorname{DH}(\Delta _{\bullet }).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $f\in C_ c(\mathbb {R})$. It follows from proposition <a data-tag="5E98C990" href="../../tag/D70EFA3100C9/">10.5.8</a> that 
+    
+<div class="equation">
+  \[  G[\Delta _{\bullet }^ i]\to G[\Delta _{\bullet }]  \]
+</div>
+<p>
+       almost everywhere on $\Delta $. Extending $f(G[\Delta _{\bullet }^ i])$ by $0$ outside $\Delta ^ i$, we also have $\mathds {1}_{\Delta ^ i}\to \mathds {1}_{\Delta }$ almost everywhere on $\Delta $, since the boundary of the convex body $\Delta $ has Lebesgue measure zero. The dominated convergence theorem gives 
+    
+<div class="equation">
+  \[  \int _{\Delta ^ i} f(G[\Delta _{\bullet }^ i])\, \mathrm{d}\lambda \to \int _{\Delta } f(G[\Delta _{\bullet }])\, \mathrm{d}\lambda .  \]
+</div>
+<p>
+       This is the weak convergence. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+The main source of Okounkov test curves is the following: <article class="env-theorem" id="sgpt-43914315">
+<p><a class="environment-identifier" href="../../tag/74133E3920A2/">Theorem <span data-tag="43914315">10.5.13</span>.</a><span data-gerby-tag="43914315"></span> Let $X$ be a connected compact Kähler manifold and $\theta $ be a closed smooth real $(1,1)$-form on $X$ representing a big cohomology class $\alpha $. Let $Y_{\bullet }$ be a smooth flag on $X$ and $\Gamma \in \mathrm{TC}(X,\theta )_{&gt;0}$. Then the map </p>
+<div class="equation">
+  \[  (-\infty ,\Gamma _{\max })\ni \tau \mapsto \Delta _{Y_{\bullet }}(\theta ,\Gamma )_{\tau }\coloneqq \Delta _{Y_{\bullet }}(\theta ,\Gamma _{\tau })  \]
+</div>
+<p> defines an Okounkov test curve relative to $\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty })$. </p>
+<p>If furthermore $\Gamma \in \mathrm{TC}^1(X,\theta ;\Gamma _{-\infty })$ (resp. $\mathrm{TC}^{\infty }(X,\theta ;\Gamma _{-\infty })$), then we have $\Delta _{Y_{\bullet }}(\theta ,\Gamma )\in \mathrm{TC}^1(\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty }))$ (resp. $\mathrm{TC}^{\infty }(\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty }))$). </p>
+</article> See definition <a data-tag="ECCF19D5" href="../../tag/C8399F09D86D/">9.1.1</a> and definition <a data-tag="38A406EF" href="../../tag/69529F41AA18/">9.1.5</a> for the relevant definitions. 
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Consider $\Gamma \in \mathrm{TC}(X,\theta )_{&gt;0}$. We need to verify that $\Delta _{Y_{\bullet }}(\theta ,\Gamma )$ is an Okounkov test curve relative to $\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty })$. 
+    <p>
+      First observe that $\tau \mapsto \Delta _{Y_{\bullet }}(\theta ,\Gamma _{\tau })$ is concave and decreasing for $\tau &lt;\Gamma _{\max }$. The decreasing property follows from theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">10.4.13</a> <a data-tag="5D591206" href="../../tag/944BC14A8246/#sgpt-5D591206">2</a>. For concavity, use the valuative characterization theorem <a data-tag="7D9FC961" href="../../tag/14121F7F4FC5/">10.4.20</a> together with the additivity of valuations in proposition <a data-tag="8C1D8954" href="../../tag/EF8E476D98F4/">10.2.7</a>: if $x\in \Delta _{Y_\bullet }(\theta ,\Gamma _\tau )$ and $y\in \Delta _{Y_\bullet }(\theta ,\Gamma _{\tau '})$, then $tx+(1-t)y$ is obtained from the current $tS+(1-t)S'$, which is more singular than $\Gamma _{t\tau +(1-t)\tau '}$. Hence 
+    
+<div class="equation">
+  \[  t\Delta _{Y_\bullet }\left(\theta ,\Gamma _\tau \right)+(1-t)\Delta _{Y_\bullet }\left(\theta ,\Gamma _{\tau '}\right)\subseteq \Delta _{Y_\bullet }\left(\theta ,\Gamma _{t\tau +(1-t)\tau '}\right).  \]
+</div>
+<p>
+      Next we show that as $\tau \to -\infty $, we have 
+    
+<div class="equation">
+  \[  \Delta _{Y_{\bullet }}(\theta ,\Gamma _{\tau })\xrightarrow {d_{\mathrm{Haus}}}\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty }).  \]
+</div>
+<p>
+      By theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">10.4.13</a> <a data-tag="5D591206" href="../../tag/944BC14A8246/#sgpt-5D591206">2</a>, the bodies $\Delta _{Y_{\bullet }}(\theta ,\Gamma _{\tau })$ are contained in $\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty })$ and increase as $\tau \to -\infty $. Thus it suffices to compute their volumes: 
+    
+<div class="equation">
+  \[  \begin{split}  \lim _{\tau \to -\infty }\operatorname{vol}\Delta _{Y_{\bullet }}(\theta ,\Gamma _{\tau })=\frac{1}{n!}\lim _{\tau \to -\infty }\operatorname{vol}(\theta +\mathrm{dd}^{\mathrm{c}}\Gamma _{\tau })=\frac{1}{n!}\operatorname{vol}(\theta +\mathrm{dd}^{\mathrm{c}}\Gamma _{-\infty }) \\  =\operatorname{vol}\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty }), \end{split}  \]
+</div>
+<p>
+       where we applied theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">10.4.13</a> and theorem <a data-tag="91496AFE" href="../../tag/CAB6F4E23080/">6.2.30</a>. 
+    <p>
+      When $\Gamma \in \mathrm{TC}^{\infty }(X,\theta ;\Gamma _{-\infty })$, it is clear that $\Delta _{Y_{\bullet }}(\theta ,\Gamma )\in \mathrm{TC}^{\infty }(\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty }))$. 
+    <p>
+      When $\Gamma \in \mathrm{TC}^{1}(X,\theta ;\Gamma _{-\infty })$, by theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">10.4.13</a> <a data-tag="F01AE1E4" href="../../tag/944BC14A8246/#sgpt-F01AE1E4">1</a>, (<a data-tag="50A4CAA5" href="../../tag/942AC971E484/">9.5</a>) and (<a data-tag="A69630EE" href="../../tag/1DD8B9478031/">10.109</a>), we have 
+    
+<div class="equation">
+  \[  \mathbf{E}^{\Gamma _{-\infty }}(\Gamma )=\mathbf{E}(\Delta _{Y_{\bullet }}(\theta ,\Gamma )).  \]
+</div>
+<p>
+       Indeed, by theorem <a data-tag="9B46A73A" href="../../tag/944BC14A8246/">10.4.13</a> <a data-tag="F01AE1E4" href="../../tag/944BC14A8246/#sgpt-F01AE1E4">1</a>, 
+    
+<div class="equation">
+  \[  n!\operatorname{vol}\Delta _{Y_{\bullet }}(\theta ,\Gamma _\tau )=\int _ X\theta _{\Gamma _\tau }^ n  \]
+</div>
+<p>
+       for every $\tau &lt;\Gamma _{\max }$, and the same identity holds at $\tau =-\infty $. Comparing (<a data-tag="50A4CAA5" href="../../tag/942AC971E484/">9.5</a>) with (<a data-tag="A69630EE" href="../../tag/1DD8B9478031/">10.109</a>) gives the asserted equality of energies. 
+    <p>
+      So $\Delta _{Y_{\bullet }}(\theta ,\Gamma )\in \mathrm{TC}^1(\Delta _{Y_{\bullet }}(\theta ,\Gamma _{-\infty }))$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-remark" id="sgpt-C98777C6">
+<p><a class="environment-identifier" href="../../tag/731294EE36CA/">Remark <span data-tag="C98777C6">10.5.14</span>.</a><span data-gerby-tag="C98777C6"></span> As a special case of this construction, suppose that $\Gamma $ is the test curve induced by a test configuration as in example <a data-tag="780413CB" href="../../tag/20A8C7BFE0BB/">9.3.9</a> and <a data-tag="31726C4D" href="../../tag/D6FC5A3046FA/">9.3.10</a>, then for any $\tau &lt;\Gamma _{\max }$, $\Delta _{Y_{\bullet }}(\theta ,\Gamma _{\tau })$ is the Okounkov body of a graded linear series </p>
+<div class="equation">
+  \[  \bigoplus _{k=0}^{\infty }\mathcal{F}^{k\tau }_ k,  \]
+</div>
+<p> where $\mathcal{F}$ is the filtration induced by the test configuration. See <span class="cite">[<span class="postnote">Theorem 5.28</span>, <a href="../../references/#RDD4F604B770B">Xia21</a>]</span> for the details. In particular, in this case, our theory of partial Okounkov bodies recovers the Okounkov bodies of the filtered linear series in the sense of <span class="cite">[<a href="../../references/#R3A70B7E19313">BC11</a>]</span>. </p>
+</article>
+
+<p>
+<blockquote class="motto">The mathematician's patterns, like the painter's or the poet's must be beautiful; the ideas, like the colors or the words must fit together in a harmonious way. Beauty is the first test: There is no permanent place in this world for ugly mathematics. 
+— Godfrey Harold Hardy<aside class="source-footnote" id="sgpt-a0000095098"><span class="footnote-label">Note.</span> Godfrey Harold Hardy (1877–1947) was a British mathematician famous for his work in number theory and mathematical analysis. Apart from his research, Hardy was a strong advocate for pure mathematics and believed that mathematics should be pursued for its own beauty, not just for practical use. 
+He remained lifelong unmarried and dedicated much of his life entirely to mathematics, fitting into the common stereotype of a mathematician.</aside></blockquote>
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

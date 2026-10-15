@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gauduchon tests for integrable densities · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>7B44C03D318B</code></p><h1>Gauduchon tests for integrable densities</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 14.28 Gauduchon tests for integrable densities <span data-gerby-tag="F10CA257"></span></div>
+<p>
+For a smooth strictly positive probability density, the normalization scalar is an infimum of Gauduchon quotients by theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">26.1.3</a>. We extend this dual formula to the threshold of an arbitrary integrable density. A uniform bound for all Gauduchon tests in a single $L^ r$ norm allows the passage from smooth to bounded densities, and monotone truncation then reaches all integrable densities, including those with zero threshold. The formula is most naturally written for the $n$th root of the density. 
+</p>
+<p>
+Recall that a Hermitian form $\gamma $ is <em>Gauduchon</em> if $\mathrm{dd}^{\mathrm{c}}(\gamma ^{n-1})=0$ (definition <a data-tag="DD74A88E" href="../../tag/70139B6ABDC2/">4.1.1</a>); in dimension one every Hermitian form is Gauduchon. For a Gauduchon form $\gamma $ and a nonnegative measurable function $p$, put 
+</p>
+<div class="equation">
+  \[  L_{h,\gamma }(p)= \frac{\displaystyle \int _ Xp(\mathrm{d}V/\gamma ^ n)^{1/n}\gamma ^ n}{\displaystyle \int _ Xh\wedge \gamma ^{n-1}} =\int _ Xp\, a_\gamma \, \mathrm{d}V, \qquad a_\gamma =\frac{(\gamma ^ n/\mathrm{d}V)^{(n-1)/n}}{\int _ Xh\wedge \gamma ^{n-1}}.  \]
+</div>
+<p>
+ Since the coefficient $a_\gamma $ is smooth and strictly positive, each individual test $L_{h,\gamma }$ is finite on $L^ n$; the supremum over $\gamma $ may be infinite. In dimension one the test is $\int _ Xp\, \mathrm{d}V/\int _ Xh$. For real or complex $p\in L^ n(\mathrm{d}V)$, define the <em>root functional</em>
+</p>
+<div class="equation">
+  \[  \rho _ h(p)=b_ h(|p|^ n)^{-1/n}\quad (p\ne 0),\qquad \rho _ h(0)=0,  \]
+</div>
+<p>
+ with the convention $0^{-1/n}=+\infty $. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-0DF693AB">
+<p><a class="environment-identifier" href="../../tag/346B39C3F0B6/">Theorem <span data-tag="0DF693AB">14.28.1</span>.</a><span data-gerby-tag="0DF693AB"></span> For every real or complex $p\in L^ n(\mathrm{d}V)$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-14E5F2EF"><span data-gerby-tag="14E5F2EF"></span>
+<span class="equation-label"><a data-tag="14E5F2EF" href="../../tag/77553DB34B46/">14.103</a></span>
+<div>\begin{equation} \label{eq:integrable-gauduchon-root} \rho _ h(p)=\sup _{\gamma \text{ Gauduchon}}L_{h,\gamma }(|p|). \end{equation}</div>
+</div>
+<p> Equivalently, for every nonzero nonnegative $f\in L^1(\mathrm{d}V)$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-86A10912"><span data-gerby-tag="86A10912"></span>
+<span class="equation-label"><a data-tag="86A10912" href="../../tag/3FECA4E31049/">14.104</a></span>
+<div>\begin{equation} \label{eq:integrable-gauduchon-threshold} b_ h(f)^{1/n}= \inf _{\gamma \text{ Gauduchon}} \frac{\displaystyle \int _ Xh\wedge \gamma ^{n-1}}{\displaystyle \int _ X(f\, \mathrm{d}V/\gamma ^ n)^{1/n}\gamma ^ n}. \end{equation}</div>
+</div>
+<p> Both sides of (<a data-tag="14E5F2EF" href="../../tag/77553DB34B46/">14.103</a>) may be $+\infty $, and both sides of (<a data-tag="86A10912" href="../../tag/3FECA4E31049/">14.104</a>) may vanish. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to prove (<a data-tag="14E5F2EF" href="../../tag/77553DB34B46/">14.103</a>) for $p\geq 0$, since both sides depend only on $|p|$; the case $p=0$ is immediate. 
+    <p>
+<em>Step 1: smooth strictly positive $p$.</em> Apply theorem <a data-tag="876DF057" href="../../tag/2DB664A6EFDF/">26.1.3</a>, with background $h$, to the probability measure $\mu =p^ n\mathrm{d}V/Z$, where $Z=\int _ Xp^ n\, \mathrm{d}V$. By homogeneity (lemma <a data-tag="F84443FE" href="../../tag/CE5CA1071A3C/">14.26.1</a>) its scalar is $c_ h(\mu )=Zc_ h(p^ n)$, while the denominator of each Gauduchon quotient is $Z^{-1/n}\int _ Xp(\mathrm{d}V/\gamma ^ n)^{1/n}\gamma ^ n$. The factors of $Z$ cancel, and the dual formula becomes 
+    
+<div class="equation">
+  \[  c_ h(p^ n)^{-1/n}=\sup _\gamma L_{h,\gamma }(p).  \]
+</div>
+<p>
+       Since $b_ h(p^ n)=c_ h(p^ n)$ by proposition <a data-tag="58DB2491" href="../../tag/69BB1D568698/">14.27.4</a>, this proves (<a data-tag="14E5F2EF" href="../../tag/77553DB34B46/">14.103</a>) for such $p$. 
+    <p>
+<em>Step 2: a uniform bound for the tests.</em> The lower-density estimate of theorem <a data-tag="FD57C562" href="../../tag/EA32B8891E2B/">10.3.3</a>, with exponent two, gives a constant $m_ h&gt;0$ such that 
+    
+<div class="equation">
+  \[  c_ h(p^ n)\| p^ n\| _{L^2}\geq m_ h  \]
+</div>
+<p>
+       for smooth strictly positive $p$. By Step 1, therefore, 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-CD193854"><span data-gerby-tag="CD193854"></span>
+<span class="equation-label"><a data-tag="CD193854" href="../../tag/C6012A389791/">14.105</a></span>
+<div>\begin{equation} \label{eq:gauduchon-test-uniform-bound} L_{h,\gamma }(p)\leq m_ h^{-1/n}\| p\| _{L^{2n}} \quad \text{for every }\gamma . \end{equation}</div>
+</div>
+<p>
+       Approximating nonnegative functions in $L^{2n}$ by smooth strictly positive ones extends this bound to all nonnegative $p\in L^{2n}$. Since $a_\gamma &gt;0$, duality gives $\| a_\gamma \| _{L^{2n/(2n-1)}}\leq m_ h^{-1/n}$ for every $\gamma $. In particular, $p\mapsto \sup _\gamma L_{h,\gamma }(p)$ is Lipschitz on the cone of nonnegative functions in $L^{2n}$, with the same constant. 
+    <p>
+<em>Step 3: bounded $p$.</em> Let $p\geq 0$ be bounded and nonzero, and approximate it in $L^{2n}$ by smooth strictly positive functions $p_ j$. By Hölder's inequality, $p_ j^ n\to p^ n$ in $L^2$, so lemma <a data-tag="23A16D9F" href="../../tag/366F6832AB46/">14.26.2</a> gives 
+    
+<div class="equation">
+  \[  c_ h(p_ j^ n)\longrightarrow c_ h(p^ n)&gt;0.  \]
+</div>
+<p>
+       By the Lipschitz bound derived from (<a data-tag="CD193854" href="../../tag/C6012A389791/">14.105</a>), 
+    
+<div class="equation">
+  \[  \sup _\gamma L_{h,\gamma }(p_ j) \longrightarrow \sup _\gamma L_{h,\gamma }(p).  \]
+</div>
+<p>
+       Passing to the limit in the identity of Step 1 for $p_ j$, and using $b_ h(p^ n)=c_ h(p^ n)$ (proposition <a data-tag="58DB2491" href="../../tag/69BB1D568698/">14.27.4</a>), we obtain (<a data-tag="14E5F2EF" href="../../tag/77553DB34B46/">14.103</a>) for bounded $p$. 
+    <p>
+<em>Step 4: general $p$.</em> For nonnegative $p\in L^ n$, put $p_ k=\min (p,k)$. Then $p_ k^ n=\min (p^ n,k^ n)$ are truncations of $p^ n$, so the definition of $b_ h$ and Step 3 give 
+    
+<div class="equation">
+  \[  \rho _ h(p)=\lim _{k\to \infty }c_ h(p_ k^ n)^{-1/n} =\sup _ k\sup _\gamma L_{h,\gamma }(p_ k).  \]
+</div>
+<p>
+       For each fixed $\gamma $, monotone convergence gives $\sup _ kL_{h,\gamma }(p_ k)=L_{h,\gamma }(p)$. Interchanging the two suprema proves (<a data-tag="14E5F2EF" href="../../tag/77553DB34B46/">14.103</a>). Finally, every denominator in (<a data-tag="86A10912" href="../../tag/3FECA4E31049/">14.104</a>) is positive; taking reciprocals in (<a data-tag="14E5F2EF" href="../../tag/77553DB34B46/">14.103</a>) with $p=f^{1/n}$ proves (<a data-tag="86A10912" href="../../tag/3FECA4E31049/">14.104</a>), including the case $b_ h(f)=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+<p>
+For a nonsmooth density we do not claim that the infimum in (<a data-tag="86A10912" href="../../tag/3FECA4E31049/">14.104</a>) is attained by a Gauduchon form; attainment by Gauduchon currents is studied in section <a data-tag="22459783" href="../../tag/5CB8CFC32A19/">26.9</a>. 
+</p>
+<p>
+For $n\geq 2$, the coefficient of the test has norm 
+</p>
+<div class="equation">
+  \[  \| a_\gamma \| _{L^{n/(n-1)}} =\frac{(\int _ X\gamma ^ n)^{(n-1)/n}}{\int _ Xh\wedge \gamma ^{n-1}}  \]
+</div>
+<p>
+ in the exponent dual to $n$. By (<a data-tag="DE55D25C" href="../../tag/AE720210AADD/">26.89</a>) in theorem <a data-tag="89544950" href="../../tag/B6CA5669E402/">26.14.3</a>, positive lower mass is therefore equivalent to a uniform bound for these norms, that is, for all tests on $L^ n$ simultaneously. Without positive lower mass, Step 2 of the proof still bounds the coefficients uniformly in the weaker norm of $L^{2n/(2n-1)}$, on every compact Hermitian manifold. This suffices to pass from smooth to bounded densities, and monotone truncation then treats all integrable densities. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-74689D40">
+<p><a class="environment-identifier" href="../../tag/429BB0FF98A9/">Proposition <span data-tag="74689D40">14.28.2</span>.</a><span data-gerby-tag="74689D40"></span> Let $f$ be a nonzero nonnegative function in $L^1(\mathrm{d}V)$ and let $p\in L^ n(\mathrm{d}V)$ be real or complex. If $h_1,h_2$ are Hermitian forms on $X$ and $m h_1\leq h_2\leq M h_1$ for positive constants $m,M$, then </p>
+<div class="equation">
+  \[  m^ n b_{h_1}(f)\leq b_{h_2}(f)\leq M^ n b_{h_1}(f), \qquad M^{-1}\rho _{h_1}(p)\leq \rho _{h_2}(p)\leq m^{-1}\rho _{h_1}(p).  \]
+</div>
+<p> If $h_2-h_1=\mathrm{dd}^{\mathrm{c}}a$ for a smooth real function $a$, then $b_{h_1}(f)=b_{h_2}(f)$ and $\rho _{h_1}(p)=\rho _{h_2}(p)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For every Gauduchon form $\gamma $, the numerators in (<a data-tag="86A10912" href="../../tag/3FECA4E31049/">14.104</a>) satisfy 
+    
+<div class="equation">
+  \[  m\int _ Xh_1\wedge \gamma ^{n-1}\leq \int _ Xh_2\wedge \gamma ^{n-1} \leq M\int _ Xh_1\wedge \gamma ^{n-1},  \]
+</div>
+<p>
+       while the denominators do not depend on the background. Taking the infimum over $\gamma $ and then $n$th powers proves the bounds for the thresholds; taking reciprocal $n$th roots gives the bounds for $\rho $, with the stated conventions at zero and infinity. If $h_2-h_1=\mathrm{dd}^{\mathrm{c}}a$, the numerators agree by Stokes' theorem, since $\mathrm{dd}^{\mathrm{c}}(\gamma ^{n-1})=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Any two Hermitian metrics on the compact manifold $X$ are comparable. Hence the positivity of $b_ h(f)$, and the set of real or complex $p\in L^ n$ with $\rho _ h(p)&lt;+\infty $, do not depend on the choice of $h$. The dependence on the reference volume is equally simple. If $\mathrm{d}V$ is replaced by $\mathrm{d}V'=\sigma \, \mathrm{d}V$ with a smooth function $\sigma &gt;0$, the measure $f\, \mathrm{d}V$ has density $f'=f/\sigma $ with respect to $\mathrm{d}V'$, and theorem <a data-tag="76378BFC" href="../../tag/CC13A9B1D927/">14.27.2</a> shows that the threshold of $f'$ relative to $\mathrm{d}V'$ equals $b_ h(f)$. Correspondingly, the map $p\mapsto \sigma ^{-1/n}p$ from $L^ n(\mathrm{d}V)$ to $L^ n(\mathrm{d}V')$ preserves both the $L^ n$ norm and the root functional. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

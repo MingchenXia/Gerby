@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Proposition 4.3.24 · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/energy-geodesics/">Chapter 14 · Energy, geodesics, rays, and test curves</a> · Tag <code>B40B93A4363D</code></p><h1>Proposition 4.3.24</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · Proposition 4.3.24 <span data-gerby-tag="392A645A"></span></div><article class="env-proposition" id="sgpt-392A645A">
+<p><a class="environment-identifier" href="../../tag/B40B93A4363D/">Proposition <span data-tag="392A645A">4.3.24</span>.</a><span data-gerby-tag="392A645A"></span> Given $\ell ,\ell '\in \mathcal{R}^{\infty }(X,\theta ;\phi )$. Then $\ell \lor \ell '\in \mathcal{R}^{\infty }(X,\theta ;\phi )$ exists, and </p>
+<div class="equation" id="sgpt-2BE4A6D4"><span data-gerby-tag="2BE4A6D4"></span>
+<span class="equation-label"><a data-tag="2BE4A6D4" href="../../tag/CA6EEFF029A5/">4.95</a></span>
+<div>\begin{equation} \label{eq:Elor} \mathbf{E}^{\phi }(\ell \lor \ell ')=\lim _{t\to \infty }\frac{1}{t}E_{\theta }^{\phi }\left(\ell _ t\lor \ell '_ t\right). \end{equation}</div>
+</div>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For each $t&gt;0$, let $(\ell ''^ t_{s})_{s\in [0,t]}$ be the geodesic from $\phi $ to $\ell _ t\lor \ell '_ t$. 
+    <p>
+<strong>Step 1</strong>. We first show that for each fixed $s\geq 0$, $\ell ''^ t_{s}$ is increasing in $t\in [s,\infty )$. 
+    <p>
+      To see this, fix $s\geq 0$ and choose $t'&gt;t\geq s$. We need to show that 
+    
+<div class="equation" id="sgpt-831939C7"><span data-gerby-tag="831939C7"></span>
+<span class="equation-label"><a data-tag="831939C7" href="../../tag/947F65850DBC/">4.96</a></span>
+<div>\begin{equation} \label{eq:ellppdombyellpptemp1} \ell ''^{t'}_ s\geq \ell ''^{t}_ s. \end{equation}</div>
+</div>
+<p>
+       Since $(\ell ''^{t'}_ a)_{a\in [0,t]}$ is a geodesic, it suffices to show that $(\ell ''^ t_ a)_{a\in [0,t]}$ is a candidate in the Perron envelope defining the former geodesic. In other words, in verifying (<a data-tag="831939C7" href="../../tag/947F65850DBC/">4.96</a>), we may assume that either $s=0$ or $s=t$. The case $s=0$ is of course trivial. So it remains to prove the following: 
+    
+<div class="equation">
+  \[  \ell ''^{t'}_ t\geq \ell _ t\lor \ell '_ t.  \]
+</div>
+<p>
+       By symmetry, it suffices to prove 
+    
+<div class="equation">
+  \[  \ell ''^{t'}_ t\geq \ell _ t.  \]
+</div>
+<p>
+       But since $(\ell _ a)_{a\in [0,t']}$ is a candidate in the Perron envelope defining $\ell ''^{t'}$, this inequality follows. 
+    <p>
+<strong>Step 2</strong>. Next, observe that for a fixed $s\geq 0$, we have 
+    
+<div class="equation">
+  \[  \sup _ X \ell ''^ t_ s\leq \frac{s}{t}\sup _ X\ell ''^ t_ t+ \frac{t-s}{t}\sup _ X \ell ''^ t_0=\frac{s}{t}\left( \sup _ X\ell _ t \right)\lor \left( \sup _ X\ell '_ t \right)  \]
+</div>
+<p>
+       for all $t&gt;s$. The right-hand side is bounded from above by a constant independent of $t\geq s$ by proposition <a data-tag="3F6C536C" href="../../tag/FD1B5378AA06/">4.2.9</a>. Let 
+    
+<div class="equation" id="sgpt-C5DE1BBB"><span data-gerby-tag="C5DE1BBB"></span>
+<span class="equation-label"><a data-tag="C5DE1BBB" href="../../tag/EF4F3DA38F04/">4.97</a></span>
+<div>\begin{equation} \label{eq:llorlp} (\ell \lor \ell ')_ s\coloneqq \operatorname *{sup}_{t&gt;s}{}\! {}^{*} \ell ''^ t_{s}. \end{equation}</div>
+</div>
+<p>
+       Then proposition <a data-tag="8066E44C" href="../../tag/7ADCF3A953E5/">4.3.17</a> guarantees that $\ell \lor \ell '\in \mathcal{R}^{\infty }(X,\theta ;\phi )$. 
+    <p>
+<strong>Step 3</strong>. We need to show that $\ell \lor \ell '$ defined in this way is indeed the minimal ray lying above $\ell $ and $\ell '$. 
+    <p>
+      First, by Step 1, we have 
+    
+<div class="equation">
+  \[  \ell ''^ t_ s\geq \ell ''^ s_ s\geq \ell _ s  \]
+</div>
+<p>
+       for any $t\geq s\geq 0$. Therefore, 
+    
+<div class="equation">
+  \[  (\ell \lor \ell ')_ s\geq \ell _ s  \]
+</div>
+<p>
+       for all $s\geq 0$. In other words, $\ell \lor \ell '\geq \ell $. Similarly, $\ell \lor \ell '\geq \ell '$. 
+    <p>
+      Next, let $L\in \mathcal{R}^{\infty }(X,\theta ;\phi )$ be a ray lying above both $\ell $ and $\ell '$. Then we have 
+    
+<div class="equation">
+  \[  L_ t\geq \ell _ t\lor \ell '_ t  \]
+</div>
+<p>
+       for all $t\geq 0$. In particular, 
+    
+<div class="equation">
+  \[  L_ s\geq \ell ''^ t_ s  \]
+</div>
+<p>
+       for all $t\geq s\geq 0$. It follows that 
+    
+<div class="equation">
+  \[  L_ s\geq (\ell \lor \ell ')_ s  \]
+</div>
+<p>
+       for all $s\geq 0$. 
+    <p>
+<strong>Step 4</strong>. It remains to argue (<a data-tag="2BE4A6D4" href="../../tag/CA6EEFF029A5/">4.95</a>). Since the energy is linear along bounded rays, 
+    
+<div class="equation">
+  \[  \mathbf{E}^{\phi }(\ell \lor \ell ')=E_{\theta }^{\phi }\left((\ell \lor \ell ')_1\right).  \]
+</div>
+<p>
+       Moreover, $\ell ''^ t_1$ increases to $(\ell \lor \ell ')_1$ as $t\to \infty $. By proposition <a data-tag="C0DDCEBD" href="../../tag/3DA562555236/">3.1.47</a>, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }\left((\ell \lor \ell ')_1\right)=\lim _{t\to \infty } E_{\theta }^{\phi }\left(\ell ''^ t_1\right).  \]
+</div>
+<p>
+       Finally, by proposition <a data-tag="8F8682C7" href="../../tag/0C8741A27906/">4.3.16</a> applied to $(\ell ''^ t_ s)_{s\in [0,t]}$, 
+    
+<div class="equation">
+  \[  E_{\theta }^{\phi }\left(\ell ''^ t_1\right)=\frac{1}{t}E_{\theta }^{\phi }\left(\ell _ t\lor \ell '_ t\right).  \]
+</div>
+<p>
+       Combining these identities gives (<a data-tag="2BE4A6D4" href="../../tag/CA6EEFF029A5/">4.95</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

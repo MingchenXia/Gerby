@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Heat potentials and the mixed derivative · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hopf-lck/">Chapter 20 · Hopf and locally conformally Kähler geometry</a> · Tag <code>1CD2386648C8</code></p><h1>Heat potentials and the mixed derivative</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 8.3 Heat potentials and the mixed derivative <span data-gerby-tag="8E2FA323"></span></div>
+<p>
+The fiber potential will be built from the heat kernel of $E$. It has large vertical energy at small times and decays at large times, where it can be cut off, and a lower bound for its logarithmic Hessian controls vertical positivity. To control the radial–vertical block when the time varies, we also need an estimate relating the kernel to its logarithmic gradient. 
+</p>
+<p>
+For $t&gt;0$ define 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-33A3A76C"><span data-gerby-tag="33A3A76C"></span>
+<span class="equation-label"><a data-tag="33A3A76C" href="../../tag/097EB0CA92F4/">8.6</a></span>
+<div>\begin{equation} \label{eq:hopf-heat} k_ t(w)=\frac2t\sum _{\lambda \in \Lambda } \exp \left(-\frac{|w-\lambda |^2}{t}\right). \end{equation}</div>
+</div>
+<p>
+ This is a smooth positive $\Lambda $-periodic function of integral one: unfolding the integral reduces it to the Gaussian integral on $\mathbb C$, since $\mathrm{d}A_ E=\mathrm{d}a\, \mathrm{d}b/(2\pi )$ for $w=a+\mathrm ib$. For $(p,q)\in \mathbb Z^2$ set 
+</p>
+<div class="equation">
+  \[  \nu _{p,q}=p+\frac{\mathrm iq}{2\pi },\qquad \chi _{p,q}(w)=\mathrm{e}^{2\pi \mathrm ip\operatorname {Re}w+ \mathrm iq\operatorname {Im}w}.  \]
+</div>
+<p>
+ These characters form an orthonormal basis of $L^2(E,\mathrm{d}A_ E)$. Computing the Fourier coefficients by the same unfolding gives 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-746F570C"><span data-gerby-tag="746F570C"></span>
+<span class="equation-label"><a data-tag="746F570C" href="../../tag/27E901CC3829/">8.7</a></span>
+<div>\begin{equation} \label{eq:hopf-heat-fourier} k_ t=\sum _{p,q}\mathrm{e}^{-\pi ^2|\nu _{p,q}|^2t}\chi _{p,q}, \qquad \partial _ tk_ t=\partial _ w\partial _{\bar w}k_ t. \end{equation}</div>
+</div>
+<p>
+ All differentiated series converge locally uniformly for $t&gt;0$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4228F54D">
+<p><a class="environment-identifier" href="../../tag/14E6CDA9AAC4/">Lemma <span data-tag="4228F54D">8.3.1</span>.</a><span data-gerby-tag="4228F54D"></span> Let $0&lt;\eta &lt;1/10$ and define </p>
+<div class="equation">
+  \[  F_\eta (t,w)=-\eta \int _ t^\infty (k_ r(w)-1)\, \mathrm{d}r.  \]
+</div>
+<p> Then $F_\eta $ is smooth and real, and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-6886B30B"><span data-gerby-tag="6886B30B"></span>
+<span class="equation-label"><a data-tag="6886B30B" href="../../tag/9CCEEAD6F62C/">8.8</a></span>
+<div>\begin{align}  (F_\eta )_ t=(F_\eta )_{w\bar w} &amp; =\eta (k_ t-1),\label{eq:hopf-F-heat}\\  (\log k_ t)_{w\bar w}&amp; \geq -1/t,\label{eq:hopf-log-hessian}\\  \int _ E|(F_\eta )_ w(t,w)|^2\mathrm{d}A_ E &amp; =2\eta ^2\log (1/t)+O(\eta ^2)\quad (0&lt;t\leq 1). \label{eq:hopf-energy} \end{align}</div>
+</div>
+<p> The error term in (<a data-tag="8351AE1B" href="../../tag/E73DDDEDFD02/">8.10</a>) is uniform in $t$ and $\eta $. For fixed nonnegative integers $a,m$ there is also a uniform estimate </p>
+<div class="equation" id="non-kahler-pluripotential-theory-350919E5"><span data-gerby-tag="350919E5"></span>
+<span class="equation-label"><a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a></span>
+<div>\begin{equation} \label{eq:hopf-large-time} \| \partial _ t^ aF_\eta (t,\cdot )\| _{C^ m(E)} \leq C_{a,m}\eta \mathrm{e}^{-t/4}\quad (t\geq 1). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Integrating the nonconstant Fourier modes gives 
+    
+<div class="equation">
+  \[  F_\eta (t,w)=-\frac{\eta }{\pi ^2} \sum _{(p,q)\ne (0,0)} \frac{\mathrm{e}^{-\pi ^2|\nu _{p,q}|^2t}}{|\nu _{p,q}|^2}\chi _{p,q}(w).  \]
+</div>
+<p>
+       This proves smoothness, reality and (<a data-tag="6886B30B" href="../../tag/9CCEEAD6F62C/">8.8</a>). The least nonzero value of $\pi ^2|\nu _{p,q}|^2$ is $1/4$, and any fixed number of differentiations introduces coefficients of polynomial growth in $|\nu _{p,q}|$. Factoring out $\mathrm{e}^{-t/4}$ for $t\geq 1$ therefore leaves a convergent Gaussian series, which proves (<a data-tag="350919E5" href="../../tag/464524C306E0/">8.11</a>). 
+    <p>
+      To prove (<a data-tag="446B1FB1" href="../../tag/D87F1ADF41BF/">8.9</a>), fix a lift of $w$ and give $\Lambda $ the probability weights 
+    
+<div class="equation">
+  \[  P_\lambda = \frac{\mathrm{e}^{-|w-\lambda |^2/t}}{\sum _{\lambda '}\mathrm{e}^{-|w-\lambda '|^2/t}}.  \]
+</div>
+<p>
+       Logarithmic differentiation of the Gaussian sum yields 
+    
+<div class="equation">
+  \[  t\partial _{\bar w}\log k_ t=-\sum _\lambda (w-\lambda )P_\lambda ,  \]
+</div>
+<p>
+       and one more derivative gives 
+    
+<div class="equation">
+  \[  (\log k_ t)_{w\bar w} =-\frac1t+\frac1{t^2} \left(\sum _\lambda |w-\lambda |^2P_\lambda -\left|\sum _\lambda (w-\lambda )P_\lambda \right|^2\right).  \]
+</div>
+<p>
+       The expression in parentheses is a variance and is nonnegative. 
+    <p>
+       Finally, Parseval's identity gives, with $\mathcal E_\eta (t)$ denoting the energy in (<a data-tag="8351AE1B" href="../../tag/E73DDDEDFD02/">8.10</a>), 
+    
+<div class="equation">
+  \[  \mathcal E_\eta (t)=\frac{\eta ^2}{\pi ^2} \sum _{(p,q)\ne (0,0)} \frac{\mathrm{e}^{-2\pi ^2|\nu _{p,q}|^2t}}{|\nu _{p,q}|^2}, \qquad \mathcal E_\eta '(t)=-2\eta ^2(k_{2t}(0)-1).  \]
+</div>
+<p>
+       The Gaussian formula at the origin implies 
+    
+<div class="equation">
+  \[  k_{2t}(0)=\frac1t+ O\left(t^{-1}\mathrm{e}^{-1/(4t)}\right)\quad (0&lt;t\leq 1).  \]
+</div>
+<p>
+       To see this, isolate the zero lattice vector and use $\mathrm{e}^{-|\lambda |^2/(2t)}\leq \mathrm{e}^{-1/(4t)}\mathrm{e}^{-|\lambda |^2/4}$ for $\lambda \ne 0$. The error term is integrable near $t=0$, and $\mathcal E_\eta (1)=O(\eta ^2)$. Integrating the derivative between $t$ and $1$ proves (<a data-tag="8351AE1B" href="../../tag/E73DDDEDFD02/">8.10</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+The Schur complement subtracts a square involving the mixed derivative. When the time parameter is allowed to vary, the heat equation produces a compensating positive square, and the following bound relating the heat kernel to its logarithmic gradient controls the region where that square is small. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C16AAF0D">
+<p><a class="environment-identifier" href="../../tag/7C9989D90F66/">Lemma <span data-tag="C16AAF0D">8.3.2</span>.</a><span data-gerby-tag="C16AAF0D"></span> For a constant $C_0\geq 1$ depending only on $E$, </p>
+<div class="equation" id="non-kahler-pluripotential-theory-92026DD7"><span data-gerby-tag="92026DD7"></span>
+<span class="equation-label"><a data-tag="92026DD7" href="../../tag/8EBD296AAFDA/">8.12</a></span>
+<div>\begin{equation} \label{eq:hopf-gradient} tk_ t(w)\leq C_0\exp \left( -\frac{|t\partial _{\bar w}\log k_ t(w)|^2}{C_0t}\right) \quad (0&lt;t\leq 1). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a nearest lattice point $\lambda _0$, and put $d=|w-\lambda _0|$ and $s_\lambda =|w-\lambda |^2-d^2\geq 0$. The distance $d$ is bounded by the diameter of a fundamental rectangle. By the triangle inequality, $s_\lambda \geq |\lambda -\lambda _0|^2/4-C$, and outside a fixed finite set of $\lambda $ we have $s_\lambda \geq |\lambda -\lambda _0|^2/8$. Consequently, 
+    
+<div class="equation">
+  \[  \sum _\lambda (1+|w-\lambda |)\mathrm{e}^{-s_\lambda /t}\leq C, \qquad tk_ t(w)\leq C\mathrm{e}^{-d^2/t}.  \]
+</div>
+<p>
+       The probability formula in the previous proof gives, with $G=|t\partial _{\bar w}\log k_ t|$, 
+    
+<div class="equation">
+  \[  G\leq d+\sum _{\lambda \ne \lambda _0}|w-\lambda |\mathrm{e}^{-s_\lambda /t}.  \]
+</div>
+<p>
+       If $d\geq 1/4$, this is at most $Cd$. If $d&lt;1/4$, the nonzero lattice distances are at least one and 
+    
+<div class="equation">
+  \[  s_\lambda \geq |\lambda -\lambda _0| (|\lambda -\lambda _0|-2d) \geq \tfrac 12|\lambda -\lambda _0|^2.  \]
+</div>
+<p>
+       Summing the resulting Gaussian bound gives $G\leq C(d+\mathrm{e}^{-c/t})$ in all cases. When $G&gt;2C\mathrm{e}^{-c/t}$, we have $d\geq G/(2C)$, and the bound $tk_ t\leq C\mathrm{e}^{-d^2/t}$ gives (<a data-tag="92026DD7" href="../../tag/8EBD296AAFDA/">8.12</a>). In the remaining case $G^2/t$ is bounded, and (<a data-tag="92026DD7" href="../../tag/8EBD296AAFDA/">8.12</a>) follows from $tk_ t\leq C$ after increasing $C_0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-C63ECDFB">
+<p><a class="environment-identifier" href="../../tag/AB7F46061184/">Lemma <span data-tag="C63ECDFB">8.3.3</span>.</a><span data-gerby-tag="C63ECDFB"></span> There is a constant $C$ depending only on $E$ with the following property. For $0&lt;\kappa &lt;1/(200C_0)$, $0&lt;\eta &lt;1/10$, $0&lt;t\leq 1$ and $1/2\leq \mu \leq 1$, define $\sigma &gt;0$ and the functions $h,\zeta $ of $w\in E$ by </p>
+<div class="equation">
+  \[  \sigma ^2=\frac{2\kappa }{\eta }\log \frac1{\eta t},\qquad h=\eta k_ t,\qquad \zeta =\frac{\sigma }{\mu }\, t\partial _{\bar w}\log k_ t.  \]
+</div>
+<p> Then </p>
+<div class="equation" id="non-kahler-pluripotential-theory-3594E9CF"><span data-gerby-tag="3594E9CF"></span>
+<span class="equation-label"><a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a></span>
+<div>\begin{equation} \label{eq:hopf-square} \kappa tk_ t- \frac{\mu ^2(1-\eta )h}{1-\eta +h} \left|\zeta -\frac1{1-\eta }\right|^2 \leq C\kappa \exp \left(-\frac1{C\sigma ^2t}\right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\sigma ^2t\geq 1/100$, the bound $tk_ t\leq C_0$ gives (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) after enlarging $C$. Assume therefore that $\sigma ^2t&lt;1/100$. If $|\zeta -(1-\eta )^{-1}|\geq 1/4$, the subtracted expression is at least $h/[100(1+h)]$. Since $\log (1/(\eta t))&gt;2$, the definition of $\sigma $ gives 
+    
+<div class="equation">
+  \[  \kappa t(1+h)\leq \frac{\eta }{400}+C_0\kappa \eta &lt;\frac{\eta }{100}.  \]
+</div>
+<p>
+       Multiplication by $k_ t/(1+h)$ shows that the left side of (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) is nonpositive. 
+    <p>
+      Otherwise $|\zeta |\geq 3/4$, so 
+    
+<div class="equation">
+  \[  |t\partial _{\bar w}\log k_ t|=\frac{\mu |\zeta |}{\sigma } \geq \frac3{8\sigma }.  \]
+</div>
+<p>
+       Discarding the nonnegative square and applying lemma <a data-tag="C16AAF0D" href="../../tag/7C9989D90F66/">8.3.2</a> gives (<a data-tag="3594E9CF" href="../../tag/ED58C2434E12/">8.13</a>) in this case as well. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

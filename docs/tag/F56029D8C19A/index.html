@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Curvature and projective complement exhaustions · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hermitian-torsion/">Chapter 10 · Hermitian geometry, torsion, and Gauduchon duality</a> · Tag <code>F56029D8C19A</code></p><h1>Curvature and projective complement exhaustions</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 4.6.9 Curvature and projective complement exhaustions <span data-gerby-tag="D00329D9"></span></div>
+<p>
+Corollary <a data-tag="C86DCFF0" href="../../tag/B53EB4EFC135/">4.6.39</a> excludes $r$-convexity of the complement of the zero section in the projective completion, but it does not decide which larger indices occur. Upper bounds come from curvature. The reciprocal of the squared norm of a Hermitian metric is an exhaustion near the removed zero section, and every positive direction of the curvature, evaluated at a fiber vector, contributes a positive Levi eigenvalue. For a stable bundle of positive Gauduchon degree, the Hermitian–Einstein metric provides such a direction at every fiber vector. 
+</p>
+<p>
+In this subsection, $E\to X$ is a holomorphic vector bundle of rank $r\geq 1$, $n\geq 1$, and $h$ is a smooth Hermitian metric on $E$. In a holomorphic frame, write the matrix of $h$ as $M$, using column vectors and an inner product linear in its first argument, so that $h(v,v)=v^*Mv$. Put 
+</p>
+<div class="equation">
+  \[  F_ h=\bar\partial (M^{-1}\partial M) =\sum _{\alpha ,\beta }F_{\alpha \bar\beta }\, \mathrm dz_\alpha \wedge \mathrm d\bar z_\beta , \qquad R_ h(u,\bar u)=\sum _{\alpha ,\beta }F_{\alpha \bar\beta }u_\alpha \bar u_\beta .  \]
+</div>
+<p>
+ For $v\in E_ x$, the real $(1,1)$-form $\alpha _{h,v}=\mathrm i\, h(F_ hv,v)$ has the Hermitian coefficient form $u\mapsto h(R_ h(u,\bar u)v,v)$. For a Hermitian form $\omega $ on $X$, the <em>mean curvature</em> of $h$ is the $h$-Hermitian endomorphism $K_{\omega ,h}=\Lambda _\omega (\mathrm iF_ h)$, where $\Lambda _\omega $ denotes contraction with $\omega $, so that $\Lambda _\omega (\beta )\, \omega ^ n=n\beta \wedge \omega ^{n-1}$ for $(1,1)$-forms $\beta $. The curvature $F_ h$ is unscaled: for a line bundle, the curvature $-\mathrm{dd}^{\mathrm{c}}\log h$ of section <a data-tag="0FAE63D7" href="../../tag/93399AABE3EC/">4.6</a> is $\mathrm iF_ h/(2\pi )$. 
+</p>
+<p>
+Use the line convention for projectivization and put 
+</p>
+<div class="equation">
+  \[  U_ E=\mathbb P(\mathcal O_ X\oplus E)\setminus \mathbb P(\mathcal O_ X).  \]
+</div>
+<p>
+ The chart $[1:v]$ identifies the total space of $E$ with an open subset of $\mathbb P(\mathcal O_ X\oplus E)$, in which $\mathbb P(\mathcal O_ X)$ is the zero section; thus $U_ E$ contains $E^\times $. Its complex dimension is $n+r$. Convexity is understood in the sense of the smooth exhaustions of <a data-tag="CA25F14F" href="../../tag/4276F3B6339D/">4.6.8</a>. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-F8D5B741">
+<p><a class="environment-identifier" href="../../tag/5022159B8350/">Lemma <span data-tag="F8D5B741">4.6.41</span>.</a><span data-gerby-tag="F8D5B741"></span>  Put $G(v)=h(v,v)$ and $\rho =G^{-1}$ on $E^\times $. In a holomorphic frame that is unitary and <em>Chern-normal</em> at $x$, meaning that $M(x)$ is the identity and the first derivatives of $M$ vanish at $x$, the complex Hessian of $\rho $ at $(x,v)$ is </p>
+<div class="equation">
+  \[  \mathcal L_\rho (u,w) =\frac{h(R_ h(u,\bar u)v,v)}{G^2} -\frac{|w|_ h^2}{G^2} +\frac{2|h(w,v)|^2}{G^3}, \qquad u\in T_ x^{1,0}X,\quad w\in E_ x,  \]
+</div>
+<p> where $(u,w)$ are the horizontal and vertical components of a tangent vector. There are no mixed horizontal–vertical terms, and the vertical block has exactly one positive and $r-1$ negative eigenvalues. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Such a frame is obtained by a constant change of frame making it unitary at $x$, followed by a holomorphic change of frame, linear in the coordinates, that cancels $\partial M$. Then $F_{\alpha \bar\beta }=-\partial _\alpha \partial _{\bar\beta }M$ at $x$. The horizontal first derivatives of $G$ and its mixed horizontal–vertical second derivatives vanish. The horizontal complex Hessian of $G$ is $-h(R_ h(u,\bar u)v,v)$, its vertical complex Hessian is $|w|_ h^2$, and its vertical first derivative in the direction $w$ is $h(w,v)$. Apply 
+    
+<div class="equation">
+  \[  \partial \bar\partial (G^{-1}) =2G^{-3}\partial G\wedge \bar\partial G-G^{-2}\partial \bar\partial G.  \]
+</div>
+<p>
+       The vertical block equals $G^{-1}&gt;0$ at $w=v$ and equals $-|w|_ h^2/G^2$ when $w\perp _ h v$. These two subspaces are orthogonal for the vertical block, which proves the statement about its eigenvalues. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-9BF81039">
+<p><a class="environment-identifier" href="../../tag/B93CB03C68B7/">Theorem <span data-tag="9BF81039">4.6.42</span>.</a><span data-gerby-tag="9BF81039"></span>  Let $s$ be an integer with $0\leq s\leq n$. Suppose that for every $x\in X$ and every $0\ne v\in E_ x$, the coefficient form of $\alpha _{h,v}$ has at least $s$ positive eigenvalues. Then $U_ E$ is $(n+r-s)$-convex. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By lemma <a data-tag="F8D5B741" href="../../tag/5022159B8350/">4.6.41</a>, the horizontal block of $\mathcal L_\rho $ has at least $s$ positive eigenvalues and the vertical block has one. Their direct sum thus has at least $s+1$ positive eigenvalues at every point of $E^\times $. 
+    <p>
+      Choose $\epsilon &gt;0$ and a smooth function $\chi :[0,+\infty )\to [0,1]$ equal to one on $[0,\epsilon ]$ and to zero on $[2\epsilon ,+\infty )$. Define 
+    
+<div class="equation">
+  \[  \psi ([1:v])=\frac{\chi (G(v))}{G(v)}\quad (v\ne 0),  \]
+</div>
+<p>
+       and extend $\psi $ by zero on the divisor at infinity $\mathbb P(E)$. This extension is smooth. Indeed, near a point $[0:v]$ with $v\ne 0$, use a local representative $[u:v]$ in a projective chart. On its intersection with the affine chart, $G(v/u)=h(v,v)/|u|^2$ tends to infinity as $u\to 0$, so $\chi (G)$ vanishes in a neighborhood of the point. 
+    <p>
+      The function $\psi $ tends to infinity near the removed zero section. Since the ambient projective bundle is compact, every sublevel set of $\psi $ is compact in $U_ E$: it is closed there and cannot accumulate on the removed section. Put $D=\{ G&lt;\epsilon \} \subset E$, including the zero section, and $K=\mathbb P(\mathcal O_ X\oplus E)\setminus D$. Then $K$ is a compact subset of $U_ E$, and $\psi =\rho $ on $U_ E\setminus K$. Thus the exhaustion $\psi $ has at least $s+1$ positive Levi eigenvalues outside a compact set. In dimension $n+r$, this is $(n+r-s)$-convexity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Taking $s=0$ gives $(n+r)$-convexity for every bundle. For $s=1$, the curvature hypothesis is precisely RC-positivity of the metric, as in definition <a data-tag="806132F0" href="../../tag/2C6FED9B1909/">4.11.1</a>. A positive definite mean curvature provides such a direction by taking a trace. 
+</p>
+<p>
+To apply this to stable bundles, we extend the degree of line bundles of section <a data-tag="0FAE63D7" href="../../tag/93399AABE3EC/">4.6</a> to vector bundles through their determinants. 
+</p>
+
+<article class="env-definition" id="non-kahler-pluripotential-theory-88EB1901">
+<p><a class="environment-identifier" href="../../tag/3B58CDB44607/">Definition <span data-tag="88EB1901">4.6.43</span>.</a><span data-gerby-tag="88EB1901"></span>  For a Gauduchon form $\omega $ on $X$, define </p>
+<div class="equation">
+  \[  \deg _\omega E=\deg _{\omega ^{n-1}}\det E =\int _ X\frac{\mathrm i\operatorname {tr}F_ h}{2\pi }\wedge \omega ^{n-1}, \qquad \mu _\omega (E)=\frac{\deg _\omega E}{r}.  \]
+</div>
+<p> For a nonzero torsion-free coherent sheaf $\mathcal F$, use the determinant line bundle $\det \mathcal F=(\bigwedge ^{\operatorname {rank}\mathcal F}\mathcal F)^{**}$ to define its degree and slope. The bundle $E$ is <em>$\omega $-slope-stable</em> if $\mu _\omega (\mathcal F)&lt;\mu _\omega (E)$ for every coherent subsheaf $\mathcal F\subset E$ with $0&lt;\operatorname {rank}\mathcal F&lt;r$ and torsion-free quotient. </p>
+</article>
+
+<p>
+If $\det h'=\mathrm e^ f\det h$, the two curvature representatives differ by $-\mathrm{dd}^{\mathrm{c}}f$, whose integral against $\omega ^{n-1}$ vanishes by lemma <a data-tag="7DC882C7" href="../../tag/3B0A8DD950AD/">2.1.1</a>. Thus the degree depends only on the Bott–Chern class $c_1^{\mathrm{BC}}(E)$ of the closed form $\mathrm i\operatorname {tr}F_ h/(2\pi )$, and it is the pairing of this class with $\omega ^{n-1}$. The Hopf example in example <a data-tag="425BE5B9" href="../../tag/8F043288C182/">4.6.55</a> shows that the de Rham first Chern class of $E$ does not determine the degree. 
+</p>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-B119F64B">
+<p><a class="environment-identifier" href="../../tag/18D33491ABFD/">Corollary <span data-tag="B119F64B">4.6.44</span>.</a><span data-gerby-tag="B119F64B"></span>  If $K_{\omega ,h}$ is positive definite for a Hermitian form $\omega $ on $X$, then $U_ E$ is $(n+r-1)$-convex. This holds, in particular, when $\omega $ is Gauduchon, $E$ is $\omega $-slope-stable, and $\deg _\omega E&gt;0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $v\ne 0$, the trace of $\alpha _{h,v}$ with respect to $\omega $ is $h(K_{\omega ,h}v,v)&gt;0$, and a Hermitian form with positive trace has a positive eigenvalue. Apply theorem <a data-tag="9BF81039" href="../../tag/B93CB03C68B7/">4.6.42</a> with $s=1$. 
+    <p>
+      Under the Gauduchon and stability hypotheses, the classical existence theorem for Hermitian–Einstein metrics on stable bundles gives a metric $h$ with $K_{\omega ,h}=\lambda \operatorname {Id}_ E$, where $\lambda $ is a constant. Taking the trace and integrating the contraction identity gives 
+    
+<div class="equation">
+  \[  r\lambda \int _ X\omega ^ n =n\int _ X\operatorname {tr}(\mathrm iF_ h)\wedge \omega ^{n-1} =2\pi n\deg _\omega E&gt;0.  \]
+</div>
+<p>
+       Here $\operatorname {tr}F_ h=\bar\partial \partial \log \det M$, so $\mathrm i\operatorname {tr}F_ h/(2\pi )$ represents $c_1^{\mathrm{BC}}(E)$. Thus $\lambda &gt;0$, and the first assertion applies. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-4F47EA23">
+<p><a class="environment-identifier" href="../../tag/E2EF3C8673FC/">Corollary <span data-tag="4F47EA23">4.6.45</span>.</a><span data-gerby-tag="4F47EA23"></span>  For every $e\geq 0$, there is a stable ample rank-two bundle $E$ on $X=\mathbb F_ e$ as in corollary <a data-tag="916297FA" href="../../tag/E29138267596/">4.6.40</a> for which $U_ E$ is $3$-convex but not $2$-convex. Its least smooth convexity index is three. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Use the ruling section $S$ and fiber $f$ of lemma <a data-tag="9A9AA541" href="../../tag/8FE2AABC7334/">4.6.19</a>, and put $H=S+(3e+1)f$ and $P=4H-f$. Choose $E$ as in corollary <a data-tag="916297FA" href="../../tag/E29138267596/">4.6.40</a>, $\mu _ P$-stable and with $c_1(E)=4H$. The intersection numbers of lemma <a data-tag="9A9AA541" href="../../tag/8FE2AABC7334/">4.6.19</a> give 
+    
+<div class="equation">
+  \[  c_1(E)\cdot P=4H\cdot (4H-f)=80e+28&gt;0.  \]
+</div>
+<p>
+       By the same lemma, $P=4S+(12e+3)f$ is very ample. Take for $\omega $ the pulled-back Fubini–Study Kähler form representing $c_1(\mathcal O_ X(P))$. Degrees with respect to $\omega $ are intersection numbers with $P$, so $E$ is $\omega $-slope-stable with $\deg _\omega E&gt;0$, and corollary <a data-tag="B119F64B" href="../../tag/18D33491ABFD/">4.6.44</a> gives $3$-convexity, since $n=r=2$. By the choice of $E$, the complement is not $2$-convex. Finally, $1$-convexity would imply $2$-convexity, so the least index is three. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

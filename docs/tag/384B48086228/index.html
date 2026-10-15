@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Subharmonic comparison · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/classical-potentials/">Chapter 3 · Harmonic and subharmonic functions</a> · Tag <code>384B48086228</code></p><h1>Subharmonic comparison</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · Theorem 3.1.3 <span data-gerby-tag="908CA39C"></span></div><article class="env-theorem" id="foundations-of-pluripotential-theory-908CA39C">
+<p><a class="environment-identifier" href="../../tag/384B48086228/">Theorem <span data-tag="908CA39C">3.1.3</span>.</a><span data-gerby-tag="908CA39C"></span> Let $u\in \mathrm{SH}(\Omega )$. </p>
+<ol>
+<li><p>
+Let $D\subset \Omega $ be a bounded open set, and let $h$ be a real function which is harmonic on $D$ and continuous on $\overline D$. If 
+</p>
+<div class="equation">
+  \[  \varlimsup _{D\ni x\to \zeta }u(x)\leq h(\zeta )\qquad \text{for every }\zeta \in \partial D,  \]
+</div>
+<p>
+ then $u\leq h$ on $D$. 
+</p>
+</li><li><p>
+Let $x\in \Omega $ and $\overline{B(x,R)}\subset \Omega $. Then the spherical mean $M_ u(x,r)$ increases with $r\in (0,R]$ and decreases to $u(x)$ as $r\downarrow 0$. Moreover, 
+</p>
+<div class="equation">
+  \[  u(x)\leq \frac{1}{|B(x,R)|}\int _{B(x,R)}u(y)\, \mathrm d y.  \]
+</div>
+</li>
+</ol>
+<p> Conversely, an upper semicontinuous function $u\colon \Omega \to [-\infty ,\infty )$ is subharmonic if assertion (1) holds for $u$ whenever $D$ is a ball with $\overline D\subset \Omega $. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We begin with (1). Fix $\varepsilon &gt;0$ and consider the upper semicontinuous function $w(y)=u(y)-h(y)+\varepsilon |y|^2$ on $D$. For $x\in D$ and small $r&gt;0$ we have $M_ h(x,r)=h(x)$ by proposition <a data-tag="51885F96" href="../../tag/620D5E4DD6EC/">2.1.1</a>, and $M_{|\cdot |^2}(x,r)=|x|^2+r^2$ by the identity for spherical means of $|y|^2$ proved in section <a data-tag="846116E9" href="../../tag/A3DA602C02CB/">2.4</a>. Together with (<a data-tag="725DD23E" href="../../tag/39B65BA580E1/">3.1</a>) this gives 
+    
+<div class="equation">
+  \[  M_ w(x,r)\geq w(x)+\varepsilon r^2  \]
+</div>
+<p>
+       for every $x\in D$ and every sufficiently small $r&gt;0$. Consequently, $w$ cannot attain a finite maximum over $D$ at a point $x\in D$, since we would then have $M_ w(x,r)\leq w(x)$ for small $r$. 
+    <p>
+      Now let $\delta &gt;0$. Because $h$ is continuous on $\overline D$, the boundary hypothesis gives $\varlimsup _{D\ni x\to \zeta }(u-h)(x)\leq 0$, so every $\zeta \in \partial D$ has an open neighborhood $N_\zeta $ with $u-h&lt;\delta $ on $N_\zeta \cap D$. Finitely many of these neighborhoods cover the compact set $\partial D$. If $N$ denotes their union, then $K=\overline D\setminus N$ is a compact subset of $D$. Put $c=\delta +\varepsilon \sup _{y\in \overline D}|y|^2$, so that $w&lt;c$ on $D\setminus K$. If $w$ took a value larger than $c$, then $\sup _ Dw=\sup _ Kw$ would be a finite maximum attained at a point of $K$, which we have just excluded. Hence $u-h\leq w\leq c$ on $D$, and letting $\varepsilon \downarrow 0$ and $\delta \downarrow 0$ gives $u\leq h$. 
+    <p>
+      For (2), let $B=B(x,R)$. By lemma <a data-tag="A2C10798" href="../../tag/36C9571A59E0/">3.1.2</a> there are continuous functions $f_ n$ on $\partial B$ that decrease to $u|_{\partial B}$. Let $H_ n=H_ Bf_ n$ be their Poisson integrals; by theorem <a data-tag="330E7C21" href="../../tag/08ED9D7CF1CF/">2.3.1</a>, $H_ n$ is harmonic on $B$ and continuous on $\overline B$ with boundary values $f_ n$. For $\zeta \in \partial B$, upper semicontinuity gives $\varlimsup _{B\ni y\to \zeta }u(y)\leq u(\zeta )\leq f_ n(\zeta )$, so (1) yields $u\leq H_ n$ on $B$. The value of a Poisson integral at the center of the ball is the mean of its boundary values, because $P_ B(x,\cdot )$ is the constant $(s_{d-1}R^{d-1})^{-1}$ by (<a data-tag="1FE966FD" href="../../tag/1AF0CC9EF476/">2.14</a>). Using also the mean-value property of $H_ n$, we obtain for $0&lt;r&lt;R$ 
+    
+<div class="equation">
+  \[  u(x)\leq H_ n(x)=M_{f_ n}(x,R),\qquad M_ u(x,r)\leq M_{H_ n}(x,r)=H_ n(x)=M_{f_ n}(x,R).  \]
+</div>
+<p>
+       By lemma <a data-tag="A2C10798" href="../../tag/36C9571A59E0/">3.1.2</a>, applied to surface measure on $\partial B$, $M_{f_ n}(x,R)$ decreases to $M_ u(x,R)$. Therefore $u(x)\leq M_ u(x,R)$, and $M_ u(x,r)\leq M_ u(x,R)$ for $0&lt;r&lt;R$. As $R$ may be replaced by any smaller radius, $M_ u(x,\cdot )$ is increasing on $(0,R]$. Moreover, $u(x)\leq M_ u(x,r)\leq \sup _{\partial B(x,r)}u$, and the upper limit of the right-hand side as $r\downarrow 0$ is at most $u(x)$ by upper semicontinuity; hence $M_ u(x,r)$ decreases to $u(x)$ as $r\downarrow 0$. 
+    <p>
+      Finally, let $M$ be a real upper bound for $u$ on $\overline B$. Integration in polar coordinates (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>), applied to the nonnegative function $M-u$, and the substitution $r=Rt$ give 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-BD1DEA1A"><span data-gerby-tag="BD1DEA1A"></span>
+<span class="equation-label"><a data-tag="BD1DEA1A" href="../../tag/7DDC45C194C3/">3.2</a></span>
+<div>\begin{equation} \label{eq:ball-average-spherical-means} \frac{1}{|B|}\int _ Bu(y)\, \mathrm d y=\frac{d}{R^ d}\int _0^ Rr^{d-1}M_ u(x,r)\, \mathrm d r=d\int _0^1t^{d-1}M_ u(x,Rt)\, \mathrm d t, \end{equation}</div>
+</div>
+<p>
+       where all integrals lie in $[-\infty ,\infty )$; here we used $|B|=s_{d-1}R^ d/d$. Since $M_ u(x,r)\geq u(x)$ for $0&lt;r\leq R$ and $d\int _0^1t^{d-1}\, \mathrm dt=1$, the right-hand side is at least $u(x)$. 
+    <p>
+      The proof of (2) used the subharmonicity of $u$ only through (1) for the ball $B$. Hence, if $u$ is upper semicontinuous and satisfies (1) for all balls $B$ with $\overline B\subset \Omega $, then $u(x)\leq M_ u(x,R)$ whenever $\overline{B(x,R)}\subset \Omega $, so $u$ is subharmonic. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

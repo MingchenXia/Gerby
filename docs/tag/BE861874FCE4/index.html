@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Geodesics in the space of potentials · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/energy-geodesics/">Chapter 14 · Energy, geodesics, rays, and test curves</a> · Tag <code>BE861874FCE4</code></p><h1>Geodesics in the space of potentials</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 4.2 Geodesics in the space of potentials <span data-gerby-tag="127A76D8"></span></div>
+<p>
+ Let $X$ be a connected compact Kähler manifold of dimension $n$ and $\theta $ be a smooth closed real $(1,1)$-form on $X$ representing a big cohomology class. Fix a model potential $\phi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. See definition <a data-tag="A6D9D88E" href="../../tag/6623E38E5FC2/">3.1.10</a> for the definition. 
+</p>
+
+<article class="env-definition" id="sgpt-942E7DE4">
+<p><a class="environment-identifier" href="../../tag/774DAAE2CF9E/">Definition <span data-tag="942E7DE4">4.2.1</span>.</a><span data-gerby-tag="942E7DE4"></span> Let $\varphi _0, \varphi _1 \in \mathrm{PSH}(X,\theta )$. The <em>geodesic</em> $(\varphi _ t)_{t\in (0,1)}$ from $\varphi _0$ to $\varphi _1$ is the family of potentials $\varphi _ t\in \mathrm{PSH}(X,\theta )\cup \{ -\infty \} $ such that </p>
+<div class="equation" id="sgpt-7D1ECB5C"><span data-gerby-tag="7D1ECB5C"></span>
+<span class="equation-label"><a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a></span>
+<div>\begin{equation} \label{eq:Perron2} \begin{split}  \varphi _ t=\operatorname *{sup}_{}{}\! {}^{*}&amp;  \left\{  \psi _ t: (\psi _{s})_ s \textup{ is a subgeodesic from }\psi _0\textup{ to }\psi _1,\right.\\ &amp; \psi _0,\psi _1\in \mathrm{PSH}(X,\theta ),\left.\psi _0\leq \varphi _0,\psi _1\leq \varphi _1\right\} . \end{split} \end{equation}</div>
+</div>
+<p> More generally, let $(\varphi _ t)_{t\in [a,b]}$ ($a,b\in \mathbb {R}$, $a\leq b$) be a curve in $\mathrm{PSH}(X,\theta )$. We say $(\varphi _ t)_{t\in [a,b]}$ is a <em>geodesic</em> if the curve $(\varphi _{tb+(1-t)a})_{t\in (0,1)}$ is a geodesic from $\varphi _ a$ to $\varphi _ b$. </p>
+<p>We also say $(\varphi _ t)_{t\in (a,b)}$ is a <em>geodesic</em> in $\mathrm{PSH}(X,\theta )$ from $\varphi _ a$ to $\varphi _ b$. </p>
+</article>
+
+<p>
+The envelopes of the form (<a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a>) are usually referred to as the <em>Perron envelopes</em>. In general, the geodesic defined by (<a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a>) fails to have the correct limit when $t\to 0+$ or $t\to 1-$. Therefore, <em>a priori</em> it is not a subgeodesic from $\varphi _0$ to $\varphi _1$. In the sequel, we use the word <em>geodesic</em> only in situations where the endpoint behavior has been verified. 
+</p>
+
+<article class="env-lemma" id="sgpt-B8D4881A">
+<p><a class="environment-identifier" href="../../tag/BDEA4F06B7F1/">Lemma <span data-tag="B8D4881A">4.2.2</span>.</a><span data-gerby-tag="B8D4881A"></span> Let $\varphi _0,\varphi _1\in \mathrm{PSH}(X,\theta )$. Assume that there is a subgeodesic from $\varphi _0$ to $\varphi _1$. Then the geodesic $(\varphi _ t)_{t\in (0,1)}$ from $\varphi _0$ to $\varphi _1$ is a subgeodesic from $\varphi _0$ to $\varphi _1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This is an immediate consequence of proposition <a data-tag="BBFDD373" href="../../tag/5ECD747A7B0B/">4.1.9</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="sgpt-97029165">
+<p><a class="environment-identifier" href="../../tag/C16140E8B047/">Example <span data-tag="97029165">4.2.3</span>.</a><span data-gerby-tag="97029165"></span> Let $\varphi _0\in \mathrm{PSH}(X,\theta )$ and $C\in \mathbb {R}$. Then the subgeodesic $(\varphi _0+tC)_{t\in [0,1]}$ studied in example <a data-tag="D92709AE" href="../../tag/2F494BEED8F5/">4.1.5</a> is a geodesic. This follows easily from proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>. </p>
+<p>In particular, when $C=0$, we find that the constant subgeodesic at $\varphi _0$ is indeed a geodesic, which we call the <em>constant geodesic</em> at $\varphi _0$. </p>
+<p>More generally, suppose that $(\varphi _ t)_{t\in [0,1]}$ is a geodesic and $C_1,C_2\in \mathbb {R}$, then $(\varphi _ t+C_1t+C_2)_{t\in [0,1]}$ is also a geodesic. This follows immediately from example <a data-tag="D92709AE" href="../../tag/2F494BEED8F5/">4.1.5</a>. </p>
+</article>
+
+
+Next we want to show that under mild assumptions, there exist subgeodesics between two potentials. The assumption below turns out to be necessary as well, as we shall prove in theorem <a data-tag="D01C6A5E" href="../../tag/1CA975F04423/">6.1.23</a> later. <article class="env-proposition" id="sgpt-74EB2527">
+<p><a class="environment-identifier" href="../../tag/8AB36536E36D/">Proposition <span data-tag="74EB2527">4.2.4</span>.</a><span data-gerby-tag="74EB2527"></span> Given $\varphi _0, \varphi _1 \in \mathcal{E}(X,\theta ;\phi )$, the geodesic $(\varphi _ t)_{t\in (0,1)}$ from $\varphi _0$ to $\varphi _1$ defined by (<a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a>) is a subgeodesic from $\varphi _0$ to $\varphi _1$ and $\varphi _ t\in \mathcal{E}(X,\theta ;\phi )$ for each $t\in (0,1)$. </p>
+<p>Moreover, for any $0\leq a\leq b\leq 1$, the restriction $(\varphi _ t)_{t\in [a,b]}$ is a geodesic. </p>
+<p>If furthermore $\varphi _0,\varphi _1\in \mathcal{E}^1(X,\theta ;\phi )$ (resp. $\mathcal{E}^{\infty }(X,\theta ;\phi )$), then $\varphi _ t\in \mathcal{E}^1(X,\theta ;\phi )$ (resp. $\mathcal{E}^{\infty }(X,\theta ;\phi )$) for all $t\in (0,1)$. </p>
+</article> We refer to <a data-tag="60D02775" href="../../tag/B22CE32B08DB/">3.1.3</a> for the definition of $\mathcal{E}(X,\theta ;\phi )$. Our assumption means that $P_{\theta }[\varphi _0]=P_{\theta }[\varphi _1]=\phi $. 
+
+<p>
+As a consequence of this proposition, the restriction $(\varphi _ t)_{t\in [a,b]}$ is also a subgeodesic since $\varphi _ a,\varphi _ b\in \mathcal{E}(X,\theta ;\phi )$ as well. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      After subtracting suitable constants from $\varphi _0$ and $\varphi _1$ and adding back the corresponding affine function of $t$, we may assume that $\varphi _0,\varphi _1\leq \phi $. It follows from proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a> that $\varphi _ t\leq \phi $ for all $t\in (0,1)$. In fact, we have the stronger estimate 
+    
+<div class="equation" id="sgpt-095A757B"><span data-gerby-tag="095A757B"></span>
+<span class="equation-label"><a data-tag="095A757B" href="../../tag/991B9E91FD84/">4.10</a></span>
+<div>\begin{equation} \label{eq:geodesicconvextemp1} \varphi _ t\leq t\varphi _1+(1-t)\varphi _0,\quad t\in (0,1). \end{equation}</div>
+</div>
+<p>
+      We first observe that when $\varphi _0,\varphi _1\in \mathcal{E}(X,\theta ;\phi )$, so is $\varphi _0\land \varphi _1$, see proposition <a data-tag="279EC696" href="../../tag/AAD590A053BB/">3.1.51</a>. In particular, the constant subgeodesic $t\mapsto \varphi _0\land \varphi _1$ is a candidate in the Perron envelope (<a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a>). So 
+    
+<div class="equation" id="sgpt-2D2460FA"><span data-gerby-tag="2D2460FA"></span>
+<span class="equation-label"><a data-tag="2D2460FA" href="../../tag/C45355A6B32E/">4.11</a></span>
+<div>\begin{equation} \label{eq:varphitgeqlandtemp1} \varphi _ t\geq \varphi _0\land \varphi _1,\quad t\in (0,1). \end{equation}</div>
+</div>
+
+       By proposition <a data-tag="BBFDD373" href="../../tag/5ECD747A7B0B/">4.1.9</a>, $(\varphi _ t)_{t\in (0,1)}$ is a subgeodesic.<aside class="source-footnote" id="sgpt-a0000035878"><span class="footnote-label">Note.</span> Be careful, here $t\in (0,1)$ instead of $[0,1]$.</aside> It follows from proposition <a data-tag="D1C09520" href="../../tag/420BBF2E1362/">3.1.52</a> that $\varphi _ t\in \mathcal{E}(X,\theta ;\phi )$ for all $t\in (0,1)$. 
+    <p>
+      Next, we show that as $t\to 0+$, we have $\varphi _ t\xrightarrow {L^1}\varphi _0$. The corresponding result at $t=1$ is similar. 
+    <p>
+      We first argue the special case where $\varphi _0\preceq \varphi _1$. Take a constant $C&gt;0$ such that 
+    
+<div class="equation">
+  \[  \varphi _0-C\leq \varphi _1.  \]
+</div>
+<p>
+       Then $(\varphi _0-Ct)_{t\in (0,1)}$ is clearly a candidate in (<a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a>), see example <a data-tag="D92709AE" href="../../tag/2F494BEED8F5/">4.1.5</a>. Therefore, for all $t\in (0,1)$, 
+    
+<div class="equation" id="sgpt-FBE03F4E"><span data-gerby-tag="FBE03F4E"></span>
+<span class="equation-label"><a data-tag="FBE03F4E" href="../../tag/431F43B008A4/">4.12</a></span>
+<div>\begin{equation} \label{eq:varphi0andvarphit} \varphi _0-Ct\leq \varphi _ t\leq t\varphi _1+(1-t)\varphi _0. \end{equation}</div>
+</div>
+<p>
+       It follows that $\varphi _ t\xrightarrow {L^1}\varphi _0$ as $t\to 0+$. 
+    <p>
+      Let us come back to the general case. By corollary <a data-tag="9B844C56" href="../../tag/E31D1E7DDF87/">4.1.8</a>, $\{ \varphi _ t:t\in (0,1)\} $ is a relatively compact subset of $\mathrm{PSH}(X,\theta )$ with respect to the $L^1$-topology. 
+    <p>
+      Let $\psi $ be an $L^1$-cluster point of $\varphi _ t$ as $t\searrow 0$, and it suffices to show that $\psi =\varphi _0$. 
+    <p>
+      For each $M\in \mathbb {N}$, we write 
+    
+<div class="equation">
+  \[  \varphi _0^ M=\varphi _0\land (\varphi _1+M).  \]
+</div>
+<p>
+       Observe that $\varphi _0^ M\in \mathcal{E}(X,\theta ;\phi )$ by proposition <a data-tag="279EC696" href="../../tag/AAD590A053BB/">3.1.51</a>. Let $(\varphi _ t^ M)_{t\in (0,1)}$ be the geodesic from $\varphi _0^ M$ to $\varphi _1$. Since $\varphi _0^ M\preceq \varphi _1$, the special case proved above applies to the geodesic $(\varphi _ t^ M)_ t$, and 
+    
+<div class="equation">
+  \[  \varphi _ t^ M\xrightarrow {L^1}\varphi _0^ M \quad \textup{as }t\to 0+.  \]
+</div>
+<p>
+       Moreover, every candidate for the geodesic from $\varphi _0^ M$ to $\varphi _1$ is also a candidate for the geodesic from $\varphi _0$ to $\varphi _1$, so 
+    
+<div class="equation">
+  \[  \varphi _ t^ M\leq \varphi _ t,\quad t\in (0,1).  \]
+</div>
+<p>
+       Letting $t\to 0+$ along a sequence for which $\varphi _ t\to \psi $ in $L^1$, and using corollary <a data-tag="6A1C7D0B" href="../../tag/E23F3D6154AB/">1.2.8</a>, we obtain 
+    
+<div class="equation">
+  \[  \psi \geq \varphi _0^ M  \]
+</div>
+<p>
+       almost everywhere, hence everywhere by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>. 
+    <p>
+      On the other hand, by (<a data-tag="095A757B" href="../../tag/991B9E91FD84/">4.10</a>), $\psi \leq \varphi _0$. So it suffices to show that 
+    
+<div class="equation">
+  \[  \varphi _0\land (\varphi _1+M)\xrightarrow {L^1} \varphi _0  \]
+</div>
+<p>
+       as $M\to \infty $, which is shown in proposition <a data-tag="A836F73B" href="../../tag/75FA2659491D/">3.1.54</a>. 
+    <p>
+      Now we have shown that $(\varphi _ t)_{t\in [0,1]}$ is a subgeodesic. 
+    <p>
+      Next, take $0\leq a\leq b\leq 1$. We want to show that the restriction $(\varphi _ t)_{t\in [a,b]}$ is the geodesic from $\varphi _ a$ to $\varphi _ b$. We may assume that $a&lt;b$. The argument is the standard <em>balayage</em> argument. 
+    <p>
+      Let $(\psi _ t)_{t\in (a,b)}$ be the geodesic from $\varphi _ a$ to $\varphi _ b$. Since $(\varphi _ t)_{t\in [a,b]}$ is a subgeodesic by proposition <a data-tag="9B4FABF4" href="../../tag/E5064A497AB8/">4.1.10</a>, we have $\psi _ t\geq \varphi _ t$ for all $t\in (a,b)$. 
+    <p>
+      We define 
+    
+<div class="equation">
+  \[  \eta _ t= \left\{  \begin{aligned}  \psi _ t,&amp; \quad \text{if }t\in (a,b),\\  \varphi _ t,&amp; \quad \text{if }t\in (0,1)\setminus (a,b). \end{aligned} \right.  \]
+</div>
+<p>
+       Extending it by setting $\psi _ a=\varphi _ a$ and $\psi _ b=\varphi _ b$, the first part of the proof applied to the endpoints $\varphi _ a,\varphi _ b$ shows that $(\psi _ t)_{t\in [a,b]}$ is a subgeodesic from $\varphi _ a$ to $\varphi _ b$. Since $\psi _ t\geq \varphi _ t$ for $t\in (a,b)$, the gluing lemma <a data-tag="F358A89F" href="../../tag/3BEBB86C7F79/">4.1.11</a> shows that $(\eta _ t)_{t\in [0,1]}$ is a subgeodesic from $\varphi _0$ to $\varphi _1$. 
+    <p>
+      Therefore, for all $t\in (0,1)$, we have 
+    
+<div class="equation">
+  \[  \varphi _ t\geq \eta _ t.  \]
+</div>
+<p>
+       In particular, for $t\in (a,b)$, we have 
+    
+<div class="equation">
+  \[  \varphi _ t\geq \eta _ t=\psi _ t\geq \varphi _ t.  \]
+</div>
+<p>
+       In other words, $(\varphi _ t)_{t\in (a,b)}=(\psi _ t)_{t\in (a,b)}$ is the geodesic from $\varphi _ a$ to $\varphi _ b$. 
+    <p>
+      Finally, assume furthermore that $\varphi _0,\varphi _1\in \mathcal{E}^1(X,\theta ;\phi )$ (resp. $\mathcal{E}^{\infty }(X,\theta ;\phi )$). Thanks to (<a data-tag="2D2460FA" href="../../tag/C45355A6B32E/">4.11</a>), proposition <a data-tag="279EC696" href="../../tag/AAD590A053BB/">3.1.51</a> and proposition <a data-tag="D1C09520" href="../../tag/420BBF2E1362/">3.1.52</a>, we find $\varphi _ t\in \mathcal{E}^1(X,\theta ;\phi )$ (resp. $\mathcal{E}^{\infty }(X,\theta ;\phi )$) for all $t\in (0,1)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="sgpt-EFEDFCE7">
+<p><a class="environment-identifier" href="../../tag/8A0F90757653/">Lemma <span data-tag="EFEDFCE7">4.2.5</span>.</a><span data-gerby-tag="EFEDFCE7"></span> Let $\varphi _0,\varphi _1\in \mathrm{PSH}(X,\theta )$ with $\varphi _1\leq \varphi _0$. Let $(\varphi _ t)_{t\in (0,1)}$ be the geodesic from $\varphi _0$ to $\varphi _1$. Assume that $(\varphi _ t)_{t\in [0,1]}$ is also a subgeodesic. Then $\varphi _ t$ is decreasing in $t\in [0,1]$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $0&lt; r&lt;s\leq 1$ and put $\delta =(s-r)/(1-r)$. Then $(\varphi _{\delta +(1-\delta )t})_{t\in [0,1]}$ is a subgeodesic from $\varphi _\delta $ to $\varphi _1$. Since 
+    
+<div class="equation">
+  \[  \varphi _\delta \leq (1-\delta )\varphi _0+\delta \varphi _1\leq \varphi _0,  \]
+</div>
+<p>
+       we have $\varphi _{\delta +(1-\delta )t}\leq \varphi _ t$ for all $t\in (0,1)$ by the definition of geodesic. In particular, $\varphi _ s=\varphi _{\delta +(1-\delta )r}\leq \varphi _ r$. 
+    <p>
+      It remains to prove that for any $t\in (0,1)$, we have $\varphi _ t\leq \varphi _0$, but this is an immediate consequence of proposition <a data-tag="DBC4F9ED" href="../../tag/1880C1FBD88F/">4.1.6</a>: 
+    
+<div class="equation">
+  \[  \varphi _ t\leq t\varphi _1+(1-t)\varphi _0\leq \varphi _0.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></article>
+
+<article class="env-proposition" id="sgpt-DA98E9AA">
+<p><a class="environment-identifier" href="../../tag/DE479E2BD255/">Proposition <span data-tag="DA98E9AA">4.2.6</span>.</a><span data-gerby-tag="DA98E9AA"></span> Let $\varphi _1,\varphi _0\in \mathcal{E}(X,\theta ;\phi )$ with $\varphi _1\preceq \varphi _0$. Let $(\varphi _ t)_{t\in (0,1)}$ be the geodesic from $\varphi _0$ to $\varphi _1$. Then </p>
+<div class="equation" id="sgpt-83310E9E"><span data-gerby-tag="83310E9E"></span>
+<span class="equation-label"><a data-tag="83310E9E" href="../../tag/8AE427F2EF68/">4.15</a></span>
+<div>\begin{equation} \label{eq:tsupsuptemp1} s\sup _{\{ \varphi _0\neq -\infty \} }(\varphi _1-\varphi _0)=\sup _{\{ \varphi _0\neq -\infty \} }(\varphi _ s-\varphi _0) \end{equation}</div>
+</div>
+<p> for all $s\in [0,1]$. </p>
+</article>
+
+<figure class="source-float"><div class="centered"><img alt="Mathematical diagram from the source" class="source-figure" loading="lazy" src="../../assets/sources/sgpt/4680a76cee79e9522104.svg"/> <figcaption id="sgpt-5AC6B714"><span data-gerby-tag="5AC6B714"></span><a data-tag="5AC6B714" href="../../tag/E48DC51BE08D/">4.1</a> Typical behaviour of $t\mapsto \varphi _ t(x)$</figcaption> </div>
+</figure>
+<article class="env-proof">
+
+<strong>Proof.</strong>
+      The notations in the proof are indicated in <a data-tag="5AC6B714" href="../../tag/E48DC51BE08D/">4.1</a>.<aside class="source-footnote" id="sgpt-a0000036501"><span class="footnote-label">Note.</span> When dealing with convex functions, drawing a picture is the easiest way to keep track of the directions of inequalities.</aside>
+<p>
+      We may assume that $s\in (0,1)$ since there is nothing to prove when $s=0$ or $s=1$. 
+    <p>
+      After replacing $\varphi _ t$ by $\varphi _ t-C't$ for some large enough $C'&gt;0$, we may assume that $\varphi _1\leq \varphi _0$. This procedure preserves the geodesic property by example <a data-tag="97029165" href="../../tag/C16140E8B047/">4.2.3</a>. Then $\varphi _ t$ is decreasing in $t$ by <a data-tag="EFEDFCE7" href="../../tag/8A0F90757653/">4.2.5</a>. 
+    <p>
+      Let 
+    
+<div class="equation" id="sgpt-CC01854C"><span data-gerby-tag="CC01854C"></span>
+<span class="equation-label"><a data-tag="CC01854C" href="../../tag/FEE6016E13FF/">4.16</a></span>
+<div>\begin{equation} \label{eq:Cdefsupvarphi1m0temp1} C=\sup _{\{ \varphi _1\neq -\infty \} } \left(\varphi _1-\varphi _0\right)=\sup _{\{ \varphi _0\neq -\infty \} } \left(\varphi _1-\varphi _0\right)\leq 0, \end{equation}</div>
+</div>
+<p>
+       where the equality is due to corollary <a data-tag="D0879581" href="../../tag/31032260EF62/">1.3.18</a>. Then by proposition <a data-tag="019E88AA" href="../../tag/FA3AF40B9A0A/">1.2.6</a>, we have 
+    
+<div class="equation">
+  \[  \varphi _1\leq \varphi _0+C.  \]
+</div>
+<p>
+       So $(\varphi _1-C(1-t))_{t\in (0,1)}$ is a candidate in (<a data-tag="7D1ECB5C" href="../../tag/D0FE4F9BEB1B/">4.7</a>) and hence 
+    
+<div class="equation" id="sgpt-73846841"><span data-gerby-tag="73846841"></span>
+<span class="equation-label"><a data-tag="73846841" href="../../tag/18547F185BC3/">4.17</a></span>
+<div>\begin{equation} \label{eq:varphi1leqvarphittemp} \varphi _1-C(1-t)\leq \varphi _ t,\quad t\in (0,1). \end{equation}</div>
+</div>
+<p>
+      By proposition <a data-tag="74EB2527" href="../../tag/8AB36536E36D/">4.2.4</a>, we have $\varphi _ t\xrightarrow {L^1}\varphi _1$ as $t\to 1-$. Since $\varphi _ t$ is decreasing in $t\in (0,1)$, it follows that $\varphi _1=\inf _{t\in (0,1)}\varphi _ t$. Therefore, we can find a pluripolar set $Z\subseteq X$ such that $\varphi _ t(x)\rightarrow \varphi _1(x)&gt;-\infty $ as $t\to 1-$ for all $x\in X\setminus Z$. 
+    <p>
+      Similarly, since $\varphi _0=\operatorname *{sup}_{t\in (0,1)}{}\! {}^{*} \varphi _ t$, after enlarging $Z$, we may also guarantee that $\varphi _ t(x)\rightarrow \varphi _0(x)&gt;-\infty $ as $t\to 0+$ for all $x\in X\setminus Z$ by proposition <a data-tag="65281287" href="../../tag/E10B5F00D3ED/">1.2.5</a>. 
+    <p>
+      For any such $x\in X\setminus Z$, the function $t\mapsto \varphi _ t(x)$ is a real-valued continuous convex function on $[0,1]$. In particular, $t\mapsto \varphi _ t(x)$ is absolutely continuous on $[0,1]$. Hence, for any $s\in [0,1)$, we have 
+    
+<div class="equation" id="sgpt-27F44B23"><span data-gerby-tag="27F44B23"></span>
+<span class="equation-label"><a data-tag="27F44B23" href="../../tag/16DA31D36BD2/">4.18</a></span>
+<div>\begin{equation} \label{eq:varphi1minusvarphi0temp1} \varphi _1(x)-\varphi _ s(x)=\int _ s^1 \frac{\mathrm{d}}{\mathrm{d}t}\varphi _ t(x)\, \mathrm{d}t\leq (1-s)\lim _{t\to 1-}\frac{\varphi _1(x)-\varphi _ t(x)}{1-t}\leq (1-s)C, \end{equation}</div>
+</div>
+<p>
+       where the second inequality follows from (<a data-tag="73846841" href="../../tag/18547F185BC3/">4.17</a>). 
+    <p>
+      Taking supremum in (<a data-tag="27F44B23" href="../../tag/16DA31D36BD2/">4.18</a>), we find that 
+    
+<div class="equation" id="sgpt-647CC947"><span data-gerby-tag="647CC947"></span>
+<span class="equation-label"><a data-tag="647CC947" href="../../tag/1B22CF257482/">4.19</a></span>
+<div>\begin{equation} \label{eq:supvarphi1sleqleqtemp1} \sup _{X\setminus Z} (\varphi _1-\varphi _ s)\leq (1-s)\adjustlimits \sup _{x\in X\setminus Z}\lim _{t\to 1-}\frac{\varphi _1(x)-\varphi _ t(x)}{1-t}\leq (1-s)C. \end{equation}</div>
+</div>
+<p>
+       When $s=0$, we deduce from corollary <a data-tag="D0879581" href="../../tag/31032260EF62/">1.3.18</a> and (<a data-tag="CC01854C" href="../../tag/FEE6016E13FF/">4.16</a>) that 
+    
+<div class="equation">
+  \[  C=\sup _{\{ \varphi _1\neq -\infty \} } \left(\varphi _1-\varphi _0\right)=\adjustlimits \sup _{x\in X\setminus Z}\lim _{t\to 1-}\frac{\varphi _1(x)-\varphi _ t(x)}{1-t}.  \]
+</div>
+<p>
+       But this equality works equally well for the geodesic $(\varphi _{(1-s)t+s})_{t\in [0,1]}$ with the same argument. It follows that 
+    
+<div class="equation">
+  \[  \sup _{\{ \varphi _1\neq -\infty \} } \left(\varphi _1-\varphi _ s\right)=(1-s)\adjustlimits \sup _{x\in X\setminus Z}\lim _{t\to 1-}\frac{\varphi _1(x)-\varphi _ t(x)}{1-t}=(1-s)C.  \]
+</div>
+<p>
+       Therefore, invoking corollary <a data-tag="D0879581" href="../../tag/31032260EF62/">1.3.18</a> again, we deduce that all inequalities in (<a data-tag="647CC947" href="../../tag/1B22CF257482/">4.19</a>) are in fact equalities. In other words, 
+    
+<div class="equation" id="sgpt-16D2E576"><span data-gerby-tag="16D2E576"></span>
+<span class="equation-label"><a data-tag="16D2E576" href="../../tag/5825ABE1D62B/">4.20</a></span>
+<div>\begin{equation} \label{eq:supvarphi1mivarphi0temp1} \sup _{\{ \varphi _1\neq -\infty \} }(\varphi _1-\varphi _0)= \adjustlimits \sup _{x\in X\setminus Z}\lim _{t\to 1-}\frac{\varphi _1(x)-\varphi _ t(x)}{1-t} =\sup _{\{ \varphi _1\neq -\infty \} }\frac{\varphi _1-\varphi _ s}{1-s}. \end{equation}</div>
+</div>
+<p>
+       On the other hand, we have the trivial inequality when $s\in (0,1)$: 
+    
+<div class="equation">
+  \[  \sup _{\{ \varphi _1\neq -\infty \} }(\varphi _1-\varphi _0)\leq s \sup _{\{ \varphi _1\neq -\infty \} }\frac{\varphi _ s-\varphi _0}{s}+ (1-s) \sup _{\{ \varphi _1\neq -\infty \} }\frac{\varphi _1-\varphi _ s}{1-s}.  \]
+</div>
+<p>
+       Together with (<a data-tag="16D2E576" href="../../tag/5825ABE1D62B/">4.20</a>), we find that for $s\in (0,1)$, 
+    
+<div class="equation">
+  \[  \sup _{\{ \varphi _1\neq -\infty \} }(\varphi _1-\varphi _0)\leq \sup _{\{ \varphi _1\neq -\infty \} }\frac{\varphi _ s-\varphi _0}{s}.  \]
+</div>
+<p>
+       The reverse inequality follows from the convexity, and hence for $s\in (0,1)$, we have 
+    
+<div class="equation">
+  \[  \sup _{\{ \varphi _1\neq -\infty \} }\frac{\varphi _ s-\varphi _0}{s}=\sup _{\{ \varphi _1\neq -\infty \} }(\varphi _1-\varphi _0).  \]
+</div>
+<p>
+       Using corollary <a data-tag="D0879581" href="../../tag/31032260EF62/">1.3.18</a>, we conclude (<a data-tag="83310E9E" href="../../tag/8AE427F2EF68/">4.15</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+With an almost identical proof, we find <article class="env-proposition" id="sgpt-72CF4A43">
+<p><a class="environment-identifier" href="../../tag/9335B48D7458/">Proposition <span data-tag="72CF4A43">4.2.7</span>.</a><span data-gerby-tag="72CF4A43"></span> Let $\varphi _1,\varphi _0\in \mathcal{E}^{\infty }(X,\theta ;\phi )$. Let $(\varphi _ t)_{t\in (0,1)}$ be the geodesic from $\varphi _0$ to $\varphi _1$. Then </p>
+<div class="equation">
+  \[  t\inf _{\{ \phi \neq -\infty \} }(\varphi _1-\varphi _0)=\inf _{\{ \phi \neq -\infty \} }(\varphi _ t-\varphi _0)  \]
+</div>
+<p> for all $t\in (0,1]$. </p>
+</article>
+
+
+<article class="env-definition" id="sgpt-33CB8825">
+<p><a class="environment-identifier" href="../../tag/2E335019C3A7/">Definition <span data-tag="33CB8825">4.2.8</span>.</a><span data-gerby-tag="33CB8825"></span> Let $\ell =(\ell _ t)_{t\geq 0}$ be a family in $\mathcal{E}(X,\theta ;\phi )$. We say $\ell $ is a <em>geodesic ray</em> in $\mathcal{E}(X,\theta ;\phi )$ emanating from $\ell _0$ if for each $0\leq a\leq b$, the restriction $(\ell _ t)_{t\in [a,b]}$ is a geodesic. </p>
+<p>The set of geodesic rays in $\mathcal{E}(X,\theta ;\phi )$ emanating from $\phi $ is denoted by $\mathcal{R}(X,\theta ;\phi )$. </p>
+<p>We say a geodesic ray $\ell \in \mathcal{R}(X,\theta ;\phi )$ has <em>finite energy</em> if $\ell _ t\in \mathcal{E}^1(X,\theta ;\phi )$ for all $t&gt;0$. The set of geodesic rays with finite energy is denoted by $\mathcal{R}^1(X,\theta ;\phi )$. </p>
+<p>We say a geodesic ray $\ell \in \mathcal{R}(X,\theta ;\phi )$ is <em>bounded</em> if $\ell _ t\in \mathcal{E}^{\infty }(X,\theta ;\phi )$ for all $t\geq 0$. The set of bounded geodesic rays is denoted by $\mathcal{R}^{\infty }(X,\theta ;\phi )$. </p>
+<p>Given $\ell ,\ell '\in \mathcal{R}(X,\theta ;\phi )$, we write $\ell \leq \ell '$ if $\ell _ t\leq \ell '_ t$ for each $t\geq 0$. </p>
+<p>When $\phi =V_{\theta }$, we usually omit it from the notations and write $\mathcal{R}(X,\theta )$, $\mathcal{R}^1(X,\theta )$ and $\mathcal{R}^{\infty }(X,\theta )$ respectively. </p>
+</article>
+
+
+<article class="env-proposition" id="sgpt-3F6C536C">
+<p><a class="environment-identifier" href="../../tag/FD1B5378AA06/">Proposition <span data-tag="3F6C536C">4.2.9</span>.</a><span data-gerby-tag="3F6C536C"></span> Let $\ell \in \mathcal{R}(X,\theta ;\phi )$. Then there is a constant $C\in \mathbb {R}$ such that </p>
+<div class="equation">
+  \[  \sup _{X}\ell _ t=Ct,\quad t\geq 0.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It follows from proposition <a data-tag="DA98E9AA" href="../../tag/DE479E2BD255/">4.2.6</a> that 
+    
+<div class="equation">
+  \[  \sup _{\{ \phi \neq -\infty \} }(\ell _ t-\phi )=t\sup _{\{ \phi \neq -\infty \} }(\ell _1-\phi )  \]
+</div>
+<p>
+       for all $t\geq 0$. 
+    <p>
+      It suffices to show that for any $t\geq 0$, 
+    
+<div class="equation">
+  \[  \sup _{\{ \phi \neq -\infty \} }(\ell _ t-\phi )=\sup _ X \ell _ t.  \]
+</div>
+<p>
+       This was already proved in proposition <a data-tag="53EF3AC9" href="../../tag/4C5C62135747/">3.1.13</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

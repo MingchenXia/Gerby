@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Uniform bounds near a smooth density · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/hermitian-torsion/">Chapter 10 · Hermitian geometry, torsion, and Gauduchon duality</a> · Tag <code>A0340E674DC4</code></p><h1>Uniform bounds near a smooth density</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 26.8.1 Uniform bounds near a smooth density <span data-gerby-tag="D73CEAA4"></span></div>
+<p>
+The endpoint estimate can fail for the family of all tests while the maximizing tests for a family of densities remain uniformly controlled. For smooth densities close in $C^{2,\alpha }$ to the normalized volume form $\omega ^ n/\int _ X\omega ^ n$ of the background, a fixed-point argument keeps the solution forms close to $\omega $ and their Gauduchon factors close to that of $\omega $. This gives uniform bounds for both the determinant density of the maximizing current and the density of the supporting probability. 
+</p>
+<p>
+In this subsection we assume $n\geq 3$ and fix $0&lt;\alpha &lt;1$. All Hölder norms are defined using a fixed finite atlas and fixed smooth connections. Put 
+</p>
+<div class="equation">
+  \[  H=\frac{\omega ^ n}{\mathrm{d}V},\qquad V=\int _ X\omega ^ n,\qquad F_*=\log (H/V).  \]
+</div>
+<p>
+ Thus $\mathrm{e}^{F_*}\mathrm{d}V=\omega ^ n/V$ is a probability measure. By theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>, there is a unique smooth positive function $\chi _0$, the normalized <em>Gauduchon factor</em> of $\omega $, such that 
+</p>
+<div class="equation">
+  \[  \mathrm{dd}^{\mathrm{c}}(\chi _0\omega ^{n-1})=0,\qquad \int _ X\chi _0\omega ^ n=1.  \]
+</div>
+<p>
+ Write $m=\min _ X\chi _0$, $a=\max _ X\chi _0$ and $C_0=\| \chi _0\| _{C^{2,\alpha }}$. 
+</p>
+<p>
+We first specify the constants that determine the size of the neighborhood. For a smooth positive $(1,1)$-form $\Omega $, set 
+</p>
+<div class="equation">
+  \[  L_\omega v=\frac{n\mathrm{dd}^{\mathrm{c}}v\wedge \omega ^{n-1}}{\omega ^ n}, \qquad A_\Omega \eta =\frac{\mathrm{dd}^{\mathrm{c}}(\eta \Omega ^{n-1})}{\mathrm{d}V}.  \]
+</div>
+<p>
+ The compatibility argument of proposition <a data-tag="C9919263" href="../../tag/0B0003A3A873/">4.8.1</a>, proposition <a data-tag="E0953F19" href="../../tag/2AD3CD874EA4/">9.3.1</a> shows that 
+</p>
+<div class="equation">
+  \[  \mathcal L(v,c)=L_\omega v-c, \qquad \int _ Xv\, \mathrm{d}V=0,  \]
+</div>
+<p>
+ is an isomorphism from the space of pairs $(v,c)\in C^{4,\alpha }\times \mathbb R$ with this normalization onto $C^{2,\alpha }$. Let $K\geq 1$ bound its inverse for the norm $\| v\| _{C^{4,\alpha }}+|c|$. The formal adjoint of $A_\omega $ with respect to $\mathrm{d}V$ is $(H/n)L_\omega $, whose kernel consists of the constants and whose index is zero. Consequently $A_\omega $ has kernel $\mathbb R\chi _0$ and range 
+</p>
+<div class="equation">
+  \[  Z_0=\left\{ g\in C^{0,\alpha }:\int _ Xg\, \mathrm{d}V=0\right\} .  \]
+</div>
+<p>
+ Its restriction to 
+</p>
+<div class="equation">
+  \[  E_\chi =\left\{ \eta \in C^{2,\alpha }:\int _ X\eta \omega ^ n=0\right\}   \]
+</div>
+<p>
+ has a bounded inverse $\mathcal R:Z_0\to E_\chi $. Fix $G\geq 1$ bounding this inverse. 
+</p>
+<p>
+We normalize the Hölder norms of forms and of endomorphism fields so that they dominate pointwise operator norms and are submultiplicative under composition of endomorphisms; the subscript $\mathrm{alg}$ below refers to this norm on endomorphism fields. Choose $D\geq 1$ so that 
+</p>
+<div class="equation">
+  \[  \| \mathrm{dd}^{\mathrm{c}}v\| _{C^{2,\alpha }}\leq D\| v\| _{C^{4,\alpha }},\qquad \| \omega ^{-1}\mathrm{dd}^{\mathrm{c}}v\| _{C^{2,\alpha },\mathrm{alg}} \leq D\| v\| _{C^{4,\alpha }}.  \]
+</div>
+<p>
+ Let $C_{\mathrm{tr}}\geq 1$ be a bound for the trace map on endomorphism fields, and put $Q=2C_{\mathrm{tr}}D^2$. Expanding $\Omega ^{n-1}-\omega ^{n-1}$ gives a constant $C_ A\geq 1$ such that 
+</p>
+<div class="equation">
+  \[  \| A_\Omega -A_\omega \| _{C^{2,\alpha }\to C^{0,\alpha }} \leq C_ A\| \Omega -\omega \| _{C^{2,\alpha }} \quad \text{if }\| \Omega -\omega \| _{C^{2,\alpha }}\leq 1.  \]
+</div>
+<p>
+ Only two derivatives of $\Omega $ enter this polynomial estimate. Define 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-B5A246B7"><span data-gerby-tag="B5A246B7"></span>
+<span class="equation-label"><a data-tag="B5A246B7" href="../../tag/A7F3B3DF78D5/">26.41</a></span>
+<div>\begin{equation} \label{eq:gaud-local-adjoint-radius} r=\min \left\{ \frac1{2D},\frac1{4KQ}, \frac{m}{4GC_ ADC_0}\right\} , \qquad \varepsilon =\frac r{2K}. \end{equation}</div>
+</div>
+<p>
+ These constants depend only on $\omega $, $\mathrm{d}V$, $\alpha $ and the chosen norms. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-A9AFC110">
+<p><a class="environment-identifier" href="../../tag/9F57BA26805A/">Lemma <span data-tag="A9AFC110">26.8.4</span>.</a><span data-gerby-tag="A9AFC110"></span> Let $F$ be smooth with $\| F-F_*\| _{C^{2,\alpha }}\leq \varepsilon $. The solution form $\Omega _ F=\omega +\mathrm{dd}^{\mathrm{c}}u_ F$ of $\mathrm{MA}_\omega (u_ F)=\mathrm{e}^{B_0(F)+F}\mathrm{d}V$ and its Gauduchon factor $\chi _ F$, normalized as below, satisfy </p>
+<div class="equation">
+  \begin{gather*}  \tfrac 12\omega \leq \Omega _ F\leq \tfrac 32\omega , \qquad \frac m2\leq \chi _ F\leq \frac{3a}2,\\  \mathrm{dd}^{\mathrm{c}}(\chi _ F\Omega _ F^{n-1})=0, \qquad \int _ X\chi _ F\omega ^ n=1. \end{gather*}
+</div>
+<p> The potential can be normalized by $\int _ Xu_ F\, \mathrm{d}V=0$ with $\| u_ F\| _{C^{4,\alpha }}+|B_0(F)-\log V|\leq r$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $\| v\| _{C^{4,\alpha }}\leq 1/(2D)$ put 
+    
+<div class="equation">
+  \[  N(v)=\log \det (I+\omega ^{-1}\mathrm{dd}^{\mathrm{c}}v)-L_\omega v.  \]
+</div>
+<p>
+       The logarithm series starts at degree two. If the endomorphism norms of $\omega ^{-1}\mathrm{dd}^{\mathrm{c}}v$ and $\omega ^{-1}\mathrm{dd}^{\mathrm{c}}w$ are at most $\rho \leq 1/2$, telescoping their powers bounds the difference series by $C_{\mathrm{tr}}\rho /(1-\rho )$ times the endomorphism difference. Hence 
+    
+<div class="equation">
+  \begin{align*}  \| N(v)\| _{C^{2,\alpha }}&amp; \leq Q\| v\| _{C^{4,\alpha }}^2,\\  \| N(v)-N(w)\| _{C^{2,\alpha }} &amp; \leq Q(\| v\| _{C^{4,\alpha }}+\| w\| _{C^{4,\alpha }}) \| v-w\| _{C^{4,\alpha }}. \end{align*}
+</div>
+<p>
+       On the closed radius-$r$ ball of normalized pairs $(v,c)$, the map 
+    
+<div class="equation">
+  \[  (v,c)\longmapsto \mathcal L^{-1}(F-F_*-N(v))  \]
+</div>
+<p>
+       has image norm at most $K\varepsilon +KQr^2\leq 3r/4$ and Lipschitz constant at most $2KQr\leq 1/2$. Its fixed point $(u,c)$ satisfies 
+    
+<div class="equation">
+  \[  \log \frac{(\omega +\mathrm{dd}^{\mathrm{c}}u)^ n}{\omega ^ n}-c=F-F_*.  \]
+</div>
+<p>
+       The estimate $Dr\leq 1/2$ gives the form comparison. The scalar is $b=\log V+c$. Differentiating the local equation gives a uniformly elliptic equation for each first derivative of $u$, with coefficients initially in $C^{2,\alpha }$. Interior Schauder estimates improve the regularity one order at a time, so $u$ is smooth. Uniqueness in theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">9.1.1</a> identifies it with $u_ F$ and gives $b=B_0(F)$. No uniform higher-derivative bounds on $F$ enter the estimates above. 
+    <p>
+      Put $\Delta A=A_{\Omega _ F}-A_\omega $. Stokes' theorem makes its image lie in $Z_0$. On the complete space $E_\chi $, the affine map 
+    
+<div class="equation">
+  \[  \eta \longmapsto -\mathcal R\Delta A(\chi _0+\eta )  \]
+</div>
+<p>
+       has Lipschitz constant $\kappa =GC_ ADr\leq m/(4C_0)\leq 1/4$. Its fixed point obeys 
+    
+<div class="equation">
+  \[  \| \eta \| _{C^{2,\alpha }} \leq \frac{\kappa C_0}{1-\kappa } \leq 2\kappa C_0\leq m/2.  \]
+</div>
+<p>
+       Since $A_\omega \chi _0=0$ and $A_\omega \mathcal R$ is the identity on $Z_0$, the function $\chi _ F=\chi _0+\eta $ satisfies $A_{\Omega _ F}\chi _ F=0$, and it has the stated normalization and bounds. Elliptic regularity makes it smooth. Every Gauduchon factor of $\Omega _ F$ with the same normalization satisfies the same affine fixed-point equation, so this factor is the one given by theorem <a data-tag="F1B1A709" href="../../tag/3978AEB15BD7/">4.1.2</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-E0673342">
+<p><a class="environment-identifier" href="../../tag/6A30AAE398CD/">Theorem <span data-tag="E0673342">26.8.5</span>.</a><span data-gerby-tag="E0673342"></span> For every smooth $F$ in the ball of lemma <a data-tag="A9AFC110" href="../../tag/9F57BA26805A/">26.8.4</a>, let $T_ F$ be the maximizing current of theorem <a data-tag="B931D275" href="../../tag/0537569F9F52/">26.6.2</a> and $\nu _ F$ the supporting probability of $B_0$ at $F$; both are unique. With </p>
+<div class="equation">
+  \[  H_{\max }=\max _ XH,\qquad C_\nu =\frac{3^{n+1}}4aH_{\max },\qquad C_ k=\frac{3^ n}2aH_{\max }^{(n-1)/n},  \]
+</div>
+<p> their densities satisfy </p>
+<div class="equation">
+  \[  \nu _ F=q_ F\, \mathrm{d}V,\qquad \| q_ F\| _{L^\infty }\leq C_\nu ,\qquad \| k_{T_ F}\| _{L^\infty }\leq C_ k.  \]
+</div>
+<p> In particular, for $p=n/(n-1)$, </p>
+<div class="equation">
+  \[  \| q_ F\| _{L^ p}\leq C_\nu ^{1/n},\qquad \| k_{T_ F}\| _{L^ p}\leq C_ k.  \]
+</div>
+<p> The constants do not involve $v_-(\omega )$; in particular, these bounds hold also when $v_-(\omega )=0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Set $\Omega =\Omega _ F$, $\chi =\chi _ F$ and 
+    
+<div class="equation">
+  \[  Z=\int _ X\chi \omega \wedge \Omega ^{n-1}.  \]
+</div>
+<p>
+       The form comparison and $\int _ X\chi \omega ^ n=1$ give 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-F0E4892E"><span data-gerby-tag="F0E4892E"></span>
+<span class="equation-label"><a data-tag="F0E4892E" href="../../tag/8926A66CEBEF/">26.42</a></span>
+<div>\begin{equation} \label{eq:gaud-local-factor-normalization} 2^{-(n-1)}\leq Z\leq (3/2)^{n-1}. \end{equation}</div>
+</div>
+<p>
+       Since $\mathrm{dd}^{\mathrm{c}}(\chi \Omega ^{n-1})=0$, Stokes' theorem also gives $Z=\int _ X\chi \Omega ^ n$. The form $T=(\chi /Z)\Omega ^{n-1}$ is normalized and is a constant multiple of the $(n-1)$st power of the Gauduchon metric conformal to $\Omega $. By theorem <a data-tag="B931D275" href="../../tag/0537569F9F52/">26.6.2</a>, it is the unique maximizing current, so $T=T_ F$. The equality case in the proof of that theorem gives $\nu _ F=\Omega \wedge T_ F$, and hence 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-24B5D7AA"><span data-gerby-tag="24B5D7AA"></span>
+<span class="equation-label"><a data-tag="24B5D7AA" href="../../tag/CED2026424BD/">26.43</a></span>
+<div>\begin{equation} \label{eq:gaud-local-adjoint-densities} \begin{aligned}  T_ F&amp; =\frac\chi Z\Omega ^{n-1},\\  \nu _ F&amp; =\Omega \wedge T_ F=\frac\chi Z\Omega ^ n,\\  q_ F&amp; =\frac\chi Z\frac{\Omega ^ n}{\mathrm{d}V},\\  k_{T_ F}&amp; =\frac\chi Z \left(\frac{\Omega ^ n}{\mathrm{d}V}\right)^{(n-1)/n}. \end{aligned} \end{equation}</div>
+</div>
+<p>
+       The last identity uses the positive root $\gamma =(\chi /Z)^{1/(n-1)}\Omega $, for which $T_ F=\gamma ^{n-1}$. Uniqueness of the supporting probability follows from theorem <a data-tag="3606F8FD" href="../../tag/E9E119AAA269/">26.7.2</a>. 
+    <p>
+      Now $\chi /Z\leq (3a/2)2^{n-1}$ and $\Omega ^ n/\mathrm{d}V\leq (3/2)^ nH_{\max }$, and multiplying gives exactly $q_ F\leq C_\nu $ and $k_{T_ F}\leq C_ k$. Since $\int _ Xq_ F\, \mathrm{d}V=1$, we have $\int _ Xq_ F^ p\, \mathrm{d}V\leq C_\nu ^{p-1}$, which gives the sharper $L^ p$ estimate for $q_ F$. The $L^ p$ estimate for $k_{T_ F}$ follows from $\int _ X\mathrm{d}V=1$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-9D18FFE7">
+<p><a class="environment-identifier" href="../../tag/7877D1AB98D3/">Corollary <span data-tag="9D18FFE7">26.8.6</span>.</a><span data-gerby-tag="9D18FFE7"></span> The ball of lemma <a data-tag="A9AFC110" href="../../tag/9F57BA26805A/">26.8.4</a> contains smooth injectively parametrized families, of arbitrarily large finite dimension, of data $F$ normalized by $\int _ X\mathrm{e}^ F\mathrm{d}V=1$. It also contains a smooth path of such data whose maximizing currents are pairwise distinct. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For a small smooth function $f$, put 
+    
+<div class="equation">
+  \[  F(f)=F_*+f-\log \int _ X\mathrm{e}^{F_*+f}\, \mathrm{d}V.  \]
+</div>
+<p>
+       If $F(f)=F(g)$, then $f-g$ is constant, so the map $f\mapsto F(f)$ is injective on functions of zero $\mathrm{d}V$-mean. By its continuity in $C^{2,\alpha }$, it maps a sufficiently small neighborhood of zero in any fixed finite-dimensional space of such smooth functions into the ball, and these spaces can have arbitrary dimension. 
+    <p>
+      For the path, choose a smooth real $\psi $ of zero $\mathrm{d}V$-mean whose complex Hessian at some point $x_0$ has, in an $\omega $-unitary frame, a matrix $Q_0$ that is not a multiple of the identity. A cutoff of $|z_1|^2-|z_2|^2$ in local coordinates, minus its mean, is such a function. For small real $t$ put 
+    
+<div class="equation">
+  \[  \Omega _ t=\omega +t\mathrm{dd}^{\mathrm{c}}\psi ,\qquad V_ t=\int _ X\Omega _ t^ n,\qquad F_ t=\log \frac{\Omega _ t^ n}{V_ t\, \mathrm{d}V}.  \]
+</div>
+<p>
+       These normalized data tend to $F_*$ in $C^{2,\alpha }$ as $t\to 0$, and by uniqueness in theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">9.1.1</a> their solution forms are the forms $\Omega _ t$. If $F_ s=F_ t$, then $\log (\Omega _ s^ n/\Omega _ t^ n)$ is the constant $\log (V_ s/V_ t)$. The signs of the complex Hessian of $(s-t)\psi $ at a maximum and at a minimum force this constant to be zero. Integrating the derivative of $\log \det $ along the segment between $\Omega _ t$ and $\Omega _ s$ then gives a uniformly elliptic equation for $(s-t)\psi $ without zeroth-order term, and the maximum principle forces $(s-t)\psi $ to be constant. Since $\psi $ is not constant, $s=t$. 
+    <p>
+      If the maximizing currents for $F_ s$ and $F_ t$ agree, (<a data-tag="24B5D7AA" href="../../tag/CED2026424BD/">26.43</a>) makes $\Omega _ s^{n-1}$ and $\Omega _ t^{n-1}$ proportional at $x_0$. Positive cofactor matrices determine positive forms up to scale, so $I+sQ_0$ and $I+tQ_0$ are proportional. Since $I$ and $Q_0$ are linearly independent, comparing coefficients gives $s=t$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+The small $C^{2,\alpha }$ neighborhood gives a condition directly on the prescribed density. The next estimate instead assumes uniform bounds for the solution forms and covers a larger smooth family without derivative bounds on its densities. The question for arbitrary bounded families of continuous densities remains open when $v_-(\omega )=0$. The concentrating sequences of proposition <a data-tag="DB141F7B" href="../../tag/89AE8B534538/">26.17.2</a> consist of near-maximizers, so these estimates do not apply to them. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

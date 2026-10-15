@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exact equations on products with zero lower mass · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>FC44870E2A2C</code></p><h1>Exact equations on products with zero lower mass</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 14.29 Exact equations on products with zero lower mass <span data-gerby-tag="E5ABD389"></span></div>
+<p>
+Positive lower mass guarantees solvability for all measures, but an individual density can have a positive threshold and an exact equation even when the lower mass vanishes. We construct explicit examples on products. Let $(X_0,h_0)$ be a connected compact Hermitian manifold of dimension $m\geq 1$ with $v_-(h_0)=0$. On its product with a projective space, a singular potential pulled back from the projective factor solves an explicit equation whose density has a sublogarithmic singularity. The coefficient is computed from the normalization scalars of bounded truncations, the equation itself follows from the product structure of the Monge–Ampère measure, and the product background again has zero lower mass. 
+</p>
+<p>
+Throughout this section, $Y=\mathbb P^ k$ with $k\geq 1$, $\kappa $ is the Fubini–Study form normalized by $\int _ Y\kappa ^ k=1$, and $X=X_0\times Y$, a compact complex manifold of dimension $N=m+k$ with the Hermitian background $H=h_0+\kappa $. Forms and functions on the factors are identified with their pullbacks to $X$. Put 
+</p>
+<div class="equation">
+  \[  V_0=\int _{X_0}h_0^ m,\qquad C=\binom Nm,\qquad \mu =V_0^{-1}h_0^ m\wedge \kappa ^ k,\qquad R=\frac{\mu }{\mathrm{d}V},  \]
+</div>
+<p>
+ where $\mathrm{d}V$ is any smooth positive probability volume form on $X$. Then $\mu $ is a smooth positive probability volume form, and $R$ is smooth and bounded above and below by positive constants. The normalization scalar $c_ H$ and the threshold $b_ H$ are those of section <a data-tag="0FC8E1C0" href="../../tag/93CEF832AEA2/">14.26</a>, section <a data-tag="CF1C0A46" href="../../tag/72CDE5ADD348/">14.27</a>, now on the $N$-dimensional manifold $X$ with background $H$. 
+</p>
+<p>
+For $0&lt;\alpha &lt;1$ define, on $Y$, 
+</p>
+<div class="equation">
+  \[  \psi ([z_0:\cdots :z_ k])=\log \frac{\sum _{i=1}^ k|z_ i|^2}{\sum _{i=0}^ k|z_ i|^2}, \qquad u_\alpha =1-(1-\psi )^\alpha .  \]
+</div>
+<p>
+ The function $\psi $ is smooth on $Y\setminus \{ o\} $, where $o=[1:0:\cdots :0]$, and tends to $-\infty $ at $o$; moreover $\psi \leq 0$, with equality exactly on the hyperplane $\{ z_0=0\} $. Thus $u_\alpha \leq 0$, and $u_\alpha $ has a single pole at $o$, where $u_\alpha (o)=-\infty $. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-4A877CC1">
+<p><a class="environment-identifier" href="../../tag/B30B4EF45772/">Lemma <span data-tag="4A877CC1">14.29.1</span>.</a><span data-gerby-tag="4A877CC1"></span> The function $u_\alpha $ is $\kappa $-plurisubharmonic with supremum zero, and </p>
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_\kappa (u_\alpha )=q_\alpha \kappa ^ k, \qquad \int _ Yq_\alpha \kappa ^ k=1.  \]
+</div>
+<p> The density $q_\alpha $ is smooth and strictly positive on $Y\setminus \{ o\} $, belongs to $L^1(\kappa ^ k)$, and belongs to no $L^ p(\kappa ^ k)$ with $p&gt;1$. If we set $q_\alpha (o)=+\infty $, then every truncation $\min (q_\alpha ,s)$, $s&gt;0$, is strictly positive and continuous on $Y$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In homogeneous coordinates, $\kappa +\mathrm{dd}^{\mathrm{c}}\psi =\mathrm{dd}^{\mathrm{c}}\log \sum _{i=1}^ k|z_ i|^2\geq 0$ on $Y\setminus \{ o\} $. The function $\chi (t)=1-(1-t)^\alpha $, $t\leq 0$, is increasing and convex, with $0&lt;\chi '\leq \alpha $. Hence, off $o$, 
+    
+<div class="equation">
+  \[  \kappa +\mathrm{dd}^{\mathrm{c}}u_\alpha \geq (1-\chi '(\psi ))\kappa +\chi '(\psi )(\kappa +\mathrm{dd}^{\mathrm{c}}\psi ) \geq (1-\alpha )\kappa .  \]
+</div>
+<p>
+       Since $u_\alpha $ is bounded above, it extends across $o$ as a $\kappa $-plurisubharmonic function, with value $-\infty $ at $o$. On the hyperplane $\{ z_0=0\} $ we have $\psi =0$, hence $u_\alpha =0$, so $\sup _ Yu_\alpha =0$. 
+    <p>
+      To compute the measure, work in the affine chart $z_0=1$ and put $r=\sum _{i=1}^ k|z_ i|^2$. On this chart $\kappa =\mathrm{dd}^{\mathrm{c}}\log (1+r)$ and $\kappa +\mathrm{dd}^{\mathrm{c}}u_\alpha =\mathrm{dd}^{\mathrm{c}}F$, where $s(r)=1-\log (r/(1+r))$ and 
+    
+<div class="equation">
+  \[  F(r)=\log (1+r)+1-s(r)^\alpha ,\qquad Q(r)=rF'(r)=\frac{r+\alpha s(r)^{\alpha -1}}{1+r}.  \]
+</div>
+<p>
+       For a radial function, the Levi form has the tangential eigenvalue $F'(r)=Q(r)/r$, with multiplicity $k-1$, and the radial eigenvalue 
+    
+<div class="equation">
+  \[  Q'(r)=\frac{1-\alpha s(r)^{\alpha -1}+\alpha (1-\alpha )r^{-1}s(r)^{\alpha -2}}{(1+r)^2}&gt;0.  \]
+</div>
+<p>
+       Integrating in the radial variable gives $\int _{\{ a&lt;r&lt;b\} }(\mathrm{dd}^{\mathrm{c}}F)^ k=Q(b)^ k-Q(a)^ k$; the constant of proportionality is fixed by the case $F=\log (1+r)$, for which $(\mathrm{dd}^{\mathrm{c}}F)^ k=\kappa ^ k$ has mass one on the chart and $Q(r)=r/(1+r)$. Since again $Q(0)=0$ and $Q(\infty )=1$, the punctured chart has mass one. The complement of the chart is a hyperplane, which has zero volume, and the non-pluripolar measure does not charge $o$. Hence $\int _ Yq_\alpha \kappa ^ k=1$. 
+    <p>
+      Relative to $\kappa ^ k$, whose tangential and radial eigenvalues are $1/(1+r)$ and $1/(1+r)^2$, the density on this chart is 
+    
+<div class="equation">
+  \[  q_\alpha (r)=(1+r)^{k+1}(Q(r)/r)^{k-1}Q'(r) \asymp r^{-k}(1-\log r)^{-1-k(1-\alpha )}\quad (r\downarrow 0).  \]
+</div>
+<p>
+       Near $r=0$ the smooth volume is comparable to $r^{k-1}\mathrm{d}r$ in the radial variable, so $q_\alpha $ is integrable. For $p&gt;1$, the substitution $L=1-\log r$ turns the integral of $q_\alpha ^ p$ into the integral of $\mathrm{e}^{k(p-1)L}$ times a power of $L$, which diverges. The same asymptotics show that $q_\alpha (r)\to +\infty $ uniformly as $r\downarrow 0$, so every truncation $\min (q_\alpha ,s)$ is continuous at $o$. Finally, $q_\alpha \geq (1-\alpha )^ k&gt;0$ by the lower bound $\kappa +\mathrm{dd}^{\mathrm{c}}u_\alpha \geq (1-\alpha )\kappa $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-7C7DFBFB">
+<p><a class="environment-identifier" href="../../tag/40B884870886/">Lemma <span data-tag="7C7DFBFB">14.29.2</span>.</a><span data-gerby-tag="7C7DFBFB"></span> Let $g$ be a strictly positive continuous function on $Y$, and put $M_ g=\int _ Yg\kappa ^ k$. Then </p>
+<div class="equation">
+  \[  c_ H(Rg)=\frac{CV_0}{M_ g}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Suppose first that $g$ is smooth. Since $\kappa $ is Kähler, theorem <a data-tag="3EE16849" href="../../tag/F33DA8C9DF9F/">9.1.1</a> on $Y$ gives a smooth $\phi _ g$ with $A_ g=\kappa +\mathrm{dd}^{\mathrm{c}}\phi _ g&gt;0$ and $A_ g^ k=(g/M_ g)\kappa ^ k$; the scalar is determined by integration, since both sides have mass one. On $X$, since $h_0^{m+1}=0$ and $A_ g^{k+1}=0$ for dimensional reasons, 
+    
+<div class="equation">
+  \[  (H+\mathrm{dd}^{\mathrm{c}}\phi _ g)^ N=C h_0^ m\wedge A_ g^ k =(CV_0/M_ g)Rg\, \mathrm{d}V.  \]
+</div>
+<p>
+       Uniqueness of the scalar gives $c_ H(Rg)=CV_0/M_ g$. For continuous $g&gt;0$, choose smooth $g_ l&gt;0$ converging uniformly to $g$. Since $g$ has a positive minimum, $(1-\varepsilon _ l)g\leq g_ l\leq (1+\varepsilon _ l)g$ for some $\varepsilon _ l\in (0,1)$ tending to zero. The order and homogeneity of the scalar in lemma <a data-tag="F84443FE" href="../../tag/CE5CA1071A3C/">14.26.1</a> give 
+    
+<div class="equation">
+  \[  (1-\varepsilon _ l)c_ H(Rg_ l)\leq c_ H(Rg) \leq (1+\varepsilon _ l)c_ H(Rg_ l).  \]
+</div>
+<p>
+       Since $M_{g_ l}\to M_ g$, the smooth case proves the formula. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-F4CAE5F4">
+<p><a class="environment-identifier" href="../../tag/B36BAA6B4AA0/">Theorem <span data-tag="F4CAE5F4">14.29.3</span>.</a><span data-gerby-tag="F4CAE5F4"></span> The Hermitian form $H$ is not closed and satisfies $v_-(H)=0$. For every $0&lt;\alpha &lt;1$, the function $f=Rq_\alpha $ is a probability density in $L^1(\mathrm{d}V)$, belonging to no $L^ p(\mathrm{d}V)$ with $p&gt;1$, and </p>
+<div class="equation">
+  \[  b_ H(f)=CV_0&gt;0,\qquad \mathrm{MA}^{\mathrm{ext}}_ H(u_\alpha )=b_ H(f)f\, \mathrm{d}V.  \]
+</div>
+<p> The potential $u_\alpha $, pulled back to $X$, has supremum zero and finite mass $CV_0$. It belongs to $\mathcal E_{\mathrm{env}}(X,H,0)$, and $P_{\delta H}(u_\alpha )\not\equiv -\infty $ for every $0&lt;\delta &lt;1$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Step 1: the threshold.</em> Write $a=\min _ XR&gt;0$, $A=\max _ XR$, and $M_ s=\int _ Y\min (q_\alpha ,s)\kappa ^ k$ for $s&gt;0$. By lemma <a data-tag="4A877CC1" href="../../tag/B30B4EF45772/">14.29.1</a>, the truncations $\min (q_\alpha ,s)$ are continuous and strictly positive, and $M_ s\uparrow 1$ as $s\to \infty $. The truncations of $f$ satisfy 
+    
+<div class="equation">
+  \[  R\min (q_\alpha ,j/A)\leq \min (Rq_\alpha ,j) \leq R\min (q_\alpha ,j/a).  \]
+</div>
+<p>
+       Hence lemma <a data-tag="7C7DFBFB" href="../../tag/40B884870886/">14.29.2</a> and the monotonicity of the scalar give 
+    
+<div class="equation">
+  \[  \frac{CV_0}{M_{j/a}}\leq c_ H(\min (f,j)) \leq \frac{CV_0}{M_{j/A}}.  \]
+</div>
+<p>
+       Both bounds tend to $CV_0$ as $j\to \infty $, so $b_ H(f)=CV_0$, whatever the reference volume $\mathrm{d}V$. 
+    <p>
+<em>Step 2: the equation.</em> For $u_{\alpha ,j}=\max (u_\alpha ,-j)$, the binomial expansion of bounded local products, with factor forms of degrees $m$ and $k$, gives 
+    
+<div class="equation">
+  \[  \mathrm{MA}_ H(u_{\alpha ,j}) =C h_0^ m\wedge \mathrm{MA}_\kappa (u_{\alpha ,j}).  \]
+</div>
+<p>
+       Multiplying by $\mathbf1_{\{ u_\alpha &gt;-j\} }$ and letting $j\to \infty $, as in the definition (<a data-tag="0C05ED0A" href="../../tag/E6AA45ACEA33/">6.1</a>) of the extended measure, we obtain 
+    
+<div class="equation">
+  \[  \mathrm{MA}^{\mathrm{ext}}_ H(u_\alpha )=Ch_0^ m\wedge q_\alpha \kappa ^ k =CV_0\, q_\alpha \mu =CV_0f\, \mathrm{d}V,  \]
+</div>
+<p>
+       a measure of mass $CV_0$. The bounds $a\leq R\leq A$ transfer the integrability properties of $q_\alpha $ to $f$. 
+    <p>
+<em>Step 3: lower mass and nonclosedness.</em> Pull back bounded $h_0$-plurisubharmonic functions whose masses on $X_0$ tend to zero. The same expansion shows that their $H$-masses are $C$ times their masses on $X_0$, so $v_-(H)=0$. If $h_0$ were closed, Stokes' theorem would give every bounded $h_0$-plurisubharmonic function the mass $V_0&gt;0$, contradicting $v_-(h_0)=0$. Hence $h_0$, and therefore $H$, is not closed. 
+    <p>
+<em>Step 4: the envelopes.</em> Choose $\alpha &lt;\beta &lt;1$. For $b\geq 1$ and $\varepsilon &gt;0$ with $\varepsilon \beta \leq 1$, the number 
+    
+<div class="equation">
+  \[  K_ b=\sup _{s\geq 1}\{ b s^\alpha -\varepsilon s^\beta \} -b  \]
+</div>
+<p>
+       is finite, since $\beta &gt;\alpha $. The function $g_ b=-\varepsilon (1-\psi )^\beta -K_ b$ on $Y$ satisfies $\kappa +\mathrm{dd}^{\mathrm{c}}g_ b\geq (1-\varepsilon \beta )\kappa \geq 0$, by the chain-rule computation in the proof of lemma <a data-tag="4A877CC1" href="../../tag/B30B4EF45772/">14.29.1</a>, applied to the increasing convex function $t\mapsto -\varepsilon (1-t)^\beta $, whose derivative is at most $\varepsilon \beta $ for $t\leq 0$. With $L=1-\psi \geq 1$, the inequality $g_ b\leq bu_\alpha $ reads $bL^\alpha -\varepsilon L^\beta -b\leq K_ b$, so it holds on $Y\setminus \{ o\} $, and also at $o$, where both sides are $-\infty $. Thus the pullback of $g_ b$ belongs to $\mathrm{PSH}(X,H)$ and lies below $bu_\alpha $. Since $b\geq 1$ is arbitrary, $u_\alpha \in \mathcal E_{\mathrm{env}}(X,H,0)$ by definition <a data-tag="1025E1CB" href="../../tag/7EF949B941B4/">13.4.1</a>. For $0&lt;\delta &lt;1$, take $b=1$ and $\varepsilon \beta \leq \delta $. Then $g_1$ is $\delta H$-plurisubharmonic and lies below $u_\alpha $, so $P_{\delta H}(u_\alpha )\geq g_1$ is not identically $-\infty $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-00618A58">
+<p><a class="environment-identifier" href="../../tag/8C4A9CEF04C8/">Corollary <span data-tag="00618A58">14.29.4</span>.</a><span data-gerby-tag="00618A58"></span> Let $X_0$ be the elliptic threefold of theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">26.18.1</a>, with the balanced metric $\omega $ of proposition <a data-tag="CC2145C0" href="../../tag/94417AD14985/">26.18.7</a>. On $X_0\times \mathbb P^2$, with background $H=\omega +\kappa $, the densities $f=Rq_\alpha $ of the preceding theorem satisfy </p>
+<div class="equation">
+  \[  v_-(H)=0,\qquad b_ H(f)=240\pi , \qquad \mathrm{MA}^{\mathrm{ext}}_ H(u_\alpha )=240\pi f\, \mathrm{d}V.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Theorem <a data-tag="C504D1D4" href="../../tag/38D9206B1A2F/">26.18.1</a> gives $v_-(\omega )=0$, and proposition <a data-tag="CC2145C0" href="../../tag/94417AD14985/">26.18.7</a> gives $V_0=24\pi $. The product theorem applies with $m=3$, $k=2$ and $C=\binom 53=10$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+These examples show that an individual density can have a positive threshold and an exact equation even though the background has zero lower mass. The exactness comes from the product structure. For $k\geq 2$, the radial flux also identifies the normalized exponential limit in theorem <a data-tag="C917100A" href="../../tag/AACA90B5B52B/">14.35.2</a>; the first moment determines whether scalar centering has a finite limit. <a data-tag="E3CD8C18" href="../../tag/FBE8C5BA5CA4/">33.1.1</a> asks for an exact equation for every integrable density with positive threshold. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

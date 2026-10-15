@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Division and finite analytic modules · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/complex-spaces/">Chapter 8 · Complex spaces and modifications</a> · Tag <code>D4E6B7455291</code></p><h1>Division and finite analytic modules</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · A.1 Division and finite analytic modules <span data-gerby-tag="B47E22E4"></span></div>
+<p>
+Let $n\geq 0$. We write $\mathcal O_ n$ for the ring of germs at $0\in \mathbb C^ n$ of holomorphic functions; two functions defined near $0$ have the same germ if they agree on some neighborhood of $0$, and identities between germs are understood in this sense. By the iterated Cauchy formula of section <a data-tag="34B0F7D2" href="../../tag/D8E2D1A98ACF/">7.1</a>, every germ is given near $0$ by its Taylor series (<a data-tag="655AD683" href="../../tag/E0E563B56BCE/">7.1</a>), which converges normally on a small polydisc. Conversely, a power series $\sum _\alpha c_\alpha z^\alpha $ with $\sum _\alpha |c_\alpha |r^{|\alpha |}&lt;\infty $ for some $r&gt;0$ defines a holomorphic function on the polydisc $\{ |z_ j|&lt;r\} $: since $|c_\alpha |\leq Cr^{-|\alpha |}$, the series of partial derivatives of each order converge normally on every polydisc $\{ |z_ j|\leq s\} $ with $s&lt;r$, so the sum is smooth, may be differentiated termwise, and satisfies the Cauchy–Riemann equations. Thus germs are the same as convergent power series, $\mathcal O_ n=\mathbb C\{ z_1,\ldots ,z_ n\} $, and $\mathcal O_0=\mathbb C$. 
+</p>
+<p>
+The ring $\mathcal O_ n$ is an integral domain: if $fg=0$ near $0$ and $f\neq 0$, then $g$ vanishes on the nonempty open subset $\{ f\neq 0\} $ of a connected neighborhood of $0$, so $g=0$ by the identity theorem. A germ that does not vanish at the origin has a holomorphic reciprocal near the origin; hence $\mathcal O_ n$ is a local ring, whose maximal ideal $\mathfrak m$ consists of the germs vanishing at the origin. The <em>order</em> $\operatorname {ord}_0f$ of a nonzero germ $f$ is the degree of the first nonzero homogeneous term of its Taylor expansion. The order of a product is the sum of the orders. Indeed, if $P_ s$ and $Q_ t$ are the first nonzero homogeneous terms of $f$ and $g$, then $P_ sQ_ t$ is the homogeneous term of degree $s+t$ of $fg$. It is not zero: a polynomial vanishing on a nonempty open set is zero, so the sets $\{ P_ s\neq 0\} $ and $\{ Q_ t\neq 0\} $ are open and dense, and therefore meet. Hence every element of the $k$th power $\mathfrak m^ k$ has order at least $k$. 
+</p>
+<p>
+Conversely, let $f=\sum _\beta c_\beta z^\beta $ have order at least $k$. Assign to each $\beta $ with $|\beta |\geq k$ the first multi-index $\alpha \leq \beta $ with $|\alpha |=k$ in the lexicographic order, and let $f_\alpha =\sum c_\beta z^{\beta -\alpha }$, the sum over the $\beta $ assigned to $\alpha $. These series converge normally wherever the series of $f$ does, so $f_\alpha \in \mathcal O_ n$, and $f=\sum _{|\alpha |=k}z^\alpha f_\alpha \in \mathfrak m^ k$. Thus $\operatorname {ord}_0f\geq k$ if and only if $f\in \mathfrak m^ k$. A holomorphic change of coordinates fixing $0$ induces a ring automorphism of $\mathcal O_ n$ that preserves $\mathfrak m$ and its powers; so the order does not depend on the coordinates. For a holomorphic function $f$ near a point $a$ of a complex manifold whose germ at $a$ is nonzero, $\operatorname {ord}_ af$ is the order of its germ in local coordinates centered at $a$. This is the order used for Lelong numbers in proposition <a data-tag="00DD8C92" href="../../tag/43A1E607F822/">12.1.4</a>; chapter <a data-tag="1D553871" href="../../tag/8494F0D4F79D/">12</a> also defines the order of a coherent ideal at a point and the order along a prime divisor (definition <a data-tag="91527C9C" href="../../tag/B5514FFD42D1/">12.6.3</a>).  
+</p>
+<p>
+Write points of $\mathbb C^ n$, $n\geq 1$, as $(z',w)$ with $z'\in \mathbb C^{n-1}$. A <em>Weierstrass polynomial</em> of degree $m\geq 0$ in $w$ is a polynomial 
+</p>
+<div class="equation">
+  \[  P(z',w)=w^ m+a_1(z')w^{m-1}+\cdots +a_ m(z'),\qquad a_ j\in \mathcal O_{n-1},\quad a_ j(0)=0.  \]
+</div>
+<p>
+ We shall often use the following bound for the roots $t$ of a monic polynomial with complex coefficients: 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-1F95143C"><span data-gerby-tag="1F95143C"></span>
+<span class="equation-label"><a data-tag="1F95143C" href="../../tag/667706D7A5E8/">A.1</a></span>
+<div>\begin{equation} \label{eq:monic-root-bound} t^ m+d_1t^{m-1}+\cdots +d_ m=0\quad \Longrightarrow \quad |t|\le 2\max _{1\leq j\leq m}|d_ j|^{1/j}. \end{equation}</div>
+</div>
+<p>
+ Indeed, otherwise $|d_ j|&lt;(|t|/2)^ j$ for all $j$, and dividing the equation by $t^ m$ gives $1\le \sum _{j=1}^ m|d_ j/t^ j|&lt;\sum _{j=1}^ m2^{-j}&lt;1$. In particular, the roots of $P(z',\cdot )$ tend to $0$ as $z'\to 0$. 
+</p>
+<p>
+A germ $f\in \mathcal O_ n$ is <em>distinguished</em> in $w$ if $f(0,w)$ is not identically zero. If $f(0,w)$ vanishes to order $m\geq 1$ at $w=0$, the Weierstrass preparation theorem (theorem <a data-tag="36E97251" href="../../tag/F54A645FF399/">7.4.2</a>) writes $f$ as a unit times a Weierstrass polynomial of degree $m$; if $f(0)\neq 0$, then $f$ is itself a unit, which is the case $m=0$. Every nonzero germ becomes distinguished in the last coordinate after a linear change of coordinates. Indeed, let $P_ s$ be the first nonzero homogeneous term of $f$ and choose $v$ with $P_ s(v)\neq 0$; in linear coordinates whose last basis vector is $v$, we have $f(0,w)=P_ s(v)w^ s+O(w^{s+1})$, which vanishes to order exactly $s$, the order of $f$. Since $P_ s\neq 0$, the admissible vectors $v$ form a dense open set. Hence the new coordinates can be chosen arbitrarily close to given ones, and finitely many nonzero germs become distinguished simultaneously if $v$ avoids the zero set of the product of their first homogeneous terms. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-681BB46B">
+<p><a class="environment-identifier" href="../../tag/611958EF0AB8/">Proposition <span data-tag="681BB46B">A.1.1</span> <span class="named">(Weierstrass division)</span>.</a><span data-gerby-tag="681BB46B"></span> Let $n\geq 1$ and $m\geq 0$, and let $P$ be a Weierstrass polynomial of degree $m$ in $w$. Then every germ $f\in \mathcal O_ n$ can be written uniquely as </p>
+<div class="equation">
+  \[  f=Pq+R,\qquad q\in \mathcal O_ n,\quad R\in \mathcal O_{n-1}[w],\quad \deg _ w R&lt;m.  \]
+</div>
+<p> Moreover, let $\Delta '\subset \mathbb C^{n-1}$ be a polydisc centered at $0$ and $\Delta =\{ |w|&lt;r\} $ a disc such that the coefficients of $P$ are holomorphic near $\overline{\Delta '}$ and all roots of $P(z',\cdot )$, $z'\in \Delta '$, lie in $\{ |w|\leq \rho \} $ for some $\rho &lt;r$; such polydiscs $\Delta '\times \Delta $ exist with arbitrarily small radii. Then every holomorphic function $f$ on $\Delta '\times \Delta $ can be written uniquely as $f=Pq+R$, where $q$ is holomorphic on $\Delta '\times \Delta $ and $R$ is a polynomial in $w$ of degree less than $m$ with holomorphic coefficients on $\Delta '$; for every $s\in (\rho ,r)$, $z'\in \Delta '$ and $|w|&lt;s$, </p>
+<div class="equation" id="foundations-of-pluripotential-theory-1F76F240"><span data-gerby-tag="1F76F240"></span>
+<span class="equation-label"><a data-tag="1F76F240" href="../../tag/A61080C94D0B/">A.2</a></span>
+<div>\begin{equation} \label{eq:weierstrass-division-integrals} \begin{aligned}  q(z',w)&amp; =\frac1{2\pi \mathrm i}\int _{|\zeta |=s} \frac{f(z',\zeta )}{P(z',\zeta )(\zeta -w)}\, \mathrm d\zeta ,\\  R(z',w)&amp; =\frac1{2\pi \mathrm i}\int _{|\zeta |=s} \frac{f(z',\zeta )}{P(z',\zeta )}\,  \frac{P(z',\zeta )-P(z',w)}{\zeta -w}\, \mathrm d\zeta . \end{aligned} \end{equation}</div>
+</div>
+<p> Division is a bounded linear operation on bounded holomorphic functions on $\Delta '\times \Delta $: there is a constant $C$, independent of $f$, with </p>
+<div class="equation">
+  \[  \sup _{\Delta '\times \Delta }|q|+\sup _{\Delta '\times \Delta }|R|\le C\sup _{\Delta '\times \Delta }|f|.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Polydiscs as in the statement exist with arbitrarily small radii, because the roots of $P(z',\cdot )$ tend to $0$ as $z'\to 0$, by (<a data-tag="1F95143C" href="../../tag/667706D7A5E8/">A.1</a>). 
+    <p>
+      Let $\Delta '\times \Delta $ be such a polydisc and $f$ a holomorphic function on it. For $\rho &lt;s&lt;r$ and $|w|&lt;s$ define $q$ and $R$ by (<a data-tag="1F76F240" href="../../tag/A61080C94D0B/">A.2</a>). For fixed $z'$ and $w$, both integrands are holomorphic in $\zeta $ on the annulus $\{ \rho &lt;|\zeta |&lt;r\} $, except for the pole of the first one at $\zeta =w$; by Cauchy's theorem the integrals do not depend on $s$ as long as $|w|&lt;s$, and the second one does not depend on $s\in (\rho ,r)$ at all. Hence $q$ and $R$ are defined on $\Delta '\times \Delta $, and they are holomorphic by differentiation under the integral sign. The difference quotient $(P(z',\zeta )-P(z',w))/(\zeta -w)$ is a polynomial in $w$ of degree $m-1$ whose coefficients are polynomials in $\zeta $ and in the $a_ j(z')$; hence $R$ is a polynomial in $w$ of degree less than $m$ with holomorphic coefficients on $\Delta '$. Adding the two integrals, we obtain $Pq+R=(2\pi \mathrm i)^{-1}\int _{|\zeta |=s}f(z',\zeta )(\zeta -w)^{-1}\, \mathrm d\zeta =f$ by Cauchy's formula. 
+    <p>
+      For the estimate, let $f$ be bounded, and fix $s_0=(\rho +r)/2$. For $|\zeta |\geq s_0$ we have $|P(z',\zeta )|=\prod _ l|\zeta -\lambda _ l(z')|\geq (s_0-\rho )^ m$, where $\lambda _ l(z')$ are the roots, and the coefficients of the difference quotient are bounded for $z'\in \Delta '$, $|\zeta |=s_0$ and $|w|&lt;r$, since the $a_ j$ are bounded on $\Delta '$. The integral over $|\zeta |=s_0$ therefore gives $|R|\leq C_1\sup |f|$ on $\Delta '\times \Delta $. For $s_0\leq |w|&lt;r$ we have $|q|=|f-R|/|P|\leq (1+C_1)(s_0-\rho )^{-m}\sup |f|$, and the maximum principle for the holomorphic functions $q(z',\cdot )$ on the discs $\{ |w|\leq s\} $, $s_0\leq s&lt;r$, extends this bound to all of $\Delta '\times \Delta $. 
+    <p>
+      For uniqueness, suppose that $Pq+R=0$ on a polydisc as above, with $R$ a polynomial in $w$ of degree less than $m$. For each $z'$, the polynomial $R(z',\cdot )=-P(z',\cdot )q(z',\cdot )$ vanishes at the $m$ roots of $P(z',\cdot )$, counted with multiplicity, all of which lie in $\Delta $. Its degree is less than $m$, so $R(z',\cdot )=0$. Then $P(z',\cdot )q(z',\cdot )=0$, and since $P(z',\cdot )$ has only finitely many zeros, the continuous function $q(z',\cdot )$ vanishes on a dense set, hence everywhere. Finally, every germ is represented by a bounded holomorphic function on some polydisc as above, and an identity between germs holds on some such polydisc; so the assertions for germs follow. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+The first consequence of division is the Noetherian property of $\mathcal O_ n$. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-CE2A1B12">
+<p><a class="environment-identifier" href="../../tag/4B4DFDFC5DBA/">Proposition <span data-tag="CE2A1B12">A.1.2</span>.</a><span data-gerby-tag="CE2A1B12"></span> Every ideal of $\mathcal O_ n$ is finitely generated, and every submodule of $\mathcal O_ n^ r$, $r\geq 1$, is finitely generated. Consequently, every increasing sequence of ideals of $\mathcal O_ n$, or of submodules of a finitely generated $\mathcal O_ n$-module, is eventually constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first recall three algebraic facts about a commutative ring $\Lambda $ all of whose ideals are finitely generated. Every submodule $N$ of $\Lambda ^ r$ is finitely generated, by induction on $r$: the projection of $N$ to the last coordinate is an ideal; choose elements of $N$ whose last coordinates generate it, and add generators of $N\cap (\Lambda ^{r-1}\times \{ 0\} )$, which exist by the induction hypothesis. A finitely generated module is a quotient of some $\Lambda ^ r$, and the inverse image of a submodule is a submodule of $\Lambda ^ r$; hence submodules of finitely generated modules are finitely generated. Finally, the union of an increasing sequence of submodules is a submodule; its finitely many generators already lie in one member of the sequence, which is therefore stationary from then on. 
+    <p>
+      It remains to prove that the ideals of $\mathcal O_ n$ are finitely generated, which we do by induction on $n$. The ring $\mathcal O_0=\mathbb C$ is a field. Let $n\geq 1$ and let $I\subset \mathcal O_ n$ be an ideal. If $I=0$ or $I$ contains a unit, it is generated by one element. Otherwise choose a nonzero germ in $I$, and coordinates in which it is distinguished in $w$. By the preparation theorem it is a unit times a Weierstrass polynomial $P$ of some degree $m\geq 1$, and $P\in I$. Divide every $f\in I$ by $P$ using proposition <a data-tag="681BB46B" href="../../tag/611958EF0AB8/">A.1.1</a>; the remainder $R_ f=f-Pq$ again belongs to $I$. The remainders of degree less than $m$ that lie in $I$ form an $\mathcal O_{n-1}$-submodule of $\mathcal O_{n-1}[w]$, which we identify, through their coefficients, with a submodule of $\mathcal O_{n-1}^ m$. By the induction hypothesis and the first paragraph, it is generated by finitely many remainders $R_1,\ldots ,R_ k$. Then $P,R_1,\ldots ,R_ k$ generate $I$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Division also factors a monic polynomial near each of its roots. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-8F61842D">
+<p><a class="environment-identifier" href="../../tag/C47992939550/">Lemma <span data-tag="8F61842D">A.1.3</span>.</a><span data-gerby-tag="8F61842D"></span> Let $n\geq 1$, let $P(z',w)=w^\mu +a_1(z')w^{\mu -1}+\cdots +a_\mu (z')$ be a monic polynomial in $w$ whose coefficients are holomorphic near a point $x'\in \mathbb C^{n-1}$, and let $w_0$ be a root of multiplicity $\mu '\geq 1$ of $P(x',\cdot )$. Then, near $x=(x',w_0)$, </p>
+<div class="equation">
+  \[  P=P_ xQ_ x,  \]
+</div>
+<p> where $P_ x$ is a Weierstrass polynomial of degree $\mu '$ in $w-w_0$ with respect to the coordinates $(z'-x',w-w_0)$, and $Q_ x$ is a monic polynomial of degree $\mu -\mu '$ in $w$ with coefficients holomorphic near $x'$ and $Q_ x(x)\neq 0$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In the coordinates $(z'-x',w-w_0)$ centered at $x$, the function $w\mapsto P(x',w)$ has a zero of order $\mu '$ at $w_0$. By the Weierstrass preparation theorem (theorem <a data-tag="36E97251" href="../../tag/F54A645FF399/">7.4.2</a>), $P$ is, near $x$, a nowhere vanishing holomorphic function $U$ times a Weierstrass polynomial $P_ x$ of degree $\mu '$ in $w-w_0$. Since $P_ x$ is monic in $w$, Euclidean division of the polynomial $P$ by $P_ x$, with coefficients holomorphic near $x'$, gives $P=P_ xQ+R$, where $Q$ is a monic polynomial of degree $\mu -\mu '$ in $w$ and $R$ is a polynomial in $w$, equivalently in $w-w_0$, of degree less than $\mu '$. The identities $P=P_ xQ+R$ and $P=P_ xU+0$ are two divisions of the germ of $P$ at $x$ by $P_ x$; by the uniqueness in proposition <a data-tag="681BB46B" href="../../tag/611958EF0AB8/">A.1.1</a>, applied in the coordinates centered at $x$, we get $Q=U$ near $x$ and $R=0$. Hence $Q_ x=Q$ has the required properties, with $Q_ x(x)=U(x)\neq 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+We use sheaves in the following elementary form. A sheaf $\mathcal F$ of modules on a topological space assigns to each open set $U$ a module $\mathcal F(U)$ of sections, with restriction maps, such that sections that agree locally are equal and compatible local sections glue. The stalk $\mathcal F_ x$ consists of the germs at $x$ of sections defined near $x$. Kernels and images of morphisms of sheaves are defined stalkwise, and a sequence of morphisms is exact if it is exact on every stalk; in particular, a section of the image of a morphism is, near each point, the image of a section of the source. Similarly, the quotient $\mathcal S/\mathcal F$ of a sheaf of modules by a subsheaf has the stalks $\mathcal S_ x/\mathcal F_ x$, and its sections are the families of classes that are, near each point, the classes of a section of $\mathcal S$; so sections of $\mathcal S/\mathcal F$ can be lifted locally to sections of $\mathcal S$. The cokernel of a morphism is the quotient of its target by its image. 
+</p>
+<p>
+Let $\mathcal A$ be a sheaf of rings and $\mathcal F$ a sheaf of $\mathcal A$-modules. We say that $\mathcal F$ is <em>locally finitely generated</em> if every point has a neighborhood $U$ and finitely many sections $s_1,\ldots ,s_ p\in \mathcal F(U)$ whose germs generate $\mathcal F_ y$ over $\mathcal A_ y$ for every $y\in U$. This requires one family of generators on a whole neighborhood, not merely finite generation of each stalk. The <em>sheaf of relations</em> of sections $s_1,\ldots ,s_ p\in \mathcal F(U)$ is the kernel of the morphism $\mathcal A^ p|_ U\to \mathcal F|_ U$, $(a_ i)\mapsto \sum _ ia_ is_ i$. The sheaf $\mathcal F$ is <em>coherent</em> if it is locally finitely generated and the sheaf of relations of every finite family of sections over every open set is locally finitely generated.  
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-1EC81EA8">
+<p><a class="environment-identifier" href="../../tag/4AA3D030C896/">Lemma <span data-tag="1EC81EA8">A.1.4</span>.</a><span data-gerby-tag="1EC81EA8"></span> Let $\mathcal A$ be a sheaf of rings. Kernels, images and cokernels of morphisms between coherent $\mathcal A$-modules are coherent. If two of the three sheaves in an exact sequence $0\to \mathcal F\to \mathcal S\to \mathcal G\to 0$ of $\mathcal A$-modules are coherent, so is the third. Finite direct sums of coherent sheaves are coherent. If $\mathcal A$ is coherent as a module over itself, every locally finitely generated $\mathcal A$-submodule of $\mathcal A^ r$ is coherent. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      A locally finitely generated submodule of a coherent sheaf is coherent, because its sections have the same relations when they are regarded as sections of the larger sheaf. The image of a morphism from a coherent sheaf is locally generated by the images of local generators of the source, so the image of a morphism between coherent sheaves is coherent. For the kernel of a morphism $\phi \colon \mathcal F\to \mathcal G$ between coherent sheaves, choose local generators $F_1,\ldots ,F_ p$ of $\mathcal F$ and local generators $R_ j=(R_{j1},\ldots ,R_{jp})$ of the relations of $\phi (F_1),\ldots ,\phi (F_ p)$. If $\sum _ ia_ iF_ i$ lies in the kernel, then $(a_ i)$ is a relation of the $\phi (F_ i)$, hence a combination of the $R_ j$; so the sections $\sum _ iR_{ji}F_ i$ generate the kernel, which is therefore coherent. 
+    <p>
+      Let $\mathcal F\subset \mathcal S$ be coherent sheaves and consider $\mathcal G=\mathcal S/\mathcal F$; this covers cokernels, because images are coherent. Local generators of $\mathcal S$ map to local generators of $\mathcal G$. Given sections $G_1,\ldots ,G_ p$ of $\mathcal G$, lift them locally to sections $S_1,\ldots ,S_ p$ of $\mathcal S$, and choose local generators $F_1,\ldots ,F_ k$ of $\mathcal F$. A tuple $(a_ i)$ is a relation of the $G_ i$ exactly when $\sum _ ia_ iS_ i\in \mathcal F$, that is, when $(a,b)$ is a relation of $(S_1,\ldots ,S_ p,F_1,\ldots ,F_ k)$ in $\mathcal S$ for some $b$. Hence the projections to the first $p$ coordinates of local generators of the latter relations generate the relations of the $G_ i$, and $\mathcal G$ is coherent. 
+    <p>
+      Now let $\mathcal F$ and $\mathcal G$ be coherent. Local lifts of generators of $\mathcal G$, together with local generators of $\mathcal F$, generate $\mathcal S$. Given sections $S_1,\ldots ,S_ p$ of $\mathcal S$, let $R_1,\ldots ,R_ l$ generate the relations of their images in $\mathcal G$. The combinations $H_ j=\sum _ iR_{ji}S_ i$ lie in $\mathcal F$; let $Q_1,\ldots ,Q_ k$ generate their relations. Every relation $(a_ i)$ of the $S_ i$ is first a relation of their images, so $a=\sum _ jc_ jR_ j$, and then $\sum _ jc_ jH_ j=\sum _ ia_ iS_ i=0$, so $c$ is a combination of $Q_1,\ldots ,Q_ k$. Hence the tuples $\sum _ jQ_{\nu j}R_ j$, $1\leq \nu \leq k$, which are relations of the $S_ i$, generate all of them, and $\mathcal S$ is coherent. The remaining case of the exact sequence, with $\mathcal S$ and $\mathcal G$ coherent, is the kernel case. A finite direct sum is an extension $0\to \mathcal F\to \mathcal F\oplus \mathcal G\to \mathcal G\to 0$. Finally, if $\mathcal A$ is coherent, so is $\mathcal A^ r$, and the last assertion follows from the first sentence of the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-1EC19B8B">
+<p><a class="environment-identifier" href="../../tag/F28642698B29/">Theorem <span data-tag="1EC19B8B">A.1.5</span> <span class="named">(Oka's coherence theorem)</span>.</a><span data-gerby-tag="1EC19B8B"></span> The sheaf $\mathcal O_ M$ of holomorphic functions on a complex manifold $M$ is coherent. In particular, the kernel of the morphism $\mathcal O_ U^ q\to \mathcal O_ U^ p$ defined by a $p\times q$ matrix of holomorphic functions on an open set $U\subset M$ is locally finitely generated. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The sheaf $\mathcal O_ M$ is generated by the constant $1$, and the statement is local, so we must show that the relations of finitely many holomorphic functions $F_1,\ldots ,F_ q$ near a point of $\mathbb C^ n$, which we take to be the origin, are locally finitely generated. We argue by induction on $n$: we reduce to relations that are polynomials in one variable of bounded degree, and apply the induction hypothesis to their coefficients. For $n=0$ the assertion is finite-dimensional linear algebra. Let $n\geq 1$. If the germ of some $F_ j$ at $0$ is zero, then $F_ j$ vanishes on a connected neighborhood, and the relations of the $F_ i$ are those of the remaining functions, with an arbitrary $j$th coordinate; so we may assume that no germ $F_ j$ is zero (if all are zero, every tuple is a relation). Choose coordinates $(z',w)$ in which all $F_ j$ are distinguished in $w$. By the preparation theorem, on a small polydisc each $F_ j$ is a holomorphic unit $u_ j$ times a Weierstrass polynomial; since $(g_ j)$ is a relation of the $F_ j$ exactly when $(u_ jg_ j)$ is a relation of the Weierstrass polynomials, we may assume that each $F_ j$ is a Weierstrass polynomial in $w$ whose coefficients are holomorphic on a polydisc $\Delta '\subset \mathbb C^{n-1}$. Renumbering, let $F_ q$ have the maximal degree $\mu $. 
+    <p>
+      We claim that at every point $x=(x',w_0)$ of the polydisc, the stalk of relations is generated by relations whose coordinates are polynomials in $w$ of degree at most $\mu $ with coefficients holomorphic near $x'$. If $F_ q(x)\neq 0$, then for a relation $g=(g_1,\ldots ,g_ q)$ we have $g_ q=-\sum _{j&lt;q}g_ jF_ j/F_ q$, so $g=\sum _{j&lt;q}(g_ j/F_ q)(F_ qe_ j-F_ je_ q)$ is a combination of the elementary relations $F_ qe_ j-F_ je_ q$, which are polynomial of degree at most $\mu $. Suppose that $F_ q(x)=0$, and let $\mu '\geq 1$ be the order of the root $w_0$ of $F_ q(x',\cdot )$. By lemma <a data-tag="8F61842D" href="../../tag/C47992939550/">A.1.3</a>, near $x$ the monic polynomial $F_ q$ is the product of a Weierstrass polynomial $P_ x$ of degree $\mu '$ in $w-w_0$ and a monic polynomial $Q_ x$ in $w$ of degree $\mu -\mu '$: 
+    
+<div class="equation">
+  \[  F_ q=P_ xQ_ x,\qquad Q_ x(x)\neq 0.  \]
+</div>
+<p>
+       Let $g$ be a relation at $x$. Dividing each $g_ j$, $j&lt;q$, by $P_ x$ (proposition <a data-tag="681BB46B" href="../../tag/611958EF0AB8/">A.1.1</a>) and writing $P_ x=F_ qQ_ x^{-1}$, we obtain $g_ j=F_ qt_ j+r_ j$ with $\deg _ wr_ j&lt;\mu '$. Subtracting $\sum _{j&lt;q}t_ j(F_ qe_ j-F_ je_ q)$ from $g$, we obtain a relation whose first $q-1$ coordinates are $r_1,\ldots ,r_{q-1}$; we call its last coordinate $r_ q$. Then 
+    
+<div class="equation">
+  \[  P_ xQ_ xr_ q=-\sum _{j&lt;q}F_ jr_ j.  \]
+</div>
+<p>
+       The right-hand side is a polynomial in $w$; dividing it by $P_ x$ as a polynomial and comparing with the uniqueness of division at $x$, we find that $Q_ xr_ q$ is a polynomial of degree less than $\mu $. Each $Q_ xr_ j$, $j&lt;q$, is also a polynomial of degree at most $(\mu -\mu ')+(\mu '-1)&lt;\mu $. Thus $(Q_ xr_1,\ldots ,Q_ xr_ q)$ is a polynomial relation of degree less than $\mu $, and $(r_ j)$ is its product with the unit $Q_ x^{-1}$. This proves the claim. 
+    <p>
+      A tuple of polynomials $g_ j=\sum _{k=0}^{\mu }c_{jk}(z')w^ k$ is a relation exactly when the $2\mu +1$ coefficients of the polynomial $\sum _ jF_ jg_ j$ vanish. These coefficients are given by a holomorphic matrix acting on the coefficient vectors $(c_{jk})$, with entries formed from the coefficients of the $F_ j$. By the induction hypothesis and lemma <a data-tag="1EC81EA8" href="../../tag/4AA3D030C896/">A.1.4</a>, the kernel of this matrix is coherent, so it has finitely many generators on a smaller polydisc $\Delta '_1$, generating its stalk at every point of $\Delta '_1$. The corresponding polynomial tuples are relations of the $F_ j$, and they generate, over the rings of germs on the base, all polynomial relations of degree at most $\mu $ at every point over $\Delta '_1$. By the claim, they generate all relations at every point of the polydisc over $\Delta '_1$. This proves that $\mathcal O_ M$ is coherent. The last assertion follows from lemma <a data-tag="1EC81EA8" href="../../tag/4AA3D030C896/">A.1.4</a>, since the kernel of a morphism between the coherent sheaves $\mathcal O_ U^ q$ and $\mathcal O_ U^ p$ is coherent. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+We now turn to the zero sets of holomorphic functions. An <em>analytic subset</em> of a complex manifold $M$ (definition <a data-tag="76F27E8E" href="../../tag/42A02A1A5EFE/">7.1.1</a>) is a closed subset $A\subset M$ such that every point of $M$ has a neighborhood $U$ and finitely many holomorphic functions $g_1,\ldots ,g_ k$ on $U$ with $A\cap U=\{ g_1=\cdots =g_ k=0\} $. It is <em>proper</em> if $A\neq M$.  
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-AAD5DED2">
+<p><a class="environment-identifier" href="../../tag/4D71178D595A/">Lemma <span data-tag="AAD5DED2">A.1.6</span>.</a><span data-gerby-tag="AAD5DED2"></span> Let $A$ be a proper analytic subset of a connected complex manifold $M$. Then $A$ is nowhere dense in $M$. Moreover, if $U\subset M$ is a nonempty connected open set and $g_1,\ldots ,g_ k$ are holomorphic functions on $U$ with $A\cap U=\{ g_1=\cdots =g_ k=0\} $, then some $g_ i$ is not identically zero on $U$. In particular, every point of $A$ has a connected open neighborhood $U$ with a holomorphic function $g\not\equiv 0$ on $U$ such that $A\cap U\subset \{ g=0\} $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The interior of $A$ is open, and we show that it is closed in $M$. Let $a\in M$ be a limit of interior points of $A$, and choose a connected coordinate neighborhood $U$ of $a$ and functions $g_1,\ldots ,g_ k$ with $A\cap U=\{ g_1=\cdots =g_ k=0\} $. Each $g_ i$ vanishes on a nonempty open subset of $U$, hence on $U$ by the identity theorem; so $U\subset A$, and $a$ is an interior point. Since $M$ is connected and $A\neq M$, the interior of $A$ is empty. In the second assertion, if all $g_ i$ vanished identically on $U$, the nonempty open set $U$ would lie in $A$, contradicting the first. For the third, take for $U$ a connected coordinate ball on which $A$ is the common zero set of finitely many holomorphic functions, and for $g$ one of them that is not identically zero, which exists by the second assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+We recall some algebraic terminology. The <em>field of fractions</em> $\operatorname {Frac}(R)$ of an integral domain $R$ consists of the formal quotients $b/c$ with $b,c\in R$ and $c\neq 0$, where $b/c=b'/c'$ if $bc'=b'c$, with the usual addition and multiplication; it contains $R$ through $b\mapsto b/1$. More generally, the <em>total ring of fractions</em> of a commutative ring $R$ is defined in the same way, with denominators restricted to the nonzerodivisors of $R$. An element of a commutative ring containing $R$ is <em>integral</em> over $R$ if it is a root of a monic polynomial with coefficients in $R$, and $R$ is <em>integrally closed</em> if every element of $\operatorname {Frac}(R)$ that is integral over $R$ belongs to $R$.  
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-19C933BE">
+<p><a class="environment-identifier" href="../../tag/AA4164301998/">Lemma <span data-tag="19C933BE">A.1.7</span>.</a><span data-gerby-tag="19C933BE"></span> Let $A$ be a proper analytic subset of a connected complex manifold $M$. Every holomorphic function on $M\setminus A$ which is locally bounded near $A$ extends uniquely to a holomorphic function on $M$, and $M\setminus A$ is connected. Moreover, let $b,c\in \mathcal O_ n$ with $c\neq 0$, and suppose that representatives satisfy $|b|\leq C|c|$ on a neighborhood of $0$ for a constant $C$. Then $b\in c\, \mathcal O_ n$. In particular, the ring $\mathcal O_ n$ is integrally closed. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $f$ be holomorphic on $M\setminus A$ and locally bounded near $A$. If $\dim M=0$, then $A=\varnothing $ and there is nothing to prove. Fix $a\in A$. By lemma <a data-tag="AAD5DED2" href="../../tag/4D71178D595A/">A.1.6</a> there is a holomorphic function $g\not\equiv 0$ on a connected neighborhood of $a$ vanishing on $A$; choose linear coordinates $(z',w)$ centered at $a$ in which $g$ is distinguished in $w$. By the Weierstrass preparation theorem and (<a data-tag="1F95143C" href="../../tag/667706D7A5E8/">A.1</a>), there is a polydisc $\Delta '\times \Delta $ centered at $a$, with $\Delta =\{ |w|&lt;r\} $, on which $g$ is a unit times a Weierstrass polynomial $W$ and $f$ is bounded off $A$, such that all roots of $W(z',\cdot )$, $z'\in \Delta '$, have modulus at most some $\rho &lt;r$. For fixed $z'\in \Delta '$, the function $f(z',\cdot )$ is holomorphic on $\Delta $ outside the finitely many points of $A$ in the fiber, which are roots of $W(z',\cdot )$, and it is bounded near them; by the removable singularity theorem in one variable it extends holomorphically to $\Delta $. For $\rho &lt;s&lt;r$ the function 
+    
+<div class="equation">
+  \[  F(z',w)=\frac1{2\pi \mathrm i}\int _{|\zeta |=s}\frac{f(z',\zeta )}{\zeta -w}\, \mathrm d\zeta ,\qquad z'\in \Delta ',\  |w|&lt;s,  \]
+</div>
+<p>
+       is holomorphic, by differentiation under the integral sign, since $f$ is holomorphic near $\Delta '\times \{ |\zeta |=s\} $, a set disjoint from $A$. By Cauchy's formula for the extended functions $f(z',\cdot )$, it agrees with $f$ outside $A$. Letting $s\uparrow r$, we obtain a holomorphic extension of $f$ to $\Delta '\times \Delta $. Since $A$ is nowhere dense, two holomorphic extensions on overlapping open sets agree, being continuous functions that coincide on a dense subset; so the local extensions glue to a holomorphic function on $M$, and this extension is unique. 
+    <p>
+      If $M\setminus A$ were disconnected, the function equal to $0$ on one nonempty union of its connected components and to $1$ on the others would be bounded and holomorphic on $M\setminus A$. Its holomorphic extension is continuous and takes values in $\{ 0,1\} $ on the dense set $M\setminus A$, hence everywhere; since $M$ is connected, it is constant, a contradiction. 
+    <p>
+      Now let $b,c\in \mathcal O_ n$, $c\neq 0$, with $|b|\leq C|c|$ on a connected neighborhood $U$ of the origin on which both are defined. The set $\{ c=0\} $ is a proper analytic subset of $U$, and the holomorphic function $b/c$ on $U\setminus \{ c=0\} $ is bounded by $C$. By the first part it extends to a holomorphic function $h$ on $U$, and $ch=b$ on the dense set $U\setminus \{ c=0\} $, hence on $U$; so $b\in c\, \mathcal O_ n$. Finally, let $b/c\in \operatorname {Frac}(\mathcal O_ n)$, with $c\neq 0$, satisfy a monic equation $(b/c)^ m+a_1(b/c)^{m-1}+\cdots +a_ m=0$ with $a_ j\in \mathcal O_ n$. Multiplying by $c^ m$, we obtain the identity $b^ m+a_1b^{m-1}c+\cdots +a_ mc^ m=0$ between germs, which holds on a connected neighborhood of $0$ on which the $a_ j$ are bounded. At the points of this neighborhood where $c\neq 0$, the number $b/c$ is a root of a monic polynomial with bounded coefficients, so $|b/c|$ is bounded there by (<a data-tag="1F95143C" href="../../tag/667706D7A5E8/">A.1</a>); at the points where $c=0$ the identity gives $b^ m=0$. Hence $|b|\leq C|c|$ on this neighborhood for some constant $C$, and by what we have just proved, $b/c\in \mathcal O_ n$, which proves that $\mathcal O_ n$ is integrally closed. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

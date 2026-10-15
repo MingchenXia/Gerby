@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Unitarily invariant measures · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/measures-distributions/">Chapter 2 · Measures, distributions, and convergence</a> · Tag <code>5254DB7AD29F</code></p><h1>Unitarily invariant measures</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 6.3 Unitarily invariant measures <span data-gerby-tag="B130EEA6"></span></div>
+<p>
+  The incidence argument outlined at the beginning of the chapter averages over complex directions and over complex hyperplanes, so we need invariant probability measures on complex projective space and on the Grassmannian of hyperplanes. We construct them from the Gaussian measure on matrices, compute the measure of small balls in projective space, and introduce orthonormal frames on hyperplanes that depend on the hyperplane in a Borel way. 
+</p>
+<p>
+We identify $\mathbb C^ n$ with $\mathbb R^{2n}$ and write $\langle z,w\rangle =\sum _ jz_ j\overline{w_ j}$ for the Hermitian inner product, so that the Euclidean inner product is $\operatorname{Re}\langle z,w\rangle $. The unitary group $\mathrm U(n)$ consists of the complex $n\times n$ matrices $U$ with $U^*U=1$, where $U^*$ is the conjugate transpose; it is compact, being closed and bounded in the space of matrices. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-F30923C2">
+<p><a class="environment-identifier" href="../../tag/D01DFDB6AE9A/">Proposition <span data-tag="F30923C2">6.3.1</span>.</a><span data-gerby-tag="F30923C2"></span> There is a Borel probability measure $\eta $ on $\mathrm U(n)$ that is invariant under left and right multiplication by elements of $\mathrm U(n)$. Let $Y$ be a nonempty metric space on which $\mathrm U(n)$ acts continuously and transitively. Then $Y$ is compact, and it carries a unique $\mathrm U(n)$-invariant Borel probability measure; for every $y_0\in Y$, this measure is the image of $\eta $ under the map $g\mapsto gy_0$. In particular, the unit sphere of $\mathbb C^ n$ and the complex Grassmannians described below carry unique unitarily invariant probability measures. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Identify the space of complex $n\times n$ matrices with $\mathbb R^{2n^2}$ through the real and imaginary parts of the entries, and let $\gamma $ be the measure on it with density $\mathrm e^{-\pi \operatorname {tr}(X^*X)}$ with respect to Lebesgue measure. Since $\operatorname {tr}(X^*X)=\sum _{j,k}|X_{jk}|^2$, this density is the Gaussian $\mathrm e^{-\pi |x|^2}$ on $\mathbb R^{2n^2}$, so $\gamma $ is a probability measure by lemma <a data-tag="3A412CED" href="../../tag/A976F203FD66/">6.1.1</a> (with $\xi =0$ and $t=1$). The singular matrices form a $\gamma $-null set: they are the zero set of the real polynomial $|\det X|^2$, which is not identically zero since $\det 1=1$, and the zero set of such a polynomial is Lebesgue null. 
+    <p>
+      To prove the last fact, let $P$ be a real polynomial in $m\geq 1$ variables that is not identically zero; we argue by induction on $m$. If $m=1$, the zero set is finite. If $m\geq 2$, write $P=\sum _ kc_ k(x')x_ m^ k$ as a polynomial in the last variable, with coefficients $c_ k$ that are polynomials in $x'=(x_1,\ldots ,x_{m-1})$. Some $c_ k$ is not identically zero, so by induction the common zero set $Z'$ of the coefficients is null in $\mathbb R^{m-1}$. For $x'\notin Z'$, the polynomial $P(x',\cdot )$ is not identically zero and has finitely many zeros. By Tonelli's theorem applied to the indicator function of the closed set $\{ P=0\} $, this set is null. 
+    <p>
+      For invertible $X$ define 
+    
+<div class="equation">
+  \[  Q(X)=X(X^*X)^{-1/2},  \]
+</div>
+<p>
+       where $(X^*X)^{1/2}$ is the positive square root of the positive definite matrix $X^*X$. By the spectral theorem for Hermitian matrices, this square root exists and is unique. It depends continuously on the matrix. Indeed, let $A_ k\to A$ be positive definite matrices. The square roots $A_ k^{1/2}$ are bounded, since $\operatorname {tr}(A_ k^{1/2}A_ k^{1/2})=\operatorname {tr}A_ k$. Every convergent subsequence of them has a positive semidefinite limit $S$ with $S^2=A$; then $S$ is invertible, hence positive definite, and $S=A^{1/2}$ by uniqueness. A bounded sequence of matrices all of whose convergent subsequences have the same limit converges to it, so $A_ k^{1/2}\to A^{1/2}$. Since inversion is continuous on invertible matrices, $Q$ is continuous on the open set of invertible matrices, and $Q(X)^*Q(X)=(X^*X)^{-1/2}X^*X(X^*X)^{-1/2}=1$. Let $\eta $ be the image under $Q$ of the restriction of $\gamma $ to the invertible matrices; it is a Borel probability measure on $\mathrm U(n)$. 
+    <p>
+      Fix $U,V\in \mathrm U(n)$. The map $X\mapsto UXV$ is real linear and preserves $\operatorname {tr}(X^*X)$, so it is orthogonal on $\mathbb R^{2n^2}$ and preserves $\gamma $. By uniqueness of positive square roots, $(V^*X^*XV)^{1/2}=V^*(X^*X)^{1/2}V$, and therefore $Q(UXV)=UQ(X)V$. Consequently the image of $\eta $ under $g\mapsto UgV$ is the image of $\gamma $ under $X\mapsto Q(UXV)$, which is $\eta $ because $X\mapsto UXV$ preserves $\gamma $. This proves the invariance of $\eta $ on both sides. 
+    <p>
+      Now let $Y$ be as in the statement and fix $y_0\in Y$. By transitivity, $Y$ is the image of the compact space $\mathrm U(n)$ under the continuous map $g\mapsto gy_0$, so $Y$ is compact, and hence separable. Let $\sigma $ be the image of $\eta $ under $g\mapsto gy_0$. For $h\in \mathrm U(n)$, the image of $\sigma $ under $h$ is the image of $\eta $ under $g\mapsto hgy_0$, which is $\sigma $ by left invariance; thus $\sigma $ is invariant. Let $f$ be continuous on $Y$. Every $y\in Y$ has the form $hy_0$, by transitivity, and right invariance gives 
+    
+<div class="equation">
+  \[  \int f(gy)\, \mathrm d\eta (g)=\int f(ghy_0)\, \mathrm d\eta (g)=\int f\, \mathrm d\sigma .  \]
+</div>
+<p>
+       Let $\tau $ be any invariant Borel probability measure on $Y$. We integrate the last identity against $\tau $ and apply Fubini's theorem to the bounded continuous function $(g,y)\mapsto f(gy)$ on $\mathrm U(n)\times Y$, which is product-measurable by lemma <a data-tag="7AE4FB12" href="../../tag/9F2BA6481FD8/">1.1.8</a> because $\mathrm U(n)$ and $Y$ are separable metric spaces. We obtain 
+    
+<div class="equation">
+  \[  \int f\, \mathrm d\sigma =\int _{\mathrm U(n)}\int _ Yf(gy)\, \mathrm d\tau (y)\, \mathrm d\eta (g)=\int f\, \mathrm d\tau .  \]
+</div>
+<p>
+       Thus $\sigma $ and $\tau $ agree on continuous functions. For a nonempty closed set $F\subset Y$, the continuous functions $\max \{ 0,1-j\operatorname {dist}(y,F)\} $ decrease to $\mathbf1_ F$, so dominated convergence gives $\sigma (F)=\tau (F)$. The closed sets are stable under finite intersections and generate the Borel $\sigma $-algebra, so lemma <a data-tag="8C97E40C" href="../../tag/97A1ECFF2340/">1.1.6</a>(2) gives $\sigma =\tau $. In particular $\sigma $ does not depend on $y_0$. 
+    <p>
+      Finally, $\mathrm U(n)$ acts continuously on the unit sphere of $\mathbb C^ n$, and transitively: every unit vector is the first column of a unitary matrix, obtained by completing it to an orthonormal basis with the Gram–Schmidt process. For the Grassmannians, these properties are verified below, where they are introduced. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></article>
+<p>
+For an integer $0\leq k\leq n$, we realize the complex Grassmannian $\mathrm{Gr}_{\mathbb C}(k,n)$ of $k$-dimensional complex subspaces of $\mathbb C^ n$ as the set of Hermitian matrices $P$ with $P^2=P$ and $\operatorname {tr}P=k$. By the spectral theorem, such a matrix has the eigenvalues $0$ and $1$ only, so it is the orthogonal projection onto its image, which has dimension $\operatorname {tr}P=k$; conversely, the orthogonal projection onto a $k$-dimensional subspace is such a matrix. The set $\mathrm{Gr}_{\mathbb C}(k,n)$ is closed and bounded, since $\operatorname {tr}(P^*P)=\operatorname {tr}P=k$, and hence compact. The unitary group acts continuously by $P\mapsto UPU^*$, which replaces the image of $P$ by its image under $U$. The action is transitive: given two $k$-dimensional subspaces, choose orthonormal bases of $\mathbb C^ n$ whose first $k$ vectors span them; the unitary matrix carrying one basis to the other maps one subspace onto the other. 
+</p>
+<p>
+Complex projective space $\mathbb P^{n-1}(\mathbb C)$ is the case $k=1$. For $\xi \in \mathbb P^{n-1}(\mathbb C)$ we write $P_\xi $ for the corresponding rank-one projection, and we denote the invariant probability measure on $\mathbb P^{n-1}(\mathbb C)$ by $\sigma $. The Hopf map $q\colon S^{2n-1}\to \mathbb P^{n-1}(\mathbb C)$ sends a unit vector $e$ to the complex line it spans, that is, to the projection $ee^*$. 
+</p>
+<p>
+For $\xi ,\xi '\in \mathbb P^{n-1}(\mathbb C)$ with unit representatives $e,e'$, set 
+</p>
+<div class="equation">
+  \[  d(\xi ,\xi ')=\arccos |\langle e,e'\rangle |\in [0,\pi /2];  \]
+</div>
+<p>
+ this does not depend on the choice of representatives. We claim that $d$ is a metric inducing the topology of $\mathbb P^{n-1}(\mathbb C)$. Let $\delta (e,e')=\arccos \operatorname{Re}\langle e,e'\rangle \in [0,\pi ]$ be the angle between two unit vectors, that is, their great-circle distance on $S^{2n-1}$. Since the maximum of $\operatorname{Re}\langle \mathrm e^{\mathrm i\theta }e,e'\rangle $ over $\theta $ is $|\langle e,e'\rangle |$ and $\arccos $ is decreasing, the number $d(\xi ,\xi ')$ is the minimum of $\delta $ over the unit representatives of $\xi $ and $\xi '$. 
+</p>
+<p>
+The angle $\delta $ satisfies the triangle inequality. Indeed, let $e,e',e''$ be unit vectors, put $a=\delta (e,e')$ and $b=\delta (e',e'')$, and write $e=\cos a\, e'+\sin a\, u$ and $e''=\cos b\, e'+\sin b\, w$ with unit vectors $u,w$ orthogonal to $e'$ for the Euclidean inner product. Then $\operatorname{Re}\langle e,e''\rangle =\cos a\cos b+\sin a\sin b\operatorname{Re}\langle u,w\rangle \geq \cos (a+b)$ by the Cauchy–Schwarz inequality. Hence $\delta (e,e'')\leq a+b$ when $a+b\leq \pi $, and this inequality is trivial when $a+b&gt;\pi $. To deduce the triangle inequality for $d$, fix a unit representative $e'$ of $\xi '$, and choose the representatives $e$ of $\xi $ and $e''$ of $\xi ''$ such that $\delta (e,e')=d(\xi ,\xi ')$ and $\delta (e',e'')=d(\xi ',\xi '')$. Then 
+</p>
+<div class="equation">
+  \[  d(\xi ,\xi '')\leq \delta (e,e'')\leq d(\xi ,\xi ')+d(\xi ',\xi '').  \]
+</div>
+<p>
+ The function $d$ is symmetric, and $d(\xi ,\xi ')=0$ forces equality in the Cauchy–Schwarz inequality $|\langle e,e'\rangle |\leq 1$, hence $\xi =\xi '$. Finally, $\cos ^2d(\xi ,\xi ')=|\langle e,e'\rangle |^2=\operatorname {tr}(P_\xi P_{\xi '})$ depends continuously on the two projections. Therefore the identity map from $\mathbb P^{n-1}(\mathbb C)$, with its compact matrix topology, to the metric space $(\mathbb P^{n-1}(\mathbb C),d)$ is a continuous bijection onto a Hausdorff space, hence a homeomorphism. Since $q$ is a continuous surjection from a compact space onto a Hausdorff space, this topology is also the quotient topology of the Hopf map. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-06504FE2">
+<p><a class="environment-identifier" href="../../tag/80451E036222/">Lemma <span data-tag="06504FE2">6.3.2</span>.</a><span data-gerby-tag="06504FE2"></span> Let $n\geq 1$, $0&lt;a\leq \pi /2$ and $\xi _0\in \mathbb P^{n-1}(\mathbb C)$. Then </p>
+<div class="equation">
+  \[  \sigma \{ \xi :d(\xi ,\xi _0)&lt;a\} =(\sin a)^{2n-2}.  \]
+</div>
+<p> In particular, this ball has $\sigma $-measure at most $a^{2n-2}$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $n=1$, then $\mathbb P^0(\mathbb C)$ is a single point, and both sides equal $1$; so let $n\geq 2$. Let $\gamma $ be the probability measure on $\mathbb C^ n=\mathbb R^{2n}$ with density $\mathrm e^{-\pi |z|^2}$. Unitary maps are orthogonal on $\mathbb R^{2n}$, so they preserve Lebesgue measure and $|z|$; hence $\gamma $ is unitarily invariant. Moreover $\gamma (\{ 0\} )=0$. The map $z\mapsto \mathbb Cz$ from $\mathbb C^ n\setminus \{ 0\} $ to $\mathbb P^{n-1}(\mathbb C)$, that is, $z\mapsto zz^*/|z|^2$, is continuous and commutes with the action of $\mathrm U(n)$. Hence the image of $\gamma $ under this map is a unitarily invariant Borel probability measure, and by the uniqueness in proposition <a data-tag="F30923C2" href="../../tag/D01DFDB6AE9A/">6.3.1</a> it is $\sigma $. 
+    <p>
+      The metric $d$ is unitarily invariant, because unitary matrices preserve $\langle \cdot ,\cdot \rangle $. Since $\sigma $ is invariant and the unitary group acts transitively, we may therefore take $\xi _0=\mathbb Ce_1$, the first coordinate line. Write $z=(z_1,z')$ with $z'\in \mathbb C^{n-1}$. For the line $\xi =\mathbb Cz$, the condition $d(\xi ,\xi _0)&lt;a$ means $|z_1|&gt;\cos a\, |z|$, because $\arccos $ is strictly decreasing; that is, $|z_1|^2\sin ^2a&gt;\cos ^2a\, |z'|^2$, or $|z_1|^2&gt;\cot ^2a\, |z'|^2$, where $\cot (\pi /2)=0$. Thus the preimage of the ball under $z\mapsto \mathbb Cz$ is the set of $z\neq 0$ with $|z_1|^2&gt;\cot ^2a\, |z'|^2$. We compute its $\gamma $-measure by Fubini's theorem, integrating first in $z_1$. For $c\geq 0$, polar coordinates in $\mathbb C$ give 
+    
+<div class="equation">
+  \[  \int _{\{ w\in \mathbb C:|w|^2&gt;c\} }\mathrm e^{-\pi |w|^2}\, \mathrm d w=2\pi \int _{\sqrt c}^\infty r\mathrm e^{-\pi r^2}\, \mathrm d r=\mathrm e^{-\pi c},  \]
+</div>
+<p>
+       and we apply this with $c=\cot ^2a\, |z'|^2$. Using lemma <a data-tag="3A412CED" href="../../tag/A976F203FD66/">6.1.1</a> in $\mathbb C^{n-1}=\mathbb R^{2n-2}$ with $\xi =0$ and $t=1+\cot ^2a$, we obtain 
+    
+<div class="equation">
+  \[  \sigma \{ \xi :d(\xi ,\xi _0)&lt;a\} =\int _{\mathbb C^{n-1}}\mathrm e^{-\pi (1+\cot ^2a)|z'|^2}\, \mathrm d z'=(1+\cot ^2a)^{-(n-1)}=(\sin a)^{2n-2}.  \]
+</div>
+<p>
+       The last assertion follows from $\sin a\leq a$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+We write $\mathcal H=\mathrm{Gr}_{\mathbb C}(n-1,n)$ for the space of complex hyperplanes through the origin in $\mathbb C^ n$, and $\nu $ for its invariant probability measure. For $H\in \mathcal H$, the orthogonal projection $P_ H$ onto $H$ is the matrix representing $H$, and the orthogonal complement $H^\perp $ is a complex line. Let $m_ H$ be the Lebesgue measure of $H$, that is, the image of Lebesgue measure on $\mathbb C^{n-1}=\mathbb R^{2n-2}$ under any complex linear isometry $\mathbb C^{n-1}\to H$. 
+</p>
+<p>
+To integrate functions that depend on $H$, we use orthonormal frames of $H$ that depend on $H$ in a Borel way. Let $e_1,\ldots ,e_ n$ be the standard basis of $\mathbb C^ n$, and order the $(n-1)$-element subsets $I$ of $\{ 1,\ldots ,n\} $. For each $I$, let $W_ I$ be the set of hyperplanes $H$ for which the vectors $P_ He_ i$, $i\in I$, are linearly independent. Since $\langle P_ He_ i,P_ He_ j\rangle =\langle P_ He_ i,e_ j\rangle $, the Gram determinant of these vectors is the principal minor of $P_ H$ with indices in $I$, so $W_ I$ is open. These sets cover $\mathcal H$, because the $n$ vectors $P_ He_1,\ldots ,P_ He_ n$ span the $(n-1)$-dimensional space $H$, so that $n-1$ of them form a basis. Let $W_ I'$ be the Borel set of hyperplanes $H$ for which $I$ is the first index with $H\in W_ I$; these finitely many sets partition $\mathcal H$. For $H\in W_ I'$, the Gram–Schmidt process applied to $(P_ He_ i)_{i\in I}$ gives an orthonormal basis of $H$, and hence a complex linear isometry $T_ H\colon \mathbb C^{n-1}\to H$. 
+</p>
+<p>
+The Gram–Schmidt process depends continuously on linearly independent families, so the map $(H,w)\mapsto T_ Hw$ is continuous on each set $W_ I'\times \mathbb C^{n-1}$. Hence the preimage of an open subset of $\mathbb C^ n$ under this map is a finite union of relatively open subsets of these Borel sets, and $(H,w)\mapsto T_ Hw$ is a Borel map from $\mathcal H\times \mathbb C^{n-1}$ to $\mathbb C^ n$. A map into a product of two separable metric spaces whose components are Borel is Borel, because the preimage of a product of Borel sets is Borel and these products generate the Borel sets of the product (lemma <a data-tag="7AE4FB12" href="../../tag/9F2BA6481FD8/">1.1.8</a>). In particular, $(H,w)\mapsto (H,T_ Hw)$ is a Borel map into $\mathcal H\times \mathbb C^ n$. Consequently, for every nonnegative Borel function $f$ on the closed set $\{ (H,c)\in \mathcal H\times \mathbb C^ n:c\in H\} $, the function 
+</p>
+<div class="equation">
+  \[  H\longmapsto \int _ Hf(H,c)\, \mathrm d m_ H(c)=\int _{\mathbb C^{n-1}}f(H,T_ Hw)\, \mathrm d w  \]
+</div>
+<p>
+ is Borel, by Tonelli's theorem (proposition <a data-tag="D7B34569" href="../../tag/379F54715B13/">1.1.7</a>), applied with respect to $\nu $ and Lebesgue measure to the Borel function $(H,w)\mapsto f(H,T_ Hw)$, which is product-measurable by lemma <a data-tag="7AE4FB12" href="../../tag/9F2BA6481FD8/">1.1.8</a>, since $\mathcal H$ and $\mathbb C^{n-1}$ are separable metric spaces. The value of the integral does not depend on the frame, because a change of orthonormal frame preserves Lebesgue measure. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

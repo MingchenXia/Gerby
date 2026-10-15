@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Poisson kernels and Harnack inequalities · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/classical-potentials/">Chapter 3 · Harmonic and subharmonic functions</a> · Tag <code>9C3CB4CF29A2</code></p><h1>Poisson kernels and Harnack inequalities</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 2.3 Poisson kernels and Harnack inequalities <span data-gerby-tag="4AFF0A80"></span></div>
+<p>
+  Let $D\subset \mathbb R^ d$ be a bounded open set. The <em>Dirichlet problem</em> on $D$ asks, for a given $f\in C(\partial D)$, for a function $h$ which is harmonic on $D$ and continuous on $\overline D$ with $h=f$ on $\partial D$. By proposition <a data-tag="CD09FBEF" href="../../tag/B304785CC98D/">2.1.3</a> it has at most one solution. On a ball $B=B(c,R)$ the solution is given by an explicit integral formula: for $x\in B$ and $\zeta \in \partial B$ put 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-1FE966FD"><span data-gerby-tag="1FE966FD"></span>
+<span class="equation-label"><a data-tag="1FE966FD" href="../../tag/1AF0CC9EF476/">2.14</a></span>
+<div>\begin{equation} \label{eq:ball-poisson-kernel} P_ B(x,\zeta )=\frac{R^2-|x-c|^2}{s_{d-1}R|x-\zeta |^ d}. \end{equation}</div>
+</div>
+<p>
+ This is the Poisson kernel of $B$. In dimension one, $B=(a,b)$, the boundary $\partial B=\{ a,b\} $ carries counting measure and $s_0=2$, so that $P_ B(x,a)=(b-x)/(b-a)$ and $P_ B(x,b)=(x-a)/(b-a)$; the Poisson integral below is then the affine interpolation of the two endpoint values. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-330E7C21">
+<p><a class="environment-identifier" href="../../tag/08ED9D7CF1CF/">Theorem <span data-tag="330E7C21">2.3.1</span>.</a><span data-gerby-tag="330E7C21"></span> Let $B$ be a ball and $f\in C(\partial B)$. The Poisson integral </p>
+<div class="equation">
+  \[  H_ Bf(x)=\int _{\partial B}P_ B(x,\zeta )f(\zeta )\, \mathrm d S(\zeta ),\qquad x\in B,  \]
+</div>
+<p> is the unique harmonic function on $B$ which extends continuously to $\overline B$ with boundary values $f$. The kernel is positive, and $\int _{\partial B}P_ B(x,\zeta )\, \mathrm dS(\zeta )=1$ for every $x\in B$. The operator $H_ B$ is linear, preserves order, and satisfies $\sup _ B|H_ Bf|\leq \max _{\partial B}|f|$. Every function harmonic on a neighborhood of $\overline B$ is the Poisson integral of its restriction to $\partial B$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $d=1$ and $B=(a,b)$, then $H_ Bf$ is the affine function with the values $f(a)$ and $f(b)$ at the endpoints, as noted above. It is harmonic on $B$ and extends continuously to $\overline B$ with boundary values $f$, and the kernel is positive with $P_ B(x,a)+P_ B(x,b)=1$. The remaining assertions are proved below in all dimensions. 
+    <p>
+      Now let $d\geq 2$; after a translation we may assume that $c=0$. Fix $\zeta \in \partial B$ and put $A(x)=R^2-|x|^2$ and $t(x)=|x-\zeta |$ for $x\neq \zeta $. We have $\nabla A=-2x$, $\Delta A=-2d$ and $\nabla t^{-d}=-dt^{-d-2}(x-\zeta )$, and (<a data-tag="81E29763" href="../../tag/9448EDDC2E41/">2.13</a>), applied to $F(t)=t^{-d}$ after translating $\zeta $ to the origin, gives $\Delta t^{-d}=\bigl (d(d+1)-d(d-1)\bigr )t^{-d-2}=2dt^{-d-2}$. By the product rule $\Delta (At^{-d})=(\Delta A)t^{-d}+2\nabla A\cdot \nabla t^{-d}+A\Delta t^{-d}$, and since $t^2=|x|^2-2x\cdot \zeta +|\zeta |^2$, 
+    
+<div class="equation">
+  \[  \Delta (At^{-d})=2dt^{-d-2}\bigl (-t^2+2x\cdot (x-\zeta )+R^2-|x|^2\bigr )=2dt^{-d-2}(R^2-|\zeta |^2)=0.  \]
+</div>
+<p>
+       Thus $P_ B(\cdot ,\zeta )$ is harmonic on $B$ for every $\zeta \in \partial B$. Every partial derivative $\partial _ x^\alpha P_ B(x,\zeta )$ is continuous on $B\times \partial B$, hence bounded on $K\times \partial B$ for each compact set $K\subset B$, where $|x-\zeta |\geq \operatorname {dist}(K,\partial B)&gt;0$. By the mean value theorem and dominated convergence on the finite measure space $(\partial B,S)$, we may therefore differentiate under the integral sign any number of times, so $H_ Bf$ is smooth on $B$ and $\Delta H_ Bf(x)=\int _{\partial B}\Delta _ xP_ B(x,\zeta )f(\zeta )\, \mathrm dS(\zeta )=0$. 
+    <p>
+      Next we show that the kernel has integral one. Taking $f=1$, we see that $I(x)=\int _{\partial B}P_ B(x,\zeta )\, \mathrm dS(\zeta )$ is harmonic on $B$. It is also radial. Indeed, $P_ B(Qx,Q\zeta )=P_ B(x,\zeta )$ for every orthogonal transformation $Q$, and surface measure on $\partial B$ is invariant under $Q$, so $I(Qx)=I(x)$. Moreover, if $|x|=|x'|$ and $x\neq x'$, the orthogonal reflection $y\mapsto y-2(y\cdot e)e$ with $e=(x-x')/|x-x'|$ maps $x$ to $x'$. Hence $I(x)=F(|x|)$, where $F(r)=I(re_1)$ is smooth on $(-R,R)$ and $e_1$ is the first coordinate vector. By (<a data-tag="81E29763" href="../../tag/9448EDDC2E41/">2.13</a>), $(r^{d-1}F'(r))'=0$ on $(0,R)$, so $r^{d-1}F'(r)$ is constant there. Since $F'$ is bounded near $0$ and $d\geq 2$, this constant is $\lim _{r\to 0}r^{d-1}F'(r)=0$. Hence $F$ is constant on $(0,R)$, and since $I$ is continuous at the origin, $I$ is constant on $B$, with value $I(0)=R^2\cdot s_{d-1}R^{d-1}/(s_{d-1}R\cdot R^ d)=1$. 
+    <p>
+      For the boundary behavior, fix $\zeta _0\in \partial B$ and $\varepsilon &gt;0$, and choose $\delta &gt;0$ such that $|f(\zeta )-f(\zeta _0)|&lt;\varepsilon $ for $\zeta \in \partial B$ with $|\zeta -\zeta _0|&lt;\delta $. Since the kernel is positive with integral one, 
+    
+<div class="equation">
+  \begin{align*}  |H_ Bf(x)-f(\zeta _0)|&amp; \leq \int _{\partial B}P_ B(x,\zeta )|f(\zeta )-f(\zeta _0)|\, \mathrm dS(\zeta )\\ &amp; \leq \varepsilon +2\max _{\partial B}|f|\int _{\{ \zeta \in \partial B:|\zeta -\zeta _0|\geq \delta \} }P_ B(x,\zeta )\, \mathrm dS(\zeta ). \end{align*}
+</div>
+<p>
+       If $|x-\zeta _0|&lt;\delta /2$, then $|x-\zeta |\geq \delta /2$ in the last integral, so $P_ B(x,\zeta )\leq (R^2-|x-c|^2)/(s_{d-1}R(\delta /2)^ d)$ there, and the integral is at most $R^{d-2}(2/\delta )^ d(R^2-|x-c|^2)$. This tends to zero as $x\to \zeta _0$, because $|\zeta _0-c|=R$. Hence $\varlimsup _{x\to \zeta _0}|H_ Bf(x)-f(\zeta _0)|\leq \varepsilon $ for every $\varepsilon &gt;0$. Since $f$ is continuous on $\partial B$, it follows that the function equal to $H_ Bf$ on $B$ and to $f$ on $\partial B$ is continuous on $\overline B$. 
+    <p>
+      Uniqueness follows from the last assertion of proposition <a data-tag="CD09FBEF" href="../../tag/B304785CC98D/">2.1.3</a>. The operator $H_ B$ is linear by definition, and since the kernel is positive with integral one, $H_ B$ preserves order and $|H_ Bf(x)|\leq \int _{\partial B}P_ B(x,\zeta )|f(\zeta )|\, \mathrm dS(\zeta )\leq \max _{\partial B}|f|$. Finally, if $h$ is harmonic on a neighborhood of $\overline B$, then $h$ and $H_ B(h|_{\partial B})$ are harmonic on $B$, continuous on $\overline B$ and equal on $\partial B$, so they coincide. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+We often regard $H_ Bf$ as the continuous function on $\overline B$ which equals $f$ on $\partial B$. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-4B48F71A">
+<a class="environment-identifier" href="../../tag/DAC835A39525/">Proposition <span data-tag="4B48F71A">2.3.2</span>.</a><span data-gerby-tag="4B48F71A"></span><ol>
+<li><p>
+Let $h\geq 0$ be harmonic on $B(0,R)$, let $x\in B(0,R)$ and put $r=|x|$. Then 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-555AB527"><span data-gerby-tag="555AB527"></span>
+<span class="equation-label"><a data-tag="555AB527" href="../../tag/880B4ABDC24A/">2.15</a></span>
+<div>\begin{equation} \label{eq:harnack-ball} \frac{R^{d-2}(R-r)}{(R+r)^{d-1}}h(0) \leq h(x)\leq \frac{R^{d-2}(R+r)}{(R-r)^{d-1}}h(0). \end{equation}</div>
+</div>
+</li><li><p>
+A nonnegative harmonic function on a domain is either positive everywhere or identically zero. 
+</p>
+</li><li><p>
+Let $\Omega $ be a domain, $K\subset \Omega $ compact and $x_0\in \Omega $. Then there is a constant $C=C(K,x_0,\Omega )&gt;0$ such that 
+</p>
+<div class="equation">
+  \[  \sup _ K h\leq C h(x_0)  \]
+</div>
+<p>
+ for every nonnegative harmonic function $h$ on $\Omega $. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Let $r&lt;R'&lt;R$. By theorem <a data-tag="330E7C21" href="../../tag/08ED9D7CF1CF/">2.3.1</a> on $B(0,R')$, both $h(x)$ and $h(0)$ are integrals of the nonnegative boundary values of $h$ against the Poisson kernel. For $|\zeta |=R'$ we have $R'-r\leq |x-\zeta |\leq R'+r$, so the ratio 
+    
+<div class="equation">
+  \[  \frac{P_{B(0,R')}(x,\zeta )}{P_{B(0,R')}(0,\zeta )}=\frac{R'^{d-2}(R'^2-r^2)}{|x-\zeta |^ d}  \]
+</div>
+<p>
+       lies between the two coefficients in (<a data-tag="555AB527" href="../../tag/880B4ABDC24A/">2.15</a>) with $R'$ in place of $R$. Integrating and letting $R'\uparrow R$ gives (<a data-tag="555AB527" href="../../tag/880B4ABDC24A/">2.15</a>). 
+    <p>
+      (2) If a nonnegative harmonic function on a domain vanishes at a point, it attains its minimum there and is identically zero by proposition <a data-tag="CD09FBEF" href="../../tag/B304785CC98D/">2.1.3</a>. 
+    <p>
+      (3) We first apply (1), after a translation, to a ball $B(a,2t)\subset \Omega $: for $y\in B(a,t)$ we have $r=|y-a|&lt;t$, and the right inequality in (<a data-tag="555AB527" href="../../tag/880B4ABDC24A/">2.15</a>) on $B(a,2t)$ gives 
+    
+<div class="equation">
+  \[  h(y)\leq \frac{(2t)^{d-2}(2t+r)}{(2t-r)^{d-1}}h(a)\leq \frac{(2t)^{d-2}\cdot 3t}{t^{d-1}}h(a)=C_0h(a),\qquad C_0=3\cdot 2^{d-2}.  \]
+</div>
+<p>
+       Now let $y\in \Omega $. Since $\Omega $ is connected, $y$ can be joined to $x_0$ by a polygonal path in $\Omega $: the set of points that can be so joined is open, and so is its complement in $\Omega $, because balls are convex. The path is compact, so there is $t&gt;0$ with $B(z,2t)\subset \Omega $ for every point $z$ of the path. Choose points $x_0=p_0,p_1,\ldots ,p_ N=y$ along the path with $|p_{i+1}-p_ i|&lt;t$. Applying the ball estimate on $B(p_ i,2t)$ for $i=0,\ldots ,N-1$ gives $h(y)\leq C_0^ Nh(x_0)$, and once more on $B(y,2t)$ gives $h\leq C_0^{N+1}h(x_0)$ on $B(y,t)$. Here $t$ and $N$ depend on $y$, $x_0$ and $\Omega $, but not on $h$. Finitely many of the balls $B(y,t)$, $y\in K$, cover $K$, and the largest of the corresponding constants $C_0^{N+1}$ is the required $C$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+A sequence of smooth functions on an open set $D\subset \mathbb R^ d$ converges to $g$ <em>in $C^\infty $ on compact subsets</em> if, for every multi-index $\alpha $, the derivatives $\partial ^\alpha $ of its terms converge to $\partial ^\alpha g$ uniformly on compact subsets of $D$. 
+</p>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-C3267DE5">
+<p><a class="environment-identifier" href="../../tag/D0BED761B9E7/">Corollary <span data-tag="C3267DE5">2.3.3</span>.</a><span data-gerby-tag="C3267DE5"></span> Let $D\subset \mathbb R^ d$ be a domain. </p>
+<ol>
+<li><p>
+Every sequence of nonnegative harmonic functions on $D$ which is bounded at one point of $D$ has a subsequence converging in $C^\infty $ on compact subsets; the limit is harmonic. 
+</p>
+</li><li><p>
+An increasing sequence of harmonic functions on $D$ either converges in $C^\infty $ on compact subsets to a finite harmonic function, or tends to $+\infty $ uniformly on compact subsets. 
+</p>
+</li><li><p>
+A decreasing sequence of harmonic functions on $D$ either converges in $C^\infty $ on compact subsets to a finite harmonic function, or tends to $-\infty $ uniformly on compact subsets. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $h_ j\geq 0$ be harmonic on $D$ with $h_ j(x_0)\leq M$ for some $x_0\in D$. Let $K\subset D$ be compact and choose $\delta &gt;0$ such that $K_\delta =\{ y:\operatorname {dist}(y,K)\leq \delta \} $ is contained in $D$. By proposition <a data-tag="4B48F71A" href="../../tag/DAC835A39525/">2.3.2</a>(3), $h_ j\leq C(K_\delta ,x_0,D)M$ on $K_\delta $ for all $j$, and (<a data-tag="724EB1D3" href="../../tag/D63569C18649/">2.5</a>) with radius $\delta $ then bounds each derivative $\partial ^\alpha h_ j$ on $K$ uniformly in $j$. Taking for $K$ a closed ball in $D$ and applying this bound to the first derivatives of $\partial ^\alpha h_ j$, we see that the functions $\partial ^\alpha h_ j$ are uniformly Lipschitz on every closed ball in $D$, and hence equicontinuous on compact subsets of $D$. 
+    <p>
+      Let $K_ m$ be the sets of the compact exhaustion of $D$ constructed in section <a data-tag="AD6522C4" href="../../tag/DAFA3E4936D2/">1.1</a>; every compact subset of $D$ lies in some $K_ m$. Applying proposition <a data-tag="C7F49DCE" href="../../tag/2963E35FB0D3/">1.6.4</a> on each $K_ m$ and making a diagonal extraction over all $m$ and all multi-indices $\alpha $, we obtain a subsequence along which every $\partial ^\alpha h_ j$ converges uniformly on compact subsets of $D$, say to $g_\alpha $. To identify the limits, let $e_ k$ be the $k$th standard basis vector. Passing to the uniform limit in 
+    
+<div class="equation">
+  \[  \partial ^\alpha h_ j(y+te_ k)-\partial ^\alpha h_ j(y)=\int _0^ t\partial ^{\alpha +e_ k}h_ j(y+se_ k)\, \mathrm ds,  \]
+</div>
+<p>
+       which holds whenever the segment from $y$ to $y+te_ k$ lies in $D$, we find that $\partial _ kg_\alpha =g_{\alpha +e_ k}$. By induction, $g=g_0$ is smooth with $\partial ^\alpha g=g_\alpha $, so the subsequence converges to $g$ in $C^\infty $ on compact subsets, and $\Delta g=\lim _ j\Delta h_ j=0$. This proves the first assertion. 
+    <p>
+      We also need a lower Harnack bound: for compact $K\subset D$ and $x_0\in D$ there is $c&gt;0$ such that $h\geq c\, h(x_0)$ on $K$ for every nonnegative harmonic $h$ on $D$. Indeed, if $B(a,2t)\subset D$ and $y\in B(a,t)$, then $r=|y-a|&lt;t$, and the left inequality in (<a data-tag="555AB527" href="../../tag/880B4ABDC24A/">2.15</a>) on $B(a,2t)$ gives $h(y)\geq (2t)^{d-2}(2t-r)(2t+r)^{1-d}h(a)\geq c_0h(a)$ with $c_0=2^{d-2}3^{1-d}$. Cover $K$ by finitely many balls $B(a_ k,t_ k)$ with $B(a_ k,2t_ k)\subset D$. Proposition <a data-tag="4B48F71A" href="../../tag/DAC835A39525/">2.3.2</a>(3), applied to the compact set $\{ x_0\} $ and the base point $a_ k$, gives $h(x_0)\leq C_ kh(a_ k)$. Hence $h\geq (c_0/\max _ kC_ k)h(x_0)$ on $K$. 
+    <p>
+      Now let $(h_ j)$ be increasing and fix $x_0\in D$. The functions $h_ j-h_1$ are nonnegative and harmonic. If $h_ j(x_0)$ is bounded, the first assertion applies to every subsequence of $(h_ j-h_1)$. Since the sequence increases and, by proposition <a data-tag="4B48F71A" href="../../tag/DAC835A39525/">2.3.2</a>(3), is bounded on compact sets, it has a finite pointwise limit, and every subsequence has a further subsequence converging in $C^\infty $ on compact subsets to this limit. Hence the whole sequence converges in $C^\infty $ on compact subsets, and the limit is a finite harmonic function. If $h_ j(x_0)\to +\infty $, the lower Harnack bound gives $h_ j-h_1\geq c(h_ j(x_0)-h_1(x_0))$ on each compact $K$, and since $h_1$ is bounded on $K$, $h_ j\to +\infty $ uniformly on $K$. For a decreasing sequence, apply this to $(-h_ j)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-CE1806D7">
+<p><a class="environment-identifier" href="../../tag/F898AC76FE42/">Corollary <span data-tag="CE1806D7">2.3.4</span>.</a><span data-gerby-tag="CE1806D7"></span> A real harmonic function on $\mathbb R^ d$ which is bounded above or bounded below is constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      After changing the sign and adding a constant, we may assume that the function $h$ is nonnegative. Fix $x\in \mathbb R^ d$ and put $r=|x|$. For $R&gt;r$, (<a data-tag="555AB527" href="../../tag/880B4ABDC24A/">2.15</a>) on $B(0,R)$ gives $c_ Rh(0)\leq h(x)\leq C_ Rh(0)$, where the coefficients $c_ R$ and $C_ R$ of (<a data-tag="555AB527" href="../../tag/880B4ABDC24A/">2.15</a>) tend to one as $R\to \infty $. Letting $R\to \infty $ gives $h(x)=h(0)$. Hence $h$ is constant. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

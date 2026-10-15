@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Relative extremal functions and capacity · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/capacity-fine-topology/">Chapter 4 · Energy, capacity, and fine topology</a> · Tag <code>2B6F9623A939</code></p><h1>Relative extremal functions and capacity</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 4.3 Relative extremal functions and capacity <span data-gerby-tag="131E2304"></span></div>
+<p>
+  The Newtonian and logarithmic capacities of section <a data-tag="042247C9" href="../../tag/FF9D3CA4D463/">4.1</a>, which we call kernel capacities, are defined by minimizing energy over measures. We now define a second capacity by maximizing over subharmonic functions. Its values depend on a surrounding ball, but it is increasing, continuous along decreasing sequences and strongly subadditive (proposition <a data-tag="6A79421D" href="../../tag/3CC68CCFAF3A/">4.3.4</a>). These properties allow us to extend it to arbitrary sets (theorem <a data-tag="AFB551A5" href="../../tag/AEE550586C10/">4.3.5</a>), and we shall show that its null sets are exactly the polar sets. 
+</p>
+<p>
+From now on, $B=B(0,R)$ is an open ball centered at the origin; the results hold for every radius $R&gt;0$, and in some proofs we take $R$ large. For a set $A\Subset B$, we say that a function $v$ is admissible for $A$ if $v\in \mathrm{SH}(B)$, $v\leq 0$ on $B$ and $v\leq -1$ on $A$. The relative extremal function of $A$ and its regularization are 
+</p>
+<div class="equation">
+  \[  f_ A=\sup \{ v:v\text{ is admissible for }A\} ,\qquad u_ A=f_ A^*.  \]
+</div>
+<p>
+ The constant $-1$ is admissible, so $-1\leq f_ A\leq u_ A\leq 0$, and $u_ A$ is subharmonic by theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.2</a>. The condition $v\leq -1$ is imposed at every point of $A$, but the regularization $u_ A$ may exceed $-1$ at some points of $A$. For instance, let $A=\{ 0\} $. Since $E_ d$ is a radial function that increases with $|x|$, the function $\varepsilon (E_ d-c_ R)$, where $c_ R$ is the value of $E_ d$ on $\partial B$, is nonpositive on $B$ for every $\varepsilon &gt;0$. It is subharmonic by proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a> and equals $-\infty $ at the origin, so it is admissible for $A$. Letting $\varepsilon \downarrow 0$, we obtain $f_ A=0$ on $B\setminus \{ 0\} $, and therefore $u_ A(0)=0$. 
+</p>
+<p>
+Extremal functions will be represented as Green potentials. On a ball, the Green function $G_ B$ of theorem <a data-tag="497FD574" href="../../tag/476CFD04AAC6/">2.5.2</a> is given by an explicit formula, from which we read off its symmetry and its smoothness near $\partial B$. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-9D12CA19">
+<p><a class="environment-identifier" href="../../tag/D17D3298467B/">Lemma <span data-tag="9D12CA19">4.3.1</span>.</a><span data-gerby-tag="9D12CA19"></span> The Green function of $B$ is symmetric: $G_ B(x,y)=G_ B(y,x)$ for $x,y\in B$. For $x,y\in B$ with $y\neq 0$, put $y^*=R^2y/|y|^2$. Then for $d\geq 3$, </p>
+<div class="equation">
+  \[  G_ B(x,y)=\Gamma _ d(x-y)-\left(\frac R{|y|}\right)^{d-2}\Gamma _ d(x-y^*),  \]
+</div>
+<p> and for $d=2$, </p>
+<div class="equation">
+  \[  G_ B(x,y)=\frac1{2\pi }\log \frac{|y|\, |x-y^*|}{R|x-y|}.  \]
+</div>
+<p> For $y=0$, $G_ B(x,0)=\Gamma _ d(x)-\Gamma _ d(Re_1)$ if $d\geq 3$ and $G_ B(x,0)=(2\pi )^{-1}\log (R/|x|)$ if $d=2$; here $e_1$ is the first coordinate unit vector. Moreover, for $0&lt;r&lt;R$, these formulas extend the difference $G_ B(x,y)-\Gamma _ d(x-y)$ to a smooth function of $(x,y)$ on the set where $|y|\leq r$ and $|x|&lt;R^2/r$; this range of $x$ contains a neighborhood of $\overline B$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $y\in B\setminus \{ 0\} $. Since $|y^*|=R^2/|y|&gt;R$, the function $x\mapsto \Gamma _ d(x-y^*)$ is harmonic on a neighborhood of $\overline B$. Expanding the square gives 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-734CB3DC"><span data-gerby-tag="734CB3DC"></span>
+<span class="equation-label"><a data-tag="734CB3DC" href="../../tag/B44D46472BE9/">4.4</a></span>
+<div>\begin{equation} \label{eq:ball-green-symmetric-quantity} |y|^2|x-y^*|^2=R^4-2R^2x\mathbin {\cdot }y+|x|^2|y|^2, \end{equation}</div>
+</div>
+<p>
+       and therefore $|y|^2|x-y^*|^2-R^2|x-y|^2=(R^2-|x|^2)(R^2-|y|^2)$. Each displayed expression, as a function of $x$, is the sum of $\Gamma _ d(x-y)$ and a function harmonic near $\overline B$. By proposition <a data-tag="571B3697" href="../../tag/F8A69601BB8C/">2.2.1</a>, it is therefore harmonic on $B\setminus \{ y\} $ and locally integrable on $B$, with distributional Laplacian $-\delta _ y$ on $B$. Moreover, the last identity shows that $|y|\, |x-y^*|&gt;R|x-y|$ on $B$, with equality on $\partial B$. Hence the expression is positive on $B\setminus \{ y\} $ and tends to zero at every point of $\partial B$. The ball is a regular domain by theorem <a data-tag="3442F8BF" href="../../tag/C1B72E118338/">2.4.6</a>, and the uniqueness assertion of theorem <a data-tag="497FD574" href="../../tag/476CFD04AAC6/">2.5.2</a> identifies the displayed expression with $G_ B(y,x)$ for $x\neq y$. The same argument applies to $y=0$, where the stated expressions differ from $\Gamma _ d(x)$ by constants. 
+    <p>
+      Let $Q(x,y)$ denote the right side of (<a data-tag="734CB3DC" href="../../tag/B44D46472BE9/">4.4</a>); it is symmetric in $x$ and $y$, and $Q(x,0)=R^4$. The formulas just proved can be written, for all $x,y\in B$ including $y=0$, as 
+    
+<div class="equation">
+  \[  \begin{aligned}  G_ B(y,x)&amp; =\Gamma _ d(x-y)-\frac{R^{d-2}Q(x,y)^{(2-d)/2}}{(d-2)s_{d-1}}&amp; &amp; (d\geq 3),\\  G_ B(y,x)&amp; =\Gamma _2(x-y)+\frac1{4\pi }\log \frac{Q(x,y)}{R^2}&amp; &amp; (d=2). \end{aligned}  \]
+</div>
+<p>
+       Both right sides are symmetric in $x$ and $y$, so $G_ B(y,x)=G_ B(x,y)$; this also proves the formulas in the order stated. Finally, $Q(x,y)\geq (R^2-|x||y|)^2&gt;0$ when $|y|\leq r$ and $|x|&lt;R^2/r$, so the correction terms $G_ B(x,y)-\Gamma _ d(x-y)$ in the last display are smooth functions of $(x,y)$ there. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+For a finite positive measure $\lambda $ with compact support in $B$, its Green potential is 
+</p>
+<div class="equation">
+  \[  G_ B\lambda (x)=\int G_ B(x,y)\, \mathrm d\lambda (y),\qquad x\in B.  \]
+</div>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-3D5469C4">
+<p><a class="environment-identifier" href="../../tag/4A7451727417/">Proposition <span data-tag="3D5469C4">4.3.2</span>.</a><span data-gerby-tag="3D5469C4"></span> Let $K\subset B$ be compact. </p>
+<ol>
+<li><p>
+The function $f_ K$ is the supremum of the continuous admissible functions for $K$; it is lower semicontinuous, equals $-1$ on $K$, and equals $u_ K$ on $B\setminus K$. The function $u_ K$ is harmonic on $B\setminus K$ and tends to zero at $\partial B$. 
+</p>
+</li><li><p>
+Let $\lambda $ be a finite positive measure with compact support in $B$, and put $u=-G_ B\lambda $. Then $u=E_ d*\lambda -H_ B\bigl ((E_ d*\lambda )|_{\partial B}\bigr )$ on $B$, where $H_ B$ is the Poisson integral of theorem <a data-tag="330E7C21" href="../../tag/08ED9D7CF1CF/">2.3.1</a>; in particular, $u$ is subharmonic on $B$ with Riesz measure $\lambda $. If $\operatorname{Supp}\lambda \subset B(0,r)$ with $0&lt;r&lt;R$, then the restriction of $u$ to the annulus $r&lt;|x|&lt;R$ extends to a harmonic function on the annulus $r&lt;|x|&lt;R^2/r$ that vanishes on $\partial B$. Moreover, 
+</p>
+<div class="equation">
+  \[  \lambda (B)=\int _{\partial B}\partial _ nu\, \mathrm d S,  \]
+</div>
+<p>
+ where $\partial _ n$ is the derivative along the outward unit normal of $\partial B$. If $\lambda '$ is another such measure and $-G_ B\lambda \leq -G_ B\lambda '$ on $B$, then $\lambda (B)\geq \lambda '(B)$. Conversely, if $v$ is a locally integrable subharmonic function on $B$ whose Riesz measure $\lambda $ has compact support in $B$, and if $v(x)\to 0$ as $x$ tends to any point of $\partial B$, then $v=-G_ B\lambda $. 
+</p>
+</li><li><p>
+The Riesz measure $\lambda _ K=\Delta u_ K$ is a finite positive measure supported on $K$, and $u_ K=-G_ B\lambda _ K$. 
+</p>
+</li>
+</ol>
+<p> The number $C_ B(K)=\lambda _ K(K)$ is called the relative capacity of $K$ with respect to $B$; by (2) and (3), $C_ B(K)=\int _{\partial B}\partial _ nu_ K\, \mathrm dS$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Since $K$ is a compact subset of $B$, there is $c&gt;0$ such that $q(x)=c(|x|^2-R^2)\leq -1$ on $K$. The function $q$ is smooth and subharmonic, since $\Delta q=2dc&gt;0$, and it is nonpositive on $B$; hence it is admissible, and $q\leq f_ K\leq u_ K\leq 0$. In particular $f_ K$ and $u_ K$ tend to zero at $\partial B$. 
+    <p>
+      We show that $f_ K$ is the supremum of the continuous admissible functions. Let $v$ be admissible. We first extend $\max \{ v,q\} $ to a subharmonic function on $\mathbb R^ d$: put $w=\max \{ v,q\} $ on $B$ and $w=q$ on $\mathbb R^ d\setminus B$. At $\zeta \in \partial B$ we have $w(\zeta )=0$ and $\varlimsup _{x\to \zeta }w(x)\leq 0$, because $v\leq 0$ on $B$ and $q$ is continuous with $q(\zeta )=0$; so $w$ is upper semicontinuous. We verify the comparison principle of theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a> for $w$ on an arbitrary ball $D$. Let $h$ be harmonic on $D$ and continuous on $\overline D$, with $\varlimsup _{D\ni x\to \zeta }w(x)\leq h(\zeta )$ for $\zeta \in \partial D$. Since $w\geq q$ and $q$ is continuous, $q\leq h$ on $\partial D$, hence on $D$ by the comparison principle for $q$; in particular $w=q\leq h$ on $D\setminus B$. On the bounded open set $D\cap B$, the function $v-h$ has nonpositive boundary upper limits: at points of $\partial D\cap B$ because $v\leq w$, and at points of $\partial B$ because $\varlimsup v\leq 0=q\leq h$ there. By the comparison principle on bounded open sets (the remark after theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>), $v\leq h$ on $D\cap B$. Thus $w\leq h$ on $D$, and the converse part of theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a> shows that $w$ is subharmonic on $\mathbb R^ d$. 
+    <p>
+      Since $w\geq q$, it is locally integrable. Its mollifications $w*\rho _\varepsilon $ are smooth and satisfy $\Delta (w*\rho _\varepsilon )=(\Delta w)*\rho _\varepsilon \geq 0$, so they are subharmonic, and they decrease to $w$ as $\varepsilon \downarrow 0$ by (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>). Fix $\delta &gt;0$. On $B$ we have $w*\rho _\varepsilon \leq \sup _{B(0,R+\varepsilon )}w\leq c((R+\varepsilon )^2-R^2)$, because $w\leq 0$ on $B$ and $w=q$ outside $B$; hence $w*\rho _\varepsilon -\delta \leq 0$ on $B$ for small $\varepsilon $. On $K$ we have $w\leq -1$. Since the continuous functions $w*\rho _\varepsilon $ decrease to $w$, the open sets $\{ w*\rho _\varepsilon &lt;-1+\delta \} $ increase and cover the compact set $K$, so $w*\rho _\varepsilon &lt;-1+\delta $ on $K$ for small $\varepsilon $. For such $\varepsilon $ the function $w*\rho _\varepsilon -\delta $ is continuous and admissible, and it is at least $w-\delta \geq v-\delta $. Since $v$ and $\delta $ are arbitrary, $f_ K$ is the supremum of the continuous admissible functions; in particular $f_ K$ is lower semicontinuous. Every admissible function is at most $-1$ on $K$, so $f_ K=-1$ on $K$. 
+    <p>
+      Let $D$ be an open ball with $\overline D\subset B\setminus K$; we show that $f_ K=u_ K$ on $D$ and that $u_ K$ is harmonic there. For a continuous admissible function $v$, let $v^ D$ be its harmonic lifting on $D$, which equals the Poisson integral of $v|_{\partial D}$ on $D$ and $v$ elsewhere. As noted in section <a data-tag="846116E9" href="../../tag/A3DA602C02CB/">2.4</a>, the continuous subsolutions defined there are exactly the real-valued continuous subharmonic functions. Hence lemma <a data-tag="5564A480" href="../../tag/3F83842AEB11/">2.4.1</a> shows that $v^ D$ is continuous and subharmonic and that $v^ D\geq v$. It is admissible: $v^ D\leq 0$ because the Poisson integral preserves order, and $v^ D=v$ on $K$. 
+    <p>
+      Apply Choquet's lemma (lemma <a data-tag="B87643F0" href="../../tag/B37EED9280E3/">3.4.1</a>) to the family of continuous admissible functions, whose supremum is $f_ K$: there are continuous admissible functions $v_1,v_2,\ldots $ with $(\sup _ jv_ j)^*=u_ K$. The functions $w_ j=\max \{ -1,v_1,\ldots ,v_ j\} $ are continuous, admissible and increasing, and so are the functions $w_ j^ D$. On $D$, the harmonic functions $w_ j^ D$ take values in $[-1,0]$ and increase, so by corollary <a data-tag="C3267DE5" href="../../tag/D0BED761B9E7/">2.3.3</a> they converge locally uniformly to a harmonic function $H$. On the one hand, each $w_ j^ D$ is admissible, so $H\leq f_ K\leq u_ K$ on $D$. On the other hand, $H\geq \sup _ jw_ j$. The upper semicontinuous regularization of $\sup _ jw_ j=\max \{ -1,\sup _ jv_ j\} $ is $\max \{ -1,u_ K\} =u_ K$, so $\sup _ jw_ j=u_ K$ almost everywhere by theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.2</a>. Hence $H=u_ K$ almost everywhere on $D$; since both functions are subharmonic and locally integrable, $H=u_ K$ on $D$ by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>. Therefore $f_ K=u_ K=H$ on $D$. As $D$ is arbitrary, $f_ K=u_ K$ on $B\setminus K$, and $u_ K$ is harmonic there. 
+    <p>
+      (2) Fix $0&lt;r&lt;R$ with $\operatorname{Supp}\lambda \subset B(0,r)$. By the definition of $G_ B$ in theorem <a data-tag="497FD574" href="../../tag/476CFD04AAC6/">2.5.2</a> and the symmetry in lemma <a data-tag="9D12CA19" href="../../tag/D17D3298467B/">4.3.1</a>, 
+    
+<div class="equation">
+  \[  u(x)=-\int G_ B(y,x)\, \mathrm d\lambda (y)=E_ d*\lambda (x)-\int H_ B\bigl (E_ d(\cdot -y)|_{\partial B}\bigr )(x)\, \mathrm d\lambda (y).  \]
+</div>
+<p>
+       By Fubini's theorem the last integral is the Poisson integral of the continuous function $\zeta \mapsto E_ d*\lambda (\zeta )$ on $\partial B$, so it is harmonic on $B$. Hence $u$ is subharmonic with Riesz measure $\lambda $, by proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a>. By lemma <a data-tag="9D12CA19" href="../../tag/D17D3298467B/">4.3.1</a>, for $y\in \operatorname{Supp}\lambda $ the formula given there for $G_ B(x,y)$ defines a harmonic function of $x$ on the annulus $r&lt;|x|&lt;R^2/r$, which vanishes for $|x|=R$. Since this function is jointly smooth in $(x,y)$, its derivatives in $x$ are bounded uniformly in $y\in \operatorname{Supp}\lambda $ on compact subsets of the annulus. Differentiating under the integral sign, we see that $-\int G_ B(x,y)\, \mathrm d\lambda (y)$ defines a harmonic function on this annulus that extends $u$ across $\partial B$ and vanishes on $\partial B$; we denote the extension again by $u$. 
+    <p>
+      Choose $r&lt;r'&lt;R$ and $\chi \in C_ c^\infty (B)$ with $\chi =1$ on a neighborhood of $\overline{B(0,r')}$. Then $\lambda (B)=\int \chi \, \mathrm d\lambda =\int _ Bu\Delta \chi \, \mathrm d x$. The integrand vanishes outside the annulus $r'&lt;|x|&lt;R$, near whose closure $u$ is smooth and harmonic. The divergence identity (<a data-tag="5DE03682" href="../../tag/DEF1A85BF9E8/">2.3</a>) on this annulus, applied to the field $u\nabla \chi -\chi \nabla u$, whose divergence there is $u\Delta \chi $, gives 
+    
+<div class="equation">
+  \[  \int _ Bu\Delta \chi \, \mathrm d x=\int _{|x|=r'}\partial _ ru\, \mathrm d S,  \]
+</div>
+<p>
+       because $\chi $ and its derivatives vanish near $|x|=R$, while $\chi =1$ near $|x|=r'$; here $\partial _ r$ is the radial derivative. Applying the divergence identity on the same annulus to $\nabla u$, whose divergence vanishes there, we see that this integral equals $\int _{\partial B}\partial _ nu\, \mathrm dS$. This proves the flux identity. 
+    <p>
+      For the comparison of masses, let $u'=-G_ B\lambda '$ be a second function as above with $u\leq u'$ on $B$. Then $u-u'\leq 0$ on $B$ and $u-u'=0$ on $\partial B$, and since $u-u'$ is smooth near $\partial B$, its derivative at a point of $\partial B$ along the outward normal is the limit of difference quotients $((u-u')(\zeta -sn)-0)/(-s)\geq 0$ as $s\downarrow 0$. Hence $\partial _ nu\geq \partial _ nu'$ on $\partial B$, and integration gives $\lambda (B)\geq \lambda '(B)$. 
+    <p>
+      For the converse, let $v$ and $\lambda $ be as stated, extend $\lambda $ by zero to $\mathbb R^ d$, and put $p=E_ d*\lambda $. By proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a>, $\Delta (v-p)=0$ on $B$ in the sense of distributions, so by theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a> the locally integrable function $v-p$ agrees almost everywhere on $B$ with a harmonic function $h$. Then $p+h$ is a locally integrable subharmonic function on $B$ that agrees with $v$ almost everywhere, hence everywhere by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>. The function $p$ is finite and continuous on the neighborhood $\mathbb R^ d\setminus \operatorname{Supp}\lambda $ of $\partial B$: if $x\notin \operatorname{Supp}\lambda $, then $E_ d(w-y)\to E_ d(x-y)$ uniformly in $y\in \operatorname{Supp}\lambda $ as $w\to x$, because $E_ d$ is uniformly continuous on compact subsets of $\mathbb R^ d\setminus \{ 0\} $. As $v$ tends to zero at $\partial B$, the harmonic function $h=v-p$ extends continuously to $\overline B$ with boundary values $-p|_{\partial B}$, and the uniqueness in theorem <a data-tag="330E7C21" href="../../tag/08ED9D7CF1CF/">2.3.1</a> gives $h=-H_ B(p|_{\partial B})$. By the formula for $-G_ B\lambda $ proved at the beginning of (2), $v=p-H_ B(p|_{\partial B})=-G_ B\lambda $. 
+    <p>
+      (3) By (1), $u_ K$ is harmonic on $B\setminus K$, so its Riesz measure $\lambda _ K$, a positive Radon measure on $B$ by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>, is supported on the compact set $K$; in particular it is finite. Moreover $-1\leq u_ K\leq 0$, so $u_ K$ is locally integrable, and $u_ K$ tends to zero at $\partial B$ by (1). The converse in (2) therefore gives $u_ K=-G_ B\lambda _ K$. The flux formula for $C_ B(K)$ is now (2) with $\lambda =\lambda _ K$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-2511D125">
+<p><a class="environment-identifier" href="../../tag/5B4ACD7E054D/">Theorem <span data-tag="2511D125">4.3.3</span>.</a><span data-gerby-tag="2511D125"></span> For a compact set $K\subset \mathbb R^ d$, the following conditions are equivalent: </p>
+<ol>
+<li><p>
+$K$ is not polar; 
+</p>
+</li><li><p>
+$K$ carries a nonzero positive measure with finite energy; 
+</p>
+</li><li><p>
+$K$ carries a nonzero positive measure $\mu $ such that $E_ d*\mu $ is finite and continuous on $\mathbb R^ d$. 
+</p>
+</li>
+</ol>
+<p> If $K\subset B$, they are also equivalent to $C_ B(K)&gt;0$. Moreover, every finite positive measure with compact support and finite energy gives zero mass to polar sets: every polar set is contained in a Borel set of measure zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Conditions (1)–(3) do not involve $B$, so for their equivalence we may enlarge $R$ and assume that $K\subset B$. We first show, for every ball $B=B(0,R)$ containing $K$, that $K$ is polar if and only if $C_ B(K)=0$. Since $u_ K=-G_ B\lambda _ K$ and $C_ B(K)=\lambda _ K(K)$ (proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>), we have $C_ B(K)=0$ if and only if $u_ K=0$. Suppose $u_ K=0$. Then $f_ K=0$ almost everywhere by theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.2</a>. Choose a point $x\in B$ with $f_ K(x)=0$ and admissible functions $v_ j$ with $v_ j(x)&gt;-2^{-j}$. The partial sums $\sum _{j\leq N}v_ j$ are subharmonic and decrease with $N$, and their values at $x$ stay above $-1$. By theorem <a data-tag="1B5BFA16" href="../../tag/62E4A7EF2B4F/">3.1.6</a>, the limit $\sum _ jv_ j$ is subharmonic on $B$ and not identically $-\infty $. It equals $-\infty $ on $K$, since every $v_ j$ is at most $-1$ there. Thus $K$ is polar. 
+    <p>
+      Conversely, if $K$ is polar, proposition <a data-tag="7F3FDDFF" href="../../tag/64A94A9EE9E3/">4.2.3</a> gives a function $E_ d*\nu $, not identically $-\infty $, that equals $-\infty $ on $K$; subtracting a constant, we may assume it is negative on $B$. All its positive multiples are then admissible, so $f_ K=0$ wherever $E_ d*\nu &gt;-\infty $, that is, almost everywhere. Hence $u_ K=0$ almost everywhere, and therefore everywhere by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>. 
+    <p>
+      Suppose that $K$ is not polar, so that $\lambda _ K\neq 0$. By parts (2) and (3) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>, $u_ K=E_ d*\lambda _ K+h$ with the harmonic function $h=-H_ B\bigl ((E_ d*\lambda _ K)|_{\partial B}\bigr )$ on $B$. Since $u_ K\geq -1$, it follows that $E_ d*\lambda _ K\geq -1-h&gt;-\infty $ on $K$. Theorem <a data-tag="878C027A" href="../../tag/872A6887585B/">4.2.2</a> writes $\lambda _ K$ as a sum of measures with finite continuous potentials, and one of them, $\mu $, is nonzero; so (3) holds. A measure $\mu $ as in (3) has finite energy, because its potential $U^\mu $ is bounded on the compact support of $\mu $; so (3) implies (2). 
+    <p>
+      Next, let $\mu $ be a finite positive measure with compact support such that $E_ d*\mu $ is finite and continuous, and let $\nu $ be any finite positive measure with compact support. We show that $\mu $ gives measure zero to the Borel set $\{ E_ d*\nu =-\infty \} $; by proposition <a data-tag="7F3FDDFF" href="../../tag/64A94A9EE9E3/">4.2.3</a>, every bounded polar set lies in a set of this form. By the reciprocity law (<a data-tag="F1E9B4D8" href="../../tag/718E110735E0/">4.1</a>), $\int (E_ d*\nu )\, \mathrm d\mu =\int (E_ d*\mu )\, \mathrm d\nu $. The right side is finite because $E_ d*\mu $ is continuous, hence so is the left side, and therefore $E_ d*\nu &gt;-\infty $ $\mu $-almost everywhere. 
+    <p>
+      Now let $\mu $ be a finite positive measure with compact support and finite energy. Then $U^\mu &lt;\infty $ $\mu $-almost everywhere, that is, $E_ d*\mu $ is finite $\mu $-almost everywhere, and theorem <a data-tag="878C027A" href="../../tag/872A6887585B/">4.2.2</a> writes $\mu $ as a sum of measures with finite continuous potentials. If $A$ is a bounded polar set and $\nu $ is chosen for $A$ as in proposition <a data-tag="7F3FDDFF" href="../../tag/64A94A9EE9E3/">4.2.3</a>, the previous paragraph shows that each of these measures, and hence $\mu $, gives measure zero to the Borel set $\{ E_ d*\nu =-\infty \} $, which contains $A$. An arbitrary polar set is a countable union of bounded polar sets, so it is contained in a countable union of Borel sets of $\mu $-measure zero; this proves the final assertion. In particular, a nonzero measure with finite energy cannot be carried by a polar compact set, so (2) implies (1). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-6A79421D">
+<p><a class="environment-identifier" href="../../tag/3CC68CCFAF3A/">Proposition <span data-tag="6A79421D">4.3.4</span>.</a><span data-gerby-tag="6A79421D"></span> The relative capacity of compact subsets of $B$ has the following properties. It is increasing: $C_ B(K)\leq C_ B(L)$ for compact sets $K\subset L\subset B$. It is continuous along decreasing sequences: if compact sets $K_ j\subset B$ decrease to $K$, then $C_ B(K_ j)\to C_ B(K)$. It is strongly subadditive: for compact sets $K,L\subset B$, </p>
+<div class="equation">
+  \[  C_ B(K\cup L)+C_ B(K\cap L)\leq C_ B(K)+C_ B(L).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $K\subset L$, every function admissible for $L$ is admissible for $K$, so $u_ L\leq u_ K$. By proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>, $u_ L=-G_ B\lambda _ L$ and $u_ K=-G_ B\lambda _ K$, and part (2) of that proposition gives $C_ B(L)\geq C_ B(K)$. 
+    <p>
+      Let $K_ j$ be compact sets decreasing to $K$. Their extremal functions increase with $j$ and are bounded above by $f_ K$. Let $v$ be admissible for $K$ and $\varepsilon &gt;0$. The function $v+\varepsilon (|x|^2-R^2)$ is less than $-1$ on $K$, so by upper semicontinuity it is less than $-1$ on an open neighborhood $U$ of $K$. The compact sets $K_ j\setminus U$ decrease and have empty intersection, so one of them is empty; thus $K_ j\subset U$ for all large $j$. Hence $v+\varepsilon (|x|^2-R^2)$ is admissible for $K_ j$, and therefore at most $f_{K_ j}$, when $j$ is large. Letting $\varepsilon \downarrow 0$ and taking the supremum over $v$, we obtain $f_{K_ j}\to f_ K$ pointwise. Since $f_{K_ j}=u_{K_ j}$ and $f_ K=u_ K$ almost everywhere (theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.2</a>) and all these functions take values in $[-1,0]$, bounded convergence gives $u_{K_ j}\to u_ K$ in $L^1(B)$. Choose $\chi \in C_ c^\infty (B)$ equal to one near $K_1$. Since all the Riesz measures are supported in $K_1$, 
+    
+<div class="equation">
+  \[  C_ B(K_ j)=\int \chi \, \mathrm d\lambda _{K_ j}=\int u_{K_ j}\Delta \chi \, \mathrm d x\longrightarrow \int u_ K\Delta \chi \, \mathrm d x=C_ B(K).  \]
+</div>
+<p>
+      For strong subadditivity we first prove that $F=f_{K\cup L}+f_{K\cap L}$ satisfies $F\geq f_ K+f_ L$. At a point of $K$ we have $f_{K\cup L}=-1=f_ K$, and $f_{K\cap L}\geq f_ L$ because $K\cap L\subset L$; the case of a point of $L$ is symmetric. So the inequality holds on $K\cup L$. By proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>, $F$ is harmonic on the open set $U=B\setminus (K\cup L)$, lower semicontinuous on $B$, and tends to zero at $\partial B$. Let $v$ and $w$ be continuous admissible functions for $K$ and $L$. At a boundary point $\zeta $ of $U$ in $B$, which lies in $K\cup L$, we have 
+    
+<div class="equation">
+  \[  \begin{aligned}  \varlimsup _{U\ni x\to \zeta }(v+w)(x)&amp; =v(\zeta )+w(\zeta )\leq f_ K(\zeta )+f_ L(\zeta )\\ &amp; \leq F(\zeta )\leq \varliminf _{U\ni x\to \zeta }F(x), \end{aligned}  \]
+</div>
+<p>
+       and at points of $\partial B$ the upper limits of $v+w$ are nonpositive while $F$ tends to zero. By proposition <a data-tag="4517B555" href="../../tag/6D3B30A16AAE/">3.1.4</a>, applied to the subharmonic function $v+w-F$ on the bounded open set $U$, we get $v+w\leq F$ on $U$. Taking the supremum over $v$ and $w$, which by proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a> gives $f_ K$ and $f_ L$, proves the inequality on $U$, hence on $B$. 
+    <p>
+      Since each $f$ equals the corresponding $u$ almost everywhere, we obtain $u_{K\cup L}+u_{K\cap L}\geq u_ K+u_ L$ almost everywhere; taking ball averages and letting the radius tend to zero, (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>) gives this inequality everywhere. The two sides are the negatives of the Green potentials of $\lambda _{K\cup L}+\lambda _{K\cap L}$ and of $\lambda _ K+\lambda _ L$, so part (2) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a> gives the asserted inequality of masses. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+We extend the relative capacity to arbitrary sets with compact closure in $B$. For an open set $O\Subset B$ and a set $A\Subset B$ put 
+</p>
+<div class="equation">
+  \[  \begin{aligned}  C_ B(O)&amp; =\sup \{ C_ B(K):K\subset O\text{ compact}\} ,\\  C_ B^*(A)&amp; =\inf \{ C_ B(O):O\text{ open},\  A\subset O\Subset B\} . \end{aligned}  \]
+</div>
+<p>
+ We call $C_ B^*(A)$ the outer relative capacity of $A$. For an open set $O\Subset B$ we have $C_ B^*(O)=C_ B(O)$: the set $O$ itself is allowed in the infimum, and every open $O'\supset O$ satisfies $C_ B(O')\geq C_ B(O)$, because compact subsets of $O$ are compact subsets of $O'$. The outer capacity $C_ B^*$ is increasing by definition, and $C_ B^*(\varnothing )=0$. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-AFB551A5">
+<p><a class="environment-identifier" href="../../tag/AEE550586C10/">Theorem <span data-tag="AFB551A5">4.3.5</span>.</a><span data-gerby-tag="AFB551A5"></span> The outer relative capacity has the following properties. </p>
+<ol>
+<li><p>
+$C_ B^*(K)=C_ B(K)$ for every compact set $K\subset B$. 
+</p>
+</li><li><p>
+It is increasing and countably subadditive: $C_ B^*(\bigcup _ jA_ j)\leq \sum _ jC_ B^*(A_ j)$ whenever $\bigcup _ jA_ j\Subset B$. 
+</p>
+</li><li><p>
+If $A_1\subset A_2\subset \cdots $ and $A=\bigcup _ jA_ j\Subset B$, then $C_ B^*(A_ j)\to C_ B^*(A)$. 
+</p>
+</li><li><p>
+If $C_ B^*(A)=0$, then $A$ is polar. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Let $K\subset B$ be compact; we may assume that $K\neq \varnothing $, since $C_ B^*(\varnothing )=0=C_ B(\varnothing )$. For $0&lt;\delta &lt;\operatorname {dist}(K,\mathbb R^ d\setminus B)$, the compact sets $K_ j=\{ x:\operatorname {dist}(x,K)\leq \delta /j\} $ are neighborhoods of $K$ in $B$ that decrease to $K$; let $O_ j$ be their interiors. Every open set containing $K$ has capacity at least $C_ B(K)$, so by proposition <a data-tag="6A79421D" href="../../tag/3CC68CCFAF3A/">4.3.4</a>
+
+<div class="equation">
+  \[  C_ B(K)\leq C_ B^*(K)\leq C_ B(O_ j)\leq C_ B(K_ j)\longrightarrow C_ B(K).  \]
+</div>
+<p>
+<em>Strong subadditivity.</em> Parts (2) and (3) rest on two inequalities for $C_ B^*$, the first of which is $C_ B^*(A\cup A')+C_ B^*(A\cap A')\leq C_ B^*(A)+C_ B^*(A')$ for $A,A'\Subset B$. Consider first open sets $O,O'\Subset B$, and let $K\subset O\cup O'$ and $L\subset O\cap O'$ be compact. Cover $K$ by finitely many closed balls, each contained in $O$ or in $O'$, and let $K'$ and $K''$ be the intersections of $K$ with the union of those contained in $O$ and in $O'$, respectively. Then $K'\cup L\subset O$ and $K''\cup L\subset O'$ are compact, their union contains $K$ and their intersection contains $L$. By monotonicity and proposition <a data-tag="6A79421D" href="../../tag/3CC68CCFAF3A/">4.3.4</a>, 
+    
+<div class="equation">
+  \[  \begin{aligned}  C_ B(K)+C_ B(L)&amp; \leq C_ B\bigl ((K'\cup L)\cup (K''\cup L)\bigr )+C_ B\bigl ((K'\cup L)\cap (K''\cup L)\bigr )\\ &amp; \leq C_ B(K'\cup L)+C_ B(K''\cup L)\leq C_ B(O)+C_ B(O'). \end{aligned}  \]
+</div>
+<p>
+       Taking the supremum over $K$ and $L$ proves the inequality for open sets. For arbitrary $A,A'\Subset B$, apply it to open sets $O\supset A$ and $O'\supset A'$ with compact closures in $B$, and take the infimum. 
+    <p>
+<em>An excess inequality.</em> Let $A_ j\subset E_ j$ be sets with $E_1\cup E_2\Subset B$. All the capacities involved are finite. Strong subadditivity applied to $E_1$ and $A_1\cup E_2$, and to $A_1\cup A_2$ and $E_2$, gives 
+    
+<div class="equation">
+  \[  \begin{aligned}  C_ B^*(E_1\cup E_2)+C_ B^*(A_1)&amp; \leq C_ B^*(E_1)+C_ B^*(A_1\cup E_2),\\  C_ B^*(A_1\cup E_2)+C_ B^*(A_2)&amp; \leq C_ B^*(A_1\cup A_2)+C_ B^*(E_2), \end{aligned}  \]
+</div>
+<p>
+       where we have used monotonicity to bound the capacities of the intersections from below. Adding these inequalities and cancelling $C_ B^*(A_1\cup E_2)$ gives the case $N=2$ of 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-7A97AF00"><span data-gerby-tag="7A97AF00"></span>
+<span class="equation-label"><a data-tag="7A97AF00" href="../../tag/0A0CA0153B81/">4.15</a></span>
+<div>\begin{equation} \label{eq:outer-capacity-excess} C_ B^*\left(\bigcup _{j=1}^ NE_ j\right)-C_ B^*\left(\bigcup _{j=1}^ NA_ j\right) \leq \sum _{j=1}^ N\bigl (C_ B^*(E_ j)-C_ B^*(A_ j)\bigr ), \end{equation}</div>
+</div>
+<p>
+       valid whenever $A_ j\subset E_ j$ and $\bigcup _ jE_ j\Subset B$. Induction on $N$, applied to the pairs $\bigcup _{j&lt;N}A_ j\subset \bigcup _{j&lt;N}E_ j$ and $A_ N\subset E_ N$, proves (<a data-tag="7A97AF00" href="../../tag/0A0CA0153B81/">4.15</a>) in general. 
+    <p>
+      (2) and (3). If $O_ j$ are open sets increasing to an open set $O\Subset B$, every compact subset of $O$ lies in some $O_ j$, so $C_ B(O_ j)\to C_ B(O)$. Now let $A_ j$ be arbitrary sets with $A=\bigcup _ jA_ j\Subset B$, fix an open set $W$ with $\overline A\subset W\Subset B$, and let $\varepsilon &gt;0$. Intersecting almost optimal open sets in the definition of $C_ B^*(A_ j)$ with $W$, we find open sets $E_ j$ with $A_ j\subset E_ j\subset W$ and $C_ B(E_ j)&lt;C_ B^*(A_ j)+\varepsilon 2^{-j}$. By (<a data-tag="7A97AF00" href="../../tag/0A0CA0153B81/">4.15</a>) and the result for open sets, 
+    
+<div class="equation">
+  \[  C_ B^*\left(\bigcup _ j A_ j\right)\leq C_ B\left(\bigcup _ j E_ j\right)=\lim _{N\to \infty }C_ B\left(\bigcup _{j=1}^ NE_ j\right) \leq \lim _{N\to \infty }C_ B^*\left(\bigcup _{j=1}^ N A_ j\right)+\varepsilon .  \]
+</div>
+<p>
+       Let $\varepsilon \downarrow 0$. If the $A_ j$ increase, the right side is $\lim _ NC_ B^*(A_ N)\leq C_ B^*(A)$, which proves (3). In general, strong subadditivity gives finite subadditivity, and the displayed inequality extends it to countable subadditivity, which proves (2). 
+    <p>
+      (4) Suppose $C_ B^*(A)=0$. We construct subharmonic functions $v_ j$ on $B$ that equal $-1$ on $A$ and whose Riesz measures have mass less than $2^{-j}$. Their sum will be a nontrivial subharmonic function equal to $-\infty $ on $A$. Fix an open set $W$ with $\overline A\subset W\Subset B$, and choose open sets $O_ j$ with $A\subset O_ j\subset W$ and $C_ B(O_ j)&lt;2^{-j}$. Exhaust $O_ j$ by compact sets $L_{j,m}$, increasing in $m$, whose interiors cover $O_ j$. Choose $c&gt;0$ with $q(x)=c(|x|^2-R^2)\leq -1$ on $\overline W$; then $q$ is admissible for every $L_{j,m}$, so $u_{L_{j,m}}\geq q$. The functions $u_{L_{j,m}}$ decrease as $m$ increases, and their limit $v_ j$ is subharmonic by theorem <a data-tag="1B5BFA16" href="../../tag/62E4A7EF2B4F/">3.1.6</a>, lies between $q$ and $0$, and hence tends to zero at $\partial B$. Moreover, $v_ j=-1$ on $O_ j$, since $f_{L_{j,m}}$ and hence $u_{L_{j,m}}$ equal $-1$ on the interior of $L_{j,m}$. 
+    <p>
+      The functions $u_{L_{j,m}}$ converge to $v_ j$ in $L^1(B)$ by bounded convergence, so their Riesz measures, which are supported in $\overline W$, converge in the sense of distributions on $B$, and hence vaguely by proposition <a data-tag="915FBB91" href="../../tag/4DFD880D9E4D/">1.5.1</a>, to the Riesz measure $\lambda _ j$ of $v_ j$. By proposition <a data-tag="6031A2A1" href="../../tag/132090FCDF4A/">1.5.2</a>, applied to the open set $B\setminus \overline W$, the measure $\lambda _ j$ is supported in $\overline W$. Testing against a function in $C_ c^\infty (B)$ equal to one near $\overline W$ gives $\lambda _ j(B)=\lim _ mC_ B(L_{j,m})=C_ B(O_ j)$, since every compact subset of $O_ j$ lies in some $L_{j,m}$. The function $v_ j$ is bounded, hence locally integrable, tends to zero at $\partial B$, and has a Riesz measure with compact support in $B$; by the converse in part (2) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>, $v_ j=-G_ B\lambda _ j$. 
+    <p>
+      The measure $\nu =\sum _ j\lambda _ j$ is finite, since $\lambda _ j(B)=C_ B(O_ j)&lt;2^{-j}$, and it is supported in $\overline W$. By Tonelli's theorem for the nonnegative kernel $G_ B$, we have $\sum _ jv_ j=-G_ B\nu $. By part (2) of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a>, $-G_ B\nu $ is subharmonic on $B$ with Riesz measure $\nu $, so it is locally integrable and not identically $-\infty $. Since every $v_ j$ equals $-1$ on $A$, the sum $\sum _ jv_ j$ equals $-\infty $ on $A$. Hence $A$ is polar. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-example" id="foundations-of-pluripotential-theory-01C621E0">
+<p><a class="environment-identifier" href="../../tag/FC1E9D9B42F0/">Example <span data-tag="01C621E0">4.3.6</span>.</a><span data-gerby-tag="01C621E0"></span> Let $0&lt;r&lt;R$ and $K=\overline{B(0,r)}$. The function $x\mapsto G_ B(x,0)$ is radial and decreasing in $|x|$ by lemma <a data-tag="9D12CA19" href="../../tag/D17D3298467B/">4.3.1</a>. We claim that $u_ K=f_ K=w$, where </p>
+<div class="equation">
+  \[  w=\max \left\{ -1,-\frac{G_ B(\cdot ,0)}{G_ B(re_1,0)}\right\} .  \]
+</div>
+<p> The function $w$ equals $-1$ on $K$ and $-G_ B(x,0)/G_ B(re_1,0)$ on the annulus $r&lt;|x|&lt;R$. It is subharmonic, because $-G_ B(\cdot ,0)/G_ B(re_1,0)$ is a positive multiple of $E_ d$ plus a constant on $B$, and it is nonpositive; hence it is admissible and $w\leq f_ K$. Conversely, let $v$ be admissible. On the annulus, $w$ is harmonic and continuous up to the boundary, with boundary values $-1$ on $|x|=r$ and $0$ on $|x|=R$. Since $v\leq -1$ on the inner sphere and $v\leq 0$ on $B$, upper semicontinuity shows that the boundary upper limits of $v$ are at most these values. The comparison principle (theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>) on the annulus gives $v\leq w$ there, and $v\leq -1=w$ on $K$. Hence $f_ K=w$, and since $w$ is continuous, $u_ K=w$. Near $\partial B$, $u_ K$ is $-1/G_ B(re_1,0)$ times $G_ B(\cdot ,0)$, whose outward normal derivative on $\partial B$ is $-(s_{d-1}R^{d-1})^{-1}$. Therefore the flux formula of proposition <a data-tag="3D5469C4" href="../../tag/4A7451727417/">4.3.2</a> gives </p>
+<div class="equation">
+  \[  C_ B(\overline{B(0,r)})=\frac{1}{G_ B(re_1,0)}= \begin{cases}  2\pi /\log (R/r),&amp; d=2,\\  (d-2)s_{d-1}/(r^{2-d}-R^{2-d}),&amp; d\geq 3. \end{cases}  \]
+</div>
+<p>These are relative capacities. To compute the kernel capacities of the same ball, let $\sigma _ r$ be the normalized surface measure on the sphere $|x|=r$ and $p=E_ d*\sigma _ r$. If $|x|&gt;r$, then $p(x)$ is the spherical mean over $\partial B(0,r)$ of the function $y\mapsto E_ d(x-y)$, which is harmonic on a neighborhood of $\overline{B(0,r)}$; hence $p(x)=E_ d(x)$ by the mean-value property (theorem <a data-tag="667A5C9D" href="../../tag/A60BA3B2DBFC/">2.1.2</a>). Surface measure is invariant under orthogonal transformations (section <a data-tag="A631CCEB" href="../../tag/524A2588C8CE/">2.1</a>), which act transitively on spheres centered at the origin, so $p$ is radial. On the ball $|x|&lt;r$, the function $p$ is harmonic: by proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a> and theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a> it agrees almost everywhere with a harmonic function there, hence everywhere by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>. Since $p$ is radial, for $0&lt;|x|&lt;r$ the value $p(x)$ is the spherical mean of $p$ over $\partial B(0,|x|)$, which equals $p(0)$ by the mean-value property; moreover, $p(0)=E_ d(re_1)$ because $E_ d$ is radial. Finally, $p$ is constant on the sphere $|x|=r$, which is the support of $\sigma _ r$, so part (1) of theorem <a data-tag="878C027A" href="../../tag/872A6887585B/">4.2.2</a> shows that $p$ is continuous at the points of the sphere. Hence $p=E_ d(re_1)$ on $K$. </p>
+<p>Consequently the Newtonian potential of $\sigma _ r$ equals $\Gamma _ d(re_1)$ on $K$ and $\Gamma _ d(x)$ for $|x|&gt;r$, and the logarithmic potential with a scale $D&gt;2r$ equals $(2\pi )^{-1}\log (D/r)$ on $K$ and $(2\pi )^{-1}\log (D/|x|)$ for $|x|&gt;r$. In particular $\sigma _ r$ has finite energy, and its potential $U^{\sigma _ r}$ has a constant value $V$ on $K$. Since $\sigma _ r$ is a nonzero measure with finite energy carried by the sphere $|x|=r$, theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a> shows that this sphere is not polar, although it has Lebesgue measure zero: for $0&lt;\varepsilon &lt;r$ it is contained in $B(0,r+\varepsilon )\setminus B(0,r-\varepsilon )$, whose measure $s_{d-1}\bigl ((r+\varepsilon )^ d-(r-\varepsilon )^ d\bigr )/d$ tends to zero as $\varepsilon \downarrow 0$. </p>
+<p>Let $\nu $ be a probability measure on $K$ with finite energy. Then $\nu -\sigma _ r$ has total mass zero, and its positive and negative parts are dominated by $\nu $ and $\sigma _ r$, so they have finite energy because the kernel is nonnegative on $K\times K$. Moreover, $\int U^{\sigma _ r}\, \mathrm d(\nu -\sigma _ r)=V-V=0$. Hence proposition <a data-tag="DF3A6DB5" href="../../tag/09A0D05A868F/">4.1.2</a> gives </p>
+<div class="equation">
+  \[  I(\nu )=I(\sigma _ r)+2\int U^{\sigma _ r}\, \mathrm d(\nu -\sigma _ r)+I(\nu -\sigma _ r)\geq I(\sigma _ r).  \]
+</div>
+<p> Thus $\sigma _ r$ is the equilibrium measure of $K$, the Newtonian capacity of $K$ is $(d-2)s_{d-1}r^{d-2}$ if $d\geq 3$, and its logarithmic capacity is $r$ if $d=2$. A probability measure on a compact set is also one on every larger compact set, so the kernel capacities are increasing; when $d=2$, we compute both logarithmic capacities with a scale exceeding the diameter of the larger set, as theorem <a data-tag="A35EEAC5" href="../../tag/AA43DD93EFE4/">4.1.3</a> allows. Letting $r\downarrow 0$, we recover the fact that a point has kernel capacity zero. </p>
+</article>
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

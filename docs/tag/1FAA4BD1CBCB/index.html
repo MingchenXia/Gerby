@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Basic properties of partial Okounkov bodies · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/sections-okounkov/">Chapter 16 · Sections, graded series, and Okounkov bodies</a> · Tag <code>1FAA4BD1CBCB</code></p><h1>Basic properties of partial Okounkov bodies</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · 10.3.4 Basic properties of partial Okounkov bodies <span data-gerby-tag="DEA6AEC4"></span></div>
+
+<article class="env-proposition" id="sgpt-6BA97796">
+<p><a class="environment-identifier" href="../../tag/97A03B9F1F87/">Proposition <span data-tag="6BA97796">10.3.16</span>.</a><span data-gerby-tag="6BA97796"></span> The partial Okounkov body $\Delta _{\nu }(L,h)$ depends only on $\mathrm{dd}^{\mathrm{c}}h$, not on the explicit choices of $L,h_0,h$. </p>
+</article> Thanks to this result, given a closed positive $(1,1)$-current $T\in c_1(L)$ on $X$ with $\int _ X T^ n&gt;0$, we can write 
+
+<div class="equation">
+  \[  \Delta _{\nu }(T)\coloneqq \Delta _{\nu }(\theta ,\varphi )  \]
+</div>
+<p>
+ if $T=\theta +\mathrm{dd}^{\mathrm{c}}\varphi $ for some $\varphi \in \mathrm{PSH}(X,\theta )$. 
+</p>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      There are two different claims to prove, as detailed in the two steps below. 
+    <p>
+<strong>Step 1</strong>. Let $h_0'$ be another Hermitian metric on $L$. Set $\theta '=c_1(L,h_0')$. Write $\mathrm{dd}^{\mathrm{c}}f=\theta -\theta '$. Let $\varphi '=\varphi +f\in \mathrm{PSH}(X,\theta ')$. Then 
+    
+<div class="equation" id="sgpt-9155F61C"><span data-gerby-tag="9155F61C"></span>
+<span class="equation-label"><a data-tag="9155F61C" href="../../tag/C90692A83F74/">10.53</a></span>
+<div>\begin{equation} \label{eq:DeltaDelta1} \Delta _{\nu }(\theta ,\varphi )=\Delta _{\nu }(\theta ',\varphi '). \end{equation}</div>
+</div>
+<p>
+      This is obvious since $\Gamma (\theta ,\varphi )=\Gamma (\theta ',\varphi ')$. 
+    <p>
+<strong>Step 2</strong>. Let $L'$ be another big line bundle on $X$. By Step 1, we may assume that the reference Hermitian metric $h'_0$ on $L'$ is such that $c_1(L',h'_0)=\theta $. 
+    <p>
+      Let $h'$ be a plurisubharmonic metric on $L'$ with $c_1(L,h)=c_1(L',h')$. Then 
+    
+<div class="equation">
+  \[  \Delta _{\nu }(L,h)=\Delta _{\nu }(L',h').  \]
+</div>
+<p>
+       By the approximation step in the construction of $\Delta _\nu (L,h)$ and the continuity of the extension in theorem <a data-tag="870F54F8" href="../../tag/2534E787147E/">10.1.6</a>, it is enough to prove the assertion when $c_1(L,h)$ has analytic singularities. After taking a birational resolution, it suffices to deal with the case where $c_1(L,h)$ has analytic singularities along an effective $\mathbb {Q}$-divisor $D$. By rescaling, we may also assume that $D$ is a divisor. By <a data-tag="4A843D2E" href="../../tag/555C64B2D134/">10.3.15</a>, we further reduce to the case where $c_1(L,h)$ is not singular. 
+    <p>
+      In this case, the assertion is proved in proposition <a data-tag="54A6D63A" href="../../tag/572B003B2680/">10.3.6</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-58574995">
+<p><a class="environment-identifier" href="../../tag/1934C9D19460/">Proposition <span data-tag="58574995">10.3.17</span>.</a><span data-gerby-tag="58574995"></span> Let $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Assume that $\varphi \preceq _{\mathcal{I}} \psi $. Then </p>
+<div class="equation" id="sgpt-95B9CA9A"><span data-gerby-tag="95B9CA9A"></span>
+<span class="equation-label"><a data-tag="95B9CA9A" href="../../tag/44ACC02FAF04/">10.54</a></span>
+<div>\begin{equation} \label{eq:Deltacomp} \Delta _{\nu }(\theta ,\varphi ) \subseteq \Delta _{\nu }(\theta ,\psi ). \end{equation}</div>
+</div>
+</article> In particular, we always have 
+
+<div class="equation">
+  \[  \Delta _{\nu }(\theta ,\varphi )\subseteq \Delta _{\nu }(L).  \]
+</div>
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      This follows from corollary <a data-tag="EF7FDE10" href="../../tag/511230BE9AE5/">10.1.7</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-theorem" id="sgpt-B3064668">
+<p><a class="environment-identifier" href="../../tag/30EEF3A985B7/">Theorem <span data-tag="B3064668">10.3.18</span>.</a><span data-gerby-tag="B3064668"></span> The Okounkov body map </p>
+<div class="equation">
+  \[  \Delta _{\nu }(\theta ,\bullet ):\left( \mathrm{PSH}(X,\theta )_{&gt;0},d_ S\right)\rightarrow \left(\mathcal{K}_ n,d_{\mathrm{Haus}}\right)  \]
+</div>
+<p> is continuous. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $\varphi _ j\to \varphi $ be a $d_ S$-convergent sequence in $\mathrm{PSH}(X,\theta )_{&gt;0}$. We want to show that 
+    
+<div class="equation" id="sgpt-EDEF4909"><span data-gerby-tag="EDEF4909"></span>
+<span class="equation-label"><a data-tag="EDEF4909" href="../../tag/6AAC6A3D90A2/">10.55</a></span>
+<div>\begin{equation} \label{eq:Deltavjv} \Delta _{\nu }(\theta ,\varphi _ j)\xrightarrow {d_{\mathrm{Haus}}}\Delta _{\nu }(\theta ,\varphi ). \end{equation}</div>
+</div>
+<p>
+       Replacing the potentials by their $P$-envelopes does not change their partial Okounkov bodies, since $P$-equivalent potentials are $\mathcal{I}$-equivalent, nor does it change their $d_ S$-classes. Thus we may assume that all $\varphi _ j$'s and $\varphi $ are model potentials. 
+    <p>
+      By proposition <a data-tag="199F2D4D" href="../../tag/1DEED63B61B0/">6.2.12</a>, after passing to a subsequence we can sandwich $\varphi _ j$ between a decreasing sequence and an increasing sequence, both converging to $\varphi $ in $d_ S$. Using proposition <a data-tag="58574995" href="../../tag/1934C9D19460/">10.3.17</a> and theorem <a data-tag="088A1719" href="../../tag/BA1F1C1CF20F/">C.1.3</a>, it is enough to prove (<a data-tag="EDEF4909" href="../../tag/6AAC6A3D90A2/">10.55</a>) when $(\varphi _ j)_ j$ is monotone. By theorem <a data-tag="720E23D2" href="../../tag/88D575A3C46A/">6.2.27</a>, replacing $\varphi _ j$ and $\varphi $ by their $\mathcal{I}$-envelopes preserves this reduction, so we may further assume that the $\varphi _ j$'s and $\varphi $ are $\mathcal{I}$-model. In both cases, we claim that 
+    
+<div class="equation">
+  \[  \Gamma (\theta ,\varphi _ j)\xrightarrow {d_{\mathrm{sg}}} \Gamma (\theta ,\varphi )  \]
+</div>
+<p>
+       as $j\to \infty $. In fact, using theorem <a data-tag="60272F70" href="../../tag/FEA63C5AE11F/">7.4.2</a>, we can compute 
+    
+<div class="equation">
+  \[  \begin{aligned}  d_{\mathrm{sg}}\left(\Gamma (\theta ,\varphi _ j), \Gamma (\theta ,\varphi )\right) = &amp; \varlimsup _{k\to \infty } k^{-n}\left| h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi _ j)\right)-h^0\left(X,L^ k\otimes \mathcal{I}(k\varphi )\right) \right|\\  =&amp;  \frac{1}{n!} \left| \operatorname{vol}\theta _{\varphi _ j}-\operatorname{vol}\theta _{\varphi }\right|, \end{aligned}  \]
+</div>
+<p>
+       which converges to $0$ by theorem <a data-tag="91496AFE" href="../../tag/CAB6F4E23080/">6.2.30</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="sgpt-CA7419B9">
+<p><a class="environment-identifier" href="../../tag/CFE94018A80A/">Proposition <span data-tag="CA7419B9">10.3.19</span>.</a><span data-gerby-tag="CA7419B9"></span> Let $\pi \colon Y\rightarrow X$ be a modification. Then </p>
+<div class="equation">
+  \[  \Delta _{\nu }(\pi ^*L,\pi ^*h)=\Delta _{\nu }(L,h).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Thanks to proposition <a data-tag="D63378B8" href="../../tag/E535E4DC5384/">3.2.7</a>, we may assume that $\varphi $ is $\mathcal{I}$-model. By theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a>, we can find a sequence $(\varphi _ j)_ j$ with analytic singularities in $\mathrm{PSH}(X,\theta )$ such that $\varphi _ j\xrightarrow {d_ S}\varphi $. It is clear that $\pi ^*\varphi _ j\xrightarrow {d_ S}\pi ^*\varphi $. By theorem <a data-tag="B3064668" href="../../tag/30EEF3A985B7/">10.3.18</a>, we may then reduce to the case where $\varphi $ has analytic singularities. In this case, it suffices to apply <a data-tag="4A843D2E" href="../../tag/555C64B2D134/">10.3.15</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-proposition" id="sgpt-DA2C282B">
+<p><a class="environment-identifier" href="../../tag/86E922DD5140/">Proposition <span data-tag="DA2C282B">10.3.20</span>.</a><span data-gerby-tag="DA2C282B"></span> Let $(L', h')$ be another Hermitian big line bundle on $X$. Then </p>
+<div class="equation">
+  \[  \Delta _{\nu }(L,h)+\Delta _{\nu }(L', h')\subseteq \Delta _{\nu }(L\otimes L',h\otimes h').  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take a Hermitian metric $h_0'$ on $L'$ and let $\theta '=c_1(L',h_0')$. We identify $h'$ with $\varphi '\in \mathrm{PSH}(X,\theta ')$. Then we need to show 
+    
+<div class="equation" id="sgpt-9B62714D"><span data-gerby-tag="9B62714D"></span>
+<span class="equation-label"><a data-tag="9B62714D" href="../../tag/70AAFA1F54AB/">10.58</a></span>
+<div>\begin{equation} \label{eq:suba} \Delta _{\nu }(\theta ,\varphi )+\Delta _{\nu }(\theta ',\varphi ')\subseteq \Delta _{\nu }(\theta +\theta ',\varphi +\varphi '). \end{equation}</div>
+</div>
+<p>
+       We observe that 
+    
+<div class="equation">
+  \[  P_{\theta }[\varphi ]_{\mathcal{I}}+P_{\theta '}[\varphi ']_{\mathcal{I}}\sim _{\mathcal{I}} \varphi +\varphi '.  \]
+</div>
+<p>
+       Thus, after replacing $\varphi $ and $\varphi '$ by their $\mathcal{I}$-envelopes, in view of proposition <a data-tag="58574995" href="../../tag/1934C9D19460/">10.3.17</a>, we may assume that $\varphi $ and $\varphi '$ are $\mathcal{I}$-good. 
+    <p>
+      By theorem <a data-tag="78C13CE2" href="../../tag/F9085BB700B0/">7.1.1</a>, we can find sequences $(\varphi _ j)_ j$ and $(\varphi '_ j)_ j$ in $\mathrm{PSH}(X,\theta )_{&gt;0}$ and $\mathrm{PSH}(X,\theta ')_{&gt;0}$ respectively such that 
+    
+<ol>
+<li class="custom-item" id="sgpt-66CCC701"><span data-gerby-tag="66CCC701"></span><p>
+ $\varphi _ j$ and $\varphi '_ j$ both have analytic singularities for all $j\geq 1$, and 
+</p>
+</li><li class="custom-item" id="sgpt-731B9A7A"><span data-gerby-tag="731B9A7A"></span><p>
+ $\varphi _ j\xrightarrow {d_ S}\varphi $, $\varphi '_ j\xrightarrow {d_ S}\varphi '$. 
+</p>
+</li>
+</ol>
+<p>
+       Then $\varphi _ j+\varphi '_ j\in \mathrm{PSH}(X,\theta +\theta ')_{&gt;0}$ and $\varphi _ j+\varphi '_ j\xrightarrow {d_ S} \varphi +\varphi '$ by theorem <a data-tag="EFF6C6C5" href="../../tag/666CDCEAA1BE/">6.2.25</a>. Thus, by theorem <a data-tag="B3064668" href="../../tag/30EEF3A985B7/">10.3.18</a>, we may assume that $\varphi $ and $\varphi '$ both have analytic singularities. Taking a birational resolution, we may further assume that they have log singularities. By <a data-tag="4A843D2E" href="../../tag/555C64B2D134/">10.3.15</a>, we reduce to the case without singularities, in which case the result is just proposition <a data-tag="49478B40" href="../../tag/AE9EBC9C5252/">10.3.10</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-theorem" id="sgpt-12745FD7">
+<p><a class="environment-identifier" href="../../tag/10DA5B8BC320/">Theorem <span data-tag="12745FD7">10.3.21</span>.</a><span data-gerby-tag="12745FD7"></span> Let $\varphi ,\psi \in \mathrm{PSH}(X,\theta )_{&gt;0}$. Then for any $t\in (0,1)$, </p>
+<div class="equation" id="sgpt-C2A1E49C"><span data-gerby-tag="C2A1E49C"></span>
+<span class="equation-label"><a data-tag="C2A1E49C" href="../../tag/E375090F5B43/">10.59</a></span>
+<div>\begin{equation} \label{eq:Deltaconcave} \Delta _{\nu }\left(\theta ,t\varphi +(1-t)\psi \right)\supseteq t\Delta _{\nu }(\theta ,\varphi )+(1-t)\Delta _{\nu }(\theta ,\psi ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We may assume that $t$ is rational as a consequence of theorem <a data-tag="B3064668" href="../../tag/30EEF3A985B7/">10.3.18</a>. Similarly, as in the proof of proposition <a data-tag="DA2C282B" href="../../tag/86E922DD5140/">10.3.20</a>, we may reduce to the case where both $\varphi $ and $\psi $ have analytic singularities. In this case, let $N&gt;0$ be an integer such that $Nt$ is an integer. Then for any $s\in \mathrm{H}^0(X,L^ k\otimes \mathcal{I}_{\infty }(k\varphi ))$ and $r\in \mathrm{H}^0(X,L^ k\otimes \mathcal{I}_{\infty }(k\psi ))$, we have 
+    
+<div class="equation">
+  \[  s^{tN}\otimes r^{N-tN}\in \mathrm{H}^0\left(X,L^{kN}\otimes \mathcal{I}_{\infty }\left(kN(t\varphi +(1-t)\psi )\right)\right).  \]
+</div>
+<p>
+       By theorem <a data-tag="289292E3" href="../../tag/37D86D761E81/">10.1.3</a> and <a data-tag="4A843D2E" href="../../tag/555C64B2D134/">10.3.15</a>, (<a data-tag="C2A1E49C" href="../../tag/E375090F5B43/">10.59</a>) follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="sgpt-FB400BA0">
+<p><a class="environment-identifier" href="../../tag/300A5A5F84BB/">Proposition <span data-tag="FB400BA0">10.3.22</span>.</a><span data-gerby-tag="FB400BA0"></span> For any $a\in \mathbb {Z}_{&gt;0}$, </p>
+<div class="equation">
+  \[  \Delta _{\nu }(a\theta ,a\varphi )=a\Delta _{\nu }(\theta ,\varphi ).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      As in the proof of proposition <a data-tag="DA2C282B" href="../../tag/86E922DD5140/">10.3.20</a>, we may assume that $\varphi $ has log singularities. Using <a data-tag="4A843D2E" href="../../tag/555C64B2D134/">10.3.15</a>, we reduce to the case without the singularities, which is proved in proposition <a data-tag="159DA1BA" href="../../tag/2B94C07754DD/">10.3.11</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+In particular, if $S$ is a closed positive $(1,1)$-current on $X$ with $\int _ X S^ n&gt;0$ and such that 
+</p>
+<div class="equation">
+  \[  \{ S\} \in \mathrm{NS}^1(X)_{\mathbb {Q}},  \]
+</div>
+<p>
+ we can define 
+</p>
+<div class="equation" id="sgpt-10E5CE3B"><span data-gerby-tag="10E5CE3B"></span>
+<span class="equation-label"><a data-tag="10E5CE3B" href="../../tag/FD8FCE0E872C/">10.60</a></span>
+<div>\begin{equation} \label{eq:DeltanuTalgebraic1} \Delta _{\nu }(S)\coloneqq a^{-1}\Delta _{\nu }(aS) \end{equation}</div>
+</div>
+<p>
+ for a sufficiently divisible positive integer $a$. This definition is independent of the choice of $a$ thanks to proposition <a data-tag="FB400BA0" href="../../tag/300A5A5F84BB/">10.3.22</a>. 
+</p>
+<p>
+We also need the following perturbation. Let $A$ be an ample line bundle on $X$. Fix a Hermitian metric $h_ A$ on $A$ such that $\omega \coloneqq c_1(A,h_ A)$ is a Kähler form on $X$. 
+</p>
+
+<article class="env-proposition" id="sgpt-7376AD13">
+<p><a class="environment-identifier" href="../../tag/63CE446DCB89/">Proposition <span data-tag="7376AD13">10.3.23</span>.</a><span data-gerby-tag="7376AD13"></span> As $\mathbb {Q}_{&gt;0}\ni \delta \searrow 0$, the convex bodies $\Delta _{\nu }(\theta +\delta \omega +\mathrm{dd}^{\mathrm{c}}\varphi )$ are decreasing and </p>
+<div class="equation">
+  \[  \Delta _{\nu }(\theta +\delta \omega +\mathrm{dd}^{\mathrm{c}}\varphi )\xrightarrow {d_{\mathrm{Haus}}} \Delta _{\nu }(\theta _{\varphi }).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $0\leq \delta &lt;\delta '$ be two rational numbers. Take $C\in \mathbb {N}_{&gt;0}$ divisible enough, so that $C\delta $ and $C\delta '$ are both integers. Then by proposition <a data-tag="DA2C282B" href="../../tag/86E922DD5140/">10.3.20</a>, 
+    
+<div class="equation">
+  \[  \Delta _{\nu }(C\theta +C\delta \omega +C\mathrm{dd}^{\mathrm{c}}\varphi )\subseteq \Delta _{\nu }(C\theta +C\delta '\omega +C\mathrm{dd}^{\mathrm{c}}\varphi ).  \]
+</div>
+<p>
+       It follows that 
+    
+<div class="equation">
+  \[  \Delta _{\nu }(\theta +\delta \omega +\mathrm{dd}^{\mathrm{c}}\varphi )\subseteq \Delta _{\nu }(\theta +\delta '\omega +\mathrm{dd}^{\mathrm{c}}\varphi ).  \]
+</div>
+<p>
+       On the other hand, 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Delta _{\nu }(\theta +\delta \omega +\mathrm{dd}^{\mathrm{c}}\varphi )=\frac{1}{n!}\operatorname{vol}(\theta +\delta \omega )_{\varphi }.  \]
+</div>
+<p>
+       As $\delta \to 0+$, the right-hand side converges to 
+    
+<div class="equation">
+  \[  \operatorname{vol}\Delta _{\nu }(\theta ,\varphi )=\frac{1}{n!}\operatorname{vol}\theta _{\varphi },  \]
+</div>
+<p>
+       thanks to proposition <a data-tag="9C667FBF" href="../../tag/DF8A923E8F3E/">7.3.4</a>. Our assertion therefore follows. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

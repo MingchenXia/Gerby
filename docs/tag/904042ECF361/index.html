@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Strict barriers and background variation · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/non-pluripolar-mass/">Chapter 11 · Non-pluripolar measures and mass</a> · Tag <code>904042ECF361</code></p><h1>Strict barriers and background variation</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 30.4 Strict barriers and background variation <span data-gerby-tag="7C0A81DD"></span></div>
+<p>
+Positive lower volume permits a small stretch away from any less singular potential, and the admissible stretch depends only on the lower volume and a mass bound. Mixing the stretched potential with a strict potential produces a strict potential lying below the original one. The same bound for mixed masses controls the change of the lower volume under a small smooth perturbation of the background. Throughout this section, $\omega $ is a fixed Hermitian form on $X$. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-1DBB631B">
+<p><a class="environment-identifier" href="../../tag/EDD01F5B65E5/">Lemma <span data-tag="1DBB631B">30.4.1</span>.</a><span data-gerby-tag="1DBB631B"></span> Let $u,r\in \mathrm{PSH}(X,\theta )$, with $u\leq r$, and assume $\underline{\operatorname {vol}}_\theta (u)&gt;0$. For a Hermitian form $\Omega \geq \theta $, set </p>
+<div class="equation">
+  \[  b_0=1+\frac{\underline{\operatorname {vol}}_\theta (u)}{2^{n+1}n\, v_+(\Omega )}.  \]
+</div>
+<p> Then $\mathcal A_ b(u,r)\neq \varnothing $, so that $Q_ b(u,r)$ is defined, for $1\leq b\leq b_0$, and </p>
+<div class="equation">
+  \[  \lim _{b\downarrow 1}\overline{\operatorname {vol}}_\theta (Q_ b(u,r)) =\overline{\operatorname {vol}}_\theta (u).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $K=v_+(\Omega )$. Since $0&lt;\underline{\operatorname {vol}}_\theta (u)\leq K$, we have $1&lt;b_0\leq 2$. After a common translation we may assume $u\leq r\leq 0$. Suppose, to reach a contradiction, that $\mathcal A_ b(u,r)=\varnothing $ for some $1&lt;b\leq b_0$. Set 
+    
+<div class="equation">
+  \[  u_ j=\max (u,r-j),\qquad v_ j=u+(b-1)u_ j, \qquad q_ j=P_\theta (v_ j-(b-1)r).  \]
+</div>
+<p>
+       Here, as for stretching envelopes, a competitor $g$ for $q_ j$ is required to satisfy $g+(b-1)r\leq v_ j$, which is meaningful also at common poles. Off the poles the obstacle $v_ j-(b-1)r=u+(b-1)(u_ j-r)$ lies between $u-(b-1)j$ and $u$. Hence $q_ j$ is $\theta $-plurisubharmonic and $q_ j\sim u$. As $j$ increases, $q_ j$ decreases. A $\theta $-plurisubharmonic decreasing limit would belong to $\mathcal A_ b(u,r)$, so the limit is identically $-\infty $, and $\sup _ Xq_ j\to -\infty $ by theorem <a data-tag="D9A05B95" href="../../tag/FC59B7D406A3/">1.4.2</a>. 
+    <p>
+      Let $C_ j=\{ q_ j+(b-1)r=v_ j\} $. By the contact theorem, $\mu _{q_ j}$ is carried by $C_ j$. The current $b\theta +\mathrm{dd}^{\mathrm{c}}(q_ j+(b-1)r)$ equals $(\theta +\mathrm{dd}^{\mathrm{c}}q_ j)+(b-1)(\theta +\mathrm{dd}^{\mathrm{c}}r)\geq \theta +\mathrm{dd}^{\mathrm{c}}q_ j$. Positivity of the mixed products and ordered contact in background $b\theta $ therefore give 
+    
+<div class="equation">
+  \[  \mu _{q_ j}\leq \mathbf1_{C_ j}\bigl ((\theta +\mathrm{dd}^{\mathrm{c}}u)+(b-1)(\theta +\mathrm{dd}^{\mathrm{c}}u_ j)\bigr )^ n.  \]
+</div>
+<p>
+       On $C_ j$ we have $q_ j=u+(b-1)(u_ j-r)\geq bu$, because $u_ j\geq u$ and $r\leq 0$. Fix $k&gt;0$. For all sufficiently large $j$, $q_ j\leq -bk$ everywhere, so $C_ j\subset \{ u\leq -k\} $, and consequently 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-3AFA1D91"><span data-gerby-tag="3AFA1D91"></span>
+<span class="equation-label"><a data-tag="3AFA1D91" href="../../tag/080E895C193D/">30.6</a></span>
+<div>\begin{equation} \label{eq:positive-volume-stretch-tail} \underline{\operatorname {vol}}_\theta (u) \leq \mu _{q_ j}(X) \leq \int _{\{ u\leq -k\} }\bigl ((\theta +\mathrm{dd}^{\mathrm{c}}u)+(b-1)(\theta +\mathrm{dd}^{\mathrm{c}}u_ j)\bigr )^ n. \end{equation}</div>
+</div>
+<p>
+      To estimate the right-hand side, note that for any $s,t\in \mathrm{PSH}(X,\theta )$ and $0\leq i\leq n$, positivity of the non-pluripolar mixed products and proposition <a data-tag="7095F67A" href="../../tag/1342466C71A9/">6.5.3</a> imply 
+    
+<div class="equation">
+  \[  \begin{aligned} &amp; \binom ni\int _ X(\theta +\mathrm{dd}^{\mathrm{c}}s)^{n-i}\wedge (\theta +\mathrm{dd}^{\mathrm{c}}t)^ i\\ &amp; \quad \leq \binom ni\int _ X(\Omega +\mathrm{dd}^{\mathrm{c}}s)^{n-i}\wedge (\Omega +\mathrm{dd}^{\mathrm{c}}t)^ i\\ &amp; \quad \leq 2^ n\int _ X\mathrm{MA}_\Omega ((s+t)/2)\leq 2^ nK. \end{aligned}  \]
+</div>
+<p>
+        The second inequality follows by expanding $(\Omega +\mathrm{dd}^{\mathrm{c}}\frac{s+t}2)^ n$; for the possibly unbounded average, apply this expansion to its truncations at constant levels, which remain $\Omega $-plurisubharmonic. Expanding the integrand in (<a data-tag="3AFA1D91" href="../../tag/080E895C193D/">30.6</a>), and using $(b-1)^ i\leq b-1$ for $i\geq 1$, gives 
+    
+<div class="equation">
+  \[  \underline{\operatorname {vol}}_\theta (u) \leq \mu _ u(\{ u\leq -k\} )+n2^ nK(b-1).  \]
+</div>
+<p>
+       The measure $\mu _ u$ is finite and puts no mass on the pole set of $u$, so the first term tends to zero as $k\to \infty $. By the choice of $b_0$, the remaining error is at most half of $\underline{\operatorname {vol}}_\theta (u)&gt;0$, a contradiction. Thus $\mathcal A_ b(u,r)\neq \varnothing $ for $1&lt;b\leq b_0$; for $b=1$ the family contains $u$, and $Q_1(u,r)=u$. 
+    <p>
+      Put $h_0=Q_{b_0}(u,r)$ and, for $1&lt;b\leq b_0$, $t=(b-1)/(b_0-1)\in (0,1]$. The inequality $h_0\leq b_0u-(b_0-1)r$ shows that $(1-t)u+th_0$ is a competitor for $Q_ b(u,r)$, and $Q_ b(u,r)\leq bu-(b-1)r\leq u$. Hence 
+    
+<div class="equation">
+  \[  (1-t)u+th_0\leq Q_ b(u,r)\leq u.  \]
+</div>
+<p>
+       Addition, homogeneity and volume monotonicity give 
+    
+<div class="equation">
+  \[  (1-t)^ n\overline{\operatorname {vol}}_\theta (u) \leq \overline{\operatorname {vol}}_\theta (Q_ b(u,r)) \leq \overline{\operatorname {vol}}_\theta (u).  \]
+</div>
+<p>
+       Letting $b\downarrow 1$ proves the limit. Undoing the common translation changes neither the volumes nor the nonemptiness of the competitor families. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="non-kahler-pluripotential-theory-40A9BCB2">
+<p><a class="environment-identifier" href="../../tag/D51B82B18D30/">Corollary <span data-tag="40A9BCB2">30.4.2</span>.</a><span data-gerby-tag="40A9BCB2"></span> If $u\in \mathrm{PSH}(X,\theta )$ has positive lower volume, then there are $w\in \mathrm{PSH}(X,\theta )$ and $\varepsilon &gt;0$ with </p>
+<div class="equation">
+  \[  w\leq u,\qquad \theta +\mathrm{dd}^{\mathrm{c}}w\geq \varepsilon \omega .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Translate $u$ so that $u\leq V_\theta $. By bigness, there are $\rho \in \mathrm{PSH}(X,\theta )$ and $\delta &gt;0$ with $\theta +\mathrm{dd}^{\mathrm{c}}\rho \geq \delta \omega $; after a translation, $\rho \leq V_\theta $. By lemma <a data-tag="1DBB631B" href="../../tag/EDD01F5B65E5/">30.4.1</a> with $r=V_\theta $, there is $b&gt;1$ for which $h=Q_ b(u,V_\theta )$ is defined. Put 
+    
+<div class="equation">
+  \[  w=b^{-1}h+(1-b^{-1})\rho .  \]
+</div>
+<p>
+       Since $b^{-1}h+(1-b^{-1})V_\theta \leq u$ and $\rho \leq V_\theta $, we have $w\leq u$; moreover $\theta +\mathrm{dd}^{\mathrm{c}}w\geq (1-b^{-1})\delta \omega $. Undoing the translation of $u$ by the same translation of $w$ gives the assertion with $\varepsilon =(1-b^{-1})\delta $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-DE77A39F">
+<p><a class="environment-identifier" href="../../tag/0729BE10D92E/">Proposition <span data-tag="DE77A39F">30.4.3</span>.</a><span data-gerby-tag="DE77A39F"></span> Assume in addition that $\theta \geq 0$. If $u\in \mathrm{PSH}(X,\theta )$ and $\underline{\operatorname {vol}}_\theta (u)&gt;0$, then $P_{\varepsilon \theta }(u)\not\equiv -\infty $ for some $\varepsilon \in (0,1)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By corollary <a data-tag="40A9BCB2" href="../../tag/D51B82B18D30/">30.4.2</a>, choose $w\leq u$ and $\delta &gt;0$ with $\theta +\mathrm{dd}^{\mathrm{c}}w\geq \delta \omega $. Choose $C&gt;0$ with $\theta \leq C\omega $, and $0&lt;t&lt;\min (1,\delta /C)$. Then 
+    
+<div class="equation">
+  \[  (1-t)\theta +\mathrm{dd}^{\mathrm{c}}w\geq (\delta -tC)\omega \geq 0.  \]
+</div>
+<p>
+       Thus $w$ is a competitor for $P_{(1-t)\theta }(u)$, and $\varepsilon =1-t$ has the required property. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+For a reference potential $\varphi $, the positive-volume model condition reads 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-3FC99299"><span data-gerby-tag="3FC99299"></span>
+<span class="equation-label"><a data-tag="3FC99299" href="../../tag/F65E6B4224EA/">30.10</a></span>
+<div>\begin{equation} \label{eq:li-model-condition} P_\theta [\varphi ]=\varphi ,\qquad \underline{\operatorname {vol}}_\theta (\varphi )&gt;0. \end{equation}</div>
+</div>
+<p>
+ When $\theta \geq 0$, proposition <a data-tag="DE77A39F" href="../../tag/0729BE10D92E/">30.4.3</a> shows that (<a data-tag="3FC99299" href="../../tag/F65E6B4224EA/">30.10</a>) implies the smaller-background model condition (<a data-tag="54840897" href="../../tag/237D346B8CBA/">13.26</a>) of section <a data-tag="576861A0" href="../../tag/97D4C0CD199E/">13.5</a>. If moreover $v_-(\theta )&gt;0$, the converse holds. Indeed, if $P_{\varepsilon \theta }(\varphi )\not\equiv -\infty $, then a translate of the same competitor shows that $P_{\varepsilon \theta }(\psi )\not\equiv -\infty $ for every $\psi \sim \varphi $ in $\mathrm{PSH}(X,\theta )$, and lemma <a data-tag="94A16878" href="../../tag/18D2E34A9D42/">13.5.2</a> gives $\int _ X\mathrm{MA}_\theta (\psi )\geq (1-\varepsilon )^ nv_-(\theta )$. Hence 
+</p>
+<div class="equation">
+  \[  \underline{\operatorname {vol}}_\theta (\varphi ) \geq (1-\varepsilon )^ n v_-(\theta )&gt;0.  \]
+</div>
+<p>
+ Without the lower bound $v_-(\theta )&gt;0$, the same lemma still shows that each potential equivalent to $\varphi $ has positive mass, but not that these masses are bounded away from zero. 
+</p>
+<p>
+A small smooth increase of the background changes the lower volume by at most a linear error, and a strict potential lying below $u$ gives a multiplicative comparison for both volumes. 
+</p>
+
+<article class="env-proposition" id="non-kahler-pluripotential-theory-95AB9149">
+<p><a class="environment-identifier" href="../../tag/F4C607C7C503/">Proposition <span data-tag="95AB9149">30.4.4</span>.</a><span data-gerby-tag="95AB9149"></span> There is $C&gt;0$, depending only on $\theta $ and $\omega $, such that, for every $u\in \mathrm{PSH}(X,\theta )$, every $\varepsilon \in [0,1]$ and every smooth real $(1,1)$-form $\eta $ with $\theta \leq \eta \leq \theta +\varepsilon \omega $, </p>
+<div class="equation">
+  \[  0\leq \underline{\operatorname {vol}}_\eta (u) -\underline{\operatorname {vol}}_\theta (u)\leq C\varepsilon .  \]
+</div>
+<p> If $\underline{\operatorname {vol}}_\theta (u)&gt;0$, there is also $\delta &gt;0$, depending on $u$, such that, for every $\varepsilon \geq 0$ and every smooth $\eta $ with $\theta \leq \eta \leq \theta +\varepsilon \omega $, both singularity volumes satisfy </p>
+<div class="equation">
+  \[  \operatorname {vol}_\theta (u) \leq \operatorname {vol}_\eta (u) \leq (1+\varepsilon /\delta )^ n\operatorname {vol}_\theta (u).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a Hermitian form $\Omega $ with $\Omega \geq \theta $ and $\Omega \geq \omega $, and set $C=n2^ n v_+(\Omega )$. For every $v\in \mathrm{PSH}(X,\theta )$ and $1\leq k\leq n$, the mixed-mass estimate in the proof of lemma <a data-tag="1DBB631B" href="../../tag/EDD01F5B65E5/">30.4.1</a>, applied to $s=v$ and $t=0$, together with $\omega \leq \Omega $, gives 
+    
+<div class="equation">
+  \[  \binom nk\int _ X(\theta +\mathrm{dd}^{\mathrm{c}}v)^{n-k}\wedge \omega ^ k \leq 2^ n v_+(\Omega ).  \]
+</div>
+<p>
+       Expanding in the smooth positive perturbation and using $\varepsilon ^ k\leq \varepsilon $ yields 
+    
+<div class="equation">
+  \[  \int _ X\mathrm{MA}_\eta (v) \leq \int _ X\mathrm{MA}_{\theta +\varepsilon \omega }(v) \leq \int _ X\mathrm{MA}_\theta (v)+C\varepsilon .  \]
+</div>
+<p>
+       Each $v\sim u$ in $\mathrm{PSH}(X,\theta )$ is also a competitor for the lower volume in background $\eta $. Taking the infimum over these $v$ proves the upper bound for $\underline{\operatorname {vol}}_\eta (u)-\underline{\operatorname {vol}}_\theta (u)$. The lower bound is background monotonicity (theorem <a data-tag="6412693D" href="../../tag/D7019DA65027/">30.1.1</a>). 
+    <p>
+      Now assume that $u$ has positive lower volume, and choose $w\leq u$ and $\delta &gt;0$ with $\theta +\mathrm{dd}^{\mathrm{c}}w\geq \delta \omega $ by corollary <a data-tag="40A9BCB2" href="../../tag/D51B82B18D30/">30.4.2</a>. The case $\varepsilon =0$ is immediate. For $\varepsilon &gt;0$ put $t=\varepsilon /\delta $. The potential $tw$ belongs to $\mathrm{PSH}(X,t(\theta -\delta \omega ))$, and the form $\eta +t(\theta -\delta \omega )$ is big, since adding $\mathrm{dd}^{\mathrm{c}}((1+t)w)$ to it gives a form at least $(1+t)\delta \omega -t\delta \omega =\delta \omega $. Addition and monotonicity give 
+    
+<div class="equation">
+  \[  \begin{split}  \operatorname {vol}_\eta (u) &amp; \leq \operatorname {vol}_{\eta +t(\theta -\delta \omega )}(u+tw)\\ &amp; \leq \operatorname {vol}_{(1+t)\theta }((1+t)u) =(1+t)^ n\operatorname {vol}_\theta (u). \end{split}  \]
+</div>
+<p>
+       Here we used $\eta +t(\theta -\delta \omega )\leq (1+t)\theta $, which holds because $\eta \leq \theta +\varepsilon \omega $, and $u+tw\leq (1+t)u$. The lower bound is again background monotonicity. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

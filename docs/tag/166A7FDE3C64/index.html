@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gradients against positive currents · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/local-monge-ampere/">Chapter 7 · Local Monge–Ampère theory and Hessian equations</a> · Tag <code>166A7FDE3C64</code></p><h1>Gradients against positive currents</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 9.13 Gradients against positive currents <span data-gerby-tag="0D32377E"></span></div>
+<p>
+  Several later arguments differentiate the product $v\Theta $ of a bounded plurisubharmonic function $v$ and a closed positive current $\Theta $; examples are the proof that non-pluripolar products are closed (theorem <a data-tag="A226C692" href="../../tag/8A125B338F90/">15.2.1</a>) and cutoff arguments on compact manifolds. For smooth $v$ the derivative is $\mathrm dv\wedge \Theta $, and its size is controlled by the gradient measure $\mathrm dv\wedge \mathrm d^{\mathrm c}v\wedge \Theta $, with $\mathrm d^{\mathrm c}$ as in (<a data-tag="B5542B77" href="../../tag/C44E7362B437/">7.6</a>). We extend both objects, together with the chain rule, to locally bounded plurisubharmonic functions by decreasing approximation. In this section $\eta $ denotes a real one-form, not the form $\mathrm{dd}^{\mathrm{c}}|z|^2$ of the preceding sections. 
+</p>
+<p>
+Throughout, $U\subset \mathbb C^ n$ is open and $\Theta $ is a closed positive current of bidimension $(1,1)$ on $U$, with trace measure $\mu =\Theta \wedge \beta $. We first describe $\Theta $ by a matrix of densities with respect to $\mu $. For $1\leq j,k\leq n$ let $\nu _{jk}$ be the complex Radon measure $\frac{\mathrm i}{2\pi }\, \mathrm dz_ k\wedge \mathrm d\bar z_ j\wedge \Theta $. Up to a constant factor, $\nu _{jk}$ is a coefficient measure of $\Theta $, so by theorem <a data-tag="2BB3620D" href="../../tag/1C212E45A497/">7.2.5</a> there is a constant $C$, depending only on $n$, with $|\nu _{jk}|\leq C\mu $. Hence $C\mu +\operatorname{Re}\nu _{jk}$ and $C\mu +\operatorname{Im}\nu _{jk}$ are positive measures bounded by $2C\mu $, and lemma <a data-tag="43819F13" href="../../tag/9790D3B21542/">1.7.1</a>, applied to them, gives bounded Borel functions $h_{jk}$ with 
+</p>
+<div class="equation">
+  \[  \frac{\mathrm i}{2\pi }\, \mathrm dz_ k\wedge \mathrm d\bar z_ j\wedge \Theta =h_{jk}\, \mu \qquad (1\leq j,k\leq n).  \]
+</div>
+<p>
+Since $\Theta $ is real (theorem <a data-tag="2BB3620D" href="../../tag/1C212E45A497/">7.2.5</a>), the complex conjugate of $\nu _{jk}$ is $\frac{-\mathrm i}{2\pi }\, \mathrm d\bar z_ k\wedge \mathrm dz_ j\wedge \Theta =\nu _{kj}$; by the uniqueness of densities in lemma <a data-tag="43819F13" href="../../tag/9790D3B21542/">1.7.1</a>, $h_{kj}=\bar h_{jk}$ $\mu $-almost everywhere, so the matrix $H=(h_{jk})$ is Hermitian $\mu $-almost everywhere. Since $\sum _ j\frac{\mathrm i}{2\pi }\, \mathrm dz_ j\wedge \mathrm d\bar z_ j=\beta /\pi $, summing the identities with $j=k$ gives $\operatorname {tr}H=1/\pi $ $\mu $-almost everywhere. 
+</p>
+<p>
+We identify a $(1,0)$-form $\xi =\sum _ k\xi _ k\, \mathrm dz_ k$ with its coefficient vector $(\xi _1,\ldots ,\xi _ n)\in \mathbb C^ n$, and write $\langle a,b\rangle =\sum _ ja_ j\bar b_ j$ on $\mathbb C^ n$. For a constant $(1,0)$-form $\xi $, the measure $(\mathrm i/2\pi )\, \xi \wedge \bar\xi \wedge \Theta =\langle H\xi ,\xi \rangle \mu $ is positive, because $\mathrm i\xi \wedge \bar\xi $ is a strongly positive form and $\Theta $ is positive; so $\langle H\xi ,\xi \rangle \geq 0$ $\mu $-almost everywhere. Applying this to the countably many $\xi $ with rational real and imaginary parts, and using that $\xi \mapsto \langle H\xi ,\xi \rangle $ is continuous, we see that $H$ is positive semidefinite $\mu $-almost everywhere. Changing $H$ on a $\mu $-null set, we may assume that it is Hermitian and positive semidefinite with trace $1/\pi $ everywhere. Its eigenvalues then lie in $[0,1/\pi ]$, so that $\langle H\xi ,\xi \rangle \leq |\xi |^2/\pi $. 
+</p>
+<p>
+Let $H^{1/2}$ be the positive semidefinite square root of $H$. It is a bounded Borel function on $U$. Indeed, by the Weierstrass approximation theorem there are real polynomials $p_ m$ with $p_ m(t)\to \sqrt t$ uniformly on $[0,1/\pi ]$. Diagonalizing $H(x)$ by a unitary matrix, we see that every entry of $p_ m(H(x))-H(x)^{1/2}$ is bounded by $\sup _{[0,1/\pi ]}|p_ m(t)-\sqrt t|$. The entries of $p_ m(H)$ are polynomials in the $h_{jk}$, hence Borel functions, and so are their pointwise limits, the entries of $H^{1/2}$. Moreover $|H^{1/2}\xi |^2=\langle H\xi ,\xi \rangle \leq |\xi |^2/\pi $. 
+</p>
+<p>
+For a real $C^1$ function $w$, the coefficient vector of the form $\partial w$ is $(\partial w/\partial z_ k)_{k=1}^ n$, and we denote it also by $\partial w$. Since $\mathrm dw\wedge \mathrm d^{\mathrm c}w=(\mathrm i/2\pi )\, \partial w\wedge \bar\partial w$ by (<a data-tag="6DD59AAB" href="../../tag/6A8B7EB02562/">9.7</a>), it follows that 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-DEE3D747"><span data-gerby-tag="DEE3D747"></span>
+<span class="equation-label"><a data-tag="DEE3D747" href="../../tag/9148FE66924C/">9.82</a></span>
+<div>\begin{equation} \label{eq:current-gradient-density} \mathrm dw\wedge \mathrm d^{\mathrm c}w\wedge \Theta =\bigl |H^{1/2}\partial w\bigr |^2\mu . \end{equation}</div>
+</div>
+<p>
+ Thus, for a compact set $K\subset U$, the square of the <em>energy seminorm</em> $\| H^{1/2}\partial w\| _{L^2(K,\mu )}$ is the mass that $\mathrm dw\wedge \mathrm d^{\mathrm c}w\wedge \Theta $ gives to $K$. 
+</p>
+<p>
+Similarly, let $\eta $ be a real one-form with continuous coefficients and $(1,0)$-part $\sum _ ke_ k\, \mathrm dz_ k$, and put $e=(e_1,\ldots ,e_ n)$ and $w_ k=\partial w/\partial z_ k$. Only the $(1,1)$-part 
+</p>
+<div class="equation">
+  \[  \sum _{j,k}(e_ k\bar w_ j-\bar e_ jw_ k)\, \mathrm dz_ k\wedge \mathrm d\bar z_ j  \]
+</div>
+<p>
+ of $\eta \wedge \mathrm dw$ contributes to $\eta \wedge \mathrm dw\wedge \Theta $, so that $\eta \wedge \mathrm dw\wedge \Theta =-2\pi \mathrm i\bigl (\langle He,\partial w\rangle -\langle H\partial w,e\rangle \bigr )\mu $. Since $H$ is Hermitian, the second inner product is the complex conjugate of the first, and therefore 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-A92370AD"><span data-gerby-tag="A92370AD"></span>
+<span class="equation-label"><a data-tag="A92370AD" href="../../tag/92EE3E85B474/">9.83</a></span>
+<div>\begin{equation} \label{eq:current-gradient-pairing} \eta \wedge \mathrm dw\wedge \Theta =4\pi \operatorname{Im}\bigl \langle H^{1/2}e,H^{1/2}\partial w\bigr \rangle \, \mu . \end{equation}</div>
+</div>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-3CDA1967">
+<p><a class="environment-identifier" href="../../tag/8B33E7CC2E18/">Lemma <span data-tag="3CDA1967">9.13.1</span>.</a><span data-gerby-tag="3CDA1967"></span> Let $\Theta $ be a closed positive current of bidimension $(1,1)$ on an open set $U\subset \mathbb C^ n$, and let $v$ be a locally bounded plurisubharmonic function on $U$. Then the current $\mathrm d(v\Theta )$ has measure coefficients; we denote it by $\mathrm dv\wedge \Theta $. The current </p>
+<div class="equation" id="foundations-of-pluripotential-theory-7591087E"><span data-gerby-tag="7591087E"></span>
+<span class="equation-label"><a data-tag="7591087E" href="../../tag/F48E1DFF8563/">9.84</a></span>
+<div>\begin{equation} \label{eq:bounded-current-gradient-measure} E_\Theta (v)=\mathrm dv\wedge \mathrm d^{\mathrm c}v\wedge \Theta =\tfrac 12\mathrm{dd}^{\mathrm{c}}(v^2\Theta )-v\, \mathrm{dd}^{\mathrm{c}}v\wedge \Theta \end{equation}</div>
+</div>
+<p> is a positive measure, the <em>gradient measure</em> of $v$ with respect to $\Theta $. If smooth plurisubharmonic functions $v_ l$ decrease to $v$ on a neighborhood of a compact set $K\subset U$, then their gradients $\partial v_ l$ converge in the energy seminorm on $K$, that is, $H^{1/2}\partial v_ l$ converges in $L^2(K,\mu )$. For every $f\in C^1(\mathbb R)$, </p>
+<div class="equation" id="foundations-of-pluripotential-theory-9CE8644C"><span data-gerby-tag="9CE8644C"></span>
+<span class="equation-label"><a data-tag="9CE8644C" href="../../tag/E07A2779E1E2/">9.85</a></span>
+<div>\begin{equation} \label{eq:bounded-current-chain-rule} \mathrm d(f(v)\Theta )=f'(v)\, \mathrm dv\wedge \Theta . \end{equation}</div>
+</div>
+<p> Finally, let $\eta $ be a compactly supported smooth real one-form on $U$, and let $\tau \in C_ c(U)$, $\tau \geq 0$, be equal to one on $\operatorname{Supp}\eta $. There is a constant $C_\eta $, depending only on $\eta $, such that for every bounded Borel function $a$, </p>
+<div class="equation" id="foundations-of-pluripotential-theory-F7E38D08"><span data-gerby-tag="F7E38D08"></span>
+<span class="equation-label"><a data-tag="F7E38D08" href="../../tag/14D420FC6F06/">9.86</a></span>
+<div>\begin{equation} \label{eq:current-gradient-cauchy-schwarz} \left|\int a\eta \wedge \mathrm dv\wedge \Theta \right|^2 \leq C_\eta \left(\int \tau E_\Theta (v)\right) \left(\int _{\operatorname{Supp}\eta }|a|^2\,  \Theta \wedge \beta \right). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We approximate $v$ by smooth plurisubharmonic functions $v_ l$ and pass to the limit, first in the gradients (Step 1) and then in each assertion of the lemma (Steps 2–5). All assertions are local, so we fix a compact set $K\subset U$ and an open neighborhood $W\subset U$ of $K$ on which smooth plurisubharmonic functions $v_ l$ decrease to $v$. For the convergence assertion, $W$ and the $v_ l$ are given. Otherwise we take for $W$ a relatively compact open neighborhood of $K$ in $U$ and for $v_ l$ the radial mollifications $v*\rho _{\varepsilon _ l}$, where $\varepsilon _ l\downarrow 0$ and $\varepsilon _1$ is less than the distance from $\overline W$ to $\mathbb C^ n\setminus U$; they are smooth and plurisubharmonic on $W$ and decrease to $v$ (proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>). Choose a compact set $K_1\subset W$ with $K\subset \operatorname{Int}K_1$, and a function $\sigma \in C^\infty _ c(W)$ with $\sigma \geq 0$ which equals one on a neighborhood of $K_1$. Since $v\leq v_ l\leq v_1$, the $v_ l$ are uniformly bounded on $\operatorname{Supp}\sigma $. 
+    <p>
+<em>Step 1. Convergence of the gradients.</em> For a smooth real function $w$, we have $\mathrm{dd}^{\mathrm{c}}(w^2)=2\, \mathrm dw\wedge \mathrm d^{\mathrm c}w+2w\, \mathrm{dd}^{\mathrm{c}}w$, and $\mathrm{dd}^{\mathrm{c}}(w^2\Theta )=\mathrm{dd}^{\mathrm{c}}(w^2)\wedge \Theta $ because $\Theta $ is closed. Hence 
+    
+<div class="equation">
+  \[  \mathrm dw\wedge \mathrm d^{\mathrm c}w\wedge \Theta =\tfrac 12\mathrm{dd}^{\mathrm{c}}(w^2\Theta )-w\, \mathrm{dd}^{\mathrm{c}}w\wedge \Theta .  \]
+</div>
+<p>
+       Apply this identity to $w=v_ l-v_ m$ and integrate against $\sigma $: 
+    
+<div class="equation">
+  \[  \int \sigma \, \mathrm dw\wedge \mathrm d^{\mathrm c}w\wedge \Theta =\tfrac 12\int (v_ l-v_ m)^2\mathrm{dd}^{\mathrm{c}}\sigma \wedge \Theta -\int \sigma (v_ l-v_ m)\, \mathrm{dd}^{\mathrm{c}}(v_ l-v_ m)\wedge \Theta .  \]
+</div>
+<p>
+       Both terms on the right tend to zero as $l,m\to \infty $. For the first, $|v_ l-v_ m|\leq v_ N-v$ for $l,m\geq N$, and $v_ N-v\to 0$ pointwise and boundedly on $\operatorname{Supp}\sigma $; since $\mathrm{dd}^{\mathrm{c}}\sigma \wedge \Theta $ is a signed measure with total variation bounded by a multiple of $\mu $ on $\operatorname{Supp}\sigma $, dominated convergence applies. For the second, expand it into the four integrals $\int \sigma v_ p\, \mathrm{dd}^{\mathrm{c}}v_ q\wedge \Theta $ with $p,q\in \{ l,m\} $, taken with the signs $+,-,-,+$. Given indices $l_ k,m_ k\to \infty $, pass to a subsequence along which both are strictly increasing; then $v_{l_ k}$ and $v_{m_ k}$ decrease to $v$, and the weighted form of theorem <a data-tag="8B1F9B78" href="../../tag/D87C13B3250A/">9.2.5</a> on $W$, with the base current $\Theta $, shows that each of the four integrals tends to $\int \sigma v\, \mathrm{dd}^{\mathrm{c}}v\wedge \Theta $. Their signed sum therefore tends to zero, and since this holds for a subsequence of every such pair of index sequences, the second term tends to zero as $l,m\to \infty $. Since $\sigma \geq 0$, $\sigma =1$ on $K_1$ and $\mathrm dw\wedge \mathrm d^{\mathrm c}w\wedge \Theta $ is the positive measure $|H^{1/2}\partial w|^2\mu $, by (<a data-tag="DEE3D747" href="../../tag/9148FE66924C/">9.82</a>), the left side bounds $\| H^{1/2}\partial v_ l-H^{1/2}\partial v_ m\| _{L^2(K_1,\mu )}^2$. Consequently $H^{1/2}\partial v_ l$ is a Cauchy sequence in $L^2(K_1,\mu )$; let $\Gamma \in L^2(K_1,\mu )$ be its limit. In particular, $H^{1/2}\partial v_ l$ converges in $L^2(K,\mu )$, which is the convergence assertion. 
+    <p>
+<em>Step 2. The first derivative.</em> Let $\eta $ be a smooth real one-form with compact support in $\operatorname{Int}K_1$, with $(1,0)$-part $\sum _ ke_ k\, \mathrm dz_ k$. By (<a data-tag="A92370AD" href="../../tag/92EE3E85B474/">9.83</a>), 
+    
+<div class="equation">
+  \[  \int \eta \wedge \mathrm dv_ l\wedge \Theta =4\pi \int \operatorname{Im}\bigl \langle H^{1/2}e,H^{1/2}\partial v_ l\bigr \rangle \, \mathrm d\mu \longrightarrow 4\pi \int \operatorname{Im}\bigl \langle H^{1/2}e,\Gamma \bigr \rangle \, \mathrm d\mu ,  \]
+</div>
+<p>
+       since $H^{1/2}e$ is bounded and vanishes outside $K_1$, and $\mu (K_1)&lt;\infty $. On the other hand, $\mathrm dv_ l\wedge \Theta =\mathrm d(v_ l\Theta )$ since $\Theta $ is closed, and $v_ l\Theta \to v\Theta $ weakly on $W$ by dominated convergence on the coefficient measures; hence $\mathrm d(v_ l\Theta )\to \mathrm d(v\Theta )$ weakly. Therefore the pairing of $\mathrm d(v\Theta )$ with $\eta $, written $\int \eta \wedge \mathrm d(v\Theta )$, equals the last integral. Write $\langle H^{1/2}e,\Gamma \rangle =\sum _ ke_ kG_ k$, where $G_ k=\sum _ j(H^{1/2})_{jk}\bar\Gamma _ j$ belongs to $L^2(K_1,\mu )\subset L^1(K_1,\mu )$, so that 
+    
+<div class="equation">
+  \[  4\pi \operatorname{Im}\bigl \langle H^{1/2}e,\Gamma \bigr \rangle =\sum _ k\bigl (-2\pi \mathrm i\, G_ k\, e_ k+2\pi \mathrm i\, \bar G_ k\, \bar e_ k\bigr ).  \]
+</div>
+<p>
+       Thus, on real test one-forms $\eta $ supported in $\operatorname{Int}K_1$, the current $\mathrm d(v\Theta )$ acts by integrating against $\mu $ the coefficients $e_ k$ and $\bar e_ k$ of $\eta $, multiplied by the functions $-2\pi \mathrm i\, G_ k$ and $2\pi \mathrm i\, \bar G_ k$, which are integrable on $K_1$. Every test one-form is a complex linear combination of two real ones, so on $\operatorname{Int}K_1$ the current $\mathrm d(v\Theta )$ has measure coefficients, which are absolutely continuous with respect to $\mu $ and finite on $K_1$. In particular, for a bounded Borel function $a$, 
+    
+<div class="equation">
+  \[  \int a\eta \wedge \mathrm dv\wedge \Theta =4\pi \int a\operatorname{Im}\bigl \langle H^{1/2}e,\Gamma \bigr \rangle \, \mathrm d\mu .  \]
+</div>
+<p>
+<em>Step 3. The gradient measure.</em> Since $H^{1/2}\partial v_ l\to \Gamma $ in $L^2(K_1,\mu )$, the densities $|H^{1/2}\partial v_ l|^2$ converge to $|\Gamma |^2$ in $L^1(K_1,\mu )$, so the measures $\mathrm dv_ l\wedge \mathrm d^{\mathrm c}v_ l\wedge \Theta =|H^{1/2}\partial v_ l|^2\mu $ converge weakly on $\operatorname{Int}K_1$ to the positive measure $|\Gamma |^2\mu $. On the other hand, by the identity of Step 1, 
+    
+<div class="equation">
+  \[  \mathrm dv_ l\wedge \mathrm d^{\mathrm c}v_ l\wedge \Theta =\tfrac 12\mathrm{dd}^{\mathrm{c}}(v_ l^2\Theta )-v_ l\, \mathrm{dd}^{\mathrm{c}}v_ l\wedge \Theta \longrightarrow \tfrac 12\mathrm{dd}^{\mathrm{c}}(v^2\Theta )-v\, \mathrm{dd}^{\mathrm{c}}v\wedge \Theta  \]
+</div>
+<p>
+       weakly on $W$: the first term converges by dominated convergence on the coefficient measures of $v_ l^2\Theta $ and the weak continuity of $\mathrm{dd}^{\mathrm{c}}$, and the second by theorem <a data-tag="8B1F9B78" href="../../tag/D87C13B3250A/">9.2.5</a>. Hence the right side of (<a data-tag="7591087E" href="../../tag/F48E1DFF8563/">9.84</a>) is the positive measure $|\Gamma |^2\mu $ on $\operatorname{Int}K_1$. Since $K$ was arbitrary and $K\subset \operatorname{Int}K_1$, the current $E_\Theta (v)$, which does not involve the approximations, is a positive measure on $U$. 
+    <p>
+<em>Step 4. The Cauchy–Schwarz inequality.</em> Let $\eta $, $\tau $ and $a$ be as in the statement, and apply Steps 1–3 with $K=\operatorname{Supp}\tau $; then $\operatorname{Supp}\eta \subset K\subset \operatorname{Int}K_1$. For a smooth real function $w$ on $W$, (<a data-tag="A92370AD" href="../../tag/92EE3E85B474/">9.83</a>) and the Cauchy–Schwarz inequality give 
+    
+<div class="equation">
+  \[  \left|\int a\eta \wedge \mathrm dw\wedge \Theta \right|^2 \leq 16\pi ^2\int _{\operatorname{Supp}\eta }|a|^2\bigl |H^{1/2}e\bigr |^2\, \mathrm d\mu \int _{\operatorname{Supp}\eta }\bigl |H^{1/2}\partial w\bigr |^2\, \mathrm d\mu .  \]
+</div>
+<p>
+       Since $|H^{1/2}e|^2\leq |e|^2/\pi $, we have $16\pi ^2|H^{1/2}e|^2\leq C_\eta $ with $C_\eta =16\pi \sup |e|^2$, which depends only on $\eta $. The second integral is at most $\int \tau \, \mathrm dw\wedge \mathrm d^{\mathrm c}w\wedge \Theta $, because $\tau \geq 0$ and $\tau =1$ on $\operatorname{Supp}\eta $. Apply this to $w=v_ l$ and let $l\to \infty $. The left side converges to $|\int a\eta \wedge \mathrm dv\wedge \Theta |^2$ by Step 2, since $a\, \operatorname{Im}\langle H^{1/2}e,H^{1/2}\partial v_ l\rangle \to a\, \operatorname{Im}\langle H^{1/2}e,\Gamma \rangle $ in $L^1(K_1,\mu )$, and $\int \tau \, \mathrm dv_ l\wedge \mathrm d^{\mathrm c}v_ l\wedge \Theta \to \int \tau E_\Theta (v)$ by Step 3, since $\tau $ is continuous with compact support in $\operatorname{Int}K_1$. This proves (<a data-tag="F7E38D08" href="../../tag/14D420FC6F06/">9.86</a>). 
+    <p>
+<em>Step 5. The chain rule.</em> Both sides of (<a data-tag="9CE8644C" href="../../tag/E07A2779E1E2/">9.85</a>) are complex-linear in $f$, so we may assume that $f$ is real. Let first $f$ be smooth. The functions $v_ l$ and $v$ take values in a compact interval $J$ on $\operatorname{Supp}\sigma $. Since $f(v_ l)\to f(v)$ boundedly, $f(v_ l)\Theta \to f(v)\Theta $ weakly on $W$ by dominated convergence, and hence $\mathrm d(f(v_ l)\Theta )\to \mathrm d(f(v)\Theta )$. By the chain rule for smooth functions and the closedness of $\Theta $, $\mathrm d(f(v_ l)\Theta )=f'(v_ l)\, \mathrm dv_ l\wedge \Theta $. Moreover $f'(v_ l)H^{1/2}\partial v_ l\to f'(v)\Gamma $ in $L^2(K_1,\mu )$: the difference is 
+    
+<div class="equation">
+  \[  f'(v_ l)\bigl (H^{1/2}\partial v_ l-\Gamma \bigr )+\bigl (f'(v_ l)-f'(v)\bigr )\Gamma ,  \]
+</div>
+<p>
+       where the first term tends to zero because $f'$ is bounded on $J$, and the second by dominated convergence. Now let $\eta $ be as in Step 2. Identity (<a data-tag="A92370AD" href="../../tag/92EE3E85B474/">9.83</a>), multiplied by the continuous function $f'(v_ l)$, and Step 2 with $a=f'(v)$ give 
+    
+<div class="equation">
+  \[  \int \eta \wedge f'(v_ l)\, \mathrm dv_ l\wedge \Theta =4\pi \int \operatorname{Im}\bigl \langle H^{1/2}e,f'(v_ l)H^{1/2}\partial v_ l\bigr \rangle \, \mathrm d\mu \longrightarrow \int \eta \wedge f'(v)\, \mathrm dv\wedge \Theta .  \]
+</div>
+<p>
+       Since the left side also tends to $\int \eta \wedge \mathrm d(f(v)\Theta )$, the currents $\mathrm d(f(v)\Theta )$ and $f'(v)\, \mathrm dv\wedge \Theta $ agree on $\operatorname{Int}K_1$. As $K$ was arbitrary, this proves (<a data-tag="9CE8644C" href="../../tag/E07A2779E1E2/">9.85</a>) for smooth $f$. 
+    <p>
+      Now let $f\in C^1(\mathbb R)$, and let $f_ m=f*\rho _{1/m}$ be its mollifications on $\mathbb R$. By proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a> and lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>, $f_ m\to f$ and $f_ m'=f'*\rho _{1/m}\to f'$ uniformly on compact subsets of $\mathbb R$. Since $v$ is locally bounded, $f_ m(v)\to f(v)$ and $f_ m'(v)\to f'(v)$ uniformly on compact subsets of $U$. As $\Theta $ and $\mathrm dv\wedge \Theta $ are currents of order zero, it follows that $f_ m(v)\Theta \to f(v)\Theta $ and $f_ m'(v)\, \mathrm dv\wedge \Theta \to f'(v)\, \mathrm dv\wedge \Theta $ weakly. Since $\mathrm d$ is weakly continuous, the identity $\mathrm d(f_ m(v)\Theta )=f_ m'(v)\, \mathrm dv\wedge \Theta $ passes to the limit. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

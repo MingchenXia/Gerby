@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mean inequalities and comparison · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/classical-potentials/">Chapter 3 · Harmonic and subharmonic functions</a> · Tag <code>ABE9A23B5282</code></p><h1>Mean inequalities and comparison</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 3.1 Mean inequalities and comparison <span data-gerby-tag="F1D5D447"></span></div>
+<p>
+  Recall that a function $u\colon \Omega \to [-\infty ,\infty )$ is upper semicontinuous if the set $\{ u&lt;a\} $ is open for every $a\in \mathbb R$; equivalently, $\varlimsup _{y\to x}u(y)\leq u(x)$ for every $x\in \Omega $. Such a function is Borel measurable, because the sets $\{ u&lt;a\} $ are open. It is bounded above on every compact set $K\subset \Omega $, because the increasing open sets $\{ u&lt;n\} $, $n\in \mathbb N$, cover $K$, so that one of them contains $K$. A similar covering argument shows that $u$ attains its maximum on every nonempty compact set $K$: otherwise the open sets $\{ u&lt;a\} $ with $a&lt;\sup _ Ku$ would cover $K$, and a finite subcover would give $\sup _ Ku&lt;\sup _ Ku$. The same arguments apply to upper semicontinuous functions on any compact metric space. 
+</p>
+<p>
+We shall often integrate upper semicontinuous functions over products. Subsets $X$ and $Y$ of Euclidean spaces are separable metric spaces, so by lemma <a data-tag="7AE4FB12" href="../../tag/9F2BA6481FD8/">1.1.8</a> every Borel function on $X\times Y$ is measurable for the product of the Borel $\sigma $-algebras of $X$ and $Y$. Hence Tonelli's and Fubini's theorems (proposition <a data-tag="D7B34569" href="../../tag/379F54715B13/">1.1.7</a>) apply to Borel functions on such products. As in section <a data-tag="A631CCEB" href="../../tag/524A2588C8CE/">2.1</a>, $\mathrm dS$ denotes surface measure on the unit sphere $S^{d-1}$, and $s_{d-1}$ is its total mass. 
+</p>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-BEE8F6C5">
+<p><a class="environment-identifier" href="../../tag/3E4C6A9CCF19/">Definition <span data-tag="BEE8F6C5">3.1.1</span>.</a><span data-gerby-tag="BEE8F6C5"></span> A function $u\colon \Omega \to [-\infty ,\infty )$ is subharmonic if it is upper semicontinuous and every $x\in \Omega $ admits an $r_ x&gt;0$ with $\overline{B(x,r_ x)}\subset \Omega $ such that </p>
+<div class="equation" id="foundations-of-pluripotential-theory-725DD23E"><span data-gerby-tag="725DD23E"></span>
+<span class="equation-label"><a data-tag="725DD23E" href="../../tag/39B65BA580E1/">3.1</a></span>
+<div>\begin{equation} \label{eq:subharmonic-submean} u(x)\leq \frac{1}{s_{d-1}}\int _{S^{d-1}}u(x+r\omega )\, \mathrm d S(\omega )\qquad \text{for }0&lt;r&lt;r_ x. \end{equation}</div>
+</div>
+<p> The function identically equal to $-\infty $ is subharmonic. We write $\mathrm{SH}(\Omega )$ for the set of subharmonic functions on $\Omega $. A function $v$ is superharmonic if $-v$ is subharmonic. </p>
+</article> As for continuous functions in section <a data-tag="A631CCEB" href="../../tag/524A2588C8CE/">2.1</a>, we denote the right-hand side of (<a data-tag="725DD23E" href="../../tag/39B65BA580E1/">3.1</a>) by $M_ u(x,r)$, the spherical mean of $u$ over $\partial B(x,r)$, for every upper semicontinuous $u$ and every $r&gt;0$ with $\overline{B(x,r)}\subset \Omega $. It is well defined in $[-\infty ,\infty )$, since $u$ is Borel measurable and bounded above on the compact sphere $x+rS^{d-1}$. 
+
+<p>
+Subharmonicity is a local property: a function is subharmonic on $\Omega $ if every point of $\Omega $ has an open neighborhood on which it is subharmonic. Indeed, upper semicontinuity is a local condition, and if $u$ is subharmonic on an open neighborhood $W\subset \Omega $ of $x$, then a radius $r_ x$ as in definition <a data-tag="BEE8F6C5" href="../../tag/3E4C6A9CCF19/">3.1.1</a> for $u|_ W$, with $\overline{B(x,r_ x)}\subset W$, also serves for $u$ on $\Omega $. By proposition <a data-tag="51885F96" href="../../tag/620D5E4DD6EC/">2.1.1</a>, every real harmonic function on $\Omega $ is subharmonic. To compare subharmonic functions with harmonic functions on balls, we shall approximate upper semicontinuous boundary values from above by continuous functions. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-A2C10798">
+<p><a class="environment-identifier" href="../../tag/36C9571A59E0/">Lemma <span data-tag="A2C10798">3.1.2</span>.</a><span data-gerby-tag="A2C10798"></span> Let $X$ be a metric space and let $f\colon X\to [-\infty ,\infty )$ be upper semicontinuous and bounded above; the latter holds automatically if $X$ is compact. Then $f$ is the pointwise limit of a decreasing sequence of bounded, real-valued continuous functions $f_ n$ on $X$. For every finite Borel measure $\mu $ on $X$, the integrals $\int _ Xf_ n\, \mathrm d\mu $ decrease to $\int _ Xf\, \mathrm d\mu \in [-\infty ,\infty )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $f$ is bounded above, we can choose a positive integer $n_0&gt;\sup _ Xf$. For $n\geq n_0$ and $x\in X$ put 
+    
+<div class="equation">
+  \[  f_ n(x)=\sup _{y\in X}\bigl (\max \{ f(y),-n\} -n\operatorname {dist}(x,y)\bigr ).  \]
+</div>
+<p>
+       Taking $y=x$ gives $f_ n(x)\geq \max \{ f(x),-n\} \geq f(x)$, and $f_ n\leq \max \{ \sup _ Xf,-n\} &lt;n_0$. Thus $-n\leq f_ n&lt;n_0$, so $f_ n$ is real-valued and bounded, and as a supremum of $n$-Lipschitz functions of $x$ it is $n$-Lipschitz. Both $\max \{ f(y),-n\} $ and $-n\operatorname {dist}(x,y)$ decrease as $n$ increases, so the sequence $(f_ n)$ is decreasing. 
+    <p>
+      We show that $f_ n(x)\to f(x)$ for every $x\in X$. Otherwise there is a real number $c$ with $\lim _ nf_ n(x)&gt;c&gt;f(x)$. For each $n$ choose $y_ n\in X$ with $\max \{ f(y_ n),-n\} -n\operatorname {dist}(x,y_ n)&gt;c$. Then $n\operatorname {dist}(x,y_ n)&lt;n_0-c$, so $y_ n\to x$. Moreover $\max \{ f(y_ n),-n\} &gt;c$, which forces $f(y_ n)&gt;c$ as soon as $n&gt;-c$. On the other hand, $\{ f&lt;c\} $ is an open neighborhood of $x$ by upper semicontinuity, so it contains $y_ n$ for all large $n$. This contradiction proves that $f_ n\downarrow f$. 
+    <p>
+      Finally, the nonnegative functions $n_0-f_ n$ increase to $n_0-f$, so the monotone convergence theorem gives $\int (n_0-f_ n)\, \mathrm d\mu \uparrow \int (n_0-f)\, \mathrm d\mu $. Subtracting these integrals from the finite number $n_0\mu (X)$ proves the assertion about the integrals of $f_ n$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-908CA39C">
+<p><a class="environment-identifier" href="../../tag/384B48086228/">Theorem <span data-tag="908CA39C">3.1.3</span>.</a><span data-gerby-tag="908CA39C"></span> Let $u\in \mathrm{SH}(\Omega )$. </p>
+<ol>
+<li><p>
+Let $D\subset \Omega $ be a bounded open set, and let $h$ be a real function which is harmonic on $D$ and continuous on $\overline D$. If 
+</p>
+<div class="equation">
+  \[  \varlimsup _{D\ni x\to \zeta }u(x)\leq h(\zeta )\qquad \text{for every }\zeta \in \partial D,  \]
+</div>
+<p>
+ then $u\leq h$ on $D$. 
+</p>
+</li><li><p>
+Let $x\in \Omega $ and $\overline{B(x,R)}\subset \Omega $. Then the spherical mean $M_ u(x,r)$ increases with $r\in (0,R]$ and decreases to $u(x)$ as $r\downarrow 0$. Moreover, 
+</p>
+<div class="equation">
+  \[  u(x)\leq \frac{1}{|B(x,R)|}\int _{B(x,R)}u(y)\, \mathrm d y.  \]
+</div>
+</li>
+</ol>
+<p> Conversely, an upper semicontinuous function $u\colon \Omega \to [-\infty ,\infty )$ is subharmonic if assertion (1) holds for $u$ whenever $D$ is a ball with $\overline D\subset \Omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We begin with (1). Fix $\varepsilon &gt;0$ and consider the upper semicontinuous function $w(y)=u(y)-h(y)+\varepsilon |y|^2$ on $D$. For $x\in D$ and small $r&gt;0$ we have $M_ h(x,r)=h(x)$ by proposition <a data-tag="51885F96" href="../../tag/620D5E4DD6EC/">2.1.1</a>, and $M_{|\cdot |^2}(x,r)=|x|^2+r^2$ by the identity for spherical means of $|y|^2$ proved in section <a data-tag="846116E9" href="../../tag/A3DA602C02CB/">2.4</a>. Together with (<a data-tag="725DD23E" href="../../tag/39B65BA580E1/">3.1</a>) this gives 
+    
+<div class="equation">
+  \[  M_ w(x,r)\geq w(x)+\varepsilon r^2  \]
+</div>
+<p>
+       for every $x\in D$ and every sufficiently small $r&gt;0$. Consequently, $w$ cannot attain a finite maximum over $D$ at a point $x\in D$, since we would then have $M_ w(x,r)\leq w(x)$ for small $r$. 
+    <p>
+      Now let $\delta &gt;0$. Because $h$ is continuous on $\overline D$, the boundary hypothesis gives $\varlimsup _{D\ni x\to \zeta }(u-h)(x)\leq 0$, so every $\zeta \in \partial D$ has an open neighborhood $N_\zeta $ with $u-h&lt;\delta $ on $N_\zeta \cap D$. Finitely many of these neighborhoods cover the compact set $\partial D$. If $N$ denotes their union, then $K=\overline D\setminus N$ is a compact subset of $D$. Put $c=\delta +\varepsilon \sup _{y\in \overline D}|y|^2$, so that $w&lt;c$ on $D\setminus K$. If $w$ took a value larger than $c$, then $\sup _ Dw=\sup _ Kw$ would be a finite maximum attained at a point of $K$, which we have just excluded. Hence $u-h\leq w\leq c$ on $D$, and letting $\varepsilon \downarrow 0$ and $\delta \downarrow 0$ gives $u\leq h$. 
+    <p>
+      For (2), let $B=B(x,R)$. By lemma <a data-tag="A2C10798" href="../../tag/36C9571A59E0/">3.1.2</a> there are continuous functions $f_ n$ on $\partial B$ that decrease to $u|_{\partial B}$. Let $H_ n=H_ Bf_ n$ be their Poisson integrals; by theorem <a data-tag="330E7C21" href="../../tag/08ED9D7CF1CF/">2.3.1</a>, $H_ n$ is harmonic on $B$ and continuous on $\overline B$ with boundary values $f_ n$. For $\zeta \in \partial B$, upper semicontinuity gives $\varlimsup _{B\ni y\to \zeta }u(y)\leq u(\zeta )\leq f_ n(\zeta )$, so (1) yields $u\leq H_ n$ on $B$. The value of a Poisson integral at the center of the ball is the mean of its boundary values, because $P_ B(x,\cdot )$ is the constant $(s_{d-1}R^{d-1})^{-1}$ by (<a data-tag="1FE966FD" href="../../tag/1AF0CC9EF476/">2.14</a>). Using also the mean-value property of $H_ n$, we obtain for $0&lt;r&lt;R$ 
+    
+<div class="equation">
+  \[  u(x)\leq H_ n(x)=M_{f_ n}(x,R),\qquad M_ u(x,r)\leq M_{H_ n}(x,r)=H_ n(x)=M_{f_ n}(x,R).  \]
+</div>
+<p>
+       By lemma <a data-tag="A2C10798" href="../../tag/36C9571A59E0/">3.1.2</a>, applied to surface measure on $\partial B$, $M_{f_ n}(x,R)$ decreases to $M_ u(x,R)$. Therefore $u(x)\leq M_ u(x,R)$, and $M_ u(x,r)\leq M_ u(x,R)$ for $0&lt;r&lt;R$. As $R$ may be replaced by any smaller radius, $M_ u(x,\cdot )$ is increasing on $(0,R]$. Moreover, $u(x)\leq M_ u(x,r)\leq \sup _{\partial B(x,r)}u$, and the upper limit of the right-hand side as $r\downarrow 0$ is at most $u(x)$ by upper semicontinuity; hence $M_ u(x,r)$ decreases to $u(x)$ as $r\downarrow 0$. 
+    <p>
+      Finally, let $M$ be a real upper bound for $u$ on $\overline B$. Integration in polar coordinates (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>), applied to the nonnegative function $M-u$, and the substitution $r=Rt$ give 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-BD1DEA1A"><span data-gerby-tag="BD1DEA1A"></span>
+<span class="equation-label"><a data-tag="BD1DEA1A" href="../../tag/7DDC45C194C3/">3.2</a></span>
+<div>\begin{equation} \label{eq:ball-average-spherical-means} \frac{1}{|B|}\int _ Bu(y)\, \mathrm d y=\frac{d}{R^ d}\int _0^ Rr^{d-1}M_ u(x,r)\, \mathrm d r=d\int _0^1t^{d-1}M_ u(x,Rt)\, \mathrm d t, \end{equation}</div>
+</div>
+<p>
+       where all integrals lie in $[-\infty ,\infty )$; here we used $|B|=s_{d-1}R^ d/d$. Since $M_ u(x,r)\geq u(x)$ for $0&lt;r\leq R$ and $d\int _0^1t^{d-1}\, \mathrm dt=1$, the right-hand side is at least $u(x)$. 
+    <p>
+      The proof of (2) used the subharmonicity of $u$ only through (1) for the ball $B$. Hence, if $u$ is upper semicontinuous and satisfies (1) for all balls $B$ with $\overline B\subset \Omega $, then $u(x)\leq M_ u(x,R)$ whenever $\overline{B(x,R)}\subset \Omega $, so $u$ is subharmonic. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+<p>
+We call the first assertion of theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a> the comparison principle. Applied with $\Omega =D$, it holds for every bounded open set $D$ and every $u\in \mathrm{SH}(D)$, even when $u$ is not defined near $\partial D$. 
+</p>
+<p>
+Elementary operations preserve subharmonicity. If $u,v\in \mathrm{SH}(\Omega )$ and $c\geq 0$, then $u+v$, $cu$ and $\max \{ u,v\} $ are subharmonic; here we use the convention $0\cdot (-\infty )=0$, so that $0\cdot u$ is the zero function. Indeed, these functions are upper semicontinuous: $\{ cu&lt;a\} =\{ u&lt;a/c\} $ if $c&gt;0$, $\{ \max \{ u,v\} &lt;a\} =\{ u&lt;a\} \cap \{ v&lt;a\} $, and if $u(x)+v(x)&lt;a$, we can choose real numbers $s&gt;u(x)$ and $t&gt;v(x)$ with $s+t\leq a$, so that $u+v&lt;a$ on the open neighborhood $\{ u&lt;s\} \cap \{ v&lt;t\} $ of $x$. The identities $M_{u+v}=M_ u+M_ v$ and $M_{cu}=cM_ u$, together with the inequality $M_{\max \{ u,v\} }\geq \max \{ M_ u,M_ v\} $, give the submean inequality at $x$ for all radii smaller than the radii $r_ x$ for $u$ and for $v$. In particular, adding a real harmonic function to a subharmonic function produces a subharmonic function. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-4517B555">
+<p><a class="environment-identifier" href="../../tag/6D3B30A16AAE/">Proposition <span data-tag="4517B555">3.1.4</span>.</a><span data-gerby-tag="4517B555"></span> Let $u\in \mathrm{SH}(\Omega )$. If $\Omega $ is connected and $u$ attains its maximum over $\Omega $, then $u$ is constant. If $\Omega $ is bounded and $\varlimsup _{\Omega \ni x\to \zeta }u(x)\leq 0$ for every $\zeta \in \partial \Omega $, then $u\leq 0$ on $\Omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $m=\max _\Omega u$. If $m=-\infty $, then $u$ is identically $-\infty $, so assume that $m$ is finite, and let $E=\{ u=m\} =\{ u\geq m\} $. This set is nonempty, and it is closed in $\Omega $ because $u$ is upper semicontinuous. Let $x\in E$. For every sufficiently small $r&gt;0$, (<a data-tag="725DD23E" href="../../tag/39B65BA580E1/">3.1</a>) gives $m=u(x)\leq M_ u(x,r)\leq m$, so 
+    
+<div class="equation">
+  \[  \int _{S^{d-1}}\bigl (m-u(x+r\omega )\bigr )\, \mathrm dS(\omega )=0.  \]
+</div>
+<p>
+       Suppose that $u(x+r\omega _0)&lt;a&lt;m$ for some $\omega _0\in S^{d-1}$ and some real number $a$. By upper semicontinuity, the set $A=\{ \omega \in S^{d-1}:u(x+r\omega )&lt;a\} $ is relatively open in $S^{d-1}$, and it contains $\omega _0$. The cone $\{ t\omega :0&lt;t&lt;1,\  \omega \in A\} $ is the inverse image of $A$ under the continuous map $y\mapsto y/|y|$ on $B(0,1)\setminus \{ 0\} $, so it is a nonempty open set, and therefore $S(A)&gt;0$ by the definition of surface measure in section <a data-tag="A631CCEB" href="../../tag/524A2588C8CE/">2.1</a>. Since $m-u(x+r\omega )&gt;m-a&gt;0$ for $\omega \in A$, the integral above would be at least $(m-a)S(A)&gt;0$, a contradiction. Hence $u=m$ on every sufficiently small sphere centered at $x$, and $E$ contains a ball around $x$. Thus $E$ is open and closed in $\Omega $, and $E=\Omega $ because $\Omega $ is connected. 
+    <p>
+      The second assertion is the comparison principle on the bounded open set $D=\Omega $ with $h=0$, in the form noted after theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-922C2A66">
+<p><a class="environment-identifier" href="../../tag/5975EB5B5D7D/">Proposition <span data-tag="922C2A66">3.1.5</span>.</a><span data-gerby-tag="922C2A66"></span> Let $u\in \mathrm{SH}(\Omega )$. On each connected component of $\Omega $, either $u$ is identically $-\infty $, or $u$ is locally integrable and hence finite almost everywhere. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $x\in \Omega $ with $u(x)&gt;-\infty $, and let $\overline{B(x,r)}\subset \Omega $. If $M$ is a real upper bound for $u$ on $B(x,r)$, the ball submean inequality of theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a> gives 
+    
+<div class="equation">
+  \[  \int _{B(x,r)}(M-u)\, \mathrm d y\leq |B(x,r)|\, (M-u(x))&lt;\infty .  \]
+</div>
+<p>
+       Since $M-u\geq 0$, it follows that $u$ is integrable on $B(x,r)$. 
+    <p>
+      Now let $\Omega '$ be a connected component of $\Omega $ on which $u$ is not identically $-\infty $, and let $Y$ be the set of points of $\Omega '$ that have a neighborhood on which $u$ is integrable. Then $Y$ is open, and it is nonempty by the first paragraph. Let $y\in \Omega '$ lie in the closure of $Y$, and choose $r&gt;0$ with $\overline{B(y,3r)}\subset \Omega $. The set $Y\cap B(y,r)$ contains a point $z$, and $u$ is integrable on an open neighborhood $U$ of $z$; hence $u$ is finite almost everywhere on the nonempty open set $U\cap B(y,r)$, which has positive measure, and there is a point $x\in B(y,r)$ with $u(x)&gt;-\infty $. Since $|x-y|&lt;r$, the ball $B(x,2r)$ contains $y$ and its closure lies in $\overline{B(y,3r)}\subset \Omega $. By the first paragraph, $u$ is integrable on $B(x,2r)$, hence $y\in Y$. Thus $Y$ is also closed in $\Omega '$, and $Y=\Omega '$ because $\Omega '$ is connected. Finally, a locally integrable function is finite almost everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+<p>
+A subharmonic function on a domain is called nontrivial if it is not identically $-\infty $; by proposition <a data-tag="922C2A66" href="../../tag/5975EB5B5D7D/">3.1.5</a>, the nontrivial subharmonic functions on a domain are exactly the locally integrable ones. The set $\{ u=-\infty \} $ is called the pole set of $u$. In particular, the pole set of a nontrivial subharmonic function on a domain has Lebesgue measure zero. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-1B5BFA16">
+<p><a class="environment-identifier" href="../../tag/62E4A7EF2B4F/">Theorem <span data-tag="1B5BFA16">3.1.6</span>.</a><span data-gerby-tag="1B5BFA16"></span> Let $(u_ j)$ be a decreasing sequence in $\mathrm{SH}(\Omega )$ with pointwise limit $u$. Then $u\in \mathrm{SH}(\Omega )$. On each connected component $\Omega '$ of $\Omega $, either $u$ is identically $-\infty $ and $u_ j\to -\infty $ uniformly on compact subsets of $\Omega '$, or $u$ is locally integrable on $\Omega '$ and $u_ j\to u$ in $L^1$ on compact subsets of $\Omega '$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The limit $u$ is upper semicontinuous, since $\{ u&lt;a\} =\bigcup _ j\{ u_ j&lt;a\} $ is open for every real $a$. Let $x\in \Omega $ and $\overline{B(x,r)}\subset \Omega $. By theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>, $u_ j(x)\leq M_{u_ j}(x,r)$ for every $j$. If $M$ is a real upper bound for $u_1$ on $\partial B(x,r)$, the nonnegative functions $M-u_ j$ increase to $M-u$ on this sphere, so the monotone convergence theorem gives $M_{u_ j}(x,r)\downarrow M_ u(x,r)$. Hence $u(x)\leq u_ j(x)\leq M_{u_ j}(x,r)$ for all $j$, and in the limit $u(x)\leq M_ u(x,r)$. Thus $u$ is subharmonic. 
+    <p>
+      Let $\Omega '$ be a connected component of $\Omega $. By proposition <a data-tag="922C2A66" href="../../tag/5975EB5B5D7D/">3.1.5</a>, $u$ is either identically $-\infty $ or locally integrable on $\Omega '$. In the first case, fix a compact set $K\subset \Omega '$ and a real number $A$. The open sets $\{ u_ j&lt;-A\} $ increase with $j$ and cover $\Omega '$, because $u_ j(x)\downarrow -\infty $ for every $x\in \Omega '$. Finitely many of them, and hence one of them, cover $K$; thus $u_ j&lt;-A$ on $K$ for all large $j$. In the second case, $u_1\geq u$ is not identically $-\infty $ on $\Omega '$ and is therefore locally integrable there as well. Then $0\leq u_ j-u\leq u_1-u$ almost everywhere on $\Omega '$, and $u_ j-u\to 0$ wherever $u$ is finite, so dominated convergence gives $\int _ K(u_ j-u)\, \mathrm d x\to 0$ for every compact $K\subset \Omega '$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

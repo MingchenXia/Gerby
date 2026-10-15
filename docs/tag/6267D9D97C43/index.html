@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Extrema and density sublevels · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/monge-ampere-equations/">Chapter 12 · Monge–Ampère equations and stability</a> · Tag <code>6267D9D97C43</code></p><h1>Extrema and density sublevels</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 11.1 Extrema and density sublevels <span data-gerby-tag="528A0D7E"></span></div>
+<p>
+To apply the strong maximum principle to $w=u-v$, we first locate a maximum point and a minimum point of $w$ in the region where the linear equation $\mathrm{dd}^{\mathrm{c}}w\wedge T=0$ is uniformly elliptic. Maximizing a small perturbation of $w$ by a function $\chi $ with $\omega +\mathrm{dd}^{\mathrm{c}}\chi &gt;0$ does this, even when the Hessians are only measurable. The strong maximum principle then makes $w$ constant on the components of this region that contain these points, and $w$ is constant if the closures of the two components meet. 
+</p>
+<p>
+In this section, $u,v\in C^{1,1}(X)$ satisfy $A,B\geq 0$ almost everywhere and 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-84F3F379"><span data-gerby-tag="84F3F379"></span>
+<span class="equation-label"><a data-tag="84F3F379" href="../../tag/93A49A38E101/">11.2</a></span>
+<div>\begin{equation}  A^ n=B^ n=f\, \mathrm{d}V,\qquad f\in C^0(X),\qquad f\geq 0. \label{uni-eq:density} \end{equation}</div>
+</div>
+<p>
+ Fix a smooth positive $(1,1)$-form $\beta $, put $H=A+B$, and let $E_{\rm unif}$ be the set of points near which $H$ is uniformly positive: 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-FE2CD163"><span data-gerby-tag="FE2CD163"></span>
+<span class="equation-label"><a data-tag="FE2CD163" href="../../tag/E391B921798A/">11.3</a></span>
+<div>\begin{equation}  E_{\rm unif} =\left\{ x:\begin{array}{l} \text{there are a neighborhood }V\ni x\text{ and }c&gt;0\\  \text{with }H\geq c\beta \text{ almost everywhere on }V \end{array}\right\} . \label{uni-eq:Eunif} \end{equation}</div>
+</div>
+<p>
+ This open set does not depend on $\beta $ or on the choice of representatives of the measurable coefficients. 
+</p>
+
+<article class="env-theorem" id="non-kahler-pluripotential-theory-61B8DD0F">
+<p><a class="environment-identifier" href="../../tag/6EB399397505/">Theorem <span data-tag="61B8DD0F">11.1.1</span>.</a><span data-gerby-tag="61B8DD0F"></span> Assume (<a data-tag="84F3F379" href="../../tag/93A49A38E101/">11.2</a>). If $\chi \in C^2(X,\mathbb R)$ satisfies $C:=\omega +\mathrm{dd}^{\mathrm{c}}\chi &gt;0$, put </p>
+<div class="equation">
+  \[  P_\chi =\{ x\in X:f(x)\mathrm{d}V_ x\geq C_ x^ n\} ,\qquad U=\{ f&gt;0\} .  \]
+</div>
+<p> Then $P_\chi $ is a nonempty compact subset of $U$, and $U\subset E_{\rm unif}$. There are components $G_+,G_-$ of $E_{\rm unif}$, each meeting $P_\chi $, such that $w=u-v$ satisfies </p>
+<div class="equation" id="non-kahler-pluripotential-theory-04A0BD5D"><span data-gerby-tag="04A0BD5D"></span>
+<span class="equation-label"><a data-tag="04A0BD5D" href="../../tag/7732F2B90E2A/">11.4</a></span>
+<div>\begin{equation}  w\equiv \max _ Xw\quad \hbox{on }\overline{G_+},\qquad w\equiv \min _ Xw\quad \hbox{on }\overline{G_-}. \label{uni-eq:extrema-components} \end{equation}</div>
+</div>
+<p> If $w$ is nonconstant, these closures are disjoint. Consequently $w$ is constant if any one of the following holds: </p>
+<ol>
+<li><p>
+every two components of $E_{\rm unif}$ meeting $P_\chi $ have intersecting closures; 
+</p>
+</li><li><p>
+$E_{\rm unif}$ is connected; 
+</p>
+</li><li><p>
+$E_{\rm unif}$ is dense and has at most two components. 
+</p>
+</li>
+</ol>
+<p> The assertions about components, including the three criteria, also hold with $U$ in place of $E_{\rm unif}$. In particular, $w$ is constant when $\{ f=0\} $ is a nonempty connected embedded $C^1$ real hypersurface; this hypersurface need not be orientable or coorientable. </p>
+</article>
+
+<p>
+Since the Hessians of $C^{1,1}$ functions exist only almost everywhere, the contact argument must use points where they exist. The following lemma finds such points near a maximum; it also provides the strict comparison step in the measurable strong maximum principle. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-F0F5D947">
+<p><a class="environment-identifier" href="../../tag/59B8A4C8DA05/">Lemma <span data-tag="F0F5D947">11.1.2</span>.</a><span data-gerby-tag="F0F5D947"></span> In Euclidean space $\mathbb R^ m$, let $B(p,r)$ be the ball of center $p$ and radius $r&gt;0$, and let $I$ be the identity matrix. Let $g\in C^{1,1}$ near $\overline{B(p,r)}\subset \mathbb R^ m$, suppose $g\leq g(p)$ on the ball, and let $E$ be any subset of full measure in the ball at whose points $g$ has a second-order Taylor expansion. For every $\delta &gt;0$ and $0&lt;\rho &lt;r$, there is $x\in E\cap B(p,\rho )$ such that </p>
+<div class="equation">
+  \[  D^2g(x)\leq 2\delta I.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $g_\delta (x)=g(x)-\delta |x-p|^2$. The gradient map $F=\nabla g_\delta $ is Lipschitz on the ball, so it maps the null set $N=\overline{B(p,r)}\setminus E$ to a null set. Choose $s\in B(0,\delta \rho )\setminus F(N)$ and maximize $g_\delta (x)-s\cdot (x-p)$ on the closed ball. At any point with $|x-p|\geq \rho $, its value is strictly smaller than its value at $p$, because 
+    
+<div class="equation">
+  \[  g(x)-g(p)-\delta |x-p|^2-s\cdot (x-p) \leq -\delta |x-p|^2+|s|\, |x-p|&lt;0.  \]
+</div>
+<p>
+       Thus a maximizer $x$ lies in $B(p,\rho )$. The first-order condition at $x$ gives $F(x)=s$, so $x\notin N$. The second-order Taylor expansion at this upper contact point gives $D^2g(x)\leq 2\delta I$. Finally, sets $E$ as in the statement exist: by Rademacher's theorem, applied to the Lipschitz gradient of $g$, the function $g$ has a second-order Taylor expansion almost everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-E67FD2CF">
+<p><a class="environment-identifier" href="../../tag/96D40C4808C2/">Lemma <span data-tag="E67FD2CF">11.1.3</span>.</a><span data-gerby-tag="E67FD2CF"></span> Let $a=(a^{ij})$ be a measurable symmetric matrix field on a connected domain $\Omega \subset \mathbb R^ m$. For each compact $K\Subset \Omega $, suppose there are constants $0&lt;\lambda _ K\leq \Lambda _ K&lt;\infty $ such that </p>
+<div class="equation">
+  \[  \lambda _ K I\leq a(x)\leq \Lambda _ KI  \]
+</div>
+<p> almost everywhere on $K$, where $I$ is the identity matrix. Repeated indices $i,j=1,\ldots ,m$ are summed, and $z_{ij}=\partial _ i\partial _ jz$. If $z\in W^{2,\infty }_{\rm loc}(\Omega )$, $a^{ij}z_{ij}\geq 0$ almost everywhere, and $z$ attains its supremum at a point of $\Omega $, then $z$ is constant. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first prove strict weak comparison on a relatively compact domain: if $b\in C^{1,1}$, $Lb:=a^{ij}b_{ij}\geq \kappa &gt;0$ almost everywhere, and $b\leq M$ on the boundary, then $b\leq M$ inside. Otherwise an interior maximum point lies in a closed ball on which $a\leq \Lambda I$. Apply <a data-tag="F0F5D947" href="../../tag/59B8A4C8DA05/">11.1.2</a> to the set of full measure where both the differential inequality and the Taylor expansion hold. Choosing $2\delta m\Lambda &lt;\kappa $ gives the contradiction $\kappa \leq Lb\leq 2\delta \operatorname {tr}a\leq 2\delta m\Lambda $. 
+    <p>
+      Take the $C^{1,1}$ representative of $z$, write $M=\sup _\Omega z$, and suppose that $K=\{ z=M\} $ is a nonempty proper subset of $\Omega $. Near a relative boundary point of $K$, choose $y\notin K$ so that the ball of radius $r=\operatorname {dist}(y,K)&gt;0$ is compactly contained in $\Omega $ and touches $K$ at $x_0$. On the closed annulus $r/2\leq |x-y|\leq r$, use fixed bounds $\lambda I\leq a\leq \Lambda I$ and set 
+    
+<div class="equation">
+  \[  b(x)=\mathrm{e}^{-\alpha |x-y|^2}-\mathrm{e}^{-\alpha r^2}.  \]
+</div>
+<p>
+       For sufficiently large $\alpha $, 
+    
+<div class="equation">
+  \[  Lb=\mathrm{e}^{-\alpha |x-y|^2} \bigl (4\alpha ^2 a^{ij}(x_ i-y_ i)(x_ j-y_ j) -2\alpha \operatorname {tr}a\bigr )\geq \kappa &gt;0  \]
+</div>
+<p>
+       almost everywhere on the annulus. On its inner sphere $z&lt;M$ uniformly; on its outer sphere $b=0$. Choose $\eta &gt;0$ small enough that $z+\eta b\leq M$ on both spheres. Strict weak comparison, applied to $z+\eta b$, gives this inequality throughout the annulus. At $x_0$, however, $z=M$, $b=0$, $\nabla z=0$, and $b$ increases to first order in the inward radial direction, which contradicts that inequality. Thus $K$ has no relative boundary point in $\Omega $, and connectedness proves the assertion. The argument uses no derivatives of the measurable coefficients. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+At a point where $A,B$ are semipositive, define the cofactor quadratic form on real cotangent vectors 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-445DEDC5"><span data-gerby-tag="445DEDC5"></span>
+<span class="equation-label"><a data-tag="445DEDC5" href="../../tag/57588F1C3107/">11.5</a></span>
+<div>\begin{equation}  Q_ x(\xi )\mathrm{d}V_ x =\mathrm{i}\, \xi ^{1,0}\wedge \overline{\xi ^{1,0}}\wedge T_ x . \label{uni-eq:Q} \end{equation}</div>
+</div>
+<p>
+ Here $\xi ^{1,0}$ is the $(1,0)$-part of $\xi $, and forms of bidegree $(n-1,n-1)$ are ordered by testing against $\mathrm i\xi ^{1,0}\wedge \overline{\xi ^{1,0}}$ in this way. Mixed products of semipositive $(1,1)$-forms are semipositive in this order. Expanding $H^{n-1}$, where $H=A+B$, gives 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-BDBE4297"><span data-gerby-tag="BDBE4297"></span>
+<span class="equation-label"><a data-tag="BDBE4297" href="../../tag/144125DEDD1C/">11.6</a></span>
+<div>\begin{equation}  2^{-(n-1)}H^{n-1}\leq T\leq H^{n-1}. \label{uni-eq:cofactor-comparison} \end{equation}</div>
+</div>
+<p>
+ At a point, choose a $\beta $-unitary coframe $\mathrm{d}z_1,\ldots ,\mathrm{d}z_ n$ that diagonalizes $H$, and write $\lambda _1,\ldots ,\lambda _ n$ for the eigenvalues of $H$. For a $(1,0)$-covector $\alpha =\sum _{k=1}^ n b_ k\, \mathrm{d}z_ k$ with complex coefficients $b_ k$, the coefficient of $\mathrm{i}\alpha \wedge \bar\alpha \wedge H^{n-1}$ in this coframe is a positive constant depending only on $n$, times 
+</p>
+<div class="equation" id="non-kahler-pluripotential-theory-A73BA233"><span data-gerby-tag="A73BA233"></span>
+<span class="equation-label"><a data-tag="A73BA233" href="../../tag/CEEE110C45FE/">11.7</a></span>
+<div>\begin{equation}  \sum _{k=1}^ n |b_ k|^2\prod _{\ell \ne k}\lambda _\ell . \label{uni-eq:cofactor-eigen} \end{equation}</div>
+</div>
+<p>
+ For $n\geq 2$, (<a data-tag="BDBE4297" href="../../tag/144125DEDD1C/">11.6</a>) and (<a data-tag="A73BA233" href="../../tag/CEEE110C45FE/">11.7</a>) show that $Q$ is locally uniformly elliptic exactly on $E_{\rm unif}$, that is, where $H$ has a local essential positive lower bound. The implication from ellipticity of $Q$ to a lower bound for $H$ uses the local upper bound for $H$: testing each eigendirection bounds every product $\prod _{\ell \ne k}\lambda _\ell $ below, and choosing $k$ different from an index of a smallest eigenvalue then bounds that eigenvalue below. For $n=1$ one has $T=1$, so the linearized equation is elliptic everywhere. 
+</p>
+<article class="env-proof">
+<p>
+<strong>of <a data-tag="61B8DD0F" href="../../tag/6EB399397505/">11.1.1</a>.</strong>
+       We first locate the extrema. Fix $s&gt;0$ and consider a maximum point of 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-7DFD9BD5"><span data-gerby-tag="7DFD9BD5"></span>
+<span class="equation-label"><a data-tag="7DFD9BD5" href="../../tag/D7E23A564A00/">11.8</a></span>
+<div>\begin{equation}  w-s(v-\chi ). \label{uni-eq:pertmax} \end{equation}</div>
+</div>
+<p>
+       For smooth data, the complex Hessian of this function is nonpositive at a maximum point, that is, 
+    
+<div class="equation" id="non-kahler-pluripotential-theory-508DEF67"><span data-gerby-tag="508DEF67"></span>
+<span class="equation-label"><a data-tag="508DEF67" href="../../tag/C5CDE7D4BA13/">11.9</a></span>
+<div>\begin{equation}  (1+s)B\geq A+sC. \label{uni-eq:matrixcontact} \end{equation}</div>
+</div>
+<p>
+       Since $sC&gt;0$, this gives $B&gt;0$, and since $A^ n=B^ n$, also $A&gt;0$. In a $B$-unitary frame put $J=B^{-1/2}AB^{-1/2}$, $K=B^{-1/2}CB^{-1/2}$. Since $\det J=1$, arithmetic–geometric mean and (<a data-tag="508DEF67" href="../../tag/C5CDE7D4BA13/">11.9</a>) give 
+    
+<div class="equation">
+  \[  n+s\operatorname {tr}K\leq \operatorname {tr}J+s\operatorname {tr}K \leq n(1+s).  \]
+</div>
+<p>
+       Consequently $\operatorname {tr}K\leq n$, $B\geq C/n$, and $\det K\leq (\operatorname {tr}K/n)^ n\leq 1$. In particular $B^ n\geq C^ n$. 
+    <p>
+       For $C^{1,1}$ potentials, fix a maximum point $p$ of (<a data-tag="7DFD9BD5" href="../../tag/D7E23A564A00/">11.8</a>) and apply <a data-tag="F0F5D947" href="../../tag/59B8A4C8DA05/">11.1.2</a> on a coordinate ball, with radii tending to zero and errors $\delta _ j\downarrow 0$. For the set of full measure in that lemma, take the points where both Hessians are defined and semipositive and have the common determinant given by (<a data-tag="84F3F379" href="../../tag/93A49A38E101/">11.2</a>). With $\beta _0=\mathrm{dd}^{\mathrm{c}}|z|^2$, the resulting points $x_ j\to p$ satisfy 
+    
+<div class="equation">
+  \[  A(x_ j)+s C_ j(x_ j)\leq (1+s)B(x_ j),\qquad C_ j=C-(\delta _ j/s)\beta _0&gt;0  \]
+</div>
+<p>
+       for large $j$. The matrix argument just given yields $f(x_ j)\mathrm{d}V_{x_ j}\geq C_ j(x_ j)^ n$. Since $f$, $\mathrm{d}V$ and $C$ are continuous, letting $j\to \infty $ gives $p\in P_\chi $; no continuity of the Hessians is needed. Thus every maximum point of the perturbed function lies in $P_\chi $. The set $P_\chi $ is closed, by continuity of $f$, $\mathrm{d}V$ and $C$, hence compact, and it is contained in $U$ because $C^ n&gt;0$. Letting $s\downarrow 0$, a limit point of these maximum points is a maximum point of $w$ lying in $P_\chi $. Applying the same argument to $-w$ gives a minimum point of $w$ in $P_\chi $ as well. In particular, $P_\chi $ is nonempty. 
+    <p>
+      On a relatively compact ball in $U$, the determinants of $A$ and $B$ have a positive lower bound, while their coefficients have an essential upper bound. Every eigenvalue is therefore bounded below by the determinant lower bound divided by a fixed power of the upper bound. Thus $U\subset E_{\rm unif}$. 
+    <p>
+      By (<a data-tag="AA4FA8E3" href="../../tag/2EA7CA32AE91/">11.1</a>), $w$ solves a linear equation in nondivergence form with measurable coefficients, whose principal quadratic form is a fixed positive multiple of $Q$. On each relatively compact coordinate ball in $E_{\rm unif}$, these coefficients are uniformly elliptic. <a data-tag="E67FD2CF" href="../../tag/96D40C4808C2/">11.1.3</a>, applied to $w$ and to $-w$, makes $w$ constant on the component of $E_{\rm unif}$ containing the maximum point found above, and constant on the component containing the minimum point found above. Continuity extends the two constant values to the closures, proving (<a data-tag="04A0BD5D" href="../../tag/7732F2B90E2A/">11.4</a>). Distinct extrema force disjoint closures. 
+    <p>
+      The same argument applies on $U$ itself, since $U$ contains the extremal points found in $P_\chi $ and the cofactor is locally uniformly elliptic on $U\subset E_{\rm unif}$. This proves the assertions with $U$ in place of $E_{\rm unif}$. 
+    <p>
+      The component criteria are immediate except for the dense two-component case. If an open dense subset of connected $X$ has at most two components with disjoint closures, those closures are disjoint nonempty closed sets whose union is $X$, contradicting connectedness. Finally, when $Z=\{ f=0\} $ is a connected embedded real hypersurface, flattening charts assign to each point of $Z$ the unordered pair of components containing its two local sides. This pair is locally constant along $Z$, so connectedness makes it independent of the point; the two labels may coincide or be exchanged along a loop. Every component of $X\setminus Z$ has a nonempty boundary in $Z$, since otherwise it would be both open and closed in connected $X$. Near such a boundary point it contains a local side. Thus the pair accounts for every component, and $U$ has at most two components. It is dense because a hypersurface has empty interior. This proves the last assertion without choosing a global side. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+<p>
+In this argument, the $C^{1,1}$ bound controls the measurable coefficients, and continuity of the density places the limiting contact points in $\{ f&gt;0\} $. The next criterion gives a quantitative condition for $\{ f&gt;0\} $ to be connected. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prescribed density mixed trace · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/energy-geodesics/">Chapter 14 · Energy, geodesics, rays, and test curves</a> · Tag <code>EB970BD6E881</code></p><h1>Prescribed density mixed trace</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · Lemma 17.4.19 <span data-gerby-tag="39331132"></span></div><article class="env-lemma" id="foundations-of-pluripotential-theory-39331132">
+<p><a class="environment-identifier" href="../../tag/EB970BD6E881/">Lemma <span data-tag="39331132">17.4.19</span>.</a><span data-gerby-tag="39331132"></span> Let $A$ be a closed subset of $X$ of Lebesgue measure zero in every chart, and let $S$ be a closed positive $(1,1)$-current on $X$ whose local potentials are locally bounded on $X\setminus A$. Let $\tau $ be a smooth strictly positive real $(n-1,n-1)$-form, and put $\nu =\omega \wedge \tau $. If </p>
+<div class="equation">
+  \[  \langle S^ n\rangle =m\nu \qquad \text{for some }m\geq 0,  \]
+</div>
+<p> then </p>
+<div class="equation" id="foundations-of-pluripotential-theory-34A9DC75"><span data-gerby-tag="34A9DC75"></span>
+<span class="equation-label"><a data-tag="34A9DC75" href="../../tag/0511A794D8D0/">17.38</a></span>
+<div>\begin{equation} \label{eq:prescribed-density-mixed-trace} \left(\int _ X S\wedge \tau \right) \left(\int _ X\langle S^{n-1}\rangle \wedge \omega \right) \geq \frac mn\left(\int _ X\nu \right)^2. \end{equation}</div>
+</div>
+<p> For $n=1$ the second factor is $\int _ X\omega $. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We prove a pointwise inequality for smooth forms, apply it to regularizations of the potentials of $S$ on small balls in $X\setminus A$, and globalize with a partition of unity. 
+    <p>
+<em>Step 1: a pointwise inequality.</em> Let $\sigma $ be a smooth positive definite real $(1,1)$-form. At a given point, choose linear coordinates on the tangent space that diagonalize the Hermitian matrices of $\omega $ and $\sigma $ simultaneously, so that $\omega =\sum _ j\gamma _ j$ and $\sigma =\sum _ j\lambda _ j\gamma _ j$ with $\lambda _ j&gt;0$, where $\gamma _ j=\mathrm i\, \mathrm dz_ j\wedge \mathrm d\bar z_ j$, and put $\mathrm dV=\gamma _1\wedge \cdots \wedge \gamma _ n$. Since $\tau $ is strictly positive (section <a data-tag="28C8F083" href="../../tag/ACB622806098/">7.2</a>), the form $\tau -c\, \omega ^{n-1}$ is positive at this point for some $c&gt;0$. The product of the strongly positive form $\gamma _ j$ with this positive form is a nonnegative multiple of $\mathrm dV$ (proposition <a data-tag="10A00ACF" href="../../tag/E58104E974B0/">7.2.1</a>), and $\gamma _ j\wedge \omega ^{n-1}=(n-1)!\, \mathrm dV$, so $\gamma _ j\wedge \tau \geq c(n-1)!\, \mathrm dV$; thus $\gamma _ j\wedge \tau =t_ j\, \mathrm dV$ with $t_ j&gt;0$. Expanding the products, we obtain 
+    
+<div class="equation">
+  \[  \frac{\sigma \wedge \tau }{\omega \wedge \tau } =\frac{\sum _ j\lambda _ jt_ j}{\sum _ jt_ j},\qquad \frac{\sigma ^{n-1}\wedge \omega }{\sigma ^ n} =\frac1n\sum _ j\lambda _ j^{-1}.  \]
+</div>
+<p>
+       Since $\lambda _ j\sum _ k\lambda _ k^{-1}\geq 1$ for every $j$, the product of these two ratios is at least $1/n$. If $\sigma $ is only semipositive, we apply this to $\sigma +s\omega $ and let $s\downarrow 0$. Thus, for every smooth semipositive real $(1,1)$-form $\sigma $, as densities with respect to any fixed smooth volume form, 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-BECA8818"><span data-gerby-tag="BECA8818"></span>
+<span class="equation-label"><a data-tag="BECA8818" href="../../tag/B73555CD9C1D/">17.39</a></span>
+<div>\begin{equation} \label{eq:pointwise-mixed-trace} (\sigma \wedge \tau )(\sigma ^{n-1}\wedge \omega ) \geq \frac1n\sigma ^ n\nu . \end{equation}</div>
+</div>
+<p>
+<em>Step 2: regularization on a ball.</em> Since the local potentials of $S$ are locally bounded on the open set $X\setminus A$, every point of $X\setminus A$ is the center of a coordinate ball $B\Subset X\setminus A$ on which $S=\mathrm{dd}^{\mathrm{c}}v$ with $v$ plurisubharmonic and bounded. Fix such a ball, put $\eta =\mathrm{dd}^{\mathrm{c}}|z|^2$ as in section <a data-tag="7C99D798" href="../../tag/2044B813A798/">9.7</a>, and write $\nu =g\eta ^ n$ with $g$ smooth and positive on $B$. Since $v$ is bounded on $B$, the non-pluripolar powers of $S$ on $B$ are the Bedford–Taylor powers of $v$ (see the remark following definition <a data-tag="9D8E4DD8" href="../../tag/D79952D7E272/">15.1.3</a>); in particular $(\mathrm{dd}^{\mathrm{c}}v)^ n=mg\eta ^ n$. 
+    <p>
+      Let $v_\varepsilon =v*\rho _\varepsilon $ be the regularizations of $v$ by the radial mollifiers of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>. On each ball $B'$ concentric with $B$ and of smaller radius, the functions $v_\varepsilon $ are defined for $\varepsilon $ smaller than the difference of the radii, and by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(2) they are smooth and plurisubharmonic on $B'$ and decrease to $v$ as $\varepsilon \downarrow 0$. As recalled at the beginning of section <a data-tag="7C99D798" href="../../tag/2044B813A798/">9.7</a>, $(\mathrm{dd}^{\mathrm{c}}v_\varepsilon )^ n=\det \mathcal H(v_\varepsilon )\, \eta ^ n$. The last assertion of proposition <a data-tag="183E5B3C" href="../../tag/EB2AFC8FB17C/">9.7.3</a>, applied on $B$ to $v$ and the continuous density $mg$, therefore gives 
+    
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}v_\varepsilon )^ n=F_\varepsilon \eta ^ n, \qquad F_\varepsilon =\det \mathcal H(v_\varepsilon )\geq \bigl ((mg)^{1/n}*\rho _\varepsilon \bigr )^ n.  \]
+</div>
+<p>
+       The right side converges to $mg$ uniformly on compact subsets of $B$, by lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(1) applied to the continuous function $(mg)^{1/n}$. Hence $\sqrt{F_\varepsilon g}$ is bounded below by functions converging uniformly to $\sqrt mg$ on compact sets, and for every nonnegative $\chi \in C^\infty _ c(B)$, 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-59F15C23"><span data-gerby-tag="59F15C23"></span>
+<span class="equation-label"><a data-tag="59F15C23" href="../../tag/93DD9AEE16DC/">17.40</a></span>
+<div>\begin{equation} \label{eq:mixed-trace-local-root-limit} \varliminf _{\varepsilon \downarrow 0} \int \chi \sqrt{F_\varepsilon g}\, \eta ^ n \geq \sqrt m\int \chi \nu . \end{equation}</div>
+</div>
+<p>
+       Moreover, for every $\chi \in C^\infty _ c(B)$, as $\varepsilon \downarrow 0$ along any sequence, 
+    
+<div class="equation">
+  \[  \int \chi \, \mathrm{dd}^{\mathrm{c}}v_\varepsilon \wedge \tau \longrightarrow \int \chi \, S\wedge \tau , \qquad \int \chi \, (\mathrm{dd}^{\mathrm{c}}v_\varepsilon )^{n-1}\wedge \omega \longrightarrow \int \chi \, \langle S^{n-1}\rangle \wedge \omega .  \]
+</div>
+<p>
+       For the first convergence, note that $\int \chi \, \mathrm{dd}^{\mathrm{c}}v_\varepsilon \wedge \tau =\int v_\varepsilon \, \mathrm{dd}^{\mathrm{c}}(\chi \tau )$, by the definition of $\mathrm{dd}^{\mathrm{c}}$ on currents (section <a data-tag="28C8F083" href="../../tag/ACB622806098/">7.2</a>); since $v_\varepsilon \to v$ in $L^1$ on $\operatorname{Supp}\chi $ (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(2)), this tends to $\int v\, \mathrm{dd}^{\mathrm{c}}(\chi \tau )=\int \chi \, S\wedge \tau $. 
+    <p>
+      For the second convergence, choose a ball $B'$ as above containing $\operatorname{Supp}\chi $, and a sequence $\varepsilon _ j\downarrow 0$. By theorem <a data-tag="8B1F9B78" href="../../tag/D87C13B3250A/">9.2.5</a>, applied on $B'$ to the closed positive current $\omega $ of bidimension $(n-1,n-1)$ and to $n-1$ copies of the decreasing sequence $(v_{\varepsilon _ j})$, the currents $(\mathrm{dd}^{\mathrm{c}}v_{\varepsilon _ j})^{n-1}\wedge \omega $ converge weakly to the Bedford–Taylor product $(\mathrm{dd}^{\mathrm{c}}v)^{n-1}\wedge \omega $. By proposition <a data-tag="D16BD033" href="../../tag/D9911E035563/">9.1.2</a>(1) and (4), these products are the exterior products with $\omega $ of the smooth forms $(\mathrm{dd}^{\mathrm{c}}v_{\varepsilon _ j})^{n-1}$ and of the current $(\mathrm{dd}^{\mathrm{c}}v)^{n-1}$, which equals $\langle S^{n-1}\rangle $ on $B$. (For $n=1$ both sides of the second convergence equal $\int \chi \, \omega $.) 
+    <p>
+<em>Step 3: globalization.</em> Let $\chi $ be a smooth function with compact support in $X\setminus A$ and $0\leq \chi \leq 1$. Cover $\operatorname{Supp}\chi $ by finitely many balls $B_ l$ as in Step 2, and write $\chi =\sum _ l\chi _ l$ with nonnegative $\chi _ l\in C^\infty _ c(B_ l)$; for instance, multiply $\chi $ by a partition of unity with compact supports subordinate to the cover of $X$ by the balls $B_ l$ and $X\setminus \operatorname{Supp}\chi $ (proposition <a data-tag="2A0D66D9" href="../../tag/DAE61F3D77A3/">7.1.3</a>). In each $B_ l$ we use the notation of Step 2 with an index $l$ and put 
+    
+<div class="equation">
+  \[  a_{l,\varepsilon }=\int \chi _ l\, \mathrm{dd}^{\mathrm{c}}v_{l,\varepsilon }\wedge \tau ,\qquad b_{l,\varepsilon }=\int \chi _ l\, (\mathrm{dd}^{\mathrm{c}}v_{l,\varepsilon })^{n-1}\wedge \omega .  \]
+</div>
+<p>
+       Let $\alpha _{l,\varepsilon }$ and $\beta _{l,\varepsilon }$ be the densities of $\mathrm{dd}^{\mathrm{c}}v_{l,\varepsilon }\wedge \tau $ and $(\mathrm{dd}^{\mathrm{c}}v_{l,\varepsilon })^{n-1}\wedge \omega $ with respect to $\eta _ l^ n$. By (<a data-tag="BECA8818" href="../../tag/B73555CD9C1D/">17.39</a>) with $\sigma =\mathrm{dd}^{\mathrm{c}}v_{l,\varepsilon }$, $\alpha _{l,\varepsilon }\beta _{l,\varepsilon }\geq F_{l,\varepsilon }g_ l/n$, so the Cauchy–Schwarz inequality gives 
+    
+<div class="equation">
+  \[  \int \chi _ l\sqrt{F_{l,\varepsilon }g_ l}\, \eta _ l^ n \leq \sqrt n\int \chi _ l\sqrt{\alpha _{l,\varepsilon }\beta _{l,\varepsilon }}\, \eta _ l^ n \leq \sqrt{n\, a_{l,\varepsilon }b_{l,\varepsilon }}.  \]
+</div>
+<p>
+       Summing over $l$ and applying the Cauchy–Schwarz inequality to the finite sum $\sum _ l\sqrt{a_{l,\varepsilon }b_{l,\varepsilon }}$, we obtain 
+    
+<div class="equation">
+  \[  \left(\sum _ l a_{l,\varepsilon }\right) \left(\sum _ l b_{l,\varepsilon }\right) \geq \frac1n\left(\sum _ l \int \chi _ l\sqrt{F_{l,\varepsilon }g_ l}\, \eta _ l^ n\right)^2.  \]
+</div>
+<p>
+       Now let $\varepsilon \downarrow 0$ along a sequence. By Step 2, the two sums on the left converge to $\int _ X\chi \, S\wedge \tau $ and $\int _ X\chi \langle S^{n-1}\rangle \wedge \omega $. These are at most the corresponding integrals over $X$ without $\chi $, because $S\wedge \tau $ and $\langle S^{n-1}\rangle \wedge \omega $ are positive measures and $0\leq \chi \leq 1$. By (<a data-tag="59F15C23" href="../../tag/93DD9AEE16DC/">17.40</a>) and $g_ l\eta _ l^ n=\nu $, the lower limit of the right side is at least $(m/n)(\int _ X\chi \nu )^2$. Therefore 
+    
+<div class="equation">
+  \[  \left(\int _ X S\wedge \tau \right) \left(\int _ X\langle S^{n-1}\rangle \wedge \omega \right) \geq \frac mn\left(\int _ X\chi \nu \right)^2.  \]
+</div>
+<p>
+      Finally, we remove the cutoff. Fix a metric $d$ inducing the topology of $X$ (lemma <a data-tag="C99D5F6B" href="../../tag/98494B0CCC31/">7.1.4</a>), and for $k\geq 1$ let $K_ k=\{ x\in X:d(x,A)\geq 1/k\} $, with $K_ k=X$ if $A=\varnothing $. These compact subsets of $X\setminus A$ increase to $X\setminus A$, because $A$ is closed. By proposition <a data-tag="2A0D66D9" href="../../tag/DAE61F3D77A3/">7.1.3</a> there are smooth functions $\chi _ k\colon X\to [0,1]$ with compact support in $X\setminus A$ and $\chi _ k=1$ on $K_ k$. Since $\nu $ has a smooth density and $A$ has Lebesgue measure zero, $\nu (K_ k)\to \nu (X\setminus A)=\int _ X\nu $, so $\int _ X\chi _ k\nu \to \int _ X\nu $. Applying the last inequality to $\chi =\chi _ k$ and letting $k\to \infty $ proves (<a data-tag="34A9DC75" href="../../tag/0511A794D8D0/">17.38</a>). Both factors on its left are finite: the first is the pairing of a current with a smooth form on the compact manifold $X$, and the second is finite by theorem <a data-tag="A00627D3" href="../../tag/3783DE0B4D00/">15.4.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

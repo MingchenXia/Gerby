@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Divisors under a dominant map · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/divisors-restriction/">Chapter 17 · B-divisors and restriction</a> · Tag <code>A7CD7872B787</code></p><h1>Divisors under a dominant map</h1><section class="source-variant" data-gerby-book="non-kahler-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/non-kahler-pluripotential-theory/">Singularities in Hermitian pluripotential theory</a> · 19.8.1 Divisors under a dominant map <span data-gerby-tag="3FCA3F97"></span></div>
+<p>
+The following reduction applies to every compact modification, without choosing finitely many divisors in advance. 
+</p>
+
+<article class="env-lemma" id="non-kahler-pluripotential-theory-5028932D">
+<p><a class="environment-identifier" href="../../tag/C53A2B3087AB/">Lemma <span data-tag="5028932D">19.8.1</span>.</a><span data-gerby-tag="5028932D"></span> Let $f:Z\to M$ be a dominant holomorphic map of connected smooth compact complex manifolds, and let $D$ be a prime divisor on $Z$. If $f(D)\ne M$, there are a smooth compact modification $\sigma :M'\to M$, a prime divisor $F\subset M'$ dominated by $D$, and an integer $e\geq 1$ such that $f$ lifts holomorphically near a general point of $D$ and </p>
+<div class="equation" id="non-kahler-pluripotential-theory-F47EE864"><span data-gerby-tag="F47EE864"></span>
+<span class="equation-label"><a data-tag="F47EE864" href="../../tag/09D69C0F18B7/">19.15</a></span>
+<div>\begin{equation} \label{eq:dominant-divisorial-pullback} \operatorname {ord}_ D(\mathfrak b\mathcal O_ Z) =e\operatorname {ord}_ F(\mathfrak b\mathcal O_{M'}), \qquad \nu (w\circ f,D)=e\nu (w\circ \sigma ,F) \end{equation}</div>
+</div>
+<p> for every nonzero coherent ideal $\mathfrak b$ on $M$ and every $w\in \mathrm{QPSH}(M)$. If $f(D)=M$, both quantities on the left are zero. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first extract a divisor on the base and then check the effect of ramification on its generic Lelong number. Put $r=\dim M$. Maintain a compact analytic graph proper over $Z$, isomorphic to $Z$ near a general point of $D$, with a dominant map to the current smooth modified base. Its divisor image $S$ is irreducible analytic by the proper mapping theorem. The graph may be singular away from this neighborhood. 
+    <p>
+      Near a general point of $D$, let $J_ D(f)$ be the least vanishing order of the coefficients of $f^*(\mathrm dy_1\wedge \cdots \wedge \mathrm dy_ r)$ in a smooth source frame. Dominance makes it a finite nonnegative integer. Changes of smooth coordinates multiply the target volume form by a unit and change the source frame by an invertible matrix, so this integer is independent of the coordinates. 
+    <p>
+      Suppose $S$ has codimension $c\geq 2$. Blow up its reduced coherent ideal. Over the smooth part of $S$, use coordinates with $S=\{ y_1=\cdots =y_ c=0\} $ and put 
+    
+<div class="equation">
+  \[  m=\min _{i\leq c}\operatorname {ord}_ D(f^*y_ i)\geq 1.  \]
+</div>
+<p>
+       Choose $y_1$ attaining this minimum. After removing a proper analytic subset of $D$, its leading coefficient is a unit, and all ratios $f^*y_ i/f^*y_1$ are holomorphic. The map therefore lifts near these points to the smooth blowup chart 
+    
+<div class="equation">
+  \[  (y_1,\ldots ,y_ c)=(s,st_2,\ldots ,st_ c).  \]
+</div>
+<p>
+       Resolve the target blowup by a proper analytic resolution which is an isomorphism over its whole smooth locus; the resolution input is recalled in <a data-tag="2D2FF42A" href="../../tag/81F92F228A7E/">34.13</a>. The resulting base is smooth and compact, and the lift near the general point of $D$ is preserved. Taking the main analytic graph of the resulting meromorphic lift again gives a compact graph proper over $Z$, unchanged in this neighborhood. 
+    <p>
+      In these coordinates, 
+    
+<div class="equation">
+  \[  \mathrm dy_1\wedge \cdots \wedge \mathrm dy_ r =s^{c-1}\mathrm ds\wedge \mathrm dt_2\wedge \cdots \wedge \mathrm dt_ c \wedge \mathrm dy_{c+1}\wedge \cdots \wedge \mathrm dy_ r.  \]
+</div>
+<p>
+       Consequently the new Jacobian order is $J_ D(f)-(c-1)m\geq 0$. It strictly decreases at every step. After finitely many steps the divisor image has codimension one: its image cannot dominate a modified base when its original image was proper. This proves extraction without resolving the source graph in a way that changes the general point of $D$. 
+    <p>
+      Let $e$ be the order along $D$ of the pullback of a local equation of the extracted divisor $F$. Near its general point, the ideal $\mathfrak b\mathcal O_{M'}$ is a power of that equation times a unit ideal. Pullback gives the ideal-order identity in (<a data-tag="F47EE864" href="../../tag/09D69C0F18B7/">19.15</a>). 
+    <p>
+      The map $D\to F$ has tangential rank $r-1$ at general smooth points. Use the tangential base coordinates as source coordinates and absorb the unit in the normal pullback into a local holomorphic $e$th root. The resulting local form of the map is 
+    
+<div class="equation">
+  \[  (z_1,z_2,\ldots ,z_ r,z')\longmapsto (z_1^ e,z_2,\ldots ,z_ r).  \]
+</div>
+<p>
+       After a smooth local correction, Siu's divisorial removal from section <a data-tag="0D05D1AE" href="../../tag/2C2417A75DF4/">1.17</a> writes 
+    
+<div class="equation">
+  \[  w\circ \sigma =c_0\log |y_1|^2+R, \qquad c_0=\nu (w\circ \sigma ,F),  \]
+</div>
+<p>
+       with $R$ plurisubharmonic and $\nu (R,F)=0$. By the non-strict Lelong level theorem in <a data-tag="86D804B1" href="../../tag/E911F3E2C8E9/">1.13.1</a>, its full point Lelong number is zero at a very general point of $F$. Skoda's theorem then makes $\mathrm e^{-tR}$ locally integrable for every $t&gt;0$ at this point. 
+    <p>
+      For $e&gt;1$, choose $1&lt;p&lt;e/(e-1)$ and let $p'$ be its conjugate exponent. The density $|y_1|^{2/e-2}$ belongs locally to $L^ p$. Change of variables and Hölder's inequality, using integrability of $\mathrm e^{-tp'R}$, give 
+    
+<div class="equation">
+  \[  \int \mathrm e^{-tR(z_1^ e,z_2,\ldots ,z_ r)}\, \mathrm dV_ z =c_ e\int \mathrm e^{-tR(y)}|y_1|^{2/e-2}\, \mathrm dV_ y&lt;+\infty  \]
+</div>
+<p>
+       on sufficiently small corresponding polydisks. Free source variables contribute a finite product factor; for $e=1$ Fubini's theorem suffices. A positive generic divisor coefficient $c'$ of the pulled-back residual would instead force nonintegrability for $tc'\geq 1$. The residual coefficient is therefore zero, and the logarithmic term has coefficient $ec_0$. This proves the Lelong identity even if $R|_ F\equiv -\infty $. 
+    <p>
+      Finally, if $f(D)=M$, the map is a submersion near a very general point of $D$. A nonzero ideal is a unit at a general image point, and Skoda's theorem at an image point of zero Lelong number, followed by Fubini's theorem in product coordinates, gives zero generic Lelong number on $D$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Theorem 6.2.17 · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/collection.css?v=f9a6a0825cf0"><link rel="stylesheet" href="../../assets/formalization.css?v=f9a6a0825cf0">
+<script src="../../assets/math-config.js?v=f9a6a0825cf0"></script><script defer src="../../assets/mathjax/tex-chtml.js?v=f9a6a0825cf0"></script><script type="module" src="../../assets/formalization.mjs?v=f9a6a0825cf0"></script><script type="module" src="../../assets/collection.mjs?v=f9a6a0825cf0"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../chapters/">Chapters</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol><li><a href="../../chapters/orientation/"><span>1.</span> Conventions and prerequisites</a></li><li><a href="../../chapters/measures-distributions/"><span>2.</span> Measures, distributions, and convergence</a></li><li><a href="../../chapters/classical-potentials/"><span>3.</span> Harmonic and subharmonic functions</a></li><li><a href="../../chapters/capacity-fine-topology/"><span>4.</span> Energy, capacity, and fine topology</a></li><li><a href="../../chapters/psh-positive-currents/"><span>5.</span> Plurisubharmonic functions and positive currents</a></li><li><a href="../../chapters/singularities-regularization/"><span>6.</span> Lelong numbers, multiplier ideals, and regularization</a></li><li><a href="../../chapters/local-monge-ampere/"><span>7.</span> Local Monge–Ampère theory and Hessian equations</a></li><li><a href="../../chapters/complex-spaces/"><span>8.</span> Complex spaces and modifications</a></li><li><a href="../../chapters/positivity-cohomology/"><span>9.</span> Cohomology, positivity, and geometric loci</a></li><li><a href="../../chapters/hermitian-torsion/"><span>10.</span> Hermitian geometry, torsion, and Gauduchon duality</a></li><li><a href="../../chapters/non-pluripolar-mass/"><span>11.</span> Non-pluripolar measures and mass</a></li><li><a href="../../chapters/monge-ampere-equations/"><span>12.</span> Monge–Ampère equations and stability</a></li><li><a href="../../chapters/envelopes-models/"><span>13.</span> Singularity types, envelopes, and models</a></li><li><a href="../../chapters/energy-geodesics/"><span>14.</span> Energy, geodesics, rays, and test curves</a></li><li><a href="../../chapters/ideal-goodness/"><span>15.</span> Multiplier-ideal models and partial equilibrium</a></li><li><a href="../../chapters/sections-okounkov/"><span>16.</span> Sections, graded series, and Okounkov bodies</a></li><li><a href="../../chapters/divisors-restriction/"><span>17.</span> B-divisors and restriction</a></li><li><a href="../../chapters/toric-convex/"><span>18.</span> Toric and convex geometry</a></li><li><a href="../../chapters/non-archimedean/"><span>19.</span> Non-Archimedean pluripotential theory</a></li><li><a href="../../chapters/hopf-lck/"><span>20.</span> Hopf and locally conformally Kähler geometry</a></li><li><a href="../../chapters/problems-history/"><span>21.</span> Open problems and historical notes</a></li></ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../chapters/envelopes-models/">Chapter 13 · Singularity types, envelopes, and models</a> · Tag <code>713B9E26113B</code></p><h1>Theorem 6.2.17</h1><section class="source-variant" data-gerby-book="sgpt"><div class="source-attribution">From <a href="../../sources/sgpt/">Singularities in global pluripotential theory</a> · Theorem 6.2.17 <span data-gerby-tag="45C76D02"></span></div><article class="env-theorem" id="sgpt-45C76D02">
+<p><a class="environment-identifier" href="../../tag/713B9E26113B/">Theorem <span data-tag="45C76D02">6.2.17</span>.</a><span data-gerby-tag="45C76D02"></span> Let $\theta _1,\ldots ,\theta _ n$ be smooth closed real $(1,1)$-forms on $X$ representing big cohomology classes. Suppose that $(\varphi _ j^ k)_{k\in I}$ are nets in $\mathrm{PSH}(X,\theta _ j)$ and $\varphi _ j\in \mathrm{PSH}(X,\theta _ j)$ for $j=1,\ldots ,n$. We assume that $\varphi _ j^ k\xrightarrow {d_ S}\varphi _ j$ for each $j=1,\ldots ,n$. Then </p>
+<div class="equation" id="sgpt-5254FADF"><span data-gerby-tag="5254FADF"></span>
+<span class="equation-label"><a data-tag="5254FADF" href="../../tag/3F8CB8C5B9A5/">6.56</a></span>
+<div>\begin{equation} \label{eq:convmixedmassds} \lim _{k\in I}\int _ X\theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k}=\int _ X\theta _{1,\varphi _1}\wedge \cdots \wedge \theta _{n,\varphi _ n}. \end{equation}</div>
+</div>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Since $d_ S$ is a pseudometric, in order to establish the continuity of mixed masses, it suffices to consider sequences instead of nets. So we may assume that $I=\mathbb {Z}_{&gt;0}$ as ordered sets. 
+    <p>
+<strong>Step 1</strong>. We reduce to the case where $\varphi _ j^ k,\varphi _ j$ all have positive masses and there is a constant $\delta &gt;0$ such that for all $j=1,\ldots ,n$ and $k\in I$, 
+    
+<div class="equation">
+  \[  \int _ X \theta _{j,\varphi _ j^ k}^ n&gt;\delta .  \]
+</div>
+<p>
+       Assuming in this case, the theorem has been proved, let us handle the general case. Take $t\in (0,1)$. By <a data-tag="5EA309A7" href="../../tag/51EA136E15FA/">6.2.15</a>, we have 
+    
+<div class="equation">
+  \[  (1-t)\varphi _ j^ k+tV_{\theta _ j}\xrightarrow {d_ S}(1-t)\varphi _ j+tV_{\theta _ j}  \]
+</div>
+<p>
+       as $k\to \infty $ for each $j=1,\ldots ,n$. Note that for all $k\in I$, 
+    
+<div class="equation">
+  \[  \int _ X \theta ^ n_{j,(1-t)\varphi _ j^ k+tV_{\theta _ j}}\geq t^ n\int _ X \theta _{V_{\theta _ j}}^ n&gt;0.  \]
+</div>
+<p>
+       Assume that we have proved the special case of the theorem, we have 
+    
+<div class="equation">
+  \[  \begin{split} &amp; \lim _{k\to \infty }\int _ X\theta _{1,(1-t)\varphi _1^ k+tV_{\theta _1}}\wedge \cdots \wedge \theta _{n,(1-t)\varphi _ n^ k+tV_{\theta _ n}}\\  =&amp; \int _ X\theta _{1,(1-t)\varphi _1+tV_{\theta _1}}\wedge \cdots \wedge \theta _{n,(1-t)\varphi _ n+tV_{\theta _ n}}. \end{split}  \]
+</div>
+<p>
+       More explicitly, for fixed $k$ the left-hand side is the value at $t$ of a polynomial $Q_ k(t)$ of degree at most $n$, and the right-hand side is the value of a polynomial $Q(t)$ of degree at most $n$. Choose $n+1$ distinct numbers $t_0,\ldots ,t_ n\in (0,1)$. Lagrange interpolation expresses $Q_ k(0)-Q(0)$ as a fixed linear combination of the numbers $Q_ k(t_ a)-Q(t_ a)$, which tend to $0$. Hence the same formula holds at $t=0$. From this, (<a data-tag="5254FADF" href="../../tag/3F8CB8C5B9A5/">6.56</a>) follows. 
+    <p>
+<strong>Step 2</strong>. We now assume that the assumptions mentioned at the beginning of Step 1 are met. Note that we may assume that $\varphi _ j^ k$, $\varphi _ j$ are model potentials for all $j=1,\ldots ,n$, $k&gt;0$ by proposition <a data-tag="D0C701D6" href="../../tag/C1D8A9BD3B3B/">6.2.4</a> and corollary <a data-tag="7954BF44" href="../../tag/E10CA97A11EF/">3.1.12</a>. 
+    <p>
+      We first handle the following monotone situation. Assume that, for each fixed $i$, the sequence $(\varphi _ i^ k)_ k$ is either increasing or decreasing. Let $\tilde{\varphi }_ i$ denote its pointwise limit, namely 
+    
+<div class="equation">
+  \[  \tilde{\varphi }_ i=\inf _{k&gt;0}\varphi _ i^ k  \]
+</div>
+<p>
+       in the decreasing case and 
+    
+<div class="equation">
+  \[  \tilde{\varphi }_ i=\operatorname *{sup}_{k&gt;0}{}\! {}^{*}\varphi _ i^ k  \]
+</div>
+<p>
+       in the increasing case. We assume moreover that $\tilde{\varphi }_ i\sim _ P\varphi _ i$ for every $i$. Since mixed non-pluripolar masses are invariant under replacing each entry by a $P$-equivalent potential, it suffices in this monotone situation to prove convergence to the mixed mass of the $\tilde{\varphi }_ i$'s. 
+    <p>
+      After reordering the indices, we may assume that there is $i_0\in \{ 0,\ldots ,n\} $ such that $(\varphi _ i^ k)_ k$ is decreasing for $i\leq i_0$ and increasing for $i&gt;i_0$. Therefore, for each $k&gt;0$, using theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, we have 
+    
+<div class="equation">
+  \[  \int _ X \theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k}\geq \int _ X \theta _{1,\tilde{\varphi }_1}\wedge \cdots \wedge \theta _{i_0,\tilde{\varphi }_{i_0}}\wedge \theta _{i_0+1,\varphi ^ k_{i_0+1}}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k}.  \]
+</div>
+<p>
+       Using corollary <a data-tag="CDCC4217" href="../../tag/37623491DEDC/">2.4.9</a>, we therefore conclude that 
+    
+<div class="equation">
+  \[  \varliminf _{k\to \infty }\int _ X \theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k}\geq \int _ X \theta _{1,\tilde{\varphi }_1}\wedge \cdots \wedge \theta _{n,\tilde{\varphi }_ n}.  \]
+</div>
+<p>
+       It remains to prove 
+    
+<div class="equation" id="sgpt-9CD081C6"><span data-gerby-tag="9CD081C6"></span>
+<span class="equation-label"><a data-tag="9CD081C6" href="../../tag/DDD39F87B553/">6.59</a></span>
+<div>\begin{equation} \label{eq:limsup} \varlimsup _{k\to \infty }\int _ X \theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k}\leq \int _ X \theta _{1,\tilde{\varphi }_1}\wedge \cdots \wedge \theta _{n,\tilde{\varphi }_ n}. \end{equation}</div>
+</div>
+<p>
+       By theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, for each $k&gt;0$, we have 
+    
+<div class="equation">
+  \[  \int _ X \theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k}\leq \int _ X \theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{i_0,\varphi _{i_0}^ k}\wedge \theta _{i_0+1,\tilde{\varphi }_{i_0+1}}\wedge \cdots \wedge \theta _{n,\tilde{\varphi }_{n}}.  \]
+</div>
+<p>
+       When proving (<a data-tag="9CD081C6" href="../../tag/DDD39F87B553/">6.59</a>), we may replace $\varphi _ j^ k$ by $\tilde{\varphi }_ j$ whenever $j&gt;i_0$, $k&gt;0$. Thus, we are reduced to the case where for all $i$, $(\varphi _ i^ k)_ k$ is decreasing. 
+    <p>
+      By proposition <a data-tag="DE839E2D" href="../../tag/048490BEAC8C/">3.1.26</a>, the masses $\int _ X\theta _{i,\varphi _ i^ k}^ n$ decrease to $\int _ X\theta _{i,\tilde{\varphi }_ i}^ n$. Hence, thanks to <a data-tag="8560C5E9" href="../../tag/1CC7CDBE65A9/">2.4.15</a>, for each $i=1,\ldots ,n$, we may take an increasing sequence $(b^ k_ i)_ k$ tending to $\infty $ satisfying 
+    
+<div class="equation">
+  \[  b_ i^ k\in \left(1, \left( \frac{\int _ X \theta _{i,\varphi _ i^ k}^ n}{\int _ X \theta _{i,\varphi _ i^ k}^ n-\int _ X \theta _{i,\tilde{\varphi }_ i}^ n} \right)^{1/n} \right)  \]
+</div>
+<p>
+       where the upper endpoint is understood as $\infty $ if the denominator is $0$. For each such $b_ i^ k$, <a data-tag="8560C5E9" href="../../tag/1CC7CDBE65A9/">2.4.15</a> gives $\rho _ i^ k\in \mathrm{PSH}(X,\theta _ i)$ with 
+    
+<div class="equation">
+  \[  (b^ k_ i)^{-1}\rho _ i^ k+\left(1-(b^ k_ i)^{-1}\right)\varphi _ i^ k\leq \tilde{\varphi }_ i.  \]
+</div>
+<p>
+      Then by theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a> again, 
+    
+<div class="equation">
+  \[  \prod _{i=1}^ n\left(1-(b^ k_ i)^{-1}\right)\int _ X \theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k}\leq \int _ X \theta _{1,\tilde{\varphi }_1}\wedge \cdots \wedge \theta _{n,\tilde{\varphi }_ n}.  \]
+</div>
+<p>
+       Letting $k\to \infty $, we conclude (<a data-tag="9CD081C6" href="../../tag/DDD39F87B553/">6.59</a>). This proves the monotone situation. 
+    <p>
+      We now return to the general case. It suffices to prove that any subsequence of 
+    
+<div class="equation">
+  \[  \int _ X \theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k}  \]
+</div>
+<p>
+       has a further subsequence converging to the desired limit. Starting with an arbitrary subsequence, we pass to a further subsequence, still indexed by $k$, so that the construction in proposition <a data-tag="199F2D4D" href="../../tag/1DEED63B61B0/">6.2.12</a> applies simultaneously to the finitely many sequences $(\varphi _ i^ k)_ k$, $i=1,\ldots ,n$. 
+    <p>
+      Thus, after discarding finitely many terms and relabeling, for each $i$ there are model potentials $\eta _ i^ k,\psi _ i^ k\in \mathrm{PSH}(X,\theta _ i)$ such that $(\eta _ i^ k)_ k$ is increasing, $(\psi _ i^ k)_ k$ is decreasing, and 
+    
+<div class="equation">
+  \[  \eta _ i^ k\leq \varphi _ i^ k\leq \psi _ i^ k,\quad \eta _ i^ k\xrightarrow {d_ S}\varphi _ i,\quad \psi _ i^ k\xrightarrow {d_ S}\varphi _ i.  \]
+</div>
+<p>
+       For the upper sequence, we take $\psi _ i^ k=P_{\theta _ i}[\operatorname *{sup}_{\ell \geq k}{}\! {}^{*}\varphi _ i^\ell ]$; as in (<a data-tag="83149498" href="../../tag/79C50CD3AC3E/">6.40</a>), this gives $\inf _ k\psi _ i^ k=\varphi _ i$. For the lower sequence, the construction in proposition <a data-tag="199F2D4D" href="../../tag/1DEED63B61B0/">6.2.12</a> together with proposition <a data-tag="6F748350" href="../../tag/8EB68D9BFB64/">3.1.25</a> shows that the $\eta _ i^ k$'s are model after discarding finitely many terms, and the proof of proposition <a data-tag="199F2D4D" href="../../tag/1DEED63B61B0/">6.2.12</a> shows that their increasing limit is $P$-equivalent to $\varphi _ i$. 
+    <p>
+      By theorem <a data-tag="00CC32E0" href="../../tag/0E5F6133B048/">2.4.8</a>, for every $k$, 
+    
+<div class="equation">
+  \[  \int _ X\theta _{1,\eta _1^ k}\wedge \cdots \wedge \theta _{n,\eta _ n^ k} \leq \int _ X\theta _{1,\varphi _1^ k}\wedge \cdots \wedge \theta _{n,\varphi _ n^ k} \leq \int _ X\theta _{1,\psi _1^ k}\wedge \cdots \wedge \theta _{n,\psi _ n^ k}.  \]
+</div>
+<p>
+       The monotone situation just proved applies to both the lower and upper sequences, and both limiting mixed masses are equal to 
+    
+<div class="equation">
+  \[  \int _ X\theta _{1,\varphi _1}\wedge \cdots \wedge \theta _{n,\varphi _ n}.  \]
+</div>
+<p>
+       The squeeze theorem therefore gives the desired convergence along this further subsequence. This concludes the proof. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>
