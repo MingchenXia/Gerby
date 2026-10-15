@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The real Monge–Ampère measure · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a> · Tag <code>07CCE1F902ED</code></p><h1>The real Monge–Ampère measure</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 18.4 The real Monge–Ampère measure <span data-gerby-tag="34803B32"></span></div>
+<p>
+  Let $F$ be a finite convex function on $N_{\mathbb R}$. Following Alexandrov, we measure a set $E\subset N_{\mathbb R}$ by the volume of the set $\partial F(E)$ of supporting slopes of $F$ at points of $E$. For a smooth $F$ with positive definite Hessian, $\partial F(E)=\nabla F(E)$, and the change of variables formula gives $\operatorname {vol}(\nabla F(E))=\int _ E\det (D^2F)\, \mathrm dx$, so this is a weak form of the real Monge–Ampère operator (see proposition <a data-tag="EAD83A50" href="../../tag/5D8A7A7D734E/">18.4.4</a>). Two difficulties arise in general: the subgradient map is multivalued, and it is not clear a priori that $\partial F(E)$ is measurable. Both are resolved by looking at the inverse map. By duality, a slope $p$ belongs to $\partial F(E)$ if and only if $E$ meets $\partial F^*(p)$, and $\partial F^*(p)$ is a single point for almost every $p$ in the domain of $F^*$. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-4A0FAEB3">
+<p><a class="environment-identifier" href="../../tag/409656CC47D4/">Theorem <span data-tag="4A0FAEB3">18.4.1</span>.</a><span data-gerby-tag="4A0FAEB3"></span> Let $F$ be a finite convex function on $N_{\mathbb R}$, let $G=F^*$, and let $D$ be the set of points of the interior of $\operatorname {dom}G$ at which $G$ is differentiable. For every Borel set $E\subset N_{\mathbb R}$, the set $\partial F(E)$ is measurable for the completed Lebesgue measure, and </p>
+<div class="equation">
+  \[  \operatorname {MA}_{\mathbb R}(F)(E)=n!\operatorname {vol}(\partial F(E))  \]
+</div>
+<p> defines a positive Radon measure on $N_{\mathbb R}$, the <em>real Monge–Ampère measure</em> of $F$. It is given by </p>
+<div class="equation">
+  \[  \operatorname {MA}_{\mathbb R}(F) =(\nabla G)_*(n!\mathbf1_ D\, \mathrm dp).  \]
+</div>
+<p> If $\operatorname {dom}G$ has empty interior and $n&gt;0$, then $\operatorname {MA}_{\mathbb R}(F)=0$. In every case </p>
+<div class="equation">
+  \[  \operatorname {MA}_{\mathbb R}(F)(N_{\mathbb R}) =n!\operatorname {vol}(K_ F).  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The set $\operatorname {dom}G$ is convex, and its difference from its interior is a null set: if the interior is nonempty, this difference lies in the relative boundary, which is null by lemma <a data-tag="5D4512D3" href="../../tag/34526AA883B2/">18.1.2</a>(4); otherwise $\operatorname {dom}G$ lies in a proper affine subspace. By proposition <a data-tag="01EDED5C" href="../../tag/72D7B299EAB8/">18.1.3</a>(4), applied to the finite convex function $G$ on the interior of its domain, $D$ is a Borel set, the gradient $\nabla G\colon D\to N_{\mathbb R}$ is a Borel map, and the complement of $D$ in the interior of $\operatorname {dom}G$ is a null set. Therefore the complement of $D$ in $\operatorname {dom}G$ is a null set; it is a Borel set, because $\operatorname {dom}G=\bigcup _ k\{ G\leq k\} $ is a countable union of closed sets, $G$ being lower semicontinuous. 
+    <p>
+      Let $p\in D$. Then $\partial G(p)=\{ \nabla G(p)\} $. Indeed, $\partial G(p)$ is nonempty by proposition <a data-tag="01EDED5C" href="../../tag/72D7B299EAB8/">18.1.3</a>, and every subgradient of $G$ at $p$ is also a subgradient at $p$ of the restriction of $G$ to the interior of $\operatorname {dom}G$, whose only subgradient at $p$ is $\nabla G(p)$ by proposition <a data-tag="01EDED5C" href="../../tag/72D7B299EAB8/">18.1.3</a>(3). Hence theorem <a data-tag="DD2DB654" href="../../tag/011FA81B0000/">18.2.2</a> gives, for every $E\subset N_{\mathbb R}$, 
+    
+<div class="equation">
+  \[  p\in \partial F(E)\quad \Longleftrightarrow \quad \nabla G(p)\in E.  \]
+</div>
+<p>
+       Every subgradient of $F$ lies in $\operatorname {dom}G$, so $\partial F(E)$ differs from the Borel set $(\nabla G)^{-1}(E)\cap D$ by a subset of the fixed null set $\operatorname {dom}G\setminus D$. Hence $\partial F(E)$ is measurable for the completed measure, and $\operatorname {vol}(\partial F(E))=\operatorname {vol}((\nabla G)^{-1}(E)\cap D)$. This proves the pushforward formula, which in turn shows that $E\mapsto n!\operatorname {vol}(\partial F(E))$ is countably additive on Borel sets. 
+    <p>
+      If $K$ is compact, $\partial F(K)$ is bounded by proposition <a data-tag="01EDED5C" href="../../tag/72D7B299EAB8/">18.1.3</a>(1), and it is closed, since the graph of $\partial F$ is closed and $K$ is compact; so $\partial F(K)$ is compact and has finite volume. Thus the measure is finite on compact sets, and it is a Radon measure by proposition <a data-tag="B0C4661C" href="../../tag/D0882F84DCFC/">1.1.2</a>. If $\operatorname {dom}G$ has empty interior and $n&gt;0$, then $D=\varnothing $ and the measure vanishes. In general, the total mass is $n!\operatorname {vol}(D)=n!\operatorname {vol}(\operatorname {dom}G)$, and $\operatorname {vol}(\operatorname {dom}G)=\operatorname {vol}(K_ F)$ because $K_ F\setminus \operatorname {dom}G$ lies in the relative boundary of $\operatorname {dom}G$, or in a proper affine subspace. In dimension zero, $F$ is a constant, $D$ is the single point of $M_{\mathbb R}$, and the formula gives unit mass, with $0!=1$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-6403CF44">
+<p><a class="environment-identifier" href="../../tag/F4072D9ED060/">Theorem <span data-tag="6403CF44">18.4.2</span>.</a><span data-gerby-tag="6403CF44"></span> Let $F_ j$ and $F$ be finite convex functions on $N_{\mathbb R}$ such that $F_ j\to F$ locally uniformly. Then $\operatorname {MA}_{\mathbb R}(F_ j)\to \operatorname {MA}_{\mathbb R}(F)$ vaguely. Moreover, let $P\subset M_{\mathbb R}$ be a convex body. A function $F\in \mathcal P(N_{\mathbb R},P)$ belongs to $\mathcal E(N_{\mathbb R},P)$ if and only if </p>
+<div class="equation">
+  \[  \operatorname {MA}_{\mathbb R}(F)(N_{\mathbb R})=n!\operatorname {vol}(P).  \]
+</div>
+<p> If $F$ and $H$ are finite convex functions with $F\preceq H$, then $K_ F\subset K_ H$, and the total mass of $\operatorname {MA}_{\mathbb R}(F)$ is at most that of $\operatorname {MA}_{\mathbb R}(H)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $\mu _ j=\operatorname {MA}_{\mathbb R}(F_ j)$ and $\mu =\operatorname {MA}_{\mathbb R}(F)$. Steps 1 and 2 compare the masses of compact and of open sets, and Step 3 deduces vague convergence. 
+    <p>
+<em>Step 1: compact sets.</em> Let $K$ be compact. If $x\in K$ and $0\neq p\in \partial F_ j(x)$ (in particular $n\geq 1$), choose $e\in N_{\mathbb R}$ with $|e|=1$ and $\langle p,e\rangle =|p|$; the subgradient inequality at $x$, evaluated at $x+e$, gives $|p|\leq F_ j(x+e)-F_ j(x)\leq 2\sup \{ |F_ j(y)|:\operatorname {dist}(y,K)\leq 1\} $. By local uniform convergence, the sets $\partial F_ j(K)$ are therefore contained in a fixed ball for all large $j$. If $x_ j\in K$, $p_ j\in \partial F_ j(x_ j)$, $x_ j\to x$ and $p_ j\to p$, then letting $j\to \infty $ in the subgradient inequalities gives $p\in \partial F(x)$. The set $\partial F(K)$ is compact, being bounded and closed by proposition <a data-tag="01EDED5C" href="../../tag/72D7B299EAB8/">18.1.3</a>(1), since $K$ is compact. Consequently, for every $\varepsilon &gt;0$, the set $\partial F_ j(K)$ lies in the closed $\varepsilon $-neighborhood $(\partial F(K))^\varepsilon $ of $\partial F(K)$ for all large $j$. Otherwise, for infinitely many $j$ there would be points $x_ j\in K$ and $p_ j\in \partial F_ j(x_ j)$ at distance at least $\varepsilon $ from $\partial F(K)$; as $K$ is compact and the $p_ j$ are bounded, a subsequence of $(x_ j,p_ j)$ would converge to some $(x,p)$ with $p\in \partial F(x)$, which is impossible. As $\varepsilon \downarrow 0$, these neighborhoods decrease to $\partial F(K)$, and continuity from above of Lebesgue measure on sets of finite measure gives 
+    
+<div class="equation">
+  \[  \varlimsup _ j\mu _ j(K)\leq \mu (K).  \]
+</div>
+<p>
+<em>Step 2: open sets.</em> Let $U$ be open and let $G=F^*$, with $D$ as in theorem <a data-tag="4A0FAEB3" href="../../tag/409656CC47D4/">18.4.1</a>. For $p\in \partial F(U)\cap D$, the point $x=\nabla G(p)$ lies in $U$ and is the only point with $p\in \partial F(x)$, so $x$ is the unique minimum point of $F-\langle p,\cdot \rangle $. Choose $r&gt;0$ with $\overline{B(x,r)}\subset U$. Since the sphere $\{ y:|y-x|=r\} $ is compact, $F-\langle p,\cdot \rangle $ exceeds its minimum by some $\delta &gt;0$ on it. For large $j$ we have $|F_ j-F|&lt;\delta /3$ on $\overline{B(x,r)}$, so the minimum of $F_ j-\langle p,\cdot \rangle $ on $\overline{B(x,r)}$ is attained at a point $x_ j\in B(x,r)$. A local minimum of a convex function is a global minimum, because the function is convex along each segment starting at that point; hence $p\in \partial F_ j(x_ j)\subset \partial F_ j(U)$ for all large $j$. Since $\partial F(U)\setminus D$ is a null set, Fatou's lemma, applied to the indicator functions of the sets $\partial F_ j(U)$, gives 
+    
+<div class="equation">
+  \[  \mu (U)\leq \varliminf _ j\mu _ j(U).  \]
+</div>
+<p>
+<em>Step 3: vague convergence.</em> Let $f\geq 0$ be continuous with compact support $S$. By Step 1 there is $C$ with $\mu _ j(S)\leq C$ for all large $j$. For $t&gt;0$, the set $\{ f\geq t\} $ is compact and $\{ f&gt;t\} $ is open. By Tonelli's theorem, $\int f\, \mathrm d\nu =\int _0^\infty \nu (\{ f&gt;t\} )\, \mathrm dt=\int _0^\infty \nu (\{ f\geq t\} )\, \mathrm dt$ for every positive measure $\nu $. Hence Step 2 and Fatou's lemma give 
+    
+<div class="equation">
+  \[  \begin{split}  \int f\, \mathrm d\mu &amp; =\int _0^\infty \mu (\{ f&gt;t\} )\, \mathrm dt\\ &amp; \leq \varliminf _ j\int _0^\infty \mu _ j(\{ f&gt;t\} )\, \mathrm dt=\varliminf _ j\int f\, \mathrm d\mu _ j, \end{split}  \]
+</div>
+<p>
+       and Step 1 and Fatou's lemma, applied to the nonnegative functions $t\mapsto C-\mu _ j(\{ f\geq t\} )$ on $(0,\max f]$, give 
+    
+<div class="equation">
+  \[  \begin{split}  \varlimsup _ j\int f\, \mathrm d\mu _ j&amp; =\varlimsup _ j\int _0^{\max f}\mu _ j(\{ f\geq t\} )\, \mathrm dt\\ &amp; \leq \int _0^{\max f}\mu (\{ f\geq t\} )\, \mathrm dt=\int f\, \mathrm d\mu . \end{split}  \]
+</div>
+<p>
+       Hence $\int f\, \mathrm d\mu _ j\to \int f\, \mathrm d\mu $. A general continuous function with compact support is the difference of its positive and negative parts, which proves vague convergence. 
+    <p>
+<em>Full mass.</em> Let $F\in \mathcal P(N_{\mathbb R},P)$. Then $K_ F\subset P$ by proposition <a data-tag="67A1B562" href="../../tag/D6E7C0B06FAD/">18.3.2</a>, and the total mass of $\operatorname {MA}_{\mathbb R}(F)$ is $n!\operatorname {vol}(K_ F)$ by theorem <a data-tag="4A0FAEB3" href="../../tag/409656CC47D4/">18.4.1</a>. Suppose that $P$ has nonempty interior. If $K_ F=P$, the two masses agree. If $K_ F\neq P$, choose $p\in P\setminus K_ F$ and a ball $B(p,r)$ disjoint from the closed set $K_ F$. Since $P$ is the closure of its interior by lemma <a data-tag="5D4512D3" href="../../tag/34526AA883B2/">18.1.2</a>(4), there is an interior point $q$ of $P$ in $B(p,r/2)$, and a small ball about $q$ lies in $P\setminus K_ F$. Hence $\operatorname {vol}(K_ F)&lt;\operatorname {vol}(P)$. This proves the equivalence when $P$ has nonempty interior. If $P$ has empty interior, then $n&gt;0$, both $\operatorname {vol}(K_ F)$ and $\operatorname {vol}(P)$ vanish, and $\mathcal E(N_{\mathbb R},P)=\mathcal P(N_{\mathbb R},P)$ by definition, so the equivalence holds as well. 
+    <p>
+      Finally, if $F\leq H+C$, then $F^*\geq H^*-C$, so $\operatorname {dom}F^*\subset \operatorname {dom}H^*$ and $K_ F\subset K_ H$. The inequality between the total masses follows from theorem <a data-tag="4A0FAEB3" href="../../tag/409656CC47D4/">18.4.1</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-example" id="foundations-of-pluripotential-theory-87E8B742">
+<p><a class="environment-identifier" href="../../tag/6BCC82ADB7C7/">Example <span data-tag="87E8B742">18.4.3</span>.</a><span data-gerby-tag="87E8B742"></span> In theorem <a data-tag="6403CF44" href="../../tag/F4072D9ED060/">18.4.2</a>, vague convergence cannot be replaced by narrow convergence without a condition that prevents mass from escaping to infinity. Let $n=1$, identify $N_{\mathbb R}$ and $M_{\mathbb R}$ with $\mathbb R$ so that $N=M=\mathbb Z$, and put </p>
+<div class="equation">
+  \[  F_ j(x)=\max \{ 0,x-j\} \longrightarrow 0, \qquad \operatorname {MA}_{\mathbb R}(F_ j)=\delta _ j.  \]
+</div>
+<p> Indeed, $\partial F_ j(x)$ is $\{ 0\} $ for $x&lt;j$, $\{ 1\} $ for $x&gt;j$, and $[0,1]$ for $x=j$. All slopes lie in $[0,1]$, and $F_ j\to 0$ locally uniformly. As in example <a data-tag="B49233FD" href="../../tag/81B4A3D092FF/">1.5.4</a>, the measures $\delta _ j$ converge vaguely to $\operatorname {MA}_{\mathbb R}(0)=0$, while their total masses remain equal to one. Here each $F_ j$ has full mass for $P=[0,1]$, but the limit does not. If the functions and their limit all have full mass for one fixed body, the measures converge narrowly by lemma <a data-tag="55EDF0D7" href="../../tag/F2FABB0A312F/">18.5.2</a> below. </p>
+</article>
+
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-EAD83A50">
+<p><a class="environment-identifier" href="../../tag/5D8A7A7D734E/">Proposition <span data-tag="EAD83A50">18.4.4</span>.</a><span data-gerby-tag="EAD83A50"></span> Let $F$ be a convex function on $N_{\mathbb R}$ of class $C^{1,1}_{\mathrm{loc}}$, that is, differentiable with locally Lipschitz gradient. Then the distributional Hessian $D^2F$ of $F$, computed in the coordinates of a basis of $N$, is a locally bounded measurable matrix-valued function, and </p>
+<div class="equation">
+  \[  \operatorname {MA}_{\mathbb R}(F) =n!\det (D^2F)\, \mathrm dx.  \]
+</div>
+<p> Moreover, there is a unique way to assign to every $n$-tuple $(F_1,\ldots ,F_ n)$ of finite convex functions on $N_{\mathbb R}$ a positive Radon measure $\operatorname {MA}_{\mathbb R}(F_1,\ldots ,F_ n)$, the <em>mixed real Monge–Ampère measure</em>, which is symmetric in its arguments, additive and positively homogeneous in each argument, and satisfies $\operatorname {MA}_{\mathbb R}(F,\ldots ,F)=\operatorname {MA}_{\mathbb R}(F)$. It is continuous for the vague topology under local uniform convergence of each argument. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Smooth functions.</em> Let $F$ be smooth with positive definite Hessian. For $x\neq y$, 
+    
+<div class="equation">
+  \[  \langle \nabla F(y)-\nabla F(x),y-x\rangle =\int _0^1D^2F(x+s(y-x))(y-x,y-x)\, \mathrm ds&gt;0,  \]
+</div>
+<p>
+       so $\nabla F$ is injective, and it is a local diffeomorphism by the inverse function theorem. Since $\partial F(E)=\nabla F(E)$ by proposition <a data-tag="01EDED5C" href="../../tag/72D7B299EAB8/">18.1.3</a>(3), the change of variables formula gives the asserted identity. Now let $F$ be smooth and convex; its Hessian is positive semidefinite, because the second derivatives of $F$ along lines are nonnegative. Apply the identity just proved to $F+\varepsilon |x|^2/2$, where $|x|$ is the Euclidean norm in the lattice coordinates. As $\varepsilon \downarrow 0$, these functions converge to $F$ locally uniformly and their densities $n!\det (D^2F+\varepsilon I)$ converge to $n!\det (D^2F)$ locally uniformly; comparing the two vague limits, by theorem <a data-tag="6403CF44" href="../../tag/F4072D9ED060/">18.4.2</a>, proves the identity for $F$. 
+    <p>
+<em>Functions of class $C^{1,1}_{\mathrm{loc}}$.</em> We work in the coordinates of a basis of $N$. Fix $k$ and $l$, and let $g=\partial _ kF$, which is locally Lipschitz. Let $B=B(x_0,r)$ be a ball, and let $L_ B$ be a Lipschitz constant of $g$ on $\overline{B(x_0,2r)}$. For a nonnegative test function $\chi $ supported in $B$ and $0&lt;|h|&lt;r$, the substitution $x\mapsto x-he_ l$ in one of the two terms gives 
+    
+<div class="equation">
+  \[  \int g(x)\frac{\chi (x+he_ l)-\chi (x)}h\, \mathrm dx=\int \frac{g(x-he_ l)-g(x)}h\, \chi (x)\, \mathrm dx,  \]
+</div>
+<p>
+       and the right side is at most $L_ B\int \chi \, \mathrm dx$ in absolute value. As $h\to 0$, the difference quotients of $\chi $ converge uniformly to $\partial _ l\chi $, with supports in a fixed compact set, so the left side tends to $\int g\, \partial _ l\chi \, \mathrm dx=-\langle \partial _ lg,\chi \rangle $. Hence $|\langle \partial _ l\partial _ kF,\chi \rangle |\leq L_ B\int \chi \, \mathrm dx$, and corollary <a data-tag="DE4E0957" href="../../tag/D30ED2659FC7/">1.7.2</a>(2), applied to Lebesgue measure, gives a Borel function $H_{kl}$ that represents the distribution $\partial _ l\partial _ kF$ and satisfies $|H_{kl}|\leq L_ B$ almost everywhere on each such ball $B$. Covering $N_{\mathbb R}$ by countably many such balls and setting $H_{kl}=0$ on the null set of points of some ball of the cover at which the bound fails, we may assume that $H_{kl}$ is bounded on every compact set. This proves that $D^2F=(H_{kl})$ is a locally bounded Borel matrix-valued function. Since distributional derivatives commute, $H_{kl}=H_{lk}$ almost everywhere, by the uniqueness in corollary <a data-tag="DE4E0957" href="../../tag/D30ED2659FC7/">1.7.2</a>. 
+    <p>
+      Next, $D^2F(x)$ is positive semidefinite for almost every $x$. Indeed, let $v\in \mathbb R^ n$ and let $\chi $ be a nonnegative test function. Taylor's formula shows that the second difference quotients $h^{-2}(\chi (x+hv)+\chi (x-hv)-2\chi (x))$ converge uniformly to $\sum _{k,l}v_ kv_ l\partial _ k\partial _ l\chi $ as $h\to 0$, so the substitutions $x\mapsto x\mp hv$ give 
+    
+<div class="equation">
+  \[  \Bigl \langle \sum _{k,l}v_ kv_ l\partial _ k\partial _ lF,\chi \Bigr \rangle =\lim _{h\to 0}\int \frac{F(x-hv)+F(x+hv)-2F(x)}{h^2}\, \chi (x)\, \mathrm dx\geq 0,  \]
+</div>
+<p>
+       because $F$ is convex. Thus the function $\sum _{k,l}v_ kv_ lH_{kl}$ defines a positive distribution, so its mollifications are nonnegative by proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>(3); since they converge to it at its Lebesgue points (theorem <a data-tag="01CADB42" href="../../tag/CF98893DE93E/">1.7.3</a>), it is nonnegative almost everywhere. Applying this to a countable dense set of vectors $v$, and using the continuity of the quadratic form in $v$, we see that $D^2F(x)$ is positive semidefinite for almost every $x$. 
+    <p>
+      We now obtain the formula by mollification. With the mollifiers $\rho _\varepsilon $ of lemma <a data-tag="333D0AB8" href="../../tag/9AEE54E3B1E1/">18.3.3</a>, in the same coordinates, the functions $F_\varepsilon =F*\rho _\varepsilon $ are smooth and convex, and they converge to $F$ locally uniformly, by that lemma. By proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>(1), their second derivatives are $\partial _ k\partial _ lF_\varepsilon =H_{kl}*\rho _\varepsilon $. Hence, for $\varepsilon \leq 1$, the Hessians $D^2F_\varepsilon $ are bounded on each compact set $K$ by the bound of $D^2F$ on the set of points at distance at most $1$ from $K$, and by theorem <a data-tag="01CADB42" href="../../tag/CF98893DE93E/">1.7.3</a> they converge to $D^2F(x)$ at every point $x$ that is a Lebesgue point of all the entries $H_{kl}$, that is, almost everywhere. By the smooth case, $\operatorname {MA}_{\mathbb R}(F_\varepsilon )=n!\det (D^2F_\varepsilon )\, \mathrm dx$. Let $\varepsilon $ run through a sequence tending to zero. For $f\in C_ c(N_{\mathbb R})$, dominated convergence gives $n!\int f\det (D^2F_\varepsilon )\, \mathrm dx\to n!\int f\det (D^2F)\, \mathrm dx$, while $\operatorname {MA}_{\mathbb R}(F_\varepsilon )\to \operatorname {MA}_{\mathbb R}(F)$ vaguely by theorem <a data-tag="6403CF44" href="../../tag/F4072D9ED060/">18.4.2</a>. This proves the formula. 
+    <p>
+<em>Mixed measures.</em> For smooth convex $F_1,\ldots ,F_ n$ define 
+    
+<div class="equation">
+  \[  \operatorname {MA}_{\mathbb R}(F_1,\ldots ,F_ n)=n!\, D(D^2F_1,\ldots ,D^2F_ n)\, \mathrm dx,  \]
+</div>
+<p>
+       where $D$ is the mixed discriminant of section <a data-tag="28C8F083" href="../../tag/ACB622806098/">7.2</a>, applied to the real symmetric, hence Hermitian, Hessian matrices. This measure is positive, because the mixed discriminant of positive semidefinite matrices is nonnegative (lemma <a data-tag="11CB40EC" href="../../tag/3D25BAD0C21E/">7.2.2</a>(3)), and it is symmetric and multilinear, with $D(A,\ldots ,A)=\det A$ (lemma <a data-tag="11CB40EC" href="../../tag/3D25BAD0C21E/">7.2.2</a>(1)). Expanding $\operatorname {MA}_{\mathbb R}(\sum _{j\in J}F_ j,\ldots ,\sum _{j\in J}F_ j)$ by multilinearity and using symmetry, we obtain the polarization identity 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-24CC29A7"><span data-gerby-tag="24CC29A7"></span>
+<span class="equation-label"><a data-tag="24CC29A7" href="../../tag/D38381F0AC43/">18.7</a></span>
+<div>\begin{equation} \label{eq:real-mixed-polarization} \operatorname {MA}_{\mathbb R}(F_1,\ldots ,F_ n)=\frac1{n!}\sum _{J\subset \{ 1,\ldots ,n\} } (-1)^{n-|J|}\operatorname {MA}_{\mathbb R} \left(\sum _{j\in J}F_ j\right), \end{equation}</div>
+</div>
+<p>
+       where the empty sum is the zero function, whose measure is zero for $n&gt;0$ (its only slope is $0$). Indeed, after the expansion, a term $\operatorname {MA}_{\mathbb R}(F_{\sigma (1)},\ldots ,F_{\sigma (n)})$ with $\sigma \colon \{ 1,\ldots ,n\} \to \{ 1,\ldots ,n\} $ appears with total coefficient $\sum _{J\supset \sigma (\{ 1,\ldots ,n\} )}(-1)^{n-|J|}$, which vanishes unless $\sigma $ is a bijection, and the $n!$ bijections all give $\operatorname {MA}_{\mathbb R}(F_1,\ldots ,F_ n)$ by symmetry. Any symmetric, multilinear assignment with the given diagonal values satisfies (<a data-tag="24CC29A7" href="../../tag/D38381F0AC43/">18.7</a>), by the same expansion; this proves uniqueness. 
+    <p>
+      Now let $F_1,\ldots ,F_ n$ be arbitrary finite convex functions, and let $F_{j,\varepsilon }=F_ j*\rho _\varepsilon $ be their mollifications, which are smooth and convex by lemma <a data-tag="333D0AB8" href="../../tag/9AEE54E3B1E1/">18.3.3</a>. For every $J$, $\sum _{j\in J}F_{j,\varepsilon }\to \sum _{j\in J}F_ j$ locally uniformly as $\varepsilon \to 0$ (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(1)). Let $\varepsilon $ run through a sequence tending to zero. By (<a data-tag="24CC29A7" href="../../tag/D38381F0AC43/">18.7</a>) for the smooth functions $F_{j,\varepsilon }$ and by theorem <a data-tag="6403CF44" href="../../tag/F4072D9ED060/">18.4.2</a>, for every $f\in C_ c(N_{\mathbb R},\mathbb R)$ the integrals $\int f\, \mathrm d\operatorname {MA}_{\mathbb R}(F_{1,\varepsilon },\ldots ,F_{n,\varepsilon })$ converge to 
+    
+<div class="equation">
+  \[  \Lambda (f)=\frac1{n!}\sum _{J\subset \{ 1,\ldots ,n\} }(-1)^{n-|J|}\int f\, \mathrm d\operatorname {MA}_{\mathbb R}\Bigl (\sum _{j\in J}F_ j\Bigr ).  \]
+</div>
+<p>
+       The functional $\Lambda $ is linear, and it is positive as a limit of integrals against positive measures. By theorem <a data-tag="DE073A6A" href="../../tag/0C614771FB98/">1.2.2</a>, there is a unique Radon measure $\operatorname {MA}_{\mathbb R}(F_1,\ldots ,F_ n)$ with $\int f\, \mathrm d\operatorname {MA}_{\mathbb R}(F_1,\ldots ,F_ n)=\Lambda (f)$ for every $f$; for smooth $F_ j$ it agrees with the previous definition, by (<a data-tag="24CC29A7" href="../../tag/D38381F0AC43/">18.7</a>). It is symmetric, because $\Lambda $ is a symmetric function of $F_1,\ldots ,F_ n$. Additivity and positive homogeneity in each argument hold for the smooth mixed measures; since mollification is linear, they pass to the vague limit. For $F_1=\cdots =F_ n=F$, the smooth mixed measures are $n!\det (D^2F_\varepsilon )\, \mathrm dx=\operatorname {MA}_{\mathbb R}(F_\varepsilon )$, which converge vaguely to $\operatorname {MA}_{\mathbb R}(F)$; hence $\operatorname {MA}_{\mathbb R}(F,\ldots ,F)=\operatorname {MA}_{\mathbb R}(F)$. Finally, if $F_ j^{(k)}\to F_ j$ locally uniformly as $k\to \infty $ for each $j$, then $\sum _{j\in J}F_ j^{(k)}\to \sum _{j\in J}F_ j$ locally uniformly for every $J$, and the formula for $\Lambda $ together with theorem <a data-tag="6403CF44" href="../../tag/F4072D9ED060/">18.4.2</a> shows that $\operatorname {MA}_{\mathbb R}(F_1^{(k)},\ldots ,F_ n^{(k)})\to \operatorname {MA}_{\mathbb R}(F_1,\ldots ,F_ n)$ vaguely. In dimension zero the mixed measure has no arguments, and it is the unit mass at the point. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

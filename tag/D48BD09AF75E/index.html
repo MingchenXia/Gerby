@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Riesz measures and pointwise representatives · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/subharmonic-functions/">Subharmonic functions</a> · Tag <code>D48BD09AF75E</code></p><h1>Riesz measures and pointwise representatives</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 3.2 Riesz measures and pointwise representatives <span data-gerby-tag="381B680A"></span></div>
+<p>
+  We now compare subharmonic functions with distributions. Recall from proposition <a data-tag="571B3697" href="../../tag/F8A69601BB8C/">2.2.1</a> that the fundamental solutions $E_ d$ of (<a data-tag="BC51DE75" href="../../tag/49DB76D43578/">2.9</a>) satisfy $\Delta E_ d=\delta _0$, and that $E_ d(0)=-\infty $ for $d\geq 2$, while $E_1(0)=0$. Superpositions of translates of $E_ d$ produce subharmonic functions whose Laplacian is a prescribed positive measure. Conversely, by the Riesz decomposition (theorem <a data-tag="A2BCDB4A" href="../../tag/F04DBD614238/">3.2.3</a>), every locally integrable subharmonic function is locally such a superposition plus a harmonic function. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-45B5A1B8">
+<p><a class="environment-identifier" href="../../tag/1F52C5AF98EF/">Proposition <span data-tag="45B5A1B8">3.2.1</span>.</a><span data-gerby-tag="45B5A1B8"></span> Let $\nu $ be a finite positive Borel measure on $\mathbb R^ d$ with compact support. Then its fundamental potential </p>
+<div class="equation">
+  \[  p(x)=E_ d*\nu (x)=\int E_ d(x-y)\, \mathrm d\nu (y)  \]
+</div>
+<p> is subharmonic and locally integrable on $\mathbb R^ d$, and $\Delta p=\nu $ in the sense of distributions. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="B0C4661C" href="../../tag/D0882F84DCFC/">1.1.2</a>, $\nu $ is a Radon measure; let $L$ be its compact support, so that $\nu (\mathbb R^ d\setminus L)=0$ (section <a data-tag="AD6522C4" href="../../tag/DAFA3E4936D2/">1.1</a>). For each $x$, the function $E_ d(x-\cdot )$ is bounded above on $L$, so $p(x)$ is well defined in $[-\infty ,\infty )$. Next, $E_ d$ is subharmonic on $\mathbb R^ d$. For $d\geq 2$ it is harmonic on $\mathbb R^ d\setminus \{ 0\} $; it is upper semicontinuous at the origin because $E_ d(x)\to -\infty $ as $x\to 0$, and the submean inequality at the origin holds because $E_ d(0)=-\infty $. Since subharmonicity is local, $E_ d\in \mathrm{SH}(\mathbb R^ d)$. For $d=1$, the triangle inequality gives $|x|\leq \frac12(|x+r|+|x-r|)$, which is the submean inequality for $E_1=|x|/2$. 
+    <p>
+      To show that $p$ is subharmonic, we truncate the kernel. The functions $E_ d^{(m)}=\max \{ E_ d,-m\} $, $m\in \mathbb N$, are continuous and subharmonic, and they decrease to $E_ d$. Put $p_ m=E_ d^{(m)}*\nu $. For $x$ in a compact set $K$, the differences $x-y$ with $y\in L$ lie in the compact set $K-L$, on which $E_ d^{(m)}$ is uniformly continuous; hence $p_ m$ is continuous. By theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>, each translate $E_ d^{(m)}(\cdot -y)$ satisfies the submean inequality on every sphere. Integrating in $y$ and using Fubini's theorem for the bounded continuous integrand gives $p_ m(x)\leq M_{p_ m}(x,r)$ for all $x$ and $r&gt;0$, so $p_ m\in \mathrm{SH}(\mathbb R^ d)$. For fixed $x$, the functions $E_ d^{(m)}(x-y)$ decrease to $E_ d(x-y)$ and are bounded above, uniformly in $m$ and $y\in L$, by the finite constant $\max \{ 0,\sup _{y\in L}E_ d(x-y)\} $. Monotone convergence, applied to the differences from this constant, gives $p_ m(x)\downarrow p(x)$. Hence $p$ is subharmonic by theorem <a data-tag="1B5BFA16" href="../../tag/62E4A7EF2B4F/">3.1.6</a>. 
+    <p>
+      To prove local integrability, let $K$ be compact and choose $R&gt;0$ with $K-L\subset B(0,R)$. Since $E_ d$ is locally integrable, Tonelli's theorem gives 
+    
+<div class="equation">
+  \[  \int _ K\int |E_ d(x-y)|\, \mathrm d\nu (y)\, \mathrm d x \leq \nu (L)\int _{B(0,R)}|E_ d(z)|\, \mathrm d z&lt;\infty .  \]
+</div>
+<p>
+       Hence $p$ is locally integrable. Finally, let $\chi $ be a test function. The preceding estimate with $K=\operatorname{Supp}\chi $ justifies the use of Fubini's theorem, and the identity $\Delta E_ d=\delta _0$, translated to the point $y$, gives 
+    
+<div class="equation">
+  \[  \int p\Delta \chi \, \mathrm d x =\int \left(\int E_ d(x-y)\Delta \chi (x)\, \mathrm d x\right)\mathrm d\nu (y) =\int \chi (y)\, \mathrm d\nu (y).  \]
+</div>
+<p>
+       This is the distributional equation $\Delta p=\nu $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-7E2C1398">
+<p><a class="environment-identifier" href="../../tag/E76E281548A5/">Theorem <span data-tag="7E2C1398">3.2.2</span>.</a><span data-gerby-tag="7E2C1398"></span> Let $\Omega \subset \mathbb R^ d$ be open. </p>
+<ol>
+<li><p>
+Let $u\in \mathrm{SH}(\Omega )$ be not identically $-\infty $ on any connected component of $\Omega $. Then $u$ is locally integrable, and $\Delta u$ is a positive distribution, hence a positive Radon measure. 
+</p>
+</li><li><p>
+Let $u\in \mathrm{SH}(\Omega )$ and $x\in \Omega $. For $0&lt;\varepsilon &lt;\operatorname {dist}(x,\mathbb R^ d\setminus \Omega )$ put $u*\rho _\varepsilon (x)=\int u(x-y)\rho _\varepsilon (y)\, \mathrm dy$, with the mollifier $\rho _\varepsilon $ of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>. This integral and the integral of $u$ over a ball $B(x,r)$ with $\overline{B(x,r)}\subset \Omega $ are defined in $[-\infty ,\infty )$, because $u$ is bounded above on compact sets; if $u$ is locally integrable, $u*\rho _\varepsilon $ is the mollification of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>. Then 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-94416E55"><span data-gerby-tag="94416E55"></span>
+<span class="equation-label"><a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a></span>
+<div>\begin{equation} \label{eq:canonical-subharmonic} u*\rho _\varepsilon (x)\downarrow u(x)\quad (\varepsilon \downarrow 0),\qquad u(x)=\lim _{r\downarrow 0}\frac{1}{|B(x,r)|}\int _{B(x,r)}u(y)\, \mathrm d y. \end{equation}</div>
+</div>
+<p>
+ In particular, two subharmonic functions on $\Omega $ that are equal almost everywhere are equal everywhere. 
+</p>
+</li><li><p>
+Let $T$ be a real distribution on $\Omega $ with $\Delta T\geq 0$. Then there is exactly one locally integrable $u\in \mathrm{SH}(\Omega )$ such that $\langle T,\chi \rangle =\int _\Omega u\chi \, \mathrm d x$ for every test function $\chi $. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) By proposition <a data-tag="922C2A66" href="../../tag/5975EB5B5D7D/">3.1.5</a>, $u$ is locally integrable. To show that $\Delta u\geq 0$, fix $\varepsilon &gt;0$ and $x\in \Omega _\varepsilon $, with $\Omega _\varepsilon $ as in section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>. For sufficiently small $r&gt;0$, all the closed balls $\overline{B(x-z,r)}$ with $|z|\leq \varepsilon $ lie in $\Omega $, so $u(x-z)\leq M_ u(x-z,r)$ for these $z$ by theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>. We multiply by $\rho _\varepsilon (z)$ and integrate over $z$. Since $u$ is bounded above on the compact set $\overline{B(x,\varepsilon +r)}\subset \Omega $, Fubini's theorem applies to the difference between an upper bound and $u$; as $\overline{B(x,r)}\subset \Omega _\varepsilon $, we obtain 
+    
+<div class="equation">
+  \[  u*\rho _\varepsilon (x)\leq M_{u*\rho _\varepsilon }(x,r).  \]
+</div>
+<p>
+       The function $v=u*\rho _\varepsilon $ is smooth and real on $\Omega _\varepsilon $ by proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>, and we have just shown that $v(x)\leq M_ v(x,r)$ for every $x\in \Omega _\varepsilon $ and every sufficiently small $r&gt;0$. This forces $\Delta v\geq 0$ on $\Omega _\varepsilon $. Indeed, suppose that $\Delta v(x)&lt;0$. Since $\Delta v$ is continuous, there is $R&gt;0$ such that $\overline{B(x,R)}\subset \Omega _\varepsilon $, $\Delta v&lt;0$ on $B(x,R)$ and $v(x)\leq M_ v(x,r)$ for $0&lt;r&lt;R$. By (<a data-tag="DC17A77F" href="../../tag/2B78C72EAD6C/">2.4</a>), the function $r\mapsto M_ v(x,r)$ has negative derivative on $(0,R)$, so it is strictly decreasing there. Moreover, $M_ v(x,s)\to v(x)$ as $s\downarrow 0$, because $|M_ v(x,s)-v(x)|\leq \max _{|y-x|=s}|v(y)-v(x)|$ and $v$ is continuous at $x$. Hence $M_ v(x,r)&lt;M_ v(x,r/2)\leq \lim _{s\downarrow 0}M_ v(x,s)=v(x)$ for $0&lt;r&lt;R$, a contradiction. 
+    <p>
+      Now let $\chi $ be a nonnegative test function. Then $\operatorname{Supp}\chi \subset \Omega _\varepsilon $ for small $\varepsilon $, and $u*\rho _\varepsilon \to u$ in $L^1$ on $\operatorname{Supp}\chi $ by lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>. Hence 
+    
+<div class="equation">
+  \[  \langle \Delta u,\chi \rangle =\int u\Delta \chi \, \mathrm d x=\lim _{\varepsilon \downarrow 0}\int (u*\rho _\varepsilon )\Delta \chi \, \mathrm d x=\lim _{\varepsilon \downarrow 0}\int \Delta (u*\rho _\varepsilon )\chi \, \mathrm d x\geq 0.  \]
+</div>
+<p>
+       By theorem <a data-tag="2B9CB0FB" href="../../tag/6A928E70A605/">1.4.5</a>, the positive distribution $\Delta u$ is a positive Radon measure. 
+    <p>
+      (2) Fix $x\in \Omega $ and $0&lt;\varepsilon &lt;\operatorname {dist}(x,\mathbb R^ d\setminus \Omega )$, let $C$ be a real upper bound for $u$ on $\overline{B(x,\varepsilon )}$, and let $e_1$ be the first coordinate unit vector. Since $\rho $ is radial, $\rho _\varepsilon (r\omega )=\varepsilon ^{-d}\rho ((r/\varepsilon )e_1)$ for $\omega \in S^{d-1}$, and the spherical mean of $\omega \mapsto u(x-r\omega )$ equals $M_ u(x,r)$ by the symmetry $\omega \mapsto -\omega $. Integration in polar coordinates (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>), applied to the nonnegative function $(C-u(x-y))\rho _\varepsilon (y)$ on $B(0,\varepsilon )$, and the substitution $r=\varepsilon t$ therefore give, with $w(t)=s_{d-1}\rho (te_1)t^{d-1}$, 
+    
+<div class="equation">
+  \[  \int _{B(0,\varepsilon )}\bigl (C-u(x-y)\bigr )\rho _\varepsilon (y)\, \mathrm d y=\int _0^1\bigl (C-M_ u(x,\varepsilon t)\bigr )\, w(t)\, \mathrm d t.  \]
+</div>
+<p>
+       The same computation, applied to $\rho _\varepsilon $ alone, shows that $\int _0^1w\, \mathrm dt=\int \rho _\varepsilon \, \mathrm dy=1$, so $w(t)\, \mathrm dt$ is a probability measure on $(0,1)$, and we obtain 
+    
+<div class="equation">
+  \[  u*\rho _\varepsilon (x)=\int _0^1M_ u(x,\varepsilon t)\, w(t)\, \mathrm d t\in [-\infty ,\infty ).  \]
+</div>
+<p>
+       By theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>, $M_ u(x,\varepsilon t)$ increases with $\varepsilon $ and is at least $u(x)$. Hence $u*\rho _\varepsilon (x)$ decreases as $\varepsilon \downarrow 0$ and is at least $u(x)$. On the other hand, $u*\rho _\varepsilon (x)\leq \sup _{B(x,\varepsilon )}u$, and the upper limit of the right-hand side as $\varepsilon \downarrow 0$ is at most $u(x)$ by upper semicontinuity, also when $u(x)=-\infty $. Thus $u*\rho _\varepsilon (x)\downarrow u(x)$. The ball averages are treated in the same way: by (<a data-tag="BD1DEA1A" href="../../tag/7DDC45C194C3/">3.2</a>), the average of $u$ over $B(x,r)$ is the average of $M_ u(x,rt)$, $0&lt;t&lt;1$, with respect to the probability measure $d\, t^{d-1}\, \mathrm d t$, so it lies between $u(x)$ and $\sup _{B(x,r)}u$ and tends to $u(x)$. This proves (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>). The ball averages in (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>) depend only on the almost-everywhere class of $u$; hence two subharmonic functions that agree almost everywhere agree everywhere. 
+    <p>
+      (3) Since a distribution determines a locally integrable function representing it up to null sets (proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>), (2) shows that $T$ has at most one locally integrable subharmonic representative. It remains to construct one; we do this on balls and then glue. 
+    <p>
+      By theorem <a data-tag="2B9CB0FB" href="../../tag/6A928E70A605/">1.4.5</a>, $\mu =\Delta T$ is a positive Radon measure. Let $B$ be a ball with $\overline B\subset \Omega $, and choose a nonnegative cutoff $\eta \in C_ c^\infty (\Omega )$ equal to one on an open set $U\supset \overline B$ (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>). The measure $\eta \mu $, extended by zero to $\mathbb R^ d$, is finite and has compact support, so by proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a> its fundamental potential $p=E_ d*(\eta \mu )$ is subharmonic and locally integrable, and $\Delta p=\eta \mu =\mu $ on $U$. Thus $\Delta (T-p)=0$ on $U$, and by Weyl's lemma (theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a>) the real distribution $T-p$ is represented on $U$ by a smooth harmonic function $h$; since $\operatorname{Re}h$ also represents $T-p$, the uniqueness in theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a> shows that $h=\operatorname{Re}h$ is real. Then $u_ B=p+h$ is a locally integrable subharmonic function on $B$ representing $T$ there. 
+    <p>
+      If $B'$ is another such ball, $u_ B$ and $u_{B'}$ both represent $T$ on $B\cap B'$, so they agree almost everywhere there (proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>), and hence everywhere on $B\cap B'$ by (2). Hence there is a function $u$ on $\Omega $ with $u=u_ B$ on every ball $B$ with $\overline B\subset \Omega $. It is subharmonic, because subharmonicity is local, and it is locally integrable. 
+    <p>
+      To see that $u$ represents $T$ on all of $\Omega $, let $T_\varepsilon (x)=\langle T,\rho _\varepsilon (x-\cdot )\rangle $ be the mollification of proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>. If $x\in \Omega _\varepsilon $, then $\overline{B(x,\varepsilon ')}\subset \Omega $ for some $\varepsilon '&gt;\varepsilon $, and the test function $\rho _\varepsilon (x-\cdot )$ is supported in the ball $B=B(x,\varepsilon ')$, on which $u=u_ B$ represents $T$; hence $T_\varepsilon (x)=u*\rho _\varepsilon (x)$. For every test function $\chi $, proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>, lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a> now give 
+    
+<div class="equation">
+  \[  \langle T,\chi \rangle =\lim _{\varepsilon \downarrow 0}\int T_\varepsilon \chi \, \mathrm d x=\lim _{\varepsilon \downarrow 0}\int (u*\rho _\varepsilon )\chi \, \mathrm d x=\int u\chi \, \mathrm d x.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></p></p></p></p></p></p></p></p></p></article>
+<p>
+The function $u$ of theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>(3) is called the canonical representative of $T$, and every locally integrable subharmonic function is the canonical representative of the distribution it defines. Subharmonicity is a property of a pointwise function, not of its almost-everywhere class. For instance, if we raise the value of a subharmonic function $u$ at a single point $x_0$, the spherical means $M_ u(x_0,r)$ do not change and still tend to $u(x_0)$ as $r\downarrow 0$ (theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a>), so the submean inequality fails at $x_0$. On the other hand, by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>(2), the almost-everywhere class of a subharmonic function determines it at every point, even without integrability assumptions. 
+</p>
+<p>
+Suppose that locally integrable subharmonic functions $u_ j$ on $\Omega $ converge in the sense of distributions to $T\in \mathcal D'(\Omega )$. Then $T$ is real as a limit of real distributions. Since each $u_ j$ is locally integrable, it is not identically $-\infty $ on any connected component of $\Omega $, so $\Delta u_ j\geq 0$ by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>(1), and hence $\langle \Delta T,\chi \rangle =\lim _ j\langle \Delta u_ j,\chi \rangle \geq 0$ for every nonnegative test function $\chi $. Therefore $T$ has a canonical representative by theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>(3). 
+</p>
+<p>
+For a locally integrable $u\in \mathrm{SH}(\Omega )$, the positive Radon measure $\mu _ u=\Delta u$ is called the Riesz measure of $u$. Some texts on potential theory in the plane define the Riesz measure as $(2\pi )^{-1}\Delta u$; with our normalization, $\mu _{\log |z|}=2\pi \delta _0$ on $\mathbb C=\mathbb R^2$, since $\log |z|=2\pi E_2(z)$. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-A2BCDB4A">
+<p><a class="environment-identifier" href="../../tag/F04DBD614238/">Theorem <span data-tag="A2BCDB4A">3.2.3</span> <span class="named">(Riesz decomposition)</span>.</a><span data-gerby-tag="A2BCDB4A"></span> Let $u\in \mathrm{SH}(\Omega )$ be locally integrable. Let $\eta $ be a bounded nonnegative Borel function on $\Omega $ which vanishes outside a compact subset of $\Omega $ and equals one on an open set $V\subset \Omega $; for instance, $\eta =\mathbf1_ V$ for an open set $V\Subset \Omega $, or $\eta \in C_ c^\infty (\Omega )$ with values in $[0,1]$ and $\eta =1$ on $V$. Let $\eta \mu _ u$ denote the measure $E\mapsto \int _{E\cap \Omega }\eta \, \mathrm d\mu _ u$ on $\mathbb R^ d$. Then there is a smooth real harmonic function $h$ on $V$ such that </p>
+<div class="equation">
+  \[  u=E_ d*(\eta \mu _ u)+h\qquad \text{on }V.  \]
+</div>
+<p> This equality holds at every point of $V$, including the points where $u=-\infty $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\eta $ vanishes outside the compact set $C\subset \Omega $, then $\eta \mu _ u$ is a positive Borel measure on $\mathbb R^ d$ with support in $C$ and total mass at most $\sup \eta \cdot \mu _ u(C)&lt;\infty $. Let $p=E_ d*(\eta \mu _ u)$. By proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a>, $p$ is subharmonic and locally integrable on $\mathbb R^ d$, and $\Delta p=\eta \mu _ u$. If $\chi $ is a test function with $\operatorname{Supp}\chi \subset V$, then $\int \chi \eta \, \mathrm d\mu _ u=\int \chi \, \mathrm d\mu _ u$ because $\eta =1$ on $V$; hence $\Delta p=\Delta u$ on $V$. By Weyl's lemma (theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a>), the real distribution $u-p$ is represented on $V$ by a smooth harmonic function $h$; since $\operatorname{Re}h$ also represents $u-p$, the uniqueness in theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a> shows that $h=\operatorname{Re}h$ is real. Then $p+h$ is a locally integrable subharmonic function on $V$ that agrees with $u$ almost everywhere on $V$ (proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>), and theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>(2), applied on $V$, gives $u=p+h$ at every point of $V$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-example" id="foundations-of-pluripotential-theory-23626487">
+<p><a class="environment-identifier" href="../../tag/8DF74A8828CF/">Example <span data-tag="23626487">3.2.4</span>.</a><span data-gerby-tag="23626487"></span> Let $I\subset \mathbb R$ be an open interval. Every $u\in \mathrm{SH}(I)$ other than the constant $-\infty $ is a finite, continuous, convex function. Indeed, $u$ is locally integrable by proposition <a data-tag="922C2A66" href="../../tag/5975EB5B5D7D/">3.1.5</a>. Given $x\in I$, choose an open interval $V\ni x$ with $\overline V\subset I$ and apply theorem <a data-tag="A2BCDB4A" href="../../tag/F04DBD614238/">3.2.3</a> with $\eta =\mathbf1_ V$. On $V$ we have $u=E_1*(\eta \mu _ u)+h$ with $h$ affine, and the potential $E_1*(\eta \mu _ u)(\xi )=\frac12\int |\xi -y|\, \eta (y)\, \mathrm d\mu _ u(y)$ is finite and Lipschitz in $\xi $, since $\bigl ||\xi -y|-|\xi '-y|\bigr |\leq |\xi -\xi '|$ and $\eta \mu _ u$ is a finite measure. Hence $u$ is finite and continuous. </p>
+<p>In dimension one the submean inequality reads $u(x)\leq \frac12(u(x-r)+u(x+r))$, and by theorem <a data-tag="908CA39C" href="../../tag/384B48086228/">3.1.3</a> it holds whenever $[x-r,x+r]\subset I$. Thus $u$ satisfies the midpoint inequality $u\bigl ((a+b)/2\bigr )\leq \bigl (u(a)+u(b)\bigr )/2$ for all $a,b\in I$. By induction on $n$, it follows that $u((1-\lambda )a+\lambda b)\leq (1-\lambda )u(a)+\lambda u(b)$ for every dyadic number $\lambda =k2^{-n}\in [0,1]$, because a dyadic number of order $n+1$ is the midpoint of two adjacent dyadic numbers of order $n$. Since $u$ is continuous and the dyadic numbers are dense in $[0,1]$, the same inequality holds for every $\lambda \in [0,1]$. </p>
+<p>Conversely, a finite convex function $f$ on $I$ is continuous. For $p&lt;q$ in $I$ let $\sigma (p,q)=(f(q)-f(p))/(q-p)$ be the slope of the chord of $f$ over $[p,q]$. If $p&lt;q&lt;r$ lie in $I$, then $q=(1-\lambda )p+\lambda r$ with $\lambda =(q-p)/(r-p)\in (0,1)$, and convexity gives $f(q)\leq (1-\lambda )f(p)+\lambda f(r)$, that is, $f(q)-f(p)\leq \lambda (f(r)-f(p))$ and $f(r)-f(q)\geq (1-\lambda )(f(r)-f(p))$. Dividing by $q-p=\lambda (r-p)$ and by $r-q=(1-\lambda )(r-p)$, respectively, we obtain </p>
+<div class="equation">
+  \[  \sigma (p,q)\leq \sigma (p,r)\leq \sigma (q,r).  \]
+</div>
+<p> Hence $\sigma (p,q)$ increases with $q$ for fixed $p$, and with $p$ for fixed $q$. Now let $[a,b]$ be a compact subinterval of $I$, choose $a',b'\in I$ with $a'&lt;a$ and $b&lt;b'$, and let $a\leq s&lt;t\leq b$. Applying these monotonicity properties and the displayed inequality to the triples $(a',s,t)$ and $(s,t,b')$, we find </p>
+<div class="equation">
+  \[  \sigma (a',a)\leq \sigma (a',s)\leq \sigma (s,t)\leq \sigma (t,b')\leq \sigma (b,b'),  \]
+</div>
+<p> so $|f(t)-f(s)|\leq \max \{ |\sigma (a',a)|,|\sigma (b,b')|\} \, (t-s)$. Thus $f$ is Lipschitz on every compact subinterval of $I$, and in particular continuous. Since $f$ satisfies the midpoint inequality, which is the submean inequality in dimension one, it is subharmonic. Hence the subharmonic functions on $I$ other than $-\infty $ are exactly the finite convex functions. </p>
+<p>Next let $D\subset \mathbb C=\mathbb R^2$ be a domain, and let $f$ be holomorphic on $D$ and not identically zero. Then $\log |f|$ is subharmonic, and </p>
+<div class="equation">
+  \[  \Delta \log |f|=2\pi \sum _{f(a)=0}\operatorname{ord}_ a(f)\, \delta _ a,  \]
+</div>
+<p> where $\operatorname{ord}_ a(f)$ is the order of the zero of $f$ at $a$. Indeed, the zeros of $f$ form a locally finite subset of $D$, and away from them $\log |f|$ is locally the real part of a holomorphic logarithm of $f$, hence harmonic. Near a zero $a$ of order $m$ we can write $f(z)=(z-a)^ mg(z)$ with $g$ holomorphic and nonvanishing, so that $\log |f(z)|=2\pi mE_2(z-a)+\log |g(z)|$, where $\log |g|$ is harmonic and $E_2(\cdot -a)$, the fundamental potential of $\delta _ a$, is subharmonic with $\Delta E_2(\cdot -a)=\delta _ a$ (proposition <a data-tag="45B5A1B8" href="../../tag/1F52C5AF98EF/">3.2.1</a>). Hence $\log |f|$ is subharmonic near every point, and therefore on $D$. Moreover, the right-hand side of the displayed formula is a positive Radon measure, as is $\Delta \log |f|$ (theorem <a data-tag="7E2C1398" href="../../tag/E76E281548A5/">3.2.2</a>(1)). The two measures agree on a neighborhood of every point of $D$ (proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>), and hence on $D$: cover $D$ by countably many such neighborhoods $V_ k$, and decompose a Borel set $E\subset D$ into the disjoint sets $E\cap V_ k\setminus (V_1\cup \dots \cup V_{k-1})$. For $\log |f|^2=2\log |f|$ the coefficient $2\pi $ becomes $4\pi $. </p>
+</article>
+
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

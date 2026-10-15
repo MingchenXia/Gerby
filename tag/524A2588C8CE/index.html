@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Laplacian and mean values · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a> · Tag <code>524A2588C8CE</code></p><h1>The Laplacian and mean values</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 2.1 The Laplacian and mean values <span data-gerby-tag="A631CCEB"></span></div>
+<p>
+  Recall from section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a> that $B(x,r)$ is the open ball with center $x$ and radius $r&gt;0$; its closure $\overline{B(x,r)}$ is the closed ball. We write $S^{d-1}=\{ y\in \mathbb R^ d:|y|=1\} $ for the unit sphere. The Laplacian is $\Delta =\sum _{j=1}^ d\partial _{x_ j}^2$. A real function $h\in C^2(\Omega )$ is <em>harmonic</em> if $\Delta h=0$, and a complex function is harmonic if its real and imaginary parts are harmonic. In dimension one the harmonic functions are the functions that are affine on each component interval of $\Omega $, because $h''=0$ on an interval forces $h'$ to be constant there. 
+</p>
+<p>
+We define surface measure on the unit sphere through the Lebesgue measure of cones: for a Borel set $A\subset S^{d-1}$ put 
+</p>
+<div class="equation">
+  \[  S(A)=d\, \bigl |\{ t\omega :0&lt;t&lt;1,\  \omega \in A\} \bigr |.  \]
+</div>
+<p>
+ The cone over $A$ is the inverse image of $A$ under the continuous map $y\mapsto y/|y|$ on $B(0,1)\setminus \{ 0\} $, so it is a Borel set; moreover, the cone over a countable union is the union of the cones, and cones over disjoint sets are disjoint. Hence $S$ is a finite Borel measure on $S^{d-1}$, the <em>surface measure</em>. It is invariant under every orthogonal transformation $Q$ of $\mathbb R^ d$: the cone over $QA$ is the image under $Q$ of the cone over $A$, and Lebesgue measure is invariant under orthogonal transformations. By linearity and monotone convergence (proposition <a data-tag="34CC47F9" href="../../tag/9CB694815500/">1.1.3</a>), it follows that $\int _{S^{d-1}}g\circ Q\, \mathrm dS=\int _{S^{d-1}}g\, \mathrm dS$ for every nonnegative or integrable Borel function $g$. 
+</p>
+<p>
+We write $s_{d-1}=S(S^{d-1})$ for the area of the unit sphere, so that the unit ball has volume $s_{d-1}/d$. For instance, $s_0=2$, because $S$ is counting measure on $S^0=\{ \pm 1\} $, and $s_1=2\pi $, because the unit disc has area $\pi $. On a sphere $\partial B(x,r)$ we use the measure obtained by translation and dilation, again denoted $\mathrm dS$: 
+</p>
+<div class="equation">
+  \[  \int _{\partial B(x,r)}g\, \mathrm dS=r^{d-1}\int _{S^{d-1}}g(x+r\omega )\, \mathrm dS(\omega ).  \]
+</div>
+<p>
+Next we express Lebesgue measure in polar coordinates. Let $0\leq a&lt;b$ and let $A\subset S^{d-1}$ be a Borel set. By dilation, the cone $\{ t\omega :0&lt;t&lt;b,\  \omega \in A\} $ has Lebesgue measure $b^ dS(A)/d$. The set $\{ t\omega :0&lt;t\leq a,\  \omega \in A\} $ is the intersection of the decreasing cones $\{ t\omega :0&lt;t&lt;a+1/n,\  \omega \in A\} $, so its measure is $\lim _ n(a+1/n)^ dS(A)/d=a^ dS(A)/d$. Subtracting and translating, we find that for every $x\in \mathbb R^ d$ the <em>annular sector</em> $\{ x+t\omega :a&lt;t&lt;b,\  \omega \in A\} $ has Lebesgue measure 
+</p>
+<div class="equation">
+  \[  \frac{(b^ d-a^ d)S(A)}{d}=S(A)\int _ a^ bt^{d-1}\, \mathrm dt.  \]
+</div>
+<p>
+Now fix $x\in \mathbb R^ d$ and $R&gt;0$, let $\lambda $ be the measure $t^{d-1}\, \mathrm dt$ on the Borel sets of $(0,R)$, and let $\Phi (t,\omega )=x+t\omega $. The map $\Phi $ is a homeomorphism from $(0,R)\times S^{d-1}$ onto $Z=B(x,R)\setminus \{ x\} $, with inverse $y\mapsto (|y-x|,(y-x)/|y-x|)$, and the annular sectors with center $x$ contained in $Z$ are the images under $\Phi $ of the rectangles $(a,b)\times A$ with $b\leq R$. These sectors generate the Borel $\sigma $-algebra of $Z$. Indeed, the sets $(a,b)\times (S^{d-1}\cap B(\omega ,q))$, where $0&lt;a&lt;b&lt;R$ are rational, $\omega $ runs through a countable dense subset of $S^{d-1}$ and $q$ through the positive rationals, form a countable base of the topology of $(0,R)\times S^{d-1}$. Hence every open subset of $Z$ is a countable union of their images, which are sectors. 
+</p>
+<p>
+The sets $E\subset Z$ for which $\Phi ^{-1}(E)$ belongs to the product $\sigma $-algebra form a $\sigma $-algebra containing the sectors, and hence all Borel subsets of $Z$. Consequently $\mu (E)=(\lambda \times S)(\Phi ^{-1}(E))$ defines a finite Borel measure $\mu $ on $Z$, and $\mu $ agrees with Lebesgue measure on the sectors. The sectors are closed under finite intersections, and $Z$ itself is a sector, so the two finite measures agree on every Borel subset of $Z$ by part (2) of lemma <a data-tag="8C97E40C" href="../../tag/97A1ECFF2340/">1.1.6</a>. Hence $\int _ Zf\, \mathrm dy=\int f\circ \Phi \, \mathrm d(\lambda \times S)$ for indicator functions of Borel sets, by linearity for nonnegative simple Borel functions, and by monotone convergence (proposition <a data-tag="34CC47F9" href="../../tag/9CB694815500/">1.1.3</a>) for all nonnegative Borel functions $f$. Since the point $x$ is a Lebesgue null set, Tonelli's theorem (proposition <a data-tag="D7B34569" href="../../tag/379F54715B13/">1.1.7</a>) yields the formula of integration in polar coordinates 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-A0F79D2D"><span data-gerby-tag="A0F79D2D"></span>
+<span class="equation-label"><a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a></span>
+<div>\begin{equation} \label{eq:polar-coordinates} \int _{B(x,R)}f(y)\, \mathrm d y =\int _0^ R r^{d-1}\int _{S^{d-1}}f(x+r\omega )\, \mathrm d S(\omega )\, \mathrm d r \end{equation}</div>
+</div>
+<p>
+ for every nonnegative Borel function $f$ on $B(x,R)$. Applying it to the positive and negative parts of $\operatorname{Re}f$ and $\operatorname{Im}f$ and using Fubini's theorem, we obtain (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>) for every Borel function $f$ which is integrable on $B(x,R)$. Letting $R\to \infty $ and using monotone convergence, we see that (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>) also holds with $R=\infty $, where $B(x,\infty )=\mathbb R^ d$. In particular, every sphere $\partial B(x,r)$ is a Lebesgue null set, since its indicator function vanishes at $x+t\omega $ unless $t=r$. 
+</p>
+<p>
+Next we prove the divergence theorem on balls. Let $B=B(c,R)$, let $\nu (y)=(y-c)/R$ be the outward unit normal on $\partial B$, and let $F=(F_1,\ldots ,F_ d)$ be a $C^1$ vector field on an open neighborhood $U$ of $\overline B$, with divergence $\operatorname {div}F=\sum _{j=1}^ d\partial _ jF_ j$. Then 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-43EA7E13"><span data-gerby-tag="43EA7E13"></span>
+<span class="equation-label"><a data-tag="43EA7E13" href="../../tag/4CF38DCFDD7E/">2.2</a></span>
+<div>\begin{equation} \label{eq:ball-divergence} \int _ B\operatorname {div}F\, \mathrm dy=\int _{\partial B}F\cdot \nu \, \mathrm dS. \end{equation}</div>
+</div>
+<p>
+ It suffices to prove, for each $j$, that $\int _ B\partial _ jF_ j\, \mathrm dy=\int _{\partial B}F_ j\nu _ j\, \mathrm dS$. To do so, we approximate $\mathbf1_ B$ by smooth radial cutoff functions $\chi _\varepsilon $ and integrate $\partial _ j(F_ j\chi _\varepsilon )$ over $\mathbb R^ d$. Let $0&lt;\varepsilon &lt;R$, and let $\psi _\varepsilon $ be a smooth nonnegative function on $\mathbb R$ with support in $[R-\varepsilon ,R]$ and integral one, for instance a translate and dilate of the mollifier $\rho $ of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a> in dimension one. The function $\theta _\varepsilon (t)=\int _ t^\infty \psi _\varepsilon (s)\, \mathrm ds$ is smooth with values in $[0,1]$, equals $1$ for $t\leq R-\varepsilon $ and $0$ for $t\geq R$, and satisfies $\theta _\varepsilon '=-\psi _\varepsilon $. Hence $\chi _\varepsilon (y)=\theta _\varepsilon (|y-c|)$ is smooth on $\mathbb R^ d$, because $|y-c|$ is smooth for $y\neq c$ and $\chi _\varepsilon =1$ on $B(c,R-\varepsilon )$. Moreover, $\chi _\varepsilon $ vanishes outside $\overline B$, and 
+</p>
+<div class="equation">
+  \[  \partial _ j\chi _\varepsilon (y)=-\psi _\varepsilon (|y-c|)\, \frac{y_ j-c_ j}{|y-c|}\qquad (y\neq c).  \]
+</div>
+<p>
+ The function $F_ j\chi _\varepsilon $, extended by zero outside $U$, is a $C^1$ function with compact support on $\mathbb R^ d$, because it is $C^1$ on $U$ and vanishes on the open set $\mathbb R^ d\setminus \overline B$. Integrating first in the variable $y_ j$ (Fubini's theorem) and using the fundamental theorem of calculus, we get $\int _{\mathbb R^ d}\partial _ j(F_ j\chi _\varepsilon )\, \mathrm dy=0$. Since $\partial _ j\chi _\varepsilon $ vanishes outside $B$, it follows, by (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>) with center $c$, that 
+</p>
+<div class="equation">
+  \begin{align*}  \int _{\mathbb R^ d}\chi _\varepsilon \, \partial _ jF_ j\, \mathrm dy&amp; =-\int _ BF_ j\, \partial _ j\chi _\varepsilon \, \mathrm dy=\int _ BF_ j(y)\, \psi _\varepsilon (|y-c|)\, \frac{y_ j-c_ j}{|y-c|}\, \mathrm dy\\ &amp; =\int _0^ R\psi _\varepsilon (t)g(t)\, \mathrm dt, \end{align*}
+</div>
+<p>
+ where 
+</p>
+<div class="equation">
+  \[  g(t)=t^{d-1}\int _{S^{d-1}}F_ j(c+t\omega )\, \omega _ j\, \mathrm dS(\omega ),\qquad 0&lt;t\leq R.  \]
+</div>
+<p>
+ Since $F_ j$ is uniformly continuous on $\overline B$, the function $g$ is continuous on $(0,R]$, and as $\psi _\varepsilon \geq 0$ has integral one and support in $[R-\varepsilon ,R]$, we have $|\int _0^ R\psi _\varepsilon g\, \mathrm dt-g(R)|\leq \sup _{[R-\varepsilon ,R]}|g-g(R)|$. Hence the right side tends to $g(R)$ as $\varepsilon \to 0$. On the left, $\chi _\varepsilon \to \mathbf1_ B$ pointwise and $|\chi _\varepsilon \partial _ jF_ j|\leq |\partial _ jF_ j|\mathbf1_{\overline B}$, so by dominated convergence the left side tends to $\int _ B\partial _ jF_ j\, \mathrm dy$. Finally, $\nu (c+R\omega )=\omega $, so the definition of surface measure on $\partial B$ gives $g(R)=\int _{\partial B}F_ j\nu _ j\, \mathrm dS$. Summing over $j$ proves (<a data-tag="43EA7E13" href="../../tag/4CF38DCFDD7E/">2.2</a>). 
+</p>
+<p>
+We also need the corresponding identity on an annulus. Let $0&lt;r&lt;R$, and let $F$ be a $C^1$ vector field on an open neighborhood $U$ of the closed annulus $\{ r\leq |y-c|\leq R\} $. Choose a smooth function $\eta $ with compact support in $U$ which equals one near the annulus (lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>(4)). Then $\eta F$, extended by zero outside $U$, is a $C^1$ vector field on $\mathbb R^ d$, and it equals $F$ near the closed annulus. We apply (<a data-tag="43EA7E13" href="../../tag/4CF38DCFDD7E/">2.2</a>) to $\eta F$ on $B(c,R)$ and on $B(c,r)$ and subtract. On the left we obtain the integral of $\operatorname {div}(\eta F)$ over $\{ r\leq |y-c|&lt;R\} $, which is the integral of $\operatorname {div}F$ over the open annulus, because the sphere $\partial B(c,r)$ is a Lebesgue null set. Hence 
+</p>
+<div class="equation" id="foundations-of-pluripotential-theory-5DE03682"><span data-gerby-tag="5DE03682"></span>
+<span class="equation-label"><a data-tag="5DE03682" href="../../tag/DEF1A85BF9E8/">2.3</a></span>
+<div>\begin{equation} \label{eq:annulus-divergence} \int _{r&lt;|y-c|&lt;R}\operatorname {div}F\, \mathrm dy=\int _{\partial B(c,R)}F\cdot \nu \, \mathrm dS-\int _{\partial B(c,r)}F\cdot \nu \, \mathrm dS, \end{equation}</div>
+</div>
+<p>
+ where $\nu (y)=(y-c)/|y-c|$ on both spheres. 
+</p>
+<p>
+For a continuous function $u$ on $\Omega $ and a closed ball $\overline{B(x,r)}\subset \Omega $, we write 
+</p>
+<div class="equation">
+  \[  M_ u(x,r)=\frac{1}{s_{d-1}}\int _{S^{d-1}}u(x+r\omega )\, \mathrm d S(\omega )  \]
+</div>
+<p>
+ for the spherical mean of $u$ over the sphere $\partial B(x,r)$. We say that $u$ has the <em>sphere mean-value property</em> if $u(x)=M_ u(x,r)$ for every closed ball $\overline{B(x,r)}\subset \Omega $, and the <em>ball mean-value property</em> if $u(x)=|B(x,r)|^{-1}\int _{B(x,r)}u\, \mathrm dy$ for every such ball. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-51885F96">
+<p><a class="environment-identifier" href="../../tag/620D5E4DD6EC/">Proposition <span data-tag="51885F96">2.1.1</span>.</a><span data-gerby-tag="51885F96"></span> Let $u\in C^2(\Omega )$ and $\overline{B(x,R)}\subset \Omega $. Then, for $0&lt;r&lt;R$, </p>
+<div class="equation" id="foundations-of-pluripotential-theory-DC17A77F"><span data-gerby-tag="DC17A77F"></span>
+<span class="equation-label"><a data-tag="DC17A77F" href="../../tag/2B78C72EAD6C/">2.4</a></span>
+<div>\begin{equation} \label{eq:spherical-mean-derivative} \frac{\mathrm d}{\mathrm d r}M_ u(x,r) =\frac{1}{s_{d-1}r^{d-1}}\int _{B(x,r)}\Delta u(y)\, \mathrm d y. \end{equation}</div>
+</div>
+<p> In particular, harmonic functions have both the sphere and the ball mean-value properties. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix $0&lt;r&lt;R$. For $\omega \in S^{d-1}$ and small $h\neq 0$, the fundamental theorem of calculus gives 
+    
+<div class="equation">
+  \[  \frac{u(x+(r+h)\omega )-u(x+r\omega )}{h}=\int _0^1\nabla u(x+(r+sh)\omega )\cdot \omega \, \mathrm ds.  \]
+</div>
+<p>
+       Since $\nabla u$ is uniformly continuous on the compact set $\overline{B(x,R)}$, these difference quotients converge to $\nabla u(x+r\omega )\cdot \omega $ uniformly in $\omega $ as $h\to 0$. Integrating over the finite measure space $(S^{d-1},S)$ and using the definition of surface measure on $\partial B(x,r)$, where $\nu (x+r\omega )=\omega $, we obtain 
+    
+<div class="equation">
+  \[  \frac{\mathrm d}{\mathrm d r}M_ u(x,r)=\frac{1}{s_{d-1}}\int _{S^{d-1}}\nabla u(x+r\omega )\cdot \omega \, \mathrm dS(\omega )=\frac{1}{s_{d-1}r^{d-1}}\int _{\partial B(x,r)}\nabla u\cdot \nu \, \mathrm dS.  \]
+</div>
+<p>
+       Applying (<a data-tag="43EA7E13" href="../../tag/4CF38DCFDD7E/">2.2</a>) on $B(x,r)$ to $F=\nabla u$, which is $C^1$ on $\Omega $ with divergence $\Delta u$, gives (<a data-tag="DC17A77F" href="../../tag/2B78C72EAD6C/">2.4</a>). 
+    <p>
+      Now let $u$ be harmonic. Then $M_ u(x,\cdot )$ has zero derivative, and hence is constant, on $(0,R)$. Since $|M_ u(x,r)-u(x)|\leq \max _{|y-x|=r}|u(y)-u(x)|$, which tends to zero as $r\downarrow 0$ because $u$ is continuous at $x$, the constant is $u(x)$. If $\overline{B(x,r)}\subset \Omega $, then the compact set $\overline{B(x,r)}$ has positive distance from the closed set $\mathbb R^ d\setminus \Omega $, so there is $R&gt;r$ with $\overline{B(x,R)}\subset \Omega $, and therefore $u(x)=M_ u(x,r)$; this is the sphere mean-value property. Since $M_ u(x,t)=u(x)$ for $0&lt;t\leq r$, (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>) gives $\int _{B(x,r)}u\, \mathrm dy=s_{d-1}r^ du(x)/d=|B(x,r)|\, u(x)$, which is the ball mean-value property. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-667A5C9D">
+<p><a class="environment-identifier" href="../../tag/A60BA3B2DBFC/">Theorem <span data-tag="667A5C9D">2.1.2</span>.</a><span data-gerby-tag="667A5C9D"></span> A continuous function on $\Omega $ is harmonic if and only if it has the sphere mean-value property. Every harmonic function is smooth. If $h$ is harmonic on $\Omega $ and $\overline{B(x,r)}\subset \Omega $, then for every multi-index $\alpha $, </p>
+<div class="equation" id="foundations-of-pluripotential-theory-724EB1D3"><span data-gerby-tag="724EB1D3"></span>
+<span class="equation-label"><a data-tag="724EB1D3" href="../../tag/D63569C18649/">2.5</a></span>
+<div>\begin{equation} \label{eq:harmonic-interior-derivatives} |\partial ^\alpha h(x)|\leq C_{d,\alpha }r^{-d-|\alpha |}\int _{B(x,r)}|h(y)|\, \mathrm d y, \end{equation}</div>
+</div>
+<p> where the constant $C_{d,\alpha }$ depends only on $d$ and $\alpha $. Moreover, every harmonic function $h$ on $\Omega $ satisfies $h*\rho _\varepsilon =h$ on $\Omega _\varepsilon $ for every $\varepsilon &gt;0$, where $\rho _\varepsilon $ and $\Omega _\varepsilon $ are as in section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      As in section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>, we write $u_\varepsilon =u*\rho _\varepsilon $. Let $u$ be continuous with the sphere mean-value property, and let $\overline{B(x,\varepsilon )}\subset \Omega $. The compact set $\overline{B(x,\varepsilon )}$ has positive distance from $\mathbb R^ d\setminus \Omega $, so $x\in \Omega _\varepsilon $, and $M_ u(x,r)=u(x)$ for $0&lt;r\leq \varepsilon $. Since $\rho $ is radial, we may write $\rho _\varepsilon (y)=\phi _\varepsilon (|y|)$; as $\rho _\varepsilon $ is even and vanishes outside $B(0,\varepsilon )$, (<a data-tag="A0F79D2D" href="../../tag/AAD3B6ABC9B1/">2.1</a>) gives 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-24FBCA49"><span data-gerby-tag="24FBCA49"></span>
+<span class="equation-label"><a data-tag="24FBCA49" href="../../tag/EB7C9EF52470/">2.6</a></span>
+<div>\begin{equation} \label{eq:mean-value-mollifier} \begin{split}  u_\varepsilon (x)&amp; =\int _{B(0,\varepsilon )}u(x+y)\rho _\varepsilon (y)\, \mathrm dy=s_{d-1}\int _0^\varepsilon r^{d-1}\phi _\varepsilon (r)M_ u(x,r)\, \mathrm dr\\ &amp; =u(x)\, s_{d-1}\int _0^\varepsilon r^{d-1}\phi _\varepsilon (r)\, \mathrm dr=u(x)\int _{\mathbb R^ d}\rho _\varepsilon \, \mathrm dy=u(x). \end{split} \end{equation}</div>
+</div>
+<p>
+       Every point of $\Omega _\varepsilon $ is the center of such a closed ball, so $u=u_\varepsilon $ on the open set $\Omega _\varepsilon $, and $u_\varepsilon $ is smooth there (section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>). As $\Omega $ is the union of the sets $\Omega _\varepsilon $, the function $u$ is smooth. 
+    <p>
+      Next we show that $\Delta u=0$. Fix $x\in \Omega $. Taylor's formula gives 
+    
+<div class="equation">
+  \[  u(x+r\omega )=u(x)+r\sum _ j\partial _ ju(x)\, \omega _ j+\frac{r^2}{2}\sum _{j,k}\partial _ j\partial _ ku(x)\, \omega _ j\omega _ k+o(r^2),  \]
+</div>
+<p>
+       uniformly in $\omega \in S^{d-1}$. We average over the sphere. The reflections $\omega \mapsto -\omega $ and $\omega _ j\mapsto -\omega _ j$ preserve $S$, so $\int \omega _ j\, \mathrm dS=0$ and $\int \omega _ j\omega _ k\, \mathrm dS=0$ for $j\neq k$. Permutations of the coordinates also preserve $S$, so the integrals $\int \omega _ j^2\, \mathrm dS$ are all equal, and their sum is $s_{d-1}$ because $\sum _ j\omega _ j^2=1$. Hence 
+    
+<div class="equation">
+  \[  M_ u(x,r)=u(x)+\frac{r^2}{2d}\Delta u(x)+o(r^2).  \]
+</div>
+<p>
+       Since $M_ u(x,r)=u(x)$ for all small $r$, it follows that $\Delta u(x)=0$. Thus $u$ is harmonic. Conversely, harmonic functions have the sphere mean-value property by proposition <a data-tag="51885F96" href="../../tag/620D5E4DD6EC/">2.1.1</a>; in particular they are smooth, and they satisfy $h=h_\varepsilon =h*\rho _\varepsilon $ on $\Omega _\varepsilon $ by the first part of the proof. 
+    <p>
+      Now let $h$ be harmonic and $\overline{B(x,r)}\subset \Omega $. Then $x$ lies in the open set $\Omega _ r$, and $h=h_ r$ on $\Omega _ r$ by the first part of the proof. By the differentiation formula $\partial ^\alpha h_ r=h*\partial ^\alpha \rho _ r$ of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>, and since $\partial ^\alpha \rho _ r$ vanishes outside $B(0,r)$, we get 
+    
+<div class="equation">
+  \[  \partial ^\alpha h(x)=\int _{B(x,r)} h(y)\, (\partial ^\alpha \rho _ r)(x-y)\, \mathrm d y.  \]
+</div>
+<p>
+       Since $\partial ^\alpha \rho _ r(z)=r^{-d-|\alpha |}(\partial ^\alpha \rho )(z/r)$, this proves (<a data-tag="724EB1D3" href="../../tag/D63569C18649/">2.5</a>) with $C_{d,\alpha }=\sup |\partial ^\alpha \rho |$, where $\rho $ is the mollifier on $\mathbb R^ d$ fixed in section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-CD09FBEF">
+<p><a class="environment-identifier" href="../../tag/B304785CC98D/">Proposition <span data-tag="CD09FBEF">2.1.3</span>.</a><span data-gerby-tag="CD09FBEF"></span> Let $h$ be a real harmonic function on an open set $D\subset \mathbb R^ d$. </p>
+<ol>
+<li><p>
+If $D$ is connected and $h$ attains its maximum or its minimum over $D$ at a point of $D$, then $h$ is constant. 
+</p>
+</li><li><p>
+If $D$ is bounded and $\varlimsup _{D\ni x\to \zeta }h(x)\leq 0$ for every $\zeta \in \partial D$, then $h\leq 0$ on $D$. 
+</p>
+</li>
+</ol>
+<p> Consequently, a harmonic function on a bounded open set which is continuous on its closure is determined by its boundary values. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For the first assertion, suppose that $h$ attains its maximum $m$ at a point of $D$, and let $E=\{ x\in D:h(x)=m\} $. This set is nonempty and closed in $D$. If $x\in E$ and $\overline{B(x,r)}\subset D$, the ball mean-value property gives $\int _{B(x,r)}(m-h)\, \mathrm dy=0$. The integrand is continuous and nonnegative, so it vanishes on $B(x,r)$. Thus $E$ is open, and $E=D$ by connectedness. For the minimum, apply this to $-h$. 
+    <p>
+      For the second assertion, let $\varepsilon &gt;0$, and suppose that $h&gt;\varepsilon $ somewhere in $D$; we derive a contradiction. Each $\zeta \in \partial D$ has a ball $B(\zeta ,r_\zeta )$ such that $h&lt;\varepsilon $ on $D\cap B(\zeta ,r_\zeta )$. Since $D$ is bounded, $\partial D$ is compact, and finitely many of these balls cover it; let $W$ be their union. Then $K=\overline D\setminus W=D\setminus W$ is compact. Since $h&lt;\varepsilon $ on $D\setminus K=D\cap W$, the set $K$ is nonempty. The maximum of $h$ over $K$ is attained at some point $x_0$, and $h(x_0)&gt;\varepsilon $; hence $h(x_0)$ is also the maximum of $h$ over $D$. Let $D_0$ be the component of $D$ containing $x_0$; it is open, because every point of $D$ lies in a ball contained in $D$, and balls are connected. By the first assertion, $h=h(x_0)$ on $D_0$. 
+    <p>
+      Since $\mathbb R^ d$ is connected and $D_0$ is a nonempty, bounded, open subset, $D_0$ is not closed, so it has a boundary point $\zeta $. This point does not lie in $D$: otherwise the component of $D$ containing $\zeta $ would be an open neighborhood of $\zeta $, so it would meet $D_0$ and hence equal $D_0$, which does not contain its boundary point $\zeta $. Thus $\zeta \in \partial D$ and $\varlimsup _{D\ni x\to \zeta }h(x)\geq h(x_0)&gt;0$, contradicting the hypothesis. Hence $h\leq \varepsilon $ on $D$, and letting $\varepsilon \downarrow 0$ gives $h\leq 0$. 
+    <p>
+      Finally, if two harmonic functions on a bounded open set are continuous on its closure and agree on its boundary, apply the second assertion to the real and imaginary parts of their difference and of its negative. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-1C86607F">
+<p><a class="environment-identifier" href="../../tag/C9127FBA9AE8/">Theorem <span data-tag="1C86607F">2.1.4</span> <span class="named">(Weyl's lemma)</span>.</a><span data-gerby-tag="1C86607F"></span> Let $T\in \mathcal D'(\Omega )$ satisfy $\Delta T=0$. Then there is a unique smooth harmonic function $h$ on $\Omega $ such that $\langle T,\chi \rangle =\int _\Omega h\chi \, \mathrm dx$ for every $\chi \in C_ c^\infty (\Omega )$. In particular, a locally integrable function whose distributional Laplacian vanishes agrees almost everywhere with a harmonic function. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Recall from section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a> that $(T*\phi )(y)=\langle T,\phi (y-\cdot )\rangle $ for a test function $\phi $ on $\mathbb R^ d$ supported in $\overline{B(0,s)}$ and $y\in \Omega _ s$, and that $T_\varepsilon =T*\rho _\varepsilon $. By part (1) of proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>, $T*\phi $ is smooth on $\Omega _ s$ and $\partial ^\alpha (T*\phi )=T*\partial ^\alpha \phi $; moreover $\Delta T_\varepsilon =(\Delta T)_\varepsilon =0$, so $T_\varepsilon $ is a smooth harmonic function on $\Omega _\varepsilon $. We show that $T_\varepsilon $ converges to the required $h$, locally uniformly with all derivatives, by writing $T_\varepsilon =T*(\rho _\varepsilon *\rho _ r)$ near each point for a fixed $r&gt;0$. 
+    <p>
+      Fix $x\in \Omega $ and $r&gt;0$ with $\overline{B(x,3r)}\subset \Omega $, and let $0&lt;\varepsilon &lt;r$. Since $\operatorname {dist}(x,\mathbb R^ d\setminus \Omega )&gt;3r$, every point of $B(x,2r)$ has distance greater than $r$ from $\mathbb R^ d\setminus \Omega $, and every point of $B(x,r)$ has distance greater than $2r$; thus $B(x,2r)\subset \Omega _\varepsilon $ and $B(x,r)\subset \Omega _{2r}$. Let $y\in B(x,r)$. The closed ball $\overline{B(y,r)}$ lies in $B(x,2r)$, where $T_\varepsilon $ is harmonic, so the last assertion of theorem <a data-tag="667A5C9D" href="../../tag/A60BA3B2DBFC/">2.1.2</a>, applied to $T_\varepsilon $ on $B(x,2r)$, gives $T_\varepsilon (y)=\int T_\varepsilon (z)\rho _ r(y-z)\, \mathrm dz$. The test function $\chi =\rho _ r(y-\cdot )$ is supported in $\overline{B(y,r)}\subset \Omega _\varepsilon $, so (<a data-tag="87DC088F" href="../../tag/3AA3C6A6F513/">1.7</a>) gives $T_\varepsilon (y)=\langle T,\chi *\rho _\varepsilon \rangle $. Substituting $z=w+v$ and using that $\rho _\varepsilon $ is even, we find 
+    
+<div class="equation">
+  \begin{align*}  (\chi *\rho _\varepsilon )(w)&amp; =\int \rho _ r(y-z)\rho _\varepsilon (w-z)\, \mathrm dz\\ &amp; =\int \rho _\varepsilon (v)\rho _ r(y-w-v)\, \mathrm dv=(\rho _\varepsilon *\rho _ r)(y-w). \end{align*}
+</div>
+<p>
+       The function $\rho _\varepsilon *\rho _ r$ is a test function supported in $\overline{B(0,\varepsilon +r)}\subset \overline{B(0,2r)}$, so we have shown that 
+    
+<div class="equation">
+  \[  T_\varepsilon =T*(\rho _\varepsilon *\rho _ r)\qquad \text{on }B(x,r).  \]
+</div>
+<p>
+       Since $\rho _\varepsilon *\rho _ r=\rho _ r*\rho _\varepsilon $, part (3) of lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>, applied on $\mathbb R^ d$ to $\rho _ r$, shows that $\partial ^\alpha (\rho _\varepsilon *\rho _ r)\to \partial ^\alpha \rho _ r$ uniformly for every multi-index $\alpha $ as $\varepsilon \to 0$. Let $C$ and $m$ be the constants of definition <a data-tag="55085BC2" href="../../tag/55085BC2/">1.3.1</a> for $T$ and the compact set $\overline{B(x,3r)}$, which contains the supports of $(\rho _\varepsilon *\rho _ r)(y-\cdot )$ and $\rho _ r(y-\cdot )$ for $y\in B(x,r)$. For $y\in B(x,r)$ and a multi-index $\alpha $, the difference $\partial ^\alpha T_\varepsilon (y)-\partial ^\alpha (T*\rho _ r)(y)$ is the pairing of $T$ with $w\mapsto \psi (y-w)$, where $\psi =\partial ^\alpha (\rho _\varepsilon *\rho _ r-\rho _ r)$, and the derivatives of order $\beta $ of this test function are $\pm (\partial ^\beta \psi )(y-w)$. Hence 
+    
+<div class="equation">
+  \[  \sup _{y\in B(x,r)}\bigl |\partial ^\alpha T_\varepsilon (y)-\partial ^\alpha (T*\rho _ r)(y)\bigr | \leq C\max _{|\beta |\leq m}\sup \bigl |\partial ^{\alpha +\beta }(\rho _\varepsilon *\rho _ r-\rho _ r)\bigr |,  \]
+</div>
+<p>
+       which tends to zero. Thus $T_\varepsilon \to T*\rho _ r$ on $B(x,r)$, uniformly with all derivatives. 
+    <p>
+      Every point of $\Omega $ is the center of such a ball. Therefore $h(y)=\lim _{\varepsilon \to 0}T_\varepsilon (y)$ exists for every $y\in \Omega $, and on each ball $B(x,r)$ as above it equals $T*\rho _ r$ and is the limit of $T_\varepsilon $ uniformly with all derivatives. Thus $h$ is smooth and $\Delta h=\lim _{\varepsilon \to 0}\Delta T_\varepsilon =0$. Every compact subset of $\Omega $ is covered by finitely many of these balls, so $T_\varepsilon \to h$ uniformly on compact sets, and part (2) of proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a> gives $\int h\chi \, \mathrm dx=\lim _{\varepsilon \to 0}\int T_\varepsilon \chi \, \mathrm dx=\langle T,\chi \rangle $ for every test function $\chi $. If two continuous functions define the same distribution, they agree almost everywhere by part (4) of proposition <a data-tag="D09EB34D" href="../../tag/0CB24AD25DC3/">1.4.3</a>, and hence everywhere, since nonempty open sets have positive measure. This proves uniqueness. Finally, if $T$ is given by a locally integrable function $u$, then $u$ and $h$ define the same distribution, so $u=h$ almost everywhere by the same proposition. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

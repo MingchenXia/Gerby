@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Extrapolation and model singularities · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a> · Tag <code>472B5CD7929C</code></p><h1>Extrapolation and model singularities</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 16.4 Extrapolation and model singularities <span data-gerby-tag="34AB7A05"></span></div>
+<p>
+  Throughout this section $\{ \theta \} $ is big, and all potentials belong to $\mathrm{PSH}(X,\theta )$. Mass is monotone with respect to $\preceq $, but two potentials with the same mass need not have bounded difference (example <a data-tag="F838E024" href="../../tag/246496245694/">16.4.8</a>). The basic step reverses a convex combination: if $u\preceq v$ and the mass lost from $v$ to $u$ is small, then $u\geq a^{-1}\eta +(1-a^{-1})v$ for some $a&gt;1$ and some potential $\eta $ of positive mass. The contact concentration of section <a data-tag="70D49F01" href="../../tag/954F538078ED/">16.2.1</a> prevents the envelopes used to construct $\eta $ from collapsing. This extrapolation yields the domination principle and identifies the singularity envelopes of potentials of positive mass as model potentials. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-F5DEA6F1">
+<p><a class="environment-identifier" href="../../tag/7420706BAE2F/">Lemma <span data-tag="F5DEA6F1">16.4.1</span>.</a><span data-gerby-tag="F5DEA6F1"></span> Let $\psi \in \mathrm{PSH}(X,\theta )$ with $\psi \leq 0$ and $\int _ X\langle \theta _\psi ^ n\rangle &gt;0$. Then there is a model potential $\phi \geq \psi $ with $\int _ X\langle \theta _\phi ^ n\rangle =\int _ X\langle \theta _\psi ^ n\rangle $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Fix a smooth probability volume form $\mathrm dV$ on $X$, put $m=\int _ X\langle \theta _\psi ^ n\rangle $, and consider 
+    
+<div class="equation">
+  \[  \mathcal S=\{ v\in \mathrm{PSH}(X,\theta ):\psi \leq v\leq 0, \  \int _ X\langle \theta _ v^ n\rangle =m\} , \qquad H(v)=\int _ Xv\, \mathrm dV.  \]
+</div>
+<p>
+       The set $\mathcal S$ contains $\psi $, and $H$ takes values in $[H(\psi ),0]$ on it. We construct an increasing sequence in $\mathcal S$ that almost maximizes $H$ at every stage. Put $v_0=\psi $. Given $v_ k\in \mathcal S$, let 
+    
+<div class="equation">
+  \[  s_ k=\sup \{ H(w):w\in \mathcal S,\  w\geq v_ k\} ,  \]
+</div>
+<p>
+       and choose $v_{k+1}\in \mathcal S$ with $v_{k+1}\geq v_ k$ and $H(v_{k+1})\geq s_ k-2^{-k}$. The regularized limit $\phi =(\sup _ kv_ k)^*$ is a potential with $\psi \leq \phi \leq 0$, and $\int _ X\langle \theta _\phi ^ n\rangle =m$ by corollary <a data-tag="DC306F8A" href="../../tag/56037F3B58D7/">15.7.6</a>; thus $\phi \in \mathcal S$. Since $v_ k$ increases to $\phi $ almost everywhere, between the integrable bounds $\psi $ and $0$, dominated convergence gives $H(v_ k)\to H(\phi )$. 
+    <p>
+      Let $w\in \mathcal S$ with $w\geq \phi $. Then $w\geq v_ k$ for every $k$, so 
+    
+<div class="equation">
+  \[  H(w)\leq s_ k\leq H(v_{k+1})+2^{-k},  \]
+</div>
+<p>
+       and letting $k\to \infty $ gives $H(w)\leq H(\phi )$. Since $w\geq \phi $, it follows that $w=\phi $ almost everywhere, hence everywhere. Now $P_\theta [\phi ]$ lies between $\phi $ and $0$, because $\phi \leq 0$ is a competitor for it, and it has mass $m$ by proposition <a data-tag="92AD249D" href="../../tag/037CA226D141/">16.3.2</a>. Thus $P_\theta [\phi ]\in \mathcal S$ and $P_\theta [\phi ]\geq \phi $, so $P_\theta [\phi ]=\phi $. Since $m&gt;0$, $\phi $ is a model potential. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-D3939F9F">
+<p><a class="environment-identifier" href="../../tag/4D5FAF80D021/">Lemma <span data-tag="D3939F9F">16.4.2</span>.</a><span data-gerby-tag="D3939F9F"></span> Let $\phi ,\tau \in \mathrm{PSH}(X,\theta )$ with $P_\theta [\phi ]=\phi $ and $\tau \preceq \phi $. Then </p>
+<div class="equation">
+  \[  \sup _{\{ \phi &gt; -\infty \} }(\tau -\phi )=\sup _ X\tau .  \]
+</div>
+<p> In particular, if $\tau \leq 0$, then $\tau \leq \phi $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The potential $\tau -\sup _ X\tau $ is nonpositive and more singular than $\phi $, so it is a competitor for $P_\theta [\phi ]=\phi $. Hence $\tau -\phi \leq \sup _ X\tau $ wherever $\phi $ is finite. Conversely, $\phi \leq 0$, so $\tau -\phi \geq \tau $ wherever $\phi $ is finite. The pole set of $\phi $ is pluripolar, and removing a pluripolar set does not change the supremum of the quasi-plurisubharmonic function $\tau $: an upper bound for $\tau $ off a Lebesgue null set holds everywhere. This proves the reverse inequality. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The envelopes used for extrapolation have obstacles of the form $au+(1-a)v$ with $a&gt;1$. The following lemma collects their basic properties. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-D373FCA8">
+<p><a class="environment-identifier" href="../../tag/B36FB6000F3B/">Lemma <span data-tag="D373FCA8">16.4.3</span>.</a><span data-gerby-tag="D373FCA8"></span> Let $u,v\in \mathrm{PSH}(X,\theta )$ with $u\leq v$, let $a&gt;1$, and put $f=au+(1-a)v$, where $f=-\infty $ on the pole set of $u$, which contains that of $v$. </p>
+<ol>
+<li><p>
+The obstacle $f$ is quasi-continuous, and $f\leq u$. A potential $\eta $ satisfies 
+</p>
+<div class="equation">
+  \[  a^{-1}\eta +(1-a^{-1})v\leq u  \]
+</div>
+<p>
+ if and only if $\eta \leq f$ quasi-everywhere. 
+</p>
+</li><li><p>
+Suppose that $f$ has a competitor. Then $\eta =P_\theta (f)$ is the largest potential satisfying this inequality, and $\eta \leq u$. Moreover, if $\gamma =a^{-1}\eta +(1-a^{-1})v$ and $D=\{ \gamma =u&gt;-\infty \} $, then 
+</p>
+<div class="equation">
+  \[  \mu _\eta \leq a^ n\mathbf1_ D\mu _ u.  \]
+</div>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Off the pole set of $u$, the functions $u$ and $v$ are finite and $f=u+(a-1)(u-v)\leq u$, because $u\leq v$; on the pole set, $f=-\infty $. Thus $f$ is a Borel function with $f\leq u$. Let $K$ be a compact subset of a chart. Since $u$ and $v$ are quasi-continuous (lemma <a data-tag="59FC8F76" href="../../tag/1BA71B27F698/">16.1.2</a>(1)), there are open sets of arbitrarily small capacity outside which both are continuous on $K$, as functions with values in $[-\infty ,\infty )$. On the complement in $K$ of such a set, $f$ is continuous at every point where $u$ is finite, because $v\geq u$ is finite near such a point, and at a pole of $u$ it is continuous with value $-\infty $, because $f\leq u$. Hence $f$ is quasi-continuous. Off the pole set of $u$, the inequalities $\eta \leq f$ and $a^{-1}\eta +(1-a^{-1})v\leq u$ are equivalent. Since the pole set is pluripolar, and an inequality between quasi-plurisubharmonic functions that holds quasi-everywhere holds everywhere, this proves the equivalence. 
+    <p>
+      (2) By (1), the potentials satisfying the inequality are exactly the competitors for $f$; since $f\leq u$, they lie below $u$ quasi-everywhere, hence everywhere. Thus $\mathcal A_\theta (f)$ is nonempty, by assumption, and uniformly bounded above, and proposition <a data-tag="3796C01B" href="../../tag/641F3FEC623D/">16.1.4</a> shows that $\eta $ is its largest member; in particular $\eta \leq u$ and $\gamma \leq u$. By theorem <a data-tag="DDE3B556" href="../../tag/38E18A798D6B/">16.2.5</a>, $\mu _\eta $ is carried by $\{ \eta =f\} $. At a point of this set at which $u$ is finite, $\eta =au+(1-a)v$ means $\gamma =u$; since $\mu _\eta $ does not charge the pole set of $u$, it is carried by $D$. Moreover $\mu _\gamma \geq a^{-n}\mu _\eta $, and lemma <a data-tag="86AF9332" href="../../tag/15A418789279/">16.2.2</a>, applied to $\gamma \leq u$, gives $\mathbf1_ D\mu _\gamma \leq \mathbf1_ D\mu _ u$. Hence 
+    
+<div class="equation">
+  \[  \mu _\eta =\mathbf1_ D\mu _\eta \leq a^ n\mathbf1_ D\mu _\gamma \leq a^ n\mathbf1_ D\mu _ u.  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-37CAA8E0">
+<p><a class="environment-identifier" href="../../tag/FCFA7EB59B34/">Theorem <span data-tag="37CAA8E0">16.4.4</span>.</a><span data-gerby-tag="37CAA8E0"></span> Let $u,v\in \mathrm{PSH}(X,\theta )$ with $u\preceq v$ and $\int _ X\langle \theta _ u^ n\rangle &gt;0$, and let $a&gt;1$ satisfy </p>
+<div class="equation" id="foundations-of-pluripotential-theory-2F5C1315"><span data-gerby-tag="2F5C1315"></span>
+<span class="equation-label"><a data-tag="2F5C1315" href="../../tag/4801296ED5A2/">16.69</a></span>
+<div>\begin{equation} \label{eq:extrapolation-mass-margin} a^ n\left(\int _ X\langle \theta _ v^ n\rangle -\int _ X\langle \theta _ u^ n\rangle \right)&lt;\int _ X\langle \theta _ v^ n\rangle . \end{equation}</div>
+</div>
+<p> Then there exists $\eta \in \mathrm{PSH}(X,\theta )$ with $\int _ X\langle \theta _\eta ^ n\rangle &gt;0$ such that </p>
+<div class="equation" id="foundations-of-pluripotential-theory-5684AC3C"><span data-gerby-tag="5684AC3C"></span>
+<span class="equation-label"><a data-tag="5684AC3C" href="../../tag/C646467A8FDD/">16.70</a></span>
+<div>\begin{equation} \label{eq:extrapolation-convex-inequality} a^{-1}\eta +(1-a^{-1})v\leq u. \end{equation}</div>
+</div>
+<p> The largest such $\eta $ is the obstacle envelope $E_ a(u,v)=P_\theta (au+(1-a)v)$; here the obstacle $au+(1-a)v$ is defined to be $-\infty $ on the pole set of $u$, which contains that of $v$. If $u$ and $v$ have the same mass, then (<a data-tag="2F5C1315" href="../../tag/4801296ED5A2/">16.69</a>) holds for every $a&gt;1$, and $E_ a(u,v)$ also has this mass. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first construct one potential satisfying (<a data-tag="5684AC3C" href="../../tag/C646467A8FDD/">16.70</a>) as the limit of a decreasing sequence of envelopes, and then show that $E_ a(u,v)$ is the largest solution and has positive mass. 
+    <p>
+<em>Reduction.</em> Since $u\preceq v$, there are constants $A,B$ with $u-A\leq v-B\leq 0$. If $\eta '$ satisfies (<a data-tag="5684AC3C" href="../../tag/C646467A8FDD/">16.70</a>) for the pair $u-A$, $v-B$, then $\eta '+aA+(1-a)B$ satisfies it for $u$, $v$; the envelopes of the two pairs differ by the same constant, and masses do not change. We may therefore assume that $u\leq v\leq 0$. Then $m=\int _ X\langle \theta _ v^ n\rangle \geq \int _ X\langle \theta _ u^ n\rangle &gt;0$, and lemma <a data-tag="F5DEA6F1" href="../../tag/7420706BAE2F/">16.4.1</a> provides a model potential $\phi \geq v$ with $\int _ X\langle \theta _\phi ^ n\rangle =m$. Since $1-a&lt;0$, we have $au+(1-a)\phi \leq au+(1-a)v$; we first construct a potential below $au+(1-a)\phi $. 
+    <p>
+<em>A decreasing sequence of envelopes.</em> For $j\geq 1$ put $u_ j=\max \{ u,\phi -j\} $, so that $\phi -j\leq u_ j\leq \phi $; in particular, $u_ j$ and $\phi $ have the same pole set. Put 
+    
+<div class="equation">
+  \[  f_ j=au_ j+(1-a)\phi ,\qquad \eta _ j=P_\theta (f_ j),  \]
+</div>
+<p>
+       where $f_ j=-\infty $ on the pole set of $\phi $, as in lemma <a data-tag="D373FCA8" href="../../tag/B36FB6000F3B/">16.4.3</a> for the pair $u_ j\leq \phi $. Outside this pole set, $f_ j=\phi +a(u_ j-\phi )$ lies between $\phi -aj$ and $\phi $. Hence the potential $\phi -aj$ is a competitor, and every competitor is at most $\phi $, so $\eta _ j$ is a potential with 
+    
+<div class="equation">
+  \[  \phi -aj\leq \eta _ j\leq \phi ,\qquad \int _ X\langle \theta _{\eta _ j}^ n\rangle =\int _ X\langle \theta _{u_ j}^ n\rangle =m,  \]
+</div>
+<p>
+       where the masses agree because $\eta _ j\sim \phi \sim u_ j$. Since $u_ j$ decreases with $j$, so do $f_ j$ and $\eta _ j$. 
+    <p>
+<em>A contact bound.</em> Put $\gamma _ j=a^{-1}\eta _ j+(1-a^{-1})\phi $ and $D_ j=\{ \gamma _ j=u_ j&gt;-\infty \} $. By lemma <a data-tag="D373FCA8" href="../../tag/B36FB6000F3B/">16.4.3</a>(2), applied to the pair $u_ j\leq \phi $, we have $\gamma _ j\leq u_ j$ and 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-C58DEBD5"><span data-gerby-tag="C58DEBD5"></span>
+<span class="equation-label"><a data-tag="C58DEBD5" href="../../tag/B2A56AF9922E/">16.71</a></span>
+<div>\begin{equation} \label{eq:extrapolation-contact-bound} \mu _{\eta _ j}\leq a^ n\mathbf1_{D_ j}\mu _{u_ j}. \end{equation}</div>
+</div>
+<p>
+<em>A tail estimate.</em> Fix $k&gt;0$ and let $j&gt;k$. On $D_ j$ we have $\eta _ j=\phi +a(u_ j-\phi )$, so there $\eta _ j\leq \phi -ak$ if and only if $u_ j\leq \phi -k$, that is, if and only if $u\leq \phi -k$. The plurifine open set $\{ u&gt;\phi -k\} $ is contained in $\{ u&gt;\phi -j\} $, on which $u_ j=u$; hence $\mu _{u_ j}=\mu _ u$ on $\{ u&gt;\phi -k\} $, and $\mu _{u_ j}(\{ u\leq \phi -k\} )=m-\mu _ u(\{ u&gt;\phi -k\} )$, pole sets having measure zero. Together with (<a data-tag="C58DEBD5" href="../../tag/B2A56AF9922E/">16.71</a>) this gives 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-094631F7"><span data-gerby-tag="094631F7"></span>
+<span class="equation-label"><a data-tag="094631F7" href="../../tag/246B560461D1/">16.72</a></span>
+<div>\begin{equation} \label{eq:extrapolation-tail-bound} \mu _{\eta _ j}(\{ \eta _ j\leq \phi -ak\} ) \leq a^ n\left(m-\mu _ u(\{ u&gt;\phi -k\} )\right). \end{equation}</div>
+</div>
+<p>
+<em>The envelopes do not collapse.</em> Suppose that $\eta _ j$ decreases to $-\infty $ identically. Then $\sup _ X\eta _ j\to -\infty $ by corollary <a data-tag="9E1F0057" href="../../tag/134C98DC2772/">14.2.5</a>. Since $\eta _ j\preceq \phi $ and $\phi $ is a model potential, lemma <a data-tag="D3939F9F" href="../../tag/4D5FAF80D021/">16.4.2</a> gives $\eta _ j-\phi \leq \sup _ X\eta _ j$ off the pole set of $\phi $. Hence, for each $k$, $\eta _ j\leq \phi -ak$ everywhere once $j$ is large, and the left side of (<a data-tag="094631F7" href="../../tag/246B560461D1/">16.72</a>) equals $\int _ X\langle \theta _{\eta _ j}^ n\rangle =m$. Since $\phi $ is finite wherever $u$ is, $\mu _ u(\{ u&gt;\phi -k\} )\to \int _ X\langle \theta _ u^ n\rangle $ as $k\to \infty $, and (<a data-tag="094631F7" href="../../tag/246B560461D1/">16.72</a>) yields $m\leq a^ n\bigl (m-\int _ X\langle \theta _ u^ n\rangle \bigr )$, which contradicts (<a data-tag="2F5C1315" href="../../tag/4801296ED5A2/">16.69</a>). Consequently $\eta _ j$ decreases to a potential $\eta $. Letting $j\to \infty $ in $\gamma _ j\leq u_ j$ gives $a^{-1}\eta +(1-a^{-1})\phi \leq u$, and since $v\leq \phi $, also (<a data-tag="5684AC3C" href="../../tag/C646467A8FDD/">16.70</a>). 
+    <p>
+<em>The largest solution.</em> By lemma <a data-tag="D373FCA8" href="../../tag/B36FB6000F3B/">16.4.3</a>(1), applied to the pair $u\leq v$, the potentials satisfying (<a data-tag="5684AC3C" href="../../tag/C646467A8FDD/">16.70</a>) are exactly the competitors for the obstacle $f=au+(1-a)v$. The potential $\eta $ constructed above is one of them, so part (2) of the lemma shows that $E_ a=E_ a(u,v)=P_\theta (f)$ is the largest potential satisfying (<a data-tag="5684AC3C" href="../../tag/C646467A8FDD/">16.70</a>), and that $E_ a\leq u$. 
+    <p>
+<em>Positive mass.</em> Choose $b&gt;a$ that still satisfies (<a data-tag="2F5C1315" href="../../tag/4801296ED5A2/">16.69</a>). The preceding steps, applied to $b$, give $E_ b=E_ b(u,v)$. The potential 
+    
+<div class="equation">
+  \[  q=\frac abE_ b+\left(1-\frac ab\right)u  \]
+</div>
+<p>
+       is a competitor for the obstacle $f$ of $E_ a$: quasi-everywhere, $E_ b\leq bu+(1-b)v$, and therefore 
+    
+<div class="equation">
+  \[  q\leq au+(1-a)v+\left(1-\frac ab\right)(u-v)\leq au+(1-a)v.  \]
+</div>
+<p>
+       Hence $q\leq E_ a$, and the monotonicity of mass together with $\mu _ q\geq (1-a/b)^ n\mu _ u$ yields 
+    
+<div class="equation">
+  \[  \int _ X\langle \theta _{E_ a}^ n\rangle \geq \int _ X\langle \theta _ q^ n\rangle \geq \left(1-\frac ab\right)^ n\int _ X\langle \theta _ u^ n\rangle &gt;0.  \]
+</div>
+<p>
+       If $\int _ X\langle \theta _ u^ n\rangle =\int _ X\langle \theta _ v^ n\rangle $, then (<a data-tag="2F5C1315" href="../../tag/4801296ED5A2/">16.69</a>) holds for every $a&gt;1$, so $b$ can be taken arbitrarily large, and we obtain $\int _ X\langle \theta _{E_ a}^ n\rangle \geq \int _ X\langle \theta _ u^ n\rangle $. The reverse inequality follows from $E_ a\leq u$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-474DDC52">
+<p><a class="environment-identifier" href="../../tag/52ED2F2B0A63/">Lemma <span data-tag="474DDC52">16.4.5</span>.</a><span data-gerby-tag="474DDC52"></span> Let $u\in \mathrm{PSH}(X,\theta )$ with $\int _ X\langle \theta _ u^ n\rangle &gt;0$. Then there are $v\in \mathrm{PSH}(X,\theta )$ with $v\leq u$ and $\delta &gt;0$ such that $\theta _ v\geq \delta \omega $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Put $m=\int _ X\langle \theta _{V_\theta }^ n\rangle $. Since $u\preceq V_\theta $ and $\int _ X\langle \theta _ u^ n\rangle &gt;0$, we can choose $a&gt;1$ so close to one that $a^ n\bigl (m-\int _ X\langle \theta _ u^ n\rangle \bigr )&lt;m$. Theorem <a data-tag="37CAA8E0" href="../../tag/FCFA7EB59B34/">16.4.4</a> gives $\eta \in \mathrm{PSH}(X,\theta )$ with $a^{-1}\eta +(1-a^{-1})V_\theta \leq u$. Since the class is big, it contains a closed current $T\geq \delta _0\omega $ for some $\delta _0&gt;0$, and by theorem <a data-tag="491BA8B8" href="../../tag/D24B01620C94/">14.1.7</a> we can write $T=\theta +\mathrm{dd}^{\mathrm{c}}\psi $ with $\psi $ quasi-plurisubharmonic; after subtracting a constant, $\psi \in \mathrm{PSH}(X,\theta )$ satisfies $\psi \leq 0$ and $\theta _\psi \geq \delta _0\omega $, and $\psi \leq V_\theta $ because $\psi $ is a competitor for $V_\theta $. Therefore 
+    
+<div class="equation">
+  \[  v=a^{-1}\eta +(1-a^{-1})\psi \leq u,\qquad \theta _ v=a^{-1}\theta _\eta +(1-a^{-1})\theta _\psi \geq (1-a^{-1})\delta _0\omega .  \]
+</div>
+<span class="qed">$\square$</span>
+
+</p></article>
+<p>
+Recall from definition <a data-tag="D0EF383B" href="../../tag/2AF01ACCF985/">15.8.3</a> that, for $\chi \in \mathrm{PSH}(X,\theta )$, the class $\mathcal E(X,\theta ,\chi )$ of potentials of full mass relative to $\chi $ consists of the potentials $u\preceq \chi $ with $\int _ X\langle \theta _ u^ n\rangle =\int _ X\langle \theta _\chi ^ n\rangle $. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-FE2D5C9D">
+<p><a class="environment-identifier" href="../../tag/0F4D01059518/">Theorem <span data-tag="FE2D5C9D">16.4.6</span> <span class="named">(Domination principle)</span>.</a><span data-gerby-tag="FE2D5C9D"></span> Let $\chi \in \mathrm{PSH}(X,\theta )$ with $\int _ X\langle \theta _\chi ^ n\rangle &gt;0$, and let $u,v\in \mathcal E(X,\theta ,\chi )$. If $\mu _ u(\{ u&lt;v\} )=0$, then $u\geq v$ everywhere on $X$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      After reducing to the case $u\leq v$, we show that the extrapolation envelopes $E_ a(u,v)$ agree with $u$ almost everywhere for $\mu _ u$. Hence they do not collapse as $a\to \infty $, while their limit equals $-\infty $ quasi-everywhere on $\{ u&lt;v\} $, so that this set is pluripolar. 
+    <p>
+      The potential $\max \{ u,v\} $ is more singular than $\chi $ and less singular than $u$, so 
+    
+<div class="equation">
+  \[  \int _ X\langle \theta _\chi ^ n\rangle \geq \int _ X\langle \theta _{\max \{ u,v\} }^ n\rangle \geq \int _ X\langle \theta _ u^ n\rangle =\int _ X\langle \theta _\chi ^ n\rangle ;  \]
+</div>
+<p>
+       thus $\max \{ u,v\} \in \mathcal E(X,\theta ,\chi )$. Since $\{ u&lt;\max \{ u,v\} \} =\{ u&lt;v\} $, we may replace $v$ by $\max \{ u,v\} $ and assume that $u\leq v$. Subtracting the same constant from $u$ and $v$, we may also assume $v\leq 0$. Let $m&gt;0$ be the common mass of $u$, $v$ and $\chi $. 
+    <p>
+      For $a&gt;1$ let $\eta _ a=E_ a(u,v)$, $\gamma _ a=a^{-1}\eta _ a+(1-a^{-1})v$ and $D_ a=\{ \gamma _ a=u&gt;-\infty \} $. By theorem <a data-tag="37CAA8E0" href="../../tag/FCFA7EB59B34/">16.4.4</a>, $\eta _ a$ is a potential of mass $m$; in particular its obstacle $au+(1-a)v$ has a competitor, and lemma <a data-tag="D373FCA8" href="../../tag/B36FB6000F3B/">16.4.3</a>(2), applied to the pair $u\leq v$, gives $\eta _ a\leq u$, $\gamma _ a\leq u$ and 
+    
+<div class="equation">
+  \[  \mu _{\eta _ a}\leq a^ n\mathbf1_{D_ a}\mu _ u.  \]
+</div>
+<p>
+       Since $u\leq v$, the hypothesis means that $\mu _ u$ is carried by $\{ u=v\} $, so $\mu _{\eta _ a}$ is carried by $D_ a\cap \{ u=v\} $. At a point of this set, $a^{-1}\eta _ a+(1-a^{-1})u=u$, that is, $\eta _ a=u$. Hence $\mu _{\eta _ a}$ is carried by $\{ \eta _ a=u\} $, and lemma <a data-tag="86AF9332" href="../../tag/15A418789279/">16.2.2</a>, applied to $\eta _ a\leq u$, gives $\mu _{\eta _ a}\leq \mathbf1_{\{ \eta _ a=u\} }\mu _ u\leq \mu _ u$. Both measures have mass $m$, so they are equal, and $\eta _ a=u$ holds $\mu _ u$-almost everywhere. In particular 
+    
+<div class="equation">
+  \[  \int _ X\mathrm e^{\eta _ a}\, \mu _ u =\int _ X\mathrm e^ u\, \mu _ u&gt;0,  \]
+</div>
+<p>
+       where the last integral is positive because $m&gt;0$ and $\mu _ u$ does not charge the pole set of $u$. 
+    <p>
+      As $a$ increases, the obstacle $v+a(u-v)$ decreases, so $\eta _ a$ decreases. If $\eta _ a$ decreased to $-\infty $ identically as $a\to \infty $ through the integers, dominated convergence, with $0\leq \mathrm e^{\eta _ a}\leq 1$, would make the left side of the last display tend to zero, a contradiction. Hence the limit $\eta $ along the integers is a potential. Each $\eta _ a$ satisfies $\eta _ a\leq v+a(u-v)$ outside a pluripolar set; let $N$ be the union of these sets over the integers $a\geq 2$. At a point outside $N$ where $u$ is finite and $u&lt;v$, we get $\eta \leq v+a(u-v)$ for every integer $a$, hence $\eta =-\infty $. Thus $\{ u&lt;v\} $ is contained in the union of $N$ and the pole sets of $u$ and $\eta $, which is pluripolar. Therefore $u\geq v$ quasi-everywhere, and hence everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-B2268745">
+<p><a class="environment-identifier" href="../../tag/4A1DC8C4E020/">Theorem <span data-tag="B2268745">16.4.7</span>.</a><span data-gerby-tag="B2268745"></span> Let $u\in \mathrm{PSH}(X,\theta )$ with $\int _ X\langle \theta _ u^ n\rangle &gt;0$. Then </p>
+<div class="equation">
+  \[  P_\theta [u]=\max \{ v\in \mathrm{PSH}(X,\theta ):v\leq 0, \  u\preceq v,\  \int _ X\langle \theta _ v^ n\rangle =\int _ X\langle \theta _ u^ n\rangle \} .  \]
+</div>
+<p> In particular $P_\theta [P_\theta [u]]=P_\theta [u]$, so $P_\theta [u]$ is a model potential of mass $\int _ X\langle \theta _ u^ n\rangle $. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $w=P_\theta [u]$, and let $v$ belong to the displayed family. By proposition <a data-tag="92AD249D" href="../../tag/037CA226D141/">16.3.2</a>, $w\leq P_\theta [v]$, and the potentials $w$, $u$, $v$ and $P_\theta [v]$ all have the same positive mass. Moreover $v\leq P_\theta [v]$, because $v\leq 0$ is a competitor for $P_\theta [v]$. Hence $w$ and $v$ both belong to $\mathcal E(X,\theta ,P_\theta [v])$, a class whose reference potential has positive mass. By proposition <a data-tag="38793463" href="../../tag/5ADA09DD223E/">16.3.3</a>, $\mu _ w$ is carried by $\{ w=0\} $, and since $v\leq 0$, it gives no mass to $\{ w&lt;v\} $. The domination principle, theorem <a data-tag="FE2D5C9D" href="../../tag/0F4D01059518/">16.4.6</a>, yields $w\geq v$. Finally, $w$ itself belongs to the family: it is nonpositive, it satisfies $u-\sup _ Xu\leq w$, and it has the same mass as $u$ by proposition <a data-tag="92AD249D" href="../../tag/037CA226D141/">16.3.2</a>. This proves the formula. 
+    <p>
+      The potential $P_\theta [w]$ is nonpositive, satisfies $u\preceq w\preceq P_\theta [w]$, and has the same mass as $u$ by proposition <a data-tag="92AD249D" href="../../tag/037CA226D141/">16.3.2</a>. Hence it belongs to the family, and the formula gives $P_\theta [w]\leq w$. Conversely, $w\leq 0$ is a competitor for $P_\theta [w]$, so $P_\theta [w]=w$. Since the mass of $w$ is positive, $w$ is a model potential. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+
+<article class="env-example" id="foundations-of-pluripotential-theory-F838E024">
+<p><a class="environment-identifier" href="../../tag/246496245694/">Example <span data-tag="F838E024">16.4.8</span>.</a><span data-gerby-tag="F838E024"></span> On $\mathbb P^1$ let $\omega =\mathrm{dd}^{\mathrm{c}}\log (1+|z|^2)$ in the affine coordinate $z$, so that $\int _{\mathbb P^1}\omega =1$; since $\omega $ is Kähler, $V_\omega =0$. Define </p>
+<div class="equation">
+  \[  F(r)=\begin{cases}  \max \{ -\log (-r),r+2\} ,&amp; r\leq -1,\\  r+2,&amp; r\geq -1, \end{cases} \qquad u(z)=F(\log |z|^2)-\log (1+|z|^2).  \]
+</div>
+<p> The function $F$ is continuous and nondecreasing. Since $-\log (-r)&lt;r+2$ at $r=-1$, there is $\delta &gt;0$ with $F(r)=r+2$ for $r\geq -1-\delta $, and since $r+2+\log (-r)\to -\infty $ as $r\to -\infty $, we have $F(r)=-\log (-r)$ for all sufficiently negative $r$. </p>
+<p>We first show that $F(\log |z|^2)$ is subharmonic on $\mathbb C\setminus \{ 0\} $. On the open set $\{ |z|^2&gt;\mathrm e^{-1-\delta }\} $ it equals the harmonic function $\log |z|^2+2$. On the open set $\{ 0&lt;|z|^2&lt;\mathrm e^{-1}\} $ it equals $\max \{ g(\log |z|^2),\log |z|^2+2\} $, where $g(t)=-\log (-t)$ for $t&lt;0$. Since $g''(t)=t^{-2}&gt;0$, the function $g$ is convex, so it is the supremum of its tangent lines $t\mapsto g(s)+g'(s)(t-s)$, $s&lt;0$, whose slopes $g'(s)=-1/s$ are positive. Hence $g(\log |z|^2)$ is a continuous supremum of the harmonic functions $g(s)+g'(s)(\log |z|^2-s)$; it therefore satisfies the submean inequality and is subharmonic, and so is its maximum with $\log |z|^2+2$. Since subharmonicity is a local property, $F(\log |z|^2)$ is subharmonic on $\mathbb C\setminus \{ 0\} $; it tends to $-\infty $ at $0$ and extends subharmonically across the polar set $\{ 0\} $ by theorem <a data-tag="3086D03D" href="../../tag/8B711E470600/">3.5.2</a>. </p>
+<p>Next we check that $u$ is $\omega $-plurisubharmonic. For $|z|^2\geq \mathrm e^{-1}$ we have $u=2-\log (1+|z|^{-2})$. In the coordinate $\zeta =1/z$ near $\infty $ this reads $u=2-\log (1+|\zeta |^2)$, while $\omega =\mathrm{dd}^{\mathrm{c}}\log (1+|\zeta |^2)$, because $\log (1+|z|^2)=\log (1+|\zeta |^2)-\log |\zeta |^2$ and $\log |\zeta |^2$ is pluriharmonic for $\zeta \ne 0$; thus $u$ is smooth near $\infty $, with $u(\infty )=2$ and $\omega +\mathrm{dd}^{\mathrm{c}}u=0$ there. Hence $u\in \mathrm{PSH}(\mathbb P^1,\omega )$, with $\omega +\mathrm{dd}^{\mathrm{c}}u=\mathrm{dd}^{\mathrm{c}}F(\log |z|^2)$ on $\mathbb C$, and its only pole is $0$. </p>
+<p>To compute the mass of $u$, note that its Lelong number at $0$ is that of the subharmonic function $F(\log |z|^2)$, which differs from $u$ by a smooth function, and since $F$ is continuous and nondecreasing, $\sup _{|z|&lt;\mathrm e^{t/2}}F(\log |z|^2)=F(t)$. By proposition <a data-tag="2C5B449F" href="../../tag/C79BAEA70FC1/">12.1.1</a>, the Lelong number is therefore </p>
+<div class="equation">
+  \[  \lim _{t\to -\infty }\frac{F(t)}t=\lim _{t\to -\infty }\frac{-\log (-t)}t=0.  \]
+</div>
+<p> By theorem <a data-tag="724EA3B5" href="../../tag/BD2098F182CC/">12.1.3</a>, in one variable the mass that $\mathrm{dd}^{\mathrm{c}}F(\log |z|^2)$ gives to $0$ is this Lelong number, namely the limit of the masses of the discs $B(0,r)$ as $r\downarrow 0$, so the current $\omega +\mathrm{dd}^{\mathrm{c}}u$ has no atom at its pole. By proposition <a data-tag="D1BF7EF2" href="../../tag/3553558C2E27/">15.3.6</a>, $\mu _ u$ is the restriction of $\omega +\mathrm{dd}^{\mathrm{c}}u$ to $\{ u&gt;-\infty \} $, hence the mass of $u$ is $\int _{\mathbb P^1}\langle \omega +\mathrm{dd}^{\mathrm{c}}u\rangle =\int _{\mathbb P^1}\omega =1$. </p>
+<p>The potential $0$ is nonpositive, less singular than $u$, and has the same mass $\int _{\mathbb P^1}\omega =1$, so theorem <a data-tag="B2268745" href="../../tag/4A1DC8C4E020/">16.4.7</a> gives $P_\omega [u]\geq 0$; since also $P_\omega [u]\leq V_\omega =0$, we obtain $P_\omega [u]=0$. Near $0$, however, $u=-\log (-\log |z|^2)+O(1)$ is unbounded below. Thus the singularity envelope can change the singularity type of a potential while preserving its full mass. </p>
+</article>
+
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-A76C1E0D">
+<p><a class="environment-identifier" href="../../tag/D3EBF9A66D06/">Definition <span data-tag="A76C1E0D">16.4.9</span>.</a><span data-gerby-tag="A76C1E0D"></span> Let $u,\phi \in \mathrm{PSH}(X,\theta )$ with $u\preceq \phi $. The <em>singularity envelope of $u$ relative to $\phi $</em> is </p>
+<div class="equation">
+  \[  P_\theta [u](\phi ) =\left(\lim _{C\to \infty }P_\theta (u+C,\phi )\right)^*.  \]
+</div>
+<p> Choose $C_0$ with $u-C_0\leq \phi $. For $C\geq -C_0$, the potential $u-C_0$ is a common minorant of $u+C$ and $\phi $, so the rooftop envelope $P_\theta (u+C,\phi )$ lies between $u-C_0$ and $u+C$ and has the singularity type of $u$. These rooftop envelopes increase with $C$ and are bounded above by $\phi $, so the regularized limit is a potential between $u-C_0$ and $\phi $. </p>
+</article>
+
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-FC98ECA1">
+<p><a class="environment-identifier" href="../../tag/7E199392108C/">Proposition <span data-tag="FC98ECA1">16.4.10</span>.</a><span data-gerby-tag="FC98ECA1"></span> Let $u,\phi \in \mathrm{PSH}(X,\theta )$ with $u\preceq \phi $ and $\int _ X\langle \theta _\phi ^ n\rangle &gt;0$. Then the following are equivalent: </p>
+<ol>
+<li><p>
+$u\in \mathcal E(X,\theta ,\phi )$; 
+</p>
+</li><li><p>
+$P_\theta [u](\phi )=\phi $; 
+</p>
+</li><li><p>
+$P_\theta [u]=P_\theta [\phi ]$. 
+</p>
+</li>
+</ol>
+<p> Furthermore, the relative envelope $w=P_\theta [u](\phi )$ has the same mass as $u$, and </p>
+<div class="equation">
+  \[  \mu _ w\leq \mathbf1_{\{ w=\phi \} }\mu _\phi .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $w_ C=P_\theta (u+C,\phi )$. Each $w_ C$ with $C$ large has the singularity type of $u$, hence mass $\int _ X\langle \theta _ u^ n\rangle $, and $w_ C$ increases almost everywhere to $w$; by corollary <a data-tag="DC306F8A" href="../../tag/56037F3B58D7/">15.7.6</a>, $\int _ X\langle \theta _ w^ n\rangle =\int _ X\langle \theta _ u^ n\rangle $. By corollary <a data-tag="FE439A00" href="../../tag/7FE9391D7A51/">16.2.6</a>, together with $w_ C\leq \phi $ and $w_ C\leq w\leq \phi $, 
+    
+<div class="equation">
+  \[  \mu _{w_ C}\leq \mathbf1_{\{ u+C\leq \phi \} }\mu _ u +\mathbf1_{\{ w=\phi \} }\mu _\phi .  \]
+</div>
+<p>
+       As $C\to \infty $, the sets $\{ u+C\leq \phi \} $ decrease to the pole set of $u$, which is $\mu _ u$-null, because $\phi $ is bounded above; so the first term tends to zero in total variation by dominated convergence. Moreover $\mu _{w_ C}\to \mu _ w$ weakly by corollary <a data-tag="DC306F8A" href="../../tag/56037F3B58D7/">15.7.6</a>. Integrating continuous functions $\chi \geq 0$ and applying lemma <a data-tag="94C0023B" href="../../tag/EC77D6F30D3D/">16.2.1</a>, we obtain the asserted measure bound. 
+    <p>
+      If (1) holds, then $w$ and $\phi $ have the same positive mass and both belong to $\mathcal E(X,\theta ,\phi )$. By the measure bound, $\mu _ w$ gives no mass to $\{ w&lt;\phi \} $, and the domination principle, theorem <a data-tag="FE2D5C9D" href="../../tag/0F4D01059518/">16.4.6</a>, gives $w\geq \phi $; hence (2). Conversely, if (2) holds, then $u$ has the mass of $w=\phi $, which is (1). 
+    <p>
+      To prove that (2) implies (3), normalize $\phi \leq 0$. This is harmless: replacing $\phi $ by $\phi +c$ replaces $w_ C$ by $P_\theta (u+C-c,\phi )+c$, hence $w$ by $w+c$, so (2) is preserved, and $P_\theta [u]$ and $P_\theta [\phi ]$ do not change. Every $w_ C$ is then a nonpositive potential with the singularity type of $u$, hence a competitor for $P_\theta [u]$, so $\phi =w\leq P_\theta [u]$. Since (2) implies (1), $u$ has the positive mass of $\phi $, so $P_\theta [u]$ is a model potential by theorem <a data-tag="B2268745" href="../../tag/4A1DC8C4E020/">16.4.7</a>. Monotonicity and $u\preceq \phi $ now give 
+    
+<div class="equation">
+  \[  P_\theta [\phi ]\leq P_\theta [P_\theta [u]]=P_\theta [u] \leq P_\theta [\phi ].  \]
+</div>
+<p>
+       Finally, if (3) holds, then by proposition <a data-tag="92AD249D" href="../../tag/037CA226D141/">16.3.2</a> the potential $u$ has the mass of $P_\theta [u]=P_\theta [\phi ]$, which is the mass of $\phi $; this is (1). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

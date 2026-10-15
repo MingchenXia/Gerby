@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bounded mixed local energy · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a> · Tag <code>A26D05A19EF5</code></p><h1>Bounded mixed local energy</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · Theorem 9.10.13 <span data-gerby-tag="F7379E45"></span></div><article class="env-theorem" id="foundations-of-pluripotential-theory-F7379E45">
+<p><a class="environment-identifier" href="../../tag/A26D05A19EF5/">Theorem <span data-tag="F7379E45">9.10.13</span>.</a><span data-gerby-tag="F7379E45"></span> Let $u_0,\ldots ,u_ n\in \mathcal E_0(B)$. Then </p>
+<div class="equation" id="foundations-of-pluripotential-theory-0EFFAADD"><span data-gerby-tag="0EFFAADD"></span>
+<span class="equation-label"><a data-tag="0EFFAADD" href="../../tag/802CC6F04E1F/">9.69</a></span>
+<div>\begin{equation} \label{eq:bounded-mixed-local-energy} \int _ B(-u_0)\, \mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ n \leq C_ n\prod _{l=0}^ n e_1(u_ l)^{1/(n+1)}, \qquad C_ n=2^{n+2}. \end{equation}</div>
+</div>
+<p> In particular the integral is finite, and it vanishes if one of the energies $e_1(u_ l)$ vanishes. </p>
+</article><article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $B=B(a,R)$ and $\rho (z)=|z-a|^2-R^2$. We say that $v\in \mathcal E_0(B)$ has a <em>quadratic collar</em> if $v=c\rho $ on a neighborhood of $\partial B$ in $B$ for some constant $c&gt;0$. We first prove the inequality with constant one for potentials with quadratic collars (Steps 1 and 2), and then approximate arbitrary elements of $\mathcal E_0(B)$ by such potentials while keeping their energies under control (Steps 3 and 4). For functions $b_0,\ldots ,b_ n$ which either all have quadratic collars, or are smooth real functions on a neighborhood of $\overline B$ with $b_2,\ldots ,b_ n$ plurisubharmonic, put 
+    
+<div class="equation">
+  \[  I(b_0,\ldots ,b_ n) =\int _ B(-b_0)\, \mathrm{dd}^{\mathrm{c}}b_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}b_ n.  \]
+</div>
+<p>
+       The integral is finite: in the first case every mixed product of the $b_ l$ is smooth near $\partial B$ and locally finite on the rest of $B$, and in the second the integrand is a smooth form on a neighborhood of $\overline B$. 
+    <p>
+<em>Step 1. Smooth functions.</em> Let $b_0,\ldots ,b_ n$ be smooth real functions on a neighborhood of $\overline B$, with $b_2,\ldots ,b_ n$ plurisubharmonic and $b_0=0$ on $\partial B$, and put $S=\mathrm{dd}^{\mathrm{c}}b_2\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}b_ n$, with $S=1$ if $n=1$. With $\mathrm d^{\mathrm c}$ as in (<a data-tag="B5542B77" href="../../tag/C44E7362B437/">7.6</a>), we claim that 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-A8634BE7"><span data-gerby-tag="A8634BE7"></span>
+<span class="equation-label"><a data-tag="A8634BE7" href="../../tag/880A8A0EC0A2/">9.70</a></span>
+<div>\begin{equation} \label{eq:mixed-local-energy-gradient-form} I(b_0,b_1,b_2,\ldots ,b_ n) =\int _ B\mathrm db_0\wedge \mathrm d^{\mathrm c}b_1\wedge S. \end{equation}</div>
+</div>
+<p>
+       Fix a smooth function $\theta \colon \mathbb R\to [0,1]$ with $\theta =1$ on $(-\infty ,-2]$ and $\theta =0$ on $[-1,\infty )$, and put $\chi _ k=\theta (k\rho )$ for $k\geq 1$; then $\chi _ k\in C^\infty _ c(B)$. The $(2n-1)$-form $\chi _ kb_0\, \mathrm d^{\mathrm c}b_1\wedge S$ is smooth with compact support in $B$, and $S$ is closed, so proposition <a data-tag="2A0D66D9" href="../../tag/DAE61F3D77A3/">7.1.3</a> and the Leibniz rule give 
+    
+<div class="equation">
+  \[  0=\int _ B\chi _ k\, \mathrm db_0\wedge \mathrm d^{\mathrm c}b_1\wedge S +\int _ Bb_0\, \mathrm d\chi _ k\wedge \mathrm d^{\mathrm c}b_1\wedge S +\int _ B\chi _ kb_0\, \mathrm{dd}^{\mathrm{c}}b_1\wedge S.  \]
+</div>
+<p>
+       As $k\to \infty $, $\chi _ k\to 1$ pointwise on $B$, and the forms $\mathrm db_0\wedge \mathrm d^{\mathrm c}b_1\wedge S$ and $b_0\, \mathrm{dd}^{\mathrm{c}}b_1\wedge S$ have bounded coefficients on $B$; by dominated convergence, the first and the last integral tend to $\int _ B\mathrm db_0\wedge \mathrm d^{\mathrm c}b_1\wedge S$ and $-I(b_0,\ldots ,b_ n)$. In the middle integral, $\mathrm d\chi _ k=k\theta '(k\rho )\, \mathrm d\rho $ vanishes outside the set where $-2\leq k\rho \leq -1$. Let $\Lambda $ be the maximum of $|\nabla b_0|$ on $\overline B$. If $z\in B$ and $\zeta \in \partial B$ is a nearest boundary point, then $b_0(\zeta )=0$ and $|z-\zeta |=R-|z-a|$, so the mean value theorem on the segment from $z$ to $\zeta $ gives 
+    
+<div class="equation">
+  \[  |b_0(z)|\leq \Lambda (R-|z-a|)\leq \frac{\Lambda }{R}(R^2-|z-a|^2)=\frac{\Lambda }{R}|\rho (z)|.  \]
+</div>
+<p>
+       Hence $|b_0\, k\theta '(k\rho )|\leq (\Lambda /R)|k\rho |\, |\theta '(k\rho )|\leq 2\Lambda \sup |\theta '|/R$ on $B$, uniformly in $k$, and $b_0\, k\theta '(k\rho )\to 0$ pointwise on $B$. Since $\mathrm d\rho \wedge \mathrm d^{\mathrm c}b_1\wedge S$ has bounded coefficients on $B$, dominated convergence shows that the middle integral tends to zero. This proves (<a data-tag="A8634BE7" href="../../tag/880A8A0EC0A2/">9.70</a>). 
+    <p>
+      As observed at the beginning of section <a data-tag="9BD32A2A" href="../../tag/2CE0DCA46BB5/">9.2</a>, $\mathrm db\wedge \mathrm d^{\mathrm c}c\wedge S=\mathrm dc\wedge \mathrm d^{\mathrm c}b\wedge S$ for smooth real $b,c$. Moreover, $\mathrm db\wedge \mathrm d^{\mathrm c}b=(\mathrm i/2\pi )\partial b\wedge \bar\partial b$ is a positive $(1,1)$-form, and so are the forms $\mathrm{dd}^{\mathrm{c}}b_ l$, $l\geq 2$, since the complex Hessian of a smooth plurisubharmonic function is positive semidefinite (proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>). Positive $(1,1)$-forms are strongly positive (section <a data-tag="28C8F083" href="../../tag/ACB622806098/">7.2</a>), so by proposition <a data-tag="10A00ACF" href="../../tag/E58104E974B0/">7.2.1</a> the $(n,n)$-form $\mathrm db\wedge \mathrm d^{\mathrm c}b\wedge S$ is a nonnegative multiple of the volume form. Consequently the real bilinear form 
+    
+<div class="equation">
+  \[  Q(b,c)=\int _ B\mathrm db\wedge \mathrm d^{\mathrm c}c\wedge S,  \]
+</div>
+<p>
+       defined for smooth real functions $b,c$ on a neighborhood of $\overline B$ vanishing on $\partial B$, is symmetric and positive semidefinite, and by (<a data-tag="A8634BE7" href="../../tag/880A8A0EC0A2/">9.70</a>) we have $Q(b,c)=I(b,c,b_2,\ldots ,b_ n)$. The Cauchy–Schwarz inequality for $Q$, which follows from the nonnegativity of the quadratic polynomial $t\mapsto Q(b+tc,b+tc)$, therefore gives 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-F74F09ED"><span data-gerby-tag="F74F09ED"></span>
+<span class="equation-label"><a data-tag="F74F09ED" href="../../tag/9F29C0C8E20E/">9.71</a></span>
+<div>\begin{equation} \label{eq:mixed-local-energy-two-slot} I(b,c,b_2,\ldots ,b_ n)^2 \leq I(b,b,b_2,\ldots ,b_ n)I(c,c,b_2,\ldots ,b_ n). \end{equation}</div>
+</div>
+<p>
+       The symmetry of $Q$ allows us to interchange the first two arguments of $I$, and the symmetry of the products allows us to permute the last $n$ arguments. Hence $I$ is symmetric in all $n+1$ arguments when they are smooth plurisubharmonic functions on a neighborhood of $\overline B$ vanishing on $\partial B$. 
+    <p>
+<em>Step 2. Quadratic collars.</em> Let $u_0,\ldots ,u_ n$ have quadratic collars, say $u_ l=c_ l\rho $ near $\partial B$. We first show that the assertions of Step 1 persist for them. Extend each $u_ l$ by $c_ l\rho $ to a plurisubharmonic function on a neighborhood of $\overline B$. Let $\vartheta _\varepsilon $ be the radial mollifiers of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>, denoted $\rho _\varepsilon $ there; we change the letter because $\rho $ is now the quadratic function above. Because $\rho $ is a quadratic polynomial and $\vartheta _\varepsilon $ is radial, $\rho *\vartheta _\varepsilon =\rho +\gamma \varepsilon ^2$ with the constant $\gamma =\int |y|^2\vartheta _1(y)\, \mathrm dV(y)$. Hence 
+    
+<div class="equation">
+  \[  u_{l,\varepsilon }=u_ l*\vartheta _\varepsilon -c_ l\gamma \varepsilon ^2  \]
+</div>
+<p>
+       equals $c_ l\rho $ on a fixed neighborhood of $\partial B$ for all small $\varepsilon $. By proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>, the convolutions $u_ l*\vartheta _\varepsilon $ are smooth and plurisubharmonic on a neighborhood of $\overline B$ for small $\varepsilon $, and they decrease to $u_ l$ as $\varepsilon \downarrow 0$. Hence each $u_{l,\varepsilon }$, which differs from $u_ l*\vartheta _\varepsilon $ by a constant, is smooth and plurisubharmonic on a neighborhood of $\overline B$ and vanishes on $\partial B$, although the $u_{l,\varepsilon }$ need not decrease. By theorem <a data-tag="8B1F9B78" href="../../tag/D87C13B3250A/">9.2.5</a>, 
+    
+<div class="equation">
+  \[  (-u_0*\vartheta _\varepsilon )\, \mathrm{dd}^{\mathrm{c}}u_{1,\varepsilon }\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_{n,\varepsilon } \longrightarrow (-u_0)\, \mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ n  \]
+</div>
+<p>
+       weakly, and the constant $c_0\gamma \varepsilon ^2$ changes the integral against a fixed test function only by an amount tending to zero, by the local mass bounds of theorem <a data-tag="103AB333" href="../../tag/2A84C325AB58/">9.1.3</a>. Near $\partial B$, all the $u_{l,\varepsilon }$ and $u_ l$ coincide with $c_ l\rho $. Splitting the integrals over $B$ by a cutoff in $C_ c(B)$ which equals one outside this neighborhood of $\partial B$, we conclude that $I(u_{0,\varepsilon },\ldots ,u_{n,\varepsilon })\to I(u_0,\ldots ,u_ n)$, and likewise for every rearrangement of the potentials. Passing to the limit in the smooth case proves that $I$ is symmetric and satisfies (<a data-tag="F74F09ED" href="../../tag/9F29C0C8E20E/">9.71</a>) for potentials with quadratic collars. 
+    <p>
+      We now prove the inequality with constant one for these potentials. Since $u_ l=c_ l\rho $ near $\partial B$ with $c_ l&gt;0$, the energy $e_1(u_ l)$ is positive: already its integral over a neighborhood of $\partial B$ is positive. Since $I$ is positively homogeneous of degree one in each argument and $e_1(tv)=t^{n+1}e_1(v)$ for $t&gt;0$, both sides of the inequality are multiplied by the same factor when each $u_ l$ is replaced by $e_1(u_ l)^{-1/(n+1)}u_ l$. We may therefore assume that $e_1(u_ l)=1$ for every $l$. Consider the finitely many ordered $(n+1)$-tuples whose entries are taken from the functions $u_0,\ldots ,u_ n$, and let $F$ be the largest value of $I$ on these tuples. Since $I(u_ l,\ldots ,u_ l)=e_1(u_ l)=1$, we have $F\geq 1$. Among the tuples on which $I$ equals $F$, choose one for which the sum of the squares of the multiplicities of its distinct entries is largest. 
+    <p>
+      Suppose that this tuple contains two distinct functions $b$ and $c$, with multiplicities $r$ and $s$. By symmetry we may place them in the first two slots. In (<a data-tag="F74F09ED" href="../../tag/9F29C0C8E20E/">9.71</a>), the left side is $F^2$, while the two factors on the right are nonnegative values of $I$ on tuples of our family, hence at most $F$. Therefore both factors equal $F$. Replacing one entry $c$ by $b$ changes the sum of the squares of the multiplicities by $(r+1)^2+(s-1)^2-r^2-s^2=2(r-s)+2$, and replacing one entry $b$ by $c$ changes it by $2(s-r)+2$. One of these numbers is positive, which contradicts the choice of the tuple. Hence the chosen tuple consists of a single function repeated $n+1$ times, and $F=1$. In particular $I(u_0,\ldots ,u_ n)\leq 1$, which is the inequality with constant one. 
+    <p>
+<em>Step 3. Approximation with controlled energy.</em> Let $u\in \mathcal E_0(B)$, put $m_\rho =\int _ B(\mathrm{dd}^{\mathrm{c}}\rho )^ n$, and for $j\geq 1$ let 
+    
+<div class="equation">
+  \[  \delta _ j=j^{-n-1},\qquad v_ j=\max \{ u-\delta _ j,j\rho \} .  \]
+</div>
+<p>
+       Since $u-\delta _ j\leq -\delta _ j$ while $j\rho &gt;-\delta _ j$ near $\partial B$, the function $v_ j$ equals $j\rho $ on a neighborhood of $\partial B$ in $B$. Since $v_ j$ and $j\rho $ coincide outside a compact subset of $B$, lemma <a data-tag="7C182C45" href="../../tag/E1A777307E3D/">9.10.6</a> gives $\int _ B(\mathrm{dd}^{\mathrm{c}}v_ j)^ n=j^ nm_\rho $, and hence $v_ j\in \mathcal E_0(B)$. Moreover, $v_ j\to u$ uniformly on $B$. Indeed, let $s&gt;0$, and choose a neighborhood $V$ of $\partial B$ with $u&gt;-s$ on $V\cap B$. Since $u-\delta _ j\leq v_ j\leq 0$, we have $|v_ j-u|\leq s+\delta _ j$ on $V\cap B$. On the set $B\setminus V$, whose closure is a compact subset of $B$, the function $\rho $ is bounded away from zero and $u$ is bounded, so $j\rho &lt;u-\delta _ j$, and hence $v_ j=u-\delta _ j$, there for all large $j$. 
+    <p>
+      Next we estimate $e_1(v_ j)$. Let $t&gt;4\delta _ j$. Since $u\leq v_ j+\delta _ j$ and $v_ j\leq 0$, 
+    
+<div class="equation">
+  \[  \{ v_ j&lt;-t\} \subset \{ u&lt;v_ j/2-t/4\}  \subset \{ u&lt;-t/4\} ;  \]
+</div>
+<p>
+       for the first inclusion note that on $\{ v_ j&lt;-t\} $ we have $v_ j/2&lt;-t/2&lt;-t/4-\delta _ j$, hence $u\leq v_ j+\delta _ j&lt;v_ j/2-t/4$. As $u$ tends to $0$ and $v_ j/2-t/4$ tends to $-t/4$ at $\partial B$, the comparison theorem (theorem <a data-tag="A7DD3972" href="../../tag/D0AF90DDC7A5/">9.2.8</a>) applies to $u$ and $v_ j/2-t/4$ and gives 
+    
+<div class="equation">
+  \[  \int _{\{ v_ j&lt;-t\} }(\mathrm{dd}^{\mathrm{c}}v_ j)^ n \leq 2^ n\int _{\{ u&lt;v_ j/2-t/4\} }\bigl (\mathrm{dd}^{\mathrm{c}}(v_ j/2)\bigr )^ n \leq 2^ n\int _{\{ u&lt;-t/4\} }(\mathrm{dd}^{\mathrm{c}}u)^ n.  \]
+</div>
+<p>
+       For $0&lt;t\leq 4\delta _ j$ we use the total mass $j^ nm_\rho $ instead. Integrating over $t$ by the layer-cake formula $e_1(v)=\int _0^\infty (\mathrm{dd}^{\mathrm{c}}v)^ n(\{ v&lt;-t\} )\, \mathrm dt$, we obtain 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-AA097187"><span data-gerby-tag="AA097187"></span>
+<span class="equation-label"><a data-tag="AA097187" href="../../tag/77DC238179EB/">9.72</a></span>
+<div>\begin{equation} \label{eq:quadratic-collar-energy-approximation} e_1(v_ j)\leq 4\delta _ j j^ n m_\rho +2^{n+2}e_1(u) =\frac{4m_\rho }j+C_ ne_1(u). \end{equation}</div>
+</div>
+<p>
+<em>Step 4. The general case.</em> Apply the construction of Step 3 to each $u_ l$, obtaining functions $v_{l,j}\in \mathcal E_0(B)$ which equal $j\rho $ near $\partial B$. They are uniformly bounded, since $u_ l-1\leq v_{l,j}\leq 0$, and they converge uniformly, hence locally in capacity, to $u_ l$. Let $\chi \in C_ c(B)$ with $0\leq \chi \leq 1$. The weight $-u_0$ is bounded and quasi-continuous (theorem <a data-tag="CAA09EE2" href="../../tag/C39FEC1AB985/">9.4.2</a>), so the weighted form of theorem <a data-tag="2B1AA42A" href="../../tag/42828E3BDDFA/">9.4.8</a> and Step 2 give 
+    
+<div class="equation">
+  \[  \begin{aligned}  \int _ B\chi (-u_0)\, \mathrm{dd}^{\mathrm{c}}u_1\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}u_ n &amp; =\lim _{j\to \infty }\int _ B\chi (-v_{0,j})\, \mathrm{dd}^{\mathrm{c}}v_{1,j}\wedge \cdots \wedge \mathrm{dd}^{\mathrm{c}}v_{n,j}\\ &amp; \leq \varlimsup _{j\to \infty }\prod _{l=0}^ ne_1(v_{l,j})^{1/(n+1)}. \end{aligned}  \]
+</div>
+<p>
+       By (<a data-tag="AA097187" href="../../tag/77DC238179EB/">9.72</a>), the right side is at most 
+    
+<div class="equation">
+  \[  \lim _{j\to \infty }\prod _{l=0}^ n\left(\frac{4m_\rho }j+C_ ne_1(u_ l)\right)^{1/(n+1)} =C_ n\prod _{l=0}^ ne_1(u_ l)^{1/(n+1)}.  \]
+</div>
+<p>
+       Letting $\chi $ increase to one proves (<a data-tag="0EFFAADD" href="../../tag/802CC6F04E1F/">9.69</a>). Vanishing energies need no separate treatment, since the energies of the $v_{l,j}$ are positive. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article></section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

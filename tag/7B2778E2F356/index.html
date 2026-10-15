@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A bounded subsolution and the limiting equation · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a> · Tag <code>7B2778E2F356</code></p><h1>A bounded subsolution and the limiting equation</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 9.10.3 A bounded subsolution and the limiting equation <span data-gerby-tag="57FCB739"></span></div>
+<p>
+  We can now solve the Dirichlet problem 
+</p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}U)^ n=\mu \quad \text{on }B,\qquad U=0\quad \text{on }\partial B,  \]
+</div>
+<p>
+ for a compactly supported measure $\mu $ dominated by the Monge–Ampère measure of a bounded plurisubharmonic function, and show that the whole sequence of canonical approximants of $\mu $ converges to the solution (theorem <a data-tag="426B9EFB" href="../../tag/6C02DFB33B7C/">9.10.12</a>). By theorem <a data-tag="3CB9FBEE" href="../../tag/D25577E2BC26/">9.10.9</a>, the limit $u$ of a subsequence of canonical approximants converging in $L^1(B)$ satisfies $(\mathrm{dd}^{\mathrm{c}}\max \{ u,-T\} )^ n\to \mu $ as $T\to \infty $, so it remains to show that $u$ is bounded and has zero boundary values. For this we build from the bounded subsolution a barrier with zero boundary values and compare the approximants with a strict perturbation of the barrier. The comparison involves the masses that the varying measures $\mu _ j$ give to varying sublevel sets, and we first prove a convergence lemma for such masses. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-CA871C5F">
+<p><a class="environment-identifier" href="../../tag/A2369B2DB317/">Lemma <span data-tag="CA871C5F">9.10.10</span>.</a><span data-gerby-tag="CA871C5F"></span> Let $K_0\subset B$ be compact, and let $\nu _ j,\nu $ be finite positive Borel measures on $B$, supported in $K_0$, with $\nu _ j\to \nu $ weakly. Assume that there is a nondecreasing function $\omega \colon [0,+\infty ]\to [0,+\infty ]$ with $\omega (t)\to 0$ as $t\downarrow 0$ such that </p>
+<div class="equation">
+  \[  \nu _ j(E)\leq \omega (\operatorname {Cap}_ B^*(E))  \]
+</div>
+<p> for all $j$ and every Borel set $E\subset B$. Let $f_ j,f$ be real Borel functions on $B$ bounded by a common constant, with $f$ quasi-continuous on a neighborhood of $K_0$, and suppose that $\operatorname {Cap}_ B^*(K_0\cap \{ |f_ j-f|&gt;\delta \} )\to 0$ for every $\delta &gt;0$. Then </p>
+<div class="equation">
+  \[  \int _ Bf_ j\, \mathrm d\nu _ j\longrightarrow \int _ Bf\, \mathrm d\nu .  \]
+</div>
+<p> Moreover, for every $c\in \mathbb R$ with $\nu (\{ f=c\} )=0$, </p>
+<div class="equation" id="foundations-of-pluripotential-theory-E2EF139C"><span data-gerby-tag="E2EF139C"></span>
+<span class="equation-label"><a data-tag="E2EF139C" href="../../tag/5F846CC6D336/">9.67</a></span>
+<div>\begin{equation} \label{eq:capacity-controlled-moving-level-sets} \nu _ j(\{ f_ j&lt;c\} )\longrightarrow \nu (\{ f&lt;c\} ). \end{equation}</div>
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $C$ be a common bound for $|f_ j|$ and $|f|$. Since $\omega $ is nonnegative and nondecreasing with $\omega (t)\to 0$ as $t\downarrow 0$, we have $\omega (0)=0$ and $\omega (t_ j)\to 0$ whenever $t_ j\geq 0$ and $t_ j\to 0$. Choose $\chi \in C_ c(B)$ with $0\leq \chi \leq 1$ and $\chi =1$ on $K_0$. Since the measures are carried by $K_0$, we have $\nu _ j(B)=\int \chi \, \mathrm d\nu _ j\to \int \chi \, \mathrm d\nu =\nu (B)$, so the masses of the $\nu _ j$ and of $\nu $ have a common bound $M$. The capacity bound passes to $\nu $ on open sets: if $G\subset B$ is open, then $\operatorname {Cap}^*_ B(G)=\operatorname {Cap}_ B(G)$, and proposition <a data-tag="6031A2A1" href="../../tag/132090FCDF4A/">1.5.2</a> gives $\nu (G)\leq \varliminf _ j\nu _ j(G)\leq \omega (\operatorname {Cap}_ B(G))$. 
+    <p>
+      We first consider the fixed weight $f$. Let $L\subset B$ be a compact neighborhood of $K_0$ on which $f$ is quasi-continuous, and let $\kappa &gt;0$. Choose an open set $G\subset B$ with $\operatorname {Cap}_ B(G)&lt;\kappa $ such that $f$ is continuous on the compact set $L\setminus G$. By lemma <a data-tag="5878B026" href="../../tag/D127F8356D96/">9.4.3</a>, this restriction extends to a continuous function on $\mathbb C^ n$ bounded by $C$. Multiplying the extension by a cutoff in $C_ c(\operatorname{Int}L)$ with values in $[0,1]$ and equal to one on $K_0$, we obtain $g\in C_ c(B)$ with $|g|\leq C$ and $g=f$ on $K_0\setminus G$. Since $\nu _ j$ and $\nu $ are carried by $K_0$, 
+    
+<div class="equation">
+  \[  \left|\int _ Bf\, \mathrm d\nu _ j-\int _ Bg\, \mathrm d\nu _ j\right|\leq 2C\nu _ j(G)\leq 2C\omega (\kappa ),  \]
+</div>
+<p>
+       and similarly for $\nu $, since $\nu (G)\leq \omega (\operatorname {Cap}_ B(G))\leq \omega (\kappa )$. Since $\int g\, \mathrm d\nu _ j\to \int g\, \mathrm d\nu $, we get $\varlimsup _ j|\int f\, \mathrm d\nu _ j-\int f\, \mathrm d\nu |\leq 4C\omega (\kappa )$. Letting $\kappa \downarrow 0$ proves the assertion for the fixed weight. 
+    <p>
+      For the varying weights, let $\delta &gt;0$. Since $|f_ j-f|\leq 2C$ and $\nu _ j$ is carried by $K_0$, 
+    
+<div class="equation">
+  \[  \int _ B|f_ j-f|\, \mathrm d\nu _ j \leq \delta M+2C\omega \left( \operatorname {Cap}_ B^*(K_0\cap \{ |f_ j-f|&gt;\delta \} )\right).  \]
+</div>
+<p>
+       As $j\to \infty $, the capacity on the right tends to zero, and hence so does the second term. Letting $\delta \downarrow 0$ gives $\int |f_ j-f|\, \mathrm d\nu _ j\to 0$, which together with the fixed-weight case proves the first assertion. 
+    <p>
+      For the level sets, fix $s&gt;0$ and let $\sigma ^-_ s,\sigma ^+_ s\colon \mathbb R\to [0,1]$ be the continuous piecewise linear functions such that $\sigma ^-_ s$ equals one on $(-\infty ,c-s]$, zero on $[c,\infty )$ and is linear in between, and $\sigma ^+_ s$ equals one on $(-\infty ,c]$, zero on $[c+s,\infty )$ and is linear in between. Then 
+    
+<div class="equation">
+  \[  \mathbf1_{(-\infty ,c-s)}\leq \sigma ^-_ s \leq \mathbf1_{(-\infty ,c)}\leq \sigma ^+_ s \leq \mathbf1_{(-\infty ,c+s]}.  \]
+</div>
+<p>
+       Since $\sigma ^\pm _ s$ are Lipschitz, $\sigma ^\pm _ s\circ f_ j$ converge to $\sigma ^\pm _ s\circ f$ in the same sense as $f_ j\to f$, and $\sigma ^\pm _ s\circ f$ is quasi-continuous on a neighborhood of $K_0$ (remark following definition <a data-tag="CB3CE5F3" href="../../tag/A2CACA24130B/">9.4.1</a>). The first assertion therefore gives 
+    
+<div class="equation">
+  \[  \nu (\{ f&lt;c-s\} )\leq \varliminf _{j\to \infty }\nu _ j(\{ f_ j&lt;c\} ) \leq \varlimsup _{j\to \infty }\nu _ j(\{ f_ j&lt;c\} )\leq \nu (\{ f\leq c+s\} ).  \]
+</div>
+<p>
+       As $s\downarrow 0$, the two outer terms tend to $\nu (\{ f&lt;c\} )$ and $\nu (\{ f\leq c\} )$, which are equal since $\nu (\{ f=c\} )=0$. This proves (<a data-tag="E2EF139C" href="../../tag/5F846CC6D336/">9.67</a>). 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-18C76092">
+<p><a class="environment-identifier" href="../../tag/25E0E9371996/">Corollary <span data-tag="18C76092">9.10.11</span>.</a><span data-gerby-tag="18C76092"></span> Let $\varphi _ j\in \mathcal E_0(B)$ with $\sup _ je_2(\varphi _ j)&lt;\infty $ converge in $L^1_{\mathrm{loc}}(B)$, and let $u$ be the plurisubharmonic representative of the limit (theorem <a data-tag="3C807BFA" href="../../tag/C2DB8DFE9E2C/">8.3.4</a>). If $\nu $ is a finite positive Borel measure on $B$ with $\nu \leq (\mathrm{dd}^{\mathrm{c}}w)^ n$ for some bounded $w\in \mathrm{PSH}(B)$, then $u\in L^2(\nu )$ and $\varphi _ j\to u$ in $L^1(\nu )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By the moment estimate (<a data-tag="D269C31A" href="../../tag/9778E8C0159E/">9.43</a>) with $p=2$, the integrals $\int _ B\varphi _ j^2\, \mathrm d\nu $ are bounded uniformly in $j$. Since the $\varphi _ j$ are nonpositive, so is $u$, by the submean inequality. Fix $T&gt;0$. By lemma <a data-tag="AC0105B3" href="../../tag/504F4EDE59EF/">9.10.4</a>, the truncations $\max \{ \varphi _ j,-T\} $ converge to $\max \{ u,-T\} $ in $L^1(\nu )$, and so do their squares, since squaring is Lipschitz on $[-T,0]$. Hence $\int _ B\max \{ u,-T\} ^2\, \mathrm d\nu \leq \sup _ j\int _ B\varphi _ j^2\, \mathrm d\nu $, and letting $T\to \infty $ shows that $u\in L^2(\nu )$ with the same bound. For a function $v\leq 0$ we have $0\leq \max \{ v,-T\} -v\leq v^2/T$, so the $L^1(\nu )$ distances between $\varphi _ j,u$ and their truncations are at most $T^{-1}$ times a bound independent of $j$. Letting first $j\to \infty $ and then $T\to \infty $ proves that $\varphi _ j\to u$ in $L^1(\nu )$. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-426B9EFB">
+<p><a class="environment-identifier" href="../../tag/6C02DFB33B7C/">Theorem <span data-tag="426B9EFB">9.10.12</span>.</a><span data-gerby-tag="426B9EFB"></span> Let $B\subset \mathbb C^ n$ be a ball, $n\geq 1$, and let $\mu $ be a finite positive Borel measure with compact support in $B$. Suppose that $\mu \leq (\mathrm{dd}^{\mathrm{c}}w)^ n$ for some bounded $w\in \mathrm{PSH}(B)$. Then there is a unique bounded plurisubharmonic function $U$ on $B$ with </p>
+<div class="equation">
+  \[  (\mathrm{dd}^{\mathrm{c}}U)^ n=\mu ,\qquad \lim _{B\ni z\to \zeta }U(z)=0\quad (\zeta \in \partial B).  \]
+</div>
+<p> It belongs to $\mathcal E_0(B)$, and it is the pointwise supremum of the bounded plurisubharmonic functions $v$ on $B$ such that $(\mathrm{dd}^{\mathrm{c}}v)^ n\geq \mu $ and $\varlimsup _{B\ni z\to \zeta }v(z)\leq 0$ for every $\zeta \in \partial B$. Moreover, for every choice of grids, the whole sequence of canonical approximants $U_ j$ of $\mu $ (proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a>) converges to $U$ in $L^1(B)$ and locally in capacity, and </p>
+<div class="equation">
+  \[  \int _ B|U_ j-U|\, \mathrm d\mu +\int _ B|U_ j-U|\, \mathrm d\mu _ j\longrightarrow 0.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $\mu =0$, then all $\mu _ j$ and all $U_ j$ vanish, and $U=0$ is a solution. By the maximum principle (proposition <a data-tag="4517B555" href="../../tag/6D3B30A16AAE/">3.1.4</a>), every plurisubharmonic function on $B$ whose upper boundary limits are at most zero is nonpositive, so $U=0$ is the stated supremum, and the last assertion of theorem <a data-tag="A7DD3972" href="../../tag/D0AF90DDC7A5/">9.2.8</a>, applied in both directions, shows that any two bounded solutions coincide. We may therefore assume that $m=\mu (B)&gt;0$. We construct a barrier $W$ (Step 1) and, along a convergent subsequence of canonical approximants, prove that the masses of certain sublevel sets converge (Step 2). The comparison theorem then shows that the limit lies above $W$ and is a solution (Step 3), and uniqueness gives the convergence of the whole sequence (Step 4). 
+    <p>
+<em>Step 1. A barrier with zero boundary values.</em> Write $B=B(a,R)$ and $\rho (z)=|z-a|^2-R^2$, let $M=\sup _ Bw-\inf _ Bw$, and put $w_0=w-\sup _ Bw-1$, so that $-M-1\leq w_0\leq -1$. Since $\operatorname{Supp}\mu $ is a compact subset of $B$, the function $\rho $ is bounded away from zero on an open neighborhood $N\Subset B$ of $\operatorname{Supp}\mu $, and we can choose $A&gt;0$ with $A\rho &lt;-M-2$ on $N$. Put 
+    
+<div class="equation">
+  \[  W=\max \{ w_0,A\rho \} ,  \]
+</div>
+<p>
+       a plurisubharmonic function on $B$ (proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>). Then $W=w_0$ on $N$, while $W=A\rho $ near $\partial B$, because $A\rho \to 0$ at $\partial B$ and $w_0\leq -1$. Thus $W$ is bounded and negative and has zero boundary values. By locality on the open set $N$ (proposition <a data-tag="D16BD033" href="../../tag/D9911E035563/">9.1.2</a>), $(\mathrm{dd}^{\mathrm{c}}W)^ n=(\mathrm{dd}^{\mathrm{c}}w)^ n\geq \mu $ there; as $\mu $ is carried by $N$, we get $(\mathrm{dd}^{\mathrm{c}}W)^ n\geq \mu $ on $B$. 
+    <p>
+      For $\varepsilon &gt;0$ put $W_\varepsilon =W+\varepsilon \rho $. It equals $(A+\varepsilon )\rho $ near $\partial B$, so its Monge–Ampère measure is a smooth measure there and is finite on the remaining compact part of $B$; hence it has finite total mass. Expanding $(\mathrm{dd}^{\mathrm{c}}W+\varepsilon \mathrm{dd}^{\mathrm{c}}\rho )^ n$ and dropping the mixed terms, which are positive, we obtain 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-C01AD068"><span data-gerby-tag="C01AD068"></span>
+<span class="equation-label"><a data-tag="C01AD068" href="../../tag/5038E73ED56B/">9.68</a></span>
+<div>\begin{equation} \label{eq:local-subsolution-strict-barrier} \nu _\varepsilon :=(\mathrm{dd}^{\mathrm{c}}W_\varepsilon )^ n \geq \mu +\varepsilon ^ n(\mathrm{dd}^{\mathrm{c}}\rho )^ n. \end{equation}</div>
+</div>
+<p>
+<em>Step 2. Convergence of the masses of sublevel sets.</em> By proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a>, a subsequence of the canonical approximants, still denoted $U_ j$ (together with the corresponding measures $\mu _ j$), converges in $L^1(B)$; let $u$ be the nonpositive plurisubharmonic representative of the limit. By theorem <a data-tag="3CB9FBEE" href="../../tag/D25577E2BC26/">9.10.9</a>, $U_ j\to u$ locally in capacity, and $E_2=\sup _ je_2(U_ j)&lt;\infty $. By corollary <a data-tag="18C76092" href="../../tag/25E0E9371996/">9.10.11</a> with $\nu =\nu _\varepsilon $, we have $U_ j\to u$ in $L^1(\nu _\varepsilon )$ for every $\varepsilon &gt;0$. 
+    <p>
+      We check that lemma <a data-tag="CA871C5F" href="../../tag/A2369B2DB317/">9.10.10</a> applies to the measures $\mu _ j$ and $\mu $. Let $K$ be the support of $\mu $ and $d=\operatorname {dist}(K,\mathbb C^ n\setminus B)&gt;0$, and let $h_ j$ be the side lengths of the cubes defining $\mu _ j$. A cube $Q$ with $\mu _ j(Q)&gt;0$ satisfies $\mu (Q)&gt;0$, so it meets $K$. Since $h_ j\to 0$, after discarding finitely many indices every such cube has diameter $\sqrt{2n}\, h_ j&lt;d/2$, and then $\mu _ j$ is supported in the compact set $K_0=\{ z:\operatorname {dist}(z,K)\leq d/2\} \subset B$, which also contains the support of $\mu $. By proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a>, $\mu _ j\to \mu $ weakly. By (<a data-tag="2CDB386B" href="../../tag/92D8C50415C8/">9.57</a>) with $p=2$, and since $\operatorname {Cap}_ B(E)\leq \operatorname {Cap}_ B^*(E)$, we have $\mu _ j(E)\leq T^ n\operatorname {Cap}_ B^*(E)+E_2T^{-2}$ for every Borel set $E\subset B$ and every $T&gt;0$. Let $\omega (t)$ be the supremum of $\mu _ j(E)$ over all $j$ and all Borel sets $E\subset B$ with $\operatorname {Cap}_ B^*(E)\leq t$. Then $\omega $ is nondecreasing with values in $[0,m]$, and $\omega (t)\leq T^ nt+E_2T^{-2}$ for every $T&gt;0$. Choosing first $T$ large and then $t$ small shows that $\omega (t)\to 0$ as $t\downarrow 0$. 
+    <p>
+      Fix $\varepsilon &gt;0$. The level sets $\{ u-W_\varepsilon =-\delta \} $, $0&lt;\delta &lt;1$, are pairwise disjoint Borel sets, and $\mu +\nu _\varepsilon $ is a finite measure, so by lemma <a data-tag="092BD594" href="../../tag/D0A959AF6D25/">1.1.5</a> all but countably many of these sets are null for $\mu +\nu _\varepsilon $, hence for both measures. Choose $\delta \in (0,1)$ such that $\{ u-W_\varepsilon =-\delta \} $ is null for both $\mu $ and $\nu _\varepsilon $, and fix $T&gt;\| W_\varepsilon \| _\infty +2$. Since $W_\varepsilon -\delta &gt;-T$, the sets $\{ U_ j&lt;W_\varepsilon -\delta \} $ and $\{ u&lt;W_\varepsilon -\delta \} $ do not change when $U_ j$ and $u$ are replaced by $a_ j=\max \{ U_ j,-T\} $ and $b=\max \{ u,-T\} $. 
+    <p>
+      We apply lemma <a data-tag="CA871C5F" href="../../tag/A2369B2DB317/">9.10.10</a> to the functions $f_ j=a_ j-W_\varepsilon $ and $f=b-W_\varepsilon $, which are bounded by $T+\| W_\varepsilon \| _\infty $ and quasi-continuous by theorem <a data-tag="CAA09EE2" href="../../tag/C39FEC1AB985/">9.4.2</a> and the remark following definition <a data-tag="CB3CE5F3" href="../../tag/A2CACA24130B/">9.4.1</a>. Since $U_ j\to u$ locally in capacity, (<a data-tag="51AB9DCE" href="../../tag/8748F8035D18/">9.53</a>) shows that $a_ j\to b$ locally in capacity, and hence $f_ j\to f$, because $W_\varepsilon $ is finite. Moreover, $\mu (\{ f=-\delta \} )=0$ by the choice of $\delta $, since $\{ f=-\delta \} =\{ u-W_\varepsilon =-\delta \} $: indeed, $b=u$ wherever $u\geq -T$, while $u-W_\varepsilon &lt;-2$ and $b-W_\varepsilon \leq -T+\| W_\varepsilon \| _\infty &lt;-2$ wherever $u&lt;-T$. Thus (<a data-tag="E2EF139C" href="../../tag/5F846CC6D336/">9.67</a>), with $c=-\delta $, gives 
+    
+<div class="equation">
+  \[  \mu _ j(\{ U_ j&lt;W_\varepsilon -\delta \} ) \longrightarrow \mu (\{ u&lt;W_\varepsilon -\delta \} ).  \]
+</div>
+<p>
+       The analogous convergence holds for the fixed measure $\nu _\varepsilon $. Indeed, for $s&gt;0$, outside $\{ |U_ j-u|&gt;s\} $, the indicators of $\{ U_ j&lt;W_\varepsilon -\delta \} $ and $\{ u&lt;W_\varepsilon -\delta \} $ can differ only on $\{ |u-W_\varepsilon +\delta |\leq s\} $. The $\nu _\varepsilon $-mass of the first set tends to zero as $j\to \infty $, by the convergence in $L^1(\nu _\varepsilon )$, and that of the second set tends to $\nu _\varepsilon (\{ u-W_\varepsilon =-\delta \} )=0$ as $s\downarrow 0$. Hence 
+    
+<div class="equation">
+  \[  \nu _\varepsilon (\{ U_ j&lt;W_\varepsilon -\delta \} )\longrightarrow \nu _\varepsilon (\{ u&lt;W_\varepsilon -\delta \} ).  \]
+</div>
+<p>
+<em>Step 3. The limit is a bounded solution.</em> Since $U_ j$ and $W_\varepsilon $ have zero boundary values, the difference $U_ j-(W_\varepsilon -\delta )$ has boundary limits $\delta &gt;0$. The comparison theorem (theorem <a data-tag="A7DD3972" href="../../tag/D0AF90DDC7A5/">9.2.8</a>) therefore gives 
+    
+<div class="equation">
+  \[  \nu _\varepsilon (\{ U_ j&lt;W_\varepsilon -\delta \} ) \leq \mu _ j(\{ U_ j&lt;W_\varepsilon -\delta \} ).  \]
+</div>
+<p>
+       Let $j\to \infty $ and put $S=\{ u&lt;W_\varepsilon -\delta \} $. By (<a data-tag="C01AD068" href="../../tag/5038E73ED56B/">9.68</a>), 
+    
+<div class="equation">
+  \[  \mu (S)+\varepsilon ^ n\int _ S(\mathrm{dd}^{\mathrm{c}}\rho )^ n\leq \nu _\varepsilon (S)\leq \mu (S).  \]
+</div>
+<p>
+       Since $\mu (S)$ is finite, $S$ has Lebesgue measure zero. Thus $u\geq W_\varepsilon -\delta $ almost everywhere, and hence everywhere, by the uniqueness assertion of theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a> applied to $\max \{ u,W_\varepsilon -\delta \} $ and $u$. Letting $\delta \downarrow 0$ through admissible values and then $\varepsilon \downarrow 0$, we obtain $W\leq u\leq 0$. 
+    <p>
+      As $W$ has zero boundary values, $u$ is bounded and has zero boundary values. For $T&gt;\| u\| _\infty $ the truncation $\max \{ u,-T\} $ is $u$ itself, so (<a data-tag="EFD3FA1D" href="../../tag/8C2FAF9DC64B/">9.61</a>) gives $\| (\mathrm{dd}^{\mathrm{c}}u)^ n-\mu \| _{\mathrm{TV}}\leq 2E_2T^{-2}$ for all large $T$. Hence $(\mathrm{dd}^{\mathrm{c}}u)^ n=\mu $. In particular $(\mathrm{dd}^{\mathrm{c}}u)^ n$ has finite mass $m$, and $u\in \mathcal E_0(B)$. 
+    <p>
+<em>Step 4. Uniqueness and convergence of the whole sequence.</em> Let $v$ be a bounded plurisubharmonic function on $B$ with $(\mathrm{dd}^{\mathrm{c}}v)^ n\geq \mu $ and upper boundary limits at most zero, and put $v_\varepsilon =v+\varepsilon \rho $ for $\varepsilon &gt;0$. As in Step 1, $(\mathrm{dd}^{\mathrm{c}}v_\varepsilon )^ n\geq \mu +\varepsilon ^ n(\mathrm{dd}^{\mathrm{c}}\rho )^ n$. Since $u-v_\varepsilon $ has nonnegative lower boundary limits, the comparison theorem, applied to $u$ and $v_\varepsilon $, gives 
+    
+<div class="equation">
+  \[  \mu (\{ u&lt;v_\varepsilon \} ) +\varepsilon ^ n\int _{\{ u&lt;v_\varepsilon \} }(\mathrm{dd}^{\mathrm{c}}\rho )^ n \leq \mu (\{ u&lt;v_\varepsilon \} ).  \]
+</div>
+<p>
+       The two $\mu $-masses are finite, so the set $\{ u&lt;v_\varepsilon \} $ is Lebesgue null. Therefore $u\geq v_\varepsilon $ everywhere, by the uniqueness assertion of theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a> applied to $\max \{ u,v_\varepsilon \} $ and $u$. Letting $\varepsilon \downarrow 0$ gives $u\geq v$. Since $u$ is itself such a function, it is the pointwise supremum in the statement. Any bounded solution with zero boundary values is such a function, hence is at most $u$; exchanging the roles of the two solutions proves uniqueness. We denote the solution by $U$. 
+    <p>
+      Finally, by proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a>, every subsequence of the canonical approximants has a further subsequence converging in $L^1(B)$. By Step 3 and uniqueness, its limit is $U$, and theorem <a data-tag="E72115FA" href="../../tag/78EB0192D174/">9.10.5</a>, theorem <a data-tag="3CB9FBEE" href="../../tag/D25577E2BC26/">9.10.9</a> give the asserted convergence of the integrals and convergence in capacity along it. If one of the asserted convergences failed for the whole sequence, some subsequence would stay away from the stated limit, and no further subsequence could converge as just described. This contradiction proves all the assertions. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

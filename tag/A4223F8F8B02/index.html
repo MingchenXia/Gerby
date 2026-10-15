@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Smooth backgrounds and analytic singularities · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a> · Tag <code>A4223F8F8B02</code></p><h1>Smooth backgrounds and analytic singularities</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 13.1 Smooth backgrounds and analytic singularities <span data-gerby-tag="52C3069D"></span></div>
+<p>
+Let $X$ be a complex manifold of dimension $n\geq 0$. Recall from section <a data-tag="A68BD09C" href="../../tag/9F1C9C4A649E/">7.5</a> that a Hermitian form on $X$ is a smooth real $(1,1)$-form that is strictly positive at every point, that is, the form associated with a Hermitian metric. It is a Kähler form if it is closed, and $X$ is a Kähler manifold if it carries a Kähler form. A Hermitian form $\omega $ defines a Riemannian metric on $X$ and the positive volume form $\omega ^ n/n!$.  
+</p>
+<p>
+Continuous real $(1,1)$-forms are controlled by a Hermitian form on compact sets. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-4690D380">
+<p><a class="environment-identifier" href="../../tag/6B84DAE83456/">Lemma <span data-tag="4690D380">13.1.1</span>.</a><span data-gerby-tag="4690D380"></span> Let $\omega $ be a Hermitian form on a complex manifold $X$, let $K\subset X$ be compact, and let $\alpha $ be a continuous real $(1,1)$-form on a neighborhood of $K$. Then there is a constant $C\geq 0$ with $\alpha \geq -C\omega $ at every point of $K$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $K=\varnothing $ we take $C=0$. Otherwise cover $K$ by finitely many compact sets $K_\iota $, each contained in a chart and in the domain of $\alpha $, and write $\alpha =\mathrm i\sum _{j,k}a_{jk}\, \mathrm dz_ j\wedge \mathrm d\bar z_ k$ and $\omega =\mathrm i\sum _{j,k}w_{jk}\, \mathrm dz_ j\wedge \mathrm d\bar z_ k$ there, with Hermitian matrices $(a_{jk})$ and $(w_{jk})$. On $K_\iota $ the smallest eigenvalue of $(w_{jk})$, a continuous positive function, is at least some $c_\iota &gt;0$, and the largest eigenvalue of $-(a_{jk})$ is at most some $M_\iota \geq 0$. Hence $(a_{jk})\geq -M_\iota I\geq -(M_\iota /c_\iota )(w_{jk})$ on $K_\iota $. By the matrix criterion for positivity (section <a data-tag="C7F41591" href="../../tag/618FE2108D26/">7.3</a>), it follows that $\alpha \geq -C\omega $ on $K$ with $C=\max _\iota M_\iota /c_\iota $. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The following lemma provides smooth local potentials for smooth closed forms on whole coordinate balls, not only on small polydiscs as in lemma <a data-tag="622D1218" href="../../tag/7815541A95AD/">7.3.1</a>. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-8EBD338F">
+<p><a class="environment-identifier" href="../../tag/87D4C2281D7C/">Lemma <span data-tag="8EBD338F">13.1.2</span>.</a><span data-gerby-tag="8EBD338F"></span> Let $B$ be a coordinate ball and let $\theta $ be a smooth closed real $(1,1)$-form defined on a neighborhood of $\overline B$. Then there is a smooth real function $h$ on $B$ with $\mathrm{dd}^{\mathrm{c}}h=\theta $. Moreover, every real pluriharmonic function on a coordinate ball is, up to an additive constant, the real part of a holomorphic function on that ball. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      In dimension zero there is nothing to prove, so let $n\geq 1$. Choose concentric balls $B\Subset B'\Subset B''$ such that $\theta $ is defined on a neighborhood of $\overline{B''}$. By the last assertion of lemma <a data-tag="622D1218" href="../../tag/7815541A95AD/">7.3.1</a>, applied to the closed real $2$-form $\theta $ on the ball $B''$, there is a smooth real one-form $\alpha $ on $B''$ with $\mathrm d\alpha =\theta $. Since $\theta $ has type $(1,1)$, the $(0,2)$-part $\bar\partial \alpha ^{0,1}$ of $\mathrm d\alpha $ vanishes. The ball $B'$ is pseudoconvex by corollary <a data-tag="04AFE5BC" href="../../tag/FFB7E3647C0B/">11.2.5</a>, and $\alpha ^{0,1}$ is bounded on $B'$. Hence theorem <a data-tag="B3C17C48" href="../../tag/88735CB0C076/">11.3.4</a>, applied on $B'$ with $p=0$ and $q=|z|^2$, whose complex Hessian is the identity, gives a function $f\in L^2(B')$ with $\bar\partial f=\alpha ^{0,1}$. 
+    <p>
+      The function $f$ is smooth. Indeed, let $y\in B'$ and choose polydiscs $P'\Subset P\Subset B'$ centered at $y$. By lemma <a data-tag="622D1218" href="../../tag/7815541A95AD/">7.3.1</a>, applied to the smooth $\bar\partial $-closed form $\alpha ^{0,1}$ on $P$, there is a smooth function $f_0$ on $P'$ with $\bar\partial f_0=\alpha ^{0,1}$. Then $\bar\partial (f-f_0)=0$ on $P'$ in the sense of distributions, so $\Delta (f-f_0)=4\sum _ j\partial _{z_ j}\partial _{\bar z_ j}(f-f_0)=0$ there, and by theorem <a data-tag="1C86607F" href="../../tag/C9127FBA9AE8/">2.1.4</a> the locally integrable function $f-f_0$ agrees almost everywhere on $P'$ with a smooth function. Thus $f$ agrees almost everywhere near each point with a smooth function; two such smooth functions coincide on the overlap of their domains, being continuous and equal almost everywhere, so we may take $f$ smooth on $B'$. Since $\alpha $ is real, $\alpha ^{1,0}=\overline{\alpha ^{0,1}}=\partial \bar f$, and the $(1,1)$-part of $\mathrm d\alpha =\theta $ gives 
+    
+<div class="equation">
+  \[  \theta =\partial \alpha ^{0,1}+\bar\partial \alpha ^{1,0}=\partial \bar\partial f+\bar\partial \partial \bar f=\partial \bar\partial (f-\bar f)=\mathrm{dd}^{\mathrm{c}}(4\pi \operatorname{Im}f).  \]
+</div>
+<p>
+       Thus $h=4\pi \operatorname{Im}f$ has the required property on $B\subset B'$. 
+    <p>
+      For the last assertion, let $h$ be real and pluriharmonic on a coordinate ball. Then $\partial h$ is a $(1,0)$-form with holomorphic coefficients, since $\bar\partial \partial h=0$, and it is closed. By the last assertion of lemma <a data-tag="622D1218" href="../../tag/7815541A95AD/">7.3.1</a>, applied to the closed one-form $2\partial h$ on this ball, there is a smooth function $F$ on the whole ball with $\mathrm dF=2\partial h$. As $\mathrm dF$ has type $(1,0)$, $F$ is holomorphic, and $\mathrm d(\operatorname{Re}F)=\partial h+\bar\partial h=\mathrm dh$. Hence $h-\operatorname{Re}F$ is constant. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-AE7FEB95">
+<p><a class="environment-identifier" href="../../tag/6A70B026D8EF/">Definition <span data-tag="AE7FEB95">13.1.3</span>.</a><span data-gerby-tag="AE7FEB95"></span> Let $X$ be a complex manifold. A function $\varphi \colon X\to [-\infty ,\infty )$ is <em>quasi-plurisubharmonic</em> if it is quasi-plurisubharmonic near every point of $X$ in the sense of corollary <a data-tag="DE76A74B" href="../../tag/A3BCC047C1A7/">12.3.2</a>, that is, if every point of $X$ has a neighborhood $V$ on which $\varphi =u+f$ pointwise, with $u\in \mathrm{PSH}(V)$ and $f$ a smooth real function on $V$. For a smooth closed real $(1,1)$-form $\theta $ on $X$ we put </p>
+<div class="equation">
+  \[  \mathrm{PSH}(X,\theta )=\{ \varphi \text{ quasi-plurisubharmonic on }X:\theta +\mathrm{dd}^{\mathrm{c}}\varphi \geq 0\} ,  \]
+</div>
+<p> and call its elements <em>$\theta $-plurisubharmonic</em> (<em>$\theta $-psh</em>) functions. </p>
+</article>
+
+<p>
+We collect the elementary properties of these classes. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-DC4F957D">
+<p><a class="environment-identifier" href="../../tag/066780FF9DDD/">Lemma <span data-tag="DC4F957D">13.1.4</span>.</a><span data-gerby-tag="DC4F957D"></span> Let $X$ be a complex manifold and let $\theta $ be a smooth closed real $(1,1)$-form on $X$. </p>
+<ol>
+<li><p>
+Every quasi-plurisubharmonic function on $X$ is locally integrable, hence finite almost everywhere. If $X$ has positive dimension, a quasi-plurisubharmonic function is, at every point, the limit of its averages over small coordinate balls centered at that point. Consequently, if $\varphi $ and $\psi $ are quasi-plurisubharmonic functions on an open set $V\subset X$ with $\varphi \leq \psi $ almost everywhere on $V$, then $\varphi \leq \psi $ everywhere on $V$; in particular, two quasi-plurisubharmonic functions on $V$ that agree almost everywhere on $V$ agree everywhere on $V$. 
+</p>
+</li><li><p>
+Let $V\subset X$ be open and let $h$ be a smooth real function on $V$ with $\mathrm{dd}^{\mathrm{c}}h=\theta $. Then a quasi-plurisubharmonic function $\varphi $ on $V$ satisfies $\theta +\mathrm{dd}^{\mathrm{c}}\varphi \geq 0$ on $V$ if and only if $\varphi +h$ is plurisubharmonic on $V$. 
+</p>
+</li><li><p>
+If $\varphi _1,\ldots ,\varphi _ k\in \mathrm{PSH}(X,\theta )$, $k\geq 1$, then $\max _ i\varphi _ i\in \mathrm{PSH}(X,\theta )$. 
+</p>
+</li><li><p>
+If $X$ is compact and $\omega $ is a Hermitian form on $X$, then for every quasi-plurisubharmonic function $\varphi $ on $X$ there is a constant $C\geq 0$ with $\mathrm{dd}^{\mathrm{c}}\varphi \geq -C\omega $. 
+</p>
+</li><li><p>
+Let $\omega $ be a Hermitian form on $X$, and let $\varphi \in L^1_{\mathrm{loc}}(X)$ satisfy $\mathrm{dd}^{\mathrm{c}}\varphi \geq -C\omega $ in the sense of currents for a constant $C$. Then $\varphi $ agrees almost everywhere with a quasi-plurisubharmonic function on $X$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      At points where $X$ has dimension zero, which are isolated, all functions are smooth and $\mathrm{dd}^{\mathrm{c}}$ vanishes, so every assertion is trivial there; we may therefore assume that $X$ has positive dimension. 
+    <p>
+      (1) Near each point, $\varphi =u+f$ with $u$ plurisubharmonic and $f$ smooth, and $u$ is locally integrable by theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>. Moreover $u$ is subharmonic, by the same theorem, so at every point it is the limit of its averages over small balls, by (<a data-tag="94416E55" href="../../tag/78BEC0BF5E07/">3.3</a>); the continuous function $f$ has the same property, and hence so has $\varphi $. Now let $\varphi $ and $\psi $ be quasi-plurisubharmonic on $V$ with $\varphi \leq \psi $ almost everywhere, and let $x\in V$. Since both functions are locally integrable, their averages over small coordinate balls centered at $x$, in a chart at $x$, are finite, and those of $\varphi $ are at most those of $\psi $; letting the radius tend to zero gives $\varphi (x)\leq \psi (x)$. Applying this in both directions, we see that two quasi-plurisubharmonic functions that agree almost everywhere agree everywhere. 
+    <p>
+      (2) Let $\varphi $ be quasi-plurisubharmonic on $V$. If $\varphi +h$ is plurisubharmonic, then $\theta +\mathrm{dd}^{\mathrm{c}}\varphi =\mathrm{dd}^{\mathrm{c}}(\varphi +h)\geq 0$ by theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>. Conversely, suppose that $\mathrm{dd}^{\mathrm{c}}(\varphi +h)\geq 0$ on $V$. On a coordinate ball $B\subset V$, theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a> gives a plurisubharmonic function on $B$ that agrees almost everywhere with $\varphi +h$; both are quasi-plurisubharmonic on $B$, so they agree everywhere on $B$ by (1). Hence $\varphi +h$ is plurisubharmonic on $V$. 
+    <p>
+      (3) Let $B$ be a coordinate ball and $h$ a smooth real function on $B$ with $\mathrm{dd}^{\mathrm{c}}h=\theta $ (lemma <a data-tag="8EBD338F" href="../../tag/87D4C2281D7C/">13.1.2</a>). By (2) the functions $\varphi _ i+h$ are plurisubharmonic on $B$, hence so is $\max _ i\varphi _ i+h=\max _ i(\varphi _ i+h)$, by proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>. Thus $\max _ i\varphi _ i$ is quasi-plurisubharmonic on $B$, and $\theta +\mathrm{dd}^{\mathrm{c}}\max _ i\varphi _ i\geq 0$ there by (2). Such balls cover $X$. 
+    <p>
+      (4) By compactness there are finitely many open sets $V_\kappa \Subset V_\kappa ^+$ such that the $V_\kappa $ cover $X$ and $\varphi =u_\kappa +f_\kappa $ on $V_\kappa ^+$, with $u_\kappa $ plurisubharmonic and $f_\kappa $ smooth. By lemma <a data-tag="4690D380" href="../../tag/6B84DAE83456/">13.1.1</a>, applied to the compact set $\overline{V_\kappa }$ and the form $\mathrm{dd}^{\mathrm{c}}f_\kappa $, there are constants $C_\kappa \geq 0$ with $\mathrm{dd}^{\mathrm{c}}f_\kappa \geq -C_\kappa \omega $ on $V_\kappa $, and $\mathrm{dd}^{\mathrm{c}}u_\kappa \geq 0$ by theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>. Hence $\mathrm{dd}^{\mathrm{c}}\varphi \geq -C\omega $ with $C=\max _\kappa C_\kappa $. 
+    <p>
+      (5) Replacing $C$ by $\max \{ C,0\} $, we may assume that $C\geq 0$. Let $B$ be a coordinate ball whose closure lies in a chart. By lemma <a data-tag="4690D380" href="../../tag/6B84DAE83456/">13.1.1</a>, applied in the chart to the compact set $\overline B$, the Hermitian form $\mathrm{dd}^{\mathrm{c}}|z|^2$ and the form $-\omega $, there is $C'$ with $\omega \leq C'\mathrm{dd}^{\mathrm{c}}|z|^2$ on $B$, so $\mathrm{dd}^{\mathrm{c}}(\varphi +A|z|^2)\geq 0$ on $B$ for $A=CC'$. By theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>, $\varphi +A|z|^2$ agrees almost everywhere on $B$ with a plurisubharmonic function, and subtracting $A|z|^2$ gives a quasi-plurisubharmonic function $\varphi _ B$ on $B$ that agrees almost everywhere with $\varphi $. If $B'$ is a second such ball, then $\varphi _ B$ and $\varphi _{B'}$ agree almost everywhere on $B\cap B'$, and both are quasi-plurisubharmonic, so they agree everywhere on $B\cap B'$ by (1). Since such balls cover $X$, the functions $\varphi _ B$ define a quasi-plurisubharmonic function on $X$ that agrees almost everywhere with $\varphi $. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+Multiplier ideals of a quasi-plurisubharmonic weight are defined as in definition <a data-tag="AF52C922" href="../../tag/990C506B7D25/">12.2.5</a>. Adding a smooth function to the weight multiplies the integrand by a locally bounded positive factor with locally bounded inverse, so the multiplier ideal of $\varphi =u+f$ near a point is that of $u$; in particular it is coherent, and the local results of chapter <a data-tag="1D553871" href="../../tag/8494F0D4F79D/">12</a> apply to it. Lelong numbers of quasi-plurisubharmonic functions are defined as in corollary <a data-tag="DE76A74B" href="../../tag/A3BCC047C1A7/">12.3.2</a>, by $\nu (\varphi ,x)=\nu (u,x)$. 
+</p>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-CA227B47">
+<p><a class="environment-identifier" href="../../tag/6A7E913297D5/">Definition <span data-tag="CA227B47">13.1.5</span>.</a><span data-gerby-tag="CA227B47"></span> A quasi-plurisubharmonic function $\varphi $ on $X$ has <em>analytic singularities</em> if every point of $X$ has a connected coordinate neighborhood $V$ on which </p>
+<div class="equation" id="foundations-of-pluripotential-theory-7788D838"><span data-gerby-tag="7788D838"></span>
+<span class="equation-label"><a data-tag="7788D838" href="../../tag/60D977A9A056/">13.1</a></span>
+<div>\begin{equation} \label{eq:rational-analytic-singularities} \varphi =c\log \sum _{i=1}^ r|g_ i|^2+b, \qquad c\in \mathbb Q_{&gt;0},\quad b\text{ bounded}, \end{equation}</div>
+</div>
+<p> where $r\geq 1$ is an integer and $g_1,\ldots ,g_ r\in \mathcal O(V)$ are not all identically zero. It has <em>neat analytic singularities</em> if such presentations exist with $b$ smooth. Let $c\in \mathbb Q_{&gt;0}$ and let $\mathfrak a\subset \mathcal O_ X$ be a coherent ideal sheaf. We say that $\varphi $ has analytic singularities of <em>type</em> $(c,\mathfrak a)$ if presentations (<a data-tag="7788D838" href="../../tag/60D977A9A056/">13.1</a>) exist with this coefficient $c$, where on each $V$ the functions $g_1,\ldots ,g_ r$ generate $\mathfrak a$. </p>
+</article>
+
+<p>
+The type condition does not depend on the choice of local generators: if $(g_ i)$ and $(g'_ k)$ both generate $\mathfrak a$ on $V$, then near each point of $V$ each tuple is a holomorphic matrix times the other, and both matrices are bounded on smaller neighborhoods, so $\log \sum |g_ i|^2-\log \sum |g'_ k|^2$ is locally bounded. A type is additional data and is not unique; for example, a function of type $(c,\mathfrak a)$ also has type $(c/2,\mathfrak a^2)$. 
+</p>
+<p>
+The Lelong numbers of a function with analytic singularities are determined by its type. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-341CEEAE">
+<p><a class="environment-identifier" href="../../tag/7110958B611B/">Lemma <span data-tag="341CEEAE">13.1.6</span>.</a><span data-gerby-tag="341CEEAE"></span> Let $x$ be a point of a complex manifold $X$ at which $X$ has positive dimension, let $\mathfrak a\subset \mathcal O_ X$ be a coherent ideal sheaf with $\mathfrak a_ x\neq 0$, generated near $x$ by $g_1,\ldots ,g_ s$, and let $c&gt;0$. If $w$ is quasi-plurisubharmonic near $x$ and $w=c\log \sum _ i|g_ i|^2+O(1)$ near $x$, then $\nu (w,x)=c\operatorname {ord}_ x\mathfrak a$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a connected coordinate neighborhood $V$ of $x$ on which the $g_ i$ are defined and generate $\mathfrak a$, on which $w=v+f$ with $v$ plurisubharmonic and $f$ smooth and bounded, and on which $|w-c\log \sum _ i|g_ i|^2|\leq M$ for a constant $M$. Let $I$ be the set of indices $i$ for which the germ of $g_ i$ at $x$ is not zero. It is not empty, since these germs generate $\mathfrak a_ x\neq 0$, and for $i\notin I$ the function $g_ i$ vanishes identically on $V$, by the identity theorem. Since $0\leq \log \sum _{i\in I}|g_ i|^2-\max _{i\in I}\log |g_ i|^2\leq \log s$, the function $v$ differs from $c\max _{i\in I}\log |g_ i|^2$ by a bounded function on $V$. The latter function is plurisubharmonic by proposition <a data-tag="F24BB0D4" href="../../tag/1A6F10A07BA5/">8.3.3</a>, proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>, so proposition <a data-tag="2C5B449F" href="../../tag/C79BAEA70FC1/">12.1.1</a> and proposition <a data-tag="00DD8C92" href="../../tag/43A1E607F822/">12.1.4</a> give 
+    
+<div class="equation">
+  \[  \nu (w,x)=\nu (v,x)=c\, \nu \Bigl (\max _{i\in I}\log |g_ i|^2,x\Bigr )=c\min _{i\in I}\operatorname {ord}_ xg_ i=c\operatorname {ord}_ x\mathfrak a,  \]
+</div>
+<p>
+       where the first equality is the definition of Lelong numbers of quasi-plurisubharmonic functions (corollary <a data-tag="DE76A74B" href="../../tag/A3BCC047C1A7/">12.3.2</a>) and the last one is the description of $\operatorname {ord}_ x\mathfrak a$ by generators in section <a data-tag="886654C3" href="../../tag/DB8FD0974B86/">12.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+For a holomorphic map $\pi \colon Y\to X$ and an ideal sheaf $\mathfrak a\subset \mathcal O_ X$, we write $\pi ^*\mathfrak a=\mathfrak a\cdot \mathcal O_ Y$ for the ideal generated by the pullbacks of local generators of $\mathfrak a$. Let $\mathfrak a$ be a coherent ideal on $X$, nonzero on each component. Since $X$ is smooth, the resolution step in the construction of log resolutions at the end of section <a data-tag="6417FF60" href="../../tag/25A311AD092F/">A.5</a> is not needed, and theorem <a data-tag="B74A86AD" href="../../tag/24330D25741D/">A.5.5</a>, applied with the empty divisor, produces log resolutions of $\mathfrak a$ by blowups with smooth centers. From now on a <em>log resolution</em> of $\mathfrak a$ always means a map of this form: a composite $\pi \colon Y\to X$ of blowups along closed submanifolds of positive codimension, finite over each relatively compact open subset of $X$, such that $\pi ^*\mathfrak a=\mathcal O_ Y(-D)$ for an effective divisor $D$ whose support has simple normal crossings. We also call $\pi $ a <em>principalization</em> of $\mathfrak a$, and we write $s_ D$ for a local holomorphic equation of $D$.  
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-9395C828">
+<p><a class="environment-identifier" href="../../tag/AFD530210C3A/">Proposition <span data-tag="9395C828">13.1.7</span>.</a><span data-gerby-tag="9395C828"></span> Analytic singularities are preserved by multiplication by positive rational numbers, by sums and finite maxima, and by pullback under a holomorphic map $f\colon Y\to X$ of complex manifolds whenever the composition is not identically $-\infty $ on any component of $Y$. If $\varphi $ has type $(c,\mathfrak a)$ and $\pi \colon Y\to X$ is a log resolution of $\mathfrak a$ with $\pi ^*\mathfrak a=\mathcal O_ Y(-D)$, then locally on $Y$ </p>
+<div class="equation">
+  \[  \varphi \circ \pi =c\log |s_ D|^2+O(1),  \]
+</div>
+<p> and the remainder is smooth if the presentations of type $(c,\mathfrak a)$ are neat. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Multiplication by $q\in \mathbb Q_{&gt;0}$ replaces $c$ by $qc$. Sums and finite maxima of quasi-plurisubharmonic functions are quasi-plurisubharmonic. Indeed, let $\varphi _ i=u_ i+\sigma _ i$ near a point, with $u_ i$ plurisubharmonic and $\sigma _ i$ smooth. On a small coordinate ball about the point, the smooth functions $\sigma _ i+N|z|^2$ have positive semidefinite complex Hessians for a large constant $N$, hence are plurisubharmonic by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1). By proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>, $\varphi _1+\varphi _2$ is a plurisubharmonic function minus $2N|z|^2$, and $\max _ i\varphi _ i$ is a plurisubharmonic function minus $N|z|^2$. For a sum or a maximum of two functions with analytic singularities, choose presentations about a given point, with coefficients $c$ and $d$, and a connected coordinate neighborhood $V$ of the point contained in both domains; by the identity theorem, neither tuple vanishes identically on $V$. Since $c$ and $d$ are rational, we can choose $c_0\in \mathbb Q_{&gt;0}$ such that $c/c_0$ and $d/c_0$ are positive integers. For an integer $k\geq 1$ the multinomial formula gives 
+    
+<div class="equation">
+  \[  \Bigl (\sum _ i|g_ i|^2\Bigr )^ k=\sum _{|\alpha |=k}\Bigl |\sqrt{k!/\alpha !}\, g^\alpha \Bigr |^2,  \]
+</div>
+<p>
+       again a sum of squared moduli of holomorphic functions, not all identically zero on $V$. We may therefore assume that both presentations have the coefficient $c_0$, say $c_0\log A+b$ and $c_0\log B+b'$ with $A=\sum _ i|g_ i|^2$ and $B=\sum _ l|g'_ l|^2$. The sum is $c_0\log (AB)+b+b'$, and $AB=\sum _{i,l}|g_ ig'_ l|^2$, where some product $g_ ig'_ l$ is not identically zero on the connected set $V$. For the maximum we use 
+    
+<div class="equation">
+  \[  \max (\log A,\log B)\leq \log (A+B)\leq \max (\log A,\log B)+\log 2,  \]
+</div>
+<p>
+       which shows that $\max (c_0\log A+b,c_0\log B+b')$ differs from $c_0\log (A+B)$ by a bounded function. 
+    <p>
+      For the pullback, let $f\colon Y\to X$ be holomorphic, and suppose that $\varphi \circ f$ is not identically $-\infty $ on any connected component of $Y$. Near each point of $Y$, write $\varphi \circ f=u\circ f+\sigma \circ f$ on a connected coordinate neighborhood $W$, where $\varphi =u+\sigma $ near the image point with $u$ plurisubharmonic and $\sigma $ smooth; by proposition <a data-tag="BD9F2F29" href="../../tag/F6423BCE3BB1/">8.2.3</a>, $u\circ f$ is plurisubharmonic or identically $-\infty $ on $W$. Let $S$ be the open set of points of $Y$ near which $\varphi \circ f$ is identically $-\infty $. If $y$ lies in the closure of $S$ and $W$ is as above for $y$, then $u\circ f=-\infty $ on the nonempty open set $W\cap S$; since plurisubharmonic functions are locally integrable, $u\circ f$ is identically $-\infty $ on $W$, so $y\in S$. Thus $S$ is open and closed, and by hypothesis it contains no component of $Y$; hence $S=\varnothing $, and $\varphi \circ f$ is quasi-plurisubharmonic. If $\varphi =c\log \sum _ i|g_ i|^2+b$ on $V$, then on every connected coordinate neighborhood $W\subset f^{-1}(V)$ we have $\varphi \circ f=c\log \sum _ i|g_ i\circ f|^2+b\circ f$, with $b\circ f$ bounded, and the functions $g_ i\circ f$ do not all vanish identically on $W$, because $S=\varnothing $. 
+    <p>
+      Now let $\pi $ be a log resolution of $\mathfrak a$ as in the statement. If $g_1,\ldots ,g_ r$ generate $\mathfrak a$, their pullbacks generate $\mathcal O_ Y(-D)$, so locally $g_ i\circ \pi =s_ Dh_ i$ with holomorphic $h_ i$, and $s_ D=\sum _ ik_ i(g_ i\circ \pi )$ for holomorphic $k_ i$. Since $s_ D$ is not a zero divisor, $\sum _ ik_ ih_ i=1$, so the $h_ i$ have no common zero and $\log \sum _ i|h_ i|^2$ is smooth. Hence 
+    
+<div class="equation">
+  \[  \varphi \circ \pi =c\log |s_ D|^2+c\log \sum _ i|h_ i|^2+b\circ \pi ,  \]
+</div>
+<p>
+       which proves both assertions about the remainder. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></article>
+<p>
+If $\varphi $ has analytic singularities of type $(c,\mathfrak a)$, we also call a log resolution of $\mathfrak a$ a <em>log resolution of $\varphi $</em>; since types are not unique, this refers to the chosen type. On such a resolution $\varphi \circ \pi =c\log |s_ D|^2+O(1)$ locally, by proposition <a data-tag="9395C828" href="../../tag/AFD530210C3A/">13.1.7</a>. A merely bounded remainder need not become smooth on a log resolution. For instance, on the unit disc in $\mathbb C$ the function $\log |z|^2+|\operatorname{Re}z|$ is subharmonic, since $|\operatorname{Re}z|=\max (\operatorname{Re}z,-\operatorname{Re}z)$ is a maximum of harmonic functions (proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>), and it has analytic singularities of type $(1,(z))$. In dimension one a closed submanifold of positive codimension is a hypersurface, so every blowup in a log resolution is the identity by proposition <a data-tag="2959F02B" href="../../tag/865FE5EC97E6/">A.5.3</a>. The remainder $|\operatorname{Re}z|$ therefore stays as it is, and it is not smooth on the imaginary axis. This is why neat singularities, and the gentle singularities defined below on compact Kähler manifolds, are separate notions.  
+</p>
+<p>
+When $X$ is compact, a log resolution consists of finitely many blowups with smooth centers, and if $X$ is moreover Kähler, so is the resolved manifold (proposition <a data-tag="65563BE8" href="../../tag/1A99E612D41C/">13.1.10</a>). The proof uses metrics on line bundles and their curvature, which we now introduce. 
+</p>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-382DD681">
+<p><a class="environment-identifier" href="../../tag/D022961325A2/">Definition <span data-tag="382DD681">13.1.8</span>.</a><span data-gerby-tag="382DD681"></span> A holomorphic line bundle $L$ on $X$ is given by an open cover $(V_ i)$ of $X$ and local frames $e_ i$ over $V_ i$ with transition functions $e_ i=g_{ij}e_ j$ on $V_ i\cap V_ j$, where $g_{ij}$ is holomorphic and nowhere zero and $g_{ij}g_{jk}=g_{ik}$ on triple overlaps. A smooth <em>quadratic Hermitian metric</em> on $L$ assigns to each frame a smooth positive squared norm $|e_ i|^2$ on $V_ i$, such that $|e_ i|^2=|g_{ij}|^2|e_ j|^2$ on $V_ i\cap V_ j$. Its <em>curvature</em> is the closed real $(1,1)$-form equal to $-\mathrm{dd}^{\mathrm{c}}\log |e_ i|^2$ on $V_ i$. </p>
+</article>
+
+<p>
+When several metrics occur, we write $|e_ i|_ h^2$ for the squared norms of a metric $h$. Smooth metrics always exist, and any two of them differ by a smooth positive factor. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-A0A6EE40">
+<p><a class="environment-identifier" href="../../tag/1088A4C2B5CA/">Lemma <span data-tag="A0A6EE40">13.1.9</span>.</a><span data-gerby-tag="A0A6EE40"></span> Let $L$ be a holomorphic line bundle on a complex manifold $X$, given by frames $e_ i$ over an open cover $(V_ i)$ with transition functions $g_{ij}$ as in definition <a data-tag="382DD681" href="../../tag/D022961325A2/">13.1.8</a>. </p>
+<ol>
+<li><p>
+$L$ carries a smooth quadratic Hermitian metric. 
+</p>
+</li><li><p>
+The curvature of a smooth quadratic Hermitian metric on $L$ is well defined, and it is a smooth closed real $(1,1)$-form on $X$. 
+</p>
+</li><li><p>
+Let $h_0$ be a smooth quadratic Hermitian metric on $L$ with curvature $\eta _0$. For every smooth real function $f$ on $X$, the squared norms $|e_ i|_{h_0}^2\mathrm e^{-f}$ define a smooth quadratic Hermitian metric $h_0\mathrm e^{-f}$ on $L$, whose curvature is $\eta _0+\mathrm{dd}^{\mathrm{c}}f$. Conversely, every smooth quadratic Hermitian metric on $L$ equals $h_0\mathrm e^{-f}$ for exactly one smooth real function $f$ on $X$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) By proposition <a data-tag="2A0D66D9" href="../../tag/DAE61F3D77A3/">7.1.3</a> there is a smooth partition of unity $(\chi _ a)$ subordinate to the cover $(V_ i)$; for each $a$ choose an index $k(a)$ with $\operatorname{Supp}\chi _ a\subset V_{k(a)}$, and put $\rho _ k=\sum _{k(a)=k}\chi _ a$. Since the family $(\chi _ a)$ is locally finite, each $\rho _ k$ is smooth, the family $(\rho _ k)$ is locally finite, $\sum _ k\rho _ k=1$, and $\operatorname{Supp}\rho _ k\subset V_ k$, because a locally finite union of closed sets is closed. For each $i$ put 
+    
+<div class="equation">
+  \[  |e_ i|^2=\sum _ k\rho _ k|g_{ik}|^2\qquad \text{on }V_ i,  \]
+</div>
+<p>
+       where the $k$th term, defined on $V_ i\cap V_ k$, is extended by zero to the rest of $V_ i$. Each term is smooth on $V_ i$, since it is smooth on $V_ i\cap V_ k$ and vanishes on the open set $V_ i\setminus \operatorname{Supp}\rho _ k$, and these two open sets cover $V_ i$. By local finiteness, $|e_ i|^2$ is smooth on $V_ i$, and it is positive, because the $\rho _ k$ are nonnegative with sum one and every $g_{ik}$ is nowhere zero. On $V_ i\cap V_ j$, the cocycle relation $g_{ik}=g_{ij}g_{jk}$ holds on $V_ i\cap V_ j\cap V_ k$, hence wherever $\rho _ k\neq 0$, so 
+    
+<div class="equation">
+  \[  |e_ i|^2=\sum _ k\rho _ k|g_{ij}|^2|g_{jk}|^2=|g_{ij}|^2|e_ j|^2.  \]
+</div>
+<p>
+       Thus these squared norms form a smooth quadratic Hermitian metric on $L$. 
+    <p>
+      (2) On $V_ i\cap V_ j$ we have $\log |e_ i|^2-\log |e_ j|^2=\log |g_{ij}|^2$, which is pluriharmonic, since $g_{ij}$ is holomorphic and nowhere zero (section <a data-tag="C7F41591" href="../../tag/618FE2108D26/">7.3</a>). Hence the forms $-\mathrm{dd}^{\mathrm{c}}\log |e_ i|^2$ on $V_ i$ agree on the overlaps and define a $(1,1)$-form $\eta $ on $X$. It is smooth, because each $\log |e_ i|^2$ is a smooth real function. Moreover $\eta =-\mathrm d(\mathrm d^{\mathrm c}\log |e_ i|^2)$ on $V_ i$, by (<a data-tag="B5542B77" href="../../tag/C44E7362B437/">7.6</a>), and $\mathrm d^{\mathrm c}$ maps real forms to real forms; hence $\eta $ is real, and it is closed because $\mathrm d^2=0$. 
+    <p>
+      (3) The functions $|e_ i|_{h_0}^2\mathrm e^{-f}$ are smooth and positive on $V_ i$, and they satisfy the compatibility condition of definition <a data-tag="382DD681" href="../../tag/D022961325A2/">13.1.8</a> because the functions $|e_ i|_{h_0}^2$ do. The curvature of $h_0\mathrm e^{-f}$ is $-\mathrm{dd}^{\mathrm{c}}\log \bigl (|e_ i|_{h_0}^2\mathrm e^{-f}\bigr )=-\mathrm{dd}^{\mathrm{c}}\log |e_ i|_{h_0}^2+\mathrm{dd}^{\mathrm{c}}f=\eta _0+\mathrm{dd}^{\mathrm{c}}f$ on $V_ i$. Conversely, let $h_1$ be a smooth quadratic Hermitian metric on $L$. On $V_ i$ the function $|e_ i|_{h_1}^2/|e_ i|_{h_0}^2$ is smooth and positive, and on $V_ i\cap V_ j$ it equals $|e_ j|_{h_1}^2/|e_ j|_{h_0}^2$, since both numerator and denominator are multiplied by $|g_{ij}|^2$. Hence these quotients define a smooth positive function on $X$, which we write as $\mathrm e^{-f}$ with $f$ smooth and real; then $h_1=h_0\mathrm e^{-f}$. The function $f$ is unique, since $\mathrm e^{-f}$ must equal these quotients. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-65563BE8">
+<p><a class="environment-identifier" href="../../tag/1A99E612D41C/">Proposition <span data-tag="65563BE8">13.1.10</span>.</a><span data-gerby-tag="65563BE8"></span> Let $X$ be a compact Kähler manifold with Kähler form $\omega $, let $W\subset X$ be a closed submanifold of positive codimension, and let $\pi \colon Y\to X$ be the blowup of $X$ along $W$, with exceptional divisor $E=\pi ^{-1}(W)$. Then $Y$ is a compact complex manifold, and there are a smooth function $\rho \colon X\to [0,\infty )$ with $\rho ^{-1}(0)=W$ and a smooth closed real $(1,1)$-form $\eta $ on $Y$ with $\eta =\mathrm{dd}^{\mathrm{c}}\log (\rho \circ \pi )$ on $Y\setminus E$, such that $\pi ^*\omega +\varepsilon \eta $ is a Kähler form on $Y$ for every sufficiently small $\varepsilon &gt;0$. The form $\eta $ is the curvature of a smooth quadratic Hermitian metric on the line bundle $\mathcal O_ Y(-E)$, whose local frames are the function $1$ on $Y\setminus E$ and the local equations of $E$ near $E$. In particular $Y$ is a compact Kähler manifold. Consequently every log resolution of a coherent ideal on $X$, as above, is a compact Kähler manifold. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By proposition <a data-tag="2959F02B" href="../../tag/865FE5EC97E6/">A.5.3</a>, $Y$ is a complex manifold and $E$ is a smooth hypersurface with $\mathcal I_ W\mathcal O_ Y=\mathcal O_ Y(-E)$; moreover $Y$ is compact, since $\pi $ is proper (proposition <a data-tag="294ADE25" href="../../tag/1CAC94BB1C9D/">A.5.2</a>), and $\pi $ restricts to a biholomorphism $Y\setminus E\to X\setminus W$. The last assertion follows from the preceding ones by induction: since $X$ is compact, a log resolution is a composite of finitely many blowups along closed submanifolds of positive codimension, and each intermediate manifold is compact Kähler by what precedes. 
+    <p>
+      We construct $\eta $ as the curvature of a metric on $\mathcal O_ Y(-E)$ and show that it is positive definite along the fibers of $E\to W$ (Step 1). Since $\pi ^*\omega $ is positive in the remaining directions, $\pi ^*\omega +\varepsilon \eta $ is then positive definite near $E$ for small $\varepsilon &gt;0$ (Step 2), and also away from $E$ (Step 3). We use the charts of proposition <a data-tag="2959F02B" href="../../tag/865FE5EC97E6/">A.5.3</a>. Near a point of $W$ at which $W$ has codimension $r$, choose coordinates $(z,w)$ on $X$, $w=(w_1,\ldots ,w_ r)$, with $W=\{ w=0\} $. For each pivot $i$ the blowup has a chart with coordinates $(z,t,v)$, $v=(v_ j)_{j\neq i}$, in which 
+    
+<div class="equation">
+  \[  \pi (z,t,v)=(z,t\tilde v),\qquad \tilde v_ i=1,\quad \tilde v_ j=v_ j\  (j\neq i);  \]
+</div>
+<p>
+       in it $E=\{ t=0\} $, and the fibers of $E\to W$ are the sets $\{ z=\text{const},\  t=0\} $. If $r=1$ there is no variable $v$, and $\pi $ is the identity near the point. 
+    <p>
+<em>Step 1: a closed $(1,1)$-form that is positive along the fibers of $E$.</em> Choose finitely many charts $V_1,\ldots ,V_ N$ of $X$ covering $W$, with coordinates $(z^\alpha ,w^\alpha )$ such that $W\cap V_\alpha =\{ w^\alpha =0\} $, and put $V_0=X\setminus W$. Grouping the members of a partition of unity subordinate to this cover (proposition <a data-tag="2A0D66D9" href="../../tag/DAE61F3D77A3/">7.1.3</a>) according to a set $V_\alpha $ containing their supports, we obtain a smooth partition of unity $(\lambda _\alpha )_{0\leq \alpha \leq N}$ on $X$ with $\operatorname{Supp}\lambda _\alpha \subset V_\alpha $. Put 
+    
+<div class="equation">
+  \[  \rho =\lambda _0+\sum _{\alpha =1}^ N\lambda _\alpha |w^\alpha |^2,  \]
+</div>
+<p>
+       each term extended by zero outside $V_\alpha $. This is a smooth nonnegative function on $X$ that vanishes on $W$, because $\lambda _0=0$ there, and is positive on $X\setminus W$: at a point $x\notin W$ some $\lambda _\alpha (x)$ is positive, and $w^\alpha (x)\neq 0$ if $\alpha \geq 1$. 
+    <p>
+      We describe $\rho $ near a point $x_0\in W$, in coordinates $(z,w)$ as above on a polydisc $\Delta $ centered at $x_0$. Shrinking $\Delta $, we may assume that $\Delta $ does not meet $\operatorname{Supp}\lambda _0$, nor $\operatorname{Supp}\lambda _\alpha $ for the indices $\alpha $ with $x_0\notin V_\alpha $, and that $\Delta \subset V_\alpha $ for the others. For such an $\alpha $, each component $w^\alpha _ k$ vanishes on $W=\{ w=0\} $, so 
+    
+<div class="equation">
+  \[  w^\alpha _ k(z,w)=\sum _{l=1}^ rw_ l\int _0^1\frac{\partial w^\alpha _ k}{\partial w_ l}(z,sw)\, \mathrm ds,  \]
+</div>
+<p>
+       that is, $w^\alpha =A_\alpha w$ with a holomorphic $r\times r$ matrix $A_\alpha $ on $\Delta $. At points of $W$ the matrix $A_\alpha (z,0)=(\partial w^\alpha _ k/\partial w_ l)(z,0)$ is invertible: since $w^\alpha $ vanishes on $W$, its derivatives in the $z$-directions vanish there, and the Jacobian matrix of the coordinate change $(z,w)\mapsto (z^\alpha ,w^\alpha )$ is invertible. Hence, on $\Delta $, 
+    
+<div class="equation">
+  \[  \rho =\sum _\alpha \lambda _\alpha |A_\alpha w|^2=w^*\mathcal Q\, w,\qquad \mathcal Q=\sum _\alpha \lambda _\alpha A_\alpha ^*A_\alpha ,  \]
+</div>
+<p>
+       where the sums run over the indices $\alpha \geq 1$ with $x_0\in V_\alpha $, and $w^*$ is the conjugate transpose of the column vector $w$. The Hermitian matrix $\mathcal Q$ is smooth and positive semidefinite, and it is positive definite at $x_0$, because the coefficients $\lambda _\alpha (x_0)$ of the invertible matrices $A_\alpha (x_0)$ add up to one; shrinking $\Delta $, we may assume that $\mathcal Q$ is positive definite on $\Delta $. In a chart $(z,t,v)$ over $\Delta $ we obtain 
+    
+<div class="equation">
+  \[  \rho \circ \pi =|t|^2h_ E,\qquad h_ E(z,t,v)=\tilde v^*\mathcal Q(z,t\tilde v)\, \tilde v,  \]
+</div>
+<p>
+       and $h_ E$ is smooth and positive, since $\tilde v\neq 0$. 
+    <p>
+      Define a real $(1,1)$-form $\eta $ on $Y$ by $\eta =\mathrm{dd}^{\mathrm{c}}\log (\rho \circ \pi )$ on $Y\setminus E$ and $\eta =\mathrm{dd}^{\mathrm{c}}\log h_ E$ on each chart $(z,t,v)$ as above. These definitions agree. Off $E$ we have $\log (\rho \circ \pi )=\log |t|^2+\log h_ E$, and $\log |t|^2$ is pluriharmonic there. On the overlap of two charts, the local equations $t$ and $t'$ of $E$ generate the same ideal $\mathcal O_ Y(-E)$, so $t'=ut$ with $u$ holomorphic and nowhere zero. Off $E$ the corresponding functions $h_ E$ and $h'_ E$ satisfy $\log h_ E-\log h'_ E=\log |u|^2$. Both sides are continuous on the overlap and $E$ is nowhere dense, so this identity holds on the whole overlap, and $\log |u|^2$ is pluriharmonic. Thus $\eta $ is a smooth closed real $(1,1)$-form on $Y$. It is the curvature, in the sense of definition <a data-tag="382DD681" href="../../tag/D022961325A2/">13.1.8</a>, of the metric on the line bundle $\mathcal O_ Y(-E)$ with the frame $1$ on $Y\setminus E$, the frames $t$ on the charts and the transition functions $t$ and $t'/t$, for which $|1|^2=1/(\rho \circ \pi )$ and $|t|^2=1/h_ E$. These squared norms are smooth and positive, and they satisfy the compatibility condition of that definition because $\rho \circ \pi =|t|^2h_ E$ and $h'_ E=|t/t'|^2h_ E$. 
+    <p>
+      We show that $\eta $ is positive definite along the fibers of $E\to W$. Fix a point $(z_0,0,v_0)$ of $E$ in a chart, and put $\mathcal Q_0=\mathcal Q(z_0,0)$. On the fiber $\{ z=z_0,\  t=0\} $ we have $h_ E=\tilde v^*\mathcal Q_0\tilde v$. Write $\mathcal Q_0=\Gamma ^*\Gamma $ with an invertible matrix $\Gamma $, for instance the positive square root of $\mathcal Q_0$, and let $e_1,\ldots ,e_ r$ be the standard basis of $\mathbb C^ r$. Then $h_ E=|F(v)|^2$ on the fiber, where $F(v)=\Gamma \tilde v=\Gamma e_ i+\sum _{j\neq i}v_ j\Gamma e_ j$ is an affine map whose linear part $\Lambda \xi =\sum _{j\neq i}\xi _ j\Gamma e_ j$ is injective, and $F(v)$ never lies in the image of $\Lambda $, because the columns $\Gamma e_1,\ldots ,\Gamma e_ r$ are linearly independent. Writing $\langle a,b\rangle =\sum _ ka_ k\bar b_ k$ on $\mathbb C^ r$, we have $\partial _{\bar v_ l}|F|^2=\langle F,\Gamma e_ l\rangle $ and $\partial _{v_ k}|F|^2=\langle \Gamma e_ k,F\rangle $, so for $\xi \in \mathbb C^{r-1}$ 
+    
+<div class="equation">
+  \[  \sum _{k,l\neq i}\frac{\partial ^2\log |F|^2}{\partial v_ k\partial \bar v_ l}\, \xi _ k\bar\xi _ l =\frac{|\Lambda \xi |^2}{|F|^2}-\frac{|\langle \Lambda \xi ,F\rangle |^2}{|F|^4} =\frac{|F|^2|\Lambda \xi |^2-|\langle \Lambda \xi ,F\rangle |^2}{|F|^4}.  \]
+</div>
+<p>
+       By the Cauchy–Schwarz inequality this is nonnegative, and it vanishes only if $\Lambda \xi =\mu F$ for some $\mu \in \mathbb C$. Since $F$ does not lie in the image of $\Lambda $, this forces $\mu =0$, so $\Lambda \xi =0$ and $\xi =0$. By the matrix criterion, the restriction of $\eta $ to each fiber of $E\to W$ is positive definite. 
+    <p>
+<em>Step 2: positivity near $E$.</em> The form $P=\pi ^*\omega $ is a smooth closed semipositive $(1,1)$-form on $Y$. We regard the real $(1,1)$-forms $P$ and $\eta $ in a chart $(z,t,v)$ as Hermitian forms on holomorphic tangent vectors, given by their coefficient matrices, so that $P(\tau ,\tau )=\omega (\mathrm d\pi \, \tau ,\mathrm d\pi \, \tau )$ by the chain rule; norms of tangent vectors are taken in the coordinates of the chart. Let $V$ be spanned by the vectors $\partial /\partial v_ k$ and $H$ by the vectors $\partial /\partial z_ l$ and $\partial /\partial t$, and write $P$ and $\eta $ in block form with respect to the decomposition of the tangent space into $V$ and $H$. At points of $E$ we have $\mathrm d\pi (\partial /\partial v_ k)=t\, \partial /\partial w_ k=0$, while $\mathrm d\pi (\partial /\partial z_ l)=\partial /\partial z_ l$ and $\mathrm d\pi (\partial /\partial t)=\sum _ j\tilde v_ j\, \partial /\partial w_ j$ are linearly independent. Since $\omega $ is positive definite, $P_{HV}=0$ and $P_{HH}$ is positive definite at points of $E$, while $\eta _{VV}$ is positive definite there by Step 1. 
+    <p>
+      Choose finitely many compact sets $K_\iota $ whose interiors cover $E$, each contained in a chart $(z,t,v)$. The smallest eigenvalues of $P_{HH}$ and of $\eta _{VV}$ are continuous and positive on the compact sets $E\cap K_\iota $, so there are $a,c&gt;0$ such that they exceed $2c$ and $2a$, respectively, on $E\cap K_\iota $ for every $\iota $. Let $M&gt;0$ bound the operator norm of $\eta $ on every $K_\iota $, so that $|\eta (\tau ,\tau ')|\leq M|\tau ||\tau '|$, and choose $\ell \in (0,1]$ with $2M\ell +M\ell ^2\leq a/2$. Where $P_{HH}$ is invertible, the linear map $L=P_{HH}^{-1}P_{HV}\colon V\to H$ depends continuously on the point, and it vanishes on $E$. Hence every point of $E\cap K_\iota $ has a neighborhood on whose intersection with $K_\iota $ we have $P_{HH}\geq c$, $\eta _{VV}\geq a$ and $\| L\| \leq \ell $. Let $O_\iota $ be the union of these neighborhoods. Then 
+    
+<div class="equation">
+  \[  \mathcal N=\operatorname{Int}\Bigl (\bigcup _\iota K_\iota \Bigr )\cap \bigcap _\iota \bigl (O_\iota \cup (Y\setminus K_\iota )\bigr )  \]
+</div>
+<p>
+       is an open neighborhood of $E$ with $\mathcal N\cap K_\iota \subset O_\iota $ for every $\iota $. On $\mathcal N\cap K_\iota $ we have, for $\xi \in V$, 
+    
+<div class="equation">
+  \[  \eta (\xi -L\xi ,\xi -L\xi )\geq \bigl (a-2M\| L\| -M\| L\| ^2\bigr )|\xi |^2\geq \frac a2|\xi |^2,\qquad |\xi -L\xi |\leq 2|\xi |.  \]
+</div>
+<p>
+       Write a tangent vector at a point of $\mathcal N\cap K_\iota $ as $\tau =\xi +\zeta $ with $\xi \in V$ and $\zeta \in H$, and put $\sigma =\zeta +L\xi \in H$. Completing the square, 
+    
+<div class="equation">
+  \[  P(\tau ,\tau )=P_{HH}(\sigma ,\sigma )+S(\xi ,\xi ),\qquad S=P_{VV}-P_{VH}P_{HH}^{-1}P_{HV},  \]
+</div>
+<p>
+       and $S\geq 0$ because $P\geq 0$ (take $\zeta =-L\xi $, so that $\sigma =0$). Hence $P(\tau ,\tau )\geq c|\sigma |^2$. Since $\tau =(\xi -L\xi )+\sigma $, 
+    
+<div class="equation">
+  \[  \eta (\tau ,\tau )\geq \frac a2|\xi |^2-4M|\xi ||\sigma |-M|\sigma |^2.  \]
+</div>
+<p>
+       Therefore, for $\varepsilon &gt;0$, 
+    
+<div class="equation">
+  \[  (P+\varepsilon \eta )(\tau ,\tau )\geq (c-\varepsilon M)|\sigma |^2+\frac{\varepsilon a}2|\xi |^2-4\varepsilon M|\xi ||\sigma |.  \]
+</div>
+<p>
+       The right-hand side is a quadratic form in $(|\sigma |,|\xi |)$, which is positive definite as soon as $\varepsilon M&lt;c$ and $(c-\varepsilon M)a&gt;8\varepsilon M^2$; and $(\sigma ,\xi )\neq 0$ for $\tau \neq 0$. Thus $\pi ^*\omega +\varepsilon \eta $ is positive definite on the fixed neighborhood $\mathcal N$ of $E$ for all sufficiently small $\varepsilon &gt;0$. 
+    <p>
+<em>Step 3: positivity away from $E$.</em> On the compact set $Y\setminus \mathcal N\subset Y\setminus E$ the map $\pi $ is a local biholomorphism, so $\pi ^*\omega $ is positive definite at every point. Cover $Y\setminus \mathcal N$ by finitely many compact sets contained in charts. On each of them the smallest eigenvalue of the coefficient matrix of $\pi ^*\omega $ is bounded below by a positive constant $c'$, and the operator norm of the coefficient matrix of $\eta $ is bounded by a constant $M'$, with $c'$ and $M'$ independent of the set. Hence $\pi ^*\omega +\varepsilon \eta $ is positive definite on $Y\setminus \mathcal N$ if $\varepsilon M'&lt;c'$. Together with Step 2, this shows that $\pi ^*\omega +\varepsilon \eta $ is positive definite on all of $Y$ for every sufficiently small $\varepsilon &gt;0$. It is closed, since both terms are, so it is a Kähler form on $Y$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-54CD2043">
+<p><a class="environment-identifier" href="../../tag/4E814A4EB7D1/">Definition <span data-tag="54CD2043">13.1.11</span>.</a><span data-gerby-tag="54CD2043"></span> Let $X$ be a compact Kähler manifold. A quasi-plurisubharmonic function $\varphi $ on $X$ has <em>gentle analytic singularities of type $(c,\mathfrak a)$</em> if it has analytic singularities of type $(c,\mathfrak a)$, the function $\exp (\varphi /c)$ is smooth on $X$, including at its zeros, and on every log resolution $\pi $ of $\mathfrak a$, with $\pi ^*\mathfrak a=\mathcal O(-D)$, one has locally </p>
+<div class="equation">
+  \[  \varphi \circ \pi =c\log |s_ D|^2+h,\qquad h\text{ smooth}.  \]
+</div>
+</article>
+
+<p>
+The log resolutions in this definition are compact Kähler manifolds by proposition <a data-tag="65563BE8" href="../../tag/1A99E612D41C/">13.1.10</a>. The smoothness of $\exp (\varphi /c)$ on $X$ and that of the remainder on the log resolutions are separate requirements. We require the local form on every log resolution, not only on one, because later proofs use it on a resolution chosen in the course of the argument. Both requirements hold if $\varphi $ has presentations (<a data-tag="7788D838" href="../../tag/60D977A9A056/">13.1</a>) of type $(c,\mathfrak a)$ with smooth remainders $b$, since then $\exp (\varphi /c)=\mathrm e^{b/c}\sum _ i|g_ i|^2$ locally and proposition <a data-tag="9395C828" href="../../tag/AFD530210C3A/">13.1.7</a> applies; they also hold for the cutoff sums of lemma <a data-tag="B56FC59A" href="../../tag/EFA6E7FF99E6/">13.4.1</a>. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Capacitability and exceptional sets · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a> · Tag <code>E98B97E4C96B</code></p><h1>Capacitability and exceptional sets</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 4.4 Capacitability and exceptional sets <span data-gerby-tag="095F93A2"></span></div>
+<p>
+  Theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a> characterizes the polar compact sets. To extend this characterization to Borel sets, in particular to the exceptional sets of limits of subharmonic functions, we approximate sets from inside by compact sets. A set $A\Subset B$ is capacitable if 
+</p>
+<div class="equation">
+  \[  C_ B^*(A)=\sup \{ C_ B(K):K\subset A\text{ compact}\} .  \]
+</div>
+<p>
+ Open sets are capacitable by definition, and compact sets by theorem <a data-tag="AFB551A5" href="../../tag/AEE550586C10/">4.3.5</a>. So is every set of the form $A=\bigcup _ jK_ j\Subset B$ with compact sets $K_ j$: the compact sets $K_1\cup \cdots \cup K_ j$ increase to $A$, so part (3) of theorem <a data-tag="AFB551A5" href="../../tag/AEE550586C10/">4.3.5</a> gives $C_ B^*(A)=\lim _ jC_ B(K_1\cup \cdots \cup K_ j)$. The exceptional sets $\{ \varlimsup _ jv_ j&lt;v\} $ that we meet below are Borel sets, but a Borel set need not be a countable union of closed sets. 
+</p>
+<p>
+For instance, let $0&lt;s&lt;R$ and consider the Borel set $A=\{ te_1:0\leq t\leq s,\  t\notin \mathbb Q\} $, a segment with countably many points removed. Suppose that $A=\bigcup _ nF_ n$ with closed sets $F_ n$. The closed sets $\{ t\in [0,s]:te_1\in F_ n\} $ and the one-point sets $\{ q\} $ with $q\in \mathbb Q\cap [0,s]$ form a sequence $D_1,D_2,\ldots $ of closed sets covering $[0,s]$, none of which contains an interval of positive length, since the former consist of irrational numbers. Put $J_0=[0,s]$, and choose closed intervals $J_ k\subset J_{k-1}$ of positive length with $J_ k\cap D_ k=\varnothing $: the interior of $J_{k-1}$ contains a point outside $D_ k$, and since $D_ k$ is closed, a short closed interval around this point lies in $J_{k-1}$ and misses $D_ k$. The nested compact intervals $J_ k$ have a common point, which lies in no $D_ k$; this is a contradiction. Choquet's theorem shows that, nevertheless, every Borel set is capacitable. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-376CCB09">
+<p><a class="environment-identifier" href="../../tag/62C826EB1B48/">Theorem <span data-tag="376CCB09">4.4.1</span>.</a><span data-gerby-tag="376CCB09"></span> Let $L\subset B$ be compact. Every Borel set $A\subset L$ is capacitable. More generally, let $X$ be a compact Hausdorff space, $f\colon X\to L$ a continuous map, and $\widetilde A=\bigcap _{i\geq 1}\bigcup _{k\geq 1}K_{ik}$ with compact sets $K_{ik}\subset X$; then $f(\widetilde A)$ is capacitable. In particular, every Borel set $A\subset L$ contains an increasing sequence of compact sets whose capacities increase to $C_ B^*(A)$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+<em>Capacitability of $f(\widetilde A)$.</em> Replacing $K_{ik}$ by $K_{i1}\cup \cdots \cup K_{ik}$, we may assume that $K_{ik}$ increases with $k$. Put $A=f(\widetilde A)$ and fix $\varepsilon &gt;0$. We choose integers $h_1,h_2,\ldots $ inductively. Put $\widetilde A_0=\widetilde A$, and suppose $\widetilde A_{p-1}$ has been defined. Since $\widetilde A_{p-1}\subset \bigcup _ kK_{pk}$, the sets $\widetilde A_{p-1}\cap K_{ph}$ increase with $h$ and have union $\widetilde A_{p-1}$, so their images under $f$ increase to $f(\widetilde A_{p-1})\subset L$. By part (3) of theorem <a data-tag="AFB551A5" href="../../tag/AEE550586C10/">4.3.5</a>, we can choose $h_ p$ such that $\widetilde A_ p=\widetilde A_{p-1}\cap K_{p,h_ p}$ satisfies 
+    
+<div class="equation">
+  \[  C_ B^*\bigl (f(\widetilde A_ p)\bigr )&gt;C_ B^*\bigl (f(\widetilde A_{p-1})\bigr )-\varepsilon 2^{-p}.  \]
+</div>
+<p>
+       Hence $C_ B^*(f(\widetilde A_ p))&gt;C_ B^*(A)-\varepsilon $ for every $p$. 
+    <p>
+      The sets $L_ p=K_{1,h_1}\cap \cdots \cap K_{p,h_ p}$ are compact, because compact subsets of the Hausdorff space $X$ are closed; they decrease and contain $\widetilde A_ p$, so the compact sets $f(L_ p)\subset L$ decrease and, by part (1) of theorem <a data-tag="AFB551A5" href="../../tag/AEE550586C10/">4.3.5</a> and the monotonicity of $C_ B^*$, satisfy $C_ B(f(L_ p))=C_ B^*(f(L_ p))\geq C_ B^*(f(\widetilde A_ p))&gt;C_ B^*(A)-\varepsilon $. Moreover $\bigcap _ pf(L_ p)=f(\bigcap _ pL_ p)$: if $y\in f(L_ p)$ for every $p$, the sets $f^{-1}(y)\cap L_ p$ form a decreasing sequence of nonempty compact sets, since $f^{-1}(y)$ is closed, and hence have a common point. Since $\bigcap _ pL_ p=\bigcap _ iK_{i,h_ i}\subset \widetilde A$, the compact set $\bigcap _ pf(L_ p)$ is contained in $A$, and by proposition <a data-tag="6A79421D" href="../../tag/3CC68CCFAF3A/">4.3.4</a> its capacity is $\lim _ pC_ B(f(L_ p))\geq C_ B^*(A)-\varepsilon $. As $\varepsilon $ is arbitrary, $A$ is capacitable. 
+    <p>
+<em>Borel sets.</em> If $L=\varnothing $ there is nothing to prove, so let $L\neq \varnothing $. Call a subset of $L$ analytic if it has the form $f(\widetilde A)$ considered above; this is the notion of descriptive set theory and is unrelated to complex analytic sets. In such a representation we may assume that $X$ is nonempty, since the empty set is the image of the empty subset of a one-point space under a constant map. We may also assume that $X=Y\times L$ for a nonempty compact Hausdorff space $Y$ and that $f$ is the projection onto $L$. Indeed, put $Y=X$. The map $g\colon X\to Y\times L$, $g(x)=(x,f(x))$, is continuous and injective, so $g(\widetilde A)=\bigcap _ i\bigcup _ kg(K_{ik})$ with compact sets $g(K_{ik})$, and the projection of $g(\widetilde A)$ onto $L$ is $f(\widetilde A)$. 
+    <p>
+      Analytic sets are closed under countable intersections and countable unions. To see this, let $A_ j=\pi (\widetilde A_ j)$, $j\geq 1$, be analytic, with $\widetilde A_ j\subset Y_ j\times L$ as above and $\pi $ denoting projections onto $L$. The space $X=(\prod _ jY_ j)\times L$ is compact by lemma <a data-tag="E265537C" href="../../tag/8734A1486521/">1.6.2</a> and Hausdorff, as a product of Hausdorff spaces. Let $\widehat A_ j\subset X$ be the inverse image of $\widetilde A_ j$ under the continuous map $\pi _ j\colon (y,z)\mapsto (y_ j,z)$. If $\widetilde A_ j=\bigcap _ i\bigcup _ kK^{(j)}_{ik}$ with compact sets $K^{(j)}_{ik}\subset Y_ j\times L$, then $\widehat A_ j=\bigcap _ i\bigcup _ k\pi _ j^{-1}(K^{(j)}_{ik})$. Each $K^{(j)}_{ik}$ is closed, being a compact subset of a Hausdorff space, so $\pi _ j^{-1}(K^{(j)}_{ik})$ is a closed and hence compact subset of $X$. Thus each $\widehat A_ j$, and therefore also $\bigcap _ j\widehat A_ j$, is a countable intersection of countable unions of compact subsets of $X$. 
+    <p>
+      A point $z\in L$ lies in $\bigcap _ jA_ j$ if and only if for every $j$ there is $y_ j\in Y_ j$ with $(y_ j,z)\in \widetilde A_ j$, that is, if and only if $(y,z)\in \bigcap _ j\widehat A_ j$ for some $y=(y_ j)_ j\in \prod _ jY_ j$. Hence the projection of $\bigcap _ j\widehat A_ j$ onto $L$ is $\bigcap _ jA_ j$, and countable intersections of analytic sets are analytic. Since every $Y_ i$ is nonempty, the same reasoning shows that the projection of each $\widehat A_ j$ onto $L$ is $A_ j$. 
+    <p>
+      For unions, write $\widehat A_ j=\bigcap _ n\bigcup _ kH_{jnk}$ with compact $H_{jnk}\subset X$, and consider, in the product of $X$ with the one-point compactification $\{ 1,2,\ldots \} \cup \{ \infty \} $ of the positive integers (a compact Hausdorff space, homeomorphic to $\{ 1/j:j\geq 1\} \cup \{ 0\} \subset \mathbb R$), the set 
+    
+<div class="equation">
+  \[  \bigcap _ n\bigcup _{j,k}\bigl (H_{jnk}\times \{ j\} \bigr ).  \]
+</div>
+<p>
+       A point $(x,j)$ belongs to it if and only if $j\neq \infty $ and $x\in \widehat A_ j$, so its projection onto $L$ is $\bigcup _ jA_ j$. Each $H_{jnk}\times \{ j\} $ is compact, so countable unions of analytic sets are analytic. 
+    <p>
+      Closed subsets of the compact metric space $L$ are compact, hence analytic, and an open set $U\subset L$ is the union of the compact sets $\{ z\in L:\operatorname {dist}(z,L\setminus U)\geq 1/n\} $, hence analytic. The family of sets $E\subset L$ such that both $E$ and $L\setminus E$ are analytic is closed under complements, and under countable unions, because the complement of a countable union is the countable intersection of the complements. It is therefore a $\sigma $-algebra containing all open subsets of $L$, so every Borel subset of $L$ is analytic and hence capacitable. 
+    <p>
+<em>Increasing compact sets.</em> Let $A\subset L$ be Borel. Since $A$ is capacitable, there are compact sets $K_ j\subset A$ with $C_ B(K_ j)\to C_ B^*(A)$. The compact sets $K_1\cup \cdots \cup K_ j\subset A$ increase, and by monotonicity their capacities increase to $C_ B^*(A)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-2378FA2B">
+<p><a class="environment-identifier" href="../../tag/098882E3CBEB/">Corollary <span data-tag="2378FA2B">4.4.2</span>.</a><span data-gerby-tag="2378FA2B"></span> Let $A\Subset B$. Then $A$ is polar if and only if $C_ B^*(A)=0$. A compact set has Newtonian or logarithmic capacity zero if and only if it is polar. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      By theorem <a data-tag="AFB551A5" href="../../tag/AEE550586C10/">4.3.5</a>, it remains to show that a polar set has outer capacity zero. By proposition <a data-tag="7F3FDDFF" href="../../tag/64A94A9EE9E3/">4.2.3</a>, $A$ is contained in the pole set of a function $E_ d*\nu $ with $\nu $ finite, positive and compactly supported. Let $N$ be a compact neighborhood of $\overline A$ in $B$. The set $P=N\cap \{ E_ d*\nu =-\infty \} $ is Borel, being the intersection of $N$ with the open sets $\{ E_ d*\nu &lt;-n\} $, $n\geq 1$. Every compact subset of $P$ is polar and therefore has capacity zero by theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a>. By theorem <a data-tag="376CCB09" href="../../tag/62C826EB1B48/">4.4.1</a>, $C_ B^*(P)=0$, and monotonicity gives $C_ B^*(A)=0$. For the kernel capacities, a compact set has capacity zero if and only if it carries no probability measure of finite energy (theorem <a data-tag="A35EEAC5" href="../../tag/AA43DD93EFE4/">4.1.3</a>), that is, no nonzero positive measure of finite energy; by theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a> this happens if and only if it is polar. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+The main step towards the polarity of exceptional sets is the following lemma, which tests $L^1_{\mathrm{loc}}$ convergence of subharmonic functions against measures with continuous potentials. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-D6D2EBB5">
+<p><a class="environment-identifier" href="../../tag/59F83B6EAAB7/">Lemma <span data-tag="D6D2EBB5">4.4.3</span>.</a><span data-gerby-tag="D6D2EBB5"></span> Let $\Omega \subset \mathbb R^ d$ be open, and let $v_ j$ and $v$ be locally integrable subharmonic functions on $\Omega $ with $v_ j\to v$ in $L^1_{\mathrm{loc}}(\Omega )$. If $\sigma $ is a finite positive measure with compact support in $\Omega $ such that $E_ d*\sigma $ is finite and continuous, then </p>
+<div class="equation">
+  \[  \int v_ j\, \mathrm d\sigma \longrightarrow \int v\, \mathrm d\sigma &gt; -\infty , \qquad \varlimsup _ jv_ j=v\quad \sigma \text{-almost everywhere}.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Choose a cutoff $\chi \in C_ c^\infty (\Omega )$ with $0\leq \chi \leq 1$ and $\chi =1$ on an open neighborhood $V$ of $\operatorname{Supp}\sigma $, and put $\nu _ j=\chi \Delta v_ j$ and $\nu =\chi \Delta v$. Since $\Delta v_ j\to \Delta v$ distributionally, proposition <a data-tag="915FBB91" href="../../tag/4DFD880D9E4D/">1.5.1</a> shows that $\nu _ j\to \nu $ vaguely, and the total masses $\nu _ j(\Omega )=\int \chi \, \mathrm d\Delta v_ j$ are bounded. By the Riesz decomposition (theorem <a data-tag="A2BCDB4A" href="../../tag/F04DBD614238/">3.2.3</a>), $v_ j=E_ d*\nu _ j+h_ j$ and $v=E_ d*\nu +h$ on $V$, with $h_ j$ and $h$ harmonic. 
+    <p>
+      We show that $h_ j\to h$ uniformly on compact subsets of $V$. For a test function $\varphi $, Fubini's theorem gives $\int (E_ d*\nu _ j)\varphi \, \mathrm d x=\int (E_ d*\varphi )\, \mathrm d\nu _ j$, and $E_ d*\varphi $ is continuous by proposition <a data-tag="571B3697" href="../../tag/F8A69601BB8C/">2.2.1</a>; since the $\nu _ j$ are supported in the fixed compact set $\operatorname{Supp}\chi $, it follows that $E_ d*\nu _ j\to E_ d*\nu $ distributionally, and hence $h_ j\to h$ distributionally on $V$. The functions $h_ j$ are also bounded in $L^1$ on compact subsets of $V$. This holds for the $v_ j$, which converge in $L^1_{\mathrm{loc}}$, and for the $E_ d*\nu _ j$: if $Q\subset V$ is compact and $s&gt;0$ is such that $Q-\operatorname{Supp}\chi \subset B(0,s)$, then Tonelli's theorem gives 
+    
+<div class="equation">
+  \[  \int _ Q|E_ d*\nu _ j|\, \mathrm dx\leq \int \Bigl (\int _ Q|E_ d(x-y)|\, \mathrm dx\Bigr )\, \mathrm d\nu _ j(y)\leq \nu _ j(\Omega )\int _{B(0,s)}|E_ d|\, \mathrm dz,  \]
+</div>
+<p>
+       and the masses $\nu _ j(\Omega )$ are bounded. 
+    <p>
+      By the interior estimates (<a data-tag="724EB1D3" href="../../tag/D63569C18649/">2.5</a>), the derivatives of the $h_ j$ are therefore bounded on compact subsets of $V$, so the $h_ j$ are locally equicontinuous. Moreover, $h_ j\to h$ pointwise on $V$. Indeed, if $x\in V$ and $\varepsilon &gt;0$ is less than the distance from $x$ to $\mathbb R^ d\setminus V$, then $h_ j(x)=(h_ j*\rho _\varepsilon )(x)$ and $h(x)=(h*\rho _\varepsilon )(x)$ by the last assertion of theorem <a data-tag="667A5C9D" href="../../tag/A60BA3B2DBFC/">2.1.2</a>, and $(h_ j*\rho _\varepsilon )(x)\to (h*\rho _\varepsilon )(x)$ by distributional convergence. To upgrade this to uniform convergence, let $Q\subset V$ be compact and $\theta &gt;0$. By equicontinuity, every point of $Q$ has a neighborhood on which each $h_ j$, and also the continuous function $h$, varies by less than $\theta $. Finitely many of these neighborhoods, centered at points $x_1,\ldots ,x_ N$, cover $Q$, and for all large $j$ we have $|h_ j(x_ i)-h(x_ i)|&lt;\theta $ for every $i$; hence $|h_ j-h|&lt;3\theta $ on $Q$. 
+    <p>
+      Next, the reciprocity law (<a data-tag="F1E9B4D8" href="../../tag/718E110735E0/">4.1</a>), applied to $\sigma $ and $\nu _ j$ and to $\sigma $ and $\nu $, gives 
+    
+<div class="equation">
+  \[  \int (E_ d*\nu _ j)\, \mathrm d\sigma =\int (E_ d*\sigma )\, \mathrm d\nu _ j \longrightarrow \int (E_ d*\sigma )\, \mathrm d\nu =\int (E_ d*\nu )\, \mathrm d\sigma ,  \]
+</div>
+<p>
+       where the convergence holds because $E_ d*\sigma $ is continuous and the $\nu _ j$ converge vaguely with supports in $\operatorname{Supp}\chi $. All these integrals are finite, since $E_ d*\sigma $ is bounded on $\operatorname{Supp}\chi $. Adding the integrals of $h_ j$, which converge to $\int h\, \mathrm d\sigma $, proves that $\int v_ j\, \mathrm d\sigma \to \int v\, \mathrm d\sigma &gt;-\infty $. 
+    <p>
+      By Hartogs' lemma (theorem <a data-tag="CAECA7D8" href="../../tag/5784B80133BF/">3.3.3</a>), $\varlimsup _ jv_ j\leq v$ everywhere, and the $v_ j$ are bounded above on $\operatorname{Supp}\sigma $ by a common constant for large $j$. Reverse Fatou's lemma therefore gives 
+    
+<div class="equation">
+  \[  \int \varlimsup _ jv_ j\, \mathrm d\sigma \geq \lim _ j\int v_ j\, \mathrm d\sigma =\int v\, \mathrm d\sigma .  \]
+</div>
+<p>
+       Since $v-\varlimsup _ jv_ j\geq 0$ and $\int v\, \mathrm d\sigma $ is finite, it follows that $\varlimsup _ jv_ j=v$ $\sigma $-almost everywhere. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-B7DF3499">
+<p><a class="environment-identifier" href="../../tag/E54414B74C32/">Theorem <span data-tag="B7DF3499">4.4.4</span>.</a><span data-gerby-tag="B7DF3499"></span> Let $\Omega \subset \mathbb R^ d$ be open. </p>
+<ol>
+<li><p>
+If $v_ j$ and $v$ are locally integrable subharmonic functions on $\Omega $ with $v_ j\to v$ in $L^1_{\mathrm{loc}}(\Omega )$, then the set $\{ \varlimsup _ jv_ j&lt;v\} $ is polar. 
+</p>
+</li><li><p>
+Let $\{ u_ t\} $ be a family of subharmonic functions on $\Omega $ with a common upper bound on every compact subset, and let $F=\sup _ tu_ t$. Then the set $\{ F&lt;F^*\} $, where the supremum differs from its upper semicontinuous regularization, is polar. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Let $N\subset \Omega $ be compact, and take $R$ so large that $N\subset B$. The set $E=\{ x\in N:\varlimsup _ jv_ j(x)&lt;v(x)\} $ is the union, over rational numbers $a&lt;b$ and integers $J\geq 1$, of the Borel sets 
+    
+<div class="equation">
+  \[  N\cap \{ v\geq b\} \cap \bigcap _{j\geq J}\{ v_ j\leq a\} ,  \]
+</div>
+<p>
+       so it is Borel. Suppose some compact subset $S$ of $E$ were not polar. By theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a>, $S$ would carry a nonzero positive measure $\sigma $ with $E_ d*\sigma $ finite and continuous, and lemma <a data-tag="D6D2EBB5" href="../../tag/59F83B6EAAB7/">4.4.3</a> would give $\varlimsup _ jv_ j=v$ $\sigma $-almost everywhere on $S$, which is impossible. Hence every compact subset of $E$ is polar and has capacity zero. By theorem <a data-tag="376CCB09" href="../../tag/62C826EB1B48/">4.4.1</a> and corollary <a data-tag="2378FA2B" href="../../tag/098882E3CBEB/">4.4.2</a>, $E$ is polar. Since countably many compact sets $N$ cover $\Omega $, proposition <a data-tag="7F3FDDFF" href="../../tag/64A94A9EE9E3/">4.2.3</a> completes the proof. 
+    <p>
+      (2) If the family is empty, or if all its members are identically $-\infty $ on a component of $\Omega $, then $F=F^*=-\infty $ there. Let $\Omega '$ be a component on which some member $u_{t_0}$ is not identically $-\infty $; by proposition <a data-tag="922C2A66" href="../../tag/5975EB5B5D7D/">3.1.5</a>, $u_{t_0}$ is locally integrable on $\Omega '$. By lemma <a data-tag="B87643F0" href="../../tag/B37EED9280E3/">3.4.1</a>, applied on $\Omega '$, there are members $u_{t_1},u_{t_2},\ldots $ of the family with $(\sup _{k\geq 1}u_{t_ k})^*=F^*$ on $\Omega '$. Put $w_ j=\max \{ u_{t_0},\ldots ,u_{t_ j}\} $ and $w=\sup _ jw_ j$. Since $\sup _{k\geq 1}u_{t_ k}\leq w\leq F$, we have $w^*=F^*$ on $\Omega '$, and theorem <a data-tag="18DB3E38" href="../../tag/1C986491E366/">3.4.2</a>, applied to the family $(w_ j)$, shows that $F^*$ is subharmonic on $\Omega '$ and that $w=F^*$ almost everywhere on $\Omega '$. 
+    <p>
+      We show next that $w_ j\to F^*$ in $L^1_{\mathrm{loc}}(\Omega ')$. As $u_{t_0}\leq w_ j\leq F^*$, the functions $w_ j$ and $F^*$ are locally integrable on $\Omega '$. If $Q\subset \Omega '$ is compact and $M$ is a common upper bound of the $w_ j$ on $Q$, then $0\leq M-w_ j\leq M-u_{t_0}$ on $Q$ and $M-w_ j$ decreases to $M-w$, so dominated convergence gives $w_ j\to w=F^*$ in $L^1(Q)$. Since $\varlimsup _ jw_ j=w$, part (1) shows that $\{ w&lt;F^*\} \cap \Omega '$ is polar, and $\{ F&lt;F^*\} \cap \Omega '$ is contained in it because $w\leq F$. The components of $\Omega $ are pairwise disjoint nonempty open sets, hence of positive Lebesgue measure, so there are at most countably many of them (lemma <a data-tag="092BD594" href="../../tag/D0A959AF6D25/">1.1.5</a>), and the union over them is polar by proposition <a data-tag="7F3FDDFF" href="../../tag/64A94A9EE9E3/">4.2.3</a>. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></article>
+<p>
+Capacitability also gives Frostman's description of the potential of the equilibrium measure. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-39AFA4BA">
+<p><a class="environment-identifier" href="../../tag/CA3187A3AD4F/">Proposition <span data-tag="39AFA4BA">4.4.5</span>.</a><span data-gerby-tag="39AFA4BA"></span> Let $K$ be a compact set carrying a probability measure of finite energy, and let $\mu _ K$ be its equilibrium measure (theorem <a data-tag="A35EEAC5" href="../../tag/AA43DD93EFE4/">4.1.3</a>). When $d=2$, $U^{\mu _ K}$ and $V(K)$ stand for the potential and the minimal energy with respect to a fixed scale $D&gt;\operatorname {diam}K$. Then $U^{\mu _ K}\geq V(K)$ on $K$ outside a polar set, $U^{\mu _ K}=V(K)$ almost everywhere with respect to $\mu _ K$, and $U^{\mu _ K}\leq V(K)$ on all of $\mathbb R^ d$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Take $R$ so large that $K\subset B$. Let $\varepsilon &gt;0$, and consider the set $E_\varepsilon =\{ x\in K:U^{\mu _ K}(x)&lt;V(K)-\varepsilon \} $, which is Borel since $U^{\mu _ K}$ is lower semicontinuous. If $C_ B^*(E_\varepsilon )&gt;0$, then by theorem <a data-tag="376CCB09" href="../../tag/62C826EB1B48/">4.4.1</a> $E_\varepsilon $ contains a compact set of positive capacity, which is not polar by theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a>; that theorem provides a probability measure $\nu $ on this compact set with finite continuous potential, hence with finite energy. Then $I(\mu _ K,\nu )=\int U^{\mu _ K}\, \mathrm d\nu \leq V(K)-\varepsilon $, contradicting theorem <a data-tag="A35EEAC5" href="../../tag/AA43DD93EFE4/">4.1.3</a>. Thus $C_ B^*(E_\varepsilon )=0$ for every $\varepsilon &gt;0$, and countable subadditivity (theorem <a data-tag="AFB551A5" href="../../tag/AEE550586C10/">4.3.5</a>) and corollary <a data-tag="2378FA2B" href="../../tag/098882E3CBEB/">4.4.2</a> show that $\{ x\in K:U^{\mu _ K}(x)&lt;V(K)\} $ is polar. The finite-energy measure $\mu _ K$ gives zero mass to this set (theorem <a data-tag="2511D125" href="../../tag/5B4ACD7E054D/">4.3.3</a>), so $U^{\mu _ K}\geq V(K)$ $\mu _ K$-almost everywhere. Since $\int U^{\mu _ K}\, \mathrm d\mu _ K=V(K)$, it follows that $U^{\mu _ K}=V(K)$ $\mu _ K$-almost everywhere. 
+    <p>
+      Let $x\in \operatorname{Supp}\mu _ K$. Every neighborhood of $x$ has positive $\mu _ K$-measure and therefore contains points where $U^{\mu _ K}=V(K)$; by lower semicontinuity, $U^{\mu _ K}(x)\leq V(K)$. To extend this bound to $\mathbb R^ d$, decompose $\mu _ K=\sum _ j\mu _ j$ by theorem <a data-tag="878C027A" href="../../tag/872A6887585B/">4.2.2</a>, which applies because $E_ d*\mu _ K$ is finite $\mu _ K$-almost everywhere, and let $\pi _ N=\sum _{j\leq N}\mu _ j$. The potential $U^{\pi _ N}$ is continuous on $\mathbb R^ d$ and, by differentiation under the integral sign, harmonic off the compact set $S_ N=\operatorname{Supp}\pi _ N\subset \operatorname{Supp}\mu _ K$. Since the kernel is nonnegative on $K\times K$, we have $U^{\pi _ N}\leq U^{\mu _ K}\leq V(K)$ on $S_ N$. 
+    <p>
+      We claim that $U^{\pi _ N}\leq V(K)$ on $\mathbb R^ d$. If $\pi _ N=0$, this holds because $V(K)\geq 0$, so let $\pi _ N\neq 0$. As $|x|\to \infty $, the Newtonian potential $U^{\pi _ N}(x)$ tends to $0&lt;V(K)$, and the logarithmic potential tends to $-\infty $. Applying the maximum principle (proposition <a data-tag="CD09FBEF" href="../../tag/B304785CC98D/">2.1.3</a>) to $U^{\pi _ N}$ on the bounded open sets $B(0,\rho )\setminus S_ N$ with $\rho $ large, we obtain the claim. Finally, fix $x\in \mathbb R^ d$. The kernel $k(x,\cdot )$ is bounded below on $K$ by a constant $-c_ x$ (with $c_ x=0$ in the Newtonian case), and monotone convergence applied to $k(x,\cdot )+c_ x$ gives $U^{\pi _ N}(x)\to U^{\mu _ K}(x)$. Hence $U^{\mu _ K}(x)\leq V(K)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kiselman&#x27;s minimum principle · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a> · Tag <code>53A48113C242</code></p><h1>Kiselman&#x27;s minimum principle</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 8.5 Kiselman&#x27;s minimum principle <span data-gerby-tag="12F6C9C4"></span></div>
+<p>
+An infimum of plurisubharmonic functions need not be plurisubharmonic. For instance, the function $v(z,w)=|w|^2+2\operatorname{Re}(zw)=|w+\bar z|^2-|z|^2$ is plurisubharmonic on $\mathbb {C}^2$, since $2\operatorname{Re}(zw)$ is pluriharmonic, but $\inf _{w\in \mathbb {C}}v(z,w)=-|z|^2$ is not. Kiselman's minimum principle shows that, under convexity assumptions on the domain, the infimum is plurisubharmonic or identically $-\infty $ if it is taken only over the real parts of some variables and the function does not depend on their imaginary parts. The reason is visible for a smooth function $u(z,w)$ that depends only on $z$ and $\operatorname{Re}w$. Its complex Hessian in $w$ is a quarter of its real Hessian in $\operatorname{Re}w$, and at a nondegenerate minimum over $\operatorname{Re}w$, the complex Hessian of the infimum is the Schur complement of the $w$-block in the complex Hessian of $u$, which is positive semidefinite. 
+</p>
+<p>
+Throughout this section, points of $\mathbb {C}^ m\times \mathbb {C}^ k$ are written $(z,w)$, and $w=t+\mathrm{i}s$ with $t=\operatorname{Re}w$ and $s=\operatorname{Im}w$ in $\mathbb R^ k$. A set $\Omega \subset \mathbb {C}^ m\times \mathbb {C}^ k$ is <em>invariant under imaginary translations</em> if $(z,w+\mathrm{i}s')\in \Omega $ for all $(z,w)\in \Omega $ and $s'\in \mathbb R^ k$. A function $u$ on such a set is <em>invariant under imaginary translations</em> if $u(z,w+\mathrm{i}s')=u(z,w)$ for all such $(z,w)$ and $s'$, that is, if $u(z,w)$ depends only on $z$ and $\operatorname{Re}w$. For such $\Omega $ and $u$, we identify $t\in \mathbb R^ k$ with $t+\mathrm{i}0\in \mathbb {C}^ k$, so that $u(z,t)$ is defined. We write 
+</p>
+<div class="equation">
+  \[  V_ z=\{ t\in \mathbb R^ k:(z,t)\in \Omega \} ,\qquad \Omega _{\mathbb R}=\{ (z,t)\in \mathbb {C}^ m\times \mathbb R^ k:t\in V_ z\}   \]
+</div>
+<p>
+ for the real fiber of $\Omega $ over $z\in \mathbb {C}^ m$ and the real slice of $\Omega $, and $p(\Omega )=\{ z:V_ z\neq \varnothing \} $ for the projection of $\Omega $ to $\mathbb {C}^ m$; it is the image of $\Omega $ under $(z,w)\mapsto z$, because $(z,\operatorname{Re}w)\in \Omega $ for every $(z,w)\in \Omega $ by invariance. Since this projection is continuous and open, $p(\Omega )$ is open if $\Omega $ is open, and connected if $\Omega $ is connected. 
+</p>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-90492B74">
+<p><a class="environment-identifier" href="../../tag/1F87EF4FCF69/">Theorem <span data-tag="90492B74">8.5.1</span> <span class="named">(Kiselman's minimum principle)</span>.</a><span data-gerby-tag="90492B74"></span> Let $m,k\ge 1$, and let $\Omega \subset \mathbb {C}^ m\times \mathbb {C}^ k$ be a domain invariant under imaginary translations whose nonempty real fibers $V_ z$ are convex. Assume that there is a plurisubharmonic function $\psi $ on $\Omega $, invariant under imaginary translations, such that for every $c\in \mathbb R$ the set </p>
+<div class="equation">
+  \[  \{ (z,t)\in \Omega _{\mathbb R}:\psi (z,t)\le c\}   \]
+</div>
+<p> is compact. If $u\in \mathrm{PSH}(\Omega )$ is invariant under imaginary translations, then the function </p>
+<div class="equation">
+  \[  v(z)=\inf _{t\in V_ z}u(z,t)  \]
+</div>
+<p> is plurisubharmonic or identically $-\infty $ on $p(\Omega )$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We first treat smooth functions with positive definite real Hessian in $t$ that tend to $+\infty $ at the boundary of the real fibers (Step 1). We then approximate $u$ by such functions on subdomains exhausting $\Omega $ (Step 2) and pass to the limit (Step 3). 
+    <p>
+<em>Step 1: a smooth case.</em> In this step, $\Omega $ may be any open set invariant under imaginary translations whose real fibers are convex. Suppose that $u$ is smooth and plurisubharmonic, invariant under imaginary translations, and that for every $z\in p(\Omega )$ the function $t\mapsto u(z,t)$ has positive definite real Hessian on $V_ z$ and tends to $+\infty $ at the boundary of $V_ z$ and, if $V_ z$ is unbounded, as $|t|\to \infty $. We show that $v$ is plurisubharmonic on each connected component of $p(\Omega )$. 
+    <p>
+      Fix $z\in p(\Omega )$ and put $f(t)=u(z,t)$ for $t\in V_ z$. Since its Hessian is positive definite, $f$ is strictly convex on every segment in the open convex set $V_ z$, hence on $V_ z$. Its sublevel sets $\{ t\in V_ z:f(t)\leq c\} $ are compact: they are bounded, because $f\to +\infty $ as $|t|\to \infty $ when $V_ z$ is unbounded, and the limit in $\mathbb R^ k$ of a convergent sequence in such a set cannot lie on the boundary of $V_ z$, because $f\to +\infty $ there, so it lies in $V_ z$ and, since $f$ is continuous on $V_ z$, in the sublevel set. Hence $f$ attains its minimum on the nonempty set $V_ z$, and by strict convexity at a unique point $g(z)$. 
+    <p>
+      This point is the only critical point of $f$: if $\nabla f(t_1)=0$, then the convex function $s\mapsto f(t_1+s(t_2-t_1))$ has derivative zero at $s=0$, hence $f(t_2)\geq f(t_1)$ for every $t_2\in V_ z$, and $t_1=g(z)$. Fix $z_0\in p(\Omega )$. Since the $t$-Hessian is invertible, the implicit function theorem gives a smooth solution $t=G(z)$ of $\partial _ tu(z,t)=0$ near $z_0$ with $G(z_0)=g(z_0)$, and $G=g$ near $z_0$ because $g(z)$ is the only critical point. Hence $g$ and $v(z)=u(z,g(z))$ are smooth on $p(\Omega )$. 
+    <p>
+      At the point $(z,g(z))$, let $H=(\partial ^2u/\partial t_ a\partial t_ b)$, $B=(\partial ^2u/\partial z_ j\partial t_ a)$ and $C=(\partial ^2u/\partial z_ j\partial \bar z_ l)$. Thus $H$ is a real symmetric positive definite $k\times k$ matrix and $B$ is a complex $m\times k$ matrix; since $u$ is real, $(\partial ^2u/\partial t_ a\partial \bar z_ j)=B^*$, the conjugate transpose of $B$. Differentiating the identity $\partial _ tu(z,g(z))=0$ with respect to $\bar z$ gives $B^*+Hg_{\bar z}=0$, where $g_{\bar z}=(\partial g_ a/\partial \bar z_ j)$; hence $g_{\bar z}=-H^{-1}B^*$. By the chain rule and the same identity, $v_{z_ j}(z)=u_{z_ j}(z,g(z))$, and differentiating once more with respect to $\bar z$ gives 
+    
+<div class="equation">
+  \[  v_{z\bar z}=C+Bg_{\bar z}=C-BH^{-1}B^*.  \]
+</div>
+<p>
+       On the other hand, for functions of $z$ and $\operatorname{Re}w$ we have $\partial _{w_ a}=\partial _{\bar w_ a}=\frac12\partial _{t_ a}$. Hence the complex Hessian of $u$ with respect to $(z,w)$, which is positive semidefinite by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1), is 
+    
+<div class="equation">
+  \[  \begin{pmatrix}  C
+
+&amp; B/2
+
+\\  B^*/2
+
+&amp; H/4
+
+\end{pmatrix}\ge 0.  \]
+</div>
+<p>
+       Evaluating the associated Hermitian quadratic form at $(\xi ,-2H^{-1}B^*\xi )$, $\xi \in \mathbb {C}^ m$, gives $\xi ^*(C-BH^{-1}B^*)\xi \geq 0$. Thus $v_{z\bar z}\geq 0$, and the smooth function $v$ is plurisubharmonic on each component of $p(\Omega )$ by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1). 
+    <p>
+<em>Step 2: regularization.</em> Now let $u$ be as in the theorem. For $\varepsilon &gt;0$ let $u_\varepsilon =u*\rho _\varepsilon $ and $\psi _\varepsilon =\psi *\rho _\varepsilon $ on $\Omega _\varepsilon =\{ x\in \Omega :\operatorname {dist}(x,\mathbb {C}^{m+k}\setminus \Omega )&gt;\varepsilon \} $, where $\rho _\varepsilon $ is the radial mollifier of section <a data-tag="7069872D" href="../../tag/E5DAA0D27299/">1.4</a>. Imaginary translations are isometries preserving $\Omega $, and convolution commutes with translations, so $\Omega _\varepsilon $, $u_\varepsilon $ and $\psi _\varepsilon $ are invariant under imaginary translations. By proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>, the functions $u_\varepsilon $ and $\psi _\varepsilon $ are smooth and plurisubharmonic on each connected component of $\Omega _\varepsilon $, so their complex Hessians are positive semidefinite at every point, and they decrease to $u$ and $\psi $ as $\varepsilon \downarrow 0$; in particular $u_\varepsilon \geq u$ and $\psi _\varepsilon \geq \psi $. 
+    <p>
+      The real fibers of $\Omega _\varepsilon $ are convex. Indeed, $(z,t)\in \Omega _\varepsilon $ if and only if the closed ball of radius $\varepsilon $ about $(z,t)$ lies in $\Omega $ (if it does, its distance to the closed complement of $\Omega $ is positive, because it is compact); by invariance this means that $(z+y,t+y')\in \Omega _{\mathbb R}$ for all $(y,y')\in \mathbb {C}^ m\times \mathbb R^ k$ with $|y|^2+|y'|^2\leq \varepsilon ^2$. Hence the real fiber of $\Omega _\varepsilon $ over $z$ is the intersection of the convex sets $V_{z+y}-y'$ over these $(y,y')$. Moreover, on each real fiber of $\Omega _\varepsilon $ the function $t\mapsto \psi _\varepsilon (z,t)$ is convex, since by invariance its real Hessian is four times the complex Hessian of $\psi _\varepsilon $ in $w$, which is positive semidefinite, and a smooth function with positive semidefinite Hessian on an open convex set is convex along every segment. 
+    <p>
+      For $c\in \mathbb R$ let $K_ c=\{ (z,t)\in \Omega _{\mathbb R}:\psi (z,t)\le c\} $; it is a compact subset of $\Omega $. Choose $\varepsilon _ j\downarrow 0$, $j\geq 1$, such that $\operatorname {dist}(K_{j+1},\mathbb {C}^{m+k}\setminus \Omega )&gt;4\varepsilon _ j$ whenever $K_{j+1}\neq \varnothing $. Since $\psi $ and the distance to the complement of $\Omega $ are invariant under imaginary translations, the same bound holds for the set $\{ x\in \Omega :\psi (x)\leq j+1\} =K_{j+1}+\mathrm{i}\mathbb R^ k$. Define 
+    
+<div class="equation">
+  \[  G_ j=\{ (z,w)\in \Omega _{\varepsilon _ j}:\psi _{\varepsilon _ j}(z,w)&lt;j\} ,\qquad U_ j=u_{\varepsilon _ j}+\frac{|\operatorname{Re}w|^2}{j} +\frac{1}{j-\psi _{\varepsilon _ j}}\quad \text{on }G_ j.  \]
+</div>
+<p>
+       The open set $G_ j$ is invariant under imaginary translations, and its real fiber over $z$ is a sublevel set of the convex function $\psi _{\varepsilon _ j}(z,\, \cdot \, )$ on the convex real fiber of $\Omega _{\varepsilon _ j}$, hence convex. Since $\psi \leq \psi _{\varepsilon _ j}$, the real slice of $G_ j$ is contained in the compact set $K_ j\subset K_{j+1}$, which lies in $\Omega _{\varepsilon _ j}$ at positive distance from its complement. Consequently, for each $z$, the closure of the real fiber of $G_ j$ over $z$ is a compact subset of the real fiber of $\Omega _{\varepsilon _ j}$, and $\psi _{\varepsilon _ j}(z,\, \cdot \, )=j$ on its boundary. 
+    <p>
+      The function $U_ j$ is smooth, plurisubharmonic and invariant under imaginary translations. Indeed, by the chain rule the complex Hessian of $1/(j-\psi _{\varepsilon _ j})$ has the entries 
+    
+<div class="equation">
+  \[  \frac{(\psi _{\varepsilon _ j})_{a\bar b}}{(j-\psi _{\varepsilon _ j})^2} +\frac{2(\psi _{\varepsilon _ j})_ a(\psi _{\varepsilon _ j})_{\bar b}}{(j-\psi _{\varepsilon _ j})^3},  \]
+</div>
+<p>
+       where the subscripts denote derivatives with respect to the coordinates of $(z,w)$. Since $j-\psi _{\varepsilon _ j}&gt;0$ on $G_ j$ and $(\psi _{\varepsilon _ j})_{\bar b}=\overline{(\psi _{\varepsilon _ j})_ b}$, this matrix is the sum of positive multiples of the complex Hessian of $\psi _{\varepsilon _ j}$ and of a positive semidefinite matrix of rank at most one, hence positive semidefinite. Moreover, $|\operatorname{Re}w|^2$ has the positive semidefinite complex Hessian in $(z,w)$ given by the diagonal matrix with entries $0$ in the $z$-directions and $\frac12$ in the $w$-directions. Hence $U_ j$ is plurisubharmonic on each connected component of $G_ j$, by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1). 
+    <p>
+      The real $t$-Hessian of $U_ j$ is positive definite: the $t$-Hessians of $u_{\varepsilon _ j}$ and $1/(j-\psi _{\varepsilon _ j})$ are positive semidefinite, as for $\psi _\varepsilon $ above, and that of $|t|^2/j$ is $(2/j)I$. On each real fiber of $G_ j$, which is bounded, $U_ j(z,t)\to +\infty $ at the boundary, because $1/(j-\psi _{\varepsilon _ j})\to +\infty $ there while the other two terms are bounded below on the compact closure of the fiber. Hence Step 1 applies to $U_ j$ on $G_ j$, and 
+    
+<div class="equation">
+  \[  v_ j(z)=\inf \{ U_ j(z,t):(z,t)\in G_ j\}   \]
+</div>
+<p>
+       is plurisubharmonic on each connected component of $p(G_ j)$. 
+    <p>
+<em>Step 3: passage to the limit.</em> The sets $G_ j$ increase to $\Omega $. Indeed, $\varepsilon _{j+1}\leq \varepsilon _ j$ gives $\Omega _{\varepsilon _ j}\subset \Omega _{\varepsilon _{j+1}}$ and $\psi _{\varepsilon _{j+1}}\leq \psi _{\varepsilon _ j}&lt;j&lt;j+1$ on $G_ j$. Every point $x\in \Omega $ lies in $\Omega _{\varepsilon _ j}$ for large $j$, and $\psi _{\varepsilon _ j}(x)\to \psi (x)&lt;\infty $, so $x\in G_ j$ for large $j$. On $G_ j$ we have $U_{j+1}\leq U_ j$, since $u_{\varepsilon _{j+1}}\leq u_{\varepsilon _ j}$, $|\operatorname{Re}w|^2/(j+1)\leq |\operatorname{Re}w|^2/j$ and $0&lt;j-\psi _{\varepsilon _ j}\leq j+1-\psi _{\varepsilon _{j+1}}$. Hence the functions $v_ j$ decrease on the increasing open sets $p(G_ j)$. They satisfy $v_ j\geq v$, since $U_ j\geq u_{\varepsilon _ j}\geq u$. Conversely, let $z\in p(\Omega )$ and $t\in V_ z$. Then $(z,t)\in G_ j$ for large $j$, and $U_ j(z,t)\to u(z,t)$, also when $u(z,t)=-\infty $, because $u_{\varepsilon _ j}(z,t)\to u(z,t)$ and the other two terms tend to zero. Hence $\lim _ jv_ j(z)\leq u(z,t)$ for every $t\in V_ z$, and therefore $v_ j\downarrow v$ on $p(\Omega )$. 
+    <p>
+      Let $B'\Subset p(\Omega )$ be a ball. Since $\overline{B'}$ is compact and covered by the increasing open sets $p(G_ j)$, we have $B'\subset p(G_ j)$ for large $j$, and the $v_ j$ with such $j$ form a decreasing sequence of plurisubharmonic functions on $B'$. By theorem <a data-tag="1174FCEA" href="../../tag/FE144A69076E/">8.3.1</a>, $v$ is plurisubharmonic or identically $-\infty $ on $B'$. Since every point of the connected open set $p(\Omega )$ lies in such a ball, lemma <a data-tag="B39137D8" href="../../tag/598B886D700E/">8.2.4</a> shows that $v$ is plurisubharmonic or identically $-\infty $ on $p(\Omega )$; this proves the theorem. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-corollary" id="foundations-of-pluripotential-theory-B6D5E591">
+<p><a class="environment-identifier" href="../../tag/2C1A82803889/">Corollary <span data-tag="B6D5E591">8.5.2</span>.</a><span data-gerby-tag="B6D5E591"></span> Let $m,k\geq 1$, let $D\subset \mathbb {C}^ m$ be a domain and let $V\subset \mathbb {R}^ k$ be a nonempty open convex set. If $u\in \mathrm{PSH}(D\times (V+\mathrm{i}\mathbb {R}^ k))$ is invariant under imaginary translations, then the function $z\mapsto \inf _{t\in V}u(z,t)$ is plurisubharmonic or identically $-\infty $ on $D$. The same holds for $z\mapsto \inf _{t\in V}(u(z,t)-\ell (t))$, for every real affine function $\ell $ on $\mathbb R^ k$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      It suffices to prove the assertion on every ball $B(z_0,r)\Subset D$: since $D$ is connected, lemma <a data-tag="B39137D8" href="../../tag/598B886D700E/">8.2.4</a> then gives it on $D$. We construct a function $\psi $ as in theorem <a data-tag="90492B74" href="../../tag/1F87EF4FCF69/">8.5.1</a> for the domain $B(z_0,r)\times (V+\mathrm{i}\mathbb R^ k)$, which is invariant under imaginary translations and has real fibers $V$. 
+    <p>
+      We first need a continuous convex function $b\geq 0$ on $V$ with compact sublevel sets. If $V=\mathbb R^ k$, take $b(t)=|t|^2$. Otherwise let $\delta (t)=\operatorname {dist}(t,\mathbb {R}^ k\setminus V)$, which is continuous and positive on $V$. It is concave on $V$: if the balls $B(t_1,r_1)$ and $B(t_2,r_2)$ lie in $V$ and $0\leq \lambda \leq 1$, then by convexity $V$ contains $\lambda B(t_1,r_1)+(1-\lambda )B(t_2,r_2)=B(\lambda t_1+(1-\lambda )t_2,\lambda r_1+(1-\lambda )r_2)$, so $\delta (\lambda t_1+(1-\lambda )t_2)\geq \lambda r_1+(1-\lambda )r_2$, and letting $r_ i\uparrow \delta (t_ i)$ gives concavity. Consequently $1/\delta $ is convex: since $x\mapsto 1/x$ is decreasing and convex on $(0,\infty )$, 
+    
+<div class="equation">
+  \[  \frac1{\delta (\lambda t_1+(1-\lambda )t_2)}\leq \frac1{\lambda \delta (t_1)+(1-\lambda )\delta (t_2)}\leq \frac\lambda {\delta (t_1)}+\frac{1-\lambda }{\delta (t_2)}.  \]
+</div>
+<p>
+       Put $b(t)=|t|^2+1/\delta (t)$. For $c&gt;0$ the set $\{ b\leq c\} $ is closed in $V$ and contained in the compact set $\{ t:|t|^2\leq c,\  \delta (t)\geq 1/c\} \subset V$, hence compact. 
+    <p>
+      A continuous convex function $f$ on $V$ defines a plurisubharmonic function $f(\operatorname{Re}w)$ on every domain of the form $D'\times (V+\mathrm{i}\mathbb R^ k)$. Indeed, $f(\operatorname{Re}w)$ is continuous, and its restriction to an affine complex line is $f\circ A$ for a real affine map $A$ from an open subset of $\mathbb {C}$ to $V$. If the closed disc of radius $r$ about $\zeta _0$ lies in the domain of $A$, then, since $A$ is affine, $A(\zeta _0)$ is the midpoint of $A(\zeta _0+r\mathrm{e}^{\mathrm{i}\theta })$ and $A(\zeta _0-r\mathrm{e}^{\mathrm{i}\theta })$ for every $\theta $, and the convexity of $f$ gives 
+    
+<div class="equation">
+  \[  f(A(\zeta _0))\leq \tfrac 12\bigl (f(A(\zeta _0+r\mathrm{e}^{\mathrm{i}\theta }))+f(A(\zeta _0-r\mathrm{e}^{\mathrm{i}\theta }))\bigr ).  \]
+</div>
+<p>
+       Averaging over $\theta \in [0,2\pi ]$, we obtain the submean inequality for the continuous function $f\circ A$ on this circle. 
+    <p>
+      Now put $\psi (z,w)=(r^2-|z-z_0|^2)^{-1}+b(\operatorname{Re}w)$. This function is continuous, positive and invariant under imaginary translations. It is plurisubharmonic as a sum of two plurisubharmonic functions (proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>). The second term is plurisubharmonic by the preceding paragraph. For the first, $x\mapsto (r^2-x)^{-1}$ is convex and increasing on $(-\infty ,r^2)$ and $|z-z_0|^2$ has the complex Hessian $I$, so by the chain rule the complex Hessian of $(r^2-|z-z_0|^2)^{-1}$ is positive semidefinite, and proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1) applies. For $c&gt;0$, the set $\{ (z,t)\in B(z_0,r)\times V:\psi (z,t)\leq c\} $ is closed in $B(z_0,r)\times V$ and, since both terms of $\psi $ are nonnegative, contained in the compact set $\{ |z-z_0|^2\leq r^2-1/c\} \times \{ b\leq c\} $; it is therefore compact, and for $c\leq 0$ it is empty. Hence theorem <a data-tag="90492B74" href="../../tag/1F87EF4FCF69/">8.5.1</a> applies on $B(z_0,r)\times (V+\mathrm{i}\mathbb R^ k)$, and shows that $\inf _{t\in V}u(z,t)$ is plurisubharmonic or identically $-\infty $ on $B(z_0,r)$. 
+    <p>
+      Finally, if $\ell $ is real affine, then $\ell (\operatorname{Re}w)$ is the real part of a complex affine function of $w$. Hence $-\ell (\operatorname{Re}w)$ is smooth with vanishing complex Hessian, so it is plurisubharmonic by proposition <a data-tag="A4C1D7B4" href="../../tag/06C722B7D837/">8.2.2</a>(1), and $u-\ell (\operatorname{Re}w)$ is plurisubharmonic by proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>. It is invariant under imaginary translations, and the first part applies to it. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

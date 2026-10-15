@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Convergence of energy integrals · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a> · Tag <code>6293A9FE1CA2</code></p><h1>Convergence of energy integrals</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 9.10.1 Convergence of energy integrals <span data-gerby-tag="B0CA97BB"></span></div>
+<p>
+  We shall identify the limit $u$ of a convergent subsequence of canonical approximants as a solution of $(\mathrm{dd}^{\mathrm{c}}u)^ n=\mu $. For this we must pass to the limit in integrals such as $\int U_ j\, \mathrm d\mu _ j$, in which both the integrand and the measure depend on $j$, and the energy bounds of proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a> control only the large negative values of the integrand. We first prove that $L^1_{\mathrm{loc}}$ convergence of uniformly bounded plurisubharmonic functions implies $L^1$ convergence against any fixed finite measure that does not charge sets of outer capacity zero (lemma <a data-tag="AC0105B3" href="../../tag/504F4EDE59EF/">9.10.4</a>). Writing integrals against $\mu _ j$ as integrals of cube averages against $\mu $, we then transfer this continuity to the varying measures $\mu _ j$ (theorem <a data-tag="E72115FA" href="../../tag/78EB0192D174/">9.10.5</a>). 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-AC0105B3">
+<p><a class="environment-identifier" href="../../tag/504F4EDE59EF/">Lemma <span data-tag="AC0105B3">9.10.4</span>.</a><span data-gerby-tag="AC0105B3"></span> Let $D\subset \mathbb C^ n$ be a bounded open set, and let $\nu $ be a finite positive Borel measure on $D$ such that $\nu (E)=0$ for every Borel set $E\subset D$ satisfying </p>
+<div class="equation">
+  \[  \operatorname {Cap}_ D^*(E\cap K)=0\qquad \text{for every compact }K\subset D.  \]
+</div>
+<p> Let $L\geq 0$, let $v_ j$ be plurisubharmonic functions on $D$ with $|v_ j|\leq L$, and suppose that $v_ j\to v$ in $L^1_{\mathrm{loc}}(D)$, where $v$ is the plurisubharmonic representative of the limit (theorem <a data-tag="3C807BFA" href="../../tag/C2DB8DFE9E2C/">8.3.4</a>, applied on each connected component of $D$). Then </p>
+<div class="equation">
+  \[  \int _ D|v_ j-v|\, \mathrm d\nu \longrightarrow 0.  \]
+</div>
+<p> The hypothesis on $\nu $ holds if $\nu \leq (\mathrm{dd}^{\mathrm{c}}w)^ n$ for a bounded plurisubharmonic function $w$ on $D$. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      We show that $\varlimsup _ jv_ j=v$ $\nu $-almost everywhere (Step 1) and that $\int v_ j\, \mathrm d\nu \to \int v\, \mathrm d\nu $ (Step 2), and combine the two facts (Step 3). First, the bounds $-L\le v\le L$ hold almost everywhere: for every compact set $K\subset D$ we have $(|v|-L)_+\le |v-v_ j|$, so $\int _ K(|v|-L)_+\, \mathrm dV\le \| v_ j-v\| _{L^1(K)}\to 0$. They hold everywhere by the uniqueness assertion of theorem <a data-tag="1574289B" href="../../tag/2A4F77263F48/">8.2.1</a>, applied on each connected component of $D$ to the plurisubharmonic functions $\max \{ v,-L\} $ and $v$, and to $\max \{ v,L\} $ and the constant $L$. 
+    <p>
+<em>Step 1. The upper limit of $v_ j$.</em> We show that 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-762C2663"><span data-gerby-tag="762C2663"></span>
+<span class="equation-label"><a data-tag="762C2663" href="../../tag/0B2BC6EDF748/">9.48</a></span>
+<div>\begin{equation} \label{eq:fixed-measure-psh-limsup} \varlimsup _{j\to \infty }v_ j=v\qquad \nu \text{-almost everywhere}. \end{equation}</div>
+</div>
+<p>
+       For $\ell \ge 1$ let $b_\ell =(\sup _{j\geq \ell }v_ j)^*$ be the upper semicontinuous regularization of the supremum. By theorem <a data-tag="1E761457" href="../../tag/D32A2FB94F6B/">8.3.2</a>, these are plurisubharmonic functions with values in $[-L,L]$, and they decrease as $\ell $ increases. We claim that $b_\ell \downarrow v$ everywhere. Let $z\in D$ and $\varepsilon &gt;0$. By upper semicontinuity, $v&lt;v(z)+\varepsilon $ on a neighborhood of a closed ball $\overline{B'}\subset D$ centered at $z$, and Hartogs' lemma (theorem <a data-tag="3C807BFA" href="../../tag/C2DB8DFE9E2C/">8.3.4</a>), applied on the connected component of $D$ containing $z$ with the constant majorant $v(z)+\varepsilon $, gives $v_ j&lt;v(z)+\varepsilon $ on $\overline{B'}$ for all large $j$. Hence $\sup _{j\ge \ell }v_ j\le v(z)+\varepsilon $ on $B'$ for all large $\ell $, so $b_\ell (z)\le v(z)+\varepsilon $, and the decreasing limit of $b_\ell $ is at most $v$. 
+    <p>
+      Conversely, $b_\ell \ge v_ j$ for all $j\ge \ell $, so $(v-b_\ell )_+\le |v-v_ j|$ for $j\ge \ell $; integrating over a compact set $K\subset D$ and letting $j\to \infty $, we find that $b_\ell \ge v$ almost everywhere on $K$, hence almost everywhere on $D$. The decreasing limit of the $b_\ell $ is bounded below by $-L$, so it is plurisubharmonic by theorem <a data-tag="1174FCEA" href="../../tag/FE144A69076E/">8.3.1</a>; it is at most $v$ and equals $v$ almost everywhere, hence everywhere by the uniqueness of plurisubharmonic representatives, applied on each connected component of $D$. 
+    <p>
+      The sets $N_\ell =\{ \sup _{j\ge \ell }v_ j&lt;b_\ell \} $ are Borel, and by corollary <a data-tag="2ACED3F4" href="../../tag/D865A8538D7D/">9.5.2</a> they satisfy $\operatorname {Cap}_ D^*(N_\ell \cap K)=0$ for every compact $K\subset D$. By countable subadditivity of outer capacity (proposition <a data-tag="DE1E4FA5" href="../../tag/97EFDB6FDEE3/">9.3.3</a>), the union $N=\bigcup _\ell N_\ell $ has the same property, so $\nu (N)=0$ by hypothesis. For $z\notin N$ we have $\sup _{j\ge \ell }v_ j(z)=b_\ell (z)$ for every $\ell $, and therefore $\varlimsup _ jv_ j(z)=\lim _\ell b_\ell (z)=v(z)$. This proves (<a data-tag="762C2663" href="../../tag/0B2BC6EDF748/">9.48</a>). The argument applies to every sequence of plurisubharmonic functions with values in $[-L,L]$ that converges to $v$ in $L^1_{\mathrm{loc}}(D)$. 
+    <p>
+<em>Step 2. Convergence of $\int v_ j\, \mathrm d\nu $.</em> We first construct convex combinations of the $v_ j$ whose integrals converge to $\int v\, \mathrm d\nu $. Let $\mathcal C_\ell $ be the set of finite convex combinations of $v_\ell ,v_{\ell +1},\ldots $; its elements are plurisubharmonic functions with values in $[-L,L]$ (proposition <a data-tag="EB8EB013" href="../../tag/7EBEE004A7FA/">8.2.5</a>). Let 
+    
+<div class="equation">
+  \[  d_\ell =\inf _{r\in \mathcal C_\ell }\| r\| _{L^2(\nu )}.  \]
+</div>
+<p>
+       Since $\mathcal C_{\ell +1}\subset \mathcal C_\ell $, the numbers $d_\ell $ increase, and they are bounded by $L\, \nu (D)^{1/2}$; let $d$ be their limit. Choose $r_\ell \in \mathcal C_\ell $ with 
+    
+<div class="equation">
+  \[  \| r_\ell \| _{L^2(\nu )}^2\leq d_\ell ^2+\ell ^{-1}.  \]
+</div>
+<p>
+       For $k\geq \ell $ the midpoint $(r_ k+r_\ell )/2$ belongs to the convex set $\mathcal C_\ell $, so its norm is at least $d_\ell $, and the parallelogram identity gives 
+    
+<div class="equation">
+  \[  \| r_ k-r_\ell \| _{L^2(\nu )}^2 =2\| r_ k\| _{L^2(\nu )}^2+2\| r_\ell \| _{L^2(\nu )}^2-4\Bigl \| \frac{r_ k+r_\ell }2\Bigr \| _{L^2(\nu )}^2 \leq 2(d^2-d_\ell ^2)+4\ell ^{-1}.  \]
+</div>
+<p>
+       The right-hand side tends to zero as $\ell \to \infty $, so we can choose $\ell _1&lt;\ell _2&lt;\cdots $ with $\| r_{\ell _{i+1}}-r_{\ell _ i}\| _{L^2(\nu )}\le 2^{-i}$. By the triangle inequality in $L^2(\nu )$ and the monotone convergence theorem, the function $g=\sum _ i|r_{\ell _{i+1}}-r_{\ell _ i}|$ satisfies $\| g\| _{L^2(\nu )}\le 1$. Hence $g&lt;\infty $ $\nu $-almost everywhere, and at every point where $g$ is finite the sequence $(r_{\ell _ i})$ converges. 
+    <p>
+      On the other hand, the $r_{\ell _ i}$ are plurisubharmonic with values in $[-L,L]$, and $r_\ell \to v$ in $L^1_{\mathrm{loc}}(D)$, since $\| r_\ell -v\| _{L^1(K)}\le \sup _{j\ge \ell }\| v_ j-v\| _{L^1(K)}$ for every compact $K\subset D$. By Step 1, applied to the sequence $(r_{\ell _ i})$, we have $\varlimsup _ ir_{\ell _ i}=v$ $\nu $-almost everywhere. Therefore $r_{\ell _ i}\to v$ $\nu $-almost everywhere, and dominated convergence, with the constant bound $L$ and the finite measure $\nu $, gives $\int r_{\ell _ i}\, \mathrm d\nu \to \int v\, \mathrm d\nu $. 
+    <p>
+      We now show that $\int v_ j\, \mathrm d\nu \to \int v\, \mathrm d\nu $. Otherwise there are $c&gt;0$ and a subsequence $(v_{j_ k})$ such that either $\int v_{j_ k}\, \mathrm d\nu \ge \int v\, \mathrm d\nu +c$ for all $k$, or $\int v_{j_ k}\, \mathrm d\nu \le \int v\, \mathrm d\nu -c$ for all $k$. The subsequence satisfies the hypotheses of the lemma, so the construction above, applied to it, provides convex combinations of its terms whose integrals converge to $\int v\, \mathrm d\nu $. This is impossible, since every convex combination of the $v_{j_ k}$ satisfies the same inequality as the $v_{j_ k}$ themselves. 
+    <p>
+<em>Step 3. Conclusion.</em> By Step 1, $\varlimsup _ jv_ j\le v$ everywhere, so $(v_ j-v)_+\to 0$ pointwise. These functions are bounded by $2L$, so $\int (v_ j-v)_+\, \mathrm d\nu \to 0$ by dominated convergence. Since 
+    
+<div class="equation">
+  \[  |v_ j-v|=2(v_ j-v)_+-(v_ j-v),  \]
+</div>
+<p>
+       Step 2 proves the assertion. 
+    <p>
+      Finally, suppose that $\nu \le (\mathrm{dd}^{\mathrm{c}}w)^ n$ with $w$ bounded and plurisubharmonic on $D$, and put $M=\sup _ Dw-\inf _ Dw$. If $M=0$, then $w$ is constant and $\nu =0$. Otherwise $(w-\inf _ Dw)/M$ is a competitor for $\operatorname {Cap}_ D$ (definition <a data-tag="AF32B1A0" href="../../tag/E9E7C75396D2/">9.3.2</a>), whose Monge–Ampère measure is $M^{-n}(\mathrm{dd}^{\mathrm{c}}w)^ n$. Hence $\nu (A)\leq M^ n\operatorname {Cap}_ D(A)$ for every Borel set $A\subset D$, and $\operatorname {Cap}_ D(A)\le \operatorname {Cap}_ D^*(A)$ because $\operatorname {Cap}_ D$ is increasing. If $E$ is as in the hypothesis, then $\nu (E\cap K)=0$ for every compact $K\subset D$, and exhausting $D$ by countably many compact sets gives $\nu (E)=0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+
+<article class="env-theorem" id="foundations-of-pluripotential-theory-E72115FA">
+<p><a class="environment-identifier" href="../../tag/78EB0192D174/">Theorem <span data-tag="E72115FA">9.10.5</span>.</a><span data-gerby-tag="E72115FA"></span> Let $\mu $, $\mu _ j$ and $U_ j$ be as in proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a>. Suppose that a subsequence of $(U_ j)$, relabeled $(U_ j)$ together with the corresponding measures $\mu _ j$, converges in $L^1(B)$, and let $u$ be the plurisubharmonic representative of its limit, which is nonpositive by proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a>. Then $u\in L^2(\mu )$ and </p>
+<div class="equation" id="foundations-of-pluripotential-theory-F97690CD"><span data-gerby-tag="F97690CD"></span>
+<span class="equation-label"><a data-tag="F97690CD" href="../../tag/0991A86E50A6/">9.49</a></span>
+<div>\begin{equation} \label{eq:canonical-grid-self-integral-convergence} \int _ B|U_ j-u|\, \mathrm d\mu \longrightarrow 0, \qquad \int _ B|U_ j-u|\, \mathrm d\mu _ j\longrightarrow 0. \end{equation}</div>
+</div>
+<p> In particular, </p>
+<div class="equation">
+  \[  \int _ B U_ j(\mathrm{dd}^{\mathrm{c}}U_ j)^ n\longrightarrow \int _ Bu\, \mathrm d\mu .  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      If $m=0$, then $\mu =\mu _ j=0$ and there is nothing to prove. We assume that $m&gt;0$, and use the cubes $Q\in \mathcal Q_ j$, the polydiscs $P(z,r)$ and the estimate (<a data-tag="C88407F2" href="../../tag/CC0546ABBCE7/">9.46</a>) of proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a>; recall that $K$ denotes the support of $\mu $. 
+    <p>
+<em>Step 1. Convergence against the fixed measure $\mu $.</em> By theorem <a data-tag="C2BB479D" href="../../tag/05F71889C324/">9.10.2</a> with $p=2$ and the uniform bound for $e_2(U_ j)$ in proposition <a data-tag="3263E506" href="../../tag/1151DF7B32E4/">9.10.3</a>, we have $S=\sup _ j\int _ BU_ j^2\, \mathrm d\mu &lt;\infty $. Fix $T&gt;0$. The truncations $\max \{ U_ j,-T\} $ are plurisubharmonic with values in $[-T,0]$, and they converge to $\max \{ u,-T\} $ in $L^1_{\mathrm{loc}}(B)$, since $s\mapsto \max \{ s,-T\} $ is $1$-Lipschitz. The measure $\mu $ satisfies the hypothesis of lemma <a data-tag="AC0105B3" href="../../tag/504F4EDE59EF/">9.10.4</a>, because $\mu \le (\mathrm{dd}^{\mathrm{c}}w)^ n$, so the truncations converge in $L^1(\mu )$. Since $|a^2-b^2|\le 2T|a-b|$ for $a,b\in [-T,0]$, it follows that $\int \max \{ u,-T\} ^2\, \mathrm d\mu \le S$. Letting $T\to \infty $, monotone convergence gives $\int u^2\, \mathrm d\mu \le S$; in particular $u\in L^2(\mu )$, and $u$ is finite $\mu $-almost everywhere. For every measurable $v\le 0$ we have $\int _ B|v-\max \{ v,-T\} |\, \mathrm d\mu \le T^{-1}\int _ Bv^2\, \mathrm d\mu $, because $0\le \max \{ v,-T\} -v\le v^2/T$. Applying this to $v=U_ j$ and $v=u$, and using the convergence of the truncations in $L^1(\mu )$, we get $\varlimsup _ j\int _ B|U_ j-u|\, \mathrm d\mu \le 2S/T$, and letting $T\to \infty $ proves the first convergence in (<a data-tag="F97690CD" href="../../tag/0991A86E50A6/">9.49</a>). 
+    <p>
+<em>Step 2. Cube averages.</em> For $z\in K$ let $Q_ j(z)$ be the cube of $\mathcal Q_ j$ containing $z$, and write 
+    
+<div class="equation">
+  \[  \mathcal A_ jv(z)=\frac1{|Q_ j(z)|}\int _{Q_ j(z)}v\, \mathrm dV  \]
+</div>
+<p>
+       for the average over this cube of a function $v$ integrable on it. If $v$ is $\mu _ j$-integrable, then $v$ is integrable on every cube $Q$ with $\mu (Q)&gt;0$; on a cube with $\mu (Q)=0$ on which $v$ is not integrable we set $\mathcal A_ jv=0$, which does not affect integrals against $\mu $. Since $\mu $ is carried by $K$, the definition of $\mu _ j$ gives 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-24861AA5"><span data-gerby-tag="24861AA5"></span>
+<span class="equation-label"><a data-tag="24861AA5" href="../../tag/2AE59414D95C/">9.50</a></span>
+<div>\begin{equation} \label{eq:canonical-grid-cell-pairing} \int _ Bv\, \mathrm d\mu _ j=\int _ K\mathcal A_ jv\, \mathrm d\mu . \end{equation}</div>
+</div>
+<p>
+       For a plurisubharmonic function $v\le 0$ on $B$ and $z\in K$, the Cauchy–Schwarz inequality for the probability measure $\mathrm dV/|Q_ j(z)|$ on $Q_ j(z)$ and (<a data-tag="C88407F2" href="../../tag/CC0546ABBCE7/">9.46</a>) with $p=2$ give 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-67D2E7A3"><span data-gerby-tag="67D2E7A3"></span>
+<span class="equation-label"><a data-tag="67D2E7A3" href="../../tag/67A2F5CF1C50/">9.51</a></span>
+<div>\begin{equation} \label{eq:canonical-grid-cell-square} |\mathcal A_ jv(z)|^2 \leq \mathcal A_ j(v^2)(z)\leq D_{n,2}|v(z)|^2; \end{equation}</div>
+</div>
+<p>
+       if $v(z)=-\infty $, the right side is infinite. This applies in particular to the possibly unbounded function $u$. 
+    <p>
+      Fix $z\in K$ with $u(z)&gt;-\infty $ and $\varepsilon &gt;0$, and put $c=u(z)+2\varepsilon $. By upper semicontinuity of $u$ and Hartogs' lemma (theorem <a data-tag="3C807BFA" href="../../tag/C2DB8DFE9E2C/">8.3.4</a>), there is a neighborhood of $z$ on which $u\le c$ and $U_ j\le c$ for all large $j$. Since the polydiscs $P(z,4\sqrt2\, h_ j)$ shrink to $z$, for $v=u$ or $v=U_ j$ and all large $j$ the function $v-c$ is plurisubharmonic and nonpositive on $P(z,4\sqrt2\, h_ j)$. Then (<a data-tag="C88407F2" href="../../tag/CC0546ABBCE7/">9.46</a>) with $p=1$, applied to $v-c$, gives $\mathcal A_ j(c-v)(z)\le D_{n,1}(c-v(z))$, while $\mathcal A_ jv(z)\le c$ because $v\le c$ on $Q_ j(z)$. Thus, for all large $j$, 
+    
+<div class="equation">
+  \[  c-D_{n,1}(c-v(z))\leq \mathcal A_ jv(z)\leq c, \qquad v=u\  \text{or}\  v=U_ j.  \]
+</div>
+<p>
+       Consequently $\mathcal A_ ju(z)\to u(z)$, and $\mathcal A_ jU_ j(z)\to u(z)$ whenever $U_ j(z)\to u(z)$. Indeed, in both cases the lower bound tends to $u(z)+2\varepsilon (1-D_{n,1})$ as $j\to \infty $, the upper bound is $u(z)+2\varepsilon $, and $\varepsilon &gt;0$ is arbitrary. 
+    <p>
+      We use the following elementary fact: if Borel functions $F_ j$ on $K$ converge to zero $\mu $-almost everywhere and are bounded in $L^2(\mu )$, then $\int _ K|F_ j|\, \mathrm d\mu \to 0$. Indeed, for $\varepsilon &gt;0$ the Cauchy–Schwarz inequality gives 
+    
+<div class="equation">
+  \[  \int _ K|F_ j|\, \mathrm d\mu \leq \varepsilon m+\| F_ j\| _{L^2(\mu )} \mu (\{ |F_ j|&gt;\varepsilon \} )^{1/2},  \]
+</div>
+<p>
+       and $\mu (\{ |F_ j|&gt;\varepsilon \} )=\int _ K\mathbf1_{\{ |F_ j|&gt;\varepsilon \} }\, \mathrm d\mu \to 0$ by dominated convergence; we let first $j\to \infty $ and then $\varepsilon \downarrow 0$. 
+    <p>
+      By (<a data-tag="67D2E7A3" href="../../tag/67A2F5CF1C50/">9.51</a>) and Step 1, the sequences $(\mathcal A_ jU_ j-u)$ and $(\mathcal A_ ju-u)$ are bounded in $L^2(\mu )$. Since $u$ is finite $\mu $-almost everywhere, we have shown that $\mathcal A_ ju\to u$ $\mu $-almost everywhere, so $\mathcal A_ ju\to u$ in $L^1(\mu )$ by the elementary fact. By the first convergence in (<a data-tag="F97690CD" href="../../tag/0991A86E50A6/">9.49</a>), every subsequence of $(U_ j)$ has a further subsequence $(U_{j_ k})$ with $\sum _ k\int _ B|U_{j_ k}-u|\, \mathrm d\mu &lt;\infty $. By the monotone convergence theorem, $\sum _ k|U_{j_ k}-u|$ is $\mu $-integrable, hence finite $\mu $-almost everywhere, so $U_{j_ k}\to u$ $\mu $-almost everywhere. By the pointwise convergence proved above, applied along this subsequence, $\mathcal A_{j_ k}U_{j_ k}\to u$ $\mu $-almost everywhere, and hence in $L^1(\mu )$. Consequently the whole sequence $\mathcal A_ jU_ j$ converges to $u$ in $L^1(\mu )$. The function $U_ j-u$ is $\mu _ j$-integrable, since $u$ is locally integrable and $\mu _ j$ has a bounded density with compact support. Therefore (<a data-tag="24861AA5" href="../../tag/2AE59414D95C/">9.50</a>) gives 
+    
+<div class="equation" id="foundations-of-pluripotential-theory-327997A9"><span data-gerby-tag="327997A9"></span>
+<span class="equation-label"><a data-tag="327997A9" href="../../tag/166F0CCED71A/">9.52</a></span>
+<div>\begin{equation} \label{eq:canonical-grid-signed-integral} \int _ B(U_ j-u)\, \mathrm d\mu _ j=\int _ K(\mathcal A_ jU_ j-\mathcal A_ ju)\, \mathrm d\mu \longrightarrow 0. \end{equation}</div>
+</div>
+<p>
+<em>Step 3. The absolute difference.</em> Put $g_ j=\mathcal A_ j((U_ j-u)_+)$ on $K$. Let $z\in K$ with $u(z)&gt;-\infty $, and let $c$ be as in Step 2. For all large $j$ we have $U_ j\le c$ and $u\le c$ on $Q_ j(z)$, so $(U_ j-u)_+\le c-u$ there, and hence $0\le g_ j(z)\le c-\mathcal A_ ju(z)$. Since $\mathcal A_ ju(z)\to u(z)$, letting $j\to \infty $ and then $\varepsilon \downarrow 0$ shows that $g_ j\to 0$ $\mu $-almost everywhere. The Cauchy–Schwarz inequality and (<a data-tag="67D2E7A3" href="../../tag/67A2F5CF1C50/">9.51</a>) give 
+    
+<div class="equation">
+  \[  g_ j(z)^2\leq 2\mathcal A_ j(U_ j^2)(z) +2\mathcal A_ j(u^2)(z) \leq 2D_{n,2}\bigl (U_ j(z)^2+u(z)^2\bigr ),  \]
+</div>
+<p>
+       so the $g_ j$ are bounded in $L^2(\mu )$ by Step 1. The elementary fact of Step 2 gives $\int _ Kg_ j\, \mathrm d\mu \to 0$, and by (<a data-tag="24861AA5" href="../../tag/2AE59414D95C/">9.50</a>) this integral equals $\int _ B(U_ j-u)_+\, \mathrm d\mu _ j$. Combining this with (<a data-tag="327997A9" href="../../tag/166F0CCED71A/">9.52</a>) and the identity $|U_ j-u|=2(U_ j-u)_+-(U_ j-u)$, we obtain the second convergence in (<a data-tag="F97690CD" href="../../tag/0991A86E50A6/">9.49</a>). 
+    <p>
+      Finally, since $(\mathrm{dd}^{\mathrm{c}}U_ j)^ n=\mu _ j$, we have $\int _ BU_ j(\mathrm{dd}^{\mathrm{c}}U_ j)^ n=\int _ B(U_ j-u)\, \mathrm d\mu _ j+\int _ Bu\, \mathrm d\mu _ j$. The first term tends to zero by the second convergence in (<a data-tag="F97690CD" href="../../tag/0991A86E50A6/">9.49</a>), and by (<a data-tag="24861AA5" href="../../tag/2AE59414D95C/">9.50</a>) and Step 2 the second term equals $\int _ K\mathcal A_ ju\, \mathrm d\mu $, which tends to $\int _ Bu\, \mathrm d\mu $. This proves the last assertion. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></article>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>

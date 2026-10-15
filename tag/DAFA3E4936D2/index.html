@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" data-search-index="../../search.json" data-collection-root="../../">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Radon measures and integration · Gerby</title>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/book.css"><link rel="stylesheet" href="../../assets/collection.css"><link rel="stylesheet" href="../../assets/formalization.css">
+<script src="../../assets/math-config.js"></script><script defer src="../../assets/mathjax/tex-chtml.js"></script><script type="module" src="../../assets/formalization.mjs"></script><script type="module" src="../../assets/collection.mjs"></script></head>
+<body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="../../">g <span>Gerby</span></a><a href="../../topics/">Topics</a><a href="../../entries/">All entries</a><a href="../../sources/">Sources</a></header>
+<div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
+<label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A topic, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared topics"><ul><li><a href="../../topics/analytic-singularities-and-demailly-approximation/">Analytic singularities and Demailly approximation</a></li><li><a href="../../topics/bedford-taylor-products-and-local-capacity/">Bedford–Taylor products and local capacity</a></li><li><a href="../../topics/complex-differential-forms-and-positive-currents/">Complex differential forms and positive currents</a></li><li><a href="../../topics/complex-spaces-and-modifications/">Complex spaces and modifications</a></li><li><a href="../../topics/conventions/">Conventions</a></li><li><a href="../../topics/convex-analysis-and-toric-potentials/">Convex analysis and toric potentials</a></li><li><a href="../../topics/envelopes-and-model-potentials/">Envelopes and model potentials</a></li><li><a href="../../topics/fine-topology-and-balayage/">Fine topology and balayage</a></li><li><a href="../../topics/fourier-analysis-and-incidence-of-complex-lines/">Fourier analysis and incidence of complex lines</a></li><li><a href="../../topics/global-potentials-and-positive-cohomology-classes/">Global potentials and positive cohomology classes</a></li><li><a href="../../topics/harmonic-functions-and-the-dirichlet-problem/">Harmonic functions and the Dirichlet problem</a></li><li><a href="../../topics/historical-and-bibliographical-notes/">Historical and bibliographical notes</a></li><li><a href="../../topics/introduction-to-part-i/">Introduction to Part I</a></li><li><a href="../../topics/introduction-to-part-ii/">Introduction to Part II</a></li><li><a href="../../topics/lelong-numbers-and-multiplier-ideals/">Lelong numbers and multiplier ideals</a></li><li><a href="../../topics/measures-and-distributions/">Measures and distributions</a></li><li><a href="../../topics/non-pluripolar-products/">Non-pluripolar products</a></li><li><a href="../../topics/pluripolar-sets-and-the-plurifine-topology/">Pluripolar sets and the plurifine topology</a></li><li><a href="../../topics/plurisubharmonic-functions/">Plurisubharmonic functions</a></li><li><a href="../../topics/potential-theory/">Potential theory</a></li><li><a href="../../topics/potentials-energy-and-capacity/">Potentials, energy and capacity</a></li><li><a href="../../topics/preface/">Preface</a></li><li><a href="../../topics/project-notes/">Project notes</a></li><li><a href="../../topics/relative-energy-and-perron-segments/">Relative energy and Perron segments</a></li><li><a href="../../topics/subharmonic-functions/">Subharmonic functions</a></li><li><a href="../../topics/weighted-l2-estimates-and-holomorphic-extension/">Weighted L2 estimates and holomorphic extension</a></li></ul></nav><p class="draft-note">Content is combined by topic. Every excerpt retains its source and proof status.</p></aside>
+<main id="content"><p class="eyebrow"><a href="../../topics/measures-and-distributions/">Measures and distributions</a> · Tag <code>DAFA3E4936D2</code></p><h1>Radon measures and integration</h1><section class="source-variant" data-gerby-book="foundations-of-pluripotential-theory"><div class="source-attribution">From <a href="../../sources/foundations-of-pluripotential-theory/">Foundations of pluripotential theory</a> · 1.1 Radon measures and integration <span data-gerby-tag="AD6522C4"></span></div>
+<p>
+  Unless stated otherwise, all measures in this chapter are positive, that is, they take values in $[0,\infty ]$. We use the Lebesgue integral, defined first for nonnegative simple functions and then, for a nonnegative measurable function, as the supremum of the integrals of the simple functions below it. Lebesgue measure on $\mathbb R^ d$ is denoted by $\mathrm dx$, and the Lebesgue measure of a measurable set $E\subset \mathbb R^ d$ by $|E|$. The Borel $\sigma $-algebra of $\Omega $ is the smallest $\sigma $-algebra containing the open subsets of $\Omega $, and a Borel measure on $\Omega $ is a measure defined on it. A measure on a measurable space $X$ is $\sigma $-finite if $X$ is a countable union of measurable sets of finite measure. We write $C(\Omega )=C^0(\Omega )$ and $C_ c(\Omega )=C^0_ c(\Omega )$. Their elements may be real- or complex-valued; the real-valued functions in $C_ c(\Omega )$ form the space $C_ c(\Omega ,\mathbb R)$, which we use whenever positivity is involved. 
+</p>
+
+<article class="env-definition" id="foundations-of-pluripotential-theory-4720F063">
+<p><a class="environment-identifier" href="../../tag/901C72102EF9/">Definition <span data-tag="4720F063">1.1.1</span>.</a><span data-gerby-tag="4720F063"></span> A Radon measure on $\Omega $ is a Borel measure $\mu $ on $\Omega $ which is finite on compact sets and satisfies, for every Borel set $E\subset \Omega $, </p>
+<div class="equation">
+  \[  \mu (E)=\inf _{E\subset U,\  U\text{ open}}\mu (U) =\sup _{K\subset E,\  K\text{ compact}}\mu (K).  \]
+</div>
+<p> The two equalities are called outer and inner regularity of $\mu $. A measurable function is locally integrable with respect to $\mu $ if its absolute value has finite integral over every compact subset of $\Omega $. </p>
+</article>
+
+<p>
+The support $\operatorname{Supp}\mu $ of a Radon measure $\mu $ is the set of points of $\Omega $ all of whose open neighborhoods have positive measure. Its complement $\Omega \setminus \operatorname{Supp}\mu $ is the union of all open subsets of $\Omega $ of measure zero, so it is open and $\operatorname{Supp}\mu $ is relatively closed in $\Omega $. Moreover $\mu (\Omega \setminus \operatorname{Supp}\mu )=0$ by inner regularity, because every compact subset of $\Omega \setminus \operatorname{Supp}\mu $ is covered by finitely many open sets of measure zero. 
+</p>
+<p>
+We shall often use a compact exhaustion of $\Omega $, that is, a sequence of compact sets $K_ j\subset \Omega $, $j\geq 1$, with $K_ j\subset \operatorname{Int}K_{j+1}$ for every $j$ and $\bigcup _ j\operatorname{Int}K_ j=\Omega $. For example, 
+</p>
+<div class="equation">
+  \[  K_ j=\{ x\in \Omega :|x|\leq j,\  \operatorname {dist}(x,\mathbb R^ d\setminus \Omega )\geq j^{-1}\} ,  \]
+</div>
+<p>
+ where $\operatorname {dist}(x,\varnothing )=+\infty $ if $\Omega =\mathbb R^ d$. Indeed, $K_ j$ is closed and bounded, hence compact. It lies in the open set $\{ x:|x|&lt;j+1,\  \operatorname {dist}(x,\mathbb R^ d\setminus \Omega )&gt;(j+1)^{-1}\} $, which is contained in $K_{j+1}$, and every point of $\Omega $ lies in $\operatorname{Int}K_ j$ for all large $j$. 
+</p>
+<p>
+If $K\subset \Omega $ is compact and $U\subset \Omega $ is an open set containing $K$, a cutoff function for $K$ in $U$ is a continuous function $\eta \colon \Omega \to [0,1]$ such that $\eta =1$ on $K$ and $\operatorname{Supp}\eta $ is a compact subset of $U$. Such functions exist. If $K=\varnothing $, take $\eta =0$; otherwise choose $\delta &gt;0$ with $2\delta &lt;\operatorname {dist}(K,\mathbb R^ d\setminus U)$, so that $V=\{ x:\operatorname {dist}(x,K)&lt;\delta \} $ is an open set whose closure is a compact subset of $U$, and put 
+</p>
+<div class="equation">
+  \[  \eta (x)=\frac{\operatorname {dist}(x,\mathbb R^ d\setminus V)}{\operatorname {dist}(x,\mathbb R^ d\setminus V)+\operatorname {dist}(x,K)}.  \]
+</div>
+<p>
+ The denominator never vanishes, since the first term is positive on $V\supset K$ and the second is positive off $K$; moreover $\eta =1$ on $K$ and $\eta =0$ outside $V$. Smooth cutoff functions are constructed in lemma <a data-tag="E72A5743" href="../../tag/3C40E6BD1222/">1.4.1</a>. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-B0C4661C">
+<p><a class="environment-identifier" href="../../tag/D0882F84DCFC/">Proposition <span data-tag="B0C4661C">1.1.2</span>.</a><span data-gerby-tag="B0C4661C"></span> Let $\mu $ be a Borel measure on $\Omega $ which is finite on compact subsets. Then $\mu $ is a Radon measure. In particular, $\mu $ is $\sigma $-finite. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Assume first that $\mu (\Omega )&lt;\infty $, and let $F\subset \Omega $ be relatively closed; we may assume that $F\neq \varnothing $. The open sets $U_ j=\{ x\in \Omega :\operatorname {dist}(x,F)&lt;j^{-1}\} $ decrease to $F$, so $\mu (U_ j)\to \mu (F)$ because $\mu $ is finite. Hence $F$ can be approximated in measure from outside by open sets. Passing to complements, every open set can be approximated from inside by relatively closed sets. 
+    <p>
+      Let $\mathcal A$ be the class of Borel sets $E$ such that for every $\varepsilon &gt;0$ there are an open set $U$ and a relatively closed set $F$ with $F\subset E\subset U$ and $\mu (U\setminus F)&lt;\varepsilon $. We have just seen that $\mathcal A$ contains the relatively closed sets, and $\mathcal A$ is closed under complements because the condition is symmetric. To see that $\mathcal A$ is closed under countable unions, let $E=\bigcup _ jE_ j$ with $E_ j\in \mathcal A$, and choose $F_ j\subset E_ j\subset U_ j$ with $\mu (U_ j\setminus F_ j)&lt;\varepsilon 2^{-j}$. The open set $U=\bigcup _ jU_ j$ satisfies $\mu (U\setminus E)&lt;\varepsilon $. Since $\mu (\bigcup _{j\leq N}E_ j)\to \mu (E)$, there is $N$ such that the relatively closed set $F=\bigcup _{j\leq N}F_ j$ satisfies $\mu (E\setminus F)\leq \mu (E\setminus \bigcup _{j\leq N}E_ j)+\sum _{j\leq N}\mu (E_ j\setminus F_ j)&lt;2\varepsilon $, and hence $\mu (U\setminus F)&lt;3\varepsilon $. Thus $\mathcal A$ is a $\sigma $-algebra containing the open sets, so it contains every Borel set $E$. If $F\subset E$ is relatively closed and $(K_ j)$ is a compact exhaustion of $\Omega $, then the sets $F\cap K_ j$ are compact and $\mu (F\setminus K_ j)\to 0$. Hence every Borel set can be approximated in measure from outside by open sets and from inside by compact sets. 
+    <p>
+      In general, let $(K_ j)$ be a compact exhaustion of $\Omega $, put $K_0=\varnothing $, and let $V_ j=\operatorname{Int}K_{j+1}$. The measures $\mu _ j(E)=\mu (E\cap V_ j)$ are finite, hence Radon by the first part. For inner regularity, let $E$ be a Borel set and $\varepsilon &gt;0$. A compact set $K\subset E$ with $\mu _ j(E\setminus K)&lt;\varepsilon $ satisfies $\mu (K)\geq \mu _ j(K)&gt;\mu (E\cap V_ j)-\varepsilon $, and $\mu (E\cap V_ j)\to \mu (E)$ as $j\to \infty $. For outer regularity, note that the Borel sets $B_ j=K_ j\setminus K_{j-1}$ partition $\Omega $ and that $E\cap B_ j\subset V_ j$. By outer regularity of $\mu _ j$ there is an open set $O_ j\subset V_ j$ containing $E\cap B_ j$ with $\mu (O_ j\setminus (E\cap B_ j))&lt;\varepsilon 2^{-j}$; it suffices to intersect an approximating open set with $V_ j$. Then $O=\bigcup _ jO_ j$ is an open set containing $E$ with $\mu (O\setminus E)&lt;\varepsilon $. Finally, $\mu $ is $\sigma $-finite because $\Omega =\bigcup _ jK_ j$ and each $\mu (K_ j)$ is finite. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></article>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-34CC47F9">
+<p><a class="environment-identifier" href="../../tag/9CB694815500/">Proposition <span data-tag="34CC47F9">1.1.3</span>.</a><span data-gerby-tag="34CC47F9"></span> Let $(X,\mu )$ be a measure space and let $f_ j$, $j\geq 1$, be measurable functions on $X$. </p>
+<ol>
+<li><p>
+If $f_ j\geq 0$ and $f_ j\uparrow f$ pointwise, then $\int f_ j\, \mathrm d\mu \uparrow \int f\, \mathrm d\mu $. 
+</p>
+</li><li><p>
+If $f_ j\geq 0$ for every $j$, then 
+</p>
+<div class="equation">
+  \[  \int \varliminf _ j f_ j\, \mathrm d\mu \leq \varliminf _ j\int f_ j\, \mathrm d\mu .  \]
+</div>
+</li><li><p>
+If the $f_ j$ are real or complex, converge almost everywhere to a measurable function $f$, and satisfy $|f_ j|\leq g$ for an integrable function $g$, then $f$ is integrable and $\int |f_ j-f|\, \mathrm d\mu \to 0$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) The integrals $\int f_ j\, \mathrm d\mu $ increase and are bounded by $\int f\, \mathrm d\mu $, so we must show that their limit is at least $\int f\, \mathrm d\mu $. Let $s\leq f$ be a nonnegative simple function and $0&lt;t&lt;1$. The measurable sets $E_ j=\{ f_ j\geq ts\} $ increase with $j$, and their union contains $\{ s&gt;0\} $, since $f(x)\geq s(x)&gt;ts(x)$ there. Applying continuity from below to the sets $E_ j\cap \{ s=a\} $ for the finitely many values $a$ of $s$, we obtain 
+    
+<div class="equation">
+  \[  \lim _ j\int f_ j\, \mathrm d\mu \geq \lim _ jt\int _{E_ j}s\, \mathrm d\mu =t\int s\, \mathrm d\mu .  \]
+</div>
+<p>
+       Taking the supremum over $s$ and then letting $t\uparrow 1$ proves (1); infinite integrals are allowed. 
+    <p>
+      (2) The functions $g_ j=\inf _{k\geq j}f_ k$ are measurable, they increase to $\varliminf _ jf_ j$, and $\int g_ j\, \mathrm d\mu \leq \int f_ k\, \mathrm d\mu $ for every $k\geq j$. Applying (1) to $(g_ j)$ gives (2). 
+    <p>
+      (3) Letting $j\to \infty $ in $|f_ j|\leq g$ gives $|f|\leq g$ almost everywhere, so $f$ is integrable. The functions $2g-|f_ j-f|$ are nonnegative almost everywhere, and (2), applied after a modification on a null set, gives 
+    
+<div class="equation">
+  \[  \int 2g\, \mathrm d\mu \leq \varliminf _ j\int \bigl (2g-|f_ j-f|\bigr )\, \mathrm d\mu =\int 2g\, \mathrm d\mu -\varlimsup _ j\int |f_ j-f|\, \mathrm d\mu .  \]
+</div>
+<p>
+       Since $\int 2g\, \mathrm d\mu &lt;\infty $, it follows that $\int |f_ j-f|\, \mathrm d\mu \to 0$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></article>
+<p>
+Assertions (1), (2) and (3) are the monotone convergence theorem, Fatou's lemma and the dominated convergence theorem. They concern sequences and fail for nets. For instance, the indicator functions of the finite subsets of $[0,1]$, directed by inclusion, form an increasing net of Borel functions with supremum $\mathbf1_{[0,1]}$; each of them has Lebesgue integral zero, while the supremum has integral one. The supremum of an increasing net of measurable functions need not even be measurable: if $A\subset \mathbb R$ is not Lebesgue measurable, the indicator functions of the finite subsets of $A$ increase to $\mathbf1_ A$. Where nets occur later, the passage to the limit therefore requires a separate argument. 
+</p>
+<p>
+Sets that are not Lebesgue measurable exist. Choose a set $V\subset [0,1)$ containing exactly one point of each coset $x+\mathbb Q$ of the rational numbers. The translates $V+q$, $q\in \mathbb Q\cap (-1,1)$, are contained in $(-1,2)$, and they are pairwise disjoint, because two points of $V$ with rational difference coincide. They cover $[0,1)$, since every $x\in [0,1)$ differs from the point of $V$ in its coset by a rational number in $(-1,1)$. If $V$ were measurable, translation invariance of Lebesgue measure would give $1\leq \sum _ q|V|\leq 3$, which is impossible for a countably infinite sum of equal terms. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-C4BE8A40">
+<p><a class="environment-identifier" href="../../tag/9931E90187F6/">Lemma <span data-tag="C4BE8A40">1.1.4</span> <span class="named">(Jensen's inequality)</span>.</a><span data-gerby-tag="C4BE8A40"></span> Let $(X,P)$ be a probability space, let $I\subset \mathbb R$ be an open interval, let $\varphi \colon I\to \mathbb R$ be convex, and let $f\colon X\to I$ be an integrable function. Then $\int f\, \mathrm dP\in I$, the function $\varphi \circ f$ is measurable, its negative part is integrable, and </p>
+<div class="equation">
+  \[  \varphi \Bigl (\int f\, \mathrm dP\Bigr )\leq \int \varphi \circ f\, \mathrm dP.  \]
+</div>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      For $u&lt;v$ in $I$ put $s(u,v)=(\varphi (v)-\varphi (u))/(v-u)$. If $u&lt;v&lt;w$ lie in $I$, then $v=\lambda u+(1-\lambda )w$ with $\lambda =(w-v)/(w-u)\in (0,1)$, and the convexity inequality $\varphi (v)\leq \lambda \varphi (u)+(1-\lambda )\varphi (w)$ is equivalent to each of the inequalities $s(u,v)\leq s(u,w)$ and $s(u,w)\leq s(v,w)$. Hence $s(u,v)$ is nondecreasing in each of its two arguments. Consequently, if $[x,y]\subset I$ and $x'&lt;x$, $y'&gt;y$ are points of $I$, then $s(x',x)\leq s(u,v)\leq s(y,y')$ whenever $x\leq u&lt;v\leq y$, so $\varphi $ is Lipschitz on $[x,y]$. In particular, $\varphi $ is continuous, and $\varphi \circ f$ is measurable. 
+    <p>
+      Let $a=\int f\, \mathrm dP$. If $I$ has a finite left endpoint $\alpha $, then $f-\alpha &gt;0$ on $X$, so one of the sets $\{ f-\alpha &gt;1/k\} $, which increase to $X$, has positive measure, and therefore $a-\alpha =\int (f-\alpha )\, \mathrm dP&gt;0$. In the same way, $a$ is smaller than a finite right endpoint of $I$; thus $a\in I$. For $u&lt;a&lt;w$ in $I$ we have $s(u,a)\leq s(u,w)\leq s(a,w)$, so $c=\sup _{u&lt;a}s(u,a)$ is finite and $c\leq s(a,w)$ for every $w&gt;a$. Hence $\varphi (y)\geq \varphi (a)+c(y-a)$ for every $y\in I$: for $y&lt;a$ this is the inequality $s(y,a)\leq c$, and for $y&gt;a$ it is $s(a,y)\geq c$. It follows that $\varphi \circ f\geq \varphi (a)+c(f-a)$, where the right side is integrable. Therefore the negative part of $\varphi \circ f$ is integrable, and since $\int (f-a)\, \mathrm dP=0$, integration gives $\int \varphi \circ f\, \mathrm dP\geq \varphi (a)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Let $(X,\mathcal M)$ and $(Y,\mathcal N)$ be measurable spaces, and let $\Phi \colon X\to Y$ be measurable, that is, $\Phi ^{-1}(E)\in \mathcal M$ for every $E\in \mathcal N$. The image of a measure $\mu $ on $X$ under $\Phi $ is the measure $\Phi _*\mu (E)=\mu (\Phi ^{-1}(E))$ on $Y$; it is countably additive because preimages preserve disjoint unions. For every $\mathcal N$-measurable function $f\geq 0$ on $Y$, 
+</p>
+<div class="equation">
+  \[  \int _ Yf\, \mathrm d\Phi _*\mu =\int _ Xf\circ \Phi \, \mathrm d\mu .  \]
+</div>
+<p>
+ This holds for indicator functions by definition, hence for simple functions by linearity, and for general $f$ by monotone convergence, applied to simple functions $s_ k\uparrow f$ and to $s_ k\circ \Phi \uparrow f\circ \Phi $. Consequently, a function $f$ is integrable with respect to $\Phi _*\mu $ if and only if $f\circ \Phi $ is integrable with respect to $\mu $, and then the identity still holds. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-092BD594">
+<p><a class="environment-identifier" href="../../tag/D0A959AF6D25/">Lemma <span data-tag="092BD594">1.1.5</span>.</a><span data-gerby-tag="092BD594"></span> Let $\mu $ be a $\sigma $-finite measure on a measurable space $X$. Then every family of pairwise disjoint measurable subsets of $X$ of positive measure is countable. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Write $X=\bigcup _ mX_ m$ with measurable sets $X_ m$ of finite measure. Every member $E$ of the family satisfies $\mu (E\cap X_ m)\geq 1/k$ for some $m$ and some integer $k\geq 1$. For fixed $m$ and $k$, at most $k\mu (X_ m)$ members have this property, because the corresponding sets $E\cap X_ m$ are pairwise disjoint subsets of $X_ m$. Hence the family is a countable union of finite subfamilies. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+In particular, a $\sigma $-finite Borel measure has at most countably many atoms, that is, points of positive measure. If $\mu $ is a Radon measure on $\Omega $, which is $\sigma $-finite by proposition <a data-tag="B0C4661C" href="../../tag/D0882F84DCFC/">1.1.2</a>, and $a\in \mathbb R^ d$, then $\mu (\Omega \cap \{ x:|x-a|=r\} )=0$ for all but countably many radii $r&gt;0$, since these sets are pairwise disjoint. 
+</p>
+<p>
+Uniqueness questions for measures, and the construction of product measures, rest on the following lemma. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-8C97E40C">
+<p><a class="environment-identifier" href="../../tag/97A1ECFF2340/">Lemma <span data-tag="8C97E40C">1.1.6</span>.</a><span data-gerby-tag="8C97E40C"></span> Let $\mathcal P$ be a nonempty family of subsets of a set $Z$ which is closed under finite intersections, and let $\sigma (\mathcal P)$ be the $\sigma $-algebra generated by $\mathcal P$. </p>
+<ol>
+<li><p>
+Every family of subsets of $Z$ which contains $\mathcal P$ and is closed under complements and countable disjoint unions contains $\sigma (\mathcal P)$. 
+</p>
+</li><li><p>
+Let $\lambda $ and $\lambda '$ be finite measures on a $\sigma $-algebra containing $\sigma (\mathcal P)$. If $\lambda (Z)=\lambda '(Z)$ and $\lambda (A)=\lambda '(A)$ for every $A\in \mathcal P$, then $\lambda (E)=\lambda '(E)$ for every $E\in \sigma (\mathcal P)$. 
+</p>
+</li>
+</ol>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      (1) Let $\mathcal L$ be the intersection of all families of subsets of $Z$ which contain $\mathcal P$ and are closed under complements and countable disjoint unions; it is the smallest such family. It contains $Z=A\cup (Z\setminus A)$ for any $A\in \mathcal P$. If $B\subset A$ belong to $\mathcal L$, so does $A\setminus B$, the complement of the disjoint union of $Z\setminus A$ and $B$. For $A\in \mathcal P$, the sets $B\in \mathcal L$ with $A\cap B\in \mathcal L$ form a family which contains $\mathcal P$ and is closed under countable disjoint unions and under complements, because $A\cap (Z\setminus B)=A\setminus (A\cap B)$; hence it equals $\mathcal L$. Thus $A\cap B\in \mathcal L$ whenever $A\in \mathcal P$ and $B\in \mathcal L$. Repeating the argument with $A\in \mathcal L$ shows that $\mathcal L$ is closed under finite intersections. Writing a countable union $\bigcup _ jA_ j$ of members of $\mathcal L$ as the disjoint union of the sets $A_ j\cap (Z\setminus A_1)\cap \cdots \cap (Z\setminus A_{j-1})$, we see that $\mathcal L$ is a $\sigma $-algebra. Hence $\sigma (\mathcal P)\subset \mathcal L$, and $\mathcal L$ is contained in every family as in (1). 
+    <p>
+      (2) The sets $E\in \sigma (\mathcal P)$ with $\lambda (E)=\lambda '(E)$ form a family which contains $\mathcal P$, is closed under countable disjoint unions by countable additivity, and is closed under complements because $\lambda (Z\setminus E)=\lambda (Z)-\lambda (E)$ and $\lambda '(Z\setminus E)=\lambda '(Z)-\lambda '(E)$ are differences of finite numbers. By (1), this family is all of $\sigma (\mathcal P)$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></article>
+<p>
+Assertion (1) is Dynkin's $\pi $–$\lambda $ theorem. 
+</p>
+
+<article class="env-proposition" id="foundations-of-pluripotential-theory-D7B34569">
+<p><a class="environment-identifier" href="../../tag/379F54715B13/">Proposition <span data-tag="D7B34569">1.1.7</span>.</a><span data-gerby-tag="D7B34569"></span> Let $(X,\mu )$ and $(Y,\nu )$ be $\sigma $-finite measure spaces. There is a unique measure $\mu \times \nu $ on the product $\sigma $-algebra of $X\times Y$ with $(\mu \times \nu )(A\times B)=\mu (A)\nu (B)$ for all measurable $A\subset X$ and $B\subset Y$, where $0\cdot \infty =0$. If $f\geq 0$ is product-measurable, then $x\mapsto \int _ Yf(x,y)\, \mathrm d\nu (y)$ and $y\mapsto \int _ Xf(x,y)\, \mathrm d\mu (x)$ are measurable and </p>
+<div class="equation">
+  \[  \int f\, \mathrm d(\mu \times \nu ) =\int _ X\left(\int _ Y f(x,y)\, \mathrm d\nu (y)\right)\mathrm d\mu (x) =\int _ Y\left(\int _ X f(x,y)\, \mathrm d\mu (x)\right)\mathrm d\nu (y).  \]
+</div>
+<p> If $f$ is complex-valued, product-measurable and $\int |f|\, \mathrm d(\mu \times \nu )&lt;\infty $, then its sections are integrable for almost every value of the other variable, both iterated integrals exist, and the same equalities hold. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      The product $\sigma $-algebra is generated by the measurable rectangles $A\times B$, and the intersection of two rectangles is a rectangle, so lemma <a data-tag="8C97E40C" href="../../tag/97A1ECFF2340/">1.1.6</a> applies to the family of rectangles. 
+    <p>
+<em>Step 1: finite measures.</em> Suppose that $\mu $ and $\nu $ are finite. The sets $E\subset X\times Y$ whose sections $E_ x=\{ y:(x,y)\in E\} $ are all measurable form a $\sigma $-algebra containing the rectangles, so sections of product-measurable sets are measurable. The product-measurable sets $E$ for which $x\mapsto \nu (E_ x)$ is measurable include the rectangles, since $\nu ((A\times B)_ x)=\mathbf1_ A(x)\nu (B)$. They are closed under complements, as $\nu ((X\times Y\setminus E)_ x)=\nu (Y)-\nu (E_ x)$, and under countable disjoint unions, so by lemma <a data-tag="8C97E40C" href="../../tag/97A1ECFF2340/">1.1.6</a>(1) they are all product-measurable sets. 
+    <p>
+      By monotone convergence (proposition <a data-tag="34CC47F9" href="../../tag/9CB694815500/">1.1.3</a>), $\lambda (E)=\int _ X\nu (E_ x)\, \mathrm d\mu (x)$ is a measure with $\lambda (A\times B)=\mu (A)\nu (B)$. If $\lambda '$ is another such measure, then $\lambda '(X\times Y)=\mu (X)\nu (Y)=\lambda (X\times Y)$, so $\lambda '=\lambda $ by lemma <a data-tag="8C97E40C" href="../../tag/97A1ECFF2340/">1.1.6</a>(2). In particular, $\lambda $ coincides with the measure $E\mapsto \int _ Y\mu (E^ y)\, \mathrm d\nu (y)$, where $E^ y=\{ x:(x,y)\in E\} $, which is obtained by exchanging the roles of $X$ and $Y$. This proves uniqueness and both integral identities for indicator functions. If $f\geq 0$ is product-measurable, its sections are measurable, because $\{ y:f(x,y)&gt;t\} $ is a section of $\{ f&gt;t\} $. Linearity extends the identities, together with the measurability of the inner integrals, to nonnegative simple functions, and monotone convergence, applied to an increasing sequence of such functions converging to $f$, extends them to $f$. 
+    <p>
+<em>Step 2: $\sigma $-finite measures.</em> Partition $X$ and $Y$ into countably many measurable sets $X_ m$ and $Y_ n$ of finite measure, and consider the finite measures $\mu _ m(A)=\mu (A\cap X_ m)$ on $X$ and $\nu _ n(B)=\nu (B\cap Y_ n)$ on $Y$. Let $\lambda _{mn}$ be the product of $\mu _ m$ and $\nu _ n$ given by Step 1, and put $\mu \times \nu =\sum _{m,n}\lambda _{mn}$. This is a measure on the product $\sigma $-algebra, and $(\mu \times \nu )(A\times B)=\sum _{m,n}\mu (A\cap X_ m)\nu (B\cap Y_ n)=\mu (A)\nu (B)$. If $\lambda '$ is another measure with this property, then $\lambda '_{mn}(E)=\lambda '(E\cap (X_ m\times Y_ n))$ is a finite measure with $\lambda '_{mn}(A\times B)=\mu _ m(A)\nu _ n(B)$, so $\lambda '_{mn}=\lambda _{mn}$ by Step 1, and $\lambda '=\sum _{m,n}\lambda '_{mn}=\mu \times \nu $. 
+    <p>
+      The integral of a nonnegative measurable function with respect to a countable sum of measures is the sum of the integrals. This holds for indicator functions by definition and for simple functions by linearity; in general it follows by monotone convergence, which also allows us to interchange a limit with a series of nonnegative terms. Applying this to $\mu \times \nu =\sum _{m,n}\lambda _{mn}$, to $\nu =\sum _ n\nu _ n$ and to $\mu =\sum _ m\mu _ m$, and using Step 1 for each $\lambda _{mn}$, we obtain for every nonnegative product-measurable $f$ 
+    
+<div class="equation">
+  \[  \int f\, \mathrm d(\mu \times \nu )=\sum _{m,n}\int _ X\left(\int _ Yf(x,y)\, \mathrm d\nu _ n(y)\right)\mathrm d\mu _ m(x)=\int _ X\left(\int _ Yf(x,y)\, \mathrm d\nu (y)\right)\mathrm d\mu (x),  \]
+</div>
+<p>
+       where $x\mapsto \int _ Yf(x,y)\, \mathrm d\nu (y)=\sum _ n\int _ Yf(x,y)\, \mathrm d\nu _ n(y)$ is measurable as a countable sum of measurable functions. The other iterated integral is treated in the same way, with the roles of $X$ and $Y$ exchanged. 
+    <p>
+      Now let $\int |f|\, \mathrm d(\mu \times \nu )&lt;\infty $. By the nonnegative case applied to $|f|$, the measurable function $x\mapsto \int _ Y|f(x,y)|\, \mathrm d\nu (y)$ is integrable, so it is finite outside a measurable $\mu $-null set $N$. For $x\notin N$ the section $f(x,\cdot )$ is integrable, and its integral is the corresponding combination of the integrals of the sections of the positive and negative parts of $\operatorname{Re}f$ and $\operatorname{Im}f$. These four functions have finite integrals with respect to $\mu \times \nu $; defining the inner integral to be zero on $N$ and applying the nonnegative case to each of them, we obtain the first equality for $f$. The second follows by exchanging the roles of $X$ and $Y$. 
+      <span class="qed">$\square$</span>
+</p>
+</p></p></p></p></p></p></article>
+<p>
+We refer to these assertions as Tonelli's theorem (for nonnegative $f$) and Fubini's theorem (for integrable $f$). To apply them to Borel functions on products of topological spaces, we need to compare the Borel $\sigma $-algebra of a product with the product of the Borel $\sigma $-algebras. 
+</p>
+
+<article class="env-lemma" id="foundations-of-pluripotential-theory-7AE4FB12">
+<p><a class="environment-identifier" href="../../tag/9F2BA6481FD8/">Lemma <span data-tag="7AE4FB12">1.1.8</span>.</a><span data-gerby-tag="7AE4FB12"></span> Let $Z_1$ and $Z_2$ be separable metric spaces, and give $Z_1\times Z_2$ the product topology. Then the Borel $\sigma $-algebra of $Z_1\times Z_2$ is the $\sigma $-algebra generated by the products $A_1\times A_2$ of Borel sets $A_1\subset Z_1$ and $A_2\subset Z_2$. Consequently, every Borel function on $Z_1\times Z_2$ is measurable for the product of the Borel $\sigma $-algebras of $Z_1$ and $Z_2$, and Tonelli's and Fubini's theorems apply to it whenever $Z_1$ and $Z_2$ carry $\sigma $-finite Borel measures. </p>
+</article>
+
+<article class="env-proof">
+<p>
+<strong>Proof.</strong>
+      Let $p_1$ and $p_2$ be the projections of $Z_1\times Z_2$ onto its factors. For $i=1,2$, the sets $E\subset Z_ i$ with $p_ i^{-1}(E)$ Borel form a $\sigma $-algebra which contains the open sets, because $p_ i$ is continuous; hence it contains all Borel sets. Thus $A_1\times A_2=p_1^{-1}(A_1)\cap p_2^{-1}(A_2)$ is Borel whenever $A_1$ and $A_2$ are Borel. Conversely, we may assume that $Z_1$ and $Z_2$ are nonempty, and we choose countable dense subsets $D_1\subset Z_1$ and $D_2\subset Z_2$. Let $W\subset Z_1\times Z_2$ be open and $(z_1,z_2)\in W$. There is $r&gt;0$ with $B(z_1,r)\times B(z_2,r)\subset W$, where $B(z_ i,r)$ is the open ball in $Z_ i$. Choose $a_ i\in D_ i$ with $\operatorname {dist}(a_ i,z_ i)&lt;r/3$ and a rational number $q\in (r/3,2r/3)$; then $z_ i\in B(a_ i,q)\subset B(z_ i,r)$ by the triangle inequality. Hence $W$ is the union of those of the countably many products $B(a_1,q_1)\times B(a_2,q_2)$, with $a_ i\in D_ i$ and positive rational $q_ i$, that are contained in $W$. Each of them is a product of open sets, so every open subset of $Z_1\times Z_2$, and therefore every Borel subset, belongs to the $\sigma $-algebra generated by the products of Borel sets. 
+      <span class="qed">$\square$</span>
+</p>
+</article>
+<p>
+In particular, the Borel $\sigma $-algebra of $\mathbb R^{d_1+d_2}=\mathbb R^{d_1}\times \mathbb R^{d_2}$ is the product of the Borel $\sigma $-algebras of the factors. On Borel sets, Lebesgue measure on $\mathbb R^{d_1+d_2}$ is the product of the Lebesgue measures on the factors. Indeed, both measures assign to a product of half-open boxes the product of their volumes. These products are closed under finite intersections, and they generate the Borel $\sigma $-algebra, since every open set is a countable union of half-open boxes. By lemma <a data-tag="8C97E40C" href="../../tag/97A1ECFF2340/">1.1.6</a>(2), the two measures agree on the Borel subsets of every box $[-N,N)^{d_1+d_2}$, hence on all Borel sets. 
+</p>
+<p>
+Recall that the completion of a measure $\lambda $ on a $\sigma $-algebra $\mathcal A$ is its extension to the $\sigma $-algebra of all sets $E\cup N'$, where $E\in \mathcal A$ and $N'$ is contained in a $\lambda $-null set of $\mathcal A$; Lebesgue measure is the completion of its restriction to the Borel sets. A function $f$ which is measurable for the completion agrees $\lambda $-almost everywhere with an $\mathcal A$-measurable function $g$. Indeed, approximate $f$ pointwise by simple functions measurable for the completion. Replace each of their level sets by a set of $\mathcal A$ contained in it and differing from it only inside a $\lambda $-null set of $\mathcal A$, and let $g$ be the pointwise limit of the modified simple functions outside the countable union of these null sets, and $0$ on that union. 
+</p>
+<p>
+In particular, every Lebesgue measurable function on $\Omega $ agrees almost everywhere with a Borel function, and in integrals with respect to Lebesgue measure we may use Borel representatives; for instance, if $v$ is a Borel function on $\mathbb R^ d$, then $(x,y)\mapsto v(x-y)$ is a Borel function on $\mathbb R^ d\times \mathbb R^ d$. Tonelli's and Fubini's theorems are often applied to functions that are only measurable for the completion of $\mu \times \nu $; statements about almost every section of such a function refer to a product-measurable representative. 
+</p>
+<p>
+Let $\alpha $ and $\beta $ be Radon measures on $\Omega $. The difference $\sigma =\alpha -\beta $ is defined on the relatively compact Borel subsets of $\Omega $, and on all Borel subsets if $\alpha $ and $\beta $ are finite. We call $\sigma $ a real signed Radon measure, and a finite real signed measure if $\alpha $ and $\beta $ are finite. The total variation of $\sigma $ is 
+</p>
+<div class="equation">
+  \[  |\sigma |(A)=\sup _{A=\bigsqcup _{i=1}^ m A_ i}\sum _{i=1}^ m|\sigma (A_ i)|,  \]
+</div>
+<p>
+ where $A$ is a relatively compact Borel set and the supremum is taken over all finite partitions of $A$ into Borel sets. Since $|\sigma (A_ i)|\leq \alpha (A_ i)+\beta (A_ i)$, we have $|\sigma |\leq \alpha +\beta $. 
+</p>
+<p>
+We show that $|\sigma |$ is countably additive on the relatively compact Borel sets. It is finitely additive: if $A=A'\sqcup A''$, combining partitions of $A'$ and $A''$ gives $|\sigma |(A)\geq |\sigma |(A')+|\sigma |(A'')$, and intersecting a partition of $A$ with $A'$ and $A''$ gives the reverse inequality by the triangle inequality. If $A$ is the union of disjoint Borel sets $A_ j$, finite additivity and monotonicity give $|\sigma |(A)\geq \sum _ j|\sigma |(A_ j)$. Conversely, for every finite partition $A=\bigsqcup _ iB_ i$, countable additivity of $\sigma $ gives $\sum _ i|\sigma (B_ i)|\leq \sum _ i\sum _ j|\sigma (B_ i\cap A_ j)|\leq \sum _ j|\sigma |(A_ j)$. This argument uses only the countable additivity of $\sigma $ on relatively compact Borel sets, the bound $|\sigma |\leq \alpha +\beta $ and the triangle inequality. 
+</p>
+<p>
+To extend $|\sigma |$ to all Borel sets, let $(K_ j)$ be a compact exhaustion of $\Omega $ and $K_0=\varnothing $. The relatively compact Borel sets $B_ j=K_ j\setminus K_{j-1}$ partition $\Omega $, and we put $|\sigma |(E)=\sum _ j|\sigma |(E\cap B_ j)$ for Borel sets $E\subset \Omega $. This extension is countably additive, by rearrangement of double series of nonnegative terms, and it agrees with the previous definition on relatively compact sets by countable additivity there. It is bounded by $\alpha +\beta $, hence finite on compact sets, so it is a Radon measure by proposition <a data-tag="B0C4661C" href="../../tag/D0882F84DCFC/">1.1.2</a>. In the same way, the set functions $\sigma ^\pm =(|\sigma |\pm \sigma )/2$, which are nonnegative because $|\sigma (A)|\leq |\sigma |(A)$, extend to Radon measures, and $\sigma =\sigma ^+-\sigma ^-$ and $|\sigma |=\sigma ^++\sigma ^-$ on relatively compact Borel sets. 
+</p>
+<p>
+For a Borel function $f$ which is integrable with respect to $|\sigma |$, for instance a bounded Borel function with compact support, we put $\int f\, \mathrm d\sigma =\int f\, \mathrm d\sigma ^+-\int f\, \mathrm d\sigma ^-$. The measures $\sigma ^++\beta $ and $\alpha +\sigma ^-$ agree on relatively compact Borel sets, hence on all Borel sets, so $\int f\, \mathrm d\sigma =\int f\, \mathrm d\alpha -\int f\, \mathrm d\beta $ whenever $f$ is integrable with respect to $\alpha +\beta $. The inequality $|\int f\, \mathrm d\sigma |\leq \int |f|\, \mathrm d|\sigma |$ holds for simple $f$ because $|\sigma ^+(A)-\sigma ^-(A)|\leq |\sigma |(A)$, and in general by approximation with simple functions $s_ k\to f$, $|s_ k|\leq |f|$, and dominated convergence. In this way, convergence theorems and iterated integrals for signed measures reduce to the positive case. 
+</p>
+</section><footer class="book-footer">Gerby · Mingchen Xia · <a href="../../sources/">Sources and revisions</a><br>Formalization status is recorded for each source statement at its verified proof revision.</footer></main></div></body></html>
