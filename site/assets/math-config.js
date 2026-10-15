@@ -1,5 +1,7 @@
 window.MathJax = {
+  loader: {load: ['[tex]/html', '[tex]/textmacros']},
   tex: {
+    packages: {'[+]': ['html', 'textmacros']},
     inlineMath: [['$', '$'], ['\\(', '\\)']], processEscapes: true,
     macros: {
       mathds: ['\\mathbb{#1}', 1],

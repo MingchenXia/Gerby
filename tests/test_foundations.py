@@ -76,6 +76,7 @@ See \cref{def:test,eq:first}.
 \begin{definition}\label{def:with_underscore}For $\iota,\jmath$, the rest of this definition survives.\end{definition}
 \begin{equation}\label{eq:with_underscore}x<y\end{equation}
 See \cref{def:with_underscore,eq:with_underscore}.
+\[x<y\quad\textup{by \cref{def:with_underscore} and \eqref{eq:with_underscore}}\]
 \end{document}""")
             records = adapter.render_fragments(source, working)
             self.assertEqual({r["label"] for r in records}, {"chap:with_underscore", "sec:test", "def:with_underscore", "eq:with_underscore"})
@@ -83,6 +84,9 @@ See \cref{def:with_underscore,eq:with_underscore}.
             self.assertIn("the rest of this definition survives", definition["html"])
             self.assertEqual(definition["parent_label"], "sec:test")
             self.assertNotIn("TeXFragment object", str(records))
+            section = next(r for r in records if r["label"] == "sec:test")
+            self.assertIn(r"\gerbyref{765FE373}{1.1.1}", section["html"])
+            self.assertIn(r"\gerbyref{2C442D09}{1.1}", section["html"])
 
 
 if __name__ == "__main__":

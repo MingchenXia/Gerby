@@ -96,17 +96,33 @@ def compatibility():
 
 def register_commands(document):
     from plasTeX import Command
+    def identifier(tokens):
+        text = tokens if isinstance(tokens, str) else "".join(token.source for token in tokens)
+        return re.sub(r"\s+", "", text)
     class label(Command):
         args = "[ type:str ] label:id"
     document.context.addGlobal("label", label)
+    class ref(Command):
+        args = "* label:nox"
+
+        def invoke(self, tex):
+            self.parse(tex)
+            name = identifier(self.attributes["label"])
+            self.attributes["label"] = name
+            document.context.ref(self, "label", name)
+
+        @property
+        def source(self):
+            return r"\ref{" + self.attributes["label"] + "}"
+    document.context.addGlobal("ref", ref)
     class CrossReference(Command):
-        args = "* labels:str"
+        args = "* labels:nox"
 
         def invoke(self, tex):
             self.parse(tex)
             names = {"chap": "Chapter", "sec": "Section", "thm": "Theorem", "lem": "Lemma", "prop": "Proposition", "cor": "Corollary", "def": "Definition", "eq": "Equation", "ex": "Example", "rem": "Remark"}
             references = []
-            for label in self.attributes["labels"].split(","):
+            for label in identifier(self.attributes["labels"]).split(","):
                 label = label.strip()
                 prefix = names.get(label.split(":")[0], "")
                 if self.nodeName == "cref":
@@ -131,11 +147,11 @@ def register_commands(document):
     document.context.newcommand("aa", 0, "å")
     for name in ("itemref", "Itemref"):
         class ItemReference(Command):
-            args = "label:str"
+            args = "label:nox"
 
             def invoke(self, tex):
                 self.parse(tex)
-                label = self.attributes["label"]
+                label = identifier(self.attributes["label"])
                 parent = ":".join(label.split(":")[1:-1])
                 tex.input((r"\cref{" + parent + "} " if parent else "") + r"\ref{" + label + "}")
                 return []
@@ -298,18 +314,28 @@ def render_fragments(source, working):
         os.chdir(previous)
     if problems.problems:
         raise ValueError("Gerby rendering errors: " + "; ".join(problems.problems))
+    def web_references(markup):
+        def replace(match):
+            name = re.sub(r"\s+", "", match[1])
+            target = document.context.labels.get(name)
+            if target is None or not target.id:
+                raise ValueError(f"Unresolved mathematical reference: {name}")
+            number = target.ref.textContent.strip() if target.ref is not None else ""
+            number = number or getattr(target, "title", target).textContent.strip()
+            return r"\gerbyref{" + stable_tag(target.id) + "}{" + escape(number, quote=False) + "}"
+        return re.sub(r"\\ref\{([^}]+)\}", replace, markup)
     for record in records:
         fragments = list(working.glob(f"*-{record['tag']}-*.tag"))
         if len(fragments) != 1:
             raise ValueError(f"Expected exactly one Gerby fragment for {record['kind']} {record['tag']} {record['label']}: {record['statement_tex'][:500]}")
-        record["html"] = fragments[0].read_text()
+        record["html"] = web_references(fragments[0].read_text())
         record["statement_html"] = record["html"]
         if record["kind"] == "definition":
             term = BeautifulSoup(record["html"], "html.parser").find("em")
             if term and 3 <= len(term.get_text()) <= 120:
                 name = term.get_text(" ", strip=True)
                 record["semantic_title"] = name[:1].upper() + name[1:]
-        record["proof_html"] = "".join(path.read_text() for path in sorted(working.glob(record["tag"] + "-*.proof")))
+        record["proof_html"] = "".join(web_references(path.read_text()) for path in sorted(working.glob(record["tag"] + "-*.proof")))
         record["html"] += record["proof_html"]
     floats = {}
     for record in records:

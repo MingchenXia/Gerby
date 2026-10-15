@@ -95,6 +95,13 @@ class CollectionTests(unittest.TestCase):
         self.assertNotIn(r"\gerbyimage", result)
         self.assertNotIn(r"\[", result)
 
+    def test_equation_citations_link_to_the_correct_source_statement(self):
+        html = r'\[x&lt;y\quad\textup{by \gerbyref{1234ABCD}{1.1}}\]'
+        result = prepare_fragment({**self.record, "source": "first", "html": html}, {("first", "1234ABCD"): "ABCD1234"}, {}, "../../")
+        self.assertIn(r"\href{../../tag/ABCD1234/}{1.1}", result)
+        with self.assertRaisesRegex(ValueError, "Unresolved mathematical reference"):
+            prepare_fragment({**self.record, "source": "second", "html": html}, {("first", "1234ABCD"): "ABCD1234"}, {}, "../../")
+
 
 if __name__ == "__main__":
     unittest.main()

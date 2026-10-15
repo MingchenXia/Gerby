@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from hashlib import sha256
+from functools import cache
 from html import escape
 import json
 import os
@@ -181,6 +182,15 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
     fragment = re.sub(r"\\begin\{equation\*?\}\s*(?:\\label\{[^}]+\}\s*)?" + image + r"\s*\\end\{equation\*?\}", illustration, fragment)
     if r"\gerbyimage" in fragment:
         raise ValueError(f"A source diagram remains inside a formula: {source}/{variant['label']}")
+    def math_reference(match):
+        key = source, match[1]
+        if key not in source_tags:
+            raise ValueError(f"Unresolved mathematical reference: {source}/{match[1]}")
+        url = root + "tag/" + source_tags[key] + "/" + (component_anchors or {}).get(key, "")
+        return r"\href{" + url + "}{" + match[2] + "}"
+    fragment = re.sub(r"\\gerbyref\{([A-F0-9]{8})\}\{([^{}]+)\}", math_reference, fragment)
+    if r"\gerbyref" in fragment or "TeXFragment object at" in fragment:
+        raise ValueError(f"An invalid mathematical reference remains: {source}/{variant['label']}")
     soup = BeautifulSoup(fragment, "html.parser")
     for paragraph in list(soup.find_all("p")):
         if paragraph.find(["article", "div", "aside", "figure", "h1", "h2", "h3", "ul", "ol", "table"], recursive=False):
@@ -229,14 +239,22 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
     return str(soup)
 
 
+@cache
+def asset_revision():
+    folder = Path(__file__).resolve().parents[1] / "site" / "assets"
+    names = ("book.css", "collection.css", "formalization.css", "math-config.js", "formalization.mjs", "collection.mjs")
+    return sha256(b"".join((folder / name).read_bytes() for name in names)).hexdigest()[:12]
+
+
 def shell(content, title, chapters, root=""):
     navigation = "".join(f'<li><a href="{root}chapters/{escape(key)}/"><span>{chapter["number"]}.</span> {escape(chapter["title"])}</a></li>' for key, chapter in chapters.items())
     assets = root + "assets/"
+    version = asset_revision()
     return f'''<!doctype html>
 <html lang="en" data-search-index="{root}search.json" data-collection-root="{root}">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(title)} · Gerby</title>
-<link rel="icon" href="{assets}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{assets}book.css"><link rel="stylesheet" href="{assets}collection.css"><link rel="stylesheet" href="{assets}formalization.css">
-<script src="{assets}math-config.js"></script><script defer src="{assets}mathjax/tex-chtml.js"></script><script type="module" src="{assets}formalization.mjs"></script><script type="module" src="{assets}collection.mjs"></script></head>
+<link rel="icon" href="{assets}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{assets}book.css?v={version}"><link rel="stylesheet" href="{assets}collection.css?v={version}"><link rel="stylesheet" href="{assets}formalization.css?v={version}">
+<script src="{assets}math-config.js?v={version}"></script><script defer src="{assets}mathjax/tex-chtml.js?v={version}"></script><script type="module" src="{assets}formalization.mjs?v={version}"></script><script type="module" src="{assets}collection.mjs?v={version}"></script></head>
 <body><a class="skip" href="#content">Skip to content</a><header class="book-header"><a class="brand" href="{root}">g <span>Gerby</span></a><a href="{root}chapters/">Chapters</a><a href="{root}entries/">All entries</a><a href="{root}sources/">Sources</a></header>
 <div class="reading-layout"><aside class="sidebar"><p class="book-name">A shared mathematical reference</p><p class="author">Definitions, results, and proofs</p>
 <label for="collection-search">Search all content</label><input id="collection-search" type="search" placeholder="A subject, phrase, or tag" autocomplete="off"><div id="search-results" aria-live="polite"></div><nav aria-label="Shared chapters"><ol>{navigation}</ol></nav><p class="draft-note">Shared chapters bring the source texts together. Each statement retains its attribution and proof status.</p></aside>
