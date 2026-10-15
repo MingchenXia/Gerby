@@ -18,6 +18,8 @@ from numbering import renumber_markup
 from structure import arrange_sections
 from footnotes import collect_notes, number_notes, relocate_notes
 from proof_expansions import apply_expansions, check_dependencies
+from reading_edits import apply_reading_edits, validate_reading_edits
+from numbering import assign_numbers
 
 
 def slugify(title):
@@ -396,6 +398,9 @@ def build_collection(books, destination, configuration):
         if (folder / "assets").is_dir():
             shutil.copytree(folder / "assets", destination / "assets" / "sources" / source, dirs_exist_ok=True)
     dependencies = {}
+    reading_registry = Path(__file__).resolve().parents[1] / configuration['reading_edits'] if configuration.get('reading_edits') else None
+    if reading_registry:
+        validate_reading_edits(exports, reading_registry)
     if configuration.get("proof_expansions"):
         registry = Path(__file__).resolve().parents[1] / configuration["proof_expansions"]
         exports, dependencies = apply_expansions(exports, registry, statement_fingerprint)
@@ -403,6 +408,8 @@ def build_collection(books, destination, configuration):
     check_dependencies(entries, dependencies)
     configuration = arrange_sections(entries, topics, configuration)
     chapters, topic_chapters = chapter_structure(topics, configuration)
+    assign_numbers(chapters, entries)
+    reading_notes, reading_audit = apply_reading_edits(entries, topic_chapters, reading_registry) if reading_registry else ([], {})
     comments = json.loads((Path(__file__).resolve().parents[1] / "comments.json").read_text())
     reader = Reader(chapters, topics, entries, sources, comments)
     anchors = {(v["source"], v["tag"]): "#" + v["source"] + "-" + v["tag"] for entry in entries.values() for v in entry["components"]}
@@ -506,6 +513,15 @@ def build_collection(books, destination, configuration):
         if book.get("visibility") == "private":
             source_content += '<p class="source-notice">This reading edition is published by permission. The source repository remains private; its revision links require access. Research files and source archives are not included.</p>'
         source_content += f'<p><a href="{escape(book["repository"])}/commit/{editions[source]["commit"]}">Source revision {editions[source]["commit"][:12]} ↗</a></p>'
+        source_notes = [note for note in reading_notes if note['source'] == source]
+        if source_notes:
+            source_content += '<h2>Attribution and further reading</h2><p>Original source commentary and bibliographical references accompany the corresponding Gerby entries here.</p>'
+            for note in source_notes:
+                entry = entries[note['tag']]
+                variant = {'source': source, 'label': note['label'], 'tag': entry['variants'][0]['tag'], 'html': note['html']}
+                body = prepare_fragment(variant, source_tags, reference_map, '../../', anchors, reader.numbering)
+                source_content += f'<details class="source-attribution"><summary><a href="../../tag/{entry["tag"]}/">{escape(display_title(entry))}</a></summary>{body}</details>'
+        source_content += '<h2>Contributed entries</h2>'
         write("sources/" + source, source_content + entry_list(relevant, topics, "../../"), book["title"], "../../")
         source_folder = destination / "sources" / source
         (source_folder / "tags.json").write_text(json.dumps([{**record, "canonical_tag": source_tags[(source, record["tag"])], "anchor": anchors.get((source, record["tag"]), "")} for record in inventories[source]], indent=2) + "\n")
@@ -537,6 +553,7 @@ def build_collection(books, destination, configuration):
     (destination / "navigation.json").write_text(json.dumps([reader.pages[route] for route in reader.order], ensure_ascii=False, indent=2) + "\n")
     audit = {"groups": merges, "duplicate_entries_unified": sum(len(e["variants"]) - 1 for e in entries.values()), "numbered_clauses_in_parent_statements": len(anchors), "source_tags": sum(len(records) for records in inventories.values()), "canonical_entries": len(entries)}
     (destination / "deduplication.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
+    (destination / 'reading-edition.json').write_text(json.dumps(reading_audit, indent=2) + '\n')
     return {"entries": len(entries), "topics": len(topics), "chapters": len(chapters), "sources": len(sources)}
 
 

@@ -53,7 +53,7 @@ def relocate_notes(markup, source, references=None):
             marker = soup.new_tag("span", id=reference_id, attrs={"class": "math-footnote-reference", "tabindex": "-1"})
             container = math_text.parent
             container.insert(0, marker)
-            math_text.replace_with(MATH_MARK.sub(lambda m: (r"{}^{\href{#" + identifier + "}{" + number + "}}") if m[1] == mark_id else m[0], math_text))
+            math_text.replace_with(MATH_MARK.sub(lambda m: (r"{}^{\href{#" + source + "-" + identifier + "}{" + number + "}}") if m[1] == mark_id else m[0], math_text))
         else:
             replacement = soup.new_tag("sup", id=reference_id, attrs={"class": "footnote-reference"})
             link = soup.new_tag("a", href="#" + identifier, attrs={"role": "doc-noteref", "aria-label": "Footnote " + number})

@@ -41,7 +41,7 @@ class FootnoteTests(unittest.TestCase):
         references = {('test', key): {'id': 'note', 'number': '3', 'html': note} for key in ('mark', 'note')}
         html = r'<div class="equation">\[x=2\gerbyfootnotemark{mark}\]</div>'
         soup = BeautifulSoup(relocate_notes(html, 'test', references), 'html.parser')
-        self.assertIn(r'{}^{\href{#note}{3}}', soup.get_text())
+        self.assertIn(r'{}^{\href{#test-note}{3}}', soup.get_text())
         self.assertTrue(soup.find(id='fnref-note'))
         self.assertEqual(soup.select_one('.footnote-backlink')['href'], '#fnref-note')
         self.assertIsNone(soup.div.aside)

@@ -32,6 +32,8 @@ Footnotes use numbered links at their original positions in text or formulas. No
 
 The mathematical body should read as Gerby, independently of its source books. Rewrite source-specific introductions and preserve assumptions and conventions. Outside historical sections, use internal statements instead of external references whenever the required result is available. Keep necessary external inputs explicit; moving a citation must not disguise an unproved dependency. Bibliographical attribution, source commentary, and further-reading recommendations belong under Sources.
 
+`reading/registry.json` records reviewed prose replacements with fingerprints of the original paragraphs. Check these against the raw exports before applying proof expansions; changed source prose requires another review. Reading edits change HTML and displayed captions, preserving source TeX, permanent tags, and proof guards. Exact SGPT locators resolve to current Gerby entries; do not infer an internal reference merely from a similar theorem name, or replace a proof dependency by a link to the same statement. Sources pages retain the original attribution and commentary. Historical sections retain their original exposition.
+
 Before publication, run:
 
 ```sh
