@@ -1,10 +1,12 @@
 import importlib.util
 from pathlib import Path
+import sys
 import tempfile
 import unittest
 
 spec = importlib.util.spec_from_file_location("foundations", Path(__file__).resolve().parents[1] / "adapters/foundations-of-pluripotential-theory.py")
 adapter = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = adapter
 spec.loader.exec_module(adapter)
 
 
@@ -41,15 +43,23 @@ class FoundationsTests(unittest.TestCase):
 \begin{document}
 \chapter{A chapter}\label{chap:test}
 \section{A section}\label{sec:test}
-\begin{definition}\label{def:test}A definition with $x^2$.\end{definition}
+\begin{definition}\label{def:test}A definition with $x<y$ and $x^2$.\end{definition}
 \begin{lemma}\label{lem:test}A lemma.\end{lemma}
 \begin{proof}A proof.\end{proof}
+\begin{align}
+a&<b\label{eq:first}\\
+b&<c\label{eq:second}
+\end{align}
+See \cref{def:test,eq:first}.
 \end{document}""")
             records = adapter.render_fragments(source, working)
-            self.assertEqual(len(records), 4)
+            self.assertEqual(len(records), 6)
             self.assertEqual(records[2]["title"], "Definition 1.1.1")
             self.assertEqual(records[3]["title"], "Lemma 1.1.2")
             self.assertIn("A proof.", records[3]["html"])
+            self.assertIn("x&lt;y", records[2]["html"])
+            self.assertTrue(all(record["kind"] == "equation" for record in records[4:]))
+            self.assertTrue(all("&lt;" in record["html"] for record in records[4:]))
             self.assertTrue(all(record["html"].strip() for record in records))
 
 

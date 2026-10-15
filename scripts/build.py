@@ -1,4 +1,4 @@
-"""Build the Pages catalogue and invoke registered Gerby conversion adapters."""
+"""Build the shared Gerby reference from registered source repositories."""
 from __future__ import annotations
 
 import argparse
@@ -13,6 +13,9 @@ import re
 import shutil
 import subprocess
 import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from collection import build_collection, check_links
 
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = re.compile(r"https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\Z")
@@ -214,17 +217,14 @@ def build(fetch=False):
         output.mkdir(parents=True)
         subprocess.run([sys.executable, str(adapter), str(cache[source_key(book)]["path"]), str(output)], check=True, cwd=ROOT)
         check_book(output, book["slug"])
-    page = (destination / "index.html").read_text()
-    count = len(books["books"])
-    page = page.replace("@@COUNT@@", f"{count} book{'s' if count != 1 else ''}").replace("@@BOOKS@@", book_markup(books["books"]))
-    if count:
-        page = page.replace("No proofs are claimed to be verified yet.", "Status badges refer to the exact linked proof revisions.")
-    (destination / "index.html").write_text(page)
+    summary = build_collection(books["books"], destination, json.loads((ROOT / "collection.json").read_text()))
     (destination / "formalizations.json").write_text(json.dumps(public_formalizations(formalizations, cache), indent=2) + "\n")
     revisions = [{"repository": repo, "ref": ref, "commit": info["commit"]} for (repo, ref), info in sorted(cache.items())]
-    (destination / "upstream.json").write_text(json.dumps({"built_at": datetime.now(timezone.utc).isoformat(), "sources": revisions}, indent=2) + "\n")
+    publishing_commit = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True).strip()
+    (destination / "upstream.json").write_text(json.dumps({"built_at": datetime.now(timezone.utc).isoformat(), "publishing_commit": publishing_commit, "sources": revisions}, indent=2) + "\n")
     (destination / ".nojekyll").touch()
-    print(f"Built {count} book(s), {len(revisions)} upstream revision(s): {destination}")
+    check_links(destination)
+    print(f"Built {summary['entries']} entries in {summary['topics']} shared topics from {summary['sources']} source(s): {destination}")
 
 
 if __name__ == "__main__":

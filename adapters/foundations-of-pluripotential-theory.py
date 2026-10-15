@@ -81,6 +81,40 @@ def compatibility():
     context.Tokenizer = MacroTokenizer
 
 
+def register_commands(document):
+    from plasTeX import Command
+    class CrossReference(Command):
+        args = "* labels:str"
+
+        def invoke(self, tex):
+            self.parse(tex)
+            names = {"chap": "Chapter", "sec": "Section", "thm": "Theorem", "lem": "Lemma", "prop": "Proposition", "cor": "Corollary", "def": "Definition", "eq": "Equation", "ex": "Example", "rem": "Remark"}
+            references = []
+            for label in self.attributes["labels"].split(","):
+                label = label.strip()
+                prefix = names.get(label.split(":")[0], "")
+                if self.nodeName == "cref":
+                    prefix = prefix.lower()
+                references.append((prefix + " " if prefix else "") + r"\ref{" + label + "}")
+            tex.input(", ".join(references))
+            return []
+    document.context.addGlobal("cref", type("cref", (CrossReference,), {}))
+    document.context.addGlobal("Cref", type("Cref", (CrossReference,), {}))
+    class Needspace(Command):
+        args = "amount:nox"
+
+        def invoke(self, tex):
+            self.parse(tex)
+            return []
+    document.context.addGlobal("Needspace", Needspace)
+    class addtocontents(Needspace):
+        args = "target:str content:nox"
+    document.context.addGlobal("addtocontents", addtocontents)
+    document.context.newcommand("eqref", 1, r"(\ref{#1})")
+    document.context.newcommand("texorpdfstring", 2, "#1")
+    document.context.newcommand("aa", 0, "å")
+
+
 class ParseProblems(logging.Handler):
     def __init__(self):
         super().__init__()
@@ -116,6 +150,7 @@ def render_fragments(source, working):
     config["images"]["imager"] = "none"
     config["images"]["vector-imager"] = "none"
     document = TeXDocument(config=config)
+    register_commands(document)
     os.environ.setdefault("TEXINPUTS", str(working) + os.pathsep)
     tex = TeX(document)
     tex.input(tex_source)
@@ -124,10 +159,17 @@ def render_fragments(source, working):
     tex.parse()
     if problems.problems:
         raise ValueError("Unsupported manuscript commands: " + "; ".join(problems.problems))
-    labelled = {id(node) for node in document.context.labels.values()}
+    starred = dict(re.findall(r"\\chapter\*\{([^{}]+)\}\s*\\label\{([^}]+)\}", tex_source))
+    for node in document.getElementsByTagName("chapter"):
+        if node.ref is None and node.title.textContent.strip() in starred:
+            document.context.label(starred[node.title.textContent.strip()], node)
+            node.ref = document.createDocumentFragment()
+    labelled = {}
+    for label, node in document.context.labels.items():
+        labelled.setdefault(id(node), []).append(label)
     records, tags = [], {}
     for node in nodes_in_order(document):
-        if node.nodeName not in SECTIONS and node.nodeName != "thmenv":
+        if node.nodeName not in SECTIONS and node.nodeName != "thmenv" and id(node) not in labelled:
             continue
         if id(node) not in labelled:
             if node.nodeName in SECTIONS and node.ref is None:
@@ -141,24 +183,50 @@ def render_fragments(source, working):
                 document.context.label(label, node)
             else:
                 raise ValueError(f"Every numbered heading and theorem needs a source label: {node.nodeName}")
-        label = node.id
+        aliases = labelled.get(id(node), [node.id])
+        label = aliases[0]
+        document.context.label(label, node)
         tag = stable_tag(label)
         if tag in tags and tags[tag] != label:
             raise ValueError("Gerby tag collision: reserve an explicit alias before publication")
         tags[tag] = label
-        number = node.ref.textContent.strip() if node.ref is not None else ""
+        number = node.ref.textContent.strip() if getattr(node, "ref", None) is not None else ""
         kind = node.thmName if node.nodeName == "thmenv" else node.nodeName
+        if kind in {"ArrayRow", "align", "gather", "eqnarray"}:
+            kind = "equation"
         title = node.title.textContent.strip() if getattr(node, "title", None) else ""
+        semantic_title = title or label.split(":")[-1].replace("-", " ").replace("_", " ").capitalize()
         if node.nodeName == "thmenv":
             title = kind.title() + (" " + number if number else "") + (f" ({title})" if title else "")
         elif number:
             title = number + " " + title
-        records.append({"tag": tag, "label": label, "title": title, "kind": kind, "section": node.nodeName in SECTIONS})
+        if not title:
+            title = kind.title() + (" " + number if number else "")
+        parent = node
+        while parent.parentNode is not None and parent.nodeName != "chapter":
+            parent = parent.parentNode
+        topic = parent.title.textContent.strip() if parent.nodeName == "chapter" else "Project notes"
+        records.append({"tag": tag, "label": label, "aliases": aliases[1:], "title": title, "semantic_title": semantic_title, "kind": kind, "math_row": node.nodeName == "ArrayRow", "topic": topic, "section": node.nodeName in SECTIONS})
     (working / "tags").write_text("".join(f"{tag},{label}\n" for tag, label in tags.items()))
     previous = Path.cwd()
+    rows = {record["tag"]: record for record in records if record["math_row"]}
+    row_nodes = {stable_tag(node.id): node for node in nodes_in_order(document) if node.nodeName == "ArrayRow" and node.id}
+    class StaticRenderer(Renderer):
+        textDefault = staticmethod(lambda value: escape(str(value), quote=False))
+
+        def cleanup(self, document, files, postProcess=None):
+            # Math environments render their TeX source as a whole, so their
+            # labelled rows are not separately traversed by the Gerby renderer.
+            for tag, record in rows.items():
+                filename = next((name for name in files if f"-{tag}-" in name), None)
+                if filename and not Path(filename).exists():
+                    row = row_nodes[tag]
+                    latex = row.source.strip().removesuffix(r"\\")
+                    Path(filename).write_text(f'<div class="equation" id="{tag}"><span class="equation-label"><a href="/tag/{tag}" data-tag="{tag}">{escape(record["title"])}</a></span><div>\\[\\begin{{aligned}}{escape(latex)}\\end{{aligned}}\\]</div></div>')
+            return super().cleanup(document, files, postProcess)
     try:
         os.chdir(working)
-        Renderer().render(document)
+        StaticRenderer().render(document)
     finally:
         os.chdir(previous)
     if problems.problems:
@@ -194,6 +262,12 @@ def decorate(fragment, root):
                 badge = soup.new_tag("span")
                 badge["data-gerby-tag"] = tag
                 anchor.insert_after(badge)
+    for element in soup.select("[id]"):
+        identifier = element["id"]
+        if re.fullmatch(r"[A-F0-9]{8}", identifier) and not soup.find(attrs={"data-gerby-tag": identifier}):
+            badge = soup.new_tag("span")
+            badge["data-gerby-tag"] = identifier
+            element.insert(0, badge)
     return str(soup)
 
 
@@ -259,14 +333,21 @@ def export(source, output):
     style = find_plugin("pybtex.style.formatting", "plain")()
     backend = find_plugin("pybtex.backends", "html")()
     bibliography = '<h1>Bibliography</h1>'
+    reference_records = []
     for key in citations:
         if key not in database.entries:
             raise ValueError(f"Missing bibliography entry: {key}")
         formatted = next(iter(style.format_entries([database.entries[key]])))
-        bibliography += f'<div class="bibliography-entry" id="{escape(key)}"><strong>[{escape(key)}]</strong> {formatted.text.render(backend)}</div>'
+        formatted_html = formatted.text.render(backend)
+        bibliography += f'<div class="bibliography-entry" id="{escape(key)}"><strong>[{escape(key)}]</strong> {formatted_html}</div>'
+        fields = database.entries[key].fields
+        identity = "doi:" + fields["doi"].lower().removeprefix("https://doi.org/") if fields.get("doi") else "text:" + sha256(BeautifulSoup(formatted_html, "html.parser").get_text().encode()).hexdigest()
+        reference_records.append({"key": key, "identity": identity, "html": formatted_html})
     (output / "bibliography").mkdir(exist_ok=True)
     (output / "bibliography" / "index.html").write_text(shell(bibliography, "Bibliography", records, revision, "../"))
     (output / "tags.json").write_text(json.dumps(inventory, indent=2) + "\n")
+    (output / "entries.json").write_text(json.dumps(records, ensure_ascii=False) + "\n")
+    (output / "references.json").write_text(json.dumps(reference_records, ensure_ascii=False) + "\n")
     (output / "search.json").write_text(json.dumps(search, ensure_ascii=False) + "\n")
     (output / "edition.json").write_text(json.dumps({"source": REPOSITORY, "commit": revision, "renderer": "Gerby", "tags": len(records)}, indent=2) + "\n")
     print(f"Exported {len(records)} permanent tags from the active manuscript")

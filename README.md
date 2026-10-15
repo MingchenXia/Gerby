@@ -1,52 +1,68 @@
 # Gerby
 
-A public library of online books, with a formalization status beside each theorem or tag.
+A shared mathematical reference combining definitions, theorems, and proofs from contributing texts. Browse by **topic or permanent tag**, search across all content, and see each statement's formalization status.
 
-**Website: [mingchenxia.github.io/Gerby/](https://mingchenxia.github.io/Gerby/)**
+**[Read Gerby](https://mingchenxia.github.io/Gerby/)** · [Source contributions](https://mingchenxia.github.io/Gerby/sources/)
 
-This repository hosts the catalogue and the publishing infrastructure. Book sources and formal proofs stay in their original GitHub repositories.
+## Content and organization
 
-## Current state
+The first source is [Foundations of pluripotential theory](https://github.com/MingchenXia/foundations-of-pluripotential-theory), tracking its public `main` branch. The complete active manuscript is exported, including both parts and the appendices. The earlier Section 1.1-only edition came from the initial seed revision; the source branches have since been consolidated into `main`.
 
-The catalogue publishes the active draft of **Foundations of pluripotential theory**. Its private source repository stays private; the public artifact contains only the generated reading edition. No formalization repositories have been supplied yet, so its tags show **Not recorded**.
+Contributions form one collection of shared topics and global tags. Source titles and original numbering appear as attribution within entries. As more texts are added, `collection.json` can map statements from different sources to the same canonical entry while retaining each version and its proof status. Existing book URLs redirect to the shared entries.
 
-## Adding books and formalizations
+All interface text and project documentation are in English. The source texts and formal proofs remain in their original repositories and retain their licenses.
 
-Supply the GitHub link for each book. When available, also supply its formalization repository. The integration records the book's LaTeX entry point, permanent tags, and the correspondence between tags and formal declarations.
+## Formalization badges
 
-- `books.json` lists books and their source repositories.
-- `formalizations.json` maps a book and tag to a formalization repository and verification evidence.
-- `adapters/` contains source-specific conversion scripts, added when real books are supplied.
-- [Deployment](docs/deployment.md) explains the publishing and update process.
-- [Formalization badges](docs/formalizations.md) defines the badge states and integration contract.
+Every tagged statement displays a badge:
 
-All public text is in English.
+| Badge | Meaning |
+| --- | --- |
+| Not recorded | No formalization mapping has been supplied. |
+| Pending verification | A proof repository is linked, but the current revision has not been verified. |
+| ✓ 0 sorry | The mapped declaration at the linked exact revision passed the recorded proof and axiom checks. |
 
-## Automatic updates
+No formalization repositories have been supplied yet, so the collection currently shows **Not recorded**. A repository link alone cannot produce a green badge. New proof commits revert to pending until verified. See [the evidence requirements](docs/formalizations.md).
 
-The Pages workflow publishes on every push to `main`, checks registered upstream repositories hourly, and supports manual runs and `repository_dispatch` events of type `source-updated`. Each scheduled run fetches current source revisions and rebuilds all configured books. A source repository can optionally dispatch an event for faster updates.
+## Adding content
 
-Formalization badges are tied to exact commits. When an upstream formalization moves beyond its verified commit, the published badge becomes **Pending verification** until that revision is checked. A repository link alone never produces a **0 sorry** badge.
+Supply a source repository link and, when available, its formalization repository. Integration records the active LaTeX entry point, stable source labels, shared topics, and the correspondence with formal declarations.
 
-## Local preview
+- `books.json` registers contributing source repositories and tracked revisions.
+- `collection.json` defines shared topics and explicit cross-source canonical entries.
+- `formalizations.json` records declaration mappings and verification evidence.
+- `adapters/` exports each source through the pinned official Gerby renderer.
+- [Deployment and updates](docs/deployment.md) documents the export and publishing contracts.
 
-Requires Python 3.11+, Git, and Node.js 22+. Install the pinned renderer and self-hosted mathematics assets, then provide a local checkout of the private book:
+## Updates without CI
+
+GitHub Actions CI is disabled at the author's request. Builds run locally, and `scripts/publish.py` commits the checked static output to `gh-pages`. GitHub Pages serves that prebuilt branch at `/Gerby/`.
+
+An hourly local Codex automation checks both this project and the registered upstream repositories. When a revision changes, `scripts/update.py` fetches fresh sources, rebuilds, checks internal links, and publishes. It stays quiet when nothing has changed. This local automation requires the computer and Codex to be available and GitHub authentication to remain valid. It consumes no GitHub Actions CI minutes.
+
+## Local build and publication
+
+Requires Python 3.11+, Git, Node.js, and npm. No private-source key is needed for the current public source.
 
 ```sh
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-npm ci --prefix vendor --ignore-scripts
+npm ci --prefix vendor --ignore-scripts --no-audit --no-fund
 .venv/bin/python -m unittest discover -s tests
 node --test tests/formalization.test.mjs
-export FOUNDATIONS_SOURCE_DIR=/absolute/path/to/foundations-of-pluripotential-theory
 .venv/bin/python scripts/build.py --fetch
 python3 -m http.server 8000 --directory _site
 ```
 
-Open `http://localhost:8000`. CI checks out the current book revision with a repository-specific read-only deploy key before running the same build. Published books always require a fresh source checkout.
+Open `http://localhost:8000`. With authorized push access to `MingchenXia/Gerby`, publish a completed build or check for upstream updates:
 
-## Gerby and GitHub Pages
+```sh
+.venv/bin/python scripts/publish.py
+.venv/bin/python scripts/update.py
+```
 
-[Gerby](https://gerby-project.github.io/) converts labelled LaTeX into an online, tag-based view. Its full website runs Flask with SQLite. GitHub Pages serves static files, so this project will publish static book editions prepared by source-specific Gerby adapters. Server-side comments, accounts, and Gerby's database-backed search require a separate backend; they are not provided by the current static catalogue.
+The updater requires a clean `main` checkout and uses a fast-forward pull. It never overwrites uncommitted edits. To preview an existing source checkout, set `FOUNDATIONS_SOURCE_DIR` to its absolute path before building; automatic updates ignore that preview override and fetch public sources afresh.
 
-Original books and proofs retain their upstream licenses. This repository does not change their licensing or redistribute any books before they are integrated.
+## Gerby on GitHub Pages
+
+[Gerby](https://gerby-project.github.io/) provides the LaTeX-to-tag renderer used here. This static export includes topic browsing, individual entries, full-text search, cited references, formalization badges, and self-hosted MathJax. GitHub Pages does not run the Flask/database backend, so accounts and server-side comments are not included.

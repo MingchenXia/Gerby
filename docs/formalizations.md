@@ -30,17 +30,17 @@ For Lean, a successful build alone is insufficient: Lean can compile incomplete 
 
 No verified records are seeded. Proof repositories, mappings, and verifier configuration will be added when supplied. Metadata validation is not a substitute for executing and reviewing the proof check.
 
-## Book page contract
+## Source contribution contract
 
-Every generated book page sets `data-gerby-book` on its root element. Every theorem/tag heading, including the primary heading on a single-tag page, includes `data-gerby-tag`:
+Every source contribution sets `data-gerby-book` on its containing element. A shared entry may contain several source contributions, each with its own status. Every theorem/tag heading, including the primary heading on a single-tag page, includes `data-gerby-tag`:
 
 ```html
-<html lang="en" data-gerby-book="example-book">
+<section data-gerby-book="example-book">
   <!-- Other page content and head elements omitted. -->
   <h2 data-gerby-tag="0001">Theorem 1.1</h2>
   <link rel="stylesheet" href="../../../assets/formalization.css">
   <script type="module" src="../../../assets/formalization.mjs"></script>
-</html>
+</section>
 ```
 
 Adjust the relative asset paths to the actual page depth. The module locates the registry relative to its own URL, so it works under `/Gerby/` and nested tag routes. It adds a badge beside every marked heading, defaults missing mappings to **Not recorded**, and never treats a fetch failure as successful verification. Book conversion adapters are responsible for emitting a marker for every tag and testing this against the source tag inventory.

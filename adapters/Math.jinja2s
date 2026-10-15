@@ -1,0 +1,18 @@
+name: math DeclareMathOperator
+{{ obj.source|e }}
+
+name: ensuremath eqnarray* align* gather* flalign flalign* \
+      multline multline* alignat alignat* split displaymath equation*
+<div class="equation">
+  {{ obj.source|e }}
+</div>
+
+name: equation eqnarray align gather
+<div class="equation" {% if obj.userdata['tag'] %}id="{{ obj.userdata['tag'] }}"{% endif %}>
+  {% if obj.userdata['tag'] %}
+    <span class="equation-label"><a href="/tag/{{ obj.userdata['tag'] }}" data-tag="{{ obj.userdata['tag'] }}">{{ obj.ref }}</a></span>
+  {% else %}
+    <span class="equation-label">{{ obj.ref }}</span>
+  {% endif %}
+  <div>{{ obj.source|e }}</div>
+</div>
