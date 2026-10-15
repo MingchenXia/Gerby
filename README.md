@@ -22,7 +22,7 @@ All interface text and project documentation are in English. The source texts an
 
 The reading interface follows the Stacks Project: compact navigation, a breadcrumb trail, and a reading column with page tools at the side. It adapts to computers, tablets, and phones; long equations and tables scroll inside the reading column.
 
-- Chapter pages list **sections only**. Each section has its own page containing its entries.
+- Chapter pages list **sections only**. Section pages show the full text, definitions, theorems, equations, and proofs directly, with individual entry permalinks. Nested statements and equations are displayed once rather than repeated as separate list items.
 - **Previous** and **Next** links appear above and below each page, following one complete order through chapters, sections, and statements. Breadcrumbs return directly to the containing section or chapter.
 - Statement headings use manuscript names and numbers, such as **Definition 1.2.3**. Internal LaTeX labels are searchable identifiers and are never shown as reader headings. Permanent tags are hidden initially and can be revealed with **Show tags**.
 - Search accepts mathematical subjects, phrases, statement numbers, or tags. An exact unambiguous tag opens its entry directly. Each page also has a permalink and a copyable BibTeX citation.

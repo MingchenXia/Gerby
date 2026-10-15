@@ -255,6 +255,80 @@ def entry_list(entries, topics, root):
     return '<ul class="entry-list">' + "".join(items) + '</ul>'
 
 
+def source_roots(entries):
+    """Locate exported entries inside the larger source sections containing them."""
+    roots = {}
+    for entry in entries.values():
+        for variant in entry["variants"]:
+            soup = BeautifulSoup(variant["html"], "html.parser")
+            node = next((found for identifier in (variant["tag"], variant["label"], *variant.get("aliases", [])) if (found := soup.find(id=identifier))), None)
+            if node:
+                key = variant["source"], node["id"]
+                if key in roots and roots[key]["tag"] != entry["tag"]:
+                    raise ValueError(f"Two entries share a source root: {key}: {roots[key]['tag']} / {entry['tag']}")
+                roots[key] = {"tag": entry["tag"], "preferred": variant is entry["variants"][0]}
+    return roots
+
+
+def continuous_section(relevant, entries, roots, sources, source_tags, references, root, anchors):
+    """Read full source fragments once, retaining prose between statements."""
+    covered, chunks = set(), []
+    topic = relevant[0]["topic"]
+    rooted = {origin["tag"] for origin in roots.values() if origin["preferred"]}
+    rootless = [(entry["tag"], entry["variants"][0]["source"], str(BeautifulSoup(entry["variants"][0]["html"], "html.parser"))) for entry in relevant if entry["tag"] not in rooted]
+    for entry in relevant:
+        if entry["tag"] in covered:
+            continue
+        variant = entry["variants"][0]
+        source = variant["source"]
+        soup = BeautifulSoup(variant["html"], "html.parser")
+        for node in list(soup.find_all(id=True)):
+            if not node.parent:
+                continue
+            origin = roots.get((source, node["id"]))
+            if not origin:
+                continue
+            canonical = origin["tag"]
+            target = entries[canonical]
+            if canonical not in covered and target["topic"] == topic and origin["preferred"]:
+                continue
+            # A parent section may contain an entry whose preferred version is
+            # elsewhere. Keep a reference here instead of repeating its proof.
+            replacement = soup.new_tag("p")
+            replacement["class"] = "shared-entry-reference"
+            link = soup.new_tag("a", href=root + "tag/" + canonical + "/")
+            link.string = display_title(target)
+            replacement.append("See ")
+            replacement.append(link)
+            replacement.append(".")
+            if re.fullmatch(r"h[1-6]", node.name):
+                level = int(node.name[1])
+                for sibling in list(node.next_siblings):
+                    if getattr(sibling, "name", None) and re.fullmatch(r"h[1-6]", sibling.name) and int(sibling.name[1]) <= level:
+                        break
+                    sibling.extract()
+            elif node.name == "article":
+                following = node.find_next_sibling()
+                if following and "env-proof" in following.get("class", []):
+                    following.decompose()
+            node.replace_with(replacement)
+        represented = {roots[(source, node["id"])]["tag"] for node in soup.find_all(id=True) if (source, node["id"]) in roots}
+        retained = str(soup)
+        represented.update(tag for tag, origin, fragment in rootless if origin == source and fragment in retained)
+        represented.add(entry["tag"])
+        if represented & covered:
+            raise ValueError(f"A section repeats entries: {sorted(represented & covered)}")
+        covered.update(represented)
+        body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors)
+        heading = f'<h2><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a></h2>' if variant.get("section") else ""
+        provenance = f'<div class="source-attribution">From <a href="{root}sources/{source}/">{escape(sources[source]["title"])}</a> <span data-gerby-tag="{variant["tag"]}"></span></div>'
+        chunks.append(f'<section class="reading-chunk" id="entry-{entry["tag"]}" data-section-entries="{" ".join(sorted(represented))}"><div class="source-variant" data-gerby-book="{source}">{heading}{provenance}{body}</div></section>')
+    expected = {entry["tag"] for entry in relevant}
+    if covered != expected:
+        raise ValueError(f"Section reading coverage differs: missing {sorted(expected - covered)}, extra {sorted(covered - expected)}")
+    return '<div class="section-reading">' + "".join(chunks) + '</div>'
+
+
 def redirect(path, target, destination, fragments=None, anchor=""):
     path.parent.mkdir(parents=True, exist_ok=True)
     relative = Path(os.path.relpath(target, path.parent)).as_posix()
@@ -300,9 +374,11 @@ def build_collection(books, destination, configuration):
         content = f'<p class="eyebrow">Chapter {chapter["number"]}</p><h1>{escape(chapter["title"])}</h1><p>{escape(chapter.get("description", ""))}</p>'
         content += '<h2>Sections</h2>' + reader.section_list(key, "../../", anchors=True)
         write("chapters/" + key, content, chapter["title"], "../../")
+    roots = source_roots(entries)
     for topic, section in reader.sections.items():
         content = f'<h1>{section["number"]} {escape(section["title"])}</h1><p>{escape(topics[topic].get("description", ""))}</p>'
-        write("sections/" + topic, content + entry_list(section["entries"], topics, "../../"), section["title"], "../../")
+        content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors)
+        write("sections/" + topic, content, section["title"], "../../")
     redirect(destination / "topics" / "index.html", destination / "chapters" / "index.html", destination)
     for key, topic in topics.items():
         redirect(destination / "topics" / key / "index.html", destination / "sections" / key / "index.html", destination)
@@ -378,6 +454,8 @@ def check_links(destination):
     pages = {path.resolve(): BeautifulSoup(path.read_text(), "html.parser") for path in destination.rglob("*.html")}
     identifiers = {path: {item["id"] for item in soup.select("[id]")} for path, soup in pages.items()}
     for page, soup in pages.items():
+        if len(identifiers[page]) != len(soup.select('[id]')):
+            raise ValueError(f"Duplicate identifiers on {page}")
         for element in soup.select("[href], script[src], img[src]"):
             value = element.get("href", element.get("src", ""))
             parsed = urlsplit(value)

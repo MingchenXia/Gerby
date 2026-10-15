@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from collection import build_collection, check_links
+from collection import build_collection, check_links, continuous_section, source_roots
 from reader import Reader, bibtex
 
 
@@ -30,7 +30,7 @@ class ReaderTests(unittest.TestCase):
         build_collection([self.book], root, self.config)
         return json.loads((root / "navigation.json").read_text())
 
-    def test_chapters_list_sections_and_sections_list_entries(self):
+    def test_chapters_list_sections_and_sections_show_full_statements(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self.build(root)
@@ -38,8 +38,44 @@ class ReaderTests(unittest.TestCase):
             self.assertEqual(len(chapter.select('main .section-list a')), 2)
             self.assertFalse(chapter.select('main .reference-entry'))
             section = BeautifulSoup((root / "sections/alpha/index.html").read_text(), "html.parser")
-            self.assertEqual(len(section.select('main .reference-entry')), 2)
+            self.assertFalse(section.select('main .reference-entry'))
+            self.assertEqual(len(section.select('main .env-definition')), 2)
+            self.assertEqual(section.select_one('html')['data-reading-mode'], 'continuous')
+            self.assertIn('A statement.', section.select_one('main').get_text())
             check_links(root)
+
+    def test_nested_statements_and_proofs_are_readable_once(self):
+        for record in self.records[:2]:
+            record['html'] = record['html'].replace('<article ', f'<article id="{record["tag"]}" ')
+        parent = {'tag': '00000010', 'label': 'sec:alpha', 'title': '1 Alpha', 'kind': 'section', 'topic': 'Alpha', 'section': True, 'html': '<h2 id="sec:alpha">1 Alpha</h2><p>Opening explanation.</p>' + self.records[0]['html'] + '<article class="env-proof"><p>Proof. The required argument.</p></article><p>Connecting explanation.</p>' + self.records[1]['html']}
+        self.records.insert(0, parent)
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.build(root)
+            soup = BeautifulSoup((root / 'sections/alpha/index.html').read_text(), 'html.parser')
+            self.assertEqual(len(soup.select('.reading-chunk')), 1)
+            self.assertEqual(len(soup.select('.env-definition')), 2)
+            self.assertEqual(len(soup.select('.env-proof')), 1)
+            self.assertFalse(soup.select('.env-proof')[0].find_parent('details'))
+            text = soup.select_one('.section-reading').get_text()
+            self.assertEqual(text.count('Opening explanation.'), 1)
+            self.assertEqual(text.count('Connecting explanation.'), 1)
+            ids = [node['id'] for node in soup.select('[id]')]
+            self.assertEqual(len(ids), len(set(ids)))
+            check_links(root)
+
+    def test_section_keeps_only_the_preferred_version_of_a_shared_result(self):
+        old = '<article id="22222222"><p>Definition 1. The repeated statement.</p></article><article class="env-proof"><p>Old source proof.</p></article>'
+        preferred = '<article id="33333333"><p>Definition 2. The preferred statement.</p></article><article class="env-proof"><p>Preferred proof.</p></article>'
+        entries = {
+            'AAAAAAAA': {'tag': 'AAAAAAAA', 'topic': 'alpha', 'variants': [{'source': 'a', 'tag': '11111111', 'label': 'sec:alpha', 'title': '1 Alpha', 'section': True, 'html': '<h2 id="sec:alpha">1 Alpha</h2>' + old}]},
+            'BBBBBBBB': {'tag': 'BBBBBBBB', 'topic': 'alpha', 'variants': [{'source': 'b', 'tag': '33333333', 'label': 'def:new', 'title': 'Definition 2', 'html': preferred}, {'source': 'a', 'tag': '22222222', 'label': 'def:old', 'title': 'Definition 1', 'html': old}]}
+        }
+        html = continuous_section(list(entries.values()), entries, source_roots(entries), {'a': {'title': 'Source A'}, 'b': {'title': 'Source B'}}, {}, {}, '../../', {})
+        soup = BeautifulSoup(html, 'html.parser')
+        self.assertNotIn('Old source proof.', soup.get_text())
+        self.assertEqual(soup.get_text().count('Preferred proof.'), 1)
+        self.assertEqual(len(soup.select('.shared-entry-reference')), 1)
 
     def test_reading_chain_covers_every_page_once_with_reciprocal_links(self):
         with tempfile.TemporaryDirectory() as temporary:
