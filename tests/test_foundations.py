@@ -88,6 +88,24 @@ See \cref{def:with_underscore,eq:with_underscore}.
             self.assertIn(r"\gerbyref{765FE373}{1.1.1}", section["html"])
             self.assertIn(r"\gerbyref{2C442D09}{1.1}", section["html"])
 
+    def test_footnote_marks_keep_source_fingerprints_and_render_linkable_identities(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source, working = root / 'source', root / 'render'
+            (source / 'style').mkdir(parents=True)
+            working.mkdir()
+            (source / 'style/book-preamble.tex').write_text(r'\newcommand{\nef}{\mathrm{nef}}' + '\n' + r'\setlist')
+            (source / 'book.tex').write_text(r'''\documentclass[envcountsect]{svmono}
+\begin{document}\chapter{Notes}\label{chap:notes}\section{A section}\label{sec:notes}
+\begin{definition}\label{def:notes}A term\footnote{Its meaning.}.
+\[x=2\footnotemark\]\footnotetext{The formula note.}\end{definition}\end{document}''')
+            records = adapter.render_fragments(source, working)
+            definition = next(r for r in records if r['label'] == 'def:notes')
+            self.assertIn(r'\footnotemark', definition['statement_tex'])
+            self.assertNotIn(r'\gerbyfootnotemark', definition['statement_tex'])
+            self.assertIn(r'\gerbyfootnotemark{', definition['html'])
+            self.assertIn('data-footnote-mark=', definition['html'])
+
 
 if __name__ == "__main__":
     unittest.main()

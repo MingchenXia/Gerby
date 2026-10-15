@@ -16,6 +16,7 @@ from unidecode import unidecode
 from reader import Reader, display_title, tag_code
 from numbering import renumber_markup
 from structure import arrange_sections
+from footnotes import collect_notes, number_notes, relocate_notes
 from proof_expansions import apply_expansions, check_dependencies
 
 
@@ -180,9 +181,9 @@ def chapter_structure(topics, configuration):
     return {key: c for key, c in chapters.items() if c["topics"]}, assigned
 
 
-def prepare_fragment(variant, source_tags, references, root, component_anchors=None, numbering=None):
+def prepare_fragment(variant, source_tags, references, root, component_anchors=None, numbering=None, footnotes=None):
     source = variant["source"]
-    fragment = variant["html"].replace(r"\begin{bgroup}", "{").replace(r"\end{bgroup}", "}")
+    fragment = relocate_notes(variant["html"], source, footnotes).replace(r"\begin{bgroup}", "{").replace(r"\end{bgroup}", "}")
     def math_label(match):
         target = (numbering or {}).get((source, match[1]), {})
         # Align rows need a tag inside their parent's TeX; standalone pages
@@ -260,11 +261,15 @@ def prepare_fragment(variant, source_tags, references, root, component_anchors=N
     if variant.get("section") and first:
         first.decompose()
     for marker in soup.select("[data-gerby-tag]"):
-        canonical = (numbering or {}).get((source, marker["data-gerby-tag"]), {}).get("canonical_tag")
+        record = (numbering or {}).get((source, marker["data-gerby-tag"]), {})
+        canonical = record.get("canonical_tag")
         if canonical:
             code = soup.new_tag("code", attrs={"class": "tag-id"})
             code.string = canonical
             marker.append(code)
+        if record.get("clause"):
+            # A logical condition has an anchor/tag, not an independent proof.
+            del marker["data-gerby-tag"]
     prefix = source + "-"
     identifiers = {item["id"] for item in soup.select("[id]")}
     for item in soup.select("[id]"):
@@ -292,12 +297,14 @@ def entry_list(entries, topics, root):
     return '<ul class="entry-list">' + "".join(items) + '</ul>'
 
 
-def source_roots(entries):
+def source_roots(entries, note_candidates=None):
     """Locate exported entries inside the larger source sections containing them."""
     roots = {}
-    for entry in entries.values():
+    for position, entry in enumerate(entries.values()):
         for variant in entry["variants"]:
             soup = BeautifulSoup(variant["html"], "html.parser")
+            if note_candidates is not None:
+                collect_notes(note_candidates, soup, entry, variant, position)
             node = next((found for identifier in (variant["tag"], variant["label"], *variant.get("aliases", [])) if (found := soup.find(id=identifier))), None)
             if node:
                 key = variant["source"], node["id"]
@@ -307,7 +314,7 @@ def source_roots(entries):
     return roots
 
 
-def continuous_section(relevant, entries, roots, sources, source_tags, references, root, anchors, numbering=None):
+def continuous_section(relevant, entries, roots, sources, source_tags, references, root, anchors, numbering=None, footnotes=None):
     """Read full source fragments once, retaining prose between statements."""
     covered, chunks = set(), []
     topic = relevant[0]["topic"]
@@ -356,7 +363,7 @@ def continuous_section(relevant, entries, roots, sources, source_tags, reference
         if represented & covered:
             raise ValueError(f"A section repeats entries: {sorted(represented & covered)}")
         covered.update(represented)
-        body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors, numbering)
+        body = prepare_fragment({**variant, "html": retained}, source_tags, references, root, anchors, numbering, footnotes)
         heading = f'<h2><a href="{root}tag/{entry["tag"]}/">{escape(display_title(entry))}</a>{tag_code(entry["tag"])}</h2>' if variant.get("section") and not entry.get("section_intro") else ""
         badge = f'<span data-gerby-tag="{variant["tag"]}">{tag_code(entry["tag"]) if entry.get("section_intro") else ""}</span>'
         chunks.append(f'<section class="reading-chunk" id="entry-{entry["tag"]}" data-section-entries="{" ".join(sorted(represented))}"><div class="source-variant" data-gerby-book="{source}">{heading}{badge}{body}</div></section>')
@@ -421,10 +428,12 @@ def build_collection(books, destination, configuration):
         if chapter["tag"] in entries:
             raise ValueError("A chapter tag collides with an entry")
         redirect(destination / "tag" / chapter["tag"] / "index.html", destination / "chapters" / key / "index.html", destination)
-    roots = source_roots(entries)
+    note_candidates = {}
+    roots = source_roots(entries, note_candidates)
+    footnotes = number_notes(note_candidates)
     for topic, section in reader.sections.items():
         content = f'<h1>{section["number"]} {escape(section["title"])}{tag_code(section["tag"])}</h1>'
-        content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors, reader.numbering)
+        content += continuous_section(section["entries"], entries, roots, sources, source_tags, reference_map, "../../", anchors, reader.numbering, footnotes)
         write("sections/" + topic, content, section["title"], "../../")
         if section["tag"] not in entries:
             redirect(destination / "tag" / section["tag"] / "index.html", destination / "sections" / topic / "index.html", destination)
@@ -460,7 +469,7 @@ def build_collection(books, destination, configuration):
         for number, variant in enumerate(entry["variants"]):
             source, local = variant["source"], variant["tag"]
             badge = f'<span data-gerby-tag="{local}"></span>'
-            body = prepare_fragment(variant, source_tags, reference_map, root, anchors, reader.numbering)
+            body = prepare_fragment(variant, source_tags, reference_map, root, anchors, reader.numbering, footnotes)
             if number:
                 body = '<details class="source-alternative"><summary>Read the alternative statement and proof</summary>' + body + '</details>'
             content += f'<section class="source-variant" data-gerby-book="{source}">{badge}{body}</section>'

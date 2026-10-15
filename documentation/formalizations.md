@@ -11,6 +11,8 @@ Every integrated theorem/tag receives one of these English badges:
 
 “Not recorded” does not assert that no formalization exists. A badge refers to the mapped declaration at the displayed commit, not every declaration in the repository. The correspondence between the informal statement and formal declaration also needs review.
 
+Logical conditions in a statement's list are covered by the complete statement's badge. Their individual tags remain available for references, but they do not display independent formalization badges.
+
 ## Registry
 
 `formalizations.json` contains entries keyed by `(book, tag)`. Book namespaces prevent collisions when different books use the same Gerby tag.

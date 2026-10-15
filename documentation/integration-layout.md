@@ -28,6 +28,10 @@ Show tags reveals tags for all addressable reading structures, including chapter
 
 Cite this page opens the citation panel immediately, including when clicked again with an existing `#cite` fragment. Direct citation links also expand the panel. Copy citation copies the displayed BibTeX entry; the permalink and title must identify the current reading page.
 
+Footnotes use numbered links at their original positions in text or formulas. Note bodies follow the containing definition, theorem, proof, or prose block, with a return link to the reference. Number notes within each current Gerby section and reuse those numbers on standalone entries. Logical list conditions keep their existing tags and anchors; only the complete statement has a formalization badge.
+
+The mathematical body should read as Gerby, independently of its source books. Rewrite source-specific introductions and preserve assumptions and conventions. Outside historical sections, use internal statements instead of external references whenever the required result is available. Keep necessary external inputs explicit; moving a citation must not disguise an unproved dependency. Bibliographical attribution, source commentary, and further-reading recommendations belong under Sources.
+
 Before publication, run:
 
 ```sh
