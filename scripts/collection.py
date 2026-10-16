@@ -426,7 +426,7 @@ def build_collection(books, destination, configuration):
         page.parent.mkdir(parents=True, exist_ok=True)
         page.write_text(reader.shell(content, route, root, asset_revision()))
 
-    introduction = f'<section class="collection-intro"><div><h1>Pome</h1><p>A mathematical reference combining definitions, results, and proofs from contributing texts.</p><p class="collection-count">{len(entries):,} entries · {len(chapters)} chapters · {len(topics)} sections · {len(sources)} sources</p></div><img class="home-mascot" src="assets/pome-mascot.png" alt="Pome pomegranate mascot" width="128" height="128"></section>'
+    introduction = f'<section class="collection-intro"><div><h1>Pome</h1><p>A Stacks Project for pluripotential theory</p><p class="collection-count">{len(entries):,} entries · {len(chapters)} chapters · {len(topics)} sections · {len(sources)} sources</p></div><img class="home-mascot" src="assets/pome-mascot.png" alt="Pome pomegranate mascot" width="128" height="128"></section>'
     write("", introduction + '<nav class="home-links" aria-label="Explore Pome"><a href="chapters/">Table of contents</a><a href="search/">Search</a><a href="references/">Bibliography</a><a href="comments/">Comments</a><a href="sources/">Sources</a><a href="https://github.com/MingchenXia/Pome">GitHub</a></nav><h2>Table of contents</h2>' + reader.contents(""), "Pome", "")
     write("chapters", '<h1>Table of contents</h1>' + reader.contents("../"), "Table of contents", "../")
     for key, chapter in chapters.items():
